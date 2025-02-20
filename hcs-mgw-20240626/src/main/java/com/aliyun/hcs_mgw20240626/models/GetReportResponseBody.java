@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class GetReportResponseBody extends TeaModel {
+    /**
+     * <p>The details for obtaining the migration report.</p>
+     */
     @NameInMap("GetReportResponse")
     public GetReportResp getReportResponse;
 

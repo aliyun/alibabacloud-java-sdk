@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class CreateReportRequest extends TeaModel {
+    /**
+     * <p>The details for creating the migration report.</p>
+     */
     @NameInMap("CreateReport")
     public CreateReportInfo createReport;
 

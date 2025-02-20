@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentStatusResponseBody extends TeaModel {
     /**
-     * <p>2</p>
+     * <p>The details for obtaining the status of the agent.</p>
      */
     @NameInMap("ImportAgentStatus")
     public GetAgentStatusResp importAgentStatus;

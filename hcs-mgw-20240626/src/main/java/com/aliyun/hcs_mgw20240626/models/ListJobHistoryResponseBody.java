@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class ListJobHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The running history of the migration task.</p>
+     */
     @NameInMap("JobHistoryList")
     public ListJobHistoryResp jobHistoryList;
 

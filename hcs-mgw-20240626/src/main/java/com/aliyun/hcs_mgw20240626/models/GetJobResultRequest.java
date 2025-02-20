@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobResultRequest extends TeaModel {
     /**
+     * <p>The execution ID of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

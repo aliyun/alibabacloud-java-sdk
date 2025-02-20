@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentRequest extends TeaModel {
+    /**
+     * <p>The details for creating the agent.</p>
+     */
     @NameInMap("ImportAgent")
     public CreateAgentInfo importAgent;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteJobRequest extends TeaModel {
     /**
+     * <p>Specifies whether to force delete the subtask. If the task has subtasks and you set this parameter to true, the task and its subtasks are forcibly deleted. If this parameter is set to false, the task and its subtasks fail to be deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

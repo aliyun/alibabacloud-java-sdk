@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetReportRequest extends TeaModel {
     /**
+     * <p>The execution ID of the migration task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,7 @@ public class GetReportRequest extends TeaModel {
     public Integer runtimeId;
 
     /**
+     * <p>The ID of the migration task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

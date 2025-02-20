@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
+    /**
+     * <p>The details for updating the task.</p>
+     */
     @NameInMap("ImportJob")
     public UpdateJobInfo importJob;
 

@@ -8,6 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "hcs-mgw";
         com.aliyun.gateway.oss.Client gatewayClient = new com.aliyun.gateway.oss.Client();
         this._spi = gatewayClient;
         this._endpointRule = "";
@@ -15,8 +16,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
 
     /**
+     * <b>description</b> :
+     * <p>  To create a data address, you must have the permission on mgw:CreateImportAddress.</p>
+     * <ul>
+     * <li>If you want to use an agent to migrate data, you must create an agent first and then associate the agent with a data address when you create the data address.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据地址。</p>
+     * <p>Creates a data address.</p>
      * 
      * @param request CreateAddressRequest
      * @param headers map
@@ -52,8 +59,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create a data address, you must have the permission on mgw:CreateImportAddress.</p>
+     * <ul>
+     * <li>If you want to use an agent to migrate data, you must create an agent first and then associate the agent with a data address when you create the data address.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建数据地址。</p>
+     * <p>Creates a data address.</p>
      * 
      * @param request CreateAddressRequest
      * @return CreateAddressResponse
@@ -65,8 +78,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create an agent, you must have the permission on mgw:CreateImportAgent.</p>
+     * <ul>
+     * <li>If you want to migrate data to Alibaba Cloud over an Express Connect circuit or a VPN gateway, or migrate data from a self-managed storage space to Alibaba Cloud, you can deploy an agent.</li>
+     * <li>Before you create an agent, you must create a tunnel. An agent must be associated with a tunnel.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建代理。</p>
+     * <p>The request boy for creating the agent.</p>
      * 
      * @param request CreateAgentRequest
      * @param headers map
@@ -102,8 +122,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create an agent, you must have the permission on mgw:CreateImportAgent.</p>
+     * <ul>
+     * <li>If you want to migrate data to Alibaba Cloud over an Express Connect circuit or a VPN gateway, or migrate data from a self-managed storage space to Alibaba Cloud, you can deploy an agent.</li>
+     * <li>Before you create an agent, you must create a tunnel. An agent must be associated with a tunnel.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建代理。</p>
+     * <p>The request boy for creating the agent.</p>
      * 
      * @param request CreateAgentRequest
      * @return CreateAgentResponse
@@ -115,8 +142,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create a migration task, you must have the permission on mgw:CreateImportJob.</p>
+     * <ul>
+     * <li>Before you create a migration task, you must create data addresses.</li>
+     * <li>A migration task can run multiple rounds. Each round has an execution ID.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建迁移任务。</p>
+     * <p>Creates a migration task.</p>
      * 
      * @param request CreateJobRequest
      * @param headers map
@@ -152,8 +186,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create a migration task, you must have the permission on mgw:CreateImportJob.</p>
+     * <ul>
+     * <li>Before you create a migration task, you must create data addresses.</li>
+     * <li>A migration task can run multiple rounds. Each round has an execution ID.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建迁移任务。</p>
+     * <p>Creates a migration task.</p>
      * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
@@ -165,8 +206,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create a migration report, you must have the permission on mgw:CreateImportReport.</p>
+     * <ul>
+     * <li>If you specify that a migration report is to be generated when you create a migration task, you do not need to call this operation. If you do not specify that a migration report is to be generated when you create a migration task, you can call this operation to create a migration report for an execution with the specified ID.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建迁移报告。</p>
+     * <p>Creates a migration report.</p>
      * 
      * @param request CreateReportRequest
      * @param headers map
@@ -202,8 +249,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create a migration report, you must have the permission on mgw:CreateImportReport.</p>
+     * <ul>
+     * <li>If you specify that a migration report is to be generated when you create a migration task, you do not need to call this operation. If you do not specify that a migration report is to be generated when you create a migration task, you can call this operation to create a migration report for an execution with the specified ID.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建迁移报告。</p>
+     * <p>Creates a migration report.</p>
      * 
      * @param request CreateReportRequest
      * @return CreateReportResponse
@@ -215,8 +268,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create a tunnel, you must have the permission on mgw:CreateImportTunnel.</p>
+     * <ul>
+     * <li>When you use an agent to migrate data, the agent must be associated with a tunnel.</li>
+     * <li>A tunnel can be associated with multiple agents. You can throttle the traffic of the agents that are associated with the same tunnel by setting the bandwidth and the number of requests per second for the tunnel.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建通道。</p>
+     * <p>Creates a tunnel.</p>
      * 
      * @param request CreateTunnelRequest
      * @param headers map
@@ -252,8 +312,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To create a tunnel, you must have the permission on mgw:CreateImportTunnel.</p>
+     * <ul>
+     * <li>When you use an agent to migrate data, the agent must be associated with a tunnel.</li>
+     * <li>A tunnel can be associated with multiple agents. You can throttle the traffic of the agents that are associated with the same tunnel by setting the bandwidth and the number of requests per second for the tunnel.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建通道。</p>
+     * <p>Creates a tunnel.</p>
      * 
      * @param request CreateTunnelRequest
      * @return CreateTunnelResponse
@@ -265,8 +332,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete a data address, you must have the permission on mgw:DeleteImportAddress.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据地址。</p>
+     * <p>Deletes a data address.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -294,8 +364,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete a data address, you must have the permission on mgw:DeleteImportAddress.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除数据地址。</p>
+     * <p>Deletes a data address.</p>
      * @return DeleteAddressResponse
      */
     public DeleteAddressResponse deleteAddress(String userid, String addressName) throws Exception {
@@ -305,8 +378,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete an agent, you must have the permission on mgw:DeleteImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除代理。</p>
+     * <p>Deletes an agent.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -334,8 +410,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete an agent, you must have the permission on mgw:DeleteImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除代理。</p>
+     * <p>Deletes an agent.</p>
      * @return DeleteAgentResponse
      */
     public DeleteAgentResponse deleteAgent(String userid, String agentName) throws Exception {
@@ -345,8 +424,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete a migration task, you must have the permission on mgw:DeleteImportJob.</p>
+     * <ul>
+     * <li>The operation to delete a migration task is asynchronous. The migration task remains in the Deleting state until it is deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除迁移任务。</p>
+     * <p>Deletes a migration task.</p>
      * 
      * @param request DeleteJobRequest
      * @param headers map
@@ -382,8 +467,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete a migration task, you must have the permission on mgw:DeleteImportJob.</p>
+     * <ul>
+     * <li>The operation to delete a migration task is asynchronous. The migration task remains in the Deleting state until it is deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除迁移任务。</p>
+     * <p>Deletes a migration task.</p>
      * 
      * @param request DeleteJobRequest
      * @return DeleteJobResponse
@@ -395,8 +486,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete a tunnel, you must have the permission on mgw:DeleteImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除通道。</p>
+     * <p>Deletes a tunnel.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -424,8 +518,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To delete a tunnel, you must have the permission on mgw:DeleteImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除通道。</p>
+     * <p>Deletes a tunnel.</p>
      * @return DeleteTunnelResponse
      */
     public DeleteTunnelResponse deleteTunnel(String userid, String tunnelId) throws Exception {
@@ -435,8 +532,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a data address, you must have the permission on mgw:GetImportAddress.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据地址信息。</p>
+     * <p>Obtains the details of a data address.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -464,8 +564,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a data address, you must have the permission on mgw:GetImportAddress.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取数据地址信息。</p>
+     * <p>Obtains the details of a data address.</p>
      * @return GetAddressResponse
      */
     public GetAddressResponse getAddress(String userid, String addressName) throws Exception {
@@ -475,8 +578,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about an agent, you must have the permission on mgw:GetImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取代理信息。</p>
+     * <p>Obtains the details of an agent.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -504,8 +610,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about an agent, you must have the permission on mgw:GetImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取代理信息。</p>
+     * <p>Obtains the details of an agent.</p>
      * @return GetAgentResponse
      */
     public GetAgentResponse getAgent(String userid, String agentName) throws Exception {
@@ -515,8 +624,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the status of an agent, you must have the permission on mgw:GetImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取代理状态。</p>
+     * <p>Obtains the running status of an agent.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -544,8 +656,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the status of an agent, you must have the permission on mgw:GetImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取代理状态。</p>
+     * <p>Obtains the running status of an agent.</p>
      * @return GetAgentStatusResponse
      */
     public GetAgentStatusResponse getAgentStatus(String userid, String agentName) throws Exception {
@@ -555,8 +670,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a migration task, you must have the permission on mgw:GetImportJob.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取迁移任务信息。</p>
+     * <p>Obtains the details of a migration task.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -592,8 +710,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a migration task, you must have the permission on mgw:GetImportJob.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取迁移任务信息。</p>
+     * <p>Obtains the details of a migration task.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -605,8 +726,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the retry information about a migration task, you must have the permission on mgw:GetImportJobResult.</p>
+     * <ul>
+     * <li>If files fail to be migrated during a migration task, a list of files that fail to be migrated is generated. You can call this operation to query this list. You can create a data address based on this list and create a subtask. This way, you can migrate these files again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取迁移任务失败文件清单信息。</p>
+     * <p>Obtains the list of files that fail to be migrated when files fail to be migrated during a migration task.</p>
      * 
      * @param request GetJobResultRequest
      * @param headers map
@@ -642,8 +769,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the retry information about a migration task, you must have the permission on mgw:GetImportJobResult.</p>
+     * <ul>
+     * <li>If files fail to be migrated during a migration task, a list of files that fail to be migrated is generated. You can call this operation to query this list. You can create a data address based on this list and create a subtask. This way, you can migrate these files again.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取迁移任务失败文件清单信息。</p>
+     * <p>Obtains the list of files that fail to be migrated when files fail to be migrated during a migration task.</p>
      * 
      * @param request GetJobResultRequest
      * @return GetJobResultResponse
@@ -655,8 +788,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a migration report, you must have the permission on mgw:GetImportReport.</p>
+     * <ul>
+     * <li>The migration report is pushed to the destination data address. For more information, see the &quot;View a migration report&quot; section of the &quot;Subsequent operations&quot; topic in migration tutorials.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取迁移报告。</p>
+     * <p>Obtains the details of a migration report.</p>
      * 
      * @param request GetReportRequest
      * @param headers map
@@ -696,8 +835,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a migration report, you must have the permission on mgw:GetImportReport.</p>
+     * <ul>
+     * <li>The migration report is pushed to the destination data address. For more information, see the &quot;View a migration report&quot; section of the &quot;Subsequent operations&quot; topic in migration tutorials.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>获取迁移报告。</p>
+     * <p>Obtains the details of a migration report.</p>
      * 
      * @param request GetReportRequest
      * @return GetReportResponse
@@ -709,8 +854,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a tunnel, you must have the permission on mgw:GetImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取通道信息。</p>
+     * <p>Obtains the details of a tunnel.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -738,8 +886,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the information about a tunnel, you must have the permission on mgw:GetImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取通道信息。</p>
+     * <p>Obtains the details of a tunnel.</p>
      * @return GetTunnelResponse
      */
     public GetTunnelResponse getTunnel(String userid, String tunnelId) throws Exception {
@@ -749,8 +900,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of data addresses, you must have the permission on mgw:ListImportAddress.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举数据地址。</p>
+     * <p>Lists the data addresses created by a user in the specific region.</p>
      * 
      * @param request ListAddressRequest
      * @param headers map
@@ -790,8 +944,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of data addresses, you must have the permission on mgw:ListImportAddress.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举数据地址。</p>
+     * <p>Lists the data addresses created by a user in the specific region.</p>
      * 
      * @param request ListAddressRequest
      * @return ListAddressResponse
@@ -803,8 +960,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of agents, you must have the permission on mgw:ListImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举代理。</p>
+     * <p>Lists the agents created by a user in the specific region.</p>
      * 
      * @param request ListAgentRequest
      * @param headers map
@@ -844,8 +1004,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of agents, you must have the permission on mgw:ListImportAgent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举代理。</p>
+     * <p>Lists the agents created by a user in the specific region.</p>
      * 
      * @param request ListAgentRequest
      * @return ListAgentResponse
@@ -857,8 +1020,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of migration tasks, you must have the permission on mgw:ListImportJob.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举迁移任务。</p>
+     * <p>Lists the migration tasks created by a user in the specific region.</p>
      * 
      * @param request ListJobRequest
      * @param headers map
@@ -906,8 +1072,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of migration tasks, you must have the permission on mgw:ListImportJob.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举迁移任务。</p>
+     * <p>Lists the migration tasks created by a user in the specific region.</p>
      * 
      * @param request ListJobRequest
      * @return ListJobResponse
@@ -919,8 +1088,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the execution history of a migration task, you must have the permission on mgw:ListImportJobHistory.</p>
+     * <ul>
+     * <li>A migration task can run multiple rounds. A unique execution ID is generated for each round.</li>
+     * <li>The execution history of a migration task records the change history of the task status.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列举迁移任务运行历史。</p>
+     * <p>Lists the running history of a migration task.</p>
      * 
      * @param request ListJobHistoryRequest
      * @param headers map
@@ -964,8 +1140,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query the execution history of a migration task, you must have the permission on mgw:ListImportJobHistory.</p>
+     * <ul>
+     * <li>A migration task can run multiple rounds. A unique execution ID is generated for each round.</li>
+     * <li>The execution history of a migration task records the change history of the task status.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列举迁移任务运行历史。</p>
+     * <p>Lists the running history of a migration task.</p>
      * 
      * @param request ListJobHistoryRequest
      * @return ListJobHistoryResponse
@@ -977,8 +1160,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of tunnels, you must have the permission on mgw:ListImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举通道。</p>
+     * <p>Lists tunnels.</p>
      * 
      * @param request ListTunnelRequest
      * @param headers map
@@ -1018,8 +1204,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To query a list of tunnels, you must have the permission on mgw:ListImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>列举通道。</p>
+     * <p>Lists tunnels.</p>
      * 
      * @param request ListTunnelRequest
      * @return ListTunnelResponse
@@ -1031,8 +1220,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To update a data address, you must have the permission on mgw:UpdateImportAddress.</p>
+     * <ul>
+     * <li>If the data address is associated with an agent, you can scale up or down the agent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据地址。</p>
+     * <p>Updates a data address.</p>
      * 
      * @param request UpdateAddressRequest
      * @param headers map
@@ -1068,8 +1263,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To update a data address, you must have the permission on mgw:UpdateImportAddress.</p>
+     * <ul>
+     * <li>If the data address is associated with an agent, you can scale up or down the agent.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新数据地址。</p>
+     * <p>Updates a data address.</p>
      * 
      * @param request UpdateAddressRequest
      * @return UpdateAddressResponse
@@ -1081,8 +1282,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To update a migration task, you must have the permission on mgw:UpdateImportJob.</p>
+     * <ul>
+     * <li>You can update only the status or throttling settings of a task in a single request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新迁移任务。</p>
+     * <p>Updates the status or throttling of a task.</p>
      * 
      * @param request UpdateJobRequest
      * @param headers map
@@ -1118,8 +1325,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To update a migration task, you must have the permission on mgw:UpdateImportJob.</p>
+     * <ul>
+     * <li>You can update only the status or throttling settings of a task in a single request.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新迁移任务。</p>
+     * <p>Updates the status or throttling of a task.</p>
      * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
@@ -1131,8 +1344,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To update a tunnel, you must have the permission on mgw:UpdateImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新通道。</p>
+     * <p>Updates a tunnel.</p>
      * 
      * @param request UpdateTunnelRequest
      * @param headers map
@@ -1168,8 +1384,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  To update a tunnel, you must have the permission on mgw:UpdateImportTunnel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新通道。</p>
+     * <p>Updates a tunnel.</p>
      * 
      * @param request UpdateTunnelRequest
      * @return UpdateTunnelResponse
@@ -1182,7 +1401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验数据地址是否可用。</p>
+     * <p>Verifies whether a data address is available.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1211,7 +1430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>校验数据地址是否可用。</p>
+     * <p>Verifies whether a data address is available.</p>
      * @return VerifyAddressResponse
      */
     public VerifyAddressResponse verifyAddress(String userid, String addressName) throws Exception {

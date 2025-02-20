@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class ListJobResponseBody extends TeaModel {
+    /**
+     * <p>The queried migration tasks.</p>
+     */
     @NameInMap("ImportJobList")
     public ListJobResp importJobList;
 

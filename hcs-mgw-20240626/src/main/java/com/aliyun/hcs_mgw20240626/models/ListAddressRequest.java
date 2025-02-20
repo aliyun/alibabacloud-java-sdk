@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAddressRequest extends TeaModel {
     /**
+     * <p>Specifies the number of migration addresses to be returned.\
+     * Valid values: 0 - 1000 (excluding 0).\
+     * Default value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +16,9 @@ public class ListAddressRequest extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The marker after which the migration addresses are listed.\
+     * By default, this parameter is left empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_marker</p>
      */
