@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobResultResponseBody extends TeaModel {
     /**
-     * <p>1</p>
+     * <p>The details for obtaining the retries of the migration task.</p>
      */
     @NameInMap("ImportJobResult")
     public GetJobResultResp importJobResult;

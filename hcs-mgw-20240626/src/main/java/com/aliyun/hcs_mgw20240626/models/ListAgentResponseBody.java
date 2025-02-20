@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class ListAgentResponseBody extends TeaModel {
+    /**
+     * <p>The details of the agents.</p>
+     */
     @NameInMap("ImportAgentList")
     public ListAgentResp importAgentList;
 

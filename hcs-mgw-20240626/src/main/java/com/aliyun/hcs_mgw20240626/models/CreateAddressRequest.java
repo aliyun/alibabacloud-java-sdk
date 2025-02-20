@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class CreateAddressRequest extends TeaModel {
+    /**
+     * <p>The details for creating the data address.</p>
+     */
     @NameInMap("ImportAddress")
     public CreateAddressInfo importAddress;
 

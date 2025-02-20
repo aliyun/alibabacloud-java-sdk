@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
     /**
+     * <p>The details for creating the migration task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ImportJob")

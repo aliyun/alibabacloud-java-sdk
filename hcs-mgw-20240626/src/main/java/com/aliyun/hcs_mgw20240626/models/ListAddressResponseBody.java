@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class ListAddressResponseBody extends TeaModel {
+    /**
+     * <p>The details of migration addresses.</p>
+     */
     @NameInMap("ImportAddressList")
     public ListAddressResp importAddressList;
 

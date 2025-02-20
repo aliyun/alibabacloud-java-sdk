@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class GetTunnelResponseBody extends TeaModel {
+    /**
+     * <p>The details for obtaining the details of the tunnel.</p>
+     */
     @NameInMap("ImportTunnel")
     public GetTunnelResp importTunnel;
 

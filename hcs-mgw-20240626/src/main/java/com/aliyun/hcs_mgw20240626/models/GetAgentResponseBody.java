@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentResponseBody extends TeaModel {
     /**
-     * <p>2</p>
+     * <p>The details for obtaining the details of the agent.</p>
      */
     @NameInMap("ImportAgent")
     public GetAgentResp importAgent;

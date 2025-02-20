@@ -4,6 +4,9 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class UpdateAddressRequest extends TeaModel {
+    /**
+     * <p>The details for updating the data address.</p>
+     */
     @NameInMap("ImportAddress")
     public UpdateAddressInfo importAddress;
 

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTunnelRequest extends TeaModel {
     /**
+     * <p>Specifies the number of tunnels to be returned.\
+     * Valid values: 0 - 1000.\
+     * Default value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +16,9 @@ public class ListTunnelRequest extends TeaModel {
     public Integer count;
 
     /**
+     * <p>The marker after which tunnels are listed.\
+     * By default, this parameter is left empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

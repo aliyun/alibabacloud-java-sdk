@@ -4,6 +4,10 @@ package com.aliyun.hcs_mgw20240626.models;
 import com.aliyun.tea.*;
 
 public class UpdateTunnelInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>k1=v1;k2=v2</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

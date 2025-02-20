@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAddressResponseBody extends TeaModel {
     /**
-     * <p>222</p>
+     * <p>The details for obtaining the data address.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1:1</li>
+     * </ul>
      */
     @NameInMap("ImportAddress")
     public GetAddressResp importAddress;

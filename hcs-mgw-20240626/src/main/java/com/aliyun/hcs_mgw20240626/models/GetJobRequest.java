@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobRequest extends TeaModel {
     /**
+     * <p>Specifies whether to obtain the details of the migration task by using the task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

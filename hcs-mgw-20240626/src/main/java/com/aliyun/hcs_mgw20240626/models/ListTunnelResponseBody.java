@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTunnelResponseBody extends TeaModel {
     /**
-     * <p>2</p>
+     * <p>The details of the tunnels.</p>
      */
     @NameInMap("ImportTunnelList")
     public ListTunnelResp importTunnelList;
