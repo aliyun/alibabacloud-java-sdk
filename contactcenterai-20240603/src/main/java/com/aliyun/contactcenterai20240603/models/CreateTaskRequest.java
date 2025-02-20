@@ -495,6 +495,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("serviceChannelKeywords")
         public java.util.List<String> serviceChannelKeywords;
 
+        @NameInMap("vocabularyId")
+        public String vocabularyId;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -563,6 +566,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public java.util.List<String> getServiceChannelKeywords() {
             return this.serviceChannelKeywords;
+        }
+
+        public CreateTaskRequestTranscription setVocabularyId(String vocabularyId) {
+            this.vocabularyId = vocabularyId;
+            return this;
+        }
+        public String getVocabularyId() {
+            return this.vocabularyId;
         }
 
         public CreateTaskRequestTranscription setVoiceFileUrl(String voiceFileUrl) {
