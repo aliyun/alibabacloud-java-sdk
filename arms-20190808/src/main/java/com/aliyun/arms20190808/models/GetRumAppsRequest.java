@@ -31,6 +31,9 @@ public class GetRumAppsRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("AppType")
+    public String appType;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -55,6 +58,9 @@ public class GetRumAppsRequest extends TeaModel {
      */
     @NameInMap("Tags")
     public java.util.List<GetRumAppsRequestTags> tags;
+
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static GetRumAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumAppsRequest self = new GetRumAppsRequest();
@@ -85,6 +91,14 @@ public class GetRumAppsRequest extends TeaModel {
         return this.appName;
     }
 
+    public GetRumAppsRequest setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
+    }
+
     public GetRumAppsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -107,6 +121,14 @@ public class GetRumAppsRequest extends TeaModel {
     }
     public java.util.List<GetRumAppsRequestTags> getTags() {
         return this.tags;
+    }
+
+    public GetRumAppsRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
     public static class GetRumAppsRequestTags extends TeaModel {

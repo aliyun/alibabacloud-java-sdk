@@ -1,3 +1,22 @@
+2025-02-21 Version: 10.0.2
+- Update API CreateOrUpdateAlertRule: add param CheckCycle.
+- Update API CreateRumApp: add param Language.
+- Update API CreateRumApp: add param Workspace.
+- Update API GetMultipleTrace: add param PageNumber.
+- Update API GetMultipleTrace: add param PageSize.
+- Update API GetRumAppInfo: add param Workspace.
+- Update API GetRumAppInfo: update response param.
+- Update API GetRumApps: add param AppType.
+- Update API GetRumApps: add param Workspace.
+- Update API GetRumDataForPage: add param Workspace.
+- Update API GetTrace: add param PageNumber.
+- Update API GetTrace: add param PageSize.
+- Update API InstallManagedPrometheus: update param ClusterType.
+- Update API ListAddonReleases: update response param.
+- Update API UninstallManagedPrometheus: update param ClusterType.
+- Update API UpdateRumApp: add param AppConfig.
+
+
 2025-01-08 Version: 10.0.0
 - Update API CreateOrUpdateAlertRule: update response param.
 - Update API DoInsightsAction: add param RegionId.

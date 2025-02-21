@@ -367,6 +367,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     }
 
     public static class GetRumAppInfoResponseBodyData extends TeaModel {
+        @NameInMap("AppConfig")
+        public String appConfig;
+
         /**
          * <p>The group to which the application belongs.</p>
          * 
@@ -547,6 +550,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public static GetRumAppInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRumAppInfoResponseBodyData self = new GetRumAppInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetRumAppInfoResponseBodyData setAppConfig(String appConfig) {
+            this.appConfig = appConfig;
+            return this;
+        }
+        public String getAppConfig() {
+            return this.appConfig;
         }
 
         public GetRumAppInfoResponseBodyData setAppGroup(String appGroup) {

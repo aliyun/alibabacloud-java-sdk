@@ -82,6 +82,9 @@ public class GetRumDataForPageRequest extends TeaModel {
     @NameInMap("StartTime")
     public Integer startTime;
 
+    @NameInMap("Workspace")
+    public String workspace;
+
     public static GetRumDataForPageRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumDataForPageRequest self = new GetRumDataForPageRequest();
         return TeaModel.build(map, self);
@@ -149,6 +152,14 @@ public class GetRumDataForPageRequest extends TeaModel {
     }
     public Integer getStartTime() {
         return this.startTime;
+    }
+
+    public GetRumDataForPageRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

@@ -14,6 +14,12 @@ public class GetMultipleTraceRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -55,6 +61,22 @@ public class GetMultipleTraceRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public GetMultipleTraceRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetMultipleTraceRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public GetMultipleTraceRequest setRegionId(String regionId) {

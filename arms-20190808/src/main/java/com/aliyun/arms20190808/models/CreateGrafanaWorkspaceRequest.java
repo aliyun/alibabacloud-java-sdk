@@ -4,6 +4,10 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateGrafanaWorkspaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("AccountNumber")
     public String accountNumber;
 
@@ -20,9 +24,17 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     @NameInMap("AliyunLang")
     public String aliyunLang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CustomAccountNumber")
     public String customAccountNumber;
 
@@ -35,6 +47,10 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
@@ -83,6 +99,12 @@ public class CreateGrafanaWorkspaceRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>包年包月的计费周期，取值： Month（默认值）：按月购买。                                 Year：按年购买。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
