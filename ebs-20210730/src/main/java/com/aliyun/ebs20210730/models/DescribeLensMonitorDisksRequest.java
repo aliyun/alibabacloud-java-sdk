@@ -21,6 +21,12 @@ public class DescribeLensMonitorDisksRequest extends TeaModel {
     @NameInMap("DiskCategory")
     public String diskCategory;
 
+    /**
+     * <p>Regular matching fuzzy query to filter cloud disk IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-cd40hxfu0v**</p>
+     */
     @NameInMap("DiskIdPattern")
     public String diskIdPattern;
 
@@ -48,7 +54,6 @@ public class DescribeLensMonitorDisksRequest extends TeaModel {
      * <li>DiskBPSExceedInstanceMaxLimit: specifies the event that is triggered when the number of BPS on the disk reaches the upper limit of the instance.</li>
      * <li>DiskIOPSExceedDiskMaxLimit: specifies the event that is triggered when the number of IOPS on the disk reaches the upper limit of the disk.</li>
      * <li>DiskBPSExceedDiskMaxLimit: specifies the event that is triggered when the number of BPS on the disk reaches the upper limit of the disk.</li>
-     * <li>DiskSlowIOTriggerred: specifies the event that is triggered when the I/O speed on the disk is slow.</li>
      * </ul>
      */
     @NameInMap("LensTags")

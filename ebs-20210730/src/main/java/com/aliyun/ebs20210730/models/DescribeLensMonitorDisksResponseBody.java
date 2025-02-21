@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     /**
-     * <p>Cloud disk information list.</p>
+     * <p>The information about the disks.</p>
      */
     @NameInMap("DiskInfos")
     public java.util.List<DescribeLensMonitorDisksResponseBodyDiskInfos> diskInfos;
@@ -232,11 +232,9 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
-         * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
-         * <blockquote>
-         * <p> This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/essd-autopl-disks">ESSD AutoPL disks</a></p>
-         * </blockquote>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>Baseline performance = min{1,800 + 50 × Capacity, 50,000}</p>
+         * <p>This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>4000</p>
