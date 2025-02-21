@@ -34,6 +34,7 @@ public class UpdateApiTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    @Deprecated
     public UpdateApiTemplateResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;

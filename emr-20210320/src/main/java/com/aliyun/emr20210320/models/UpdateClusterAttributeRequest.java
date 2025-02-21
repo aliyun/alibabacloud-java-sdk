@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterAttributeRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateClusterAttributeRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>集群名称。</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>emrtest</p>
@@ -24,6 +24,8 @@ public class UpdateClusterAttributeRequest extends TeaModel {
     public String clusterName;
 
     /**
+     * <p>Specifies whether release protection is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -31,6 +33,8 @@ public class UpdateClusterAttributeRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
+     * <p>The cluster description.</p>
+     * 
      * <strong>example:</strong>
      * <p>Emr cluster for ETL</p>
      */
@@ -38,7 +42,7 @@ public class UpdateClusterAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

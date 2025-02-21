@@ -155,6 +155,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.applicationState;
         }
 
+        @Deprecated
         public Applications setApplicationVersion(String applicationVersion) {
             this.applicationVersion = applicationVersion;
             return this;

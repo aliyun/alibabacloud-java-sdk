@@ -3,16 +3,17 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class GetApiTemplateResponseBody extends TeaModel {
+public class UpdateUserAttributeResponseBody extends TeaModel {
     /**
-     * <p>The content of the API operation template.</p>
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     @Deprecated
-    public ApiTemplate data;
+    public Boolean data;
 
     /**
-     * <p>Request ID.</p>
+     * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -20,21 +21,21 @@ public class GetApiTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetApiTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetApiTemplateResponseBody self = new GetApiTemplateResponseBody();
+    public static UpdateUserAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateUserAttributeResponseBody self = new UpdateUserAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
     @Deprecated
-    public GetApiTemplateResponseBody setData(ApiTemplate data) {
+    public UpdateUserAttributeResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public ApiTemplate getData() {
+    public Boolean getData() {
         return this.data;
     }
 
-    public GetApiTemplateResponseBody setRequestId(String requestId) {
+    public UpdateUserAttributeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -39,11 +39,17 @@ public class CreateScriptRequest extends TeaModel {
     public String scriptType;
 
     /**
-     * <p>The scripts.</p>
+     * <p>The common scripts or bootstrap actions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Scripts")
     public java.util.List<Script> scripts;
+
+    /**
+     * <p>The timeout period for manually running a common script. You cannot specify the timeout period for a bootstrap action.</p>
+     */
+    @NameInMap("TimeoutSecs")
+    public String timeoutSecs;
 
     public static CreateScriptRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateScriptRequest self = new CreateScriptRequest();
@@ -80,6 +86,14 @@ public class CreateScriptRequest extends TeaModel {
     }
     public java.util.List<Script> getScripts() {
         return this.scripts;
+    }
+
+    public CreateScriptRequest setTimeoutSecs(String timeoutSecs) {
+        this.timeoutSecs = timeoutSecs;
+        return this;
+    }
+    public String getTimeoutSecs() {
+        return this.timeoutSecs;
     }
 
 }

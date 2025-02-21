@@ -97,6 +97,7 @@ public class Script extends TeaModel {
         return this.nodeSelector;
     }
 
+    @Deprecated
     public Script setPriority(Integer priority) {
         this.priority = priority;
         return this;

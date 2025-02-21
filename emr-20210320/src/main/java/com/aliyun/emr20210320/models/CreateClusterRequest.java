@@ -61,6 +61,17 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <p>Specifies whether to enable release protection for the cluster. Valid values:</p>
+     * <ul>
+     * <li>true: enables release protection for the cluster.</li>
+     * <li>false: disables release protection for the cluster.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 

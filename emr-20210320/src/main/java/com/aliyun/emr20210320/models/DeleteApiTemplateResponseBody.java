@@ -36,6 +36,7 @@ public class DeleteApiTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    @Deprecated
     public DeleteApiTemplateResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;

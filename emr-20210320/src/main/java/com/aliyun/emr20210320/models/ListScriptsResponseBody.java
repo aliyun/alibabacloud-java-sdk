@@ -32,7 +32,7 @@ public class ListScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>List of scripts.</p>
+     * <p>The scripts.</p>
      */
     @NameInMap("Scripts")
     public java.util.List<Scripts> scripts;
@@ -160,7 +160,7 @@ public class ListScriptsResponseBody extends TeaModel {
         public Long lastUpdateTime;
 
         /**
-         * <p>Node selector.</p>
+         * <p>The node selector.</p>
          */
         @NameInMap("NodeSelector")
         public NodeSelector nodeSelector;

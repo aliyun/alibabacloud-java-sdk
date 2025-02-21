@@ -3,38 +3,35 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class GetApiTemplateResponseBody extends TeaModel {
+public class CreateUsersResponseBody extends TeaModel {
     /**
-     * <p>The content of the API operation template.</p>
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
-    @Deprecated
-    public ApiTemplate data;
+    public Boolean data;
 
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetApiTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetApiTemplateResponseBody self = new GetApiTemplateResponseBody();
+    public static CreateUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateUsersResponseBody self = new CreateUsersResponseBody();
         return TeaModel.build(map, self);
     }
 
-    @Deprecated
-    public GetApiTemplateResponseBody setData(ApiTemplate data) {
+    public CreateUsersResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
-    public ApiTemplate getData() {
+    public Boolean getData() {
         return this.data;
     }
 
-    public GetApiTemplateResponseBody setRequestId(String requestId) {
+    public CreateUsersResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

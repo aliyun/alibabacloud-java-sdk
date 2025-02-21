@@ -4,10 +4,10 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class AutoScalingPolicy extends TeaModel {
-    @NameInMap("constraints")
+    @NameInMap("Constraints")
     public Constraints constraints;
 
-    @NameInMap("scalingRules")
+    @NameInMap("ScalingRules")
     public java.util.List<ScalingRule> scalingRules;
 
     public static AutoScalingPolicy build(java.util.Map<String, ?> map) throws Exception {
@@ -32,10 +32,10 @@ public class AutoScalingPolicy extends TeaModel {
     }
 
     public static class Constraints extends TeaModel {
-        @NameInMap("maxCapacity")
+        @NameInMap("MaxCapacity")
         public Integer maxCapacity;
 
-        @NameInMap("minCapacity")
+        @NameInMap("MinCapacity")
         public Integer minCapacity;
 
         public static Constraints build(java.util.Map<String, ?> map) throws Exception {
