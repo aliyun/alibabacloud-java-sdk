@@ -32,6 +32,9 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <p>The nickname of the application.</p>
      * 
@@ -97,6 +100,9 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public String tagShrink;
 
+    @NameInMap("Workspace")
+    public String workspace;
+
     public static CreateRumAppShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRumAppShrinkRequest self = new CreateRumAppShrinkRequest();
         return TeaModel.build(map, self);
@@ -124,6 +130,14 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateRumAppShrinkRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public CreateRumAppShrinkRequest setNickName(String nickName) {
@@ -188,6 +202,14 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     }
     public String getTagShrink() {
         return this.tagShrink;
+    }
+
+    public CreateRumAppShrinkRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

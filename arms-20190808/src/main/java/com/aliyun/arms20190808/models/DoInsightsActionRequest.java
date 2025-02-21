@@ -123,10 +123,6 @@ public class DoInsightsActionRequest extends TeaModel {
      * <li>QueryTopoRed: queries the red topology metrics, such as the number of requests, response time, and number of errors.</li>
      * </ul>
      * <p>Notice: The preceding features are still in canary release and are disabled by default. If you need to enable these features, submit a ticket in the Application Real-Time Monitoring Service (ARMS) console.</p>
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,6 +131,12 @@ public class DoInsightsActionRequest extends TeaModel {
     @NameInMap("Module")
     public String module;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

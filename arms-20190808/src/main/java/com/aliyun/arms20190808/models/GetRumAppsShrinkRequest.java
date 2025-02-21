@@ -31,6 +31,9 @@ public class GetRumAppsShrinkRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("AppType")
+    public String appType;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -55,6 +58,9 @@ public class GetRumAppsShrinkRequest extends TeaModel {
      */
     @NameInMap("Tags")
     public String tagsShrink;
+
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static GetRumAppsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumAppsShrinkRequest self = new GetRumAppsShrinkRequest();
@@ -85,6 +91,14 @@ public class GetRumAppsShrinkRequest extends TeaModel {
         return this.appName;
     }
 
+    public GetRumAppsShrinkRequest setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
+    }
+
     public GetRumAppsShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -107,6 +121,14 @@ public class GetRumAppsShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
+    }
+
+    public GetRumAppsShrinkRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

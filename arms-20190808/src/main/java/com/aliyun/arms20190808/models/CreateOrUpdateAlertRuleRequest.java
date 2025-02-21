@@ -159,6 +159,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("AutoAddTargetConfig")
     public String autoAddTargetConfig;
 
+    @NameInMap("CheckCycle")
+    public Long checkCycle;
+
     /**
      * <p>The ID of the monitored cluster.</p>
      * 
@@ -448,6 +451,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public String getAutoAddTargetConfig() {
         return this.autoAddTargetConfig;
+    }
+
+    public CreateOrUpdateAlertRuleRequest setCheckCycle(Long checkCycle) {
+        this.checkCycle = checkCycle;
+        return this;
+    }
+    public Long getCheckCycle() {
+        return this.checkCycle;
     }
 
     public CreateOrUpdateAlertRuleRequest setClusterId(String clusterId) {

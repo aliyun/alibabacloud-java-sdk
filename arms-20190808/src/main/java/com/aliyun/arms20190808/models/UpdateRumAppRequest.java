@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateRumAppRequest extends TeaModel {
+    @NameInMap("AppConfig")
+    public String appConfig;
+
     /**
      * <p>Specifies whether to restart the application the next day. Valid values: true and false.</p>
      * 
@@ -117,6 +120,14 @@ public class UpdateRumAppRequest extends TeaModel {
     public static UpdateRumAppRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRumAppRequest self = new UpdateRumAppRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRumAppRequest setAppConfig(String appConfig) {
+        this.appConfig = appConfig;
+        return this;
+    }
+    public String getAppConfig() {
+        return this.appConfig;
     }
 
     public UpdateRumAppRequest setAutoRestart(Boolean autoRestart) {

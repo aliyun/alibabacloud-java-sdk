@@ -226,6 +226,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         @NameInMap("Conditions")
         public java.util.List<ListAddonReleasesResponseBodyDataReleasesConditions> conditions;
 
+        @NameInMap("Config")
+        public String config;
+
         /**
          * <p>The time when the add-on was created.</p>
          * 
@@ -291,6 +294,9 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
         @NameInMap("Managed")
         public Boolean managed;
+
+        @NameInMap("NextVersion")
+        public String nextVersion;
 
         /**
          * <p>The region ID.</p>
@@ -393,6 +399,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             return this.conditions;
         }
 
+        public ListAddonReleasesResponseBodyDataReleases setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
+        }
+
         public ListAddonReleasesResponseBodyDataReleases setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -455,6 +469,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
         public Boolean getManaged() {
             return this.managed;
+        }
+
+        public ListAddonReleasesResponseBodyDataReleases setNextVersion(String nextVersion) {
+            this.nextVersion = nextVersion;
+            return this;
+        }
+        public String getNextVersion() {
+            return this.nextVersion;
         }
 
         public ListAddonReleasesResponseBodyDataReleases setRegionId(String regionId) {
