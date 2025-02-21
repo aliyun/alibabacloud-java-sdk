@@ -52,6 +52,9 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("RegionColor")
     public StartCloudRecordShrinkRequestRegionColor regionColor;
 
+    @NameInMap("ReservePaneForNoCameraUser")
+    public Boolean reservePaneForNoCameraUser;
+
     /**
      * <p>storageConfig</p>
      * <p>This parameter is required.</p>
@@ -156,6 +159,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     }
     public StartCloudRecordShrinkRequestRegionColor getRegionColor() {
         return this.regionColor;
+    }
+
+    public StartCloudRecordShrinkRequest setReservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
+        this.reservePaneForNoCameraUser = reservePaneForNoCameraUser;
+        return this;
+    }
+    public Boolean getReservePaneForNoCameraUser() {
+        return this.reservePaneForNoCameraUser;
     }
 
     public StartCloudRecordShrinkRequest setStorageConfig(StartCloudRecordShrinkRequestStorageConfig storageConfig) {
@@ -1222,6 +1233,9 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
         @NameInMap("PaneId")
         public Integer paneId;
 
+        @NameInMap("ReservePaneForOfflineUser")
+        public Boolean reservePaneForOfflineUser;
+
         /**
          * <p>source</p>
          */
@@ -1239,6 +1253,13 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<StartCloudRecordShrinkRequestPanesTexts> texts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cameraFirst</p>
+         */
+        @NameInMap("VideoOrder")
+        public String videoOrder;
 
         @NameInMap("Whiteboard")
         public StartCloudRecordShrinkRequestPanesWhiteboard whiteboard;
@@ -1272,6 +1293,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
             return this.paneId;
         }
 
+        public StartCloudRecordShrinkRequestPanes setReservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+            this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+            return this;
+        }
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
         public StartCloudRecordShrinkRequestPanes setSource(String source) {
             this.source = source;
             return this;
@@ -1294,6 +1323,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
         }
         public java.util.List<StartCloudRecordShrinkRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public StartCloudRecordShrinkRequestPanes setVideoOrder(String videoOrder) {
+            this.videoOrder = videoOrder;
+            return this;
+        }
+        public String getVideoOrder() {
+            return this.videoOrder;
         }
 
         public StartCloudRecordShrinkRequestPanes setWhiteboard(StartCloudRecordShrinkRequestPanesWhiteboard whiteboard) {
@@ -1381,6 +1418,13 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyuns.dalian.oss.com">https://aliyuns.dalian.oss.com</a></p>
+         */
+        @NameInMap("Endpoint")
+        public String endpoint;
+
+        /**
          * <p>region</p>
          * <p>This parameter is required.</p>
          * 
@@ -1429,6 +1473,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public StartCloudRecordShrinkRequestStorageConfig setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
         }
 
         public StartCloudRecordShrinkRequestStorageConfig setRegion(Integer region) {

@@ -52,6 +52,9 @@ public class StartCloudRecordRequest extends TeaModel {
     @NameInMap("RegionColor")
     public StartCloudRecordRequestRegionColor regionColor;
 
+    @NameInMap("ReservePaneForNoCameraUser")
+    public Boolean reservePaneForNoCameraUser;
+
     /**
      * <p>storageConfig</p>
      * <p>This parameter is required.</p>
@@ -156,6 +159,14 @@ public class StartCloudRecordRequest extends TeaModel {
     }
     public StartCloudRecordRequestRegionColor getRegionColor() {
         return this.regionColor;
+    }
+
+    public StartCloudRecordRequest setReservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
+        this.reservePaneForNoCameraUser = reservePaneForNoCameraUser;
+        return this;
+    }
+    public Boolean getReservePaneForNoCameraUser() {
+        return this.reservePaneForNoCameraUser;
     }
 
     public StartCloudRecordRequest setStorageConfig(StartCloudRecordRequestStorageConfig storageConfig) {
@@ -1258,6 +1269,9 @@ public class StartCloudRecordRequest extends TeaModel {
         @NameInMap("PaneId")
         public Integer paneId;
 
+        @NameInMap("ReservePaneForOfflineUser")
+        public Boolean reservePaneForOfflineUser;
+
         /**
          * <p>source</p>
          */
@@ -1275,6 +1289,13 @@ public class StartCloudRecordRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<StartCloudRecordRequestPanesTexts> texts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cameraFirst</p>
+         */
+        @NameInMap("VideoOrder")
+        public String videoOrder;
 
         @NameInMap("Whiteboard")
         public StartCloudRecordRequestPanesWhiteboard whiteboard;
@@ -1308,6 +1329,14 @@ public class StartCloudRecordRequest extends TeaModel {
             return this.paneId;
         }
 
+        public StartCloudRecordRequestPanes setReservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+            this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+            return this;
+        }
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
         public StartCloudRecordRequestPanes setSource(String source) {
             this.source = source;
             return this;
@@ -1330,6 +1359,14 @@ public class StartCloudRecordRequest extends TeaModel {
         }
         public java.util.List<StartCloudRecordRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public StartCloudRecordRequestPanes setVideoOrder(String videoOrder) {
+            this.videoOrder = videoOrder;
+            return this;
+        }
+        public String getVideoOrder() {
+            return this.videoOrder;
         }
 
         public StartCloudRecordRequestPanes setWhiteboard(StartCloudRecordRequestPanesWhiteboard whiteboard) {
@@ -1417,6 +1454,13 @@ public class StartCloudRecordRequest extends TeaModel {
         public String bucket;
 
         /**
+         * <strong>example:</strong>
+         * <p><a href="https://aliyuns.dalian.oss.com">https://aliyuns.dalian.oss.com</a></p>
+         */
+        @NameInMap("Endpoint")
+        public String endpoint;
+
+        /**
          * <p>region</p>
          * <p>This parameter is required.</p>
          * 
@@ -1465,6 +1509,14 @@ public class StartCloudRecordRequest extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public StartCloudRecordRequestStorageConfig setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
         }
 
         public StartCloudRecordRequestStorageConfig setRegion(Integer region) {

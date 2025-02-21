@@ -1208,6 +1208,9 @@ public class UpdateStreamingOutRequest extends TeaModel {
         @NameInMap("PaneId")
         public Integer paneId;
 
+        @NameInMap("ReservePaneForOfflineUser")
+        public Boolean reservePaneForOfflineUser;
+
         /**
          * <strong>example:</strong>
          * <p>22</p>
@@ -1224,6 +1227,13 @@ public class UpdateStreamingOutRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateStreamingOutRequestPanesTexts> texts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cameraFirst</p>
+         */
+        @NameInMap("VideoOrder")
+        public String videoOrder;
 
         @NameInMap("Whiteboard")
         public UpdateStreamingOutRequestPanesWhiteboard whiteboard;
@@ -1257,6 +1267,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
             return this.paneId;
         }
 
+        public UpdateStreamingOutRequestPanes setReservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+            this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+            return this;
+        }
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
         public UpdateStreamingOutRequestPanes setSource(String source) {
             this.source = source;
             return this;
@@ -1279,6 +1297,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
         }
         public java.util.List<UpdateStreamingOutRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateStreamingOutRequestPanes setVideoOrder(String videoOrder) {
+            this.videoOrder = videoOrder;
+            return this;
+        }
+        public String getVideoOrder() {
+            return this.videoOrder;
         }
 
         public UpdateStreamingOutRequestPanes setWhiteboard(UpdateStreamingOutRequestPanesWhiteboard whiteboard) {

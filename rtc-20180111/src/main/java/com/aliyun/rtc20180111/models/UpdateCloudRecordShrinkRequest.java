@@ -1174,6 +1174,9 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         @NameInMap("PaneId")
         public Integer paneId;
 
+        @NameInMap("ReservePaneForOfflineUser")
+        public Boolean reservePaneForOfflineUser;
+
         /**
          * <strong>example:</strong>
          * <p>22</p>
@@ -1190,6 +1193,13 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateCloudRecordShrinkRequestPanesTexts> texts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cameraFirst</p>
+         */
+        @NameInMap("VideoOrder")
+        public String videoOrder;
 
         @NameInMap("Whiteboard")
         public UpdateCloudRecordShrinkRequestPanesWhiteboard whiteboard;
@@ -1223,6 +1233,14 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
             return this.paneId;
         }
 
+        public UpdateCloudRecordShrinkRequestPanes setReservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+            this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+            return this;
+        }
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
         public UpdateCloudRecordShrinkRequestPanes setSource(String source) {
             this.source = source;
             return this;
@@ -1245,6 +1263,14 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         }
         public java.util.List<UpdateCloudRecordShrinkRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanes setVideoOrder(String videoOrder) {
+            this.videoOrder = videoOrder;
+            return this;
+        }
+        public String getVideoOrder() {
+            return this.videoOrder;
         }
 
         public UpdateCloudRecordShrinkRequestPanes setWhiteboard(UpdateCloudRecordShrinkRequestPanesWhiteboard whiteboard) {
