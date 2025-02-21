@@ -19,13 +19,11 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The delivery groups.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you configure this parameter, the system assigns application instances only among the specified authorized delivery groups.</p>
-     * </li>
-     * <li><p>This parameter is required if you configure <code>AppInstanceId</code> or <code>AppInstancePersistentId</code>.</p>
-     * </li>
+     * <li>If you configure this parameter, the system assigns application instances only among the specified authorized delivery groups. </li>
+     * <li>This parameter is required if you configure <code>AppInstanceId</code> or <code>AppInstancePersistentId</code>.</li>
      * </ul>
+     * </blockquote>
      */
     @NameInMap("AppInstanceGroupIdList")
     public java.util.List<String> appInstanceGroupIdList;
@@ -33,13 +31,11 @@ public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <p>The ID of the application instance.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>If you configure this parameter, the system attempts to assign only the specified application instance.</p>
-     * </li>
-     * <li><p>If you configure this parameter, you must also configure <code>AppInstanceGroupIdList</code> and the number of delivery groups specified by <code>AppInstanceGroupIdList</code> must be 1.</p>
-     * </li>
+     * <li>If you configure this parameter, the system attempts to assign only the specified application instance.</li>
+     * <li>If you configure this parameter, you must also configure <code>AppInstanceGroupIdList</code> and the number of delivery groups specified by <code>AppInstanceGroupIdList</code> must be 1.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ai-1rznfnrvsa99d****</p>
@@ -57,7 +53,7 @@ public class GetConnectionTicketRequest extends TeaModel {
     public String appInstancePersistentId;
 
     /**
-     * <p>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/zh/wuying-appstreaming/user-guide/create-an-application?#how-to-get-installation-and-startup-para">Obtain parameters configured to install and start an application</a>.</p>
+     * <p>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">Obtain parameters configured to install and start an application</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>/q /n</p>

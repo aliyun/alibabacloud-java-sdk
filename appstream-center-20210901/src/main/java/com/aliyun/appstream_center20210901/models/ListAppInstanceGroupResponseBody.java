@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListAppInstanceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The delivery groups.</p>
+     */
     @NameInMap("AppInstanceGroupModels")
     public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModels> appInstanceGroupModels;
 
@@ -82,8 +85,6 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps extends TeaModel {
         /**
-         * <p>应用图标。</p>
-         * 
          * <strong>example:</strong>
          * <p><a href="https://app-center-icon-****.png">https://app-center-icon-****.png</a></p>
          */
@@ -101,20 +102,12 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>应用版本。</p>
-         * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
-        /**
-         * <p>应用版本名称。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>初始版本</p>
-         */
         @NameInMap("AppVersionName")
         public String appVersionName;
 
@@ -271,6 +264,12 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <p>The maximum number of idle sessions. After you specify a value for this parameter, auto scaling is triggered only if the number of idle sessions in the delivery group is smaller than the specified value and the session usage exceeds the value specified for <code>ScalingUsageThreshold</code>. Otherwise, the system determines that the idle sessions in the delivery group are sufficient and does not perform auto scaling.`` You can use this parameter to flexibly manage auto scaling and reduce costs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxIdleAppInstanceAmount")
         public Integer maxIdleAppInstanceAmount;
 
@@ -630,8 +629,6 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String appInstanceType;
 
         /**
-         * <p>策略ID。</p>
-         * 
          * <strong>example:</strong>
          * <p>pg-g3k5wa2ms2****</p>
          */
@@ -648,8 +645,6 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
 
         /**
-         * <p>售卖模式。</p>
-         * 
          * <strong>example:</strong>
          * <p>Node</p>
          */
@@ -691,6 +686,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("MinAmount")
         public Integer minAmount;
 
+        /**
+         * <p>The resource groups.</p>
+         */
         @NameInMap("NodePool")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePool> nodePool;
 
