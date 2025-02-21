@@ -52,6 +52,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ListApiTemplatesResponseBody setApiTemplates(java.util.List<ApiTemplate> apiTemplates) {
         this.apiTemplates = apiTemplates;
         return this;

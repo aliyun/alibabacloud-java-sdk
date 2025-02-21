@@ -50,6 +50,7 @@ public class ComponentInstanceSelector extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ComponentInstanceSelector setActionScope(String actionScope) {
         this.actionScope = actionScope;
         return this;

@@ -51,7 +51,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public Integer maxCapacity;
 
         /**
-         * <p>The maximum number of nodes that you can configure based on your business requirements.</p>
+         * <p>The maximum number of pay-as-you-go nodes in the node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MaxOnDemandCapacity")
         public Integer maxOnDemandCapacity;
@@ -234,6 +237,15 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>The name of the node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-etltask</p>
+         */
+        @NameInMap("NodeGroupName")
+        public String nodeGroupName;
+
+        /**
          * <p>The ID of the auto scaling policy.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +261,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public String scalingPolicyType;
 
         /**
-         * <p>The list of auto scaling rules.</p>
+         * <p>The auto scaling rules.</p>
          */
         @NameInMap("ScalingRules")
         public java.util.List<ScalingRules> scalingRules;
@@ -281,6 +293,14 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         }
         public String getNodeGroupId() {
             return this.nodeGroupId;
+        }
+
+        public ScalingPolicies setNodeGroupName(String nodeGroupName) {
+            this.nodeGroupName = nodeGroupName;
+            return this;
+        }
+        public String getNodeGroupName() {
+            return this.nodeGroupName;
         }
 
         public ScalingPolicies setScalingPolicyId(String scalingPolicyId) {
@@ -317,7 +337,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public java.util.List<ApplicationConfig> applicationConfigs;
 
         /**
-         * <p>The services deployed in the cluster.</p>
+         * <p>The services.</p>
          */
         @NameInMap("Applications")
         public java.util.List<Application> applications;
@@ -382,6 +402,17 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>Indicates whether release protection is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true: Release protection is enabled for the cluster.</li>
+         * <li>false: Release protection is disabled for the cluster.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 

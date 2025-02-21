@@ -1,3 +1,16 @@
+2025-02-21 Version: 2.3.0
+- Support API CreateUsers.
+- Support API DeleteUsers.
+- Support API ListUsers.
+- Support API UpdateUserAttribute.
+- Update API CreateScript: add param TimeoutSecs.
+- Update API GetClusterCloneMeta: update response param.
+- Update API ListClusters: update param RegionId.
+- Update API ListScripts: add param ScriptId.
+- Update API ListScripts: add param ScriptName.
+- Update API ListScripts: add param Statuses.
+
+
 2024-12-23 Version: 2.2.0
 - Support API UpdateClusterAttribute.
 

@@ -68,6 +68,7 @@ public class NodeSelector extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public NodeSelector setNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
         return this;
@@ -84,6 +85,7 @@ public class NodeSelector extends TeaModel {
         return this.nodeGroupIds;
     }
 
+    @Deprecated
     public NodeSelector setNodeGroupName(String nodeGroupName) {
         this.nodeGroupName = nodeGroupName;
         return this;

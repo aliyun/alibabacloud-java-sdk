@@ -43,6 +43,18 @@ public class ListScriptsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The script ID. Only common scripts are supported.</p>
+     */
+    @NameInMap("ScriptId")
+    public String scriptId;
+
+    /**
+     * <p>The name of the script. Only common scripts are supported. Fuzzy search is supported.</p>
+     */
+    @NameInMap("ScriptName")
+    public String scriptName;
+
+    /**
      * <p>Type of cluster script. Possible values:</p>
      * <ul>
      * <li>BOOTSTRAP: Bootstrap script.</li>
@@ -55,6 +67,12 @@ public class ListScriptsRequest extends TeaModel {
      */
     @NameInMap("ScriptType")
     public String scriptType;
+
+    /**
+     * <p>The status of the script. Only common scripts are supported.</p>
+     */
+    @NameInMap("Statuses")
+    public java.util.List<String> statuses;
 
     public static ListScriptsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListScriptsRequest self = new ListScriptsRequest();
@@ -93,12 +111,36 @@ public class ListScriptsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListScriptsRequest setScriptId(String scriptId) {
+        this.scriptId = scriptId;
+        return this;
+    }
+    public String getScriptId() {
+        return this.scriptId;
+    }
+
+    public ListScriptsRequest setScriptName(String scriptName) {
+        this.scriptName = scriptName;
+        return this;
+    }
+    public String getScriptName() {
+        return this.scriptName;
+    }
+
     public ListScriptsRequest setScriptType(String scriptType) {
         this.scriptType = scriptType;
         return this;
     }
     public String getScriptType() {
         return this.scriptType;
+    }
+
+    public ListScriptsRequest setStatuses(java.util.List<String> statuses) {
+        this.statuses = statuses;
+        return this;
+    }
+    public java.util.List<String> getStatuses() {
+        return this.statuses;
     }
 
 }
