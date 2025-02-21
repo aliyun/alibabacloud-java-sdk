@@ -130,6 +130,7 @@ public class CreateDedicatedBlockStorageClusterRequest extends TeaModel {
         return this.capacity;
     }
 
+    @Deprecated
     public CreateDedicatedBlockStorageClusterRequest setDbscId(String dbscId) {
         this.dbscId = dbscId;
         return this;
