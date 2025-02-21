@@ -1172,6 +1172,9 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         @NameInMap("PaneId")
         public Integer paneId;
 
+        @NameInMap("ReservePaneForOfflineUser")
+        public Boolean reservePaneForOfflineUser;
+
         /**
          * <strong>example:</strong>
          * <p>22</p>
@@ -1188,6 +1191,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> texts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cameraFirst</p>
+         */
+        @NameInMap("VideoOrder")
+        public String videoOrder;
 
         @NameInMap("Whiteboard")
         public UpdateStreamingOutShrinkRequestPanesWhiteboard whiteboard;
@@ -1221,6 +1231,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
             return this.paneId;
         }
 
+        public UpdateStreamingOutShrinkRequestPanes setReservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+            this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+            return this;
+        }
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
         public UpdateStreamingOutShrinkRequestPanes setSource(String source) {
             this.source = source;
             return this;
@@ -1243,6 +1261,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         }
         public java.util.List<UpdateStreamingOutShrinkRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanes setVideoOrder(String videoOrder) {
+            this.videoOrder = videoOrder;
+            return this;
+        }
+        public String getVideoOrder() {
+            return this.videoOrder;
         }
 
         public UpdateStreamingOutShrinkRequestPanes setWhiteboard(UpdateStreamingOutShrinkRequestPanesWhiteboard whiteboard) {

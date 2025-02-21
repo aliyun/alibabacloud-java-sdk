@@ -1210,6 +1210,9 @@ public class UpdateCloudRecordRequest extends TeaModel {
         @NameInMap("PaneId")
         public Integer paneId;
 
+        @NameInMap("ReservePaneForOfflineUser")
+        public Boolean reservePaneForOfflineUser;
+
         /**
          * <strong>example:</strong>
          * <p>22</p>
@@ -1226,6 +1229,13 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<UpdateCloudRecordRequestPanesTexts> texts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cameraFirst</p>
+         */
+        @NameInMap("VideoOrder")
+        public String videoOrder;
 
         @NameInMap("Whiteboard")
         public UpdateCloudRecordRequestPanesWhiteboard whiteboard;
@@ -1259,6 +1269,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
             return this.paneId;
         }
 
+        public UpdateCloudRecordRequestPanes setReservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+            this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+            return this;
+        }
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
         public UpdateCloudRecordRequestPanes setSource(String source) {
             this.source = source;
             return this;
@@ -1281,6 +1299,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
         }
         public java.util.List<UpdateCloudRecordRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public UpdateCloudRecordRequestPanes setVideoOrder(String videoOrder) {
+            this.videoOrder = videoOrder;
+            return this;
+        }
+        public String getVideoOrder() {
+            return this.videoOrder;
         }
 
         public UpdateCloudRecordRequestPanes setWhiteboard(UpdateCloudRecordRequestPanesWhiteboard whiteboard) {

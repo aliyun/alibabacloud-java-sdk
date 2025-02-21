@@ -47,6 +47,19 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("RegionColor")
     public StartStreamingOutShrinkRequestRegionColor regionColor;
 
+    @NameInMap("ReservePaneForNoCameraUser")
+    public Boolean reservePaneForNoCameraUser;
+
+    @NameInMap("StartWithoutChannel")
+    public Boolean startWithoutChannel;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("StartWithoutChannelWaitTime")
+    public Integer startWithoutChannelWaitTime;
+
     /**
      * <strong>example:</strong>
      * <p>123</p>
@@ -150,6 +163,30 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     }
     public StartStreamingOutShrinkRequestRegionColor getRegionColor() {
         return this.regionColor;
+    }
+
+    public StartStreamingOutShrinkRequest setReservePaneForNoCameraUser(Boolean reservePaneForNoCameraUser) {
+        this.reservePaneForNoCameraUser = reservePaneForNoCameraUser;
+        return this;
+    }
+    public Boolean getReservePaneForNoCameraUser() {
+        return this.reservePaneForNoCameraUser;
+    }
+
+    public StartStreamingOutShrinkRequest setStartWithoutChannel(Boolean startWithoutChannel) {
+        this.startWithoutChannel = startWithoutChannel;
+        return this;
+    }
+    public Boolean getStartWithoutChannel() {
+        return this.startWithoutChannel;
+    }
+
+    public StartStreamingOutShrinkRequest setStartWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
+        this.startWithoutChannelWaitTime = startWithoutChannelWaitTime;
+        return this;
+    }
+    public Integer getStartWithoutChannelWaitTime() {
+        return this.startWithoutChannelWaitTime;
     }
 
     public StartStreamingOutShrinkRequest setTaskId(String taskId) {
@@ -1215,6 +1252,9 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
         @NameInMap("PaneId")
         public String paneId;
 
+        @NameInMap("ReservePaneForOfflineUser")
+        public Boolean reservePaneForOfflineUser;
+
         /**
          * <strong>example:</strong>
          * <p>1811****</p>
@@ -1231,6 +1271,13 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
 
         @NameInMap("Texts")
         public java.util.List<StartStreamingOutShrinkRequestPanesTexts> texts;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cameraFirst</p>
+         */
+        @NameInMap("VideoOrder")
+        public String videoOrder;
 
         @NameInMap("Whiteboard")
         public StartStreamingOutShrinkRequestPanesWhiteboard whiteboard;
@@ -1264,6 +1311,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
             return this.paneId;
         }
 
+        public StartStreamingOutShrinkRequestPanes setReservePaneForOfflineUser(Boolean reservePaneForOfflineUser) {
+            this.reservePaneForOfflineUser = reservePaneForOfflineUser;
+            return this;
+        }
+        public Boolean getReservePaneForOfflineUser() {
+            return this.reservePaneForOfflineUser;
+        }
+
         public StartStreamingOutShrinkRequestPanes setSource(String source) {
             this.source = source;
             return this;
@@ -1286,6 +1341,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
         }
         public java.util.List<StartStreamingOutShrinkRequestPanesTexts> getTexts() {
             return this.texts;
+        }
+
+        public StartStreamingOutShrinkRequestPanes setVideoOrder(String videoOrder) {
+            this.videoOrder = videoOrder;
+            return this;
+        }
+        public String getVideoOrder() {
+            return this.videoOrder;
         }
 
         public StartStreamingOutShrinkRequestPanes setWhiteboard(StartStreamingOutShrinkRequestPanesWhiteboard whiteboard) {

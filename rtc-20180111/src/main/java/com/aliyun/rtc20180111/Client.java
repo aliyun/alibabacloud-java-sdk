@@ -5196,6 +5196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionColor", request.regionColor);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reservePaneForNoCameraUser)) {
+            query.put("ReservePaneForNoCameraUser", request.reservePaneForNoCameraUser);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.storageConfig)) {
             query.put("StorageConfig", request.storageConfig);
         }
@@ -5582,6 +5586,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionColor)) {
             query.put("RegionColor", request.regionColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reservePaneForNoCameraUser)) {
+            query.put("ReservePaneForNoCameraUser", request.reservePaneForNoCameraUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWithoutChannel)) {
+            query.put("StartWithoutChannel", request.startWithoutChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWithoutChannelWaitTime)) {
+            query.put("StartWithoutChannelWaitTime", request.startWithoutChannelWaitTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
