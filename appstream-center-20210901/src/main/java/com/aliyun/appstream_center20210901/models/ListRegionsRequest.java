@@ -7,6 +7,16 @@ public class ListRegionsRequest extends TeaModel {
     @NameInMap("BizSource")
     public String bizSource;
 
+    /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 

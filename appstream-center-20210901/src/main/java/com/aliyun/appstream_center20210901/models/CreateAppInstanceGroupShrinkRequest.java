@@ -16,6 +16,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    @NameInMap("AppPackageType")
+    public String appPackageType;
+
     @NameInMap("AppPolicyId")
     public String appPolicyId;
 
@@ -59,6 +62,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
      */
     @NameInMap("ChargeType")
     public String chargeType;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("Network")
     public String networkShrink;
@@ -122,6 +128,9 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("StoragePolicy")
     public String storagePolicyShrink;
 
+    @NameInMap("SubPayType")
+    public String subPayType;
+
     @NameInMap("UserDefinePolicy")
     public String userDefinePolicyShrink;
 
@@ -153,6 +162,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getAppInstanceGroupName() {
         return this.appInstanceGroupName;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setAppPackageType(String appPackageType) {
+        this.appPackageType = appPackageType;
+        return this;
+    }
+    public String getAppPackageType() {
+        return this.appPackageType;
     }
 
     public CreateAppInstanceGroupShrinkRequest setAppPolicyId(String appPolicyId) {
@@ -201,6 +218,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public CreateAppInstanceGroupShrinkRequest setNetworkShrink(String networkShrink) {
@@ -289,6 +314,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getStoragePolicyShrink() {
         return this.storagePolicyShrink;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setSubPayType(String subPayType) {
+        this.subPayType = subPayType;
+        return this;
+    }
+    public String getSubPayType() {
+        return this.subPayType;
     }
 
     public CreateAppInstanceGroupShrinkRequest setUserDefinePolicyShrink(String userDefinePolicyShrink) {

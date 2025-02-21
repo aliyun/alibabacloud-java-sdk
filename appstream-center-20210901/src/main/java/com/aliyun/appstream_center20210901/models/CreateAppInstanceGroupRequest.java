@@ -16,6 +16,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
+    @NameInMap("AppPackageType")
+    public String appPackageType;
+
     @NameInMap("AppPolicyId")
     public String appPolicyId;
 
@@ -59,6 +62,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
      */
     @NameInMap("ChargeType")
     public String chargeType;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
 
     @NameInMap("Network")
     public CreateAppInstanceGroupRequestNetwork network;
@@ -122,6 +128,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     @NameInMap("StoragePolicy")
     public CreateAppInstanceGroupRequestStoragePolicy storagePolicy;
 
+    @NameInMap("SubPayType")
+    public String subPayType;
+
     @NameInMap("UserDefinePolicy")
     public CreateAppInstanceGroupRequestUserDefinePolicy userDefinePolicy;
 
@@ -153,6 +162,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public String getAppInstanceGroupName() {
         return this.appInstanceGroupName;
+    }
+
+    public CreateAppInstanceGroupRequest setAppPackageType(String appPackageType) {
+        this.appPackageType = appPackageType;
+        return this;
+    }
+    public String getAppPackageType() {
+        return this.appPackageType;
     }
 
     public CreateAppInstanceGroupRequest setAppPolicyId(String appPolicyId) {
@@ -201,6 +218,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateAppInstanceGroupRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     public CreateAppInstanceGroupRequest setNetwork(CreateAppInstanceGroupRequestNetwork network) {
@@ -289,6 +314,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public CreateAppInstanceGroupRequestStoragePolicy getStoragePolicy() {
         return this.storagePolicy;
+    }
+
+    public CreateAppInstanceGroupRequest setSubPayType(String subPayType) {
+        this.subPayType = subPayType;
+        return this;
+    }
+    public String getSubPayType() {
+        return this.subPayType;
     }
 
     public CreateAppInstanceGroupRequest setUserDefinePolicy(CreateAppInstanceGroupRequestUserDefinePolicy userDefinePolicy) {
@@ -766,6 +799,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("DebugMode")
         public String debugMode;
 
+        @NameInMap("PerSessionPerApp")
+        public Boolean perSessionPerApp;
+
         /**
          * <p>会话类型。</p>
          * 
@@ -786,6 +822,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         }
         public String getDebugMode() {
             return this.debugMode;
+        }
+
+        public CreateAppInstanceGroupRequestRuntimePolicy setPerSessionPerApp(Boolean perSessionPerApp) {
+            this.perSessionPerApp = perSessionPerApp;
+            return this;
+        }
+        public Boolean getPerSessionPerApp() {
+            return this.perSessionPerApp;
         }
 
         public CreateAppInstanceGroupRequestRuntimePolicy setSessionType(String sessionType) {

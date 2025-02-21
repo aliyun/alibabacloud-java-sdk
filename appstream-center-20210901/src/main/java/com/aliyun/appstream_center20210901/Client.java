@@ -526,6 +526,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppInstanceGroupName", request.appInstanceGroupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appPackageType)) {
+            body.put("AppPackageType", request.appPackageType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appPolicyId)) {
             body.put("AppPolicyId", request.appPolicyId);
         }
@@ -548,6 +552,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
             body.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("ClusterId", request.clusterId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkShrink)) {
@@ -592,6 +600,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storagePolicyShrink)) {
             body.put("StoragePolicy", request.storagePolicyShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subPayType)) {
+            body.put("SubPayType", request.subPayType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userInfoShrink)) {
@@ -1389,7 +1401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表展示云应用交付组</p>
+     * <p>Queries the details of multiple delivery groups that meet the query conditions.</p>
      * 
      * @param request ListAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1468,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表展示云应用交付组</p>
+     * <p>Queries the details of multiple delivery groups that meet the query conditions.</p>
      * 
      * @param request ListAppInstanceGroupRequest
      * @return ListAppInstanceGroupResponse
@@ -1507,6 +1519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userIdList)) {
+            query.put("UserIdList", request.userIdList);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1789,8 +1805,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> All supported regions instead of available regions are returned by this operation. For more information, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>云应用支持的地域列表</p>
+     * <p>Queries the regions that are supported by App Streaming.</p>
      * 
      * @param request ListRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1830,8 +1851,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> All supported regions instead of available regions are returned by this operation. For more information, see <a href="https://help.aliyun.com/document_detail/426036.html">Supported regions</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>云应用支持的地域列表</p>
+     * <p>Queries the regions that are supported by App Streaming.</p>
      * 
      * @param request ListRegionsRequest
      * @return ListRegionsResponse
