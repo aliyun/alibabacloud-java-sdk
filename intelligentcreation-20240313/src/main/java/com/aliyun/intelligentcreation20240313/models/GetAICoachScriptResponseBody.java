@@ -1,0 +1,934 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.intelligentcreation20240313.models;
+
+import com.aliyun.tea.*;
+
+public class GetAICoachScriptResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>point</p>
+     */
+    @NameInMap("assessmentScope")
+    public String assessmentScope;
+
+    @NameInMap("completeStrategy")
+    public GetAICoachScriptResponseBodyCompleteStrategy completeStrategy;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://demo.com">https://demo.com</a></p>
+     */
+    @NameInMap("coverUrl")
+    public String coverUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
+    @NameInMap("dialogueInputTextLimit")
+    public Integer dialogueInputTextLimit;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("dialogueTextFlag")
+    public Boolean dialogueTextFlag;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("dialogueTipFlag")
+    public Boolean dialogueTipFlag;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("dialogueVoiceLimit")
+    public Integer dialogueVoiceLimit;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("evaluateReportFlag")
+    public Boolean evaluateReportFlag;
+
+    @NameInMap("expressiveness")
+    public java.util.Map<String, Integer> expressiveness;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2025-02-24 12:00:00</p>
+     */
+    @NameInMap("gmtCreate")
+    public String gmtCreate;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2025-02-24 12:00:00</p>
+     */
+    @NameInMap("gmtModified")
+    public String gmtModified;
+
+    /**
+     * <strong>example:</strong>
+     * <p>coach</p>
+     */
+    @NameInMap("initiator")
+    public String initiator;
+
+    @NameInMap("interactionInputTypes")
+    public java.util.List<String> interactionInputTypes;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("interactionType")
+    public Integer interactionType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
+    @NameInMap("introduce")
+    public String introduce;
+
+    /**
+     * <strong>example:</strong>
+     * <p>demo</p>
+     */
+    @NameInMap("name")
+    public String name;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("orderAckFlag")
+    public Boolean orderAckFlag;
+
+    @NameInMap("pointDeductionRuleList")
+    public java.util.List<GetAICoachScriptResponseBodyPointDeductionRuleList> pointDeductionRuleList;
+
+    @NameInMap("points")
+    public java.util.List<GetAICoachScriptResponseBodyPoints> points;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("requestId")
+    public String requestId;
+
+    @NameInMap("sampleDialogueList")
+    public java.util.List<GetAICoachScriptResponseBodySampleDialogueList> sampleDialogueList;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("scriptRecordId")
+    public String scriptRecordId;
+
+    @NameInMap("sparringTipContent")
+    public String sparringTipContent;
+
+    @NameInMap("sparringTipTitle")
+    public String sparringTipTitle;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("status")
+    public Integer status;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("studentThinkTimeFlag")
+    public Boolean studentThinkTimeFlag;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("studentThinkTimeLimit")
+    public Integer studentThinkTimeLimit;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("type")
+    public Integer type;
+
+    @NameInMap("weights")
+    public GetAICoachScriptResponseBodyWeights weights;
+
+    public static GetAICoachScriptResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetAICoachScriptResponseBody self = new GetAICoachScriptResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GetAICoachScriptResponseBody setAssessmentScope(String assessmentScope) {
+        this.assessmentScope = assessmentScope;
+        return this;
+    }
+    public String getAssessmentScope() {
+        return this.assessmentScope;
+    }
+
+    public GetAICoachScriptResponseBody setCompleteStrategy(GetAICoachScriptResponseBodyCompleteStrategy completeStrategy) {
+        this.completeStrategy = completeStrategy;
+        return this;
+    }
+    public GetAICoachScriptResponseBodyCompleteStrategy getCompleteStrategy() {
+        return this.completeStrategy;
+    }
+
+    public GetAICoachScriptResponseBody setCoverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
+        return this;
+    }
+    public String getCoverUrl() {
+        return this.coverUrl;
+    }
+
+    public GetAICoachScriptResponseBody setDialogueInputTextLimit(Integer dialogueInputTextLimit) {
+        this.dialogueInputTextLimit = dialogueInputTextLimit;
+        return this;
+    }
+    public Integer getDialogueInputTextLimit() {
+        return this.dialogueInputTextLimit;
+    }
+
+    public GetAICoachScriptResponseBody setDialogueTextFlag(Boolean dialogueTextFlag) {
+        this.dialogueTextFlag = dialogueTextFlag;
+        return this;
+    }
+    public Boolean getDialogueTextFlag() {
+        return this.dialogueTextFlag;
+    }
+
+    public GetAICoachScriptResponseBody setDialogueTipFlag(Boolean dialogueTipFlag) {
+        this.dialogueTipFlag = dialogueTipFlag;
+        return this;
+    }
+    public Boolean getDialogueTipFlag() {
+        return this.dialogueTipFlag;
+    }
+
+    public GetAICoachScriptResponseBody setDialogueVoiceLimit(Integer dialogueVoiceLimit) {
+        this.dialogueVoiceLimit = dialogueVoiceLimit;
+        return this;
+    }
+    public Integer getDialogueVoiceLimit() {
+        return this.dialogueVoiceLimit;
+    }
+
+    public GetAICoachScriptResponseBody setEvaluateReportFlag(Boolean evaluateReportFlag) {
+        this.evaluateReportFlag = evaluateReportFlag;
+        return this;
+    }
+    public Boolean getEvaluateReportFlag() {
+        return this.evaluateReportFlag;
+    }
+
+    public GetAICoachScriptResponseBody setExpressiveness(java.util.Map<String, Integer> expressiveness) {
+        this.expressiveness = expressiveness;
+        return this;
+    }
+    public java.util.Map<String, Integer> getExpressiveness() {
+        return this.expressiveness;
+    }
+
+    public GetAICoachScriptResponseBody setGmtCreate(String gmtCreate) {
+        this.gmtCreate = gmtCreate;
+        return this;
+    }
+    public String getGmtCreate() {
+        return this.gmtCreate;
+    }
+
+    public GetAICoachScriptResponseBody setGmtModified(String gmtModified) {
+        this.gmtModified = gmtModified;
+        return this;
+    }
+    public String getGmtModified() {
+        return this.gmtModified;
+    }
+
+    public GetAICoachScriptResponseBody setInitiator(String initiator) {
+        this.initiator = initiator;
+        return this;
+    }
+    public String getInitiator() {
+        return this.initiator;
+    }
+
+    public GetAICoachScriptResponseBody setInteractionInputTypes(java.util.List<String> interactionInputTypes) {
+        this.interactionInputTypes = interactionInputTypes;
+        return this;
+    }
+    public java.util.List<String> getInteractionInputTypes() {
+        return this.interactionInputTypes;
+    }
+
+    public GetAICoachScriptResponseBody setInteractionType(Integer interactionType) {
+        this.interactionType = interactionType;
+        return this;
+    }
+    public Integer getInteractionType() {
+        return this.interactionType;
+    }
+
+    public GetAICoachScriptResponseBody setIntroduce(String introduce) {
+        this.introduce = introduce;
+        return this;
+    }
+    public String getIntroduce() {
+        return this.introduce;
+    }
+
+    public GetAICoachScriptResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public GetAICoachScriptResponseBody setOrderAckFlag(Boolean orderAckFlag) {
+        this.orderAckFlag = orderAckFlag;
+        return this;
+    }
+    public Boolean getOrderAckFlag() {
+        return this.orderAckFlag;
+    }
+
+    public GetAICoachScriptResponseBody setPointDeductionRuleList(java.util.List<GetAICoachScriptResponseBodyPointDeductionRuleList> pointDeductionRuleList) {
+        this.pointDeductionRuleList = pointDeductionRuleList;
+        return this;
+    }
+    public java.util.List<GetAICoachScriptResponseBodyPointDeductionRuleList> getPointDeductionRuleList() {
+        return this.pointDeductionRuleList;
+    }
+
+    public GetAICoachScriptResponseBody setPoints(java.util.List<GetAICoachScriptResponseBodyPoints> points) {
+        this.points = points;
+        return this;
+    }
+    public java.util.List<GetAICoachScriptResponseBodyPoints> getPoints() {
+        return this.points;
+    }
+
+    public GetAICoachScriptResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetAICoachScriptResponseBody setSampleDialogueList(java.util.List<GetAICoachScriptResponseBodySampleDialogueList> sampleDialogueList) {
+        this.sampleDialogueList = sampleDialogueList;
+        return this;
+    }
+    public java.util.List<GetAICoachScriptResponseBodySampleDialogueList> getSampleDialogueList() {
+        return this.sampleDialogueList;
+    }
+
+    public GetAICoachScriptResponseBody setScriptRecordId(String scriptRecordId) {
+        this.scriptRecordId = scriptRecordId;
+        return this;
+    }
+    public String getScriptRecordId() {
+        return this.scriptRecordId;
+    }
+
+    public GetAICoachScriptResponseBody setSparringTipContent(String sparringTipContent) {
+        this.sparringTipContent = sparringTipContent;
+        return this;
+    }
+    public String getSparringTipContent() {
+        return this.sparringTipContent;
+    }
+
+    public GetAICoachScriptResponseBody setSparringTipTitle(String sparringTipTitle) {
+        this.sparringTipTitle = sparringTipTitle;
+        return this;
+    }
+    public String getSparringTipTitle() {
+        return this.sparringTipTitle;
+    }
+
+    public GetAICoachScriptResponseBody setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    public GetAICoachScriptResponseBody setStudentThinkTimeFlag(Boolean studentThinkTimeFlag) {
+        this.studentThinkTimeFlag = studentThinkTimeFlag;
+        return this;
+    }
+    public Boolean getStudentThinkTimeFlag() {
+        return this.studentThinkTimeFlag;
+    }
+
+    public GetAICoachScriptResponseBody setStudentThinkTimeLimit(Integer studentThinkTimeLimit) {
+        this.studentThinkTimeLimit = studentThinkTimeLimit;
+        return this;
+    }
+    public Integer getStudentThinkTimeLimit() {
+        return this.studentThinkTimeLimit;
+    }
+
+    public GetAICoachScriptResponseBody setType(Integer type) {
+        this.type = type;
+        return this;
+    }
+    public Integer getType() {
+        return this.type;
+    }
+
+    public GetAICoachScriptResponseBody setWeights(GetAICoachScriptResponseBodyWeights weights) {
+        this.weights = weights;
+        return this;
+    }
+    public GetAICoachScriptResponseBodyWeights getWeights() {
+        return this.weights;
+    }
+
+    public static class GetAICoachScriptResponseBodyCompleteStrategy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
+        @NameInMap("abnormalQuitSessionExpired")
+        public Integer abnormalQuitSessionExpired;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("abnormalQuitSessionExpiredFlag")
+        public Boolean abnormalQuitSessionExpiredFlag;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("clickCompleteAutoEnd")
+        public Boolean clickCompleteAutoEnd;
+
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
+        @NameInMap("duration")
+        public Integer duration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("durationFlag")
+        public Boolean durationFlag;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("fullCoverageAutoEnd")
+        public Boolean fullCoverageAutoEnd;
+
+        public static GetAICoachScriptResponseBodyCompleteStrategy build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCompleteStrategy self = new GetAICoachScriptResponseBodyCompleteStrategy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCompleteStrategy setAbnormalQuitSessionExpired(Integer abnormalQuitSessionExpired) {
+            this.abnormalQuitSessionExpired = abnormalQuitSessionExpired;
+            return this;
+        }
+        public Integer getAbnormalQuitSessionExpired() {
+            return this.abnormalQuitSessionExpired;
+        }
+
+        public GetAICoachScriptResponseBodyCompleteStrategy setAbnormalQuitSessionExpiredFlag(Boolean abnormalQuitSessionExpiredFlag) {
+            this.abnormalQuitSessionExpiredFlag = abnormalQuitSessionExpiredFlag;
+            return this;
+        }
+        public Boolean getAbnormalQuitSessionExpiredFlag() {
+            return this.abnormalQuitSessionExpiredFlag;
+        }
+
+        public GetAICoachScriptResponseBodyCompleteStrategy setClickCompleteAutoEnd(Boolean clickCompleteAutoEnd) {
+            this.clickCompleteAutoEnd = clickCompleteAutoEnd;
+            return this;
+        }
+        public Boolean getClickCompleteAutoEnd() {
+            return this.clickCompleteAutoEnd;
+        }
+
+        public GetAICoachScriptResponseBodyCompleteStrategy setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public GetAICoachScriptResponseBodyCompleteStrategy setDurationFlag(Boolean durationFlag) {
+            this.durationFlag = durationFlag;
+            return this;
+        }
+        public Boolean getDurationFlag() {
+            return this.durationFlag;
+        }
+
+        public GetAICoachScriptResponseBodyCompleteStrategy setFullCoverageAutoEnd(Boolean fullCoverageAutoEnd) {
+            this.fullCoverageAutoEnd = fullCoverageAutoEnd;
+            return this;
+        }
+        public Boolean getFullCoverageAutoEnd() {
+            return this.fullCoverageAutoEnd;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyPointDeductionRuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        @NameInMap("punishmentTypes")
+        public java.util.List<String> punishmentTypes;
+
+        @NameInMap("ruleValue")
+        public String ruleValue;
+
+        /**
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static GetAICoachScriptResponseBodyPointDeductionRuleList build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyPointDeductionRuleList self = new GetAICoachScriptResponseBodyPointDeductionRuleList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPointDeductionRuleList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetAICoachScriptResponseBodyPointDeductionRuleList setPunishmentTypes(java.util.List<String> punishmentTypes) {
+            this.punishmentTypes = punishmentTypes;
+            return this;
+        }
+        public java.util.List<String> getPunishmentTypes() {
+            return this.punishmentTypes;
+        }
+
+        public GetAICoachScriptResponseBodyPointDeductionRuleList setRuleValue(String ruleValue) {
+            this.ruleValue = ruleValue;
+            return this;
+        }
+        public String getRuleValue() {
+            return this.ruleValue;
+        }
+
+        public GetAICoachScriptResponseBodyPointDeductionRuleList setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyPointsAnswerListParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static GetAICoachScriptResponseBodyPointsAnswerListParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyPointsAnswerListParameters self = new GetAICoachScriptResponseBodyPointsAnswerListParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListParameters setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyPointsAnswerList extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("parameters")
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListParameters> parameters;
+
+        /**
+         * <strong>example:</strong>
+         * <p>normalKnowledge</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static GetAICoachScriptResponseBodyPointsAnswerList build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyPointsAnswerList self = new GetAICoachScriptResponseBodyPointsAnswerList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setParameters(java.util.List<GetAICoachScriptResponseBodyPointsAnswerListParameters> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListParameters> getParameters() {
+            return this.parameters;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyPoints extends TeaModel {
+        @NameInMap("answerList")
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerList> answerList;
+
+        @NameInMap("knowledgeList")
+        public java.util.List<String> knowledgeList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("questionDescription")
+        public String questionDescription;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("sortNo")
+        public Integer sortNo;
+
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static GetAICoachScriptResponseBodyPoints build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyPoints self = new GetAICoachScriptResponseBodyPoints();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPoints setAnswerList(java.util.List<GetAICoachScriptResponseBodyPointsAnswerList> answerList) {
+            this.answerList = answerList;
+            return this;
+        }
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerList> getAnswerList() {
+            return this.answerList;
+        }
+
+        public GetAICoachScriptResponseBodyPoints setKnowledgeList(java.util.List<String> knowledgeList) {
+            this.knowledgeList = knowledgeList;
+            return this;
+        }
+        public java.util.List<String> getKnowledgeList() {
+            return this.knowledgeList;
+        }
+
+        public GetAICoachScriptResponseBodyPoints setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetAICoachScriptResponseBodyPoints setQuestionDescription(String questionDescription) {
+            this.questionDescription = questionDescription;
+            return this;
+        }
+        public String getQuestionDescription() {
+            return this.questionDescription;
+        }
+
+        public GetAICoachScriptResponseBodyPoints setSortNo(Integer sortNo) {
+            this.sortNo = sortNo;
+            return this;
+        }
+        public Integer getSortNo() {
+            return this.sortNo;
+        }
+
+        public GetAICoachScriptResponseBodyPoints setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodySampleDialogueList extends TeaModel {
+        @NameInMap("message")
+        public String message;
+
+        /**
+         * <strong>example:</strong>
+         * <p>coach</p>
+         */
+        @NameInMap("role")
+        public String role;
+
+        public static GetAICoachScriptResponseBodySampleDialogueList build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodySampleDialogueList self = new GetAICoachScriptResponseBodySampleDialogueList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodySampleDialogueList setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
+        public GetAICoachScriptResponseBodySampleDialogueList setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyWeights extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("abilityEvaluation")
+        public Integer abilityEvaluation;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("abilityEvaluationEnabled")
+        public Boolean abilityEvaluationEnabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("assessmentPoint")
+        public Integer assessmentPoint;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("expressiveness")
+        public Integer expressiveness;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("expressivenessEnabled")
+        public Boolean expressivenessEnabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("pointDeductionRule")
+        public Integer pointDeductionRule;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("pointDeductionRuleEnabled")
+        public Boolean pointDeductionRuleEnabled;
+
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("standard")
+        public Integer standard;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("standardEnabled")
+        public Boolean standardEnabled;
+
+        public static GetAICoachScriptResponseBodyWeights build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyWeights self = new GetAICoachScriptResponseBodyWeights();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyWeights setAbilityEvaluation(Integer abilityEvaluation) {
+            this.abilityEvaluation = abilityEvaluation;
+            return this;
+        }
+        public Integer getAbilityEvaluation() {
+            return this.abilityEvaluation;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setAbilityEvaluationEnabled(Boolean abilityEvaluationEnabled) {
+            this.abilityEvaluationEnabled = abilityEvaluationEnabled;
+            return this;
+        }
+        public Boolean getAbilityEvaluationEnabled() {
+            return this.abilityEvaluationEnabled;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setAssessmentPoint(Integer assessmentPoint) {
+            this.assessmentPoint = assessmentPoint;
+            return this;
+        }
+        public Integer getAssessmentPoint() {
+            return this.assessmentPoint;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setExpressiveness(Integer expressiveness) {
+            this.expressiveness = expressiveness;
+            return this;
+        }
+        public Integer getExpressiveness() {
+            return this.expressiveness;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setExpressivenessEnabled(Boolean expressivenessEnabled) {
+            this.expressivenessEnabled = expressivenessEnabled;
+            return this;
+        }
+        public Boolean getExpressivenessEnabled() {
+            return this.expressivenessEnabled;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setPointDeductionRule(Integer pointDeductionRule) {
+            this.pointDeductionRule = pointDeductionRule;
+            return this;
+        }
+        public Integer getPointDeductionRule() {
+            return this.pointDeductionRule;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setPointDeductionRuleEnabled(Boolean pointDeductionRuleEnabled) {
+            this.pointDeductionRuleEnabled = pointDeductionRuleEnabled;
+            return this;
+        }
+        public Boolean getPointDeductionRuleEnabled() {
+            return this.pointDeductionRuleEnabled;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setStandard(Integer standard) {
+            this.standard = standard;
+            return this;
+        }
+        public Integer getStandard() {
+            return this.standard;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setStandardEnabled(Boolean standardEnabled) {
+            this.standardEnabled = standardEnabled;
+            return this;
+        }
+        public Boolean getStandardEnabled() {
+            return this.standardEnabled;
+        }
+
+    }
+
+}
