@@ -11,6 +11,9 @@ public class SendSdkMessageRequest extends TeaModel {
     @NameInMap("data")
     public String data;
 
+    @NameInMap("header")
+    public String header;
+
     /**
      * <strong>example:</strong>
      * <p>avatar</p>
@@ -43,6 +46,14 @@ public class SendSdkMessageRequest extends TeaModel {
     }
     public String getData() {
         return this.data;
+    }
+
+    public SendSdkMessageRequest setHeader(String header) {
+        this.header = header;
+        return this;
+    }
+    public String getHeader() {
+        return this.header;
     }
 
     public SendSdkMessageRequest setModuleName(String moduleName) {

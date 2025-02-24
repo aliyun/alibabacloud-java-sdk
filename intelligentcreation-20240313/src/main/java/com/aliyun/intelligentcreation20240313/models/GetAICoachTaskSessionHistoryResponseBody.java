@@ -21,6 +21,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     @NameInMap("endTime")
     public String endTime;
 
+    @NameInMap("pauseDuration")
+    public Long pauseDuration;
+
     /**
      * <strong>example:</strong>
      * <p>D5798660-1531-5D12-9C20-16FEE9D22351</p>
@@ -78,6 +81,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetAICoachTaskSessionHistoryResponseBody setPauseDuration(Long pauseDuration) {
+        this.pauseDuration = pauseDuration;
+        return this;
+    }
+    public Long getPauseDuration() {
+        return this.pauseDuration;
     }
 
     public GetAICoachTaskSessionHistoryResponseBody setRequestId(String requestId) {
