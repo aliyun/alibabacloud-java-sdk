@@ -52,6 +52,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Properties", request.propertiesShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resellerOwnerUid)) {
+            query.put("ResellerOwnerUid", request.resellerOwnerUid);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

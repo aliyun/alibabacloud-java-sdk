@@ -17,6 +17,9 @@ public class CreateMultiOrderRequest extends TeaModel {
     @NameInMap("Properties")
     public java.util.Map<String, String> properties;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     public static CreateMultiOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMultiOrderRequest self = new CreateMultiOrderRequest();
         return TeaModel.build(map, self);
@@ -44,6 +47,14 @@ public class CreateMultiOrderRequest extends TeaModel {
     }
     public java.util.Map<String, String> getProperties() {
         return this.properties;
+    }
+
+    public CreateMultiOrderRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public static class CreateMultiOrderRequestOrderItemsComponents extends TeaModel {

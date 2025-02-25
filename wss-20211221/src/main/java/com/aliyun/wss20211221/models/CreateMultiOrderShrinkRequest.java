@@ -17,6 +17,9 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
     @NameInMap("Properties")
     public String propertiesShrink;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     public static CreateMultiOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMultiOrderShrinkRequest self = new CreateMultiOrderShrinkRequest();
         return TeaModel.build(map, self);
@@ -44,6 +47,14 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
     }
     public String getPropertiesShrink() {
         return this.propertiesShrink;
+    }
+
+    public CreateMultiOrderShrinkRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public static class CreateMultiOrderShrinkRequestOrderItemsComponents extends TeaModel {
