@@ -28,10 +28,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>仅铂金版和专业版实例支持使用ActiveCaCertificate接口。</li>
-     * <li>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</li>
-     * <li>ActiveCaCertificate接口仅支持对已在云消息队列 MQTT 版服务端注册的CA证书进行操作，您可以通过<a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a>接口查询指定实例下已注册的CA证书。</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to reactivate only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -66,15 +66,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveCaCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveCaCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ActiveCaCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>仅铂金版和专业版实例支持使用ActiveCaCertificate接口。</li>
-     * <li>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</li>
-     * <li>ActiveCaCertificate接口仅支持对已在云消息队列 MQTT 版服务端注册的CA证书进行操作，您可以通过<a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a>接口查询指定实例下已注册的CA证书。</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to reactivate only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -90,9 +95,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -131,14 +136,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveDeviceCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveDeviceCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ActiveDeviceCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -185,7 +195,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomAuthConnectBlackResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomAuthConnectBlackResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddCustomAuthConnectBlackResponse());
+        }
+
     }
 
     /**
@@ -249,7 +264,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomAuthIdentityResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomAuthIdentityResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddCustomAuthIdentityResponse());
+        }
+
     }
 
     /**
@@ -266,7 +286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds permissions on topics. You must create a level-1 topic in the ApsaraMQ for MQTT console before you call this operation.</p>
+     * <p>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</p>
      * 
      * @param request AddCustomAuthPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -313,12 +333,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomAuthPermissionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomAuthPermissionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddCustomAuthPermissionResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Adds permissions on topics. You must create a level-1 topic in the ApsaraMQ for MQTT console before you call this operation.</p>
+     * <p>Grants permissions on topics. You must create a parent topic in the console before you call this API operation.</p>
      * 
      * @param request AddCustomAuthPermissionRequest
      * @return AddCustomAuthPermissionResponse
@@ -375,7 +400,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyTokenResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ApplyTokenResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ApplyTokenResponse());
+        }
+
     }
 
     /**
@@ -436,7 +466,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchQuerySessionByClientIdsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new BatchQuerySessionByClientIdsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new BatchQuerySessionByClientIdsResponse());
+        }
+
     }
 
     /**
@@ -494,7 +529,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CloseConnectionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CloseConnectionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CloseConnectionResponse());
+        }
+
     }
 
     /**
@@ -548,7 +588,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGroupIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGroupIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateGroupIdResponse());
+        }
+
     }
 
     /**
@@ -568,10 +613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
-     * <li>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
      * <li>If you delete a specific CA certificate from an ApsaraMQ for MQTT broker, all device certificates that are issued by the CA certificate and are registered with the ApsaraMQ for MQTT broker are automatically deleted.</li>
      * </ul>
      * 
@@ -607,15 +652,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCaCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCaCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCaCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
-     * <li>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to delete only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
      * <li>If you delete a specific CA certificate from an ApsaraMQ for MQTT broker, all device certificates that are issued by the CA certificate and are registered with the ApsaraMQ for MQTT broker are automatically deleted.</li>
      * </ul>
      * 
@@ -663,7 +713,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomAuthConnectBlackResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomAuthConnectBlackResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCustomAuthConnectBlackResponse());
+        }
+
     }
 
     /**
@@ -719,7 +774,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomAuthIdentityResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomAuthIdentityResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCustomAuthIdentityResponse());
+        }
+
     }
 
     /**
@@ -775,7 +835,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomAuthPermissionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCustomAuthPermissionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCustomAuthPermissionResponse());
+        }
+
     }
 
     /**
@@ -792,9 +857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -833,14 +898,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDeviceCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -890,7 +960,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGroupIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGroupIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteGroupIdResponse());
+        }
+
     }
 
     /**
@@ -909,10 +984,116 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DisasterDowngrade</p>
+     * 
+     * @param request DisasterDowngradeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisasterDowngradeResponse
+     */
+    public DisasterDowngradeResponse disasterDowngradeWithOptions(DisasterDowngradeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.downgradeInstanceId)) {
+            body.put("DowngradeInstanceId", request.downgradeInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisasterDowngrade"),
+            new TeaPair("version", "2020-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisasterDowngradeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisasterDowngradeResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DisasterDowngrade</p>
+     * 
+     * @param request DisasterDowngradeRequest
+     * @return DisasterDowngradeResponse
+     */
+    public DisasterDowngradeResponse disasterDowngrade(DisasterDowngradeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disasterDowngradeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DisasterRecovery</p>
+     * 
+     * @param request DisasterRecoveryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisasterRecoveryResponse
+     */
+    public DisasterRecoveryResponse disasterRecoveryWithOptions(DisasterRecoveryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recoveryInstanceId)) {
+            body.put("RecoveryInstanceId", request.recoveryInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisasterRecovery"),
+            new TeaPair("version", "2020-04-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisasterRecoveryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisasterRecoveryResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DisasterRecovery</p>
+     * 
+     * @param request DisasterRecoveryRequest
+     * @return DisasterRecoveryResponse
+     */
+    public DisasterRecoveryResponse disasterRecovery(DisasterRecoveryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disasterRecoveryWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>仅铂金版和专业版实例支持使用GetCaCertificate接口。</li>
-     * <li>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -939,14 +1120,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCaCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetCaCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetCaCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>仅铂金版和专业版实例支持使用GetCaCertificate接口。</li>
-     * <li>单用户请求频率限制为500次/秒。如有特殊需求，请联系云消息队列 MQTT 版技术支持，钉钉群号：35228338。</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -962,8 +1148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum edition instances support the use of the GetDeviceCertificate interface. - The request frequency limit per user is 500 requests/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -990,13 +1177,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDeviceCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum edition instances support the use of the GetDeviceCertificate interface. - The request frequency limit per user is 500 requests/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1049,7 +1242,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceCredentialResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceCredentialResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDeviceCredentialResponse());
+        }
+
     }
 
     /**
@@ -1072,9 +1270,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1101,14 +1299,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRegisterCodeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRegisterCodeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRegisterCodeResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
-     * <p>  This API operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1124,10 +1327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
-     * <li>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1162,15 +1365,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InactivateCaCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new InactivateCaCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new InactivateCaCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
-     * <li>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/436768.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation to deregister only CA certificates that are registered with ApsaraMQ for MQTT brokers. You can call the <a href="https://help.aliyun.com/document_detail/2604958.html">ListCaCertificate</a> operation to query CA certificates that are registered with an ApsaraMQ for MQTT instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1186,9 +1394,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1227,14 +1435,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InactivateDeviceCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new InactivateDeviceCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new InactivateDeviceCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
-     * <p>  This operation is supported only by ApsaraMQ for MQTT Enterprise Platinum Edition and Professional Edition instances.</p>
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group 35228338 to contact ApsaraMQ for MQTT technical support.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1250,8 +1463,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional instances support using the ListCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact the Micro Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1278,13 +1492,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCaCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListCaCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListCaCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional instances support using the ListCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact the Micro Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1300,8 +1520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional instances support using the ListDeviceCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1328,13 +1549,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDeviceCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional instances support using the ListDeviceCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1350,8 +1577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional edition instances support using the ListDeviceCertificateByCaSn interface. - The request frequency limit for a single user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1378,13 +1606,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceCertificateByCaSnResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceCertificateByCaSnResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDeviceCertificateByCaSnResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional edition instances support using the ListDeviceCertificateByCaSn interface. - The request frequency limit for a single user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1443,7 +1677,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceCredentialClientIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeviceCredentialClientIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDeviceCredentialClientIdResponse());
+        }
+
     }
 
     /**
@@ -1490,7 +1729,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGroupIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListGroupIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListGroupIdResponse());
+        }
+
     }
 
     /**
@@ -1549,7 +1793,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
+        }
+
     }
 
     /**
@@ -1589,7 +1838,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCustomAuthConnectBlackResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCustomAuthConnectBlackResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryCustomAuthConnectBlackResponse());
+        }
+
     }
 
     /**
@@ -1629,7 +1883,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCustomAuthIdentityResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCustomAuthIdentityResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryCustomAuthIdentityResponse());
+        }
+
     }
 
     /**
@@ -1669,7 +1928,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCustomAuthPermissionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCustomAuthPermissionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryCustomAuthPermissionResponse());
+        }
+
     }
 
     /**
@@ -1747,7 +2011,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceDeviceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceDeviceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryMqttTraceDeviceResponse());
+        }
+
     }
 
     /**
@@ -1831,7 +2100,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceMessageOfClientResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceMessageOfClientResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryMqttTraceMessageOfClientResponse());
+        }
+
     }
 
     /**
@@ -1903,7 +2177,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceMessagePublishResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceMessagePublishResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryMqttTraceMessagePublishResponse());
+        }
+
     }
 
     /**
@@ -1991,7 +2270,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceMessageSubscribeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMqttTraceMessageSubscribeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryMqttTraceMessageSubscribeResponse());
+        }
+
     }
 
     /**
@@ -2051,7 +2335,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySessionByClientIdResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySessionByClientIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QuerySessionByClientIdResponse());
+        }
+
     }
 
     /**
@@ -2111,7 +2400,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTokenResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryTokenResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryTokenResponse());
+        }
+
     }
 
     /**
@@ -2172,7 +2466,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshDeviceCredentialResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshDeviceCredentialResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RefreshDeviceCredentialResponse());
+        }
+
     }
 
     /**
@@ -2196,12 +2495,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</p>
+     * <p>RegisterCaCertificate</p>
      * 
      * @param request RegisterCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2240,17 +2540,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterCaCertificateResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterCaCertificateResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RegisterCaCertificateResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
+     * <p>  Only ApsaraMQ for MQTT Enterprise Platinum Edition instances support this operation.</p>
      * <ul>
-     * <li>Only Platinum and Professional instances support using the RegisterCaCertificate interface. - The request frequency limit per user is 500 times/second. For special requirements, please contact Cloud Message Queue MQTT version technical support, DingTalk group number: 35228338.</li>
+     * <li>You can call this operation up to 500 times per second per Alibaba Cloud account. If you want to increase the limit, join the DingTalk group (ID: 35228338) to contact ApsaraMQ for MQTT technical support.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Registers a certificate authority (CA) certificate with an ApsaraMQ for MQTT broker. ApsaraMQ for MQTT allows you to use X.509 certificates for authentication. When you connect an ApsaraMQ for MQTT client to an ApsaraMQ for MQTT broker, you can use the device certificate to implement authentication. CA certificates are used to issue device certificates to clients and validate the device certificates. Before you use a device certificate to authenticate an ApsaraMQ for MQTT client, you must register the CA certificate for which you apply with the ApsaraMQ for MQTT broker.</p>
+     * <p>RegisterCaCertificate</p>
      * 
      * @param request RegisterCaCertificateRequest
      * @return RegisterCaCertificateResponse
@@ -2299,7 +2605,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDeviceCredentialResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDeviceCredentialResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RegisterDeviceCredentialResponse());
+        }
+
     }
 
     /**
@@ -2359,7 +2670,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeTokenResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeTokenResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RevokeTokenResponse());
+        }
+
     }
 
     /**
@@ -2382,11 +2698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  The <strong>SendMessage</strong> operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</p>
+     * <p>  The <strong>SendMessage</strong> operation is called by an application on a cloud server. This operation is complementary to the operation that is called to send a message from an ApsaraMQ for MQTT client. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</p>
      * <ul>
-     * <li>Before you call the <strong>SendMessage</strong> operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the <a href="https://mqtt.console.aliyun.com">Instance Details</a> page that corresponds to the instance in the <strong>ApsaraMQ for MQTT console</strong>.</li>
-     * <li>Messages that are sent by calling the <strong>SendMessage</strong> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/174527.html">Export data from ApsaraMQ for MQTT to other Alibaba Cloud services</a>. You can call the <strong>SendMessage</strong> operation up to 1,000 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</li>
-     * <li>Each successful call to the <strong>SendMessage</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * <li>Messages that are sent by calling the <strong>SendMessage</strong> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT broker to forward messages to ApsaraMQ for RocketMQ, use <a href="https://help.aliyun.com/document_detail/174527.html">an SDK to send the messages</a>. The <strong>SendMessage</strong> operation supports up to 1,000 queries per second (QPS). For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</li>
+     * <li>Each successful call to the <strong>SendMessage</strong> operation is calculated as a message transaction per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2425,16 +2740,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SendMessageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SendMessageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SendMessageResponse());
+        }
+
     }
 
     /**
      * <b>description</b> :
-     * <p>  The <strong>SendMessage</strong> operation is called by applications on cloud servers. It is complementary to the operation that is called by ApsaraMQ for MQTT clients to send messages. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</p>
+     * <p>  The <strong>SendMessage</strong> operation is called by an application on a cloud server. This operation is complementary to the operation that is called to send a message from an ApsaraMQ for MQTT client. For information about the differences between the scenarios of sending messages from applications on cloud servers and the scenarios of sending messages from ApsaraMQ for MQTT clients, see <a href="https://help.aliyun.com/document_detail/179160.html">Developer guide</a>.</p>
      * <ul>
-     * <li>Before you call the <strong>SendMessage</strong> operation, make sure that the kernel version of your ApsaraMQ for MQTT instance is 3.3.0 or later. You can obtain the information about the kernel version on the <a href="https://mqtt.console.aliyun.com">Instance Details</a> page that corresponds to the instance in the <strong>ApsaraMQ for MQTT console</strong>.</li>
-     * <li>Messages that are sent by calling the <strong>SendMessage</strong> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT to forward messages to ApsaraMQ for RocketMQ, send the messages by using an SDK. For more information, see <a href="https://help.aliyun.com/document_detail/174527.html">Export data from ApsaraMQ for MQTT to other Alibaba Cloud services</a>. You can call the <strong>SendMessage</strong> operation up to 1,000 times per second. For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">Limits on QPS</a>.</li>
-     * <li>Each successful call to the <strong>SendMessage</strong> operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For information about the billing details, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
+     * <li>Messages that are sent by calling the <strong>SendMessage</strong> operation cannot be forwarded to ApsaraMQ for RocketMQ. If you want to use an ApsaraMQ for MQTT broker to forward messages to ApsaraMQ for RocketMQ, use <a href="https://help.aliyun.com/document_detail/174527.html">an SDK to send the messages</a>. The <strong>SendMessage</strong> operation supports up to 1,000 queries per second (QPS). For more information, see <a href="https://help.aliyun.com/document_detail/163047.html">QPS limits</a>.</li>
+     * <li>Each successful call to the <strong>SendMessage</strong> operation is calculated as a message transaction per second (TPS). This affects the billing of your instance. For more information, see <a href="https://help.aliyun.com/document_detail/52819.html">Billing rules</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2450,7 +2769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>配置多域名证书</p>
+     * <p>Configures a multi-domain certificate.</p>
      * 
      * @param request SetSniConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2485,12 +2804,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetSniConfigResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetSniConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetSniConfigResponse());
+        }
+
     }
 
     /**
      * <b>summary</b> : 
-     * <p>配置多域名证书</p>
+     * <p>Configures a multi-domain certificate.</p>
      * 
      * @param request SetSniConfigRequest
      * @return SetSniConfigResponse
@@ -2537,7 +2861,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
+        }
+
     }
 
     /**
@@ -2591,7 +2920,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UnRegisterDeviceCredentialResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UnRegisterDeviceCredentialResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UnRegisterDeviceCredentialResponse());
+        }
+
     }
 
     /**
@@ -2653,7 +2987,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
+        }
+
     }
 
     /**
@@ -2717,7 +3056,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomAuthIdentityResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomAuthIdentityResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateCustomAuthIdentityResponse());
+        }
+
     }
 
     /**
@@ -2781,7 +3125,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomAuthPermissionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCustomAuthPermissionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateCustomAuthPermissionResponse());
+        }
+
     }
 
     /**

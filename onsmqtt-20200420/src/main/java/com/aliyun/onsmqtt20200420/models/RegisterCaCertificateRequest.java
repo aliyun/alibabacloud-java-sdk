@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class RegisterCaCertificateRequest extends TeaModel {
     /**
-     * <p>Content of the CA certificate to be registered.</p>
+     * <p>The content of the CA certificate that you want to register with an ApsaraMQ for MQTT broker.</p>
      * <blockquote>
-     * <p>Note that \n in the example represents a new line.</p>
+     * <p>In the example, \n indicates a line feed.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class RegisterCaCertificateRequest extends TeaModel {
     public String caContent;
 
     /**
-     * <p>Name of the CA certificate to be registered</p>
+     * <p>The name of the CA certificate that you want to register with an ApsaraMQ for MQTT broker.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class RegisterCaCertificateRequest extends TeaModel {
     public String caName;
 
     /**
-     * <p>The instance ID of the Cloud Message Queue MQTT version. When registering a CA certificate, you need to specify an instance to bind with.</p>
+     * <p>The ID of the ApsaraMQ for MQTT instance to which you want to bind the CA certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,9 +38,9 @@ public class RegisterCaCertificateRequest extends TeaModel {
     public String mqttInstanceId;
 
     /**
-     * <p>Content of the verification certificate for the CA certificate to be registered. It is used together with the registration code of the CA certificate to verify that the user possesses the private key of this CA certificate. </p>
+     * <p>The content of the validation certificate issued by the CA certificate that you want to register with an ApsaraMQ for MQTT broker. The validation certificate must be used together with the registration code of the CA certificate to verify the private key of the CA certificate.</p>
      * <blockquote>
-     * <p> in the example represents a line break.</p>
+     * <p>In the example, \n indicates a line feed.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

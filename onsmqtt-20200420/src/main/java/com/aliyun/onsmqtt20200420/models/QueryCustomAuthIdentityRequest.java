@@ -15,11 +15,6 @@ public class QueryCustomAuthIdentityRequest extends TeaModel {
 
     /**
      * <p>The identity type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>USER</li>
-     * <li>CLIENT</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>USER</p>

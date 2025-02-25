@@ -8,11 +8,18 @@ public class SetSniConfigResponseBody extends TeaModel {
     public SetSniConfigResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4581CCF-62AF-44D9-B5B4-D1DQDC0E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -46,24 +53,52 @@ public class SetSniConfigResponseBody extends TeaModel {
     }
 
     public static class SetSniConfigResponseBodyAccessDeniedDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SetSniConfig</p>
+         */
         @NameInMap("AuthAction")
         public String authAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2063xxxxxxxx533</p>
+         */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1245xxxxx34343</p>
+         */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SubUser</p>
+         */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AQFma6gWZmuoFkMxQ0M3MUVCLTRFQzQtNTI1OS1BQ0Q0LTlBMTFGQkVDOTA3Qw==</p>
+         */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ImplicitDeny</p>
+         */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AccountLevelIdentityBasedPolicy</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
