@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceInstanceLabelResponseBody extends TeaModel {
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class DeleteResourceInstanceLabelResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40325405-579C-4D82********</p>
      */

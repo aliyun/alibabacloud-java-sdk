@@ -4,12 +4,21 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DeleteResourceInstanceLabelRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the delete operation takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</p>
+     */
     @NameInMap("AllInstances")
     public Boolean allInstances;
 
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The keys of the tags that you want to delete.</p>
+     */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 

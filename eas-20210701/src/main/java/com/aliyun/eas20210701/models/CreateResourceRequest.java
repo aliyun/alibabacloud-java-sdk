@@ -57,6 +57,9 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    /**
+     * <p>The custom tag.</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
@@ -275,19 +278,19 @@ public class CreateResourceRequest extends TeaModel {
         public String externalClusterId;
 
         /**
-         * <p>The tag key-value pairs for nodes.</p>
+         * <p>The tag key-value pairs of the node.</p>
          */
         @NameInMap("NodeMatchLabels")
         public java.util.Map<String, String> nodeMatchLabels;
 
         /**
-         * <p>Tolerations for nodes.</p>
+         * <p>The tolerations for the node taint.</p>
          */
         @NameInMap("NodeTolerations")
         public java.util.List<CreateResourceRequestSelfManagedResourceOptionsNodeTolerations> nodeTolerations;
 
         /**
-         * <p>The name of the RAM user to which the permissions on Elastic Algorithm Service of Platform for AI (PAI-EAS) are granted.</p>
+         * <p>The name of the RAM user to which the permissions on Elastic Algorithm Service (EAS) of Platform for AI (PAI) are granted.</p>
          * 
          * <strong>example:</strong>
          * <p>clusterrole</p>

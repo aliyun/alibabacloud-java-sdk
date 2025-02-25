@@ -13,6 +13,12 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>Indicates whether the retention period of preemptible instances was disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DisableSpotProtectionPeriod")
     public Boolean disableSpotProtectionPeriod;
 
@@ -31,6 +37,12 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     @NameInMap("Resources")
     public java.util.List<DescribeVirtualResourceResponseBodyResources> resources;
 
+    /**
+     * <p>The number of deployed services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ServiceCount")
     public Integer serviceCount;
 

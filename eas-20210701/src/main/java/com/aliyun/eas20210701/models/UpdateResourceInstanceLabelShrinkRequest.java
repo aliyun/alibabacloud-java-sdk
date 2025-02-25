@@ -5,15 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceInstanceLabelShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether the modification takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("AllInstances")
     public Boolean allInstances;
 
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
+    /**
+     * <p>The custom tag.</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 

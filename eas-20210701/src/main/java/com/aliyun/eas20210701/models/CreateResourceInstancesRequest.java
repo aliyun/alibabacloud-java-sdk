@@ -51,6 +51,9 @@ public class CreateResourceInstancesRequest extends TeaModel {
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    /**
+     * <p>The custom service tag.</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 

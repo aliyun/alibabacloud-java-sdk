@@ -1478,7 +1478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源组实例标签</p>
+     * <p>Deletes the tags of an instance in a resource group.</p>
      * 
      * @param tmpReq DeleteResourceInstanceLabelRequest
      * @param headers map
@@ -1535,7 +1535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源组实例标签</p>
+     * <p>Deletes the tags of an instance in a resource group.</p>
      * 
      * @param request DeleteResourceInstanceLabelRequest
      * @return DeleteResourceInstanceLabelResponse
@@ -2190,6 +2190,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeGroupEndpointsWithOptions(ClusterId, GroupName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询可用机器规格</p>
+     * 
+     * @param tmpReq DescribeMachineSpecRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMachineSpecResponse
+     */
+    public DescribeMachineSpecResponse describeMachineSpecWithOptions(DescribeMachineSpecRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeMachineSpecShrinkRequest request = new DescribeMachineSpecShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceTypes)) {
+            request.instanceTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceTypes, "InstanceTypes", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypesShrink)) {
+            query.put("InstanceTypes", request.instanceTypesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMachineSpec"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/public/instance_types"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMachineSpecResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeMachineSpecResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询可用机器规格</p>
+     * 
+     * @param request DescribeMachineSpecRequest
+     * @return DescribeMachineSpecResponse
+     */
+    public DescribeMachineSpecResponse describeMachineSpec(DescribeMachineSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeMachineSpecWithOptions(request, headers, runtime);
     }
 
     /**
@@ -4873,7 +4931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源组实例标签</p>
+     * <p>Updates the tag of an instance in a resource group.</p>
      * 
      * @param tmpReq UpdateResourceInstanceLabelRequest
      * @param headers map
@@ -4928,7 +4986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新资源组实例标签</p>
+     * <p>Updates the tag of an instance in a resource group.</p>
      * 
      * @param request UpdateResourceInstanceLabelRequest
      * @return UpdateResourceInstanceLabelResponse

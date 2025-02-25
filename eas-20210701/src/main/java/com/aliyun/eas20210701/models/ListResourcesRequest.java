@@ -4,6 +4,16 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
+    /**
+     * <p>The sorting order. Valid values:</p>
+     * <ul>
+     * <li>Desc</li>
+     * <li>Asc</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -43,6 +53,12 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The resource group status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceReady</p>
+     */
     @NameInMap("ResourceStatus")
     public String resourceStatus;
 
@@ -59,6 +75,25 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The condition by which the results are sorted. By default, the query results are sorted by the timestamp type in descending order.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PrePaidInstanceCount</li>
+     * <li>CpuCount</li>
+     * <li>Memory</li>
+     * <li>CreateTime</li>
+     * <li>PostPaidInstanceCount</li>
+     * <li>MemoryUsed</li>
+     * <li>GpuCount</li>
+     * <li>GpuUsed</li>
+     * <li>CpuUsed</li>
+     * <li>ServiceCount</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
