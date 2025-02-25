@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ActiveCaCertificateRequest extends TeaModel {
     /**
-     * <p>CA证书所绑定的实例ID，即云消息队列 MQTT 版的实例ID。</p>
+     * <p>The ID of the ApsaraMQ for MQTT instance to which the CA certificate is bound.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class ActiveCaCertificateRequest extends TeaModel {
     public String mqttInstanceId;
 
     /**
-     * <p>待激活CA证书的SN序列号，用于唯一标识一个CA证书。</p>
-     * <p>取值范围：不超过128 Byte。</p>
+     * <p>The serial number of the CA certificate that you want to reactivate. The serial number is the unique identifier of a CA certificate.</p>
+     * <p>The serial number of a CA certificate cannot exceed 128 bytes in size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

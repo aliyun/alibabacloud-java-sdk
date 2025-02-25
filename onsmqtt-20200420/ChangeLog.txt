@@ -1,3 +1,9 @@
+2025-02-25 Version: 1.5.0
+- Support API DisasterDowngrade.
+- Support API DisasterRecovery.
+- Update API AddCustomAuthIdentity: update param SignMode.
+
+
 2024-12-26 Version: 1.4.0
 - Support API ListTagResources.
 - Support API TagResources.
