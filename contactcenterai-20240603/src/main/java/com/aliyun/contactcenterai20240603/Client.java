@@ -198,6 +198,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTaskResponse createTaskWithOptions(String workspaceId, String appId, CreateTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customPrompt)) {
+            body.put("customPrompt", request.customPrompt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dialogue)) {
             body.put("dialogue", request.dialogue);
         }
