@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOriginRuleRequest extends TeaModel {
     /**
+     * <p>Rewrite the DNS resolution record for the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.example.com</p>
      */
@@ -12,6 +14,8 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String dnsRecord;
 
     /**
+     * <p>The HOST carried in the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
      */
@@ -19,6 +23,8 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String originHost;
 
     /**
+     * <p>Port of the origin server when using the HTTP protocol for origin requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -26,6 +32,8 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String originHttpPort;
 
     /**
+     * <p>Port of the origin server when using the HTTPS protocol for origin requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>4433</p>
      */
@@ -33,6 +41,13 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String originHttpsPort;
 
     /**
+     * <p>Protocol used for the origin request. Possible values:</p>
+     * <ul>
+     * <li>http: Use HTTP protocol for origin requests.</li>
+     * <li>https: Use HTTPS protocol for origin requests.</li>
+     * <li>follow: Follow the client\&quot;s protocol for origin requests.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>http</p>
      */
@@ -40,6 +55,8 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String originScheme;
 
     /**
+     * <p>The SNI carried in the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
      */
@@ -47,6 +64,13 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String originSni;
 
     /**
+     * <p>Use range chunking for downloading files from the origin. Possible values:</p>
+     * <ul>
+     * <li>on: Enable</li>
+     * <li>off: Disable</li>
+     * <li>force: Force</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -54,6 +78,8 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String range;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -61,6 +87,12 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -68,6 +100,8 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -75,6 +109,7 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,6 +119,8 @@ public class CreateOriginRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version of the site where the configuration takes effect. The default is version 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

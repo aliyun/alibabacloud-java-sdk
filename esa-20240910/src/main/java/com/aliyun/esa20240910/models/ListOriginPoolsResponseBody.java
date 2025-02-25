@@ -4,21 +4,54 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListOriginPoolsResponseBody extends TeaModel {
+    /**
+     * <p>List of origin pools.</p>
+     */
     @NameInMap("OriginPools")
     public java.util.List<ListOriginPoolsResponseBodyOriginPools> originPools;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Page size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Total count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -76,18 +109,54 @@ public class ListOriginPoolsResponseBody extends TeaModel {
     }
 
     public static class ListOriginPoolsResponseBodyOriginPoolsOriginsAuthConf extends TeaModel {
+        /**
+         * <p>The AccessKey required for private authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI5tMfEib****ahybCpZqp</p>
+         */
         @NameInMap("AccessKey")
         public String accessKey;
 
+        /**
+         * <p>Authentication type.</p>
+         * <ul>
+         * <li>public: Public read/write, used when the origin is OSS or S3 and it is set to public read/write;</li>
+         * <li>private_same_account: Private same account, used when the origin is OSS and the authentication type is private within the same account;</li>
+         * <li>private_cross_account: Private cross-account, used when the origin is OSS and the authentication type is private across accounts;</li>
+         * <li>private: Used when the origin is S3 and the authentication type is private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("AuthType")
         public String authType;
 
+        /**
+         * <p>The Region of the origin required when the origin is AWS S3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-east-1</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The SecretKey required for private authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VIxuvJSA2****fgYoZ3nkp208dy5w7</p>
+         */
         @NameInMap("SecretKey")
         public String secretKey;
 
+        /**
+         * <p>The signature version required when the origin is AWS S3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -139,27 +208,85 @@ public class ListOriginPoolsResponseBody extends TeaModel {
     }
 
     public static class ListOriginPoolsResponseBodyOriginPoolsOrigins extends TeaModel {
+        /**
+         * <p>Origin address, e.g., <a href="http://www.example.com">www.example.com</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>Authentication information. When the origin is OSS or S3 and requires authentication, you need to provide related configuration information for authentication.</p>
+         */
         @NameInMap("AuthConf")
         public ListOriginPoolsResponseBodyOriginPoolsOriginsAuthConf authConf;
 
+        /**
+         * <p>Whether the origin is enabled:</p>
+         * <ul>
+         * <li>true: Enabled;</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The request header to be carried during back-to-origin, only supports Host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;Host&quot;: [
+         *           &quot;example.com&quot;
+         *         ]
+         *       }</p>
+         */
         @NameInMap("Header")
         public Object header;
 
+        /**
+         * <p>Origin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>997502094872132</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Origin name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>origin1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Origin type:</p>
+         * <ul>
+         * <li>ip_domain: IP or domain type origin; </li>
+         * <li>OSS: OSS address origin; </li>
+         * <li>S3: AWS S3 origin.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S3</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Weight, an integer between 0 and 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -235,9 +362,21 @@ public class ListOriginPoolsResponseBody extends TeaModel {
     }
 
     public static class ListOriginPoolsResponseBodyOriginPoolsReferencesDnsRecords extends TeaModel {
+        /**
+         * <p>Record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1042852886352704</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -265,9 +404,21 @@ public class ListOriginPoolsResponseBody extends TeaModel {
     }
 
     public static class ListOriginPoolsResponseBodyOriginPoolsReferencesIPARecords extends TeaModel {
+        /**
+         * <p>Record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1042852886352704</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipa.example.com</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -295,9 +446,21 @@ public class ListOriginPoolsResponseBody extends TeaModel {
     }
 
     public static class ListOriginPoolsResponseBodyOriginPoolsReferencesLoadBalancers extends TeaModel {
+        /**
+         * <p>ID of the load balancer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>998740660522624</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Name of the load balancer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb1.example.com</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -325,12 +488,21 @@ public class ListOriginPoolsResponseBody extends TeaModel {
     }
 
     public static class ListOriginPoolsResponseBodyOriginPoolsReferences extends TeaModel {
+        /**
+         * <p>使用此源地址池为源站的七层记录列表。</p>
+         */
         @NameInMap("DnsRecords")
         public java.util.List<ListOriginPoolsResponseBodyOriginPoolsReferencesDnsRecords> dnsRecords;
 
+        /**
+         * <p>List of layer 4 records that use this origin pool as the origin.</p>
+         */
         @NameInMap("IPARecords")
         public java.util.List<ListOriginPoolsResponseBodyOriginPoolsReferencesIPARecords> IPARecords;
 
+        /**
+         * <p>List of load balancers using this origin pool.</p>
+         */
         @NameInMap("LoadBalancers")
         public java.util.List<ListOriginPoolsResponseBodyOriginPoolsReferencesLoadBalancers> loadBalancers;
 
@@ -366,27 +538,73 @@ public class ListOriginPoolsResponseBody extends TeaModel {
     }
 
     public static class ListOriginPoolsResponseBodyOriginPools extends TeaModel {
+        /**
+         * <p>Whether the origin pool is enabled:</p>
+         * <ul>
+         * <li>true: Enabled;</li>
+         * <li>false: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>ID of the origin pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1038520525196928</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Name of the origin pool, unique within a site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Information about the origins added to the origin pool.</p>
+         */
         @NameInMap("Origins")
         public java.util.List<ListOriginPoolsResponseBodyOriginPoolsOrigins> origins;
 
+        /**
+         * <p>Domain name assigned to the origin pool, which can be used as the origin address for records under the site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pool1.example.com</p>
+         */
         @NameInMap("RecordName")
         public String recordName;
 
+        /**
+         * <p>Number of load balancers that reference this origin pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ReferenceLBCount")
         public Integer referenceLBCount;
 
+        /**
+         * <p>Reference information for the origin pool. The origin pool is considered referenced when it is configured in a load balancer or set as the origin for a record.</p>
+         */
         @NameInMap("References")
         public ListOriginPoolsResponseBodyOriginPoolsReferences references;
 
+        /**
+         * <p>ID of the site to which the origin pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>216558609793952</p>
+         */
         @NameInMap("SiteId")
         public Long siteId;
 

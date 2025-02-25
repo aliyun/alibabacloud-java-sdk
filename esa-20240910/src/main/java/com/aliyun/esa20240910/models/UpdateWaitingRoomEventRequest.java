@@ -202,6 +202,7 @@ public class UpdateWaitingRoomEventRequest extends TeaModel {
 
     /**
      * <p>The ID of the waiting room event, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>89677721098****</p>

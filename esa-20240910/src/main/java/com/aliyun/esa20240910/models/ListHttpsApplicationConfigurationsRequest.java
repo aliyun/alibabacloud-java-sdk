@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     /**
+     * <p>Configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3528160969****</p>
      */
@@ -12,6 +14,13 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+     * <ul>
+     * <li>global: Query global configuration.</li>
+     * <li>rule: Query rule configuration.</li>
+     * </ul>
+     * <p>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>global</p>
      */
@@ -19,6 +28,8 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>Page number, default is 1 if not provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +37,8 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of items per page, maximum is 500, default is 500 if not provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +46,8 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Rule name, which can be used to find the rule with the specified name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -40,6 +55,7 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +65,8 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Site version number. For sites with version management enabled, this parameter can specify the site version for which the configuration is effective, default is version 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

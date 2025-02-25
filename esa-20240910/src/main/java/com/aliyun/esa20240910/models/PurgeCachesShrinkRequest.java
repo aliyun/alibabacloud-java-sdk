@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PurgeCachesShrinkRequest extends TeaModel {
     /**
-     * <p>The content to purge.</p>
+     * <p>Content to be refreshed.</p>
      */
     @NameInMap("Content")
     public String contentShrink;
 
     /**
-     * <p>Specifies whether to purge cached resources for edge computing. For example, purge the resources cached by the CacheAPI operation of Edge Routine.</p>
+     * <p>Used for refreshing cached resources in edge computing, such as allowing the refresh of content cached using the CacheAPI interface of an edge function.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,13 +20,13 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public Boolean edgeComputePurge;
 
     /**
-     * <p>Specifies whether to purge resources in a directory if the resources requested are different from the resources on the origin server. Default value: false.</p>
+     * <p>Indicates whether to refresh all resources under the directory when the content from the origin and the source resource are inconsistent. The default is false.</p>
      * <ul>
-     * <li><strong>true</strong>: purges all resources in the directory.</li>
-     * <li><strong>false</strong>: purges only changed resources in the directory.</li>
+     * <li><strong>true</strong>: Refreshes all resources under the specified directory.</li>
+     * <li><strong>false</strong>: Refreshes only the changed resources under the specified directory.</li>
      * </ul>
      * <blockquote>
-     * <p> This configuration takes effect for the following purge task types: directory, cachetag, ignoreParams, hostname, and purgeall.</p>
+     * <p> Applies to: Directory refresh, cachetag refresh, ignoreParams refresh, hostname refresh, and purge all cache of the site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,14 +46,15 @@ public class PurgeCachesShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The type of the purge task. Valid values:</p>
+     * <p>The type of refresh task. Possible values:</p>
      * <ul>
-     * <li><strong>file</strong> (default): purges the cache by file.</li>
-     * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
-     * <li><strong>directory</strong>: purges the cache by directory.</li>
-     * <li><strong>ignoreParams</strong>: purges the cache by URL with specific parameters ignored. This option ignores the question mark (?) and parameters after the question mark (?) in a request URL and purges the cache. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource without specified parameters. If the URLs match, the POPs purge the cached resources.</li>
-     * <li><strong>hostname</strong>: purges the cache by hostname.</li>
-     * <li><strong>purgeall</strong>: purges all cache.</li>
+     * <li><strong>file</strong> (default): File refresh.</li>
+     * <li><strong>cachekey</strong>: Cachekey refresh.</li>
+     * <li><strong>cachetag</strong>: Cachetag refresh.</li>
+     * <li><strong>directory</strong>: Directory refresh.</li>
+     * <li><strong>ignoreParams</strong>: Ignore parameters refresh. Ignoring parameters means removing the ? and everything after it in the request URL. When performing an ignore parameters refresh, the user first submits the URL without parameters through the interface. The submitted URLs to be refreshed will then be matched against the cached resource URLs with the parameters removed. If the cached resource URL, after removing the parameters, matches the URL to be refreshed, the CDN node will refresh the cached resources.</li>
+     * <li><strong>hostname</strong>: Hostname refresh.</li>
+     * <li><strong>purgeall</strong>: Purge all cache under the site.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

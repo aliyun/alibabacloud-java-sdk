@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCompressionRuleResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE8EB0DE-3267-53D1-AB83-F36377D63FD0</p>
      */

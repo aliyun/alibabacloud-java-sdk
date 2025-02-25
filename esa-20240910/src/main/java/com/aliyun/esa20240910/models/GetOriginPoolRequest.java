@@ -5,16 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetOriginPoolRequest extends TeaModel {
     /**
+     * <p>The ID of the origin pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>GetOriginPool</p>
+     * <p>1038520525196928</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
+     * <p>The ID of the site, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>216558609793952</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

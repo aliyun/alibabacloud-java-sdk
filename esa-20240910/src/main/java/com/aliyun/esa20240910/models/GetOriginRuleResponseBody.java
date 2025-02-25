@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetOriginRuleResponseBody extends TeaModel {
     /**
+     * <p>Configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>352816096987136</p>
      */
@@ -12,6 +14,12 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+     * <ul>
+     * <li>global: Query global configuration.</li>
+     * <li>rule: Query rule configuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>rule</p>
      */
@@ -19,6 +27,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String configType;
 
     /**
+     * <p>Rewrite the DNS resolution record for the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.example.com</p>
      */
@@ -26,6 +36,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String dnsRecord;
 
     /**
+     * <p>HOST carried in the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
      */
@@ -33,6 +45,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String originHost;
 
     /**
+     * <p>Source site port accessed when using the HTTP protocol for origin.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -40,6 +54,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String originHttpPort;
 
     /**
+     * <p>Source site port accessed when using the HTTPS protocol for origin.</p>
+     * 
      * <strong>example:</strong>
      * <p>4433</p>
      */
@@ -47,6 +63,13 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String originHttpsPort;
 
     /**
+     * <p>Protocol used for the origin request. Value range:</p>
+     * <ul>
+     * <li>http: Use HTTP protocol for origin.</li>
+     * <li>https: Use HTTPS protocol for origin.</li>
+     * <li>follow: Follow client protocol for origin.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>http</p>
      */
@@ -54,6 +77,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String originScheme;
 
     /**
+     * <p>SNI carried in the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
      */
@@ -61,6 +86,13 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String originSni;
 
     /**
+     * <p>Use range chunking method for origin download. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * <li>force: Force.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -68,6 +100,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String range;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
@@ -75,6 +109,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -82,6 +118,12 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -89,6 +131,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -96,6 +140,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Rule execution sequence.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -103,6 +149,8 @@ public class GetOriginRuleResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
+     * <p>Site version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

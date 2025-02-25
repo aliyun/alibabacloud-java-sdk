@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

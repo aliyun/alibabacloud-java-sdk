@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     /**
+     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     @NameInMap("ConfigId")
     public Long configId;
 
+    /**
+     * <p>Modify request headers, supporting add, delete, and modify operations.</p>
+     */
     @NameInMap("RequestHeaderModification")
     public java.util.List<UpdateHttpRequestHeaderModificationRuleRequestRequestHeaderModification> requestHeaderModification;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
      */
@@ -24,6 +30,12 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule enable status, supports:</p>
+     * <ul>
+     * <li><strong>on</strong>: indicates enabled.</li>
+     * <li><strong>off</strong>: indicates disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -31,6 +43,8 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -38,6 +52,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,6 +116,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
 
     public static class UpdateHttpRequestHeaderModificationRuleRequestRequestHeaderModification extends TeaModel {
         /**
+         * <p>Request header name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +126,12 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Operation type. Value range:</p>
+         * <ul>
+         * <li>add: Add.</li>
+         * <li>del: Delete.</li>
+         * <li>modify: Modify.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,6 +141,8 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends TeaModel {
         public String operation;
 
         /**
+         * <p>Request header value.</p>
+         * 
          * <strong>example:</strong>
          * <p>headerValue</p>
          */

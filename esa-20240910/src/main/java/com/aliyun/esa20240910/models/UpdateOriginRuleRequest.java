@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateOriginRuleRequest extends TeaModel {
     /**
+     * <p>Configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Rewrite the DNS resolution record of the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.example.com</p>
      */
@@ -21,6 +24,8 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String dnsRecord;
 
     /**
+     * <p>The HOST carried in the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
      */
@@ -28,6 +33,8 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originHost;
 
     /**
+     * <p>The port of the origin server when using HTTP protocol for origin requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>8080</p>
      */
@@ -35,6 +42,8 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originHttpPort;
 
     /**
+     * <p>The port of the origin server when using HTTPS protocol for origin requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>4433</p>
      */
@@ -42,6 +51,13 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originHttpsPort;
 
     /**
+     * <p>Protocol used for the origin request. Possible values:</p>
+     * <ul>
+     * <li>http: Use HTTP protocol for origin requests.</li>
+     * <li>https: Use HTTPS protocol for origin requests.</li>
+     * <li>follow: Follow the client\&quot;s protocol for origin requests.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>http</p>
      */
@@ -49,6 +65,8 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originScheme;
 
     /**
+     * <p>The SNI carried in the origin request.</p>
+     * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
      */
@@ -56,6 +74,13 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originSni;
 
     /**
+     * <p>Use range chunked transfer to download files from the origin. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * <li>force: Force.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -63,6 +88,8 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String range;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -70,6 +97,12 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -77,6 +110,8 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -84,6 +119,7 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

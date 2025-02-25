@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCacheReserveInstancesResponseBody extends TeaModel {
     /**
-     * <p>The cache reserve instances.</p>
+     * <p>List of cache reserve instances.</p>
      */
     @NameInMap("InstanceInfo")
     public java.util.List<ListCacheReserveInstancesResponseBodyInstanceInfo> instanceInfo;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>Page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1 to 500</strong>.</p>
+     * <p>Page size, default <strong>500</strong>, range: <strong>1~500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -29,7 +29,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>
@@ -38,7 +38,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>Total count.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -47,7 +47,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>Total pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,16 +110,16 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
 
     public static class ListCacheReserveInstancesResponseBodyInstanceInfo extends TeaModel {
         /**
-         * <p>The capacity of the cache reserve instance. Unit: GB.</p>
+         * <p>Cache reserve capacity. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>512000</p>
          */
         @NameInMap("CacheReserveCapacity")
-        public String cacheReserveCapacity;
+        public Long cacheReserveCapacity;
 
         /**
-         * <p>The region in which the cache reserve instance resides.</p>
+         * <p>Cache reserve usage region.</p>
          * 
          * <strong>example:</strong>
          * <p>HK</p>
@@ -127,8 +127,11 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         @NameInMap("CacheReserveRegion")
         public String cacheReserveRegion;
 
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         /**
-         * <p>The time when the cache reserve instance was purchased.</p>
+         * <p>Instance purchase time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-12T05:41:51Z</p>
@@ -137,7 +140,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The subscription period of the cache reserve instance. Unit: months.</p>
+         * <p>Duration of the instance purchase, unit: months.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -146,7 +149,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public Integer duration;
 
         /**
-         * <p>The time when the cache reserve instance expires.</p>
+         * <p>Instance expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-05T16:00:00Z</p>
@@ -155,7 +158,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The ID of the cache reserve instance.</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-xcdn-96wblslz****</p>
@@ -164,12 +167,12 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the cache reserve instance. Valid values:</p>
+         * <p>Instance status. Values:</p>
          * <ul>
-         * <li>online: The instance is in service.</li>
-         * <li>offline: The instance has expired within an allowable period. In this state, the plan is unavailable.</li>
-         * <li>disable: The instance is released.</li>
-         * <li>overdue: The service was stopped due to overdue payments.</li>
+         * <li><strong>online</strong>: Normal service status.</li>
+         * <li><strong>offline</strong>: Expired but not overdue, in an unavailable state.</li>
+         * <li><strong>disable</strong>: Released status.</li>
+         * <li><strong>overdue</strong>: Overdue and suspended status.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,11 +186,11 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListCacheReserveInstancesResponseBodyInstanceInfo setCacheReserveCapacity(String cacheReserveCapacity) {
+        public ListCacheReserveInstancesResponseBodyInstanceInfo setCacheReserveCapacity(Long cacheReserveCapacity) {
             this.cacheReserveCapacity = cacheReserveCapacity;
             return this;
         }
-        public String getCacheReserveCapacity() {
+        public Long getCacheReserveCapacity() {
             return this.cacheReserveCapacity;
         }
 
@@ -197,6 +200,14 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
         public String getCacheReserveRegion() {
             return this.cacheReserveRegion;
+        }
+
+        public ListCacheReserveInstancesResponseBodyInstanceInfo setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public ListCacheReserveInstancesResponseBodyInstanceInfo setCreateTime(String createTime) {

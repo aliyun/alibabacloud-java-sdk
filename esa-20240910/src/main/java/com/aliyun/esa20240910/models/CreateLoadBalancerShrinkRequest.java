@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerShrinkRequest extends TeaModel {
     /**
+     * <p>Configuration for failover across pools.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,21 +14,39 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String adaptiveRoutingShrink;
 
     /**
+     * <p>List of default pools.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
+     * <p>123</p>
      */
     @NameInMap("DefaultPools")
     public String defaultPoolsShrink;
 
+    /**
+     * <p>Detailed description of the load balancer, for easier management and identification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试负载均衡器描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Whether the load balancer is enabled.</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
+     * <p>Fallback pool ID, where traffic will be directed when all other pools are unavailable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +56,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Long fallbackPool;
 
     /**
+     * <p>Monitor configuration for health checks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +66,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String monitorShrink;
 
     /**
+     * <p>The name of the load balancer, which must meet domain name format validation and be a subdomain under the site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,16 +76,34 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("RandomSteering")
     public String randomSteeringShrink;
 
+    /**
+     * <p>Address pools corresponding to primary regions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;ENAM&quot;: [
+     *     12345678****
+     *   ],
+     *   &quot;WNAM&quot;: [
+     *     23456789****,
+     *     23456789****
+     *   ]
+     * }</p>
+     */
     @NameInMap("RegionPools")
     public Object regionPools;
 
     /**
+     * <p>Rule information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;ENAM&quot;: [
@@ -78,27 +118,60 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     @NameInMap("Rules")
     public String rulesShrink;
 
+    /**
+     * <p>Session persistence, with values:</p>
+     * <ul>
+     * <li>off: Not enabled.</li>
+     * <li>ip: Session persistence by IP.</li>
+     * <li>cookie: Not enabled for session persistence.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ip</p>
+     */
     @NameInMap("SessionAffinity")
     public String sessionAffinity;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
 
     /**
+     * <p>Load balancing strategy.</p>
+     * <ul>
+     * <li>geo: Geographical strategy.</li>
+     * <li>random: Weighted round-robin.</li>
+     * <li>order: Primary and backup method.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ip</p>
+     * <p>order</p>
      */
     @NameInMap("SteeringPolicy")
     public String steeringPolicy;
 
+    /**
+     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
+     */
     @NameInMap("SubRegionPools")
     public Object subRegionPools;
 
+    /**
+     * <p>TTL value, the time-to-live for DNS records, with a default of 30 seconds. The value range is 10-600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 

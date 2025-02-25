@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetCacheReserveSpecificationResponseBody extends TeaModel {
     /**
-     * <p>The capacities of cache reserve instances that can be created.</p>
+     * <p>List of cache retention capacity specifications.</p>
      */
     @NameInMap("CacheReserveCapacity")
     public java.util.List<String> cacheReserveCapacity;
 
     /**
-     * <p>The regions in which cache reserve instances can be created.</p>
+     * <p>List of cache retention region specifications.</p>
      */
     @NameInMap("CacheReserveRegion")
     public java.util.List<String> cacheReserveRegion;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     /**
+     * <p>Configuration ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
      */
@@ -12,6 +14,12 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Configuration type, which can be used to query global or rule configurations. Possible values:</p>
+     * <ul>
+     * <li>global: Query global configuration;</li>
+     * <li>rule: Query rule configuration;</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>rule</p>
      */
@@ -19,6 +27,8 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>Page number, default is 1 if not provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,8 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of items per page, maximum is 500, default is 500 if not provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +45,8 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Rule name, which can be used to find the rule with the specified name. It only takes effect when provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -40,6 +54,7 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +64,8 @@ public class ListHttpRequestHeaderModificationRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Version number of the site configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

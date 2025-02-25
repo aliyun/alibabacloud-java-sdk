@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHttpsApplicationConfigurationRequest extends TeaModel {
     /**
+     * <p>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869087.html">listHttpsApplicationConfigurations</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteHttpsApplicationConfigurationRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

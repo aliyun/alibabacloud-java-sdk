@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetNetworkOptimizationResponseBody extends TeaModel {
     /**
+     * <p>Configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
      */
@@ -12,6 +14,12 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+     * <ul>
+     * <li>global: Query global configuration.</li>
+     * <li>rule: Query rule configuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>global</p>
      */
@@ -19,6 +27,12 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String configType;
 
     /**
+     * <p>Whether to enable GRPC, default is disabled. Value range:</p>
+     * <ul>
+     * <li>on: Enabled</li>
+     * <li>off: Disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -26,6 +40,12 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String grpc;
 
     /**
+     * <p>Whether to enable HTTP2 origin, default is disabled. Value range:</p>
+     * <ul>
+     * <li>on: Enabled</li>
+     * <li>off: Disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -33,6 +53,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String http2Origin;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
      */
@@ -40,6 +62,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -47,6 +71,12 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Values:</p>
+     * <ul>
+     * <li>on: Enabled</li>
+     * <li>off: Disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -54,6 +84,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -61,6 +93,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Rule execution sequence.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -68,6 +102,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
+     * <p>Site version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -75,6 +111,12 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public Integer siteVersion;
 
     /**
+     * <p>Whether to enable smart routing service, default is disabled. Value range:</p>
+     * <ul>
+     * <li>on: Enabled</li>
+     * <li>off: Disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -82,6 +124,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String smartRouting;
 
     /**
+     * <p>Maximum upload file size, in MB, value range: 100～500.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
@@ -89,6 +133,12 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String uploadMaxFilesize;
 
     /**
+     * <p>Whether to enable Websocket, default is enabled. Value range:</p>
+     * <ul>
+     * <li>on: Enabled</li>
+     * <li>off: Disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

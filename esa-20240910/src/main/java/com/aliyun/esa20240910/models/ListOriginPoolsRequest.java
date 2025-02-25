@@ -4,27 +4,65 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListOriginPoolsRequest extends TeaModel {
+    /**
+     * <p>Type of name match query, supporting the following two types, with exact match as the default.</p>
+     * <ul>
+     * <li>fuzzy: Fuzzy query.</li>
+     * <li>exact: Exact query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>exact</p>
+     */
     @NameInMap("MatchType")
     public String matchType;
 
+    /**
+     * <p>Name of the origin pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pool1</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Sorting, supports ascending and descending order by ID, default is descending by ID, which is positively correlated with creation time.</p>
+     * <ul>
+     * <li>-id: Sort by ID in descending order.</li>
+     * <li>id: Sort by ID in ascending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
+     * <p>Page number, default value is 1.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ListOriginPools</p>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>Page size, an integer greater than 0, with a maximum of 500. If the value exceeds 500, it will be set to 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>151538882642832</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

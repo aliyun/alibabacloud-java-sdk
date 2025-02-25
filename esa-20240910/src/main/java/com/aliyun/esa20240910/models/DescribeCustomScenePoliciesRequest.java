@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DescribeCustomScenePoliciesRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Valid values: <strong>1 to 100000</strong>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

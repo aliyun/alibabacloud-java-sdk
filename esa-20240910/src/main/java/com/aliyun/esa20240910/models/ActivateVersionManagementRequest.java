@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ActivateVersionManagementRequest extends TeaModel {
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11223***</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

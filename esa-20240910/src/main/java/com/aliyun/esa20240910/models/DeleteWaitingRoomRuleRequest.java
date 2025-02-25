@@ -16,6 +16,7 @@ public class DeleteWaitingRoomRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the waiting room bypass rule.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>3672886****</p>

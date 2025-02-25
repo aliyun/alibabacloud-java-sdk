@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateCacheTagRequest extends TeaModel {
     /**
+     * <p>Whether to ignore case. Value range:</p>
+     * <ul>
+     * <li>on: Enabled, ignores case.</li>
+     * <li>off: Disabled, does not ignore case.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,7 @@ public class UpdateCacheTagRequest extends TeaModel {
     public String caseInsensitive;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,8 @@ public class UpdateCacheTagRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +37,8 @@ public class UpdateCacheTagRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
+     * <p>Custom CacheTag name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */

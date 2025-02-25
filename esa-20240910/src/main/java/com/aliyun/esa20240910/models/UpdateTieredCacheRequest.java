@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateTieredCacheRequest extends TeaModel {
     /**
+     * <p>Multi-level cache architecture mode. Possible values:</p>
+     * <ul>
+     * <li>edge: Edge cache layer.</li>
+     * <li>edge_smart: Edge cache layer + intelligent cache layer.</li>
+     * <li>edge_regional: Edge cache layer + regional cache layer.</li>
+     * <li>edge_regional_smart: Edge cache layer + regional cache layer + intelligent cache layer.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,7 @@ public class UpdateTieredCacheRequest extends TeaModel {
     public String cacheArchitectureMode;
 
     /**
+     * <p>Site ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

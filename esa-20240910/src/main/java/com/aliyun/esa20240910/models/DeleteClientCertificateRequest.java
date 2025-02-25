@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClientCertificateRequest extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteClientCertificateRequest extends TeaModel {
     public String id;
 
     /**
+     * <p>The website ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetIPv6ResponseBody extends TeaModel {
     /**
+     * <p>IPv6 switch. Values:</p>
+     * <ul>
+     * <li><strong>on</strong>: Enable. </li>
+     * <li><strong>off</strong>: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,8 @@ public class GetIPv6ResponseBody extends TeaModel {
     public String enable;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
      */

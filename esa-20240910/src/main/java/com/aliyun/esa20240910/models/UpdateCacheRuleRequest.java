@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCacheRuleRequest extends TeaModel {
     /**
+     * <p>Enable caching on specified ports. Value range: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, 2096.</p>
+     * 
      * <strong>example:</strong>
      * <p>8880</p>
      */
@@ -12,6 +14,13 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String additionalCacheablePorts;
 
     /**
+     * <p>Browser cache mode. Value range:</p>
+     * <ul>
+     * <li>no_cache: Do not cache.</li>
+     * <li>follow_origin: Follow origin cache policy.</li>
+     * <li>override_origin: Override origin cache policy.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>no_cache</p>
      */
@@ -19,6 +28,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String browserCacheMode;
 
     /**
+     * <p>Browser cache expiration time, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -26,6 +37,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String browserCacheTtl;
 
     /**
+     * <p>Set bypass cache mode. Value range:</p>
+     * <ul>
+     * <li>cache_all: Cache all requests.</li>
+     * <li>bypass_all: Bypass cache for all requests.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cache_all</p>
      */
@@ -33,6 +50,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String bypassCache;
 
     /**
+     * <p>Cache deception defense. Used to defend against web cache deception attacks, only the cache content that passes the validation will be cached. Value range:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -40,6 +63,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String cacheDeceptionArmor;
 
     /**
+     * <p>Cache reservation eligibility. Used to control whether user requests bypass the cache reservation node during origin pull. Value range:</p>
+     * <ul>
+     * <li>bypass_cache_reserve: Requests bypass cache reservation.</li>
+     * <li>eligible_for_cache_reserve: Eligible for cache reservation.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>bypass_cache_reserve</p>
      */
@@ -47,6 +76,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String cacheReserveEligibility;
 
     /**
+     * <p>Check if the cookie exists when generating cache keys, and if it does, add the cookie name (case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
+     * 
      * <strong>example:</strong>
      * <p>cookiename</p>
      */
@@ -54,6 +85,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String checkPresenceCookie;
 
     /**
+     * <p>Check if the header exists when generating cache keys, and if it does, add the header name (case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
+     * 
      * <strong>example:</strong>
      * <p>headername</p>
      */
@@ -61,6 +94,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String checkPresenceHeader;
 
     /**
+     * <p>Configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +104,14 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Edge cache mode. Value range:</p>
+     * <ul>
+     * <li>follow_origin: Follow origin cache policy (if exists), otherwise use default cache policy.</li>
+     * <li>no_cache: Do not cache.</li>
+     * <li>override_origin: Override origin cache policy.</li>
+     * <li>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>follow_origin</p>
      */
@@ -77,6 +119,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String edgeCacheMode;
 
     /**
+     * <p>Edge cache expiration time, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -84,6 +128,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String edgeCacheTtl;
 
     /**
+     * <p>Status code cache expiration time, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
@@ -91,6 +137,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String edgeStatusCodeCacheTtl;
 
     /**
+     * <p>Include specified cookie names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
+     * 
      * <strong>example:</strong>
      * <p>cookiename</p>
      */
@@ -98,6 +146,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String includeCookie;
 
     /**
+     * <p>Include specified header names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
+     * 
      * <strong>example:</strong>
      * <p>headername</p>
      */
@@ -105,6 +155,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String includeHeader;
 
     /**
+     * <p>Query strings to be reserved or excluded, supporting multiple values separated by spaces.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */
@@ -112,6 +164,14 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String queryString;
 
     /**
+     * <p>Query string handling mode when generating cache keys. Values:</p>
+     * <ul>
+     * <li>ignore_all: Ignore all.</li>
+     * <li>exclude_query_string: Exclude specified query strings.</li>
+     * <li>reserve_all: Default, reserve all.</li>
+     * <li>include_query_string: Include specified query strings.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ignore_all</p>
      */
@@ -119,6 +179,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String queryStringMode;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -126,6 +188,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -133,6 +201,8 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -140,6 +210,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Serve stale cache. When enabled, the node can still respond to user requests with expired cached files when the origin server is unavailable. Value range:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -147,6 +223,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String serveStale;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -156,6 +233,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Query string sorting. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -163,6 +246,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String sortQueryStringForCache;
 
     /**
+     * <p>Include client device type when generating cache keys. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -170,6 +259,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String userDeviceType;
 
     /**
+     * <p>Include client geographic location when generating cache keys. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -177,6 +272,12 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String userGeo;
 
     /**
+     * <p>When generating cache keys, include the client\&quot;s language type. Value range: </p>
+     * <ul>
+     * <li>on: enabled. </li>
+     * <li>off: disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

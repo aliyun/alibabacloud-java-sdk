@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadClientCaCertificateRequest extends TeaModel {
     /**
+     * <p>The certificate content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UploadClientCaCertificateRequest extends TeaModel {
     public String certificate;
 
     /**
+     * <p>The certificate name.</p>
+     * 
      * <strong>example:</strong>
      * <p>yourCertName</p>
      */
@@ -21,6 +24,7 @@ public class UploadClientCaCertificateRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The website ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

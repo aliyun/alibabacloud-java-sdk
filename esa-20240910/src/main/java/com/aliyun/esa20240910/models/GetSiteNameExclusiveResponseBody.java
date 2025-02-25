@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetSiteNameExclusiveResponseBody extends TeaModel {
     /**
+     * <p>Feature switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,8 @@ public class GetSiteNameExclusiveResponseBody extends TeaModel {
     public String enable;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35C66C7B-671H-4297-9187-2C4477247A78</p>
      */

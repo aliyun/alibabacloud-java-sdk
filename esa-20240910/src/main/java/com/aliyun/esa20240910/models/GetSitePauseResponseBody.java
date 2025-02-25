@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetSitePauseResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether acceleration has been paused. Possible values:</p>
+     * <ul>
+     * <li>true: The site\&quot;s acceleration is paused.</li>
+     * <li>false: The site is accelerating normally.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class GetSitePauseResponseBody extends TeaModel {
     public Boolean paused;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
      */

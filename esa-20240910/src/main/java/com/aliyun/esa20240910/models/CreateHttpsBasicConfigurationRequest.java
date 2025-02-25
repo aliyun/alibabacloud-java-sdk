@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     /**
+     * <p>Custom cipher suite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</p>
+     * 
      * <strong>example:</strong>
      * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
      */
@@ -12,6 +14,13 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ciphersuite;
 
     /**
+     * <p>Cipher suite group. Default is all cipher suites. Possible values:</p>
+     * <ul>
+     * <li>all: All cipher suites.</li>
+     * <li>strict: Strong cipher suites.</li>
+     * <li>custom: Custom cipher suites.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -19,6 +28,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ciphersuiteGroup;
 
     /**
+     * <p>Whether to enable HTTP2. Default is enabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -26,6 +41,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String http2;
 
     /**
+     * <p>Whether to enable HTTP3. Default is enabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -33,6 +54,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String http3;
 
     /**
+     * <p>Whether to enable HTTPS. Default is enabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -40,6 +67,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String https;
 
     /**
+     * <p>Whether to enable OCSP. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -47,6 +80,8 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ocspStapling;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -54,6 +89,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -61,6 +102,8 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -68,6 +111,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +121,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Whether to enable TLS1.0. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -84,6 +134,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String tls10;
 
     /**
+     * <p>Whether to enable TLS1.1. Default is enabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -91,6 +147,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String tls11;
 
     /**
+     * <p>Whether to enable TLS1.2. Default is enabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -98,6 +160,12 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String tls12;
 
     /**
+     * <p>Whether to enable TLS1.3. Default is enabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

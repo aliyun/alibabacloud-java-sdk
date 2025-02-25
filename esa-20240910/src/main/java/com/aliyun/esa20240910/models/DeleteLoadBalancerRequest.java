@@ -5,16 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerRequest extends TeaModel {
     /**
+     * <p>The ID of the load balancer, used to uniquely identify the load balancer to be queried. This ID is returned directly upon creation of the load balancer and can also be obtained through the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface for querying all load balancers under a site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DeleteLoadBalancer</p>
+     * <p>99867648760****</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
+     * <p>The ID of the site, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1159101787****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

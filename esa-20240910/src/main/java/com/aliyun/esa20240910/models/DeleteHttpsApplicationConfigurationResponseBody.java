@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteHttpsApplicationConfigurationResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35C66C7B-671H-4297-9187-2C4477247A78</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCiphersRequest extends TeaModel {
     /**
+     * <p>The name of the cipher suite group, which can be: all, strict, custom.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

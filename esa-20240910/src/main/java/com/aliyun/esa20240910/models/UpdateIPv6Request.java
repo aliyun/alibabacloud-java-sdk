@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateIPv6Request extends TeaModel {
     /**
+     * <p>Switch. Values:</p>
+     * <ul>
+     * <li><strong>on</strong>: Enable.</li>
+     * <li><strong>off</strong>: Disable.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class UpdateIPv6Request extends TeaModel {
     public String enable;
 
     /**
+     * <p>Site ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

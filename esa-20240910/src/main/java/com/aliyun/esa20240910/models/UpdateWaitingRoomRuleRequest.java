@@ -50,6 +50,7 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the waiting room bypass rule that you want to update. You can call <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> to obtain the ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>8987739839****</p>

@@ -4,11 +4,20 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateOriginPoolResponseBody extends TeaModel {
+    /**
+     * <p>Source address pool ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1038520525196928</p>
+     */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
     @NameInMap("RequestId")
     public String requestId;

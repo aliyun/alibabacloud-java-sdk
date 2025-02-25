@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateQuotaRequest extends TeaModel {
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetCertificateQuotaRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Certificate Quota type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

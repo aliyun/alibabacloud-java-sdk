@@ -73,7 +73,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启版本管理</p>
+     * <p>Enable Version Management</p>
      * 
      * @param request ActivateVersionManagementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -110,7 +110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启版本管理</p>
+     * <p>Enable Version Management</p>
      * 
      * @param request ActivateVersionManagementRequest
      * @return ActivateVersionManagementResponse
@@ -122,7 +122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请免费证书</p>
+     * <p>Apply for Free Certificate</p>
      * 
      * @param request ApplyCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -155,7 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请免费证书</p>
+     * <p>Apply for Free Certificate</p>
      * 
      * @param request ApplyCertificateRequest
      * @return ApplyCertificateResponse
@@ -1143,7 +1143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点缓存配置</p>
+     * <p>Create a new site cache configuration</p>
      * 
      * @param request CreateCacheRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1276,7 +1276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点缓存配置</p>
+     * <p>Create a new site cache configuration</p>
      * 
      * @param request CreateCacheRuleRequest
      * @return CreateCacheRuleResponse
@@ -1288,7 +1288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建客户端证书</p>
+     * <p>Uses the ESA-managed certificate authority (CA) to issue client certificates.</p>
      * 
      * @param request CreateClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1339,7 +1339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建客户端证书</p>
+     * <p>Uses the ESA-managed certificate authority (CA) to issue client certificates.</p>
      * 
      * @param request CreateClientCertificateRequest
      * @return CreateClientCertificateResponse
@@ -1351,7 +1351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增压缩规则</p>
+     * <p>Add a compression rule</p>
      * 
      * @param request CreateCompressionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1416,7 +1416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增压缩规则</p>
+     * <p>Add a compression rule</p>
      * 
      * @param request CreateCompressionRuleRequest
      * @return CreateCompressionRuleResponse
@@ -1718,7 +1718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP请求头规则</p>
+     * <p>Add HTTP Request Header Rule</p>
      * 
      * @param tmpReq CreateHttpRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1781,7 +1781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP请求头规则</p>
+     * <p>Add HTTP Request Header Rule</p>
      * 
      * @param request CreateHttpRequestHeaderModificationRuleRequest
      * @return CreateHttpRequestHeaderModificationRuleResponse
@@ -1793,7 +1793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP响应头规则</p>
+     * <p>Add HTTP Response Header Rule</p>
      * 
      * @param tmpReq CreateHttpResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1856,7 +1856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增HTTP响应头规则</p>
+     * <p>Add HTTP Response Header Rule</p>
      * 
      * @param request CreateHttpResponseHeaderModificationRuleRequest
      * @return CreateHttpResponseHeaderModificationRuleResponse
@@ -1868,7 +1868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点HTTPS应用配置</p>
+     * <p>Create a new site HTTPS application configuration</p>
      * 
      * @param request CreateHttpsApplicationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1961,7 +1961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点HTTPS应用配置</p>
+     * <p>Create a new site HTTPS application configuration</p>
      * 
      * @param request CreateHttpsApplicationConfigurationRequest
      * @return CreateHttpsApplicationConfigurationResponse
@@ -1973,7 +1973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点HTTPS基础配置</p>
+     * <p>Create a new site HTTPS basic configuration</p>
      * 
      * @param request CreateHttpsBasicConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2062,7 +2062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点HTTPS基础配置</p>
+     * <p>Create a new site HTTPS basic configuration</p>
      * 
      * @param request CreateHttpsBasicConfigurationRequest
      * @return CreateHttpsBasicConfigurationResponse
@@ -2074,7 +2074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点图片转换配置</p>
+     * <p>Add Site Image Transformation Configuration</p>
      * 
      * @param request CreateImageTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2131,7 +2131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点图片转换配置</p>
+     * <p>Add Site Image Transformation Configuration</p>
      * 
      * @param request CreateImageTransformRequest
      * @return CreateImageTransformResponse
@@ -2262,8 +2262,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and other settings, to achieve effective traffic management and optimization.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增负载均衡器</p>
+     * <p>Add a new load balancer</p>
      * 
      * @param tmpReq CreateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2377,8 +2380,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and other settings, to achieve effective traffic management and optimization.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增负载均衡器</p>
+     * <p>Add a new load balancer</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -2390,7 +2396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点网络优化配置</p>
+     * <p>Create a new site network optimization configuration</p>
      * 
      * @param request CreateNetworkOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2463,7 +2469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点网络优化配置</p>
+     * <p>Create a new site network optimization configuration</p>
      * 
      * @param request CreateNetworkOptimizationRequest
      * @return CreateNetworkOptimizationResponse
@@ -2474,8 +2480,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Multiple origins can be added under the origin address, supporting domain names, IPs, OSS, S3, and other types of origins. It supports authentication for OSS and S3 type origins.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增源地址池</p>
+     * <p>Add a new origin address pool</p>
      * 
      * @param tmpReq CreateOriginPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2529,8 +2538,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Multiple origins can be added under the origin address, supporting domain names, IPs, OSS, S3, and other types of origins. It supports authentication for OSS and S3 type origins.</p>
+     * 
      * <b>summary</b> : 
-     * <p>新增源地址池</p>
+     * <p>Add a new origin address pool</p>
      * 
      * @param request CreateOriginPoolRequest
      * @return CreateOriginPoolResponse
@@ -2591,7 +2603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点回源规则配置</p>
+     * <p>Create a new origin rule configuration for the site</p>
      * 
      * @param request CreateOriginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2672,7 +2684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增站点回源规则配置</p>
+     * <p>Create a new origin rule configuration for the site</p>
      * 
      * @param request CreateOriginRuleRequest
      * @return CreateOriginRuleResponse
@@ -2844,7 +2856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增重定向规则</p>
+     * <p>Add a Redirect Rule</p>
      * 
      * @param request CreateRedirectRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2913,7 +2925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增重定向规则</p>
+     * <p>Add a Redirect Rule</p>
      * 
      * @param request CreateRedirectRuleRequest
      * @return CreateRedirectRuleResponse
@@ -2925,7 +2937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增重写Url规则</p>
+     * <p>Add Rewrite URL Rule</p>
      * 
      * @param request CreateRewriteUrlRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2994,7 +3006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>新增重写Url规则</p>
+     * <p>Add Rewrite URL Rule</p>
      * 
      * @param request CreateRewriteUrlRuleRequest
      * @return CreateRewriteUrlRuleResponse
@@ -4080,8 +4092,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Can only be disabled when there is only version 0 and the default environment.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭版本管理</p>
+     * <p>Disable version management</p>
      * 
      * @param request DeactivateVersionManagementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4117,8 +4132,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Can only be disabled when there is only version 0 and the default environment.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关闭版本管理</p>
+     * <p>Disable version management</p>
      * 
      * @param request DeactivateVersionManagementRequest
      * @return DeactivateVersionManagementResponse
@@ -4130,7 +4148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除缓存配置</p>
+     * <p>Delete Cache Configuration</p>
      * 
      * @param request DeleteCacheRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4171,7 +4189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除缓存配置</p>
+     * <p>Delete Cache Configuration</p>
      * 
      * @param request DeleteCacheRuleRequest
      * @return DeleteCacheRuleResponse
@@ -4273,7 +4291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除客户端证书</p>
+     * <p>Deletes a revoked client certificate.</p>
      * 
      * @param request DeleteClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4306,7 +4324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除客户端证书</p>
+     * <p>Deletes a revoked client certificate.</p>
      * 
      * @param request DeleteClientCertificateRequest
      * @return DeleteClientCertificateResponse
@@ -4685,7 +4703,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTPS应用配置</p>
+     * <p>Delete HTTPS Application Configuration</p>
      * 
      * @param request DeleteHttpsApplicationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4726,7 +4744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTPS应用配置</p>
+     * <p>Delete HTTPS Application Configuration</p>
      * 
      * @param request DeleteHttpsApplicationConfigurationRequest
      * @return DeleteHttpsApplicationConfigurationResponse
@@ -4738,7 +4756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTPS基础配置</p>
+     * <p>Delete HTTPS Basic Configuration</p>
      * 
      * @param request DeleteHttpsBasicConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4779,7 +4797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除HTTPS基础配置</p>
+     * <p>Delete HTTPS Basic Configuration</p>
      * 
      * @param request DeleteHttpsBasicConfigurationRequest
      * @return DeleteHttpsBasicConfigurationResponse
@@ -4986,8 +5004,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete a load balancer by its ID, only one can be deleted at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除负载均衡器</p>
+     * <p>Delete Load Balancer</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5027,8 +5048,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Delete a load balancer by its ID, only one can be deleted at a time.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除负载均衡器</p>
+     * <p>Delete Load Balancer</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
@@ -5040,7 +5064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网络优化配置</p>
+     * <p>Delete Network Optimization Configuration</p>
      * 
      * @param request DeleteNetworkOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5081,7 +5105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除网络优化配置</p>
+     * <p>Delete Network Optimization Configuration</p>
      * 
      * @param request DeleteNetworkOptimizationRequest
      * @return DeleteNetworkOptimizationResponse
@@ -5093,7 +5117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源地址池</p>
+     * <p>Delete Origin Address Pool</p>
      * 
      * @param request DeleteOriginPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5134,7 +5158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源地址池</p>
+     * <p>Delete Origin Address Pool</p>
      * 
      * @param request DeleteOriginPoolRequest
      * @return DeleteOriginPoolResponse
@@ -5195,7 +5219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除回源规则配置</p>
+     * <p>Delete Origin Rule Configuration</p>
      * 
      * @param request DeleteOriginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5236,7 +5260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除回源规则配置</p>
+     * <p>Delete Origin Rule Configuration</p>
      * 
      * @param request DeleteOriginRuleRequest
      * @return DeleteOriginRuleResponse
@@ -6236,7 +6260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DCDN DDoS用户bps、pps数据</p>
+     * <p>Query DCDN DDoS user bps and pps data</p>
      * 
      * @param request DescribeDDoSBpsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6269,7 +6293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DCDN DDoS用户bps、pps数据</p>
+     * <p>Query DCDN DDoS user bps and pps data</p>
      * 
      * @param request DescribeDDoSBpsListRequest
      * @return DescribeDDoSBpsListResponse
@@ -6281,7 +6305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ddos分析七层qps走势图接口</p>
+     * <p>DDoS Analysis Layer 7 QPS Trend Chart API</p>
      * 
      * @param request DescribeDDoSL7QpsListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6334,7 +6358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ddos分析七层qps走势图接口</p>
+     * <p>DDoS Analysis Layer 7 QPS Trend Chart API</p>
      * 
      * @param request DescribeDDoSL7QpsListRequest
      * @return DescribeDDoSL7QpsListResponse
@@ -6875,7 +6899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available specifications of cache reserve instances.</p>
+     * <p>Query Cache Retention Instance Specifications</p>
      * 
      * @param request GetCacheReserveSpecificationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6904,7 +6928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available specifications of cache reserve instances.</p>
+     * <p>Query Cache Retention Instance Specifications</p>
      * @return GetCacheReserveSpecificationResponse
      */
     public GetCacheReserveSpecificationResponse getCacheReserveSpecification() throws Exception {
@@ -6914,7 +6938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条缓存配置</p>
+     * <p>Query a single cache configuration</p>
      * 
      * @param request GetCacheRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6947,7 +6971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条缓存配置</p>
+     * <p>Query a single cache configuration</p>
      * 
      * @param request GetCacheRuleRequest
      * @return GetCacheRuleResponse
@@ -6959,7 +6983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cache tag configuration of your website. You can call this operation when you need to specify tags in the Cache-Tag response header to use the purge by cache tag feature.</p>
+     * <p>Query Site Cache Tag Configuration</p>
      * 
      * @param request GetCacheTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6992,7 +7016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cache tag configuration of your website. You can call this operation when you need to specify tags in the Cache-Tag response header to use the purge by cache tag feature.</p>
+     * <p>Query Site Cache Tag Configuration</p>
      * 
      * @param request GetCacheTagRequest
      * @return GetCacheTagResponse
@@ -7004,7 +7028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries certificate information about a website.</p>
+     * <p>Retrieve the certificate, private key, and certificate information</p>
      * 
      * @param request GetCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7037,7 +7061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries certificate information about a website.</p>
+     * <p>Retrieve the certificate, private key, and certificate information</p>
      * 
      * @param request GetCertificateRequest
      * @return GetCertificateResponse
@@ -7049,7 +7073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询证书quota及用量</p>
+     * <p>Query certificate quota and usage</p>
      * 
      * @param request GetCertificateQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7082,7 +7106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询证书quota及用量</p>
+     * <p>Query certificate quota and usage</p>
      * 
      * @param request GetCertificateQuotaRequest
      * @return GetCertificateQuotaResponse
@@ -7094,7 +7118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端CA证书信息</p>
+     * <p>Queries a client CA certificate.</p>
      * 
      * @param request GetClientCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7127,7 +7151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取客户端CA证书信息</p>
+     * <p>Queries a client CA certificate.</p>
      * 
      * @param request GetClientCaCertificateRequest
      * @return GetClientCaCertificateResponse
@@ -7274,7 +7298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询压缩规则详情</p>
+     * <p>Query Compression Rule Details</p>
      * 
      * @param request GetCompressionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7307,7 +7331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询压缩规则详情</p>
+     * <p>Query Compression Rule Details</p>
      * 
      * @param request GetCompressionRuleRequest
      * @return GetCompressionRuleResponse
@@ -7319,7 +7343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the development mode configuration of your website.</p>
+     * <p>Query Site Developer Mode Configuration</p>
      * 
      * @param request GetDevelopmentModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7352,7 +7376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the development mode configuration of your website.</p>
+     * <p>Query Site Developer Mode Configuration</p>
      * 
      * @param request GetDevelopmentModeRequest
      * @return GetDevelopmentModeResponse
@@ -7830,7 +7854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条HTTPS应用配置</p>
+     * <p>Query a Single HTTPS Application Configuration</p>
      * 
      * @param request GetHttpsApplicationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7863,7 +7887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条HTTPS应用配置</p>
+     * <p>Query a Single HTTPS Application Configuration</p>
      * 
      * @param request GetHttpsApplicationConfigurationRequest
      * @return GetHttpsApplicationConfigurationResponse
@@ -7875,7 +7899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条HTTPS基础配置</p>
+     * <p>Query a Single HTTPS Basic Configuration</p>
      * 
      * @param request GetHttpsBasicConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7908,7 +7932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条HTTPS基础配置</p>
+     * <p>Query a Single HTTPS Basic Configuration</p>
      * 
      * @param request GetHttpsBasicConfigurationRequest
      * @return GetHttpsBasicConfigurationResponse
@@ -7920,7 +7944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点IPv6配置</p>
+     * <p>Query Site IPv6 Configuration</p>
      * 
      * @param request GetIPv6Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -7953,7 +7977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点IPv6配置</p>
+     * <p>Query Site IPv6 Configuration</p>
      * 
      * @param request GetIPv6Request
      * @return GetIPv6Response
@@ -8187,8 +8211,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence policy, routing policy, etc.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询特定负载均衡器</p>
+     * <p>Query a Specific Load Balancer</p>
      * 
      * @param request GetLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8220,8 +8247,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence policy, routing policy, etc.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询特定负载均衡器</p>
+     * <p>Query a Specific Load Balancer</p>
      * 
      * @param request GetLoadBalancerRequest
      * @return GetLoadBalancerResponse
@@ -8278,7 +8308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条网络优化配置</p>
+     * <p>Query a single network optimization configuration</p>
      * 
      * @param request GetNetworkOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8311,7 +8341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条网络优化配置</p>
+     * <p>Query a single network optimization configuration</p>
      * 
      * @param request GetNetworkOptimizationRequest
      * @return GetNetworkOptimizationResponse
@@ -8323,7 +8353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询特定源地址池</p>
+     * <p>Query a specific origin pool</p>
      * 
      * @param request GetOriginPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8356,7 +8386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询特定源地址池</p>
+     * <p>Query a specific origin pool</p>
      * 
      * @param request GetOriginPoolRequest
      * @return GetOriginPoolResponse
@@ -8413,7 +8443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条回源规则配置</p>
+     * <p>Query a single origin rule configuration</p>
      * 
      * @param request GetOriginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8446,7 +8476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询单条回源规则配置</p>
+     * <p>Query a single origin rule configuration</p>
      * 
      * @param request GetOriginRuleRequest
      * @return GetOriginRuleResponse
@@ -9275,7 +9305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点名称独占配置</p>
+     * <p>Query Site Name Exclusive Configuration</p>
      * 
      * @param request GetSiteNameExclusiveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9308,7 +9338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点名称独占配置</p>
+     * <p>Query Site Name Exclusive Configuration</p>
      * 
      * @param request GetSiteNameExclusiveRequest
      * @return GetSiteNameExclusiveResponse
@@ -9320,7 +9350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点暂停配置</p>
+     * <p>Query Site Pause Configuration</p>
      * 
      * @param request GetSitePauseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9353,7 +9383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点暂停配置</p>
+     * <p>Query Site Pause Configuration</p>
      * 
      * @param request GetSitePauseRequest
      * @return GetSitePauseResponse
@@ -9422,7 +9452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tiered cache configuration of your website.</p>
+     * <p>Query Multi-level Cache Configuration for Site</p>
      * 
      * @param request GetTieredCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9455,7 +9485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tiered cache configuration of your website.</p>
+     * <p>Query Multi-level Cache Configuration for Site</p>
      * 
      * @param request GetTieredCacheRequest
      * @return GetTieredCacheResponse
@@ -9622,7 +9652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the application key (AppKey) that is used for authentication and data exchange in bot behavior detection in Web Application Firewall (WAF).</p>
+     * <p>This interface is used to obtain the application key (AppKey) for the BOT behavior detection feature in the site\&quot;s Web Application Firewall (WAF). The key is typically used for authentication and data exchange with the WAF service.</p>
      * 
      * @param request GetWafBotAppKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9651,7 +9681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the application key (AppKey) that is used for authentication and data exchange in bot behavior detection in Web Application Firewall (WAF).</p>
+     * <p>This interface is used to obtain the application key (AppKey) for the BOT behavior detection feature in the site\&quot;s Web Application Firewall (WAF). The key is typically used for authentication and data exchange with the WAF service.</p>
      * @return GetWafBotAppKeyResponse
      */
     public GetWafBotAppKeyResponse getWafBotAppKey() throws Exception {
@@ -9722,7 +9752,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quotas of Web Application Firewall (WAF) resources, such as managed rule groups, custom lists, custom error pages, and scenario-specific policies.</p>
+     * <p>Get WAF Quota Details</p>
      * 
      * @param request GetWafQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9759,7 +9789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the quotas of Web Application Firewall (WAF) resources, such as managed rule groups, custom lists, custom error pages, and scenario-specific policies.</p>
+     * <p>Get WAF Quota Details</p>
      * 
      * @param request GetWafQuotaRequest
      * @return GetWafQuotaResponse
@@ -9771,7 +9801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cache reserve instances in your Alibaba Cloud account.</p>
+     * <p>Query Cache Reserve Instance List</p>
      * 
      * @param request ListCacheReserveInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9804,7 +9834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cache reserve instances in your Alibaba Cloud account.</p>
+     * <p>Query Cache Reserve Instance List</p>
      * 
      * @param request ListCacheReserveInstancesRequest
      * @return ListCacheReserveInstancesResponse
@@ -9816,7 +9846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条缓存配置</p>
+     * <p>Query multiple cache configurations</p>
      * 
      * @param request ListCacheRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9849,7 +9879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条缓存配置</p>
+     * <p>Query multiple cache configurations</p>
      * 
      * @param request ListCacheRulesRequest
      * @return ListCacheRulesResponse
@@ -9861,7 +9891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下证书列表</p>
+     * <p>List certificates under a site</p>
      * 
      * @param request ListCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9894,7 +9924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询站点下证书列表</p>
+     * <p>List certificates under a site</p>
      * 
      * @param request ListCertificatesRequest
      * @return ListCertificatesResponse
@@ -9906,7 +9936,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询TLS密码套件列表</p>
+     * <p>Query TLS Cipher Suite List</p>
      * 
      * @param request ListCiphersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9939,7 +9969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询TLS密码套件列表</p>
+     * <p>Query TLS Cipher Suite List</p>
      * 
      * @param request ListCiphersRequest
      * @return ListCiphersResponse
@@ -10384,7 +10414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP请求头规则列表</p>
+     * <p>List of HTTP Request Header Rules</p>
      * 
      * @param request ListHttpRequestHeaderModificationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10417,7 +10447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询HTTP请求头规则列表</p>
+     * <p>List of HTTP Request Header Rules</p>
      * 
      * @param request ListHttpRequestHeaderModificationRulesRequest
      * @return ListHttpRequestHeaderModificationRulesResponse
@@ -10474,7 +10504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条HTTPS应用配置</p>
+     * <p>Query multiple HTTPS application configurations</p>
      * 
      * @param request ListHttpsApplicationConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10507,7 +10537,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条HTTPS应用配置</p>
+     * <p>Query multiple HTTPS application configurations</p>
      * 
      * @param request ListHttpsApplicationConfigurationsRequest
      * @return ListHttpsApplicationConfigurationsResponse
@@ -10519,7 +10549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条HTTPS基础配置</p>
+     * <p>Query multiple HTTPS basic configurations</p>
      * 
      * @param request ListHttpsBasicConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10552,7 +10582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条HTTPS基础配置</p>
+     * <p>Query multiple HTTPS basic configurations</p>
      * 
      * @param request ListHttpsBasicConfigurationsRequest
      * @return ListHttpsBasicConfigurationsResponse
@@ -10806,8 +10836,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the status of origins under load balancers. You can pass multiple load balancer IDs at once, separated by commas. This is for load balancers that have monitors configured. It will probe the origins in the source address pools used by the load balancers and record the current status of each origin.</p>
+     * <ul>
+     * <li>Healthy(healthy): The probe result is available.</li>
+     * <li>Unhealthy(unhealthy): The probe result is unavailable.</li>
+     * <li>Unknown(unknown): Unknown, the monitor has not yet probed.</li>
+     * <li>Undetected(undetected): The load balancer to which the origin belongs is not bound to a monitor.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询负载均衡器里各源站状态</p>
+     * <p>Query the status of origins in load balancers</p>
      * 
      * @param request ListLoadBalancerOriginStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10839,8 +10878,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Query the status of origins under load balancers. You can pass multiple load balancer IDs at once, separated by commas. This is for load balancers that have monitors configured. It will probe the origins in the source address pools used by the load balancers and record the current status of each origin.</p>
+     * <ul>
+     * <li>Healthy(healthy): The probe result is available.</li>
+     * <li>Unhealthy(unhealthy): The probe result is unavailable.</li>
+     * <li>Unknown(unknown): Unknown, the monitor has not yet probed.</li>
+     * <li>Undetected(undetected): The load balancer to which the origin belongs is not bound to a monitor.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询负载均衡器里各源站状态</p>
+     * <p>Query the status of origins in load balancers</p>
      * 
      * @param request ListLoadBalancerOriginStatusRequest
      * @return ListLoadBalancerOriginStatusResponse
@@ -10852,10 +10900,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call an operation to create a traffic steering policy based on the originating country or region for a load balancer, you can use the code of a region or subregion to specify traffic that is sent from the region or subregion.</p>
+     * <p>When creating a load balancer \&quot;based on country/region scheduling\&quot; strategy through OpenAPI, use the code of primary or secondary regions to represent traffic from this geographical area.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information that can be used to configure a traffic steering policy based on the originating country or region for a load balancer, such as the code and code descriptions of the regions and subregions of the load balancer.</p>
+     * <p>Query Load Balancer Region List</p>
      * 
      * @param request ListLoadBalancerRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10888,10 +10936,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call an operation to create a traffic steering policy based on the originating country or region for a load balancer, you can use the code of a region or subregion to specify traffic that is sent from the region or subregion.</p>
+     * <p>When creating a load balancer \&quot;based on country/region scheduling\&quot; strategy through OpenAPI, use the code of primary or secondary regions to represent traffic from this geographical area.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information that can be used to configure a traffic steering policy based on the originating country or region for a load balancer, such as the code and code descriptions of the regions and subregions of the load balancer.</p>
+     * <p>Query Load Balancer Region List</p>
      * 
      * @param request ListLoadBalancerRegionsRequest
      * @return ListLoadBalancerRegionsResponse
@@ -10903,7 +10951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询负载均衡器列表</p>
+     * <p>List of Load Balancers</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10936,7 +10984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询负载均衡器列表</p>
+     * <p>List of Load Balancers</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -11001,7 +11049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条网络优化配置</p>
+     * <p>Query multiple network optimization configurations</p>
      * 
      * @param request ListNetworkOptimizationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11034,7 +11082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条网络优化配置</p>
+     * <p>Query multiple network optimization configurations</p>
      * 
      * @param request ListNetworkOptimizationsRequest
      * @return ListNetworkOptimizationsResponse
@@ -11046,7 +11094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询源地址池列表</p>
+     * <p>List Origin Pools</p>
      * 
      * @param request ListOriginPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11079,7 +11127,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询源地址池列表</p>
+     * <p>List Origin Pools</p>
      * 
      * @param request ListOriginPoolsRequest
      * @return ListOriginPoolsResponse
@@ -11091,7 +11139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条回源规则配置</p>
+     * <p>Query multiple origin rules configurations</p>
      * 
      * @param request ListOriginRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11124,7 +11172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多条回源规则配置</p>
+     * <p>Query multiple origin rules configurations</p>
      * 
      * @param request ListOriginRulesRequest
      * @return ListOriginRulesResponse
@@ -11559,7 +11607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about websites in your account, such as the name, status, and configuration of each website.</p>
+     * <p>Query Site List</p>
      * 
      * @param tmpReq ListSitesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11598,7 +11646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about websites in your account, such as the name, status, and configuration of each website.</p>
+     * <p>Query Site List</p>
      * 
      * @param request ListSitesRequest
      * @return ListSitesResponse
@@ -12453,8 +12501,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
+     * <li>If the acceleration area is not overseas, the site must have successfully completed the filing process.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>新购套餐</p>
+     * <p>Purchase New Package</p>
      * 
      * @param request PurchaseRatePlanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12463,6 +12517,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PurchaseRatePlanResponse purchaseRatePlanWithOptions(PurchaseRatePlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            query.put("Amount", request.amount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
         }
@@ -12522,8 +12580,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
+     * <li>If the acceleration area is not overseas, the site must have successfully completed the filing process.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>新购套餐</p>
+     * <p>Purchase New Package</p>
      * 
      * @param request PurchaseRatePlanRequest
      * @return PurchaseRatePlanResponse
@@ -12535,7 +12599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</p>
+     * <p>Cache Refresh</p>
      * 
      * @param tmpReq PurgeCachesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12594,7 +12658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</p>
+     * <p>Cache Refresh</p>
      * 
      * @param request PurgeCachesRequest
      * @return PurgeCachesResponse
@@ -13520,7 +13584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改缓存配置</p>
+     * <p>Modify cache configuration</p>
      * 
      * @param request UpdateCacheRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13653,7 +13717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改缓存配置</p>
+     * <p>Modify cache configuration</p>
      * 
      * @param request UpdateCacheRuleRequest
      * @return UpdateCacheRuleResponse
@@ -13665,7 +13729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点缓存Tag配置</p>
+     * <p>Modify Site Cache Tag Configuration</p>
      * 
      * @param request UpdateCacheTagRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13714,7 +13778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点缓存Tag配置</p>
+     * <p>Modify Site Cache Tag Configuration</p>
      * 
      * @param request UpdateCacheTagRequest
      * @return UpdateCacheTagResponse
@@ -13726,7 +13790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点cname拉平配置</p>
+     * <p>Modify site CNAME flattening configuration</p>
      * 
      * @param request UpdateCnameFlatteningRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13767,7 +13831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点cname拉平配置</p>
+     * <p>Modify site CNAME flattening configuration</p>
      * 
      * @param request UpdateCnameFlatteningRequest
      * @return UpdateCnameFlatteningResponse
@@ -13779,7 +13843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改压缩规则</p>
+     * <p>Modify compression rule</p>
      * 
      * @param request UpdateCompressionRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13844,7 +13908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改压缩规则</p>
+     * <p>Modify compression rule</p>
      * 
      * @param request UpdateCompressionRuleRequest
      * @return UpdateCompressionRuleResponse
@@ -13925,7 +13989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点开发者模式配置</p>
+     * <p>Modify Site Developer Mode Configuration</p>
      * 
      * @param request UpdateDevelopmentModeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13966,7 +14030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点开发者模式配置</p>
+     * <p>Modify Site Developer Mode Configuration</p>
      * 
      * @param request UpdateDevelopmentModeRequest
      * @return UpdateDevelopmentModeResponse
@@ -14035,7 +14099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP请求头规则</p>
+     * <p>Modify HTTP Request Header Rules</p>
      * 
      * @param tmpReq UpdateHttpRequestHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14098,7 +14162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP请求头规则</p>
+     * <p>Modify HTTP Request Header Rules</p>
      * 
      * @param request UpdateHttpRequestHeaderModificationRuleRequest
      * @return UpdateHttpRequestHeaderModificationRuleResponse
@@ -14110,7 +14174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP响应头规则</p>
+     * <p>Modify HTTP Response Header Rules</p>
      * 
      * @param tmpReq UpdateHttpResponseHeaderModificationRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14173,7 +14237,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTP响应头规则</p>
+     * <p>Modify HTTP Response Header Rules</p>
      * 
      * @param request UpdateHttpResponseHeaderModificationRuleRequest
      * @return UpdateHttpResponseHeaderModificationRuleResponse
@@ -14185,7 +14249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTPS应用配置</p>
+     * <p>Modify HTTPS Application Configuration</p>
      * 
      * @param request UpdateHttpsApplicationConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14278,7 +14342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTPS应用配置</p>
+     * <p>Modify HTTPS Application Configuration</p>
      * 
      * @param request UpdateHttpsApplicationConfigurationRequest
      * @return UpdateHttpsApplicationConfigurationResponse
@@ -14290,7 +14354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTPS基础配置</p>
+     * <p>Modify HTTPS Basic Configuration</p>
      * 
      * @param request UpdateHttpsBasicConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14383,7 +14447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改HTTPS基础配置</p>
+     * <p>Modify HTTPS Basic Configuration</p>
      * 
      * @param request UpdateHttpsBasicConfigurationRequest
      * @return UpdateHttpsBasicConfigurationResponse
@@ -14395,7 +14459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点IPv6配置</p>
+     * <p>Modify Site IPv6 Configuration</p>
      * 
      * @param request UpdateIPv6Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -14436,7 +14500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点IPv6配置</p>
+     * <p>Modify Site IPv6 Configuration</p>
      * 
      * @param request UpdateIPv6Request
      * @return UpdateIPv6Response
@@ -14448,7 +14512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点图片转换配置</p>
+     * <p>Modify Site Image Transformation Configuration</p>
      * 
      * @param request UpdateImageTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14505,7 +14569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点图片转换配置</p>
+     * <p>Modify Site Image Transformation Configuration</p>
      * 
      * @param request UpdateImageTransformRequest
      * @return UpdateImageTransformResponse
@@ -14583,8 +14647,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence policies, and various advanced settings related to traffic routing. &gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改负载均衡器</p>
+     * <p>Modify Load Balancer</p>
      * 
      * @param tmpReq UpdateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14698,8 +14765,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence policies, and various advanced settings related to traffic routing. &gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改负载均衡器</p>
+     * <p>Modify Load Balancer</p>
      * 
      * @param request UpdateLoadBalancerRequest
      * @return UpdateLoadBalancerResponse
@@ -14711,7 +14781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点托管转换配置</p>
+     * <p>Modify Site Managed Transformation Configuration</p>
      * 
      * @param request UpdateManagedTransformRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14760,7 +14830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点托管转换配置</p>
+     * <p>Modify Site Managed Transformation Configuration</p>
      * 
      * @param request UpdateManagedTransformRequest
      * @return UpdateManagedTransformResponse
@@ -14772,7 +14842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改网络优化配置</p>
+     * <p>Modify network optimization configuration</p>
      * 
      * @param request UpdateNetworkOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14845,7 +14915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改网络优化配置</p>
+     * <p>Modify network optimization configuration</p>
      * 
      * @param request UpdateNetworkOptimizationRequest
      * @return UpdateNetworkOptimizationResponse
@@ -14857,7 +14927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改监视器</p>
+     * <p>Modify the Monitor</p>
      * 
      * @param tmpReq UpdateOriginPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14912,7 +14982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改监视器</p>
+     * <p>Modify the Monitor</p>
      * 
      * @param request UpdateOriginPoolRequest
      * @return UpdateOriginPoolResponse
@@ -15026,7 +15096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点回源规则配置</p>
+     * <p>Modify Origin Rule Configuration for Site</p>
      * 
      * @param request UpdateOriginRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15107,7 +15177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点回源规则配置</p>
+     * <p>Modify Origin Rule Configuration for Site</p>
      * 
      * @param request UpdateOriginRuleRequest
      * @return UpdateOriginRuleResponse
@@ -15366,7 +15436,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新重定向规则</p>
+     * <p>Update Redirect Rule</p>
      * 
      * @param request UpdateRedirectRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15435,7 +15505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新重定向规则</p>
+     * <p>Update Redirect Rule</p>
      * 
      * @param request UpdateRedirectRuleRequest
      * @return UpdateRedirectRuleResponse
@@ -15447,7 +15517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改重写Url规则</p>
+     * <p>Modify Rewrite URL Rule</p>
      * 
      * @param request UpdateRewriteUrlRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15516,7 +15586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改重写Url规则</p>
+     * <p>Modify Rewrite URL Rule</p>
      * 
      * @param request UpdateRewriteUrlRuleRequest
      * @return UpdateRewriteUrlRuleResponse
@@ -15953,7 +16023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点名称独占配置</p>
+     * <p>Modify Site Name Exclusive Configuration</p>
      * 
      * @param request UpdateSiteNameExclusiveRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15994,7 +16064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点名称独占配置</p>
+     * <p>Modify Site Name Exclusive Configuration</p>
      * 
      * @param request UpdateSiteNameExclusiveRequest
      * @return UpdateSiteNameExclusiveResponse
@@ -16006,7 +16076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点暂停配置</p>
+     * <p>Modify Site Pause Configuration</p>
      * 
      * @param request UpdateSitePauseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16047,7 +16117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点暂停配置</p>
+     * <p>Modify Site Pause Configuration</p>
      * 
      * @param request UpdateSitePauseRequest
      * @return UpdateSitePauseResponse
@@ -16112,7 +16182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点多级缓存配置</p>
+     * <p>Modify Multi-level Cache Configuration for Site</p>
      * 
      * @param request UpdateTieredCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16153,7 +16223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点多级缓存配置</p>
+     * <p>Modify Multi-level Cache Configuration for Site</p>
      * 
      * @param request UpdateTieredCacheRequest
      * @return UpdateTieredCacheResponse
@@ -16602,7 +16672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传客户端CA证书</p>
+     * <p>Uploads a client certificate authority (CA) certificate.</p>
      * 
      * @param request UploadClientCaCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16649,7 +16719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>上传客户端CA证书</p>
+     * <p>Uploads a client certificate authority (CA) certificate.</p>
      * 
      * @param request UploadClientCaCertificateRequest
      * @return UploadClientCaCertificateResponse
