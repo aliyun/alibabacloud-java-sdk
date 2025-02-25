@@ -117,6 +117,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
         @NameInMap("intentionScript")
         public String intentionScript;
 
+        @NameInMap("interrupt")
+        public Boolean interrupt;
+
         /**
          * <strong>example:</strong>
          * <p>null</p>
@@ -190,6 +193,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
             return this.intentionScript;
         }
 
+        public RealTimeDialogResponseBodyChoicesDelta setInterrupt(Boolean interrupt) {
+            this.interrupt = interrupt;
+            return this;
+        }
+        public Boolean getInterrupt() {
+            return this.interrupt;
+        }
+
         public RealTimeDialogResponseBodyChoicesDelta setRecommendIntention(String recommendIntention) {
             this.recommendIntention = recommendIntention;
             return this;
@@ -260,6 +271,9 @@ public class RealTimeDialogResponseBody extends TeaModel {
 
         @NameInMap("intentionScript")
         public String intentionScript;
+
+        @NameInMap("interrupt")
+        public Boolean interrupt;
 
         /**
          * <strong>example:</strong>
@@ -336,6 +350,14 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
         public String getIntentionScript() {
             return this.intentionScript;
+        }
+
+        public RealTimeDialogResponseBodyChoicesMessage setInterrupt(Boolean interrupt) {
+            this.interrupt = interrupt;
+            return this;
+        }
+        public Boolean getInterrupt() {
+            return this.interrupt;
         }
 
         public RealTimeDialogResponseBodyChoicesMessage setRecommendIntention(String recommendIntention) {

@@ -41,6 +41,9 @@ public class RealTimeDialogRequest extends TeaModel {
     @NameInMap("recommend")
     public Boolean recommend;
 
+    @NameInMap("scriptContentPlayed")
+    public String scriptContentPlayed;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -56,6 +59,9 @@ public class RealTimeDialogRequest extends TeaModel {
      */
     @NameInMap("stream")
     public Boolean stream;
+
+    @NameInMap("userVad")
+    public Boolean userVad;
 
     public static RealTimeDialogRequest build(java.util.Map<String, ?> map) throws Exception {
         RealTimeDialogRequest self = new RealTimeDialogRequest();
@@ -110,6 +116,14 @@ public class RealTimeDialogRequest extends TeaModel {
         return this.recommend;
     }
 
+    public RealTimeDialogRequest setScriptContentPlayed(String scriptContentPlayed) {
+        this.scriptContentPlayed = scriptContentPlayed;
+        return this;
+    }
+    public String getScriptContentPlayed() {
+        return this.scriptContentPlayed;
+    }
+
     public RealTimeDialogRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -124,6 +138,14 @@ public class RealTimeDialogRequest extends TeaModel {
     }
     public Boolean getStream() {
         return this.stream;
+    }
+
+    public RealTimeDialogRequest setUserVad(Boolean userVad) {
+        this.userVad = userVad;
+        return this;
+    }
+    public Boolean getUserVad() {
+        return this.userVad;
     }
 
     public static class RealTimeDialogRequestConversationModel extends TeaModel {

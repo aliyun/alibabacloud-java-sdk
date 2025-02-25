@@ -1876,12 +1876,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("recommend", request.recommend);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptContentPlayed)) {
+            body.put("scriptContentPlayed", request.scriptContentPlayed);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             body.put("sessionId", request.sessionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
             body.put("stream", request.stream);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userVad)) {
+            body.put("userVad", request.userVad);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
