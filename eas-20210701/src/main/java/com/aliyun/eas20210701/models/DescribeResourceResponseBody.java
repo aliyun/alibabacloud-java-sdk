@@ -22,6 +22,12 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
+    /**
+     * <p>The number of vCPUs that is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("CpuUsed")
     public Integer cpuUsed;
 
@@ -52,6 +58,12 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
+    /**
+     * <p>The number of GPUs that is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("GpuUsed")
     public Float gpuUsed;
 
@@ -64,9 +76,21 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("InstanceCount")
     public Integer instanceCount;
 
+    /**
+     * <p>The total memory size. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8192</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The size of memory that is used. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("MemoryUsed")
     public Integer memoryUsed;
 

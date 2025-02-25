@@ -246,7 +246,7 @@ public class CreateServiceAutoScalerRequest extends TeaModel {
          * <ul>
          * <li>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</li>
          * <li>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</li>
-         * <li>If you set metricName to gpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</li>
+         * <li>If you set metricName to gpu, scale-out is triggered when the average gpu utilization for a single instance is greater than this threshold.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

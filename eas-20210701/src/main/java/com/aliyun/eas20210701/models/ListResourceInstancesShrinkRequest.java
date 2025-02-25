@@ -139,6 +139,9 @@ public class ListResourceInstancesShrinkRequest extends TeaModel {
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Label")
     public String labelShrink;
 

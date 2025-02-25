@@ -22,6 +22,12 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The worker name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-fd95xxxxx-xxxxxx</p>
+     */
     @NameInMap("WorkerName")
     public String workerName;
 

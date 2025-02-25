@@ -139,6 +139,9 @@ public class ListResourceInstancesRequest extends TeaModel {
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Label")
     public java.util.Map<String, String> label;
 

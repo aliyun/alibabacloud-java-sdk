@@ -41,7 +41,7 @@ public class ListVirtualResourceResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The list of virtual resource groups.</p>
+     * <p>The virtual resource groups.</p>
      */
     @NameInMap("VirtualResources")
     public java.util.List<ListVirtualResourceResponseBodyVirtualResources> virtualResources;
@@ -101,6 +101,12 @@ public class ListVirtualResourceResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The number of deployed services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ServiceCount")
         public Integer serviceCount;
 

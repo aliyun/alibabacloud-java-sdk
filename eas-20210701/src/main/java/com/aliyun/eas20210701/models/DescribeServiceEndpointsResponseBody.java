@@ -21,6 +21,9 @@ public class DescribeServiceEndpointsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Execution successful.</p>
      */
     @NameInMap("Message")
     public String message;

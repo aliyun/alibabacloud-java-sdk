@@ -127,6 +127,12 @@ public class DescribeGatewayResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the HTTP to HTTPS redirection is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SSLRedirectionEnabled")
     public Boolean SSLRedirectionEnabled;
 

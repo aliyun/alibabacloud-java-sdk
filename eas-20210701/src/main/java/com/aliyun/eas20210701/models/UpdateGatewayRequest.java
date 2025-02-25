@@ -8,19 +8,8 @@ public class UpdateGatewayRequest extends TeaModel {
      * <p>Specifies whether to enable Internet access. Default value: false.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>false</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,7 +19,12 @@ public class UpdateGatewayRequest extends TeaModel {
     public Boolean enableInternet;
 
     /**
-     * <p>Specifies whether to enable internal network access. Default value: true.</p>
+     * <p>Specifies whether to enable private access. Default value: true.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,11 +32,23 @@ public class UpdateGatewayRequest extends TeaModel {
     @NameInMap("EnableIntranet")
     public Boolean enableIntranet;
 
+    /**
+     * <p>Specifies whether to enable HTTP to HTTPS redirection. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableSSLRedirection")
     public Boolean enableSSLRedirection;
 
     /**
-     * <p>The instance type used for the private gateway.</p>
+     * <p>The instance type used by the private gateway. Valid values:</p>
+     * <ul>
+     * <li>2c4g</li>
+     * <li>4c8g</li>
+     * <li>8c16g</li>
+     * <li>16c32g</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.4xlarge</p>
@@ -51,7 +57,7 @@ public class UpdateGatewayRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Indicates whether it is the default private gateway.</p>
+     * <p>Specifies whether it is the default private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -60,7 +66,7 @@ public class UpdateGatewayRequest extends TeaModel {
     public Boolean isDefault;
 
     /**
-     * <p>The private gateway alias.</p>
+     * <p>The alias of the private gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>mygateway1</p>
