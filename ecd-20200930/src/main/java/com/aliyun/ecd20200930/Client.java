@@ -1181,7 +1181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones an existing policy.</p>
+     * <p>Clones an existing policy to quickly create a policy.</p>
      * 
      * @param request ClonePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1226,7 +1226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones an existing policy.</p>
+     * <p>Clones an existing policy to quickly create a policy.</p>
      * 
      * @param request ClonePolicyGroupRequest
      * @return ClonePolicyGroupResponse
@@ -3422,10 +3422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a policy.</p>
+     * <p>Creates a cloud computer policy.</p>
      * 
      * @param request CreatePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3686,10 +3686,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A policy is a set of security rules that are used to control security configurations when end users use cloud desktops. A policy contains basic features, such as USB redirection and watermarking, and other features, such as security group control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
+     * <p>A cloud computer policy is a collection of rules to manage cloud computers in performance and security. For example, you can create a basic policy that involves the disk mapping, USB redirection, watermarking features and rules such as DNS rules. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a policy.</p>
+     * <p>Creates a cloud computer policy.</p>
      * 
      * @param request CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -4846,8 +4846,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</p>
+     * <ul>
+     * <li>You cannot delete the cloud computer policies that are associated with cloud computers.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes one or more custom policies.</p>
+     * <p>Deletes one or more custom cloud computer policies.</p>
      * 
      * @param request DeletePolicyGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4887,8 +4893,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You cannot delete the cloud computer policy created by the Elastic Desktop Service (EDS) system.</p>
+     * <ul>
+     * <li>You cannot delete the cloud computer policies that are associated with cloud computers.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes one or more custom policies.</p>
+     * <p>Deletes one or more custom cloud computer policies.</p>
      * 
      * @param request DeletePolicyGroupsRequest
      * @return DeletePolicyGroupsResponse
@@ -6454,6 +6466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.gpuDriverType)) {
             query.put("GpuDriverType", request.gpuDriverType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuMemory)) {
+            query.put("GpuMemory", request.gpuMemory);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeFamily)) {
@@ -12791,10 +12807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud desktops that you want to restart by calling this operation must be in the Running state.</p>
+     * <p>The cloud computers for which you want to change their policies must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the policies that are configured for a cloud desktop.</p>
+     * <p>Changes an existing cloud computer policy for cloud computers.</p>
      * 
      * @param request ModifyDesktopsPolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12843,10 +12859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud desktops that you want to restart by calling this operation must be in the Running state.</p>
+     * <p>The cloud computers for which you want to change their policies must be in the Running state.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the policies that are configured for a cloud desktop.</p>
+     * <p>Changes an existing cloud computer policy for cloud computers.</p>
      * 
      * @param request ModifyDesktopsPolicyGroupRequest
      * @return ModifyDesktopsPolicyGroupResponse
@@ -13517,6 +13533,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改工作区DNS信息</p>
+     * 
+     * @param request ModifyOfficeSiteDnsInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyOfficeSiteDnsInfoResponse
+     */
+    public ModifyOfficeSiteDnsInfoResponse modifyOfficeSiteDnsInfoWithOptions(ModifyOfficeSiteDnsInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsAddress)) {
+            query.put("DnsAddress", request.dnsAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteId)) {
+            query.put("OfficeSiteId", request.officeSiteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyOfficeSiteDnsInfo"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOfficeSiteDnsInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyOfficeSiteDnsInfoResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改工作区DNS信息</p>
+     * 
+     * @param request ModifyOfficeSiteDnsInfoRequest
+     * @return ModifyOfficeSiteDnsInfoResponse
+     */
+    public ModifyOfficeSiteDnsInfoResponse modifyOfficeSiteDnsInfo(ModifyOfficeSiteDnsInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyOfficeSiteDnsInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables or disables multi-factor authentication (MFA) for an enterprise Active Directory (AD) office network (formerly workspace).</p>
      * 
      * @param request ModifyOfficeSiteMfaEnabledRequest
@@ -13574,7 +13647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a policy.</p>
+     * <p>Modifies the cloud computer policy.</p>
      * 
      * @param request ModifyPolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13847,7 +13920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies a policy.</p>
+     * <p>Modifies the cloud computer policy.</p>
      * 
      * @param request ModifyPolicyGroupRequest
      * @return ModifyPolicyGroupResponse
@@ -14586,7 +14659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renew subscription cloud computers.</p>
+     * <p>Renews monthly subscription cloud computers.</p>
      * 
      * @param request RenewDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14651,7 +14724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renew subscription cloud computers.</p>
+     * <p>Renews monthly subscription cloud computers.</p>
      * 
      * @param request RenewDesktopsRequest
      * @return RenewDesktopsResponse

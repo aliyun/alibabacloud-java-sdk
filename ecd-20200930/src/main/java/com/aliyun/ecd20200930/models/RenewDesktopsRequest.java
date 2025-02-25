@@ -6,23 +6,10 @@ import com.aliyun.tea.*;
 public class RenewDesktopsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the auto-payment feature.</p>
-     * <p>Default value: true. Valid values:</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><p>true: enables the auto-payment feature.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.</p>
-     * <!-- -->
-     * </li>
-     * <li><p>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <p>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</p>
-     * <!-- --></li>
+     * <li>true (default): enables the auto-payment feature. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated.</li>
+     * <li>false: disables the auto-payment feature. In this case, an order is generated but you need to complete the payment. You can log on to the EDS console and complete the payment based on the order ID on the Orders page.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,11 +18,17 @@ public class RenewDesktopsRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable the auto-renewal feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
-     * <p>The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.</p>
+     * <p>The cloud computer IDs. You can only renew monthly subscription cloud computers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +86,7 @@ public class RenewDesktopsRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,6 +95,14 @@ public class RenewDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <blockquote>
+     * <p> This field is not available for public use.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
