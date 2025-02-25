@@ -14,7 +14,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the session.</p>
+     * <p>Details of sessions.</p>
      */
     @NameInMap("Sessions")
     public java.util.List<DescribeDesktopSessionsResponseBodySessions> sessions;
@@ -148,6 +148,12 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        /**
+         * <p>Indicates whether the switch to check session status of cloud computers is turned on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OsSessionStatus")
         public String osSessionStatus;
 
@@ -220,6 +226,19 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        /**
+         * <p>The billing method of cloud computers.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>duration: hourly plan (available for users in the whitelist)</li>
+         * <li>postPaid: pay-as-you-go</li>
+         * <li>monthPackage: monthly subscription (120-hour computing plan and 250-hour computing plan)</li>
+         * <li>prePaid: monthly subscription (Unlimited computing plan)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>monthPackage</p>
+         */
         @NameInMap("SubPayType")
         public String subPayType;
 

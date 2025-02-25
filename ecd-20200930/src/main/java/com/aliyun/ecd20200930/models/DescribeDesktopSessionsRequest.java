@@ -4,6 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopSessionsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to turn on the switch to check session status of cloud computers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("CheckOsSession")
     public Boolean checkOsSession;
 
@@ -40,6 +46,10 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("EndUserIdFilter")
     public String endUserIdFilter;
 
@@ -71,7 +81,7 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,6 +113,19 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The billing method of cloud computers.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>duration: hourly plan (available for users in the whitelist)</li>
+     * <li>postPaid: pay-as-you-go</li>
+     * <li>monthPackage: monthly subscription (the 120-hour/250-hour computing plan)</li>
+     * <li>prePaid: monthly subscription (the Unlimited computing plan)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>monthPackage</p>
+     */
     @NameInMap("SubPayType")
     public String subPayType;
 

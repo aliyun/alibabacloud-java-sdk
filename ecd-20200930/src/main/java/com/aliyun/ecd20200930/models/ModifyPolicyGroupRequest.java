@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether the end user has administrator permissions after the end user connects to the cloud desktop.</p>
+     * <p>Specifies whether end users have the administrator permissions.</p>
      * <blockquote>
-     * <p> This parameter is in invitational preview and not available to the public.</p>
+     * <p> This parameter is in invitational preview for specific users and not available to the public.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,12 +17,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String adminAccess;
 
     /**
-     * <p>Specifies whether to enable the anti-screenshot feature. Valid values:</p>
+     * <p>Specifies whether to enable the anti-screenshot feature.</p>
+     * <p>Valid values:</p>
      * <ul>
+     * <li>off (default)</li>
      * <li>on</li>
-     * <li>off</li>
      * </ul>
-     * <p>Default value: off.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -31,7 +31,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String appContentProtection;
 
     /**
-     * <p>The client CIDR blocks in the whitelist.</p>
+     * <p>The client IP address whitelist.</p>
      */
     @NameInMap("AuthorizeAccessPolicyRule")
     public java.util.List<ModifyPolicyGroupRequestAuthorizeAccessPolicyRule> authorizeAccessPolicyRule;
@@ -43,12 +43,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public java.util.List<ModifyPolicyGroupRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
     /**
-     * <p>Specifies whether to enable the webcam redirection feature. Valid values:</p>
+     * <p>Specifies whether to enable the webcam redirection feature.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on</li>
      * <li>off</li>
+     * <li>on (default)</li>
      * </ul>
-     * <p>Default value: on.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -57,17 +57,19 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String cameraRedirect;
 
     /**
-     * <p>The logon methods.</p>
+     * <p>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</p>
      */
     @NameInMap("ClientType")
     public java.util.List<ModifyPolicyGroupRequestClientType> clientType;
 
     /**
-     * <p>The permissions on clipboards. Valid values:</p>
+     * <p>The permissions on the clipboard.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>read: specifies one-way transfer. You can copy data from your computer to cloud desktops, but cannot copy data from cloud desktops to your computer.</li>
-     * <li>readwrite: specifies two-way transfer. You can copy data between your computer and cloud desktops.</li>
-     * <li>off: specifies that the two-way transfer is disabled. You cannot copy data between your computer and cloud desktops.</li>
+     * <li>read: specifies one-way transfer. You can copy files only from local devices to cloud computers.</li>
+     * <li>readwrite: specifies two-way transfer You can copy files between local devices and cloud computers.</li>
+     * <li>write: specifies one-way transfer. You can only copy files from cloud computers to local devices.</li>
+     * <li>off: disables both one-way and two-way transfer. Files cannot be copied between local devices and cloud computers.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,10 +78,15 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("Clipboard")
     public String clipboard;
 
+    /**
+     * <p>The device redirection rules.</p>
+     */
     @NameInMap("DeviceRedirects")
     public java.util.List<ModifyPolicyGroupRequestDeviceRedirects> deviceRedirects;
 
     /**
+     * <p>The custom peripheral rules.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -87,10 +94,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public java.util.List<ModifyPolicyGroupRequestDeviceRules> deviceRules;
 
     /**
-     * <p>The domain blacklist or whitelist. Wildcard domains are supported. Separate domain names with commas (,). Valid values:</p>
+     * <p>Specifies whether the access control for domain names is enabled. Domain names support wildcards (\*). Separate multiple domain names with commas (,).</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>[black:],example1.com,example2.com: the domain name blacklist.</li>
-     * <li>[white:],example1.com,example2.com: the domain name whitelist.</li>
+     * <li>off</li>
+     * <li>on</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,13 +108,18 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String domainList;
 
     /**
-     * <p>The details of the DNS rule.</p>
+     * <p>The details of the domain name resolution rules.</p>
      */
     @NameInMap("DomainResolveRule")
     public java.util.List<ModifyPolicyGroupRequestDomainResolveRule> domainResolveRule;
 
     /**
-     * <p>The DNS rule type.</p>
+     * <p>The type of the domain name resolution rule.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>OFF</li>
+     * <li>ON</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>OFF</p>
@@ -115,10 +128,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String domainResolveRuleType;
 
     /**
-     * <p>The user applies for the administrator assistance switch. Value range: </p>
+     * <p>Specifies whether to turn on the Contact Administrator for Help switch.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on </li>
      * <li>off</li>
+     * <li>on</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,10 +142,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String endUserApplyAdminCoordinate;
 
     /**
-     * <p>The flow collaboration switch between users. Value range: </p>
+     * <p>Specifies whether to turn on the User Stream Collaboration switch.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on </li>
      * <li>off</li>
+     * <li>on</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,10 +156,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String endUserGroupCoordinate;
 
     /**
-     * <p>Specifies whether to enable the image display quality feature for the Graphics cloud desktop. If your business requires high desktop performance and optimal user experience, we recommend that you enable this feature. For example, you can enable this policy in professional design scenarios. Valid values:</p>
+     * <p>Specifies whether to enable the Image Quality Control feature for Graphic-based cloud computers. If you have high requirements on the performance and user experience in scenarios such as professional design, we recommend that you enable this feature.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on</li>
      * <li>off</li>
+     * <li>on</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -154,15 +170,15 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String gpuAcceleration;
 
     /**
-     * <p>Specifies whether to allow the access from HTM5 clients to a cloud desktop. Valid values:</p>
-     * <ul>
-     * <li>on: allows the access.</li>
-     * <li>off: denies the access.</li>
-     * </ul>
-     * <p>Default value: off.</p>
+     * <p>Specifies whether to allow web client access.</p>
      * <blockquote>
-     * <p> We recommend that you use the ClientType-related parameters to control the EDS client type for cloud desktop logon.</p>
+     * <p> We recommend that you specify the ClientType-related parameters to control the Alibaba Cloud Workspace client type for cloud computer connection.``</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off</li>
+     * <li>on</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -171,14 +187,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String html5Access;
 
     /**
-     * <p>The file transfer policy for HTML5 clients. Valid values:</p>
+     * <p>The file transfer feature on the web client.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>off: Files cannot be uploaded from or downloaded to HTML5 clients.</li>
-     * <li>upload: Files can be uploaded from HTML5 clients.</li>
-     * <li>download: Files can be downloaded to HTML5 clients.</li>
-     * <li>all: Files can be uploaded from and downloaded to HTML5 clients.</li>
+     * <li>all: Files can be uploaded and downloaded between local computers and the web client.</li>
+     * <li>download: Files on the web client can be downloaded to local computers.</li>
+     * <li>upload: Files on local computers can be uploaded to the web client.</li>
+     * <li>off (default): Files cannot be transferred between the web client and local computers.</li>
      * </ul>
-     * <p>Default value: off.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -187,12 +203,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String html5FileTransfer;
 
     /**
-     * <p>The protocol that you want to use for network communication. Valid values:</p>
+     * <p>The protocol for network communication.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>TCP: Only the TCP protocol is used.</li>
-     * <li>BOTH: allows automatic switchover between the TCP protocol and the UDP protocol.</li>
+     * <li>TCP (default): TCP</li>
+     * <li>BOTH: TCP and UDP</li>
      * </ul>
-     * <p>Default value: TCP.</p>
      * 
      * <strong>example:</strong>
      * <p>BOTH</p>
@@ -201,11 +217,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String internetCommunicationProtocol;
 
     /**
-     * <p>The permissions on local disk mapping. Valid values:</p>
+     * <p>The permissions on local disk mapping.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>read: read-only permissions. Local disks are mapped to cloud desktops. You can only read (copy) local files but cannot modify them.</li>
-     * <li>readwrite: read and write permissions. Local disks are mapped to cloud desktops. You can read (copy) and modify local files.</li>
-     * <li>off: no permissions. Local disks are not mapped to cloud desktops.</li>
+     * <li>read: read-only. Local disk mapping is available on cloud computers. However, you can only read (copy) local files but cannot modify the files.</li>
+     * <li>readwrite: read and write. Local disk mapping is available on cloud computers. You can read (copy) and write (modify) local files.</li>
+     * <li>off (default): no permissions. Local disk mapping is unavailable on cloud computers.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -214,11 +231,17 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("LocalDrive")
     public String localDrive;
 
+    /**
+     * <p>The maximum retry period for reconnecting to cloud computers when the cloud computers are disconnected due to none-human reasons. Valid values: 30 to 7200. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("MaxReconnectTime")
     public Integer maxReconnectTime;
 
     /**
-     * <p>The name of the policy.</p>
+     * <p>The name of the cloud computer policy.</p>
      * 
      * <strong>example:</strong>
      * <p>testPolicyGroupName</p>
@@ -227,12 +250,15 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The network redirection feature. Valid values:</p>
+     * <p>Specifies whether to enable network redirection.</p>
+     * <blockquote>
+     * <p> This parameter is in invitational preview for specific users and not available to the public.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
      * <ul>
+     * <li>off (default)</li>
      * <li>on</li>
-     * <li>off</li>
      * </ul>
-     * <p>Default value: off.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -241,7 +267,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String netRedirect;
 
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The ID of the cloud computer policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -251,7 +277,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>Specifies whether to allow user preemption. Default value: off. You cannot change the value.</p>
+     * <p>The cloud computer preemption feature.</p>
+     * <blockquote>
+     * <p> To ensure user experience and data security, when a cloud computer is used by an end user, other end users cannot connect to the cloud computer. By default, this parameter is set to <code>off</code>, which cannot be modified.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off (default): Multiple end users cannot connect to the same cloud computer at the same time.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -260,19 +293,20 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String preemptLogin;
 
     /**
-     * <p>The names of the users that are allowed to connect to the same cloud desktop at the same time. You can specify up to five usernames.</p>
+     * <p>The usernames that are allowed to connect to the cloud computer in use. You can specify up to five usernames.</p>
      * <blockquote>
-     * <p>To improve user experience and ensure data security, multiple end users cannot connect to the same cloud desktop at the same time.</p>
+     * <p> To ensure user experience and data security, other end users cannot connect to the cloud computer that is used by an end user.</p>
      * </blockquote>
      */
     @NameInMap("PreemptLoginUser")
     public java.util.List<String> preemptLoginUser;
 
     /**
-     * <p>Specifies whether to enable printer redirection. Valid values:</p>
+     * <p>The printer redirection feature.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>off: disables printer redirection.</li>
-     * <li>on: enables printer redirection.</li>
+     * <li>off</li>
+     * <li>on</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -282,12 +316,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String printerRedirection;
 
     /**
-     * <p>Specifies whether to enable the custom screen recording feature. Valid values:</p>
+     * <p>Specifies whether to enable the custom screen recording feature.</p>
+     * <p>Valid values:</p>
      * <ul>
+     * <li>off (default)</li>
      * <li>on</li>
-     * <li>off</li>
      * </ul>
-     * <p>Default value: off.</p>
      * 
      * <strong>example:</strong>
      * <p>OFF</p>
@@ -305,11 +339,16 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Long recordContentExpires;
 
     /**
-     * <p>Specifies whether to enable screen recording. Valid values:</p>
+     * <p>Specifies whether to enable the screen recording feature.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>OFF: disabled.</li>
-     * <li>ALLTIME: All operations that are performed by an end user on the cloud desktop are recorded. The recording immediately starts when the end user connects to the cloud desktop and ends after the end user disconnects from the cloud desktop.</li>
-     * <li>PERIOD: The operations that are performed by an end user on the cloud desktop during a specific period of time are recorded. You must specify the start time and the end time of the recording.</li>
+     * <li>byaction_cmd_ft: enables the operation-triggered screen recording upon command execution and file transfer.</li>
+     * <li>ALLTIME: enables the whole-process screen recording. That is, the recording starts when cloud computers are connected and ends when the cloud computers are disconnected.</li>
+     * <li>session: enables the screen recording for session lifecycle listening.</li>
+     * <li>PERIOD: enables the interval-based screen recording. You must specify an interval between the start time and end time of this type of recording.</li>
+     * <li>byaction_commands: enables the operation-triggered screen recording upon command execution.</li>
+     * <li>OFF: disables the screen recording feature.</li>
+     * <li>byaction_file_transfer: enables the operation-triggered screen recording upon file transfer.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -319,10 +358,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String recording;
 
     /**
-     * <p>Specifies whether to record the sound that is generated on the cloud desktop during screen recording. Valid values:</p>
+     * <p>Specifies whether to record the audio files generated from cloud computers.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>off: records only video files.</li>
+     * <li>on: records video and audio files.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -332,7 +372,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String recordingAudio;
 
     /**
-     * <p>This parameter takes effect based on the Recording-related parameters. You can specify a time range for screen recording, and recording files are generated after the specified end time is reached.</p>
+     * <p>The file length of the screen recording. Unit: minutes. Screen recording files are split based on the specified file length and uploaded to Object Storage Service (OSS) buckets. When a screen recording file reaches 300 MB in size, the system preferentially performs rolling update for the file.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>10</li>
+     * <li>20</li>
+     * <li>30</li>
+     * <li>60</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -341,7 +388,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Integer recordingDuration;
 
     /**
-     * <p>The time when the screen recording ends. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.</p>
+     * <p>The time when the screen recording stops. Specify the value in the HH:MM:SS format. The value is meaningful only when you set <code>Recording</code> to <code>PERIOD</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>08:59:00</p>
@@ -350,7 +397,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String recordingEndTime;
 
     /**
-     * <p>The period in which the screen recording audit is valid. Valid values: 15 to 180. Unit: days.</p>
+     * <p>The retention period of the screen recording file. Valid values: 1 to 180. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -359,7 +406,8 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Long recordingExpires;
 
     /**
-     * <p>The frame rate of screen recording. Unit: fps. Valid values:</p>
+     * <p>The frame rate of screen recording. Unit: fps.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>2</li>
      * <li>5</li>
@@ -374,7 +422,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Long recordingFps;
 
     /**
-     * <p>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value is valid only when you set the Recording parameter to PERIOD.</p>
+     * <p>The time when the screen recording starts. Specify the value in the HH:MM:SS format. The value is meaningful only when you set the <code>Recording</code> parameter to <code>PERIOD</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>08:00:00</p>
@@ -383,7 +431,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String recordingStartTime;
 
     /**
-     * <p>Specifies whether to enable the screen recording notification feature. Valid values: on and off. on and off (default).</p>
+     * <p>Specifies whether to enable the screen recording notification feature after end users log on to the Alibaba Cloud Workspace client.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off</li>
+     * <li>on</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -392,7 +445,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String recordingUserNotify;
 
     /**
-     * <p>The content of the screen recording notification sent to the client. By default, you do not need to specify this parameter.</p>
+     * <p>The notification content of screen recording. By default, this parameter is left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Your desktop is being recorded.</p>
@@ -401,7 +454,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String recordingUserNotifyMessage;
 
     /**
-     * <p>The ID of the region where the cloud desktop resides.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -411,11 +464,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The permissions on the keyboard and mouse to control the cloud desktop during remote assistance. Valid values:</p>
+     * <p>The permissions on keyboard and mouse control during remote assistance.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>fullControl: The keyboard and mouse can be fully controlled.</li>
-     * <li>optionalControl: By default, this feature is disabled. You can apply for permissions to enable the feature.</li>
-     * <li>disableControl: The keyboard and mouse cannot be controlled.</li>
+     * <li>optionalControl: By default, you are not granted the permissions. You can apply for the permissions.</li>
+     * <li>fullControl: You are granted the full permissions.</li>
+     * <li>disableControl: You are not granted the permissions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -425,7 +479,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String remoteCoordinate;
 
     /**
-     * <p>The security group rules that you want to delete.</p>
+     * <p>The client IP addresses that you want to delete from the whitelist.</p>
      */
     @NameInMap("RevokeAccessPolicyRule")
     public java.util.List<ModifyPolicyGroupRequestRevokeAccessPolicyRule> revokeAccessPolicyRule;
@@ -437,10 +491,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public java.util.List<ModifyPolicyGroupRequestRevokeSecurityPolicyRule> revokeSecurityPolicyRule;
 
     /**
-     * <p>The effective scope of the policy. Valid values:</p>
+     * <p>The effective scope of the policy.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>GLOBAL: takes effect globally.</li>
-     * <li>IP: takes effect based on the IP address.</li>
+     * <li>IP: The policy takes effect based on the IP address.</li>
+     * <li>GLOBAL: The policy takes effect globally.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -450,16 +505,17 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>This parameter is required when the Scope parameter is set to IP.</p>
+     * <p>This parameter is required when the <code>Scope</code> parameter is set to <code>IP</code>.````</p>
      */
     @NameInMap("ScopeValue")
     public java.util.List<String> scopeValue;
 
     /**
-     * <p>Specifies whether to enable USB redirection. Valid values:</p>
+     * <p>Specifies whether to enable the USB redirection feature.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on: enables USB redirection.</li>
-     * <li>off: disables USB redirection.</li>
+     * <li>off</li>
+     * <li>on</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -484,12 +540,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String videoRedirect;
 
     /**
-     * <p>Specify whether to enable the policy of image display quality. Valid values:</p>
+     * <p>The image display quality.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on: enables the policy of image display quality.</li>
-     * <li>off: disables the policy of image display quality.</li>
+     * <li>high: high-definition (HD)</li>
+     * <li>low: smoothness</li>
+     * <li>lossless: no quality loss</li>
+     * <li>medium (default): scenario-specific adaptation</li>
      * </ul>
-     * <p>Default value: off.</p>
      * 
      * <strong>example:</strong>
      * <p>low</p>
@@ -498,10 +556,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String visualQuality;
 
     /**
-     * <p>Specifies whether to enable watermarking. Valid values:</p>
+     * <p>The watermarking feature.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>on: enables watermarking.</li>
-     * <li>off: disables watermarking.</li>
+     * <li>blind: Invisible watermarks are applied.</li>
+     * <li>off: The watermarking feature is disabled.</li>
+     * <li>on: Visible watermarks are applied.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -511,7 +571,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String watermark;
 
     /**
-     * <p>Specifies whether to enable the anti-screen photo feature for invisible watermarks. on and off (default).</p>
+     * <p>Specifies whether to enable the anti-screen photo feature for invisible watermarks.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off</li>
+     * <li>on</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -520,7 +585,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String watermarkAntiCam;
 
     /**
-     * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+     * <p>The font color in red, green, and blue (RGB) of the watermark. Valid values: 0 to 16777215.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -529,7 +594,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Integer watermarkColor;
 
     /**
-     * <p>The inclination angle of the watermark. Value values: -10 to -30.</p>
+     * <p>The watermark rotation. Valid values: -10 to -30.</p>
      * 
      * <strong>example:</strong>
      * <p>-10</p>
@@ -538,7 +603,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Double watermarkDegree;
 
     /**
-     * <p>The font size of the watermark. Valid values: 10 to 50</p>
+     * <p>The watermark font size. Valid values: 10 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -547,7 +612,8 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Integer watermarkFontSize;
 
     /**
-     * <p>The font style of the watermark. Valid values:</p>
+     * <p>The watermark font style.</p>
+     * <p>Valid values:</p>
      * <ul>
      * <li>plain</li>
      * <li>bold</li>
@@ -560,7 +626,13 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String watermarkFontStyle;
 
     /**
-     * <p>The watermark enhancement feature. Valid values: low, medium, and high.</p>
+     * <p>The watermark enhancement feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>high</li>
+     * <li>low</li>
+     * <li>medium</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>medium</p>
@@ -569,7 +641,10 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String watermarkPower;
 
     /**
-     * <p>The number of watermark rows. This parameter is not in use.</p>
+     * <p>The number of watermark rows.</p>
+     * <blockquote>
+     * <p> This parameter is not available for public use.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -578,7 +653,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Integer watermarkRowAmount;
 
     /**
-     * <p>The security priority rule for invisible watermarks. Valid values: on and off.</p>
+     * <p>Specifies whether to enable the security priority feature for invisible watermarks.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off</li>
+     * <li>on</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -587,11 +667,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String watermarkSecurity;
 
     /**
-     * <p>The transparency of the watermark. The valid values include:</p>
+     * <p>The watermark transparency.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>LIGHT</li>
-     * <li>MIDDLE</li>
+     * <li>LIGHT (default)</li>
      * <li>DARK</li>
+     * <li>MIDDLE</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -601,7 +682,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String watermarkTransparency;
 
     /**
-     * <p>The transparency of the watermark. A larger value indicates a less transparent watermark. Valid values: 10 to 100.</p>
+     * <p>The watermark opacity. A larger value indicates more opaque watermarks. Valid values: 10 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -610,10 +691,18 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public Integer watermarkTransparencyValue;
 
     /**
-     * <p>The type of the watermark. You can specify multiple watermark types at a time. Separate watermark types with commas (,). Valid values:</p>
+     * <p>The watermark content. You can select up to three items as the watermark content. Separate multiple items with commas (,).</p>
+     * <blockquote>
+     * <p> If you set this parameter to <code>Custom</code>, you must specify <code>WatermarkCustomText</code>.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
      * <ul>
      * <li>EndUserId: the username</li>
-     * <li>HostName: the last 15 characters of the cloud desktop ID</li>
+     * <li>Custom: the custom text</li>
+     * <li>DesktopIp: the IP address of the cloud computer</li>
+     * <li>ClientIp: the IP address of the Alibaba Cloud Workspace client</li>
+     * <li>HostName: the rightmost 15 digits of the cloud computer ID</li>
+     * <li>ClientTime: the current time displayed on the cloud computer</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -622,6 +711,10 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("WatermarkType")
     public String watermarkType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("WyAssistant")
     public String wyAssistant;
 
@@ -1112,7 +1205,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     public static class ModifyPolicyGroupRequestAuthorizeAccessPolicyRule extends TeaModel {
         /**
-         * <p>The CIDR block that the client can access.</p>
+         * <p>The client CIDR block from which end users can connect to cloud computers. The value is an IPv4 CIDR block.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1164,7 +1257,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String cidrIp;
 
         /**
-         * <p>The description of security group rule N.</p>
+         * <p>The description of the security group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1173,13 +1266,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The protocol type of security group rule N. Valid values:</p>
+         * <p>The protocol type of the security group rule.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>tcp: TCP</li>
-         * <li>udp: UDP</li>
-         * <li>icmp: ICMP (IPv4)</li>
-         * <li>gre: GRE</li>
-         * <li>all: all protocols</li>
+         * <li>UDP: the User Datagram Protocol (UDP) protocol.</li>
+         * <li>TCP: the Transmission Control Protocol (TCP) protocol.</li>
+         * <li>ALL: all protocols.</li>
+         * <li>GRE: the Generic Routing Encapsulation (GRE) protocol.</li>
+         * <li>ICMP: the Internet Control Message Protocol (ICMP) for (IPv4)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1189,10 +1283,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The authorization policy of security group rule N. Valid values:</p>
+         * <p>The authorization of the security group rule.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>accept: specifies the Allow policy that allows all access requests.</li>
-         * <li>drop: specifies the Deny policy that denies all access requests. If no messages of access denied are returned, the requests time out or failed.</li>
+         * <li>drop: denies all access requests. If no messages of access denied are returned, the requests timed out or failed.</li>
+         * <li>accept: accepts all requests.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1202,14 +1297,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The port range of security group rule N. The value of the port range is determined by the protocol type specified by the AuthorizeSecurityPolicyRule.N.IpProtocol parameter.</p>
+         * <p>The port range of the security group rule. The value range of this parameter varies based on the value of the IpProtocol parameter.</p>
          * <ul>
-         * <li>When the AuthorizeSecurityPolicyRule.N.IpProtocol parameter is set to tcp or udp, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
-         * <li>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to icmp, set the value to -1/-1.</li>
-         * <li>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to gre, set the value to -1/-1.</li>
-         * <li>When AuthorizeSecurityPolicyRule.N.IpProtocol is set to all, set the value to -1/-1.</li>
+         * <li>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+         * <li>If the IpProtocol parameter is set to ICMP, set the value to -1/-1.</li>
+         * <li>If the IpProtocol parameter is set to GRE, set the value to -1/-1.</li>
+         * <li>If the IpProtocol parameter is set to ALL, set the value to -1/-1.</li>
          * </ul>
-         * <p>For more information about the common ports of typical applications, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
+         * <p>For more information about the common ports applied in EDS, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>22/22</p>
@@ -1218,9 +1313,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The priority of security group rule N. A smaller value indicates a higher priority.</p>
-         * <p>Valid values: 1 to 60.</p>
-         * <p>Default value: 1.</p>
+         * <p>The priority of the security group rule. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1229,10 +1322,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String priority;
 
         /**
-         * <p>The direction of security group rule N. Valid values:</p>
+         * <p>The direction of the security group rule.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>inflow: inbound</li>
          * <li>outflow: outbound</li>
+         * <li>inflow: inbound</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1306,18 +1400,18 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     public static class ModifyPolicyGroupRequestClientType extends TeaModel {
         /**
-         * <p>The type of client that you want to use to connect to the cloud desktop. Valid values:</p>
-         * <ul>
-         * <li>windows: the Windows client</li>
-         * <li>linux: C-Key Series Cloud Computer TC and A Series Cloud Computer TC</li>
-         * <li>macos: the macOS client</li>
-         * <li>ios: the iOS client</li>
-         * <li>android: the Android client</li>
-         * <li>html5: the web client</li>
-         * </ul>
+         * <p>The type of the Alibaba Cloud Workspace client.</p>
          * <blockquote>
-         * <p>By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to connect to the cloud desktop.</p>
+         * <p> If you do not specify the <code>ClientType</code> parameter, all types of the client are allowed by default.</p>
          * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>html5: web client</li>
+         * <li>android: Android client</li>
+         * <li>windows: Windows client</li>
+         * <li>ios: iOS client</li>
+         * <li>macos: macOS client</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>windows</p>
@@ -1326,14 +1420,15 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String clientType;
 
         /**
-         * <p>The logon method. This parameter specifies whether a specific type of the client is allowed to connect to the cloud desktop. Valid values:</p>
-         * <ul>
-         * <li>on: allowed.</li>
-         * <li>off: disallowed.</li>
-         * </ul>
+         * <p>Specifies whether to allow end users to use a specific type of the client to connect to cloud computers.</p>
          * <blockquote>
-         * <p>By default, if you do not configure the ClientType-related parameters, all types of clients are allowed to log on to cloud desktops.</p>
+         * <p> If you do not specify the <code>ClientType</code> parameter, all types of the client are allowed by default.</p>
          * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1365,9 +1460,34 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
 
     public static class ModifyPolicyGroupRequestDeviceRedirects extends TeaModel {
+        /**
+         * <p>The peripheral type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>printer</li>
+         * <li>scanner</li>
+         * <li>camera</li>
+         * <li>adb: the Android Debug Bridge (ADB) device</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>camera</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <p>The redirection type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>deviceRedirect: device redirection</li>
+         * <li>usbRedirect: USB redirection</li>
+         * <li>off: redirection disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usbRedirect</p>
+         */
         @NameInMap("RedirectType")
         public String redirectType;
 
@@ -1395,21 +1515,76 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
 
     public static class ModifyPolicyGroupRequestDeviceRules extends TeaModel {
+        /**
+         * <p>The device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sandisk</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The product ID (PID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x0781</p>
+         */
         @NameInMap("DevicePid")
         public String devicePid;
 
+        /**
+         * <p>The peripheral type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>usbKey</li>
+         * <li>other</li>
+         * <li>graphicsTablet</li>
+         * <li>printer</li>
+         * <li>cardReader</li>
+         * <li>scanner</li>
+         * <li>storage</li>
+         * <li>camera</li>
+         * <li>adb</li>
+         * <li>networkInterfaceCard: the NIC device</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>storage</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x55b1</p>
+         */
         @NameInMap("DeviceVid")
         public String deviceVid;
 
+        /**
+         * <p>The link optimization command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2:0</p>
+         */
         @NameInMap("OptCommand")
         public String optCommand;
 
+        /**
+         * <p>The redirection type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>deviceRedirect: device redirection</li>
+         * <li>usbRedirect: USB redirection</li>
+         * <li>off: redirection disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>usbRedirect</p>
+         */
         @NameInMap("RedirectType")
         public String redirectType;
 
@@ -1470,7 +1645,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     public static class ModifyPolicyGroupRequestDomainResolveRule extends TeaModel {
         /**
-         * <p>The description of the DNS rule.</p>
+         * <p>The description of domain name resolution rule.</p>
          * 
          * <strong>example:</strong>
          * <p>description policy</p>
@@ -1488,22 +1663,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String domain;
 
         /**
-         * <p>Specifies whether to allow the DNS rule.</p>
+         * <p>Specifies whether to allow the domain name resolution rule.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>allow</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>block</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>allow</li>
+         * <li>block</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1545,7 +1709,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     public static class ModifyPolicyGroupRequestRevokeAccessPolicyRule extends TeaModel {
         /**
-         * <p>The IPv4 CIDR block that can be accessed from the client.</p>
+         * <p>The client CIDR block that you want to delete. After it is deleted, end users cannot connect to cloud computers from the CIDR block. The value is an IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -1554,7 +1718,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String cidrIp;
 
         /**
-         * <p>The description of the client IP address whitelist that you want to delete.</p>
+         * <p>The description of the client IP addresses that you want to delete from the whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1587,7 +1751,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     public static class ModifyPolicyGroupRequestRevokeSecurityPolicyRule extends TeaModel {
         /**
-         * <p>The IPv4 CIDR block of the security group rule.</p>
+         * <p>The object of the security group rule that you want to delete. The value is an IPv4 CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX/16</p>
@@ -1596,7 +1760,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String cidrIp;
 
         /**
-         * <p>The description of the security group rule.</p>
+         * <p>The description of the security group rule that you want to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1605,13 +1769,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The protocol type of the security group rule. Valid values:</p>
+         * <p>The protocol type of the security group rule that you want to delete.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>TCP</li>
          * <li>UDP</li>
-         * <li>ICMP: ICMP (IPv4)</li>
-         * <li>GRE</li>
          * <li>ALL</li>
+         * <li>GRE</li>
+         * <li>ICMP</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1621,12 +1786,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String ipProtocol;
 
         /**
-         * <p>The authorization policy of the security group rule that you want to delete. Valid values:</p>
+         * <p>The authorization of the security group rule that you want to delete.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>accept: allows all access requests.</li>
-         * <li>drop: disallows all access requests. If no denied messages are returned, the requests timed out or failed.</li>
+         * <li>drop: denies all access requests. If no messages of access denied are returned, the requests timed out or failed.</li>
+         * <li>accept (default): accepts all requests.</li>
          * </ul>
-         * <p>Default value: accept.</p>
          * 
          * <strong>example:</strong>
          * <p>accept</p>
@@ -1635,14 +1800,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The port range of the security group rule that you want to delete. The value of the port range is determined by the protocol type specified by the IpProtocol parameter.</p>
+         * <p>The port range of the security group rule that you want to delete. The value range of this parameter varies based on the value of the IpProtocol parameter.</p>
          * <ul>
-         * <li>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</li>
-         * <li>If the IpProtocol parameter is set to ICMP, the port range is -1/-1.</li>
-         * <li>If the IpProtocol parameter is set to GRE, the port range is -1/-1.</li>
-         * <li>If the IpProtocol parameter is set to ALL, the port range is -1/-1.</li>
+         * <li>If the IpProtocol parameter is set to TCP or UDP, the port range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</li>
+         * <li>If the IpProtocol parameter is set to ICMP, set the value to -1/-1.</li>
+         * <li>If the IpProtocol parameter is set to GRE, set the value to -1/-1.</li>
+         * <li>If the IpProtocol parameter is set to ALL, set the value to -1/-1.</li>
          * </ul>
-         * <p>For more information about the common ports of typical applications, see <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/common-ports?spm=a2c63.p38356.0.0.56b87f2c2SJTAw">Common ports</a>.</p>
+         * <p>For more information about the common ports applied in EDS, see <a href="https://help.aliyun.com/document_detail/40724.html">Common ports</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>22/22</p>
@@ -1651,9 +1816,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String portRange;
 
         /**
-         * <p>The priority of the security group rule. A smaller value indicates a higher priority.</p>
-         * <p>Valid values: 1 to 60.</p>
-         * <p>Default value: 1.</p>
+         * <p>The priority of the security group rule that you want to delete. A smaller value indicates a higher priority. Valid values: 1 to 60. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1662,10 +1825,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String priority;
 
         /**
-         * <p>The direction of the security group rule that you want to delete. Valid values:</p>
+         * <p>The direction of the security group rule that you want to delete.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>inflow: inbound</li>
          * <li>outflow: outbound</li>
+         * <li>inflow: inbound</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1739,7 +1903,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     public static class ModifyPolicyGroupRequestUsbSupplyRedirectRule extends TeaModel {
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          * 
          * <strong>example:</strong>
          * <p>Test rule</p>
@@ -1748,7 +1912,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The class of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see <a href="https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ">Defined Class Codes</a>.</p>
+         * <p>The device class. This parameter is required when <code>usbRuleType</code> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>0Eh</p>
@@ -1757,7 +1921,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String deviceClass;
 
         /**
-         * <p>The subclass of the device. This parameter is required when you set the usbRuleType parameter to 1. For more information, see <a href="https://www.usb.org/defined-class-codes?spm=a2c63.p38356.0.0.56b84b03GUn4kJ">Defined Class Codes</a>.</p>
+         * <p>The device subclass. This parameter is required when <code>usbRuleType</code> is set to 1. For more information, see <a href="https://www.usb.org/defined-class-codes">Defined Class Codes</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>xxh</p>
@@ -1766,7 +1930,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String deviceSubclass;
 
         /**
-         * <p>The ID of the service.</p>
+         * <p>The product ID (PID).</p>
          * 
          * <strong>example:</strong>
          * <p>08**</p>
@@ -1775,10 +1939,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public String productId;
 
         /**
-         * <p>Specifies whether to allow USB redirection. Valid values:</p>
+         * <p>Specifies whether to allow USB redirection.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>1: allowed.</li>
-         * <li>2: disallowed.</li>
+         * <li>1: allows USB redirection.</li>
+         * <li>2: forbids USB redirection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1788,10 +1953,11 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public Long usbRedirectType;
 
         /**
-         * <p>The type of the USB redirection rule. Valid values:</p>
+         * <p>The type of the USB redirection rule.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>1: device class.</li>
-         * <li>2: device vendor.</li>
+         * <li>1: by device class</li>
+         * <li>2: by device vendor</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1801,7 +1967,7 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         public Long usbRuleType;
 
         /**
-         * <p>The ID of the vendor. For more information, see<a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf?spm=a2c63.p38356.0.0.56b84b03GUn4kJ&file=vendor_ids032322.pdf_1.pdf"> Valid USB Vendor IDs (VIDs)</a>.</p>
+         * <p>The vendor ID (VID). For more information, see <a href="https://www.usb.org/sites/default/files/vendor_ids032322.pdf_1.pdf">Valid USB VIDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>04**</p>

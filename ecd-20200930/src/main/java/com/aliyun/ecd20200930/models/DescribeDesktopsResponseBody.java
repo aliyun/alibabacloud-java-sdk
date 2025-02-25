@@ -1032,6 +1032,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("SnapshotPolicyName")
         public String snapshotPolicyName;
 
+        @NameInMap("StandardStartTime")
+        public String standardStartTime;
+
         /**
          * <p>The time when the cloud desktop was first started.</p>
          * 
@@ -1524,6 +1527,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getSnapshotPolicyName() {
             return this.snapshotPolicyName;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setStandardStartTime(String standardStartTime) {
+            this.standardStartTime = standardStartTime;
+            return this;
+        }
+        public String getStandardStartTime() {
+            return this.standardStartTime;
         }
 
         public DescribeDesktopsResponseBodyDesktops setStartTime(String startTime) {

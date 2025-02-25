@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the policy.</p>
+     * <p>The cloud computer policy ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-gx2x1dhsmthe9****</p>
