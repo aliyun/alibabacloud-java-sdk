@@ -4,6 +4,9 @@ package com.aliyun.contactcenterai20240603.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    @NameInMap("customPrompt")
+    public String customPrompt;
+
     @NameInMap("dialogue")
     public CreateTaskRequestDialogue dialogue;
 
@@ -46,6 +49,14 @@ public class CreateTaskRequest extends TeaModel {
     public static CreateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskRequest self = new CreateTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTaskRequest setCustomPrompt(String customPrompt) {
+        this.customPrompt = customPrompt;
+        return this;
+    }
+    public String getCustomPrompt() {
+        return this.customPrompt;
     }
 
     public CreateTaskRequest setDialogue(CreateTaskRequestDialogue dialogue) {
@@ -318,9 +329,6 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("desc")
         public String desc;
 
-        /**
-         * <p>This parameter is required.</p>
-         */
         @NameInMap("enumValues")
         public java.util.List<CreateTaskRequestFieldsEnumValues> enumValues;
 
