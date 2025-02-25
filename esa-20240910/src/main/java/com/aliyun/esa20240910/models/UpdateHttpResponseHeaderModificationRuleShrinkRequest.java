@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaModel {
     /**
+     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpResponseHeaderModificationRules</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,15 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     @NameInMap("ConfigId")
     public Long configId;
 
+    /**
+     * <p>Modify response headers, supporting add, delete, and modify operations.</p>
+     */
     @NameInMap("ResponseHeaderModification")
     public String responseHeaderModificationShrink;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
      */
@@ -24,6 +30,12 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String rule;
 
     /**
+     * <p>Rule enable status, supports:</p>
+     * <ul>
+     * <li><strong>on</strong>: indicates enabled.</li>
+     * <li><strong>off</strong>: indicates disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -31,6 +43,8 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -38,6 +52,7 @@ public class UpdateHttpResponseHeaderModificationRuleShrinkRequest extends TeaMo
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

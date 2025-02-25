@@ -4,10 +4,15 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkOptimizationsResponseBody extends TeaModel {
+    /**
+     * <p>Response body configurations.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<ListNetworkOptimizationsResponseBodyConfigs> configs;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The size of the page, i.e., the number of items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
      */
@@ -29,6 +38,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -36,6 +47,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -97,6 +110,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
 
     public static class ListNetworkOptimizationsResponseBodyConfigs extends TeaModel {
         /**
+         * <p>Configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>395386449776640</p>
          */
@@ -104,6 +119,12 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public Long configId;
 
         /**
+         * <p>Configuration type, which can be used to query global or rule-based configurations. The value range is as follows:</p>
+         * <ul>
+         * <li>global: Query global configuration.</li>
+         * <li>rule: Query rule configuration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>global</p>
          */
@@ -111,6 +132,12 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String configType;
 
         /**
+         * <p>Whether to enable GRPC, defaulting to disabled. The value range is as follows:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -118,6 +145,12 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String grpc;
 
         /**
+         * <p>Whether to enable HTTP2 origin, defaulting to disabled. The value range is as follows:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -125,6 +158,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String http2Origin;
 
         /**
+         * <p>Rule content.</p>
+         * 
          * <strong>example:</strong>
          * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
@@ -132,6 +167,12 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String rule;
 
         /**
+         * <p>Rule switch. The value range is as follows:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -139,6 +180,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
+         * <p>Rule name.</p>
+         * 
          * <strong>example:</strong>
          * <p>rule_example</p>
          */
@@ -146,6 +189,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
+         * <p>Rule execution sequence.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +198,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
+         * <p>Site version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -160,6 +207,12 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public Integer siteVersion;
 
         /**
+         * <p>Whether to enable smart routing service, defaulting to disabled. The value range is as follows:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -167,6 +220,8 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String smartRouting;
 
         /**
+         * <p>Maximum upload file size in MB, with a range from 100 to 500.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -174,6 +229,12 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         public String uploadMaxFilesize;
 
         /**
+         * <p>Whether to enable Websocket, defaulting to enabled. The value range is as follows:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */

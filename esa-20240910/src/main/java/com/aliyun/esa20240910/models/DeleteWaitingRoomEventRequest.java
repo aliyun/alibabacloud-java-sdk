@@ -16,6 +16,7 @@ public class DeleteWaitingRoomEventRequest extends TeaModel {
 
     /**
      * <p>The ID of the waiting room event.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>302909890***</p>

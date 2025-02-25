@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDDoSBpsListResponseBody extends TeaModel {
     /**
+     * <p>The interval between each piece of data, in seconds.</p>
+     * <p>Generated based on the interval between StartTime and EndTime: less than 1 hour, 60s; 1 hour or more but less than 1 day, 300s; 1 day or more but less than a week, 1800s; 1 week or more, 3600s.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
     @NameInMap("DataInterval")
     public Integer dataInterval;
 
+    /**
+     * <p>A list of network bandwidth data for each time interval.</p>
+     */
     @NameInMap("DataModule")
     public java.util.List<DescribeDDoSBpsListResponseBodyDataModule> dataModule;
 
     /**
+     * <p>The end time for fetching data. In ISO8601 format, using UTC+0, formatted as: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time must be later than the start time, and the span between start and end times should not exceed 31 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-05-18T06:19:42Z</p>
      */
@@ -22,7 +31,7 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -31,6 +40,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The start time for fetching data. In ISO8601 format, using UTC, formatted as: YYYY-MM-DDThh:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-05-14T17:00:00Z</p>
      */
@@ -84,6 +95,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
 
     public static class DescribeDDoSBpsListResponseBodyDataModule extends TeaModel {
         /**
+         * <p>Attack bandwidth, in bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>9000000000</p>
          */
@@ -91,6 +104,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         public Long attackBps;
 
         /**
+         * <p>Attack PPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>9000000</p>
          */
@@ -98,6 +113,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         public Long attackPps;
 
         /**
+         * <p>Normal business bandwidth, in bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000000</p>
          */
@@ -105,6 +122,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         public Long normalBps;
 
         /**
+         * <p>Normal business PPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
@@ -112,6 +131,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         public Long normalPps;
 
         /**
+         * <p>The timestamp of this data, in ISO8601 format, using UTC+0, formatted as: yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-14T17:00:00Z</p>
          */
@@ -119,6 +140,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
+         * <p>Total bandwidth, in bps.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000000000</p>
          */
@@ -126,6 +149,8 @@ public class DescribeDDoSBpsListResponseBody extends TeaModel {
         public Long totalBps;
 
         /**
+         * <p>Total PPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000000</p>
          */

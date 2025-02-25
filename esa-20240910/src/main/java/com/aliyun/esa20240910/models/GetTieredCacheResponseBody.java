@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetTieredCacheResponseBody extends TeaModel {
     /**
-     * <p>The tiered cache architecture mode. Valid values:</p>
+     * <p>Multi-level cache architecture mode. Possible values:</p>
      * <ul>
-     * <li>edge: edge tiered cache.</li>
-     * <li>edge_smart: edge tiered cache + smart tiered cache.</li>
-     * <li>edge_regional: edge tiered cache + regional tiered cache.</li>
-     * <li>edge_regional_smart: edge tiered cache + regional tiered cache + smart tiered cache.</li>
+     * <li>edge: Edge cache layer.</li>
+     * <li>edge_smart: Edge cache layer + intelligent cache layer.</li>
+     * <li>edge_regional: Edge cache layer + regional cache layer.</li>
+     * <li>edge_regional_smart: Edge cache layer + regional cache layer + intelligent cache layer.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class GetTieredCacheResponseBody extends TeaModel {
     public String cacheArchitectureMode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>

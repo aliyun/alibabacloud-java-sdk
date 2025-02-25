@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class PurchaseRatePlanResponseBody extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xcdn-ads11w</p>
+     * <p>esa-site-ads11w</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
+     * <p>Order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123</p>
      */
@@ -19,7 +23,7 @@ public class PurchaseRatePlanResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30423A7F-A83D-1E24-B80E-86DD25790758</p>

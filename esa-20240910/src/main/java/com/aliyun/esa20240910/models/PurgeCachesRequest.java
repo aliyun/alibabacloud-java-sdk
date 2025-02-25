@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PurgeCachesRequest extends TeaModel {
     /**
-     * <p>The content to purge.</p>
+     * <p>Content to be refreshed.</p>
      */
     @NameInMap("Content")
     public PurgeCachesRequestContent content;
 
     /**
-     * <p>Specifies whether to purge cached resources for edge computing. For example, purge the resources cached by the CacheAPI operation of Edge Routine.</p>
+     * <p>Used for refreshing cached resources in edge computing, such as allowing the refresh of content cached using the CacheAPI interface of an edge function.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -20,13 +20,13 @@ public class PurgeCachesRequest extends TeaModel {
     public Boolean edgeComputePurge;
 
     /**
-     * <p>Specifies whether to purge resources in a directory if the resources requested are different from the resources on the origin server. Default value: false.</p>
+     * <p>Indicates whether to refresh all resources under the directory when the content from the origin and the source resource are inconsistent. The default is false.</p>
      * <ul>
-     * <li><strong>true</strong>: purges all resources in the directory.</li>
-     * <li><strong>false</strong>: purges only changed resources in the directory.</li>
+     * <li><strong>true</strong>: Refreshes all resources under the specified directory.</li>
+     * <li><strong>false</strong>: Refreshes only the changed resources under the specified directory.</li>
      * </ul>
      * <blockquote>
-     * <p> This configuration takes effect for the following purge task types: directory, cachetag, ignoreParams, hostname, and purgeall.</p>
+     * <p> Applies to: Directory refresh, cachetag refresh, ignoreParams refresh, hostname refresh, and purge all cache of the site.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class PurgeCachesRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,14 +46,15 @@ public class PurgeCachesRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The type of the purge task. Valid values:</p>
+     * <p>The type of refresh task. Possible values:</p>
      * <ul>
-     * <li><strong>file</strong> (default): purges the cache by file.</li>
-     * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
-     * <li><strong>directory</strong>: purges the cache by directory.</li>
-     * <li><strong>ignoreParams</strong>: purges the cache by URL with specific parameters ignored. This option ignores the question mark (?) and parameters after the question mark (?) in a request URL and purges the cache. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource without specified parameters. If the URLs match, the POPs purge the cached resources.</li>
-     * <li><strong>hostname</strong>: purges the cache by hostname.</li>
-     * <li><strong>purgeall</strong>: purges all cache.</li>
+     * <li><strong>file</strong> (default): File refresh.</li>
+     * <li><strong>cachekey</strong>: Cachekey refresh.</li>
+     * <li><strong>cachetag</strong>: Cachetag refresh.</li>
+     * <li><strong>directory</strong>: Directory refresh.</li>
+     * <li><strong>ignoreParams</strong>: Ignore parameters refresh. Ignoring parameters means removing the ? and everything after it in the request URL. When performing an ignore parameters refresh, the user first submits the URL without parameters through the interface. The submitted URLs to be refreshed will then be matched against the cached resource URLs with the parameters removed. If the cached resource URL, after removing the parameters, matches the URL to be refreshed, the CDN node will refresh the cached resources.</li>
+     * <li><strong>hostname</strong>: Hostname refresh.</li>
+     * <li><strong>purgeall</strong>: Purge all cache under the site.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -109,9 +110,32 @@ public class PurgeCachesRequest extends TeaModel {
     }
 
     public static class PurgeCachesRequestContentCacheKeys extends TeaModel {
+        /**
+         * <p>When refreshing, specify the header information corresponding to the cache key. When the custom cache key feature switch is enabled, the cache key will be generated based on the specified header for refreshing.</p>
+         * <p><strong>UserGeo: Country/Region</strong></p>
+         * <ul>
+         * <li>Country/region codes follow the ISO 3166-2 standard.</li>
+         * </ul>
+         * <p><strong>UserDeviceType: Device Type, currently there are three enum values</strong></p>
+         * <ul>
+         * <li>desktop</li>
+         * <li>tablet</li>
+         * <li>mobile</li>
+         * </ul>
+         * <p><strong>UserLanguage: Language</strong></p>
+         * <ul>
+         * <li>Language codes follow the ISO 639-1 or BCP47 standards. For example, input \&quot;zh\&quot; to refresh content in Chinese.</li>
+         * </ul>
+         */
         @NameInMap("Headers")
         public java.util.Map<String, String> headers;
 
+        /**
+         * <p>URL address to be refreshed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -139,41 +163,44 @@ public class PurgeCachesRequest extends TeaModel {
     }
 
     public static class PurgeCachesRequestContent extends TeaModel {
+        /**
+         * <p>List of cachekeys to be refreshed, required when the type is cachekey.</p>
+         */
         @NameInMap("CacheKeys")
         public java.util.List<PurgeCachesRequestContentCacheKeys> cacheKeys;
 
         /**
-         * <p>The cache tags that are used to purge the cache. This parameter is required if Type is set to cachetag.</p>
+         * <p>List of cachetags to be refreshed, required when the type is cachetag.</p>
          */
         @NameInMap("CacheTags")
         public java.util.List<String> cacheTags;
 
         /**
-         * <p>The directories that are used to purge the cache. This parameter is required if Type is set to directory.</p>
+         * <p>List of directories to be refreshed, required when the type is directory.</p>
          */
         @NameInMap("Directories")
         public java.util.List<String> directories;
 
         /**
-         * <p>The files to purge. This parameter is required if Type is set to file.</p>
+         * <p>List of files to be refreshed, required when the type is file.</p>
          */
         @NameInMap("Files")
         public java.util.List<?> files;
 
         /**
-         * <p>The hostnames that are used to purge the cache. This parameter is required if Type is set to hostname.</p>
+         * <p>List of hostnames to be refreshed, required when the type is hostname.</p>
          */
         @NameInMap("Hostnames")
         public java.util.List<String> hostnames;
 
         /**
-         * <p>The file URLs with parameters ignored that are used to purge the cache. This parameter is required if Type is set to ignoreParams.</p>
+         * <p>List of files with ignored parameters, required when the type is ignoreParams.</p>
          */
         @NameInMap("IgnoreParams")
         public java.util.List<String> ignoreParams;
 
         /**
-         * <p>Specifies whether to purge all cache of the website. Default value: false. The value is true when Type is set to purgeall.</p>
+         * <p>Flag for purging all content. Default is false, set to true when the type is purgeall.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

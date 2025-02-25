@@ -4,6 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class DeactivateVersionManagementResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D61E4801-EAFF-4A63-AAE1-FBF6CE1CFD1C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     /**
+     * <p>Alt-Svc feature switch. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvc;
 
     /**
+     * <p>Whether the Alt-Svc header includes the clear parameter. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -19,6 +31,8 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcClear;
 
     /**
+     * <p>Validity period of Alt-Svc in seconds. The default is 86400 seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>86400</p>
      */
@@ -26,6 +40,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcMa;
 
     /**
+     * <p>Whether the Alt-Svc header includes the persist parameter. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -33,6 +53,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcPersist;
 
     /**
+     * <p>Whether to enable HSTS. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -40,6 +66,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hsts;
 
     /**
+     * <p>Whether to include subdomains in HSTS. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -47,6 +79,8 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsIncludeSubdomains;
 
     /**
+     * <p>HSTS expiration time in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */
@@ -54,6 +88,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsMaxAge;
 
     /**
+     * <p>Whether to enable HSTS preloading. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -61,6 +101,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsPreload;
 
     /**
+     * <p>Whether to enable forced HTTPS. Default is disabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -68,6 +114,14 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String httpsForce;
 
     /**
+     * <p>Status code for forced HTTPS redirection. Possible values:</p>
+     * <ul>
+     * <li>301</li>
+     * <li>302</li>
+     * <li>307</li>
+     * <li>308</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>301</p>
      */
@@ -75,6 +129,8 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String httpsForceCode;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
      */
@@ -82,6 +138,12 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -89,6 +151,8 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -96,6 +160,7 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,6 +170,8 @@ public class CreateHttpsApplicationConfigurationRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the version of the site for which the configuration will take effect. The default is version 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

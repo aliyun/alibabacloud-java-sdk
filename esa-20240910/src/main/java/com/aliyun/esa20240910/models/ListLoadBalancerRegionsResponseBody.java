@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>Page number</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Number of records per page</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -23,13 +23,13 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The regions.</p>
+     * <p>List of region information</p>
      */
     @NameInMap("Regions")
     public java.util.List<ListLoadBalancerRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>81A5E222-24BF-17EF-9E80-A68D9B8F363D</p>
@@ -38,7 +38,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>Total number of records</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -47,7 +47,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>Total number of pages</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,13 +110,16 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
 
     public static class ListLoadBalancerRegionsResponseBodyRegionsSubRegions extends TeaModel {
         /**
-         * <p>The Chinese name of the region.</p>
+         * <p>Secondary region Chinese full name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>印度尼西亚</p>
          */
         @NameInMap("SubRegionCnName")
         public String subRegionCnName;
 
         /**
-         * <p>The code of the subregion.</p>
+         * <p>Secondary region code</p>
          * 
          * <strong>example:</strong>
          * <p>ID</p>
@@ -125,7 +128,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         public String subRegionCode;
 
         /**
-         * <p>The English name of the subregion.</p>
+         * <p>Secondary region English full name</p>
          * 
          * <strong>example:</strong>
          * <p>Indonesia</p>
@@ -166,13 +169,16 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
 
     public static class ListLoadBalancerRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The Chinese name of the region.</p>
+         * <p>Primary region Chinese full name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>东南亚</p>
          */
         @NameInMap("RegionCnName")
         public String regionCnName;
 
         /**
-         * <p>The code of the region.</p>
+         * <p>Primary region code</p>
          * 
          * <strong>example:</strong>
          * <p>SEAS</p>
@@ -181,7 +187,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         public String regionCode;
 
         /**
-         * <p>The English name of the region.</p>
+         * <p>Primary region English full name</p>
          * 
          * <strong>example:</strong>
          * <p>South East Asia</p>
@@ -190,7 +196,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         public String regionEnName;
 
         /**
-         * <p>The subregions of the region.</p>
+         * <p>List of secondary region information</p>
          */
         @NameInMap("SubRegions")
         public java.util.List<ListLoadBalancerRegionsResponseBodyRegionsSubRegions> subRegions;

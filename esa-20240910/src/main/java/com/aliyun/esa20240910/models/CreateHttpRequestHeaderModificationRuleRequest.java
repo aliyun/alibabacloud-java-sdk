@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     /**
+     * <p>Modify request headers, supporting add, delete, and modify operations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RequestHeaderModification")
     public java.util.List<CreateHttpRequestHeaderModificationRuleRequestRequestHeaderModification> requestHeaderModification;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
      */
@@ -18,6 +21,12 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -25,6 +34,8 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -32,6 +43,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +53,8 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Version number of the site configuration. For sites with version management enabled, this parameter specifies the version to apply the configuration to, defaulting to version 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -102,6 +116,7 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
 
     public static class CreateHttpRequestHeaderModificationRuleRequestRequestHeaderModification extends TeaModel {
         /**
+         * <p>Request header name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +126,12 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Operation type. Possible values:</p>
+         * <ul>
+         * <li>add: Add.</li>
+         * <li>del: Delete.</li>
+         * <li>modify: Modify.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,6 +141,8 @@ public class CreateHttpRequestHeaderModificationRuleRequest extends TeaModel {
         public String operation;
 
         /**
+         * <p>Request header value.</p>
+         * 
          * <strong>example:</strong>
          * <p>headervalue</p>
          */

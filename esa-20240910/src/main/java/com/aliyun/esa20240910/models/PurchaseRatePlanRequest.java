@@ -4,10 +4,25 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class PurchaseRatePlanRequest extends TeaModel {
+    @NameInMap("Amount")
+    public Integer amount;
+
+    /**
+     * <p>Automatic payment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
+     * <p>Auto-renewal:</p>
+     * <ul>
+     * <li>true: Enable auto-renewal.</li>
+     * <li>false: Disable auto-renewal.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +30,12 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>Billing type</p>
+     * <ul>
+     * <li>PREPAY: Prepaid.</li>
+     * <li>POSTPAY: Postpaid.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
      */
@@ -22,6 +43,13 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>Acceleration area:</p>
+     * <ul>
+     * <li>domestic: Mainland China only.</li>
+     * <li>global: Worldwide.</li>
+     * <li>overseas: Global (excluding Mainland China).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>domestic</p>
      */
@@ -29,6 +57,8 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String coverage;
 
     /**
+     * <p>Subscription period (in months).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +66,8 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>Package code.</p>
+     * 
      * <strong>example:</strong>
      * <p>entranceplan</p>
      */
@@ -43,6 +75,8 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String planCode;
 
     /**
+     * <p>Package name.</p>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -50,6 +84,8 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String planName;
 
     /**
+     * <p>Site name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test.com</p>
      */
@@ -57,6 +93,12 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public String siteName;
 
     /**
+     * <p>Site access type:</p>
+     * <ul>
+     * <li>NS: NS access.</li>
+     * <li>CNAME: CNAME access.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CNAME</p>
      */
@@ -66,6 +108,14 @@ public class PurchaseRatePlanRequest extends TeaModel {
     public static PurchaseRatePlanRequest build(java.util.Map<String, ?> map) throws Exception {
         PurchaseRatePlanRequest self = new PurchaseRatePlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PurchaseRatePlanRequest setAmount(Integer amount) {
+        this.amount = amount;
+        return this;
+    }
+    public Integer getAmount() {
+        return this.amount;
     }
 
     public PurchaseRatePlanRequest setAutoPay(Boolean autoPay) {

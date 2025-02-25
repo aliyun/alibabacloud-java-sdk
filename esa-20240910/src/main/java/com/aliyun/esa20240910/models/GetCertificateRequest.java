@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateRequest extends TeaModel {
     /**
-     * <p>The certificate ID.</p>
+     * <p>Certificate ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetCertificateRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

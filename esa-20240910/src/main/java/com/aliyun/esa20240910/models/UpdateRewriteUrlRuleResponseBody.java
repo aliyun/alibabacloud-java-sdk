@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateRewriteUrlRuleResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRewriteUrlRuleRequest extends TeaModel {
     /**
+     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Query string after rewriting.</p>
+     * 
      * <strong>example:</strong>
      * <p>example=123</p>
      */
@@ -21,6 +24,11 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String queryString;
 
     /**
+     * <p>Query string rewrite type. Value range:</p>
+     * <ul>
+     * <li>static: Static mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>static</p>
      */
@@ -28,6 +36,11 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteQueryStringType;
 
     /**
+     * <p>URI rewrite type. Value range:</p>
+     * <ul>
+     * <li>static: Static mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>static</p>
      * 
@@ -38,6 +51,8 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteUriType;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
      */
@@ -45,6 +60,12 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -52,6 +73,8 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example=123</p>
      */
@@ -59,6 +82,7 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +92,8 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Target URI after rewriting.</p>
+     * 
      * <strong>example:</strong>
      * <p>/image/example.jpg</p>
      */

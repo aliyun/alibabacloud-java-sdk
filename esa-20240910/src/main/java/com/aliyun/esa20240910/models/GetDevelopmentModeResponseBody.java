@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetDevelopmentModeResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the development mode is enabled. Valid values:</p>
+     * <p>Switch. Values:</p>
      * <ul>
-     * <li><strong>on</strong></li>
-     * <li><strong>off</strong></li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetDevelopmentModeResponseBody extends TeaModel {
     public String enable;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>

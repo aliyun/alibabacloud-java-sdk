@@ -4,23 +4,41 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateOriginPoolShrinkRequest extends TeaModel {
+    /**
+     * <p>Whether the origin pool is enabled:</p>
+     * <ul>
+     * <li>true: Enabled;</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
+     * <p>The ID of the origin pool, which can be obtained by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>UpdateOriginPool</p>
+     * <p>1038520525196928</p>
      */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>Information about the origins added to the origin pool. Multiple origins are passed as an array.</p>
+     */
     @NameInMap("Origins")
     public String originsShrink;
 
     /**
+     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>216558609793952</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

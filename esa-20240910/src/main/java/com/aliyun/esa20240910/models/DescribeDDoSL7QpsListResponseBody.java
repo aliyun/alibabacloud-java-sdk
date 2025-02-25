@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
     /**
+     * <p>The time granularity of the queried data, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */
     @NameInMap("DataInterval")
     public Integer dataInterval;
 
+    /**
+     * <p>Application layer time trend data list.</p>
+     */
     @NameInMap("DataModule")
     public java.util.List<DescribeDDoSL7QpsListResponseBodyDataModule> dataModule;
 
     /**
+     * <p>The end time of the query.</p>
+     * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-19T19:00:00Z</p>
      */
@@ -22,6 +30,8 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Record ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>86510927836942****</p>
      */
@@ -29,7 +39,7 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
     public Long recordId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -38,6 +48,8 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Site ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456****</p>
      */
@@ -45,6 +57,9 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The start time of the query.</p>
+     * <p>The date format follows ISO8601 notation and uses UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-19T16:00:00Z</p>
      */
@@ -114,6 +129,8 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
 
     public static class DescribeDDoSL7QpsListResponseBodyDataModule extends TeaModel {
         /**
+         * <p>Attack QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -121,6 +138,8 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         public Long attack;
 
         /**
+         * <p>Normal QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -128,6 +147,8 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         public Long normal;
 
         /**
+         * <p>Data time, following ISO8601 notation and using UTC+0, formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-19T16:00:00Z</p>
          */
@@ -135,6 +156,8 @@ public class DescribeDDoSL7QpsListResponseBody extends TeaModel {
         public String timeStamp;
 
         /**
+         * <p>Total QPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */

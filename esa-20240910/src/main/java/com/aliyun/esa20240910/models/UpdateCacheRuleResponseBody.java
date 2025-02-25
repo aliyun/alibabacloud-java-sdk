@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCacheRuleResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
      */

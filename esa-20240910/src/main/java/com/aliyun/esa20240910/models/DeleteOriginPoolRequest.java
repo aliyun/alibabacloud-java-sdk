@@ -5,16 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteOriginPoolRequest extends TeaModel {
     /**
+     * <p>The ID of the origin address pool, which can be obtained by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DeleteOriginPool</p>
+     * <p>103852052519****</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
+     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21655860979****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

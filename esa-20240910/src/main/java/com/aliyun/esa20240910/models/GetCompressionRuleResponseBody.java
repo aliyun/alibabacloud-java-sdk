@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetCompressionRuleResponseBody extends TeaModel {
     /**
+     * <p>Brotli compression. Value range: </p>
+     * <ul>
+     * <li>on: Enable. </li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,8 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public String brotli;
 
     /**
+     * <p>Configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
      */
@@ -19,6 +27,12 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Configuration type. Possible values:</p>
+     * <ul>
+     * <li>global: Global configuration.</li>
+     * <li>rule: Rule configuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>rule</p>
      */
@@ -26,6 +40,12 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public String configType;
 
     /**
+     * <p>Gzip compression. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -33,6 +53,8 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public String gzip;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>186C6DF2-D96A-5102-B04E-FB92C16C9867</p>
      */
@@ -40,6 +62,8 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
      */
@@ -47,6 +71,12 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Possible values:</p>
+     * <ul>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -54,6 +84,8 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -61,6 +93,8 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Rule execution sequence.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,12 +102,24 @@ public class GetCompressionRuleResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
+     * <p>Site configuration version.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("SiteVersion")
     public Integer siteVersion;
 
+    /**
+     * <p>Zstd compression. Value range: </p>
+     * <ul>
+     * <li>on: Enable. </li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Zstd")
     public String zstd;
 

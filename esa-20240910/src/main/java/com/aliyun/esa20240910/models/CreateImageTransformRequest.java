@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateImageTransformRequest extends TeaModel {
     /**
+     * <p>Indicates whether image transformation is enabled. Possible values:</p>
+     * <ul>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -12,6 +18,8 @@ public class CreateImageTransformRequest extends TeaModel {
     public String enable;
 
     /**
+     * <p>Rule content, specifically the strategy or condition expression being implemented.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
      */
@@ -19,6 +27,12 @@ public class CreateImageTransformRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Values:</p>
+     * <ul>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -26,6 +40,8 @@ public class CreateImageTransformRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -33,6 +49,7 @@ public class CreateImageTransformRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +59,8 @@ public class CreateImageTransformRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

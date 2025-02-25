@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
+     * <p>Configuration for failover across pools.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,21 +14,39 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public CreateLoadBalancerRequestAdaptiveRouting adaptiveRouting;
 
     /**
+     * <p>List of default pools.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
+     * <p>123</p>
      */
     @NameInMap("DefaultPools")
     public java.util.List<Long> defaultPools;
 
+    /**
+     * <p>Detailed description of the load balancer, for easier management and identification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试负载均衡器描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Whether the load balancer is enabled.</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
+     * <p>Fallback pool ID, where traffic will be directed when all other pools are unavailable.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +56,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public Long fallbackPool;
 
     /**
+     * <p>Monitor configuration for health checks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +66,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public CreateLoadBalancerRequestMonitor monitor;
 
     /**
+     * <p>The name of the load balancer, which must meet domain name format validation and be a subdomain under the site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,16 +76,34 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("RandomSteering")
     public CreateLoadBalancerRequestRandomSteering randomSteering;
 
+    /**
+     * <p>Address pools corresponding to primary regions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;ENAM&quot;: [
+     *     12345678****
+     *   ],
+     *   &quot;WNAM&quot;: [
+     *     23456789****,
+     *     23456789****
+     *   ]
+     * }</p>
+     */
     @NameInMap("RegionPools")
     public Object regionPools;
 
     /**
+     * <p>Rule information.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;ENAM&quot;: [
@@ -78,27 +118,60 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("Rules")
     public java.util.List<CreateLoadBalancerRequestRules> rules;
 
+    /**
+     * <p>Session persistence, with values:</p>
+     * <ul>
+     * <li>off: Not enabled.</li>
+     * <li>ip: Session persistence by IP.</li>
+     * <li>cookie: Not enabled for session persistence.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ip</p>
+     */
     @NameInMap("SessionAffinity")
     public String sessionAffinity;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
 
     /**
+     * <p>Load balancing strategy.</p>
+     * <ul>
+     * <li>geo: Geographical strategy.</li>
+     * <li>random: Weighted round-robin.</li>
+     * <li>order: Primary and backup method.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ip</p>
+     * <p>order</p>
      */
     @NameInMap("SteeringPolicy")
     public String steeringPolicy;
 
+    /**
+     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
+     */
     @NameInMap("SubRegionPools")
     public Object subRegionPools;
 
+    /**
+     * <p>TTL value, the time-to-live for DNS records, with a default of 30 seconds. The value range is 10-600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("Ttl")
     public Integer ttl;
 
@@ -228,6 +301,16 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestAdaptiveRouting extends TeaModel {
+        /**
+         * <p>Whether to failover across pools.</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FailoverAcrossPools")
         public Boolean failoverAcrossPools;
 
@@ -247,36 +330,120 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestMonitor extends TeaModel {
+        /**
+         * <p>Number of consecutive failed probes required to consider the target as down, such as <code>5</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ConsecutiveDown")
         public Integer consecutiveDown;
 
+        /**
+         * <p>Number of consecutive successful probes required to consider the target as up, such as <code>3</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ConsecutiveUp")
         public Integer consecutiveUp;
 
+        /**
+         * <p>Expected status codes, such as <code>200,202</code>, indicating successful HTTP responses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ExpectedCodes")
         public String expectedCodes;
 
+        /**
+         * <p>Whether to follow redirects.</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FollowRedirects")
         public Boolean followRedirects;
 
+        /**
+         * <p>Header information included during the probe, which is an HTTP header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;host&quot;: [
+         *             &quot;example1.com&quot;,
+         *             &quot;example2.com&quot;
+         *         ]
+         *     }</p>
+         */
         @NameInMap("Header")
         public Object header;
 
+        /**
+         * <p>Monitoring interval, such as <code>60</code> seconds, indicating the frequency of checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <p>Monitor request method, such as <code>GET</code>, which is a method in the HTTP protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>Monitor check path, such as <code>/healthcheck</code>, which is an HTTP request path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/health</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>Origin server port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1921</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>Application health check timeout, in seconds, with a value range of 1-10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <p>Monitor protocol type, such as HTTP, used for health checks. When the value is <code>off</code>, it indicates that no check will be performed.</p>
+         * <ul>
+         * <li>TCP</li>
+         * <li>UDP</li>
+         * <li>SMTP</li>
+         * <li>HTTPS</li>
+         * <li>HTTP</li>
+         * <li>ICMP Ping</li>
+         * <li>off</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -376,9 +543,18 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestRandomSteering extends TeaModel {
+        /**
+         * <p>Default weight for all pools that do not have individual weights specified. The value range is an integer between 0 and 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("DefaultWeight")
         public Integer defaultWeight;
 
+        /**
+         * <p>Weight configuration for each backend server pool, with the key being the pool ID and the value being the weight coefficient. The weight coefficient represents the proportion of relative traffic distribution.</p>
+         */
         @NameInMap("PoolWeights")
         public java.util.Map<String, Integer> poolWeights;
 
@@ -406,15 +582,39 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestRulesFixedResponse extends TeaModel {
+        /**
+         * <p>Content-Type field in the HTTP Header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/octet-stream</p>
+         */
         @NameInMap("ContentType")
         public String contentType;
 
+        /**
+         * <p>Location field in the HTTP response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com/index.html">http://www.example.com/index.html</a></p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>Response body value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello World!</p>
+         */
         @NameInMap("MessageBody")
         public String messageBody;
 
+        /**
+         * <p>Response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("StatusCode")
         public Integer statusCode;
 
@@ -458,24 +658,115 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestRules extends TeaModel {
+        /**
+         * <p>Execute a specified response after matching the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;content_type&quot;: &quot;application/json&quot;, &quot;location&quot;: &quot;<a href="http://www.example.com">www.example.com</a>&quot;, &quot;message_body&quot;: &quot;Testing Hello&quot;, &quot;status_code&quot;: 0}</p>
+         */
         @NameInMap("FixedResponse")
         public CreateLoadBalancerRequestRulesFixedResponse fixedResponse;
 
+        /**
+         * <p>Modify the corresponding load balancing configuration after matching the rule. The configured fields will override the corresponding fields in the load balancer configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *             &quot;adaptive_routing&quot;: {
+         *                 &quot;failover_across_pools&quot;: true
+         *             },
+         *             &quot;sub_region_pools&quot;: {
+         *                 &quot;AL,AT&quot;: [
+         *                     92298024898****,
+         *                     92304347804****
+         *                 ],
+         *                 &quot;BG,BY&quot;: [
+         *                     92298024898****
+         *                 ]
+         *             },
+         *             &quot;default_pools&quot;: [
+         *                 92298024898****,
+         *                 92304347804****
+         *             ],
+         *             &quot;fallback_pool&quot;: 92298024898****,
+         *             &quot;location_strategy&quot;: {
+         *                 &quot;mode&quot;: &quot;resolver_ip&quot;,
+         *                 &quot;prefer_ecs&quot;: &quot;always&quot;
+         *             },
+         *             &quot;random_steering&quot;: {
+         *                 &quot;default_weight&quot;: 0.3,
+         *                 &quot;pool_weights&quot;: {
+         *                     &quot;92298024898****&quot;: 0.7,
+         *                     &quot;92304347804****&quot;: 0.8
+         *                 }
+         *             },
+         *             &quot;region_pools&quot;: {
+         *                 &quot;CN,SEAS&quot;: [
+         *                     92298024898****,
+         *                     92304347804****
+         *                 ],
+         *                 &quot;SAF,SAS&quot;: [
+         *                     92304347804****
+         *                 ]
+         *             },
+         *             &quot;session_affinity&quot;: &quot;ip&quot;,
+         *             &quot;steering_policy&quot;: &quot;geo&quot;,
+         *             &quot;ttl&quot;: 30
+         *         }</p>
+         */
         @NameInMap("Overrides")
         public Object overrides;
 
+        /**
+         * <p>Matching rule information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.request.method eq &quot;GET&quot; and http.request.version eq &quot;HTTP/1.0&quot;) or (ip.geoip.country eq &quot;CN&quot;) or (http.host eq &quot;<a href="http://www.example.com">www.example.com</a>&quot;)</p>
+         */
         @NameInMap("Rule")
         public String rule;
 
+        /**
+         * <p>Rule switch.</p>
+         * <ul>
+         * <li>on: Enable the rule.</li>
+         * <li>off: Disable the rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("RuleEnable")
         public String ruleEnable;
 
+        /**
+         * <p>Rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_1</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>Rule execution order. It can be left blank, in which case the rules will be executed in the list order. If filled, it should be a positive integer greater than 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Sequence")
         public Integer sequence;
 
+        /**
+         * <p>Whether to terminate the execution of subsequent rules.</p>
+         * <ul>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Terminates")
         public Boolean terminates;
 

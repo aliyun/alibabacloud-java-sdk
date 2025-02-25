@@ -4,23 +4,41 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateOriginPoolShrinkRequest extends TeaModel {
+    /**
+     * <p>Whether the origin address pool is enabled:</p>
+     * <ul>
+     * <li>true: Enabled;</li>
+     * <li>false: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
+     * <p>The name of the origin address pool, which must be unique within a site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CreateOriginPool</p>
+     * <p>pool1</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Information about the origins added to the origin address pool, with multiple origins passed as an array.</p>
+     */
     @NameInMap("Origins")
     public String originsShrink;
 
     /**
+     * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21655860979****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

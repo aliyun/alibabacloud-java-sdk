@@ -4,19 +4,43 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerShrinkRequest extends TeaModel {
+    /**
+     * <p>Configuration for cross-pool origin fallback.</p>
+     */
     @NameInMap("AdaptiveRouting")
     public String adaptiveRoutingShrink;
 
+    /**
+     * <p>List of default pool IDs.</p>
+     */
     @NameInMap("DefaultPools")
     public String defaultPoolsShrink;
 
+    /**
+     * <p>Detailed description of the load balancer, which is useful for management and identification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>负载均衡器描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>Whether the load balancer is enabled.</p>
+     * <ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Not enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
+     * <p>Fallback pool ID, where traffic will be directed when all other pools are unavailable.</p>
+     * 
      * <strong>example:</strong>
      * <p>96228666776****</p>
      */
@@ -24,6 +48,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Long fallbackPool;
 
     /**
+     * <p>Load balancer ID, which can be obtained by calling the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,13 +57,21 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>Monitor configuration for health checks.</p>
+     */
     @NameInMap("Monitor")
     public String monitorShrink;
 
+    /**
+     * <p>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</p>
+     */
     @NameInMap("RandomSteering")
     public String randomSteeringShrink;
 
     /**
+     * <p>Address pools corresponding to the primary region.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;ENAM&quot;: [
@@ -54,6 +87,8 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Object regionPools;
 
     /**
+     * <p>Rule configuration list, used to define behavior overrides under specific conditions.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -61,11 +96,11 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String rulesShrink;
 
     /**
-     * <p>Session persistence. Valid values:</p>
+     * <p>Session persistence, with values:</p>
      * <ul>
-     * <li>off:disables session persistence.</li>
-     * <li>ip: enables session persistence by IP address.</li>
-     * <li>cookie: disables session persistence.</li>
+     * <li>off: Not enabled.</li>
+     * <li>ip: Session persistence by IP.</li>
+     * <li>cookie: Not enabled for session persistence.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,15 +110,18 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String sessionAffinity;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>UpdateLoadBalancer</p>
+     * <p>1159101787****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
 
     /**
+     * <p>Load balancing policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>order</p>
      */
@@ -91,6 +129,8 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String steeringPolicy;
 
     /**
+     * <p>Address pools corresponding to the secondary region. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
      */
@@ -98,6 +138,8 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public Object subRegionPools;
 
     /**
+     * <p>TTL value, the time-to-live for DNS records. The default is 30, and the range is 10-600.</p>
+     * 
      * <strong>example:</strong>
      * <p>300</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCertificatesRequest extends TeaModel {
     /**
+     * <p>Search keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>example</p>
      */
@@ -12,6 +14,8 @@ public class ListCertificatesRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>Page number of the returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -19,6 +23,8 @@ public class ListCertificatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>Number of records per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,7 @@ public class ListCertificatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +42,8 @@ public class ListCertificatesRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Whether to return only valid certificates.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRewriteUrlRuleRequest extends TeaModel {
     /**
+     * <p>Query string after rewriting.</p>
+     * 
      * <strong>example:</strong>
      * <p>example=123</p>
      */
@@ -12,6 +14,11 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String queryString;
 
     /**
+     * <p>Query string rewrite type. Value range:</p>
+     * <ul>
+     * <li>static: Static mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>static</p>
      * 
@@ -22,6 +29,11 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteQueryStringType;
 
     /**
+     * <p>URI rewrite type. Value range:</p>
+     * <ul>
+     * <li>static: Static mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>static</p>
      * 
@@ -32,6 +44,8 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteUriType;
 
     /**
+     * <p>Rule content.</p>
+     * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
      */
@@ -39,6 +53,12 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rule;
 
     /**
+     * <p>Rule switch. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */
@@ -46,6 +66,8 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
+     * <p>Rule name.</p>
+     * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
@@ -53,6 +75,7 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,6 +85,8 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -69,6 +94,8 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
+     * <p>Target URI after rewriting.</p>
+     * 
      * <strong>example:</strong>
      * <p>/image/example.jpg</p>
      */

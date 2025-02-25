@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCiphersResponseBody extends TeaModel {
     /**
+     * <p>Name of the cipher suite group.</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -12,16 +14,23 @@ public class ListCiphersResponseBody extends TeaModel {
     public String ciphersGroup;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 
     /**
+     * <p>Total number of cipher suites.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */

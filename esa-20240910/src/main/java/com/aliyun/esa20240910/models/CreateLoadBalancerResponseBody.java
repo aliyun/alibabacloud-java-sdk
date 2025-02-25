@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
+     * <p>Load Balancer ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>99867648760****</p>
      */
@@ -12,7 +14,7 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     public Long id;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>

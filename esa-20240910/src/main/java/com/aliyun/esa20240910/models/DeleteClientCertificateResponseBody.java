@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteClientCertificateResponseBody extends TeaModel {
     /**
+     * <p>The certificate ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>baba39055622c008b90285a8838ed09a</p>
      */
@@ -12,6 +14,8 @@ public class DeleteClientCertificateResponseBody extends TeaModel {
     public String id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
      */
@@ -19,6 +23,8 @@ public class DeleteClientCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The website ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234567890123</p>
      */
@@ -26,6 +32,8 @@ public class DeleteClientCertificateResponseBody extends TeaModel {
     public Long siteId;
 
     /**
+     * <p>The website name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */

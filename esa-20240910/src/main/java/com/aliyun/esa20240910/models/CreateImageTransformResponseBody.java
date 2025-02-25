@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateImageTransformResponseBody extends TeaModel {
     /**
+     * <p>Configuration ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>352816096987136</p>
      */
@@ -12,6 +14,8 @@ public class CreateImageTransformResponseBody extends TeaModel {
     public Long configId;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */

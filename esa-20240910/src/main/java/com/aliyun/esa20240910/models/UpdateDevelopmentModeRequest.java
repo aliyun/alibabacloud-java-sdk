@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateDevelopmentModeRequest extends TeaModel {
     /**
+     * <p>Feature switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class UpdateDevelopmentModeRequest extends TeaModel {
     public String enable;
 
     /**
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

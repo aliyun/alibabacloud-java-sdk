@@ -5,19 +5,30 @@ import com.aliyun.tea.*;
 
 public class ListLoadBalancerOriginStatusRequest extends TeaModel {
     /**
+     * <p>Load balancer ID. When querying multiple load balancers, separate the IDs with commas. A maximum of 100 load balancer IDs can be passed at once. Load balancer IDs can be obtained by calling the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99874066052****,100892832360****</p>
      */
     @NameInMap("LoadBalancerIds")
     public String loadBalancerIds;
 
+    /**
+     * <p>Source address pool type. Various source address pools are configured under the load balancer, including default pools, fallback pools, and primary region pools. Only the status of origins in the default pool affects the status of the load balancer itself. Passing <code>default_pool</code> means only querying the status of origins in the default source address pool under the load balancer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default_pool</p>
+     */
     @NameInMap("PoolType")
     public String poolType;
 
     /**
+     * <p>Site ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ListLoadBalancerOriginStatus</p>
+     * <p>1159101787****</p>
      */
     @NameInMap("SiteId")
     public Long siteId;
