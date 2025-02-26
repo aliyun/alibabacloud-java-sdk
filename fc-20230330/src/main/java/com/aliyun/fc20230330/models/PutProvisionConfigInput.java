@@ -81,6 +81,7 @@ public class PutProvisionConfigInput extends TeaModel {
         return this.scheduledActions;
     }
 
+    @Deprecated
     public PutProvisionConfigInput setTarget(Long target) {
         this.target = target;
         return this;
