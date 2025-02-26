@@ -54,6 +54,9 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("TargetStatus")
+    public String targetStatus;
+
     @NameInMap("Uuid")
     public String uuid;
 
@@ -108,6 +111,14 @@ public class ApproveFotaUpdateRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public ApproveFotaUpdateRequest setTargetStatus(String targetStatus) {
+        this.targetStatus = targetStatus;
+        return this;
+    }
+    public String getTargetStatus() {
+        return this.targetStatus;
     }
 
     public ApproveFotaUpdateRequest setUuid(String uuid) {
