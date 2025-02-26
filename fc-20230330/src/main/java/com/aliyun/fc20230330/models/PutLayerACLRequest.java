@@ -36,6 +36,7 @@ public class PutLayerACLRequest extends TeaModel {
         return this.acl;
     }
 
+    @Deprecated
     public PutLayerACLRequest set_public(String _public) {
         this._public = _public;
         return this;

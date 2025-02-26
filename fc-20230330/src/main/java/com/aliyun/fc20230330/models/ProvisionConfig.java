@@ -41,7 +41,7 @@ public class ProvisionConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>acs:fc:cn-shanghai:124:functions/myFunction</p>
+     * <p>acs:fc:cn-shanghai:124:functions/myFunction/prod</p>
      */
     @NameInMap("functionArn")
     public String functionArn;
