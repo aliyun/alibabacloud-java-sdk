@@ -17,6 +17,9 @@ public class ModifyHybridCloudServerRequest extends TeaModel {
     /**
      * <p>The name of the node.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("CustomName")
     public String customName;

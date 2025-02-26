@@ -294,6 +294,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             return this.resourceInstanceName;
         }
 
+        @Deprecated
         public DescribeProductInstancesResponseBodyProductInstances setResourceIp(String resourceIp) {
             this.resourceIp = resourceIp;
             return this;
@@ -302,6 +303,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             return this.resourceIp;
         }
 
+        @Deprecated
         public DescribeProductInstancesResponseBodyProductInstances setResourceName(String resourceName) {
             this.resourceName = resourceName;
             return this;

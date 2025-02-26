@@ -8,13 +8,13 @@ public class DescribeResourceSupportRegionsResponseBody extends TeaModel {
      * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
-     * <p>58FDF266-3D56-5DE8-91E0-96A26B****DD</p>
+     * <p>58FD****-3D56-5DE8-91E0-96A26BABFFDD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The region IDs.</p>
+     * <p>An array of region IDs of the CLB and ECS instances that are added to WAF in cloud native mode.</p>
      */
     @NameInMap("SupportRegions")
     public java.util.List<String> supportRegions;

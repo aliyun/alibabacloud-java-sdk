@@ -20,7 +20,7 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
      * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
@@ -39,6 +39,17 @@ public class DescribeResourceSupportRegionsRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The cloud service. Valid values:</p>
+     * <ul>
+     * <li><strong>clb4</strong>: Layer 4 CLB.</li>
+     * <li><strong>clb7</strong>: Layer 7 CLB.</li>
+     * <li><strong>ecs</strong>: ECS.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>clb7</p>
+     */
     @NameInMap("ResourceProduct")
     public String resourceProduct;
 

@@ -60,6 +60,9 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
     public static class DescribeApisecEventsResponseBodyData extends TeaModel {
         /**
          * <p>The number of attacks.</p>
+         * <blockquote>
+         * <p>Notice: The parameter has been deprecated, please use the Attackips parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -138,6 +141,12 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
          */
         @NameInMap("AttackIpInfo")
         public String attackIpInfo;
+
+        /**
+         * <p>The source IP addresses of the attacks.</p>
+         */
+        @NameInMap("AttackIps")
+        public java.util.List<String> attackIps;
 
         /**
          * <p>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
@@ -367,6 +376,14 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         }
         public String getAttackIpInfo() {
             return this.attackIpInfo;
+        }
+
+        public DescribeApisecEventsResponseBodyData setAttackIps(java.util.List<String> attackIps) {
+            this.attackIps = attackIps;
+            return this;
+        }
+        public java.util.List<String> getAttackIps() {
+            return this.attackIps;
         }
 
         public DescribeApisecEventsResponseBodyData setEndTs(Long endTs) {

@@ -71,6 +71,12 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     @NameInMap("RuleId")
     public Long ruleId;
 
+    /**
+     * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoRuleName</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
@@ -87,6 +93,12 @@ public class DescribeDefenseResourceTemplatesRequest extends TeaModel {
     @NameInMap("RuleType")
     public String ruleType;
 
+    /**
+     * <p>The name of the protection rule template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test221</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

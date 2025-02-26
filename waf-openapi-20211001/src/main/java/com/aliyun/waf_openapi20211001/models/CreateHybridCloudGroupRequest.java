@@ -26,6 +26,9 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     /**
      * <p>The name of the node group.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoGroupName</p>
      */
     @NameInMap("GroupName")
     public String groupName;
@@ -79,7 +82,7 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
     public String locationCode;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
      * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
@@ -93,6 +96,9 @@ public class CreateHybridCloudGroupRequest extends TeaModel {
 
     /**
      * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoRamark</p>
      */
     @NameInMap("Remark")
     public String remark;

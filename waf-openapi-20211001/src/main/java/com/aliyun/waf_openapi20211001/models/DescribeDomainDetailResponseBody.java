@@ -622,6 +622,15 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainDetailResponseBodyRedirectBackupBackends extends TeaModel {
+        /**
+         * <p>The back-to-origin IP address or domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *     &quot;1.1.XX.XX&quot;,
+         *     &quot;2.2.XX.XX&quot;
+         * ]</p>
+         */
         @NameInMap("Backend")
         public String backend;
 
@@ -689,6 +698,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         @NameInMap("Backends")
         public java.util.List<DescribeDomainDetailResponseBodyRedirectBackends> backends;
 
+        /**
+         * <p>An array of HTTPS listener ports.</p>
+         */
         @NameInMap("BackupBackends")
         public java.util.List<DescribeDomainDetailResponseBodyRedirectBackupBackends> backupBackends;
 

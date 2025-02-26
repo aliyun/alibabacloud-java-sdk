@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePunishedDomainsRequest extends TeaModel {
     /**
-     * <p>The domain names.</p>
+     * <p>The domain names that are added to WAF.</p>
      */
     @NameInMap("Domains")
     public java.util.List<String> domains;
@@ -22,6 +22,13 @@ public class DescribePunishedDomainsRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>beian</p>
+     */
+    @NameInMap("PunishType")
+    public String punishType;
 
     /**
      * <p>The region in which the WAF instance is deployed. Valid values:</p>
@@ -64,6 +71,14 @@ public class DescribePunishedDomainsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribePunishedDomainsRequest setPunishType(String punishType) {
+        this.punishType = punishType;
+        return this;
+    }
+    public String getPunishType() {
+        return this.punishType;
     }
 
     public DescribePunishedDomainsRequest setRegionId(String regionId) {

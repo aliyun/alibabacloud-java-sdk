@@ -129,9 +129,21 @@ public class DescribeDefenseTemplatesRequest extends TeaModel {
     @NameInMap("TemplateId")
     public Long templateId;
 
+    /**
+     * <p>The IDs of the protection templates that you want to query. Separate multiple template IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>189731,189539,189538,189531,189540,189542,189541</p>
+     */
     @NameInMap("TemplateIds")
     public String templateIds;
 
+    /**
+     * <p>The name of the protection template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testTemplateName</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

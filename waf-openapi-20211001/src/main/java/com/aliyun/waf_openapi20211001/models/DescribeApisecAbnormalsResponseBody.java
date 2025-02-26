@@ -212,6 +212,13 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long lastestTime;
 
         /**
+         * <strong>example:</strong>
+         * <p>1684252800</p>
+         */
+        @NameInMap("LatestDiscoverTime")
+        public Long latestDiscoverTime;
+
+        /**
          * <p>The domain name or IP address of the API.</p>
          * 
          * <strong>example:</strong>
@@ -381,6 +388,14 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         }
         public Long getLastestTime() {
             return this.lastestTime;
+        }
+
+        public DescribeApisecAbnormalsResponseBodyData setLatestDiscoverTime(Long latestDiscoverTime) {
+            this.latestDiscoverTime = latestDiscoverTime;
+            return this;
+        }
+        public Long getLatestDiscoverTime() {
+            return this.latestDiscoverTime;
         }
 
         public DescribeApisecAbnormalsResponseBodyData setMatchedHost(String matchedHost) {

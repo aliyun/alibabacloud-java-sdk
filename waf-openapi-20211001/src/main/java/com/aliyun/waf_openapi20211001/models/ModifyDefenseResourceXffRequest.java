@@ -97,6 +97,9 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    @NameInMap("ResponseHeaders")
+    public java.util.List<ModifyDefenseResourceXffRequestResponseHeaders> responseHeaders;
+
     /**
      * <p>Specifies whether a Layer 7 proxy is deployed in front of WAF. Layer 7 proxies include Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
      * <ul>
@@ -180,12 +183,50 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
+    public ModifyDefenseResourceXffRequest setResponseHeaders(java.util.List<ModifyDefenseResourceXffRequestResponseHeaders> responseHeaders) {
+        this.responseHeaders = responseHeaders;
+        return this;
+    }
+    public java.util.List<ModifyDefenseResourceXffRequestResponseHeaders> getResponseHeaders() {
+        return this.responseHeaders;
+    }
+
     public ModifyDefenseResourceXffRequest setXffStatus(Integer xffStatus) {
         this.xffStatus = xffStatus;
         return this;
     }
     public Integer getXffStatus() {
         return this.xffStatus;
+    }
+
+    public static class ModifyDefenseResourceXffRequestResponseHeaders extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ModifyDefenseResourceXffRequestResponseHeaders build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDefenseResourceXffRequestResponseHeaders self = new ModifyDefenseResourceXffRequestResponseHeaders();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDefenseResourceXffRequestResponseHeaders setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ModifyDefenseResourceXffRequestResponseHeaders setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

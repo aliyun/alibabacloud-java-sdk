@@ -42,6 +42,15 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
 
     public static class DescribeApisecStatisticsResponseBodyData extends TeaModel {
         /**
+         * <p>The number of handled events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Actioned")
+        public Long actioned;
+
+        /**
          * <p>The number of APIs.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +188,14 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         public static DescribeApisecStatisticsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApisecStatisticsResponseBodyData self = new DescribeApisecStatisticsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApisecStatisticsResponseBodyData setActioned(Long actioned) {
+            this.actioned = actioned;
+            return this;
+        }
+        public Long getActioned() {
+            return this.actioned;
         }
 
         public DescribeApisecStatisticsResponseBodyData setApi(Long api) {

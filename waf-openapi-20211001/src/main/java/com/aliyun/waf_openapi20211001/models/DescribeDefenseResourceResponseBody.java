@@ -40,6 +40,36 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         return this.resource;
     }
 
+    public static class DescribeDefenseResourceResponseBodyResourceResponseHeaders extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDefenseResourceResponseBodyResourceResponseHeaders build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDefenseResourceResponseBodyResourceResponseHeaders self = new DescribeDefenseResourceResponseBodyResourceResponseHeaders();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDefenseResourceResponseBodyResourceResponseHeaders setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDefenseResourceResponseBodyResourceResponseHeaders setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeDefenseResourceResponseBodyResource extends TeaModel {
         /**
          * <p>The status of the tracking cookie.</p>
@@ -195,6 +225,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         @NameInMap("ResourceOrigin")
         public String resourceOrigin;
 
+        @NameInMap("ResponseHeaders")
+        public java.util.List<DescribeDefenseResourceResponseBodyResourceResponseHeaders> responseHeaders;
+
         /**
          * <p>Indicates whether a Layer 7 proxy is deployed in front of WAF, such as Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
          * <ul>
@@ -331,6 +364,14 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         }
         public String getResourceOrigin() {
             return this.resourceOrigin;
+        }
+
+        public DescribeDefenseResourceResponseBodyResource setResponseHeaders(java.util.List<DescribeDefenseResourceResponseBodyResourceResponseHeaders> responseHeaders) {
+            this.responseHeaders = responseHeaders;
+            return this;
+        }
+        public java.util.List<DescribeDefenseResourceResponseBodyResourceResponseHeaders> getResponseHeaders() {
+            return this.responseHeaders;
         }
 
         public DescribeDefenseResourceResponseBodyResource setXffStatus(Integer xffStatus) {
