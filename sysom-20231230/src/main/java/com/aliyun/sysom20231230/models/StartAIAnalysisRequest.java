@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class StartAIAnalysisRequest extends TeaModel {
+    @NameInMap("analysisTool")
+    public String analysisTool;
+
     /**
      * <strong>example:</strong>
      * <p>ecs_sysom</p>
@@ -49,6 +52,14 @@ public class StartAIAnalysisRequest extends TeaModel {
     public static StartAIAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         StartAIAnalysisRequest self = new StartAIAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartAIAnalysisRequest setAnalysisTool(String analysisTool) {
+        this.analysisTool = analysisTool;
+        return this;
+    }
+    public String getAnalysisTool() {
+        return this.analysisTool;
     }
 
     public StartAIAnalysisRequest setChannel(String channel) {

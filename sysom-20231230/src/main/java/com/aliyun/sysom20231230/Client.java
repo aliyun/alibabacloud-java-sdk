@@ -2390,6 +2390,264 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取ecs信息的列表，如标签列表，公网ip列表等</p>
+     * 
+     * @param request ListInstancesEcsInfoListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancesEcsInfoListResponse
+     */
+    public ListInstancesEcsInfoListResponse listInstancesEcsInfoListWithOptions(ListInstancesEcsInfoListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.infoType)) {
+            query.put("info_type", request.infoType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instance_id", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managedType)) {
+            query.put("managed_type", request.managedType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("plugin_id", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstancesEcsInfoList"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/instance/listInstancesEcsInfoList"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesEcsInfoListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstancesEcsInfoListResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取ecs信息的列表，如标签列表，公网ip列表等</p>
+     * 
+     * @param request ListInstancesEcsInfoListRequest
+     * @return ListInstancesEcsInfoListResponse
+     */
+    public ListInstancesEcsInfoListResponse listInstancesEcsInfoList(ListInstancesEcsInfoListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstancesEcsInfoListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取已纳管/未纳管实例信息，信息中包含ECS信息</p>
+     * 
+     * @param tmpReq ListInstancesWithEcsInfoRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstancesWithEcsInfoResponse
+     */
+    public ListInstancesWithEcsInfoResponse listInstancesWithEcsInfoWithOptions(ListInstancesWithEcsInfoRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListInstancesWithEcsInfoShrinkRequest request = new ListInstancesWithEcsInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceTag)) {
+            request.instanceTagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceTag, "instance_tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            query.put("current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthStatus)) {
+            query.put("health_status", request.healthStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instance_id", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdName)) {
+            query.put("instance_id_name", request.instanceIdName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("instance_name", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTagShrink)) {
+            query.put("instance_tag", request.instanceTagShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isManaged)) {
+            query.put("is_managed", request.isManaged);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osName)) {
+            query.put("os_name", request.osName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIp)) {
+            query.put("private_ip", request.privateIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publicIp)) {
+            query.put("public_ip", request.publicIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resource_group_id", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdName)) {
+            query.put("resource_group_id_name", request.resourceGroupIdName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
+            query.put("resource_group_name", request.resourceGroupName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInstancesWithEcsInfo"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/instance/listInstancesWithEcsInfo"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesWithEcsInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstancesWithEcsInfoResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取已纳管/未纳管实例信息，信息中包含ECS信息</p>
+     * 
+     * @param request ListInstancesWithEcsInfoRequest
+     * @return ListInstancesWithEcsInfoResponse
+     */
+    public ListInstancesWithEcsInfoResponse listInstancesWithEcsInfo(ListInstancesWithEcsInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listInstancesWithEcsInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取插件的安装/更新/卸载实例列表</p>
+     * 
+     * @param request ListPluginsInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPluginsInstancesResponse
+     */
+    public ListPluginsInstancesResponse listPluginsInstancesWithOptions(ListPluginsInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.current)) {
+            query.put("current", request.current);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdName)) {
+            query.put("instance_id_name", request.instanceIdName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTag)) {
+            query.put("instance_tag", request.instanceTag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            query.put("operation_type", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("plugin_id", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPluginsInstances"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/am/agent/listPluginsInstances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListPluginsInstancesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListPluginsInstancesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取插件的安装/更新/卸载实例列表</p>
+     * 
+     * @param request ListPluginsInstancesRequest
+     * @return ListPluginsInstancesResponse
+     */
+    public ListPluginsInstancesResponse listPluginsInstances(ListPluginsInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPluginsInstancesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取实例中的pod列表</p>
      * 
      * @param request ListPodsOfInstanceRequest
@@ -2506,6 +2764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartAIAnalysisResponse startAIAnalysisWithOptions(StartAIAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.analysisTool)) {
+            body.put("analysisTool", request.analysisTool);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             body.put("channel", request.channel);
         }
