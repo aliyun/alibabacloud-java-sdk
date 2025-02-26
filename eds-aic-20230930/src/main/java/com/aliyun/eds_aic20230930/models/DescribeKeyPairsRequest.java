@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the ADB key pairs.</p>
+     */
     @NameInMap("KeyPairIds")
     public java.util.List<String> keyPairIds;
 
     /**
+     * <p>The name of the ADB key pair.</p>
+     * 
      * <strong>example:</strong>
      * <p>testKeyPairName</p>
      */
@@ -15,6 +20,8 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public String keyPairName;
 
     /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAYRHtOLVQzCYj17y+OP7LZQBUVVbi0GTu8g5****</p>
      */

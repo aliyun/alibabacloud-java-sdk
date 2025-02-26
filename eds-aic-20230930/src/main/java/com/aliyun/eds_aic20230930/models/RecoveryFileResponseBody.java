@@ -4,10 +4,18 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RecoveryFileResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97</p>
+     */
     @NameInMap("Count")
     public Long count;
 
     /**
+     * <p>The backup file that is restored.</p>
+     * 
      * <strong>example:</strong>
      * <p>6AD56E39-430B-5401-AB4A-7B086454****</p>
      */
@@ -15,12 +23,20 @@ public class RecoveryFileResponseBody extends TeaModel {
     public java.util.List<RecoveryFileResponseBodyData> data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6AD56E39-430B-5401-AB4A-7B086454****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-5prhfo7wv1gjx****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
@@ -62,9 +78,21 @@ public class RecoveryFileResponseBody extends TeaModel {
     }
 
     public static class RecoveryFileResponseBodyData extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-34pqe4r0kd9kn****</p>
+         */
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-5prhfo7wv1gjx****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

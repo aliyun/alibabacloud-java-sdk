@@ -4,10 +4,18 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;acp-3vzqq4y3f31f3z3df\&quot;]</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
+     * <p>The ID of the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>223684716098****</p>
      */
@@ -15,6 +23,8 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>310A783E-CC46-5452-A8A3-71AE5DB59****</p>
      */

@@ -4,10 +4,14 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class AttachKeyPairRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The ID of the ADB key pair.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

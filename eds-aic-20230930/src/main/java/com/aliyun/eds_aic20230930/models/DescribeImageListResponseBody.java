@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListResponseBody extends TeaModel {
+    /**
+     * <p>The objects that are returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeImageListResponseBodyData> data;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeImageListResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>620740FF-492F-5956-B1BA-361E966C0269</p>
      */
@@ -22,6 +29,8 @@ public class DescribeImageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -67,6 +76,8 @@ public class DescribeImageListResponseBody extends TeaModel {
 
     public static class DescribeImageListResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>117819727354****</p>
          */
@@ -74,6 +85,8 @@ public class DescribeImageListResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The description of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -81,6 +94,8 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The time when the image was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-02-01 10:56:36</p>
          */
@@ -88,6 +103,8 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the image was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-02-01 10:56:36</p>
          */
@@ -95,6 +112,8 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>imgc-075cllfeuazh****</p>
          */
@@ -102,19 +121,34 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The name of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>IMAGE</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The region where the image is distributed. The key is the region and the value is the distribution information.</p>
+         */
         @NameInMap("ImageRegionDistributeMap")
         public java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap;
 
+        /**
+         * <p>The list of regions.</p>
+         */
         @NameInMap("ImageRegionList")
         public java.util.List<String> imageRegionList;
 
         /**
+         * <p>The type of the image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>User: custom images.</li>
+         * <li>System: system images.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>System</p>
          */
@@ -122,19 +156,49 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String imageType;
 
         /**
+         * <p>The language of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>zh</p>
          */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>The time when the image was published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-25 10:06:45</p>
+         */
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
+        /**
+         * <p>The rendering type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>GPURemote</li>
+         * <li>CPU</li>
+         * <li>GPULocal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
         @NameInMap("RenderingType")
         public String renderingType;
 
         /**
+         * <p>The state of the image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE: The image is available.</li>
+         * <li>DELETE: The image is deleted.</li>
+         * <li>INIT: The image is being initialized.</li>
+         * <li>CREATE_FAILED: The image failed to be created.</li>
+         * <li>CREATING: The image is being created.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */
@@ -142,6 +206,8 @@ public class DescribeImageListResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The OS type of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>Android 12</p>
          */

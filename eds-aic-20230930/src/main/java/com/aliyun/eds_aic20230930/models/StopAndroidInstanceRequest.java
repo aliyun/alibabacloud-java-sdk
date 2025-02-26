@@ -4,9 +4,18 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class StopAndroidInstanceRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud phone instances.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <p>Specifies whether to enforce a stop operation. If a cloud phone instance fails to stop due to system or network issues, a forced stop can be triggered, though it may result in data loss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 

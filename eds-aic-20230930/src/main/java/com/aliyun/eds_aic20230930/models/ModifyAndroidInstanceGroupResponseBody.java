@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAndroidInstanceGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6C83EBE3-F267-5F11-ABF8-4E7B90B****</p>
      */

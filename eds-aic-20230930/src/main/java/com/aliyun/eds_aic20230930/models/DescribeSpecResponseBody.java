@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSpecResponseBody extends TeaModel {
     /**
+     * <p>Indicates the current read position returned by this call. An empty value means that all data has been read.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
      */
@@ -12,16 +14,23 @@ public class DescribeSpecResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D9888DAD-331E-5FBC-B5A0-F2445115****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Specification information.</p>
+     */
     @NameInMap("SpecInfoModel")
     public java.util.List<DescribeSpecResponseBodySpecInfoModel> specInfoModel;
 
     /**
+     * <p>Total number of items.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -67,6 +76,8 @@ public class DescribeSpecResponseBody extends TeaModel {
 
     public static class DescribeSpecResponseBodySpecInfoModel extends TeaModel {
         /**
+         * <p>Number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -74,6 +85,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public Integer core;
 
         /**
+         * <p>Memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -87,6 +100,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String resolution;
 
         /**
+         * <p>Specification ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp.basic.small</p>
          */
@@ -94,6 +109,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String specId;
 
         /**
+         * <p>Specification status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -101,6 +118,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String specStatus;
 
         /**
+         * <p>Specification type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ARM</p>
          */
@@ -108,6 +127,8 @@ public class DescribeSpecResponseBody extends TeaModel {
         public String specType;
 
         /**
+         * <p>System disk size, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */

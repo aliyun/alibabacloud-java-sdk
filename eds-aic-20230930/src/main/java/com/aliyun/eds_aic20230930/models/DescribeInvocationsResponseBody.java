@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeInvocationsResponseBody extends TeaModel {
+    /**
+     * <p>The objects that are returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeInvocationsResponseBodyData> data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>440D7342-5E7C-B2DB-D0B4EAC2BDF1****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -52,6 +59,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     public static class DescribeInvocationsResponseBodyData extends TeaModel {
         /**
+         * <p>The end time of the command execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-11 17:45:03</p>
          */
@@ -59,6 +68,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
+         * <p>The ID of the cloud phone instance on which the command is executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-uto81vfd8t8z****</p>
          */
@@ -66,6 +77,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-15775dc8****</p>
          */
@@ -73,6 +86,16 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String invocationId;
 
         /**
+         * <p>The execution state of the command.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: The command is successfully executed.</li>
+         * <li>FAILED: The command failed to be executed.</li>
+         * <li>RUNNING: The command is being executed.</li>
+         * <li>PENDING: The command is pending execution.</li>
+         * <li>TIMEOUT: The command execution timed out.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -80,6 +103,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String invocationStatus;
 
         /**
+         * <p>The output of the command execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -87,6 +112,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String output;
 
         /**
+         * <p>The start time of the command execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-11 17:45:03</p>
          */

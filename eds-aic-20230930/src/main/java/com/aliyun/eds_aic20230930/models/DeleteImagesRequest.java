@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteImagesRequest extends TeaModel {
     /**
+     * <p>The IDs of the images.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ImageIds")

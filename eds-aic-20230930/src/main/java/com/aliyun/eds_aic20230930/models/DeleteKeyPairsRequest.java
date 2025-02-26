@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DeleteKeyPairsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the ADB key pairs.</p>
+     */
     @NameInMap("KeyPairIds")
     public java.util.List<String> keyPairIds;
 

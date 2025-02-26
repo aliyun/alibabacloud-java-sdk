@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class AttachKeyPairResponseBody extends TeaModel {
+    /**
+     * <p>The object that is returned.</p>
+     */
     @NameInMap("Data")
     public AttachKeyPairResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
      */
@@ -36,10 +41,15 @@ public class AttachKeyPairResponseBody extends TeaModel {
     }
 
     public static class AttachKeyPairResponseBodyData extends TeaModel {
+        /**
+         * <p>The IDs of the cloud phone instances to which the ADB key pair is successfully attached.</p>
+         */
         @NameInMap("AttachedInstanceIds")
         public java.util.List<String> attachedInstanceIds;
 
         /**
+         * <p>The number of the cloud phone instances to which the ADB key pair failed to be attached.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -47,6 +57,8 @@ public class AttachKeyPairResponseBody extends TeaModel {
         public Integer failCount;
 
         /**
+         * <p>The ID of the ADB key pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>kp-6v2q33ae4tw3a****</p>
          */
@@ -54,6 +66,8 @@ public class AttachKeyPairResponseBody extends TeaModel {
         public String keyPairId;
 
         /**
+         * <p>The total number of the cloud phone instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

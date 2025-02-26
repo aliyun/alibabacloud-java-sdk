@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateScreenshotRequest extends TeaModel {
     /**
+     * <p>The IDs of the cloud phone instances. You can create multiple snapshots simultaneously.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
     /**
+     * <p>The name of the OSS bucket. The name must start with &quot;cloudphone-saved-bucket-&quot;. The OSS bucket and the cloud phone instance must be in the same region. If you leave this parameter empty, the system will create a default OSS bucket named “cloudphone-saved-bucket-{Region of the cloud phone instance}-{AliUid}.”</p>
+     * 
      * <strong>example:</strong>
      * <p>cloudphone-saved-bucket-cn-shanghai-default</p>
      */
@@ -18,6 +21,8 @@ public class CreateScreenshotRequest extends TeaModel {
     public String ossBucketName;
 
     /**
+     * <p>Specifies whether to bypass the snapshot policy control. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

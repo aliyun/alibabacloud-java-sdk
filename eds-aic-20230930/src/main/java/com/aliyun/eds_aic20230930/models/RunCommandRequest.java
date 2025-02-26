@@ -5,19 +5,40 @@ import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
     /**
+     * <p>The content of the command.</p>
+     * 
      * <strong>example:</strong>
      * <p>ls</p>
      */
     @NameInMap("CommandContent")
     public String commandContent;
 
+    /**
+     * <p>The encoding method of the command content (<code>CommandContent</code>). The value is not case-sensitive.</p>
+     * <blockquote>
+     * <p> If you set the value to an invalid encoding method, the system will process the command content as <code>PlainText</code>.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Base64: encodes the command content in Base64.</li>
+     * <li>PlainText (default): does not encode the command content. The command content is input as plain text.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PlainText</p>
+     */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    /**
+     * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The timeout period of the command execution. If the command execution exceeds the timeout period, it will be considered timed out. If you leave this parameter empty, it defaults to 60.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */

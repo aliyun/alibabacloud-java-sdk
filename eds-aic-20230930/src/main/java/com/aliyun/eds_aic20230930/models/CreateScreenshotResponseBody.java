@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateScreenshotResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>3AF82CE1-2801-52CE-BF64-B491DD7C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<CreateScreenshotResponseBodyTasks> tasks;
 
@@ -37,6 +42,8 @@ public class CreateScreenshotResponseBody extends TeaModel {
 
     public static class CreateScreenshotResponseBodyTasks extends TeaModel {
         /**
+         * <p>The ID of the cloud phone instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-bwhtebzah2fse****</p>
          */
@@ -44,6 +51,8 @@ public class CreateScreenshotResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
+         * <p>The ID of the task. You can use the task ID with the DescribeTasks operation to get the download link for the screenshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-imr0fufqd7cle****</p>
          */

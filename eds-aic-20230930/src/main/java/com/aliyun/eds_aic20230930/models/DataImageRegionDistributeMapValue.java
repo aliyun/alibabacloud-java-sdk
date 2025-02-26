@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class DataImageRegionDistributeMapValue extends TeaModel {
     /**
+     * <p>The status of the image distribution task.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>AVAILABLE: The task is ready.</li>
+     * <li>DELETE: The task is deleted.</li>
+     * <li>INIT: The task is being initialized.</li>
+     * <li>CREATE_FAILED: The task failed to be created.</li>
+     * <li>CREATING: The task is being created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
      */
@@ -12,6 +22,8 @@ public class DataImageRegionDistributeMapValue extends TeaModel {
     public String distributeStatus;
 
     /**
+     * <p>The distribution progress of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>100%</p>
      */

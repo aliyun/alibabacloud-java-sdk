@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class InstallAppResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-14xwibw7yp73q****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

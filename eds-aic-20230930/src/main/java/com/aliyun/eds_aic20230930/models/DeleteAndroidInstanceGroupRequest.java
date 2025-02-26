@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DeleteAndroidInstanceGroupRequest extends TeaModel {
+    /**
+     * <p>The IDs of the instance groups.</p>
+     */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 

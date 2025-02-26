@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyGroupRequest extends TeaModel {
     /**
+     * <p>The IDs of the policies.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyGroupIds")

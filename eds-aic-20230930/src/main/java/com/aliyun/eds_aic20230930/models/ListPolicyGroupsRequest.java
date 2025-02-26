@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPolicyGroupsRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries per page. Value range: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,15 +14,26 @@ public class ListPolicyGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The IDs of the policies.</p>
+     */
     @NameInMap("PolicyGroupIds")
     public java.util.List<String> policyGroupIds;
 
+    /**
+     * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defaultPolicyGroup</p>
+     */
     @NameInMap("PolicyGroupName")
     public String policyGroupName;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>227CBB4C-F5DC-589D-A667-C5CA3D52****</p>
      */

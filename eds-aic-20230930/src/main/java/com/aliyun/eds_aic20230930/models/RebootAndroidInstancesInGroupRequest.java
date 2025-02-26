@@ -4,9 +4,23 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RebootAndroidInstancesInGroupRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud phone instances.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <p>Specifies whether to enforce a restart operation. If a cloud phone instance fails to stop due to system or network issues, a forced restart can be triggered, though it may result in data loss.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 

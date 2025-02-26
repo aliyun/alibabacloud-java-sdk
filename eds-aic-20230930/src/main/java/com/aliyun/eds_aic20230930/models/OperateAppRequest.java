@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class OperateAppRequest extends TeaModel {
     /**
+     * <p>The ID of the app.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
     @NameInMap("AppId")
     public Integer appId;
 
+    /**
+     * <p>The IDs of the cloud phone instances.</p>
+     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
     /**
+     * <p>The type of the operation.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>stop: closes the app.</li>
+     * <li>restart: reopens the app.</li>
+     * <li>start: open the app.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>start</p>
      */

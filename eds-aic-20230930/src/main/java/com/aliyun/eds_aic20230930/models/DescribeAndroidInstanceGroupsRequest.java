@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     /**
+     * <p>The ID of the region.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,19 +14,37 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The billing method.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription</li>
+     * <li>PostPaid: pay-as-you-go</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The IDs of the instance groups.</p>
+     */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
+    /**
+     * <p>The name of the instance group. Instance groups support fuzzy search by name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defaultInstanceGroup</p>
+     */
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
     /**
+     * <p>The ID of the key pair.</p>
+     * 
      * <strong>example:</strong>
      * <p>kp-5htf0ymsrnb7q****</p>
      */
@@ -32,6 +52,8 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String keyPairId;
 
     /**
+     * <p>The maximum number of entries per page. Value range: 0 to 100. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -39,6 +61,8 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
      */
@@ -46,6 +70,8 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>pg-1b77w6xrqfubi****</p>
      */
@@ -53,6 +79,12 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String policyGroupId;
 
     /**
+     * <p>The sales mode.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>standard</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>standard</p>
      */
@@ -60,6 +92,19 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     public String saleMode;
 
     /**
+     * <p>The status of the instance group.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>UPDATING_FAILED: The image update for the instance group failed.</li>
+     * <li>FAILED: The instance group failed to be created.</li>
+     * <li>RUNNING: The instance group is available.</li>
+     * <li>EXPIRED: The instance group expired.</li>
+     * <li>DELETING: The instance group is being deleted.</li>
+     * <li>DELETED: The instance group is deleted.</li>
+     * <li>UPDATING: The instance group is undergoing an image update.</li>
+     * <li>CREATING: The instance group is being created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CREATING</p>
      */

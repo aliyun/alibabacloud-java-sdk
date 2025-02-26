@@ -4,36 +4,70 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAndroidInstancesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the instances.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>name</p>
      */
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    /**
+     * <p>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>PrePaid: subscription.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
+     * <p>The ID of the instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag-25nt4kk9whjh****</p>
      */
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    /**
+     * <p>The IDs of the instance groups.</p>
+     */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
+    /**
+     * <p>The name of the instance group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
     /**
+     * <p>The ID of the bound key pair.</p>
+     * 
      * <strong>example:</strong>
      * <p>kp-5hh431emkpuoi****</p>
      */
@@ -41,6 +75,8 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public String keyPairId;
 
     /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -48,32 +84,76 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>node_id</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The name of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>node_name</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
     /**
+     * <p>The sales mode.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Instance: the standard mode.</li>
+     * <li>Node: the node mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>standard</p>
+     * <p>Instance</p>
      */
     @NameInMap("SaleMode")
     public String saleMode;
 
     /**
+     * <p>The state of the instance.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>BACKUPING: The instance is being backed up.</li>
+     * <li>STARTING: The instance is being started.</li>
+     * <li>RUNNING: The instance group is available.</li>
+     * <li>DELETING: The instance is being deleted.</li>
+     * <li>BACKUP_FAILED: The backup operation failed.</li>
+     * <li>DELETED: The instance is deleted.</li>
+     * <li>FAILED: The instance failed to be created.</li>
+     * <li>STOPPED: The instance is stopped.</li>
+     * <li>RECOVERING: The instance has an ongoing file recovery task.</li>
+     * <li>UNAVAILABLE: The instance has an exception.</li>
+     * <li>REBOOTING: The instance is being restarted.</li>
+     * <li>RESETTING: The instance is being reset.</li>
+     * <li>STOPPING: The instance is being stopped.</li>
+     * <li>RECOVER_FAILED: The file recovery task failed.</li>
+     * <li>CREATING: The instance is being created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the resources.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeAndroidInstancesRequestTag> tag;
 
@@ -203,9 +283,21 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
 
     public static class DescribeAndroidInstancesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 

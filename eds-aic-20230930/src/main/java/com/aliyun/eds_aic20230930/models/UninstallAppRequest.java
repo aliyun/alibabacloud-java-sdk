@@ -4,12 +4,21 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UninstallAppRequest extends TeaModel {
+    /**
+     * <p>The IDs of the apps.</p>
+     */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;
 
+    /**
+     * <p>The ID of the instance groups. If you specify this parameter, you cannot specify InstanceIdList.</p>
+     */
     @NameInMap("InstanceGroupIdList")
     public java.util.List<String> instanceGroupIdList;
 
+    /**
+     * <p>The IDs of the cloud phone instances. If you specify this parameter, you cannot specify InstanceGroupIdList.</p>
+     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 

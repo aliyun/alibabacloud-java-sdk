@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateKeyPairResponseBody extends TeaModel {
+    /**
+     * <p>The objects that are returned.</p>
+     */
     @NameInMap("Data")
     public CreateKeyPairResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
      */
@@ -37,6 +42,8 @@ public class CreateKeyPairResponseBody extends TeaModel {
 
     public static class CreateKeyPairResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the key pair was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-30 08:45:09.0</p>
          */
@@ -44,6 +51,8 @@ public class CreateKeyPairResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The ID of the key pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>kp-6v2q33ae4tw3*****</p>
          */
@@ -51,6 +60,8 @@ public class CreateKeyPairResponseBody extends TeaModel {
         public String keyPairId;
 
         /**
+         * <p>The name of the key pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKeyPairName</p>
          */
@@ -58,6 +69,8 @@ public class CreateKeyPairResponseBody extends TeaModel {
         public String keyPairName;
 
         /**
+         * <p>The private key of the key pair. The PEM-encoded private key that is in PKCS#8 format and adheres to the ADB connection specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</p>
          */

@@ -4,13 +4,21 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the instance groups.</p>
+     */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
+    /**
+     * <p>The instance groups.</p>
+     */
     @NameInMap("InstanceGroupInfos")
     public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> instanceGroupInfos;
 
     /**
+     * <p>The ID of the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>22365781890****</p>
      */
@@ -18,6 +26,8 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
      */
@@ -62,9 +72,18 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos extends TeaModel {
+        /**
+         * <p>The ID of the instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-cuv4scs4obxch****</p>
+         */
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
+        /**
+         * <p>The IDs of the instances.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 

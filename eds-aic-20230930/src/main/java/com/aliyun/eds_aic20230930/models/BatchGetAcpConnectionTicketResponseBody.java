@@ -4,11 +4,14 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
+    /**
+     * <p>The results of the instance connection tasks.</p>
+     */
     @NameInMap("InstanceConnectionModels")
     public java.util.List<BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels> instanceConnectionModels;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
@@ -39,6 +42,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
 
     public static class BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels extends TeaModel {
         /**
+         * <p>The ID of the delivery group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-1uzb6heg797z3****</p>
          */
@@ -46,6 +51,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The ID of the cloud phone instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-ajxvwo1u0hqvd****</p>
          */
@@ -53,6 +60,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou@c9f5c2e8-f5c4-4b01-8602-000cae94****</p>
          */
@@ -60,6 +69,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The state of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
          */
@@ -67,6 +78,8 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>The ticket used to connect to the cloud phone instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>piVE58_AdmVSVW7SEW3<em>AE5</em>p8mmO5gvItsNOmv4S_f_cNpoU_BOTwChTBoNM1ZJeedfK9zxYnbN5hossqIZCr6t7SGxRigm2Cb4fGaCdBZWIzmgdHq6sXXZQg4KFWufyvpeV<em>0</em>Cm58slMT1tJw3****</p>
          */
