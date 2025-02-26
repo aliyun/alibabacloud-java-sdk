@@ -2535,6 +2535,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuNodeSpec)) {
+            query.put("GpuNodeSpec", request.gpuNodeSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.kvStoreAccount)) {
             query.put("KvStoreAccount", request.kvStoreAccount);
         }
@@ -2565,6 +2569,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kvStoreType)) {
             query.put("KvStoreType", request.kvStoreType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            query.put("ModelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelOption)) {
+            query.put("ModelOption", request.modelOption);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossPath)) {
@@ -17525,6 +17537,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateTaskContentResponse updateTaskContent(UpdateTaskContentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskContentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>接受大容量sql文件的更新节点内容API</p>
+     * 
+     * @param request UpdateTaskContentV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTaskContentV2Response
+     */
+    public UpdateTaskContentV2Response updateTaskContentV2WithOptions(UpdateTaskContentV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeContent)) {
+            body.put("NodeContent", request.nodeContent);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateTaskContentV2"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskContentV2Response());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateTaskContentV2Response());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>接受大容量sql文件的更新节点内容API</p>
+     * 
+     * @param request UpdateTaskContentV2Request
+     * @return UpdateTaskContentV2Response
+     */
+    public UpdateTaskContentV2Response updateTaskContentV2(UpdateTaskContentV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTaskContentV2WithOptions(request, runtime);
     }
 
     /**

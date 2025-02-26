@@ -49,6 +49,9 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("GpuNodeSpec")
+    public String gpuNodeSpec;
+
     @NameInMap("KvStoreAccount")
     public String kvStoreAccount;
 
@@ -72,6 +75,16 @@ public class CreateDifyInstanceRequest extends TeaModel {
 
     @NameInMap("KvStoreType")
     public String kvStoreType;
+
+    @NameInMap("ModelId")
+    public String modelId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Disable</p>
+     */
+    @NameInMap("ModelOption")
+    public String modelOption;
 
     @NameInMap("OssPath")
     public String ossPath;
@@ -289,6 +302,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public CreateDifyInstanceRequest setGpuNodeSpec(String gpuNodeSpec) {
+        this.gpuNodeSpec = gpuNodeSpec;
+        return this;
+    }
+    public String getGpuNodeSpec() {
+        return this.gpuNodeSpec;
+    }
+
     public CreateDifyInstanceRequest setKvStoreAccount(String kvStoreAccount) {
         this.kvStoreAccount = kvStoreAccount;
         return this;
@@ -351,6 +372,22 @@ public class CreateDifyInstanceRequest extends TeaModel {
     }
     public String getKvStoreType() {
         return this.kvStoreType;
+    }
+
+    public CreateDifyInstanceRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    public CreateDifyInstanceRequest setModelOption(String modelOption) {
+        this.modelOption = modelOption;
+        return this;
+    }
+    public String getModelOption() {
+        return this.modelOption;
     }
 
     public CreateDifyInstanceRequest setOssPath(String ossPath) {
