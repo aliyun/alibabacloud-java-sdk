@@ -22,6 +22,9 @@ public class CreateComputeTask2Request extends TeaModel {
     @NameInMap("remarks")
     public String remarks;
 
+    @NameInMap("taskSource")
+    public String taskSource;
+
     @NameInMap("type")
     public String type;
 
@@ -76,6 +79,14 @@ public class CreateComputeTask2Request extends TeaModel {
     }
     public String getRemarks() {
         return this.remarks;
+    }
+
+    public CreateComputeTask2Request setTaskSource(String taskSource) {
+        this.taskSource = taskSource;
+        return this;
+    }
+    public String getTaskSource() {
+        return this.taskSource;
     }
 
     public CreateComputeTask2Request setType(String type) {
