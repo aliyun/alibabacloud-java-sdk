@@ -1,3 +1,16 @@
+2025-02-26 Version: 1.5.0
+- Support API GetServiceFuncStatus.
+- Support API ListInstancesEcsInfoList.
+- Support API ListInstancesWithEcsInfo.
+- Support API ListPluginsInstances.
+- Support API UpdateFuncSwitchRecord.
+- Update API InstallAgentForCluster: update param body.
+- Update API ListClusterAgentInstallRecords: update response param.
+- Update API ListInstances: add param cluster_id.
+- Update API StartAIAnalysis: update param body.
+- Update API UpgradeAgentForCluster: update response param.
+
+
 2025-02-11 Version: 1.4.0
 - Support API GetServiceFuncStatus.
 - Support API UpdateFuncSwitchRecord.
