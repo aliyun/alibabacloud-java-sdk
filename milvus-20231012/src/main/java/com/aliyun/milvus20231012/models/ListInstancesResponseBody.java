@@ -318,6 +318,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyData extends TeaModel {
+        @NameInMap("AutoBackup")
+        public Boolean autoBackup;
+
         /**
          * <strong>example:</strong>
          * <p>1718608505000</p>
@@ -439,6 +442,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static ListInstancesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyData self = new ListInstancesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyData setAutoBackup(Boolean autoBackup) {
+            this.autoBackup = autoBackup;
+            return this;
+        }
+        public Boolean getAutoBackup() {
+            return this.autoBackup;
         }
 
         public ListInstancesResponseBodyData setBeginTime(Long beginTime) {
