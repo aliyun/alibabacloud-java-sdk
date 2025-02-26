@@ -246,6 +246,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             return this.resourceFunction;
         }
 
+        @Deprecated
         public DescribeCloudResourcesResponseBodyCloudResources setResourceInstance(String resourceInstance) {
             this.resourceInstance = resourceInstance;
             return this;
@@ -278,6 +279,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             return this.resourceInstanceName;
         }
 
+        @Deprecated
         public DescribeCloudResourcesResponseBodyCloudResources setResourceName(String resourceName) {
             this.resourceName = resourceName;
             return this;

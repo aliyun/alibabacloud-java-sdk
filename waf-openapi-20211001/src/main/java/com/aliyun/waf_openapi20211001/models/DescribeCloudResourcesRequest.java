@@ -240,6 +240,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
+    @Deprecated
     public DescribeCloudResourcesRequest setResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;

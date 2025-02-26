@@ -70,6 +70,9 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
@@ -147,6 +150,9 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
 
         /**
          * <p>The remarks about the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("Remark")
         public String remark;

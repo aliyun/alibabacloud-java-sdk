@@ -302,6 +302,12 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         @NameInMap("Note")
         public String note;
 
+        /**
+         * <p>The list of protection objects corresponding to this asset.</p>
+         */
+        @NameInMap("Resources")
+        public java.util.List<String> resources;
+
         public static DescribeApisecApiResourcesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApisecApiResourcesResponseBodyData self = new DescribeApisecApiResourcesResponseBodyData();
             return TeaModel.build(map, self);
@@ -481,6 +487,14 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         }
         public String getNote() {
             return this.note;
+        }
+
+        public DescribeApisecApiResourcesResponseBodyData setResources(java.util.List<String> resources) {
+            this.resources = resources;
+            return this;
+        }
+        public java.util.List<String> getResources() {
+            return this.resources;
         }
 
     }

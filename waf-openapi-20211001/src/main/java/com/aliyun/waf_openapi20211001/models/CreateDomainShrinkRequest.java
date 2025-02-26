@@ -41,14 +41,14 @@ public class CreateDomainShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The configurations of the listeners.</p>
+     * <p>The listener configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
-     * <p>The configurations of the forwarding rule.</p>
+     * <p>The forwarding configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Redirect")
@@ -77,6 +77,9 @@ public class CreateDomainShrinkRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateDomainShrinkRequestTag> tag;
 
@@ -150,9 +153,21 @@ public class CreateDomainShrinkRequest extends TeaModel {
     }
 
     public static class CreateDomainShrinkRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tagkey1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue1</p>
+         */
         @NameInMap("Value")
         public String value;
 

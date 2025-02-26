@@ -61,7 +61,7 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
@@ -69,6 +69,9 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The tag of the resource. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDefenseResourcesRequestTag> tag;
 
@@ -135,6 +138,8 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
 
     public static class DescribeDefenseResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>Tagkey1</p>
          */
@@ -142,6 +147,8 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>TagValue1</p>
          */

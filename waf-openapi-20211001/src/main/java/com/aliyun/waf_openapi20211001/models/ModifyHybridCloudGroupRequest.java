@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridCloudGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
     public Long clusterId;
 
     /**
+     * <p>The ID of the node group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,20 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
     public Long groupId;
 
     /**
+     * <p>The name of the node group.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,16 +48,30 @@ public class ModifyHybridCloudGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region in which the WAF instance is deployed. Valid value:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

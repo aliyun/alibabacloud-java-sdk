@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainResponseBody extends TeaModel {
     /**
-     * <p>The information about the domain name.</p>
+     * <p>The information about the domain name that is added.</p>
      */
     @NameInMap("DomainInfo")
     public CreateDomainResponseBodyDomainInfo domainInfo;
@@ -59,6 +59,12 @@ public class CreateDomainResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The name of the protected object that is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
+         */
         @NameInMap("DomainId")
         public String domainId;
 
