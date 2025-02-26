@@ -1,3 +1,8 @@
+2025-02-26 Version: 2.2.1
+- Update API ApproveFotaUpdate: add param TargetStatus.
+- Update API DescribeUserResources: update response param.
+
+
 2025-01-24 Version: 2.2.0
 - Support API DescribeUserResources.
 - Update API DescribeSnapshots: update response param.

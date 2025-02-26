@@ -62,6 +62,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SessionId", request.sessionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetStatus)) {
+            query.put("TargetStatus", request.targetStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
             query.put("Uuid", request.uuid);
         }

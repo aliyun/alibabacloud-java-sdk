@@ -588,6 +588,110 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeUserResourcesResponseBodyResourcesOsUpdatePackages extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Kb")
+        public String kb;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static DescribeUserResourcesResponseBodyResourcesOsUpdatePackages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUserResourcesResponseBodyResourcesOsUpdatePackages self = new DescribeUserResourcesResponseBodyResourcesOsUpdatePackages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdatePackages setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdatePackages setKb(String kb) {
+            this.kb = kb;
+            return this;
+        }
+        public String getKb() {
+            return this.kb;
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdatePackages setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class DescribeUserResourcesResponseBodyResourcesOsUpdate extends TeaModel {
+        @NameInMap("CheckId")
+        public String checkId;
+
+        @NameInMap("KbListString")
+        public String kbListString;
+
+        @NameInMap("PackageCount")
+        public Integer packageCount;
+
+        @NameInMap("Packages")
+        public java.util.List<DescribeUserResourcesResponseBodyResourcesOsUpdatePackages> packages;
+
+        @NameInMap("UpdateCatalogUrl")
+        public String updateCatalogUrl;
+
+        public static DescribeUserResourcesResponseBodyResourcesOsUpdate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUserResourcesResponseBodyResourcesOsUpdate self = new DescribeUserResourcesResponseBodyResourcesOsUpdate();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdate setCheckId(String checkId) {
+            this.checkId = checkId;
+            return this;
+        }
+        public String getCheckId() {
+            return this.checkId;
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdate setKbListString(String kbListString) {
+            this.kbListString = kbListString;
+            return this;
+        }
+        public String getKbListString() {
+            return this.kbListString;
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdate setPackageCount(Integer packageCount) {
+            this.packageCount = packageCount;
+            return this;
+        }
+        public Integer getPackageCount() {
+            return this.packageCount;
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdate setPackages(java.util.List<DescribeUserResourcesResponseBodyResourcesOsUpdatePackages> packages) {
+            this.packages = packages;
+            return this;
+        }
+        public java.util.List<DescribeUserResourcesResponseBodyResourcesOsUpdatePackages> getPackages() {
+            return this.packages;
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesOsUpdate setUpdateCatalogUrl(String updateCatalogUrl) {
+            this.updateCatalogUrl = updateCatalogUrl;
+            return this;
+        }
+        public String getUpdateCatalogUrl() {
+            return this.updateCatalogUrl;
+        }
+
+    }
+
     public static class DescribeUserResourcesResponseBodyResourcesSessions extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -759,6 +863,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         @NameInMap("GlobalStatus")
         public Boolean globalStatus;
 
+        @NameInMap("HasUpgrade")
+        public Boolean hasUpgrade;
+
         /**
          * <strong>example:</strong>
          * <p>false</p>
@@ -816,6 +923,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
          */
         @NameInMap("OsType")
         public String osType;
+
+        @NameInMap("OsUpdate")
+        public DescribeUserResourcesResponseBodyResourcesOsUpdate osUpdate;
 
         /**
          * <strong>example:</strong>
@@ -1098,6 +1208,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
             return this.globalStatus;
         }
 
+        public DescribeUserResourcesResponseBodyResources setHasUpgrade(Boolean hasUpgrade) {
+            this.hasUpgrade = hasUpgrade;
+            return this;
+        }
+        public Boolean getHasUpgrade() {
+            return this.hasUpgrade;
+        }
+
         public DescribeUserResourcesResponseBodyResources setHibernationBeta(Boolean hibernationBeta) {
             this.hibernationBeta = hibernationBeta;
             return this;
@@ -1176,6 +1294,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeUserResourcesResponseBodyResources setOsUpdate(DescribeUserResourcesResponseBodyResourcesOsUpdate osUpdate) {
+            this.osUpdate = osUpdate;
+            return this;
+        }
+        public DescribeUserResourcesResponseBodyResourcesOsUpdate getOsUpdate() {
+            return this.osUpdate;
         }
 
         public DescribeUserResourcesResponseBodyResources setProductType(String productType) {
