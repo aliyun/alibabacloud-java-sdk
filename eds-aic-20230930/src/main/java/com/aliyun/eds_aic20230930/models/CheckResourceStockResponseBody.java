@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CheckResourceStockResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>805D8FB6-512A-531C-9E4D-2A807D3C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of resource inventory.</p>
+     */
     @NameInMap("ResourceStockModels")
     public java.util.List<CheckResourceStockResponseBodyResourceStockModels> resourceStockModels;
 
@@ -37,6 +42,8 @@ public class CheckResourceStockResponseBody extends TeaModel {
 
     public static class CheckResourceStockResponseBodyResourceStockModels extends TeaModel {
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -44,6 +51,8 @@ public class CheckResourceStockResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Inventory status of the instance group.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -51,6 +60,8 @@ public class CheckResourceStockResponseBody extends TeaModel {
         public String stockStatus;
 
         /**
+         * <p>Zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai-b</p>
          */

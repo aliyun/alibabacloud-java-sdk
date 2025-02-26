@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the instance group.</p>
+     */
     @NameInMap("InstanceGroupModel")
     public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel> instanceGroupModel;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -67,6 +76,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks extends TeaModel {
         /**
+         * <p>The size of the disk. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -74,6 +85,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public Integer diskSize;
 
         /**
+         * <p>The type of the disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
          */
@@ -105,6 +118,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel extends TeaModel {
         /**
+         * <p>The ID of the delivery group.</p>
+         * 
          * <strong>example:</strong>
          * <p>aig-48xr63m4dybjk****</p>
          */
@@ -112,16 +127,26 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String appInstanceGroupId;
 
         /**
+         * <p>The type of the architecture.</p>
+         * 
          * <strong>example:</strong>
          * <p>ARM</p>
          */
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        /**
+         * <p>Number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("AvailableInstanceAmount")
         public Integer availableInstanceAmount;
 
         /**
+         * <p>The billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
          */
@@ -129,19 +154,32 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The number of vCPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <p>The disks.</p>
+         */
         @NameInMap("Disks")
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> disks;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
+         * <p>The time when the instance group was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-02-01 10:56:36</p>
          */
@@ -149,6 +187,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the subscription instance group expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2027-06-29 07:25:31</p>
          */
@@ -156,6 +196,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String gmtExpired;
 
         /**
+         * <p>The time when the instance group was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-02-01 10:56:36</p>
          */
@@ -163,26 +205,44 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the image.</p>
+         * 
          * <strong>example:</strong>
          * <p>imgc-06zyt9m93zwax****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The list of installed applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;TikTok&quot;,&quot;WeChat&quot;</p>
+         */
         @NameInMap("InstalledAppList")
         public String installedAppList;
 
         /**
+         * <p>The ID of the instance group.</p>
+         * 
          * <strong>example:</strong>
          * <p>ag-h67a2cs0zprfdh****</p>
          */
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
+        /**
+         * <p>The name of the instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultInstanceGroup</p>
+         */
         @NameInMap("InstanceGroupName")
         public String instanceGroupName;
 
         /**
+         * <p>The specifications of the instance group.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp.basic.small</p>
          */
@@ -190,6 +250,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String instanceGroupSpec;
 
         /**
+         * <p>The description of the instance group specifications.</p>
+         * 
          * <strong>example:</strong>
          * <p>ARM-2vCPU4GiB 32GiB</p>
          */
@@ -197,6 +259,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String instanceGroupSpecDescribe;
 
         /**
+         * <p>The status of the instance group.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -204,6 +268,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String instanceGroupStatus;
 
         /**
+         * <p>The memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -211,6 +277,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public Integer memory;
 
         /**
+         * <p>The number of instances in the instance group.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -218,6 +286,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String numberOfInstances;
 
         /**
+         * <p>The ID of the network.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai+dir-030598****</p>
          */
@@ -225,6 +295,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-c6n38xucps8kl****</p>
          */
@@ -232,16 +304,26 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The rendering type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
         @NameInMap("RenderingType")
         public String renderingType;
 
         /**
+         * <p>The height of the resolution.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */
@@ -249,6 +331,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public Integer resolutionHeight;
 
         /**
+         * <p>The width of the resolution.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */
@@ -256,6 +340,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public Integer resolutionWidth;
 
         /**
+         * <p>The sales mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -263,6 +349,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String saleMode;
 
         /**
+         * <p>The version of the operating system.</p>
+         * 
          * <strong>example:</strong>
          * <p>Android 12</p>
          */
@@ -270,6 +358,8 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String systemVersion;
 
         /**
+         * <p>The ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-t4n0yqs009ho024wt****</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class FetchFileResponseBody extends TeaModel {
     /**
+     * <p>The objects that are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
@@ -12,12 +14,20 @@ public class FetchFileResponseBody extends TeaModel {
     public java.util.List<FetchFileResponseBodyData> data;
 
     /**
+     * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the batch task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-ehs0yoedj0xe9****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

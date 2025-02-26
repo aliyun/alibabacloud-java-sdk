@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupFilesResponseBody extends TeaModel {
+    /**
+     * <p>The backup files that are returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeBackupFilesResponseBodyData> data;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +20,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request. If the request fails, provide this ID to technical support to assist in diagnosing the issue.</p>
+     * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>91</p>
      */
@@ -82,19 +93,35 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
 
     public static class DescribeBackupFilesResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>
          */
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultInstanceName</p>
+         */
         @NameInMap("AndroidInstanceName")
         public String androidInstanceName;
 
+        /**
+         * <p>Is all data to be backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("BackupAll")
         public Boolean backupAll;
 
         /**
+         * <p>The ID of the backup file.</p>
+         * 
          * <strong>example:</strong>
          * <p>bf-b0qbg3pbpjkn7****</p>
          */
@@ -102,6 +129,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public String backupFileId;
 
         /**
+         * <p>The name of the backup file.</p>
+         * 
          * <strong>example:</strong>
          * <p>a-58ftsoo90p0qa****.ab</p>
          */
@@ -109,16 +138,26 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public String backupFileName;
 
         /**
+         * <p>The directory in which the backup file is stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</p>
          */
         @NameInMap("BackupFilePath")
         public String backupFilePath;
 
+        /**
+         * <p>The description of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is default description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The owner of the backup file.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -126,6 +165,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public String endUserId;
 
         /**
+         * <p>The total size of the source files.</p>
+         * 
          * <strong>example:</strong>
          * <p>10227168</p>
          */
@@ -133,6 +174,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
+         * <p>The time when the backup file was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-15 17:33:59</p>
          */
@@ -140,6 +183,8 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The time when the backup file was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-15 17:33:59</p>
          */
@@ -147,32 +192,61 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The ID of the instance group.</p>
+         * 
          * <strong>example:</strong>
          * <p>ag-58ftsoo90p0qi****</p>
          */
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>List of apps to be backed up.</p>
+         */
         @NameInMap("SourceAppInfoList")
         public java.util.List<String> sourceAppInfoList;
 
+        /**
+         * <p>The directories of the source files.</p>
+         */
         @NameInMap("SourceFilePathList")
         public java.util.List<String> sourceFilePathList;
 
         /**
+         * <p>The status of the backup file.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE</li>
+         * <li>RECOVERING</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp67acfmxazb4p****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
+         * <p>The endpoint of the OSS bucket that stores the backup file.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou.aliyuncs.com</p>
          */
@@ -180,6 +254,12 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         public String uploadEndpoint;
 
         /**
+         * <p>The type of the backup.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OSS: backup files are stored in OSS buckets. .</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */

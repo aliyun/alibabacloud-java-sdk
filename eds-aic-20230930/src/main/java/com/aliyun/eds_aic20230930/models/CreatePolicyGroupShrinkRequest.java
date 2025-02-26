@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyGroupShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the webcam redirection feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off</li>
+     * <li>on</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>off</p>
      */
@@ -12,6 +19,14 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String cameraRedirect;
 
     /**
+     * <p>The read/write permissions on the clipboard.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>read: read-only.</li>
+     * <li>readwrite: read and write.</li>
+     * <li>off: read/write disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>readwrite</p>
      */
@@ -19,6 +34,15 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String clipboard;
 
     /**
+     * <p>The file transfer policy of the Alibaba Cloud Workspace web client.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>all: File upload and download are supported.</li>
+     * <li>download: Only file download is supported.</li>
+     * <li>upload: Only file upload is supported.</li>
+     * <li>off: File upload or download is forbidden.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>off</p>
      */
@@ -26,22 +50,52 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String html5FileTransfer;
 
     /**
+     * <p>The read/write permissions on the on-premises drive.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>read: read-only.</li>
+     * <li>readwrite: ready and write.</li>
+     * <li>off: read/write disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>off</p>
      */
     @NameInMap("LocalDrive")
     public String localDrive;
 
+    /**
+     * <p>Specifies whether to lock the resolution.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off</li>
+     * <li>on</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("LockResolution")
     public String lockResolution;
 
+    /**
+     * <p>The network redirection policy.</p>
+     */
     @NameInMap("NetRedirectPolicy")
     public String netRedirectPolicyShrink;
 
+    /**
+     * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defaultPolicy</p>
+     */
     @NameInMap("PolicyGroupName")
     public String policyGroupName;
 
     /**
+     * <p>The height of the resolution. Unit: pixels.</p>
+     * 
      * <strong>example:</strong>
      * <p>1280</p>
      */
@@ -49,6 +103,8 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public Integer resolutionHeight;
 
     /**
+     * <p>The width of the resolution. Unit: pixels.</p>
+     * 
      * <strong>example:</strong>
      * <p>720</p>
      */

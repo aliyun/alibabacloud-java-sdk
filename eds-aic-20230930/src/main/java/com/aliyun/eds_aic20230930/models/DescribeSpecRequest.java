@@ -11,6 +11,8 @@ public class DescribeSpecRequest extends TeaModel {
     public String matrixSpec;
 
     /**
+     * <p>The maximum number of items to return per page in a paginated query. The value range is 1 to 100, with a default value of 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -18,6 +20,8 @@ public class DescribeSpecRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Indicates the starting position for reading. If left empty, it starts from the beginning.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
      */
@@ -27,10 +31,15 @@ public class DescribeSpecRequest extends TeaModel {
     @NameInMap("SaleMode")
     public String saleMode;
 
+    /**
+     * <p>List of specification IDs.</p>
+     */
     @NameInMap("SpecIds")
     public java.util.List<String> specIds;
 
     /**
+     * <p>Specification status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Available</p>
      */
@@ -38,6 +47,8 @@ public class DescribeSpecRequest extends TeaModel {
     public String specStatus;
 
     /**
+     * <p>Specification type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ARM</p>
      */

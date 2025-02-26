@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ResetAndroidInstancesInGroupRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud phone instances.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 

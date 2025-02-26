@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
+    /**
+     * <p>The objects that are returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeKeyPairsResponseBodyData> data;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>FFbc8N4E1iOlcSxC+8boa0HHH2LKWbggYUinyrZWvtS1oTrMYCg1HuMLGuftj0****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>565FB06A-AE04-5AD0-8A32-5BA92CA5****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -67,6 +76,8 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     public static class DescribeKeyPairsResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the ADB key pair was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
          */
@@ -74,13 +85,17 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The ID of the ADB key pair.</p>
+         * 
          * <strong>example:</strong>
-         * <p>kp-6v2q33ae4tw3*****</p>
+         * <p>kp-6v2q33ae4tw3a****</p>
          */
         @NameInMap("KeyPairId")
         public String keyPairId;
 
         /**
+         * <p>The name of the ADB key pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKeyPairName</p>
          */

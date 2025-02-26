@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyKeyPairNameRequest extends TeaModel {
     /**
+     * <p>The ID of the ADB key pair.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyKeyPairNameRequest extends TeaModel {
     public String keyPairId;
 
     /**
+     * <p>The name of the ADB key pair.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

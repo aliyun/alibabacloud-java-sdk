@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DowngradeAndroidInstanceGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>22326560487****</p>
      */
@@ -12,6 +14,8 @@ public class DowngradeAndroidInstanceGroupResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3AF82CE1-2801-52CE-BF64-B491DD7C****</p>
      */

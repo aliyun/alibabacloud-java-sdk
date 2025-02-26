@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class SendFileRequest extends TeaModel {
     /**
+     * <p>The IDs of the cloud phone instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
     /**
+     * <p>The path to which you want to upload the pushed file in the cloud phone instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +22,10 @@ public class SendFileRequest extends TeaModel {
     public String sourceFilePath;
 
     /**
-     * <p>This parameter is required.</p>
+     * <p>The endpoint of the OSS bucket in which the file is stored.</p>
+     * <blockquote>
+     * <p> Set the value to an internal endpoint when the cloud phone instance and the OSS bucket are in the same region to improve transfer speed without incurring public traffic fees. Sample endpoint: <code>oss-cn-hangzhou-internal.aliyuncs.com</code>. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>oss-cn-hangzhou.aliyuncs.com</p>
@@ -29,6 +34,10 @@ public class SendFileRequest extends TeaModel {
     public String uploadEndpoint;
 
     /**
+     * <p>The storage type of the file that you want to upload.</p>
+     * <ul>
+     * <li>Set the value to OSS.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +47,10 @@ public class SendFileRequest extends TeaModel {
     public String uploadType;
 
     /**
+     * <p>The OSS URL of the file.</p>
+     * <blockquote>
+     * <p> The OSS bucket name must start with &quot;cloudphone-saved-bucket-&quot;, for example, &quot;cloudphone-saved-bucket-example&quot;. You must also create an OSS directory to store the backup data. Set the value for UploadUrl in this format: oss://\<BucketName>/\<OSSDirectoryName>\<FileName>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UploadUrl")

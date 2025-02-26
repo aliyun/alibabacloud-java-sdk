@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     /**
+     * <p>The ID of the user to whom the cloud phone instance is assigned.</p>
+     * 
      * <strong>example:</strong>
      * <p>user</p>
      */
@@ -12,15 +14,23 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The ID of the instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag-25nt4kk9whjh****</p>
      */
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    /**
+     * <p>The IDs of the cloud phone instances. You can specify 1 to 100 IDs of cloud phone instances.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The instance connection tasks.</p>
+     */
     @NameInMap("InstanceTasks")
     public java.util.List<BatchGetAcpConnectionTicketRequestInstanceTasks> instanceTasks;
 
@@ -63,6 +73,8 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
 
     public static class BatchGetAcpConnectionTicketRequestInstanceTasks extends TeaModel {
         /**
+         * <p>The ID of the cloud phone instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-fkuit0cmyfvzz****</p>
          */
@@ -70,6 +82,8 @@ public class BatchGetAcpConnectionTicketRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou@c9f5c2e8-f5c4-4b01-8602-000cae94****</p>
          */

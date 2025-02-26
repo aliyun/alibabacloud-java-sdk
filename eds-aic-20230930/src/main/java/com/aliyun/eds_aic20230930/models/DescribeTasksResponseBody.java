@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
+    /**
+     * <p>The objects that are returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeTasksResponseBodyData> data;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
      */
@@ -22,6 +29,8 @@ public class DescribeTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -66,51 +75,117 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SendFileFailed</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connect error.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The total number of failed subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("FailedChildCount")
         public Integer failedChildCount;
 
         /**
+         * <p>The end time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The ID of the cloud phone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-uto81vfd8t8z****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the cloud phone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultInstanceName</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The state of the cloud phone instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
+         * <p>The ID of the command execution.</p>
+         * 
          * <strong>example:</strong>
          * <p>B8ED2BA9-0C6A-5643-818F-B5D60A64****</p>
          */
         @NameInMap("InvokeId")
         public String invokeId;
 
+        /**
+         * <p>The level of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Level")
         public Integer level;
 
+        /**
+         * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The parameters of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param</p>
+         */
         @NameInMap("Param")
         public String param;
 
+        /**
+         * <p>The ID of the parent task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-41oan3tza16vs****</p>
+         */
         @NameInMap("ParentTaskId")
         public String parentTaskId;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -118,29 +193,53 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>acp-25nt4kk9whhok****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The execution result of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Success\&quot;: True}</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The total number of the subtasks that are running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RunningChildCount")
         public Integer runningChildCount;
 
         /**
+         * <p>The start time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-11T08:53:32Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The total number of successfully executed subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98</p>
+         */
         @NameInMap("SuccessChildCount")
         public Integer successChildCount;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>t-bp67acfmxazb4p****</p>
          */
@@ -148,6 +247,8 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>The state of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Processing</p>
          */
@@ -155,12 +256,20 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>The type of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>StartInstance</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The total number of subtasks of the current batch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalChildCount")
         public Integer totalChildCount;
 

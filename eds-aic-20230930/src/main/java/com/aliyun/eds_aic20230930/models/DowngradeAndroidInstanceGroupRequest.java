@@ -4,10 +4,20 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DowngradeAndroidInstanceGroupRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud phone instances that you want to delete.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
+     * <p>Specifies whether to enable the auto-payment feature. Default value: false.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true: enables the auto-payment feature. Ensure your account has sufficient balance to use this feature.</li>
+     * <li>false: disables the auto-payment feature. This requires manual payment each time you place an order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -15,6 +25,7 @@ public class DowngradeAndroidInstanceGroupRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>The ID of the instance group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

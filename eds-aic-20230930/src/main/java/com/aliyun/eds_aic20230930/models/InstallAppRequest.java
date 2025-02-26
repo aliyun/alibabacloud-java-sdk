@@ -4,12 +4,21 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class InstallAppRequest extends TeaModel {
+    /**
+     * <p>The IDs of the apps that you want to install.</p>
+     */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;
 
+    /**
+     * <p>The IDs of the instance groups.</p>
+     */
     @NameInMap("InstanceGroupIdList")
     public java.util.List<String> instanceGroupIdList;
 
+    /**
+     * <p>The IDs of the cloud phone instances.</p>
+     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 

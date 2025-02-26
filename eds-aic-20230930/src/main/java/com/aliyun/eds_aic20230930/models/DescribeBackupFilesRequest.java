@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupFilesRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>acp-34pqe4r0kd9kn****</p>
      */
@@ -12,29 +14,53 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String androidInstanceId;
 
     /**
+     * <p>The name of the instance. Instances support fuzzy search by name.</p>
+     * 
      * <strong>example:</strong>
      * <p>acp-34pqe4r0kd9kn****</p>
      */
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    /**
+     * <p>Is all data to be backed up.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("BackupAll")
     public Boolean backupAll;
 
     /**
+     * <p>The ID of the backup file.</p>
+     * 
      * <strong>example:</strong>
      * <p>bf-dxrh5jrv0zpb8****</p>
      */
     @NameInMap("BackupFileId")
     public String backupFileId;
 
+    /**
+     * <p>The name of the backup file. Backup files support fuzzy search by name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defaulBackupFile</p>
+     */
     @NameInMap("BackupFileName")
     public String backupFileName;
 
+    /**
+     * <p>The description of the backup file. Backup files support fuzzy search by description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The end of the period for querying generated backup files.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-20 10:00:00</p>
      */
@@ -42,6 +68,8 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The owner of the backup file.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1</p>
      */
@@ -49,6 +77,8 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The ID of the instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag-fxdx91jsfyiy3****</p>
      */
@@ -56,6 +86,8 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String instanceGroupId;
 
     /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -63,6 +95,8 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
      */
@@ -70,12 +104,17 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The beginning of the period for querying generated backup files.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-05-23 10:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The list of backup file status.</p>
+     */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;
 

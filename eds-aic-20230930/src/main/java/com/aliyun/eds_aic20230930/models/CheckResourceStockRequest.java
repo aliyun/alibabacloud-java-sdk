@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckResourceStockRequest extends TeaModel {
     /**
+     * <p>Specification ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>acp.basic.small</p>
      */
@@ -15,6 +17,7 @@ public class CheckResourceStockRequest extends TeaModel {
     public Integer amount;
 
     /**
+     * <p>Region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +30,8 @@ public class CheckResourceStockRequest extends TeaModel {
     public Boolean gpuAcceleration;
 
     /**
+     * <p>The availability zone of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
      */

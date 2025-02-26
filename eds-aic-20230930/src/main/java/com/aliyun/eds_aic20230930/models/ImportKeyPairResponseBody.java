@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyPairResponseBody extends TeaModel {
+    /**
+     * <p>The object that is returned.</p>
+     */
     @NameInMap("Data")
     public ImportKeyPairResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
      */
@@ -37,6 +42,8 @@ public class ImportKeyPairResponseBody extends TeaModel {
 
     public static class ImportKeyPairResponseBodyData extends TeaModel {
         /**
+         * <p>The time when the ADB key pair was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-05T10:29:22Z</p>
          */
@@ -44,6 +51,8 @@ public class ImportKeyPairResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
+         * <p>The ID of the ADB key pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>kp-6v2q33ae4tw3*****</p>
          */
@@ -51,6 +60,8 @@ public class ImportKeyPairResponseBody extends TeaModel {
         public String keyPairId;
 
         /**
+         * <p>The name of the ADB key pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKeyPairName</p>
          */

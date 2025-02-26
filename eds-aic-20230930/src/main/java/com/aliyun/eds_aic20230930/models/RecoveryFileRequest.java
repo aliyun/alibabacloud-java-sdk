@@ -5,25 +5,45 @@ import com.aliyun.tea.*;
 
 public class RecoveryFileRequest extends TeaModel {
     /**
+     * <p>The IDs of the instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
+    /**
+     * <p>Whether all data is to be backed up.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("BackupAll")
     public Boolean backupAll;
 
     /**
+     * <p>The ID of the backup file.</p>
+     * 
      * <strong>example:</strong>
      * <p>bf-azhps4rdyi2th****</p>
      */
     @NameInMap("BackupFileId")
     public String backupFileId;
 
+    /**
+     * <p>The OSS path to which the backup file is uploaded.</p>
+     * <blockquote>
+     * <p> When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss://${bucketName}/${key}.</p>
+     * </blockquote>
+     */
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 
     /**
+     * <p>The endpoint of the OSS bucket that stores the backup file.</p>
+     * <blockquote>
+     * <p>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
      */
@@ -31,6 +51,12 @@ public class RecoveryFileRequest extends TeaModel {
     public String uploadEndpoint;
 
     /**
+     * <p>The type of the backup.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>OSS: backup files are stored in OSS buckets.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */

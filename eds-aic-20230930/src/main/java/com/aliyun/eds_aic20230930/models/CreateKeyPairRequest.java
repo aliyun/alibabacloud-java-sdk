@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKeyPairRequest extends TeaModel {
     /**
+     * <p>The name of the key pair. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with http:// or https://.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

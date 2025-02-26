@@ -4,10 +4,18 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomImageRequest extends TeaModel {
+    /**
+     * <p>Idempotent parameter. Default is empty, with a maximum length of 100 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20393E53-8FF1-524C-B494-B478A5369733</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>Image description.</p>
+     * 
      * <strong>example:</strong>
      * <p>create for cc5g group auth rules test</p>
      */
@@ -15,6 +23,7 @@ public class CreateCustomImageRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Image name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,7 @@ public class CreateCustomImageRequest extends TeaModel {
     public String imageName;
 
     /**
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPolicyGroupsResponseBody extends TeaModel {
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The policies.</p>
+     */
     @NameInMap("PolicyGroupModel")
     public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModel> policyGroupModel;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
      */
@@ -22,6 +29,8 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>31</p>
      */
@@ -66,9 +75,26 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules extends TeaModel {
+        /**
+         * <p>The type of the rule.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>prc: an application package name.</li>
+         * <li>domain: a domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>The name of the application package or domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.example.com</p>
+         */
         @NameInMap("Target")
         public String target;
 
@@ -96,27 +122,86 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy extends TeaModel {
+        /**
+         * <p>Indicates whether a custom proxy is manually configured.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("CustomProxy")
         public String customProxy;
 
+        /**
+         * <p>The IPv4 address of the custom proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
+         */
         @NameInMap("HostAddr")
         public String hostAddr;
 
+        /**
+         * <p>Indicates whether the network redirection feature is enabled. When this feature is enabled, network traffic is automatically redirected to the on-premises network by default.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("NetRedirect")
         public String netRedirect;
 
+        /**
+         * <p>The port of the custom proxy. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1145</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The password of the proxy. The password must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password</p>
+         */
         @NameInMap("ProxyPassword")
         public String proxyPassword;
 
+        /**
+         * <p>The type of the proxy protocol.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>socks5.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>socks5</p>
+         */
         @NameInMap("ProxyType")
         public String proxyType;
 
+        /**
+         * <p>The username of the proxy. The name must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
+         */
         @NameInMap("ProxyUserName")
         public String proxyUserName;
 
+        /**
+         * <p>The proxy rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicyRules> rules;
 
@@ -193,6 +278,13 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
         /**
+         * <p>Specifies whether to enable the webcam redirection feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>on</p>
          */
@@ -200,6 +292,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String cameraRedirect;
 
         /**
+         * <p>The read/write permissions on the clipboard.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>read: read-only.</li>
+         * <li>readwrite: read and write.</li>
+         * <li>off: read/write disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>readwrite</p>
          */
@@ -207,6 +307,8 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String clipboard;
 
         /**
+         * <p>The time when the policy was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-04 10:28:54</p>
          */
@@ -214,6 +316,15 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The file transfer policy of the HTML5 client.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>all: File upload and download are supported.</li>
+         * <li>download: Only file download is supported.</li>
+         * <li>upload: Only file upload is supported.</li>
+         * <li>off: File upload or download is forbidden.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>download</p>
          */
@@ -221,29 +332,61 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public String html5FileTransfer;
 
         /**
+         * <p>The read/write permissions on the on-premises drive.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>read: read-only.</li>
+         * <li>readwrite: ready and write.</li>
+         * <li>off: read/write denied.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>off</p>
          */
         @NameInMap("LocalDrive")
         public String localDrive;
 
+        /**
+         * <p>Identifies whether the resolution is locked.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>off</li>
+         * <li>on</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("LockResolution")
         public String lockResolution;
 
+        /**
+         * <p>The network redirection policy.</p>
+         */
         @NameInMap("NetRedirectPolicy")
         public ListPolicyGroupsResponseBodyPolicyGroupModelNetRedirectPolicy netRedirectPolicy;
 
         /**
+         * <p>The ID of the policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-9q6o8qpiy8opkj****</p>
          */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        /**
+         * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default Policy</p>
+         */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
         /**
+         * <p>The height of the resolution.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -251,6 +394,8 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         public Integer sessionResolutionHeight;
 
         /**
+         * <p>The width of the resolution.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */

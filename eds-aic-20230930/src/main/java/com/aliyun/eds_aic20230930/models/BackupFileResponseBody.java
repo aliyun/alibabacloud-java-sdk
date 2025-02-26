@@ -4,10 +4,18 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class BackupFileResponseBody extends TeaModel {
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Count")
     public Long count;
 
     /**
+     * <p>The objects that are returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
      */
@@ -15,12 +23,20 @@ public class BackupFileResponseBody extends TeaModel {
     public java.util.List<BackupFileResponseBodyData> data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The batch task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-22ex666a5mco5****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
@@ -62,15 +78,39 @@ public class BackupFileResponseBody extends TeaModel {
     }
 
     public static class BackupFileResponseBodyData extends TeaModel {
+        /**
+         * <p>Instance id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-34pqe4r0kd9kn****</p>
+         */
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
+        /**
+         * <p>Backup file id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf-b0qbg3pbpjkn7****</p>
+         */
         @NameInMap("BackupFileId")
         public String backupFileId;
 
+        /**
+         * <p>Backup file name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a-58ftsoo90p0qa****.ab</p>
+         */
         @NameInMap("BackupFileName")
         public String backupFileName;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-22ex666a5mco5****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

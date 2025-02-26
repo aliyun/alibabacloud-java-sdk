@@ -5,19 +5,39 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListRequest extends TeaModel {
     /**
+     * <p>The ID of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>imgc-075cllfeuazh0****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The name of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Android 12 image</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>Image package type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VM</p>
+     */
     @NameInMap("ImagePackageType")
     public String imagePackageType;
 
     /**
+     * <p>The type of the image.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>User: custom images.</li>
+     * <li>System: system images.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +47,8 @@ public class DescribeImageListRequest extends TeaModel {
     public String imageType;
 
     /**
+     * <p>The maximum number of entries per page. Value range: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      * 
@@ -37,6 +59,8 @@ public class DescribeImageListRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
      */
@@ -44,6 +68,16 @@ public class DescribeImageListRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The state of the image.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>AVAILABLE: The image is available.</li>
+     * <li>DELETE: The image is deleted.</li>
+     * <li>INIT: The image is being initialized.</li>
+     * <li>CREATE_FAILED: The image failed to be created.</li>
+     * <li>CREATING: The image is being created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
      */

@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
     /**
+     * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The ID of the execution. You can retrieve the output of a command once by using either the execution ID or the cloud phone instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

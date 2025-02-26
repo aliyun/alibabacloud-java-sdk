@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAndroidInstanceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ag-cuv4scs4obxhs****</p>
      */
@@ -12,6 +14,13 @@ public class ModifyAndroidInstanceGroupRequest extends TeaModel {
     public String instanceGroupId;
 
     /**
+     * <p>The new name of the instance group.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>newName</p>
      */
@@ -19,6 +28,8 @@ public class ModifyAndroidInstanceGroupRequest extends TeaModel {
     public String newInstanceGroupName;
 
     /**
+     * <p>The ID of the policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>pg-2w97kp89gnsif****</p>
      */

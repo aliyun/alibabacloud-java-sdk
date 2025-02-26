@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAndroidInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the cloud phone instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>acp-8v5bjld0r7tkl****</p>
      */
@@ -12,6 +14,11 @@ public class ModifyAndroidInstanceRequest extends TeaModel {
     public String androidInstanceId;
 
     /**
+     * <p>The new name of the cloud phone instance.</p>
+     * <blockquote>
+     * <p> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>new_name</p>
      */

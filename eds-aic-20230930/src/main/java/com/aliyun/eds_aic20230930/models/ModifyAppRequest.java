@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class ModifyAppRequest extends TeaModel {
     /**
+     * <p>The ID of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
     @NameInMap("AppId")
     public Integer appId;
 
+    /**
+     * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>defaultAppName</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The description of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The URL of the icon.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://defaultIcon.png">https://defaultIcon.png</a></p>
      */

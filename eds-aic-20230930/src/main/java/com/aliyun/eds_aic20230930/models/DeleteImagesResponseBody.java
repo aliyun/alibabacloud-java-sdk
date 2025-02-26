@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagesResponseBody extends TeaModel {
+    /**
+     * <p>The images.</p>
+     */
     @NameInMap("Data")
     public DeleteImagesResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4610632D-D661-5982-B3D7-5D3FD183F595</p>
      */
@@ -36,9 +41,15 @@ public class DeleteImagesResponseBody extends TeaModel {
     }
 
     public static class DeleteImagesResponseBodyData extends TeaModel {
+        /**
+         * <p>The IDs of the images that failed to be deleted.</p>
+         */
         @NameInMap("FailDeleteImageIds")
         public java.util.List<String> failDeleteImageIds;
 
+        /**
+         * <p>The IDs of the images that are successfully deleted.</p>
+         */
         @NameInMap("SuccessDeleteImageIds")
         public java.util.List<String> successDeleteImageIds;
 

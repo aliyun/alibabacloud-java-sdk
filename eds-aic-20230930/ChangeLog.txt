@@ -1,3 +1,16 @@
+2025-02-26 Version: 3.1.0
+- Support API DisconnectAndroidInstance.
+- Support API EndCoordination.
+- Support API GenerateCoordinationCode.
+- Support API SetAdbSecure.
+- Update API CreateAndroidInstanceGroup: add param EnableIpv6.
+- Update API CreateAndroidInstanceGroup: add param Ipv6Bandwidth.
+- Update API CreateAndroidInstanceGroup: add param Tag.
+- Update API CreateApp: add param CustomAppInfo.
+- Update API DescribeAndroidInstances: update response param.
+- Update API SendFile: update param UploadEndpoint.
+
+
 2025-01-23 Version: 3.0.0
 - Support API CreateScreenshot.
 - Update API CheckResourceStock: update param AcpSpecId.

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomImageNameRequest extends TeaModel {
     /**
+     * <p>The ID of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>imgc-075cllfeuazh0****</p>
      */
@@ -12,6 +14,8 @@ public class UpdateCustomImageNameRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The name of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>imagename</p>
      */

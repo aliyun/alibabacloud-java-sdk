@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeAndroidInstanceRequest extends TeaModel {
+    /**
+     * <p>List of instance IDs.</p>
+     */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
+     * <p>User ID to be assigned.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,6 +20,8 @@ public class AuthorizeAndroidInstanceRequest extends TeaModel {
     public String authorizeUserId;
 
     /**
+     * <p>User ID to be unassigned.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
