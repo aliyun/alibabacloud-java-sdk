@@ -4,6 +4,9 @@ package com.aliyun.dataanalysisgbi20240823.models;
 import com.aliyun.tea.*;
 
 public class RunDataAnalysisRequest extends TeaModel {
+    @NameInMap("agentCtrlParams")
+    public Object agentCtrlParams;
+
     @NameInMap("dataRole")
     public java.util.List<String> dataRole;
 
@@ -40,6 +43,14 @@ public class RunDataAnalysisRequest extends TeaModel {
     public static RunDataAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDataAnalysisRequest self = new RunDataAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunDataAnalysisRequest setAgentCtrlParams(Object agentCtrlParams) {
+        this.agentCtrlParams = agentCtrlParams;
+        return this;
+    }
+    public Object getAgentCtrlParams() {
+        return this.agentCtrlParams;
     }
 
     public RunDataAnalysisRequest setDataRole(java.util.List<String> dataRole) {
