@@ -106,6 +106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenericAdvancedSearchResponse genericAdvancedSearchWithOptions(GenericAdvancedSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
+            query.put("industry", request.industry);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("query", request.query);
         }

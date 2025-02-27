@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GenericAdvancedSearchRequest extends TeaModel {
+    @NameInMap("industry")
+    public String industry;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -27,6 +30,14 @@ public class GenericAdvancedSearchRequest extends TeaModel {
     public static GenericAdvancedSearchRequest build(java.util.Map<String, ?> map) throws Exception {
         GenericAdvancedSearchRequest self = new GenericAdvancedSearchRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenericAdvancedSearchRequest setIndustry(String industry) {
+        this.industry = industry;
+        return this;
+    }
+    public String getIndustry() {
+        return this.industry;
     }
 
     public GenericAdvancedSearchRequest setQuery(String query) {
