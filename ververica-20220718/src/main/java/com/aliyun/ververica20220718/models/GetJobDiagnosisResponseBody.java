@@ -3,25 +3,18 @@ package com.aliyun.ververica20220718.models;
 
 import com.aliyun.tea.*;
 
-public class StartJobResponseBody extends TeaModel {
+public class GetJobDiagnosisResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("accessDeniedDetail")
     public String accessDeniedDetail;
 
-    /**
-     * <ul>
-     * <li>If the value of success was true, the job that you created was returned.</li>
-     * <li>If the value of success was false, a null value was returned.</li>
-     * </ul>
-     */
     @NameInMap("data")
-    public Job data;
+    public JobDiagnosis data;
 
     /**
-     * <ul>
-     * <li>If the value of success was false, an error code was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -29,11 +22,6 @@ public class StartJobResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <ul>
-     * <li>If the value of success was false, an error message was returned.</li>
-     * <li>If the value of success was true, a null value was returned.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
@@ -41,8 +29,6 @@ public class StartJobResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>The value was fixed to 200.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -50,8 +36,6 @@ public class StartJobResponseBody extends TeaModel {
     public Integer httpCode;
 
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</p>
      */
@@ -59,20 +43,18 @@ public class StartJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
 
-    public static StartJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        StartJobResponseBody self = new StartJobResponseBody();
+    public static GetJobDiagnosisResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetJobDiagnosisResponseBody self = new GetJobDiagnosisResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public StartJobResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public GetJobDiagnosisResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -80,15 +62,15 @@ public class StartJobResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public StartJobResponseBody setData(Job data) {
+    public GetJobDiagnosisResponseBody setData(JobDiagnosis data) {
         this.data = data;
         return this;
     }
-    public Job getData() {
+    public JobDiagnosis getData() {
         return this.data;
     }
 
-    public StartJobResponseBody setErrorCode(String errorCode) {
+    public GetJobDiagnosisResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -96,7 +78,7 @@ public class StartJobResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public StartJobResponseBody setErrorMessage(String errorMessage) {
+    public GetJobDiagnosisResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -104,7 +86,7 @@ public class StartJobResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public StartJobResponseBody setHttpCode(Integer httpCode) {
+    public GetJobDiagnosisResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -112,7 +94,7 @@ public class StartJobResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public StartJobResponseBody setRequestId(String requestId) {
+    public GetJobDiagnosisResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -120,7 +102,7 @@ public class StartJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StartJobResponseBody setSuccess(Boolean success) {
+    public GetJobDiagnosisResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

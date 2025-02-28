@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StartJobWithParamsResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The details of the job of the deployment returned.</p>
      */
@@ -58,6 +61,14 @@ public class StartJobWithParamsResponseBody extends TeaModel {
     public static StartJobWithParamsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartJobWithParamsResponseBody self = new StartJobWithParamsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StartJobWithParamsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public StartJobWithParamsResponseBody setData(Job data) {

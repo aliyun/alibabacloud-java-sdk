@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class StopJobResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <ul>
      * <li>If the value of success was true, the job that you stopped was returned.</li>
@@ -67,6 +70,14 @@ public class StopJobResponseBody extends TeaModel {
     public static StopJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StopJobResponseBody self = new StopJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public StopJobResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public StopJobResponseBody setData(Job data) {

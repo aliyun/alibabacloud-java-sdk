@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Event extends TeaModel {
     @NameInMap("createdAt")
-    public Long createdAt;
+    public String createdAt;
 
     /**
      * <strong>example:</strong>
@@ -57,11 +57,11 @@ public class Event extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public Event setCreatedAt(Long createdAt) {
+    public Event setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    public Long getCreatedAt() {
+    public String getCreatedAt() {
         return this.createdAt;
     }
 
