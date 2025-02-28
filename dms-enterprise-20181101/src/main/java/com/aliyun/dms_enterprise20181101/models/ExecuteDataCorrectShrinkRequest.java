@@ -32,6 +32,12 @@ public class ExecuteDataCorrectShrinkRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is used to call the API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21400447956867****</p>
+     */
     @NameInMap("RealLoginUserUid")
     public String realLoginUserUid;
 

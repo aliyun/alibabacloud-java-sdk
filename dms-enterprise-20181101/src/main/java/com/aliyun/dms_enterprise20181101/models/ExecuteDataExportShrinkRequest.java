@@ -5,12 +5,21 @@ import com.aliyun.tea.*;
 
 public class ExecuteDataExportShrinkRequest extends TeaModel {
     /**
-     * <p>The parameters that are required to perform the operation:</p>
+     * <p>The parameters that are required to perform the operation. Sample code:</p>
      * <pre><code class="language-json">{
-     *    &quot;fileType&quot;: &quot;CSV&quot;, // The format of the exported file.
-     *    &quot;encoding&quot;: &quot;&quot; // The encoding format.
-     *  }
+     *   &quot;mode&quot; : &quot;FAST&quot;,   // The mode in which data is exported. Default value: FAST. A value of NORMAL specifies that the export task can be terminated during the export.  &quot;encoding&quot; : &quot;UTF8&quot;,  // The encoding format.  &quot;startTime&quot; : &quot;2022-12-22 00:00:00&quot;,  // The point in time at which data export starts.  &quot;transaction&quot; : false,    // Specifies whether to enable transactions.  &quot;fileType&quot; : &quot;SQL&quot;    // The format of the exported file.}
      * </code></pre>
+     * <blockquote>
+     * <p> You can also set mode, encoding, and fileType to the following values:</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>mode: NORMAL</p>
+     * </li>
+     * <li><p>encoding: UTF8MB4, GB2312, ISO_8859_1, GBK, LATAIN1, or CP1252</p>
+     * </li>
+     * <li><p>fileType: XLSX, CSV, JSON, or TXT</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{    &quot;fileType&quot;: &quot;CSV&quot;,    &quot;encoding&quot;: &quot;&quot;  }</p>
@@ -28,6 +37,12 @@ public class ExecuteDataExportShrinkRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is used to call the API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21400447956867****</p>
+     */
     @NameInMap("RealLoginUserUid")
     public String realLoginUserUid;
 

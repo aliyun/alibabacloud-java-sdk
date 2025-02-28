@@ -62,6 +62,12 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("Uid")
     public Long uid;
 
+    /**
+     * <p>The UID of the String type. If you specify this parameter, the UID of the Long type is replaced.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>322824****:dmstest.wu@A201***</p>
+     */
     @NameInMap("UidString")
     public String uidString;
 

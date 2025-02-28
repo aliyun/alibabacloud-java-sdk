@@ -1,3 +1,10 @@
+2025-02-28 Version: 1.68.1
+- Update API UpdateTaskContentV2: add param RegionId.
+- Update API UpdateTaskContentV2: update param NodeContent.
+- Update API UpdateTaskContentV2: update param NodeId.
+- Update API UpdateTaskContentV2: update response param.
+
+
 2025-02-26 Version: 1.68.0
 - Support API UpdateTaskContentV2.
 - Update API CreateDifyInstance: add param GpuNodeSpec.

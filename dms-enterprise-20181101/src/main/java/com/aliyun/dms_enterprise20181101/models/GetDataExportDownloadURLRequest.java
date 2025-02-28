@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataExportDownloadURLRequest extends TeaModel {
     /**
-     * <p>The ID of the ticket. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to obtain the ticket ID.</p>
+     * <p>The ticket ID. You can call the <a href="https://help.aliyun.com/document_detail/144643.html">ListOrders</a> operation to query the ticket ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,17 @@ public class GetDataExportDownloadURLRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is used to call the API operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21400447956867****</p>
+     */
     @NameInMap("RealLoginUserUid")
     public String realLoginUserUid;
 
     /**
-     * <p>The ID of the tenant. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to obtain the tenant ID.</p>
+     * <p>The tenant ID. You can call the <a href="https://help.aliyun.com/document_detail/198073.html">GetUserActiveTenant</a> or <a href="https://help.aliyun.com/document_detail/198074.html">ListUserTenants</a> operation to query the tenant ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3***</p>

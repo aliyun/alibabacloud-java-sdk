@@ -96,6 +96,12 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo extends TeaModel {
+        /**
+         * <p>Export task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1385****</p>
+         */
         @NameInMap("JobId")
         public Long jobId;
 
@@ -323,7 +329,7 @@ public class GetDataExportOrderDetailResponseBody extends TeaModel {
 
     public static class GetDataExportOrderDetailResponseBodyDataExportOrderDetail extends TeaModel {
         /**
-         * <p>The information about the ticket.</p>
+         * <p>The status information.</p>
          */
         @NameInMap("KeyInfo")
         public GetDataExportOrderDetailResponseBodyDataExportOrderDetailKeyInfo keyInfo;
