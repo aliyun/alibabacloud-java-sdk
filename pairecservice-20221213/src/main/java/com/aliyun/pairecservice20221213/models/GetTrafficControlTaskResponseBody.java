@@ -49,8 +49,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PreExperimentIds")
+    public String preExperimentIds;
+
     @NameInMap("PrepubStatus")
     public String prepubStatus;
+
+    @NameInMap("ProdExperimentIds")
+    public String prodExperimentIds;
 
     @NameInMap("ProductStatus")
     public String productStatus;
@@ -63,6 +69,9 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
 
     @NameInMap("SceneName")
     public String sceneName;
+
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     @NameInMap("StartTime")
     public String startTime;
@@ -219,12 +228,28 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         return this.name;
     }
 
+    public GetTrafficControlTaskResponseBody setPreExperimentIds(String preExperimentIds) {
+        this.preExperimentIds = preExperimentIds;
+        return this;
+    }
+    public String getPreExperimentIds() {
+        return this.preExperimentIds;
+    }
+
     public GetTrafficControlTaskResponseBody setPrepubStatus(String prepubStatus) {
         this.prepubStatus = prepubStatus;
         return this;
     }
     public String getPrepubStatus() {
         return this.prepubStatus;
+    }
+
+    public GetTrafficControlTaskResponseBody setProdExperimentIds(String prodExperimentIds) {
+        this.prodExperimentIds = prodExperimentIds;
+        return this;
+    }
+    public String getProdExperimentIds() {
+        return this.prodExperimentIds;
     }
 
     public GetTrafficControlTaskResponseBody setProductStatus(String productStatus) {
@@ -257,6 +282,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     }
     public String getSceneName() {
         return this.sceneName;
+    }
+
+    public GetTrafficControlTaskResponseBody setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     public GetTrafficControlTaskResponseBody setStartTime(String startTime) {

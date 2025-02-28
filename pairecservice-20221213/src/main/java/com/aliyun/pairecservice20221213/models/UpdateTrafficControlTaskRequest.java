@@ -43,8 +43,17 @@ public class UpdateTrafficControlTaskRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PreExperimentIds")
+    public String preExperimentIds;
+
+    @NameInMap("ProdExperimentIds")
+    public String prodExperimentIds;
+
     @NameInMap("SceneId")
     public String sceneId;
+
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     @NameInMap("StartTime")
     public String startTime;
@@ -182,12 +191,36 @@ public class UpdateTrafficControlTaskRequest extends TeaModel {
         return this.name;
     }
 
+    public UpdateTrafficControlTaskRequest setPreExperimentIds(String preExperimentIds) {
+        this.preExperimentIds = preExperimentIds;
+        return this;
+    }
+    public String getPreExperimentIds() {
+        return this.preExperimentIds;
+    }
+
+    public UpdateTrafficControlTaskRequest setProdExperimentIds(String prodExperimentIds) {
+        this.prodExperimentIds = prodExperimentIds;
+        return this;
+    }
+    public String getProdExperimentIds() {
+        return this.prodExperimentIds;
+    }
+
     public UpdateTrafficControlTaskRequest setSceneId(String sceneId) {
         this.sceneId = sceneId;
         return this;
     }
     public String getSceneId() {
         return this.sceneId;
+    }
+
+    public UpdateTrafficControlTaskRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     public UpdateTrafficControlTaskRequest setStartTime(String startTime) {

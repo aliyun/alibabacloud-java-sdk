@@ -58,6 +58,9 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         @NameInMap("ConfigValue")
         public String configValue;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <strong>example:</strong>
          * <p>2</p>
@@ -125,6 +128,14 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         }
         public String getConfigValue() {
             return this.configValue;
+        }
+
+        public ListEngineConfigsResponseBodyEngineConfigs setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListEngineConfigsResponseBodyEngineConfigs setEngineConfigId(String engineConfigId) {

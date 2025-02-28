@@ -7,6 +7,9 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("PreNeedConfig")
+    public Boolean preNeedConfig;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +24,14 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public GenerateTrafficControlTaskCodeResponseBody setPreNeedConfig(Boolean preNeedConfig) {
+        this.preNeedConfig = preNeedConfig;
+        return this;
+    }
+    public Boolean getPreNeedConfig() {
+        return this.preNeedConfig;
     }
 
     public GenerateTrafficControlTaskCodeResponseBody setRequestId(String requestId) {

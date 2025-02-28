@@ -95,12 +95,24 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("PreExperimentIds")
+    public String preExperimentIds;
+
+    @NameInMap("ProdExperimentIds")
+    public String prodExperimentIds;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("SceneId")
     public String sceneId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     /**
      * <strong>example:</strong>
@@ -270,12 +282,36 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateTrafficControlTaskRequest setPreExperimentIds(String preExperimentIds) {
+        this.preExperimentIds = preExperimentIds;
+        return this;
+    }
+    public String getPreExperimentIds() {
+        return this.preExperimentIds;
+    }
+
+    public CreateTrafficControlTaskRequest setProdExperimentIds(String prodExperimentIds) {
+        this.prodExperimentIds = prodExperimentIds;
+        return this;
+    }
+    public String getProdExperimentIds() {
+        return this.prodExperimentIds;
+    }
+
     public CreateTrafficControlTaskRequest setSceneId(String sceneId) {
         this.sceneId = sceneId;
         return this;
     }
     public String getSceneId() {
         return this.sceneId;
+    }
+
+    public CreateTrafficControlTaskRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     public CreateTrafficControlTaskRequest setStartTime(String startTime) {

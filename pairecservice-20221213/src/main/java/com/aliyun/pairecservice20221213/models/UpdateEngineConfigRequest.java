@@ -16,6 +16,9 @@ public class UpdateEngineConfigRequest extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <strong>example:</strong>
      * <p>Pre</p>
@@ -48,6 +51,14 @@ public class UpdateEngineConfigRequest extends TeaModel {
     }
     public String getConfigValue() {
         return this.configValue;
+    }
+
+    public UpdateEngineConfigRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public UpdateEngineConfigRequest setEnvironment(String environment) {

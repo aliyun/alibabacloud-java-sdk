@@ -58,6 +58,24 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         @NameInMap("CompareFeature")
         public Boolean compareFeature;
 
+        @NameInMap("DatasetId")
+        public String datasetId;
+
+        @NameInMap("DatasetMountPath")
+        public String datasetMountPath;
+
+        @NameInMap("DatasetName")
+        public String datasetName;
+
+        @NameInMap("DatasetType")
+        public String datasetType;
+
+        @NameInMap("DatasetUri")
+        public String datasetUri;
+
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
         /**
          * <strong>example:</strong>
          * <p>eas_service_1</p>
@@ -237,6 +255,15 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         @NameInMap("OssResourceId")
         public String ossResourceId;
 
+        @NameInMap("PredictWorkerCount")
+        public Integer predictWorkerCount;
+
+        @NameInMap("PredictWorkerCpu")
+        public Integer predictWorkerCpu;
+
+        @NameInMap("PredictWorkerMemory")
+        public Integer predictWorkerMemory;
+
         /**
          * <strong>example:</strong>
          * <p>0.89</p>
@@ -258,6 +285,9 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         @NameInMap("SceneName")
         public String sceneName;
 
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
         /**
          * <strong>example:</strong>
          * <p>4</p>
@@ -278,6 +308,9 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("SwitchId")
+        public String switchId;
 
         @NameInMap("UseFeatureStore")
         public String useFeatureStore;
@@ -310,12 +343,18 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         @NameInMap("UserTablePartitionFieldFormat")
         public String userTablePartitionFieldFormat;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
         /**
          * <strong>example:</strong>
          * <p>work_flow_1</p>
          */
         @NameInMap("WorkflowName")
         public String workflowName;
+
+        @NameInMap("WorkspaceId")
+        public String workspaceId;
 
         public static ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs self = new ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs();
@@ -328,6 +367,54 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         }
         public Boolean getCompareFeature() {
             return this.compareFeature;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setDatasetId(String datasetId) {
+            this.datasetId = datasetId;
+            return this;
+        }
+        public String getDatasetId() {
+            return this.datasetId;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setDatasetMountPath(String datasetMountPath) {
+            this.datasetMountPath = datasetMountPath;
+            return this;
+        }
+        public String getDatasetMountPath() {
+            return this.datasetMountPath;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setDatasetName(String datasetName) {
+            this.datasetName = datasetName;
+            return this;
+        }
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setDatasetType(String datasetType) {
+            this.datasetType = datasetType;
+            return this;
+        }
+        public String getDatasetType() {
+            return this.datasetType;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setDatasetUri(String datasetUri) {
+            this.datasetUri = datasetUri;
+            return this;
+        }
+        public String getDatasetUri() {
+            return this.datasetUri;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
         }
 
         public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setEasServiceName(String easServiceName) {
@@ -562,6 +649,30 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             return this.ossResourceId;
         }
 
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setPredictWorkerCount(Integer predictWorkerCount) {
+            this.predictWorkerCount = predictWorkerCount;
+            return this;
+        }
+        public Integer getPredictWorkerCount() {
+            return this.predictWorkerCount;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setPredictWorkerCpu(Integer predictWorkerCpu) {
+            this.predictWorkerCpu = predictWorkerCpu;
+            return this;
+        }
+        public Integer getPredictWorkerCpu() {
+            return this.predictWorkerCpu;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setPredictWorkerMemory(Integer predictWorkerMemory) {
+            this.predictWorkerMemory = predictWorkerMemory;
+            return this;
+        }
+        public Integer getPredictWorkerMemory() {
+            return this.predictWorkerMemory;
+        }
+
         public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setSampleRate(String sampleRate) {
             this.sampleRate = sampleRate;
             return this;
@@ -586,6 +697,14 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             return this.sceneName;
         }
 
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
         public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setServiceId(String serviceId) {
             this.serviceId = serviceId;
             return this;
@@ -608,6 +727,14 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setSwitchId(String switchId) {
+            this.switchId = switchId;
+            return this;
+        }
+        public String getSwitchId() {
+            return this.switchId;
         }
 
         public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setUseFeatureStore(String useFeatureStore) {
@@ -650,12 +777,28 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             return this.userTablePartitionFieldFormat;
         }
 
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setWorkflowName(String workflowName) {
             this.workflowName = workflowName;
             return this;
         }
         public String getWorkflowName() {
             return this.workflowName;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setWorkspaceId(String workspaceId) {
+            this.workspaceId = workspaceId;
+            return this;
+        }
+        public String getWorkspaceId() {
+            return this.workspaceId;
         }
 
     }

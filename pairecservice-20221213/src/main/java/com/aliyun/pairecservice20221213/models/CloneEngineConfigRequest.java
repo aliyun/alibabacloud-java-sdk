@@ -11,6 +11,9 @@ public class CloneEngineConfigRequest extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <strong>example:</strong>
      * <p>Pre</p>
@@ -36,6 +39,14 @@ public class CloneEngineConfigRequest extends TeaModel {
     }
     public String getConfigValue() {
         return this.configValue;
+    }
+
+    public CloneEngineConfigRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CloneEngineConfigRequest setEnvironment(String environment) {
