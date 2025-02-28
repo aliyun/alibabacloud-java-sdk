@@ -3,7 +3,7 @@ package com.aliyun.cloudauth20221125.models;
 
 import com.aliyun.tea.*;
 
-public class EntElementVerifyResponseBody extends TeaModel {
+public class EntElementVerifyV2ResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>Success</p>
@@ -28,14 +28,14 @@ public class EntElementVerifyResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Result")
-    public EntElementVerifyResponseBodyResult result;
+    public EntElementVerifyV2ResponseBodyResult result;
 
-    public static EntElementVerifyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        EntElementVerifyResponseBody self = new EntElementVerifyResponseBody();
+    public static EntElementVerifyV2ResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        EntElementVerifyV2ResponseBody self = new EntElementVerifyV2ResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public EntElementVerifyResponseBody setCode(String code) {
+    public EntElementVerifyV2ResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -43,7 +43,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public EntElementVerifyResponseBody setMessage(String message) {
+    public EntElementVerifyV2ResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -51,7 +51,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
         return this.message;
     }
 
-    public EntElementVerifyResponseBody setRequestId(String requestId) {
+    public EntElementVerifyV2ResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -59,15 +59,15 @@ public class EntElementVerifyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public EntElementVerifyResponseBody setResult(EntElementVerifyResponseBodyResult result) {
+    public EntElementVerifyV2ResponseBody setResult(EntElementVerifyV2ResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public EntElementVerifyResponseBodyResult getResult() {
+    public EntElementVerifyV2ResponseBodyResult getResult() {
         return this.result;
     }
 
-    public static class EntElementVerifyResponseBodyResult extends TeaModel {
+    public static class EntElementVerifyV2ResponseBodyResult extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -75,12 +75,17 @@ public class EntElementVerifyResponseBody extends TeaModel {
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-25/9999-09-09</p>
+         */
         @NameInMap("OpenTime")
         public String openTime;
 
-        @NameInMap("ReasonCode")
-        public String reasonCode;
-
+        /**
+         * <strong>example:</strong>
+         * <p>LegalPersonNameFlag,LegalPersonCertNoFlag</p>
+         */
         @NameInMap("ReasonDetail")
         public String reasonDetail;
 
@@ -91,12 +96,12 @@ public class EntElementVerifyResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        public static EntElementVerifyResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            EntElementVerifyResponseBodyResult self = new EntElementVerifyResponseBodyResult();
+        public static EntElementVerifyV2ResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
+            EntElementVerifyV2ResponseBodyResult self = new EntElementVerifyV2ResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public EntElementVerifyResponseBodyResult setBizCode(String bizCode) {
+        public EntElementVerifyV2ResponseBodyResult setBizCode(String bizCode) {
             this.bizCode = bizCode;
             return this;
         }
@@ -104,7 +109,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
             return this.bizCode;
         }
 
-        public EntElementVerifyResponseBodyResult setOpenTime(String openTime) {
+        public EntElementVerifyV2ResponseBodyResult setOpenTime(String openTime) {
             this.openTime = openTime;
             return this;
         }
@@ -112,15 +117,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
             return this.openTime;
         }
 
-        public EntElementVerifyResponseBodyResult setReasonCode(String reasonCode) {
-            this.reasonCode = reasonCode;
-            return this;
-        }
-        public String getReasonCode() {
-            return this.reasonCode;
-        }
-
-        public EntElementVerifyResponseBodyResult setReasonDetail(String reasonDetail) {
+        public EntElementVerifyV2ResponseBodyResult setReasonDetail(String reasonDetail) {
             this.reasonDetail = reasonDetail;
             return this;
         }
@@ -128,7 +125,7 @@ public class EntElementVerifyResponseBody extends TeaModel {
             return this.reasonDetail;
         }
 
-        public EntElementVerifyResponseBodyResult setStatus(String status) {
+        public EntElementVerifyV2ResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
         }

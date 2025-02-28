@@ -4,12 +4,24 @@ package com.aliyun.cloudauth20221125.models;
 import com.aliyun.tea.*;
 
 public class EntRiskQueryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8FC3D6AC-9FED-4311-8DA7-C4BF47D9F260</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,20 @@ public class EntRiskQueryResponseBody extends TeaModel {
     }
 
     public static class EntRiskQueryResponseBodyResultRiskList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>92500112MA5UHU****</p>
+         */
         @NameInMap("CreditCode")
         public String creditCode;
 
         @NameInMap("EntName")
         public String entName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-03</p>
+         */
         @NameInMap("ListedDate")
         public String listedDate;
 
@@ -69,9 +89,17 @@ public class EntRiskQueryResponseBody extends TeaModel {
         @NameInMap("OperationOrg")
         public String operationOrg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50011260996****</p>
+         */
         @NameInMap("RegNo")
         public String regNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-02-06</p>
+         */
         @NameInMap("RemovedDate")
         public String removedDate;
 
@@ -161,12 +189,20 @@ public class EntRiskQueryResponseBody extends TeaModel {
     }
 
     public static class EntRiskQueryResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BizCode")
         public String bizCode;
 
         @NameInMap("RiskList")
         public java.util.List<EntRiskQueryResponseBodyResultRiskList> riskList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public String status;
 

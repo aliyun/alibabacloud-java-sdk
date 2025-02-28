@@ -4,6 +4,10 @@ package com.aliyun.cloudauth20221125.models;
 import com.aliyun.tea.*;
 
 public class EntVerifyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -12,6 +16,9 @@ public class EntVerifyResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-A***B-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,6 +64,10 @@ public class EntVerifyResponseBody extends TeaModel {
     }
 
     public static class EntVerifyResponseBodyResultRiskVerifyResultModelResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>model_1</p>
+         */
         @NameInMap("ModelName")
         public String modelName;
 
@@ -87,6 +98,10 @@ public class EntVerifyResponseBody extends TeaModel {
     }
 
     public static class EntVerifyResponseBodyResultRiskVerifyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Found")
         public Boolean found;
 
