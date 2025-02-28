@@ -10,6 +10,9 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("ExpireTime")
     public String expireTime;
 
@@ -48,6 +51,14 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public ModifyAccountMaskingPrivilegeRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public ModifyAccountMaskingPrivilegeRequest setExpireTime(String expireTime) {

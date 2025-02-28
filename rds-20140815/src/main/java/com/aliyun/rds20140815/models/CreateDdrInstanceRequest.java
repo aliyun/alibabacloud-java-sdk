@@ -41,7 +41,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
 
     /**
      * <p>The instance type of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>rds.mysql.s1.small</p>
@@ -77,7 +76,6 @@ public class CreateDdrInstanceRequest extends TeaModel {
 
     /**
      * <p>The storage capacity of the destination instance. Valid values: <strong>5 to 2000</strong>. Unit: GB. You can increase the storage capacity at a step size of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -10,6 +10,9 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -39,6 +42,14 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public DeleteMaskingRulesRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public DeleteMaskingRulesRequest setOwnerId(String ownerId) {

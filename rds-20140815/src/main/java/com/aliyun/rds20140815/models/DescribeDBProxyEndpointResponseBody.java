@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
+    @NameInMap("CausalConsistReadTimeout")
+    public String causalConsistReadTimeout;
+
     /**
      * <p>The proxy endpoint queried.</p>
      * 
@@ -109,6 +112,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DbProxyEndpointReadWriteMode")
     public String dbProxyEndpointReadWriteMode;
 
+    @NameInMap("DbProxyEndpointVpcId")
+    public String dbProxyEndpointVpcId;
+
     /**
      * <p>The vSwitch ID of the proxy terminal.</p>
      * 
@@ -183,6 +189,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public static DescribeDBProxyEndpointResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBProxyEndpointResponseBody self = new DescribeDBProxyEndpointResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBProxyEndpointResponseBody setCausalConsistReadTimeout(String causalConsistReadTimeout) {
+        this.causalConsistReadTimeout = causalConsistReadTimeout;
+        return this;
+    }
+    public String getCausalConsistReadTimeout() {
+        return this.causalConsistReadTimeout;
     }
 
     public DescribeDBProxyEndpointResponseBody setDBProxyConnectString(String DBProxyConnectString) {
@@ -263,6 +277,14 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     }
     public String getDbProxyEndpointReadWriteMode() {
         return this.dbProxyEndpointReadWriteMode;
+    }
+
+    public DescribeDBProxyEndpointResponseBody setDbProxyEndpointVpcId(String dbProxyEndpointVpcId) {
+        this.dbProxyEndpointVpcId = dbProxyEndpointVpcId;
+        return this;
+    }
+    public String getDbProxyEndpointVpcId() {
+        return this.dbProxyEndpointVpcId;
     }
 
     public DescribeDBProxyEndpointResponseBody setDbProxyEndpointVswitchId(String dbProxyEndpointVswitchId) {

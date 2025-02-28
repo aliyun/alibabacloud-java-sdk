@@ -10,6 +10,9 @@ public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -36,6 +39,14 @@ public class DescribeAccountMaskingPrivilegeRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public DescribeAccountMaskingPrivilegeRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public DescribeAccountMaskingPrivilegeRequest setOwnerId(String ownerId) {

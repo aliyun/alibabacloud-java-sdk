@@ -147,11 +147,12 @@ public class DescribePriceRequest extends TeaModel {
     public Integer instanceUsedType;
 
     /**
-     * <p>The type of the order. Valid values:</p>
+     * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><strong>BUY</strong>: purchase order</li>
-     * <li><strong>UPGRADE</strong>: specification change order</li>
-     * <li><strong>RENEW</strong>: renewal order</li>
+     * <li><strong>BUY</strong></li>
+     * <li><strong>RENEW</strong></li>
+     * <li><strong>UPGRADE</strong></li>
+     * <li><strong>DOWNGRADE</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -227,7 +228,7 @@ public class DescribePriceRequest extends TeaModel {
     public String timeType;
 
     /**
-     * <p>The subscription duration of the instance. Valid values:</p>
+     * <p>The subscription duration of the instance.</p>
      * <ul>
      * <li>If you set the <strong>TimeType</strong> parameter to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1 to 100</strong>.</li>
      * <li>If you set the <strong>TimeType</strong> parameter to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1 to 999</strong>.</li>

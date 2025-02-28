@@ -10,6 +10,9 @@ public class CreateMaskingRulesShrinkRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("DefaultAlgo")
     public String defaultAlgo;
 
@@ -48,6 +51,14 @@ public class CreateMaskingRulesShrinkRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public CreateMaskingRulesShrinkRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public CreateMaskingRulesShrinkRequest setDefaultAlgo(String defaultAlgo) {

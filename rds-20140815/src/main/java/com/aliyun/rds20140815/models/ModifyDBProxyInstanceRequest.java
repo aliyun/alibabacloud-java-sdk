@@ -327,6 +327,9 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         @NameInMap("destVSwitchId")
         public String destVSwitchId;
 
+        @NameInMap("destVpcId")
+        public String destVpcId;
+
         public static ModifyDBProxyInstanceRequestMigrateAZ build(java.util.Map<String, ?> map) throws Exception {
             ModifyDBProxyInstanceRequestMigrateAZ self = new ModifyDBProxyInstanceRequestMigrateAZ();
             return TeaModel.build(map, self);
@@ -346,6 +349,14 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         }
         public String getDestVSwitchId() {
             return this.destVSwitchId;
+        }
+
+        public ModifyDBProxyInstanceRequestMigrateAZ setDestVpcId(String destVpcId) {
+            this.destVpcId = destVpcId;
+            return this;
+        }
+        public String getDestVpcId() {
+            return this.destVpcId;
         }
 
     }

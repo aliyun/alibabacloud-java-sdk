@@ -10,6 +10,9 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("DBName")
+    public String DBName;
+
     @NameInMap("DefaultAlgo")
     public String defaultAlgo;
 
@@ -51,6 +54,14 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public ModifyMaskingRulesRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
     public ModifyMaskingRulesRequest setDefaultAlgo(String defaultAlgo) {

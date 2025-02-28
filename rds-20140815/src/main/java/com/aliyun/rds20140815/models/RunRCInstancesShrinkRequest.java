@@ -255,6 +255,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<RunRCInstancesShrinkRequestTag> tag;
 
+    @NameInMap("UserData")
+    public String userData;
+
     /**
      * <p>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</p>
      * <blockquote>
@@ -531,6 +534,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public java.util.List<RunRCInstancesShrinkRequestTag> getTag() {
         return this.tag;
+    }
+
+    public RunRCInstancesShrinkRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public RunRCInstancesShrinkRequest setVSwitchId(String vSwitchId) {
