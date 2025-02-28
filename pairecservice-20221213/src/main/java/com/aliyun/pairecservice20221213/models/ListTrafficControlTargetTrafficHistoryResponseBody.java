@@ -53,13 +53,13 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         public String recordTime;
 
         @NameInMap("TrafficControlTargetAimTraffic")
-        public String trafficControlTargetAimTraffic;
+        public Double trafficControlTargetAimTraffic;
 
         @NameInMap("TrafficControlTargetTraffic")
-        public String trafficControlTargetTraffic;
+        public Double trafficControlTargetTraffic;
 
         @NameInMap("TrafficControlTaskTraffic")
-        public String trafficControlTaskTraffic;
+        public Double trafficControlTaskTraffic;
 
         public static ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories build(java.util.Map<String, ?> map) throws Exception {
             ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories self = new ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories();
@@ -90,27 +90,27 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             return this.recordTime;
         }
 
-        public ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories setTrafficControlTargetAimTraffic(String trafficControlTargetAimTraffic) {
+        public ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories setTrafficControlTargetAimTraffic(Double trafficControlTargetAimTraffic) {
             this.trafficControlTargetAimTraffic = trafficControlTargetAimTraffic;
             return this;
         }
-        public String getTrafficControlTargetAimTraffic() {
+        public Double getTrafficControlTargetAimTraffic() {
             return this.trafficControlTargetAimTraffic;
         }
 
-        public ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories setTrafficControlTargetTraffic(String trafficControlTargetTraffic) {
+        public ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories setTrafficControlTargetTraffic(Double trafficControlTargetTraffic) {
             this.trafficControlTargetTraffic = trafficControlTargetTraffic;
             return this;
         }
-        public String getTrafficControlTargetTraffic() {
+        public Double getTrafficControlTargetTraffic() {
             return this.trafficControlTargetTraffic;
         }
 
-        public ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories setTrafficControlTaskTraffic(String trafficControlTaskTraffic) {
+        public ListTrafficControlTargetTrafficHistoryResponseBodyTrafficControlTaskTrafficHistories setTrafficControlTaskTraffic(Double trafficControlTaskTraffic) {
             this.trafficControlTaskTraffic = trafficControlTaskTraffic;
             return this;
         }
-        public String getTrafficControlTaskTraffic() {
+        public Double getTrafficControlTaskTraffic() {
             return this.trafficControlTaskTraffic;
         }
 

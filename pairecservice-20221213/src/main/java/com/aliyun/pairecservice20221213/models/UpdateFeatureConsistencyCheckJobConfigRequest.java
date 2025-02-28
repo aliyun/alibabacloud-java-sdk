@@ -13,6 +13,24 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("CompareFeature")
     public Boolean compareFeature;
 
+    @NameInMap("DatasetId")
+    public String datasetId;
+
+    @NameInMap("DatasetMountPath")
+    public String datasetMountPath;
+
+    @NameInMap("DatasetName")
+    public String datasetName;
+
+    @NameInMap("DatasetType")
+    public String datasetType;
+
+    @NameInMap("DatasetUri")
+    public String datasetUri;
+
+    @NameInMap("DefaultRoute")
+    public String defaultRoute;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -166,6 +184,15 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("OssResourceId")
     public String ossResourceId;
 
+    @NameInMap("PredictWorkerCount")
+    public Integer predictWorkerCount;
+
+    @NameInMap("PredictWorkerCpu")
+    public Integer predictWorkerCpu;
+
+    @NameInMap("PredictWorkerMemory")
+    public Integer predictWorkerMemory;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -184,12 +211,18 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("SceneId")
     public String sceneId;
 
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     /**
      * <strong>example:</strong>
      * <p>4</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
+
+    @NameInMap("SwitchId")
+    public String switchId;
 
     /**
      * <p>This parameter is required.</p>
@@ -227,12 +260,18 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("UserTablePartitionFieldFormat")
     public String userTablePartitionFieldFormat;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     /**
      * <strong>example:</strong>
      * <p>work_flow_1</p>
      */
     @NameInMap("WorkflowName")
     public String workflowName;
+
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
 
     public static UpdateFeatureConsistencyCheckJobConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFeatureConsistencyCheckJobConfigRequest self = new UpdateFeatureConsistencyCheckJobConfigRequest();
@@ -245,6 +284,54 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     }
     public Boolean getCompareFeature() {
         return this.compareFeature;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setDatasetId(String datasetId) {
+        this.datasetId = datasetId;
+        return this;
+    }
+    public String getDatasetId() {
+        return this.datasetId;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setDatasetMountPath(String datasetMountPath) {
+        this.datasetMountPath = datasetMountPath;
+        return this;
+    }
+    public String getDatasetMountPath() {
+        return this.datasetMountPath;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
+        return this;
+    }
+    public String getDatasetName() {
+        return this.datasetName;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setDatasetType(String datasetType) {
+        this.datasetType = datasetType;
+        return this;
+    }
+    public String getDatasetType() {
+        return this.datasetType;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setDatasetUri(String datasetUri) {
+        this.datasetUri = datasetUri;
+        return this;
+    }
+    public String getDatasetUri() {
+        return this.datasetUri;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setDefaultRoute(String defaultRoute) {
+        this.defaultRoute = defaultRoute;
+        return this;
+    }
+    public String getDefaultRoute() {
+        return this.defaultRoute;
     }
 
     public UpdateFeatureConsistencyCheckJobConfigRequest setEasServiceName(String easServiceName) {
@@ -431,6 +518,30 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
         return this.ossResourceId;
     }
 
+    public UpdateFeatureConsistencyCheckJobConfigRequest setPredictWorkerCount(Integer predictWorkerCount) {
+        this.predictWorkerCount = predictWorkerCount;
+        return this;
+    }
+    public Integer getPredictWorkerCount() {
+        return this.predictWorkerCount;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setPredictWorkerCpu(Integer predictWorkerCpu) {
+        this.predictWorkerCpu = predictWorkerCpu;
+        return this;
+    }
+    public Integer getPredictWorkerCpu() {
+        return this.predictWorkerCpu;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setPredictWorkerMemory(Integer predictWorkerMemory) {
+        this.predictWorkerMemory = predictWorkerMemory;
+        return this;
+    }
+    public Integer getPredictWorkerMemory() {
+        return this.predictWorkerMemory;
+    }
+
     public UpdateFeatureConsistencyCheckJobConfigRequest setSampleRate(Double sampleRate) {
         this.sampleRate = sampleRate;
         return this;
@@ -447,12 +558,28 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
         return this.sceneId;
     }
 
+    public UpdateFeatureConsistencyCheckJobConfigRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
     public UpdateFeatureConsistencyCheckJobConfigRequest setServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setSwitchId(String switchId) {
+        this.switchId = switchId;
+        return this;
+    }
+    public String getSwitchId() {
+        return this.switchId;
     }
 
     public UpdateFeatureConsistencyCheckJobConfigRequest setUserIdField(String userIdField) {
@@ -487,12 +614,28 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
         return this.userTablePartitionFieldFormat;
     }
 
+    public UpdateFeatureConsistencyCheckJobConfigRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public UpdateFeatureConsistencyCheckJobConfigRequest setWorkflowName(String workflowName) {
         this.workflowName = workflowName;
         return this;
     }
     public String getWorkflowName() {
         return this.workflowName;
+    }
+
+    public UpdateFeatureConsistencyCheckJobConfigRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

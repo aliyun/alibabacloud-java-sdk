@@ -11,6 +11,9 @@ public class GetEngineConfigResponseBody extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <strong>example:</strong>
      * <p>Pre</p>
@@ -71,6 +74,14 @@ public class GetEngineConfigResponseBody extends TeaModel {
     }
     public String getConfigValue() {
         return this.configValue;
+    }
+
+    public GetEngineConfigResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public GetEngineConfigResponseBody setEnvironment(String environment) {
