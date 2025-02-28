@@ -1,3 +1,10 @@
+2025-02-28 Version: 1.3.0
+- Support API ModifyTransitRouteTableAggregation.
+- Update API CreateTransitRouteTableAggregation: add param TransitRouteTableAggregationScopeList.
+- Update API CreateTransitRouteTableAggregation: update param TransitRouteTableAggregationScope.
+- Update API DescribeTransitRouteTableAggregation: update response param.
+
+
 2025-01-06 Version: 1.2.2
 - Update API CreateTransitRouterMulticastDomain: add param Options.
 - Update API ListTransitRouterMulticastDomains: update response param.

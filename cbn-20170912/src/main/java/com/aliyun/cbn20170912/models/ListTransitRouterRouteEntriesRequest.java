@@ -261,6 +261,7 @@ public class ListTransitRouterRouteEntriesRequest extends TeaModel {
         return this.routeFilter;
     }
 
+    @Deprecated
     public ListTransitRouterRouteEntriesRequest setTransitRouterRouteEntryDestinationCidrBlock(String transitRouterRouteEntryDestinationCidrBlock) {
         this.transitRouterRouteEntryDestinationCidrBlock = transitRouterRouteEntryDestinationCidrBlock;
         return this;

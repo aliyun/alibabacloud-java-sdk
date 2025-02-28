@@ -3,27 +3,15 @@ package com.aliyun.cbn20170912.models;
 
 import com.aliyun.tea.*;
 
-public class CreateTransitRouteTableAggregationRequest extends TeaModel {
+public class ModifyTransitRouteTableAggregationRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <blockquote>
-     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
-     * <p>02fb3da4-130e-11e9-8e44-001****</p>
+     * <p>02fb3da4****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <ul>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request.</li>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters and request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -43,14 +31,6 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The destination CIDR block of the aggregate route.</p>
-     * <blockquote>
-     * <p> The following CIDR blocks are not supported:</p>
-     * <ul>
-     * <li>CIDR blocks that start with 0 or 100.64.</li>
-     * <li>Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</li>
-     * </ul>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,9 +40,6 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationCidr;
 
     /**
-     * <p>The description of the aggregate route.</p>
-     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.</p>
-     * 
      * <strong>example:</strong>
      * <p>desctest</p>
      */
@@ -70,9 +47,6 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationDescription;
 
     /**
-     * <p>The name of the aggregate route.</p>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -. You can also leave the name empty.</p>
-     * 
      * <strong>example:</strong>
      * <p>nametest</p>
      */
@@ -80,9 +54,6 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationName;
 
     /**
-     * <p>The scope of networks that you want to advertise the aggregate route.</p>
-     * <p>Set the value to <strong>VPC</strong>, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
-     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
@@ -93,21 +64,20 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     public java.util.List<String> transitRouteTableAggregationScopeList;
 
     /**
-     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vtb-iq8qgruq1ry8jc7vt****</p>
+     * <p>vtb-6ehgc262hr170qgyc****</p>
      */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;
 
-    public static CreateTransitRouteTableAggregationRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateTransitRouteTableAggregationRequest self = new CreateTransitRouteTableAggregationRequest();
+    public static ModifyTransitRouteTableAggregationRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyTransitRouteTableAggregationRequest self = new ModifyTransitRouteTableAggregationRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTransitRouteTableAggregationRequest setClientToken(String clientToken) {
+    public ModifyTransitRouteTableAggregationRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -115,7 +85,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateTransitRouteTableAggregationRequest setDryRun(Boolean dryRun) {
+    public ModifyTransitRouteTableAggregationRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -123,7 +93,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public CreateTransitRouteTableAggregationRequest setOwnerAccount(String ownerAccount) {
+    public ModifyTransitRouteTableAggregationRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -131,7 +101,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateTransitRouteTableAggregationRequest setOwnerId(Long ownerId) {
+    public ModifyTransitRouteTableAggregationRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -139,7 +109,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateTransitRouteTableAggregationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyTransitRouteTableAggregationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -147,7 +117,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateTransitRouteTableAggregationRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyTransitRouteTableAggregationRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -155,7 +125,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
+    public ModifyTransitRouteTableAggregationRequest setTransitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
         this.transitRouteTableAggregationCidr = transitRouteTableAggregationCidr;
         return this;
     }
@@ -163,7 +133,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationCidr;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationDescription(String transitRouteTableAggregationDescription) {
+    public ModifyTransitRouteTableAggregationRequest setTransitRouteTableAggregationDescription(String transitRouteTableAggregationDescription) {
         this.transitRouteTableAggregationDescription = transitRouteTableAggregationDescription;
         return this;
     }
@@ -171,7 +141,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationDescription;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationName(String transitRouteTableAggregationName) {
+    public ModifyTransitRouteTableAggregationRequest setTransitRouteTableAggregationName(String transitRouteTableAggregationName) {
         this.transitRouteTableAggregationName = transitRouteTableAggregationName;
         return this;
     }
@@ -179,7 +149,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationName;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationScope(String transitRouteTableAggregationScope) {
+    public ModifyTransitRouteTableAggregationRequest setTransitRouteTableAggregationScope(String transitRouteTableAggregationScope) {
         this.transitRouteTableAggregationScope = transitRouteTableAggregationScope;
         return this;
     }
@@ -187,7 +157,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationScope;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationScopeList(java.util.List<String> transitRouteTableAggregationScopeList) {
+    public ModifyTransitRouteTableAggregationRequest setTransitRouteTableAggregationScopeList(java.util.List<String> transitRouteTableAggregationScopeList) {
         this.transitRouteTableAggregationScopeList = transitRouteTableAggregationScopeList;
         return this;
     }
@@ -195,7 +165,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationScopeList;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableId(String transitRouteTableId) {
+    public ModifyTransitRouteTableAggregationRequest setTransitRouteTableId(String transitRouteTableId) {
         this.transitRouteTableId = transitRouteTableId;
         return this;
     }
