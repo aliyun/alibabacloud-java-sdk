@@ -6654,7 +6654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URL of the file that records the export results for a data export ticket in Data Management (DMS).</p>
+     * <p>Queries the download URL of export results for a data export ticket.</p>
      * 
      * @param request GetDataExportDownloadURLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6699,7 +6699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download URL of the file that records the export results for a data export ticket in Data Management (DMS).</p>
+     * <p>Queries the download URL of export results for a data export ticket.</p>
      * 
      * @param request GetDataExportDownloadURLRequest
      * @return GetDataExportDownloadURLResponse
@@ -17541,7 +17541,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>接受大容量sql文件的更新节点内容API</p>
+     * <p>大sql更新节点专用</p>
      * 
      * @param request UpdateTaskContentV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -17584,7 +17584,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>接受大容量sql文件的更新节点内容API</p>
+     * <p>大sql更新节点专用</p>
      * 
      * @param request UpdateTaskContentV2Request
      * @return UpdateTaskContentV2Response

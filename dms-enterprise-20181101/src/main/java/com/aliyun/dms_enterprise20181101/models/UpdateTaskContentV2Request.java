@@ -12,8 +12,6 @@ public class UpdateTaskContentV2Request extends TeaModel {
     public String nodeContent;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>449***</p>
      */
