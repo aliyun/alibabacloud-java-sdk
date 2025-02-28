@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBProxyEndpointRequest extends TeaModel {
+    @NameInMap("CausalConsistReadTimeout")
+    public String causalConsistReadTimeout;
+
     /**
      * <p>The capabilities that you want to enable for the proxy endpoint. If you specify more than one capability, separate the capabilities with semicolons (;). Format: <code>Capability 1:Status;Capability 2:Status;...</code>. Do not add a semicolon (;) at the end of the value.</p>
      * <p>Valid capability values:</p>
@@ -234,9 +237,24 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc-2zeusejj******</p>
+     */
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static ModifyDBProxyEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBProxyEndpointRequest self = new ModifyDBProxyEndpointRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBProxyEndpointRequest setCausalConsistReadTimeout(String causalConsistReadTimeout) {
+        this.causalConsistReadTimeout = causalConsistReadTimeout;
+        return this;
+    }
+    public String getCausalConsistReadTimeout() {
+        return this.causalConsistReadTimeout;
     }
 
     public ModifyDBProxyEndpointRequest setConfigDBProxyFeatures(String configDBProxyFeatures) {
@@ -389,6 +407,14 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public ModifyDBProxyEndpointRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

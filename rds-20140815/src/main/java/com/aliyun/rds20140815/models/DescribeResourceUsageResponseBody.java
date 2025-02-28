@@ -22,6 +22,12 @@ public class DescribeResourceUsageResponseBody extends TeaModel {
     @NameInMap("BackupDataSize")
     public Long backupDataSize;
 
+    /**
+     * <p>The storage capacity that is used to store the snapshot backup files of the <strong>RDS for SQL Server</strong> instance. Unit: bytes. The value 0 indicates that no snapshot backup files are stored for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BackupEcsSnapshotSize")
     public String backupEcsSnapshotSize;
 

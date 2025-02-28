@@ -22,6 +22,12 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the service-linked role is required. Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RequireServiceLinkedRole")
     public String requireServiceLinkedRole;
 

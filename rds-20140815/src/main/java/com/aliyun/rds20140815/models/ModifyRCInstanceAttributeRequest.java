@@ -57,6 +57,9 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
     public static ModifyRCInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRCInstanceAttributeRequest self = new ModifyRCInstanceAttributeRequest();
         return TeaModel.build(map, self);
@@ -100,6 +103,14 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyRCInstanceAttributeRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
 }

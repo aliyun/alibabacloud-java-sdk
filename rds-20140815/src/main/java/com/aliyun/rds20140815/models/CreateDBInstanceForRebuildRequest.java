@@ -57,7 +57,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
      * </ul>
      * <p>Default value: Classic.</p>
      * <blockquote>
-     * <p> The <strong>VPCId</strong> and <strong>VSwitchId</strong> parameters must be specified when this parameter is set to <strong>VPC</strong>.</p>
+     * <p> If the instance uses cloud disks, this parameter is required. Set the value to <strong>VPC</strong>. The <strong>VpcId</strong> and <strong>VSwitchId</strong> parameters must be specified when this parameter is set to <strong>VPC</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
      * <li><strong>Month</strong></li>
      * </ul>
      * <blockquote>
-     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
+     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
