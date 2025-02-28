@@ -4,21 +4,41 @@ package com.aliyun.cloudauth20221125.models;
 import com.aliyun.tea.*;
 
 public class EntRiskQueryRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>32198****193000</p>
+     */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>00</p>
+     */
     @NameInMap("ParamType")
     public String paramType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>91330106673959****</p>
+     */
     @NameInMap("ParamValue")
     public String paramValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000000086</p>
+     */
     @NameInMap("SceneCode")
     public String sceneCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UserAuthorization")
     public String userAuthorization;
 

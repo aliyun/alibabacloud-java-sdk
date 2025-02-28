@@ -4,6 +4,10 @@ package com.aliyun.cloudauth20221125.models;
 import com.aliyun.tea.*;
 
 public class EntVerifyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>321324***38293</p>
+     */
     @NameInMap("AccountNo")
     public String accountNo;
 
@@ -13,15 +17,27 @@ public class EntVerifyRequest extends TeaModel {
     @NameInMap("InfoVerifyType")
     public String infoVerifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>370105*****3892</p>
+     */
     @NameInMap("LegalPersonCertNo")
     public String legalPersonCertNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1300***53</p>
+     */
     @NameInMap("LegalPersonMobile")
     public String legalPersonMobile;
 
     @NameInMap("LegalPersonName")
     public String legalPersonName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32132***328932</p>
+     */
     @NameInMap("LicenseNo")
     public String licenseNo;
 
@@ -31,15 +47,27 @@ public class EntVerifyRequest extends TeaModel {
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BASIC</p>
+     */
     @NameInMap("RiskModelVersion")
     public String riskModelVersion;
 
     @NameInMap("RiskVerifyType")
     public String riskVerifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>withdraw</p>
+     */
     @NameInMap("SceneCode")
     public String sceneCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UserAuthorization")
     public String userAuthorization;
 

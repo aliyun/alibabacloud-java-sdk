@@ -3,11 +3,16 @@ package com.aliyun.cloudauth20221125.models;
 
 import com.aliyun.tea.*;
 
-public class EntElementVerifyRequest extends TeaModel {
+public class EntElementVerifyV2Request extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EntName")
     public String entName;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENT_2META</p>
      */
@@ -16,7 +21,7 @@ public class EntElementVerifyRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>370105*****3892</p>
+     * <p>1******************9</p>
      */
     @NameInMap("LegalPersonCertNo")
     public String legalPersonCertNo;
@@ -25,46 +30,56 @@ public class EntElementVerifyRequest extends TeaModel {
     public String legalPersonName;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>32132***328932</p>
+     * <p>91330106673959****</p>
      */
     @NameInMap("LicenseNo")
     public String licenseNo;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>32198****193000</p>
+     * <p>e0c34a77f5ac40a5aa5e6ed20c35****</p>
      */
     @NameInMap("MerchantBizId")
     public String merchantBizId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>432***421</p>
+     * <p>mch7x9a2b4c8d3e5f6g1h2i3j4k5****</p>
      */
     @NameInMap("MerchantUserId")
     public String merchantUserId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
-     * <p>withdraw</p>
+     * <p>1000000006</p>
      */
     @NameInMap("SceneCode")
     public String sceneCode;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("UserAuthorization")
     public String userAuthorization;
 
-    public static EntElementVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
-        EntElementVerifyRequest self = new EntElementVerifyRequest();
+    public static EntElementVerifyV2Request build(java.util.Map<String, ?> map) throws Exception {
+        EntElementVerifyV2Request self = new EntElementVerifyV2Request();
         return TeaModel.build(map, self);
     }
 
-    public EntElementVerifyRequest setEntName(String entName) {
+    public EntElementVerifyV2Request setEntName(String entName) {
         this.entName = entName;
         return this;
     }
@@ -72,7 +87,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.entName;
     }
 
-    public EntElementVerifyRequest setInfoVerifyType(String infoVerifyType) {
+    public EntElementVerifyV2Request setInfoVerifyType(String infoVerifyType) {
         this.infoVerifyType = infoVerifyType;
         return this;
     }
@@ -80,7 +95,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.infoVerifyType;
     }
 
-    public EntElementVerifyRequest setLegalPersonCertNo(String legalPersonCertNo) {
+    public EntElementVerifyV2Request setLegalPersonCertNo(String legalPersonCertNo) {
         this.legalPersonCertNo = legalPersonCertNo;
         return this;
     }
@@ -88,7 +103,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.legalPersonCertNo;
     }
 
-    public EntElementVerifyRequest setLegalPersonName(String legalPersonName) {
+    public EntElementVerifyV2Request setLegalPersonName(String legalPersonName) {
         this.legalPersonName = legalPersonName;
         return this;
     }
@@ -96,7 +111,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.legalPersonName;
     }
 
-    public EntElementVerifyRequest setLicenseNo(String licenseNo) {
+    public EntElementVerifyV2Request setLicenseNo(String licenseNo) {
         this.licenseNo = licenseNo;
         return this;
     }
@@ -104,7 +119,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.licenseNo;
     }
 
-    public EntElementVerifyRequest setMerchantBizId(String merchantBizId) {
+    public EntElementVerifyV2Request setMerchantBizId(String merchantBizId) {
         this.merchantBizId = merchantBizId;
         return this;
     }
@@ -112,7 +127,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.merchantBizId;
     }
 
-    public EntElementVerifyRequest setMerchantUserId(String merchantUserId) {
+    public EntElementVerifyV2Request setMerchantUserId(String merchantUserId) {
         this.merchantUserId = merchantUserId;
         return this;
     }
@@ -120,7 +135,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.merchantUserId;
     }
 
-    public EntElementVerifyRequest setSceneCode(String sceneCode) {
+    public EntElementVerifyV2Request setSceneCode(String sceneCode) {
         this.sceneCode = sceneCode;
         return this;
     }
@@ -128,7 +143,7 @@ public class EntElementVerifyRequest extends TeaModel {
         return this.sceneCode;
     }
 
-    public EntElementVerifyRequest setUserAuthorization(String userAuthorization) {
+    public EntElementVerifyV2Request setUserAuthorization(String userAuthorization) {
         this.userAuthorization = userAuthorization;
         return this;
     }

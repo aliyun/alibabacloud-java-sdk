@@ -3,7 +3,7 @@ package com.aliyun.cloudauth20221125.models;
 
 import com.aliyun.tea.*;
 
-public class EntRiskQueryResponse extends TeaModel {
+public class EntElementVerifyV2Response extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class EntRiskQueryResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public EntRiskQueryResponseBody body;
+    public EntElementVerifyV2ResponseBody body;
 
-    public static EntRiskQueryResponse build(java.util.Map<String, ?> map) throws Exception {
-        EntRiskQueryResponse self = new EntRiskQueryResponse();
+    public static EntElementVerifyV2Response build(java.util.Map<String, ?> map) throws Exception {
+        EntElementVerifyV2Response self = new EntElementVerifyV2Response();
         return TeaModel.build(map, self);
     }
 
-    public EntRiskQueryResponse setHeaders(java.util.Map<String, String> headers) {
+    public EntElementVerifyV2Response setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class EntRiskQueryResponse extends TeaModel {
         return this.headers;
     }
 
-    public EntRiskQueryResponse setStatusCode(Integer statusCode) {
+    public EntElementVerifyV2Response setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class EntRiskQueryResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public EntRiskQueryResponse setBody(EntRiskQueryResponseBody body) {
+    public EntElementVerifyV2Response setBody(EntElementVerifyV2ResponseBody body) {
         this.body = body;
         return this;
     }
-    public EntRiskQueryResponseBody getBody() {
+    public EntElementVerifyV2ResponseBody getBody() {
         return this.body;
     }
 
