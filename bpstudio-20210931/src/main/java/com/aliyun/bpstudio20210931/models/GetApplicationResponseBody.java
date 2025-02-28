@@ -201,6 +201,77 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
 
+    public static class GetApplicationResponseBodyDataComplianceListRules extends TeaModel {
+        @NameInMap("ruleDetail")
+        public String ruleDetail;
+
+        @NameInMap("ruleId")
+        public String ruleId;
+
+        public static GetApplicationResponseBodyDataComplianceListRules build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataComplianceListRules self = new GetApplicationResponseBodyDataComplianceListRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataComplianceListRules setRuleDetail(String ruleDetail) {
+            this.ruleDetail = ruleDetail;
+            return this;
+        }
+        public String getRuleDetail() {
+            return this.ruleDetail;
+        }
+
+        public GetApplicationResponseBodyDataComplianceListRules setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
+        }
+
+    }
+
+    public static class GetApplicationResponseBodyDataComplianceList extends TeaModel {
+        @NameInMap("ResourceCode")
+        public String resourceCode;
+
+        @NameInMap("ResourceName")
+        public String resourceName;
+
+        @NameInMap("Rules")
+        public java.util.List<GetApplicationResponseBodyDataComplianceListRules> rules;
+
+        public static GetApplicationResponseBodyDataComplianceList build(java.util.Map<String, ?> map) throws Exception {
+            GetApplicationResponseBodyDataComplianceList self = new GetApplicationResponseBodyDataComplianceList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetApplicationResponseBodyDataComplianceList setResourceCode(String resourceCode) {
+            this.resourceCode = resourceCode;
+            return this;
+        }
+        public String getResourceCode() {
+            return this.resourceCode;
+        }
+
+        public GetApplicationResponseBodyDataComplianceList setResourceName(String resourceName) {
+            this.resourceName = resourceName;
+            return this;
+        }
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        public GetApplicationResponseBodyDataComplianceList setRules(java.util.List<GetApplicationResponseBodyDataComplianceListRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataComplianceListRules> getRules() {
+            return this.rules;
+        }
+
+    }
+
     public static class GetApplicationResponseBodyDataPriceList extends TeaModel {
         /**
          * <p>The billing method.</p>
@@ -620,6 +691,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Checklist")
         public java.util.List<GetApplicationResponseBodyDataChecklist> checklist;
 
+        @NameInMap("ComplianceList")
+        public java.util.List<GetApplicationResponseBodyDataComplianceList> complianceList;
+
         /**
          * <p>The time when the app was created</p>
          * 
@@ -726,6 +800,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public java.util.List<GetApplicationResponseBodyDataChecklist> getChecklist() {
             return this.checklist;
+        }
+
+        public GetApplicationResponseBodyData setComplianceList(java.util.List<GetApplicationResponseBodyDataComplianceList> complianceList) {
+            this.complianceList = complianceList;
+            return this;
+        }
+        public java.util.List<GetApplicationResponseBodyDataComplianceList> getComplianceList() {
+            return this.complianceList;
         }
 
         public GetApplicationResponseBodyData setCreateTime(String createTime) {

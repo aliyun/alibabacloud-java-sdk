@@ -24,7 +24,7 @@ public class ValuateApplicationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyjt3c5om3hi</p>

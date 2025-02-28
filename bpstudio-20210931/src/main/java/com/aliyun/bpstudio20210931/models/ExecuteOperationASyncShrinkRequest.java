@@ -50,7 +50,7 @@ public class ExecuteOperationASyncShrinkRequest extends TeaModel {
      * <p>This operation type is the operation type of modifying the product, some operation types are generic, and some are used alone. The following is an example of ECS deployment:</p>
      * <ul>
      * <li>The name of the ECS: rename</li>
-     * <li>Specificationof ecs: modifyInstanceType</li>
+     * <li>Specification of ecs: modifyInstanceType</li>
      * <li>Startup of ecs: modifyInstanceType</li>
      * <li>Stop of ecs: modifyInstanceType</li>
      * <li>Restart of ecs: modifyInstanceType</li>

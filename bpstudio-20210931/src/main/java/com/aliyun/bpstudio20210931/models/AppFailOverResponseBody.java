@@ -24,6 +24,9 @@ public class AppFailOverResponseBody extends TeaModel {
 
     /**
      * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
