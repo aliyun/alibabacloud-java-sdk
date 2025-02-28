@@ -134,6 +134,9 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         @NameInMap("Scope")
         public String scope;
 
+        @NameInMap("ScopeList")
+        public java.util.List<String> scopeList;
+
         /**
          * <p>The status of the advertisement of the aggregate route. Valid values:</p>
          * <ul>
@@ -203,6 +206,14 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         }
         public String getScope() {
             return this.scope;
+        }
+
+        public DescribeTransitRouteTableAggregationResponseBodyData setScopeList(java.util.List<String> scopeList) {
+            this.scopeList = scopeList;
+            return this;
+        }
+        public java.util.List<String> getScopeList() {
+            return this.scopeList;
         }
 
         public DescribeTransitRouteTableAggregationResponseBodyData setStatus(String status) {

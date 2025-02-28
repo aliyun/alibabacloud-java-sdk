@@ -27,6 +27,9 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Multicast domain feature.</p>
+     */
     @NameInMap("Options")
     public ModifyTransitRouterMulticastDomainRequestOptions options;
 
@@ -158,6 +161,18 @@ public class ModifyTransitRouterMulticastDomainRequest extends TeaModel {
     }
 
     public static class ModifyTransitRouterMulticastDomainRequestOptions extends TeaModel {
+        /**
+         * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Default value: <strong>enable</strong>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The IGMP feature is in beta testing. To use it, contact your account manager.</li>
+         * <li>The IGMP feature cannot be disabled after it is enabled.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("Igmpv2Support")
         public String igmpv2Support;
 

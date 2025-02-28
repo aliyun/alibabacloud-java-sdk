@@ -3,7 +3,7 @@ package com.aliyun.cbn20170912.models;
 
 import com.aliyun.tea.*;
 
-public class CreateTransitRouteTableAggregationRequest extends TeaModel {
+public class CreateTransitRouteTableAggregationShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
@@ -90,7 +90,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationScope;
 
     @NameInMap("TransitRouteTableAggregationScopeList")
-    public java.util.List<String> transitRouteTableAggregationScopeList;
+    public String transitRouteTableAggregationScopeListShrink;
 
     /**
      * <p>The ID of the route table of the Enterprise Edition transit router.</p>
@@ -102,12 +102,12 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;
 
-    public static CreateTransitRouteTableAggregationRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateTransitRouteTableAggregationRequest self = new CreateTransitRouteTableAggregationRequest();
+    public static CreateTransitRouteTableAggregationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateTransitRouteTableAggregationShrinkRequest self = new CreateTransitRouteTableAggregationShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateTransitRouteTableAggregationRequest setClientToken(String clientToken) {
+    public CreateTransitRouteTableAggregationShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -115,7 +115,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateTransitRouteTableAggregationRequest setDryRun(Boolean dryRun) {
+    public CreateTransitRouteTableAggregationShrinkRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
@@ -123,7 +123,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public CreateTransitRouteTableAggregationRequest setOwnerAccount(String ownerAccount) {
+    public CreateTransitRouteTableAggregationShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -131,7 +131,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateTransitRouteTableAggregationRequest setOwnerId(Long ownerId) {
+    public CreateTransitRouteTableAggregationShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -139,7 +139,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateTransitRouteTableAggregationRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateTransitRouteTableAggregationShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -147,7 +147,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateTransitRouteTableAggregationRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateTransitRouteTableAggregationShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -155,7 +155,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
+    public CreateTransitRouteTableAggregationShrinkRequest setTransitRouteTableAggregationCidr(String transitRouteTableAggregationCidr) {
         this.transitRouteTableAggregationCidr = transitRouteTableAggregationCidr;
         return this;
     }
@@ -163,7 +163,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationCidr;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationDescription(String transitRouteTableAggregationDescription) {
+    public CreateTransitRouteTableAggregationShrinkRequest setTransitRouteTableAggregationDescription(String transitRouteTableAggregationDescription) {
         this.transitRouteTableAggregationDescription = transitRouteTableAggregationDescription;
         return this;
     }
@@ -171,7 +171,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationDescription;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationName(String transitRouteTableAggregationName) {
+    public CreateTransitRouteTableAggregationShrinkRequest setTransitRouteTableAggregationName(String transitRouteTableAggregationName) {
         this.transitRouteTableAggregationName = transitRouteTableAggregationName;
         return this;
     }
@@ -179,7 +179,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationName;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationScope(String transitRouteTableAggregationScope) {
+    public CreateTransitRouteTableAggregationShrinkRequest setTransitRouteTableAggregationScope(String transitRouteTableAggregationScope) {
         this.transitRouteTableAggregationScope = transitRouteTableAggregationScope;
         return this;
     }
@@ -187,15 +187,15 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
         return this.transitRouteTableAggregationScope;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableAggregationScopeList(java.util.List<String> transitRouteTableAggregationScopeList) {
-        this.transitRouteTableAggregationScopeList = transitRouteTableAggregationScopeList;
+    public CreateTransitRouteTableAggregationShrinkRequest setTransitRouteTableAggregationScopeListShrink(String transitRouteTableAggregationScopeListShrink) {
+        this.transitRouteTableAggregationScopeListShrink = transitRouteTableAggregationScopeListShrink;
         return this;
     }
-    public java.util.List<String> getTransitRouteTableAggregationScopeList() {
-        return this.transitRouteTableAggregationScopeList;
+    public String getTransitRouteTableAggregationScopeListShrink() {
+        return this.transitRouteTableAggregationScopeListShrink;
     }
 
-    public CreateTransitRouteTableAggregationRequest setTransitRouteTableId(String transitRouteTableId) {
+    public CreateTransitRouteTableAggregationShrinkRequest setTransitRouteTableId(String transitRouteTableId) {
         this.transitRouteTableId = transitRouteTableId;
         return this;
     }

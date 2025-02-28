@@ -52,7 +52,7 @@ public class ListTransitRouterMulticastDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the transit router.</p>
+     * <p>The ID of the region to which the transit router belongs.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>

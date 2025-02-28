@@ -45,7 +45,7 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the multicast domain.</p>
+     * <p>The list of multicast domains.</p>
      */
     @NameInMap("TransitRouterMulticastDomains")
     public java.util.List<ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomains> transitRouterMulticastDomains;
@@ -96,6 +96,12 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
     }
 
     public static class ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions extends TeaModel {
+        /**
+         * <p>Indicates whether the IGMP feature is enabled for the multicast domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("Igmpv2Support")
         public String igmpv2Support;
 
@@ -166,6 +172,9 @@ public class ListTransitRouterMulticastDomainsResponseBody extends TeaModel {
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>Multicast domain feature.</p>
+         */
         @NameInMap("Options")
         public ListTransitRouterMulticastDomainsResponseBodyTransitRouterMulticastDomainsOptions options;
 

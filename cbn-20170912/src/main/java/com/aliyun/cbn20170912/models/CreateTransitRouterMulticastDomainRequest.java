@@ -36,6 +36,9 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Multicast domain feature.</p>
+     */
     @NameInMap("Options")
     public CreateTransitRouterMulticastDomainRequestOptions options;
 
@@ -207,6 +210,22 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     }
 
     public static class CreateTransitRouterMulticastDomainRequestOptions extends TeaModel {
+        /**
+         * <p>Indicates whether the IGMP feature is enabled for the multicast domain. Once enabled, hosts can dynamically join or leave multicast groups by using IGMP protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>enable</strong>: enables IGMP.</li>
+         * <li><strong>disable</strong>(default): disables IGMP.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>The IGMP feature is in beta testing. To use it, contact your account manager.</li>
+         * <li>If you select this option, you cannot disable IPv6 after the VBR is created.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
+         */
         @NameInMap("Igmpv2Support")
         public String igmpv2Support;
 
