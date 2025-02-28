@@ -4,6 +4,9 @@ package com.aliyun.ververica20220718.models;
 import com.aliyun.tea.*;
 
 public class ListJobsResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <ul>
      * <li>If the value of success was true, all jobs that meet the condition were returned.</li>
@@ -94,6 +97,14 @@ public class ListJobsResponseBody extends TeaModel {
     public static ListJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListJobsResponseBody self = new ListJobsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListJobsResponseBody setData(java.util.List<Job> data) {
