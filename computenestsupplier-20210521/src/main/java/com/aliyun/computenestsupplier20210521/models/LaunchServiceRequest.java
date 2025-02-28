@@ -21,6 +21,9 @@ public class LaunchServiceRequest extends TeaModel {
 
     /**
      * <p>Whether to set the recommended service publishing to the service directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Recommend")
     public Boolean recommend;
