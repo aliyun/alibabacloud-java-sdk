@@ -24,7 +24,7 @@ public class ReleaseApplicationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

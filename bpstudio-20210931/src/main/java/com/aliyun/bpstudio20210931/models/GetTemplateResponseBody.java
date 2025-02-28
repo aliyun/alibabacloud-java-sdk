@@ -172,10 +172,10 @@ public class GetTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Template DescriptionD</p>
+         * <p>Template Description</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>remark</p>
          */
         @NameInMap("Description")
         public String description;

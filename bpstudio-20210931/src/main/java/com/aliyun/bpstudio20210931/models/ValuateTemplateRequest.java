@@ -52,7 +52,7 @@ public class ValuateTemplateRequest extends TeaModel {
      * <p>The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.</p>
      */
     @NameInMap("Variables")
-    public java.util.Map<String, String> variables;
+    public java.util.Map<String, ?> variables;
 
     public static ValuateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ValuateTemplateRequest self = new ValuateTemplateRequest();
@@ -99,11 +99,11 @@ public class ValuateTemplateRequest extends TeaModel {
         return this.templateId;
     }
 
-    public ValuateTemplateRequest setVariables(java.util.Map<String, String> variables) {
+    public ValuateTemplateRequest setVariables(java.util.Map<String, ?> variables) {
         this.variables = variables;
         return this;
     }
-    public java.util.Map<String, String> getVariables() {
+    public java.util.Map<String, ?> getVariables() {
         return this.variables;
     }
 

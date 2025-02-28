@@ -15,7 +15,7 @@ public class GetApplicationRequest extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>Queries the basic information, verification results, billing results, and deployment results of an application.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyjt3c5om3hi</p>

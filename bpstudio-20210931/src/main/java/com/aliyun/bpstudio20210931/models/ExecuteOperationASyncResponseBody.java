@@ -14,7 +14,7 @@ public class ExecuteOperationASyncResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The ID of the operation.</p>
+     * <p>The operation ID. You can call the GetExecuteOperationResult operation to asynchronously query the result of an operation. The ID expires after one hour.</p>
      * 
      * <strong>example:</strong>
      * <p>op_xxxxxxxxxxxxxxxxxx_ecs_modifyInstanceType_BYSOQGWUV6PME412_ERMEZLXNN3K9N3OL</p>
