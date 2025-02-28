@@ -2802,6 +2802,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建消息</p>
+     * 
+     * @param request CreateMessageRequest
+     * @param headers CreateMessageHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMessageResponse
+     */
+    public CreateMessageResponse createMessageWithOptions(CreateMessageRequest request, CreateMessageHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assistantId)) {
+            body.put("assistantId", request.assistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
+            body.put("metadata", request.metadata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAssistantId)) {
+            body.put("originalAssistantId", request.originalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            body.put("role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadId)) {
+            body.put("threadId", request.threadId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
+            realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMessage"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/assistant/createMessage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMessageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateMessageResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建消息</p>
+     * 
+     * @param request CreateMessageRequest
+     * @return CreateMessageResponse
+     */
+    public CreateMessageResponse createMessage(CreateMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateMessageHeaders headers = new CreateMessageHeaders();
+        return this.createMessageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>新增或更新表单实例</p>
      * 
      * @param request CreateOrUpdateFormDataRequest
@@ -3212,6 +3293,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         CreateReportHeaders headers = new CreateReportHeaders();
         return this.createReportWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建运行</p>
+     * 
+     * @param request CreateRunRequest
+     * @param headers CreateRunHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRunResponse
+     */
+    public CreateRunResponse createRunWithOptions(CreateRunRequest request, CreateRunHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assistantId)) {
+            body.put("assistantId", request.assistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instructions)) {
+            body.put("instructions", request.instructions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
+            body.put("metadata", request.metadata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAssistantId)) {
+            body.put("originalAssistantId", request.originalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
+            body.put("stream", request.stream);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadId)) {
+            body.put("threadId", request.threadId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
+            realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRun"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/assistant/createRun"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRunResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRunResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建运行</p>
+     * 
+     * @param request CreateRunRequest
+     * @return CreateRunResponse
+     */
+    public CreateRunResponse createRun(CreateRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateRunHeaders headers = new CreateRunHeaders();
+        return this.createRunWithOptions(request, headers, runtime);
     }
 
     /**
@@ -3812,6 +3974,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         CreateSubscribedCalendarHeaders headers = new CreateSubscribedCalendarHeaders();
         return this.createSubscribedCalendarWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建线程</p>
+     * 
+     * @param request CreateThreadRequest
+     * @param headers CreateThreadHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateThreadResponse
+     */
+    public CreateThreadResponse createThreadWithOptions(CreateThreadRequest request, CreateThreadHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assistantId)) {
+            body.put("assistantId", request.assistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
+            body.put("metadata", request.metadata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAssistantId)) {
+            body.put("originalAssistantId", request.originalAssistantId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
+            realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateThread"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/assistant/createThread"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateThreadResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateThreadResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建线程</p>
+     * 
+     * @param request CreateThreadRequest
+     * @return CreateThreadResponse
+     */
+    public CreateThreadResponse createThread(CreateThreadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CreateThreadHeaders headers = new CreateThreadHeaders();
+        return this.createThreadWithOptions(request, headers, runtime);
     }
 
     /**
@@ -12325,6 +12556,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询消息</p>
+     * 
+     * @param request ListMessageRequest
+     * @param headers ListMessageHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMessageResponse
+     */
+    public ListMessageResponse listMessageWithOptions(ListMessageRequest request, ListMessageHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assistantId)) {
+            body.put("assistantId", request.assistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            body.put("limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            body.put("order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAssistantid)) {
+            body.put("originalAssistantid", request.originalAssistantid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            body.put("runId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadId)) {
+            body.put("threadId", request.threadId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
+            realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMessage"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/assistant/listMessage"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMessageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListMessageResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询消息</p>
+     * 
+     * @param request ListMessageRequest
+     * @return ListMessageResponse
+     */
+    public ListMessageResponse listMessage(ListMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListMessageHeaders headers = new ListMessageHeaders();
+        return this.listMessageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>列出多行记录</p>
      * 
      * @param tmpReq ListMultiDimTableRecordsRequest
@@ -15822,6 +16134,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         RespondEventHeaders headers = new RespondEventHeaders();
         return this.respondEventWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询运行</p>
+     * 
+     * @param request RetrieveRunRequest
+     * @param headers RetrieveRunHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetrieveRunResponse
+     */
+    public RetrieveRunResponse retrieveRunWithOptions(RetrieveRunRequest request, RetrieveRunHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assistantId)) {
+            body.put("assistantId", request.assistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAssistantId)) {
+            body.put("originalAssistantId", request.originalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runId)) {
+            body.put("runId", request.runId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadId)) {
+            body.put("threadId", request.threadId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
+            realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetrieveRun"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/assistant/retrieveRun"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RetrieveRunResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RetrieveRunResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询运行</p>
+     * 
+     * @param request RetrieveRunRequest
+     * @return RetrieveRunResponse
+     */
+    public RetrieveRunResponse retrieveRun(RetrieveRunRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RetrieveRunHeaders headers = new RetrieveRunHeaders();
+        return this.retrieveRunWithOptions(request, headers, runtime);
     }
 
     /**
