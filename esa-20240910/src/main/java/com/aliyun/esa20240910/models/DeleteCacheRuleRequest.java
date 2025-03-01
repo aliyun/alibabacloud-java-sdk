@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCacheRuleRequest extends TeaModel {
     /**
-     * <p>ConfigId of the configuration, which can be obtained by calling the <a href="~~ListCacheRules~~">ListCacheRules</a> interface.</p>
+     * <p>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2866985.html">ListCacheRules</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

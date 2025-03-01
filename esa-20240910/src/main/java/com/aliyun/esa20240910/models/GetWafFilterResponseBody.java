@@ -120,6 +120,9 @@ public class GetWafFilterResponseBody extends TeaModel {
         @NameInMap("Attributes")
         public Integer attributes;
 
+        @NameInMap("Enable")
+        public Boolean enable;
+
         /**
          * <p>The type of the value input box. Valid values:</p>
          * <ul>
@@ -134,6 +137,9 @@ public class GetWafFilterResponseBody extends TeaModel {
          */
         @NameInMap("Kind")
         public String kind;
+
+        @NameInMap("MinPlan")
+        public String minPlan;
 
         /**
          * <p>Indicates whether the match result is inverted.</p>
@@ -202,12 +208,28 @@ public class GetWafFilterResponseBody extends TeaModel {
             return this.attributes;
         }
 
+        public GetWafFilterResponseBodyFilterFieldsLogics setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
         public GetWafFilterResponseBodyFilterFieldsLogics setKind(String kind) {
             this.kind = kind;
             return this;
         }
         public String getKind() {
             return this.kind;
+        }
+
+        public GetWafFilterResponseBodyFilterFieldsLogics setMinPlan(String minPlan) {
+            this.minPlan = minPlan;
+            return this;
+        }
+        public String getMinPlan() {
+            return this.minPlan;
         }
 
         public GetWafFilterResponseBodyFilterFieldsLogics setNegative(Boolean negative) {
@@ -342,6 +364,9 @@ public class GetWafFilterResponseBody extends TeaModel {
     }
 
     public static class GetWafFilterResponseBodyFilterFields extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
         /**
          * <p>The field for matched objects in the system.</p>
          * 
@@ -365,6 +390,9 @@ public class GetWafFilterResponseBody extends TeaModel {
          */
         @NameInMap("Logics")
         public java.util.List<GetWafFilterResponseBodyFilterFieldsLogics> logics;
+
+        @NameInMap("MinPlan")
+        public String minPlan;
 
         /**
          * <p>The selector, which defines how to select a matched object.</p>
@@ -395,6 +423,14 @@ public class GetWafFilterResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetWafFilterResponseBodyFilterFields setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
         public GetWafFilterResponseBodyFilterFields setKey(String key) {
             this.key = key;
             return this;
@@ -417,6 +453,14 @@ public class GetWafFilterResponseBody extends TeaModel {
         }
         public java.util.List<GetWafFilterResponseBodyFilterFieldsLogics> getLogics() {
             return this.logics;
+        }
+
+        public GetWafFilterResponseBodyFilterFields setMinPlan(String minPlan) {
+            this.minPlan = minPlan;
+            return this;
+        }
+        public String getMinPlan() {
+            return this.minPlan;
         }
 
         public GetWafFilterResponseBodyFilterFields setSelector(GetWafFilterResponseBodyFilterFieldsSelector selector) {

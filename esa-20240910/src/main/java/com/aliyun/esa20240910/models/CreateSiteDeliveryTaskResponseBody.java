@@ -33,7 +33,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
      * <p>123456****</p>
      */
     @NameInMap("SiteId")
-    public String siteId;
+    public Long siteId;
 
     /**
      * <p>The name of the delivery task.</p>
@@ -65,11 +65,11 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSiteDeliveryTaskResponseBody setSiteId(String siteId) {
+    public CreateSiteDeliveryTaskResponseBody setSiteId(Long siteId) {
         this.siteId = siteId;
         return this;
     }
-    public String getSiteId() {
+    public Long getSiteId() {
         return this.siteId;
     }
 

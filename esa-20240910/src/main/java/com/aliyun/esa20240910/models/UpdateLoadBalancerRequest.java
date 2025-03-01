@@ -48,7 +48,7 @@ public class UpdateLoadBalancerRequest extends TeaModel {
     public Long fallbackPool;
 
     /**
-     * <p>Load balancer ID, which can be obtained by calling the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface.</p>
+     * <p>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

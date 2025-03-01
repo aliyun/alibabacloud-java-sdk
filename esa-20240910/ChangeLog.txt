@@ -1,3 +1,14 @@
+2025-03-01 Version: 2.21.1
+- Update API CreateOriginRule: add param OriginMtls.
+- Update API CreateOriginRule: add param OriginVerify.
+- Update API CreateSiteDeliveryTask: update response param.
+- Update API GetOriginRule: update response param.
+- Update API GetWafFilter: update response param.
+- Update API ListOriginRules: update response param.
+- Update API UpdateOriginRule: add param OriginMtls.
+- Update API UpdateOriginRule: add param OriginVerify.
+
+
 2025-02-25 Version: 2.21.0
 - Support API ActivateVersionManagement.
 - Support API CheckAssumeSlrRole.

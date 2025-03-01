@@ -18,7 +18,7 @@ public class UpdateOriginPoolShrinkRequest extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The ID of the origin pool, which can be obtained by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> interface.</p>
+     * <p>The ID of the origin pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class UpdateRatePlanSpecRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable auto payment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -22,6 +28,12 @@ public class UpdateRatePlanSpecRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The specification update type. Valid values:</p>
+     * <ul>
+     * <li>DOWNGRADE</li>
+     * <li>UPGRADE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>UPGRADE</p>
      */
