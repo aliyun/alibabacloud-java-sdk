@@ -62,6 +62,9 @@ public class GetOriginRuleResponseBody extends TeaModel {
     @NameInMap("OriginHttpsPort")
     public String originHttpsPort;
 
+    @NameInMap("OriginMtls")
+    public String originMtls;
+
     /**
      * <p>Protocol used for the origin request. Value range:</p>
      * <ul>
@@ -84,6 +87,9 @@ public class GetOriginRuleResponseBody extends TeaModel {
      */
     @NameInMap("OriginSni")
     public String originSni;
+
+    @NameInMap("OriginVerify")
+    public String originVerify;
 
     /**
      * <p>Use range chunking method for origin download. Value range:</p>
@@ -210,6 +216,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
         return this.originHttpsPort;
     }
 
+    public GetOriginRuleResponseBody setOriginMtls(String originMtls) {
+        this.originMtls = originMtls;
+        return this;
+    }
+    public String getOriginMtls() {
+        return this.originMtls;
+    }
+
     public GetOriginRuleResponseBody setOriginScheme(String originScheme) {
         this.originScheme = originScheme;
         return this;
@@ -224,6 +238,14 @@ public class GetOriginRuleResponseBody extends TeaModel {
     }
     public String getOriginSni() {
         return this.originSni;
+    }
+
+    public GetOriginRuleResponseBody setOriginVerify(String originVerify) {
+        this.originVerify = originVerify;
+        return this;
+    }
+    public String getOriginVerify() {
+        return this.originVerify;
     }
 
     public GetOriginRuleResponseBody setRange(String range) {

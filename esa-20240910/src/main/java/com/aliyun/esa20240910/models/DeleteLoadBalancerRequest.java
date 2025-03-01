@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The ID of the load balancer, used to uniquely identify the load balancer to be queried. This ID is returned directly upon creation of the load balancer and can also be obtained through the <a href="~~ListLoadBalancers~~">ListLoadBalancers</a> interface for querying all load balancers under a site.</p>
+     * <p>The ID of the load balancer, used to uniquely identify the load balancer to be queried. This ID is returned directly upon creation of the load balancer and can also be obtained through the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface for querying all load balancers under a site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

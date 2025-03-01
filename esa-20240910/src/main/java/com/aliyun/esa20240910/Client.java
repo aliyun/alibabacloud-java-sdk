@@ -2628,12 +2628,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OriginHttpsPort", request.originHttpsPort);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originMtls)) {
+            query.put("OriginMtls", request.originMtls);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.originScheme)) {
             query.put("OriginScheme", request.originScheme);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.originSni)) {
             query.put("OriginSni", request.originSni);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originVerify)) {
+            query.put("OriginVerify", request.originVerify);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.range)) {
@@ -6641,8 +6649,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can only query the status of a package instance after purchasing and creating it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询套餐实例状态</p>
+     * <p>Query Package Instance Status</p>
      * 
      * @param request DescribeRatePlanInstanceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6678,8 +6689,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can only query the status of a package instance after purchasing and creating it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询套餐实例状态</p>
+     * <p>Query Package Instance Status</p>
      * 
      * @param request DescribeRatePlanInstanceStatusRequest
      * @return DescribeRatePlanInstanceStatusResponse
@@ -15125,12 +15139,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OriginHttpsPort", request.originHttpsPort);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originMtls)) {
+            query.put("OriginMtls", request.originMtls);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.originScheme)) {
             query.put("OriginScheme", request.originScheme);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.originSni)) {
             query.put("OriginSni", request.originSni);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originVerify)) {
+            query.put("OriginVerify", request.originVerify);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.range)) {

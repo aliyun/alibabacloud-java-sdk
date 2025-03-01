@@ -167,6 +167,9 @@ public class ListOriginRulesResponseBody extends TeaModel {
         @NameInMap("OriginHttpsPort")
         public String originHttpsPort;
 
+        @NameInMap("OriginMtls")
+        public String originMtls;
+
         /**
          * <p>Protocol used for the origin request. Value range:</p>
          * <ul>
@@ -189,6 +192,9 @@ public class ListOriginRulesResponseBody extends TeaModel {
          */
         @NameInMap("OriginSni")
         public String originSni;
+
+        @NameInMap("OriginVerify")
+        public String originVerify;
 
         /**
          * <p>Use range slicing to download files from the origin. The value range is:</p>
@@ -306,6 +312,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
             return this.originHttpsPort;
         }
 
+        public ListOriginRulesResponseBodyConfigs setOriginMtls(String originMtls) {
+            this.originMtls = originMtls;
+            return this;
+        }
+        public String getOriginMtls() {
+            return this.originMtls;
+        }
+
         public ListOriginRulesResponseBodyConfigs setOriginScheme(String originScheme) {
             this.originScheme = originScheme;
             return this;
@@ -320,6 +334,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
         public String getOriginSni() {
             return this.originSni;
+        }
+
+        public ListOriginRulesResponseBodyConfigs setOriginVerify(String originVerify) {
+            this.originVerify = originVerify;
+            return this;
+        }
+        public String getOriginVerify() {
+            return this.originVerify;
         }
 
         public ListOriginRulesResponseBodyConfigs setRange(String range) {

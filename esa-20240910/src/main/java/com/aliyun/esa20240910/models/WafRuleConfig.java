@@ -40,6 +40,9 @@ public class WafRuleConfig extends TeaModel {
     @NameInMap("RateLimit")
     public WafRuleConfigRateLimit rateLimit;
 
+    @NameInMap("SecurityLevel")
+    public WafRuleConfigSecurityLevel securityLevel;
+
     @NameInMap("Sigchl")
     public java.util.List<String> sigchl;
 
@@ -154,6 +157,14 @@ public class WafRuleConfig extends TeaModel {
     }
     public WafRuleConfigRateLimit getRateLimit() {
         return this.rateLimit;
+    }
+
+    public WafRuleConfig setSecurityLevel(WafRuleConfigSecurityLevel securityLevel) {
+        this.securityLevel = securityLevel;
+        return this;
+    }
+    public WafRuleConfigSecurityLevel getSecurityLevel() {
+        return this.securityLevel;
     }
 
     public WafRuleConfig setSigchl(java.util.List<String> sigchl) {
@@ -717,6 +728,25 @@ public class WafRuleConfig extends TeaModel {
         }
         public WafRuleConfigRateLimitThreshold getThreshold() {
             return this.threshold;
+        }
+
+    }
+
+    public static class WafRuleConfigSecurityLevel extends TeaModel {
+        @NameInMap("Value")
+        public String value;
+
+        public static WafRuleConfigSecurityLevel build(java.util.Map<String, ?> map) throws Exception {
+            WafRuleConfigSecurityLevel self = new WafRuleConfigSecurityLevel();
+            return TeaModel.build(map, self);
+        }
+
+        public WafRuleConfigSecurityLevel setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
