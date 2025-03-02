@@ -33,6 +33,15 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     public String changeListPath;
 
     /**
+     * <p>The ID of the client group that executes the data synchronization plan. This parameter is required only for data synchronization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cl-***************</p>
+     */
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    /**
      * <p>This parameter is required when <strong>SourceType</strong> is set to <strong>NAS</strong>. It represents the creation time of the file system, in UNIX timestamp, in seconds.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +80,15 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
      */
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
+
+    /**
+     * <p>The ID of the data source. This parameter is required only for data synchronization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-****************</p>
+     */
+    @NameInMap("DataSourceId")
+    public String dataSourceId;
 
     /**
      * <p>Destination data source details. (Required only for synchronization)</p>
@@ -196,7 +214,7 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     public String options;
 
     /**
-     * <p>Table store instance details.</p>
+     * <p>The details about the Tablestore instance.</p>
      */
     @NameInMap("OtsDetail")
     public String otsDetailShrink;
@@ -256,13 +274,14 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     public String schedule;
 
     /**
-     * <p>Data source type, with the following options:</p>
+     * <p>The type of the data source. Valid values:</p>
      * <ul>
-     * <li><strong>ECS_FILE</strong>: Backs up ECS files</li>
-     * <li><strong>OSS</strong>: Backs up Alibaba Cloud OSS</li>
-     * <li><strong>NAS</strong>: Backs up Alibaba Cloud NAS</li>
-     * <li><strong>OTS</strong>: Backs up Alibaba Cloud OTS</li>
-     * <li><strong>UDM_ECS</strong>: Backs up the entire ECS instance</li>
+     * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
+     * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
+     * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems</li>
+     * <li><strong>OTS</strong>: Tablestore instances</li>
+     * <li><strong>UDM_ECS</strong>: ECS instances</li>
+     * <li><strong>SYNC</strong>: data synchronization</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -333,6 +352,14 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
         return this.changeListPath;
     }
 
+    public CreateBackupPlanShrinkRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
     public CreateBackupPlanShrinkRequest setCreateTime(Long createTime) {
         this.createTime = createTime;
         return this;
@@ -363,6 +390,14 @@ public class CreateBackupPlanShrinkRequest extends TeaModel {
     }
     public Long getCrossAccountUserId() {
         return this.crossAccountUserId;
+    }
+
+    public CreateBackupPlanShrinkRequest setDataSourceId(String dataSourceId) {
+        this.dataSourceId = dataSourceId;
+        return this;
+    }
+    public String getDataSourceId() {
+        return this.dataSourceId;
     }
 
     public CreateBackupPlanShrinkRequest setDestDataSourceDetailShrink(String destDataSourceDetailShrink) {

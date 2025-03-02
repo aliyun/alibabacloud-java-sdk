@@ -41,6 +41,15 @@ public class UpdateVaultRequest extends TeaModel {
     @NameInMap("VaultName")
     public String vaultName;
 
+    /**
+     * <p>Whether to enable the vault worm feature. Once the worm feature is enabled, the vault and all its backup data cannot be deleted before they automatically expire. After enabling the worm feature, it is not supported to disable it. The worm feature is only effective for standard and archive backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("WormEnabled")
+    public Boolean wormEnabled;
+
     public static UpdateVaultRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVaultRequest self = new UpdateVaultRequest();
         return TeaModel.build(map, self);
@@ -76,6 +85,14 @@ public class UpdateVaultRequest extends TeaModel {
     }
     public String getVaultName() {
         return this.vaultName;
+    }
+
+    public UpdateVaultRequest setWormEnabled(Boolean wormEnabled) {
+        this.wormEnabled = wormEnabled;
+        return this;
+    }
+    public Boolean getWormEnabled() {
+        return this.wormEnabled;
     }
 
 }
