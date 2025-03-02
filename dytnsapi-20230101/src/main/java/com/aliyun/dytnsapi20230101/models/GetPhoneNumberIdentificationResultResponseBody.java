@@ -6,11 +6,15 @@ import com.aliyun.tea.*;
 public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
     /**
      * <p>The return code. Valid values:</p>
-     * <br>
-     * <p>*   OK: The request is successful.</p>
-     * <p>*   NoIdentificationResult: No verification result is available or the verification failed.</p>
-     * <p>*   SessionNotValid: The session is invalid or expired.</p>
-     * <p>*   MobileNumberIllegal: The format of the phone number is invalid.</p>
+     * <ul>
+     * <li>OK: The request is successful.</li>
+     * <li>NoIdentificationResult: No verification result is available or the verification failed.</li>
+     * <li>SessionNotValid: The session is invalid or expired.</li>
+     * <li>MobileNumberIllegal: The format of the phone number is invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,12 +27,18 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
 
     /**
      * <p>The description of the return code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68A40250-50CD-034C-B728-0BD******177</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -73,6 +83,9 @@ public class GetPhoneNumberIdentificationResultResponseBody extends TeaModel {
     public static class GetPhoneNumberIdentificationResultResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the phone number passed the verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsIdentified")
         public String isIdentified;

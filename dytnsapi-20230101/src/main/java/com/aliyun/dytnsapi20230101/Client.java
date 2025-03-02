@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification result of your phone number.</p>
+     * 
+     * @param request GetPhoneNumberIdentificationResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPhoneNumberIdentificationResultResponse
+     */
     public GetPhoneNumberIdentificationResultResponse getPhoneNumberIdentificationResultWithOptions(GetPhoneNumberIdentificationResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -75,14 +83,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberIdentificationResultResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberIdentificationResultResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetPhoneNumberIdentificationResultResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification result of your phone number.</p>
+     * 
+     * @param request GetPhoneNumberIdentificationResultRequest
+     * @return GetPhoneNumberIdentificationResultResponse
+     */
     public GetPhoneNumberIdentificationResultResponse getPhoneNumberIdentificationResult(GetPhoneNumberIdentificationResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPhoneNumberIdentificationResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification URL of your phone number.</p>
+     * 
+     * @param request GetPhoneNumberIdentificationUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPhoneNumberIdentificationUrlResponse
+     */
     public GetPhoneNumberIdentificationUrlResponse getPhoneNumberIdentificationUrlWithOptions(GetPhoneNumberIdentificationUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -132,9 +160,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberIdentificationUrlResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPhoneNumberIdentificationUrlResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetPhoneNumberIdentificationUrlResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the verification URL of your phone number.</p>
+     * 
+     * @param request GetPhoneNumberIdentificationUrlRequest
+     * @return GetPhoneNumberIdentificationUrlResponse
+     */
     public GetPhoneNumberIdentificationUrlResponse getPhoneNumberIdentificationUrl(GetPhoneNumberIdentificationUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPhoneNumberIdentificationUrlWithOptions(request, runtime);

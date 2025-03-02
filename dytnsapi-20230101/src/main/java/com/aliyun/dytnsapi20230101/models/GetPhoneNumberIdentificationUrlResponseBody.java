@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
     /**
      * <p>The return code. Valid values:</p>
-     * <br>
-     * <p>*   **OK**: The request is successful.</p>
-     * <p>*   **IdentificationNotAvailable**: The verification system does not support the phone number that corresponds to the IP address.</p>
-     * <p>*   **MobileNumberIllegal**: The format of the phone number is invalid.</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * <li><strong>IdentificationNotAvailable</strong>: The verification system does not support the phone number that corresponds to the IP address.</li>
+     * <li><strong>MobileNumberIllegal</strong>: The format of the phone number is invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -22,12 +26,18 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
 
     /**
      * <p>The description of the return code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68A40250-50CD-034C-B728-0BD******177</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -72,12 +82,18 @@ public class GetPhoneNumberIdentificationUrlResponseBody extends TeaModel {
     public static class GetPhoneNumberIdentificationUrlResponseBodyData extends TeaModel {
         /**
          * <p>The verification URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&ipa_s_i=8636b75e2fcb40c53ffecc2b59">https://global-ip-auth.dycpaas.com/global/biz/ip_auth/start?ipa_s_c_c=IPF0000000000000******&amp;ipa_s_i=8636b75e2fcb40c53ffecc2b59</a>******</p>
          */
         @NameInMap("IdentificationUrl")
         public String identificationUrl;
 
         /**
          * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8636b75e2fcb40c53ffecc2b5947115c.149b03d2a7494e6e8f5b34c915245815.707c7f0d93f4409db0761aa5da94ce01.1686******041</p>
          */
         @NameInMap("SessionId")
         public String sessionId;
