@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class GetPhoneNumberIdentificationUrlRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>K***9i7CIe</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
-     * <p>The IP address of the subscriber\"s phone.</p>
+     * <p>The IP address of the subscriber\&quot;s phone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>114.124.***.13</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The external ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>149b03d2-a749-4e6e-8f5b-34******5815</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -27,12 +38,19 @@ public class GetPhoneNumberIdentificationUrlRequest extends TeaModel {
 
     /**
      * <p>The phone number of the subscriber. The phone number is in the Mobile Station International Subscriber Directory Number (MSISDN) format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>628211****113</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
      * <p>Specifies whether to remember the phone number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RememberPhoneNumber")
     public Boolean rememberPhoneNumber;
