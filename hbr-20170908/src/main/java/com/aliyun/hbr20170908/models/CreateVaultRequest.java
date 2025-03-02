@@ -56,7 +56,7 @@ public class CreateVaultRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
-     * <p>The storage class of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
+     * <p>The storage type of the backup vault. Valid value: <strong>STANDARD</strong>, which indicates standard storage.</p>
      * 
      * <strong>example:</strong>
      * <p>STANDARD</p>
@@ -76,6 +76,15 @@ public class CreateVaultRequest extends TeaModel {
      */
     @NameInMap("VaultType")
     public String vaultType;
+
+    /**
+     * <p>Whether to enable the vault worm feature. Once the worm feature is enabled, the vault and all its backup data cannot be deleted before they automatically expire. After enabling the worm feature, it is not supported to disable it. The worm feature is only effective for standard and archive backup vault.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("WormEnabled")
+    public Boolean wormEnabled;
 
     public static CreateVaultRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVaultRequest self = new CreateVaultRequest();
@@ -136,6 +145,14 @@ public class CreateVaultRequest extends TeaModel {
     }
     public String getVaultType() {
         return this.vaultType;
+    }
+
+    public CreateVaultRequest setWormEnabled(Boolean wormEnabled) {
+        this.wormEnabled = wormEnabled;
+        return this;
+    }
+    public Boolean getWormEnabled() {
+        return this.wormEnabled;
     }
 
 }

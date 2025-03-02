@@ -64,6 +64,9 @@ public class DescribeVaultsRequest extends TeaModel {
     @NameInMap("VaultId")
     public String vaultId;
 
+    @NameInMap("VaultName")
+    public String vaultName;
+
     /**
      * <p>The region ID to which the backup vault belongs.</p>
      * 
@@ -137,6 +140,14 @@ public class DescribeVaultsRequest extends TeaModel {
     }
     public String getVaultId() {
         return this.vaultId;
+    }
+
+    public DescribeVaultsRequest setVaultName(String vaultName) {
+        this.vaultName = vaultName;
+        return this;
+    }
+    public String getVaultName() {
+        return this.vaultName;
     }
 
     public DescribeVaultsRequest setVaultRegionId(String vaultRegionId) {

@@ -537,6 +537,18 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         public Long bytesTotal;
 
         /**
+         * <p>Indicates whether the disk backup point can be deleted. This parameter is valid only if the value of SourceType is UDM_ECS_DISK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("CanBeDeleted")
+        public Boolean canBeDeleted;
+
+        /**
          * <p>The time when the backup snapshot was completed. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -784,6 +796,14 @@ public class DescribeUdmSnapshotsResponseBody extends TeaModel {
         }
         public Long getBytesTotal() {
             return this.bytesTotal;
+        }
+
+        public DescribeUdmSnapshotsResponseBodySnapshots setCanBeDeleted(Boolean canBeDeleted) {
+            this.canBeDeleted = canBeDeleted;
+            return this;
+        }
+        public Boolean getCanBeDeleted() {
+            return this.canBeDeleted;
         }
 
         public DescribeUdmSnapshotsResponseBodySnapshots setCompleteTime(Long completeTime) {

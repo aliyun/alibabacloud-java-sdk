@@ -36,6 +36,7 @@ public class DescribeVaultReplicationRegionsRequest extends TeaModel {
         return this.token;
     }
 
+    @Deprecated
     public DescribeVaultReplicationRegionsRequest setVaultId(String vaultId) {
         this.vaultId = vaultId;
         return this;
