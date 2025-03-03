@@ -26,8 +26,18 @@ public class DatasetVersion extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    @NameInMap("ImportInfo")
+    public String importInfo;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
+
+    /**
+     * <strong>example:</strong>
+     * <p>RO RW</p>
+     */
+    @NameInMap("MountAccess")
+    public String mountAccess;
 
     @NameInMap("Options")
     public String options;
@@ -112,12 +122,28 @@ public class DatasetVersion extends TeaModel {
         return this.gmtModifiedTime;
     }
 
+    public DatasetVersion setImportInfo(String importInfo) {
+        this.importInfo = importInfo;
+        return this;
+    }
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
     public DatasetVersion setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
     }
     public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    public DatasetVersion setMountAccess(String mountAccess) {
+        this.mountAccess = mountAccess;
+        return this;
+    }
+    public String getMountAccess() {
+        return this.mountAccess;
     }
 
     public DatasetVersion setOptions(String options) {

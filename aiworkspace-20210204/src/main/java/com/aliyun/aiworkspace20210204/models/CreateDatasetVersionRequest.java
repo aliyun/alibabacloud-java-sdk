@@ -30,6 +30,9 @@ public class CreateDatasetVersionRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImportInfo")
+    public String importInfo;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
@@ -109,6 +112,14 @@ public class CreateDatasetVersionRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateDatasetVersionRequest setImportInfo(String importInfo) {
+        this.importInfo = importInfo;
+        return this;
+    }
+    public String getImportInfo() {
+        return this.importInfo;
     }
 
     public CreateDatasetVersionRequest setLabels(java.util.List<Label> labels) {

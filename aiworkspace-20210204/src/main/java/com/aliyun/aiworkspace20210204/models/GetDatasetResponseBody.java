@@ -49,11 +49,20 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    @NameInMap("ImportInfo")
+    public String importInfo;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     @NameInMap("LatestVersion")
     public DatasetVersion latestVersion;
+
+    @NameInMap("MountAccess")
+    public String mountAccess;
+
+    @NameInMap("MountAccessReadWriteRoleIdList")
+    public java.util.List<String> mountAccessReadWriteRoleIdList;
 
     /**
      * <strong>example:</strong>
@@ -203,6 +212,14 @@ public class GetDatasetResponseBody extends TeaModel {
         return this.gmtModifiedTime;
     }
 
+    public GetDatasetResponseBody setImportInfo(String importInfo) {
+        this.importInfo = importInfo;
+        return this;
+    }
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
     public GetDatasetResponseBody setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
@@ -217,6 +234,22 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public DatasetVersion getLatestVersion() {
         return this.latestVersion;
+    }
+
+    public GetDatasetResponseBody setMountAccess(String mountAccess) {
+        this.mountAccess = mountAccess;
+        return this;
+    }
+    public String getMountAccess() {
+        return this.mountAccess;
+    }
+
+    public GetDatasetResponseBody setMountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
+        this.mountAccessReadWriteRoleIdList = mountAccessReadWriteRoleIdList;
+        return this;
+    }
+    public java.util.List<String> getMountAccessReadWriteRoleIdList() {
+        return this.mountAccessReadWriteRoleIdList;
     }
 
     public GetDatasetResponseBody setName(String name) {

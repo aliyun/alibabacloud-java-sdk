@@ -7,6 +7,9 @@ public class UpdateDatasetRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("MountAccessReadWriteRoleIdList")
+    public java.util.List<String> mountAccessReadWriteRoleIdList;
+
     /**
      * <strong>example:</strong>
      * <p>myName</p>
@@ -34,6 +37,14 @@ public class UpdateDatasetRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateDatasetRequest setMountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
+        this.mountAccessReadWriteRoleIdList = mountAccessReadWriteRoleIdList;
+        return this;
+    }
+    public java.util.List<String> getMountAccessReadWriteRoleIdList() {
+        return this.mountAccessReadWriteRoleIdList;
     }
 
     public UpdateDatasetRequest setName(String name) {

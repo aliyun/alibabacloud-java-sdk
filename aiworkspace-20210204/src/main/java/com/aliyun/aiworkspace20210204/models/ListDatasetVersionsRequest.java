@@ -6,24 +6,13 @@ import com.aliyun.tea.*;
 public class ListDatasetVersionsRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>OSS</p>
-     */
-    @NameInMap("DataSourcesTypes")
-    public String dataSourcesTypes;
-
-    /**
-     * <strong>example:</strong>
      * <p>key1,key2</p>
      */
     @NameInMap("LabelKeys")
     public String labelKeys;
 
-    /**
-     * <strong>example:</strong>
-     * <p>value1,value2</p>
-     */
-    @NameInMap("LableValues")
-    public String lableValues;
+    @NameInMap("LabelValues")
+    public String labelValues;
 
     /**
      * <strong>example:</strong>
@@ -83,14 +72,6 @@ public class ListDatasetVersionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListDatasetVersionsRequest setDataSourcesTypes(String dataSourcesTypes) {
-        this.dataSourcesTypes = dataSourcesTypes;
-        return this;
-    }
-    public String getDataSourcesTypes() {
-        return this.dataSourcesTypes;
-    }
-
     public ListDatasetVersionsRequest setLabelKeys(String labelKeys) {
         this.labelKeys = labelKeys;
         return this;
@@ -99,12 +80,12 @@ public class ListDatasetVersionsRequest extends TeaModel {
         return this.labelKeys;
     }
 
-    public ListDatasetVersionsRequest setLableValues(String lableValues) {
-        this.lableValues = lableValues;
+    public ListDatasetVersionsRequest setLabelValues(String labelValues) {
+        this.labelValues = labelValues;
         return this;
     }
-    public String getLableValues() {
-        return this.lableValues;
+    public String getLabelValues() {
+        return this.labelValues;
     }
 
     public ListDatasetVersionsRequest setOrder(String order) {
