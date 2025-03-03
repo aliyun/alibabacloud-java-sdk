@@ -4,9 +4,17 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DeletionType")
     public String deletionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>009429F8-C1C0-5872-B674-A6C2333B9647</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

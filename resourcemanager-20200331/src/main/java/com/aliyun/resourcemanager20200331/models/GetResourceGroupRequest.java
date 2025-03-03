@@ -6,15 +6,23 @@ import com.aliyun.tea.*;
 public class GetResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
     /**
      * <p>Specifies whether to return the information of tags. Valid values:</p>
-     * <br>
-     * <p>*   false (default value)</p>
-     * <p>*   true</p>
+     * <ul>
+     * <li>false (default value)</li>
+     * <li>true</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-9gLOoK****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

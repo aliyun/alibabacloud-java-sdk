@@ -6,14 +6,20 @@ import com.aliyun.tea.*;
 public class MoveResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which you want to move the resources.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzmeobk5w****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The resources that you want to move.</p>
-     * <br>
-     * <p>>  You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.</p>
+     * <blockquote>
+     * <p> You can move a maximum of 10 resources at a time. If you want to move more than 10 resources, move them in batches.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public java.util.List<MoveResourcesRequestResources> resources;
@@ -42,24 +48,36 @@ public class MoveResourcesRequest extends TeaModel {
     public static class MoveResourcesRequestResources extends TeaModel {
         /**
          * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1sig0mjktx5ewx1****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The ID of the Alibaba Cloud service to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("Service")
         public String service;

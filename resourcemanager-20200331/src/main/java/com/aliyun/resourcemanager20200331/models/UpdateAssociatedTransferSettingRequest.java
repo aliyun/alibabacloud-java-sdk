@@ -4,11 +4,21 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class UpdateAssociatedTransferSettingRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the Transfer Existing Associated Resources feature. Valid values:</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableExistingResourcesTransfer")
     public String enableExistingResourcesTransfer;
 
     /**
-     * <p>The settings of the transfer rules.</p>
+     * <p>The settings of transfer rules.</p>
      */
     @NameInMap("RuleSettings")
     public java.util.List<UpdateAssociatedTransferSettingRequestRuleSettings> ruleSettings;
@@ -37,41 +47,54 @@ public class UpdateAssociatedTransferSettingRequest extends TeaModel {
     public static class UpdateAssociatedTransferSettingRequestRuleSettings extends TeaModel {
         /**
          * <p>The type of the associated resource.</p>
-         * <br>
-         * <p>You can obtain the resource type from the **Resource type** column in [Services that work with Resource Group](~~94479~~).</p>
+         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk</p>
          */
         @NameInMap("AssociatedResourceType")
         public String associatedResourceType;
 
         /**
          * <p>The service code of the associated resource.</p>
-         * <br>
-         * <p>You can obtain the service code from the **Service code** column in [Services that work with Resource Group](~~94479~~).</p>
+         * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("AssociatedService")
         public String associatedService;
 
         /**
          * <p>The type of the primary resource.</p>
-         * <br>
-         * <p>You can obtain the resource type from the **Resource type** column in [Services that work with Resource Group](~~94479~~).</p>
+         * <p>You can obtain the resource type from the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("MasterResourceType")
         public String masterResourceType;
 
         /**
          * <p>The service code of the primary resource.</p>
-         * <br>
-         * <p>You can obtain the service code from the **Service code** column in [Services that work with Resource Group](~~94479~~).</p>
+         * <p>You can obtain the service code from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("MasterService")
         public String masterService;
 
         /**
          * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
-         * <br>
-         * <p>- Enable: enabled</p>
-         * <p>- Disable: disabled</p>
+         * <ul>
+         * <li>Enable: enabled</li>
+         * <li>Disable: disabled</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         @NameInMap("Status")
         public String status;

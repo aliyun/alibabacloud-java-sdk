@@ -12,6 +12,9 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7556FD65-45D2-5C45-9FC9-A7DE831C775C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,33 +43,49 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
     public static class ListAssociatedTransferSettingResponseBodyAssociatedTransferSettingRuleSettings extends TeaModel {
         /**
          * <p>The type of the associated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk</p>
          */
         @NameInMap("AssociatedResourceType")
         public String associatedResourceType;
 
         /**
          * <p>The service code of the associated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("AssociatedService")
         public String associatedService;
 
         /**
          * <p>The type of the primary resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("MasterResourceType")
         public String masterResourceType;
 
         /**
          * <p>The service code of the primary resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("MasterService")
         public String masterService;
 
         /**
          * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
-         * <br>
-         * <p>- Enable: enabled</p>
-         * <p>- Disable: disabled</p>
+         * <ul>
+         * <li>Enable: enabled</li>
+         * <li>Disable: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         @NameInMap("Status")
         public String status;
@@ -120,25 +139,42 @@ public class ListAssociatedTransferSettingResponseBody extends TeaModel {
 
     public static class ListAssociatedTransferSettingResponseBodyAssociatedTransferSetting extends TeaModel {
         /**
-         * <p>The settings of the Transfer Associated Resources feature.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121998723923****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>Indicates whether the Transfer Existing Associated Resources feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableExistingResourcesTransfer")
         public String enableExistingResourcesTransfer;
 
         /**
-         * <p>The settings of the transfer rules.</p>
+         * <p>The settings of transfer rules.</p>
          */
         @NameInMap("RuleSettings")
         public java.util.List<ListAssociatedTransferSettingResponseBodyAssociatedTransferSettingRuleSettings> ruleSettings;
 
         /**
          * <p>The status of the Transfer Associated Resources feature. Valid values:</p>
-         * <br>
-         * <p>- Enable: enabled</p>
-         * <p>- Disable: disabled</p>
+         * <ul>
+         * <li>Enable: enabled</li>
+         * <li>Disable: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         @NameInMap("Status")
         public String status;

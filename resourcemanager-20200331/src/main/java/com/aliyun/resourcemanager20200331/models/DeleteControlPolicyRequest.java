@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteControlPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the control policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cp-SImPt8GCEwiq****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;

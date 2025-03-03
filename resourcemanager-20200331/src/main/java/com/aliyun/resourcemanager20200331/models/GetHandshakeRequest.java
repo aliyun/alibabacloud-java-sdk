@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetHandshakeRequest extends TeaModel {
     /**
      * <p>The ID of the invitation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>h-ycm4rp****</p>
      */
     @NameInMap("HandshakeId")
     public String handshakeId;

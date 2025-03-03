@@ -6,28 +6,39 @@ import com.aliyun.tea.*;
 public class ListTagKeysRequest extends TeaModel {
     /**
      * <p>The tag key for a fuzzy query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>team</p>
      */
     @NameInMap("KeyFilter")
     public String keyFilter;
 
     /**
      * <p>The maximum number of entries to return for a single request.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The resource type.</p>
-     * <br>
      * <p>The value Account indicates the members of the resource directory.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Account</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

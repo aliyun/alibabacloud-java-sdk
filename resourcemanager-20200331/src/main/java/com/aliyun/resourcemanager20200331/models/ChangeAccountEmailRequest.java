@@ -6,14 +6,23 @@ import com.aliyun.tea.*;
 public class ChangeAccountEmailRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud account ID of the member.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>181761095690****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The email address to be bound to the member.</p>
-     * <br>
-     * <p>>  The system automatically sends a verification email to the email address. After the verification is passed, the email address takes effect, and the system changes both the logon email address and secure email address of the member.</p>
+     * <blockquote>
+     * <p> The system automatically sends a verification email to the email address. After the verification is passed, the email address takes effect, and the system changes both the logon email address and secure email address of the member.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;

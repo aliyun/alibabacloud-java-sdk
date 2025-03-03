@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InitResourceDirectoryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class InitResourceDirectoryResponseBody extends TeaModel {
     public static class InitResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
         /**
          * <p>The time when the resource directory was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-18T15:32:10.473Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the enterprise management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172841235500****</p>
          */
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
         /**
          * <p>The name of the enterprise management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-****</p>
          */
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-Ss****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
         /**
          * <p>The ID of the root folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-Zo****</p>
          */
         @NameInMap("RootFolderId")
         public String rootFolderId;

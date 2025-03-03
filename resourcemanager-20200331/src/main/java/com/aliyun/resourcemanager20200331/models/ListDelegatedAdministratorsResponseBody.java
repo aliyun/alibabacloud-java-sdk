@@ -12,24 +12,36 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>009C3A02-7D4B-416C-9CE7-548C91508F1E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,33 +94,49 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
     public static class ListDelegatedAdministratorsResponseBodyAccountsAccount extends TeaModel {
         /**
          * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138660628348****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The time when the member was specified as a delegated administrator account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616652684164</p>
          */
         @NameInMap("DelegationEnabledTime")
         public String delegationEnabledTime;
 
         /**
          * <p>The display name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The way in which the member joins the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   invited: The member is invited to join the resource directory.</p>
-         * <p>*   created: The member is directly created in the resource directory.</p>
+         * <ul>
+         * <li>invited: The member is invited to join the resource directory.</li>
+         * <li>created: The member is directly created in the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
         /**
          * <p>The identifier of the trusted service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfw.aliyuncs.com</p>
          */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class RemoveCloudAccountRequest extends TeaModel {
     /**
      * <p>The ID of the member.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>177242285274****</p>
      */
     @NameInMap("AccountId")
     public String accountId;

@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class SetMemberDeletionPermissionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the member deletion feature. Valid values:</p>
-     * <br>
-     * <p>*   Enabled: enables the member deletion feature</p>
-     * <p>*   Disabled: disables the member deletion feature</p>
+     * <ul>
+     * <li>Enabled: enables the member deletion feature</li>
+     * <li>Disabled: disables the member deletion feature</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;

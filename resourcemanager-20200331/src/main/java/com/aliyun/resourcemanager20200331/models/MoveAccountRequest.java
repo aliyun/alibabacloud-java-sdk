@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class MoveAccountRequest extends TeaModel {
     /**
      * <p>The ID of the account you want to move.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The ID of the destination folder.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-bVaRIG****</p>
      */
     @NameInMap("DestinationFolderId")
     public String destinationFolderId;

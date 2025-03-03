@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class AcceptHandshakeRequest extends TeaModel {
     /**
      * <p>The ID of the invitation.</p>
-     * <br>
-     * <p>You can call the [ListHandshakesForAccount](~~160006~~) operation to obtain the ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/160006.html">ListHandshakesForAccount</a> operation to obtain the ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>h-Ih8IuPfvV0t0****</p>
      */
     @NameInMap("HandshakeId")
     public String handshakeId;

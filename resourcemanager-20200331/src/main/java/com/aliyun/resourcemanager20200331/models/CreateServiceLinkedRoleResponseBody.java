@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FE58D7CF-03BC-432A-B42D-BC3390C8C2E1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,51 +43,76 @@ public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     public static class CreateServiceLinkedRoleResponseBodyRole extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:role/aliyunserviceroleforpolardb</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The document of the trust policy for the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Statement\&quot;:[{\&quot;Action\&quot;:\&quot;sts:AssumeRole\&quot;,\&quot;Effect\&quot;:\&quot;Allow\&quot;,\&quot;Principal\&quot;:{\&quot;Service\&quot;:[\&quot;polardb.aliyuncs.com\&quot;]}}],\&quot;Version\&quot;:\&quot;1\&quot;}</p>
          */
         @NameInMap("AssumeRolePolicyDocument")
         public String assumeRolePolicyDocument;
 
         /**
          * <p>The time when the role was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-30T08:14:16Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service Linked Role for PolarDB. PolarDB will use this role to access your resources in other services.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the role is a service-linked role. Valid values:</p>
-         * <br>
-         * <p>*   true: The role is a service-linked role.</p>
-         * <p>*   false: The role is not a service-linked role.</p>
+         * <ul>
+         * <li>true: The role is a service-linked role.</li>
+         * <li>false: The role is not a service-linked role.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsServiceLinkedRole")
         public Boolean isServiceLinkedRole;
 
         /**
          * <p>The ID of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32833240981067****</p>
          */
         @NameInMap("RoleId")
         public String roleId;
 
         /**
          * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunServiceRoleForPolarDB</p>
          */
         @NameInMap("RoleName")
         public String roleName;
 
         /**
          * <p>The role name that uses a domain name as the suffix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com">AliyunServiceRoleForPolarDB@role.test.onaliyunservice.com</a></p>
          */
         @NameInMap("RolePrincipalName")
         public String rolePrincipalName;

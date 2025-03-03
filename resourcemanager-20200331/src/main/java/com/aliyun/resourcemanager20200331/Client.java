@@ -27,12 +27,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-      * This topic provides an example on how to call the API operation to accept the invitation `h-Ih8IuPfvV0t0****` that is initiated to invite the Alibaba Cloud account `177242285274****` to join the resource directory `rd-3G****`.
-      *
-      * @param request AcceptHandshakeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AcceptHandshakeResponse
+     * <b>description</b> :
+     * <p>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
+     * This topic provides an example on how to call the API operation to accept the invitation <code>h-Ih8IuPfvV0t0****</code> that is initiated to invite the Alibaba Cloud account <code>177242285274****</code> to join the resource directory <code>rd-3G****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Accepts an invitation.</p>
+     * 
+     * @param request AcceptHandshakeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AcceptHandshakeResponse
      */
     public AcceptHandshakeResponse acceptHandshakeWithOptions(AcceptHandshakeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -55,15 +59,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AcceptHandshakeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AcceptHandshakeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AcceptHandshakeResponse());
+        }
+
     }
 
     /**
-      * After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
-      * This topic provides an example on how to call the API operation to accept the invitation `h-Ih8IuPfvV0t0****` that is initiated to invite the Alibaba Cloud account `177242285274****` to join the resource directory `rd-3G****`.
-      *
-      * @param request AcceptHandshakeRequest
-      * @return AcceptHandshakeResponse
+     * <b>description</b> :
+     * <p>After an invited Alibaba Cloud account joins a resource directory, it becomes a member of the resource directory. By default, the name of the invited Alibaba Cloud account is used as the display name of the account in the resource directory.
+     * This topic provides an example on how to call the API operation to accept the invitation <code>h-Ih8IuPfvV0t0****</code> that is initiated to invite the Alibaba Cloud account <code>177242285274****</code> to join the resource directory <code>rd-3G****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Accepts an invitation.</p>
+     * 
+     * @param request AcceptHandshakeRequest
+     * @return AcceptHandshakeResponse
      */
     public AcceptHandshakeResponse acceptHandshake(AcceptHandshakeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -71,15 +84,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-      * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-      * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-      * A maximum of 10 access control policies can be attached to a folder or member.
-      * This topic provides an example on how to call the API operation to attach the custom access control policy `cp-jExXAqIYkwHN****` to the folder `fd-ZDNPiT****`.
-      *
-      * @param request AttachControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AttachControlPolicyResponse
+     * <b>description</b> :
+     * <p>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
+     * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
+     * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
+     * A maximum of 10 access control policies can be attached to a folder or member.
+     * This topic provides an example on how to call the API operation to attach the custom access control policy <code>cp-jExXAqIYkwHN****</code> to the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * @param request AttachControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachControlPolicyResponse
      */
     public AttachControlPolicyResponse attachControlPolicyWithOptions(AttachControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -106,18 +120,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AttachControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AttachControlPolicyResponse());
+        }
+
     }
 
     /**
-      * After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
-      * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
-      * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
-      * A maximum of 10 access control policies can be attached to a folder or member.
-      * This topic provides an example on how to call the API operation to attach the custom access control policy `cp-jExXAqIYkwHN****` to the folder `fd-ZDNPiT****`.
-      *
-      * @param request AttachControlPolicyRequest
-      * @return AttachControlPolicyResponse
+     * <b>description</b> :
+     * <p>After you attach an access control policy, the operations performed on resources by using members are limited by the policy. Make sure that the attached policy meets your expectations. Otherwise, your business may be affected.
+     * By default, the system access control policy FullAliyunAccess is attached to each folder and member.
+     * The access control policy that is attached to a folder also applies to all its subfolders and all members in the subfolders.
+     * A maximum of 10 access control policies can be attached to a folder or member.
+     * This topic provides an example on how to call the API operation to attach the custom access control policy <code>cp-jExXAqIYkwHN****</code> to the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * @param request AttachControlPolicyRequest
+     * @return AttachControlPolicyResponse
      */
     public AttachControlPolicyResponse attachControlPolicy(AttachControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -125,11 +145,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the policy `AdministratorAccess` is attached to the RAM user `alice@demo.onaliyun.com` and takes effect only for resources in the `rg-9gLOoK****` resource group.
-      *
-      * @param request AttachPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AttachPolicyResponse
+     * <b>description</b> :
+     * <p>In this example, the policy <code>AdministratorAccess</code> is attached to the RAM user <code>alice@demo.onaliyun.com</code> and takes effect only for resources in the <code>rg-9gLOoK****</code> resource group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>为RAM身份授权</p>
+     * 
+     * @param request AttachPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachPolicyResponse
      */
     public AttachPolicyResponse attachPolicyWithOptions(AttachPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -168,14 +192,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AttachPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AttachPolicyResponse());
+        }
+
     }
 
     /**
-      * In this example, the policy `AdministratorAccess` is attached to the RAM user `alice@demo.onaliyun.com` and takes effect only for resources in the `rg-9gLOoK****` resource group.
-      *
-      * @param request AttachPolicyRequest
-      * @return AttachPolicyResponse
+     * <b>description</b> :
+     * <p>In this example, the policy <code>AdministratorAccess</code> is attached to the RAM user <code>alice@demo.onaliyun.com</code> and takes effect only for resources in the <code>rg-9gLOoK****</code> resource group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>为RAM身份授权</p>
+     * 
+     * @param request AttachPolicyRequest
+     * @return AttachPolicyResponse
      */
     public AttachPolicyResponse attachPolicy(AttachPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -183,13 +216,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-      * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-      * This topic provides an example on how to call the API operation to bind a mobile phone number to the member `138660628348****` for security purposes.
-      *
-      * @param request BindSecureMobilePhoneRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return BindSecureMobilePhoneResponse
+     * <b>description</b> :
+     * <p>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
+     * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
+     * This topic provides an example on how to call the API operation to bind a mobile phone number to the member <code>138660628348****</code> for security purposes.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>设置安全手机号</p>
+     * 
+     * @param request BindSecureMobilePhoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindSecureMobilePhoneResponse
      */
     public BindSecureMobilePhoneResponse bindSecureMobilePhoneWithOptions(BindSecureMobilePhoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -220,22 +257,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new BindSecureMobilePhoneResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new BindSecureMobilePhoneResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new BindSecureMobilePhoneResponse());
+        }
+
     }
 
     /**
-      * You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
-      * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
-      * This topic provides an example on how to call the API operation to bind a mobile phone number to the member `138660628348****` for security purposes.
-      *
-      * @param request BindSecureMobilePhoneRequest
-      * @return BindSecureMobilePhoneResponse
+     * <b>description</b> :
+     * <p>You can call this API operation only to bind a mobile phone number to a member of the resource account type. You cannot call this API operation to change the mobile phone number that is bound to a member of the resource account type.
+     * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this API operation.
+     * This topic provides an example on how to call the API operation to bind a mobile phone number to the member <code>138660628348****</code> for security purposes.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>设置安全手机号</p>
+     * 
+     * @param request BindSecureMobilePhoneRequest
+     * @return BindSecureMobilePhoneResponse
      */
     public BindSecureMobilePhoneResponse bindSecureMobilePhone(BindSecureMobilePhoneRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindSecureMobilePhoneWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>取消修改邮箱</p>
+     * 
+     * @param request CancelChangeAccountEmailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelChangeAccountEmailResponse
+     */
     public CancelChangeAccountEmailResponse cancelChangeAccountEmailWithOptions(CancelChangeAccountEmailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -257,14 +311,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelChangeAccountEmailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelChangeAccountEmailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelChangeAccountEmailResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>取消修改邮箱</p>
+     * 
+     * @param request CancelChangeAccountEmailRequest
+     * @return CancelChangeAccountEmailResponse
+     */
     public CancelChangeAccountEmailResponse cancelChangeAccountEmail(CancelChangeAccountEmailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelChangeAccountEmailWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>取消创建云账号类型的成员</p>
+     * 
+     * @param request CancelCreateCloudAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelCreateCloudAccountResponse
+     */
     public CancelCreateCloudAccountResponse cancelCreateCloudAccountWithOptions(CancelCreateCloudAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -286,20 +360,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCreateCloudAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelCreateCloudAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelCreateCloudAccountResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>取消创建云账号类型的成员</p>
+     * 
+     * @param request CancelCreateCloudAccountRequest
+     * @return CancelCreateCloudAccountResponse
+     */
     public CancelCreateCloudAccountResponse cancelCreateCloudAccount(CancelCreateCloudAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelCreateCloudAccountWithOptions(request, runtime);
     }
 
     /**
-      * This topic provides an example on how to call the API operation to cancel the invitation whose ID is `h-ycm4rp****`.
-      *
-      * @param request CancelHandshakeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CancelHandshakeResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to cancel the invitation whose ID is <code>h-ycm4rp****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an invitation.</p>
+     * 
+     * @param request CancelHandshakeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelHandshakeResponse
      */
     public CancelHandshakeResponse cancelHandshakeWithOptions(CancelHandshakeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -322,20 +412,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelHandshakeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelHandshakeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelHandshakeResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to cancel the invitation whose ID is `h-ycm4rp****`.
-      *
-      * @param request CancelHandshakeRequest
-      * @return CancelHandshakeResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to cancel the invitation whose ID is <code>h-ycm4rp****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels an invitation.</p>
+     * 
+     * @param request CancelHandshakeRequest
+     * @return CancelHandshakeResponse
      */
     public CancelHandshakeResponse cancelHandshake(CancelHandshakeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelHandshakeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>取消升级资源账号</p>
+     * 
+     * @param request CancelPromoteResourceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelPromoteResourceAccountResponse
+     */
     public CancelPromoteResourceAccountResponse cancelPromoteResourceAccountWithOptions(CancelPromoteResourceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -357,14 +464,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelPromoteResourceAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelPromoteResourceAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelPromoteResourceAccountResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>取消升级资源账号</p>
+     * 
+     * @param request CancelPromoteResourceAccountRequest
+     * @return CancelPromoteResourceAccountResponse
+     */
     public CancelPromoteResourceAccountResponse cancelPromoteResourceAccount(CancelPromoteResourceAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelPromoteResourceAccountWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>成员账号设置安全邮箱</p>
+     * 
+     * @param request ChangeAccountEmailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeAccountEmailResponse
+     */
     public ChangeAccountEmailResponse changeAccountEmailWithOptions(ChangeAccountEmailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -390,21 +517,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeAccountEmailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeAccountEmailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ChangeAccountEmailResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>成员账号设置安全邮箱</p>
+     * 
+     * @param request ChangeAccountEmailRequest
+     * @return ChangeAccountEmailResponse
+     */
     public ChangeAccountEmailResponse changeAccountEmail(ChangeAccountEmailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeAccountEmailWithOptions(request, runtime);
     }
 
     /**
-      * Before you delete a member, you must call this API operation to check whether the member can be deleted.
-      * This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is `179855839641****`.
-      *
-      * @param request CheckAccountDeleteRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CheckAccountDeleteResponse
+     * <b>description</b> :
+     * <p>Before you delete a member, you must call this API operation to check whether the member can be deleted.
+     * This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is <code>179855839641****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a member deletion check.</p>
+     * 
+     * @param request CheckAccountDeleteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAccountDeleteResponse
      */
     public CheckAccountDeleteResponse checkAccountDeleteWithOptions(CheckAccountDeleteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -427,15 +570,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAccountDeleteResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAccountDeleteResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CheckAccountDeleteResponse());
+        }
+
     }
 
     /**
-      * Before you delete a member, you must call this API operation to check whether the member can be deleted.
-      * This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is `179855839641****`.
-      *
-      * @param request CheckAccountDeleteRequest
-      * @return CheckAccountDeleteResponse
+     * <b>description</b> :
+     * <p>Before you delete a member, you must call this API operation to check whether the member can be deleted.
+     * This topic provides an example on how to call the API operation to perform a deletion check on the member whose ID is <code>179855839641****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Performs a member deletion check.</p>
+     * 
+     * @param request CheckAccountDeleteRequest
+     * @return CheckAccountDeleteResponse
      */
     public CheckAccountDeleteResponse checkAccountDelete(CheckAccountDeleteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -443,14 +595,121 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * A resource directory supports two types of member accounts: resource accounts and cloud accounts.
-      * *   Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see [CreateResourceAccount](~~159392~~).
-      * >  A resource account can be upgraded to a cloud account. For more information, see [PromoteResourceAccount](~~159395~~) .
-      * *   Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.
-      *
-      * @param request CreateCloudAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateCloudAccountResponse
+     * <b>description</b> :
+     * <p>You can create up to 10 custom transfer rules. Each custom transfer rule can contain up to 10 content records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a transfer rule. Custom transfer rules and transfer rules for associated resources are supported.</p>
+     * 
+     * @param request CreateAutoGroupingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAutoGroupingRuleResponse
+     */
+    public CreateAutoGroupingRuleResponse createAutoGroupingRuleWithOptions(CreateAutoGroupingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            query.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            query.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
+            query.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceTypesScope)) {
+            query.put("ExcludeResourceTypesScope", request.excludeResourceTypesScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
+            query.put("RegionIdsScope", request.regionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
+            query.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            query.put("ResourceIdsScope", request.resourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScope)) {
+            query.put("ResourceTypesScope", request.resourceTypesScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleContents)) {
+            query.put("RuleContents", request.ruleContents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleDesc)) {
+            query.put("RuleDesc", request.ruleDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
+            query.put("RuleType", request.ruleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAutoGroupingRule"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAutoGroupingRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateAutoGroupingRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can create up to 10 custom transfer rules. Each custom transfer rule can contain up to 10 content records.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a transfer rule. Custom transfer rules and transfer rules for associated resources are supported.</p>
+     * 
+     * @param request CreateAutoGroupingRuleRequest
+     * @return CreateAutoGroupingRuleResponse
+     */
+    public CreateAutoGroupingRuleResponse createAutoGroupingRule(CreateAutoGroupingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAutoGroupingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>A resource directory supports two types of member accounts: resource accounts and cloud accounts.</p>
+     * <ul>
+     * <li>Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>.<blockquote>
+     * <p> A resource account can be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a> .</p>
+     * </blockquote>
+     * </li>
+     * <li>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建云账号</p>
+     * 
+     * @param request CreateCloudAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudAccountResponse
      */
     public CreateCloudAccountResponse createCloudAccountWithOptions(CreateCloudAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -485,17 +744,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateCloudAccountResponse());
+        }
+
     }
 
     /**
-      * A resource directory supports two types of member accounts: resource accounts and cloud accounts.
-      * *   Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see [CreateResourceAccount](~~159392~~).
-      * >  A resource account can be upgraded to a cloud account. For more information, see [PromoteResourceAccount](~~159395~~) .
-      * *   Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.
-      *
-      * @param request CreateCloudAccountRequest
-      * @return CreateCloudAccountResponse
+     * <b>description</b> :
+     * <p>A resource directory supports two types of member accounts: resource accounts and cloud accounts.</p>
+     * <ul>
+     * <li>Resource account (recommended): A resource account is only used as a resource container and fully depends on a resource directory. Such member accounts are secure and easy-to-create. For more information about how to create a resource account, see <a href="https://help.aliyun.com/document_detail/159392.html">CreateResourceAccount</a>.<blockquote>
+     * <p> A resource account can be upgraded to a cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/159395.html">PromoteResourceAccount</a> .</p>
+     * </blockquote>
+     * </li>
+     * <li>Cloud account: A cloud account has all the features of an Alibaba Cloud account, including root permissions.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建云账号</p>
+     * 
+     * @param request CreateCloudAccountRequest
+     * @return CreateCloudAccountResponse
      */
     public CreateCloudAccountResponse createCloudAccount(CreateCloudAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -503,11 +775,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to create a custom access control policy named `ExampleControlPolicy`. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.
-      *
-      * @param request CreateControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateControlPolicyResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to create a custom access control policy named <code>ExampleControlPolicy</code>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</p>
+     * 
+     * @param request CreateControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateControlPolicyResponse
      */
     public CreateControlPolicyResponse createControlPolicyWithOptions(CreateControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -542,14 +815,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateControlPolicyResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to create a custom access control policy named `ExampleControlPolicy`. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.
-      *
-      * @param request CreateControlPolicyRequest
-      * @return CreateControlPolicyResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to create a custom access control policy named <code>ExampleControlPolicy</code>. This access control policy is used to prohibit modifications to the ResourceDirectoryAccountAccessRole role and the permissions of the role.</p>
+     * 
+     * @param request CreateControlPolicyRequest
+     * @return CreateControlPolicyResponse
      */
     public CreateControlPolicyResponse createControlPolicy(CreateControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -557,12 +836,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  A maximum of five levels of folders can be created under the root folder.
-      * In this example, a folder named `rdFolder` is created under the root folder.
-      *
-      * @param request CreateFolderRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateFolderResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A maximum of five levels of folders can be created under the root folder.
+     * In this example, a folder named <code>rdFolder</code> is created under the root folder.</p>
+     * </blockquote>
+     * 
+     * @param request CreateFolderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFolderResponse
      */
     public CreateFolderResponse createFolderWithOptions(CreateFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -589,21 +871,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFolderResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFolderResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateFolderResponse());
+        }
+
     }
 
     /**
-      * >  A maximum of five levels of folders can be created under the root folder.
-      * In this example, a folder named `rdFolder` is created under the root folder.
-      *
-      * @param request CreateFolderRequest
-      * @return CreateFolderResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A maximum of five levels of folders can be created under the root folder.
+     * In this example, a folder named <code>rdFolder</code> is created under the root folder.</p>
+     * </blockquote>
+     * 
+     * @param request CreateFolderRequest
+     * @return CreateFolderResponse
      */
     public CreateFolderResponse createFolder(CreateFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFolderWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a policy.</p>
+     * 
+     * @param request CreatePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolicyResponse
+     */
     public CreatePolicyResponse createPolicyWithOptions(CreatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -633,14 +931,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreatePolicyResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a policy.</p>
+     * 
+     * @param request CreatePolicyRequest
+     * @return CreatePolicyResponse
+     */
     public CreatePolicyResponse createPolicy(CreatePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>创建权限策略版本</p>
+     * 
+     * @param request CreatePolicyVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePolicyVersionResponse
+     */
     public CreatePolicyVersionResponse createPolicyVersionWithOptions(CreatePolicyVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -670,21 +988,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyVersionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyVersionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreatePolicyVersionResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>创建权限策略版本</p>
+     * 
+     * @param request CreatePolicyVersionRequest
+     * @return CreatePolicyVersionResponse
+     */
     public CreatePolicyVersionResponse createPolicyVersion(CreatePolicyVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolicyVersionWithOptions(request, runtime);
     }
 
     /**
-      * A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-      * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
-      *
-      * @param request CreateResourceAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateResourceAccountResponse
+     * <b>description</b> :
+     * <p>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a member of the resource account type.</p>
+     * 
+     * @param request CreateResourceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateResourceAccountResponse
      */
     public CreateResourceAccountResponse createResourceAccountWithOptions(CreateResourceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -727,15 +1060,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateResourceAccountResponse());
+        }
+
     }
 
     /**
-      * A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.
-      * This topic provides an example on how to call the API operation to create a member in the `fd-r23M55****` folder. The display name of the member is `Dev`, and the prefix for the Alibaba Cloud account name of the member is `alice`.
-      *
-      * @param request CreateResourceAccountRequest
-      * @return CreateResourceAccountResponse
+     * <b>description</b> :
+     * <p>A member serves as a container for resources and is also an organizational unit in a resource directory. A member indicates a project or application. The resources of different members are isolated.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a member of the resource account type.</p>
+     * 
+     * @param request CreateResourceAccountRequest
+     * @return CreateResourceAccountResponse
      */
     public CreateResourceAccountResponse createResourceAccount(CreateResourceAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -743,11 +1084,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
-      *
-      * @param request CreateResourceGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateResourceGroupResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A maximum of 30 resource groups can be created within an Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a resource group.</p>
+     * 
+     * @param request CreateResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateResourceGroupResponse
      */
     public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -778,20 +1125,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateResourceGroupResponse());
+        }
+
     }
 
     /**
-      * >  A maximum of 30 resource groups can be created within an Alibaba Cloud account.
-      *
-      * @param request CreateResourceGroupRequest
-      * @return CreateResourceGroupResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A maximum of 30 resource groups can be created within an Alibaba Cloud account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a resource group.</p>
+     * 
+     * @param request CreateResourceGroupRequest
+     * @return CreateResourceGroupResponse
      */
     public CreateResourceGroupResponse createResourceGroup(CreateResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a RAM role.</p>
+     * 
+     * @param request CreateRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRoleResponse
+     */
     public CreateRoleResponse createRoleWithOptions(CreateRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -825,14 +1191,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRoleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a RAM role.</p>
+     * 
+     * @param request CreateRoleRequest
+     * @return CreateRoleResponse
+     */
     public CreateRoleResponse createRole(CreateRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRoleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>创建服务关联角色</p>
+     * 
+     * @param request CreateServiceLinkedRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServiceLinkedRoleResponse
+     */
     public CreateServiceLinkedRoleResponse createServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -862,14 +1248,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceLinkedRoleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceLinkedRoleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateServiceLinkedRoleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>创建服务关联角色</p>
+     * 
+     * @param request CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     */
     public CreateServiceLinkedRoleResponse createServiceLinkedRole(CreateServiceLinkedRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createServiceLinkedRoleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Rejects an invitation.</p>
+     * 
+     * @param request DeclineHandshakeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeclineHandshakeResponse
+     */
     public DeclineHandshakeResponse declineHandshakeWithOptions(DeclineHandshakeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -891,20 +1297,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeclineHandshakeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeclineHandshakeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeclineHandshakeResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Rejects an invitation.</p>
+     * 
+     * @param request DeclineHandshakeRequest
+     * @return DeclineHandshakeResponse
+     */
     public DeclineHandshakeResponse declineHandshake(DeclineHandshakeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.declineHandshakeWithOptions(request, runtime);
     }
 
     /**
-      * The ID of the member that you want to delete.
-      *
-      * @param tmpReq DeleteAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteAccountResponse
+     * <b>description</b> :
+     * <p>The ID of the member that you want to delete.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>账号一键删除</p>
+     * 
+     * @param tmpReq DeleteAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAccountResponse
      */
     public DeleteAccountResponse deleteAccountWithOptions(DeleteAccountRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -937,14 +1359,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAccountResponse());
+        }
+
     }
 
     /**
-      * The ID of the member that you want to delete.
-      *
-      * @param request DeleteAccountRequest
-      * @return DeleteAccountResponse
+     * <b>description</b> :
+     * <p>The ID of the member that you want to delete.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>账号一键删除</p>
+     * 
+     * @param request DeleteAccountRequest
+     * @return DeleteAccountResponse
      */
     public DeleteAccountResponse deleteAccount(DeleteAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -952,12 +1383,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to delete a custom control policy that is attached to folders or member accounts, you must call the [DetachControlPolicy](~~208331~~) operation to detach the policy before you delete it.
-      * In this example, the custom control policy `cp-SImPt8GCEwiq****` is deleted.
-      *
-      * @param request DeleteControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteControlPolicyResponse
+     * <b>summary</b> : 
+     * <p>Deletes a transfer rule.</p>
+     * 
+     * @param request DeleteAutoGroupingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAutoGroupingRuleResponse
+     */
+    public DeleteAutoGroupingRuleResponse deleteAutoGroupingRuleWithOptions(DeleteAutoGroupingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAutoGroupingRule"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAutoGroupingRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteAutoGroupingRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a transfer rule.</p>
+     * 
+     * @param request DeleteAutoGroupingRuleRequest
+     * @return DeleteAutoGroupingRuleResponse
+     */
+    public DeleteAutoGroupingRuleResponse deleteAutoGroupingRule(DeleteAutoGroupingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAutoGroupingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>If you want to delete a custom control policy that is attached to folders or member accounts, you must call the <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> operation to detach the policy before you delete it.
+     * In this example, the custom control policy <code>cp-SImPt8GCEwiq****</code> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除管控策略</p>
+     * 
+     * @param request DeleteControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteControlPolicyResponse
      */
     public DeleteControlPolicyResponse deleteControlPolicyWithOptions(DeleteControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -980,15 +1464,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteControlPolicyResponse());
+        }
+
     }
 
     /**
-      * If you want to delete a custom control policy that is attached to folders or member accounts, you must call the [DetachControlPolicy](~~208331~~) operation to detach the policy before you delete it.
-      * In this example, the custom control policy `cp-SImPt8GCEwiq****` is deleted.
-      *
-      * @param request DeleteControlPolicyRequest
-      * @return DeleteControlPolicyResponse
+     * <b>description</b> :
+     * <p>If you want to delete a custom control policy that is attached to folders or member accounts, you must call the <a href="https://help.aliyun.com/document_detail/208331.html">DetachControlPolicy</a> operation to detach the policy before you delete it.
+     * In this example, the custom control policy <code>cp-SImPt8GCEwiq****</code> is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>删除管控策略</p>
+     * 
+     * @param request DeleteControlPolicyRequest
+     * @return DeleteControlPolicyResponse
      */
     public DeleteControlPolicyResponse deleteControlPolicy(DeleteControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -996,11 +1489,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.
-      *
-      * @param request DeleteFolderRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteFolderResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</p>
+     * </blockquote>
+     * 
+     * @param request DeleteFolderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFolderResponse
      */
     public DeleteFolderResponse deleteFolderWithOptions(DeleteFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1023,14 +1519,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFolderResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFolderResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteFolderResponse());
+        }
+
     }
 
     /**
-      * >  Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.
-      *
-      * @param request DeleteFolderRequest
-      * @return DeleteFolderResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before you delete a folder, make sure that the folder does not contain any member accounts or child folders.</p>
+     * </blockquote>
+     * 
+     * @param request DeleteFolderRequest
+     * @return DeleteFolderResponse
      */
     public DeleteFolderResponse deleteFolder(DeleteFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1038,13 +1542,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   Before you delete a policy, you must delete all non-default versions of the policy. For more information about how to delete a policy version, see [DeletePolicyVersion](~~159041~~).
-      * *   Before you delete a policy, make sure that the policy is not referenced. This means that the policy is not attached to RAM users, RAM user groups, or RAM roles. For more information about how to detach a policy, see [DetachPolicy](~~159168~~).
-      *
-      * @param request DeletePolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeletePolicyResponse
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Before you delete a policy, you must delete all non-default versions of the policy. For more information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
+     * <li>Before you delete a policy, make sure that the policy is not referenced. This means that the policy is not attached to RAM users, RAM user groups, or RAM roles. For more information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除权限策略</p>
+     * 
+     * @param request DeletePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolicyResponse
      */
     public DeletePolicyResponse deletePolicyWithOptions(DeletePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1067,16 +1578,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeletePolicyResponse());
+        }
+
     }
 
     /**
-      * > 
-      * *   Before you delete a policy, you must delete all non-default versions of the policy. For more information about how to delete a policy version, see [DeletePolicyVersion](~~159041~~).
-      * *   Before you delete a policy, make sure that the policy is not referenced. This means that the policy is not attached to RAM users, RAM user groups, or RAM roles. For more information about how to detach a policy, see [DetachPolicy](~~159168~~).
-      *
-      * @param request DeletePolicyRequest
-      * @return DeletePolicyResponse
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Before you delete a policy, you must delete all non-default versions of the policy. For more information about how to delete a policy version, see <a href="https://help.aliyun.com/document_detail/159041.html">DeletePolicyVersion</a>.</li>
+     * <li>Before you delete a policy, make sure that the policy is not referenced. This means that the policy is not attached to RAM users, RAM user groups, or RAM roles. For more information about how to detach a policy, see <a href="https://help.aliyun.com/document_detail/159168.html">DetachPolicy</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除权限策略</p>
+     * 
+     * @param request DeletePolicyRequest
+     * @return DeletePolicyResponse
      */
     public DeletePolicyResponse deletePolicy(DeletePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1084,11 +1607,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  The default version of a permission policy cannot be deleted.
-      *
-      * @param request DeletePolicyVersionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeletePolicyVersionResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The default version of a permission policy cannot be deleted.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>删除权限策略版本</p>
+     * 
+     * @param request DeletePolicyVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePolicyVersionResponse
      */
     public DeletePolicyVersionResponse deletePolicyVersionWithOptions(DeletePolicyVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1115,14 +1644,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyVersionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyVersionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeletePolicyVersionResponse());
+        }
+
     }
 
     /**
-      * >  The default version of a permission policy cannot be deleted.
-      *
-      * @param request DeletePolicyVersionRequest
-      * @return DeletePolicyVersionResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The default version of a permission policy cannot be deleted.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>删除权限策略版本</p>
+     * 
+     * @param request DeletePolicyVersionRequest
+     * @return DeletePolicyVersionResponse
      */
     public DeletePolicyVersionResponse deletePolicyVersion(DeletePolicyVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1130,12 +1670,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Before you delete a resource group, you must delete all the resources in it.
-      * In this example, the resource group whose ID is `rg-9gLOoK****` is deleted.
-      *
-      * @param request DeleteResourceGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteResourceGroupResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before you delete a resource group, you must delete all the resources in it.
+     * In this example, the resource group whose ID is <code>rg-9gLOoK****</code> is deleted.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a resource group.</p>
+     * 
+     * @param request DeleteResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteResourceGroupResponse
      */
     public DeleteResourceGroupResponse deleteResourceGroupWithOptions(DeleteResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1158,21 +1704,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteResourceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteResourceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteResourceGroupResponse());
+        }
+
     }
 
     /**
-      * >  Before you delete a resource group, you must delete all the resources in it.
-      * In this example, the resource group whose ID is `rg-9gLOoK****` is deleted.
-      *
-      * @param request DeleteResourceGroupRequest
-      * @return DeleteResourceGroupResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Before you delete a resource group, you must delete all the resources in it.
+     * In this example, the resource group whose ID is <code>rg-9gLOoK****</code> is deleted.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a resource group.</p>
+     * 
+     * @param request DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
      */
     public DeleteResourceGroupResponse deleteResourceGroup(DeleteResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除角色</p>
+     * 
+     * @param request DeleteRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRoleResponse
+     */
     public DeleteRoleResponse deleteRoleWithOptions(DeleteRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1194,14 +1759,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRoleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRoleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRoleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除角色</p>
+     * 
+     * @param request DeleteRoleRequest
+     * @return DeleteRoleResponse
+     */
     public DeleteRoleResponse deleteRole(DeleteRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRoleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除服务关联角色</p>
+     * 
+     * @param request DeleteServiceLinkedRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServiceLinkedRoleResponse
+     */
     public DeleteServiceLinkedRoleResponse deleteServiceLinkedRoleWithOptions(DeleteServiceLinkedRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1223,21 +1808,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceLinkedRoleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceLinkedRoleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteServiceLinkedRoleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除服务关联角色</p>
+     * 
+     * @param request DeleteServiceLinkedRoleRequest
+     * @return DeleteServiceLinkedRoleResponse
+     */
     public DeleteServiceLinkedRoleResponse deleteServiceLinkedRole(DeleteServiceLinkedRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteServiceLinkedRoleWithOptions(request, runtime);
     }
 
     /**
-      * >  If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-      * This topic provides an example on how to call the API operation to remove the delegated administrator account `181761095690****` for Cloud Firewall.
-      *
-      * @param request DeregisterDelegatedAdministratorRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeregisterDelegatedAdministratorResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
+     * This topic provides an example on how to call the API operation to remove the delegated administrator account <code>181761095690****</code> for Cloud Firewall.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>注销代理管理员</p>
+     * 
+     * @param request DeregisterDelegatedAdministratorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeregisterDelegatedAdministratorResponse
      */
     public DeregisterDelegatedAdministratorResponse deregisterDelegatedAdministratorWithOptions(DeregisterDelegatedAdministratorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1264,15 +1867,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterDelegatedAdministratorResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterDelegatedAdministratorResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeregisterDelegatedAdministratorResponse());
+        }
+
     }
 
     /**
-      * >  If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
-      * This topic provides an example on how to call the API operation to remove the delegated administrator account `181761095690****` for Cloud Firewall.
-      *
-      * @param request DeregisterDelegatedAdministratorRequest
-      * @return DeregisterDelegatedAdministratorResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If the delegated administrator account that you want to remove has historical management tasks in the related trusted service, the trusted service may be affected after the delegated administrator account is removed. Therefore, proceed with caution.
+     * This topic provides an example on how to call the API operation to remove the delegated administrator account <code>181761095690****</code> for Cloud Firewall.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>注销代理管理员</p>
+     * 
+     * @param request DeregisterDelegatedAdministratorRequest
+     * @return DeregisterDelegatedAdministratorResponse
      */
     public DeregisterDelegatedAdministratorResponse deregisterDelegatedAdministrator(DeregisterDelegatedAdministratorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1280,13 +1894,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you disable a resource directory, make sure that the following requirements are met:
-      * *   All member accounts must be removed from the resource directory. For more information about how to remove a member account, see [RemoveCloudAccount](~~159431~~).
-      * *   All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see [DeleteFolder](~~159432~~).
-      *
-      * @param request DestroyResourceDirectoryRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DestroyResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>Before you disable a resource directory, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
+     * <li>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
+     * </ul>
+     * 
+     * @param request DestroyResourceDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DestroyResourceDirectoryResponse
      */
     public DestroyResourceDirectoryResponse destroyResourceDirectoryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -1301,15 +1918,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DestroyResourceDirectoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DestroyResourceDirectoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DestroyResourceDirectoryResponse());
+        }
+
     }
 
     /**
-      * Before you disable a resource directory, make sure that the following requirements are met:
-      * *   All member accounts must be removed from the resource directory. For more information about how to remove a member account, see [RemoveCloudAccount](~~159431~~).
-      * *   All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see [DeleteFolder](~~159432~~).
-      *
-      * @return DestroyResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>Before you disable a resource directory, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>All member accounts must be removed from the resource directory. For more information about how to remove a member account, see <a href="https://help.aliyun.com/document_detail/159431.html">RemoveCloudAccount</a>.</li>
+     * <li>All folders except the root folder must be deleted from the resource directory. For more information about how to delete a folder, see <a href="https://help.aliyun.com/document_detail/159432.html">DeleteFolder</a>.</li>
+     * </ul>
+     * @return DestroyResourceDirectoryResponse
      */
     public DestroyResourceDirectoryResponse destroyResourceDirectory() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1317,13 +1941,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-      * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-      * This topic provides an example on how to call the API operation to detach the custom control policy `cp-jExXAqIYkwHN****` from the folder `fd-ZDNPiT****`.
-      *
-      * @param request DetachControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DetachControlPolicyResponse
+     * <b>description</b> :
+     * <p>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
+     * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
+     * This topic provides an example on how to call the API operation to detach the custom control policy <code>cp-jExXAqIYkwHN****</code> from the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>解绑管控策略</p>
+     * 
+     * @param request DetachControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachControlPolicyResponse
      */
     public DetachControlPolicyResponse detachControlPolicyWithOptions(DetachControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1350,22 +1978,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DetachControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DetachControlPolicyResponse());
+        }
+
     }
 
     /**
-      * After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
-      * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
-      * This topic provides an example on how to call the API operation to detach the custom control policy `cp-jExXAqIYkwHN****` from the folder `fd-ZDNPiT****`.
-      *
-      * @param request DetachControlPolicyRequest
-      * @return DetachControlPolicyResponse
+     * <b>description</b> :
+     * <p>After you detach an access control policy, the operations performed on resources by using members are not limited by the policy. Make sure that the detached policy meets your expectations. Otherwise, your business may be affected.
+     * Both the system and custom access control policies can be detached. If an object has only one access control policy attached, the policy cannot be detached.
+     * This topic provides an example on how to call the API operation to detach the custom control policy <code>cp-jExXAqIYkwHN****</code> from the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>解绑管控策略</p>
+     * 
+     * @param request DetachControlPolicyRequest
+     * @return DetachControlPolicyResponse
      */
     public DetachControlPolicyResponse detachControlPolicy(DetachControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachControlPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>为RAM身份移除权限</p>
+     * 
+     * @param request DetachPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachPolicyResponse
+     */
     public DetachPolicyResponse detachPolicyWithOptions(DetachPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1403,14 +2048,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DetachPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DetachPolicyResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>为RAM身份移除权限</p>
+     * 
+     * @param request DetachPolicyRequest
+     * @return DetachPolicyResponse
+     */
     public DetachPolicyResponse detachPolicy(DetachPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables the Transfer Associated Resources feature.</p>
+     * 
+     * @param request DisableAssociatedTransferRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableAssociatedTransferResponse
+     */
     public DisableAssociatedTransferResponse disableAssociatedTransferWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1424,21 +2089,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAssociatedTransferResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAssociatedTransferResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisableAssociatedTransferResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables the Transfer Associated Resources feature.</p>
+     * @return DisableAssociatedTransferResponse
+     */
     public DisableAssociatedTransferResponse disableAssociatedTransfer() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableAssociatedTransferWithOptions(runtime);
     }
 
     /**
-      * After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.
-      * >  If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.
-      *
-      * @param request DisableControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisableControlPolicyResponse
+     * <b>summary</b> : 
+     * <p>Disables the Automatic Resource Transfer feature. After the feature is disabled, existing custom transfer rules and existing transfer rules for associated resources are deleted. However, existing relationships between resources and resource groups are not affected. If you still want to use this feature, you can enable it again 1 minute later.</p>
+     * 
+     * @param request DisableAutoGroupingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableAutoGroupingResponse
+     */
+    public DisableAutoGroupingResponse disableAutoGroupingWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableAutoGrouping"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableAutoGroupingResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisableAutoGroupingResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Disables the Automatic Resource Transfer feature. After the feature is disabled, existing custom transfer rules and existing transfer rules for associated resources are deleted. However, existing relationships between resources and resource groups are not affected. If you still want to use this feature, you can enable it again 1 minute later.</p>
+     * @return DisableAutoGroupingResponse
+     */
+    public DisableAutoGroupingResponse disableAutoGrouping() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableAutoGroupingWithOptions(runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.</p>
+     * <blockquote>
+     * <p> If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>禁用管控策略</p>
+     * 
+     * @param request DisableControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableControlPolicyResponse
      */
     public DisableControlPolicyResponse disableControlPolicyWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -1453,20 +2173,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisableControlPolicyResponse());
+        }
+
     }
 
     /**
-      * After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.
-      * >  If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.
-      *
-      * @return DisableControlPolicyResponse
+     * <b>description</b> :
+     * <p>After you disable the Control Policy feature, the system automatically detaches all control policies that are attached to folders and member accounts. The system does not delete these control policies, but you cannot attach them to folders or member accounts again.</p>
+     * <blockquote>
+     * <p> If you disable the Control Policy feature, the permissions of all folders and member accounts in a resource directory are affected. You must proceed with caution.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>禁用管控策略</p>
+     * @return DisableControlPolicyResponse
      */
     public DisableControlPolicyResponse disableControlPolicy() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableControlPolicyWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables the Transfer Associated Resources feature.</p>
+     * 
+     * @param request EnableAssociatedTransferRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableAssociatedTransferResponse
+     */
     public EnableAssociatedTransferResponse enableAssociatedTransferWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1480,20 +2218,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAssociatedTransferResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAssociatedTransferResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EnableAssociatedTransferResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables the Transfer Associated Resources feature.</p>
+     * @return EnableAssociatedTransferResponse
+     */
     public EnableAssociatedTransferResponse enableAssociatedTransfer() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableAssociatedTransferWithOptions(runtime);
     }
 
     /**
-      * The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](~~178671~~).
-      *
-      * @param request EnableControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnableControlPolicyResponse
+     * <b>summary</b> : 
+     * <p>Enables the Automatic Resource Transfer feature. After the feature is enabled, you can create, update, delete, and query transfer rules.</p>
+     * 
+     * @param request EnableAutoGroupingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableAutoGroupingResponse
+     */
+    public EnableAutoGroupingResponse enableAutoGroupingWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableAutoGrouping"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableAutoGroupingResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EnableAutoGroupingResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables the Automatic Resource Transfer feature. After the feature is enabled, you can create, update, delete, and query transfer rules.</p>
+     * @return EnableAutoGroupingResponse
+     */
+    public EnableAutoGroupingResponse enableAutoGrouping() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableAutoGroupingWithOptions(runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the Control Policy feature.</p>
+     * 
+     * @param request EnableControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableControlPolicyResponse
      */
     public EnableControlPolicyResponse enableControlPolicyWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -1508,13 +2299,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EnableControlPolicyResponse());
+        }
+
     }
 
     /**
-      * The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see [Overview of the Control Policy feature](~~178671~~).
-      *
-      * @return EnableControlPolicyResponse
+     * <b>description</b> :
+     * <p>The Control Policy feature allows you to manage the permission boundaries of the folders or member accounts in a resource directory in a centralized manner. This feature is implemented based on the resource directory. You can use this feature to develop common or dedicated rules for access control. The Control Policy feature does not grant permissions but only defines permission boundaries. A member account in a resource directory can be used to access resources only after it is granted the required permissions by using the Resource Access Management (RAM) service. For more information, see <a href="https://help.aliyun.com/document_detail/178671.html">Overview of the Control Policy feature</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the Control Policy feature.</p>
+     * @return EnableControlPolicyResponse
      */
     public EnableControlPolicyResponse enableControlPolicy() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1522,12 +2321,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](~~111215~~).
-      * In this example, the current account is used to enable a resource directory.
-      *
-      * @param request EnableResourceDirectoryRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnableResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
+     * In this example, the current account is used to enable a resource directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>开启RD</p>
+     * 
+     * @param request EnableResourceDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableResourceDirectoryResponse
      */
     public EnableResourceDirectoryResponse enableResourceDirectoryWithOptions(EnableResourceDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1562,15 +2365,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableResourceDirectoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableResourceDirectoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EnableResourceDirectoryResponse());
+        }
+
     }
 
     /**
-      * You can use the current account or a newly created account to enable a resource directory. For more information, see [Enable a resource directory](~~111215~~).
-      * In this example, the current account is used to enable a resource directory.
-      *
-      * @param request EnableResourceDirectoryRequest
-      * @return EnableResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>You can use the current account or a newly created account to enable a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/111215.html">Enable a resource directory</a>.
+     * In this example, the current account is used to enable a resource directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>开启RD</p>
+     * 
+     * @param request EnableResourceDirectoryRequest
+     * @return EnableResourceDirectoryResponse
      */
     public EnableResourceDirectoryResponse enableResourceDirectory(EnableResourceDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1578,11 +2390,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is `181761095690****`.
-      *
-      * @param request GetAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <code>181761095690****</code>.</p>
+     * 
+     * @param request GetAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAccountResponse
      */
     public GetAccountResponse getAccountWithOptions(GetAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1609,14 +2422,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAccountResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is `181761095690****`.
-      *
-      * @param request GetAccountRequest
-      * @return GetAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the information of the member whose Alibaba Cloud account ID is <code>181761095690****</code>.</p>
+     * 
+     * @param request GetAccountRequest
+     * @return GetAccountResponse
      */
     public GetAccountResponse getAccount(GetAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1624,12 +2443,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call the [CheckAccountDelete](~~448542~~) operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-      * This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is `179855839641****`. The response shows that the member does not meet deletion requirements.
-      *
-      * @param request GetAccountDeletionCheckResultRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAccountDeletionCheckResultResponse
+     * <b>description</b> :
+     * <p>After you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
+     * This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is <code>179855839641****</code>. The response shows that the member does not meet deletion requirements.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the result of a member deletion check.</p>
+     * 
+     * @param request GetAccountDeletionCheckResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAccountDeletionCheckResultResponse
      */
     public GetAccountDeletionCheckResultResponse getAccountDeletionCheckResultWithOptions(GetAccountDeletionCheckResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1652,15 +2475,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountDeletionCheckResultResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountDeletionCheckResultResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAccountDeletionCheckResultResponse());
+        }
+
     }
 
     /**
-      * After you call the [CheckAccountDelete](~~448542~~) operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
-      * This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is `179855839641****`. The response shows that the member does not meet deletion requirements.
-      *
-      * @param request GetAccountDeletionCheckResultRequest
-      * @return GetAccountDeletionCheckResultResponse
+     * <b>description</b> :
+     * <p>After you call the <a href="https://help.aliyun.com/document_detail/448542.html">CheckAccountDelete</a> operation to perform a member deletion check, you can call the GetAccountDeletionCheckResult operation to query the check result. If the check result shows that the member meets deletion requirements, you can delete the member. Otherwise, you need to first modify the items that do not meet requirements.
+     * This topic provides an example on how to call the API operation to query the result of the deletion check for the member whose ID is <code>179855839641****</code>. The response shows that the member does not meet deletion requirements.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the result of a member deletion check.</p>
+     * 
+     * @param request GetAccountDeletionCheckResultRequest
+     * @return GetAccountDeletionCheckResultResponse
      */
     public GetAccountDeletionCheckResultResponse getAccountDeletionCheckResult(GetAccountDeletionCheckResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1668,11 +2500,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
-      *
-      * @param request GetAccountDeletionStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAccountDeletionStatusResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is <code>169946124551****</code>. The response shows that the member is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取账号删除状态</p>
+     * 
+     * @param request GetAccountDeletionStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAccountDeletionStatusResponse
      */
     public GetAccountDeletionStatusResponse getAccountDeletionStatusWithOptions(GetAccountDeletionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1695,14 +2531,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountDeletionStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAccountDeletionStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAccountDeletionStatusResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is `169946124551****`. The response shows that the member is deleted.
-      *
-      * @param request GetAccountDeletionStatusRequest
-      * @return GetAccountDeletionStatusResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the deletion status of the member whose Alibaba Cloud account ID is <code>169946124551****</code>. The response shows that the member is deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>获取账号删除状态</p>
+     * 
+     * @param request GetAccountDeletionStatusRequest
+     * @return GetAccountDeletionStatusResponse
      */
     public GetAccountDeletionStatusResponse getAccountDeletionStatus(GetAccountDeletionStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1710,11 +2555,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is `cp-SImPt8GCEwiq****`.
-      *
-      * @param request GetControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetControlPolicyResponse
+     * <b>summary</b> : 
+     * <p>Queries the information about a transfer rule.</p>
+     * 
+     * @param request GetAutoGroupingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAutoGroupingRuleResponse
+     */
+    public GetAutoGroupingRuleResponse getAutoGroupingRuleWithOptions(GetAutoGroupingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoGroupingRule"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoGroupingRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAutoGroupingRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a transfer rule.</p>
+     * 
+     * @param request GetAutoGroupingRuleRequest
+     * @return GetAutoGroupingRuleResponse
+     */
+    public GetAutoGroupingRuleResponse getAutoGroupingRule(GetAutoGroupingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAutoGroupingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Automatic Resource Transfer feature.</p>
+     * 
+     * @param request GetAutoGroupingStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAutoGroupingStatusResponse
+     */
+    public GetAutoGroupingStatusResponse getAutoGroupingStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoGroupingStatus"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoGroupingStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAutoGroupingStatusResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Automatic Resource Transfer feature.</p>
+     * @return GetAutoGroupingStatusResponse
+     */
+    public GetAutoGroupingStatusResponse getAutoGroupingStatus() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAutoGroupingStatusWithOptions(runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <code>cp-SImPt8GCEwiq****</code>.</p>
+     * 
+     * @param request GetControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetControlPolicyResponse
      */
     public GetControlPolicyResponse getControlPolicyWithOptions(GetControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1741,20 +2675,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetControlPolicyResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is `cp-SImPt8GCEwiq****`.
-      *
-      * @param request GetControlPolicyRequest
-      * @return GetControlPolicyResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the details of the access control policy whose ID is <code>cp-SImPt8GCEwiq****</code>.</p>
+     * 
+     * @param request GetControlPolicyRequest
+     * @return GetControlPolicyResponse
      */
     public GetControlPolicyResponse getControlPolicy(GetControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getControlPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Control Policy feature.</p>
+     * 
+     * @param request GetControlPolicyEnablementStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetControlPolicyEnablementStatusResponse
+     */
     public GetControlPolicyEnablementStatusResponse getControlPolicyEnablementStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1768,20 +2716,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetControlPolicyEnablementStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetControlPolicyEnablementStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetControlPolicyEnablementStatusResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of the Control Policy feature.</p>
+     * @return GetControlPolicyEnablementStatusResponse
+     */
     public GetControlPolicyEnablementStatusResponse getControlPolicyEnablementStatus() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getControlPolicyEnablementStatusWithOptions(runtime);
     }
 
     /**
-      * In this example, the information of the folder `fd-Jyl5U7****` is queried.
-      *
-      * @param request GetFolderRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetFolderResponse
+     * <b>description</b> :
+     * <p>In this example, the information of the folder <code>fd-Jyl5U7****</code> is queried.</p>
+     * 
+     * @param request GetFolderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFolderResponse
      */
     public GetFolderResponse getFolderWithOptions(GetFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1804,14 +2763,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFolderResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFolderResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFolderResponse());
+        }
+
     }
 
     /**
-      * In this example, the information of the folder `fd-Jyl5U7****` is queried.
-      *
-      * @param request GetFolderRequest
-      * @return GetFolderResponse
+     * <b>description</b> :
+     * <p>In this example, the information of the folder <code>fd-Jyl5U7****</code> is queried.</p>
+     * 
+     * @param request GetFolderRequest
+     * @return GetFolderResponse
      */
     public GetFolderResponse getFolder(GetFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1819,11 +2784,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the information of the invitation whose ID is `h-ycm4rp****` is queried.
-      *
-      * @param request GetHandshakeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetHandshakeResponse
+     * <b>description</b> :
+     * <p>In this example, the information of the invitation whose ID is <code>h-ycm4rp****</code> is queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of an invitation.</p>
+     * 
+     * @param request GetHandshakeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHandshakeResponse
      */
     public GetHandshakeResponse getHandshakeWithOptions(GetHandshakeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1846,20 +2815,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHandshakeResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetHandshakeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetHandshakeResponse());
+        }
+
     }
 
     /**
-      * In this example, the information of the invitation whose ID is `h-ycm4rp****` is queried.
-      *
-      * @param request GetHandshakeRequest
-      * @return GetHandshakeResponse
+     * <b>description</b> :
+     * <p>In this example, the information of the invitation whose ID is <code>h-ycm4rp****</code> is queried.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of an invitation.</p>
+     * 
+     * @param request GetHandshakeRequest
+     * @return GetHandshakeResponse
      */
     public GetHandshakeResponse getHandshake(GetHandshakeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getHandshakeWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetPayerForAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPayerForAccountResponse
+     */
     public GetPayerForAccountResponse getPayerForAccountWithOptions(GetPayerForAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1881,14 +2864,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPayerForAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPayerForAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetPayerForAccountResponse());
+        }
+
     }
 
+    /**
+     * @param request GetPayerForAccountRequest
+     * @return GetPayerForAccountResponse
+     */
     public GetPayerForAccountResponse getPayerForAccount(GetPayerForAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPayerForAccountWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information of a policy.</p>
+     * 
+     * @param request GetPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPolicyResponse
+     */
     public GetPolicyResponse getPolicyWithOptions(GetPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1918,14 +2918,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetPolicyResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information of a policy.</p>
+     * 
+     * @param request GetPolicyRequest
+     * @return GetPolicyResponse
+     */
     public GetPolicyResponse getPolicy(GetPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取权限策略的指定版本</p>
+     * 
+     * @param request GetPolicyVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPolicyVersionResponse
+     */
     public GetPolicyVersionResponse getPolicyVersionWithOptions(GetPolicyVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1955,20 +2975,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyVersionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyVersionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetPolicyVersionResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取权限策略的指定版本</p>
+     * 
+     * @param request GetPolicyVersionRequest
+     * @return GetPolicyVersionResponse
+     */
     public GetPolicyVersionResponse getPolicyVersion(GetPolicyVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPolicyVersionWithOptions(request, runtime);
     }
 
     /**
-      * This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.
-      *
-      * @param request GetResourceDirectoryRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</p>
+     * 
+     * @param request GetResourceDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceDirectoryResponse
      */
     public GetResourceDirectoryResponse getResourceDirectoryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -1983,13 +3019,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceDirectoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceDirectoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceDirectoryResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.
-      *
-      * @return GetResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to use a management account to call the API operation to query the information of the resource directory that is enabled by using the management account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</p>
+     * @return GetResourceDirectoryResponse
      */
     public GetResourceDirectoryResponse getResourceDirectory() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1997,11 +3041,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~159973~~).
-      *
-      * @param request GetResourceGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetResourceGroupResponse
+     * <b>description</b> :
+     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/159973.html">Common parameters</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>In this example, the information of the resource group whose ID is <code>rg-9gLOoK****</code> is queried.</p>
+     * 
+     * @param request GetResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetResourceGroupResponse
      */
     public GetResourceGroupResponse getResourceGroupWithOptions(GetResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2028,20 +3076,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceGroupResponse());
+        }
+
     }
 
     /**
-      * For more information about common request parameters, see [Common parameters](~~159973~~).
-      *
-      * @param request GetResourceGroupRequest
-      * @return GetResourceGroupResponse
+     * <b>description</b> :
+     * <p>For more information about common request parameters, see <a href="https://help.aliyun.com/document_detail/159973.html">Common parameters</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>In this example, the information of the resource group whose ID is <code>rg-9gLOoK****</code> is queried.</p>
+     * 
+     * @param request GetResourceGroupRequest
+     * @return GetResourceGroupResponse
      */
     public GetResourceGroupResponse getResourceGroup(GetResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information of a RAM role.</p>
+     * 
+     * @param request GetRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRoleResponse
+     */
     public GetRoleResponse getRoleWithOptions(GetRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2067,14 +3132,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRoleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information of a RAM role.</p>
+     * 
+     * @param request GetRoleRequest
+     * @return GetRoleResponse
+     */
     public GetRoleResponse getRole(GetRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRoleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query the status of the deletion task for a service linked role.</p>
+     * 
+     * @param request GetServiceLinkedRoleDeletionStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetServiceLinkedRoleDeletionStatusResponse
+     */
     public GetServiceLinkedRoleDeletionStatusResponse getServiceLinkedRoleDeletionStatusWithOptions(GetServiceLinkedRoleDeletionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2096,22 +3181,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceLinkedRoleDeletionStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetServiceLinkedRoleDeletionStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetServiceLinkedRoleDeletionStatusResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Query the status of the deletion task for a service linked role.</p>
+     * 
+     * @param request GetServiceLinkedRoleDeletionStatusRequest
+     * @return GetServiceLinkedRoleDeletionStatusResponse
+     */
     public GetServiceLinkedRoleDeletionStatusResponse getServiceLinkedRoleDeletionStatus(GetServiceLinkedRoleDeletionStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getServiceLinkedRoleDeletionStatusWithOptions(request, runtime);
     }
 
     /**
-      * > 
-      * *   An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.
-      * *   We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.
-      *
-      * @param request InitResourceDirectoryRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return InitResourceDirectoryResponse
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.</li>
+     * <li>We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a resource directory. After you enable a resource directory, the system automatically creates a root folder and sets the current account as the enterprise management account of the resource directory. The enterprise management account has all administrative permissions on this resource direc</p>
+     * 
+     * @param request InitResourceDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InitResourceDirectoryResponse
      */
     public InitResourceDirectoryResponse initResourceDirectoryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
@@ -2126,15 +3230,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InitResourceDirectoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new InitResourceDirectoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new InitResourceDirectoryResponse());
+        }
+
     }
 
     /**
-      * > 
-      * *   An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.
-      * *   We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.
-      *
-      * @return InitResourceDirectoryResponse
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>An account can be used to enable a resource directory only after it passes enterprise real-name verification. An account that only passed individual real-name verification cannot be used to enable a resource directory.</li>
+     * <li>We recommend that you only use the enterprise management account as the administrator of the resource directory. Do not use the enterprise management account to purchase cloud resources.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a resource directory. After you enable a resource directory, the system automatically creates a root folder and sets the current account as the enterprise management account of the resource directory. The enterprise management account has all administrative permissions on this resource direc</p>
+     * @return InitResourceDirectoryResponse
      */
     public InitResourceDirectoryResponse initResourceDirectory() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2142,11 +3257,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to invite the account `someone@example.com` to join a resource directory.
-      *
-      * @param request InviteAccountToResourceDirectoryRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return InviteAccountToResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to invite the account <code>someone@example.com</code> to join a resource directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invites an account to join a resource directory.</p>
+     * 
+     * @param request InviteAccountToResourceDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InviteAccountToResourceDirectoryResponse
      */
     public InviteAccountToResourceDirectoryResponse inviteAccountToResourceDirectoryWithOptions(InviteAccountToResourceDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2181,14 +3300,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new InviteAccountToResourceDirectoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new InviteAccountToResourceDirectoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new InviteAccountToResourceDirectoryResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to invite the account `someone@example.com` to join a resource directory.
-      *
-      * @param request InviteAccountToResourceDirectoryRequest
-      * @return InviteAccountToResourceDirectoryResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to invite the account <code>someone@example.com</code> to join a resource directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Invites an account to join a resource directory.</p>
+     * 
+     * @param request InviteAccountToResourceDirectoryRequest
+     * @return InviteAccountToResourceDirectoryResponse
      */
     public InviteAccountToResourceDirectoryResponse inviteAccountToResourceDirectory(InviteAccountToResourceDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2196,11 +3324,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.
-      *
-      * @param request ListAccountsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListAccountsResponse
+     * <b>description</b> :
+     * <p>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all the members in a resource directory.</p>
+     * 
+     * @param request ListAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAccountsResponse
      */
     public ListAccountsResponse listAccountsWithOptions(ListAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2235,20 +3367,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAccountsResponse());
+        }
+
     }
 
     /**
-      * You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.
-      *
-      * @param request ListAccountsRequest
-      * @return ListAccountsResponse
+     * <b>description</b> :
+     * <p>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all the members in a resource directory.</p>
+     * 
+     * @param request ListAccountsRequest
+     * @return ListAccountsResponse
      */
     public ListAccountsResponse listAccounts(ListAccountsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAccountsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information of members in a folder.</p>
+     * 
+     * @param request ListAccountsForParentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAccountsForParentResponse
+     */
     public ListAccountsForParentResponse listAccountsForParentWithOptions(ListAccountsForParentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2290,14 +3439,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountsForParentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAccountsForParentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAccountsForParentResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information of members in a folder.</p>
+     * 
+     * @param request ListAccountsForParentRequest
+     * @return ListAccountsForParentResponse
+     */
     public ListAccountsForParentResponse listAccountsForParent(ListAccountsForParentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAccountsForParentWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ListAncestorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAncestorsResponse
+     */
     public ListAncestorsResponse listAncestorsWithOptions(ListAncestorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2319,14 +3485,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAncestorsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAncestorsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAncestorsResponse());
+        }
+
     }
 
+    /**
+     * @param request ListAncestorsRequest
+     * @return ListAncestorsResponse
+     */
     public ListAncestorsResponse listAncestors(ListAncestorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAncestorsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the settings of the Transfer Associated Resources feature.</p>
+     * 
+     * @param request ListAssociatedTransferSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAssociatedTransferSettingResponse
+     */
     public ListAssociatedTransferSettingResponse listAssociatedTransferSettingWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2340,20 +3523,99 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAssociatedTransferSettingResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAssociatedTransferSettingResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAssociatedTransferSettingResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the settings of the Transfer Associated Resources feature.</p>
+     * @return ListAssociatedTransferSettingResponse
+     */
     public ListAssociatedTransferSettingResponse listAssociatedTransferSetting() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAssociatedTransferSettingWithOptions(runtime);
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named `FullAliyunAccess`.
-      *
-      * @param request ListControlPoliciesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListControlPoliciesResponse
+     * <b>summary</b> : 
+     * <p>Queries a list of transfer rules.</p>
+     * 
+     * @param request ListAutoGroupingRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAutoGroupingRulesResponse
+     */
+    public ListAutoGroupingRulesResponse listAutoGroupingRulesWithOptions(ListAutoGroupingRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
+            query.put("RuleType", request.ruleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAutoGroupingRules"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListAutoGroupingRulesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListAutoGroupingRulesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a list of transfer rules.</p>
+     * 
+     * @param request ListAutoGroupingRulesRequest
+     * @return ListAutoGroupingRulesResponse
+     */
+    public ListAutoGroupingRulesResponse listAutoGroupingRules(ListAutoGroupingRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAutoGroupingRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named <code>FullAliyunAccess</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries access control policies.</p>
+     * 
+     * @param request ListControlPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListControlPoliciesResponse
      */
     public ListControlPoliciesResponse listControlPoliciesWithOptions(ListControlPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2388,14 +3650,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListControlPoliciesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListControlPoliciesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListControlPoliciesResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named `FullAliyunAccess`.
-      *
-      * @param request ListControlPoliciesRequest
-      * @return ListControlPoliciesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the system access control policies within a resource directory. The response shows that the resource directory has only one system access control policy. The policy is named <code>FullAliyunAccess</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries access control policies.</p>
+     * 
+     * @param request ListControlPoliciesRequest
+     * @return ListControlPoliciesResponse
      */
     public ListControlPoliciesResponse listControlPolicies(ListControlPoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2403,11 +3674,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder `fd-ZDNPiT****`.
-      *
-      * @param request ListControlPolicyAttachmentsForTargetRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListControlPolicyAttachmentsForTargetResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * @param request ListControlPolicyAttachmentsForTargetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListControlPolicyAttachmentsForTargetResponse
      */
     public ListControlPolicyAttachmentsForTargetResponse listControlPolicyAttachmentsForTargetWithOptions(ListControlPolicyAttachmentsForTargetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2434,14 +3706,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListControlPolicyAttachmentsForTargetResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListControlPolicyAttachmentsForTargetResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListControlPolicyAttachmentsForTargetResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder `fd-ZDNPiT****`.
-      *
-      * @param request ListControlPolicyAttachmentsForTargetRequest
-      * @return ListControlPolicyAttachmentsForTargetResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the access control policies that are attached to the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * @param request ListControlPolicyAttachmentsForTargetRequest
+     * @return ListControlPolicyAttachmentsForTargetResponse
      */
     public ListControlPolicyAttachmentsForTargetResponse listControlPolicyAttachmentsForTarget(ListControlPolicyAttachmentsForTargetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2449,11 +3727,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.
-      *
-      * @param request ListDelegatedAdministratorsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListDelegatedAdministratorsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出所有的代理管理员</p>
+     * 
+     * @param request ListDelegatedAdministratorsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDelegatedAdministratorsResponse
      */
     public ListDelegatedAdministratorsResponse listDelegatedAdministratorsWithOptions(ListDelegatedAdministratorsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2484,14 +3766,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDelegatedAdministratorsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDelegatedAdministratorsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDelegatedAdministratorsResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.
-      *
-      * @param request ListDelegatedAdministratorsRequest
-      * @return ListDelegatedAdministratorsResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query all delegated administrator accounts in a resource directory. The response shows that two delegated administrator accounts for Cloud Firewall exist in the resource directory.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出所有的代理管理员</p>
+     * 
+     * @param request ListDelegatedAdministratorsRequest
+     * @return ListDelegatedAdministratorsResponse
      */
     public ListDelegatedAdministratorsResponse listDelegatedAdministrators(ListDelegatedAdministratorsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2499,11 +3790,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the trusted services for which the member `138660628348****` is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.
-      *
-      * @param request ListDelegatedServicesForAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListDelegatedServicesForAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the trusted services for which the member <code>138660628348****</code> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查看指定账号被设置为哪些可信服务的委派管理员</p>
+     * 
+     * @param request ListDelegatedServicesForAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDelegatedServicesForAccountResponse
      */
     public ListDelegatedServicesForAccountResponse listDelegatedServicesForAccountWithOptions(ListDelegatedServicesForAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2526,14 +3821,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDelegatedServicesForAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDelegatedServicesForAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDelegatedServicesForAccountResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the trusted services for which the member `138660628348****` is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.
-      *
-      * @param request ListDelegatedServicesForAccountRequest
-      * @return ListDelegatedServicesForAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the trusted services for which the member <code>138660628348****</code> is specified as a delegated administrator account. The response shows that the member is specified as a delegated administrator account of Cloud Firewall.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查看指定账号被设置为哪些可信服务的委派管理员</p>
+     * 
+     * @param request ListDelegatedServicesForAccountRequest
+     * @return ListDelegatedServicesForAccountResponse
      */
     public ListDelegatedServicesForAccountResponse listDelegatedServicesForAccount(ListDelegatedServicesForAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2541,11 +3845,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can view the information of only the first-level subfolders of a folder.
-      *
-      * @param request ListFoldersForParentRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListFoldersForParentResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can view the information of only the first-level subfolders of a folder.</p>
+     * </blockquote>
+     * 
+     * @param request ListFoldersForParentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFoldersForParentResponse
      */
     public ListFoldersForParentResponse listFoldersForParentWithOptions(ListFoldersForParentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2580,14 +3887,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFoldersForParentResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListFoldersForParentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListFoldersForParentResponse());
+        }
+
     }
 
     /**
-      * >  You can view the information of only the first-level subfolders of a folder.
-      *
-      * @param request ListFoldersForParentRequest
-      * @return ListFoldersForParentResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can view the information of only the first-level subfolders of a folder.</p>
+     * </blockquote>
+     * 
+     * @param request ListFoldersForParentRequest
+     * @return ListFoldersForParentResponse
      */
     public ListFoldersForParentResponse listFoldersForParent(ListFoldersForParentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2595,11 +3910,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the invitations that are associated with the management account `172841235500****`. The response shows that two invitations are associated with the management account.
-      *
-      * @param request ListHandshakesForAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListHandshakesForAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the invitations that are associated with the management account <code>172841235500****</code>. The response shows that two invitations are associated with the management account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the invitations that are associated with an account.</p>
+     * 
+     * @param request ListHandshakesForAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHandshakesForAccountResponse
      */
     public ListHandshakesForAccountResponse listHandshakesForAccountWithOptions(ListHandshakesForAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2626,20 +3945,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHandshakesForAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListHandshakesForAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListHandshakesForAccountResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the invitations that are associated with the management account `172841235500****`. The response shows that two invitations are associated with the management account.
-      *
-      * @param request ListHandshakesForAccountRequest
-      * @return ListHandshakesForAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the invitations that are associated with the management account <code>172841235500****</code>. The response shows that two invitations are associated with the management account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the invitations that are associated with an account.</p>
+     * 
+     * @param request ListHandshakesForAccountRequest
+     * @return ListHandshakesForAccountResponse
      */
     public ListHandshakesForAccountResponse listHandshakesForAccount(ListHandshakesForAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listHandshakesForAccountWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries invitations in a resource directory.</p>
+     * 
+     * @param request ListHandshakesForResourceDirectoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHandshakesForResourceDirectoryResponse
+     */
     public ListHandshakesForResourceDirectoryResponse listHandshakesForResourceDirectoryWithOptions(ListHandshakesForResourceDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2665,14 +4001,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHandshakesForResourceDirectoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListHandshakesForResourceDirectoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListHandshakesForResourceDirectoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries invitations in a resource directory.</p>
+     * 
+     * @param request ListHandshakesForResourceDirectoryRequest
+     * @return ListHandshakesForResourceDirectoryResponse
+     */
     public ListHandshakesForResourceDirectoryResponse listHandshakesForResourceDirectory(ListHandshakesForResourceDirectoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listHandshakesForResourceDirectoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries policies.</p>
+     * 
+     * @param request ListPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPoliciesResponse
+     */
     public ListPoliciesResponse listPoliciesWithOptions(ListPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2706,23 +4062,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListPoliciesResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries policies.</p>
+     * 
+     * @param request ListPoliciesRequest
+     * @return ListPoliciesResponse
+     */
     public ListPoliciesResponse listPolicies(ListPoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPoliciesWithOptions(request, runtime);
     }
 
     /**
-      * You can view the following information:
-      * *   Policy attachment records under an Alibaba Cloud account or a resource group
-      * *   Policies attached to RAM users, RAM user groups, or RAM roles
-      * *   RAM users, RAM user groups, or RAM roles to which policies are attached under an Alibaba Cloud account or a resource group
-      *
-      * @param request ListPolicyAttachmentsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListPolicyAttachmentsResponse
+     * <b>description</b> :
+     * <p>You can view the following information:</p>
+     * <ul>
+     * <li>Policy attachment records under an Alibaba Cloud account or a resource group</li>
+     * <li>Policies attached to RAM users, RAM user groups, or RAM roles</li>
+     * <li>RAM users, RAM user groups, or RAM roles to which policies are attached under an Alibaba Cloud account or a resource group</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries policy attachment records.</p>
+     * 
+     * @param request ListPolicyAttachmentsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPolicyAttachmentsResponse
      */
     public ListPolicyAttachmentsResponse listPolicyAttachmentsWithOptions(ListPolicyAttachmentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2773,23 +4147,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPolicyAttachmentsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListPolicyAttachmentsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListPolicyAttachmentsResponse());
+        }
+
     }
 
     /**
-      * You can view the following information:
-      * *   Policy attachment records under an Alibaba Cloud account or a resource group
-      * *   Policies attached to RAM users, RAM user groups, or RAM roles
-      * *   RAM users, RAM user groups, or RAM roles to which policies are attached under an Alibaba Cloud account or a resource group
-      *
-      * @param request ListPolicyAttachmentsRequest
-      * @return ListPolicyAttachmentsResponse
+     * <b>description</b> :
+     * <p>You can view the following information:</p>
+     * <ul>
+     * <li>Policy attachment records under an Alibaba Cloud account or a resource group</li>
+     * <li>Policies attached to RAM users, RAM user groups, or RAM roles</li>
+     * <li>RAM users, RAM user groups, or RAM roles to which policies are attached under an Alibaba Cloud account or a resource group</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries policy attachment records.</p>
+     * 
+     * @param request ListPolicyAttachmentsRequest
+     * @return ListPolicyAttachmentsResponse
      */
     public ListPolicyAttachmentsResponse listPolicyAttachments(ListPolicyAttachmentsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPolicyAttachmentsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查看权限策略版本列表</p>
+     * 
+     * @param request ListPolicyVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPolicyVersionsResponse
+     */
     public ListPolicyVersionsResponse listPolicyVersionsWithOptions(ListPolicyVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2815,21 +4208,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPolicyVersionsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListPolicyVersionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListPolicyVersionsResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查看权限策略版本列表</p>
+     * 
+     * @param request ListPolicyVersionsRequest
+     * @return ListPolicyVersionsResponse
+     */
     public ListPolicyVersionsResponse listPolicyVersions(ListPolicyVersionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPolicyVersionsWithOptions(request, runtime);
     }
 
     /**
-      * You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
-      * This topic provides an example on how to call the API operation to query the basic information about the resource groups `rg-1hSBH2****` and `rg-9gLOoK****` within the current account.
-      *
-      * @param request ListResourceGroupsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListResourceGroupsResponse
+     * <b>description</b> :
+     * <p>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
+     * This topic provides an example on how to call the API operation to query the basic information about the resource groups <code>rg-1hSBH2****</code> and <code>rg-9gLOoK****</code> within the current account.</p>
+     * 
+     * @param request ListResourceGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceGroupsResponse
      */
     public ListResourceGroupsResponse listResourceGroupsWithOptions(ListResourceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2884,15 +4290,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceGroupsResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceGroupsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListResourceGroupsResponse());
+        }
+
     }
 
     /**
-      * You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
-      * This topic provides an example on how to call the API operation to query the basic information about the resource groups `rg-1hSBH2****` and `rg-9gLOoK****` within the current account.
-      *
-      * @param request ListResourceGroupsRequest
-      * @return ListResourceGroupsResponse
+     * <b>description</b> :
+     * <p>You can call this API operation to query all resource groups within the current account. You can also call this API operation to query a specific resource group based on the status, ID, identifier, or display name of the resource group.
+     * This topic provides an example on how to call the API operation to query the basic information about the resource groups <code>rg-1hSBH2****</code> and <code>rg-9gLOoK****</code> within the current account.</p>
+     * 
+     * @param request ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
      */
     public ListResourceGroupsResponse listResourceGroups(ListResourceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2900,12 +4312,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-      * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
-      *
-      * @param request ListResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListResourcesResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can use a RAM role that is not associated with a session policy to call this API operation.
+     * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance <code>i-23v38****</code> in the resource group <code>rg-uPJpP****</code>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resources that can be accessed by the current account in resource groups.</p>
+     * 
+     * @param request ListResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourcesResponse
      */
     public ListResourcesResponse listResourcesWithOptions(ListResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2956,21 +4374,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListResourcesResponse());
+        }
+
     }
 
     /**
-      * >  You can use a RAM role that is not associated with a session policy to call this API operation.
-      * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance `i-23v38****` in the resource group `rg-uPJpP****`.
-      *
-      * @param request ListResourcesRequest
-      * @return ListResourcesResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can use a RAM role that is not associated with a session policy to call this API operation.
+     * This topic provides an example on how to call the API operation to query resources that can be accessed by the current account in resource groups. The response shows that the current account can access only the Elastic Compute Service (ECS) instance <code>i-23v38****</code> in the resource group <code>rg-uPJpP****</code>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries resources that can be accessed by the current account in resource groups.</p>
+     * 
+     * @param request ListResourcesRequest
+     * @return ListResourcesResponse
      */
     public ListResourcesResponse listResources(ListResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries RAM roles.</p>
+     * 
+     * @param request ListRolesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRolesResponse
+     */
     public ListRolesResponse listRolesWithOptions(ListRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3000,20 +4437,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRolesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRolesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRolesResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries RAM roles.</p>
+     * 
+     * @param request ListRolesRequest
+     * @return ListRolesResponse
+     */
     public ListRolesResponse listRoles(ListRolesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRolesWithOptions(request, runtime);
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.
-      *
-      * @param request ListTagKeysRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTagKeysResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出所有的Tag key</p>
+     * 
+     * @param request ListTagKeysRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagKeysResponse
      */
     public ListTagKeysResponse listTagKeysWithOptions(ListTagKeysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3048,14 +4501,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagKeysResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.
-      *
-      * @param request ListTagKeysRequest
-      * @return ListTagKeysResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query tag keys. The response shows that the custom tag key team exists.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出所有的Tag key</p>
+     * 
+     * @param request ListTagKeysRequest
+     * @return ListTagKeysResponse
      */
     public ListTagKeysResponse listTagKeys(ListTagKeysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3063,11 +4525,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of `rg-aekz6bre2uq****`. The response shows that only the `k1:v1` tag is added to the resource group.
-      *
-      * @param request ListTagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTagResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of <code>rg-aekz6bre2uq****</code>. The response shows that only the <code>k1:v1</code> tag is added to the resource group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to resource groups or the members in a resource directory.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
      */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3106,14 +4572,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of `rg-aekz6bre2uq****`. The response shows that only the `k1:v1` tag is added to the resource group.
-      *
-      * @param request ListTagResourcesRequest
-      * @return ListTagResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the tags that are added to the resource group with an ID of <code>rg-aekz6bre2uq****</code>. The response shows that only the <code>k1:v1</code> tag is added to the resource group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to resource groups or the members in a resource directory.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
      */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3121,11 +4596,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.
-      *
-      * @param request ListTagValuesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTagValuesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出所有的Tag values</p>
+     * 
+     * @param request ListTagValuesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagValuesResponse
      */
     public ListTagValuesResponse listTagValuesWithOptions(ListTagValuesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3164,14 +4643,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagValuesResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.
-      *
-      * @param request ListTagValuesRequest
-      * @return ListTagValuesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to query the tag values of the tag key k1. The response shows that the tag value of the tag key k1 is v1.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>列出所有的Tag values</p>
+     * 
+     * @param request ListTagValuesRequest
+     * @return ListTagValuesResponse
      */
     public ListTagValuesResponse listTagValues(ListTagValuesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3179,11 +4667,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the folders or member accounts to which the control policy `cp-jExXAqIYkwHN****` is attached are queried. The returned result shows that the control policy is attached to the folder `fd-ZDNPiT****`.
-      *
-      * @param request ListTargetAttachmentsForControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTargetAttachmentsForControlPolicyResponse
+     * <b>description</b> :
+     * <p>In this example, the folders or member accounts to which the control policy <code>cp-jExXAqIYkwHN****</code> is attached are queried. The returned result shows that the control policy is attached to the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the objects to which a specific control policy is attached.</p>
+     * 
+     * @param request ListTargetAttachmentsForControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTargetAttachmentsForControlPolicyResponse
      */
     public ListTargetAttachmentsForControlPolicyResponse listTargetAttachmentsForControlPolicyWithOptions(ListTargetAttachmentsForControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3214,14 +4706,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTargetAttachmentsForControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTargetAttachmentsForControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTargetAttachmentsForControlPolicyResponse());
+        }
+
     }
 
     /**
-      * In this example, the folders or member accounts to which the control policy `cp-jExXAqIYkwHN****` is attached are queried. The returned result shows that the control policy is attached to the folder `fd-ZDNPiT****`.
-      *
-      * @param request ListTargetAttachmentsForControlPolicyRequest
-      * @return ListTargetAttachmentsForControlPolicyResponse
+     * <b>description</b> :
+     * <p>In this example, the folders or member accounts to which the control policy <code>cp-jExXAqIYkwHN****</code> is attached are queried. The returned result shows that the control policy is attached to the folder <code>fd-ZDNPiT****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the objects to which a specific control policy is attached.</p>
+     * 
+     * @param request ListTargetAttachmentsForControlPolicyRequest
+     * @return ListTargetAttachmentsForControlPolicyResponse
      */
     public ListTargetAttachmentsForControlPolicyResponse listTargetAttachmentsForControlPolicy(ListTargetAttachmentsForControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3229,12 +4730,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  Only an enterprise management account or delegated administrator account can be used to call this operation.
-      * In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.
-      *
-      * @param request ListTrustedServiceStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ListTrustedServiceStatusResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Only an enterprise management account or delegated administrator account can be used to call this operation.
+     * In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</p>
+     * </blockquote>
+     * 
+     * @param request ListTrustedServiceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTrustedServiceStatusResponse
      */
     public ListTrustedServiceStatusResponse listTrustedServiceStatusWithOptions(ListTrustedServiceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3265,21 +4769,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTrustedServiceStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTrustedServiceStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTrustedServiceStatusResponse());
+        }
+
     }
 
     /**
-      * >  Only an enterprise management account or delegated administrator account can be used to call this operation.
-      * In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.
-      *
-      * @param request ListTrustedServiceStatusRequest
-      * @return ListTrustedServiceStatusResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> Only an enterprise management account or delegated administrator account can be used to call this operation.
+     * In this example, the trusted services that are enabled within an enterprise management account are queried. The returned result shows that the trusted services Cloud Config and ActionTrail are enabled within the enterprise management account.</p>
+     * </blockquote>
+     * 
+     * @param request ListTrustedServiceStatusRequest
+     * @return ListTrustedServiceStatusResponse
      */
     public ListTrustedServiceStatusResponse listTrustedServiceStatus(ListTrustedServiceStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTrustedServiceStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>移动账号</p>
+     * 
+     * @param request MoveAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MoveAccountResponse
+     */
     public MoveAccountResponse moveAccountWithOptions(MoveAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3305,21 +4825,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new MoveAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new MoveAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new MoveAccountResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>移动账号</p>
+     * 
+     * @param request MoveAccountRequest
+     * @return MoveAccountResponse
+     */
     public MoveAccountResponse moveAccount(MoveAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.moveAccountWithOptions(request, runtime);
     }
 
     /**
-      * For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the **Supported by the API** column in [Alibaba Cloud services that support resource groups](~~94479~~).
-      * In this example, two virtual private clouds (VPCs) `vpc-bp1sig0mjktx5ewx1****` and `vpc-bp1visxm225pv49dz****` that reside in different regions and belong to different resource groups are moved to the resource group `rg-aekzmeobk5w****`.
-      *
-      * @param request MoveResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return MoveResourcesResponse
+     * <b>description</b> :
+     * <p>For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the <strong>Supported by the API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Alibaba Cloud services that support resource groups</a>.
+     * In this example, two virtual private clouds (VPCs) <code>vpc-bp1sig0mjktx5ewx1****</code> and <code>vpc-bp1visxm225pv49dz****</code> that reside in different regions and belong to different resource groups are moved to the resource group <code>rg-aekzmeobk5w****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Moves resources from one resource group to another. You can move multiple resources that reside in different regions, are used by different Alibaba Cloud services, or belong to different resource groups.</p>
+     * 
+     * @param request MoveResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MoveResourcesResponse
      */
     public MoveResourcesResponse moveResourcesWithOptions(MoveResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3346,21 +4882,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new MoveResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new MoveResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new MoveResourcesResponse());
+        }
+
     }
 
     /**
-      * For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the **Supported by the API** column in [Alibaba Cloud services that support resource groups](~~94479~~).
-      * In this example, two virtual private clouds (VPCs) `vpc-bp1sig0mjktx5ewx1****` and `vpc-bp1visxm225pv49dz****` that reside in different regions and belong to different resource groups are moved to the resource group `rg-aekzmeobk5w****`.
-      *
-      * @param request MoveResourcesRequest
-      * @return MoveResourcesResponse
+     * <b>description</b> :
+     * <p>For more information about Alibaba Cloud services whose resources can be moved between resource groups, see the <strong>Supported by the API</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Alibaba Cloud services that support resource groups</a>.
+     * In this example, two virtual private clouds (VPCs) <code>vpc-bp1sig0mjktx5ewx1****</code> and <code>vpc-bp1visxm225pv49dz****</code> that reside in different regions and belong to different resource groups are moved to the resource group <code>rg-aekzmeobk5w****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Moves resources from one resource group to another. You can move multiple resources that reside in different regions, are used by different Alibaba Cloud services, or belong to different resource groups.</p>
+     * 
+     * @param request MoveResourcesRequest
+     * @return MoveResourcesResponse
      */
     public MoveResourcesResponse moveResources(MoveResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.moveResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>升级资源账号</p>
+     * 
+     * @param request PromoteResourceAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PromoteResourceAccountResponse
+     */
     public PromoteResourceAccountResponse promoteResourceAccountWithOptions(PromoteResourceAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3386,25 +4939,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PromoteResourceAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new PromoteResourceAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new PromoteResourceAccountResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>升级资源账号</p>
+     * 
+     * @param request PromoteResourceAccountRequest
+     * @return PromoteResourceAccountResponse
+     */
     public PromoteResourceAccountResponse promoteResourceAccount(PromoteResourceAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.promoteResourceAccountWithOptions(request, runtime);
     }
 
     /**
-      * The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
-      * When you call this operation, you must take note of the following limits:
-      * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](~~208133~~).
-      * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-      * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-      * This topic provides an example on how to call the API operation to specify the member `181761095690****` as a delegated administrator account of Cloud Firewall.
-      *
-      * @param request RegisterDelegatedAdministratorRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RegisterDelegatedAdministratorResponse
+     * <b>description</b> :
+     * <p>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
+     * When you call this operation, you must take note of the following limits:</p>
+     * <ul>
+     * <li>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
+     * <li>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</li>
+     * <li>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
+     * This topic provides an example on how to call the API operation to specify the member <code>181761095690****</code> as a delegated administrator account of Cloud Firewall.</li>
+     * </ul>
+     * 
+     * @param request RegisterDelegatedAdministratorRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RegisterDelegatedAdministratorResponse
      */
     public RegisterDelegatedAdministratorResponse registerDelegatedAdministratorWithOptions(RegisterDelegatedAdministratorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3431,19 +4999,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDelegatedAdministratorResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterDelegatedAdministratorResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RegisterDelegatedAdministratorResponse());
+        }
+
     }
 
     /**
-      * The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
-      * When you call this operation, you must take note of the following limits:
-      * *   Only some trusted services support delegated administrator accounts. For more information, see [Supported trusted services](~~208133~~).
-      * *   Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.
-      * *   The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
-      * This topic provides an example on how to call the API operation to specify the member `181761095690****` as a delegated administrator account of Cloud Firewall.
-      *
-      * @param request RegisterDelegatedAdministratorRequest
-      * @return RegisterDelegatedAdministratorResponse
+     * <b>description</b> :
+     * <p>The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory.
+     * When you call this operation, you must take note of the following limits:</p>
+     * <ul>
+     * <li>Only some trusted services support delegated administrator accounts. For more information, see <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</li>
+     * <li>Only the management account of a resource directory or an authorized RAM user or RAM role of the management account can be used to call this operation.</li>
+     * <li>The number of delegated administrator accounts that are allowed for a trusted service is defined by the trusted service.
+     * This topic provides an example on how to call the API operation to specify the member <code>181761095690****</code> as a delegated administrator account of Cloud Firewall.</li>
+     * </ul>
+     * 
+     * @param request RegisterDelegatedAdministratorRequest
+     * @return RegisterDelegatedAdministratorResponse
      */
     public RegisterDelegatedAdministratorResponse registerDelegatedAdministrator(RegisterDelegatedAdministratorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3451,11 +5027,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to remove the member `177242285274****` from a resource directory.
-      *
-      * @param request RemoveCloudAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RemoveCloudAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to remove the member <code>177242285274****</code> from a resource directory.</p>
+     * 
+     * @param request RemoveCloudAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveCloudAccountResponse
      */
     public RemoveCloudAccountResponse removeCloudAccountWithOptions(RemoveCloudAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3478,20 +5055,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveCloudAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveCloudAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RemoveCloudAccountResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to remove the member `177242285274****` from a resource directory.
-      *
-      * @param request RemoveCloudAccountRequest
-      * @return RemoveCloudAccountResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to remove the member <code>177242285274****</code> from a resource directory.</p>
+     * 
+     * @param request RemoveCloudAccountRequest
+     * @return RemoveCloudAccountResponse
      */
     public RemoveCloudAccountResponse removeCloudAccount(RemoveCloudAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeCloudAccountWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重新发送创建云账号的邮箱验证</p>
+     * 
+     * @param request ResendCreateCloudAccountEmailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResendCreateCloudAccountEmailResponse
+     */
     public ResendCreateCloudAccountEmailResponse resendCreateCloudAccountEmailWithOptions(ResendCreateCloudAccountEmailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3513,14 +5104,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ResendCreateCloudAccountEmailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ResendCreateCloudAccountEmailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ResendCreateCloudAccountEmailResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重新发送创建云账号的邮箱验证</p>
+     * 
+     * @param request ResendCreateCloudAccountEmailRequest
+     * @return ResendCreateCloudAccountEmailResponse
+     */
     public ResendCreateCloudAccountEmailResponse resendCreateCloudAccountEmail(ResendCreateCloudAccountEmailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resendCreateCloudAccountEmailWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重新发送升级资源账号的邮箱验证</p>
+     * 
+     * @param request ResendPromoteResourceAccountEmailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResendPromoteResourceAccountEmailResponse
+     */
     public ResendPromoteResourceAccountEmailResponse resendPromoteResourceAccountEmailWithOptions(ResendPromoteResourceAccountEmailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3542,14 +5153,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ResendPromoteResourceAccountEmailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ResendPromoteResourceAccountEmailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ResendPromoteResourceAccountEmailResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重新发送升级资源账号的邮箱验证</p>
+     * 
+     * @param request ResendPromoteResourceAccountEmailRequest
+     * @return ResendPromoteResourceAccountEmailResponse
+     */
     public ResendPromoteResourceAccountEmailResponse resendPromoteResourceAccountEmail(ResendPromoteResourceAccountEmailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resendPromoteResourceAccountEmailWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重新发送确认邮件</p>
+     * 
+     * @param request RetryChangeAccountEmailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryChangeAccountEmailResponse
+     */
     public RetryChangeAccountEmailResponse retryChangeAccountEmailWithOptions(RetryChangeAccountEmailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3571,21 +5202,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryChangeAccountEmailResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RetryChangeAccountEmailResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RetryChangeAccountEmailResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>重新发送确认邮件</p>
+     * 
+     * @param request RetryChangeAccountEmailRequest
+     * @return RetryChangeAccountEmailResponse
+     */
     public RetryChangeAccountEmailResponse retryChangeAccountEmail(RetryChangeAccountEmailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.retryChangeAccountEmailWithOptions(request, runtime);
     }
 
     /**
-      * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-      * In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account `138660628348****`.
-      *
-      * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SendVerificationCodeForBindSecureMobilePhoneResponse
+     * <b>description</b> :
+     * <p>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
+     * In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <code>138660628348****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发送绑定安全手机验证码</p>
+     * 
+     * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendVerificationCodeForBindSecureMobilePhoneResponse
      */
     public SendVerificationCodeForBindSecureMobilePhoneResponse sendVerificationCodeForBindSecureMobilePhoneWithOptions(SendVerificationCodeForBindSecureMobilePhoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3612,15 +5259,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerificationCodeForBindSecureMobilePhoneResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerificationCodeForBindSecureMobilePhoneResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SendVerificationCodeForBindSecureMobilePhoneResponse());
+        }
+
     }
 
     /**
-      * To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-      * In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account `138660628348****`.
-      *
-      * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
-      * @return SendVerificationCodeForBindSecureMobilePhoneResponse
+     * <b>description</b> :
+     * <p>To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
+     * In this example, a verification code is sent to the mobile phone number that you want to bind to the resource account <code>138660628348****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发送绑定安全手机验证码</p>
+     * 
+     * @param request SendVerificationCodeForBindSecureMobilePhoneRequest
+     * @return SendVerificationCodeForBindSecureMobilePhoneResponse
      */
     public SendVerificationCodeForBindSecureMobilePhoneResponse sendVerificationCodeForBindSecureMobilePhone(SendVerificationCodeForBindSecureMobilePhoneRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3628,11 +5284,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.
-      *
-      * @param request SendVerificationCodeForEnableRDRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SendVerificationCodeForEnableRDResponse
+     * <b>description</b> :
+     * <p>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发送开启资源目录短信</p>
+     * 
+     * @param request SendVerificationCodeForEnableRDRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendVerificationCodeForEnableRDResponse
      */
     public SendVerificationCodeForEnableRDResponse sendVerificationCodeForEnableRDWithOptions(SendVerificationCodeForEnableRDRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3655,20 +5315,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerificationCodeForEnableRDResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SendVerificationCodeForEnableRDResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SendVerificationCodeForEnableRDResponse());
+        }
+
     }
 
     /**
-      * Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.
-      *
-      * @param request SendVerificationCodeForEnableRDRequest
-      * @return SendVerificationCodeForEnableRDResponse
+     * <b>description</b> :
+     * <p>Each Alibaba Cloud account can be used to send a maximum of 100 verification codes per day.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>发送开启资源目录短信</p>
+     * 
+     * @param request SendVerificationCodeForEnableRDRequest
+     * @return SendVerificationCodeForEnableRDResponse
      */
     public SendVerificationCodeForEnableRDResponse sendVerificationCodeForEnableRD(SendVerificationCodeForEnableRDRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendVerificationCodeForEnableRDWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>设置权限策略默认版本</p>
+     * 
+     * @param request SetDefaultPolicyVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetDefaultPolicyVersionResponse
+     */
     public SetDefaultPolicyVersionResponse setDefaultPolicyVersionWithOptions(SetDefaultPolicyVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3694,20 +5371,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetDefaultPolicyVersionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetDefaultPolicyVersionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetDefaultPolicyVersionResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>设置权限策略默认版本</p>
+     * 
+     * @param request SetDefaultPolicyVersionRequest
+     * @return SetDefaultPolicyVersionResponse
+     */
     public SetDefaultPolicyVersionResponse setDefaultPolicyVersion(SetDefaultPolicyVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setDefaultPolicyVersionWithOptions(request, runtime);
     }
 
     /**
-      * Members of the resource account type can be deleted only after the member deletion feature is enabled.
-      *
-      * @param request SetMemberDeletionPermissionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SetMemberDeletionPermissionResponse
+     * <b>description</b> :
+     * <p>Members of the resource account type can be deleted only after the member deletion feature is enabled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>开启或关闭成员删除许可</p>
+     * 
+     * @param request SetMemberDeletionPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetMemberDeletionPermissionResponse
      */
     public SetMemberDeletionPermissionResponse setMemberDeletionPermissionWithOptions(SetMemberDeletionPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3730,14 +5423,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SetMemberDeletionPermissionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetMemberDeletionPermissionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetMemberDeletionPermissionResponse());
+        }
+
     }
 
     /**
-      * Members of the resource account type can be deleted only after the member deletion feature is enabled.
-      *
-      * @param request SetMemberDeletionPermissionRequest
-      * @return SetMemberDeletionPermissionResponse
+     * <b>description</b> :
+     * <p>Members of the resource account type can be deleted only after the member deletion feature is enabled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>开启或关闭成员删除许可</p>
+     * 
+     * @param request SetMemberDeletionPermissionRequest
+     * @return SetMemberDeletionPermissionResponse
      */
     public SetMemberDeletionPermissionResponse setMemberDeletionPermission(SetMemberDeletionPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3745,11 +5447,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to add the tag `k1:v1` to the resource group with an ID of `rg-aekz6bre2uq****`.
-      *
-      * @param request TagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return TagResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to add the tag <code>k1:v1</code> to the resource group with an ID of <code>rg-aekz6bre2uq****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds tags to resource groups or the members in a resource directory.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
      */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3780,14 +5486,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to add the tag `k1:v1` to the resource group with an ID of `rg-aekz6bre2uq****`.
-      *
-      * @param request TagResourcesRequest
-      * @return TagResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to add the tag <code>k1:v1</code> to the resource group with an ID of <code>rg-aekz6bre2uq****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds tags to resource groups or the members in a resource directory.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
      */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3795,11 +5510,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to call the API operation to remove the tag whose tag key is `k1` from the resource group whose ID is `rg-aek2dpwyrfr****`.
-      *
-      * @param request UntagResourcesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UntagResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to remove the tag whose tag key is <code>k1</code> from the resource group whose ID is <code>rg-aek2dpwyrfr****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from resource groups or the members in a resource directory.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
      */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3834,14 +5553,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
+        }
+
     }
 
     /**
-      * This topic provides an example on how to call the API operation to remove the tag whose tag key is `k1` from the resource group whose ID is `rg-aek2dpwyrfr****`.
-      *
-      * @param request UntagResourcesRequest
-      * @return UntagResourcesResponse
+     * <b>description</b> :
+     * <p>This topic provides an example on how to call the API operation to remove the tag whose tag key is <code>k1</code> from the resource group whose ID is <code>rg-aek2dpwyrfr****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from resource groups or the members in a resource directory.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
      */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3849,14 +5577,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-      * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](~~111233~~).
-      * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](~~209980~~).
-      * This example provides an example on how to call the API operation to change the display name of the member `12323344****` to `admin`.
-      *
-      * @param request UpdateAccountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateAccountResponse
+     * <b>description</b> :
+     * <p>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</p>
+     * <ul>
+     * <li>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
+     * <li>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.
+     * This example provides an example on how to call the API operation to change the display name of the member <code>12323344****</code> to <code>admin</code>.</li>
+     * </ul>
+     * 
+     * @param request UpdateAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAccountResponse
      */
     public UpdateAccountResponse updateAccountWithOptions(UpdateAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3887,17 +5618,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAccountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAccountResponse());
+        }
+
     }
 
     /**
-      * *   To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.
-      * *   Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see [Switch a resource account to a cloud account](~~111233~~).
-      * *   Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see [Switch a cloud account to a resource account](~~209980~~).
-      * This example provides an example on how to call the API operation to change the display name of the member `12323344****` to `admin`.
-      *
-      * @param request UpdateAccountRequest
-      * @return UpdateAccountResponse
+     * <b>description</b> :
+     * <p>  To ensure that the system can record the operators of management operations, you must use a RAM user or RAM role to which the AliyunResourceDirectoryFullAccess policy is attached within the management account of your resource directory to call this operation.</p>
+     * <ul>
+     * <li>Before you switch the type of a member from resource account to cloud account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/111233.html">Switch a resource account to a cloud account</a>.</li>
+     * <li>Before you switch the type of a member from cloud account to resource account, make sure that specific conditions are met. For more information about the conditions, see <a href="https://help.aliyun.com/document_detail/209980.html">Switch a cloud account to a resource account</a>.
+     * This example provides an example on how to call the API operation to change the display name of the member <code>12323344****</code> to <code>admin</code>.</li>
+     * </ul>
+     * 
+     * @param request UpdateAccountRequest
+     * @return UpdateAccountResponse
      */
     public UpdateAccountResponse updateAccount(UpdateAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3905,11 +5644,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
-      *
-      * @param request UpdateAssociatedTransferSettingRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateAssociatedTransferSettingResponse
+     * <b>description</b> :
+     * <p>For information about the resources that support the Transfer Associated Resources feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Use the Transfer Associated Resources feature</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the settings of the Transfer Associated Resources feature.</p>
+     * 
+     * @param request UpdateAssociatedTransferSettingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAssociatedTransferSettingResponse
      */
     public UpdateAssociatedTransferSettingResponse updateAssociatedTransferSettingWithOptions(UpdateAssociatedTransferSettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3936,14 +5679,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAssociatedTransferSettingResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAssociatedTransferSettingResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAssociatedTransferSettingResponse());
+        }
+
     }
 
     /**
-      * For information about the resources that support the Transfer Associated Resources feature, see [Use the Transfer Associated Resources feature](~~2639129~~).
-      *
-      * @param request UpdateAssociatedTransferSettingRequest
-      * @return UpdateAssociatedTransferSettingResponse
+     * <b>description</b> :
+     * <p>For information about the resources that support the Transfer Associated Resources feature, see <a href="https://help.aliyun.com/document_detail/606232.html">Use the Transfer Associated Resources feature</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the settings of the Transfer Associated Resources feature.</p>
+     * 
+     * @param request UpdateAssociatedTransferSettingRequest
+     * @return UpdateAssociatedTransferSettingResponse
      */
     public UpdateAssociatedTransferSettingResponse updateAssociatedTransferSetting(UpdateAssociatedTransferSettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -3951,11 +5703,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the name of the access control policy whose ID is `cp-jExXAqIYkwHN****` is changed to `NewControlPolicy`.
-      *
-      * @param request UpdateControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateControlPolicyResponse
+     * <b>summary</b> : 
+     * <p>Updates the configuration of the Automatic Resource Transfer feature. You can update only the configuration of the Transfer Existing Associated Resources feature.</p>
+     * 
+     * @param request UpdateAutoGroupingConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAutoGroupingConfigResponse
+     */
+    public UpdateAutoGroupingConfigResponse updateAutoGroupingConfigWithOptions(UpdateAutoGroupingConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableExistingResourcesTransfer)) {
+            query.put("EnableExistingResourcesTransfer", request.enableExistingResourcesTransfer);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAutoGroupingConfig"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAutoGroupingConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAutoGroupingConfigResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the configuration of the Automatic Resource Transfer feature. You can update only the configuration of the Transfer Existing Associated Resources feature.</p>
+     * 
+     * @param request UpdateAutoGroupingConfigRequest
+     * @return UpdateAutoGroupingConfigResponse
+     */
+    public UpdateAutoGroupingConfigResponse updateAutoGroupingConfig(UpdateAutoGroupingConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAutoGroupingConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a transfer rule.</p>
+     * 
+     * @param request UpdateAutoGroupingRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAutoGroupingRuleResponse
+     */
+    public UpdateAutoGroupingRuleResponse updateAutoGroupingRuleWithOptions(UpdateAutoGroupingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeRegionIdsScope)) {
+            query.put("ExcludeRegionIdsScope", request.excludeRegionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceGroupIdsScope)) {
+            query.put("ExcludeResourceGroupIdsScope", request.excludeResourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceIdsScope)) {
+            query.put("ExcludeResourceIdsScope", request.excludeResourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeResourceTypesScope)) {
+            query.put("ExcludeResourceTypesScope", request.excludeResourceTypesScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsScope)) {
+            query.put("RegionIdsScope", request.regionIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIdsScope)) {
+            query.put("ResourceGroupIdsScope", request.resourceGroupIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIdsScope)) {
+            query.put("ResourceIdsScope", request.resourceIdsScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypesScope)) {
+            query.put("ResourceTypesScope", request.resourceTypesScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleContents)) {
+            query.put("RuleContents", request.ruleContents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleDesc)) {
+            query.put("RuleDesc", request.ruleDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAutoGroupingRule"),
+            new TeaPair("version", "2020-03-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAutoGroupingRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateAutoGroupingRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a transfer rule.</p>
+     * 
+     * @param request UpdateAutoGroupingRuleRequest
+     * @return UpdateAutoGroupingRuleResponse
+     */
+    public UpdateAutoGroupingRuleResponse updateAutoGroupingRule(UpdateAutoGroupingRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAutoGroupingRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>In this example, the name of the access control policy whose ID is <code>cp-jExXAqIYkwHN****</code> is changed to <code>NewControlPolicy</code>.</p>
+     * 
+     * @param request UpdateControlPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateControlPolicyResponse
      */
     public UpdateControlPolicyResponse updateControlPolicyWithOptions(UpdateControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -3990,20 +5885,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateControlPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateControlPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateControlPolicyResponse());
+        }
+
     }
 
     /**
-      * In this example, the name of the access control policy whose ID is `cp-jExXAqIYkwHN****` is changed to `NewControlPolicy`.
-      *
-      * @param request UpdateControlPolicyRequest
-      * @return UpdateControlPolicyResponse
+     * <b>description</b> :
+     * <p>In this example, the name of the access control policy whose ID is <code>cp-jExXAqIYkwHN****</code> is changed to <code>NewControlPolicy</code>.</p>
+     * 
+     * @param request UpdateControlPolicyRequest
+     * @return UpdateControlPolicyResponse
      */
     public UpdateControlPolicyResponse updateControlPolicy(UpdateControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateControlPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * @param request UpdateFolderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateFolderResponse
+     */
     public UpdateFolderResponse updateFolderWithOptions(UpdateFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4029,20 +5935,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFolderResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFolderResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateFolderResponse());
+        }
+
     }
 
+    /**
+     * @param request UpdateFolderRequest
+     * @return UpdateFolderResponse
+     */
     public UpdateFolderResponse updateFolder(UpdateFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateFolderWithOptions(request, runtime);
     }
 
     /**
-      * In this example, the display name of the resource group `rg-9gLOoK****` is changed to `project`.
-      *
-      * @param request UpdateResourceGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateResourceGroupResponse
+     * <b>description</b> :
+     * <p>In this example, the display name of the resource group <code>rg-9gLOoK****</code> is changed to <code>project</code>.</p>
+     * 
+     * @param request UpdateResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateResourceGroupResponse
      */
     public UpdateResourceGroupResponse updateResourceGroupWithOptions(UpdateResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4069,14 +5985,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateResourceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateResourceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateResourceGroupResponse());
+        }
+
     }
 
     /**
-      * In this example, the display name of the resource group `rg-9gLOoK****` is changed to `project`.
-      *
-      * @param request UpdateResourceGroupRequest
-      * @return UpdateResourceGroupResponse
+     * <b>description</b> :
+     * <p>In this example, the display name of the resource group <code>rg-9gLOoK****</code> is changed to <code>project</code>.</p>
+     * 
+     * @param request UpdateResourceGroupRequest
+     * @return UpdateResourceGroupResponse
      */
     public UpdateResourceGroupResponse updateResourceGroup(UpdateResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -4084,11 +6006,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the description of the RAM role `ECSAdmin` is updated to `ECS administrator`.
-      *
-      * @param request UpdateRoleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateRoleResponse
+     * <b>description</b> :
+     * <p>In this example, the description of the RAM role <code>ECSAdmin</code> is updated to <code>ECS administrator</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information of a Resource Access Management (RAM) role.</p>
+     * 
+     * @param request UpdateRoleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRoleResponse
      */
     public UpdateRoleResponse updateRoleWithOptions(UpdateRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -4123,14 +6049,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRoleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRoleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRoleResponse());
+        }
+
     }
 
     /**
-      * In this example, the description of the RAM role `ECSAdmin` is updated to `ECS administrator`.
-      *
-      * @param request UpdateRoleRequest
-      * @return UpdateRoleResponse
+     * <b>description</b> :
+     * <p>In this example, the description of the RAM role <code>ECSAdmin</code> is updated to <code>ECS administrator</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the information of a Resource Access Management (RAM) role.</p>
+     * 
+     * @param request UpdateRoleRequest
+     * @return UpdateRoleResponse
      */
     public UpdateRoleResponse updateRole(UpdateRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class UpdateResourceGroupResponseBody extends TeaModel {
     public static class UpdateResourceGroupResponseBodyResourceGroup extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18+08:00</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The display name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The unique identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         @NameInMap("Name")
         public String name;

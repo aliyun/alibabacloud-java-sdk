@@ -6,9 +6,10 @@ import com.aliyun.tea.*;
 public class ListAccountsForParentRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the information of tags. Valid values:</p>
-     * <br>
      * <p>false (default value)</p>
-     * <br>
+     * <p>true</p>
+     * 
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IncludeTags")
@@ -16,30 +17,39 @@ public class ListAccountsForParentRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the folder.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-bVaRIG****</p>
      */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 
     /**
      * <p>The keyword used for the query, such as the display name of a member.</p>
-     * <br>
      * <p>Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("QueryKeyword")
     public String queryKeyword;
@@ -106,12 +116,18 @@ public class ListAccountsForParentRequest extends TeaModel {
     public static class ListAccountsForParentRequestTag extends TeaModel {
         /**
          * <p>A tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>A tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_value</p>
          */
         @NameInMap("Value")
         public String value;

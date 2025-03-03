@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListPolicyAttachmentsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,11 +94,17 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
     public static class ListPolicyAttachmentsResponseBodyPolicyAttachmentsPolicyAttachment extends TeaModel {
         /**
          * <p>The time when the policy was attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("AttachDate")
         public String attachDate;
 
         /**
+         * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The description of the policy.</p>
          */
         @NameInMap("Description")
@@ -94,37 +112,54 @@ public class ListPolicyAttachmentsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AdministratorAccess</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the policy. Valid values:</p>
-         * <br>
-         * <p>*   Custom: custom policy</p>
-         * <p>*   System: system policy</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
          * <p>The name of the object to which the policy is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@demo.onaliyun.com">alice@demo.onaliyun.com</a></p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The type of the object to which the policy is attached. Valid values:</p>
-         * <br>
-         * <p>*   IMSUser: RAM user</p>
-         * <p>*   IMSGroup: RAM user group</p>
-         * <p>*   ServiceRole: RAM role</p>
+         * <ul>
+         * <li>IMSUser: RAM user</li>
+         * <li>IMSGroup: RAM user group</li>
+         * <li>ServiceRole: RAM role</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IMSUser</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
 
         /**
          * <p>The ID of the resource group or the ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

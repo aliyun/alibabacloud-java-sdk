@@ -12,6 +12,9 @@ public class AcceptHandshakeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5828C836-3286-49A6-9006-15231BB19342</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,75 +43,110 @@ public class AcceptHandshakeResponseBody extends TeaModel {
     public static class AcceptHandshakeResponseBodyHandshake extends TeaModel {
         /**
          * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06T02:15:40Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The time when the invitation expires. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-20T02:15:40Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The ID of the invitation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h-Ih8IuPfvV0t0****</p>
          */
         @NameInMap("HandshakeId")
         public String handshakeId;
 
         /**
          * <p>The ID of the management account of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
         /**
          * <p>The name of the management account of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CompanyA</p>
          */
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
         /**
          * <p>The time when the invitation was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-06T02:16:40Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The comment on the invitation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Welcome</p>
          */
         @NameInMap("Note")
         public String note;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-3G****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
         /**
          * <p>The status of the invitation. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The invitation is waiting for confirmation.</p>
-         * <p>*   Accepted: The invitation is accepted.</p>
-         * <p>*   Cancelled: The invitation is canceled.</p>
-         * <p>*   Declined: The invitation is rejected.</p>
-         * <p>*   Expired: The invitation expires.</p>
+         * <ul>
+         * <li>Pending: The invitation is waiting for confirmation.</li>
+         * <li>Accepted: The invitation is accepted.</li>
+         * <li>Cancelled: The invitation is canceled.</li>
+         * <li>Declined: The invitation is rejected.</li>
+         * <li>Expired: The invitation expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Accepted</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID or logon email address of the invited Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>177242285274****</p>
          */
         @NameInMap("TargetEntity")
         public String targetEntity;
 
         /**
          * <p>The type of the invited Alibaba Cloud account. Valid values:</p>
-         * <br>
-         * <p>*   Account: indicates the ID of the Alibaba Cloud account.</p>
-         * <p>*   Email: indicates the logon email address of the Alibaba Cloud account.</p>
+         * <ul>
+         * <li>Account: indicates the ID of the Alibaba Cloud account.</li>
+         * <li>Email: indicates the logon email address of the Alibaba Cloud account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;

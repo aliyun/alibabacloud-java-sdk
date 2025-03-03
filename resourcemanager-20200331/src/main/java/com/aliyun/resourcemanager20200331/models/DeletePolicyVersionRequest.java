@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class DeletePolicyVersionRequest extends TeaModel {
     /**
      * <p>The name of the policy.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS-Administrator</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The ID of the policy version.</p>
-     * <br>
-     * <p>You can call the [ListPolicyVersions](~~159982~~) operation to query the ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159982.html">ListPolicyVersions</a> operation to query the ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v3</p>
      */
     @NameInMap("VersionId")
     public String versionId;

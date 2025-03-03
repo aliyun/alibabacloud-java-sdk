@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetPayerForAccountResponseBody extends TeaModel {
     /**
      * <p>The ID of the settlement account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172841235500****</p>
      */
     @NameInMap("PayerAccountId")
     public String payerAccountId;
 
     /**
      * <p>The name of the settlement account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alice</p>
      */
     @NameInMap("PayerAccountName")
     public String payerAccountName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

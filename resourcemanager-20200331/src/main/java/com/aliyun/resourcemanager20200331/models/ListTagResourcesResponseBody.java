@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the next query is required.</p>
-     * <br>
-     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.</p>
-     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * <ul>
+     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
+     * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8054B059-6B36-53BF-AA45-B8C9A0ED05AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,27 +64,40 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The ID of the resource group or member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz6bre2uq****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the object whose tags are queried. Valid values:</p>
-         * <br>
-         * <p>*   resourcegroup: resource group</p>
-         * <p>*   Account: member</p>
+         * <ul>
+         * <li>resourcegroup: resource group</li>
+         * <li>Account: member</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>resourcegroup</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

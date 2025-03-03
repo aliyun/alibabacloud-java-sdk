@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListPoliciesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -24,12 +30,18 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,45 +94,67 @@ public class ListPoliciesResponseBody extends TeaModel {
     public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
         /**
          * <p>The number of times the policy is referenced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AttachmentCount")
         public Integer attachmentCount;
 
         /**
          * <p>The time when the policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The default version of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS administrator</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the policy. Valid values:</p>
-         * <br>
-         * <p>*   Custom: custom policy</p>
-         * <p>*   System: system policy</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
          * <p>The time when the policy was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-02-11T18:39:12Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

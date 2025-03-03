@@ -6,37 +6,50 @@ import com.aliyun.tea.*;
 public class ListControlPoliciesRequest extends TeaModel {
     /**
      * <p>The language in which you want to return the descriptions of the access control policies. Valid values:</p>
-     * <br>
-     * <p>- zh-CN (default value): Chinese</p>
-     * <p>- en: English</p>
-     * <p>- ja: Japanese</p>
-     * <br>
-     * <p>>  This parameter is valid only for system access control policies.</p>
+     * <ul>
+     * <li>zh-CN (default value): Chinese</li>
+     * <li>en: English</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is valid only for system access control policies.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The number of the page to return. </p>
-     * <br>
      * <p>Page start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. </p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the access control policy. Valid values:</p>
-     * <br>
-     * <p>- System: system access control policy</p>
-     * <p>- Custom: custom access control policy</p>
+     * <ul>
+     * <li>System: system access control policy</li>
+     * <li>Custom: custom access control policy</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

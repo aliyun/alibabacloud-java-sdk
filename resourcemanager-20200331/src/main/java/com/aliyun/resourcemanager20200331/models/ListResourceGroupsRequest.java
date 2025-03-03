@@ -6,73 +6,93 @@ import com.aliyun.tea.*;
 public class ListResourceGroupsRequest extends TeaModel {
     /**
      * <p>The display name of the resource group. This parameter specifies a filter condition for the query. Fuzzy match is supported.</p>
-     * <br>
      * <p>The display name can be a maximum of 50 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
      * <p>Specifies whether to return the information of tags. Valid values:</p>
-     * <br>
-     * <p>*   false (default value)</p>
-     * <p>*   true</p>
-     * <br>
-     * <p>>  If you configure the Tag parameter, the system returns the information of tags regardless of the setting of the `IncludeTags` parameter.</p>
+     * <ul>
+     * <li>false (default value)</li>
+     * <li>true</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you configure the Tag parameter, the system returns the information of tags regardless of the setting of the <code>IncludeTags</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
     /**
      * <p>The identifier of the resource group. This parameter specifies a filter condition for the query. Fuzzy match is supported.</p>
-     * <br>
      * <p>The identifier can be a maximum of 50 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group. This parameter specifies a filter condition for the query.</p>
-     * <br>
-     * <p>The ID can be a maximum of 18 characters in length and must start with `rg-`.</p>
-     * <br>
-     * <p>>  This parameter is incorporated into the `ResourceGroupIds` parameter. If you configure both the `ResourceGroupId` and `ResourceGroupIds` parameters, the value of the `ResourceGroupIds` parameter prevails.</p>
+     * <p>The ID can be a maximum of 18 characters in length and must start with <code>rg-</code>.</p>
+     * <blockquote>
+     * <p> This parameter is incorporated into the <code>ResourceGroupIds</code> parameter. If you configure both the <code>ResourceGroupId</code> and <code>ResourceGroupIds</code> parameters, the value of the <code>ResourceGroupIds</code> parameter prevails.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-9gLOoK****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The IDs of the resource groups. This parameter specifies a filter condition for the query.</p>
-     * <br>
      * <p>You can specify a maximum of 100 resource group IDs.</p>
-     * <br>
-     * <p>>  If you configure both the `ResourceGroupId` and `ResourceGroupIds` parameters, the value of the `ResourceGroupIds` parameter prevails.</p>
+     * <blockquote>
+     * <p> If you configure both the <code>ResourceGroupId</code> and <code>ResourceGroupIds</code> parameters, the value of the <code>ResourceGroupIds</code> parameter prevails.</p>
+     * </blockquote>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 
     /**
      * <p>The status of the resource group. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   Creating: The resource group is being created.</p>
-     * <p>*   OK: The resource group is created.</p>
-     * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
+     * <ul>
+     * <li>Creating: The resource group is being created.</li>
+     * <li>OK: The resource group is created.</li>
+     * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Status")
     public String status;
@@ -163,12 +183,18 @@ public class ListResourceGroupsRequest extends TeaModel {
     public static class ListResourceGroupsRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

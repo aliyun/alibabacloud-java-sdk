@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class SetDefaultPolicyVersionRequest extends TeaModel {
     /**
      * <p>The name of the policy.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS-Administrator</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The ID of the policy version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
      */
     @NameInMap("VersionId")
     public String versionId;

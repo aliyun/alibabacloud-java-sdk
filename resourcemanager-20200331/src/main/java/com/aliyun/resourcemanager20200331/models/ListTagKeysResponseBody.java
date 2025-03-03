@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagKeysResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the next query is required.</p>
-     * <br>
-     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.</p>
-     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     * <ul>
+     * <li>If the value of this parameter is empty (<code>&quot;NextToken&quot;: &quot;&quot;</code>), all results are returned, and the next query is not required.</li>
+     * <li>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC09A6AA-2713-4E10-A2E9-E6C5C43A8842</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,6 +64,9 @@ public class ListTagKeysResponseBody extends TeaModel {
     public static class ListTagKeysResponseBodyTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
          */
         @NameInMap("Key")
         public String key;

@@ -12,6 +12,9 @@ public class ListAncestorsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83AFBEB6-DC03-406E-9686-867461FF6698</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListAncestorsResponseBody extends TeaModel {
     public static class ListAncestorsResponseBodyFoldersFolder extends TeaModel {
         /**
          * <p>The time when the folder was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-18T10:03:35.217Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-b1****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
          * <p>The name of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
          */
         @NameInMap("FolderName")
         public String folderName;

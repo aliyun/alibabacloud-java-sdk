@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B32BD3D6-1089-41F3-8E70-E0079BC7D760</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
 
     /**
      * <p>The total number of objects to which the control policy is attached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,28 +94,41 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     public static class ListTargetAttachmentsForControlPolicyResponseBodyTargetAttachmentsTargetAttachment extends TeaModel {
         /**
          * <p>The time when the control policy was attached to the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-19T02:56:24Z</p>
          */
         @NameInMap("AttachDate")
         public String attachDate;
 
         /**
          * <p>The ID of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-ZDNPiT****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev_Department</p>
          */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
          * <p>The type of the object. Valid values:</p>
-         * <br>
-         * <p>*   Root: Root folder</p>
-         * <p>*   Folder: child folder of the Root folder</p>
-         * <p>*   Account: member account</p>
+         * <ul>
+         * <li>Root: Root folder</li>
+         * <li>Folder: child folder of the Root folder</li>
+         * <li>Account: member account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Folder</p>
          */
         @NameInMap("TargetType")
         public String targetType;
