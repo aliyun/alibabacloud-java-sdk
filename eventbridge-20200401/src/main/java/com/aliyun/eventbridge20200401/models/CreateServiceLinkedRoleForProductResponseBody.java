@@ -35,7 +35,7 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

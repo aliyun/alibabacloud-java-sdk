@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryEventTracesResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * <p>The response code. Valid values:</p>
+     * <p>200: The request was successful.</p>
+     * <p>Other codes: The request failed. For information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -93,7 +95,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
 
     public static class QueryEventTracesResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the event trace. Valid values: PutEvent: a delivery event. FilterEvent: a filtering event. PushEvent: a pushing event.</p>
+         * <p>The type of the event trace. Valid values: PutEvent, FilterEvent, and PushEvent. The value PutEvent indicates that the event was delivered. The value FilterEvent indicates that the event was filtered. The value PushEvent indicates that the event was pushed.</p>
          * 
          * <strong>example:</strong>
          * <p>PutEvent</p>
@@ -111,7 +113,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
         public Long actionTime;
 
         /**
-         * <p>The endpoint of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         * <p>The endpoint of the event target. This parameter is returned only if Action is set to PushEvent.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:mns:cn-zhangjiakou:123456789098****:queues/testQueue</p>
@@ -147,7 +149,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
         public String eventSource;
 
         /**
-         * <p>The delivery delay of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         * <p>The delay period for which the event was delivered to the event target. This parameter is returned only if Action is set to PushEvent.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -156,7 +158,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
         public String notifyLatency;
 
         /**
-         * <p>The event target delivery status.</p>
+         * <p>The delivery status.</p>
          * 
          * <strong>example:</strong>
          * <p>[200]Ok</p>
@@ -165,7 +167,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
         public String notifyStatus;
 
         /**
-         * <p>The delivery time of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         * <p>The time when the event was delivered to the event target. This parameter is returned only if Action is set to PushEvent.</p>
          * 
          * <strong>example:</strong>
          * <p>1659495343896</p>
@@ -174,7 +176,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
         public Long notifyTime;
 
         /**
-         * <p>The time when the event was delivered to the event bus. This parameter is returned if the value of the Action parameter is PutEvent.</p>
+         * <p>The time when the event was delivered to the event bus. This parameter is returned only if Action is set to PutEvent.</p>
          * 
          * <strong>example:</strong>
          * <p>1659495343896</p>
@@ -183,7 +185,7 @@ public class QueryEventTracesResponseBody extends TeaModel {
         public Long receivedTime;
 
         /**
-         * <p>The time when the event rule was matched. This parameter is returned if the value of the Action parameter is FilterEvent.</p>
+         * <p>The time when the event rule was matched. This parameter is returned only if Action is set to FilterEvent.</p>
          * 
          * <strong>example:</strong>
          * <p>1659495343896</p>

@@ -14,7 +14,7 @@ public class CreateEventBusRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the event bus.</p>
+     * <p>Indicates whether the request is successful. The value true indicates that the request is successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

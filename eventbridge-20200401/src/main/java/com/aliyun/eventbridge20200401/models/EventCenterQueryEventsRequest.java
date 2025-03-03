@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class EventCenterQueryEventsRequest extends TeaModel {
     /**
+     * <p>The parameters in the request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Body")
     public EventCenterQueryEventsRequestBody body;
 
     /**
+     * <p>The name of the event bus.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -18,7 +21,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     public String busName;
 
     /**
-     * <p>本次读取的最大数据量，默认值为100。</p>
+     * <p>The number of entries per page. Valid values: 0 to 10000. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -74,6 +77,8 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
     public static class EventCenterQueryEventsRequestBodyParametersCalculations extends TeaModel {
         /**
+         * <p>The column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>source</p>
          */
@@ -81,6 +86,8 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String column;
 
         /**
+         * <p>The operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>COUNT_DISTINCT</p>
          */
@@ -110,8 +117,51 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
     }
 
+    public static class EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters extends TeaModel {
+        @NameInMap("Column")
+        public String column;
+
+        @NameInMap("Op")
+        public String op;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters build(java.util.Map<String, ?> map) throws Exception {
+            EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters self = new EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters setColumn(String column) {
+            this.column = column;
+            return this;
+        }
+        public String getColumn() {
+            return this.column;
+        }
+
+        public EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters setOp(String op) {
+            this.op = op;
+            return this;
+        }
+        public String getOp() {
+            return this.op;
+        }
+
+        public EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class EventCenterQueryEventsRequestBodyParametersFilters extends TeaModel {
         /**
+         * <p>The column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>source</p>
          */
@@ -120,11 +170,26 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>AND</p>
+         */
+        @NameInMap("NestedFilterCombination")
+        public String nestedFilterCombination;
+
+        @NameInMap("NestedFilters")
+        public java.util.List<EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters> nestedFilters;
+
+        /**
+         * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
          * <p>=</p>
          */
         @NameInMap("Op")
         public String op;
 
+        /**
+         * <p>The values that are used together with the operator.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -139,6 +204,22 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         }
         public String getColumn() {
             return this.column;
+        }
+
+        public EventCenterQueryEventsRequestBodyParametersFilters setNestedFilterCombination(String nestedFilterCombination) {
+            this.nestedFilterCombination = nestedFilterCombination;
+            return this;
+        }
+        public String getNestedFilterCombination() {
+            return this.nestedFilterCombination;
+        }
+
+        public EventCenterQueryEventsRequestBodyParametersFilters setNestedFilters(java.util.List<EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters> nestedFilters) {
+            this.nestedFilters = nestedFilters;
+            return this;
+        }
+        public java.util.List<EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters> getNestedFilters() {
+            return this.nestedFilters;
         }
 
         public EventCenterQueryEventsRequestBodyParametersFilters setOp(String op) {
@@ -161,6 +242,8 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
     public static class EventCenterQueryEventsRequestBodyParametersOrders extends TeaModel {
         /**
+         * <p>The column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>source</p>
          */
@@ -168,6 +251,8 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String column;
 
         /**
+         * <p>Specifies whether to sort the query results in descending order.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -175,6 +260,8 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Boolean desc;
 
         /**
+         * <p>The operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>AVG</p>
          */
@@ -213,30 +300,45 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     }
 
     public static class EventCenterQueryEventsRequestBodyParameters extends TeaModel {
+        /**
+         * <p>Specifies whether to further split the data set based on the column name.</p>
+         */
         @NameInMap("Breakdowns")
         public java.util.List<String> breakdowns;
 
+        /**
+         * <p>The operator that is used to calculate the specified column.</p>
+         */
         @NameInMap("Calculations")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersCalculations> calculations;
 
         /**
+         * <p>The timestamp that specifies the end of the time range to query. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1687861201814</p>
          */
         @NameInMap("EndTime")
-        public Integer endTime;
+        public Long endTime;
 
         /**
+         * <p>The logic used to filter the combination of conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>AND</p>
          */
         @NameInMap("FilterCombination")
         public String filterCombination;
 
+        /**
+         * <p>The filter conditions.</p>
+         */
         @NameInMap("Filters")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersFilters> filters;
 
         /**
+         * <p>The minimum time unit for querying time series data. Minimum value: 1. Unit: seconds. The value of this parameter is a recommended value. The actual value returned shall prevail.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -244,6 +346,8 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Integer granularity;
 
         /**
+         * <p>The maximum number of events to query. Valid values: 1 to 10000.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -251,28 +355,37 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Integer limit;
 
         /**
+         * <p>The offset of the start position for this query. The offset starts from 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Offset")
         public Integer offset;
 
+        /**
+         * <p>The order of the query results. This parameter is valid only if you set QueryType to table.</p>
+         */
         @NameInMap("Orders")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersOrders> orders;
 
         /**
+         * <p>The timestamp that specifies the beginning of the time range to query. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1687860901814</p>
          */
         @NameInMap("StartTime")
-        public Integer startTime;
+        public Long startTime;
 
         /**
+         * <p>The time range during which events are queried. Unit: milliseconds. Minimum value: 1000.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000</p>
          */
         @NameInMap("TimeRange")
-        public Integer timeRange;
+        public Long timeRange;
 
         public static EventCenterQueryEventsRequestBodyParameters build(java.util.Map<String, ?> map) throws Exception {
             EventCenterQueryEventsRequestBodyParameters self = new EventCenterQueryEventsRequestBodyParameters();
@@ -295,11 +408,11 @@ public class EventCenterQueryEventsRequest extends TeaModel {
             return this.calculations;
         }
 
-        public EventCenterQueryEventsRequestBodyParameters setEndTime(Integer endTime) {
+        public EventCenterQueryEventsRequestBodyParameters setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
         }
-        public Integer getEndTime() {
+        public Long getEndTime() {
             return this.endTime;
         }
 
@@ -351,19 +464,19 @@ public class EventCenterQueryEventsRequest extends TeaModel {
             return this.orders;
         }
 
-        public EventCenterQueryEventsRequestBodyParameters setStartTime(Integer startTime) {
+        public EventCenterQueryEventsRequestBodyParameters setStartTime(Long startTime) {
             this.startTime = startTime;
             return this;
         }
-        public Integer getStartTime() {
+        public Long getStartTime() {
             return this.startTime;
         }
 
-        public EventCenterQueryEventsRequestBodyParameters setTimeRange(Integer timeRange) {
+        public EventCenterQueryEventsRequestBodyParameters setTimeRange(Long timeRange) {
             this.timeRange = timeRange;
             return this;
         }
-        public Integer getTimeRange() {
+        public Long getTimeRange() {
             return this.timeRange;
         }
 
@@ -371,12 +484,19 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
     public static class EventCenterQueryEventsRequestBody extends TeaModel {
         /**
+         * <p>The query parameters.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Parameters")
         public EventCenterQueryEventsRequestBodyParameters parameters;
 
         /**
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li><strong>timeseries</strong>: queries time series data.</li>
+         * <li><strong>table</strong>: queries table data.</li>
+         * <li><strong>timeseries_and_table</strong>: queries time series data and table data at the same time.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -386,7 +506,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String queryType;
 
         /**
-         * <p>Schema ID。</p>
+         * <p>The schema ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

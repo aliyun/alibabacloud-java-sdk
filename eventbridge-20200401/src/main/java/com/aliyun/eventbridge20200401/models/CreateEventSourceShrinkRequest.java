@@ -30,12 +30,21 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     @NameInMap("EventSourceName")
     public String eventSourceName;
 
+    /**
+     * <p>The configurations of the external data source.</p>
+     */
     @NameInMap("ExternalSourceConfig")
     public String externalSourceConfigShrink;
 
+    /**
+     * <p>The type of the external data source.</p>
+     */
     @NameInMap("ExternalSourceType")
     public byte[] externalSourceType;
 
+    /**
+     * <p>Specifies whether to connect to an external data source.</p>
+     */
     @NameInMap("LinkedExternalSource")
     public Boolean linkedExternalSource;
 

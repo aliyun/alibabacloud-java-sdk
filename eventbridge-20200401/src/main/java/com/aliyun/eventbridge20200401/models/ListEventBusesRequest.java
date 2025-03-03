@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListEventBusesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Note: Up to 100 entries can be returned in a call.</p>
+     * <p>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</p>
+     * <blockquote>
+     * <p> A maximum of 100 entries can be returned in a request.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +26,7 @@ public class ListEventBusesRequest extends TeaModel {
     public String namePrefix;
 
     /**
-     * <p>If you set Limit and excess return values exist, this parameter is returned.</p>
+     * <p>If you configure Limit and excess return values exist, this parameter is returned. You can use this parameter and Limit to implement paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

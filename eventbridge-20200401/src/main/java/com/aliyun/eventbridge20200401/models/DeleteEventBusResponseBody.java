@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventBusResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The response code. The code 200 indicates that the request was successful. Other codes indicate that the request failed. For information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

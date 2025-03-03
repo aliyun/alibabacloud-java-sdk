@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTargetsResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The response code. The code 200 indicates that the request was successful. Other codes indicate that the request failed. For information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -102,7 +102,7 @@ public class DeleteTargetsResponseBody extends TeaModel {
         public String entryId;
 
         /**
-         * <p>The returned error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>EventRuleTargetIdDuplicate</p>
@@ -111,7 +111,7 @@ public class DeleteTargetsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The returned error message.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The id of event target is duplicate!</p>

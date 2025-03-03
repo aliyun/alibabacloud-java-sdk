@@ -35,7 +35,7 @@ public class TestEventPatternResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. If the operation is successful, the value true is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

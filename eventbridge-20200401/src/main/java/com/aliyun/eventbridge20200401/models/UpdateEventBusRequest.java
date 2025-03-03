@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEventBusRequest extends TeaModel {
     /**
-     * <p>The description of the event bus.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

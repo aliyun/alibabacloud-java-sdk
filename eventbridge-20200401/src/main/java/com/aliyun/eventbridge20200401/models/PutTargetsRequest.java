@@ -60,6 +60,25 @@ public class PutTargetsRequest extends TeaModel {
         return this.targets;
     }
 
+    public static class PutTargetsRequestTargetsConcurrentConfig extends TeaModel {
+        @NameInMap("Concurrency")
+        public Long concurrency;
+
+        public static PutTargetsRequestTargetsConcurrentConfig build(java.util.Map<String, ?> map) throws Exception {
+            PutTargetsRequestTargetsConcurrentConfig self = new PutTargetsRequestTargetsConcurrentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public PutTargetsRequestTargetsConcurrentConfig setConcurrency(Long concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+    }
+
     public static class PutTargetsRequestTargetsDeadLetterQueue extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue.</p>
@@ -162,6 +181,9 @@ public class PutTargetsRequest extends TeaModel {
     }
 
     public static class PutTargetsRequestTargets extends TeaModel {
+        @NameInMap("ConcurrentConfig")
+        public PutTargetsRequestTargetsConcurrentConfig concurrentConfig;
+
         /**
          * <p>The dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue. The dead-letter queue feature supports the following queue types: Message Queue for Apache RocketMQ, Message Service, Message Queue for Apache Kafka, and event bus.</p>
          */
@@ -236,6 +258,14 @@ public class PutTargetsRequest extends TeaModel {
         public static PutTargetsRequestTargets build(java.util.Map<String, ?> map) throws Exception {
             PutTargetsRequestTargets self = new PutTargetsRequestTargets();
             return TeaModel.build(map, self);
+        }
+
+        public PutTargetsRequestTargets setConcurrentConfig(PutTargetsRequestTargetsConcurrentConfig concurrentConfig) {
+            this.concurrentConfig = concurrentConfig;
+            return this;
+        }
+        public PutTargetsRequestTargetsConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         public PutTargetsRequestTargets setDeadLetterQueue(PutTargetsRequestTargetsDeadLetterQueue deadLetterQueue) {
