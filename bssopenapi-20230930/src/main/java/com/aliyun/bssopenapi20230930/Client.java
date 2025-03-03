@@ -1,0 +1,873 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.bssopenapi20230930;
+
+import com.aliyun.tea.*;
+import com.aliyun.bssopenapi20230930.models.*;
+
+public class Client extends com.aliyun.teaopenapi.Client {
+
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
+        super(config);
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-hangzhou", "business.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "business.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "business.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "business.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "business.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "business.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "business.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "business.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "business.aliyuncs.com"),
+            new TeaPair("cn-fujian", "business.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "business.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "business.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "business.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "business.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "business.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "business.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "business.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "business.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "business.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "business.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "business.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "business.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "business.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "business.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "business.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "business.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "business.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "business.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "business.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "business.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "business.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "business.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "business.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "business.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "business.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "business.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "business.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "business.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "business.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "business.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "business.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "business.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "business.aliyuncs.com"),
+            new TeaPair("eu-central-1", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "business.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "business.ap-southeast-1.aliyuncs.com")
+        );
+        this.checkConfig(config);
+        this._endpoint = this.getEndpoint("bssopenapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
+    }
+
+
+    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
+        if (!com.aliyun.teautil.Common.empty(endpoint)) {
+            return endpoint;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
+        }
+
+        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消资金账户低额预警</p>
+     * 
+     * @param request CancelFundAccountLowAvailableAmountAlarmRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelFundAccountLowAvailableAmountAlarmResponse
+     */
+    public CancelFundAccountLowAvailableAmountAlarmResponse cancelFundAccountLowAvailableAmountAlarmWithOptions(CancelFundAccountLowAvailableAmountAlarmRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelFundAccountLowAvailableAmountAlarm"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelFundAccountLowAvailableAmountAlarmResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelFundAccountLowAvailableAmountAlarmResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消资金账户低额预警</p>
+     * 
+     * @param request CancelFundAccountLowAvailableAmountAlarmRequest
+     * @return CancelFundAccountLowAvailableAmountAlarmResponse
+     */
+    public CancelFundAccountLowAvailableAmountAlarmResponse cancelFundAccountLowAvailableAmountAlarm(CancelFundAccountLowAvailableAmountAlarmRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelFundAccountLowAvailableAmountAlarmWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建资金账户划拨/回收</p>
+     * 
+     * @param request CreateFundAccountTransferRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFundAccountTransferResponse
+     */
+    public CreateFundAccountTransferResponse createFundAccountTransferWithOptions(CreateFundAccountTransferRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            body.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currency)) {
+            body.put("Currency", request.currency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.financeType)) {
+            body.put("FinanceType", request.financeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromFundAccountId)) {
+            body.put("FromFundAccountId", request.fromFundAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            body.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toFundAccountId)) {
+            body.put("ToFundAccountId", request.toFundAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferType)) {
+            body.put("TransferType", request.transferType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFundAccountTransfer"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFundAccountTransferResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateFundAccountTransferResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建资金账户划拨/回收</p>
+     * 
+     * @param request CreateFundAccountTransferRequest
+     * @return CreateFundAccountTransferResponse
+     */
+    public CreateFundAccountTransferResponse createFundAccountTransfer(CreateFundAccountTransferRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFundAccountTransferWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可用金</p>
+     * 
+     * @param request GetFundAccountAvailableAmountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFundAccountAvailableAmountResponse
+     */
+    public GetFundAccountAvailableAmountResponse getFundAccountAvailableAmountWithOptions(GetFundAccountAvailableAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFundAccountAvailableAmount"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountAvailableAmountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountAvailableAmountResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可用金</p>
+     * 
+     * @param request GetFundAccountAvailableAmountRequest
+     * @return GetFundAccountAvailableAmountResponse
+     */
+    public GetFundAccountAvailableAmountResponse getFundAccountAvailableAmount(GetFundAccountAvailableAmountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFundAccountAvailableAmountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可分配信控额度</p>
+     * 
+     * @param request GetFundAccountCanAllocateCreditAmountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFundAccountCanAllocateCreditAmountResponse
+     */
+    public GetFundAccountCanAllocateCreditAmountResponse getFundAccountCanAllocateCreditAmountWithOptions(GetFundAccountCanAllocateCreditAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFundAccountCanAllocateCreditAmount"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanAllocateCreditAmountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanAllocateCreditAmountResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可分配信控额度</p>
+     * 
+     * @param request GetFundAccountCanAllocateCreditAmountRequest
+     * @return GetFundAccountCanAllocateCreditAmountResponse
+     */
+    public GetFundAccountCanAllocateCreditAmountResponse getFundAccountCanAllocateCreditAmount(GetFundAccountCanAllocateCreditAmountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFundAccountCanAllocateCreditAmountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可回收金额</p>
+     * 
+     * @param request GetFundAccountCanRecycleAmountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFundAccountCanRecycleAmountResponse
+     */
+    public GetFundAccountCanRecycleAmountResponse getFundAccountCanRecycleAmountWithOptions(GetFundAccountCanRecycleAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currency)) {
+            body.put("Currency", request.currency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recycleFromFundAccountId)) {
+            body.put("RecycleFromFundAccountId", request.recycleFromFundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFundAccountCanRecycleAmount"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanRecycleAmountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanRecycleAmountResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可回收金额</p>
+     * 
+     * @param request GetFundAccountCanRecycleAmountRequest
+     * @return GetFundAccountCanRecycleAmountResponse
+     */
+    public GetFundAccountCanRecycleAmountResponse getFundAccountCanRecycleAmount(GetFundAccountCanRecycleAmountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFundAccountCanRecycleAmountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户的可转出金额</p>
+     * 
+     * @param request GetFundAccountCanTransferAmountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFundAccountCanTransferAmountResponse
+     */
+    public GetFundAccountCanTransferAmountResponse getFundAccountCanTransferAmountWithOptions(GetFundAccountCanTransferAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currency)) {
+            body.put("Currency", request.currency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFundAccountCanTransferAmount"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanTransferAmountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanTransferAmountResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户的可转出金额</p>
+     * 
+     * @param request GetFundAccountCanTransferAmountRequest
+     * @return GetFundAccountCanTransferAmountResponse
+     */
+    public GetFundAccountCanTransferAmountResponse getFundAccountCanTransferAmount(GetFundAccountCanTransferAmountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFundAccountCanTransferAmountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可提现金额</p>
+     * 
+     * @param request GetFundAccountCanWithdrawAmountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFundAccountCanWithdrawAmountResponse
+     */
+    public GetFundAccountCanWithdrawAmountResponse getFundAccountCanWithdrawAmountWithOptions(GetFundAccountCanWithdrawAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFundAccountCanWithdrawAmount"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanWithdrawAmountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanWithdrawAmountResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户可提现金额</p>
+     * 
+     * @param request GetFundAccountCanWithdrawAmountRequest
+     * @return GetFundAccountCanWithdrawAmountResponse
+     */
+    public GetFundAccountCanWithdrawAmountResponse getFundAccountCanWithdrawAmount(GetFundAccountCanWithdrawAmountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFundAccountCanWithdrawAmountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户低额预警</p>
+     * 
+     * @param request GetFundAccountLowAvailableAmountAlarmRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFundAccountLowAvailableAmountAlarmResponse
+     */
+    public GetFundAccountLowAvailableAmountAlarmResponse getFundAccountLowAvailableAmountAlarmWithOptions(GetFundAccountLowAvailableAmountAlarmRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFundAccountLowAvailableAmountAlarm"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountLowAvailableAmountAlarmResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountLowAvailableAmountAlarmResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户低额预警</p>
+     * 
+     * @param request GetFundAccountLowAvailableAmountAlarmRequest
+     * @return GetFundAccountLowAvailableAmountAlarmResponse
+     */
+    public GetFundAccountLowAvailableAmountAlarmResponse getFundAccountLowAvailableAmountAlarm(GetFundAccountLowAvailableAmountAlarmRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFundAccountLowAvailableAmountAlarmWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户收支明细</p>
+     * 
+     * @param tmpReq GetFundAccountTransactionDetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFundAccountTransactionDetailsResponse
+     */
+    public GetFundAccountTransactionDetailsResponse getFundAccountTransactionDetailsWithOptions(GetFundAccountTransactionDetailsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetFundAccountTransactionDetailsShrinkRequest request = new GetFundAccountTransactionDetailsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transactionChannelList)) {
+            request.transactionChannelListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transactionChannelList, "TransactionChannelList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transactionTypeList)) {
+            request.transactionTypeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transactionTypeList, "TransactionTypeList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billNumber)) {
+            body.put("BillNumber", request.billNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelTransactionNumber)) {
+            body.put("ChannelTransactionNumber", request.channelTransactionNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionChannelListShrink)) {
+            body.put("TransactionChannelList", request.transactionChannelListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionDirection)) {
+            body.put("TransactionDirection", request.transactionDirection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionNumber)) {
+            body.put("TransactionNumber", request.transactionNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionType)) {
+            body.put("TransactionType", request.transactionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transactionTypeListShrink)) {
+            body.put("TransactionTypeList", request.transactionTypeListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFundAccountTransactionDetails"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountTransactionDetailsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountTransactionDetailsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户收支明细</p>
+     * 
+     * @param request GetFundAccountTransactionDetailsRequest
+     * @return GetFundAccountTransactionDetailsResponse
+     */
+    public GetFundAccountTransactionDetailsResponse getFundAccountTransactionDetails(GetFundAccountTransactionDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFundAccountTransactionDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户列表</p>
+     * 
+     * @param request ListFundAccountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFundAccountResponse
+     */
+    public ListFundAccountResponse listFundAccountWithOptions(ListFundAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.queryOnlyInUse)) {
+            body.put("QueryOnlyInUse", request.queryOnlyInUse);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryOnlyManage)) {
+            body.put("QueryOnlyManage", request.queryOnlyManage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFundAccount"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListFundAccountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListFundAccountResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户列表</p>
+     * 
+     * @param request ListFundAccountRequest
+     * @return ListFundAccountResponse
+     */
+    public ListFundAccountResponse listFundAccount(ListFundAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFundAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户的付款关系</p>
+     * 
+     * @param request ListFundAccountPayRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFundAccountPayRelationResponse
+     */
+    public ListFundAccountPayRelationResponse listFundAccountPayRelationWithOptions(ListFundAccountPayRelationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFundAccountPayRelation"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListFundAccountPayRelationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListFundAccountPayRelationResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资金账户的付款关系</p>
+     * 
+     * @param request ListFundAccountPayRelationRequest
+     * @return ListFundAccountPayRelationResponse
+     */
+    public ListFundAccountPayRelationResponse listFundAccountPayRelation(ListFundAccountPayRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFundAccountPayRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置资金账户的信控限额</p>
+     * 
+     * @param request SetFundAccountCreditAmountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetFundAccountCreditAmountResponse
+     */
+    public SetFundAccountCreditAmountResponse setFundAccountCreditAmountWithOptions(SetFundAccountCreditAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.creditAmount)) {
+            body.put("CreditAmount", request.creditAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currency)) {
+            body.put("Currency", request.currency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetFundAccountCreditAmount"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetFundAccountCreditAmountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetFundAccountCreditAmountResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置资金账户的信控限额</p>
+     * 
+     * @param request SetFundAccountCreditAmountRequest
+     * @return SetFundAccountCreditAmountResponse
+     */
+    public SetFundAccountCreditAmountResponse setFundAccountCreditAmount(SetFundAccountCreditAmountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setFundAccountCreditAmountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置节省计划用户级抵扣规则</p>
+     * 
+     * @param tmpReq SetSavingPlanUserDeductRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetSavingPlanUserDeductRuleResponse
+     */
+    public SetSavingPlanUserDeductRuleResponse setSavingPlanUserDeductRuleWithOptions(SetSavingPlanUserDeductRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SetSavingPlanUserDeductRuleShrinkRequest request = new SetSavingPlanUserDeductRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userDeductRules)) {
+            request.userDeductRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userDeductRules, "UserDeductRules", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.spnInstanceCode)) {
+            body.put("SpnInstanceCode", request.spnInstanceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDeductRulesShrink)) {
+            body.put("UserDeductRules", request.userDeductRulesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetSavingPlanUserDeductRule"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetSavingPlanUserDeductRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetSavingPlanUserDeductRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置节省计划用户级抵扣规则</p>
+     * 
+     * @param request SetSavingPlanUserDeductRuleRequest
+     * @return SetSavingPlanUserDeductRuleResponse
+     */
+    public SetSavingPlanUserDeductRuleResponse setSavingPlanUserDeductRule(SetSavingPlanUserDeductRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setSavingPlanUserDeductRuleWithOptions(request, runtime);
+    }
+}
