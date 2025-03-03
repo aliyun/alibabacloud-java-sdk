@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConnectionResponseBody extends TeaModel {
     /**
-     * <p>The returned response code.</p>
+     * <p>The response code. The value Success indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

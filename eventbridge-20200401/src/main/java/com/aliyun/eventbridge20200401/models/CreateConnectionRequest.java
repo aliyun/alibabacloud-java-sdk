@@ -428,7 +428,7 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestAuthParametersOAuthParameters extends TeaModel {
         /**
-         * <p>The IP address of the authorized endpoint. The default value of a column can be up to 127 characters in length.</p>
+         * <p>The endpoint of the authorized client. The endpoint can be up to 127 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></p>
@@ -460,7 +460,7 @@ public class CreateConnectionRequest extends TeaModel {
         public String httpMethod;
 
         /**
-         * <p>The request parameters that are configured for OAuth authentication.</p>
+         * <p>The request parameters of OAuth authentication.</p>
          */
         @NameInMap("OAuthHttpParameters")
         public CreateConnectionRequestAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters;
@@ -513,20 +513,10 @@ public class CreateConnectionRequest extends TeaModel {
 
         /**
          * <p>The authentication type. Valid values:</p>
-         * <p>BASIC_AUTH: basic authentication.</p>
-         * <p>Introduction: Basic authentication is a simple authentication scheme built into the HTTP protocol. When you use the HTTP protocol for communications, the authentication method that the HTTP server uses to authenticate user identities on the client is defined in the protocol. The request header is in the Authorization: Basic Base64-encoded string (Username:Password) format.</p>
-         * <ol>
-         * <li>Username and Password are required.</li>
-         * </ol>
-         * <p>API_KEY_AUTH: API key authentication.</p>
-         * <p>Introduction: The request header is in the Token: Token value format.</p>
          * <ul>
-         * <li>ApiKeyName and ApiKeyValue are required.</li>
-         * </ul>
-         * <p>OAUTH_AUTH: OAuth authentication.</p>
-         * <p>Introduction: OAuth2.0 is an authentication mechanism. In normal cases, a system that does not use OAuth2.0 can access the resources of the server from the client. To ensure access security, access tokens are used to authenticate users in OAuth 2.0. The client must use an access token to access protected resources. This way, OAuth 2.0 protects resources from being accessed from malicious clients and improves system security.</p>
-         * <ul>
-         * <li>AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod are required.</li>
+         * <li>BASIC: basic authentication. Basic authentication is a simple authentication scheme built into the HTTP protocol. When you use the HTTP protocol for communications, the authentication method that the HTTP server uses to authenticate user identities on the client is defined in the protocol. The request header is in the Authorization: Basic Base64-encoded string (<code>Username:Password</code>) format. If you use this authentication method, you must configure Username and Password.</li>
+         * <li>API_KEY_AUTH: API key authentication. The request header is in the Token: Token value format. If you use this authentication method, you must configure ApiKeyName and ApiKeyValue.</li>
+         * <li>OAUTH_AUTH: OAuth authentication. OAuth2.0 is an authentication mechanism. In normal cases, a system that does not use OAuth2.0 can access the resources of the server from the client. To ensure access security, access tokens are used to authenticate users in OAuth 2.0. The client must use an access token to access protected resources. This way, OAuth 2.0 protects resources from being accessed from malicious clients and improves system security. If you use this authentication method, you must configure AuthorizationEndpoint, OAuthHttpParameters, and HttpMethod.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -588,11 +578,13 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestNetworkParameters extends TeaModel {
         /**
-         * <p>The network type. Valid values:</p>
-         * <p>PublicNetwork and PrivateNetwork.</p>
          * <ul>
-         * <li>Note: If you set this parameter to PrivateNetwork, you must configure VpcId, VswitcheId, and SecurityGroupId.</li>
+         * <li>PublicNetwork: the Internet.</li>
+         * <li>PrivateNetwork: virtual private cloud (VPC).</li>
          * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to PrivateNetwork, you must also configure VpcId, VswitchId, and SecurityGroupId.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -602,7 +594,7 @@ public class CreateConnectionRequest extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The ID of the security group.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-167adad548759-security_grop/sg-bp1addad26peuh9qh9****</p>
@@ -611,7 +603,7 @@ public class CreateConnectionRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The VPC. ID</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-test/vpc-bp1symadadwnwg****</p>

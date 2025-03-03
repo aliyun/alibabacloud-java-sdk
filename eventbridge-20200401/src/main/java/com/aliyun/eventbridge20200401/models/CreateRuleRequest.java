@@ -109,6 +109,25 @@ public class CreateRuleRequest extends TeaModel {
         return this.status;
     }
 
+    public static class CreateRuleRequestEventTargetsConcurrentConfig extends TeaModel {
+        @NameInMap("Concurrency")
+        public Long concurrency;
+
+        public static CreateRuleRequestEventTargetsConcurrentConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateRuleRequestEventTargetsConcurrentConfig self = new CreateRuleRequestEventTargetsConcurrentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestEventTargetsConcurrentConfig setConcurrency(Long concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+    }
+
     public static class CreateRuleRequestEventTargetsDeadLetterQueue extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. The ARN feature is supported by the following queue types: MNS and Message Queue for Apache RocketMQ.</p>
@@ -211,6 +230,9 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestEventTargets extends TeaModel {
+        @NameInMap("ConcurrentConfig")
+        public CreateRuleRequestEventTargetsConcurrentConfig concurrentConfig;
+
         /**
          * <p>The dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. The dead-letter queue feature is supported by the following queue types: Message Queue for Apache RocketMQ, Message Service (MNS), Message Queue for Apache Kafka, and EventBridge.</p>
          */
@@ -273,6 +295,14 @@ public class CreateRuleRequest extends TeaModel {
         public static CreateRuleRequestEventTargets build(java.util.Map<String, ?> map) throws Exception {
             CreateRuleRequestEventTargets self = new CreateRuleRequestEventTargets();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRuleRequestEventTargets setConcurrentConfig(CreateRuleRequestEventTargetsConcurrentConfig concurrentConfig) {
+            this.concurrentConfig = concurrentConfig;
+            return this;
+        }
+        public CreateRuleRequestEventTargetsConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         public CreateRuleRequestEventTargets setDeadLetterQueue(CreateRuleRequestEventTargetsDeadLetterQueue deadLetterQueue) {

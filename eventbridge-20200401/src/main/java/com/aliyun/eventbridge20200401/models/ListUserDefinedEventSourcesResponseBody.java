@@ -1194,9 +1194,21 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @NameInMap("EventSourceList")
         public java.util.List<ListUserDefinedEventSourcesResponseBodyDataEventSourceList> eventSourceList;
 
+        /**
+         * <p>If excess return values exist when you configure Limit, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

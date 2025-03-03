@@ -14,7 +14,7 @@ public class ListConnectionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the connections returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListConnectionsResponseBodyData data;
@@ -76,7 +76,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters extends TeaModel {
         /**
-         * <p>The API key.</p>
+         * <p>The key of the API key.</p>
          * 
          * <strong>example:</strong>
          * <p>Token</p>
@@ -169,7 +169,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String clientID;
 
         /**
-         * <p>The client key secret of the application.</p>
+         * <p>The AccessKey secret of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>ClientSecret</p>
@@ -211,7 +211,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String isValueSecret;
 
         /**
-         * <p>The key in the request body.</p>
+         * <p>The key of the request body.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -220,7 +220,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the key in the request body.</p>
+         * <p>The value of the request body.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -270,7 +270,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String isValueSecret;
 
         /**
-         * <p>The key in the request header.</p>
+         * <p>The key of the request header.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -279,7 +279,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the key in the request header.</p>
+         * <p>The value of the request header.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -329,7 +329,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String isValueSecret;
 
         /**
-         * <p>The key in the request path.</p>
+         * <p>The key of the request path.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -338,7 +338,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the key in the request path.</p>
+         * <p>The value of the request path.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -385,13 +385,13 @@ public class ListConnectionsResponseBody extends TeaModel {
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> bodyParameters;
 
         /**
-         * <p>The parameters that are configured for the request header.</p>
+         * <p>The parameters that are returned for the request header.</p>
          */
         @NameInMap("HeaderParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters> headerParameters;
 
         /**
-         * <p>The parameters that are configured for the request path.</p>
+         * <p>The parameters that are returned for the request path.</p>
          */
         @NameInMap("QueryStringParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters> queryStringParameters;
@@ -438,7 +438,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String authorizationEndpoint;
 
         /**
-         * <p>The parameters that are configured for the client.</p>
+         * <p>The parameters that are returned for the client.</p>
          */
         @NameInMap("ClientParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersClientParameters clientParameters;
@@ -446,12 +446,9 @@ public class ListConnectionsResponseBody extends TeaModel {
         /**
          * <p>The HTTP request method. Valid values:</p>
          * <ul>
-         * <li><p>GET</p>
-         * </li>
-         * <li><p>POST</p>
-         * </li>
-         * <li><p>HEAD</p>
-         * </li>
+         * <li>GET</li>
+         * <li>POST</li>
+         * <li>HEAD</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -461,7 +458,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String httpMethod;
 
         /**
-         * <p>The request parameters for OAuth authentication.</p>
+         * <p>The request parameters of OAuth authentication.</p>
          */
         @NameInMap("OAuthHttpParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters;
@@ -507,20 +504,17 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParameters extends TeaModel {
         /**
-         * <p>The parameters that are configured for API key authentication.</p>
+         * <p>The parameters that are returned for API key authentication.</p>
          */
         @NameInMap("ApiKeyAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters apiKeyAuthParameters;
 
         /**
-         * <p>The authentication type. Valid values:</p>
+         * <p>The authentication method. Valid values:</p>
          * <ul>
-         * <li><p>BASIC_AUTH: basic authentication.</p>
-         * </li>
-         * <li><p>API_KEY_AUTH: API key authentication.</p>
-         * </li>
-         * <li><p>OAUTH_AUTH: OAuth authentication.</p>
-         * </li>
+         * <li>BASIC_AUTH: basic authentication.</li>
+         * <li>API_KEY_AUTH: API key authentication.</li>
+         * <li>OAUTH_AUTH: OAuth authentication.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -530,13 +524,13 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String authorizationType;
 
         /**
-         * <p>The parameters that are configured for basic authentication.</p>
+         * <p>The parameters that are returned for basic authentication.</p>
          */
         @NameInMap("BasicAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters basicAuthParameters;
 
         /**
-         * <p>The parameters that are configured for OAuth authentication.</p>
+         * <p>The parameters that are returned for OAuth authentication.</p>
          */
         @NameInMap("OAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters OAuthParameters;
@@ -582,7 +576,10 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnectionsNetworkParameters extends TeaModel {
         /**
-         * <p>The network type. Valid values:PublicNetwork and PrivateNetwork.</p>
+         * <ul>
+         * <li>PublicNetwork: the Internet.</li>
+         * <li>PrivateNetwork: virtual private cloud (VPC).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PublicNetwork</p>
@@ -600,7 +597,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-test/vpc-bp1symadadwnwgmqud</p>
@@ -658,7 +655,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyDataConnections extends TeaModel {
         /**
-         * <p>The parameters that are configured for authentication.</p>
+         * <p>The parameters that are returned for authentication.</p>
          */
         @NameInMap("AuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParameters authParameters;
@@ -691,7 +688,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The connection ID.</p>
+         * <p>The ID of the connection.</p>
          * 
          * <strong>example:</strong>
          * <p>1141093</p>
@@ -699,6 +696,9 @@ public class ListConnectionsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The parameters that are returned for the network.</p>
+         */
         @NameInMap("NetworkParameters")
         public ListConnectionsResponseBodyDataConnectionsNetworkParameters networkParameters;
 
@@ -759,7 +759,7 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     public static class ListConnectionsResponseBodyData extends TeaModel {
         /**
-         * <p>The value of the key in the request path.</p>
+         * <p>The connections.</p>
          */
         @NameInMap("Connections")
         public java.util.List<ListConnectionsResponseBodyDataConnections> connections;

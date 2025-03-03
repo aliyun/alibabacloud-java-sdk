@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class EventCenterQueryEventsShrinkRequest extends TeaModel {
     /**
+     * <p>The parameters in the request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Body")
     public String bodyShrink;
 
     /**
+     * <p>The name of the event bus.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -18,7 +21,7 @@ public class EventCenterQueryEventsShrinkRequest extends TeaModel {
     public String busName;
 
     /**
-     * <p>本次读取的最大数据量，默认值为100。</p>
+     * <p>The number of entries per page. Valid values: 0 to 10000. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

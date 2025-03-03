@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateEventBusResponseBody extends TeaModel {
     /**
-     * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * <p>The response code. Valid values:</p>
+     * <ul>
+     * <li>Success: The request was successful.</li>
+     * <li>Other codes: The request failed. For information about error codes, see Error codes.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +18,7 @@ public class UpdateEventBusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The event bus [xxxx] not existed!</p>
@@ -32,7 +36,7 @@ public class UpdateEventBusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -25,7 +25,10 @@ public class QueryEventRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>EventSource is required for querying default bus events.</p>
+     * <p>The name of the event source.</p>
+     * <ul>
+     * <li>This parameter is required if you query the system event bus.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>testEventSourceName</p>

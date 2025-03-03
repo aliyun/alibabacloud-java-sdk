@@ -31,7 +31,7 @@ public class CreateEventStreamingRequest extends TeaModel {
     public String filterPattern;
 
     /**
-     * <p>The parameters that are configured for the runtime environment.</p>
+     * <p>The configurations of the runtime environment.</p>
      */
     @NameInMap("RunOptions")
     public CreateEventStreamingRequestRunOptions runOptions;
@@ -116,7 +116,7 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     public static class CreateEventStreamingRequestRunOptionsBatchWindow extends TeaModel {
         /**
-         * <p>The maximum number of events that is allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+         * <p>The maximum number of events that is allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -125,7 +125,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public Integer countBasedWindow;
 
         /**
-         * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+         * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -177,197 +177,6 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public String getArn() {
             return this.arn;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters extends TeaModel {
-        @NameInMap("Endpoint")
-        public String endpoint;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("Topic")
-        public String topic;
-
-        public static CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters self = new CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        public CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters extends TeaModel {
-        @NameInMap("LogstoreName")
-        public String logstoreName;
-
-        @NameInMap("ProjectName")
-        public String projectName;
-
-        public static CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters self = new CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters setLogstoreName(String logstoreName) {
-            this.logstoreName = logstoreName;
-            return this;
-        }
-        public String getLogstoreName() {
-            return this.logstoreName;
-        }
-
-        public CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters setProjectName(String projectName) {
-            this.projectName = projectName;
-            return this;
-        }
-        public String getProjectName() {
-            return this.projectName;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsLogDelivery extends TeaModel {
-        @NameInMap("KafkaLogParameters")
-        public java.util.List<CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters> kafkaLogParameters;
-
-        @NameInMap("SLSLogParameters")
-        public java.util.List<CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters> SLSLogParameters;
-
-        public static CreateEventStreamingRequestRunOptionsLogDelivery build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsLogDelivery self = new CreateEventStreamingRequestRunOptionsLogDelivery();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsLogDelivery setKafkaLogParameters(java.util.List<CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters> kafkaLogParameters) {
-            this.kafkaLogParameters = kafkaLogParameters;
-            return this;
-        }
-        public java.util.List<CreateEventStreamingRequestRunOptionsLogDeliveryKafkaLogParameters> getKafkaLogParameters() {
-            return this.kafkaLogParameters;
-        }
-
-        public CreateEventStreamingRequestRunOptionsLogDelivery setSLSLogParameters(java.util.List<CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters> SLSLogParameters) {
-            this.SLSLogParameters = SLSLogParameters;
-            return this;
-        }
-        public java.util.List<CreateEventStreamingRequestRunOptionsLogDeliverySLSLogParameters> getSLSLogParameters() {
-            return this.SLSLogParameters;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsNetwork extends TeaModel {
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
-        @NameInMap("VSwitchIds")
-        public java.util.List<String> vSwitchIds;
-
-        @NameInMap("VpcId")
-        public String vpcId;
-
-        public static CreateEventStreamingRequestRunOptionsNetwork build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsNetwork self = new CreateEventStreamingRequestRunOptionsNetwork();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsNetwork setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        public CreateEventStreamingRequestRunOptionsNetwork setVSwitchIds(java.util.List<String> vSwitchIds) {
-            this.vSwitchIds = vSwitchIds;
-            return this;
-        }
-        public java.util.List<String> getVSwitchIds() {
-            return this.vSwitchIds;
-        }
-
-        public CreateEventStreamingRequestRunOptionsNetwork setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsResourceSpecResources extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Value")
-        public Integer value;
-
-        public static CreateEventStreamingRequestRunOptionsResourceSpecResources build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsResourceSpecResources self = new CreateEventStreamingRequestRunOptionsResourceSpecResources();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsResourceSpecResources setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public CreateEventStreamingRequestRunOptionsResourceSpecResources setValue(Integer value) {
-            this.value = value;
-            return this;
-        }
-        public Integer getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsResourceSpec extends TeaModel {
-        @NameInMap("Resources")
-        public java.util.List<CreateEventStreamingRequestRunOptionsResourceSpecResources> resources;
-
-        public static CreateEventStreamingRequestRunOptionsResourceSpec build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsResourceSpec self = new CreateEventStreamingRequestRunOptionsResourceSpec();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsResourceSpec setResources(java.util.List<CreateEventStreamingRequestRunOptionsResourceSpecResources> resources) {
-            this.resources = resources;
-            return this;
-        }
-        public java.util.List<CreateEventStreamingRequestRunOptionsResourceSpecResources> getResources() {
-            return this.resources;
         }
 
     }
@@ -435,107 +244,6 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
-    public static class CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Value")
-        public Integer value;
-
-        public static CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata self = new CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata setValue(Integer value) {
-            this.value = value;
-            return this;
-        }
-        public Integer getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsScaledObjectTriggers extends TeaModel {
-        @NameInMap("Metadata")
-        public CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata metadata;
-
-        @NameInMap("Type")
-        public String type;
-
-        public static CreateEventStreamingRequestRunOptionsScaledObjectTriggers build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsScaledObjectTriggers self = new CreateEventStreamingRequestRunOptionsScaledObjectTriggers();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsScaledObjectTriggers setMetadata(CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata metadata) {
-            this.metadata = metadata;
-            return this;
-        }
-        public CreateEventStreamingRequestRunOptionsScaledObjectTriggersMetadata getMetadata() {
-            return this.metadata;
-        }
-
-        public CreateEventStreamingRequestRunOptionsScaledObjectTriggers setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class CreateEventStreamingRequestRunOptionsScaledObject extends TeaModel {
-        @NameInMap("MaxReplicaCount")
-        public Integer maxReplicaCount;
-
-        @NameInMap("MinReplicaCount")
-        public Integer minReplicaCount;
-
-        @NameInMap("Triggers")
-        public java.util.List<CreateEventStreamingRequestRunOptionsScaledObjectTriggers> triggers;
-
-        public static CreateEventStreamingRequestRunOptionsScaledObject build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestRunOptionsScaledObject self = new CreateEventStreamingRequestRunOptionsScaledObject();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateEventStreamingRequestRunOptionsScaledObject setMaxReplicaCount(Integer maxReplicaCount) {
-            this.maxReplicaCount = maxReplicaCount;
-            return this;
-        }
-        public Integer getMaxReplicaCount() {
-            return this.maxReplicaCount;
-        }
-
-        public CreateEventStreamingRequestRunOptionsScaledObject setMinReplicaCount(Integer minReplicaCount) {
-            this.minReplicaCount = minReplicaCount;
-            return this;
-        }
-        public Integer getMinReplicaCount() {
-            return this.minReplicaCount;
-        }
-
-        public CreateEventStreamingRequestRunOptionsScaledObject setTriggers(java.util.List<CreateEventStreamingRequestRunOptionsScaledObjectTriggers> triggers) {
-            this.triggers = triggers;
-            return this;
-        }
-        public java.util.List<CreateEventStreamingRequestRunOptionsScaledObjectTriggers> getTriggers() {
-            return this.triggers;
-        }
-
-    }
-
     public static class CreateEventStreamingRequestRunOptions extends TeaModel {
         /**
          * <p>The batch window.</p>
@@ -544,7 +252,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestRunOptionsBatchWindow batchWindow;
 
         /**
-         * <p>Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Messages that fail to be pushed are discarded after the maximum number of retries that is specified by the retry policy is reached.</p>
+         * <p>Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Events that fail to be pushed are discarded after the maximum number of retries that is specified by the retry policy is reached.</p>
          */
         @NameInMap("DeadLetterQueue")
         public CreateEventStreamingRequestRunOptionsDeadLetterQueue deadLetterQueue;
@@ -562,9 +270,6 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("ErrorsTolerance")
         public String errorsTolerance;
 
-        @NameInMap("LogDelivery")
-        public CreateEventStreamingRequestRunOptionsLogDelivery logDelivery;
-
         /**
          * <p>The maximum number of concurrent threads.</p>
          * 
@@ -574,23 +279,11 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("MaximumTasks")
         public Long maximumTasks;
 
-        @NameInMap("Network")
-        public CreateEventStreamingRequestRunOptionsNetwork network;
-
-        @NameInMap("ResourceSpec")
-        public CreateEventStreamingRequestRunOptionsResourceSpec resourceSpec;
-
         /**
          * <p>The retry policy that you want to use if events fail to be pushed.</p>
          */
         @NameInMap("RetryStrategy")
         public CreateEventStreamingRequestRunOptionsRetryStrategy retryStrategy;
-
-        @NameInMap("RoleName")
-        public String roleName;
-
-        @NameInMap("ScaledObject")
-        public CreateEventStreamingRequestRunOptionsScaledObject scaledObject;
 
         public static CreateEventStreamingRequestRunOptions build(java.util.Map<String, ?> map) throws Exception {
             CreateEventStreamingRequestRunOptions self = new CreateEventStreamingRequestRunOptions();
@@ -621,36 +314,12 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.errorsTolerance;
         }
 
-        public CreateEventStreamingRequestRunOptions setLogDelivery(CreateEventStreamingRequestRunOptionsLogDelivery logDelivery) {
-            this.logDelivery = logDelivery;
-            return this;
-        }
-        public CreateEventStreamingRequestRunOptionsLogDelivery getLogDelivery() {
-            return this.logDelivery;
-        }
-
         public CreateEventStreamingRequestRunOptions setMaximumTasks(Long maximumTasks) {
             this.maximumTasks = maximumTasks;
             return this;
         }
         public Long getMaximumTasks() {
             return this.maximumTasks;
-        }
-
-        public CreateEventStreamingRequestRunOptions setNetwork(CreateEventStreamingRequestRunOptionsNetwork network) {
-            this.network = network;
-            return this;
-        }
-        public CreateEventStreamingRequestRunOptionsNetwork getNetwork() {
-            return this.network;
-        }
-
-        public CreateEventStreamingRequestRunOptions setResourceSpec(CreateEventStreamingRequestRunOptionsResourceSpec resourceSpec) {
-            this.resourceSpec = resourceSpec;
-            return this;
-        }
-        public CreateEventStreamingRequestRunOptionsResourceSpec getResourceSpec() {
-            return this.resourceSpec;
         }
 
         public CreateEventStreamingRequestRunOptions setRetryStrategy(CreateEventStreamingRequestRunOptionsRetryStrategy retryStrategy) {
@@ -661,20 +330,245 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.retryStrategy;
         }
 
-        public CreateEventStreamingRequestRunOptions setRoleName(String roleName) {
-            this.roleName = roleName;
-            return this;
-        }
-        public String getRoleName() {
-            return this.roleName;
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp self = new CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp();
+            return TeaModel.build(map, self);
         }
 
-        public CreateEventStreamingRequestRunOptions setScaledObject(CreateEventStreamingRequestRunOptionsScaledObject scaledObject) {
-            this.scaledObject = scaledObject;
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp setForm(String form) {
+            this.form = form;
             return this;
         }
-        public CreateEventStreamingRequestRunOptionsScaledObject getScaledObject() {
-            return this.scaledObject;
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup self = new CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic self = new CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters extends TeaModel {
+        @NameInMap("ConsumeTimestamp")
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp consumeTimestamp;
+
+        @NameInMap("Group")
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup group;
+
+        @NameInMap("InstanceEndpoint")
+        public String instanceEndpoint;
+
+        @NameInMap("InstancePassword")
+        public String instancePassword;
+
+        @NameInMap("InstanceUsername")
+        public String instanceUsername;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("Topic")
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic topic;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters self = new CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setConsumeTimestamp(CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp consumeTimestamp) {
+            this.consumeTimestamp = consumeTimestamp;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp getConsumeTimestamp() {
+            return this.consumeTimestamp;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setGroup(CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup group) {
+            this.group = group;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersGroup getGroup() {
+            return this.group;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setInstanceEndpoint(String instanceEndpoint) {
+            this.instanceEndpoint = instanceEndpoint;
+            return this;
+        }
+        public String getInstanceEndpoint() {
+            return this.instanceEndpoint;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setInstancePassword(String instancePassword) {
+            this.instancePassword = instancePassword;
+            return this;
+        }
+        public String getInstancePassword() {
+            return this.instancePassword;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setInstanceUsername(String instanceUsername) {
+            this.instanceUsername = instanceUsername;
+            return this;
+        }
+        public String getInstanceUsername() {
+            return this.instanceUsername;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setTopic(CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic topic) {
+            this.topic = topic;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParametersTopic getTopic() {
+            return this.topic;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
@@ -765,6 +659,277 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters self = new CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersPartition extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersPartition build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersPartition self = new CreateEventStreamingRequestSinkSinkDashVectorParametersPartition();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPartition setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPartition setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPartition setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId self = new CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParametersVector extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParametersVector build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParametersVector self = new CreateEventStreamingRequestSinkSinkDashVectorParametersVector();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersVector setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersVector setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersVector setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkDashVectorParameters extends TeaModel {
+        @NameInMap("ApiKey")
+        public String apiKey;
+
+        @NameInMap("Collection")
+        public String collection;
+
+        @NameInMap("DashVectorSchemaParameters")
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters dashVectorSchemaParameters;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("Network")
+        public String network;
+
+        @NameInMap("Operation")
+        public String operation;
+
+        @NameInMap("Partition")
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPartition partition;
+
+        @NameInMap("PrimaryKeyId")
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId primaryKeyId;
+
+        @NameInMap("Vector")
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersVector vector;
+
+        public static CreateEventStreamingRequestSinkSinkDashVectorParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkDashVectorParameters self = new CreateEventStreamingRequestSinkSinkDashVectorParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setApiKey(String apiKey) {
+            this.apiKey = apiKey;
+            return this;
+        }
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setCollection(String collection) {
+            this.collection = collection;
+            return this;
+        }
+        public String getCollection() {
+            return this.collection;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setDashVectorSchemaParameters(CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters dashVectorSchemaParameters) {
+            this.dashVectorSchemaParameters = dashVectorSchemaParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersDashVectorSchemaParameters getDashVectorSchemaParameters() {
+            return this.dashVectorSchemaParameters;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setNetwork(String network) {
+            this.network = network;
+            return this;
+        }
+        public String getNetwork() {
+            return this.network;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setOperation(String operation) {
+            this.operation = operation;
+            return this;
+        }
+        public String getOperation() {
+            return this.operation;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setPartition(CreateEventStreamingRequestSinkSinkDashVectorParametersPartition partition) {
+            this.partition = partition;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPartition getPartition() {
+            return this.partition;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setPrimaryKeyId(CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId primaryKeyId) {
+            this.primaryKeyId = primaryKeyId;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersPrimaryKeyId getPrimaryKeyId() {
+            return this.primaryKeyId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters setVector(CreateEventStreamingRequestSinkSinkDashVectorParametersVector vector) {
+            this.vector = vector;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParametersVector getVector() {
+            return this.vector;
         }
 
     }
@@ -1325,6 +1490,47 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSinkSinkFcParametersDataFormat extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkFcParametersDataFormat build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkFcParametersDataFormat self = new CreateEventStreamingRequestSinkSinkFcParametersDataFormat();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParametersDataFormat setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParametersDataFormat setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParametersDataFormat setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSinkSinkFcParametersFunctionName extends TeaModel {
         /**
          * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
@@ -1574,6 +1780,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Concurrency")
         public CreateEventStreamingRequestSinkSinkFcParametersConcurrency concurrency;
 
+        @NameInMap("DataFormat")
+        public CreateEventStreamingRequestSinkSinkFcParametersDataFormat dataFormat;
+
         /**
          * <p>The function name.</p>
          */
@@ -1617,6 +1826,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkFcParametersConcurrency getConcurrency() {
             return this.concurrency;
+        }
+
+        public CreateEventStreamingRequestSinkSinkFcParameters setDataFormat(CreateEventStreamingRequestSinkSinkFcParametersDataFormat dataFormat) {
+            this.dataFormat = dataFormat;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkFcParametersDataFormat getDataFormat() {
+            return this.dataFormat;
         }
 
         public CreateEventStreamingRequestSinkSinkFcParameters setFunctionName(CreateEventStreamingRequestSinkSinkFcParametersFunctionName functionName) {
@@ -2551,6 +2768,425 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkMNSParametersQueueName getQueueName() {
             return this.queueName;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody self = new CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange self = new CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId self = new CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties self = new CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName self = new CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey self = new CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters extends TeaModel {
+        @NameInMap("Body")
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody body;
+
+        @NameInMap("Endpoint")
+        public String endpoint;
+
+        @NameInMap("Exchange")
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange exchange;
+
+        @NameInMap("MessageId")
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId messageId;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("Properties")
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties properties;
+
+        @NameInMap("QueueName")
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName queueName;
+
+        @NameInMap("RoutingKey")
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey routingKey;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("TargetType")
+        public String targetType;
+
+        @NameInMap("Username")
+        public String username;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VirtualHostName")
+        public String virtualHostName;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters self = new CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setBody(CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody body) {
+            this.body = body;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersBody getBody() {
+            return this.body;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setExchange(CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange exchange) {
+            this.exchange = exchange;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersExchange getExchange() {
+            return this.exchange;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setMessageId(CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersMessageId getMessageId() {
+            return this.messageId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setProperties(CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties properties) {
+            this.properties = properties;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersProperties getProperties() {
+            return this.properties;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setQueueName(CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName queueName) {
+            this.queueName = queueName;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersQueueName getQueueName() {
+            return this.queueName;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setRoutingKey(CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey routingKey) {
+            this.routingKey = routingKey;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParametersRoutingKey getRoutingKey() {
+            return this.routingKey;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setVirtualHostName(String virtualHostName) {
+            this.virtualHostName = virtualHostName;
+            return this;
+        }
+        public String getVirtualHostName() {
+            return this.virtualHostName;
+        }
+
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
@@ -3917,6 +4553,192 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp self = new CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup self = new CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic self = new CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters extends TeaModel {
+        @NameInMap("ConsumeTimestamp")
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp consumeTimestamp;
+
+        @NameInMap("Group")
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup group;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("Topic")
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic topic;
+
+        public static CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters self = new CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters setConsumeTimestamp(CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp consumeTimestamp) {
+            this.consumeTimestamp = consumeTimestamp;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersConsumeTimestamp getConsumeTimestamp() {
+            return this.consumeTimestamp;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters setGroup(CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup group) {
+            this.group = group;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersGroup getGroup() {
+            return this.group;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters setTopic(CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic topic) {
+            this.topic = topic;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParametersTopic getTopic() {
+            return this.topic;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersBody extends TeaModel {
         /**
          * <p>The method that you want to use to transform events.</p>
@@ -3978,6 +4800,47 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType self = new CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceEndpoint extends TeaModel {
         /**
          * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
@@ -3995,7 +4858,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The endpoint that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The endpoint that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vbr-8vbsvkkbpf3vb0zefs7ex</p>
@@ -4110,7 +4973,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The password that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The password that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -4222,7 +5085,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The username that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The username that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -4339,10 +5202,10 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String template;
 
         /**
-         * <p>The network type. Valid values:</p>
+         * <p>The network type.</p>
          * <ul>
-         * <li>PublicNetwork and</li>
-         * <li>PrivateNetwork.</li>
+         * <li>PublicNetwork</li>
+         * <li>PrivateNetwork</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -4490,6 +5353,47 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
 
         public CreateEventStreamingRequestSinkSinkRocketMQParametersSecurityGroupId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey self = new CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey setValue(String value) {
             this.value = value;
             return this;
         }
@@ -4738,8 +5642,11 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Body")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersBody body;
 
+        @NameInMap("DeliveryOrderType")
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType deliveryOrderType;
+
         /**
-         * <p>The endpoint that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The endpoint that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceEndpoint")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceEndpoint instanceEndpoint;
@@ -4751,7 +5658,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceId instanceId;
 
         /**
-         * <p>The password that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The password that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstancePassword")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstancePassword instancePassword;
@@ -4763,7 +5670,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceType instanceType;
 
         /**
-         * <p>The username that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The username that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          */
         @NameInMap("InstanceUsername")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceUsername instanceUsername;
@@ -4775,10 +5682,10 @@ public class CreateEventStreamingRequest extends TeaModel {
         public CreateEventStreamingRequestSinkSinkRocketMQParametersKeys keys;
 
         /**
-         * <p>The network type. Valid values:</p>
+         * <p>The network type.</p>
          * <ul>
-         * <li>PublicNetwork and</li>
-         * <li>PrivateNetwork.</li>
+         * <li>PublicNetwork</li>
+         * <li>PrivateNetwork</li>
          * </ul>
          */
         @NameInMap("Network")
@@ -4795,6 +5702,9 @@ public class CreateEventStreamingRequest extends TeaModel {
          */
         @NameInMap("SecurityGroupId")
         public CreateEventStreamingRequestSinkSinkRocketMQParametersSecurityGroupId securityGroupId;
+
+        @NameInMap("ShardingKey")
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey shardingKey;
 
         /**
          * <p>The tags that you want to use to filter messages.</p>
@@ -4831,6 +5741,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkRocketMQParametersBody getBody() {
             return this.body;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParameters setDeliveryOrderType(CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType deliveryOrderType) {
+            this.deliveryOrderType = deliveryOrderType;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersDeliveryOrderType getDeliveryOrderType() {
+            return this.deliveryOrderType;
         }
 
         public CreateEventStreamingRequestSinkSinkRocketMQParameters setInstanceEndpoint(CreateEventStreamingRequestSinkSinkRocketMQParametersInstanceEndpoint instanceEndpoint) {
@@ -4903,6 +5821,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkRocketMQParametersSecurityGroupId getSecurityGroupId() {
             return this.securityGroupId;
+        }
+
+        public CreateEventStreamingRequestSinkSinkRocketMQParameters setShardingKey(CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey shardingKey) {
+            this.shardingKey = shardingKey;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkRocketMQParametersShardingKey getShardingKey() {
+            return this.shardingKey;
         }
 
         public CreateEventStreamingRequestSinkSinkRocketMQParameters setTags(CreateEventStreamingRequestSinkSinkRocketMQParametersTags tags) {
@@ -5407,11 +6333,17 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSink extends TeaModel {
+        @NameInMap("SinkApacheRocketMQCheckpointParameters")
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
+
         @NameInMap("SinkCustomizedKafkaConnectorParameters")
         public CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters;
 
         @NameInMap("SinkCustomizedKafkaParameters")
         public CreateEventStreamingRequestSinkSinkCustomizedKafkaParameters sinkCustomizedKafkaParameters;
+
+        @NameInMap("SinkDashVectorParameters")
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters sinkDashVectorParameters;
 
         /**
          * <p>The parameters that are configured if you specify DataHub as the event target.</p>
@@ -5443,6 +6375,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public CreateEventStreamingRequestSinkSinkMNSParameters sinkMNSParameters;
 
+        @NameInMap("SinkOpenSourceRabbitMQParameters")
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
+
         /**
          * <p>The parameters that are configured if you specify Managed Service for Prometheus as the event target.</p>
          */
@@ -5454,6 +6389,9 @@ public class CreateEventStreamingRequest extends TeaModel {
          */
         @NameInMap("SinkRabbitMQParameters")
         public CreateEventStreamingRequestSinkSinkRabbitMQParameters sinkRabbitMQParameters;
+
+        @NameInMap("SinkRocketMQCheckpointParameters")
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters;
 
         /**
          * <p>The parameters that are configured if you specify ApsaraMQ for RocketMQ as the event target.</p>
@@ -5472,6 +6410,14 @@ public class CreateEventStreamingRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateEventStreamingRequestSink setSinkApacheRocketMQCheckpointParameters(CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters) {
+            this.sinkApacheRocketMQCheckpointParameters = sinkApacheRocketMQCheckpointParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters getSinkApacheRocketMQCheckpointParameters() {
+            return this.sinkApacheRocketMQCheckpointParameters;
+        }
+
         public CreateEventStreamingRequestSink setSinkCustomizedKafkaConnectorParameters(CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters) {
             this.sinkCustomizedKafkaConnectorParameters = sinkCustomizedKafkaConnectorParameters;
             return this;
@@ -5486,6 +6432,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkCustomizedKafkaParameters getSinkCustomizedKafkaParameters() {
             return this.sinkCustomizedKafkaParameters;
+        }
+
+        public CreateEventStreamingRequestSink setSinkDashVectorParameters(CreateEventStreamingRequestSinkSinkDashVectorParameters sinkDashVectorParameters) {
+            this.sinkDashVectorParameters = sinkDashVectorParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkDashVectorParameters getSinkDashVectorParameters() {
+            return this.sinkDashVectorParameters;
         }
 
         public CreateEventStreamingRequestSink setSinkDataHubParameters(CreateEventStreamingRequestSinkSinkDataHubParameters sinkDataHubParameters) {
@@ -5528,6 +6482,14 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.sinkMNSParameters;
         }
 
+        public CreateEventStreamingRequestSink setSinkOpenSourceRabbitMQParameters(CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters) {
+            this.sinkOpenSourceRabbitMQParameters = sinkOpenSourceRabbitMQParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkOpenSourceRabbitMQParameters getSinkOpenSourceRabbitMQParameters() {
+            return this.sinkOpenSourceRabbitMQParameters;
+        }
+
         public CreateEventStreamingRequestSink setSinkPrometheusParameters(CreateEventStreamingRequestSinkSinkPrometheusParameters sinkPrometheusParameters) {
             this.sinkPrometheusParameters = sinkPrometheusParameters;
             return this;
@@ -5542,6 +6504,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkRabbitMQParameters getSinkRabbitMQParameters() {
             return this.sinkRabbitMQParameters;
+        }
+
+        public CreateEventStreamingRequestSink setSinkRocketMQCheckpointParameters(CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters) {
+            this.sinkRocketMQCheckpointParameters = sinkRocketMQCheckpointParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkRocketMQCheckpointParameters getSinkRocketMQCheckpointParameters() {
+            return this.sinkRocketMQCheckpointParameters;
         }
 
         public CreateEventStreamingRequestSink setSinkRocketMQParameters(CreateEventStreamingRequestSinkSinkRocketMQParameters sinkRocketMQParameters) {
@@ -5562,68 +6532,64 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
-    public static class CreateEventStreamingRequestSourceSourceApacheKafkaParameters extends TeaModel {
-        @NameInMap("Bootstraps")
-        public String bootstraps;
+    public static class CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters extends TeaModel {
+        @NameInMap("InstanceEndpoint")
+        public String instanceEndpoint;
 
-        @NameInMap("ConsumerGroup")
-        public String consumerGroup;
+        @NameInMap("InstancePassword")
+        public String instancePassword;
+
+        @NameInMap("InstanceUsername")
+        public String instanceUsername;
 
         @NameInMap("NetworkType")
         public String networkType;
 
-        @NameInMap("OffsetReset")
-        public String offsetReset;
-
-        @NameInMap("SaslMechanism")
-        public String saslMechanism;
-
-        @NameInMap("SaslPassword")
-        public String saslPassword;
-
-        @NameInMap("SaslUser")
-        public String saslUser;
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        @NameInMap("SecurityProtocol")
-        public String securityProtocol;
+        @NameInMap("Topics")
+        public java.util.List<String> topics;
 
-        @NameInMap("Topic")
-        public String topic;
-
-        @NameInMap("VSwitchIds")
-        public String vSwitchIds;
-
-        @NameInMap("ValueDataType")
-        public String valueDataType;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         @NameInMap("VpcId")
         public String vpcId;
 
-        public static CreateEventStreamingRequestSourceSourceApacheKafkaParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateEventStreamingRequestSourceSourceApacheKafkaParameters self = new CreateEventStreamingRequestSourceSourceApacheKafkaParameters();
+        public static CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters self = new CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters();
             return TeaModel.build(map, self);
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setBootstraps(String bootstraps) {
-            this.bootstraps = bootstraps;
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setInstanceEndpoint(String instanceEndpoint) {
+            this.instanceEndpoint = instanceEndpoint;
             return this;
         }
-        public String getBootstraps() {
-            return this.bootstraps;
+        public String getInstanceEndpoint() {
+            return this.instanceEndpoint;
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setConsumerGroup(String consumerGroup) {
-            this.consumerGroup = consumerGroup;
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setInstancePassword(String instancePassword) {
+            this.instancePassword = instancePassword;
             return this;
         }
-        public String getConsumerGroup() {
-            return this.consumerGroup;
+        public String getInstancePassword() {
+            return this.instancePassword;
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setNetworkType(String networkType) {
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setInstanceUsername(String instanceUsername) {
+            this.instanceUsername = instanceUsername;
+            return this;
+        }
+        public String getInstanceUsername() {
+            return this.instanceUsername;
+        }
+
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setNetworkType(String networkType) {
             this.networkType = networkType;
             return this;
         }
@@ -5631,39 +6597,15 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.networkType;
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setOffsetReset(String offsetReset) {
-            this.offsetReset = offsetReset;
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getOffsetReset() {
-            return this.offsetReset;
+        public String getRegionId() {
+            return this.regionId;
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSaslMechanism(String saslMechanism) {
-            this.saslMechanism = saslMechanism;
-            return this;
-        }
-        public String getSaslMechanism() {
-            return this.saslMechanism;
-        }
-
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSaslPassword(String saslPassword) {
-            this.saslPassword = saslPassword;
-            return this;
-        }
-        public String getSaslPassword() {
-            return this.saslPassword;
-        }
-
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSaslUser(String saslUser) {
-            this.saslUser = saslUser;
-            return this;
-        }
-        public String getSaslUser() {
-            return this.saslUser;
-        }
-
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSecurityGroupId(String securityGroupId) {
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
@@ -5671,39 +6613,23 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.securityGroupId;
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setSecurityProtocol(String securityProtocol) {
-            this.securityProtocol = securityProtocol;
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setTopics(java.util.List<String> topics) {
+            this.topics = topics;
             return this;
         }
-        public String getSecurityProtocol() {
-            return this.securityProtocol;
+        public java.util.List<String> getTopics() {
+            return this.topics;
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setTopic(String topic) {
-            this.topic = topic;
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
             return this;
         }
-        public String getTopic() {
-            return this.topic;
+        public String getVSwitchId() {
+            return this.vSwitchId;
         }
 
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setVSwitchIds(String vSwitchIds) {
-            this.vSwitchIds = vSwitchIds;
-            return this;
-        }
-        public String getVSwitchIds() {
-            return this.vSwitchIds;
-        }
-
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setValueDataType(String valueDataType) {
-            this.valueDataType = valueDataType;
-            return this;
-        }
-        public String getValueDataType() {
-            return this.valueDataType;
-        }
-
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters setVpcId(String vpcId) {
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -5927,6 +6853,36 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSourceSourceEventBusParameters extends TeaModel {
+        @NameInMap("EventBusName")
+        public String eventBusName;
+
+        @NameInMap("EventRuleName")
+        public String eventRuleName;
+
+        public static CreateEventStreamingRequestSourceSourceEventBusParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSourceSourceEventBusParameters self = new CreateEventStreamingRequestSourceSourceEventBusParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSourceSourceEventBusParameters setEventBusName(String eventBusName) {
+            this.eventBusName = eventBusName;
+            return this;
+        }
+        public String getEventBusName() {
+            return this.eventBusName;
+        }
+
+        public CreateEventStreamingRequestSourceSourceEventBusParameters setEventRuleName(String eventRuleName) {
+            this.eventRuleName = eventRuleName;
+            return this;
+        }
+        public String getEventRuleName() {
+            return this.eventRuleName;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSourceSourceKafkaParameters extends TeaModel {
         /**
          * <p>The group ID of the consumer that subscribes to the topic.</p>
@@ -6110,7 +7066,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public Boolean isBase64Decode;
 
         /**
-         * <p>The name of the MNS queue.</p>
+         * <p>The queue name.</p>
          * 
          * <strong>example:</strong>
          * <p>queue_api_1642474203601</p>
@@ -6228,6 +7184,198 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSourceSourceOSSParameters extends TeaModel {
+        @NameInMap("BucketName")
+        public String bucketName;
+
+        @NameInMap("Delimiter")
+        public String delimiter;
+
+        @NameInMap("LoadFormat")
+        public String loadFormat;
+
+        @NameInMap("LoadMode")
+        public String loadMode;
+
+        @NameInMap("Prefix")
+        public String prefix;
+
+        @NameInMap("RoleName")
+        public String roleName;
+
+        public static CreateEventStreamingRequestSourceSourceOSSParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSourceSourceOSSParameters self = new CreateEventStreamingRequestSourceSourceOSSParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSourceSourceOSSParameters setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOSSParameters setDelimiter(String delimiter) {
+            this.delimiter = delimiter;
+            return this;
+        }
+        public String getDelimiter() {
+            return this.delimiter;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOSSParameters setLoadFormat(String loadFormat) {
+            this.loadFormat = loadFormat;
+            return this;
+        }
+        public String getLoadFormat() {
+            return this.loadFormat;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOSSParameters setLoadMode(String loadMode) {
+            this.loadMode = loadMode;
+            return this;
+        }
+        public String getLoadMode() {
+            return this.loadMode;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOSSParameters setPrefix(String prefix) {
+            this.prefix = prefix;
+            return this;
+        }
+        public String getPrefix() {
+            return this.prefix;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOSSParameters setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+    }
+
+    public static class CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters extends TeaModel {
+        @NameInMap("BodyDataType")
+        public String bodyDataType;
+
+        @NameInMap("Endpoint")
+        public String endpoint;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("QueueName")
+        public String queueName;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("Username")
+        public String username;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VirtualHostName")
+        public String virtualHostName;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters self = new CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setBodyDataType(String bodyDataType) {
+            this.bodyDataType = bodyDataType;
+            return this;
+        }
+        public String getBodyDataType() {
+            return this.bodyDataType;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setQueueName(String queueName) {
+            this.queueName = queueName;
+            return this;
+        }
+        public String getQueueName() {
+            return this.queueName;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+        public String getUsername() {
+            return this.username;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setVirtualHostName(String virtualHostName) {
+            this.virtualHostName = virtualHostName;
+            return this;
+        }
+        public String getVirtualHostName() {
+            return this.virtualHostName;
+        }
+
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSourceSourcePrometheusParameters extends TeaModel {
         /**
          * <p>The cluster ID.</p>
@@ -6247,6 +7395,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        @NameInMap("ExternalLabels")
+        public String externalLabels;
+
         /**
          * <p>The labels.</p>
          * 
@@ -6258,6 +7409,9 @@ public class CreateEventStreamingRequest extends TeaModel {
 
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("RoleName")
+        public String roleName;
 
         public static CreateEventStreamingRequestSourceSourcePrometheusParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateEventStreamingRequestSourceSourcePrometheusParameters self = new CreateEventStreamingRequestSourceSourcePrometheusParameters();
@@ -6280,6 +7434,14 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.dataType;
         }
 
+        public CreateEventStreamingRequestSourceSourcePrometheusParameters setExternalLabels(String externalLabels) {
+            this.externalLabels = externalLabels;
+            return this;
+        }
+        public String getExternalLabels() {
+            return this.externalLabels;
+        }
+
         public CreateEventStreamingRequestSourceSourcePrometheusParameters setLabels(String labels) {
             this.labels = labels;
             return this;
@@ -6294,6 +7456,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public CreateEventStreamingRequestSourceSourcePrometheusParameters setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
     }
@@ -6374,6 +7544,58 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters extends TeaModel {
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Topics")
+        public java.util.List<String> topics;
+
+        public static CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters self = new CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters setTopics(java.util.List<String> topics) {
+            this.topics = topics;
+            return this;
+        }
+        public java.util.List<String> getTopics() {
+            return this.topics;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSourceSourceRocketMQParameters extends TeaModel {
         /**
          * <p>The authentication method.</p>
@@ -6415,7 +7637,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String groupID;
 
         /**
-         * <p>The endpoint that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The endpoint that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc.cn-zhangjiakou.aliyuncs.com</p>
@@ -6435,8 +7657,8 @@ public class CreateEventStreamingRequest extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <ul>
-         * <li>PublicNetwork and</li>
-         * <li>PrivateNetwork.</li>
+         * <li>PublicNetwork</li>
+         * <li>PrivateNetwork</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -6446,7 +7668,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String instanceNetwork;
 
         /**
-         * <p>The password that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The password that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -6473,7 +7695,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The username that is used to access the ApsaraMQ for RocketMQ instance.</p>
+         * <p>The username that you want to use to access the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -6551,7 +7773,7 @@ public class CreateEventStreamingRequest extends TeaModel {
         public String tag;
 
         /**
-         * <p>The timestamp that specifies the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUME_FROM_TIMESTAMP.</p>
+         * <p>The timestamp that indicates the time from which messages are consumed. This parameter is valid only if you set Offset to CONSUME_FROM_TIMESTAMP.</p>
          * 
          * <strong>example:</strong>
          * <p>1670656652009</p>
@@ -6854,8 +8076,8 @@ public class CreateEventStreamingRequest extends TeaModel {
     }
 
     public static class CreateEventStreamingRequestSource extends TeaModel {
-        @NameInMap("SourceApacheKafkaParameters")
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters sourceApacheKafkaParameters;
+        @NameInMap("SourceApacheRocketMQCheckpointParameters")
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters;
 
         @NameInMap("SourceCustomizedKafkaConnectorParameters")
         public CreateEventStreamingRequestSourceSourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters;
@@ -6868,6 +8090,9 @@ public class CreateEventStreamingRequest extends TeaModel {
          */
         @NameInMap("SourceDTSParameters")
         public CreateEventStreamingRequestSourceSourceDTSParameters sourceDTSParameters;
+
+        @NameInMap("SourceEventBusParameters")
+        public CreateEventStreamingRequestSourceSourceEventBusParameters sourceEventBusParameters;
 
         /**
          * <p>The parameters that are configured if you specify ApsaraMQ for Kafka as the event source.</p>
@@ -6887,6 +8112,12 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("SourceMQTTParameters")
         public CreateEventStreamingRequestSourceSourceMQTTParameters sourceMQTTParameters;
 
+        @NameInMap("SourceOSSParameters")
+        public CreateEventStreamingRequestSourceSourceOSSParameters sourceOSSParameters;
+
+        @NameInMap("SourceOpenSourceRabbitMQParameters")
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters;
+
         /**
          * <p>Parameters that are configured if you specify Managed Service for Prometheus as the event source.</p>
          */
@@ -6898,6 +8129,9 @@ public class CreateEventStreamingRequest extends TeaModel {
          */
         @NameInMap("SourceRabbitMQParameters")
         public CreateEventStreamingRequestSourceSourceRabbitMQParameters sourceRabbitMQParameters;
+
+        @NameInMap("SourceRocketMQCheckpointParameters")
+        public CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters;
 
         /**
          * <p>The parameters that are configured if you specify ApsaraMQ for RocketMQ as the event source.</p>
@@ -6916,12 +8150,12 @@ public class CreateEventStreamingRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateEventStreamingRequestSource setSourceApacheKafkaParameters(CreateEventStreamingRequestSourceSourceApacheKafkaParameters sourceApacheKafkaParameters) {
-            this.sourceApacheKafkaParameters = sourceApacheKafkaParameters;
+        public CreateEventStreamingRequestSource setSourceApacheRocketMQCheckpointParameters(CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters) {
+            this.sourceApacheRocketMQCheckpointParameters = sourceApacheRocketMQCheckpointParameters;
             return this;
         }
-        public CreateEventStreamingRequestSourceSourceApacheKafkaParameters getSourceApacheKafkaParameters() {
-            return this.sourceApacheKafkaParameters;
+        public CreateEventStreamingRequestSourceSourceApacheRocketMQCheckpointParameters getSourceApacheRocketMQCheckpointParameters() {
+            return this.sourceApacheRocketMQCheckpointParameters;
         }
 
         public CreateEventStreamingRequestSource setSourceCustomizedKafkaConnectorParameters(CreateEventStreamingRequestSourceSourceCustomizedKafkaConnectorParameters sourceCustomizedKafkaConnectorParameters) {
@@ -6948,6 +8182,14 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.sourceDTSParameters;
         }
 
+        public CreateEventStreamingRequestSource setSourceEventBusParameters(CreateEventStreamingRequestSourceSourceEventBusParameters sourceEventBusParameters) {
+            this.sourceEventBusParameters = sourceEventBusParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSourceSourceEventBusParameters getSourceEventBusParameters() {
+            return this.sourceEventBusParameters;
+        }
+
         public CreateEventStreamingRequestSource setSourceKafkaParameters(CreateEventStreamingRequestSourceSourceKafkaParameters sourceKafkaParameters) {
             this.sourceKafkaParameters = sourceKafkaParameters;
             return this;
@@ -6972,6 +8214,22 @@ public class CreateEventStreamingRequest extends TeaModel {
             return this.sourceMQTTParameters;
         }
 
+        public CreateEventStreamingRequestSource setSourceOSSParameters(CreateEventStreamingRequestSourceSourceOSSParameters sourceOSSParameters) {
+            this.sourceOSSParameters = sourceOSSParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSourceSourceOSSParameters getSourceOSSParameters() {
+            return this.sourceOSSParameters;
+        }
+
+        public CreateEventStreamingRequestSource setSourceOpenSourceRabbitMQParameters(CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters sourceOpenSourceRabbitMQParameters) {
+            this.sourceOpenSourceRabbitMQParameters = sourceOpenSourceRabbitMQParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSourceSourceOpenSourceRabbitMQParameters getSourceOpenSourceRabbitMQParameters() {
+            return this.sourceOpenSourceRabbitMQParameters;
+        }
+
         public CreateEventStreamingRequestSource setSourcePrometheusParameters(CreateEventStreamingRequestSourceSourcePrometheusParameters sourcePrometheusParameters) {
             this.sourcePrometheusParameters = sourcePrometheusParameters;
             return this;
@@ -6986,6 +8244,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSourceSourceRabbitMQParameters getSourceRabbitMQParameters() {
             return this.sourceRabbitMQParameters;
+        }
+
+        public CreateEventStreamingRequestSource setSourceRocketMQCheckpointParameters(CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters sourceRocketMQCheckpointParameters) {
+            this.sourceRocketMQCheckpointParameters = sourceRocketMQCheckpointParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSourceSourceRocketMQCheckpointParameters getSourceRocketMQCheckpointParameters() {
+            return this.sourceRocketMQCheckpointParameters;
         }
 
         public CreateEventStreamingRequestSource setSourceRocketMQParameters(CreateEventStreamingRequestSourceSourceRocketMQParameters sourceRocketMQParameters) {

@@ -99,6 +99,25 @@ public class ListTargetsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListTargetsResponseBodyDataTargetsConcurrentConfig extends TeaModel {
+        @NameInMap("Concurrency")
+        public Long concurrency;
+
+        public static ListTargetsResponseBodyDataTargetsConcurrentConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListTargetsResponseBodyDataTargetsConcurrentConfig self = new ListTargetsResponseBodyDataTargetsConcurrentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTargetsResponseBodyDataTargetsConcurrentConfig setConcurrency(Long concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+    }
+
     public static class ListTargetsResponseBodyDataTargetsParamList extends TeaModel {
         /**
          * <p>The format that is used by the event target parameter.</p>
@@ -176,6 +195,9 @@ public class ListTargetsResponseBody extends TeaModel {
     }
 
     public static class ListTargetsResponseBodyDataTargets extends TeaModel {
+        @NameInMap("ConcurrentConfig")
+        public ListTargetsResponseBodyDataTargetsConcurrentConfig concurrentConfig;
+
         /**
          * <p>The endpoint of the event target.</p>
          * 
@@ -185,6 +207,16 @@ public class ListTargetsResponseBody extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The fault tolerance policy. Valid values: ALL and NONE. </p>
+         * <ul>
+         * <li><strong>ALL</strong>: Fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations. </li>
+         * <li><strong>NONE</strong>: Fault tolerance is not allowed. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
         @NameInMap("ErrorsTolerance")
         public String errorsTolerance;
 
@@ -233,6 +265,14 @@ public class ListTargetsResponseBody extends TeaModel {
         public static ListTargetsResponseBodyDataTargets build(java.util.Map<String, ?> map) throws Exception {
             ListTargetsResponseBodyDataTargets self = new ListTargetsResponseBodyDataTargets();
             return TeaModel.build(map, self);
+        }
+
+        public ListTargetsResponseBodyDataTargets setConcurrentConfig(ListTargetsResponseBodyDataTargetsConcurrentConfig concurrentConfig) {
+            this.concurrentConfig = concurrentConfig;
+            return this;
+        }
+        public ListTargetsResponseBodyDataTargetsConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         public ListTargetsResponseBodyDataTargets setEndpoint(String endpoint) {

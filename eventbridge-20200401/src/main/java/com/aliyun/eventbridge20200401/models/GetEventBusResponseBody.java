@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEventBusResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value Success indicates that the request is successful.</p>
+     * <p>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -38,7 +38,7 @@ public class GetEventBusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

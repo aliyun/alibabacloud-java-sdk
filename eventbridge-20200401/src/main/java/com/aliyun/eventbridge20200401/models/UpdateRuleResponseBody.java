@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * <p>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class UpdateRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

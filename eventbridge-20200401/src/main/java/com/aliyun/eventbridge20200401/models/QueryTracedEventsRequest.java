@@ -43,7 +43,10 @@ public class QueryTracedEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Up to 100 entries can be returned in a call.</p>
+     * <p>The maximum number of entries to return in a request. You can use this parameter and NextToken to implement paging.</p>
+     * <blockquote>
+     * <p> A maximum of 100 entries can be returned in a request.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>50</p>

@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryTracedEventsResponseBody extends TeaModel {
     /**
-     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The response code. Valid values:</p>
+     * <ul>
+     * <li>Success: The request was successful.</li>
+     * <li>Other codes: The request failed. For information about error codes, see Error codes.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +18,7 @@ public class QueryTracedEventsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryTracedEventsResponseBodyData data;
@@ -38,7 +42,7 @@ public class QueryTracedEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -186,7 +190,7 @@ public class QueryTracedEventsResponseBody extends TeaModel {
 
     public static class QueryTracedEventsResponseBodyData extends TeaModel {
         /**
-         * <p>The event type.</p>
+         * <p>The events.</p>
          */
         @NameInMap("Events")
         public java.util.List<QueryTracedEventsResponseBodyDataEvents> events;
