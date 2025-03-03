@@ -46,6 +46,9 @@ public class ListWorkspacesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -132,6 +135,14 @@ public class ListWorkspacesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListWorkspacesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListWorkspacesRequest setSortBy(String sortBy) {

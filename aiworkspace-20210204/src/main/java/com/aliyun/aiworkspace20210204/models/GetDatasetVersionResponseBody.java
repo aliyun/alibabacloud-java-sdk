@@ -48,11 +48,17 @@ public class GetDatasetVersionResponseBody extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    @NameInMap("ImportInfo")
+    public String importInfo;
+
     /**
      * <p>代表资源标签的资源属性字段</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
+
+    @NameInMap("MountAccess")
+    public String mountAccess;
 
     /**
      * <p>扩展字段，JsonString类型。
@@ -174,12 +180,28 @@ public class GetDatasetVersionResponseBody extends TeaModel {
         return this.gmtModifiedTime;
     }
 
+    public GetDatasetVersionResponseBody setImportInfo(String importInfo) {
+        this.importInfo = importInfo;
+        return this;
+    }
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
     public GetDatasetVersionResponseBody setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
     }
     public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    public GetDatasetVersionResponseBody setMountAccess(String mountAccess) {
+        this.mountAccess = mountAccess;
+        return this;
+    }
+    public String getMountAccess() {
+        return this.mountAccess;
     }
 
     public GetDatasetVersionResponseBody setOptions(String options) {

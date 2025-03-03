@@ -36,8 +36,14 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImportInfo")
+    public String importInfo;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
+
+    @NameInMap("MountAccessReadWriteRoleIdList")
+    public java.util.List<String> mountAccessReadWriteRoleIdList;
 
     /**
      * <p>This parameter is required.</p>
@@ -178,12 +184,28 @@ public class CreateDatasetRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateDatasetRequest setImportInfo(String importInfo) {
+        this.importInfo = importInfo;
+        return this;
+    }
+    public String getImportInfo() {
+        return this.importInfo;
+    }
+
     public CreateDatasetRequest setLabels(java.util.List<Label> labels) {
         this.labels = labels;
         return this;
     }
     public java.util.List<Label> getLabels() {
         return this.labels;
+    }
+
+    public CreateDatasetRequest setMountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
+        this.mountAccessReadWriteRoleIdList = mountAccessReadWriteRoleIdList;
+        return this;
+    }
+    public java.util.List<String> getMountAccessReadWriteRoleIdList() {
+        return this.mountAccessReadWriteRoleIdList;
     }
 
     public CreateDatasetRequest setName(String name) {

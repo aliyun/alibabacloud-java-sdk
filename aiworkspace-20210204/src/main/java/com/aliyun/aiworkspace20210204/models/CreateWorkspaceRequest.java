@@ -26,6 +26,9 @@ public class CreateWorkspaceRequest extends TeaModel {
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -62,6 +65,14 @@ public class CreateWorkspaceRequest extends TeaModel {
     }
     public java.util.List<String> getEnvTypes() {
         return this.envTypes;
+    }
+
+    public CreateWorkspaceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateWorkspaceRequest setWorkspaceName(String workspaceName) {

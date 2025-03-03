@@ -45,13 +45,6 @@ public class ListImagesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <strong>example:</strong>
-     * <p>155**********904</p>
-     */
-    @NameInMap("ParentUserId")
-    public String parentUserId;
-
     @NameInMap("Query")
     public String query;
 
@@ -61,13 +54,6 @@ public class ListImagesRequest extends TeaModel {
      */
     @NameInMap("SortBy")
     public String sortBy;
-
-    /**
-     * <strong>example:</strong>
-     * <p>155**********904</p>
-     */
-    @NameInMap("UserId")
-    public String userId;
 
     /**
      * <strong>example:</strong>
@@ -144,14 +130,6 @@ public class ListImagesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListImagesRequest setParentUserId(String parentUserId) {
-        this.parentUserId = parentUserId;
-        return this;
-    }
-    public String getParentUserId() {
-        return this.parentUserId;
-    }
-
     public ListImagesRequest setQuery(String query) {
         this.query = query;
         return this;
@@ -166,14 +144,6 @@ public class ListImagesRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
-    }
-
-    public ListImagesRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
     }
 
     public ListImagesRequest setVerbose(Boolean verbose) {

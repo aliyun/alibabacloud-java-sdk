@@ -63,6 +63,9 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("Provider")
     public String provider;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
     @NameInMap("SourceDatasetId")
     public String sourceDatasetId;
 
@@ -162,6 +165,14 @@ public class ListDatasetsRequest extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public ListDatasetsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
     }
 
     public ListDatasetsRequest setSourceDatasetId(String sourceDatasetId) {

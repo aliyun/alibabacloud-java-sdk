@@ -69,6 +69,9 @@ public class GetWorkspaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <strong>example:</strong>
      * <p>ENABLED</p>
@@ -181,6 +184,14 @@ public class GetWorkspaceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetWorkspaceResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetWorkspaceResponseBody setStatus(String status) {

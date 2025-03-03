@@ -139,6 +139,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
         public static ListWorkspacesResponseBodyWorkspaces build(java.util.Map<String, ?> map) throws Exception {
             ListWorkspacesResponseBodyWorkspaces self = new ListWorkspacesResponseBodyWorkspaces();
             return TeaModel.build(map, self);
@@ -230,6 +233,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getWorkspaceName() {
             return this.workspaceName;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }
