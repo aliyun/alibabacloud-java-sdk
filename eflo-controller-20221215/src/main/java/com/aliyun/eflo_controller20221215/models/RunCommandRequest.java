@@ -31,6 +31,8 @@ public class RunCommandRequest extends TeaModel {
     public String commandContent;
 
     /**
+     * <p>Command ID</p>
+     * 
      * <strong>example:</strong>
      * <p>c-e996287206324975b5fbe1d***</p>
      */
@@ -95,6 +97,8 @@ public class RunCommandRequest extends TeaModel {
     public String frequency;
 
     /**
+     * <p>Bootstrap for script execution. The length must not exceed 1 KB.</p>
+     * 
      * <strong>example:</strong>
      * <p>python3 -u {{ACS::ScriptFileName|Ext(&quot;.py&quot;)}}</p>
      */
@@ -154,6 +158,9 @@ public class RunCommandRequest extends TeaModel {
     public String repeatMode;
 
     /**
+     * <p>The mode when stopping a task (manually or due to execution timeout). Possible values:
+     * Process: Stops the current script process. ProcessTree: Stops the current process tree (a collection of the script process and all its child processes).</p>
+     * 
      * <strong>example:</strong>
      * <p>ProcessTree</p>
      */
