@@ -685,6 +685,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("PhraseId")
         public String phraseId;
 
+        @NameInMap("RealtimeDiarizationEnabled")
+        public Boolean realtimeDiarizationEnabled;
+
         public static CreateTaskRequestParametersTranscription build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParametersTranscription self = new CreateTaskRequestParametersTranscription();
             return TeaModel.build(map, self);
@@ -744,6 +747,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getPhraseId() {
             return this.phraseId;
+        }
+
+        public CreateTaskRequestParametersTranscription setRealtimeDiarizationEnabled(Boolean realtimeDiarizationEnabled) {
+            this.realtimeDiarizationEnabled = realtimeDiarizationEnabled;
+            return this;
+        }
+        public Boolean getRealtimeDiarizationEnabled() {
+            return this.realtimeDiarizationEnabled;
         }
 
     }
