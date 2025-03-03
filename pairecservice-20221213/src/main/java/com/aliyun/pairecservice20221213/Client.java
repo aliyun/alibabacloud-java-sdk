@@ -126,6 +126,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Scores", request.scores);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            body.put("ServiceName", request.serviceName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userFeatures)) {
             body.put("UserFeatures", request.userFeatures);
         }
