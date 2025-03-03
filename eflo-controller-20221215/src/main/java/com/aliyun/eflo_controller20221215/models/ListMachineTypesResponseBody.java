@@ -4,10 +4,15 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListMachineTypesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the machine types</p>
+     */
     @NameInMap("MachineTypes")
     public java.util.List<ListMachineTypesResponseBodyMachineTypes> machineTypes;
 
     /**
+     * <p>NextToken for the next page, include this value when requesting the next page</p>
+     * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
      */
@@ -54,6 +59,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
 
     public static class ListMachineTypesResponseBodyMachineTypes extends TeaModel {
         /**
+         * <p>Number of bonds</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -61,6 +68,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public Integer bondNum;
 
         /**
+         * <p>CPU information</p>
+         * 
          * <strong>example:</strong>
          * <p>2x Intel Icelake 8369B 32C CPU</p>
          */
@@ -68,6 +77,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String cpuInfo;
 
         /**
+         * <p>Disk information</p>
+         * 
          * <strong>example:</strong>
          * <p>2x 480GB SATA SSD</p>
          */
@@ -75,6 +86,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String diskInfo;
 
         /**
+         * <p>GPU information</p>
+         * 
          * <strong>example:</strong>
          * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
          */
@@ -82,6 +95,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String gpuInfo;
 
         /**
+         * <p>Memory information</p>
+         * 
          * <strong>example:</strong>
          * <p>32x 64GB DDR4 3200 Memory</p>
          */
@@ -89,6 +104,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String memoryInfo;
 
         /**
+         * <p>Machine name</p>
+         * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
          */
@@ -96,6 +113,8 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Network information</p>
+         * 
          * <strong>example:</strong>
          * <p>2x 100Gbps DP NIC</p>
          */
@@ -103,16 +122,26 @@ public class ListMachineTypesResponseBody extends TeaModel {
         public String networkInfo;
 
         /**
+         * <p>Number of nodes</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("NodeCount")
         public String nodeCount;
 
+        /**
+         * <p>Number of CPU cores</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48</p>
+         */
         @NameInMap("TotalCpuCore")
         public Integer totalCpuCore;
 
         /**
+         * <p>Type of machine</p>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */

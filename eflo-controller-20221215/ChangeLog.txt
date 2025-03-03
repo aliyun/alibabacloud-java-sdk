@@ -1,3 +1,16 @@
+2025-03-03 Version: 2.2.0
+- Support API CloseSession.
+- Support API CreateNetTestTask.
+- Support API CreateSession.
+- Support API DescribeNetTestResult.
+- Support API ListDiagnosticResults.
+- Support API ListImages.
+- Support API ListMachineNetworkInfo.
+- Support API ListNetTestResults.
+- Support API ListUserClusterTypes.
+- Support API StopNodes.
+
+
 2025-01-06 Version: 2.1.0
 - Support API CreateDiagnosticTask.
 - Support API ListMachineTypes.
