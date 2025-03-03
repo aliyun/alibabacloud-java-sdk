@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListAncestorsRequest extends TeaModel {
     /**
      * <p>The ID of the child folder.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-i1c9nr****</p>
      */
     @NameInMap("ChildId")
     public String childId;

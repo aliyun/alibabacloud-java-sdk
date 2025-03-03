@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class DeleteRoleRequest extends TeaModel {
     /**
      * <p>The name of the RAM role.</p>
-     * <br>
      * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECSAdmin</p>
      */
     @NameInMap("RoleName")
     public String roleName;

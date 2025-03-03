@@ -6,32 +6,41 @@ import com.aliyun.tea.*;
 public class UpdateRoleRequest extends TeaModel {
     /**
      * <p>The document of the policy that specifies the trusted entity to assume the RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::12345678901234****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</p>
      */
     @NameInMap("NewAssumeRolePolicyDocument")
     public String newAssumeRolePolicyDocument;
 
     /**
      * <p>The description of the RAM role.</p>
-     * <br>
      * <p>The description must be 1 to 1,024 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS administrator</p>
      */
     @NameInMap("NewDescription")
     public String newDescription;
 
     /**
      * <p>The maximum session duration of the RAM role.</p>
-     * <br>
      * <p>Unit: seconds. Valid values: 3600 to 43200. Default value: 3600.</p>
-     * <br>
      * <p>If you do not specify this parameter, the default value is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("NewMaxSessionDuration")
     public Long newMaxSessionDuration;
 
     /**
      * <p>The name of the RAM role.</p>
-     * <br>
      * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.),and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECSAdmin</p>
      */
     @NameInMap("RoleName")
     public String roleName;

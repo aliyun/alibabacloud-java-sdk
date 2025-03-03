@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListDelegatedServicesForAccountRequest extends TeaModel {
     /**
      * <p>The ID of the member.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>138660628348****</p>
      */
     @NameInMap("AccountId")
     public String accountId;

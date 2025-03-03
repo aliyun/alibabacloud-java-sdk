@@ -6,14 +6,18 @@ import com.aliyun.tea.*;
 public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     /**
      * <p>The trusted services.</p>
-     * <br>
-     * <p>>  If the value of this parameter is empty, the member is not specified as a delegated administrator account.</p>
+     * <blockquote>
+     * <p> If the value of this parameter is empty, the member is not specified as a delegated administrator account.</p>
+     * </blockquote>
      */
     @NameInMap("DelegatedServices")
     public ListDelegatedServicesForAccountResponseBodyDelegatedServices delegatedServices;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9C03B94-9396-4794-A74B-13DC437556A6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,21 +46,31 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     public static class ListDelegatedServicesForAccountResponseBodyDelegatedServicesDelegatedService extends TeaModel {
         /**
          * <p>The time when the member was specified as a delegated administrator account of the trusted service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616652684164</p>
          */
         @NameInMap("DelegationEnabledTime")
         public String delegationEnabledTime;
 
         /**
          * <p>The identification of the trusted service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudfw.aliyuncs.com</p>
          */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;
 
         /**
          * <p>The status of the trusted service. Valid values:</p>
-         * <br>
-         * <p>*   ENABLED: enabled</p>
-         * <p>*   DISABLED: disabled</p>
+         * <ul>
+         * <li>ENABLED: enabled</li>
+         * <li>DISABLED: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         @NameInMap("Status")
         public String status;

@@ -12,24 +12,36 @@ public class ListAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListAccountsResponseBody extends TeaModel {
     public static class ListAccountsResponseBodyAccountsAccountTagsTag extends TeaModel {
         /**
          * <p>A tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>A tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -137,45 +155,67 @@ public class ListAccountsResponseBody extends TeaModel {
     public static class ListAccountsResponseBodyAccountsAccount extends TeaModel {
         /**
          * <p>The Alibaba Cloud account ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>181761095690****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The display name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-QRzuim****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
          * <p>The way in which the member joins the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   invited: The member is invited to join the resource directory.</p>
-         * <p>*   created: The member is directly created in the resource directory.</p>
+         * <ul>
+         * <li>invited: The member is invited to join the resource directory.</li>
+         * <li>created: The member is directly created in the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
         /**
          * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T08:01:50.522Z</p>
          */
         @NameInMap("JoinTime")
         public String joinTime;
 
         /**
          * <p>The time when the member was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-18T08:04:37.668Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-3G****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
@@ -188,14 +228,18 @@ public class ListAccountsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the member. Valid values:</p>
-         * <br>
-         * <p>*   CreateSuccess: The member is created.</p>
-         * <p>*   PromoteVerifying: The upgrade of the member is being confirmed.</p>
-         * <p>*   PromoteFailed: The upgrade of the member fails.</p>
-         * <p>*   PromoteExpired: The upgrade of the member expires.</p>
-         * <p>*   PromoteCancelled: The upgrade of the member is canceled.</p>
-         * <p>*   PromoteSuccess: The member is upgraded.</p>
-         * <p>*   InviteSuccess: The member accepts the invitation.</p>
+         * <ul>
+         * <li>CreateSuccess: The member is created.</li>
+         * <li>PromoteVerifying: The upgrade of the member is being confirmed.</li>
+         * <li>PromoteFailed: The upgrade of the member fails.</li>
+         * <li>PromoteExpired: The upgrade of the member expires.</li>
+         * <li>PromoteCancelled: The upgrade of the member is canceled.</li>
+         * <li>PromoteSuccess: The member is upgraded.</li>
+         * <li>InviteSuccess: The member accepts the invitation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateSuccess</p>
          */
         @NameInMap("Status")
         public String status;
@@ -208,9 +252,13 @@ public class ListAccountsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the member. Valid values:</p>
-         * <br>
-         * <p>*   CloudAccount: cloud account</p>
-         * <p>*   ResourceAccount: resource account</p>
+         * <ul>
+         * <li>CloudAccount: cloud account</li>
+         * <li>ResourceAccount: resource account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceAccount</p>
          */
         @NameInMap("Type")
         public String type;

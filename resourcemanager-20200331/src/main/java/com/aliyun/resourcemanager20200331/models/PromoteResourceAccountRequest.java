@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class PromoteResourceAccountRequest extends TeaModel {
     /**
      * <p>The ID of the resource account you want to upgrade.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The email address used to log on to the cloud account after the upgrade.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;

@@ -12,6 +12,9 @@ public class UpdateAccountResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,71 +43,104 @@ public class UpdateAccountResponseBody extends TeaModel {
     public static class UpdateAccountResponseBodyAccount extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that corresponds to the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The name of the Alibaba Cloud account that corresponds to the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:ecs-manager@aliyun.com">ecs-manager@aliyun.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The display name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-bVaRIG****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
          * <p>The way in which the member joins the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   invited: The member is invited to join the resource directory.</p>
-         * <p>*   created: The member is directly created in the resource directory.</p>
+         * <ul>
+         * <li>invited: The member is invited to join the resource directory.</li>
+         * <li>created: The member is directly created in the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
         /**
          * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("JoinTime")
         public String joinTime;
 
         /**
          * <p>The time when the member was modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-k3****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
         /**
          * <p>The status of the member. Valid values:</p>
-         * <br>
-         * <p>*   CreateSuccess: The member is created.</p>
-         * <p>*   InviteSuccess: The member accepts the invitation.</p>
-         * <p>*   Removed: The member is removed.</p>
-         * <p>*   SwitchSuccess: The type of the member is switched.</p>
+         * <ul>
+         * <li>CreateSuccess: The member is created.</li>
+         * <li>InviteSuccess: The member accepts the invitation.</li>
+         * <li>Removed: The member is removed.</li>
+         * <li>SwitchSuccess: The type of the member is switched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateSuccess</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the member. Valid values:</p>
-         * <br>
-         * <p>*   CloudAccount: cloud account</p>
-         * <p>*   ResourceAccount: resource account</p>
+         * <ul>
+         * <li>CloudAccount: cloud account</li>
+         * <li>ResourceAccount: resource account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceAccount</p>
          */
         @NameInMap("Type")
         public String type;

@@ -12,18 +12,25 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>07194EB1-DB50-4513-A51D-99B30D635AEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the task.</p>
-     * <br>
-     * <p>- SUCCEEDED</p>
-     * <p>- IN_PROGRESS</p>
-     * <p>- FAILED</p>
-     * <p>- NOT_STARTED</p>
-     * <p>- INTERNAL_ERROR</p>
+     * <ul>
+     * <li>SUCCEEDED</li>
+     * <li>IN_PROGRESS</li>
+     * <li>FAILED</li>
+     * <li>NOT_STARTED</li>
+     * <li>INTERNAL_ERROR</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FAILED</p>
      */
     @NameInMap("Status")
     public String status;
@@ -79,6 +86,9 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReasonRoleUsagesRoleUsage extends TeaModel {
         /**
          * <p>The IDs of the regions in which the resources are to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         @NameInMap("Region")
         public String region;
@@ -134,6 +144,9 @@ public class GetServiceLinkedRoleDeletionStatusResponseBody extends TeaModel {
     public static class GetServiceLinkedRoleDeletionStatusResponseBodyReason extends TeaModel {
         /**
          * <p>Failure information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service-Linked Role acs:ram::196813227629****:role/aliyunserviceroleforhdr cannot be deleted as it is in use by hdr.aliyuncs.com.</p>
          */
         @NameInMap("Message")
         public String message;

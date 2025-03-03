@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisableAssociatedTransferResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CE0AE54-6F27-5522-A429-4C5EE8FD40C8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

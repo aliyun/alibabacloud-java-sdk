@@ -12,6 +12,9 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,85 +43,121 @@ public class ResendPromoteResourceAccountEmailResponseBody extends TeaModel {
     public static class ResendPromoteResourceAccountEmailResponseBodyAccount extends TeaModel {
         /**
          * <p>The ID of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12323344****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:someone@example.com">someone@example.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The display name of the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fd-bVaRIG****</p>
          */
         @NameInMap("FolderId")
         public String folderId;
 
         /**
          * <p>The way in which the member account joined the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   invited: The member account is invited to join the resource directory.</p>
-         * <p>*   created: The member account is directly created in the resource directory.</p>
+         * <ul>
+         * <li>invited: The member account is invited to join the resource directory.</li>
+         * <li>created: The member account is directly created in the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>created</p>
          */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
         /**
          * <p>The time when the member account joined the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("JoinTime")
         public String joinTime;
 
         /**
          * <p>The time when the member account was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The account record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16950264-3f0d-4ca9-82dd-6ee7a3d33d6b</p>
          */
         @NameInMap("RecordId")
         public String recordId;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-k3****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
         /**
          * <p>The status of the member account. Valid values:</p>
-         * <br>
-         * <p>*   CreateSuccess: The member account is created.</p>
-         * <p>*   CreateVerifying: The creation of the member account is under confirmation.</p>
-         * <p>*   CreateFailed: The member account failed to be created.</p>
-         * <p>*   CreateExpired: The creation of the member account expired.</p>
-         * <p>*   CreateCancelled: The creation of the member account is canceled.</p>
-         * <p>*   PromoteVerifying: The upgrade of the member account is under confirmation.</p>
-         * <p>*   PromoteFailed: The member account failed to be upgraded.</p>
-         * <p>*   PromoteExpired: The upgrade of the member account expired.</p>
-         * <p>*   PromoteCancelled: The upgrade of the member account is canceled.</p>
-         * <p>*   PromoteSuccess: The member account is upgraded.</p>
-         * <p>*   InviteSuccess: The owner of the member account accepted the invitation.</p>
-         * <p>*   Removed: The member account is removed from the resource directory.</p>
+         * <ul>
+         * <li>CreateSuccess: The member account is created.</li>
+         * <li>CreateVerifying: The creation of the member account is under confirmation.</li>
+         * <li>CreateFailed: The member account failed to be created.</li>
+         * <li>CreateExpired: The creation of the member account expired.</li>
+         * <li>CreateCancelled: The creation of the member account is canceled.</li>
+         * <li>PromoteVerifying: The upgrade of the member account is under confirmation.</li>
+         * <li>PromoteFailed: The member account failed to be upgraded.</li>
+         * <li>PromoteExpired: The upgrade of the member account expired.</li>
+         * <li>PromoteCancelled: The upgrade of the member account is canceled.</li>
+         * <li>PromoteSuccess: The member account is upgraded.</li>
+         * <li>InviteSuccess: The owner of the member account accepted the invitation.</li>
+         * <li>Removed: The member account is removed from the resource directory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PromoteVerifying</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the member account. Valid values:</p>
-         * <br>
-         * <p>*   CloudAccount: cloud account</p>
-         * <p>*   ResourceAccount: resource account</p>
+         * <ul>
+         * <li>CloudAccount: cloud account</li>
+         * <li>ResourceAccount: resource account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceAccount</p>
          */
         @NameInMap("Type")
         public String type;

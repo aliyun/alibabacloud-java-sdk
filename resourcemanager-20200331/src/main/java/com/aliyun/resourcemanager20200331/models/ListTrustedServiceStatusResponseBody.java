@@ -12,24 +12,36 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
     public static class ListTrustedServiceStatusResponseBodyEnabledServicePrincipalsEnabledServicePrincipal extends TeaModel {
         /**
          * <p>The time when the trusted service was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-18T15:32:10.473Z</p>
          */
         @NameInMap("EnableTime")
         public String enableTime;
 
         /**
          * <p>The identification of the trusted service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>config.aliyuncs.com</p>
          */
         @NameInMap("ServicePrincipal")
         public String servicePrincipal;

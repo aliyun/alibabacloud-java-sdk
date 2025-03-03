@@ -12,6 +12,9 @@ public class GetPolicyVersionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B34724D-54B0-4A51-B34D-4512372FE1BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetPolicyVersionResponseBody extends TeaModel {
     public static class GetPolicyVersionResponseBodyPolicyVersion extends TeaModel {
         /**
          * <p>The time when the policy version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>Indicates whether the policy version is the default version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
         /**
          * <p>The document of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ \&quot;Statement\&quot;: [{ \&quot;Action\&quot;: [\&quot;oss:<em>\&quot;], \&quot;Effect\&quot;: \&quot;Allow\&quot;, \&quot;Resource\&quot;: [\&quot;acs:oss:</em>:<em>:</em>\&quot;]}], \&quot;Version\&quot;: \&quot;1\&quot;}</p>
          */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
         /**
          * <p>The ID of the policy version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v3</p>
          */
         @NameInMap("VersionId")
         public String versionId;

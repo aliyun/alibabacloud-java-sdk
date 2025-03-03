@@ -6,38 +6,47 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource groups or members. Valid values:</p>
-     * <br>
-     * <p>*   false (default value)</p>
-     * <p>*   true</p>
+     * <ul>
+     * <li>false (default value)</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The ID of a resource group or member.</p>
-     * <br>
      * <p>You can specify a maximum of 50 IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the objects from which you want to remove tags. Valid values:</p>
-     * <br>
-     * <p>*   ResourceGroup: resource group. This is the default value.</p>
-     * <p>*   Account: member.</p>
-     * <br>
-     * <p>>  This parameter is required if you remove tags from members in a resource directory.</p>
+     * <ul>
+     * <li>ResourceGroup: resource group. This is the default value.</li>
+     * <li>Account: member.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if you remove tags from members in a resource directory.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceGroup</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>A tag key.</p>
-     * <br>
      * <p>You can specify a maximum of 20 tag keys.</p>
-     * <br>
-     * <p>>  If you set the `All` parameter to `true`, you do not need to configure this parameter.</p>
+     * <blockquote>
+     * <p> If you set the <code>All</code> parameter to <code>true</code>, you do not need to configure this parameter.</p>
+     * </blockquote>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

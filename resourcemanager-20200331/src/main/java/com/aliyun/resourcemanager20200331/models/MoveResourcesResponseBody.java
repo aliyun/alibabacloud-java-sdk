@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class MoveResourcesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,55 +43,82 @@ public class MoveResourcesResponseBody extends TeaModel {
     public static class MoveResourcesResponseBodyResponses extends TeaModel {
         /**
          * <p>The error code returned.</p>
-         * <br>
-         * <p>>  This parameter is returned if the resource failed to be moved.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the resource failed to be moved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NoPermission</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message returned.</p>
-         * <br>
-         * <p>>  This parameter is returned if the resource failed to be moved.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the resource failed to be moved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>No permissions</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C00B89D3-3247-11DE-95D8-A7C01FB0AB4F</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1sig0mjktx5ewx1****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The ID of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("Service")
         public String service;
 
         /**
          * <p>The status of the move task. Valid values:</p>
-         * <br>
-         * <p>*   SUCCESS</p>
-         * <p>*   FAIL</p>
+         * <ul>
+         * <li>SUCCESS</li>
+         * <li>FAIL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAIL</p>
          */
         @NameInMap("Status")
         public String status;

@@ -12,6 +12,9 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AA43293-7C8F-5730-8F2D-7F864EC092C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
     public static class GetAccountDeletionStatusResponseBodyRdAccountDeletionStatusFailReasonList extends TeaModel {
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This account has a payer account. Please release the financial relationship of this account first.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the cloud service to which the check item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Others</p>
          */
         @NameInMap("Name")
         public String name;
@@ -76,27 +85,41 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
     public static class GetAccountDeletionStatusResponseBodyRdAccountDeletionStatus extends TeaModel {
         /**
          * <p>The Alibaba Cloud account ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169946124551****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The start time of the deletion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-23T17:05:30+08:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The end time of the deletion.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-23T17:06:01+08:00</p>
          */
         @NameInMap("DeletionTime")
         public String deletionTime;
 
         /**
          * <p>The type of the deletion. Valid values:</p>
-         * <br>
-         * <p>*   0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</p>
-         * <p>*   1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see [What is the silence period for member deletion?](~~446079~~)</p>
+         * <ul>
+         * <li>0: direct deletion. If the member does not have pay-as-you-go resources that are purchased within the previous 30 days, the system directly deletes the member.</li>
+         * <li>1: deletion with a silence period. If the member has pay-as-you-go resources that are purchased within the previous 30 days, the member enters a silence period. The system starts to delete the member until the silence period ends. For more information about the silence period, see <a href="https://help.aliyun.com/document_detail/446079.html">What is the silence period for member deletion?</a></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeletionType")
         public String deletionType;
@@ -109,12 +132,16 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
 
         /**
          * <p>The status. Valid values:</p>
-         * <br>
-         * <p>*   Success: The member is deleted.</p>
-         * <p>*   Checking: A deletion check is being performed for the member.</p>
-         * <p>*   Deleting: The member is being deleted.</p>
-         * <p>*   CheckFailed: The deletion check for the member fails.</p>
-         * <p>*   DeleteFailed: The member fails to be deleted.</p>
+         * <ul>
+         * <li>Success: The member is deleted.</li>
+         * <li>Checking: A deletion check is being performed for the member.</li>
+         * <li>Deleting: The member is being deleted.</li>
+         * <li>CheckFailed: The deletion check for the member fails.</li>
+         * <li>DeleteFailed: The member fails to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;

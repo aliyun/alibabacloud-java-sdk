@@ -6,25 +6,38 @@ import com.aliyun.tea.*;
 public class UpdateAccountRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account that corresponds to the member.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The new type of the member. Valid values:</p>
-     * <br>
-     * <p>*   ResourceAccount: resource account</p>
-     * <p>*   CloudAccount: cloud account</p>
-     * <br>
-     * <p>>  You can configure either the `NewDisplayName` or `NewAccountType` parameter.</p>
+     * <ul>
+     * <li>ResourceAccount: resource account</li>
+     * <li>CloudAccount: cloud account</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can configure either the <code>NewDisplayName</code> or <code>NewAccountType</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceAccount</p>
      */
     @NameInMap("NewAccountType")
     public String newAccountType;
 
     /**
      * <p>The new display name of the member.</p>
-     * <br>
-     * <p>>  You can configure either the `NewDisplayName` or `NewAccountType` parameter.</p>
+     * <blockquote>
+     * <p> You can configure either the <code>NewDisplayName</code> or <code>NewAccountType</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("NewDisplayName")
     public String newDisplayName;

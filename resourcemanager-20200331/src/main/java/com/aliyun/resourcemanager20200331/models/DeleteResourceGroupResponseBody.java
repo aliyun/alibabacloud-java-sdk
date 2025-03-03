@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C488B66-B819-4D14-8711-C4EAAA13AC01</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
     public static class DeleteResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The resource group is being created.</p>
-         * <p>*   OK: The resource group is created.</p>
-         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
-         * <p>*   Deleting: The resource group is being deleted.</p>
+         * <ul>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * <li>Deleting: The resource group is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PendingDelete</p>
          */
         @NameInMap("Status")
         public String status;
@@ -100,30 +110,45 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
     public static class DeleteResourceGroupResponseBodyResourceGroup extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The display name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The unique identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         @NameInMap("Name")
         public String name;
@@ -136,10 +161,14 @@ public class DeleteResourceGroupResponseBody extends TeaModel {
 
         /**
          * <p>The status of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The resource group is being created.</p>
-         * <p>*   OK: The resource group is created.</p>
-         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
+         * <ul>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PendingDelete</p>
          */
         @NameInMap("Status")
         public String status;

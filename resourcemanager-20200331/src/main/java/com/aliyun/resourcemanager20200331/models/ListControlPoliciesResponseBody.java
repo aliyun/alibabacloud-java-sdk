@@ -12,24 +12,36 @@ public class ListControlPoliciesResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9424A34C-3471-45AD-B6AB-924BBDFE42F9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of access control policies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,54 +94,80 @@ public class ListControlPoliciesResponseBody extends TeaModel {
     public static class ListControlPoliciesResponseBodyControlPoliciesControlPolicy extends TeaModel {
         /**
          * <p>The number of times that the access control policy is referenced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
          */
         @NameInMap("AttachmentCount")
         public String attachmentCount;
 
         /**
          * <p>The time when the access control policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-05T06:32:24Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System access control policy available for all operations on the cloud</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The effective scope of the access control policy. Valid values:</p>
-         * <br>
-         * <p>- All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</p>
-         * <p>- RAM: The access control policy is in effect only for RAM users and RAM roles.</p>
+         * <ul>
+         * <li>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</li>
+         * <li>RAM: The access control policy is in effect only for RAM users and RAM roles.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         @NameInMap("EffectScope")
         public String effectScope;
 
         /**
          * <p>The ID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-FullAliyunAccess</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
 
         /**
          * <p>The name of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FullAliyunAccess</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the access control policy. Valid values:</p>
-         * <br>
-         * <p>- System: system access control policy</p>
-         * <p>- Custom: custom access control policy</p>
+         * <ul>
+         * <li>System: system access control policy</li>
+         * <li>Custom: custom access control policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
          * <p>The time when the access control policy was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-05T06:32:24Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

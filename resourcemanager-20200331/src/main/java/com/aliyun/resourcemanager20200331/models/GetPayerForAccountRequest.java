@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetPayerForAccountRequest extends TeaModel {
     /**
      * <p>The ID of the account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;

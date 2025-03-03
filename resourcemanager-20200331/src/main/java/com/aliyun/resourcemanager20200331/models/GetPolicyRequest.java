@@ -6,27 +6,39 @@ import com.aliyun.tea.*;
 public class GetPolicyRequest extends TeaModel {
     /**
      * <p>The language that is used to return the description of the system policy. Valid values:</p>
-     * <br>
-     * <p>*   en: English</p>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   ja: Japanese</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh-CN: Chinese</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The name of the policy.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS-Administrator</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The type of the policy. Valid values:</p>
-     * <br>
-     * <p>*   Custom: custom policy</p>
-     * <p>*   System: system policy</p>
+     * <ul>
+     * <li>Custom: custom policy</li>
+     * <li>System: system policy</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

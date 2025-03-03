@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The information of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D69A58F-345C-4FDE-88E4-BF5189484043</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public static class GetResourceGroupResponseBodyResourceGroupRegionStatusesRegionStatus extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Status")
         public String status;
@@ -95,10 +104,17 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public static class GetResourceGroupResponseBodyResourceGroupTagsTag extends TeaModel {
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -147,51 +163,71 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public static class GetResourceGroupResponseBodyResourceGroup extends TeaModel {
         /**
          * <p>The identifier of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The status of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The resource group is being created.</p>
-         * <p>*   OK: The resource group is created.</p>
-         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
+         * <ul>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The tags that are added to the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-9gLOoK****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The time when the resource group was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the resource group. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The resource group is being created.</p>
-         * <p>*   OK: The resource group is created.</p>
-         * <p>*   PendingDelete: The resource group is waiting to be deleted.</p>
-         * <p>*   Deleting: The resource group is being deleted.</p>
+         * <ul>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>OK: The resource group is created.</li>
+         * <li>PendingDelete: The resource group is waiting to be deleted.</li>
+         * <li>Deleting: The resource group is being deleted.</li>
+         * </ul>
          */
         @NameInMap("RegionStatuses")
         public GetResourceGroupResponseBodyResourceGroupRegionStatuses regionStatuses;
 
         /**
          * <p>The status of the resource group in all regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Status")
         public String status;

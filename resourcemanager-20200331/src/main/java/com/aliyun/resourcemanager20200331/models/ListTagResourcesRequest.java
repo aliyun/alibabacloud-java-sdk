@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,9 +31,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the objects whose tags you want to query. This parameter specifies a filter condition for the query. Valid values:</p>
-     * <br>
-     * <p>*   ResourceGroup: resource group. This is the default value.</p>
-     * <p>*   Account: member.</p>
+     * <ul>
+     * <li>ResourceGroup: resource group. This is the default value.</li>
+     * <li>Account: member.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceGroup</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -87,12 +96,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>A tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>A tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("Value")
         public String value;

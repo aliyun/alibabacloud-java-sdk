@@ -6,58 +6,76 @@ import com.aliyun.tea.*;
 public class ListResourcesRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-uPJpP****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-23v38****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The resource type.</p>
-     * <br>
-     * <p>For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).</p>
+     * <p>For more information about the supported resource types, see the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The resource types. A maximum of 50 resource types are supported.</p>
-     * <br>
-     * <p>>  If you configure `ResourceTypes`, you must configure both `Service` and `ResourceType`. Otherwise, the configured Service or ResourceType does not take effect.</p>
+     * <blockquote>
+     * <p> If you configure <code>ResourceTypes</code>, you must configure both <code>Service</code> and <code>ResourceType</code>. Otherwise, the configured Service or ResourceType does not take effect.</p>
+     * </blockquote>
      */
     @NameInMap("ResourceTypes")
     public java.util.List<ListResourcesRequestResourceTypes> resourceTypes;
 
     /**
      * <p>The ID of the Alibaba Cloud service.</p>
-     * <br>
-     * <p>You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).</p>
+     * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("Service")
     public String service;
@@ -134,24 +152,28 @@ public class ListResourcesRequest extends TeaModel {
     public static class ListResourcesRequestResourceTypes extends TeaModel {
         /**
          * <p>The resource type.</p>
-         * <br>
          * <p>Valid values of N: 1 to 50.</p>
-         * <br>
-         * <p>For more information about the supported resource types, see the **Resource type** column in [Services that work with Resource Group](~~94479~~).</p>
-         * <br>
-         * <p>>  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.</p>
+         * <p>For more information about the supported resource types, see the <strong>Resource type</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <blockquote>
+         * <p> You must configure both <code>Service</code> and <code>ResourceType</code> in <code>ResourceTypes</code>. Otherwise, the two parameters do not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The ID of the Alibaba Cloud service.</p>
-         * <br>
          * <p>Valid values of N: 1 to 50.</p>
-         * <br>
-         * <p>You can obtain the ID from the **Service code** column in [Services that work with Resource Group](~~94479~~).</p>
-         * <br>
-         * <p>>  You must configure both `Service` and `ResourceType` in `ResourceTypes`. Otherwise, the two parameters do not take effect.</p>
+         * <p>You can obtain the ID from the <strong>Service code</strong> column in <a href="https://help.aliyun.com/document_detail/94479.html">Services that work with Resource Group</a>.</p>
+         * <blockquote>
+         * <p> You must configure both <code>Service</code> and <code>ResourceType</code> in <code>ResourceTypes</code>. Otherwise, the two parameters do not take effect.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Service")
         public String service;

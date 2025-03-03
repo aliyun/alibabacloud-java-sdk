@@ -6,22 +6,32 @@ import com.aliyun.tea.*;
 public class ListControlPolicyAttachmentsForTargetRequest extends TeaModel {
     /**
      * <p>The language in which you want to return the descriptions of the access control policies. Valid values:</p>
-     * <br>
-     * <p>*   zh-CN (default value): Chinese</p>
-     * <p>*   en: English</p>
-     * <p>*   ja: Japanese</p>
-     * <br>
-     * <p>>  This parameter is valid only for system access control policies.</p>
+     * <ul>
+     * <li>zh-CN (default value): Chinese</li>
+     * <li>en: English</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is valid only for system access control policies.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The ID of the object whose access control policies you want to query. Access control policies can be attached to the following objects:</p>
-     * <br>
-     * <p>*   Root folder</p>
-     * <p>*   Subfolders of the Root folder</p>
-     * <p>*   Members</p>
+     * <ul>
+     * <li>Root folder</li>
+     * <li>Subfolders of the Root folder</li>
+     * <li>Members</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-ZDNPiT****</p>
      */
     @NameInMap("TargetId")
     public String targetId;

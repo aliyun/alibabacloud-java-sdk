@@ -12,6 +12,9 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54AC391D-4F7F-5F08-B8D3-0AECDE6EC5BD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     public static class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoAbandonableChecks extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NON_SP_cs</p>
          */
         @NameInMap("CheckId")
         public String checkId;
 
         /**
          * <p>The name of the cloud service to which the check item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Container Service for Kubernetes</p>
          */
         @NameInMap("CheckName")
         public String checkName;
 
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An instance of a cloud service is running within the member. Submit a ticket to contact Alibaba Cloud technical support.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -90,18 +102,27 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     public static class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoNotAllowReason extends TeaModel {
         /**
          * <p>The ID of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NON_SP_efc</p>
          */
         @NameInMap("CheckId")
         public String checkId;
 
         /**
          * <p>The name of the cloud service to which the check item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise finance</p>
          */
         @NameInMap("CheckName")
         public String checkName;
 
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This account is an Enterprise Finance associated account. Please remove the financial association of this account before deleting it.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -140,34 +161,44 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     public static class GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfo extends TeaModel {
         /**
          * <p>The check items that you can choose to ignore for the member deletion.</p>
-         * <br>
-         * <p>>  This parameter may be returned if the value of AllowDelete is true.</p>
+         * <blockquote>
+         * <p> This parameter may be returned if the value of AllowDelete is true.</p>
+         * </blockquote>
          */
         @NameInMap("AbandonableChecks")
         public java.util.List<GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoAbandonableChecks> abandonableChecks;
 
         /**
          * <p>Indicates whether the member can be deleted. Valid values:</p>
-         * <br>
-         * <p>*   true: The member can be deleted.</p>
-         * <p>*   false: The member cannot be deleted.</p>
+         * <ul>
+         * <li>true: The member can be deleted.</li>
+         * <li>false: The member cannot be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowDelete")
         public String allowDelete;
 
         /**
          * <p>The reasons why the member cannot be deleted.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of AllowDelete is false.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of AllowDelete is false.</p>
+         * </blockquote>
          */
         @NameInMap("NotAllowReason")
         public java.util.List<GetAccountDeletionCheckResultResponseBodyAccountDeletionCheckResultInfoNotAllowReason> notAllowReason;
 
         /**
          * <p>The status of the check. Valid values:</p>
-         * <br>
-         * <p>*   PreCheckComplete: The check is complete.</p>
-         * <p>*   PreChecking: The check is in progress.</p>
+         * <ul>
+         * <li>PreCheckComplete: The check is complete.</li>
+         * <li>PreChecking: The check is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PreCheckComplete</p>
          */
         @NameInMap("Status")
         public String status;

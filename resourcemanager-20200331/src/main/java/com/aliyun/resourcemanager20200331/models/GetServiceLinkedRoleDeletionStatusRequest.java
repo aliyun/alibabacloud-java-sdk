@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceLinkedRoleDeletionStatusRequest extends TeaModel {
     /**
      * <p>The ID of the deletion task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task/acs-service-role/hdr.aliyuncs.com/AliyunServiceRoleForHdr/c4d22c52-247f-4ee1-83a2-6c0460bd****</p>
      */
     @NameInMap("DeletionTaskId")
     public String deletionTaskId;

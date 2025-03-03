@@ -6,35 +6,47 @@ import com.aliyun.tea.*;
 public class ListPoliciesRequest extends TeaModel {
     /**
      * <p>The language that is used to return the description of the system policy. Valid values:</p>
-     * <br>
-     * <p>*   en: English</p>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   ja: Japanese</p>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh-CN: Chinese</li>
+     * <li>ja: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The type of the policy. If you do not specify this parameter, the system lists all types of policies. Valid values:</p>
-     * <br>
-     * <p>*   Custom: custom policy</p>
-     * <p>*   System: system policy</p>
+     * <ul>
+     * <li>Custom: custom policy</li>
+     * <li>System: system policy</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

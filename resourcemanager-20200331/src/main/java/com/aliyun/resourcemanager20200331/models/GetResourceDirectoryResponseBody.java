@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetResourceDirectoryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD76D376-2517-4924-92C5-DBC52262F93A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,56 +43,82 @@ public class GetResourceDirectoryResponseBody extends TeaModel {
     public static class GetResourceDirectoryResponseBodyResourceDirectory extends TeaModel {
         /**
          * <p>The status of the Control Policy feature. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The feature is enabled.</p>
-         * <p>*   PendingEnable: The feature is being enabled.</p>
-         * <p>*   Disabled: The feature is disabled.</p>
-         * <p>*   PendingDisable: The feature is being disabled.</p>
+         * <ul>
+         * <li>Enabled: The feature is enabled.</li>
+         * <li>PendingEnable: The feature is being enabled.</li>
+         * <li>Disabled: The feature is disabled.</li>
+         * <li>PendingDisable: The feature is being disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("ControlPolicyStatus")
         public String controlPolicyStatus;
 
         /**
          * <p>The time when the resource directory was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-18T15:32:10.473Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The real-name verification information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\<em>\</em>\* Co., Ltd.</p>
          */
         @NameInMap("IdentityInformation")
         public String identityInformation;
 
         /**
          * <p>The ID of the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172845045600****</p>
          */
         @NameInMap("MasterAccountId")
         public String masterAccountId;
 
         /**
          * <p>The name of the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-admin</p>
          */
         @NameInMap("MasterAccountName")
         public String masterAccountName;
 
         /**
          * <p>The status of the member deletion feature. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The feature is enabled. You can call the [DeleteAccount](~~311546~~) operation to delete members of the resource account type.</p>
-         * <p>*   Disabled: The feature is disabled. You cannot delete members of the resource account type.</p>
+         * <ul>
+         * <li>Enabled: The feature is enabled. You can call the <a href="https://help.aliyun.com/document_detail/311546.html">DeleteAccount</a> operation to delete members of the resource account type.</li>
+         * <li>Disabled: The feature is disabled. You cannot delete members of the resource account type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("MemberDeletionStatus")
         public String memberDeletionStatus;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-St****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
         /**
          * <p>The ID of the Root folder.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-Zo****</p>
          */
         @NameInMap("RootFolderId")
         public String rootFolderId;

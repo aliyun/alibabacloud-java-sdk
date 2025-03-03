@@ -12,6 +12,9 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C276B600-7B7A-49E8-938C-E16CFA955A82</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,62 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
     public static class ListControlPolicyAttachmentsForTargetResponseBodyControlPolicyAttachmentsControlPolicyAttachment extends TeaModel {
         /**
          * <p>The time when the access control policy was attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-19T02:56:24Z</p>
          */
         @NameInMap("AttachDate")
         public String attachDate;
 
         /**
          * <p>The description of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleControlPolicy</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The effective scope of the access control policy. Valid values:</p>
-         * <br>
-         * <p>*   All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</p>
-         * <p>*   RAM: The access control policy is in effect only for RAM users and RAM roles.</p>
+         * <ul>
+         * <li>All: The access control policy is in effect for Alibaba Cloud accounts, RAM users, and RAM roles.</li>
+         * <li>RAM: The access control policy is in effect only for RAM users and RAM roles.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM</p>
          */
         @NameInMap("EffectScope")
         public String effectScope;
 
         /**
          * <p>The ID of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-jExXAqIYkwHN****</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
 
         /**
          * <p>The name of the access control policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleControlPolicy</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the access control policy. Valid values:</p>
-         * <br>
-         * <p>*   System: system access control policy</p>
-         * <p>*   Custom: custom access control policy</p>
+         * <ul>
+         * <li>System: system access control policy</li>
+         * <li>Custom: custom access control policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;

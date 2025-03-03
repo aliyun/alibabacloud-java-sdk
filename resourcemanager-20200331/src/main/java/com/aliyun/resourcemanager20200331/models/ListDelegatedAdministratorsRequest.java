@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ListDelegatedAdministratorsRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
-     * <br>
      * <p>Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The identifier of the trusted service.</p>
-     * <br>
-     * <p>For more information, see the `Trusted service identifier` column in [Supported trusted services](~~208133~~).</p>
+     * <p>For more information, see the <code>Trusted service identifier</code> column in <a href="https://help.aliyun.com/document_detail/208133.html">Supported trusted services</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloudfw.aliyuncs.com</p>
      */
     @NameInMap("ServicePrincipal")
     public String servicePrincipal;

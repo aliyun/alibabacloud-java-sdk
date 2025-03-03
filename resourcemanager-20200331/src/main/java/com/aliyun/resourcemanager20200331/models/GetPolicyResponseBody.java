@@ -12,6 +12,9 @@ public class GetPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>697852FB-50D7-44D9-9774-530C31EAC572</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,51 +43,76 @@ public class GetPolicyResponseBody extends TeaModel {
     public static class GetPolicyResponseBodyPolicy extends TeaModel {
         /**
          * <p>The number of times the policy is referenced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AttachmentCount")
         public Integer attachmentCount;
 
         /**
          * <p>The time when the policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The default version of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS administrator</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The document of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
          */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the policy. Valid values:</p>
-         * <br>
-         * <p>*   Custom: custom policy</p>
-         * <p>*   System: system policy</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
          * <p>The time when the policy was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-01-23T12:33:18Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;
