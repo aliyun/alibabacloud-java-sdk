@@ -85,6 +85,9 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     @NameInMap("Scores")
     public String scores;
 
+    @NameInMap("ServiceName")
+    public String serviceName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -169,6 +172,14 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     }
     public String getScores() {
         return this.scores;
+    }
+
+    public BackflowFeatureConsistencyCheckJobDataRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
     }
 
     public BackflowFeatureConsistencyCheckJobDataRequest setUserFeatures(String userFeatures) {
