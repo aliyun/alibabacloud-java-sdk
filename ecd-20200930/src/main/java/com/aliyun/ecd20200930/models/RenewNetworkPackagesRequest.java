@@ -31,6 +31,9 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <p>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</p>
      * <p>This parameter is required.</p>
@@ -96,6 +99,14 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public RenewNetworkPackagesRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public RenewNetworkPackagesRequest setNetworkPackageId(java.util.List<String> networkPackageId) {

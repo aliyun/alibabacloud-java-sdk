@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTimerGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the configuration group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeTimerGroupRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -58,6 +58,12 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     }
 
     public static class ListDirectoryUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The number of assigned cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AssignedDesktopNumber")
         public Integer assignedDesktopNumber;
 
@@ -70,6 +76,12 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:user@example.com">user@example.com</a></p>
+         */
         @NameInMap("Email")
         public String email;
 
@@ -82,6 +94,12 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("EndUser")
         public String endUser;
 
+        /**
+         * <p>The mobile number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130********</p>
+         */
         @NameInMap("Phone")
         public String phone;
 

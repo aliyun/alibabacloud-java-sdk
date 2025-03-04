@@ -58,9 +58,21 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups extends TeaModel {
+        /**
+         * <p>The ID of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aig-0bz55ibznu9p7****</p>
+         */
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
+        /**
+         * <p>The name of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoDeliveryGroup</p>
+         */
         @NameInMap("AppInstanceGroupName")
         public String appInstanceGroupName;
 
@@ -130,9 +142,21 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites extends TeaModel {
+        /**
+         * <p>The ID of the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        /**
+         * <p>The name of the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoOfficeNetwork</p>
+         */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
@@ -160,9 +184,17 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     }
 
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
+        /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         */
         @NameInMap("AllowOperateUserDrive")
         public Boolean allowOperateUserDrive;
 
+        /**
+         * <p>The array of the app steaming delivery groups bound with UPM-supported NAS.</p>
+         */
         @NameInMap("AppInstanceGroups")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> appInstanceGroups;
 
@@ -308,6 +340,9 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        /**
+         * <p>The array of office networks.</p>
+         */
         @NameInMap("OfficeSites")
         public java.util.List<DescribeNASFileSystemsResponseBodyFileSystemsOfficeSites> officeSites;
 
@@ -329,6 +364,16 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The storage type of the NAS file system. Valid values:</p>
+         * <ul>
+         * <li>Upm: UPM NAS</li>
+         * <li>ShareNas: Shared NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Upm</p>
+         */
         @NameInMap("Scene")
         public String scene;
 

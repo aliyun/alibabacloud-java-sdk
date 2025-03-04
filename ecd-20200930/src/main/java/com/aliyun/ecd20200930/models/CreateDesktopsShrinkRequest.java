@@ -74,6 +74,9 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The input parameters used when no templates are used.</p>
+     */
     @NameInMap("DesktopAttachment")
     public String desktopAttachmentShrink;
 
@@ -266,12 +269,30 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-3mtuc28rx95lx****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the saving plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spn-4b945dc4Wktd****</p>
+     */
     @NameInMap("SavingPlanId")
     public String savingPlanId;
 
+    /**
+     * <p>The ID of the auto-snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-28mp6my0l6zow****</p>
+     */
     @NameInMap("SnapshotPolicyId")
     public String snapshotPolicyId;
 
@@ -281,6 +302,12 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateDesktopsShrinkRequestTag> tag;
 
+    /**
+     * <p>The ID of the timer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccg-0caoeogrk9m5****</p>
+     */
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 

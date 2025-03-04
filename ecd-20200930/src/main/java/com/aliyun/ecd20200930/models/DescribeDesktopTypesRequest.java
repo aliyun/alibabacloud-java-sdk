@@ -194,6 +194,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("DesktopTypeId")
     public String desktopTypeId;
 
+    /**
+     * <p>The array of specifications.</p>
+     */
     @NameInMap("DesktopTypeIdList")
     public java.util.List<String> desktopTypeIdList;
 
@@ -206,9 +209,27 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("GpuCount")
     public Float gpuCount;
 
+    /**
+     * <p>The type of the pre-installed GPU driver. Valid values:</p>
+     * <ul>
+     * <li>T4</li>
+     * <li>A10</li>
+     * <li>G28</li>
+     * <li>G39</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>A10</p>
+     */
     @NameInMap("GpuDriverType")
     public String gpuDriverType;
 
+    /**
+     * <p>The GPU memory size. Unit: MB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("GpuMemory")
     public Integer gpuMemory;
 
@@ -284,6 +305,16 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("MemorySize")
     public Integer memorySize;
 
+    /**
+     * <p>The sort criterion. If left empty, the entries will be in descending order based on the creation time. Valid values:</p>
+     * <ul>
+     * <li>Memory: sort by memory size</li>
+     * <li>Cpu: sort by number of CPU cores</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Memory</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
@@ -306,15 +337,49 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The sales mode. Valid values:</p>
+     * <ul>
+     * <li>MonthPackage: monthly subscription</li>
+     * <li>FastBuy: fast buy</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FastBuy</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>ASC: in ascending order [default]</li>
+     * <li>DESC: in descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 
+    /**
+     * <p>The number of sessions supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SupportMinSessionCount")
     public Integer supportMinSessionCount;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

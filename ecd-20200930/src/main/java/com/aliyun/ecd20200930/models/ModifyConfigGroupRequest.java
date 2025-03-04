@@ -4,10 +4,17 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyConfigGroupRequest extends TeaModel {
+    /**
+     * <p>The description of the configuration group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ScheduledTask</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the configuration group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,10 +23,18 @@ public class ModifyConfigGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the configuration group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ScheduledTask</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

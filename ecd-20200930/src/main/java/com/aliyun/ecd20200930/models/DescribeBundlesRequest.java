@@ -72,7 +72,9 @@ public class DescribeBundlesRequest extends TeaModel {
     public String desktopTypeFamily;
 
     /**
-     * <p>This parameter is now in invitational preview and not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not available for public use.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>This parameter is now in invitational preview and unavailable.</p>
@@ -114,11 +116,24 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("GpuCount")
     public Float gpuCount;
 
+    /**
+     * <p>The GPU driver type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>T4</li>
+     * <li>A10</li>
+     * <li>G28</li>
+     * <li>G39</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>T4</p>
+     */
     @NameInMap("GpuDriverType")
     public String gpuDriverType;
 
     /**
-     * <p>The image ID.</p>
+     * <p>The image IDs.</p>
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
@@ -192,7 +207,7 @@ public class DescribeBundlesRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -220,11 +235,10 @@ public class DescribeBundlesRequest extends TeaModel {
     public Boolean selectedBundle;
 
     /**
-     * <p>The type of the session.</p>
-     * <p>Enumeration Value:</p>
+     * <p>The type of the session. Valide values:</p>
      * <ul>
-     * <li><strong>SingleSession</strong></li>
-     * <li><strong>MultipleSession</strong></li>
+     * <li>SingleSession</li>
+     * <li>MultipleSession</li>
      * </ul>
      * 
      * <strong>example:</strong>

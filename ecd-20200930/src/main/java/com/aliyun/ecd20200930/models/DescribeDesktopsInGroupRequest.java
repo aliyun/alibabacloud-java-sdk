@@ -4,6 +4,12 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopsInGroupRequest extends TeaModel {
+    @NameInMap("CustomEndTimePeriod")
+    public Long customEndTimePeriod;
+
+    @NameInMap("CustomStartTimePeriod")
+    public Long customStartTimePeriod;
+
     /**
      * <p>The ID of the cloud computer pool.</p>
      * <p>This parameter is required.</p>
@@ -68,6 +74,22 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public static DescribeDesktopsInGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopsInGroupRequest self = new DescribeDesktopsInGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDesktopsInGroupRequest setCustomEndTimePeriod(Long customEndTimePeriod) {
+        this.customEndTimePeriod = customEndTimePeriod;
+        return this;
+    }
+    public Long getCustomEndTimePeriod() {
+        return this.customEndTimePeriod;
+    }
+
+    public DescribeDesktopsInGroupRequest setCustomStartTimePeriod(Long customStartTimePeriod) {
+        this.customStartTimePeriod = customStartTimePeriod;
+        return this;
+    }
+    public Long getCustomStartTimePeriod() {
+        return this.customStartTimePeriod;
     }
 
     public DescribeDesktopsInGroupRequest setDesktopGroupId(String desktopGroupId) {

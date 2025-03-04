@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class WakeupDesktopsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6557DBA9-CF3E-5C1B-B1F1-68FDA599****</p>
      */

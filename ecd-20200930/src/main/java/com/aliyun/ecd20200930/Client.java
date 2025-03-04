@@ -900,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定配置组</p>
+     * <p>Binds a configuration group to resources.</p>
      * 
      * @param request BindConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -945,7 +945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定配置组</p>
+     * <p>Binds a configuration group to resources.</p>
      * 
      * @param request BindConfigGroupRequest
      * @return BindConfigGroupResponse
@@ -1982,6 +1982,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates data transfer plans.</p>
+     * 
+     * @param request CreateBandwidthResourcePackagesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBandwidthResourcePackagesResponse
+     */
+    public CreateBandwidthResourcePackagesResponse createBandwidthResourcePackagesWithOptions(CreateBandwidthResourcePackagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
+            query.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.packageSize)) {
+            query.put("PackageSize", request.packageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
+            query.put("PromotionId", request.promotionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBandwidthResourcePackages"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBandwidthResourcePackagesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateBandwidthResourcePackagesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates data transfer plans.</p>
+     * 
+     * @param request CreateBandwidthResourcePackagesRequest
+     * @return CreateBandwidthResourcePackagesResponse
+     */
+    public CreateBandwidthResourcePackagesResponse createBandwidthResourcePackages(CreateBandwidthResourcePackagesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBandwidthResourcePackagesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</p>
      * 
@@ -2440,7 +2513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建配置组</p>
+     * <p>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</p>
      * 
      * @param request CreateConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2497,7 +2570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建配置组</p>
+     * <p>Creates a configuration group. A configuration group stores the setup details for scheduled tasks on cloud computers.</p>
      * 
      * @param request CreateConfigGroupRequest
      * @return CreateConfigGroupResponse
@@ -2509,14 +2582,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to create a desktop group, make sure that the following operations are complete:</p>
+     * <p>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</p>
      * <ul>
-     * <li>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</li>
-     * <li>Resources, such as workspaces, users, desktop templates, and policies, are created.</li>
+     * <li>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cloud computer pool (formerly desktop group).</p>
+     * <p>Creates a shared group.</p>
      * 
      * @param request CreateDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2773,14 +2845,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation to create a desktop group, make sure that the following operations are complete:</p>
+     * <p>  To learn about the features, application scenarios, usage limits, scaling policies, and other details of shared groups, refer to <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a>.</p>
      * <ul>
-     * <li>You are familiar with the features, usage limits, and scaling policies of desktop groups. For more information, see <a href="https://help.aliyun.com/document_detail/290959.html">Overview</a> of desktop groups.</li>
-     * <li>Resources, such as workspaces, users, desktop templates, and policies, are created.</li>
+     * <li>Before you call this operation, make sure that the required resources, such as the office network, cloud computer template, and policies, are created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a cloud computer pool (formerly desktop group).</p>
+     * <p>Creates a shared group.</p>
      * 
      * @param request CreateDesktopGroupRequest
      * @return CreateDesktopGroupResponse
@@ -4241,7 +4312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除配置组</p>
+     * <p>Deletes a configuration group.</p>
      * 
      * @param request DeleteConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4282,7 +4353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除配置组</p>
+     * <p>Deletes a configuration group.</p>
      * 
      * @param request DeleteConfigGroupRequest
      * @return DeleteConfigGroupResponse
@@ -5747,7 +5818,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询配置组</p>
+     * <p>Queries configuration groups.</p>
      * 
      * @param request DescribeConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5816,7 +5887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询配置组</p>
+     * <p>Queries configuration groups.</p>
      * 
      * @param request DescribeConfigGroupRequest
      * @return DescribeConfigGroupResponse
@@ -6547,7 +6618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of the cloud desktop.</p>
+     * <p>Queries the details of cloud computers.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6724,7 +6795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the details of the cloud desktop.</p>
+     * <p>Queries the details of cloud computers.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @return DescribeDesktopsResponse
@@ -6745,6 +6816,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDesktopsInGroupResponse describeDesktopsInGroupWithOptions(DescribeDesktopsInGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customEndTimePeriod)) {
+            query.put("CustomEndTimePeriod", request.customEndTimePeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customStartTimePeriod)) {
+            query.put("CustomStartTimePeriod", request.customStartTimePeriod);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.desktopGroupId)) {
             query.put("DesktopGroupId", request.desktopGroupId);
         }
@@ -7955,7 +8034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more policies.</p>
+     * <p>Queries the details of a cloud computer policy.</p>
      * 
      * @param request DescribePolicyGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7974,6 +8053,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
@@ -8012,7 +8099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about one or more policies.</p>
+     * <p>Queries the details of a cloud computer policy.</p>
      * 
      * @param request DescribePolicyGroupsRequest
      * @return DescribePolicyGroupsResponse
@@ -8036,7 +8123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the price information of desktop resources in Elastic Desktop Service (EDS).</p>
+     * <p>Queries the prices of Elastic Desktop Service (EDS) resources.</p>
      * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8145,7 +8232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the price information of desktop resources in Elastic Desktop Service (EDS).</p>
+     * <p>Queries the prices of Elastic Desktop Service (EDS) resources.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -8426,6 +8513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the refund amount for unsubscribing from a cloud computer.</p>
+     * 
      * @param request DescribeRefundPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRefundPriceResponse
@@ -8468,6 +8558,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the refund amount for unsubscribing from a cloud computer.</p>
+     * 
      * @param request DescribeRefundPriceRequest
      * @return DescribeRefundPriceResponse
      */
@@ -8768,7 +8861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询定时任务配置</p>
+     * <p>Queries a scheduled task configuration group.</p>
      * 
      * @param request DescribeTimerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8809,7 +8902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询定时任务配置</p>
+     * <p>Queries a scheduled task configuration group.</p>
      * 
      * @param request DescribeTimerGroupRequest
      * @return DescribeTimerGroupResponse
@@ -11934,7 +12027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改配置组</p>
+     * <p>Modifies the basic information of a configuration group.</p>
      * 
      * @param request ModifyConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11983,7 +12076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改配置组</p>
+     * <p>Modifies the basic information of a configuration group.</p>
      * 
      * @param request ModifyConfigGroupRequest
      * @return ModifyConfigGroupResponse
@@ -12874,21 +12967,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</p>
-     * <ul>
-     * <li>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</li>
-     * <li>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-     * 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-     * 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-     * 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-     * 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-     * 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-     * 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</li>
-     * <li>The changes do not affect your personal data on the cloud desktop.</li>
-     * </ul>
+     * <p>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</p>
+     * <blockquote>
+     * <p> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.</p>
+     * <p>Changes the performance level (PL) of a system disk or data disk.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12911,6 +12996,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resellerOwnerUid)) {
+            query.put("ResellerOwnerUid", request.resellerOwnerUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rootDiskPerformanceLevel)) {
@@ -12945,21 +13034,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to change the configurations, such as the desktop type and disk size, of a cloud desktop.</p>
-     * <ul>
-     * <li>Before you call this operation, you must know the cloud desktop types and the disk sizes for each type of cloud desktop that Elastic Desktop Service (EDS) provides.</li>
-     * <li>When you change the configurations of a cloud desktop, you must change the desktop type or the size of the system disk or data disk. You must configure at least one of the following parameters: DesktopType, RootDiskSizeGib, and UserDiskSizeGib. Take note of the following items:
-     * 1\. Desktop types include the specifications of vCPUs, memory, and GPUs. You can change only the desktop type, instead of one of the specifications.
-     * 2\. You cannot change a cloud desktop from the General Office type to a non-General Office type, or from a non-General Office type to the General Office type. You cannot change a cloud desktop from the Graphics type to a non-Graphics type, or from a non-Graphics type to the Graphics type.
-     * 3\. You can only increase the sizes of system and data disks. You cannot decrease the sizes of system and data disks.
-     * 4\. If your cloud desktop uses the subscription billing method, the price difference is calculated based on the price before and after configuration changes. You may receive a refund, or must pay for the price difference.
-     * 5\. If you need to change the configurations of a cloud desktop multiple times, we recommend that you wait at least 5 minutes between consecutive operations on the cloud desktop.
-     * 6\. The cloud desktop for which you want to change the desktop type must be in the Stopped state.</li>
-     * <li>The changes do not affect your personal data on the cloud desktop.</li>
-     * </ul>
+     * <p>When creating a cloud computer in Elastic Desktop Service (EDS) Enterprise, you can use a template to define specifications that align with your business needs. By default, Enterprise Graphics or High Frequency cloud computers utilize Enterprise SSDs (ESSDs). You can customize the disk capacity and performance level (PL) of these ESSDs, and adjust the PL for both system and data disks as needed.</p>
+     * <blockquote>
+     * <p> Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Changes the configurations of a cloud desktop, including the number of vCPUs, memory size, and disk size.</p>
+     * <p>Changes the performance level (PL) of a system disk or data disk.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @return ModifyDiskSpecResponse
@@ -13932,7 +14013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改定时任务配置</p>
+     * <p>Modifies a scheduled task configuration group.</p>
      * 
      * @param request ModifyTimerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13985,7 +14066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改定时任务配置</p>
+     * <p>Modifies a scheduled task configuration group.</p>
      * 
      * @param request ModifyTimerGroupRequest
      * @return ModifyTimerGroupResponse
@@ -14538,6 +14619,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Renew a subscription cloud computer pool.</p>
+     * 
      * @param request RenewDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RenewDesktopGroupResponse
@@ -14592,6 +14676,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Renew a subscription cloud computer pool.</p>
+     * 
      * @param request RenewDesktopGroupRequest
      * @return RenewDesktopGroupResponse
      */
@@ -14747,6 +14834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkPackageId)) {
@@ -15981,7 +16072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑配置组</p>
+     * <p>Unbinds a configuration group from resources.</p>
      * 
      * @param request UnbindConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16026,7 +16117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解绑配置组</p>
+     * <p>Unbinds a configuration group from resources.</p>
      * 
      * @param request UnbindConfigGroupRequest
      * @return UnbindConfigGroupResponse
@@ -16455,6 +16546,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only cloud computers that are in the Hibernated state can be waked up.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Wakes up cloud computers.</p>
+     * 
      * @param request WakeupDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return WakeupDesktopsResponse
@@ -16493,6 +16590,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only cloud computers that are in the Hibernated state can be waked up.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Wakes up cloud computers.</p>
+     * 
      * @param request WakeupDesktopsRequest
      * @return WakeupDesktopsResponse
      */

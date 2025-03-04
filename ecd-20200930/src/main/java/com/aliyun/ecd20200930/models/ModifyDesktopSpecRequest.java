@@ -69,9 +69,21 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The array of resource specification templates.</p>
+     */
     @NameInMap("ResourceSpecs")
     public java.util.List<ModifyDesktopSpecRequestResourceSpecs> resourceSpecs;
 
+    /**
+     * <p>The resource type.</p>
+     * <blockquote>
+     * <p>This parameter is optional for non-subscribed cloud computers.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DesktopMonthPackage</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -222,12 +234,30 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     }
 
     public static class ModifyDesktopSpecRequestResourceSpecs extends TeaModel {
+        /**
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-4543qyik164a4****</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <p>The target size of the system disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("RootDiskSizeGib")
         public Integer rootDiskSizeGib;
 
+        /**
+         * <p>The target size of the data disk. Valid values: 80-500 GiB. The value must be a multiple of 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("UserDiskSizeGib")
         public Integer userDiskSizeGib;
 

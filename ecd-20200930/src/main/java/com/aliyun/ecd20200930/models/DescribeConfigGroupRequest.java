@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the configuration group.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-i1ruuudp92qpj****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The IDs of the configuration groups.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
 
+    /**
+     * <p>The name of the configuration group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ScheduledTask</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +38,8 @@ public class DescribeConfigGroupRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -32,6 +47,12 @@ public class DescribeConfigGroupRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The service type of the configuration group.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CLOUD_DESKTOP</p>
      */
@@ -39,16 +60,27 @@ public class DescribeConfigGroupRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The status of the configuration groups.</p>
+     */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;
 
     /**
+     * <p>The type of the configuration group.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>Timer: the scheduled task type.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Timer</p>
      */

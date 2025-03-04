@@ -112,6 +112,12 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @NameInMap("ClientVersion")
         public String clientVersion;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 

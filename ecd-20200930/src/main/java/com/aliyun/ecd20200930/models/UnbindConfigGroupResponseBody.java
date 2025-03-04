@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class UnbindConfigGroupResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the configuration groups.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>AD0FF13D-FC7D-56AD-934F-91C8487*****</p>
      */
