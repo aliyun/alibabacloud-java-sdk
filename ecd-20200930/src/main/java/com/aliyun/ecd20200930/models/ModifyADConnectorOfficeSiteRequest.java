@@ -13,9 +13,21 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     @NameInMap("AdHostname")
     public String adHostname;
 
+    /**
+     * <p>The hostname of the backup domain controller.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dc002</p>
+     */
     @NameInMap("BackupDCHostname")
     public String backupDCHostname;
 
+    /**
+     * <p>The DNS address of the backup domain controller.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.2.100</p>
+     */
     @NameInMap("BackupDns")
     public String backupDns;
 

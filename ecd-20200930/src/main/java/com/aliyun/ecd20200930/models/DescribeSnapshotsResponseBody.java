@@ -178,9 +178,21 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("RemainTime")
         public Integer remainTime;
 
+        /**
+         * <p>The ID of the restore point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rp-btgmaa20wkcju****</p>
+         */
         @NameInMap("RestorePointId")
         public String restorePointId;
 
+        /**
+         * <p>The name of the restore point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataDiskBackup</p>
+         */
         @NameInMap("RestorePointName")
         public String restorePointName;
 

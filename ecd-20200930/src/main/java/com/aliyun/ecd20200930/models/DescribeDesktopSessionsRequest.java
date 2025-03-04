@@ -47,6 +47,8 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The ID the end user. It is the same as EndUserId. Either one of these two parameters is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>alice</p>
      */

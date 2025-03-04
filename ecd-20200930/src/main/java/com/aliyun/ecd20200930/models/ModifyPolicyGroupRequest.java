@@ -712,6 +712,16 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     public String watermarkType;
 
     /**
+     * <p>Specifies whether to provide the AI Assistant function in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace desktop clients (including the Windows client and the macOS client).</p>
+     * <blockquote>
+     * <p>Desktop clients of V7.7 and higher versions required.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>off: the AI Aisstant function is not provided.</li>
+     * <li>on: the AI Aisstant function is provided.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>on</p>
      */

@@ -280,9 +280,25 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     }
 
     public static class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts extends TeaModel {
+        /**
+         * <p>The amount of resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("amount")
         public Long amount;
 
+        /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>desktop: cloud computers</li>
+         * <li>desktopGroup: shared cloud computers</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -316,6 +332,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("ADConnectors")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesADConnectors> ADConnectors;
 
+        /**
+         * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-bp1astu3yrplkzoo2****</p>
+         */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
@@ -406,9 +428,18 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The custom gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gw-****.com</p>
+         */
         @NameInMap("CustomAccessPoint")
         public String customAccessPoint;
 
+        /**
+         * <p>The array of custom DNS addresses.</p>
+         */
         @NameInMap("CustomDnsAddress")
         public java.util.List<String> customDnsAddress;
 
@@ -602,6 +633,16 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
 
+        /**
+         * <p>The network version. App Streaming is supported by the new version. Valid values:</p>
+         * <ul>
+         * <li>DEFAULT: the legacy version</li>
+         * <li>NM: the new version</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NM</p>
+         */
         @NameInMap("NmVersion")
         public String nmVersion;
 
@@ -678,6 +719,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("RdsLicenseStatus")
         public String rdsLicenseStatus;
 
+        /**
+         * <p>The amount of resources.</p>
+         */
         @NameInMap("ResourceAmounts")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> resourceAmounts;
 
@@ -785,6 +829,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("TotalEdsCountForGroup")
         public Long totalEdsCountForGroup;
 
+        /**
+         * <p>The total number of network cards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalResourceAmount")
         public Long totalResourceAmount;
 

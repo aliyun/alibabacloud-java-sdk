@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBundlesResponseBody extends TeaModel {
     /**
-     * <p>The details of the queried cloud computer templates.</p>
+     * <p>The details of the cloud computer templates.</p>
      */
     @NameInMap("Bundles")
     public java.util.List<DescribeBundlesResponseBodyBundles> bundles;
@@ -291,6 +291,17 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The category of the data disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_auto: SSD</li>
+         * <li>cloud_essd: ESSD (supported by specific specifications)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
@@ -368,6 +379,13 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
         /**
          * <p>The OS language of the image.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en-US: English</li>
+         * <li>zh-HK: Chinese, Traditional (Hong Kong, China)</li>
+         * <li>zh-CN: Simplified Chinese</li>
+         * <li>ja-JP: Japanese</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en-US</p>
@@ -490,6 +508,17 @@ public class DescribeBundlesResponseBody extends TeaModel {
         @NameInMap("StockState")
         public String stockState;
 
+        /**
+         * <p>The category of the system disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_auto: SSD</li>
+         * <li>cloud_essd: ESSD (supported by specific specifications)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 

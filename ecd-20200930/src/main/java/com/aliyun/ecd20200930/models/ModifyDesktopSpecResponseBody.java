@@ -13,6 +13,9 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The array of order IDs.</p>
+     */
     @NameInMap("OrderIds")
     public java.util.List<Long> orderIds;
 

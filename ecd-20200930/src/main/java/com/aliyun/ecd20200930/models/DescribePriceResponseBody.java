@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The price details.</p>
+     * <p>The price information.</p>
      */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
@@ -135,7 +135,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The unit of the currency.</p>
+         * <p>The unit of currency (USD).</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -144,7 +144,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The discounted price.</p>
+         * <p>The discounted amount.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -152,6 +152,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The orders.</p>
+         */
         @NameInMap("OrderLines")
         public java.util.Map<String, String> orderLines;
 
@@ -165,16 +168,22 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The details of the promotion.</p>
+         * <p>The promotions.</p>
          */
         @NameInMap("Promotions")
         public java.util.List<DescribePriceResponseBodyPriceInfoPricePromotions> promotions;
 
+        /**
+         * <p>The price under an effective savings plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50.00</p>
+         */
         @NameInMap("SpPrice")
         public Long spPrice;
 
         /**
-         * <p>The actual price that is paid. The original price minus the discounted part equals the actual price.</p>
+         * <p>The actual price. The original price minus the discounted amount equals the actual price.</p>
          * 
          * <strong>example:</strong>
          * <p>2.796</p>
@@ -288,14 +297,26 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>Indicates whether a free enterprise drive is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("FreeCdsQuota")
         public Boolean freeCdsQuota;
 
+        /**
+         * <p>The free capacity provided by the enterprise drive. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FreeCdsSize")
         public Long freeCdsSize;
 
         /**
-         * <p>The information about the price.</p>
+         * <p>The price.</p>
          */
         @NameInMap("Price")
         public DescribePriceResponseBodyPriceInfoPrice price;

@@ -4,6 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDirectoryUsersRequest extends TeaModel {
+    /**
+     * <blockquote>
+     * <p>This parameter is not publicly available. The value can be 1 or left empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AssignedInfo")
     public String assignedInfo;
 
@@ -26,6 +34,12 @@ public class ListDirectoryUsersRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>Specifies whether to return the users with assigned cloud computers only.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeAssignedUser")
     public Boolean includeAssignedUser;
 
@@ -68,6 +82,17 @@ public class ListDirectoryUsersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The sort type.</p>
+     * <p>Valide values:</p>
+     * <ul>
+     * <li>asc: cloud computers assigned to users on bottom</li>
+     * <li>desc: cloud computers assigned to users on top</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 

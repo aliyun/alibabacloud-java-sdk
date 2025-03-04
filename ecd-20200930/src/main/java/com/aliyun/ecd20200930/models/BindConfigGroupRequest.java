@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindConfigGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the configuration group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class BindConfigGroupRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,6 +24,7 @@ public class BindConfigGroupRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resources to which you want to bind the configuration group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceInfos")
@@ -57,6 +61,12 @@ public class BindConfigGroupRequest extends TeaModel {
 
     public static class BindConfigGroupRequestResourceInfos extends TeaModel {
         /**
+         * <p>The service type of the resource.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
          */
@@ -64,6 +74,8 @@ public class BindConfigGroupRequest extends TeaModel {
         public String productType;
 
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-1bo4xotjvwyon****</p>
          */
@@ -71,6 +83,8 @@ public class BindConfigGroupRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -78,6 +92,13 @@ public class BindConfigGroupRequest extends TeaModel {
         public String resourceRegionId;
 
         /**
+         * <p>The type of the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RESOURCE_GROUP: the resource group</li>
+         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
          */

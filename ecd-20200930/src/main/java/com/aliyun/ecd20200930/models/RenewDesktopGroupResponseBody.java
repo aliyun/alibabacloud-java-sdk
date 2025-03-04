@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RenewDesktopGroupResponseBody extends TeaModel {
+    /**
+     * <p>The order IDs.</p>
+     */
     @NameInMap("OrderId")
     public java.util.List<String> orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E55E6732-2028-52FA-AB06-EA29C36B****</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigGroupResponseBody extends TeaModel {
+    /**
+     * <p>The configuration groups.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeConfigGroupResponseBodyData> data;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,8 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -82,29 +93,54 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
 
     public static class DescribeConfigGroupResponseBodyData extends TeaModel {
         /**
+         * <p>The number of resources that are bound to the configuration group.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
         @NameInMap("BindCount")
         public Integer bindCount;
 
+        /**
+         * <p>The number of bound cloud computers.</p>
+         */
         @NameInMap("BindCountMap")
         public java.util.Map<String, Integer> bindCountMap;
 
+        /**
+         * <p>The description of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The ID of the configuration group.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccg-0cid8v30an12****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the configuration group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ScheduledTask</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The service type of the configuration group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>CLOUD_DESKTOP: the cloud computer service.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CLOUD_DESKTOP</p>
          */
@@ -112,6 +148,15 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The state of the configuration group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AVAILABLE: The configuration group is available.</li>
+         * <li>UNAVAILABLE: The configuration group is deleted.</li>
+         * <li>DELETING: The configuration group is being deleted.</li>
+         * <li>UPDATING: The configuration group is being modified.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
          */
@@ -119,6 +164,12 @@ public class DescribeConfigGroupResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The type of the configuration group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Timer: the scheduled task type.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Timer</p>
          */

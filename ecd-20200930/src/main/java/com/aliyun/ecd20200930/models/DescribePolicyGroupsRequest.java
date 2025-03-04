@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyGroupsRequest extends TeaModel {
+    /**
+     * <p>The array of cloud computer policy IDs to be excluded.</p>
+     */
     @NameInMap("ExternalPolicyGroupIds")
     public java.util.List<String> externalPolicyGroupIds;
 
@@ -29,8 +32,14 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
-     * <p>The policy IDs. You can specify one or more policy IDs.</p>
+     * <p>The IDs of the cloud computer policies.</p>
      * 
      * <strong>example:</strong>
      * <p>system-all-enabled-policy</p>
@@ -39,7 +48,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public java.util.List<String> policyGroupId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,13 +58,13 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The effective scope of the policy. Valid values:</p>
+     * <p>The effective scope of the cloud computer policy.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>GLOBAL: The policy takes effect globally.</li>
-     * <li>IP: The policy takes effect based on the IP address.</li>
-     * <li>ALL: The policy takes effect without limits.</li>
+     * <li>ALL</li>
+     * <li>IP</li>
+     * <li>GLOBAL</li>
      * </ul>
-     * <p>Default value: GLOBAL.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -90,6 +99,22 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribePolicyGroupsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribePolicyGroupsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribePolicyGroupsRequest setPolicyGroupId(java.util.List<String> policyGroupId) {

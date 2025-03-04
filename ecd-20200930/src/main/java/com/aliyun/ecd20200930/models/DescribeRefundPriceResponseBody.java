@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeRefundPriceResponseBody extends TeaModel {
+    /**
+     * <p>The price details.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribeRefundPriceResponseBodyPriceInfo priceInfo;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
 
     public static class DescribeRefundPriceResponseBodyPriceInfo extends TeaModel {
         /**
+         * <p>The unit of currency (USD).</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRefundPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The amount of the refund.</p>
+         * 
          * <strong>example:</strong>
          * <p>3990.75</p>
          */

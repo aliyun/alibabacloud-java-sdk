@@ -141,6 +141,15 @@ public class UploadImageRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The size of the system disk. Unit: GB.</p>
+     * <blockquote>
+     * <p>The size of the system disk cannot be smaller than the size of the image.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("SystemDiskSize")
     public String systemDiskSize;
 

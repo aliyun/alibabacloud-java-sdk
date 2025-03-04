@@ -412,9 +412,21 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        /**
+         * <p>The total number of cloud computers on which the command is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InvokeDesktopCount")
         public Integer invokeDesktopCount;
 
+        /**
+         * <p>The total number of cloud computers on which the command is executed successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("InvokeDesktopSucceedCount")
         public Integer invokeDesktopSucceedCount;
 

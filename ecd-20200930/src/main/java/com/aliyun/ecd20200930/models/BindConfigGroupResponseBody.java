@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindConfigGroupResponseBody extends TeaModel {
     /**
+     * <p>The ID of the configuration group.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccg-0chlk9b65lj****</p>
      */
@@ -12,6 +14,8 @@ public class BindConfigGroupResponseBody extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E54EB497-D7B7-5F04-B744-D8DFA7B******</p>
      */

@@ -74,6 +74,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The input parameters used when no templates are used.</p>
+     */
     @NameInMap("DesktopAttachment")
     public CreateDesktopsRequestDesktopAttachment desktopAttachment;
 
@@ -266,12 +269,30 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-3mtuc28rx95lx****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the saving plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spn-4b945dc4Wktd****</p>
+     */
     @NameInMap("SavingPlanId")
     public String savingPlanId;
 
+    /**
+     * <p>The ID of the auto-snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-28mp6my0l6zow****</p>
+     */
     @NameInMap("SnapshotPolicyId")
     public String snapshotPolicyId;
 
@@ -281,6 +302,12 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateDesktopsRequestTag> tag;
 
+    /**
+     * <p>The ID of the timer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccg-0caoeogrk9m5****</p>
+     */
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
@@ -769,30 +796,106 @@ public class CreateDesktopsRequest extends TeaModel {
     }
 
     public static class CreateDesktopsRequestDesktopAttachment extends TeaModel {
+        /**
+         * <p>The category of the data disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_auto: SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_auto</p>
+         */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
+        /**
+         * <p>The performance level of the data disk. Valid values:</p>
+         * <ul>
+         * <li>PL0 (default)</li>
+         * <li>PL1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
         @NameInMap("DataDiskPerLevel")
         public String dataDiskPerLevel;
 
+        /**
+         * <p>The size of the data disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("DataDiskSize")
         public Integer dataDiskSize;
 
+        /**
+         * <p>The default display language:</p>
+         * <ul>
+         * <li>zh-CN: Simplified Chinese</li>
+         * <li>zh-HK: Traditional Chinese</li>
+         * <li>en-US: English</li>
+         * <li>ja-JP: Japanese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
+         */
         @NameInMap("DefaultLanguage")
         public String defaultLanguage;
 
+        /**
+         * <p>The desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the IDs of supported desktop types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.enterprise_office.8c16g</p>
+         */
         @NameInMap("DesktopType")
         public String desktopType;
 
+        /**
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-39ddhdb0ggzjx*****</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The category of the system disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_auto: SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_auto</p>
+         */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
+        /**
+         * <p>The performance level of the system disk. Valid values:</p>
+         * <ul>
+         * <li>PL0 (default)</li>
+         * <li>PL1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
         @NameInMap("SystemDiskPerLevel")
         public String systemDiskPerLevel;
 
+        /**
+         * <p>The size of the system disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 

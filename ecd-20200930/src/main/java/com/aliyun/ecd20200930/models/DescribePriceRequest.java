@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
     /**
-     * <p>The number of the resources. Default value: 1.</p>
+     * <p>The number of resources. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,8 +16,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
      * <ul>
-     * <li>Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000</li>
-     * <li>Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200</li>
+     * <li>Valid values if you set InternetChargeType to PayByBandwidth: 10 to 1000.</li>
+     * <li>Valid values if you set InternetChargeType to InternetChargeType: 10 to 200.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,16 +26,36 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The type of hourly plan if you use the Monthly Subscription billing method. If you set <code>ResourceType</code> to <code>DesktopMonthPackage</code>, you must specify this parameter.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>120: the 120-hour computing plan.</li>
+     * <li>250: the 250-hour computing plan.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The number of cloud computers in the cloud computer pool. Default value: 1.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set <code>ResourceType</code> to <code>DesktopGroup</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GroupDesktopCount")
     public Integer groupDesktopCount;
 
     /**
      * <p>The resource specifications.</p>
      * <ul>
-     * <li><p>If you set ResourceType to Desktop, set this parameter to one of the following values:</p>
+     * <li><p>If you set <code>ResourceType</code> to <code>Desktop</code>, you must specify this parameter.</p>
      * <ul>
      * <li>ecd.basic.small</li>
      * <li>ecd.basic.large</li>
@@ -57,9 +77,9 @@ public class DescribePriceRequest extends TeaModel {
      * <li>eds.general.16c32g</li>
      * </ul>
      * </li>
-     * <li><p>If you set ResourceType to OfficeSite, set this parameter to large.</p>
+     * <li><p>If you set <code>ResourceType</code> to <code>DesktopGroup</code>, set the value of this parameter to <code>large</code>.</p>
      * </li>
-     * <li><p>If you set ResourceType to Bandwidth, leave this parameter empty.</p>
+     * <li><p>If you set <code>ResourceType</code> to <code>Bandwidth</code>, you can leave this parameter empty.</p>
      * </li>
      * </ul>
      * 
@@ -70,10 +90,11 @@ public class DescribePriceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The metering method of the Internet access package. Valid values:</p>
+     * <p>The metering method for network traffic.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>PayByBandwidth: pay-by-bandwidth</li>
-     * <li>PayByTraffic: pay-by-data-transfer</li>
+     * <li>PayByTraffic: You are charged for the actually consumed traffic.</li>
+     * <li>PayByBandwidth: You are charged by a fixed bandwidth.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,12 +104,12 @@ public class DescribePriceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The OS. Valid values:</p>
+     * <p>The OS type.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Windows</li>
      * <li>Linux</li>
+     * <li>Windows (default)</li>
      * </ul>
-     * <p>Default value: Windows.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -97,7 +118,13 @@ public class DescribePriceRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The subscription duration. Default value: 1.</p>
+     * <p>The subscription duration. The valid values of this parameter vary based on the value of <code>PeriodUnit</code>.</p>
+     * <ul>
+     * <li>If you set <code>PeriodUnit</code> to <code>Hour</code>, set the value of this parameter to 1.</li>
+     * <li>If you set <code>PeriodUnit</code> to <code>Month</code>, set the value of this parameter to 1, 2, 3, or 6.</li>
+     * <li>If you set <code>PeriodUnit</code> to <code>Year</code>, set the value of this parameter to 1, 2, or 3.</li>
+     * </ul>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -106,13 +133,13 @@ public class DescribePriceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the billing cycle. Valid values:</p>
+     * <p>The billing cycle.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Hour</li>
      * <li>Month</li>
      * <li>Year</li>
+     * <li>Hour (default)</li>
      * </ul>
-     * <p>Default value: Hour.</p>
      * 
      * <strong>example:</strong>
      * <p>Hour</p>
@@ -130,7 +157,7 @@ public class DescribePriceRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by EDS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,13 +167,14 @@ public class DescribePriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource type. Valid values:</p>
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Desktop: cloud desktop</li>
-     * <li>OfficeSite: workspace</li>
-     * <li>Bandwidth: network bandwidth</li>
+     * <li>DesktopMonthPackage: the monthly subscription plan (also known as the 120-hour or 250-hour computing plan).</li>
+     * <li>Desktop (default): the pay-as-you-go cloud computer or the monthly subscription cloud computer (also known as the Unlimited computing plan).</li>
+     * <li>Bandwidth: the premium bandwidth plan.</li>
+     * <li>DesktopGroup: the cloud computer pool.</li>
      * </ul>
-     * <p>Default value: Desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>Desktop</p>
@@ -154,11 +182,15 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
     @NameInMap("RootDiskCategory")
     public String rootDiskCategory;
 
     /**
-     * <p>The system disk size. Unit: GiB.</p>
+     * <p>The size of the system disk. Unit: GiB. If you set <code>ResourceType</code> to <code>Desktop</code>, you must specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -166,11 +198,15 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("RootDiskSizeGib")
     public Integer rootDiskSizeGib;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("UserDiskCategory")
     public String userDiskCategory;
 
     /**
-     * <p>The data disk size. Unit: GiB.</p>
+     * <p>The size of the data disk. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

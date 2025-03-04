@@ -4,13 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyTimerGroupRequest extends TeaModel {
+    /**
+     * <p>The configuration groups.</p>
+     */
     @NameInMap("ConfigTimers")
     public java.util.List<ModifyTimerGroupRequestConfigTimers> configTimers;
 
+    /**
+     * <p>The description of the configuration group.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The ID of the configuration group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,10 +26,15 @@ public class ModifyTimerGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The name of the configuration group.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The ID of the region. Set the value to <code>cn-shanghai</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -76,6 +88,8 @@ public class ModifyTimerGroupRequest extends TeaModel {
 
     public static class ModifyTimerGroupRequestConfigTimers extends TeaModel {
         /**
+         * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -83,6 +97,11 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Boolean allowClientSetting;
 
         /**
+         * <p>The CRON expression for the scheduled task.</p>
+         * <blockquote>
+         * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0 0 16 ? * 1,2,3,4,5,6,7</p>
          */
@@ -90,6 +109,8 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String cronExpression;
 
         /**
+         * <p>Specifies whether to forcibly execute the scheduled task. A value of true specifies the scheduled task will run forcefully, ignoring the cloud computer and connection status.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -97,6 +118,8 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Boolean enforce;
 
         /**
+         * <p>The interval at which the scheduled task is executed. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -104,16 +127,34 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Integer interval;
 
         /**
+         * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Hibernate: scheduled hibernation.</li>
+         * <li>Shutdown: scheduled shutdown.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Shutdown</p>
          */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</p>
+         */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
         /**
+         * <p>The reset operation.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RESET_TYPE_SYSTEM: resets the system disk.</li>
+         * <li>RESET_TYPE_USER_DISK: resets the data disk.</li>
+         * <li>RESET_TYPE_BOTH: resets the system disk and data disk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RESET_TYPE_SYSTEM</p>
          */
@@ -121,6 +162,20 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String resetType;
 
         /**
+         * <p>The type of the scheduled task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
+         * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>
+         * <li>TimerBoot: scheduled start.</li>
+         * <li>TimerReset: scheduled reset.</li>
+         * <li>NoOperationShutdown: scheduled shutdown upon inactivity.</li>
+         * <li>NoOperationHibernate: scheduled hibernation upon inactivity.</li>
+         * <li>TimerShutdown: scheduled shutdown.</li>
+         * <li>NoOperationReboot: scheduled restart upon inactivity.</li>
+         * <li>TimerReboot: scheduled restart.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TIMER_BOOT</p>
          */
@@ -128,6 +183,13 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String timerType;
 
         /**
+         * <p>The method to trigger the scheduled task upon inactivity.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Advanced: intelligent detection.</li>
+         * <li>Standard: standard detection.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Standard</p>
          */

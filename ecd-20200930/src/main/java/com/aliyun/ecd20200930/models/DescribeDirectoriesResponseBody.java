@@ -314,6 +314,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public java.util.List<DescribeDirectoriesResponseBodyDirectoriesADConnectors> ADConnectors;
 
         /**
+         * <p>The hostname of the domain controller.</p>
+         * 
          * <strong>example:</strong>
          * <p>dc001</p>
          */
@@ -321,6 +323,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String adHostname;
 
         /**
+         * <p>The hostname of the backup domain controller.</p>
+         * 
          * <strong>example:</strong>
          * <p>dc002</p>
          */
@@ -328,6 +332,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String backupDCHostname;
 
         /**
+         * <p>The DNS address of the backup domain controller.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.2.100</p>
          */

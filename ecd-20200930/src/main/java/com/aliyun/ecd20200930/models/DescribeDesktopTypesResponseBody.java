@@ -86,6 +86,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        /**
+         * <p>The GPU memory size. Unit: MB. This parameter applies to GPU-enabled cloud computers only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("GpuMemory")
         public Integer gpuMemory;
 
@@ -107,6 +113,12 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <p>The number of sessions supported by the current specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MaxSessionCount")
         public Integer maxSessionCount;
 
@@ -119,9 +131,18 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         public String memorySize;
 
+        /**
+         * <p>The array of sales modes.</p>
+         */
         @NameInMap("Scopes")
         public java.util.List<String> scopes;
 
+        /**
+         * <p>The stock status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sufficient</p>
+         */
         @NameInMap("StockState")
         public String stockState;
 

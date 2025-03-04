@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class WakeupDesktopsRequest extends TeaModel {
     /**
+     * <p>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

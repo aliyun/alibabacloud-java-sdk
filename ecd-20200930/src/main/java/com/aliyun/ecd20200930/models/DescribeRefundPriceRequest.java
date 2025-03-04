@@ -5,12 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeRefundPriceRequest extends TeaModel {
     /**
+     * <p>ID of cloud computer N. Valid values of N: 1 to 20.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
+     * <p>The unsubscription type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>RemainRefund: refunds the remaining balance and releases resources.</li>
+     * <li>RenewRefund: refunds only the renewal fee and adjusts the expiration date accordingly.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RemainRefund</p>
      */
@@ -18,6 +26,7 @@ public class DescribeRefundPriceRequest extends TeaModel {
     public String refundType;
 
     /**
+     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,12 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
+     * <p>Specifies whether to enable the automatic payment feature.</p>
      * <ul>
-     * <li><code>true</code>: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.</li>
-     * <li><code>false</code>: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the <strong>Orders</strong> page.</li>
+     * <li>If you set the value to <code>true</code>, ensure your account has sufficient balance to avoid generating abnormal orders.</li>
+     * <li>If you set the value to <code>false</code>, go to the <strong>Expenses and Costs</strong> page to complete the payment based on the order number.</li>
      * </ul>
-     * <p>Default value: <code>true</code>.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true (default): enables the automatic payment feature.</li>
+     * <li>false: generates the order and manually complete the payment.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -19,7 +23,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The ID of the cloud computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +42,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,13 +51,17 @@ public class ModifyDiskSpecRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     /**
-     * <p>The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:</p>
+     * <p>The PL of the system disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>PL0</li>
      * <li>PL1</li>
-     * <li>PL2</li>
+     * <li>PL0</li>
      * <li>PL3</li>
+     * <li>PL2</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,12 +71,13 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String rootDiskPerformanceLevel;
 
     /**
-     * <p>The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:</p>
+     * <p>The PL of the data disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>PL0</li>
      * <li>PL1</li>
-     * <li>PL2</li>
+     * <li>PL0</li>
      * <li>PL3</li>
+     * <li>PL2</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,6 +121,14 @@ public class ModifyDiskSpecRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDiskSpecRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public ModifyDiskSpecRequest setRootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
