@@ -802,6 +802,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("PerSessionPerApp")
         public Boolean perSessionPerApp;
 
+        @NameInMap("SessionPreOpen")
+        public String sessionPreOpen;
+
         /**
          * <p>会话类型。</p>
          * 
@@ -810,6 +813,9 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
          */
         @NameInMap("SessionType")
         public String sessionType;
+
+        @NameInMap("SessionUserGenerationMode")
+        public String sessionUserGenerationMode;
 
         public static CreateAppInstanceGroupRequestRuntimePolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceGroupRequestRuntimePolicy self = new CreateAppInstanceGroupRequestRuntimePolicy();
@@ -832,12 +838,28 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
             return this.perSessionPerApp;
         }
 
+        public CreateAppInstanceGroupRequestRuntimePolicy setSessionPreOpen(String sessionPreOpen) {
+            this.sessionPreOpen = sessionPreOpen;
+            return this;
+        }
+        public String getSessionPreOpen() {
+            return this.sessionPreOpen;
+        }
+
         public CreateAppInstanceGroupRequestRuntimePolicy setSessionType(String sessionType) {
             this.sessionType = sessionType;
             return this;
         }
         public String getSessionType() {
             return this.sessionType;
+        }
+
+        public CreateAppInstanceGroupRequestRuntimePolicy setSessionUserGenerationMode(String sessionUserGenerationMode) {
+            this.sessionUserGenerationMode = sessionUserGenerationMode;
+            return this;
+        }
+        public String getSessionUserGenerationMode() {
+            return this.sessionUserGenerationMode;
         }
 
     }
@@ -880,9 +902,53 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     }
 
+    public static class CreateAppInstanceGroupRequestStoragePolicyUserProfile extends TeaModel {
+        @NameInMap("RemoteStoragePath")
+        public String remoteStoragePath;
+
+        @NameInMap("RemoteStorageType")
+        public String remoteStorageType;
+
+        @NameInMap("UserProfileSwitch")
+        public Boolean userProfileSwitch;
+
+        public static CreateAppInstanceGroupRequestStoragePolicyUserProfile build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppInstanceGroupRequestStoragePolicyUserProfile self = new CreateAppInstanceGroupRequestStoragePolicyUserProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppInstanceGroupRequestStoragePolicyUserProfile setRemoteStoragePath(String remoteStoragePath) {
+            this.remoteStoragePath = remoteStoragePath;
+            return this;
+        }
+        public String getRemoteStoragePath() {
+            return this.remoteStoragePath;
+        }
+
+        public CreateAppInstanceGroupRequestStoragePolicyUserProfile setRemoteStorageType(String remoteStorageType) {
+            this.remoteStorageType = remoteStorageType;
+            return this;
+        }
+        public String getRemoteStorageType() {
+            return this.remoteStorageType;
+        }
+
+        public CreateAppInstanceGroupRequestStoragePolicyUserProfile setUserProfileSwitch(Boolean userProfileSwitch) {
+            this.userProfileSwitch = userProfileSwitch;
+            return this;
+        }
+        public Boolean getUserProfileSwitch() {
+            return this.userProfileSwitch;
+        }
+
+    }
+
     public static class CreateAppInstanceGroupRequestStoragePolicy extends TeaModel {
         @NameInMap("StorageTypeList")
         public java.util.List<String> storageTypeList;
+
+        @NameInMap("UserProfile")
+        public CreateAppInstanceGroupRequestStoragePolicyUserProfile userProfile;
 
         public static CreateAppInstanceGroupRequestStoragePolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateAppInstanceGroupRequestStoragePolicy self = new CreateAppInstanceGroupRequestStoragePolicy();
@@ -895,6 +961,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         }
         public java.util.List<String> getStorageTypeList() {
             return this.storageTypeList;
+        }
+
+        public CreateAppInstanceGroupRequestStoragePolicy setUserProfile(CreateAppInstanceGroupRequestStoragePolicyUserProfile userProfile) {
+            this.userProfile = userProfile;
+            return this;
+        }
+        public CreateAppInstanceGroupRequestStoragePolicyUserProfile getUserProfile() {
+            return this.userProfile;
         }
 
     }

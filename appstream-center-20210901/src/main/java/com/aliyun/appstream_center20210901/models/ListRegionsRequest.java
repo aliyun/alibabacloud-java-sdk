@@ -4,6 +4,14 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsRequest extends TeaModel {
+    /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("BizSource")
     public String bizSource;
 
