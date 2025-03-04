@@ -28,6 +28,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>isv推送实例消息给用户</p>
+     * 
+     * @param request NoticeInstanceUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return NoticeInstanceUserResponse
+     */
+    public NoticeInstanceUserResponse noticeInstanceUserWithOptions(NoticeInstanceUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noticeParam)) {
+            body.put("NoticeParam", request.noticeParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noticeType)) {
+            body.put("NoticeType", request.noticeType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "NoticeInstanceUser"),
+            new TeaPair("version", "2022-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new NoticeInstanceUserResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new NoticeInstanceUserResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>isv推送实例消息给用户</p>
+     * 
+     * @param request NoticeInstanceUserRequest
+     * @return NoticeInstanceUserResponse
+     */
+    public NoticeInstanceUserResponse noticeInstanceUser(NoticeInstanceUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.noticeInstanceUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>国际云市场推送计量数据</p>
      * 
      * @param request PushMeteringDataRequest
