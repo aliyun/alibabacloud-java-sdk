@@ -37,15 +37,12 @@ public class CreateServerGroupRequest extends TeaModel {
      * <li><strong>false</strong></li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</p>
-     * </li>
-     * <li><p>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</p>
-     * </li>
-     * <li><p>When cross-zone load balancing is disabled, session persistence cannot be enabled.</p>
-     * </li>
+     * <li>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</li>
+     * <li>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</li>
+     * <li>When cross-zone load balancing is disabled, session persistence cannot be enabled.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -73,6 +70,12 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
 
+    /**
+     * <p>Specifies whether to enable Ipv6.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Ipv6Enabled")
     public Boolean ipv6Enabled;
 
@@ -409,14 +412,14 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The HTTP status codes that indicate healthy backend servers.</p>
+         * <p>The HTTP status code that indicates healthy backend servers.</p>
          */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
         /**
          * <p>The backend port that is used for health checks.</p>
-         * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>65535</strong></p>
          * <p>The default value is <strong>0</strong>, which specifies that the port of a backend server is used for health checks.</p>
          * 
          * <strong>example:</strong>
@@ -451,7 +454,7 @@ public class CreateServerGroupRequest extends TeaModel {
          * <ul>
          * <li>The domain name must be 1 to 80 characters in length.</li>
          * <li>The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
-         * <li>The domain name can contain at least one period (.) but cannot start or end with a period (.).</li>
+         * <li>The domain name must contain at least one period (.) but cannot start or end with a period (.).</li>
          * <li>The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</li>
          * <li>The domain name cannot start or end with a hyphen (-).</li>
          * </ul>
@@ -480,8 +483,8 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckHttpVersion;
 
         /**
-         * <p>The interval at which health checks are performed. Unit: seconds.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+         * <p>The interval at which health checks are performed. Unit: seconds</p>
+         * <p>Valid values: <strong>1</strong> to <strong>50</strong></p>
          * <p>Default value: <strong>2</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -508,7 +511,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckMethod;
 
         /**
-         * <p>The path that is used for health checks.</p>
+         * <p>The URL that is used for health checks.</p>
          * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (/).</p>
          * <blockquote>
          * <p> This parameter takes effect only if <strong>HealthCheckProtocol</strong> is set to <strong>HTTP</strong> or <strong>HTTPS</strong>.</p>
@@ -536,9 +539,9 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckProtocol;
 
         /**
-         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
-         * <p>Default value: <strong>5</strong>.</p>
+         * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds</p>
+         * <p>Valid values: <strong>1</strong> to <strong>300</strong></p>
+         * <p>Default value: <strong>5</strong></p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -548,7 +551,7 @@ public class CreateServerGroupRequest extends TeaModel {
 
         /**
          * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
-         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
          * <p>Default value: <strong>3</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -559,8 +562,8 @@ public class CreateServerGroupRequest extends TeaModel {
 
         /**
          * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
-         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
-         * <p>Default value: <strong>3</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong></p>
+         * <p>Default value: <strong>3</strong></p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -736,9 +739,9 @@ public class CreateServerGroupRequest extends TeaModel {
         public String cookie;
 
         /**
-         * <p>The maximum amount of time to wait before the session cookie expires. Unit: seconds.</p>
-         * <p>Valid values: <strong>1</strong> to <strong>86400</strong>.</p>
-         * <p>Default value: <strong>1000</strong>.</p>
+         * <p>The maximum amount of time to wait before the session cookie expires. Unit: seconds</p>
+         * <p>Valid values: <strong>1</strong> to <strong>86400</strong></p>
+         * <p>Default value: <strong>1000</strong></p>
          * <blockquote>
          * <p> This parameter takes effect only when <strong>StickySessionEnabled</strong> is set to <strong>true</strong> and <strong>StickySessionType</strong> is set to <strong>Insert</strong>.</p>
          * </blockquote>
@@ -768,8 +771,8 @@ public class CreateServerGroupRequest extends TeaModel {
         /**
          * <p>The method that is used to handle cookies. Valid values:</p>
          * <ul>
-         * <li><strong>Insert</strong> (default value): inserts a cookie. The first time a client accesses SLB, SLB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</li>
-         * <li><strong>Server</strong>: rewrites a cookie. SLB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
+         * <li><strong>Insert</strong> (default value): inserts a cookie. The first time a client accesses ALB, ALB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.</li>
+         * <li><strong>Server</strong>: rewrites a cookie. ALB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.</li>
          * </ul>
          * <blockquote>
          * <p> This parameter takes effect when the <strong>StickySessionEnabled</strong> parameter is set to <strong>true</strong>.</p>

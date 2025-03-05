@@ -169,6 +169,9 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The tags.</p>
      */
@@ -293,6 +296,14 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     }
     public Integer getHealthyThreshold() {
         return this.healthyThreshold;
+    }
+
+    public CreateHealthCheckTemplateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateHealthCheckTemplateRequest setTag(java.util.List<CreateHealthCheckTemplateRequestTag> tag) {

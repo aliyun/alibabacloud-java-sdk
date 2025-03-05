@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnableLoadBalancerAccessLogResponseBody extends TeaModel {
     /**
+     * <p>The ID of the asynchronous job.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ff7713ca-5818-4120-85e3-0bf9e27e9103</p>
+     * <p>ff7713ca-5818-4120-85e3-0bf9fr******</p>
      */
     @NameInMap("JobId")
     public String jobId;
@@ -15,7 +17,7 @@ public class EnableLoadBalancerAccessLogResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>593B0448-D13E-4C56-AC0D-FDF0FDE0E9A3</p>
+     * <p>593B0448-D13E-4C56-AC0D-FDF0FD******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

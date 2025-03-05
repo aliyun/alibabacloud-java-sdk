@@ -38,6 +38,9 @@ public class ListHealthCheckTemplatesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The tags.</p>
      */
@@ -79,6 +82,14 @@ public class ListHealthCheckTemplatesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListHealthCheckTemplatesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListHealthCheckTemplatesRequest setTag(java.util.List<ListHealthCheckTemplatesRequestTag> tag) {
