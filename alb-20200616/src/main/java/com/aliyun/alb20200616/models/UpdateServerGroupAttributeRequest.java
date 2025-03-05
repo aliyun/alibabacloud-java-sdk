@@ -21,13 +21,11 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
      * <p>The configurations of connection draining.</p>
      * <p>After connection draining is enabled, SLB remains data transmission for a period of time after a backend server is removed or declared unhealthy.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Basic SLB instances do not support connection draining. Standard and WAF-enabled SLB instances support connection draining.</p>
-     * </li>
-     * <li><p>Server groups of the server and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</p>
-     * </li>
+     * <li>Basic SLB instances do not support connection draining. Standard and WAF-enabled SLB instances support connection draining.</li>
+     * <li>Server groups of the server and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.</li>
      * </ul>
+     * </blockquote>
      */
     @NameInMap("ConnectionDrainConfig")
     public UpdateServerGroupAttributeRequestConnectionDrainConfig connectionDrainConfig;
@@ -39,15 +37,12 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
      * <li><strong>false</strong></li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</p>
-     * </li>
-     * <li><p>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</p>
-     * </li>
-     * <li><p>When cross-zone load balancing is disabled, session persistence cannot be enabled.</p>
-     * </li>
+     * <li>Basic ALB instances do not support server groups that have cross-zone load balancing disabled. Only Standard and WAF-enabled ALB instances support server groups that have cross-zone load balancing.</li>
+     * <li>Cross-zone load balancing can be disabled for server groups of the server and IP type, but not for server groups of the Function Compute type.</li>
+     * <li>When cross-zone load balancing is disabled, session persistence cannot be enabled.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -145,6 +140,9 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable persistent TCP connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("UpstreamKeepaliveEnabled")
     public Boolean upstreamKeepaliveEnabled;

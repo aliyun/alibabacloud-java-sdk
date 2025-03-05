@@ -1008,11 +1008,15 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the <code>X-Forwarded-For</code> header is used to retrieve the client IP address. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
+         * <li><strong>true</strong> (default)</li>
          * <li><strong>false</strong></li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is available only when you create an HTTP or HTTPS listener.</p>
+         * <ul>
+         * <li>If this parameter is set to <strong>true</strong>, the default value of the <strong>XForwardedForProcessingMode</strong> parameter is <strong>append</strong>. You can change it to <strong>remove</strong>.</li>
+         * <li>If this parameter is set to <strong>false</strong>, the <code>X-Forwarded-For</code> header in the request is not modified in any way before the request is sent to backend servers.</li>
+         * <li>This parameter is only available for HTTP and HTTPS listeners.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1021,9 +1025,39 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         @NameInMap("XForwardedForEnabled")
         public Boolean XForwardedForEnabled;
 
+        /**
+         * <p>Specifies whether to use the <code>X-Forwarded-Host</code> header to retrieve the client domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is available for HTTP, HTTPS, and QUIC listeners.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("XForwardedForHostEnabled")
         public Boolean XForwardedForHostEnabled;
 
+        /**
+         * <p>Specifies how the <code>X-Forwarded-For</code> header is processed. This parameter takes effect only when <strong>XForwardedForEnabled</strong> is set to <strong>true</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>append</strong> (default)</li>
+         * <li><strong>remove</strong></li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>If this parameter is set to <strong>append</strong>, ALB appends the IP address of the last hop to the existing <code>X-Forwarded-For</code> header in the request before the request is sent to backend servers.</li>
+         * <li>If this parameter is set to <strong>remove</strong>, ALB removes the <code>X-Forwarded-For</code> header in the request before the request is sent to backend servers, no matter whether the request carries the <code>X-Forwarded-For</code> header.</li>
+         * <li>This parameter is only available for HTTP and HTTPS listeners.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>append</p>
+         */
         @NameInMap("XForwardedForProcessingMode")
         public String XForwardedForProcessingMode;
 
