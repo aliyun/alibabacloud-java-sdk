@@ -40,12 +40,6 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
-     */
-    @NameInMap("ResourceARN")
-    public java.util.List<String> resourceARN;
-
-    /**
      * <p>The ID of the service instance.</p>
      * <p>This parameter is required.</p>
      * 
@@ -105,14 +99,6 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ListServiceInstanceResourcesRequest setResourceARN(java.util.List<String> resourceARN) {
-        this.resourceARN = resourceARN;
-        return this;
-    }
-    public java.util.List<String> getResourceARN() {
-        return this.resourceARN;
     }
 
     public ListServiceInstanceResourcesRequest setServiceInstanceId(String serviceInstanceId) {
