@@ -94,6 +94,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取分钟粒度稳定性统计数据</p>
+     * 
+     * @param request GetErrorMinuteStatTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetErrorMinuteStatTrendResponse
+     */
+    public GetErrorMinuteStatTrendResponse getErrorMinuteStatTrendWithOptions(GetErrorMinuteStatTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("dataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetErrorMinuteStatTrend"),
+            new TeaPair("version", "2022-02-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/stat/GetErrorMinuteStatTrend"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetErrorMinuteStatTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetErrorMinuteStatTrendResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取分钟粒度稳定性统计数据</p>
+     * 
+     * @param request GetErrorMinuteStatTrendRequest
+     * @return GetErrorMinuteStatTrendResponse
+     */
+    public GetErrorMinuteStatTrendResponse getErrorMinuteStatTrend(GetErrorMinuteStatTrendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getErrorMinuteStatTrendWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取H5页面性能统计数据</p>
      * 
      * @param request GetH5PageTrendRequest
@@ -294,6 +354,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getNativePageTrendWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取分钟粒度网络统计数据</p>
+     * 
+     * @param request GetNetworkMinuteTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNetworkMinuteTrendResponse
+     */
+    public GetNetworkMinuteTrendResponse getNetworkMinuteTrendWithOptions(GetNetworkMinuteTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSourceId)) {
+            query.put("dataSourceId", request.dataSourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("startTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNetworkMinuteTrend"),
+            new TeaPair("version", "2022-02-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/stat/getNetworkMinuteTrend"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkMinuteTrendResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetNetworkMinuteTrendResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取分钟粒度网络统计数据</p>
+     * 
+     * @param request GetNetworkMinuteTrendRequest
+     * @return GetNetworkMinuteTrendResponse
+     */
+    public GetNetworkMinuteTrendResponse getNetworkMinuteTrend(GetNetworkMinuteTrendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getNetworkMinuteTrendWithOptions(request, headers, runtime);
     }
 
     /**
