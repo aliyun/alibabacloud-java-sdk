@@ -208,6 +208,9 @@ public class DescribeEaisResponseBody extends TeaModel {
         @NameInMap("JupyterUrl")
         public String jupyterUrl;
 
+        @NameInMap("PaymentType")
+        public String paymentType;
+
         /**
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
@@ -335,6 +338,14 @@ public class DescribeEaisResponseBody extends TeaModel {
         }
         public String getJupyterUrl() {
             return this.jupyterUrl;
+        }
+
+        public DescribeEaisResponseBodyInstancesInstance setPaymentType(String paymentType) {
+            this.paymentType = paymentType;
+            return this;
+        }
+        public String getPaymentType() {
+            return this.paymentType;
         }
 
         public DescribeEaisResponseBodyInstancesInstance setRegionId(String regionId) {
