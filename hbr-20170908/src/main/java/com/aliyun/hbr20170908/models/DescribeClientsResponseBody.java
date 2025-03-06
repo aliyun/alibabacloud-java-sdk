@@ -210,6 +210,9 @@ public class DescribeClientsResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        @NameInMap("HeartBeatTime")
+        public Long heartBeatTime;
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -372,6 +375,14 @@ public class DescribeClientsResponseBody extends TeaModel {
         }
         public Long getCreatedTime() {
             return this.createdTime;
+        }
+
+        public DescribeClientsResponseBodyClientsClient setHeartBeatTime(Long heartBeatTime) {
+            this.heartBeatTime = heartBeatTime;
+            return this;
+        }
+        public Long getHeartBeatTime() {
+            return this.heartBeatTime;
         }
 
         public DescribeClientsResponseBodyClientsClient setInstanceId(String instanceId) {

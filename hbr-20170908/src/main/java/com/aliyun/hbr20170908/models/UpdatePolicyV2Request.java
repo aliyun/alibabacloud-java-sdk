@@ -373,6 +373,15 @@ public class UpdatePolicyV2Request extends TeaModel {
         @NameInMap("TagFilters")
         public java.util.List<UpdatePolicyV2RequestRulesTagFilters> tagFilters;
 
+        /**
+         * <p>This parameter is required only if the RuleType parameter is set to BACKUP. The ID of the backup vault.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v-0001************aseg</p>
+         */
+        @NameInMap("VaultId")
+        public String vaultId;
+
         public static UpdatePolicyV2RequestRules build(java.util.Map<String, ?> map) throws Exception {
             UpdatePolicyV2RequestRules self = new UpdatePolicyV2RequestRules();
             return TeaModel.build(map, self);
@@ -480,6 +489,14 @@ public class UpdatePolicyV2Request extends TeaModel {
         }
         public java.util.List<UpdatePolicyV2RequestRulesTagFilters> getTagFilters() {
             return this.tagFilters;
+        }
+
+        public UpdatePolicyV2RequestRules setVaultId(String vaultId) {
+            this.vaultId = vaultId;
+            return this;
+        }
+        public String getVaultId() {
+            return this.vaultId;
         }
 
     }
