@@ -28,6 +28,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>开通弹性计算</p>
+     * 
+     * @param tmpReq ConvertHybridInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConvertHybridInstanceResponse
+     */
+    public ConvertHybridInstanceResponse convertHybridInstanceWithOptions(ConvertHybridInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ConvertHybridInstanceShrinkRequest request = new ConvertHybridInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceSpec)) {
+            request.resourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceSpec, "ResourceSpec", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSpecShrink)) {
+            query.put("ResourceSpec", request.resourceSpecShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConvertHybridInstance"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertHybridInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ConvertHybridInstanceResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开通弹性计算</p>
+     * 
+     * @param request ConvertHybridInstanceRequest
+     * @return ConvertHybridInstanceResponse
+     */
+    public ConvertHybridInstanceResponse convertHybridInstance(ConvertHybridInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.convertHybridInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>按量付费转包年包月</p>
      * 
      * @param tmpReq ConvertInstanceRequest
@@ -99,6 +162,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ConvertInstanceResponse convertInstance(ConvertInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.convertInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>包年包月转按量付费</p>
+     * 
+     * @param request ConvertPrepayInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConvertPrepayInstanceResponse
+     */
+    public ConvertPrepayInstanceResponse convertPrepayInstanceWithOptions(ConvertPrepayInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConvertPrepayInstance"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ConvertPrepayInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ConvertPrepayInstanceResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>包年包月转按量付费</p>
+     * 
+     * @param request ConvertPrepayInstanceRequest
+     * @return ConvertPrepayInstanceResponse
+     */
+    public ConvertPrepayInstanceResponse convertPrepayInstance(ConvertPrepayInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.convertPrepayInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -686,6 +802,217 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>对按量弹性实例修改resource quota</p>
+     * 
+     * @param tmpReq ModifyElasticResourceSpecRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyElasticResourceSpecResponse
+     */
+    public ModifyElasticResourceSpecResponse modifyElasticResourceSpecWithOptions(ModifyElasticResourceSpecRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyElasticResourceSpecShrinkRequest request = new ModifyElasticResourceSpecShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceSpec)) {
+            request.resourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceSpec, "ResourceSpec", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSpecShrink)) {
+            body.put("ResourceSpec", request.resourceSpecShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyElasticResourceSpec"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyElasticResourceSpecResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyElasticResourceSpecResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>对按量弹性实例修改resource quota</p>
+     * 
+     * @param request ModifyElasticResourceSpecRequest
+     * @return ModifyElasticResourceSpecResponse
+     */
+    public ModifyElasticResourceSpecResponse modifyElasticResourceSpec(ModifyElasticResourceSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyElasticResourceSpecWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改集群交换机</p>
+     * 
+     * @param tmpReq ModifyInstanceVswitchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceVswitchResponse
+     */
+    public ModifyInstanceVswitchResponse modifyInstanceVswitchWithOptions(ModifyInstanceVswitchRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyInstanceVswitchShrinkRequest request = new ModifyInstanceVswitchShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.haVSwitchIds)) {
+            request.haVSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.haVSwitchIds, "HaVSwitchIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vSwitchIds)) {
+            request.vSwitchIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitchIds, "VSwitchIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.haVSwitchIdsShrink)) {
+            body.put("HaVSwitchIds", request.haVSwitchIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIdsShrink)) {
+            body.put("VSwitchIds", request.vSwitchIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceVswitch"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceVswitchResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyInstanceVswitchResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改集群交换机</p>
+     * 
+     * @param request ModifyInstanceVswitchRequest
+     * @return ModifyInstanceVswitchResponse
+     */
+    public ModifyInstanceVswitchResponse modifyInstanceVswitch(ModifyInstanceVswitchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceVswitchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改namespace资源，包含按量和包年包月、混合计费</p>
+     * 
+     * @param tmpReq ModifyNamespaceSpecV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyNamespaceSpecV2Response
+     */
+    public ModifyNamespaceSpecV2Response modifyNamespaceSpecV2WithOptions(ModifyNamespaceSpecV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyNamespaceSpecV2ShrinkRequest request = new ModifyNamespaceSpecV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.elasticResourceSpec)) {
+            request.elasticResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.elasticResourceSpec, "ElasticResourceSpec", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.guaranteedResourceSpec)) {
+            request.guaranteedResourceSpecShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.guaranteedResourceSpec, "GuaranteedResourceSpec", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ha)) {
+            query.put("Ha", request.ha);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.elasticResourceSpecShrink)) {
+            body.put("ElasticResourceSpec", request.elasticResourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.guaranteedResourceSpecShrink)) {
+            body.put("GuaranteedResourceSpec", request.guaranteedResourceSpecShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyNamespaceSpecV2"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNamespaceSpecV2Response());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyNamespaceSpecV2Response());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改namespace资源，包含按量和包年包月、混合计费</p>
+     * 
+     * @param request ModifyNamespaceSpecV2Request
+     * @return ModifyNamespaceSpecV2Response
+     */
+    public ModifyNamespaceSpecV2Response modifyNamespaceSpecV2(ModifyNamespaceSpecV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyNamespaceSpecV2WithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>扩容/缩容</p>
      * 
      * @deprecated OpenAPI ModifyPrepayInstanceSpec is deprecated, please use foasconsole::2021-10-28::ModifyInstanceSpec instead.
@@ -927,6 +1254,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryConvertInstancePriceResponse queryConvertInstancePrice(QueryConvertInstancePriceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryConvertInstancePriceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>包年包月转按量付费询价</p>
+     * 
+     * @param request QueryConvertPrepayInstancePriceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryConvertPrepayInstancePriceResponse
+     */
+    public QueryConvertPrepayInstancePriceResponse queryConvertPrepayInstancePriceWithOptions(QueryConvertPrepayInstancePriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            body.put("Region", request.region);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryConvertPrepayInstancePrice"),
+            new TeaPair("version", "2021-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new QueryConvertPrepayInstancePriceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new QueryConvertPrepayInstancePriceResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>包年包月转按量付费询价</p>
+     * 
+     * @param request QueryConvertPrepayInstancePriceRequest
+     * @return QueryConvertPrepayInstancePriceResponse
+     */
+    public QueryConvertPrepayInstancePriceResponse queryConvertPrepayInstancePrice(QueryConvertPrepayInstancePriceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryConvertPrepayInstancePriceWithOptions(request, runtime);
     }
 
     /**
