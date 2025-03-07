@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListLogContentsRequest extends TeaModel {
+    /**
+     * <p>Full path of the file.</p>
+     */
     @NameInMap("fileName")
     public String fileName;
 
     /**
+     * <p>Length of the log.</p>
+     * 
      * <strong>example:</strong>
      * <p>9999</p>
      */
@@ -15,6 +20,8 @@ public class ListLogContentsRequest extends TeaModel {
     public Integer length;
 
     /**
+     * <p>Start line for query.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +29,8 @@ public class ListLogContentsRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>Region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

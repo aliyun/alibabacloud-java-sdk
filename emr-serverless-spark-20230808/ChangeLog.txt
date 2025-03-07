@@ -1,3 +1,17 @@
+2025-03-07 Version: 2.0.0
+- Support API CreateSessionCluster.
+- Support API CreateWorkspace.
+- Support API GetCuHours.
+- Support API ListKyuubiSparkApplications.
+- Update API GetSessionCluster: update response param.
+- Update API ListJobRuns: add param minDuration.
+- Update API ListJobRuns: update response param.
+- Update API ListReleaseVersions: add param serviceFilter.
+- Update API ListSessionClusters: update response param.
+- Update API ListWorkspaceQueues: update response param.
+- Update API ListWorkspaces: update response param.
+
+
 2024-12-24 Version: 1.8.0
 - Support API CreateProcessDefinitionWithSchedule.
 - Support API StartProcessInstance.

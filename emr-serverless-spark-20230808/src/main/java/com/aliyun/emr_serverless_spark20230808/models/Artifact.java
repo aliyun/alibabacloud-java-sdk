@@ -49,6 +49,9 @@ public class Artifact extends TeaModel {
     @NameInMap("modifier")
     public Long modifier;
 
+    @NameInMap("modifierName")
+    public String modifierName;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -130,6 +133,14 @@ public class Artifact extends TeaModel {
     }
     public Long getModifier() {
         return this.modifier;
+    }
+
+    public Artifact setModifierName(String modifierName) {
+        this.modifierName = modifierName;
+        return this;
+    }
+    public String getModifierName() {
+        return this.modifierName;
     }
 
     public Artifact setName(String name) {

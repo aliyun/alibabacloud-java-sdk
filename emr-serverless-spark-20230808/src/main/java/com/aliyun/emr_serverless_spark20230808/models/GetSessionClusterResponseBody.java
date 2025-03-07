@@ -102,6 +102,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public static class GetSessionClusterResponseBodySessionClusterAutoStartConfiguration extends TeaModel {
         /**
          * <p>Indicates whether automatic startup is enabled.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -127,6 +131,10 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public static class GetSessionClusterResponseBodySessionClusterAutoStopConfiguration extends TeaModel {
         /**
          * <p>Indicates whether automatic termination is enabled.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -216,13 +224,13 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public java.util.List<GetSessionClusterResponseBodySessionClusterApplicationConfigs> applicationConfigs;
 
         /**
-         * <p>The automatic startup configurations.</p>
+         * <p>The automatic startup configuration.</p>
          */
         @NameInMap("autoStartConfiguration")
         public GetSessionClusterResponseBodySessionClusterAutoStartConfiguration autoStartConfiguration;
 
         /**
-         * <p>The automatic termination configurations.</p>
+         * <p>The automatic termination configuration.</p>
          */
         @NameInMap("autoStopConfiguration")
         public GetSessionClusterResponseBodySessionClusterAutoStopConfiguration autoStopConfiguration;
@@ -271,6 +279,9 @@ public class GetSessionClusterResponseBody extends TeaModel {
          */
         @NameInMap("envId")
         public String envId;
+
+        @NameInMap("extra")
+        public String extra;
 
         /**
          * <p>Indicates whether the Fusion engine is used for acceleration.</p>
@@ -323,7 +334,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The version of E-MapReduce (EMR) Serverless Spark.</p>
+         * <p>The version of Serverless Spark.</p>
          * 
          * <strong>example:</strong>
          * <p>esr-2.2(Java Runtime)</p>
@@ -351,6 +362,13 @@ public class GetSessionClusterResponseBody extends TeaModel {
 
         /**
          * <p>The job status.</p>
+         * <ul>
+         * <li>Starting</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Stopped</li>
+         * <li>Error</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -467,6 +485,14 @@ public class GetSessionClusterResponseBody extends TeaModel {
         }
         public String getEnvId() {
             return this.envId;
+        }
+
+        public GetSessionClusterResponseBodySessionCluster setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
         }
 
         public GetSessionClusterResponseBodySessionCluster setFusion(Boolean fusion) {

@@ -88,6 +88,9 @@ public class Task extends TeaModel {
     @NameInMap("jars")
     public java.util.List<String> jars;
 
+    @NameInMap("kernelId")
+    public String kernelId;
+
     @NameInMap("lastRunResourceQueueId")
     public String lastRunResourceQueueId;
 
@@ -105,6 +108,9 @@ public class Task extends TeaModel {
 
     @NameInMap("pyFiles")
     public java.util.List<String> pyFiles;
+
+    @NameInMap("sessionClusterId")
+    public String sessionClusterId;
 
     /**
      * <strong>example:</strong>
@@ -365,6 +371,14 @@ public class Task extends TeaModel {
         return this.jars;
     }
 
+    public Task setKernelId(String kernelId) {
+        this.kernelId = kernelId;
+        return this;
+    }
+    public String getKernelId() {
+        return this.kernelId;
+    }
+
     public Task setLastRunResourceQueueId(String lastRunResourceQueueId) {
         this.lastRunResourceQueueId = lastRunResourceQueueId;
         return this;
@@ -395,6 +409,14 @@ public class Task extends TeaModel {
     }
     public java.util.List<String> getPyFiles() {
         return this.pyFiles;
+    }
+
+    public Task setSessionClusterId(String sessionClusterId) {
+        this.sessionClusterId = sessionClusterId;
+        return this;
+    }
+    public String getSessionClusterId() {
+        return this.sessionClusterId;
     }
 
     public Task setSparkArgs(String sparkArgs) {

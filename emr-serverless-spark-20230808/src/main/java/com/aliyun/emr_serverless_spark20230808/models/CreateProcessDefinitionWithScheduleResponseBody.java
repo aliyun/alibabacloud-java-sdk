@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     /**
+     * <p>The code that is returned by the backend server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1400009</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public CreateProcessDefinitionWithScheduleResponseBodyData data;
 
     /**
+     * <p>Indicates whether the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +29,8 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String failed;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The description of the returned code.</p>
+     * 
      * <strong>example:</strong>
      * <p>No permission for resource action</p>
      */
@@ -36,6 +47,8 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String msg;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -43,6 +56,8 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +127,8 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
 
     public static class CreateProcessDefinitionWithScheduleResponseBodyData extends TeaModel {
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>160************</p>
          */
@@ -119,6 +136,8 @@ public class CreateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public Long code;
 
         /**
+         * <p>The serial number of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>12342</p>
          */

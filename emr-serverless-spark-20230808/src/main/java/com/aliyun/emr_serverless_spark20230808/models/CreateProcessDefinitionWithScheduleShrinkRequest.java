@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     /**
+     * <p>The email address to receive alerts.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
      */
@@ -12,6 +14,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String alertEmailAddress;
 
     /**
+     * <p>The description of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The execution policy</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String executionType;
 
     /**
+     * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +44,7 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The code of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +54,8 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String productNamespace;
 
     /**
+     * <p>Specifies whether to publish the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -55,6 +63,8 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public Boolean publish;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -62,6 +72,8 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>root_queue</p>
      */
@@ -69,6 +81,8 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public String resourceQueue;
 
     /**
+     * <p>The number of retries.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -76,25 +90,36 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public Integer retryTimes;
 
     /**
+     * <p>The ID of the Alibaba Cloud account used by the user who creates the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>113***************</p>
      */
     @NameInMap("runAs")
     public String runAs;
 
+    /**
+     * <p>The scheduling settings.</p>
+     */
     @NameInMap("schedule")
     public String scheduleShrink;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("tags")
     public String tagsShrink;
 
     /**
+     * <p>The descriptions of all nodes in the workflow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskDefinitionJson")
     public String taskDefinitionJsonShrink;
 
     /**
+     * <p>The node parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -102,12 +127,15 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     public Integer taskParallelism;
 
     /**
+     * <p>The dependencies of all nodes in the workflow. preTaskCode specifies the ID of an upstream node, and postTaskCode specifies the ID of a downstream node. The ID of each node is unique. If a node does not have an upstream node, set preTaskCode to 0.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("taskRelationJson")
     public String taskRelationJsonShrink;
 
     /**
+     * <p>The default timeout period of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */

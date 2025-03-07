@@ -40,6 +40,9 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    @NameInMap("minDuration")
+    public Long minDuration;
+
     /**
      * <p>The job name.</p>
      * 
@@ -140,6 +143,14 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public ListJobRunsShrinkRequest setMinDuration(Long minDuration) {
+        this.minDuration = minDuration;
+        return this;
+    }
+    public Long getMinDuration() {
+        return this.minDuration;
     }
 
     public ListJobRunsShrinkRequest setName(String name) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StartProcessInstanceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to run the workflow in the production environment.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public Boolean isProd;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class StartProcessInstanceRequest extends TeaModel {
     public Long processDefinitionCode;
 
     /**
+     * <p>The code of the service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String productNamespace;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -37,6 +43,8 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The queue on which the workflow runs.</p>
+     * 
      * <strong>example:</strong>
      * <p>root_queue</p>
      */
@@ -44,6 +52,8 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String runtimeQueue;
 
     /**
+     * <p>The hash code of the version.</p>
+     * 
      * <strong>example:</strong>
      * <p>dh*********</p>
      */
@@ -51,6 +61,8 @@ public class StartProcessInstanceRequest extends TeaModel {
     public String versionHashCode;
 
     /**
+     * <p>The version number of the workflow.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -191,6 +191,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @NameInMap("allowActions")
         public java.util.List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> allowActions;
 
+        @NameInMap("createTime")
+        public Long createTime;
+
         /**
          * <p>The ID of the user who created the queue.</p>
          * 
@@ -223,6 +226,9 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
          */
         @NameInMap("minResource")
         public String minResource;
+
+        @NameInMap("paymentType")
+        public String paymentType;
 
         /**
          * <p>The queue label.</p>
@@ -309,6 +315,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             return this.allowActions;
         }
 
+        public ListWorkspaceQueuesResponseBodyQueues setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
         public ListWorkspaceQueuesResponseBodyQueues setCreator(String creator) {
             this.creator = creator;
             return this;
@@ -339,6 +353,14 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
         public String getMinResource() {
             return this.minResource;
+        }
+
+        public ListWorkspaceQueuesResponseBodyQueues setPaymentType(String paymentType) {
+            this.paymentType = paymentType;
+            return this;
+        }
+        public String getPaymentType() {
+            return this.paymentType;
         }
 
         public ListWorkspaceQueuesResponseBodyQueues setProperties(String properties) {

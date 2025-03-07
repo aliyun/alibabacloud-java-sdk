@@ -50,6 +50,9 @@ public class ListReleaseVersionsRequest extends TeaModel {
     @NameInMap("releaseVersionStatus")
     public String releaseVersionStatus;
 
+    @NameInMap("serviceFilter")
+    public String serviceFilter;
+
     /**
      * <p>The workspace ID.</p>
      * 
@@ -94,6 +97,14 @@ public class ListReleaseVersionsRequest extends TeaModel {
     }
     public String getReleaseVersionStatus() {
         return this.releaseVersionStatus;
+    }
+
+    public ListReleaseVersionsRequest setServiceFilter(String serviceFilter) {
+        this.serviceFilter = serviceFilter;
+        return this;
+    }
+    public String getServiceFilter() {
+        return this.serviceFilter;
     }
 
     public ListReleaseVersionsRequest setWorkspaceId(String workspaceId) {

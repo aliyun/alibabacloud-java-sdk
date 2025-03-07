@@ -4,11 +4,14 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListLogContentsResponseBody extends TeaModel {
+    /**
+     * <p>Log content.</p>
+     */
     @NameInMap("listLogContent")
     public ListLogContentsResponseBodyListLogContent listLogContent;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -39,6 +42,8 @@ public class ListLogContentsResponseBody extends TeaModel {
 
     public static class ListLogContentsResponseBodyListLogContentContents extends TeaModel {
         /**
+         * <p>Log line content.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark pi is 3.14\n</p>
          */
@@ -61,10 +66,15 @@ public class ListLogContentsResponseBody extends TeaModel {
     }
 
     public static class ListLogContentsResponseBodyListLogContent extends TeaModel {
+        /**
+         * <p>List of log line contents.</p>
+         */
         @NameInMap("contents")
         public java.util.List<ListLogContentsResponseBodyListLogContentContents> contents;
 
         /**
+         * <p>Total number of log lines.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
