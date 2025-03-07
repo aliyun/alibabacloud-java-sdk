@@ -3,15 +3,40 @@ package com.aliyun.maxcompute20220104.models;
 
 import com.aliyun.tea.*;
 
-public class ListJobInfosResponseBody extends TeaModel {
+public class GetJobInfoResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
-    public ListJobInfosResponseBodyData data;
+    public GetJobInfoResponseBodyData data;
 
     /**
-     * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OBJECT_NOT_EXIST</p>
+     */
+    @NameInMap("errorCode")
+    public String errorCode;
+
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This object does not exist.</p>
+     */
+    @NameInMap("errorMsg")
+    public String errorMsg;
+
+    /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li>1xx: informational response. The request is received and is being processed.</li>
+     * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
+     * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
+     * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
+     * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,25 +48,41 @@ public class ListJobInfosResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>0bc13a9516807484336515320e38f5</p>
+     * <p>0be3e0bb16654558425251398e27a9</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    public static ListJobInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListJobInfosResponseBody self = new ListJobInfosResponseBody();
+    public static GetJobInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetJobInfoResponseBody self = new GetJobInfoResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListJobInfosResponseBody setData(ListJobInfosResponseBodyData data) {
+    public GetJobInfoResponseBody setData(GetJobInfoResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public ListJobInfosResponseBodyData getData() {
+    public GetJobInfoResponseBodyData getData() {
         return this.data;
     }
 
-    public ListJobInfosResponseBody setHttpCode(Integer httpCode) {
+    public GetJobInfoResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetJobInfoResponseBody setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+        return this;
+    }
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
+    public GetJobInfoResponseBody setHttpCode(Integer httpCode) {
         this.httpCode = httpCode;
         return this;
     }
@@ -49,7 +90,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         return this.httpCode;
     }
 
-    public ListJobInfosResponseBody setRequestId(String requestId) {
+    public GetJobInfoResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -57,7 +98,66 @@ public class ListJobInfosResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListJobInfosResponseBodyDataJobInfoListSceneResults extends TeaModel {
+    public static class GetJobInfoResponseBodyDataJobSubStatusList extends TeaModel {
+        /**
+         * <p>The code of the sub-status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1010</p>
+         */
+        @NameInMap("code")
+        public Integer code;
+
+        /**
+         * <p>The description of the sub-status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Waiting for scheduling</p>
+         */
+        @NameInMap("description")
+        public String description;
+
+        /**
+         * <p>The start time of the sub-status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-05 00:04:15.717364 +0800</p>
+         */
+        @NameInMap("startTime")
+        public String startTime;
+
+        public static GetJobInfoResponseBodyDataJobSubStatusList build(java.util.Map<String, ?> map) throws Exception {
+            GetJobInfoResponseBodyDataJobSubStatusList self = new GetJobInfoResponseBodyDataJobSubStatusList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobInfoResponseBodyDataJobSubStatusList setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
+        }
+
+        public GetJobInfoResponseBodyDataJobSubStatusList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetJobInfoResponseBodyDataJobSubStatusList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class GetJobInfoResponseBodyDataSceneResults extends TeaModel {
         /**
          * <p>The intelligent diagnostics result description.</p>
          * 
@@ -109,12 +209,12 @@ public class ListJobInfosResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
-        public static ListJobInfosResponseBodyDataJobInfoListSceneResults build(java.util.Map<String, ?> map) throws Exception {
-            ListJobInfosResponseBodyDataJobInfoListSceneResults self = new ListJobInfosResponseBodyDataJobInfoListSceneResults();
+        public static GetJobInfoResponseBodyDataSceneResults build(java.util.Map<String, ?> map) throws Exception {
+            GetJobInfoResponseBodyDataSceneResults self = new GetJobInfoResponseBodyDataSceneResults();
             return TeaModel.build(map, self);
         }
 
-        public ListJobInfosResponseBodyDataJobInfoListSceneResults setDescription(String description) {
+        public GetJobInfoResponseBodyDataSceneResults setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -122,7 +222,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoListSceneResults setParams(java.util.Map<String, String> params) {
+        public GetJobInfoResponseBodyDataSceneResults setParams(java.util.Map<String, String> params) {
             this.params = params;
             return this;
         }
@@ -130,7 +230,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.params;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoListSceneResults setScene(String scene) {
+        public GetJobInfoResponseBodyDataSceneResults setScene(String scene) {
             this.scene = scene;
             return this;
         }
@@ -138,7 +238,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.scene;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoListSceneResults setSceneTag(String sceneTag) {
+        public GetJobInfoResponseBodyDataSceneResults setSceneTag(String sceneTag) {
             this.sceneTag = sceneTag;
             return this;
         }
@@ -146,7 +246,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.sceneTag;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoListSceneResults setSummary(String summary) {
+        public GetJobInfoResponseBodyDataSceneResults setSummary(String summary) {
             this.summary = summary;
             return this;
         }
@@ -154,7 +254,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.summary;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoListSceneResults setType(String type) {
+        public GetJobInfoResponseBodyDataSceneResults setType(String type) {
             this.type = type;
             return this;
         }
@@ -164,27 +264,9 @@ public class ListJobInfosResponseBody extends TeaModel {
 
     }
 
-    public static class ListJobInfosResponseBodyDataJobInfoList extends TeaModel {
+    public static class GetJobInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The cluster ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AY20A</p>
-         */
-        @NameInMap("cluster")
-        public String cluster;
-
-        /**
-         * <p>The CU snapshot proportion of the job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.48</p>
-         */
-        @NameInMap("cuSnapshot")
-        public Double cuSnapshot;
-
-        /**
-         * <p>The total number of used compute units (CUs).</p>
+         * <p>CPU usage of the job at the snapshot time. Unit: Core.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -193,16 +275,16 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long cuUsage;
 
         /**
-         * <p>The time when the job stops running.</p>
+         * <p>The time when the job was finished.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1672112913</p>
          */
         @NameInMap("endAtTime")
         public Long endAtTime;
 
         /**
-         * <p>The node ID of DataWorks.</p>
+         * <p>The ID of the upstream node.</p>
          * 
          * <strong>example:</strong>
          * <p>node_4</p>
@@ -211,7 +293,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String extNodeId;
 
         /**
-         * <p>The account of the node owner.</p>
+         * <p>The account ID of the task owner.</p>
          * 
          * <strong>example:</strong>
          * <p>duty_2</p>
@@ -241,7 +323,7 @@ public class ListJobInfosResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>20230410050036549gfmsdwf60gg</p>
+         * <p>20230410****60gg</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
@@ -250,10 +332,16 @@ public class ListJobInfosResponseBody extends TeaModel {
          * <p>The account that commits the job.</p>
          * 
          * <strong>example:</strong>
-         * <p>ALIYUN$<a href="mailto:xxx@test.aliyunid.com">xxx@test.aliyunid.com</a></p>
+         * <p>ALIYUN$7632***@aliyun.com</p>
          */
         @NameInMap("jobOwner")
         public String jobOwner;
+
+        /**
+         * <p>The list of sub-status of the job.</p>
+         */
+        @NameInMap("jobSubStatusList")
+        public java.util.List<GetJobInfoResponseBodyDataJobSubStatusList> jobSubStatusList;
 
         /**
          * <p>The type of the job.</p>
@@ -265,16 +353,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The memory snapshot proportion of the job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0.42</p>
-         */
-        @NameInMap("memorySnapshot")
-        public Double memorySnapshot;
-
-        /**
-         * <p>The total memory usage.</p>
+         * <p>Memory usage of the job at the snapshot time. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -292,19 +371,19 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>The name of the MaxCompute project.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
-         * <p>openrec_new</p>
+         * <p>dp_cdm_prod</p>
          */
         @NameInMap("project")
         public String project;
 
         /**
-         * <p>The nickname of the quota that is used by the job.</p>
+         * <p>The nickname of the computing Quota used by the job.</p>
          * 
          * <strong>example:</strong>
-         * <p>my_quota</p>
+         * <p>os_bigdata</p>
          */
         @NameInMap("quotaNickname")
         public String quotaNickname;
@@ -328,7 +407,10 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The time when the job starts to run.</p>
+         * <p>The start time of the job.</p>
+         * <blockquote>
+         * <p>The time when the job received the first batch of computing resources.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1672112113</p>
@@ -337,7 +419,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long runningAtTime;
 
         /**
-         * <p>The period for which the job runs.</p>
+         * <p>The running duration, which is the duration from the runningAtTime to the snapshotTime of the job. Unit: seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -349,13 +431,13 @@ public class ListJobInfosResponseBody extends TeaModel {
          * <p>The intelligent diagnostics results.</p>
          */
         @NameInMap("sceneResults")
-        public java.util.List<ListJobInfosResponseBodyDataJobInfoListSceneResults> sceneResults;
+        public java.util.List<GetJobInfoResponseBodyDataSceneResults> sceneResults;
 
         /**
          * <p>The signature of the SQL job.</p>
          * 
          * <strong>example:</strong>
-         * <p>i094KijGrN3kOXZ74kbexB77XQY=</p>
+         * <p>20c1efb4a7caca1865f4aa784bb500efae74af04</p>
          */
         @NameInMap("signature")
         public String signature;
@@ -370,15 +452,6 @@ public class ListJobInfosResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status of the snapshot.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>running</p>
-         */
-        @NameInMap("statusSnapshot")
-        public String statusSnapshot;
-
-        /**
          * <p>The time when the job was committed.</p>
          * 
          * <strong>example:</strong>
@@ -388,25 +461,16 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long submittedAtTime;
 
         /**
-         * <p>The tags.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[]</p>
-         */
-        @NameInMap("tags")
-        public String tags;
-
-        /**
          * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>213065738244354</p>
+         * <p>4784****5249</p>
          */
         @NameInMap("tenantId")
         public String tenantId;
 
         /**
-         * <p>The total period for which the job runs.</p>
+         * <p>The interval from the time when the job was submitted to the snapshotTime .Unit: seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -415,7 +479,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Long totalTime;
 
         /**
-         * <p>The duration for which the job waits to start.</p>
+         * <p>The duration from the time the job is submitted to the time the job starts to run. Unit: seconds (s).</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -423,28 +487,12 @@ public class ListJobInfosResponseBody extends TeaModel {
         @NameInMap("waitingTime")
         public Long waitingTime;
 
-        public static ListJobInfosResponseBodyDataJobInfoList build(java.util.Map<String, ?> map) throws Exception {
-            ListJobInfosResponseBodyDataJobInfoList self = new ListJobInfosResponseBodyDataJobInfoList();
+        public static GetJobInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetJobInfoResponseBodyData self = new GetJobInfoResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setCluster(String cluster) {
-            this.cluster = cluster;
-            return this;
-        }
-        public String getCluster() {
-            return this.cluster;
-        }
-
-        public ListJobInfosResponseBodyDataJobInfoList setCuSnapshot(Double cuSnapshot) {
-            this.cuSnapshot = cuSnapshot;
-            return this;
-        }
-        public Double getCuSnapshot() {
-            return this.cuSnapshot;
-        }
-
-        public ListJobInfosResponseBodyDataJobInfoList setCuUsage(Long cuUsage) {
+        public GetJobInfoResponseBodyData setCuUsage(Long cuUsage) {
             this.cuUsage = cuUsage;
             return this;
         }
@@ -452,7 +500,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.cuUsage;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setEndAtTime(Long endAtTime) {
+        public GetJobInfoResponseBodyData setEndAtTime(Long endAtTime) {
             this.endAtTime = endAtTime;
             return this;
         }
@@ -460,7 +508,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.endAtTime;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setExtNodeId(String extNodeId) {
+        public GetJobInfoResponseBodyData setExtNodeId(String extNodeId) {
             this.extNodeId = extNodeId;
             return this;
         }
@@ -468,7 +516,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.extNodeId;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setExtNodeOnDuty(String extNodeOnDuty) {
+        public GetJobInfoResponseBodyData setExtNodeOnDuty(String extNodeOnDuty) {
             this.extNodeOnDuty = extNodeOnDuty;
             return this;
         }
@@ -476,7 +524,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.extNodeOnDuty;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setExtPlantFrom(String extPlantFrom) {
+        public GetJobInfoResponseBodyData setExtPlantFrom(String extPlantFrom) {
             this.extPlantFrom = extPlantFrom;
             return this;
         }
@@ -484,7 +532,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.extPlantFrom;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setInputBytes(Double inputBytes) {
+        public GetJobInfoResponseBodyData setInputBytes(Double inputBytes) {
             this.inputBytes = inputBytes;
             return this;
         }
@@ -492,7 +540,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.inputBytes;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setInstanceId(String instanceId) {
+        public GetJobInfoResponseBodyData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -500,7 +548,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setJobOwner(String jobOwner) {
+        public GetJobInfoResponseBodyData setJobOwner(String jobOwner) {
             this.jobOwner = jobOwner;
             return this;
         }
@@ -508,7 +556,15 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.jobOwner;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setJobType(String jobType) {
+        public GetJobInfoResponseBodyData setJobSubStatusList(java.util.List<GetJobInfoResponseBodyDataJobSubStatusList> jobSubStatusList) {
+            this.jobSubStatusList = jobSubStatusList;
+            return this;
+        }
+        public java.util.List<GetJobInfoResponseBodyDataJobSubStatusList> getJobSubStatusList() {
+            return this.jobSubStatusList;
+        }
+
+        public GetJobInfoResponseBodyData setJobType(String jobType) {
             this.jobType = jobType;
             return this;
         }
@@ -516,15 +572,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.jobType;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setMemorySnapshot(Double memorySnapshot) {
-            this.memorySnapshot = memorySnapshot;
-            return this;
-        }
-        public Double getMemorySnapshot() {
-            return this.memorySnapshot;
-        }
-
-        public ListJobInfosResponseBodyDataJobInfoList setMemoryUsage(Long memoryUsage) {
+        public GetJobInfoResponseBodyData setMemoryUsage(Long memoryUsage) {
             this.memoryUsage = memoryUsage;
             return this;
         }
@@ -532,7 +580,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.memoryUsage;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setPriority(Long priority) {
+        public GetJobInfoResponseBodyData setPriority(Long priority) {
             this.priority = priority;
             return this;
         }
@@ -540,7 +588,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setProject(String project) {
+        public GetJobInfoResponseBodyData setProject(String project) {
             this.project = project;
             return this;
         }
@@ -548,7 +596,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.project;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setQuotaNickname(String quotaNickname) {
+        public GetJobInfoResponseBodyData setQuotaNickname(String quotaNickname) {
             this.quotaNickname = quotaNickname;
             return this;
         }
@@ -556,7 +604,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.quotaNickname;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setQuotaType(String quotaType) {
+        public GetJobInfoResponseBodyData setQuotaType(String quotaType) {
             this.quotaType = quotaType;
             return this;
         }
@@ -564,7 +612,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.quotaType;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setRegion(String region) {
+        public GetJobInfoResponseBodyData setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -572,7 +620,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.region;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setRunningAtTime(Long runningAtTime) {
+        public GetJobInfoResponseBodyData setRunningAtTime(Long runningAtTime) {
             this.runningAtTime = runningAtTime;
             return this;
         }
@@ -580,7 +628,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.runningAtTime;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setRunningTime(Long runningTime) {
+        public GetJobInfoResponseBodyData setRunningTime(Long runningTime) {
             this.runningTime = runningTime;
             return this;
         }
@@ -588,15 +636,15 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.runningTime;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setSceneResults(java.util.List<ListJobInfosResponseBodyDataJobInfoListSceneResults> sceneResults) {
+        public GetJobInfoResponseBodyData setSceneResults(java.util.List<GetJobInfoResponseBodyDataSceneResults> sceneResults) {
             this.sceneResults = sceneResults;
             return this;
         }
-        public java.util.List<ListJobInfosResponseBodyDataJobInfoListSceneResults> getSceneResults() {
+        public java.util.List<GetJobInfoResponseBodyDataSceneResults> getSceneResults() {
             return this.sceneResults;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setSignature(String signature) {
+        public GetJobInfoResponseBodyData setSignature(String signature) {
             this.signature = signature;
             return this;
         }
@@ -604,7 +652,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.signature;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setStatus(String status) {
+        public GetJobInfoResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -612,15 +660,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setStatusSnapshot(String statusSnapshot) {
-            this.statusSnapshot = statusSnapshot;
-            return this;
-        }
-        public String getStatusSnapshot() {
-            return this.statusSnapshot;
-        }
-
-        public ListJobInfosResponseBodyDataJobInfoList setSubmittedAtTime(Long submittedAtTime) {
+        public GetJobInfoResponseBodyData setSubmittedAtTime(Long submittedAtTime) {
             this.submittedAtTime = submittedAtTime;
             return this;
         }
@@ -628,15 +668,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.submittedAtTime;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public ListJobInfosResponseBodyDataJobInfoList setTenantId(String tenantId) {
+        public GetJobInfoResponseBodyData setTenantId(String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
@@ -644,7 +676,7 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.tenantId;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setTotalTime(Long totalTime) {
+        public GetJobInfoResponseBodyData setTotalTime(Long totalTime) {
             this.totalTime = totalTime;
             return this;
         }
@@ -652,85 +684,12 @@ public class ListJobInfosResponseBody extends TeaModel {
             return this.totalTime;
         }
 
-        public ListJobInfosResponseBodyDataJobInfoList setWaitingTime(Long waitingTime) {
+        public GetJobInfoResponseBodyData setWaitingTime(Long waitingTime) {
             this.waitingTime = waitingTime;
             return this;
         }
         public Long getWaitingTime() {
             return this.waitingTime;
-        }
-
-    }
-
-    public static class ListJobInfosResponseBodyData extends TeaModel {
-        /**
-         * <p>The information about the jobs.</p>
-         */
-        @NameInMap("jobInfoList")
-        public java.util.List<ListJobInfosResponseBodyDataJobInfoList> jobInfoList;
-
-        /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
-        @NameInMap("pageNumber")
-        public Long pageNumber;
-
-        /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        @NameInMap("pageSize")
-        public Long pageSize;
-
-        /**
-         * <p>The total number of returned entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>64</p>
-         */
-        @NameInMap("totalCount")
-        public Long totalCount;
-
-        public static ListJobInfosResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ListJobInfosResponseBodyData self = new ListJobInfosResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public ListJobInfosResponseBodyData setJobInfoList(java.util.List<ListJobInfosResponseBodyDataJobInfoList> jobInfoList) {
-            this.jobInfoList = jobInfoList;
-            return this;
-        }
-        public java.util.List<ListJobInfosResponseBodyDataJobInfoList> getJobInfoList() {
-            return this.jobInfoList;
-        }
-
-        public ListJobInfosResponseBodyData setPageNumber(Long pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-        public Long getPageNumber() {
-            return this.pageNumber;
-        }
-
-        public ListJobInfosResponseBodyData setPageSize(Long pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Long getPageSize() {
-            return this.pageSize;
-        }
-
-        public ListJobInfosResponseBodyData setTotalCount(Long totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Long getTotalCount() {
-            return this.totalCount;
         }
 
     }

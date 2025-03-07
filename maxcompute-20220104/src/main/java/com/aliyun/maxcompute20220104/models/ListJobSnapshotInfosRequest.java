@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobSnapshotInfosRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort query results in ascending or descending order.</p>
+     * <p>Specifies whether to sort data in ascending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -105,7 +105,7 @@ public class ListJobSnapshotInfosRequest extends TeaModel {
     public java.util.List<String> typeList;
 
     /**
-     * <p>The column based on which you want to sort query results.</p>
+     * <p>The sorting column.</p>
      * 
      * <strong>example:</strong>
      * <p>cpuUsage</p>
