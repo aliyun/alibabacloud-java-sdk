@@ -575,6 +575,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("allowFullScan")
         public Boolean allowFullScan;
 
+        @NameInMap("autoMvQuotaGb")
+        public Long autoMvQuotaGb;
+
         /**
          * <p>The Tunnel parent resource group that is bound to the project. You do not need to pay attention to this group.</p>
          * 
@@ -584,6 +587,9 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("elderTunnelQuota")
         public String elderTunnelQuota;
 
+        @NameInMap("enableAutoMv")
+        public Boolean enableAutoMv;
+
         /**
          * <p>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</p>
          * 
@@ -592,6 +598,9 @@ public class GetProjectResponseBody extends TeaModel {
          */
         @NameInMap("enableDecimal2")
         public Boolean enableDecimal2;
+
+        @NameInMap("enableDr")
+        public Boolean enableDr;
 
         /**
          * <p>Indicates whether external table caching is forcefully enabled.</p>
@@ -731,6 +740,14 @@ public class GetProjectResponseBody extends TeaModel {
             return this.allowFullScan;
         }
 
+        public GetProjectResponseBodyDataProperties setAutoMvQuotaGb(Long autoMvQuotaGb) {
+            this.autoMvQuotaGb = autoMvQuotaGb;
+            return this;
+        }
+        public Long getAutoMvQuotaGb() {
+            return this.autoMvQuotaGb;
+        }
+
         public GetProjectResponseBodyDataProperties setElderTunnelQuota(String elderTunnelQuota) {
             this.elderTunnelQuota = elderTunnelQuota;
             return this;
@@ -739,12 +756,28 @@ public class GetProjectResponseBody extends TeaModel {
             return this.elderTunnelQuota;
         }
 
+        public GetProjectResponseBodyDataProperties setEnableAutoMv(Boolean enableAutoMv) {
+            this.enableAutoMv = enableAutoMv;
+            return this;
+        }
+        public Boolean getEnableAutoMv() {
+            return this.enableAutoMv;
+        }
+
         public GetProjectResponseBodyDataProperties setEnableDecimal2(Boolean enableDecimal2) {
             this.enableDecimal2 = enableDecimal2;
             return this;
         }
         public Boolean getEnableDecimal2() {
             return this.enableDecimal2;
+        }
+
+        public GetProjectResponseBodyDataProperties setEnableDr(Boolean enableDr) {
+            this.enableDr = enableDr;
+            return this;
+        }
+        public Boolean getEnableDr() {
+            return this.enableDr;
         }
 
         public GetProjectResponseBodyDataProperties setEnableFdcCacheForce(Boolean enableFdcCacheForce) {
