@@ -1396,6 +1396,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceId", request.DBInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dimension)) {
+            query.put("Dimension", request.dimension);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.embeddingModel)) {
             query.put("EmbeddingModel", request.embeddingModel);
         }

@@ -30,6 +30,9 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("Dimension")
+    public Integer dimension;
+
     /**
      * <p>The vectorization algorithm.</p>
      * <blockquote>
@@ -253,6 +256,14 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public CreateDocumentCollectionRequest setDimension(Integer dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+    public Integer getDimension() {
+        return this.dimension;
     }
 
     public CreateDocumentCollectionRequest setEmbeddingModel(String embeddingModel) {
