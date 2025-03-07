@@ -87,7 +87,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加广告插入配置</p>
+     * <p>Adds an ad insertion configuration.</p>
      * 
      * @param request AddAdInsertionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -160,7 +160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加广告插入配置</p>
+     * <p>Adds an ad insertion configuration.</p>
      * 
      * @param request AddAdInsertionRequest
      * @return AddAdInsertionResponse
@@ -337,21 +337,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>A Flow instance can only have one Input.</li>
+     * <li>A flow can have only one source.</li>
      * </ul>
-     * <h3>Description of Input Types</h3>
+     * <h3><a href="#"></a>Source type</h3>
      * <ul>
-     * <li>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</li>
-     * <li>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</li>
-     * <li>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</li>
-     * <li>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</li>
-     * <li>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</li>
+     * <li>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</li>
+     * <li>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</li>
+     * <li>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</li>
+     * <li>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</li>
+     * <li>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Add input for MediaConnect instance</p>
+     * <p>Creates a source for a MediaConnect flow.</p>
      * 
      * @param request AddMediaConnectFlowInputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -428,21 +428,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>A Flow instance can only have one Input.</li>
+     * <li>A flow can have only one source.</li>
      * </ul>
-     * <h3>Description of Input Types</h3>
+     * <h3><a href="#"></a>Source type</h3>
      * <ul>
-     * <li>RTMP-PUSH: Creates an input of the RTMP listening type. You can push to the URL returned by the interface using the RTMP protocol.</li>
-     * <li>RTMP-PULL: Creates an input of the RTMP origin-pull type. The Flow will pull the RTMP live stream from the source you specify.</li>
-     * <li>SRT-Listener: Creates an input of the SRT listening type. You can push to the URL returned by the interface using the SRT protocol.</li>
-     * <li>SRT-Caller: Creates an input of the SRT origin-pull type. The Flow will pull the SRT live stream from the source you specify.</li>
-     * <li>Flow: Uses the output of another upstream Flow instance as the input. You need to specify both the instance ID and the output name of the paired Flow. The output of the upstream Flow instance must be of the SRT-Listener/RTMP-PULL type. When cascading between Flow instances, a dedicated line is used by default, which can be utilized for cross-regional distribution among multiple Flows.</li>
+     * <li>RTMP-PUSH: An input that you can push to the returned URL over the RTMP protocol.</li>
+     * <li>RTMP-PULL: An input that the MediaConnect flow pulls from the specified server over the RTMP protocol.</li>
+     * <li>SRT-Listener: An input that you can push to the returned URL over the SRT protocol.</li>
+     * <li>SRT-Caller: An input that the MediaConnect flow pulls from the specified server over the SRT protocol.</li>
+     * <li>Flow: An input that uses the output of another upstream flow. You must specify an upstream flow and its output. The output type of the upstream flow must be SRT-Listener or RTMP-PULL. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Add input for MediaConnect instance</p>
+     * <p>Creates a source for a MediaConnect flow.</p>
      * 
      * @param request AddMediaConnectFlowInputRequest
      * @return AddMediaConnectFlowInputResponse
@@ -454,23 +454,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>A Flow instance can have up to 4 outputs.</li>
-     * <li>The output names under the same Flow instance cannot be duplicated.</li>
-     * <li>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</li>
+     * <li>A flow can have a maximum of four outputs.</li>
+     * <li>The output names in the same flow cannot be duplicated.</li>
+     * <li>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</li>
      * </ul>
-     * <h3>Description of Output Types</h3>
+     * <h3><a href="#"></a>Output types</h3>
      * <ul>
-     * <li>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</li>
-     * <li>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</li>
-     * <li>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</li>
-     * <li>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</li>
-     * <li>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</li>
+     * <li>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</li>
+     * <li>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</li>
+     * <li>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</li>
+     * <li>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</li>
+     * <li>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Add output for MediaConnect instance</p>
+     * <p>Creates an output for a MediaConnect flow.</p>
      * 
      * @param request AddMediaConnectFlowOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -547,23 +547,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>A Flow instance can have up to 4 outputs.</li>
-     * <li>The output names under the same Flow instance cannot be duplicated.</li>
-     * <li>You can set a maximum number of simultaneous players for each output. New plays will fail once this limit is exceeded. Each output supports up to 5 streams.</li>
+     * <li>A flow can have a maximum of four outputs.</li>
+     * <li>The output names in the same flow cannot be duplicated.</li>
+     * <li>You can set an upper limit on the number of concurrent viewers for each output. If this limit is exceeded, any new playback requests will fail. Each output supports up to five streams.</li>
      * </ul>
-     * <h3>Description of Output Types</h3>
+     * <h3><a href="#"></a>Output types</h3>
      * <ul>
-     * <li>RTMP-PUSH: Creates an output of the RTMP push type. The Flow will use the RTMP protocol to push the live stream to the origin you set.</li>
-     * <li>RTMP-PULL: Creates an output of the RTMP pull type. You can use the RTMP protocol to pull the stream from the URL returned by the interface.</li>
-     * <li>SRT-Caller: Creates an output of the SRT push type. The Flow will use the SRT protocol to push the live stream to the origin you set.</li>
-     * <li>SRT-Listener: Creates an output of the SRT pull type. You can use the SRT protocol to pull the stream from the URL returned by the interface.</li>
-     * <li>Flow: Uses the input of another downstream Flow instance as the output. You need to specify both the instance ID and the input name of the paired Flow. The input type of the downstream Flow instance must be a listening type, i.e., SRT-Listener/RTMP-PUSH. This instance will push the live stream to the downstream Flow. When cascading between Flow instances, a dedicated line is used by default, which can be used for cross-regional distribution among multiple Flows.</li>
+     * <li>RTMP-PUSH: An output that the MediaConnect flow pushes to the server you specified over the RTMP protocol.</li>
+     * <li>RTMP-PULL: An output that you can pull using the returned streaming URL over the RTMP protocol.</li>
+     * <li>SRT-Caller: An output that the MediaConnect flow pushes to the server you specified over the SRT protocol.</li>
+     * <li>SRT-Listener: An output that you can pull using the returned streaming URL over the SRT protocol.</li>
+     * <li>Flow: An output that is pushed to the source URL of another MediaConnect flow. The source type of the destination flow must be SRT-Listener or RTMP-PUSH. By default, a dedicated line is used when flows are cascaded. This allows for cross-region distribution among multiple flows.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Add output for MediaConnect instance</p>
+     * <p>Creates an output for a MediaConnect flow.</p>
      * 
      * @param request AddMediaConnectFlowOutputRequest
      * @return AddMediaConnectFlowOutputResponse
@@ -782,7 +782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建vod打包资产</p>
+     * <p>Ingests multiple assets for VOD packaging.</p>
      * 
      * @param tmpReq BatchCreateVodPackagingAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -829,7 +829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量创建vod打包资产</p>
+     * <p>Ingests multiple assets for VOD packaging.</p>
      * 
      * @param request BatchCreateVodPackagingAssetRequest
      * @return BatchCreateVodPackagingAssetResponse
@@ -1142,7 +1142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的频道</p>
+     * <p>Creates a channel in MediaWeaver.</p>
      * 
      * @param request CreateChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1207,7 +1207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的频道</p>
+     * <p>Creates a channel in MediaWeaver.</p>
      * 
      * @param request CreateChannelRequest
      * @return CreateChannelResponse
@@ -1510,8 +1510,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>Only <code>HLS</code> is supported.</li>
+     * <li>The segment duration must be from 1 to 30 seconds.</li>
+     * <li>The number of M3U8 segments must be from 2 to 100.
+     * If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建实时打包频道</p>
+     * <p>Creates a live package channel.</p>
      * 
      * @param request CreateLivePackageChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1573,8 +1585,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Channel group names and channel names can contain only letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>Only <code>HLS</code> is supported.</li>
+     * <li>The segment duration must be from 1 to 30 seconds.</li>
+     * <li>The number of M3U8 segments must be from 2 to 100.
+     * If the request succeeds, the system will return the details of the newly created channel, including the channel name, creation time, modification time, and ingest endpoint details.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建实时打包频道</p>
+     * <p>Creates a live package channel.</p>
      * 
      * @param request CreateLivePackageChannelRequest
      * @return CreateLivePackageChannelResponse
@@ -1585,8 +1609,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you create a channel group, the assigned origin domain is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加实时打包频道组</p>
+     * <p>Creates a live package channel group with a custom name and description.</p>
      * 
      * @param request CreateLivePackageChannelGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1632,8 +1659,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you create a channel group, the assigned origin domain is returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>添加实时打包频道组</p>
+     * <p>Creates a live package channel group with a custom name and description.</p>
      * 
      * @param request CreateLivePackageChannelGroupRequest
      * @return CreateLivePackageChannelGroupResponse
@@ -1644,8 +1674,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实时打包源站端点</p>
+     * <p>Creates an origin endpoint for a live package channel to deliver live streams in HLS format.</p>
      * 
      * @param request CreateLivePackageOriginEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1723,8 +1757,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation is mainly used to configure origin settings, security policies including the IP address blacklist and whitelist and authorization code, and time shifting settings for channels. Before you create an origin endpoint, you must create a live package channel group and channel. After you create the endpoint, the endpoint URL and other configuration details are returned.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建实时打包源站端点</p>
+     * <p>Creates an origin endpoint for a live package channel to deliver live streams in HLS format.</p>
      * 
      * @param request CreateLivePackageOriginEndpointRequest
      * @return CreateLivePackageOriginEndpointResponse
@@ -1925,13 +1963,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  The flow names cannot be duplicated in the same region.</p>
      * <ul>
-     * <li>The name of the Flow cannot be duplicated within the same region.</li>
-     * <li>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</li>
+     * <li>Take note of the returned flow ID. You may reference it in other API operations.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create MediaConnect Flow</p>
+     * <p>Creates a MediaConnect flow.</p>
      * 
      * @param request CreateMediaConnectFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1972,13 +2010,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  The flow names cannot be duplicated in the same region.</p>
      * <ul>
-     * <li>The name of the Flow cannot be duplicated within the same region.</li>
-     * <li>When the interface responds normally, it will return the Flow instance ID. Please keep it properly.</li>
+     * <li>Take note of the returned flow ID. You may reference it in other API operations.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create MediaConnect Flow</p>
+     * <p>Creates a MediaConnect flow.</p>
      * 
      * @param request CreateMediaConnectFlowRequest
      * @return CreateMediaConnectFlowResponse
@@ -1986,6 +2024,261 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateMediaConnectFlowResponse createMediaConnectFlow(CreateMediaConnectFlowRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createMediaConnectFlowWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a MediaLive channel.</p>
+     * 
+     * @param tmpReq CreateMediaLiveChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMediaLiveChannelResponse
+     */
+    public CreateMediaLiveChannelResponse createMediaLiveChannelWithOptions(CreateMediaLiveChannelRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMediaLiveChannelShrinkRequest request = new CreateMediaLiveChannelShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.audioSettings)) {
+            request.audioSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.audioSettings, "AudioSettings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputAttachments)) {
+            request.inputAttachmentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputAttachments, "InputAttachments", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outputGroups)) {
+            request.outputGroupsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputGroups, "OutputGroups", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoSettings)) {
+            request.videoSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoSettings, "VideoSettings", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioSettingsShrink)) {
+            body.put("AudioSettings", request.audioSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputAttachmentsShrink)) {
+            body.put("InputAttachments", request.inputAttachmentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputGroupsShrink)) {
+            body.put("OutputGroups", request.outputGroupsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoSettingsShrink)) {
+            body.put("VideoSettings", request.videoSettingsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMediaLiveChannel"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMediaLiveChannelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateMediaLiveChannelResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a MediaLive channel.</p>
+     * 
+     * @param request CreateMediaLiveChannelRequest
+     * @return CreateMediaLiveChannelResponse
+     */
+    public CreateMediaLiveChannelResponse createMediaLiveChannel(CreateMediaLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMediaLiveChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a MediaLive input.</p>
+     * 
+     * @param tmpReq CreateMediaLiveInputRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMediaLiveInputResponse
+     */
+    public CreateMediaLiveInputResponse createMediaLiveInputWithOptions(CreateMediaLiveInputRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMediaLiveInputShrinkRequest request = new CreateMediaLiveInputShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputSettings)) {
+            request.inputSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputSettings, "InputSettings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.securityGroupIds)) {
+            request.securityGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.securityGroupIds, "SecurityGroupIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputSettingsShrink)) {
+            body.put("InputSettings", request.inputSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIdsShrink)) {
+            body.put("SecurityGroupIds", request.securityGroupIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMediaLiveInput"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMediaLiveInputResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateMediaLiveInputResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a MediaLive input.</p>
+     * 
+     * @param request CreateMediaLiveInputRequest
+     * @return CreateMediaLiveInputResponse
+     */
+    public CreateMediaLiveInputResponse createMediaLiveInput(CreateMediaLiveInputRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMediaLiveInputWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a security group in MediaLive.</p>
+     * 
+     * @param tmpReq CreateMediaLiveInputSecurityGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMediaLiveInputSecurityGroupResponse
+     */
+    public CreateMediaLiveInputSecurityGroupResponse createMediaLiveInputSecurityGroupWithOptions(CreateMediaLiveInputSecurityGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateMediaLiveInputSecurityGroupShrinkRequest request = new CreateMediaLiveInputSecurityGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.whitelistRules)) {
+            request.whitelistRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.whitelistRules, "WhitelistRules", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelistRulesShrink)) {
+            body.put("WhitelistRules", request.whitelistRulesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMediaLiveInputSecurityGroup"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMediaLiveInputSecurityGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateMediaLiveInputSecurityGroupResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a security group in MediaLive.</p>
+     * 
+     * @param request CreateMediaLiveInputSecurityGroupRequest
+     * @return CreateMediaLiveInputSecurityGroupResponse
+     */
+    public CreateMediaLiveInputSecurityGroupResponse createMediaLiveInputSecurityGroup(CreateMediaLiveInputSecurityGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMediaLiveInputSecurityGroupWithOptions(request, runtime);
     }
 
     /**
@@ -2047,7 +2340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的节目</p>
+     * <p>Creates a program in a MediaWeaver channel.</p>
      * 
      * @param request CreateProgramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2112,7 +2405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的节目</p>
+     * <p>Creates a program in a MediaWeaver channel.</p>
      * 
      * @param request CreateProgramRequest
      * @return CreateProgramResponse
@@ -2240,7 +2533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的源</p>
+     * <p>Creates a source in MediaWeaver.</p>
      * 
      * @param request CreateSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2289,7 +2582,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的源</p>
+     * <p>Creates a source in MediaWeaver.</p>
      * 
      * @param request CreateSourceRequest
      * @return CreateSourceResponse
@@ -2301,7 +2594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的源位置</p>
+     * <p>Creates a source location.</p>
      * 
      * @param request CreateSourceLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2350,7 +2643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个新的源位置</p>
+     * <p>Creates a source location.</p>
      * 
      * @param request CreateSourceLocationRequest
      * @return CreateSourceLocationResponse
@@ -2536,7 +2829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建vod打包资产</p>
+     * <p>Ingests an asset for VOD packaging.</p>
      * 
      * @param tmpReq CreateVodPackagingAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2595,7 +2888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建vod打包资产</p>
+     * <p>Ingests an asset for VOD packaging.</p>
      * 
      * @param request CreateVodPackagingAssetRequest
      * @return CreateVodPackagingAssetResponse
@@ -2607,7 +2900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建点播打包配置</p>
+     * <p>Creates a packaging configuration.</p>
      * 
      * @param tmpReq CreateVodPackagingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2666,7 +2959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建点播打包配置</p>
+     * <p>Creates a packaging configuration.</p>
      * 
      * @param request CreateVodPackagingConfigurationRequest
      * @return CreateVodPackagingConfigurationResponse
@@ -2678,7 +2971,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建点播打包组</p>
+     * <p>Creates a packaging group.</p>
      * 
      * @param request CreateVodPackagingGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2719,7 +3012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建点播打包组</p>
+     * <p>Creates a packaging group.</p>
      * 
      * @param request CreateVodPackagingGroupRequest
      * @return CreateVodPackagingGroupResponse
@@ -2833,7 +3126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除广告插入配置</p>
+     * <p>Deletes an ad insertion configuration.</p>
      * 
      * @param request DeleteAdInsertionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2870,7 +3163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除广告插入配置</p>
+     * <p>Deletes an ad insertion configuration.</p>
      * 
      * @param request DeleteAdInsertionRequest
      * @return DeleteAdInsertionResponse
@@ -2986,7 +3279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除频道</p>
+     * <p>Deletes a channel in MediaWeaver.</p>
      * 
      * @param request DeleteChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3023,7 +3316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除频道</p>
+     * <p>Deletes a channel in MediaWeaver.</p>
      * 
      * @param request DeleteChannelRequest
      * @return DeleteChannelResponse
@@ -3372,8 +3665,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You need to provide GroupName and ChannelName as parameters to specify exactly which channel to delete. Before you delete a channel, you must delete the origin endpoints associated with the channel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实时打包频道</p>
+     * <p>Deletes a live package channel by GroupName and ChannelName.</p>
      * 
      * @param request DeleteLivePackageChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3413,8 +3710,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You need to provide GroupName and ChannelName as parameters to specify exactly which channel to delete. Before you delete a channel, you must delete the origin endpoints associated with the channel.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实时打包频道</p>
+     * <p>Deletes a live package channel by GroupName and ChannelName.</p>
      * 
      * @param request DeleteLivePackageChannelRequest
      * @return DeleteLivePackageChannelResponse
@@ -3425,8 +3726,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Make sure that no channels are included in the channel group before you delete it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除直播打包频道组</p>
+     * <p>Deletes a live package channel group by name.</p>
      * 
      * @param request DeleteLivePackageChannelGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3462,8 +3767,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>Make sure that no channels are included in the channel group before you delete it.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除直播打包频道组</p>
+     * <p>Deletes a live package channel group by name.</p>
      * 
      * @param request DeleteLivePackageChannelGroupRequest
      * @return DeleteLivePackageChannelGroupResponse
@@ -3474,8 +3783,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation is used to delete an origin endpoint associated with a live package channel by specifying <code>GroupName</code>, <code>ChannelName</code>, and <code>EndpointName</code>. This operation will permanently delete the relevant configurations. Exercise caution when you perform this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实时打包源站端点</p>
+     * <p>Deletes an origin endpoint associated with a live package channel.</p>
      * 
      * @param request DeleteLivePackageOriginEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3519,8 +3832,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation is used to delete an origin endpoint associated with a live package channel by specifying <code>GroupName</code>, <code>ChannelName</code>, and <code>EndpointName</code>. This operation will permanently delete the relevant configurations. Exercise caution when you perform this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除实时打包源站端点</p>
+     * <p>Deletes an origin endpoint associated with a live package channel.</p>
      * 
      * @param request DeleteLivePackageOriginEndpointRequest
      * @return DeleteLivePackageOriginEndpointResponse
@@ -3844,14 +4161,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</li>
-     * <li>You cannot delete a Flow instance that is in the online state.</li>
+     * <li>When a flow is deleted, its source and outputs are also deleted.</li>
+     * <li>When a flow is in the online state, it cannot be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete MediaConnect instance by instance ID</p>
+     * <p>Deletes a MediaConnect flow.</p>
      * 
      * @param request DeleteMediaConnectFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3888,14 +4205,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When deleting a Flow instance, all Inputs and Outputs bound to this Flow will also be deleted.</li>
-     * <li>You cannot delete a Flow instance that is in the online state.</li>
+     * <li>When a flow is deleted, its source and outputs are also deleted.</li>
+     * <li>When a flow is in the online state, it cannot be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete MediaConnect instance by instance ID</p>
+     * <p>Deletes a MediaConnect flow.</p>
      * 
      * @param request DeleteMediaConnectFlowRequest
      * @return DeleteMediaConnectFlowResponse
@@ -3907,14 +4224,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When the Flow instance status is online, the input cannot be deleted.</li>
-     * <li>Only after all outputs under the Flow instance have been deleted can the input be deleted.</li>
+     * <li>When a flow is in the online state, its source cannot be deleted.</li>
+     * <li>You can delete the source only after all outputs of the flow have been deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete the input of a specific MediaConnect instance</p>
+     * <p>Deletes the source of a MediaConnect flow.</p>
      * 
      * @param request DeleteMediaConnectFlowInputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3951,14 +4268,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>If the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When the Flow instance status is online, the input cannot be deleted.</li>
-     * <li>Only after all outputs under the Flow instance have been deleted can the input be deleted.</li>
+     * <li>When a flow is in the online state, its source cannot be deleted.</li>
+     * <li>You can delete the source only after all outputs of the flow have been deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete the input of a specific MediaConnect instance</p>
+     * <p>Deletes the source of a MediaConnect flow.</p>
      * 
      * @param request DeleteMediaConnectFlowInputRequest
      * @return DeleteMediaConnectFlowInputResponse
@@ -3970,13 +4287,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When the Flow instance status is online, the output cannot be deleted.</li>
+     * <li>When a flow is in the online state, its outputs cannot be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete a specific MediaConnect output</p>
+     * <p>Deletes an output of a MediaConnect flow.</p>
      * 
      * @param request DeleteMediaConnectFlowOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4017,13 +4334,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>When the Flow instance status is online, the output cannot be deleted.</li>
+     * <li>When a flow is in the online state, its outputs cannot be deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Delete a specific MediaConnect output</p>
+     * <p>Deletes an output of a MediaConnect flow.</p>
      * 
      * @param request DeleteMediaConnectFlowOutputRequest
      * @return DeleteMediaConnectFlowOutputResponse
@@ -4145,6 +4462,213 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMediaInfosResponse deleteMediaInfos(DeleteMediaInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMediaInfosWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can only delete a channel that is not running.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a MediaLive channel.</p>
+     * 
+     * @param request DeleteMediaLiveChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMediaLiveChannelResponse
+     */
+    public DeleteMediaLiveChannelResponse deleteMediaLiveChannelWithOptions(DeleteMediaLiveChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            body.put("ChannelId", request.channelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMediaLiveChannel"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMediaLiveChannelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteMediaLiveChannelResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can only delete a channel that is not running.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a MediaLive channel.</p>
+     * 
+     * @param request DeleteMediaLiveChannelRequest
+     * @return DeleteMediaLiveChannelResponse
+     */
+    public DeleteMediaLiveChannelResponse deleteMediaLiveChannel(DeleteMediaLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMediaLiveChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can delete an input only when it is not associated with a MediaLive channel.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a MediaLive input.</p>
+     * 
+     * @param request DeleteMediaLiveInputRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMediaLiveInputResponse
+     */
+    public DeleteMediaLiveInputResponse deleteMediaLiveInputWithOptions(DeleteMediaLiveInputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputId)) {
+            body.put("InputId", request.inputId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMediaLiveInput"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMediaLiveInputResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteMediaLiveInputResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can delete an input only when it is not associated with a MediaLive channel.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a MediaLive input.</p>
+     * 
+     * @param request DeleteMediaLiveInputRequest
+     * @return DeleteMediaLiveInputResponse
+     */
+    public DeleteMediaLiveInputResponse deleteMediaLiveInput(DeleteMediaLiveInputRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMediaLiveInputWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can only delete a security group not associated with an input.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a security group in MediaLive.</p>
+     * 
+     * @param request DeleteMediaLiveInputSecurityGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMediaLiveInputSecurityGroupResponse
+     */
+    public DeleteMediaLiveInputSecurityGroupResponse deleteMediaLiveInputSecurityGroupWithOptions(DeleteMediaLiveInputSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            body.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMediaLiveInputSecurityGroup"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMediaLiveInputSecurityGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteMediaLiveInputSecurityGroupResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can only delete a security group not associated with an input.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a security group in MediaLive.</p>
+     * 
+     * @param request DeleteMediaLiveInputSecurityGroupRequest
+     * @return DeleteMediaLiveInputSecurityGroupResponse
+     */
+    public DeleteMediaLiveInputSecurityGroupResponse deleteMediaLiveInputSecurityGroup(DeleteMediaLiveInputSecurityGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMediaLiveInputSecurityGroupWithOptions(request, runtime);
     }
 
     /**
@@ -4314,7 +4838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除节目</p>
+     * <p>Deletes a program from a channel.</p>
      * 
      * @param request DeleteProgramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4355,7 +4879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除节目</p>
+     * <p>Deletes a program from a channel.</p>
      * 
      * @param request DeleteProgramRequest
      * @return DeleteProgramResponse
@@ -4416,7 +4940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源</p>
+     * <p>Deletes a source from MediaWeaver.</p>
      * 
      * @param request DeleteSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4465,7 +4989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源</p>
+     * <p>Deletes a source from MediaWeaver.</p>
      * 
      * @param request DeleteSourceRequest
      * @return DeleteSourceResponse
@@ -4477,7 +5001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源位置</p>
+     * <p>Deletes a source location.</p>
      * 
      * @param request DeleteSourceLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4518,7 +5042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除源位置</p>
+     * <p>Deletes a source location.</p>
      * 
      * @param request DeleteSourceLocationRequest
      * @return DeleteSourceLocationResponse
@@ -4589,7 +5113,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除点播打包资产</p>
+     * <p>Deletes a VOD packaging asset.</p>
      * 
      * @param request DeleteVodPackagingAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4626,7 +5150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除点播打包资产</p>
+     * <p>Deletes a VOD packaging asset.</p>
      * 
      * @param request DeleteVodPackagingAssetRequest
      * @return DeleteVodPackagingAssetResponse
@@ -4638,7 +5162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除点播打包配置</p>
+     * <p>Deletes a packaging configuration.</p>
      * 
      * @param request DeleteVodPackagingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4675,7 +5199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除点播打包配置</p>
+     * <p>Deletes a packaging configuration.</p>
      * 
      * @param request DeleteVodPackagingConfigurationRequest
      * @return DeleteVodPackagingConfigurationResponse
@@ -4687,7 +5211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除点播打包组</p>
+     * <p>Deletes a packaging group.</p>
      * 
      * @param request DeleteVodPackagingGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4724,7 +5248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除点播打包组</p>
+     * <p>Deletes a packaging group.</p>
      * 
      * @param request DeleteVodPackagingGroupRequest
      * @return DeleteVodPackagingGroupResponse
@@ -4735,8 +5259,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li><strong>Feature</strong>: You can call this operation to query the information about an AI agent.</li>
+     * <li><strong>Scenario</strong>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例</p>
+     * <p>Queries the information about an AI agent.</p>
      * 
      * @param request DescribeAIAgentInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4772,8 +5303,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <ul>
+     * <li><strong>Feature</strong>: You can call this operation to query the information about an AI agent.</li>
+     * <li><strong>Scenario</strong>: If you need to monitor or analyze the performance of an AI agent in a call or debug the agent configurations, you can call this operation to obtain required data.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询实例</p>
+     * <p>Queries the information about an AI agent.</p>
      * 
      * @param request DescribeAIAgentInstanceRequest
      * @return DescribeAIAgentInstanceResponse
@@ -5085,8 +5623,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the detailed callback configurations of an AI agent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>描述回调配置</p>
+     * <p>Queries the event callback configurations of an AI agent.</p>
      * 
      * @param request DescribeNotifyConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5122,8 +5663,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the detailed callback configurations of an AI agent.</p>
+     * 
      * <b>summary</b> : 
-     * <p>描述回调配置</p>
+     * <p>Queries the event callback configurations of an AI agent.</p>
      * 
      * @param request DescribeNotifyConfigRequest
      * @return DescribeNotifyConfigResponse
@@ -5417,8 +5961,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
+     * <strong>Note:</strong> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * <p>Creates an AI agent. This operation returns the channel in which the AI agent resides, the username of the AI agent in the channel, and the token that you can use to join the channel.</p>
      * 
      * @param tmpReq GenerateAIAgentCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5428,6 +5977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GenerateAIAgentCallShrinkRequest request = new GenerateAIAgentCallShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.chatSyncConfig)) {
+            request.chatSyncConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.chatSyncConfig, "ChatSyncConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
             request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
         }
@@ -5435,6 +5988,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
             query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatSyncConfigShrink)) {
+            query.put("ChatSyncConfig", request.chatSyncConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.expire)) {
@@ -5480,8 +6037,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to create an AI agent based on the provided ID. You can join the channel based on the returned information and talk to the agent.
+     * <strong>Note:</strong> Make sure that the provided AI agent ID is valid and configure optional parameters based on your business requirements.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * <p>Creates an AI agent. This operation returns the channel in which the AI agent resides, the username of the AI agent in the channel, and the token that you can use to join the channel.</p>
      * 
      * @param request GenerateAIAgentCallRequest
      * @return GenerateAIAgentCallResponse
@@ -5593,7 +6155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取广告插入配置</p>
+     * <p>Obtains details of an ad insertion configuration.</p>
      * 
      * @param request GetAdInsertionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5630,7 +6192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取广告插入配置</p>
+     * <p>Obtains details of an ad insertion configuration.</p>
      * 
      * @param request GetAdInsertionRequest
      * @return GetAdInsertionResponse
@@ -5860,7 +6422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取频道</p>
+     * <p>Queries information about a channel in MediaWeaver.</p>
      * 
      * @param request GetChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5897,7 +6459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取频道</p>
+     * <p>Queries information about a channel in MediaWeaver.</p>
      * 
      * @param request GetChannelRequest
      * @return GetChannelResponse
@@ -6554,8 +7116,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取实时打包频道</p>
+     * <p>Queries the details of a live package channel.</p>
      * 
      * @param request GetLivePackageChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6595,8 +7161,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query the details of a live package channel, including the creation time, description, ingest endpoint, protocol, number of segments, and segment duration.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取实时打包频道</p>
+     * <p>Queries the details of a live package channel.</p>
      * 
      * @param request GetLivePackageChannelRequest
      * @return GetLivePackageChannelResponse
@@ -6607,8 +7177,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取直播打包频道组</p>
+     * <p>Queries the details of a live package channel group by name.</p>
      * 
      * @param request GetLivePackageChannelGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6644,8 +7218,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can call this API operation to query the details of a specific channel group, including its name, description, origin domain, and creation and last modification timestamps.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取直播打包频道组</p>
+     * <p>Queries the details of a live package channel group by name.</p>
      * 
      * @param request GetLivePackageChannelGroupRequest
      * @return GetLivePackageChannelGroupResponse
@@ -6656,8 +7234,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * 
      * <b>summary</b> : 
-     * <p>获取实时打包源站端点</p>
+     * <p>Queries origin endpoints associated with a live package channel.</p>
      * 
      * @param request GetLivePackageOriginEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6701,8 +7282,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * 
      * <b>summary</b> : 
-     * <p>获取实时打包源站端点</p>
+     * <p>Queries origin endpoints associated with a live package channel.</p>
      * 
      * @param request GetLivePackageOriginEndpointRequest
      * @return GetLivePackageOriginEndpointResponse
@@ -6992,13 +7576,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>The StartTime returned by the interface is only valid when the Flow status is online.</li>
+     * <li>The returned StartTime is valid only when the flow is in the online state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve detailed information of the corresponding MediaConnect based on the instance ID</p>
+     * <p>Obtains information about a specific MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7035,13 +7619,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * <ul>
-     * <li>When the input Flow instance ID does not exist, the interface will return an error.</li>
-     * <li>The StartTime returned by the interface is only valid when the Flow status is online.</li>
+     * <li>The returned StartTime is valid only when the flow is in the online state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve detailed information of the corresponding MediaConnect based on the instance ID</p>
+     * <p>Obtains information about a specific MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowRequest
      * @return GetMediaConnectFlowResponse
@@ -7053,12 +7637,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * </ul>
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get input information under a MediaConnect instance</p>
+     * <p>Obtains information about the source of a MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowInputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7095,12 +7677,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * </ul>
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Get input information under a MediaConnect instance</p>
+     * <p>Obtains information about the source of a MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowInputRequest
      * @return GetMediaConnectFlowInputResponse
@@ -7112,12 +7692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * </ul>
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve detailed information of a specific output based on outputName</p>
+     * <p>Obtains information about an output of a MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7158,12 +7736,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li>When the provided Flow instance ID does not exist, the interface will return an error.</li>
-     * </ul>
+     * <p>  When the specified flow ID is not available, an error code is returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieve detailed information of a specific output based on outputName</p>
+     * <p>Obtains information about an output of a MediaConnect flow.</p>
      * 
      * @param request GetMediaConnectFlowOutputRequest
      * @return GetMediaConnectFlowOutputResponse
@@ -7175,7 +7751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 MediaConvert 任务详情</p>
+     * <p>Obtains the details of a transcoding task.</p>
      * 
      * @param request GetMediaConvertJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7212,7 +7788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取 MediaConvert 任务详情</p>
+     * <p>Obtains the details of a transcoding task.</p>
      * 
      * @param request GetMediaConvertJobRequest
      * @return GetMediaConvertJobResponse
@@ -7336,6 +7912,195 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetMediaInfoJobResponse getMediaInfoJob(GetMediaInfoJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMediaInfoJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a MediaLive channel.</p>
+     * 
+     * @param request GetMediaLiveChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMediaLiveChannelResponse
+     */
+    public GetMediaLiveChannelResponse getMediaLiveChannelWithOptions(GetMediaLiveChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            body.put("ChannelId", request.channelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMediaLiveChannel"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetMediaLiveChannelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetMediaLiveChannelResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a MediaLive channel.</p>
+     * 
+     * @param request GetMediaLiveChannelRequest
+     * @return GetMediaLiveChannelResponse
+     */
+    public GetMediaLiveChannelResponse getMediaLiveChannel(GetMediaLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMediaLiveChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a MediaLive input.</p>
+     * 
+     * @param request GetMediaLiveInputRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMediaLiveInputResponse
+     */
+    public GetMediaLiveInputResponse getMediaLiveInputWithOptions(GetMediaLiveInputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputId)) {
+            body.put("InputId", request.inputId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMediaLiveInput"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetMediaLiveInputResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetMediaLiveInputResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a MediaLive input.</p>
+     * 
+     * @param request GetMediaLiveInputRequest
+     * @return GetMediaLiveInputResponse
+     */
+    public GetMediaLiveInputResponse getMediaLiveInput(GetMediaLiveInputRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMediaLiveInputWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a security group in MediaLive.</p>
+     * 
+     * @param request GetMediaLiveInputSecurityGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMediaLiveInputSecurityGroupResponse
+     */
+    public GetMediaLiveInputSecurityGroupResponse getMediaLiveInputSecurityGroupWithOptions(GetMediaLiveInputSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            body.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMediaLiveInputSecurityGroup"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetMediaLiveInputSecurityGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetMediaLiveInputSecurityGroupResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a security group in MediaLive.</p>
+     * 
+     * @param request GetMediaLiveInputSecurityGroupRequest
+     * @return GetMediaLiveInputSecurityGroupResponse
+     */
+    public GetMediaLiveInputSecurityGroupResponse getMediaLiveInputSecurityGroup(GetMediaLiveInputSecurityGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMediaLiveInputSecurityGroupWithOptions(request, runtime);
     }
 
     /**
@@ -7595,7 +8360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节目</p>
+     * <p>Queries a program.</p>
      * 
      * @param request GetProgramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7636,7 +8401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节目</p>
+     * <p>Queries a program.</p>
      * 
      * @param request GetProgramRequest
      * @return GetProgramResponse
@@ -7909,7 +8674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取源</p>
+     * <p>Queries a source in MediaWeaver.</p>
      * 
      * @param request GetSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7954,7 +8719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取源</p>
+     * <p>Queries a source in MediaWeaver.</p>
      * 
      * @param request GetSourceRequest
      * @return GetSourceResponse
@@ -7966,7 +8731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取源位置</p>
+     * <p>Queries a source location.</p>
      * 
      * @param request GetSourceLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8003,7 +8768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取源位置</p>
+     * <p>Queries a source location.</p>
      * 
      * @param request GetSourceLocationRequest
      * @return GetSourceLocationResponse
@@ -8475,7 +9240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询点播打包资产</p>
+     * <p>Queries a VOD packaging asset.</p>
      * 
      * @param request GetVodPackagingAssetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8512,7 +9277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询点播打包资产</p>
+     * <p>Queries a VOD packaging asset.</p>
      * 
      * @param request GetVodPackagingAssetRequest
      * @return GetVodPackagingAssetResponse
@@ -8524,7 +9289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询打包模板配置</p>
+     * <p>Queries a packaging configuration.</p>
      * 
      * @param request GetVodPackagingConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8561,7 +9326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询打包模板配置</p>
+     * <p>Queries a packaging configuration.</p>
      * 
      * @param request GetVodPackagingConfigurationRequest
      * @return GetVodPackagingConfigurationResponse
@@ -8573,7 +9338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取点播打包组</p>
+     * <p>Queries a packaging group.</p>
      * 
      * @param request GetVodPackagingGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8610,7 +9375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取点播打包组</p>
+     * <p>Queries a packaging group.</p>
      * 
      * @param request GetVodPackagingGroupRequest
      * @return GetVodPackagingGroupResponse
@@ -8804,8 +9569,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to query a list of AI agents based on the <code>AIAgentId</code>. The optional parameters include <code>StartTime</code>, <code>EndTime</code>, <code>PageSize</code>, and <code>PageNumber</code>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
+     * <strong>Note</strong>:</p>
+     * <ul>
+     * <li>The default value of <code>PageSize</code> is 10, and the default value of <code>PageNumber</code> is 1.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列出实例</p>
+     * <p>Queries a list of AI agents.</p>
      * 
      * @param request ListAIAgentInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8857,8 +9630,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to query a list of AI agents based on the <code>AIAgentId</code>. The optional parameters include <code>StartTime</code>, <code>EndTime</code>, <code>PageSize</code>, and <code>PageNumber</code>. The returned result includes the status, runtime configurations, template configurations, custom information, and the URL of call log file for each AI agent.
+     * <strong>Note</strong>:</p>
+     * <ul>
+     * <li>The default value of <code>PageSize</code> is 10, and the default value of <code>PageNumber</code> is 1.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列出实例</p>
+     * <p>Queries a list of AI agents.</p>
      * 
      * @param request ListAIAgentInstanceRequest
      * @return ListAIAgentInstanceResponse
@@ -8870,7 +9651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取广告插入配置列表</p>
+     * <p>Obtains ad insertion configurations.</p>
      * 
      * @param request ListAdInsertionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8927,7 +9708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取广告插入配置列表</p>
+     * <p>Obtains ad insertion configurations.</p>
      * 
      * @param request ListAdInsertionsRequest
      * @return ListAdInsertionsResponse
@@ -8939,7 +9720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取警告</p>
+     * <p>Lists alerts received in MediaWeaver.</p>
      * 
      * @param request ListAlertsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9004,7 +9785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取警告</p>
+     * <p>Lists alerts received in MediaWeaver.</p>
      * 
      * @param request ListAlertsRequest
      * @return ListAlertsResponse
@@ -9260,7 +10041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取频道警告</p>
+     * <p>Lists alerts for resources in a MediaWeaver channel.</p>
      * 
      * @param request ListChannelAlertsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9321,7 +10102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取频道警告</p>
+     * <p>Lists alerts for resources in a MediaWeaver channel.</p>
      * 
      * @param request ListChannelAlertsRequest
      * @return ListChannelAlertsResponse
@@ -9333,7 +10114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取频道列表</p>
+     * <p>Lists MediaWeaver channels.</p>
      * 
      * @param request ListChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9398,7 +10179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取频道列表</p>
+     * <p>Lists MediaWeaver channels.</p>
      * 
      * @param request ListChannelsRequest
      * @return ListChannelsResponse
@@ -9898,8 +10679,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * 
      * <b>summary</b> : 
-     * <p>查询实时打包频道组</p>
+     * <p>Queries live package channel groups by page. Fuzzy search by name or description and sorting are supported.</p>
      * 
      * @param request ListLivePackageChannelGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9947,8 +10731,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * 
      * <b>summary</b> : 
-     * <p>查询实时打包频道组</p>
+     * <p>Queries live package channel groups by page. Fuzzy search by name or description and sorting are supported.</p>
      * 
      * @param request ListLivePackageChannelGroupsRequest
      * @return ListLivePackageChannelGroupsResponse
@@ -9959,8 +10746,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query live package channels by <strong>GroupName</strong> and <strong>Keyword</strong>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</p>
+     * <ul>
+     * <li><strong>GroupName</strong> is required to specify the channel group to which the channel belongs.</li>
+     * <li><strong>Keyword</strong> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</li>
+     * <li><strong>PageNo</strong> and <strong>PageSize</strong> can help control the paging of returned results to facilitate batch processing of data.</li>
+     * <li><strong>SortBy</strong> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
+     * <strong>RequestId</strong> in the response is used for subsequent troubleshooting. <strong>TotalCount</strong> indicates the total number of channels that meet the conditions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询实时打包频道</p>
+     * <p>Queries live package channels by channel group and keyword. Paging and sorting are supported.</p>
      * 
      * @param request ListLivePackageChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10012,8 +10810,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query live package channels by <strong>GroupName</strong> and <strong>Keyword</strong>. Keyword is optional. You can sort the channels by creation time in ascending or descending order and paginate the results. This facilitates the management of channels and retrieval of channel information.</p>
+     * <ul>
+     * <li><strong>GroupName</strong> is required to specify the channel group to which the channel belongs.</li>
+     * <li><strong>Keyword</strong> supports fuzzy match of channel names or descriptions, which helps quickly filter desired channels.</li>
+     * <li><strong>PageNo</strong> and <strong>PageSize</strong> can help control the paging of returned results to facilitate batch processing of data.</li>
+     * <li><strong>SortBy</strong> allows you to customize how the results are sorted. By default, the results are sorted in descending order.
+     * <strong>RequestId</strong> in the response is used for subsequent troubleshooting. <strong>TotalCount</strong> indicates the total number of channels that meet the conditions.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询实时打包频道</p>
+     * <p>Queries live package channels by channel group and keyword. Paging and sorting are supported.</p>
      * 
      * @param request ListLivePackageChannelsRequest
      * @return ListLivePackageChannelsResponse
@@ -10024,8 +10833,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实时打包源站端点</p>
+     * <p>Queries origin endpoints by channel group and channel name. Paging and sorting are supported.</p>
      * 
      * @param request ListLivePackageOriginEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10081,8 +10894,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to query origin endpoints associated with a live package channel. The results include detailed configurations about the origin endpoints, such as access URL, protocol, and security policies. Paging and sorting by creation time are supported.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询实时打包源站端点</p>
+     * <p>Queries origin endpoints by channel group and channel name. Paging and sorting are supported.</p>
      * 
      * @param request ListLivePackageOriginEndpointsRequest
      * @return ListLivePackageOriginEndpointsResponse
@@ -10677,6 +11494,251 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MediaLive channels.</p>
+     * 
+     * @param request ListMediaLiveChannelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMediaLiveChannelsResponse
+     */
+    public ListMediaLiveChannelsResponse listMediaLiveChannelsWithOptions(ListMediaLiveChannelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            body.put("Skip", request.skip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            body.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.states)) {
+            body.put("States", request.states);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMediaLiveChannels"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMediaLiveChannelsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListMediaLiveChannelsResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MediaLive channels.</p>
+     * 
+     * @param request ListMediaLiveChannelsRequest
+     * @return ListMediaLiveChannelsResponse
+     */
+    public ListMediaLiveChannelsResponse listMediaLiveChannels(ListMediaLiveChannelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMediaLiveChannelsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the security groups in MediaLive.</p>
+     * 
+     * @param request ListMediaLiveInputSecurityGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMediaLiveInputSecurityGroupsResponse
+     */
+    public ListMediaLiveInputSecurityGroupsResponse listMediaLiveInputSecurityGroupsWithOptions(ListMediaLiveInputSecurityGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            body.put("Skip", request.skip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            body.put("SortOrder", request.sortOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMediaLiveInputSecurityGroups"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMediaLiveInputSecurityGroupsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListMediaLiveInputSecurityGroupsResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the security groups in MediaLive.</p>
+     * 
+     * @param request ListMediaLiveInputSecurityGroupsRequest
+     * @return ListMediaLiveInputSecurityGroupsResponse
+     */
+    public ListMediaLiveInputSecurityGroupsResponse listMediaLiveInputSecurityGroups(ListMediaLiveInputSecurityGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMediaLiveInputSecurityGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MediaLive inputs.</p>
+     * 
+     * @param request ListMediaLiveInputsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMediaLiveInputsResponse
+     */
+    public ListMediaLiveInputsResponse listMediaLiveInputsWithOptions(ListMediaLiveInputsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skip)) {
+            body.put("Skip", request.skip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
+            body.put("SortOrder", request.sortOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.types)) {
+            body.put("Types", request.types);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMediaLiveInputs"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMediaLiveInputsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListMediaLiveInputsResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><h2><a href="#qps-"></a>QPS limit</h2>
+     * </li>
+     * </ul>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries MediaLive inputs.</p>
+     * 
+     * @param request ListMediaLiveInputsRequest
+     * @return ListMediaLiveInputsResponse
+     */
+    public ListMediaLiveInputsResponse listMediaLiveInputs(ListMediaLiveInputsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMediaLiveInputsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries a list of marks of a media asset.</p>
      * 
@@ -10938,7 +12000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节目列表</p>
+     * <p>Lists programs.</p>
      * 
      * @param request ListProgramsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10991,7 +12053,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节目列表</p>
+     * <p>Lists programs.</p>
      * 
      * @param request ListProgramsRequest
      * @return ListProgramsResponse
@@ -11076,7 +12138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节目单</p>
+     * <p>Lists the program schedule of a MediaWeaver channel.</p>
      * 
      * @param request ListSchedulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11125,7 +12187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取节目单</p>
+     * <p>Lists the program schedule of a MediaWeaver channel.</p>
      * 
      * @param request ListSchedulesRequest
      * @return ListSchedulesResponse
@@ -11404,7 +12466,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举源位置</p>
+     * <p>Lists source locations.</p>
      * 
      * @param request ListSourceLocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11461,7 +12523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举源位置</p>
+     * <p>Lists source locations.</p>
      * 
      * @param request ListSourceLocationsRequest
      * @return ListSourceLocationsResponse
@@ -11473,7 +12535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举源</p>
+     * <p>Lists sources in MediaWeaver.</p>
      * 
      * @param request ListSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11538,7 +12600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举源</p>
+     * <p>Lists sources in MediaWeaver.</p>
      * 
      * @param request ListSourcesRequest
      * @return ListSourcesResponse
@@ -11845,7 +12907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举点播打包资产</p>
+     * <p>Lists VOD packaging assets.</p>
      * 
      * @param request ListVodPackagingAssetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11898,7 +12960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举点播打包资产</p>
+     * <p>Lists VOD packaging assets.</p>
      * 
      * @param request ListVodPackagingAssetsRequest
      * @return ListVodPackagingAssetsResponse
@@ -11910,7 +12972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举点播打包配置列表</p>
+     * <p>Lists packaging configurations.</p>
      * 
      * @param request ListVodPackagingConfigurationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11963,7 +13025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举点播打包配置列表</p>
+     * <p>Lists packaging configurations.</p>
      * 
      * @param request ListVodPackagingConfigurationsRequest
      * @return ListVodPackagingConfigurationsResponse
@@ -11975,7 +13037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举点播打包组</p>
+     * <p>Lists packaging groups.</p>
      * 
      * @param request ListVodPackagingGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12024,7 +13086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举点播打包组</p>
+     * <p>Lists packaging groups.</p>
      * 
      * @param request ListVodPackagingGroupsRequest
      * @return ListVodPackagingGroupsResponse
@@ -13745,7 +14807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>向智能体通话发送datachannel消息</p>
+     * <p>Sends a DataChannel message to an AI agent.</p>
      * 
      * @param request SendAIAgentDataChannelMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13786,7 +14848,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>向智能体通话发送datachannel消息</p>
+     * <p>Sends a DataChannel message to an AI agent.</p>
      * 
      * @param request SendAIAgentDataChannelMessageRequest
      * @return SendAIAgentDataChannelMessageResponse
@@ -13797,8 +14859,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
+     * <strong>Note</strong></p>
+     * <ul>
+     * <li>Make sure that the <code>InstanceId</code> is valid and corresponds to an existing AI agent.</li>
+     * <li>The content of <code>Text</code> must comply with the specifications and does not contain sensitive or inappropriate information.</li>
+     * <li>If you do not want the new broadcast to interrupt the ongoing speech, you must set <code>EnableInterrupt</code> to <code>false</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>用来立即让某个智能体实例播报指定的文本。</p>
+     * <p>Instructs an AI agent to immediately broadcast a text message and supports interruption settings.</p>
      * 
      * @param request SendAIAgentSpeechRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13842,8 +14913,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to instruct an AI agent to broadcast the content that you specify. You can determine whether this broadcast can immediately interrupt the ongoing speech. The interruption is allowed by default.
+     * <strong>Note</strong></p>
+     * <ul>
+     * <li>Make sure that the <code>InstanceId</code> is valid and corresponds to an existing AI agent.</li>
+     * <li>The content of <code>Text</code> must comply with the specifications and does not contain sensitive or inappropriate information.</li>
+     * <li>If you do not want the new broadcast to interrupt the ongoing speech, you must set <code>EnableInterrupt</code> to <code>false</code>.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>用来立即让某个智能体实例播报指定的文本。</p>
+     * <p>Instructs an AI agent to immediately broadcast a text message and supports interruption settings.</p>
      * 
      * @param request SendAIAgentSpeechRequest
      * @return SendAIAgentSpeechResponse
@@ -14010,6 +15090,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendLiveTranscodeJobCommandResponse sendLiveTranscodeJobCommand(SendLiveTranscodeJobCommandRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendLiveTranscodeJobCommandWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>向IM客户端发送消息。</p>
+     * 
+     * @param request SendMessageChatTextRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendMessageChatTextResponse
+     */
+    public SendMessageChatTextResponse sendMessageChatTextWithOptions(SendMessageChatTextRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needArchiving)) {
+            query.put("NeedArchiving", request.needArchiving);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverId)) {
+            query.put("ReceiverId", request.receiverId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendMessageChatText"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SendMessageChatTextResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SendMessageChatTextResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>向IM客户端发送消息。</p>
+     * 
+     * @param request SendMessageChatTextRequest
+     * @return SendMessageChatTextResponse
+     */
+    public SendMessageChatTextResponse sendMessageChatText(SendMessageChatTextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendMessageChatTextWithOptions(request, runtime);
     }
 
     /**
@@ -14245,8 +15398,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to configure event notifications for an AI agent. You can configure <code>EnableNotify</code> to enable or disable event notifications, configure <code>CallbackUrl</code> to specify a callback URL, and configure <code>EventTypes</code> to specify event types. You can also configure <code>Token</code> to specify an authentication token for enhanced security. The system returns a unique <code>RequestId</code> for subsequent tracing after a successful request.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新回调配置</p>
+     * <p>Enables or disables event notifications for an AI agent and configures the callback URL and event types.</p>
      * 
      * @param request SetNotifyConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14298,8 +15455,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to configure event notifications for an AI agent. You can configure <code>EnableNotify</code> to enable or disable event notifications, configure <code>CallbackUrl</code> to specify a callback URL, and configure <code>EventTypes</code> to specify event types. You can also configure <code>Token</code> to specify an authentication token for enhanced security. The system returns a unique <code>RequestId</code> for subsequent tracing after a successful request.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新回调配置</p>
+     * <p>Enables or disables event notifications for an AI agent and configures the callback URL and event types.</p>
      * 
      * @param request SetNotifyConfigRequest
      * @return SetNotifyConfigResponse
@@ -14310,8 +15471,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <code>InstanceId</code> for subsequent tracking and operations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>启动一个智能体实例，并加入通话。</p>
+     * <p>Starts an AI agent that is configured in the Intelligent Media Services (IMS) console.</p>
      * 
      * @param tmpReq StartAIAgentInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14321,6 +15485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         StartAIAgentInstanceShrinkRequest request = new StartAIAgentInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.chatSyncConfig)) {
+            request.chatSyncConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.chatSyncConfig, "ChatSyncConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.runtimeConfig)) {
             request.runtimeConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.runtimeConfig, "RuntimeConfig", "json");
         }
@@ -14332,6 +15500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
             query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatSyncConfigShrink)) {
+            query.put("ChatSyncConfig", request.chatSyncConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.runtimeConfigShrink)) {
@@ -14373,8 +15545,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to start an AI agent instance for a conversation. ````````When the AI agent is started, the system returns a unique <code>InstanceId</code> for subsequent tracking and operations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>启动一个智能体实例，并加入通话。</p>
+     * <p>Starts an AI agent that is configured in the Intelligent Media Services (IMS) console.</p>
      * 
      * @param request StartAIAgentInstanceRequest
      * @return StartAIAgentInstanceResponse
@@ -14386,7 +15561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动频道</p>
+     * <p>Starts a channel.</p>
      * 
      * @param request StartChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14423,7 +15598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动频道</p>
+     * <p>Starts a channel.</p>
      * 
      * @param request StartChannelRequest
      * @return StartChannelResponse
@@ -14431,6 +15606,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartChannelResponse startChannel(StartChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a MediaLive channel.</p>
+     * 
+     * @param request StartMediaLiveChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartMediaLiveChannelResponse
+     */
+    public StartMediaLiveChannelResponse startMediaLiveChannelWithOptions(StartMediaLiveChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            body.put("ChannelId", request.channelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartMediaLiveChannel"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StartMediaLiveChannelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StartMediaLiveChannelResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a MediaLive channel.</p>
+     * 
+     * @param request StartMediaLiveChannelRequest
+     * @return StartMediaLiveChannelResponse
+     */
+    public StartMediaLiveChannelResponse startMediaLiveChannel(StartMediaLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startMediaLiveChannelWithOptions(request, runtime);
     }
 
     /**
@@ -14578,8 +15822,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</p>
+     * <ul>
+     * <li>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</li>
+     * </ul>
+     * <hr>
+     * 
      * <b>summary</b> : 
-     * <p>停止一个智能体实例。</p>
+     * <p>Stops an AI agent instance.</p>
      * 
      * @param request StopAIAgentInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14615,8 +15866,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  When you no longer need an AI agent to participate in a conversation or task, you can call this operation to stop the running agent and release relevant resources.****</p>
+     * <ul>
+     * <li>You must specify the unique ID of the AI agent that you want to stop by using InstanceId.****</li>
+     * </ul>
+     * <hr>
+     * 
      * <b>summary</b> : 
-     * <p>停止一个智能体实例。</p>
+     * <p>Stops an AI agent instance.</p>
      * 
      * @param request StopAIAgentInstanceRequest
      * @return StopAIAgentInstanceResponse
@@ -14628,7 +15886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止频道</p>
+     * <p>Stops a MediaWeaver channel.</p>
      * 
      * @param request StopChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14665,7 +15923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止频道</p>
+     * <p>Stops a MediaWeaver channel.</p>
      * 
      * @param request StopChannelRequest
      * @return StopChannelResponse
@@ -14673,6 +15931,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopChannelResponse stopChannel(StopChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li></li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a MediaLive channel.</p>
+     * 
+     * @param request StopMediaLiveChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopMediaLiveChannelResponse
+     */
+    public StopMediaLiveChannelResponse stopMediaLiveChannelWithOptions(StopMediaLiveChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            body.put("ChannelId", request.channelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopMediaLiveChannel"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new StopMediaLiveChannelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new StopMediaLiveChannelResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li></li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a MediaLive channel.</p>
+     * 
+     * @param request StopMediaLiveChannelRequest
+     * @return StopMediaLiveChannelResponse
+     */
+    public StopMediaLiveChannelResponse stopMediaLiveChannel(StopMediaLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopMediaLiveChannelWithOptions(request, runtime);
     }
 
     /**
@@ -16243,7 +17570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交媒体处理任务</p>
+     * <p>Submits a transcoding task.</p>
      * 
      * @param request SubmitMediaConvertJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16292,7 +17619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交媒体处理任务</p>
+     * <p>Submits a transcoding task.</p>
      * 
      * @param request SubmitMediaConvertJobRequest
      * @return SubmitMediaConvertJobResponse
@@ -17586,7 +18913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>切换真人客服接管模式</p>
+     * <p>Hands off a conversation to a human agent.</p>
      * 
      * @param request TakeoverAIAgentCallRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17631,7 +18958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>切换真人客服接管模式</p>
+     * <p>Hands off a conversation to a human agent.</p>
      * 
      * @param request TakeoverAIAgentCallRequest
      * @return TakeoverAIAgentCallResponse
@@ -17642,8 +18969,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例的配置</p>
+     * <p>Updates the configurations of an AI agent.</p>
      * 
      * @param tmpReq UpdateAIAgentInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17693,8 +19024,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Request description</h2>
+     * <p>You can call this operation to update the configurations of an AI agent, such as the tone, by specifying the agent ID and configurations.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例的配置</p>
+     * <p>Updates the configurations of an AI agent.</p>
      * 
      * @param request UpdateAIAgentInstanceRequest
      * @return UpdateAIAgentInstanceResponse
@@ -17706,7 +19041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新广告插入配置</p>
+     * <p>Modifies an ad insertion configuration.</p>
      * 
      * @param request UpdateAdInsertionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17775,7 +19110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新广告插入配置</p>
+     * <p>Modifies an ad insertion configuration.</p>
      * 
      * @param request UpdateAdInsertionRequest
      * @return UpdateAdInsertionResponse
@@ -17919,7 +19254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新频道</p>
+     * <p>Modifies a MediaWeaver channel.</p>
      * 
      * @param request UpdateChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17976,7 +19311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新频道</p>
+     * <p>Modifies a MediaWeaver channel.</p>
      * 
      * @param request UpdateChannelRequest
      * @return UpdateChannelResponse
@@ -18176,8 +19511,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实时打包频道</p>
+     * <p>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</p>
      * 
      * @param request UpdateLivePackageChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18233,8 +19572,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You need to provide the name of the channel group to which the channel belongs, channel name, protocol, segment duration, and number of segments to update. In addition, you can choose to add or modify the description of the channel. Make sure that the provided channel group name and channel name conform to the naming conventions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实时打包频道</p>
+     * <p>Updates the configuration of a live package channel, including the protocol, segment duration, and number of segments.</p>
      * 
      * @param request UpdateLivePackageChannelRequest
      * @return UpdateLivePackageChannelResponse
@@ -18245,8 +19588,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can choose to update the primary endpoint, secondary endpoint, or both. The response includes the updated ingest endpoint URL, username, and password for the ingest device to reconfigure.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实时打包频道</p>
+     * <p>Updates the credentials of ingest endpoints associated with a live package channel.</p>
      * 
      * @param request UpdateLivePackageChannelCredentialsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18290,8 +19637,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can choose to update the primary endpoint, secondary endpoint, or both. The response includes the updated ingest endpoint URL, username, and password for the ingest device to reconfigure.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新实时打包频道</p>
+     * <p>Updates the credentials of ingest endpoints associated with a live package channel.</p>
      * 
      * @param request UpdateLivePackageChannelCredentialsRequest
      * @return UpdateLivePackageChannelCredentialsResponse
@@ -18302,8 +19653,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改直播打包频道组</p>
+     * <p>Updates the information about a live package channel group including its description.</p>
      * 
      * @param request UpdateLivePackageChannelGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18343,8 +19698,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>This API operation allows you to modify the name and description of a live package channel group. The channel group name must conform to the naming conventions and can be up to 1,000 characters. The API response includes the updated channel group details and unique identifier of the request.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改直播打包频道组</p>
+     * <p>Updates the information about a live package channel group including its description.</p>
      * 
      * @param request UpdateLivePackageChannelGroupRequest
      * @return UpdateLivePackageChannelGroupResponse
@@ -18355,8 +19714,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改实时打包源站端点</p>
+     * <p>Updates the origin endpoint settings including the protocol, time shifting, and access control settings.</p>
      * 
      * @param request UpdateLivePackageOriginEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18428,8 +19791,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <p>You can call this operation to modify the origin protocol, set the number of days that time-shifted content is available, define playlist names, and configure the IP address blacklist and whitelist, allowing for fine-grained control over streaming media distribution. Some parameters are required. You must configure IpWhitelist, AuthorizationCode, or both.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改实时打包源站端点</p>
+     * <p>Updates the origin endpoint settings including the protocol, time shifting, and access control settings.</p>
      * 
      * @param request UpdateLivePackageOriginEndpointRequest
      * @return UpdateLivePackageOriginEndpointResponse
@@ -18729,13 +20096,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can modify the source only when the flow is in the offline state.</p>
      * <ul>
-     * <li>The input can only be modified when the Flow instance status is offline.</li>
-     * <li>The input type cannot be modified.</li>
+     * <li>The source type cannot be modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modify the input information of a specific MediaConnect flow</p>
+     * <p>Modifies the source of a MediaConnect flow.</p>
      * 
      * @param request UpdateMediaConnectFlowInputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18796,13 +20163,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can modify the source only when the flow is in the offline state.</p>
      * <ul>
-     * <li>The input can only be modified when the Flow instance status is offline.</li>
-     * <li>The input type cannot be modified.</li>
+     * <li>The source type cannot be modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modify the input information of a specific MediaConnect flow</p>
+     * <p>Modifies the source of a MediaConnect flow.</p>
      * 
      * @param request UpdateMediaConnectFlowInputRequest
      * @return UpdateMediaConnectFlowInputResponse
@@ -18814,13 +20181,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can modify an output only when the flow is in the offline state.</p>
      * <ul>
-     * <li>The output can only be modified when the Flow instance status is offline.</li>
      * <li>The output type cannot be modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modify information of a specific output in MediaConnect</p>
+     * <p>Modifies an output of a MediaConnect flow.</p>
      * 
      * @param request UpdateMediaConnectFlowOutputRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18885,13 +20252,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  You can modify an output only when the flow is in the offline state.</p>
      * <ul>
-     * <li>The output can only be modified when the Flow instance status is offline.</li>
      * <li>The output type cannot be modified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modify information of a specific output in MediaConnect</p>
+     * <p>Modifies an output of a MediaConnect flow.</p>
      * 
      * @param request UpdateMediaConnectFlowOutputRequest
      * @return UpdateMediaConnectFlowOutputResponse
@@ -18903,7 +20270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify MediaConnect Instance Status</p>
+     * <p>Modifies the state of a MediaConnect flow.</p>
      * 
      * @param request UpdateMediaConnectFlowStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18944,7 +20311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify MediaConnect Instance Status</p>
+     * <p>Modifies the state of a MediaConnect flow.</p>
      * 
      * @param request UpdateMediaConnectFlowStatusRequest
      * @return UpdateMediaConnectFlowStatusResponse
@@ -19051,6 +20418,289 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateMediaInfoResponse updateMediaInfo(UpdateMediaInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateMediaInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify a MediaLive channel only when it is not running.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a MediaLive channel.</p>
+     * 
+     * @param tmpReq UpdateMediaLiveChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMediaLiveChannelResponse
+     */
+    public UpdateMediaLiveChannelResponse updateMediaLiveChannelWithOptions(UpdateMediaLiveChannelRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMediaLiveChannelShrinkRequest request = new UpdateMediaLiveChannelShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.audioSettings)) {
+            request.audioSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.audioSettings, "AudioSettings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputAttachments)) {
+            request.inputAttachmentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputAttachments, "InputAttachments", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outputGroups)) {
+            request.outputGroupsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outputGroups, "OutputGroups", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoSettings)) {
+            request.videoSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoSettings, "VideoSettings", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.audioSettingsShrink)) {
+            body.put("AudioSettings", request.audioSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            body.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputAttachmentsShrink)) {
+            body.put("InputAttachments", request.inputAttachmentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputGroupsShrink)) {
+            body.put("OutputGroups", request.outputGroupsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoSettingsShrink)) {
+            body.put("VideoSettings", request.videoSettingsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMediaLiveChannel"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMediaLiveChannelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMediaLiveChannelResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify a MediaLive channel only when it is not running.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a MediaLive channel.</p>
+     * 
+     * @param request UpdateMediaLiveChannelRequest
+     * @return UpdateMediaLiveChannelResponse
+     */
+    public UpdateMediaLiveChannelResponse updateMediaLiveChannel(UpdateMediaLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMediaLiveChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify an input only when it is not associated with a MediaLive channel.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an input of MediaLive.</p>
+     * 
+     * @param tmpReq UpdateMediaLiveInputRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMediaLiveInputResponse
+     */
+    public UpdateMediaLiveInputResponse updateMediaLiveInputWithOptions(UpdateMediaLiveInputRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMediaLiveInputShrinkRequest request = new UpdateMediaLiveInputShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.inputSettings)) {
+            request.inputSettingsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.inputSettings, "InputSettings", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.securityGroupIds)) {
+            request.securityGroupIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.securityGroupIds, "SecurityGroupIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputSettingsShrink)) {
+            query.put("InputSettings", request.inputSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupIdsShrink)) {
+            query.put("SecurityGroupIds", request.securityGroupIdsShrink);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputId)) {
+            body.put("InputId", request.inputId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMediaLiveInput"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMediaLiveInputResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMediaLiveInputResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify an input only when it is not associated with a MediaLive channel.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an input of MediaLive.</p>
+     * 
+     * @param request UpdateMediaLiveInputRequest
+     * @return UpdateMediaLiveInputResponse
+     */
+    public UpdateMediaLiveInputResponse updateMediaLiveInput(UpdateMediaLiveInputRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMediaLiveInputWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify a security group only when it is not associated with a MediaLive input.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a security group created in MediaLive.</p>
+     * 
+     * @param tmpReq UpdateMediaLiveInputSecurityGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMediaLiveInputSecurityGroupResponse
+     */
+    public UpdateMediaLiveInputSecurityGroupResponse updateMediaLiveInputSecurityGroupWithOptions(UpdateMediaLiveInputSecurityGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateMediaLiveInputSecurityGroupShrinkRequest request = new UpdateMediaLiveInputSecurityGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.whitelistRules)) {
+            request.whitelistRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.whitelistRules, "WhitelistRules", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            body.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whitelistRulesShrink)) {
+            body.put("WhitelistRules", request.whitelistRulesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMediaLiveInputSecurityGroup"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMediaLiveInputSecurityGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMediaLiveInputSecurityGroupResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li><ul>
+     * <li>You can modify a security group only when it is not associated with a MediaLive input.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies a security group created in MediaLive.</p>
+     * 
+     * @param request UpdateMediaLiveInputSecurityGroupRequest
+     * @return UpdateMediaLiveInputSecurityGroupResponse
+     */
+    public UpdateMediaLiveInputSecurityGroupResponse updateMediaLiveInputSecurityGroup(UpdateMediaLiveInputSecurityGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMediaLiveInputSecurityGroupWithOptions(request, runtime);
     }
 
     /**
@@ -19226,7 +20876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节目</p>
+     * <p>Modifies a program in a MediaWeaver channel.</p>
      * 
      * @param request UpdateProgramRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19291,7 +20941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新节目</p>
+     * <p>Modifies a program in a MediaWeaver channel.</p>
      * 
      * @param request UpdateProgramRequest
      * @return UpdateProgramResponse
@@ -19362,7 +21012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新源</p>
+     * <p>Modifies a source in MediaWeaver.</p>
      * 
      * @param request UpdateSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19411,7 +21061,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新源</p>
+     * <p>Modifies a source in MediaWeaver.</p>
      * 
      * @param request UpdateSourceRequest
      * @return UpdateSourceResponse
@@ -19423,7 +21073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新源位置</p>
+     * <p>Modifies a source location.</p>
      * 
      * @param request UpdateSourceLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19472,7 +21122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新源位置</p>
+     * <p>Modifies a source location.</p>
      * 
      * @param request UpdateSourceLocationRequest
      * @return UpdateSourceLocationResponse

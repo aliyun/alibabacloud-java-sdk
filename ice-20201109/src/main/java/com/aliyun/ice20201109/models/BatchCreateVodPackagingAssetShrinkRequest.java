@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateVodPackagingAssetShrinkRequest extends TeaModel {
+    /**
+     * <p>The assets that you want to ingest.</p>
+     */
     @NameInMap("Assets")
     public String assetsShrink;
 
     /**
+     * <p>The name of the packaging group.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
      */

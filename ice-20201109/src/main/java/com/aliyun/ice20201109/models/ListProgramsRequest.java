@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProgramsRequest extends TeaModel {
     /**
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListProgramsRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +24,8 @@ public class ListProgramsRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +33,8 @@ public class ListProgramsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The name of the program.</p>
+     * 
      * <strong>example:</strong>
      * <p>program1</p>
      */
@@ -35,6 +42,12 @@ public class ListProgramsRequest extends TeaModel {
     public String programName;
 
     /**
+     * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+     * <ul>
+     * <li>asc: ascending order.</li>
+     * <li>desc: descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */

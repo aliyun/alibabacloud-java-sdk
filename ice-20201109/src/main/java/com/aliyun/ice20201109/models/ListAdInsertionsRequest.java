@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAdInsertionsRequest extends TeaModel {
     /**
-     * <p>按广告名称查询，支持模糊匹配</p>
+     * <p>The configuration name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ad</p>
@@ -14,7 +14,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>获取后续数据的最大记录数，使用此方式获取数据时分页参数将无效</p>
+     * <p>The maximum number of entries to retrieve in a subsequent request. If this parameter is used, the pagination parameters become invalid. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>获取后续数据的Token，使用此方式获取数据时分页参数将无效</p>
+     * <p>The token that is used in the next request to retrieve a new page of results. If this parameter is used, the pagination parameters become invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>*<em><strong><strong>8EqYpQbZ6Eh7+Zz8DxVYoQ</strong></strong></em></p>
@@ -32,7 +32,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>分页参数，页码</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>分页参数，页宽</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>分页参数，排序方式，asc:按创建时间升序，desc:按创建时间降序</p>
+     * <p>The sorting order of the configurations by creation time. asc: ascending. desc: descending.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>

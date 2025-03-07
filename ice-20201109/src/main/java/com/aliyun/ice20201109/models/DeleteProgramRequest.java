@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteProgramRequest extends TeaModel {
     /**
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DeleteProgramRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>The name of the program.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

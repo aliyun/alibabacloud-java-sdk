@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSourceLocationsRequest extends TeaModel {
     /**
+     * <p>Specifies whether to ignore source locations marked as deleted. A value of true means ignoring source locations marked as deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,11 @@ public class ListSourceLocationsRequest extends TeaModel {
     public Boolean filterState;
 
     /**
+     * <ul>
+     * <li>The page number.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +26,8 @@ public class ListSourceLocationsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +35,8 @@ public class ListSourceLocationsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The sorting order. By default, the query results are sorted by creation time in descending order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -33,6 +44,8 @@ public class ListSourceLocationsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The sorting order of the source locations based on the time when they were last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -40,6 +53,8 @@ public class ListSourceLocationsRequest extends TeaModel {
     public String sortByModifiedTime;
 
     /**
+     * <p>The name of the source location.</p>
+     * 
      * <strong>example:</strong>
      * <p>MySourceLocation</p>
      */

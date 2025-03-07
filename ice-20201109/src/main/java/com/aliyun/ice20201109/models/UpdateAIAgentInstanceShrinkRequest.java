@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAIAgentInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the AI agent that you want to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,9 +14,16 @@ public class UpdateAIAgentInstanceShrinkRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The template configurations of the AI agent. The configurations are merged with the template configurations that are used to start the AI agent. For more information, see the definition of TemplateConfig.</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;VoiceId&quot;:&quot;xiaoxia&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

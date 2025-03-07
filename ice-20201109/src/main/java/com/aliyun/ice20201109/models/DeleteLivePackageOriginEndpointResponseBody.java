@@ -4,6 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteLivePackageOriginEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

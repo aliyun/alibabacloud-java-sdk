@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelRequest extends TeaModel {
     /**
-     * <p>频道名称，字符必须为大小写英文字母或-、<em>。
-     * 1 ~ 200个字符。
-     * 格式：[A-Za-z0-9</em>-]+</p>
+     * <p>The channel name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,13 +15,13 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>频道描述，最大1000个字符</p>
+     * <p>The channel description. It can be up to 1,000 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>频道组名称</p>
+     * <p>The channel group name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +31,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>输入协议，目前仅支持HLS</p>
+     * <p>The ingest protocol. Only HLS is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>输入流m3u8切片个数，2～100</p>
+     * <p>The number of M3U8 segments. Valid values: 2 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +51,7 @@ public class UpdateLivePackageChannelRequest extends TeaModel {
     public Integer segmentCount;
 
     /**
-     * <p>输入流切片时长，1～30</p>
+     * <p>The segment duration. Valid values: 1 to 30.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

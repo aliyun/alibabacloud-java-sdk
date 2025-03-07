@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVodPackagingGroupRequest extends TeaModel {
     /**
+     * <p>The packaging group description.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod hls packaging</p>
      */
@@ -12,6 +14,8 @@ public class CreateVodPackagingGroupRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the packaging group. The name must be unique in an account and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
      */

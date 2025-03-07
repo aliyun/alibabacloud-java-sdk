@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateChannelResponseBody extends TeaModel {
+    /**
+     * <p>The channel information.</p>
+     */
     @NameInMap("Channel")
     public ChannelAssemblyChannel channel;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */

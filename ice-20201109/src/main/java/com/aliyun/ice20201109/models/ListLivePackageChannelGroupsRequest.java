@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivePackageChannelGroupsRequest extends TeaModel {
     /**
-     * <p>描述</p>
+     * <p>The channel group name or description. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>channel-group</p>
@@ -14,6 +14,8 @@ public class ListLivePackageChannelGroupsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,6 +23,8 @@ public class ListLivePackageChannelGroupsRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -28,6 +32,8 @@ public class ListLivePackageChannelGroupsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The sort order by creation time. Default value: desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */

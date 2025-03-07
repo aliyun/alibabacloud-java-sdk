@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSourceLocationRequest extends TeaModel {
     /**
+     * <p>The name of the source location.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

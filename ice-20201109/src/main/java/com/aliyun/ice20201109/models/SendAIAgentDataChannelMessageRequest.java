@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendAIAgentDataChannelMessageRequest extends TeaModel {
     /**
+     * <p>The ID of the AI agent in the conversation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SendAIAgentDataChannelMessageRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The DataChannel message you want to send. You must specify a JSON string. The value can be up to 8,192 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

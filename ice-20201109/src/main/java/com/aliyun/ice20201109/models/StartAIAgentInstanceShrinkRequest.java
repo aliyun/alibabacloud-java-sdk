@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the AI agent created in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS</a> console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +15,21 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     public String AIAgentId;
 
     /**
+     * <p>同步聊天记录配置。</p>
+     */
+    @NameInMap("ChatSyncConfig")
+    public String chatSyncConfigShrink;
+
+    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeConfig")
     public String runtimeConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f213fbc005e4f309379701645f4****</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -43,6 +54,14 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     }
     public String getAIAgentId() {
         return this.AIAgentId;
+    }
+
+    public StartAIAgentInstanceShrinkRequest setChatSyncConfigShrink(String chatSyncConfigShrink) {
+        this.chatSyncConfigShrink = chatSyncConfigShrink;
+        return this;
+    }
+    public String getChatSyncConfigShrink() {
+        return this.chatSyncConfigShrink;
     }
 
     public StartAIAgentInstanceShrinkRequest setRuntimeConfigShrink(String runtimeConfigShrink) {

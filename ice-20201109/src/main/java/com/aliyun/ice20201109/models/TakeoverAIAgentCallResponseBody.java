@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TakeoverAIAgentCallResponseBody extends TeaModel {
     /**
+     * <p>The ID of the ARTC channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>70f22d5784194938a7e387052f2b3208</p>
      */
@@ -12,6 +14,8 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
     public String channelId;
 
     /**
+     * <p>The ID of the human agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>uid2</p>
      */
@@ -19,6 +23,8 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
     public String humanAgentUserId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
@@ -26,6 +32,8 @@ public class TakeoverAIAgentCallResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ARTC token.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>
      */

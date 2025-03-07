@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class BatchCreateVodPackagingAssetRequest extends TeaModel {
+    /**
+     * <p>The assets that you want to ingest.</p>
+     */
     @NameInMap("Assets")
     public java.util.List<BatchCreateVodPackagingAssetRequestAssets> assets;
 
     /**
+     * <p>The name of the packaging group.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
      */
@@ -36,10 +41,15 @@ public class BatchCreateVodPackagingAssetRequest extends TeaModel {
     }
 
     public static class BatchCreateVodPackagingAssetRequestAssetsInput extends TeaModel {
+        /**
+         * <p>The URL of the media file. You can only specify a M3U8 file stored in Object Storage Service (OSS).</p>
+         */
         @NameInMap("Media")
         public String media;
 
         /**
+         * <p>The input type. Only OSS is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -71,6 +81,8 @@ public class BatchCreateVodPackagingAssetRequest extends TeaModel {
 
     public static class BatchCreateVodPackagingAssetRequestAssets extends TeaModel {
         /**
+         * <p>The name of the asset. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>30min_movie</p>
          */
@@ -78,12 +90,17 @@ public class BatchCreateVodPackagingAssetRequest extends TeaModel {
         public String assetName;
 
         /**
+         * <p>The content ID in the digital rights management (DRM) system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>movie</p>
          */
         @NameInMap("ContentId")
         public String contentId;
 
+        /**
+         * <p>The asset input configurations.</p>
+         */
         @NameInMap("Input")
         public BatchCreateVodPackagingAssetRequestAssetsInput input;
 

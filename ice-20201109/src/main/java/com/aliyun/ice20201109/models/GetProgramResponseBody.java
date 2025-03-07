@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetProgramResponseBody extends TeaModel {
+    /**
+     * <p>The information about the program.</p>
+     */
     @NameInMap("Program")
     public ChannelAssemblyProgram program;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */

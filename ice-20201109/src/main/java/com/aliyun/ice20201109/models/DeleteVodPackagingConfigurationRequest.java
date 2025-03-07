@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVodPackagingConfigurationRequest extends TeaModel {
     /**
+     * <p>The name of the packaging configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>hls_3s</p>
      */

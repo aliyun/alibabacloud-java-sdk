@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The information about the origin endpoints.</p>
+     */
     @NameInMap("LivePackageOriginEndpoint")
     public GetLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint livePackageOriginEndpoint;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>requestIdExample123</p>
      */
@@ -37,7 +42,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
 
     public static class GetLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint extends TeaModel {
         /**
-         * <p>回源授权码，与IpWhitelist必选其一</p>
+         * <p>The authorization code.</p>
          * 
          * <strong>example:</strong>
          * <p>Abc123Def456</p>
@@ -46,7 +51,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String authorizationCode;
 
         /**
-         * <p>频道名称</p>
+         * <p>The channel name.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-1</p>
@@ -55,7 +60,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>创建时间</p>
+         * <p>The time when the endpoint was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -64,13 +69,13 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>端点描述</p>
+         * <p>The endpoint description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>端点名称</p>
+         * <p>The endpoint name.</p>
          * 
          * <strong>example:</strong>
          * <p>endpoint-1</p>
@@ -79,7 +84,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String endpointName;
 
         /**
-         * <p>源站端点回源播放地址</p>
+         * <p>The endpoint URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
@@ -88,7 +93,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String endpointUrl;
 
         /**
-         * <p>频道组名称</p>
+         * <p>The channel group name.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-group-1</p>
@@ -97,7 +102,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>IP黑名单，支持无类别域间路由（CIDR），逗号分隔</p>
+         * <p>The IP address blacklist.</p>
          * 
          * <strong>example:</strong>
          * <p>10.21.222.1/32</p>
@@ -106,7 +111,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
-         * <p>IP白名单，支持无类别域间路由（CIDR），逗号分隔，与AuthorizationCode必选其一</p>
+         * <p>The IP address whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -115,7 +120,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
-         * <p>最后修改时间</p>
+         * <p>The time when the endpoint was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -124,7 +129,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>播放列表名</p>
+         * <p>The playlist name.</p>
          * 
          * <strong>example:</strong>
          * <p>manifest</p>
@@ -133,7 +138,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String manifestName;
 
         /**
-         * <p>端点分发协议，暂只支持HLS</p>
+         * <p>The distribution protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>HLS</p>
@@ -142,7 +147,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>时移天数，最大30天，0表示不支持时移</p>
+         * <p>The number of days that time-shifted content is available.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

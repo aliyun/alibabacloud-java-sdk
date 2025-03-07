@@ -100,11 +100,17 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("InterruptWords")
+        public java.util.List<String> interruptWords;
+
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentTemplateConfigAvatarChat3DLlmHistory> llmHistory;
 
         @NameInMap("LlmHistoryLimit")
         public Integer llmHistoryLimit;
+
+        @NameInMap("LlmSystemPrompt")
+        public String llmSystemPrompt;
 
         @NameInMap("MaxIdleTime")
         public Integer maxIdleTime;
@@ -117,6 +123,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("UserOnlineTimeout")
         public Integer userOnlineTimeout;
+
+        @NameInMap("VadLevel")
+        public Integer vadLevel;
 
         @NameInMap("VoiceId")
         public String voiceId;
@@ -213,6 +222,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigAvatarChat3D setInterruptWords(java.util.List<String> interruptWords) {
+            this.interruptWords = interruptWords;
+            return this;
+        }
+        public java.util.List<String> getInterruptWords() {
+            return this.interruptWords;
+        }
+
         public AIAgentTemplateConfigAvatarChat3D setLlmHistory(java.util.List<AIAgentTemplateConfigAvatarChat3DLlmHistory> llmHistory) {
             this.llmHistory = llmHistory;
             return this;
@@ -227,6 +244,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getLlmHistoryLimit() {
             return this.llmHistoryLimit;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setLlmSystemPrompt(String llmSystemPrompt) {
+            this.llmSystemPrompt = llmSystemPrompt;
+            return this;
+        }
+        public String getLlmSystemPrompt() {
+            return this.llmSystemPrompt;
         }
 
         public AIAgentTemplateConfigAvatarChat3D setMaxIdleTime(Integer maxIdleTime) {
@@ -259,6 +284,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getUserOnlineTimeout() {
             return this.userOnlineTimeout;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setVadLevel(Integer vadLevel) {
+            this.vadLevel = vadLevel;
+            return this;
+        }
+        public Integer getVadLevel() {
+            return this.vadLevel;
         }
 
         public AIAgentTemplateConfigAvatarChat3D setVoiceId(String voiceId) {
@@ -366,11 +399,17 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("InterruptWords")
+        public java.util.List<String> interruptWords;
+
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentTemplateConfigVisionChatLlmHistory> llmHistory;
 
         @NameInMap("LlmHistoryLimit")
         public Integer llmHistoryLimit;
+
+        @NameInMap("LlmSystemPrompt")
+        public String llmSystemPrompt;
 
         @NameInMap("MaxIdleTime")
         public Integer maxIdleTime;
@@ -383,6 +422,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("UserOnlineTimeout")
         public Integer userOnlineTimeout;
+
+        @NameInMap("VadLevel")
+        public Integer vadLevel;
 
         @NameInMap("VoiceId")
         public String voiceId;
@@ -471,6 +513,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigVisionChat setInterruptWords(java.util.List<String> interruptWords) {
+            this.interruptWords = interruptWords;
+            return this;
+        }
+        public java.util.List<String> getInterruptWords() {
+            return this.interruptWords;
+        }
+
         public AIAgentTemplateConfigVisionChat setLlmHistory(java.util.List<AIAgentTemplateConfigVisionChatLlmHistory> llmHistory) {
             this.llmHistory = llmHistory;
             return this;
@@ -485,6 +535,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getLlmHistoryLimit() {
             return this.llmHistoryLimit;
+        }
+
+        public AIAgentTemplateConfigVisionChat setLlmSystemPrompt(String llmSystemPrompt) {
+            this.llmSystemPrompt = llmSystemPrompt;
+            return this;
+        }
+        public String getLlmSystemPrompt() {
+            return this.llmSystemPrompt;
         }
 
         public AIAgentTemplateConfigVisionChat setMaxIdleTime(Integer maxIdleTime) {
@@ -517,6 +575,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getUserOnlineTimeout() {
             return this.userOnlineTimeout;
+        }
+
+        public AIAgentTemplateConfigVisionChat setVadLevel(Integer vadLevel) {
+            this.vadLevel = vadLevel;
+            return this;
+        }
+        public Integer getVadLevel() {
+            return this.vadLevel;
         }
 
         public AIAgentTemplateConfigVisionChat setVoiceId(String voiceId) {
@@ -630,11 +696,17 @@ public class AIAgentTemplateConfig extends TeaModel {
         @NameInMap("Greeting")
         public String greeting;
 
+        @NameInMap("InterruptWords")
+        public java.util.List<String> interruptWords;
+
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentTemplateConfigVoiceChatLlmHistory> llmHistory;
 
         @NameInMap("LlmHistoryLimit")
         public Integer llmHistoryLimit;
+
+        @NameInMap("LlmSystemPrompt")
+        public String llmSystemPrompt;
 
         @NameInMap("MaxIdleTime")
         public Integer maxIdleTime;
@@ -647,6 +719,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("UserOnlineTimeout")
         public Integer userOnlineTimeout;
+
+        @NameInMap("VadLevel")
+        public Integer vadLevel;
 
         @NameInMap("VoiceId")
         public String voiceId;
@@ -751,6 +826,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return this.greeting;
         }
 
+        public AIAgentTemplateConfigVoiceChat setInterruptWords(java.util.List<String> interruptWords) {
+            this.interruptWords = interruptWords;
+            return this;
+        }
+        public java.util.List<String> getInterruptWords() {
+            return this.interruptWords;
+        }
+
         public AIAgentTemplateConfigVoiceChat setLlmHistory(java.util.List<AIAgentTemplateConfigVoiceChatLlmHistory> llmHistory) {
             this.llmHistory = llmHistory;
             return this;
@@ -765,6 +848,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getLlmHistoryLimit() {
             return this.llmHistoryLimit;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setLlmSystemPrompt(String llmSystemPrompt) {
+            this.llmSystemPrompt = llmSystemPrompt;
+            return this;
+        }
+        public String getLlmSystemPrompt() {
+            return this.llmSystemPrompt;
         }
 
         public AIAgentTemplateConfigVoiceChat setMaxIdleTime(Integer maxIdleTime) {
@@ -797,6 +888,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public Integer getUserOnlineTimeout() {
             return this.userOnlineTimeout;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setVadLevel(Integer vadLevel) {
+            this.vadLevel = vadLevel;
+            return this;
+        }
+        public Integer getVadLevel() {
+            return this.vadLevel;
         }
 
         public AIAgentTemplateConfigVoiceChat setVoiceId(String voiceId) {

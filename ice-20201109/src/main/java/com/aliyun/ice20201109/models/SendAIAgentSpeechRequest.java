@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SendAIAgentSpeechRequest extends TeaModel {
     /**
+     * <p>Specifies whether the broadcast can interrupt the ongoing speech. Default value: true</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

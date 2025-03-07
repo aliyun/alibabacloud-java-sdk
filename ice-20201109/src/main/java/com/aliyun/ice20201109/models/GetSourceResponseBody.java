@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetSourceResponseBody extends TeaModel {
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The source information.</p>
+     */
     @NameInMap("Source")
     public ChannelAssemblySource source;
 

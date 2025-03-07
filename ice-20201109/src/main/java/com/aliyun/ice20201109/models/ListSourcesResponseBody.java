@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSourcesResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListSourcesResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,16 +23,23 @@ public class ListSourcesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The sources.</p>
+     */
     @NameInMap("SourceList")
     public java.util.List<ChannelAssemblySource> sourceList;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

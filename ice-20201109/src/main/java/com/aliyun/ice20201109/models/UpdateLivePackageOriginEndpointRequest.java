@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     /**
-     * <p>回源授权码，与IpWhitelist必选其一</p>
+     * <p>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</p>
      * 
      * <strong>example:</strong>
      * <p>Abc123Def456</p>
@@ -14,9 +14,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String authorizationCode;
 
     /**
-     * <p>频道名称。
-     * 1 ~ 200个字符。
-     * 正则匹配输入：[A-Za-z0-9_-]+</p>
+     * <p>The channel name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,15 +24,13 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>端点描述，最大1000个字符</p>
+     * <p>The endpoint description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>端点名称，要求在单个频道中唯一。
-     * 1 ~ 200个字符。
-     * 正则匹配输入：[A-Za-z0-9_-]+</p>
+     * <p>The origin endpoint name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,9 +40,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>频道组名称。
-     * 1 ~ 200个字符。
-     * 正则匹配输入：[A-Za-z0-9_-]+</p>
+     * <p>The channel group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +50,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>IP黑名单，支持无类别域间路由（CIDR），逗号分隔</p>
+     * <p>The IP address blacklist. It supports subnet masks. Separate multiple IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>103.0.0.0/8</p>
@@ -65,7 +59,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String ipBlacklist;
 
     /**
-     * <p>IP白名单，支持无类别域间路由（CIDR），逗号分隔，与AuthorizationCode必选其一</p>
+     * <p>The IP address whitelist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,). You must configure AuthorizationCode, IpWhitelist, or both.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.0/24,10.0.0.1</p>
@@ -74,9 +68,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String ipWhitelist;
 
     /**
-     * <p>播放列表名，缺省为manifest。
-     * 1 ~ 100个字符。
-     * 正则匹配输入：[A-Za-z0-9_]+</p>
+     * <p>The playlist name. Default value: manifest.</p>
      * 
      * <strong>example:</strong>
      * <p>manifest</p>
@@ -85,7 +77,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String manifestName;
 
     /**
-     * <p>端点分发协议，暂只支持HLS</p>
+     * <p>The protocol. Only HLS is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +87,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>时移天数，最大30天，0表示不支持时移</p>
+     * <p>The number of days that time-shifted content is available. Maximum value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

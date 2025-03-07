@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSourceLocationRequest extends TeaModel {
     /**
+     * <p>The protocol and hostname of the source location.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateSourceLocationRequest extends TeaModel {
     public String baseUrl;
 
     /**
+     * <p>Specifies whether to use an independent domain name to access the segments.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +24,8 @@ public class CreateSourceLocationRequest extends TeaModel {
     public Boolean enableSegmentDelivery;
 
     /**
+     * <p>The domain name used to access the segments.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxx.com">http://xxxxx.com</a></p>
      */
@@ -28,6 +33,7 @@ public class CreateSourceLocationRequest extends TeaModel {
     public String segmentDeliveryUrl;
 
     /**
+     * <p>The name of the source location.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

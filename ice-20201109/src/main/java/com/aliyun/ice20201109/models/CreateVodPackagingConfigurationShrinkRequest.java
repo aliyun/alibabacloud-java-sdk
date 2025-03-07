@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVodPackagingConfigurationShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the packaging configuration. The name must be unique in an account and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>hls_3s</p>
      */
@@ -12,6 +14,8 @@ public class CreateVodPackagingConfigurationShrinkRequest extends TeaModel {
     public String configurationName;
 
     /**
+     * <p>The description of the packaging configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>HLS 3s vod packaging</p>
      */
@@ -19,16 +23,28 @@ public class CreateVodPackagingConfigurationShrinkRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the packaging group. The name can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The packaging configuration.</p>
+     */
     @NameInMap("PackageConfig")
     public String packageConfigShrink;
 
     /**
+     * <p>The package type.</p>
+     * <ul>
+     * <li>HLS: packages content into TS segments for delivery over the HLS protocol.</li>
+     * <li>HLS_CMAF: packages content into CMAF segments for delivery over the HLS protocol.</li>
+     * <li>DASH: packages content for delivery over the DASH protocol.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>HLS</p>
      */

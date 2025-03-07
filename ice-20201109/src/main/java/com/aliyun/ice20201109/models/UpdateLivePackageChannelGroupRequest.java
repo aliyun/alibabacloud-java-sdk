@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelGroupRequest extends TeaModel {
     /**
-     * <p>频道组描述</p>
+     * <p>The channel group description. It can be up to 1,000 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The channel group name. It can contain letters, digits, hyphens (-), and underscores (<em>). The name must be 1 to 200 characters in length. Format: [A-Za-z0-9</em>-]+</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

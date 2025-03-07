@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The channel groups returned.</p>
+     */
     @NameInMap("LivePackageChannelGroups")
     public java.util.List<ListLivePackageChannelGroupsResponseBodyLivePackageChannelGroups> livePackageChannelGroups;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,16 +20,26 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The sort order.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -32,6 +47,8 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -93,7 +110,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
 
     public static class ListLivePackageChannelGroupsResponseBodyLivePackageChannelGroups extends TeaModel {
         /**
-         * <p>创建时间</p>
+         * <p>The time when the channel group was created. It is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -102,13 +119,13 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>描述</p>
+         * <p>The channel group description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The channel group name.</p>
          * 
          * <strong>example:</strong>
          * <p>testChannelGroup</p>
@@ -117,7 +134,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>修改时间</p>
+         * <p>The time when the channel group was last modified. It is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-02T12:00:00Z</p>
@@ -126,7 +143,7 @@ public class ListLivePackageChannelGroupsResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>源站域名</p>
+         * <p>The origin domain.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>

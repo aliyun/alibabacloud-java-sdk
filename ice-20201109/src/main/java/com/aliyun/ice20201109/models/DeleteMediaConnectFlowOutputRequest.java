@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMediaConnectFlowOutputRequest extends TeaModel {
     /**
-     * <p>Flow instance ID</p>
+     * <p>The flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteMediaConnectFlowOutputRequest extends TeaModel {
     public String flowId;
 
     /**
-     * <p>Output name</p>
+     * <p>The name of the output that you want to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

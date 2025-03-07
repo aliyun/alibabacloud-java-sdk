@@ -4,11 +4,14 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaConvertJobResponseBody extends TeaModel {
+    /**
+     * <p>The transcoding task.</p>
+     */
     @NameInMap("Job")
     public SubmitMediaConvertJobResponseBodyJob job;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -38,12 +41,21 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
     }
 
     public static class SubmitMediaConvertJobResponseBodyJobConfig extends TeaModel {
+        /**
+         * <p>The inputs of the transcoding task.</p>
+         */
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
+        /**
+         * <p>The output group configurations.</p>
+         */
         @NameInMap("OutputGroups")
         public java.util.List<MediaConvertOutputGroup> outputGroups;
 
+        /**
+         * <p>The output configurations.</p>
+         */
         @NameInMap("Outputs")
         public java.util.List<MediaConvertOutput> outputs;
 
@@ -79,20 +91,33 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
     }
 
     public static class SubmitMediaConvertJobResponseBodyJob extends TeaModel {
+        /**
+         * <p>The idempotency key of the request for creating the transcoding task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FB7F25E9-AD9B-1603-8AF6-F1E42DF2E706</p>
+         */
         @NameInMap("ClientToken")
         public String clientToken;
 
         /**
+         * <p>The error code returned when the transcoding task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The configurations of the transcoding task.</p>
+         */
         @NameInMap("Config")
         public SubmitMediaConvertJobResponseBodyJobConfig config;
 
         /**
+         * <p>The ID of the transcoding task.</p>
+         * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
          */
@@ -100,19 +125,29 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The error message returned when the transcoding task failed.</p>
+         * 
          * <strong>example:</strong>
          * <p>ok</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The details of the transcoded outputs.</p>
+         */
         @NameInMap("OutputDetails")
         public java.util.List<MediaConvertOutputDetail> outputDetails;
 
+        /**
+         * <p>The details of the output groups.</p>
+         */
         @NameInMap("OutputGroupDetails")
         public java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails;
 
         /**
+         * <p>The ID of the queue.</p>
+         * 
          * <strong>example:</strong>
          * <p>3780049</p>
          */
@@ -120,6 +155,8 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
+         * <p>The ID of the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>A2129C9F-CE95-58B5-B8C1-07758FF6C86F</p>
          */
@@ -127,12 +164,27 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         public String requestId;
 
         /**
+         * <p>The status of the transcoding task. Valid values:</p>
+         * <ul>
+         * <li>Inited: The task is initialized.</li>
+         * <li>Running</li>
+         * <li>Success</li>
+         * <li>Failed</li>
+         * <li>Cancelled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Created</p>
          */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;videoId&quot;:&quot;abcd&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

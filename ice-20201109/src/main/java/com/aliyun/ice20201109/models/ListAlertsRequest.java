@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsRequest extends TeaModel {
+    /**
+     * <p>The alert type.</p>
+     */
     @NameInMap("Category")
     public String category;
 
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-22T16:10:45Z</p>
      */
@@ -15,6 +20,8 @@ public class ListAlertsRequest extends TeaModel {
     public String gmtEnd;
 
     /**
+     * <p>The beginning of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-21T16:10:45Z</p>
      */
@@ -22,6 +29,8 @@ public class ListAlertsRequest extends TeaModel {
     public String gmtStart;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListAlertsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,6 +47,7 @@ public class ListAlertsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ARN of the source or program.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +57,8 @@ public class ListAlertsRequest extends TeaModel {
     public String resourceArn;
 
     /**
+     * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values: asc and desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -52,6 +66,8 @@ public class ListAlertsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */

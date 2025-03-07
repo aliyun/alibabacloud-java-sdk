@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateProgramRequest extends TeaModel {
     /**
+     * <p>The information about ad breaks.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;MessageType&quot;:&quot;SPLICE_INSERT&quot;,&quot;OffsetMillis&quot;:1000,&quot;SourceLocationName&quot;:&quot;MySourceLocation&quot;,&quot;SourceName&quot;:&quot;MyAdSource&quot;,&quot;SpliceInsertSettings&quot;:{&quot;AvailNumber&quot;:0,&quot;AvailExpected&quot;:0,&quot;SpliceEventID&quot;:1,&quot;UniqueProgramID&quot;:0}}]</p>
      */
@@ -12,6 +14,7 @@ public class CreateProgramRequest extends TeaModel {
     public String adBreaks;
 
     /**
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class CreateProgramRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>Extracts a clip from the source.</p>
+     * 
      * <strong>example:</strong>
      * <p>{StartOffsetMillis: 213123, EndOffsetMillis: 213134}</p>
      */
@@ -28,6 +33,7 @@ public class CreateProgramRequest extends TeaModel {
     public String clipRange;
 
     /**
+     * <p>The name of the program.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,7 @@ public class CreateProgramRequest extends TeaModel {
     public String programName;
 
     /**
+     * <p>The source location.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,7 @@ public class CreateProgramRequest extends TeaModel {
     public String sourceLocationName;
 
     /**
+     * <p>The name of the source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +63,7 @@ public class CreateProgramRequest extends TeaModel {
     public String sourceName;
 
     /**
+     * <p>The source type of the program.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +73,7 @@ public class CreateProgramRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The program transition method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

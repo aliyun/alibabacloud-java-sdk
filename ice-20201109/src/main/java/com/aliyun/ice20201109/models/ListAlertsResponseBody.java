@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
+    /**
+     * <p>The alerts.</p>
+     */
     @NameInMap("Alerts")
     public java.util.List<ListAlertsResponseBodyAlerts> alerts;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListAlertsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListAlertsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
@@ -29,6 +38,8 @@ public class ListAlertsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -81,10 +92,15 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyAlerts extends TeaModel {
+        /**
+         * <p>The alert type.</p>
+         */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>ScheduleError</p>
          */
@@ -92,6 +108,8 @@ public class ListAlertsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The time when the alert was received in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-16T10:03Z</p>
          */
@@ -99,6 +117,8 @@ public class ListAlertsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the alert was modified in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-16T10:03Z</p>
          */
@@ -106,6 +126,8 @@ public class ListAlertsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */
@@ -113,6 +135,8 @@ public class ListAlertsResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The ARN of the related resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>
          */
@@ -120,6 +144,8 @@ public class ListAlertsResponseBody extends TeaModel {
         public String relatedResourceArns;
 
         /**
+         * <p>The ARN of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>
          */

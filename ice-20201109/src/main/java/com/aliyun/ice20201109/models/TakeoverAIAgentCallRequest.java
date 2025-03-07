@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TakeoverAIAgentCallRequest extends TeaModel {
     /**
+     * <p>The ID of the human agent that will take over the AI agent (UserId in ARTC). If you do not specify this parameter, it is automatically generated and returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>uid2</p>
      */
@@ -12,6 +14,8 @@ public class TakeoverAIAgentCallRequest extends TeaModel {
     public String humanAgentUserId;
 
     /**
+     * <p>The ID of the AI agent that will be taken over.</p>
+     * 
      * <strong>example:</strong>
      * <p>39f8e0bc005e4f309379701645f4****</p>
      */
@@ -19,6 +23,8 @@ public class TakeoverAIAgentCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to return the ARTC token. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to ignore sources marked as deleted.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class ListSourcesRequest extends TeaModel {
     public Boolean filterState;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListSourcesRequest extends TeaModel {
     public String pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListSourcesRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values: asc and desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -33,6 +41,8 @@ public class ListSourcesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -40,6 +50,8 @@ public class ListSourcesRequest extends TeaModel {
     public String sortByModifiedTime;
 
     /**
+     * <p>The name of the source location.</p>
+     * 
      * <strong>example:</strong>
      * <p>MySourceLocation</p>
      */
@@ -47,6 +59,8 @@ public class ListSourcesRequest extends TeaModel {
     public String sourceLocationName;
 
     /**
+     * <p>The name of the source.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyVodSource</p>
      */
@@ -54,6 +68,8 @@ public class ListSourcesRequest extends TeaModel {
     public String sourceName;
 
     /**
+     * <p>The source type. Valid values: vodSource and liveSource.</p>
+     * 
      * <strong>example:</strong>
      * <p>vodSource</p>
      */

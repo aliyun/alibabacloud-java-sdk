@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListChannelsRequest extends TeaModel {
     /**
+     * <p>The name of the channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyChannel</p>
      */
@@ -12,6 +14,8 @@ public class ListChannelsRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>The tier of the channel. Valid values: basic and standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -19,6 +23,8 @@ public class ListChannelsRequest extends TeaModel {
     public String channelTier;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListChannelsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -33,6 +41,8 @@ public class ListChannelsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The playback mode. Valid values: loop and linear.</p>
+     * 
      * <strong>example:</strong>
      * <p>loop</p>
      */
@@ -40,6 +50,8 @@ public class ListChannelsRequest extends TeaModel {
     public String playbackMode;
 
     /**
+     * <p>The sorting order by creation time. Valid values: asc and desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -47,6 +59,8 @@ public class ListChannelsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -54,6 +68,8 @@ public class ListChannelsRequest extends TeaModel {
     public String sortByModifiedTime;
 
     /**
+     * <p>The channel status. A value of 0 specifies stopped. A value of 1 specifies started.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

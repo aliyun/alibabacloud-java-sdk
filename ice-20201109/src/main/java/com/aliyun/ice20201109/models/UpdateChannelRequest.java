@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateChannelRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable access control.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class UpdateChannelRequest extends TeaModel {
     public Boolean accessPolicy;
 
     /**
+     * <p>The token for accessing the channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -19,6 +23,7 @@ public class UpdateChannelRequest extends TeaModel {
     public String accessToken;
 
     /**
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class UpdateChannelRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>The source location of the filler slate.</p>
+     * 
      * <strong>example:</strong>
      * <p>MySourceLocation</p>
      */
@@ -35,6 +42,8 @@ public class UpdateChannelRequest extends TeaModel {
     public String fillerSourceLocationName;
 
     /**
+     * <p>The name of the filler slate.</p>
+     * 
      * <strong>example:</strong>
      * <p>MySource</p>
      */
@@ -42,6 +51,7 @@ public class UpdateChannelRequest extends TeaModel {
     public String fillerSourceName;
 
     /**
+     * <p>The channel output configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

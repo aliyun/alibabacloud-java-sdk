@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaConnectFlowInputRequest extends TeaModel {
     /**
-     * <p>Flow instance ID</p>
+     * <p>The flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

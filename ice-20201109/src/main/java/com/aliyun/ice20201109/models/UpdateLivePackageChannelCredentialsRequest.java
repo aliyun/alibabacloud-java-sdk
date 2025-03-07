@@ -5,24 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelCredentialsRequest extends TeaModel {
     /**
-     * <p>频道名称，字符必须为大小写英文字母或-、<em>。
-     * 1 ~ 200个字符。
-     * 格式：[A-Za-z0-9</em>-]+</p>
+     * <p>The channel name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>channel-1</p>
      */
     @NameInMap("ChannelName")
     public String channelName;
 
     /**
-     * <p>频道组名称</p>
+     * <p>The channel group name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group-1</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>刷新密钥选项, 1: 刷新endpoint1，2:刷新endpoint2，3: 刷新endpoint1&amp;2</p>
+     * <p>Specifies whether to update the credentials. 1: updates the credentials of endpoint 1. 2: updates the credentials of endpoint 2. 3: updates the credentials of endpoints 1 and 2.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("RotateCredentials")
     public Integer rotateCredentials;

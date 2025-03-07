@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateChannelRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable access control.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class CreateChannelRequest extends TeaModel {
     public Boolean accessPolicy;
 
     /**
+     * <p>The token for accessing the channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx</p>
      */
@@ -19,6 +23,7 @@ public class CreateChannelRequest extends TeaModel {
     public String accessToken;
 
     /**
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class CreateChannelRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>The tier of the channel. Valid values: basic and standard.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +43,8 @@ public class CreateChannelRequest extends TeaModel {
     public String channelTier;
 
     /**
+     * <p>The source location of the filler slate.</p>
+     * 
      * <strong>example:</strong>
      * <p>MySourceLocation</p>
      */
@@ -44,6 +52,8 @@ public class CreateChannelRequest extends TeaModel {
     public String fillerSourceLocationName;
 
     /**
+     * <p>The name of the filler slate.</p>
+     * 
      * <strong>example:</strong>
      * <p>FillerSource</p>
      */
@@ -51,6 +61,7 @@ public class CreateChannelRequest extends TeaModel {
     public String fillerSourceName;
 
     /**
+     * <p>The channel output configurations.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +79,7 @@ public class CreateChannelRequest extends TeaModel {
     public String outPutConfigList;
 
     /**
+     * <p>The playback mode. Valid values: loop and linear.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
