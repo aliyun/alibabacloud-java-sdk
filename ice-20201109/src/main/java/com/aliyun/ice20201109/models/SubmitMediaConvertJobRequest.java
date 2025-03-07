@@ -4,18 +4,37 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaConvertJobRequest extends TeaModel {
+    /**
+     * <p>The idempotency key that is used to ensure repeated requests have the same effect as a single request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86f8e525-9d73-4dac-88aa-7aa4e950c00a</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>The configurations of the transcoding task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The ID of the queue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e197ecfb103e4849922b054d3032f954</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <p>The user data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;videoId&quot;:&quot;abcd&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

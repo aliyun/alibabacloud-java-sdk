@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVodPackagingAssetRequest extends TeaModel {
     /**
+     * <p>The name of the asset. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>hls_3s</p>
      */
@@ -12,6 +14,8 @@ public class CreateVodPackagingAssetRequest extends TeaModel {
     public String assetName;
 
     /**
+     * <p>The content ID in the digital rights management (DRM) system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>movie</p>
      */
@@ -19,6 +23,8 @@ public class CreateVodPackagingAssetRequest extends TeaModel {
     public String contentId;
 
     /**
+     * <p>The asset description.</p>
+     * 
      * <strong>example:</strong>
      * <p>HLS 3 second packaging</p>
      */
@@ -26,12 +32,17 @@ public class CreateVodPackagingAssetRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the packaging group.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The asset input configurations.</p>
+     */
     @NameInMap("Input")
     public CreateVodPackagingAssetRequestInput input;
 
@@ -81,10 +92,15 @@ public class CreateVodPackagingAssetRequest extends TeaModel {
     }
 
     public static class CreateVodPackagingAssetRequestInput extends TeaModel {
+        /**
+         * <p>The URL of the media file. Only M3U8 files stored in OSS are supported.</p>
+         */
         @NameInMap("Media")
         public String media;
 
         /**
+         * <p>The input type. Only Object Storage Service (OSS) is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */

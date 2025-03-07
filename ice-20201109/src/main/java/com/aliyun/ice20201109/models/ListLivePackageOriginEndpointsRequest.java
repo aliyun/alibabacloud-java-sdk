@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     /**
+     * <p>The channel name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     public String channelName;
 
     /**
+     * <p>The channel group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The endpoint name or description. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>endpoint-</p>
      */
@@ -30,6 +34,8 @@ public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +43,8 @@ public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -44,6 +52,8 @@ public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The sort order by creation time. Valid values: asc and desc (default).</p>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */

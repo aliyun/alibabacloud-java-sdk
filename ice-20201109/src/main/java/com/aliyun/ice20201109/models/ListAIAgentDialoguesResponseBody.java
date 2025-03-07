@@ -50,12 +50,18 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         @NameInMap("Producer")
         public String producer;
 
+        @NameInMap("ReasoningText")
+        public String reasoningText;
+
         /**
          * <strong>example:</strong>
          * <p>f27f9b9be28642a88e18****</p>
          */
         @NameInMap("RoundId")
         public String roundId;
+
+        @NameInMap("Source")
+        public String source;
 
         @NameInMap("Text")
         public String text;
@@ -66,6 +72,9 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
          */
         @NameInMap("Time")
         public Long time;
+
+        @NameInMap("Type")
+        public String type;
 
         public static ListAIAgentDialoguesResponseBodyDialogues build(java.util.Map<String, ?> map) throws Exception {
             ListAIAgentDialoguesResponseBodyDialogues self = new ListAIAgentDialoguesResponseBodyDialogues();
@@ -88,12 +97,28 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
             return this.producer;
         }
 
+        public ListAIAgentDialoguesResponseBodyDialogues setReasoningText(String reasoningText) {
+            this.reasoningText = reasoningText;
+            return this;
+        }
+        public String getReasoningText() {
+            return this.reasoningText;
+        }
+
         public ListAIAgentDialoguesResponseBodyDialogues setRoundId(String roundId) {
             this.roundId = roundId;
             return this;
         }
         public String getRoundId() {
             return this.roundId;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialogues setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public ListAIAgentDialoguesResponseBodyDialogues setText(String text) {
@@ -110,6 +135,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         }
         public Long getTime() {
             return this.time;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialogues setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }

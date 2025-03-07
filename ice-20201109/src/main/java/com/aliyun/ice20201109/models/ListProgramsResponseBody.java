@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProgramsResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class ListProgramsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The programs.</p>
+     */
     @NameInMap("Programs")
     public java.util.List<ChannelAssemblyProgram> programs;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
@@ -29,6 +38,8 @@ public class ListProgramsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of programs returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */

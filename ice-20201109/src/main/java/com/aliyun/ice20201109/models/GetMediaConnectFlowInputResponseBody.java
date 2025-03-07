@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaConnectFlowInputResponseBody extends TeaModel {
     /**
-     * <p>Response body</p>
+     * <p>The response body.</p>
      */
     @NameInMap("Content")
     public GetMediaConnectFlowInputResponseBodyContent content;
 
     /**
-     * <p>Interface call description</p>
+     * <p>The call description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>请求ID</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D4C231DF-103A-55FF-8D09-E699552457DE</p>
@@ -29,7 +29,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned error code, 0 indicates success</p>
+     * <p>The returned error code. A value of 0 indicates the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,7 +76,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
 
     public static class GetMediaConnectFlowInputResponseBodyContent extends TeaModel {
         /**
-         * <p>IP whitelist, in CIDR format, multiple IP segments separated by commas</p>
+         * <p>The IP address whitelist in CIDR format. CIDR blocks are separated with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>10.211.0.0/17</p>
@@ -85,7 +85,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String cidrs;
 
         /**
-         * <p>Flow creation time</p>
+         * <p>The time when the flow was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-18T01:29:24Z</p>
@@ -94,7 +94,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Input name</p>
+         * <p>The source name.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestInput</p>
@@ -103,7 +103,15 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String inputName;
 
         /**
-         * <p>Input type</p>
+         * <p>The source type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RTMP-PUSH</li>
+         * <li>SRT-Caller</li>
+         * <li>RTMP-PULL</li>
+         * <li>SRT-Listener</li>
+         * <li>Flow</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RTMP-PUSH</p>
@@ -112,7 +120,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String inputProtocol;
 
         /**
-         * <p>Input URL</p>
+         * <p>The source URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be</p>
@@ -121,7 +129,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String inputUrl;
 
         /**
-         * <p>Input bitrate, in bps</p>
+         * <p>The maximum bitrate. Unit: bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>2000000</p>
@@ -130,7 +138,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public Integer maxBitrate;
 
         /**
-         * <p>Peer Flow instance ID, required when the output type is Flow</p>
+         * <p>The ID of the source flow. This parameter is returned when the source type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>05c3adf4-aa0e-421d-a991-48ceae3e642e</p>
@@ -139,7 +147,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String pairFlowId;
 
         /**
-         * <p>Peer Flow output name, required only when the input type is Flow</p>
+         * <p>The output of the source flow. This parameter is returned when the source type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestOutput</p>
@@ -148,7 +156,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String pairOutputName;
 
         /**
-         * <p>SRT latency, in ms, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The latency for the SRT stream. Unit: milliseconds. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -157,7 +165,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public Integer srtLatency;
 
         /**
-         * <p>SRT encryption key, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The SRT key. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>FICUBPX4Q77DYHRF</p>
@@ -166,7 +174,14 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String srtPassphrase;
 
         /**
-         * <p>SRT encryption length, required only when the input type is SRT-Listener/SRT-Caller</p>
+         * <p>The encryption key length. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0</li>
+         * <li>16</li>
+         * <li>24</li>
+         * <li>32</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>32</p>

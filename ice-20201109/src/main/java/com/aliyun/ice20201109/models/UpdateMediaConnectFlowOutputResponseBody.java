@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaConnectFlowOutputResponseBody extends TeaModel {
     /**
-     * <p>Response body</p>
+     * <p>The response body.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -14,7 +14,7 @@ public class UpdateMediaConnectFlowOutputResponseBody extends TeaModel {
     public String content;
 
     /**
-     * <p>Description of the API call</p>
+     * <p>The call description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class UpdateMediaConnectFlowOutputResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Request ID</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D737D0BC-4CB5-55AA-8119-B540C95DFE6A</p>
@@ -32,7 +32,7 @@ public class UpdateMediaConnectFlowOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returned error code, 0 indicates success</p>
+     * <p>The returned error code. A value of 0 indicates the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateVodPackagingGroupResponseBody extends TeaModel {
+    /**
+     * <p>The packaging group information.</p>
+     */
     @NameInMap("PackagingGroup")
     public VodPackagingGroup packagingGroup;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */

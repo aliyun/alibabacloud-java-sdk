@@ -4,9 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the ingest endpoint.</p>
+     */
     @NameInMap("IngestEndpoints")
     public java.util.List<UpdateLivePackageChannelCredentialsResponseBodyIngestEndpoints> ingestEndpoints;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>771A1414-27BF-53E6-AB73-EFCB*****ACF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,6 +42,8 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
 
     public static class UpdateLivePackageChannelCredentialsResponseBodyIngestEndpoints extends TeaModel {
         /**
+         * <p>The ingest endpoint ID. <code>input1</code> indicates primary and <code>input2</code> indicates secondary.</p>
+         * 
          * <strong>example:</strong>
          * <p>input1</p>
          */
@@ -40,6 +51,8 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <p>examplePassword123</p>
          */
@@ -47,6 +60,8 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The ingest endpoint URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/live/input1</p>
          */
@@ -54,6 +69,8 @@ public class UpdateLivePackageChannelCredentialsResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1</p>
          */

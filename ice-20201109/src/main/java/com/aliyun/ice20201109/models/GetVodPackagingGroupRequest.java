@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetVodPackagingGroupRequest extends TeaModel {
     /**
+     * <p>The name of the packaging group. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIAgentInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the AI agent that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

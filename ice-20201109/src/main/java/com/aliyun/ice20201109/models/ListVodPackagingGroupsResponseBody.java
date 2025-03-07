@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListVodPackagingGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The packaging groups.</p>
+     */
     @NameInMap("PackagingGroups")
     public java.util.List<VodPackagingGroup> packagingGroups;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
@@ -29,6 +38,12 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The sorting order of the packaging groups based on the time when they were created. Valid values:</p>
+     * <ul>
+     * <li>desc: descending order.</li>
+     * <li>asc: ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -36,6 +51,8 @@ public class ListVodPackagingGroupsResponseBody extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

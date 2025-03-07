@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteLivePackageChannelGroupResponseBody extends TeaModel {
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D87B753-0250-5D9D-B248-D40C3271F864</p>
      */
     @NameInMap("RequestId")
     public String requestId;

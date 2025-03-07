@@ -4,9 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelResponseBody extends TeaModel {
+    /**
+     * <p>The information about the live package channel.</p>
+     */
     @NameInMap("LivePackageChannel")
     public UpdateLivePackageChannelResponseBodyLivePackageChannel livePackageChannel;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>771A1414-27BF-53E6-AB73-EFCB*****ACF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -33,6 +42,8 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
 
     public static class UpdateLivePackageChannelResponseBodyLivePackageChannelIngestEndpoints extends TeaModel {
         /**
+         * <p>The ingest endpoint ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ingest1</p>
          */
@@ -40,6 +51,8 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <p>2F9e******b569c8</p>
          */
@@ -47,6 +60,8 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The ingest endpoint URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">http://xxx-1.packagepush-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
          */
@@ -54,6 +69,8 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String url;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>us12******das</p>
          */
@@ -101,9 +118,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
 
     public static class UpdateLivePackageChannelResponseBodyLivePackageChannel extends TeaModel {
         /**
-         * <p>频道名称，字符必须为大小写英文字母或-、<em>。
-         * 1 ~ 200个字符。
-         * 格式：[A-Za-z0-9</em>-]+</p>
+         * <p>The channel name.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-1</p>
@@ -112,7 +127,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>代表创建时间的资源属性字段</p>
+         * <p>The time when the channel was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-16T02:24:42Z</p>
@@ -121,13 +136,13 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>频道描述，最大1000个字符</p>
+         * <p>The channel description. It can be up to 1,000 characters in length.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>频道组名称</p>
+         * <p>The channel group name.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-group-1</p>
@@ -135,11 +150,14 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The ingest endpoints.</p>
+         */
         @NameInMap("IngestEndpoints")
         public java.util.List<UpdateLivePackageChannelResponseBodyLivePackageChannelIngestEndpoints> ingestEndpoints;
 
         /**
-         * <p>最后修改时间</p>
+         * <p>The time when the channel was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-16T02:24:42Z</p>
@@ -148,7 +166,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>输入协议，目前仅支持HLS</p>
+         * <p>The ingest protocol. Only HLS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>HLS</p>
@@ -157,7 +175,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>输入流m3u8切片个数，2～100</p>
+         * <p>The number of segments.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -166,7 +184,7 @@ public class UpdateLivePackageChannelResponseBody extends TeaModel {
         public Integer segmentCount;
 
         /**
-         * <p>输入流切片时长，1～30</p>
+         * <p>The segment duration.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

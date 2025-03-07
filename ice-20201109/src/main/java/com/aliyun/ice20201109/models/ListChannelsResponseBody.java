@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListChannelsResponseBody extends TeaModel {
+    /**
+     * <p>The channels.</p>
+     */
     @NameInMap("ChannelList")
     public java.util.List<ChannelAssemblyChannel> channelList;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListChannelsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListChannelsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
@@ -29,6 +38,8 @@ public class ListChannelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of channels returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>180</p>
      */

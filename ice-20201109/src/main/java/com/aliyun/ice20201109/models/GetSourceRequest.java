@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSourceRequest extends TeaModel {
     /**
+     * <p>The source location.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetSourceRequest extends TeaModel {
     public String sourceLocationName;
 
     /**
+     * <p>The name of the source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class GetSourceRequest extends TeaModel {
     public String sourceName;
 
     /**
+     * <p>The source type. Valid values: vodSource and liveSource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

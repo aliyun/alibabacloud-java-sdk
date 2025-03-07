@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSourceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to use delete markers.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,7 @@ public class DeleteSourceRequest extends TeaModel {
     public Boolean softDelete;
 
     /**
+     * <p>The name of the source location.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DeleteSourceRequest extends TeaModel {
     public String sourceLocationName;
 
     /**
+     * <p>The name of the source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class DeleteSourceRequest extends TeaModel {
     public String sourceName;
 
     /**
+     * <p>The source type. Valid values: vodSource and liveSource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

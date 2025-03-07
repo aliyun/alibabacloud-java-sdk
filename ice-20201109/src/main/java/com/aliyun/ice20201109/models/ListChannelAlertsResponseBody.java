@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListChannelAlertsResponseBody extends TeaModel {
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,16 +14,23 @@ public class ListChannelAlertsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The alerts.</p>
+     */
     @NameInMap("ProgramAlerts")
     public java.util.List<ListChannelAlertsResponseBodyProgramAlerts> programAlerts;
 
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
@@ -29,6 +38,8 @@ public class ListChannelAlertsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of alerts returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */
@@ -82,16 +93,23 @@ public class ListChannelAlertsResponseBody extends TeaModel {
 
     public static class ListChannelAlertsResponseBodyProgramAlerts extends TeaModel {
         /**
+         * <p>The ARN of the program.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:ims:mediaweaver:<regionId>:<userId>:program/myChannel/MyProgram</p>
          */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The alert type.</p>
+         */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>The number of alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -99,6 +117,8 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The time when the alert was last modified in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-16T10:03Z</p>
          */
@@ -106,6 +126,8 @@ public class ListChannelAlertsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The name of the program.</p>
+         * 
          * <strong>example:</strong>
          * <p>program_name</p>
          */

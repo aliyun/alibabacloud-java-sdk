@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteLivePackageChannelGroupRequest extends TeaModel {
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The channel group name.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
      */
     @NameInMap("GroupName")
     public String groupName;

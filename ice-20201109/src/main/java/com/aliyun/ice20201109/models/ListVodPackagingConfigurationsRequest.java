@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVodPackagingConfigurationsRequest extends TeaModel {
     /**
+     * <p>The name of the packaging group.</p>
+     * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
      */
@@ -12,6 +14,8 @@ public class ListVodPackagingConfigurationsRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The search keyword. The names of the returned packaging configurations contain the keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>hls</p>
      */
@@ -19,6 +23,8 @@ public class ListVodPackagingConfigurationsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListVodPackagingConfigurationsRequest extends TeaModel {
     public Long pageNo;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,12 @@ public class ListVodPackagingConfigurationsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The sorting order of the packaging configurations based on the time when they were created. Valid values:</p>
+     * <ul>
+     * <li>desc (default): descending order.</li>
+     * <li>asc: ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */

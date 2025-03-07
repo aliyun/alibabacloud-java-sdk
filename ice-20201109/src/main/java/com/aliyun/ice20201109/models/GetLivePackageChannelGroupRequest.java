@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLivePackageChannelGroupRequest extends TeaModel {
     /**
-     * <p>频道组名称</p>
+     * <p>The channel group name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

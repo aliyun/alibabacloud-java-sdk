@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     /**
-     * <p>IP whitelist</p>
+     * <p>The IP address whitelist.</p>
      * 
      * <strong>example:</strong>
      * <p>19.168.1.1/32,18.168.1.1/16</p>
@@ -14,7 +14,7 @@ public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     public String cidrs;
 
     /**
-     * <p>Flow instance ID</p>
+     * <p>The flow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     public String flowId;
 
     /**
-     * <p>Output name</p>
+     * <p>The output name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     public String outputName;
 
     /**
-     * <p>Output address, modifiable when the output type is RTMP-PUSH/SRT-Caller mode</p>
+     * <p>The output URL. You can modify this parameter only when the output type is RTMP-PUSH or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://push.test.alivecdn.com/live/alitest</p>
@@ -43,7 +43,7 @@ public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     public String outputToUrl;
 
     /**
-     * <p>Player limit</p>
+     * <p>The maximum number of viewers.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -52,7 +52,7 @@ public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     public String playerLimit;
 
     /**
-     * <p>SRT latency, modifiable when the input type is SRT-Listener/SRT-Caller</p>
+     * <p>The latency for the SRT stream. You can modify this parameter only when the source type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -61,7 +61,7 @@ public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     public String srtLatency;
 
     /**
-     * <p>SRT encryption key, modifiable when the input type is SRT-Listener/SRT-Caller</p>
+     * <p>The SRT key. You can modify this parameter only when the source type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>FICUBPX4Q77DYHRF</p>
@@ -70,7 +70,7 @@ public class UpdateMediaConnectFlowOutputRequest extends TeaModel {
     public String srtPassphrase;
 
     /**
-     * <p>SRT encryption length, modifiable when the input type is SRT-Listener/SRT-Caller</p>
+     * <p>The encryption key length. You can modify this parameter only when the source type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>

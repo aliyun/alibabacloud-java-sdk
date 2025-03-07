@@ -4,10 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLivePackageChannelGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the channel group.</p>
+     */
     @NameInMap("LivePackageChannelGroup")
     public UpdateLivePackageChannelGroupResponseBodyLivePackageChannelGroup livePackageChannelGroup;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>request-1234567890</p>
      */
@@ -37,7 +42,7 @@ public class UpdateLivePackageChannelGroupResponseBody extends TeaModel {
 
     public static class UpdateLivePackageChannelGroupResponseBodyLivePackageChannelGroup extends TeaModel {
         /**
-         * <p>创建时间</p>
+         * <p>The time when the channel group was created. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -46,7 +51,7 @@ public class UpdateLivePackageChannelGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>描述</p>
+         * <p>The channel group description.</p>
          * 
          * <strong>example:</strong>
          * <p>Updated description of the channel group.</p>
@@ -55,7 +60,7 @@ public class UpdateLivePackageChannelGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>频道组名称</p>
+         * <p>The channel group name.</p>
          * 
          * <strong>example:</strong>
          * <p>example-group-name</p>
@@ -64,7 +69,7 @@ public class UpdateLivePackageChannelGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>修改时间</p>
+         * <p>The time when the channel group was last modified. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -73,7 +78,7 @@ public class UpdateLivePackageChannelGroupResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>源站域名</p>
+         * <p>The origin domain.</p>
          * 
          * <strong>example:</strong>
          * <p>example-origin.com</p>

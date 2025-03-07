@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVodPackagingAssetRequest extends TeaModel {
     /**
+     * <p>The name of the VOD packaging asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>30min_movie</p>
      */

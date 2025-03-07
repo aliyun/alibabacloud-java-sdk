@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSourceLocationResponseBody extends TeaModel {
     /**
+     * <p><strong>Request ID</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
      */
@@ -12,6 +14,12 @@ public class DeleteSourceLocationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid value:</p>
+     * <ul>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
