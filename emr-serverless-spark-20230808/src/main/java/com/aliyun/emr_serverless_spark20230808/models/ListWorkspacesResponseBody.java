@@ -91,6 +91,102 @@ public class ListWorkspacesResponseBody extends TeaModel {
         return this.workspaces;
     }
 
+    public static class ListWorkspacesResponseBodyWorkspacesPrePaidQuota extends TeaModel {
+        @NameInMap("allocatedResource")
+        public String allocatedResource;
+
+        @NameInMap("autoRenewal")
+        public Boolean autoRenewal;
+
+        @NameInMap("createTime")
+        public Long createTime;
+
+        @NameInMap("expireTime")
+        public Long expireTime;
+
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        @NameInMap("maxResource")
+        public String maxResource;
+
+        @NameInMap("paymentStatus")
+        public String paymentStatus;
+
+        @NameInMap("usedResource")
+        public String usedResource;
+
+        public static ListWorkspacesResponseBodyWorkspacesPrePaidQuota build(java.util.Map<String, ?> map) throws Exception {
+            ListWorkspacesResponseBodyWorkspacesPrePaidQuota self = new ListWorkspacesResponseBodyWorkspacesPrePaidQuota();
+            return TeaModel.build(map, self);
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setAllocatedResource(String allocatedResource) {
+            this.allocatedResource = allocatedResource;
+            return this;
+        }
+        public String getAllocatedResource() {
+            return this.allocatedResource;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setAutoRenewal(Boolean autoRenewal) {
+            this.autoRenewal = autoRenewal;
+            return this;
+        }
+        public Boolean getAutoRenewal() {
+            return this.autoRenewal;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setExpireTime(Long expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setMaxResource(String maxResource) {
+            this.maxResource = maxResource;
+            return this;
+        }
+        public String getMaxResource() {
+            return this.maxResource;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setPaymentStatus(String paymentStatus) {
+            this.paymentStatus = paymentStatus;
+            return this;
+        }
+        public String getPaymentStatus() {
+            return this.paymentStatus;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setUsedResource(String usedResource) {
+            this.usedResource = usedResource;
+            return this;
+        }
+        public String getUsedResource() {
+            return this.usedResource;
+        }
+
+    }
+
     public static class ListWorkspacesResponseBodyWorkspacesStateChangeReason extends TeaModel {
         /**
          * <p>The error code.</p>
@@ -235,6 +331,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         @NameInMap("paymentType")
         public String paymentType;
+
+        @NameInMap("prePaidQuota")
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota prePaidQuota;
 
         /**
          * <p>The region ID.</p>
@@ -404,6 +503,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        public ListWorkspacesResponseBodyWorkspaces setPrePaidQuota(ListWorkspacesResponseBodyWorkspacesPrePaidQuota prePaidQuota) {
+            this.prePaidQuota = prePaidQuota;
+            return this;
+        }
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota getPrePaidQuota() {
+            return this.prePaidQuota;
         }
 
         public ListWorkspacesResponseBodyWorkspaces setRegionId(String regionId) {

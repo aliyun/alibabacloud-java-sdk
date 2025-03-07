@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     /**
+     * <p>The code that is returned by the backend server.</p>
+     * 
      * <strong>example:</strong>
      * <p>1400009</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public UpdateProcessDefinitionWithScheduleResponseBodyData data;
 
     /**
+     * <p>Indicates whether the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -22,6 +29,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String failed;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -29,6 +38,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The description of the returned code.</p>
+     * 
      * <strong>example:</strong>
      * <p>No permission for resource action</p>
      */
@@ -36,7 +47,7 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -45,6 +56,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -114,6 +127,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
 
     public static class UpdateProcessDefinitionWithScheduleResponseBodyData extends TeaModel {
         /**
+         * <p>The email address to receive alerts.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:foo_bar@spark.alert.invalid.com">foo_bar@spark.alert.invalid.com</a></p>
          */
@@ -121,6 +136,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String alertEmailAddress;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>alicloud_ack_one_cluster</p>
          */
@@ -128,6 +145,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String bizId;
 
         /**
+         * <p>The workflow ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>12***********</p>
          */
@@ -135,6 +154,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The time when the workflow was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-09-05T02:03:19Z</p>
          */
@@ -142,6 +163,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The CRON expression that is used for scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>0 0 0 * * ?</p>
          */
@@ -149,6 +172,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String crontab;
 
         /**
+         * <p>The node description.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -156,6 +181,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The end of the end time range.</p>
+         * 
          * <strong>example:</strong>
          * <p>1710432000000</p>
          */
@@ -163,6 +190,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The execution policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>SERIAL</p>
          */
@@ -170,6 +199,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String executionType;
 
         /**
+         * <p>The serial number of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>123223</p>
          */
@@ -177,6 +208,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>ods_batch_workflow</p>
          */
@@ -184,6 +217,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The name of the project to which the workflow belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>w-********</p>
          */
@@ -191,6 +226,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The status of the workflow.</p>
+         * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
          */
@@ -198,6 +235,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String releaseState;
 
         /**
+         * <p>The start time of the scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -205,6 +244,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The ID of the time zone.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
@@ -212,6 +253,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String timezoneId;
 
         /**
+         * <p>The time when the workflow was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-05T06:24:27Z</p>
          */
@@ -219,6 +262,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The ID of the user that is used to initiate a scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>113*********</p>
          */
@@ -226,6 +271,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The name of the user that is used to initiate a scheduling.</p>
+         * 
          * <strong>example:</strong>
          * <p>w-********</p>
          */
@@ -233,6 +280,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -240,6 +289,8 @@ public class UpdateProcessDefinitionWithScheduleResponseBody extends TeaModel {
         public Integer version;
 
         /**
+         * <p>The hash code of the version.</p>
+         * 
          * <strong>example:</strong>
          * <p>dwerf*********</p>
          */

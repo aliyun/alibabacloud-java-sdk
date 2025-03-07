@@ -314,6 +314,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("draftId")
         public String draftId;
 
+        @NameInMap("extra")
+        public String extra;
+
         /**
          * <p>Indicates whether the Fusion engine is used for acceleration.</p>
          * 
@@ -509,6 +512,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public String getDraftId() {
             return this.draftId;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
         }
 
         public ListSessionClustersResponseBodySessionClusters setFusion(Boolean fusion) {

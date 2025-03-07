@@ -20,7 +20,7 @@ public class ListJobRunsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <p>A pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -184,13 +184,17 @@ public class ListJobRunsResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The number of CUs consumed during a specified cycle of a task. The value is an estimated value. Refer to your Alibaba Cloud bill for the actual number of consumed CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>2.059</p>
          */
         @NameInMap("cuHours")
-        public Long cuHours;
+        public Double cuHours;
 
         /**
+         * <p>The version of Spark on which the jobs run.</p>
+         * 
          * <strong>example:</strong>
          * <p>esr-3.0.0 (Spark 3.4.3, Scala 2.12)</p>
          */
@@ -216,6 +220,8 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Integer executionTimeoutSeconds;
 
         /**
+         * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -244,6 +250,8 @@ public class ListJobRunsResponseBody extends TeaModel {
         public RunLog log;
 
         /**
+         * <p>The total amount of memory allocated to the job multiplied by the running duration (seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>33030784</p>
          */
@@ -299,6 +307,8 @@ public class ListJobRunsResponseBody extends TeaModel {
         public java.util.List<Tag> tags;
 
         /**
+         * <p>The total number of CPU cores allocated to the job multiplied by the running duration (seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>8236</p>
          */
@@ -352,11 +362,11 @@ public class ListJobRunsResponseBody extends TeaModel {
             return this.creator;
         }
 
-        public ListJobRunsResponseBodyJobRuns setCuHours(Long cuHours) {
+        public ListJobRunsResponseBodyJobRuns setCuHours(Double cuHours) {
             this.cuHours = cuHours;
             return this;
         }
-        public Long getCuHours() {
+        public Double getCuHours() {
             return this.cuHours;
         }
 
