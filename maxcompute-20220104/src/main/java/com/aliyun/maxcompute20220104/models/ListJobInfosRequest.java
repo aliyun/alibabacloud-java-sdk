@@ -13,51 +13,98 @@ public class ListJobInfosRequest extends TeaModel {
     @NameInMap("ascOrder")
     public Boolean ascOrder;
 
+    /**
+     * <p>The ancestor node IDs.</p>
+     */
     @NameInMap("extNodeIdList")
     public java.util.List<String> extNodeIdList;
 
     /**
+     * <p>The start timestamp.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1672112000</p>
      */
     @NameInMap("from")
     public Long from;
 
+    /**
+     * <p>The job instance IDs.</p>
+     */
     @NameInMap("instanceIdList")
     public java.util.List<String> instanceIdList;
 
+    /**
+     * <p>The job owners.</p>
+     */
     @NameInMap("jobOwnerList")
     public java.util.List<String> jobOwnerList;
 
+    /**
+     * <p>The job priorities.</p>
+     */
     @NameInMap("priorityList")
     public java.util.List<Long> priorityList;
 
+    /**
+     * <p>The project names.</p>
+     */
     @NameInMap("projectList")
     public java.util.List<String> projectList;
 
+    /**
+     * <p>The quota nickname.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quota_nickname</p>
+     */
     @NameInMap("quotaNickname")
     public String quotaNickname;
 
+    /**
+     * <p>The intelligent diagnostics tags.</p>
+     */
     @NameInMap("sceneTagList")
     public java.util.List<String> sceneTagList;
 
+    /**
+     * <p>The job signatures.</p>
+     */
     @NameInMap("signatureList")
     public java.util.List<String> signatureList;
 
+    /**
+     * <p>The sorting columns.</p>
+     */
     @NameInMap("sortByList")
     public java.util.List<String> sortByList;
 
+    /**
+     * <p>The orders for the sorting columns.</p>
+     */
     @NameInMap("sortOrderList")
     public java.util.List<String> sortOrderList;
 
+    /**
+     * <p>The job states.</p>
+     */
     @NameInMap("statusList")
     public java.util.List<String> statusList;
 
     /**
+     * <p>The end timestamp.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1672112130</p>
      */
     @NameInMap("to")
     public Long to;
 
+    /**
+     * <p>The job types.</p>
+     */
     @NameInMap("typeList")
     public java.util.List<String> typeList;
 

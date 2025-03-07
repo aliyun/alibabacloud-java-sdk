@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobSnapshotInfosResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public ListJobSnapshotInfosResponseBodyData data;
@@ -99,6 +99,12 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
     }
 
     public static class ListJobSnapshotInfosResponseBodyDataJobInfoList extends TeaModel {
+        /**
+         * <p>The CPU request amount of the job at the snapshot time point. Unit: Core.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("cpuRequest")
         public Long cpuRequest;
 
@@ -111,6 +117,12 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         @NameInMap("cpuUsage")
         public Long cpuUsage;
 
+        /**
+         * <p>The CPU satisfaction ratio of the job at the snapshot time point (cpuUsage/cpuRequest).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("cpuUsageToRequestRatio")
         public Double cpuUsageToRequestRatio;
 
@@ -186,6 +198,12 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         @NameInMap("maxMemoryPct")
         public Double maxMemoryPct;
 
+        /**
+         * <p>The Memory request amount of the job at the snapshot time point. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>409600</p>
+         */
         @NameInMap("memoryRequest")
         public Long memoryRequest;
 
@@ -198,6 +216,12 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
         @NameInMap("memoryUsage")
         public Long memoryUsage;
 
+        /**
+         * <p>The Memory satisfaction ratio of the job at the snapshot time point (memoryUsage/memoryRequest).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("memoryUsageToRequestRatio")
         public Double memoryUsageToRequestRatio;
 
@@ -600,7 +624,7 @@ public class ListJobSnapshotInfosResponseBody extends TeaModel {
 
     public static class ListJobSnapshotInfosResponseBodyData extends TeaModel {
         /**
-         * <p>The list of jobs snapshot information</p>
+         * <p>The job snapshots.</p>
          */
         @NameInMap("jobInfoList")
         public java.util.List<ListJobSnapshotInfosResponseBodyDataJobInfoList> jobInfoList;
