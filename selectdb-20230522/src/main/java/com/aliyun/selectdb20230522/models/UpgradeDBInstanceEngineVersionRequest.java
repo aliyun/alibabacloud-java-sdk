@@ -24,6 +24,9 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    @NameInMap("ParallelOperation")
+    public Boolean parallelOperation;
+
     /**
      * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
@@ -65,6 +68,14 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public UpgradeDBInstanceEngineVersionRequest setParallelOperation(Boolean parallelOperation) {
+        this.parallelOperation = parallelOperation;
+        return this;
+    }
+    public Boolean getParallelOperation() {
+        return this.parallelOperation;
     }
 
     public UpgradeDBInstanceEngineVersionRequest setRegionId(String regionId) {

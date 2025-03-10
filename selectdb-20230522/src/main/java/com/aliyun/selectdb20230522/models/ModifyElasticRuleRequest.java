@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyElasticRuleRequest extends TeaModel {
     /**
+     * <p>The rule for computing resources of the required cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>selectdb.2xlarge</p>
      */
@@ -12,6 +14,7 @@ public class ModifyElasticRuleRequest extends TeaModel {
     public String clusterClass;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ModifyElasticRuleRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class ModifyElasticRuleRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
+     * <p>The time when you want to execute the scheduled scaling rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>00:00</p>
      */
@@ -37,6 +43,12 @@ public class ModifyElasticRuleRequest extends TeaModel {
     public String elasticRuleStartTime;
 
     /**
+     * <p>The execution cycle.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>Day</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Day</p>
      */
@@ -44,6 +56,8 @@ public class ModifyElasticRuleRequest extends TeaModel {
     public String executionPeriod;
 
     /**
+     * <p>The cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>selectdb</p>
      */
@@ -51,6 +65,7 @@ public class ModifyElasticRuleRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +78,7 @@ public class ModifyElasticRuleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

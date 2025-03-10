@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class EnDisableScalingRulesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public EnDisableScalingRulesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4773E4EC-025D-509F-AEA9-D53123FDFB0F</p>
      */
@@ -37,6 +42,8 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
 
     public static class EnDisableScalingRulesResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-pe33jc1nd01-be</p>
          */
@@ -44,6 +51,8 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
          */
@@ -51,6 +60,13 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
+         * <p>Indicates whether the scheduled scaling policy is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
