@@ -92,9 +92,23 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag extends TeaModel {
+        /**
+         * <p>The tag key of the workgroup.</p>
+         * <p>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the workgroup. Valid values of N: 1 to 20.</p>
+         * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -256,6 +270,9 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag information of the workgroup.</p>
+         */
         @NameInMap("Tags")
         public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTags tags;
 

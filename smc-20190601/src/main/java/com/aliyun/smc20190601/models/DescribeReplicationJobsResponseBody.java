@@ -246,6 +246,12 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksDataDataPartsPart extends TeaModel {
         /**
+         * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
+         * <ul>
+         * <li>true: Block replication is enabled for the data disk partition.</li>
+         * <li>false: Block replication is disabled for the data disk partition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -253,6 +259,8 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public Boolean block;
 
         /**
+         * <p>The path of the data disk partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/data</p>
          */
@@ -260,6 +268,8 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The size of the data disk partition. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>21474836480</p>
          */
@@ -318,6 +328,8 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksDataData extends TeaModel {
         /**
+         * <p>The ID of the data disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-2zeh4twm100qskw7z41z</p>
          */
@@ -325,16 +337,30 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public String diskId;
 
         /**
+         * <p>Specifies whether to use LVM. Valid values:</p>
+         * <ul>
+         * <li>true: Use LVM.</li>
+         * <li>false: Not use LVM.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("LVM")
         public Boolean LVM;
 
+        /**
+         * <p>The information about the data disk partition.</p>
+         */
         @NameInMap("Parts")
         public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksDataDataParts parts;
 
         /**
+         * <p>The size of a data disk on the destination ECS instance. Unit: GiB. Valid values: 20 to 32768.</p>
+         * <blockquote>
+         * <p> The size of a destination data disk must be larger than the size of data in the corresponding source data disk. For example, if the size of the source disk is 500 GiB but the actual used space is 100 GiB, you must set this parameter to a value greater than 100 GiB.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>22548578304</p>
          */
@@ -401,6 +427,12 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksSystemPartsPart extends TeaModel {
         /**
+         * <p>Specifies whether block replication is enabled for the system disk partition. Valid values:</p>
+         * <ul>
+         * <li>true: Block replication is enabled for the system disk partition.</li>
+         * <li>false: Block replication is disabled for the system disk partition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -408,6 +440,8 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public Boolean block;
 
         /**
+         * <p>The path of the system disk partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>/boot</p>
          */
@@ -415,6 +449,8 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The size of the system disk partition. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>21474836480</p>
          */
@@ -473,6 +509,8 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksSystem extends TeaModel {
         /**
+         * <p>The ID of the system disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-2zeh4twm100qskw7z41z</p>
          */
@@ -480,16 +518,30 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         public String diskId;
 
         /**
+         * <p>Specifies whether to use LVM. Valid values:</p>
+         * <ul>
+         * <li>true: Use LVM.</li>
+         * <li>false: Not use LVM.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("LVM")
         public Boolean LVM;
 
+        /**
+         * <p>The information about the system disk partition.</p>
+         */
         @NameInMap("Parts")
         public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksSystemParts parts;
 
         /**
+         * <p>The size of the source system disk. Unit: GiB. Valid values: 20 to 32768.</p>
+         * <blockquote>
+         * <p> The parameter value must be greater than the actual used space of the data disk on the source server. For example, if the size of the source disk is 500 GiB but the actual used space is 100 GiB, you must set this parameter to a value greater than 100 GiB.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -536,9 +588,15 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisks extends TeaModel {
+        /**
+         * <p>The information about the data disk.</p>
+         */
         @NameInMap("Data")
         public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksData data;
 
+        /**
+         * <p>The information about the system disk.</p>
+         */
         @NameInMap("System")
         public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisksSystem system;
 
@@ -878,6 +936,9 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The information about the disk.</p>
+         */
         @NameInMap("Disks")
         public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJobDisks disks;
 

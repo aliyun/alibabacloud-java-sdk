@@ -27,7 +27,7 @@ public class CreateCrossZoneMigrationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The disk information.</p>
+     * <p>The disk list.</p>
      */
     @NameInMap("Disk")
     public java.util.List<CreateCrossZoneMigrationJobRequestDisk> disk;
@@ -189,7 +189,7 @@ public class CreateCrossZoneMigrationJobRequest extends TeaModel {
 
     public static class CreateCrossZoneMigrationJobRequestDisk extends TeaModel {
         /**
-         * <p>The disk category. A value of cloud_essd that indicates enhanced SSD (ESSD).</p>
+         * <p>The disk category. A value of cloud_essd indicates enhanced SSD (ESSD).</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>

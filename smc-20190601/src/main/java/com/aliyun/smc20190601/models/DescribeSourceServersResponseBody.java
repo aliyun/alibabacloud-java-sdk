@@ -14,7 +14,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about migration sources.</p>
+     * <p>The information about the migration source.</p>
      */
     @NameInMap("SourceServers")
     public DescribeSourceServersResponseBodySourceServers sourceServers;
@@ -129,7 +129,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The size of the data disk partition. Unit: byte.</p>
+         * <p>The size of the data disk partition. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>21474836480</p>
@@ -220,7 +220,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public DescribeSourceServersResponseBodySourceServersSourceServerDataDisksDataDiskParts parts;
 
         /**
-         * <p>The path of the data disk.</p>
+         * <p>The path of data disk N.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/data</p>
@@ -229,7 +229,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The size of the data disk. Unit: GiB.</p>
+         * <p>The size of data disk N. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -297,10 +297,10 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataPartsPart extends TeaModel {
         /**
-         * <p>数据盘分区是否开启块复制。可能值：</p>
+         * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
          * <ul>
-         * <li>true：数据盘分区开启块复制。</li>
-         * <li>false：数据盘分区不开启块复制。</li>
+         * <li>true: Block replication is enabled for the data disk partition.</li>
+         * <li>false: Block replication is disabled for the data disk partition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public Boolean canBlock;
 
         /**
-         * <p>数据盘分区路径。</p>
+         * <p>The path of the data disk partition.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/data</p>
@@ -319,7 +319,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>数据盘分区大小。单位：Byte。</p>
+         * <p>The size of the data disk partition. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>21474836480</p>
@@ -328,11 +328,11 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public Long sizeBytes;
 
         /**
-         * <p>数据盘分区类型。可能值：</p>
+         * <p>The type of the data disk partition. Valid values:</p>
          * <ul>
-         * <li>Normal：普通分区。</li>
-         * <li>System：系统分区。</li>
-         * <li>Boot：启动分区。</li>
+         * <li>Normal: normal partition.</li>
+         * <li>System: system partition.</li>
+         * <li>Boot: boot partition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -401,7 +401,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksDataData extends TeaModel {
         /**
-         * <p>数据盘首个分区的起始偏移。单位：Byte。</p>
+         * <p>The start offset of the first partition of the data disk. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -410,13 +410,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public Long offset;
 
         /**
-         * <p>数据盘分区信息。</p>
+         * <p>The information about the data disk partition.</p>
          */
         @NameInMap("Parts")
         public DescribeSourceServersResponseBodySourceServersSourceServerDisksDataDataParts parts;
 
         /**
-         * <p>迁移源的数据磁盘大小。单位：GiB。</p>
+         * <p>The data disk size of the migration source. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -476,10 +476,10 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemPartsPart extends TeaModel {
         /**
-         * <p>系统盘分区是否支持块复制。可能值：</p>
+         * <p>Indicates whether block replication is enabled for the system disk partition. Valid values:</p>
          * <ul>
-         * <li>true：系统盘分区支持块复制。</li>
-         * <li>false：系统盘分区不支持块复制。</li>
+         * <li>true: Block replication is enabled for the system disk partition.</li>
+         * <li>false: Block replication is disabled for the system disk partition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -489,7 +489,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public Boolean canBlock;
 
         /**
-         * <p>系统盘分区路径。</p>
+         * <p>The path of the system disk partition.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/data</p>
@@ -498,7 +498,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>系统盘分区大小。单位：Byte。</p>
+         * <p>The size of the system disk partition. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>21474836480</p>
@@ -507,11 +507,11 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public Long sizeBytes;
 
         /**
-         * <p>系统盘分区类型。可能值：</p>
+         * <p>The type of the system disk partition. Valid values:</p>
          * <ul>
-         * <li>Normal：普通分区。</li>
-         * <li>System：系统分区。</li>
-         * <li>Boot：启动分区。</li>
+         * <li>Normal: normal partition.</li>
+         * <li>System: system partition.</li>
+         * <li>Boot: boot partition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -580,7 +580,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisksSystem extends TeaModel {
         /**
-         * <p>系统盘首个分区的起始偏移。单位：Byte。</p>
+         * <p>The start offset of the first partition of the system disk. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -589,15 +589,15 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public Long offset;
 
         /**
-         * <p>系统盘分区信息。</p>
+         * <p>The information about the system disk partition.</p>
          */
         @NameInMap("Parts")
         public DescribeSourceServersResponseBodySourceServersSourceServerDisksSystemParts parts;
 
         /**
-         * <p>迁移源系统盘的大小，单位：GiB。取值范围为20~32768。</p>
+         * <p>The size of the source system disk. Unit: GiB. Valid values: 20 to 32768.</p>
          * <blockquote>
-         * <p>参数取值需要大于源服务器数据盘实际占用大小。例如，源数据盘大小为500 GiB，实际占用100 GiB，则该参数取值需大于100 GiB。</p>
+         * <p> The parameter value must be greater than the actual used space of the data disk on the source server. For example, if the size of the source disk is 500 GiB but the actual used space is 100 GiB, you must set this parameter to a value greater than 100 GiB.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -639,13 +639,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerDisks extends TeaModel {
         /**
-         * <p>数据盘信息列表。</p>
+         * <p>The list of data disk information.</p>
          */
         @NameInMap("Data")
         public DescribeSourceServersResponseBodySourceServersSourceServerDisksData data;
 
         /**
-         * <p>系统盘信息。</p>
+         * <p>The information about the system disk.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>false</p>
@@ -714,7 +714,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The size of the system disk partition. Unit: byte.</p>
+         * <p>The size of the system disk partition. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>254803968</p>
@@ -790,8 +790,8 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     public static class DescribeSourceServersResponseBodySourceServersSourceServerTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the SMC resource. Valid values of N: 1 to 20</p>
-         * <p>You cannot specify empty strings as tag keys. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The key of tag N that is attached to the SMC resource. Valid values of N: 1 to 20.</p>
+         * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -800,8 +800,8 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20</p>
-         * <p>The tag key can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * <p>The value of tag N that is attached to the SMC resource. Valid values of N: 1 to 20.</p>
+         * <p>The tag key can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -880,7 +880,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The data disk on the migration source.</p>
+         * <p>The data disks on the migration source.</p>
          */
         @NameInMap("DataDisks")
         public DescribeSourceServersResponseBodySourceServersSourceServerDataDisks dataDisks;
@@ -895,7 +895,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>磁盘信息。</p>
+         * <p>The information about the disk.</p>
          * 
          * <strong>if can be null:</strong>
          * <p>false</p>
@@ -995,7 +995,8 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
         /**
          * <p>The status information of the migration source. This parameter is returned if the migration source is in the Unavailable state. The value of this parameter consists of key-value pairs in the JSON format. Sample keys:</p>
-         * <pre><code>error_code: the error code.error_msg: the error message.
+         * <pre><code>error_code: The error code.
+         * error_msg: the error message.
          * </code></pre>
          * 
          * <strong>example:</strong>
@@ -1011,7 +1012,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public DescribeSourceServersResponseBodySourceServersSourceServerSystemDiskParts systemDiskParts;
 
         /**
-         * <p>The system disk size of the migration source. Unit: GiB.</p>
+         * <p>The system disk size of the migration source. Unit: GiB</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -1020,17 +1021,17 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public Integer systemDiskSize;
 
         /**
-         * <p>The system information of the migration source. The value of this parameter consists of key-value pairs in the JSON format. The key-value pairs are extensible and have fixed keys. The JSON string does not exceed 1 KB in size. Sample keys:</p>
-         * <pre><code>agent_mode: The migration mode.
-         * agent_type: The migration type.
-         * client_type: The client type.
-         * hostname: The host name.
-         * ipv4: The IPv4 address.
-         * ipv6: The IPv6 address.
-         * .cores: The number of CPU cores.
-         * cpu_usage: The CPU utilization.
-         * memory: The memory size.
-         * memory_usage: The memory usage.
+         * <p>The system information of the migration source. The parameter must be specified as key-value pairs in the JSON format. The key-value pairs are extensible and have fixed keys. Maximum value: 1 KB. Example:</p>
+         * <pre><code>agent_mode: the running mode.
+         * agent_type: the type of the run.
+         * client_type: the type of the client.
+         * hostname : the hostname.
+         * ipv4:IPv4 address
+         * ipv6: IPv6 address
+         * cores: the number of CPU cores.
+         * cpu_usage: the CPU utilization.
+         * memory: the memory size.
+         * memory_usage: the memory usage.
          * </code></pre>
          * 
          * <strong>example:</strong>
@@ -1040,13 +1041,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         public String systemInfo;
 
         /**
-         * <p>The information about the tags.</p>
+         * <p>The tag details.</p>
          */
         @NameInMap("Tags")
         public DescribeSourceServersResponseBodySourceServersSourceServerTags tags;
 
         /**
-         * <p>工作组ID。</p>
+         * <p>The workgroup ID.</p>
          * 
          * <strong>example:</strong>
          * <p>w-bp1ja22kdqphehlj****</p>
