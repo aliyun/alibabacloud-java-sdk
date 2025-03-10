@@ -17,7 +17,7 @@ public class DescribeWorkgroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,6 +52,9 @@ public class DescribeWorkgroupsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The list of tag information of workgroups.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeWorkgroupsRequestTag> tag;
 
@@ -131,9 +134,23 @@ public class DescribeWorkgroupsRequest extends TeaModel {
     }
 
     public static class DescribeWorkgroupsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the workgroup. Valid values of N: 1 to 20.</p>
+         * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the workgroup. Valid values of N: 1 to 20.</p>
+         * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

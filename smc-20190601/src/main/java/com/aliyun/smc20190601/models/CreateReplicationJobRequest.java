@@ -56,6 +56,9 @@ public class CreateReplicationJobRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The information about the disk.</p>
+     */
     @NameInMap("Disks")
     public CreateReplicationJobRequestDisks disks;
 
@@ -775,6 +778,12 @@ public class CreateReplicationJobRequest extends TeaModel {
 
     public static class CreateReplicationJobRequestDisksDataPart extends TeaModel {
         /**
+         * <p>Whether block replication is enabled for the data disk partition. Valid values:</p>
+         * <ul>
+         * <li>true: Block replication is enabled for the data disk partition.</li>
+         * <li>false: Block replication is disabled for the data disk partition.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -782,6 +791,8 @@ public class CreateReplicationJobRequest extends TeaModel {
         public Boolean block;
 
         /**
+         * <p>The path of the data disk partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>/home/date</p>
          */
@@ -789,6 +800,8 @@ public class CreateReplicationJobRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The size of the data disk partition. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>21474836480</p>
          */
@@ -828,19 +841,33 @@ public class CreateReplicationJobRequest extends TeaModel {
 
     public static class CreateReplicationJobRequestDisksData extends TeaModel {
         /**
+         * <p>The ID of the data disk.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-2ze8hyowhdgd6ou2m5z6</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>Specifies whether the data disk uses LVM. Valid values:</p>
+         * <ul>
+         * <li>true: Use LVM.</li>
+         * <li>false: Not use LVM.</li>
+         * </ul>
+         */
         @NameInMap("LVM")
         public Boolean LVM;
 
+        /**
+         * <p>The information about the data disk partition.</p>
+         */
         @NameInMap("Part")
         public java.util.List<CreateReplicationJobRequestDisksDataPart> part;
 
         /**
+         * <p>The size of the data disk of the migration source. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -888,6 +915,8 @@ public class CreateReplicationJobRequest extends TeaModel {
 
     public static class CreateReplicationJobRequestDisksSystemPart extends TeaModel {
         /**
+         * <p>Specifies whether block replication is enabled for the system disk partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -895,6 +924,8 @@ public class CreateReplicationJobRequest extends TeaModel {
         public Boolean block;
 
         /**
+         * <p>The path of the system disk partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>/boot</p>
          */
@@ -902,6 +933,8 @@ public class CreateReplicationJobRequest extends TeaModel {
         public String path;
 
         /**
+         * <p>The size of the system disk partition. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>254803968</p>
          */
@@ -941,16 +974,40 @@ public class CreateReplicationJobRequest extends TeaModel {
 
     public static class CreateReplicationJobRequestDisksSystem extends TeaModel {
         /**
+         * <p>Specifies whether to use LVM. Valid values:</p>
+         * <ul>
+         * <li>true: Use LVM.</li>
+         * <li>false: Not use LVM.</li>
+         * </ul>
+         * <p>LVM is not supported:</p>
+         * <ul>
+         * <li>If your source server runs Windows, LVM is not supported.</li>
+         * <li>The system disk does not have a boot partition, and LVM is not supported.</li>
+         * </ul>
+         * <p>After LVM is enabled, this feature does not take effect in the following scenarios:</p>
+         * <ul>
+         * <li>LVM2 is not supported on your source server and the software package is not installed.</li>
+         * <li>Your source server runs Debian with a kernel version of 3.x or earlier and XFS file systems are mounted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("LVM")
         public Boolean LVM;
 
+        /**
+         * <p>The information about the system disk partition.</p>
+         */
         @NameInMap("Part")
         public java.util.List<CreateReplicationJobRequestDisksSystemPart> part;
 
         /**
+         * <p>The size of the source system disk. Unit: GiB. Valid values: 20 to 32768.</p>
+         * <blockquote>
+         * <p> The parameter value must be greater than the actual used space of the data disk on the source server. For example, if the size of the source disk is 500 GiB but the actual used space is 100 GiB, you must set this parameter to a value greater than 100 GiB.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -989,9 +1046,15 @@ public class CreateReplicationJobRequest extends TeaModel {
     }
 
     public static class CreateReplicationJobRequestDisks extends TeaModel {
+        /**
+         * <p>The information about the data disk partition.</p>
+         */
         @NameInMap("Data")
         public java.util.List<CreateReplicationJobRequestDisksData> data;
 
+        /**
+         * <p>The information about the system disk.</p>
+         */
         @NameInMap("System")
         public CreateReplicationJobRequestDisksSystem system;
 

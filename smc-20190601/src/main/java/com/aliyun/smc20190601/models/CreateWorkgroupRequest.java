@@ -42,6 +42,9 @@ public class CreateWorkgroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The tag information of the workgroup.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateWorkgroupRequestTag> tag;
 
@@ -99,9 +102,23 @@ public class CreateWorkgroupRequest extends TeaModel {
     }
 
     public static class CreateWorkgroupRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of a specified workgroup.</p>
+         * <p>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of a specified workgroup.</p>
+         * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

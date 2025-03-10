@@ -62,7 +62,7 @@ public class DescribeReplicationJobsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The page number. Minimum value: 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class DescribeReplicationJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
