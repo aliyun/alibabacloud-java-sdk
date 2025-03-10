@@ -47,6 +47,9 @@ public class ListRecyclebinRequest extends TeaModel {
     @NameInMap("marker")
     public String marker;
 
+    @NameInMap("thumbnail_processes")
+    public java.util.Map<String, ImageProcess> thumbnailProcesses;
+
     public static ListRecyclebinRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRecyclebinRequest self = new ListRecyclebinRequest();
         return TeaModel.build(map, self);
@@ -82,6 +85,14 @@ public class ListRecyclebinRequest extends TeaModel {
     }
     public String getMarker() {
         return this.marker;
+    }
+
+    public ListRecyclebinRequest setThumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
+        this.thumbnailProcesses = thumbnailProcesses;
+        return this;
+    }
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
+        return this.thumbnailProcesses;
     }
 
 }

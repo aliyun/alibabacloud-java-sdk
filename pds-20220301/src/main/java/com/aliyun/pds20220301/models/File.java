@@ -7,6 +7,9 @@ public class File extends TeaModel {
     @NameInMap("action_list")
     public java.util.List<String> actionList;
 
+    @NameInMap("auto_delete_left_sec")
+    public Long autoDeleteLeftSec;
+
     @NameInMap("category")
     public String category;
 
@@ -27,6 +30,9 @@ public class File extends TeaModel {
 
     @NameInMap("description")
     public String description;
+
+    @NameInMap("dir_size_info")
+    public FileDirSizeInfo dirSizeInfo;
 
     @NameInMap("domain_id")
     public String domainId;
@@ -119,6 +125,14 @@ public class File extends TeaModel {
         return this.actionList;
     }
 
+    public File setAutoDeleteLeftSec(Long autoDeleteLeftSec) {
+        this.autoDeleteLeftSec = autoDeleteLeftSec;
+        return this;
+    }
+    public Long getAutoDeleteLeftSec() {
+        return this.autoDeleteLeftSec;
+    }
+
     public File setCategory(String category) {
         this.category = category;
         return this;
@@ -173,6 +187,14 @@ public class File extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public File setDirSizeInfo(FileDirSizeInfo dirSizeInfo) {
+        this.dirSizeInfo = dirSizeInfo;
+        return this;
+    }
+    public FileDirSizeInfo getDirSizeInfo() {
+        return this.dirSizeInfo;
     }
 
     public File setDomainId(String domainId) {
@@ -381,6 +403,36 @@ public class File extends TeaModel {
     }
     public VideoMediaMetadata getVideoMediaMetadata() {
         return this.videoMediaMetadata;
+    }
+
+    public static class FileDirSizeInfo extends TeaModel {
+        @NameInMap("dir_count")
+        public Long dirCount;
+
+        @NameInMap("file_count")
+        public Long fileCount;
+
+        public static FileDirSizeInfo build(java.util.Map<String, ?> map) throws Exception {
+            FileDirSizeInfo self = new FileDirSizeInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public FileDirSizeInfo setDirCount(Long dirCount) {
+            this.dirCount = dirCount;
+            return this;
+        }
+        public Long getDirCount() {
+            return this.dirCount;
+        }
+
+        public FileDirSizeInfo setFileCount(Long fileCount) {
+            this.fileCount = fileCount;
+            return this;
+        }
+        public Long getFileCount() {
+            return this.fileCount;
+        }
+
     }
 
 }

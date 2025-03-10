@@ -129,7 +129,7 @@ public class CreateFileRequest extends TeaModel {
     public String localModifiedAt;
 
     /**
-     * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot end with a forward slash (/).</p>
+     * <p>The name of the file. The name can be up to 1,024 bytes in length based on the UTF-8 encoding rule and cannot contain forward slash (/).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

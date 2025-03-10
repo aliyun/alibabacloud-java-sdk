@@ -8,6 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "pds";
         com.aliyun.gateway.pds.Client gatewayClient = new com.aliyun.gateway.pds.Client();
         this._spi = gatewayClient;
         this._disableHttp2 = true;
@@ -4586,6 +4587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("marker", request.marker);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.thumbnailProcesses)) {
+            body.put("thumbnail_processes", request.thumbnailProcesses);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -5631,6 +5636,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.returnTotalCount)) {
             body.put("return_total_count", request.returnTotalCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thumbnailProcesses)) {
+            body.put("thumbnail_processes", request.thumbnailProcesses);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6901,5 +6910,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateUserWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频的DRM License</p>
+     * 
+     * @param request VideoDRMLicenseRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VideoDRMLicenseResponse
+     */
+    public VideoDRMLicenseResponse videoDRMLicenseWithOptions(VideoDRMLicenseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.drmType)) {
+            body.put("drmType", request.drmType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseRequest)) {
+            body.put("licenseRequest", request.licenseRequest);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VideoDRMLicense"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/file/video_drm_license"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new VideoDRMLicenseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频的DRM License</p>
+     * 
+     * @param request VideoDRMLicenseRequest
+     * @return VideoDRMLicenseResponse
+     */
+    public VideoDRMLicenseResponse videoDRMLicense(VideoDRMLicenseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.videoDRMLicenseWithOptions(request, headers, runtime);
     }
 }

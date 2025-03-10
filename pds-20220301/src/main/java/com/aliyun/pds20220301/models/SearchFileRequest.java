@@ -89,6 +89,9 @@ public class SearchFileRequest extends TeaModel {
     @NameInMap("return_total_count")
     public Boolean returnTotalCount;
 
+    @NameInMap("thumbnail_processes")
+    public java.util.Map<String, ImageProcess> thumbnailProcesses;
+
     public static SearchFileRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFileRequest self = new SearchFileRequest();
         return TeaModel.build(map, self);
@@ -157,6 +160,14 @@ public class SearchFileRequest extends TeaModel {
     }
     public Boolean getReturnTotalCount() {
         return this.returnTotalCount;
+    }
+
+    public SearchFileRequest setThumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
+        this.thumbnailProcesses = thumbnailProcesses;
+        return this;
+    }
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
+        return this.thumbnailProcesses;
     }
 
 }
