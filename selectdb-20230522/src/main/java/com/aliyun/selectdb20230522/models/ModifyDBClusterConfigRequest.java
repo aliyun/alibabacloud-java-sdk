@@ -32,6 +32,15 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>Specifies whether to perform parallel operations on the cluster node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("ParallelOperation")
+    public Boolean parallelOperation;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +90,14 @@ public class ModifyDBClusterConfigRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBClusterConfigRequest setParallelOperation(Boolean parallelOperation) {
+        this.parallelOperation = parallelOperation;
+        return this;
+    }
+    public Boolean getParallelOperation() {
+        return this.parallelOperation;
     }
 
     public ModifyDBClusterConfigRequest setParameters(String parameters) {

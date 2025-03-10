@@ -12,7 +12,7 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The information returned.</p>
      */
     @NameInMap("Data")
     public DescribeDBClusterConfigChangeLogsResponseBodyData data;
@@ -208,6 +208,8 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
 
     public static class DescribeDBClusterConfigChangeLogsResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-wny3li00g02-be</p>
          */
@@ -222,6 +224,8 @@ public class DescribeDBClusterConfigChangeLogsResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-wny3li00g02</p>
          */

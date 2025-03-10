@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyElasticRuleResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public ModifyElasticRuleResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5ED62C81-9948-5612-81E1-EA3853752306</p>
      */
@@ -37,6 +42,8 @@ public class ModifyElasticRuleResponseBody extends TeaModel {
 
     public static class ModifyElasticRuleResponseBodyData extends TeaModel {
         /**
+         * <p>The rule for computing resources of the required cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb.2xlarge</p>
          */
@@ -44,6 +51,8 @@ public class ModifyElasticRuleResponseBody extends TeaModel {
         public String clusterClass;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-zpr3if5wq03-be</p>
          */
@@ -51,6 +60,8 @@ public class ModifyElasticRuleResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
          */
@@ -58,6 +69,8 @@ public class ModifyElasticRuleResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
+         * <p>The time when the scheduled scaling rule is executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -65,6 +78,12 @@ public class ModifyElasticRuleResponseBody extends TeaModel {
         public String elasticRuleStartTime;
 
         /**
+         * <p>The execution cycle.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Day</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Day</p>
          */
@@ -72,6 +91,8 @@ public class ModifyElasticRuleResponseBody extends TeaModel {
         public String executionPeriod;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>29252</p>
          */

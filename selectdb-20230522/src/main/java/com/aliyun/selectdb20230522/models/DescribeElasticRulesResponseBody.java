@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticRulesResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeElasticRulesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8900A96-67F7-5274-A41B-7722E1ECF8C9</p>
      */
@@ -37,6 +42,8 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
 
     public static class DescribeElasticRulesResponseBodyDataRules extends TeaModel {
         /**
+         * <p>The rule for computing resources of the required cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb.2xlarge</p>
          */
@@ -44,6 +51,8 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
         public String clusterClass;
 
         /**
+         * <p>The time when you want to execute the scheduled scaling rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -51,6 +60,12 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
         public String elasticRuleStartTime;
 
         /**
+         * <p>The execution cycle.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Day</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Day</p>
          */
@@ -58,6 +73,8 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
         public String executionPeriod;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>5467</p>
          */
@@ -105,6 +122,8 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
 
     public static class DescribeElasticRulesResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-nwy3jv1oa02-be</p>
          */
@@ -112,12 +131,17 @@ public class DescribeElasticRulesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>selectdb-cn-7213cjv****</p>
          */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
+        /**
+         * <p>The details of the rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeElasticRulesResponseBodyDataRules> rules;
 

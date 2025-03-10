@@ -25,7 +25,16 @@ public class RestartDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the region in which the ApsaraDB for SelectDB instance resides.</p>
+     * <p>Specifies whether to perform parallel operations on the cluster node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("ParallelOperation")
+    public Boolean parallelOperation;
+
+    /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,6 +74,14 @@ public class RestartDBClusterRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public RestartDBClusterRequest setParallelOperation(Boolean parallelOperation) {
+        this.parallelOperation = parallelOperation;
+        return this;
+    }
+    public Boolean getParallelOperation() {
+        return this.parallelOperation;
     }
 
     public RestartDBClusterRequest setRegionId(String regionId) {

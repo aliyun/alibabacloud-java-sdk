@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnDisableScalingRulesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class EnDisableScalingRulesRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class EnDisableScalingRulesRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
+     * <p>The cloud service.</p>
+     * 
      * <strong>example:</strong>
      * <p>selectdb</p>
      */
@@ -30,6 +34,7 @@ public class EnDisableScalingRulesRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +47,12 @@ public class EnDisableScalingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Specifies whether to enable the scheduled scaling policy.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
