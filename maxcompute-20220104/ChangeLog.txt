@@ -1,3 +1,6 @@
+2025-03-10 Version: 3.2.1
+- Generated java 2022-01-04 for MaxCompute.
+
 2025-03-07 Version: 3.2.0
 - Support API GetJobInfo.
 - Update API ListJobInfos: update response param.
