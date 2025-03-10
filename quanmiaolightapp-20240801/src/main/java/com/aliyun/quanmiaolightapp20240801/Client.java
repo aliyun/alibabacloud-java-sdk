@@ -154,6 +154,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取挖掘分析任务结果</p>
+     * 
+     * @param request GetTagMiningAnalysisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTagMiningAnalysisTaskResponse
+     */
+    public GetTagMiningAnalysisTaskResponse getTagMiningAnalysisTaskWithOptions(String workspaceId, GetTagMiningAnalysisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTagMiningAnalysisTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/getTagMiningAnalysisTask"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetTagMiningAnalysisTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetTagMiningAnalysisTaskResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取挖掘分析任务结果</p>
+     * 
+     * @param request GetTagMiningAnalysisTaskRequest
+     * @return GetTagMiningAnalysisTaskResponse
+     */
+    public GetTagMiningAnalysisTaskResponse getTagMiningAnalysisTask(String workspaceId, GetTagMiningAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTagMiningAnalysisTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>视频理解-获取配置</p>
      * 
      * @param headers map
@@ -1250,6 +1302,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runVideoAnalysisWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-标签挖掘</p>
+     * 
+     * @param tmpReq SubmitTagMiningAnalysisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitTagMiningAnalysisTaskResponse
+     */
+    public SubmitTagMiningAnalysisTaskResponse submitTagMiningAnalysisTaskWithOptions(String workspaceId, SubmitTagMiningAnalysisTaskRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitTagMiningAnalysisTaskShrinkRequest request = new SubmitTagMiningAnalysisTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.contents)) {
+            request.contentsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contents, "contents", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            body.put("businessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentsShrink)) {
+            body.put("contents", request.contentsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("extraInfo", request.extraInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputFormat)) {
+            body.put("outputFormat", request.outputFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskDescription)) {
+            body.put("taskDescription", request.taskDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitTagMiningAnalysisTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/submitTagMiningAnalysisTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTagMiningAnalysisTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SubmitTagMiningAnalysisTaskResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>轻应用-标签挖掘</p>
+     * 
+     * @param request SubmitTagMiningAnalysisTaskRequest
+     * @return SubmitTagMiningAnalysisTaskResponse
+     */
+    public SubmitTagMiningAnalysisTaskResponse submitTagMiningAnalysisTask(String workspaceId, SubmitTagMiningAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitTagMiningAnalysisTaskWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
