@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ModifyDrdsInstanceDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

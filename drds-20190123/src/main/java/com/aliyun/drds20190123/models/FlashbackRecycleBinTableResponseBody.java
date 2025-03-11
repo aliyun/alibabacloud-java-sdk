@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class FlashbackRecycleBinTableResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the deleted logical table is restored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>463A5F0F-12AD-4544-A902-B2B983******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

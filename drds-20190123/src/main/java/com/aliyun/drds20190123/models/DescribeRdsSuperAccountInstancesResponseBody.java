@@ -12,6 +12,9 @@ public class DescribeRdsSuperAccountInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D64DE5944A1E541E0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

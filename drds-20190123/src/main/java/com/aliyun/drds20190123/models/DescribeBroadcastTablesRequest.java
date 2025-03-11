@@ -6,36 +6,56 @@ import com.aliyun.tea.*;
 public class DescribeBroadcastTablesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The content of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tb1</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

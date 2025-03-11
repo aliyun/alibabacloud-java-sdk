@@ -12,12 +12,18 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC3ABA3E-0F8A-4596-9104-F5155C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,12 +60,18 @@ public class DescribeInstDbSlsInfoResponseBody extends TeaModel {
     public static class DescribeInstDbSlsInfoResponseBodyAuditInfo extends TeaModel {
         /**
          * <p>The name of the LogStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("LogStore")
         public String logStore;
 
         /**
          * <p>The name of the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Project")
         public String project;

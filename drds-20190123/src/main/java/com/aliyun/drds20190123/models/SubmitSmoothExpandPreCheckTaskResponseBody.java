@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class SubmitSmoothExpandPreCheckTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the precheck task was submitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scucess</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DSSDF-SEWE-23ERW</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2321</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

@@ -6,36 +6,59 @@ import com.aliyun.tea.*;
 public class CreateShardTaskRequest extends TeaModel {
     /**
      * <p>The name of the DRDS database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region where the resource group resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the source table.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_tb1</p>
      */
     @NameInMap("SourceTableName")
     public String sourceTableName;
 
     /**
      * <p>The name of the destination table.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_tb2</p>
      */
     @NameInMap("TargetTableName")
     public String targetTableName;
 
     /**
-     * <p>The type of the task. Valid values:`  SHARD_TO_SINGLE `,`  SINGLE_TO_SHARD `,`  SHARD_TO_SHARD `.</p>
+     * <p>The type of the task. Valid values:<code> SHARD_TO_SINGLE</code>,<code> SINGLE_TO_SHARD</code>,<code> SHARD_TO_SHARD</code>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SINGLE_TO_SHARD</p>
      */
     @NameInMap("TaskType")
     public String taskType;

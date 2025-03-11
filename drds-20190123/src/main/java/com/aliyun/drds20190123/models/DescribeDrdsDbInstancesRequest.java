@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeDrdsDbInstancesRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dbname</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbga1138****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

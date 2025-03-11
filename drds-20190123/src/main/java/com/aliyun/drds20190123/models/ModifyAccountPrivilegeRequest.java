@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The username of the account that you want to modify.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>account_sec</p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -15,12 +19,19 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbgaen89****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region in which the PolarDB-X 1.0 instance is located.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -65,12 +76,18 @@ public class ModifyAccountPrivilegeRequest extends TeaModel {
     public static class ModifyAccountPrivilegeRequestDbPrivilege extends TeaModel {
         /**
          * <p>The name of the database that you want to manage by using the account to modify.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test123</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The permissions that you want to grant to the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadWrite</p>
          */
         @NameInMap("Privilege")
         public String privilege;

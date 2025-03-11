@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D64DE59-44A1-E541-E0CB-B7E5C4305162</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,114 +60,170 @@ public class DescribeSqlFlashbakTaskResponseBody extends TeaModel {
     public static class DescribeSqlFlashbakTaskResponseBodySqlFlashbackTasksSqlFlashbackTask extends TeaModel {
         /**
          * <p>Indicates the name of the database on which a flashback task is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_flashback</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Indicates the download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://...</p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
          * <p>Indicates the time when the download URL expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1569216270000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>Indicates the point in time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568611408000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>Indicates the point in time when the flashback task is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568611469000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>Indicates the ID of the primary key that corresponds to a table used in the flashback task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>238</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>Indicates the ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdshbga76p6****</p>
          */
         @NameInMap("InstId")
         public String instId;
 
         /**
          * <p>Indicates the progress of the reverse call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("RecallProgress")
         public Integer recallProgress;
 
         /**
          * <p>Indicates the type of the flashback task. Valid values:</p>
-         * <br>
-         * <p>*   **1**: image restoration</p>
-         * <p>*   **2**: reverse restoration</p>
+         * <ul>
+         * <li><strong>1</strong>: image restoration</li>
+         * <li><strong>2</strong>: reverse restoration</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RecallRestoreType")
         public Integer recallRestoreType;
 
         /**
          * <p>Indicates the status of the data recall task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RecallStatus")
         public Integer recallStatus;
 
         /**
          * <p>Indicates the type of the reverse call. Valid values:</p>
-         * <br>
-         * <p>*   **0**: exact search</p>
-         * <p>*   **1**: fuzzy search</p>
+         * <ul>
+         * <li><strong>0</strong>: exact search</li>
+         * <li><strong>1</strong>: fuzzy search</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RecallType")
         public Integer recallType;
 
         /**
          * <p>Indicates the start time of the reverse call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568509597000</p>
          */
         @NameInMap("SearchEndTime")
         public Long searchEndTime;
 
         /**
          * <p>Indicates the end time of the reverse call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568609597000</p>
          */
         @NameInMap("SearchStartTime")
         public Long searchStartTime;
 
         /**
          * <p>Indicates the number of data rows that are flashed back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SqlCounter")
         public Long sqlCounter;
 
         /**
          * <p>Indicates the primary key specified in the SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("SqlPk")
         public String sqlPk;
 
         /**
          * <p>Indicates the types of the SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Insert,Update,Delete</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>Indicates the name of the table that contains the data that are flashed back.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_params</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>Indicates the ID of the trace of the SQL query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace</p>
          */
         @NameInMap("TraceId")
         public String traceId;

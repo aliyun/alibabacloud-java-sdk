@@ -12,12 +12,18 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC3ABA3E-0F8A-4596-9104-F5155C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,48 +60,72 @@ public class DescribeDrdsSqlAuditStatusResponseBody extends TeaModel {
     public static class DescribeDrdsSqlAuditStatusResponseBodyDataData extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Indicates whether the complete report of the SQL audit is supported. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Detailed")
         public String detailed;
 
         /**
          * <p>Indicates whether the SQL audit feature is enabled for the database. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
          * <p>The UID of the external delivery.</p>
-         * <br>
-         * <p>> This parameter is returned only if external log delivery is enabled.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if external log delivery is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("ExtraAliUid")
         public Long extraAliUid;
 
         /**
          * <p>The Log Service Logstore from which logs are delivered.</p>
-         * <br>
-         * <p>> This parameter is returned only if external log delivery is enabled.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if external log delivery is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ExtraSlsLogStore")
         public String extraSlsLogStore;
 
         /**
          * <p>The Log Service project from which logs are delivered.</p>
-         * <br>
-         * <p>> This parameter is returned only if external log delivery is enabled.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if external log delivery is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ExtraSlsProject")
         public String extraSlsProject;
 
         /**
          * <p>Indicates whether external log delivery is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ExtraWriteEnabled")
         public Boolean extraWriteEnabled;

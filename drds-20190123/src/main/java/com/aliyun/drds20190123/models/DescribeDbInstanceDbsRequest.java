@@ -6,30 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeDbInstanceDbsRequest extends TeaModel {
     /**
      * <p>The name of the privileged account of the PolarDB-X 1.0 instance. You do not need to specify this parameter if you have no privileged account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The engine type of the storage-layer databases. Valid values: **POLARDB** and **RDS**.</p>
+     * <p>The engine type of the storage-layer databases. Valid values: <strong>POLARDB</strong> and <strong>RDS</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POLARDB</p>
      */
     @NameInMap("DbInstType")
     public String dbInstType;
 
     /**
      * <p>The ID of the instance in which the storage-layer databases are deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The password of the privileged account. You do not need to specify this parameter if you have no privileged account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pwd_111111</p>
      */
     @NameInMap("Password")
     public String password;

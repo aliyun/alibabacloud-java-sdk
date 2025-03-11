@@ -6,46 +6,69 @@ import com.aliyun.tea.*;
 public class StartRestoreRequest extends TeaModel {
     /**
      * <p>The name of the database to be restored. Separate multiple databases with commas (,).</p>
-     * <br>
-     * <p>>  If you do not specify any database name, all databases in the instance are restored by default.</p>
+     * <blockquote>
+     * <p> If you do not specify any database name, all databases in the instance are restored by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test1,test2</p>
      */
     @NameInMap("BackupDbNames")
     public String backupDbNames;
 
     /**
      * <p>The ID of the DRDS backup set.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system restores data by time (PreferredBackupTime).</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system restores data by time (PreferredBackupTime).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>23***</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The level of the backup. Valid values:</p>
-     * <br>
-     * <p>*   db: The database level.</p>
-     * <p>*   instance: the instance level.</p>
+     * <ul>
+     * <li>db: The database level.</li>
+     * <li>instance: the instance level.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>db</p>
      */
     @NameInMap("BackupLevel")
     public String backupLevel;
 
     /**
      * <p>The backup method. Valid values:</p>
-     * <br>
-     * <p>*   logic: the logical backup.</p>
-     * <p>*   phy: fast backup</p>
+     * <ul>
+     * <li>logic: the logical backup.</li>
+     * <li>phy: fast backup</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>phy</p>
      */
     @NameInMap("BackupMode")
     public String backupMode;
 
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
-     * <p>The restoration time of the instance, in the format of`  yyyy-MM-dd HH:mm:ss `.</p>
+     * <p>The restoration time of the instance, in the format of<code> yyyy-MM-dd HH:mm:ss</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-10 20:18:18</p>
      */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;

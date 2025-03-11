@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RollbackInstanceVersionResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the instance version was rolled back.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DSSDF-SEWE-*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

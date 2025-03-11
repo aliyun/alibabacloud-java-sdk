@@ -12,18 +12,27 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9F3D991-08DE-4B74-BE0E-06B809******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>Indicates the total number of storage-layer databases.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public String total;
@@ -68,22 +77,32 @@ public class DescribeDbInstanceDbsResponseBody extends TeaModel {
     public static class DescribeDbInstanceDbsResponseBodyDatabasesDatabase extends TeaModel {
         /**
          * <p>Indicates the name of a storage-layer database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Indicates the description of the storage-layer database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates the state of the storage-layer database. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The database is being created.</p>
-         * <p>*   **1**: The database is available.</p>
-         * <p>*   **3**: The database is being deleted.</p>
+         * <ul>
+         * <li><strong>0</strong>: The database is being created.</li>
+         * <li><strong>1</strong>: The database is available.</li>
+         * <li><strong>3</strong>: The database is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

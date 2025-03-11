@@ -12,30 +12,45 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>Indicates the number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>Indicates the number of primary ApsaraDB RDS for MySQL instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public String total;
@@ -96,106 +111,150 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
     public static class DescribeDrdsDbInstancesResponseBodyDbInstancesDbInstanceReadOnlyInstancesReadOnlyInstance extends TeaModel {
         /**
          * <p>Indicates the endpoint that is used to connect to the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1t1mk5a5b******.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectUrl")
         public String connectUrl;
 
         /**
          * <p>Indicates the state of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The ApsaraDB RDS for MySQL instance is being created.</p>
-         * <p>*   **1**: The ApsaraDB RDS for MySQL instance is running.</p>
-         * <p>*   **3**: The ApsaraDB RDS for MySQL instance is being deleted.</p>
-         * <p>*   **5**: The ApsaraDB RDS for MySQL instance is being restarted.</p>
-         * <p>*   **6**: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.</p>
-         * <p>*   **7**: The ApsaraDB RDS for MySQL instance is being backed up.</p>
-         * <p>*   **8**: The network type of the ApsaraDB RDS for MySQL instance is being changed.</p>
-         * <p>*   **9**: The ApsaraDB RDS for MySQL instance is being migrated.</p>
-         * <p>*   **11**: The data of the ApsaraDB RDS for MySQL instance is being migrated.</p>
-         * <p>*   **12**: A disaster-recovery instance is being generated.</p>
-         * <p>*   **13**: Data is being imported to the ApsaraDB RDS for MySQL instance.</p>
-         * <p>*   **14**: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.</p>
-         * <p>*   **15**: A failover is being performed.</p>
-         * <p>*   **16**: A temporary instance is being created.</p>
-         * <p>*   **17**: A network is being created for the ApsaraDB RDS for MySQL instance.</p>
-         * <p>*   **18**: The ApsaraDB RDS for MySQL instance is being cloned.</p>
-         * <p>*   **19**: The link is being changed.</p>
-         * <p>*   **20**: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.</p>
+         * <ul>
+         * <li><strong>0</strong>: The ApsaraDB RDS for MySQL instance is being created.</li>
+         * <li><strong>1</strong>: The ApsaraDB RDS for MySQL instance is running.</li>
+         * <li><strong>3</strong>: The ApsaraDB RDS for MySQL instance is being deleted.</li>
+         * <li><strong>5</strong>: The ApsaraDB RDS for MySQL instance is being restarted.</li>
+         * <li><strong>6</strong>: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.</li>
+         * <li><strong>7</strong>: The ApsaraDB RDS for MySQL instance is being backed up.</li>
+         * <li><strong>8</strong>: The network type of the ApsaraDB RDS for MySQL instance is being changed.</li>
+         * <li><strong>9</strong>: The ApsaraDB RDS for MySQL instance is being migrated.</li>
+         * <li><strong>11</strong>: The data of the ApsaraDB RDS for MySQL instance is being migrated.</li>
+         * <li><strong>12</strong>: A disaster-recovery instance is being generated.</li>
+         * <li><strong>13</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>14</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>15</strong>: A failover is being performed.</li>
+         * <li><strong>16</strong>: A temporary instance is being created.</li>
+         * <li><strong>17</strong>: A network is being created for the ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>18</strong>: The ApsaraDB RDS for MySQL instance is being cloned.</li>
+         * <li><strong>19</strong>: The link is being changed.</li>
+         * <li><strong>20</strong>: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
         /**
          * <p>Indicates the type of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. The value is set to RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("DbInstType")
         public String dbInstType;
 
         /**
          * <p>Indicates the ID of a resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dm-hbgau1zp****</p>
          */
         @NameInMap("DmInstanceId")
         public String dmInstanceId;
 
         /**
          * <p>Indicates the engine of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>Indicates the engine version of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>Indicates the timestamp when the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123421352351234</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>Indicates the name of a read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>Indicates the network type of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>Indicates the billing method of the read-only instance.</p>
-         * <br>
-         * <p>*   **drdsPre**: The instance uses the subscription billing method.</p>
-         * <p>*   **drdsPost**: The instance uses the pay-as-you-go billing method.</p>
+         * <ul>
+         * <li><strong>drdsPre</strong>: The instance uses the subscription billing method.</li>
+         * <li><strong>drdsPost</strong>: The instance uses the pay-as-you-go billing method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>Indicates the port that is used to connect to the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>Indicates the type of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("RdsInstType")
         public String rdsInstType;
 
         /**
          * <p>Indicates the read weight of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("ReadWeight")
         public Integer readWeight;
 
         /**
          * <p>Indicates the number of remaining days before the read-only instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainDays")
         public Integer remainDays;
@@ -341,97 +400,136 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
     public static class DescribeDrdsDbInstancesResponseBodyDbInstancesDbInstance extends TeaModel {
         /**
          * <p>Indicates the endpoint that is used to connect to an ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1t1mk5a5b******.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectUrl")
         public String connectUrl;
 
         /**
          * <p>Indicates the ID of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1t1mk5a5bdj****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>Indicates the state of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The ApsaraDB RDS for MySQL instance is being created.</p>
-         * <p>*   **1**: The ApsaraDB RDS for MySQL instance is running.</p>
-         * <p>*   **3**: The ApsaraDB RDS for MySQL instance is being deleted.</p>
-         * <p>*   **5**: The ApsaraDB RDS for MySQL instance is being restarted.</p>
-         * <p>*   **6**: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.</p>
-         * <p>*   **7**: The ApsaraDB RDS for MySQL instance is being backed up.</p>
-         * <p>*   **8**: The network type of the ApsaraDB RDS for MySQL instance is being changed.</p>
-         * <p>*   **9**: The ApsaraDB RDS for MySQL instance is being migrated.</p>
-         * <p>*   **11**: The data of the ApsaraDB RDS for MySQL instance is being migrated.</p>
-         * <p>*   **12**: A disaster-recovery instance is being generated.</p>
-         * <p>*   **13**: Data is being imported to the ApsaraDB RDS for MySQL instance.</p>
-         * <p>*   **14**: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.</p>
-         * <p>*   **15**: A failover is being performed.</p>
-         * <p>*   **16**: A temporary instance is being created.</p>
-         * <p>*   **17**: A network is being created for the ApsaraDB RDS for MySQL instance.</p>
-         * <p>*   **18**: The ApsaraDB RDS for MySQL instance is being cloned.</p>
-         * <p>*   **19**: The link is being changed.</p>
-         * <p>*   **20**: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.</p>
+         * <ul>
+         * <li><strong>0</strong>: The ApsaraDB RDS for MySQL instance is being created.</li>
+         * <li><strong>1</strong>: The ApsaraDB RDS for MySQL instance is running.</li>
+         * <li><strong>3</strong>: The ApsaraDB RDS for MySQL instance is being deleted.</li>
+         * <li><strong>5</strong>: The ApsaraDB RDS for MySQL instance is being restarted.</li>
+         * <li><strong>6</strong>: The ApsaraDB RDS for MySQL instance is being upgraded or downgraded.</li>
+         * <li><strong>7</strong>: The ApsaraDB RDS for MySQL instance is being backed up.</li>
+         * <li><strong>8</strong>: The network type of the ApsaraDB RDS for MySQL instance is being changed.</li>
+         * <li><strong>9</strong>: The ApsaraDB RDS for MySQL instance is being migrated.</li>
+         * <li><strong>11</strong>: The data of the ApsaraDB RDS for MySQL instance is being migrated.</li>
+         * <li><strong>12</strong>: A disaster-recovery instance is being generated.</li>
+         * <li><strong>13</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>14</strong>: Data is being imported to the ApsaraDB RDS for MySQL instance from an another ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>15</strong>: A failover is being performed.</li>
+         * <li><strong>16</strong>: A temporary instance is being created.</li>
+         * <li><strong>17</strong>: A network is being created for the ApsaraDB RDS for MySQL instance.</li>
+         * <li><strong>18</strong>: The ApsaraDB RDS for MySQL instance is being cloned.</li>
+         * <li><strong>19</strong>: The link is being changed.</li>
+         * <li><strong>20</strong>: The read-only instances of the ApsaraDB RDS for MySQL instance are being migrated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
         /**
          * <p>Indicates the type of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. The value is set to RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("DbInstType")
         public String dbInstType;
 
         /**
          * <p>Indicates the ID of a resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dm-hbgau1zp****</p>
          */
         @NameInMap("DmInstanceId")
         public String dmInstanceId;
 
         /**
          * <p>Indicates the engine of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>Indicates the engine version of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>Indicates the point in time when the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1237486127634</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>Indicates the network type of the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>Indicates the billing method of the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database. Valid values:</p>
-         * <br>
-         * <p>*   **drdsPre**: The instance uses the subscription billing method.</p>
-         * <p>*   **drdsPost**: The instance uses the pay-as-you-go billing method.</p>
+         * <ul>
+         * <li><strong>drdsPre</strong>: The instance uses the subscription billing method.</li>
+         * <li><strong>drdsPost</strong>: The instance uses the pay-as-you-go billing method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>Indicates the port that is used to connect to the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>Indicates whether the ApsaraDB RDS for MySQL instance that is used to store the data of the specified database is a primary instance or a read-only instance.</p>
-         * <br>
-         * <p>*   **Primary**: The instance is a primary instance.</p>
-         * <p>*   **Readonly**: The instance is a read-only instance.</p>
+         * <ul>
+         * <li><strong>Primary</strong>: The instance is a primary instance.</li>
+         * <li><strong>Readonly</strong>: The instance is a read-only instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("RdsInstType")
         public String rdsInstType;
@@ -444,12 +542,18 @@ public class DescribeDrdsDbInstancesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the read weight of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("ReadWeight")
         public Integer readWeight;
 
         /**
          * <p>Indicates the number of remaining days before a subscription instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainDays")
         public Integer remainDays;

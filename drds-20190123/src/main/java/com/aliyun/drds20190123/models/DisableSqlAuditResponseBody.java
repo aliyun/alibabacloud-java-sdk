@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DisableSqlAuditResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E273749A-9A33-44CF-ABE7-0CB19C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The return result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

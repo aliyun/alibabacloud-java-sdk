@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeDrdsTasksRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdsxxxxxxxxxxxx</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The type of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TaskType")
     public String taskType;

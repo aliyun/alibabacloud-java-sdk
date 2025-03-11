@@ -6,38 +6,56 @@ import com.aliyun.tea.*;
 public class CreateDrdsDBRequest extends TeaModel {
     /**
      * <p>The name of the account that has permissions to access all databases on the ApsaraDB RDS for MySQL instance.</p>
-     * <br>
      * <p>This parameter is required only when the Type parameter is set to VERTICAL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds_sample_account</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The type of the storage instances that are used by the PolarDB-X 1.0 database. Set the value to RDS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
      */
     @NameInMap("DbInstType")
     public String dbInstType;
 
     /**
      * <p>Specifies whether the required ApsaraDB RDS for MySQL instance is being created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DbInstanceIsCreating")
     public Boolean dbInstanceIsCreating;
 
     /**
      * <p>The name of the PolarDB-X 1.0 database you want to create.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance on which you want to create the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbgal154****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The encoding method that is used by the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>utf8</p>
      */
     @NameInMap("Encode")
     public String encode;
@@ -47,10 +65,17 @@ public class CreateDrdsDBRequest extends TeaModel {
 
     /**
      * <p>The password that is used to log on to the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds_sample_password</p>
      */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;drds_sample_rds_id1&quot;, &quot;drds_sample_rds_id2&quot;]</p>
+     */
     @NameInMap("RdsInstance")
     public java.util.List<String> rdsInstance;
 
@@ -59,9 +84,13 @@ public class CreateDrdsDBRequest extends TeaModel {
 
     /**
      * <p>The partitioning mode of the database. Valid values:</p>
-     * <br>
-     * <p>*   **HORIZONTAL**: The database is horizontally partitioned (sharded).</p>
-     * <p>*   **VERTICAL**: The database is vertically partitioned.</p>
+     * <ul>
+     * <li><strong>HORIZONTAL</strong>: The database is horizontally partitioned (sharded).</li>
+     * <li><strong>VERTICAL</strong>: The database is vertically partitioned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HORIZONTAL</p>
      */
     @NameInMap("Type")
     public String type;
@@ -162,10 +191,17 @@ public class CreateDrdsDBRequest extends TeaModel {
     public static class CreateDrdsDBRequestInstDbName extends TeaModel {
         /**
          * <p>The ID of the ApsaraDB RDS for MySQL instance on which the databases need to be vertically partitioned. This parameter is required only when the Type parameter is set to VERTICAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_sample_rds_id</p>
          */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;drds_sample_db1&quot;, &quot;drds_sample_db2&quot;]</p>
+         */
         @NameInMap("ShardDbName")
         public java.util.List<String> shardDbName;
 
@@ -195,18 +231,27 @@ public class CreateDrdsDBRequest extends TeaModel {
     public static class CreateDrdsDBRequestRdsSuperAccount extends TeaModel {
         /**
          * <p>The account name of the super administrator that is used to connect to the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_sample_rds_super_account</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The ID of ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_sample_rds_id</p>
          */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
         /**
          * <p>The password of the super administrator account that is used to connect to the ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_sample_rds_super_password</p>
          */
         @NameInMap("Password")
         public String password;

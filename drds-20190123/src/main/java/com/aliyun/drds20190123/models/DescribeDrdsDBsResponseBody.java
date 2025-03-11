@@ -12,30 +12,45 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of databases returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>006B7D19-8CDB-4AA6-AAE7-23C107GS3W2T</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of returned databases.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public String total;
@@ -96,39 +111,58 @@ public class DescribeDrdsDBsResponseBody extends TeaModel {
     public static class DescribeDrdsDBsResponseBodyDataDb extends TeaModel {
         /**
          * <p>The time when the database is created. The value of this parameter is a UNIX timestamp. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563773824000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The type of the database. Valid values: **RDS** and **POLARDB**.</p>
+         * <p>The type of the database. Valid values: <strong>RDS</strong> and <strong>POLARDB</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("DbInstType")
         public String dbInstType;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The partitioning mode of the database. Valid values:</p>
-         * <br>
-         * <p>*   **HORIZONTAL**: The database is horizontally partitioned.</p>
-         * <p>*   **VERTICAL**: The database is vertically partitioned.</p>
+         * <ul>
+         * <li><strong>HORIZONTAL</strong>: The database is horizontally partitioned.</li>
+         * <li><strong>VERTICAL</strong>: The database is vertically partitioned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HORIZONTAL</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The schema ID that is assigned to the partitioned database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test_1563773871118kxqd</p>
          */
         @NameInMap("Schema")
         public String schema;
 
         /**
          * <p>The state of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;

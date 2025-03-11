@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeDrdsDBClusterRequest extends TeaModel {
     /**
      * <p>The ID of the PolarDB cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*****************</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
      * <p>The name of the DRDS database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds_test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of a DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds*********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

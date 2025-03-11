@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The name of the member account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The description of the account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

@@ -12,12 +12,18 @@ public class DescribeDrdsDbRdsNameListResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E6FA2BF-05F2-44DD-95C0-D1B5B8xxxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

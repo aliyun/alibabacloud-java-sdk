@@ -12,18 +12,27 @@ public class DescribeHotDbListResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>msg</p>
      */
     @NameInMap("Msg")
     public String msg;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B6B7BDC-575D-4A77-A4F8-24B7EF******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -90,6 +99,9 @@ public class DescribeHotDbListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instanceName</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -145,6 +157,9 @@ public class DescribeHotDbListResponseBody extends TeaModel {
 
         /**
          * <p>The random number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jzhz</p>
          */
         @NameInMap("RandomCode")
         public String randomCode;

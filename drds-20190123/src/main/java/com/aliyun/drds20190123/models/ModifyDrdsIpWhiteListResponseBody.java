@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyDrdsIpWhiteListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>933A1EC2-8260-4D4F-A56A-73BA27******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

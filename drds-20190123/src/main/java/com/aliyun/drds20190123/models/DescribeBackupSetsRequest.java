@@ -6,20 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeBackupSetsRequest extends TeaModel {
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The end of the query time which is in timestamp format (measured in millisecond) .</p>
-     * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1591326000000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The beginning of the query time which is in timestamp format (measured in millisecond).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1591327800000</p>
      */
     @NameInMap("StartTime")
     public String startTime;

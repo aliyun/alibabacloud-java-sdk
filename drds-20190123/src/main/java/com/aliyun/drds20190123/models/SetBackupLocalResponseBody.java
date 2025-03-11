@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SetBackupLocalResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6F70CE62-5077-4B7B-95BC-4DAC45614DBE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Result")
     public String result;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

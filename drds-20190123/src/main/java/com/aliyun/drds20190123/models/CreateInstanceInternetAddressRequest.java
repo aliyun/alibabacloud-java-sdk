@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class CreateInstanceInternetAddressRequest extends TeaModel {
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds****************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region to which the DRDS instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

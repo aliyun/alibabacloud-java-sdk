@@ -6,30 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeDrdsShardingDbsRequest extends TeaModel {
     /**
      * <p>The name of the database whose shards you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds_test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The matching pattern of the database name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbNamePattern")
     public String dbNamePattern;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance whose database shards you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbgaf3c63qbo</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of database shards returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

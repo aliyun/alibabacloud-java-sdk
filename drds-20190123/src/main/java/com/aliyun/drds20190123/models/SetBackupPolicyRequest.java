@@ -6,79 +6,115 @@ import com.aliyun.tea.*;
 public class SetBackupPolicyRequest extends TeaModel {
     /**
      * <p>The databases to be backed up. Separate multiple databases with commas (,).</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the backup level is database level.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when the backup level is database level.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test1,test2</p>
      */
     @NameInMap("BackupDbNames")
     public String backupDbNames;
 
     /**
      * <p>The level of the backup. Valid values:</p>
-     * <br>
-     * <p>*   db: The database type.</p>
-     * <p>*   instance: instance</p>
+     * <ul>
+     * <li>db: The database type.</li>
+     * <li>instance: instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>db</p>
      */
     @NameInMap("BackupLevel")
     public String backupLevel;
 
     /**
      * <p>Specifies whether to enable log Backup. Valid values:</p>
-     * <br>
-     * <p>*   1: enabled.</p>
-     * <p>*   0: disabled.</p>
+     * <ul>
+     * <li>1: enabled.</li>
+     * <li>0: disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BackupLog")
     public String backupLog;
 
     /**
      * <p>The backup mode. Valid values:</p>
-     * <br>
-     * <p>*   **Logic **: logical backup</p>
-     * <p>*   **phy**: physical backup</p>
+     * <ul>
+     * <li>**Logic **: logical backup</li>
+     * <li><strong>phy</strong>: physical backup</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>phy</p>
      */
     @NameInMap("BackupMode")
     public String backupMode;
 
     /**
      * <p>The retention period of the backup data. Value range: 7 to 730.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("DataBackupRetentionPeriod")
     public String dataBackupRetentionPeriod;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The log retention period. Valid values: 7 to 730. This value must be less than or equal to the number of data backup days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("LogBackupRetentionPeriod")
     public String logBackupRetentionPeriod;
 
     /**
      * <p>The end time of the backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12:30:30</p>
      */
     @NameInMap("PreferredBackupEndTime")
     public String preferredBackupEndTime;
 
     /**
      * <p>The backup cycle. Valid values:</p>
-     * <br>
-     * <p>*   0: Monday</p>
-     * <p>*   1: Tuesday</p>
-     * <p>*   2: Wednesday</p>
-     * <p>*   3: Thursday</p>
-     * <p>*   4: Friday</p>
-     * <p>*   5: Saturday</p>
-     * <p>*   6: Sunday</p>
+     * <ul>
+     * <li>0: Monday</li>
+     * <li>1: Tuesday</li>
+     * <li>2: Wednesday</li>
+     * <li>3: Thursday</li>
+     * <li>4: Friday</li>
+     * <li>5: Saturday</li>
+     * <li>6: Sunday</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
     /**
      * <p>The start time of the backup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11:30:30</p>
      */
     @NameInMap("PreferredBackupStartTime")
     public String preferredBackupStartTime;

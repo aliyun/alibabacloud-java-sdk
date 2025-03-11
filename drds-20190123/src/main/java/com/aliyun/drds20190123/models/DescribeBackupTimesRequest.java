@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeBackupTimesRequest extends TeaModel {
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbga71nn****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

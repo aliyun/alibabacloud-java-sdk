@@ -6,27 +6,42 @@ import com.aliyun.tea.*;
 public class UpdateInstanceNetworkRequest extends TeaModel {
     /**
      * <p>Specifies the retention period of the classic network endpoint. Unit: days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("ClassicExpiredDays")
     public Integer classicExpiredDays;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds******</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>Specifies whether to retain the classic network endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RetainClassic")
     public Boolean retainClassic;
 
     /**
      * <p>The network type of the PolarDB-X 1.0 instance. Valid values:</p>
-     * <br>
-     * <p>*   vpc: Virtual Private Cloud (VPC)</p>
-     * <p>*   classic: classic network</p>
+     * <ul>
+     * <li>vpc: Virtual Private Cloud (VPC)</li>
+     * <li>classic: classic network</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>classic</p>
      */
     @NameInMap("SrcInstanceNetworkType")
     public String srcInstanceNetworkType;

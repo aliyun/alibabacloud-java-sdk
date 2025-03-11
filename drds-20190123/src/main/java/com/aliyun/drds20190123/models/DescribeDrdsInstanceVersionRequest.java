@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeDrdsInstanceVersionRequest extends TeaModel {
     /**
      * <p>The ID of the PolarDB-X 1.0 instance whose version you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbga1138****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

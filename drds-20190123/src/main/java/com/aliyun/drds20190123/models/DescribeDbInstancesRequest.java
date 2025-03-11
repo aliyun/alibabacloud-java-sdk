@@ -5,37 +5,56 @@ import com.aliyun.tea.*;
 
 public class DescribeDbInstancesRequest extends TeaModel {
     /**
-     * <p>Storage layer type. Valid values: **POLARDB** or **RDS**.</p>
+     * <p>Storage layer type. Valid values: <strong>POLARDB</strong> or <strong>RDS</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POLARDB</p>
      */
     @NameInMap("DbInstType")
     public String dbInstType;
 
     /**
      * <p>The ID of a DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the storage or cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("Search")
     public String search;

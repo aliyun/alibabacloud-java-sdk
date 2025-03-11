@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,6 +60,9 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
     public static class DescribeDrdsInstanceLevelTasksResponseBodyTasksTask extends TeaModel {
         /**
          * <p>Indicates whether the task can be canceled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowCancel")
         public Boolean allowCancel;
@@ -66,12 +75,18 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the task is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568705520000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The progress of the task. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
          */
         @NameInMap("Progress")
         public Integer progress;
@@ -84,41 +99,60 @@ public class DescribeDrdsInstanceLevelTasksResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the progress of the task is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ShowProgress")
         public Boolean showProgress;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312</p>
          */
         @NameInMap("TargetId")
         public Long targetId;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upgrade_instance</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The phase of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TaskPhase")
         public String taskPhase;
 
         /**
          * <p>The state of the task. Valid values:</p>
-         * <br>
-         * <p>*   0: The task is being executed.</p>
-         * <p>*   1: The task is executed.</p>
-         * <p>*   2: The task failed to be executed.</p>
-         * <p>*   3: The task is canceled.</p>
+         * <ul>
+         * <li>0: The task is being executed.</li>
+         * <li>1: The task is executed.</li>
+         * <li>2: The task failed to be executed.</li>
+         * <li>3: The task is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
         /**
          * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("TaskType")
         public Integer taskType;

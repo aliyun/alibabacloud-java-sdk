@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateShardTaskResponseBody extends TeaModel {
     /**
      * <p>Task creation result</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8997D95-94AD-416A-AE70-E24D08******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

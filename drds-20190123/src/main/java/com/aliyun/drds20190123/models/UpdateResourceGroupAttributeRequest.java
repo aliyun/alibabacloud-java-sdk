@@ -6,24 +6,39 @@ import com.aliyun.tea.*;
 public class UpdateResourceGroupAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the instance that you want to transfer.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDrdsInstances](~~139284~~) operation to view the details of the instances under the account, including the instance IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/139284.html">DescribeDrdsInstances</a> operation to view the details of the instances under the account, including the instance IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the resource group that you want to specify.</p>
-     * <br>
-     * <p>>  You can call the [ListResourceGroups](~~158855~~) operation to view the details of the resource groups, including the resource group IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to view the details of the resource groups, including the resource group IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-***************</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
      * <p>The ID of the region where the instance you want to transfer is located.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDrdsInstances](~~139284~~) operation to view the details of the instances under the account, including the region IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/139284.html">DescribeDrdsInstances</a> operation to view the details of the instances under the account, including the region IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

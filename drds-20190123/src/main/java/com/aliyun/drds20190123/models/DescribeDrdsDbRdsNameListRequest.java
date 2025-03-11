@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDrdsDbRdsNameListRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds_test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdsxxxxxxxxxxx</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

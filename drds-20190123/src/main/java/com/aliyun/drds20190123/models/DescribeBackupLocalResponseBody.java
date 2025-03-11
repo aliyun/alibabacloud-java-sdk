@@ -12,12 +12,18 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FDC9CFD5-306D-4A23-9D8C-057274C6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,111 +60,166 @@ public class DescribeBackupLocalResponseBody extends TeaModel {
     public static class DescribeBackupLocalResponseBodyBackupPolicyDO extends TeaModel {
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("BackupAppName")
         public String backupAppName;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("BackupDbName")
         public String backupDbName;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("BackupLevel")
         public String backupLevel;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("BackupLog")
         public String backupLog;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("BackupMode")
         public String backupMode;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("BackupPolicyMode")
         public String backupPolicyMode;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BackupRetentionPeriod")
         public Long backupRetentionPeriod;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataBackupRetentionPeriod")
         public Long dataBackupRetentionPeriod;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>Indicates whether the feature is enabled to forcibly delete binary log files if the used storage space of the instance exceeds 90% of the total storage space or the remaining storage space is less than 5 GB. Valid values:</p>
-         * <br>
-         * <p>*   1: The feature is enabled.</p>
-         * <p>*   0: The feature is disabled.</p>
+         * <ul>
+         * <li>1: The feature is enabled.</li>
+         * <li>0: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HighSpaceUsageProtection")
         public Long highSpaceUsageProtection;
 
         /**
-         * <p>The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: **18**. The value **0** indicates that log backup files are not retained.</p>
+         * <p>The number of hours for which log backup files are retained on the instance. Valid values: 0 to 168. Default value: <strong>18</strong>. The value <strong>0</strong> indicates that log backup files are not retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("LocalLogRetentionHours")
         public Long localLogRetentionHours;
 
         /**
          * <p>The maximum storage usage that is allowed for local log files. Valid values: 0 to 50. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("LocalLogRetentionSpace")
         public Long localLogRetentionSpace;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LogBackupRetentionPeriod")
         public Long logBackupRetentionPeriod;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("NextBackupActuallyTime")
         public String nextBackupActuallyTime;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("PreferredBackupPeriod")
         public String preferredBackupPeriod;
 
         /**
          * <p>No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("PreferredBackupTime")
         public String preferredBackupTime;

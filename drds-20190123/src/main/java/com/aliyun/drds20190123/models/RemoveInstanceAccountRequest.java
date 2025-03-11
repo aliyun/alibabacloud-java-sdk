@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class RemoveInstanceAccountRequest extends TeaModel {
     /**
      * <p>The name of the member account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

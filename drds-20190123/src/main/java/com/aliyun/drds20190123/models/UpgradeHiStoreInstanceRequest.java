@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class UpgradeHiStoreInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdssad23sdfc</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the column-oriented storage instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hi-sesex2e</p>
      */
     @NameInMap("HistoreInstanceId")
     public String historeInstanceId;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>03E12FE3-1638-483E-A9B6-1A9120SER56T</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,30 +60,45 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
     public static class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfoVswitchInfosVswitchInfo extends TeaModel {
         /**
          * <p>Indicates the ID of the zone in which the instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         @NameInMap("AzoneId")
         public String azoneId;
 
         /**
          * <p>Indicates whether you can change the network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DrdsSupported")
         public Boolean drdsSupported;
 
         /**
          * <p>Indicates the ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_id</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>Indicates the ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vswitch_id</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
 
         /**
          * <p>Indicates the name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vswitch_name</p>
          */
         @NameInMap("VswitchName")
         public String vswitchName;
@@ -151,18 +172,27 @@ public class DescribeInstanceSwitchNetworkResponseBody extends TeaModel {
     public static class DescribeInstanceSwitchNetworkResponseBodyVpcInfosVpcInfo extends TeaModel {
         /**
          * <p>Indicates the ID of the region in which the instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Indicates the ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_id</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>Indicates the name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc_name</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>Specify the token that is used to display the returned tags on multiple pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6ab4640a-479b-41d0-ad3c-c6e888bc3d8f</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region in which the resource is located.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,6 +28,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type. Set the value to INSTANCE.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -76,12 +87,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>color</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag that you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>red</p>
          */
         @NameInMap("Value")
         public String value;

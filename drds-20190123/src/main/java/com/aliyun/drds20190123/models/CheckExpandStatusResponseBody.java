@@ -12,12 +12,18 @@ public class CheckExpandStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CDBA7D5-8D62-4D24-9C65-510D62******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,12 +60,18 @@ public class CheckExpandStatusResponseBody extends TeaModel {
     public static class CheckExpandStatusResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether scale-out operations can be performed on the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsActive")
         public Boolean isActive;
 
         /**
          * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Msg")
         public String msg;

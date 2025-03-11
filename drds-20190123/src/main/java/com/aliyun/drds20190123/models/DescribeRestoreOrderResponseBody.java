@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRestoreOrderResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AD2DE5D-B86B-40B5-9678-487D37******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,39 +60,58 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
     public static class DescribeRestoreOrderResponseBodyRestoreOrderDODrdsOrderDOListDrdsOrderDOList extends TeaModel {
         /**
          * <p>The ID of the zone for which to query resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         @NameInMap("AzoneId")
         public String azoneId;
 
         /**
          * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C8G * 2</p>
          */
         @NameInMap("InstSpec")
         public String instSpec;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **Classic **: Classic Network</p>
-         * <p>*   **vpc**: VPC</p>
+         * <ul>
+         * <li>**Classic **: Classic Network</li>
+         * <li><strong>vpc</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("Network")
         public String network;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the vSwitch in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*******************</p>
          */
         @NameInMap("VSwtichId")
         public String VSwtichId;
 
         /**
          * <p>The ID of the VPC network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*******************</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -168,51 +193,76 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
     public static class DescribeRestoreOrderResponseBodyRestoreOrderDOPolarOrderDOListPolarOrderDOList extends TeaModel {
         /**
          * <p>The zone ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("AzoneId")
         public String azoneId;
 
         /**
          * <p>The capacity of disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         @NameInMap("DbInstanceStorage")
         public String dbInstanceStorage;
 
         /**
          * <p>The storage engine of PolarDB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   **Classic**: Classic Network</p>
-         * <p>*   **vpc**: VPC</p>
+         * <ul>
+         * <li><strong>Classic</strong>: Classic Network</li>
+         * <li><strong>vpc</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("Network")
         public String network;
 
         /**
          * <p>The number of streams that were returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Num")
         public Long num;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         @NameInMap("Version")
         public String version;
@@ -310,49 +360,75 @@ public class DescribeRestoreOrderResponseBody extends TeaModel {
     public static class DescribeRestoreOrderResponseBodyRestoreOrderDORdsOrderDOListRdsOrderDOList extends TeaModel {
         /**
          * <p>The zone ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("AzoneId")
         public String azoneId;
 
         /**
          * <p>The capacity of disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         @NameInMap("DbInstanceStorage")
         public String dbInstanceStorage;
 
         /**
          * <p>The storage engine of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The instance type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s2.large</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
          * <p>The network type. Valid values: - **Classic **: Classic Network</p>
-         * <p>- **vpc**: VPC</p>
+         * <ul>
+         * <li><strong>vpc</strong>: VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("Network")
         public String network;
 
         /**
          * <p>The number of streams that were returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Num")
         public Long num;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         @NameInMap("Version")
         public String version;

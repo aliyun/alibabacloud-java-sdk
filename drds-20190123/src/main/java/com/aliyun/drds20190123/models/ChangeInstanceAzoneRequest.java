@@ -9,12 +9,20 @@ public class ChangeInstanceAzoneRequest extends TeaModel {
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdsjiii1b49****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DrdsRegionId")
     public String drdsRegionId;
@@ -24,12 +32,20 @@ public class ChangeInstanceAzoneRequest extends TeaModel {
 
     /**
      * <p>The source zone of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-B</p>
      */
     @NameInMap("OriginAzoneId")
     public String originAzoneId;
 
     /**
      * <p>The destination zone to which you want to modify</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-A</p>
      */
     @NameInMap("TargetAzoneId")
     public String targetAzoneId;

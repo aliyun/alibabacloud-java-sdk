@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class EnableSqlFlashbackMatchSwitchResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>463A5F0F-12AD-4544-A902-B2B983******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether SqlFlashbackMatchSwitch is enabled or not.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;
 
     /**
      * <p>Indicates whether the request was sent successfully or not.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

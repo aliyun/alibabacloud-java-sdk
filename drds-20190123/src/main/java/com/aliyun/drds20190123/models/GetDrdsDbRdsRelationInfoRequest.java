@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetDrdsDbRdsRelationInfoRequest extends TeaModel {
     /**
      * <p>The name of the DRDS database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDb</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbga948vbpd2</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

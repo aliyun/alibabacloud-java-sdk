@@ -12,12 +12,18 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0B6B7BDC-575D-4A77-A4F8-24B7EF******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,18 +60,27 @@ public class DescribeExpandLogicTableInfoListResponseBody extends TeaModel {
     public static class DescribeExpandLogicTableInfoListResponseBodyDataData extends TeaModel {
         /**
          * <p>Indicates the database sharding key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("ShardDbKey")
         public String shardDbKey;
 
         /**
          * <p>Indicates the table sharding key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>address</p>
          */
         @NameInMap("ShardTbKey")
         public String shardTbKey;
 
         /**
          * <p>Indicates the name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>employee_split2</p>
          */
         @NameInMap("TableName")
         public String tableName;

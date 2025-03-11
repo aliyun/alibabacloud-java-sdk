@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ReleaseInstanceInternetAddressResponseBody extends TeaModel {
     /**
      * <p>The result returned by the current API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD17CD3C-3355-49E8-9231-FE2DB0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeRdsCommodityResponseBody extends TeaModel {
     /**
      * <p>Indicates the returned result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC3ABA3E-0F8A-4596-9104-F5155C34315B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

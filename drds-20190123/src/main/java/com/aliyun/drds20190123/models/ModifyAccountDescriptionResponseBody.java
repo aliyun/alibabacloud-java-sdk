@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyAccountDescriptionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F93CCD5-806F-4470-BBC7-20476A******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was sent successfully or not.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

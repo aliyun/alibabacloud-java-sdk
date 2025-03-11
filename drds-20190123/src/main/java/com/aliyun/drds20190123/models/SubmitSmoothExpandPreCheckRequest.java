@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class SubmitSmoothExpandPreCheckRequest extends TeaModel {
     /**
      * <p>The type of the database. Valid values:</p>
-     * <br>
-     * <p>*   RDS</p>
-     * <p>*   POLARDB</p>
+     * <ul>
+     * <li>RDS</li>
+     * <li>POLARDB</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
      */
     @NameInMap("DbInstType")
     public String dbInstType;
 
     /**
      * <p>The name of the PolarDB-X database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds*******</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

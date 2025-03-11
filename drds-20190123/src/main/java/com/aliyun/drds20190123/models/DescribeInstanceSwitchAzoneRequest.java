@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSwitchAzoneRequest extends TeaModel {
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdsxxxxxxxxxxxx</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

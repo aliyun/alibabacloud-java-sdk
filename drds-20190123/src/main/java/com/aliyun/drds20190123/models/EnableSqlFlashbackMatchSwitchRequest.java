@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class EnableSqlFlashbackMatchSwitchRequest extends TeaModel {
     /**
      * <p>The name of the database you want to back up.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

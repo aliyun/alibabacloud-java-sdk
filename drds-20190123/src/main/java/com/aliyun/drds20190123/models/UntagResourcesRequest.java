@@ -6,25 +6,46 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all tags of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds********</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource. Set the value to INSTANCE.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>color</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

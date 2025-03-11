@@ -6,30 +6,41 @@ import com.aliyun.tea.*;
 public class SubmitHotExpandTaskRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdshbga1138****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The information about the database on which you want to perform hot-spot scale-out.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ExtendedMapping")
     public java.util.List<SubmitHotExpandTaskRequestExtendedMapping> extendedMapping;
 
     /**
      * <p>The information about the instance to which the hot-spot database belongs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceDbMapping")
     public java.util.List<SubmitHotExpandTaskRequestInstanceDbMapping> instanceDbMapping;
 
     /**
      * <p>The information about the hot-spot database.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Mapping")
     public java.util.List<SubmitHotExpandTaskRequestMapping> mapping;
@@ -42,12 +53,18 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
 
     /**
      * <p>The description of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TaskDesc")
     public String taskDesc;
 
     /**
      * <p>The name of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TaskName")
     public String taskName;
@@ -124,12 +141,18 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
     public static class SubmitHotExpandTaskRequestExtendedMapping extends TeaModel {
         /**
          * <p>The name of the source physical database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("SrcDb")
         public String srcDb;
 
         /**
          * <p>The ID of the ApsaraDB RDS instance to which the source physical database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1t1mk5a5bdj****</p>
          */
         @NameInMap("SrcInstanceId")
         public String srcInstanceId;
@@ -160,12 +183,19 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
     public static class SubmitHotExpandTaskRequestInstanceDbMapping extends TeaModel {
         /**
          * <p>The name of the hot-spot database.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hot_test_****_****</p>
          */
         @NameInMap("DbList")
         public String dbList;
 
         /**
          * <p>The name of the ApsaraDB RDS instance to which the hot-spot database belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1t1mk5a5bdj****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -196,42 +226,63 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
     public static class SubmitHotExpandTaskRequestMapping extends TeaModel {
         /**
          * <p>The shard key used to split the database to which the associated table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>platform</p>
          */
         @NameInMap("DbShardColumn")
         public String dbShardColumn;
 
         /**
          * <p>The name of the hot-spot database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hot_test_****_****</p>
          */
         @NameInMap("HotDbName")
         public String hotDbName;
 
         /**
          * <p>The name of the hot-spot table. The name must be prefixed with the name of a logical table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table_*****</p>
          */
         @NameInMap("HotTableName")
         public String hotTableName;
 
         /**
          * <p>The name of the logical table on which you want to perform hot-spot scale-out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         @NameInMap("LogicTable")
         public String logicTable;
 
         /**
          * <p>The value of the shard key used to split a database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ShardDbValue")
         public String shardDbValue;
 
         /**
          * <p>The value of the shard key used to split a table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ShardTbValue")
         public String shardTbValue;
 
         /**
          * <p>The shard key used to split an associated table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>platform</p>
          */
         @NameInMap("TbShardColumn")
         public String tbShardColumn;
@@ -302,18 +353,27 @@ public class SubmitHotExpandTaskRequest extends TeaModel {
     public static class SubmitHotExpandTaskRequestSupperAccountMapping extends TeaModel {
         /**
          * <p>The ID of the ApsaraDB RDS instance that has the privileged account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1t1mk5a5bdj****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The name of the privileged account of the ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("SupperAccount")
         public String supperAccount;
 
         /**
          * <p>The password of the privileged account of the ApsaraDB RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         @NameInMap("SupperPassword")
         public String supperPassword;

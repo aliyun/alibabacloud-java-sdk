@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyPolarDbReadWeightResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B12FC174-D5CE-4A6E-83C1-0F8F86******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the database creation failure records were removed from the PolarDB-X instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

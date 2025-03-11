@@ -6,30 +6,50 @@ import com.aliyun.tea.*;
 public class ModifyPolarDbReadWeightRequest extends TeaModel {
     /**
      * <p>Polar cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The node list in the destination apsaradb for PolarDB cluster. The nodes in each cluster are separated with commas (,) and colons (:).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-<strong><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></strong>:pi-****************</p>
      */
     @NameInMap("DbNodeIds")
     public String dbNodeIds;
 
     /**
      * <p>The ID of a DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The weight of the PolarDB cluster. Separate multiple weights with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14,86</p>
      */
     @NameInMap("Weights")
     public String weights;

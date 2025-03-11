@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDrdsInstanceLevelTasksRequest extends TeaModel {
     /**
      * <p>The ID of the PolarDB-X 1.0 instance of which the unfinished tasks you want to query.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdssen12****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

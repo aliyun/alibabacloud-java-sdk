@@ -12,12 +12,18 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F7F8080-9132-4279-85D0-B7E5C4******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,12 +60,18 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
     public static class DescribeDrdsInstanceDbMonitorResponseBodyDataValues extends TeaModel {
         /**
          * <p>The time point when the value of monitoring data was obtained. The value is in the UNIX timestamp format. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603162805000</p>
          */
         @NameInMap("Date")
         public Long date;
 
         /**
          * <p>The data value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Value")
         public String value;
@@ -90,12 +102,18 @@ public class DescribeDrdsInstanceDbMonitorResponseBody extends TeaModel {
     public static class DescribeDrdsInstanceDbMonitorResponseBodyData extends TeaModel {
         /**
          * <p>The name of the monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qps</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The unit of the monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qps</p>
          */
         @NameInMap("Unit")
         public String unit;

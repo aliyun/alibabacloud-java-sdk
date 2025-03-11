@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateOrderForRdsRequest extends TeaModel {
     /**
-     * <p>The JSON string that contains the order details. For more information, see [CreateDBInstance](~~26228~~).</p>
+     * <p>The JSON string that contains the order details. For more information, see <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Params")
     public String params;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

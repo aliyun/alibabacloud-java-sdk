@@ -12,30 +12,45 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>Indicates the number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B360F47B-59E3-4D1C-BA03-6BFB1C993F88</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>Indicates the total number of returned tables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -96,12 +111,18 @@ public class DescribeTableListByTypeResponseBody extends TeaModel {
     public static class DescribeTableListByTypeResponseBodyList extends TeaModel {
         /**
          * <p>Indicates the property of a table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>single</p>
          */
         @NameInMap("Property")
         public String property;
 
         /**
          * <p>Indicates the name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>employee_split</p>
          */
         @NameInMap("TableName")
         public String tableName;
