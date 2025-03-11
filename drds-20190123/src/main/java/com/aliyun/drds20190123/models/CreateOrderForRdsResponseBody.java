@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateOrderForRdsResponseBody extends TeaModel {
     /**
      * <p>The ID of the purchased RDS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[rm-***********]</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9819BC51-D33D-4EB1-B80F-A89A20******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

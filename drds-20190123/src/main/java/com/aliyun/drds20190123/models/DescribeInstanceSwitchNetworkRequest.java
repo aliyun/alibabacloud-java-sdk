@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSwitchNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds*********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

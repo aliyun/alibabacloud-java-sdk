@@ -12,30 +12,45 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>Indicates the number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>509BDE17-505A-4B3B-854D-30D3F0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>Indicates the total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -96,30 +111,45 @@ public class DescribeDrdsSlowSqlsResponseBody extends TeaModel {
     public static class DescribeDrdsSlowSqlsResponseBodyItemsItem extends TeaModel {
         /**
          * <p>Indicates the IP address of the execution machine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.<em><strong>.</strong></em></p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>Indicates the response time. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568267711</p>
          */
         @NameInMap("ResponseTime")
         public Long responseTime;
 
         /**
          * <p>Indicates the name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("Schema")
         public String schema;
 
         /**
          * <p>Indicates the time when the slow SQL query was sent. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568267711</p>
          */
         @NameInMap("SendTime")
         public Long sendTime;
 
         /**
          * <p>Indicates the content of the slow SQL query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT   count(1) from   payment_order where   order_status = \&quot;08\&quot;;</p>
          */
         @NameInMap("Sql")
         public String sql;

@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDrdsDBIpWhiteListRequest extends TeaModel {
     /**
      * <p>The database name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The name of the whitelist group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group1</p>
      */
     @NameInMap("GroupName")
     public String groupName;

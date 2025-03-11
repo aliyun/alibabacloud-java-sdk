@@ -6,48 +6,73 @@ import com.aliyun.tea.*;
 public class DescribeDrdsInstancesRequest extends TeaModel {
     /**
      * <p>The description of the instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds_test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether the instances that you want to query expire.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Expired")
     public Boolean expired;
 
     /**
      * <p>Specifies whether hybrid queries are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FALSE</p>
      */
     @NameInMap("Mix")
     public Boolean mix;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of instances returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The version of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>V1</p>
      */
     @NameInMap("ProductVersion")
     public String productVersion;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instances you want to query belong. The value of this parameter can be NULL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NULL</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -57,9 +82,13 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
 
     /**
      * <p>The type of the instances that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **0**: shared instances</p>
-     * <p>*   **1**: dedicated instances</p>
+     * <ul>
+     * <li><strong>0</strong>: shared instances</li>
+     * <li><strong>1</strong>: dedicated instances</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Type")
     public String type;
@@ -152,12 +181,18 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     public static class DescribeDrdsInstancesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag configured for the instances you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:newretail:domain</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag configured for the instances you want to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW_RETAIL</p>
          */
         @NameInMap("Value")
         public String value;

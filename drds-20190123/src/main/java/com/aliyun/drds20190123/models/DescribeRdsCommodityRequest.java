@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeRdsCommodityRequest extends TeaModel {
     /**
      * <p>The commodity code of the service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdsPost</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The type of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OrderType")
     public String orderType;

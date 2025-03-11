@@ -12,12 +12,18 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4FE09970-CA69-4144-88CA-67FB4BTY56G3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,90 +60,135 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
     public static class DescribeDrdsDbInstanceResponseBodyDbInstanceReadOnlyInstancesReadOnlyInstance extends TeaModel {
         /**
          * <p>The URL used to connect to the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1ub71ct9skc3yxx.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectUrl")
         public String connectUrl;
 
         /**
          * <p>The ID of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1ub71ct9skc****</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The state of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
         /**
          * <p>The role of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("DbInstType")
         public String dbInstType;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dm-*************</p>
          */
         @NameInMap("DmInstanceId")
         public String dmInstanceId;
 
         /**
          * <p>The engine of the database that is run on the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The engine version of the database that is run on the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The timestamp that indicates when the read-only instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1823487328173</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The network type of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The billing method of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The port used to connect to the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The type of the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("RdsInstType")
         public String rdsInstType;
 
         /**
          * <p>The read ratio of the read-only instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("ReadWeight")
         public Integer readWeight;
 
         /**
          * <p>The number of remaining days before the read-only instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainDays")
         public String remainDays;
 
         /**
          * <p>This parameter is unavailable for read-only instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("VersionAction")
         public Integer versionAction;
@@ -291,80 +342,119 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
     public static class DescribeDrdsDbInstanceResponseBodyDbInstance extends TeaModel {
         /**
          * <p>The URL used to connect to the custom ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-***************.mysql.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectUrl")
         public String connectUrl;
 
         /**
          * <p>The ID of the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-***************</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The state of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
 
         /**
          * <p>The role of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Primary**: The instance is a primary instance.</p>
-         * <p>*   **ReadOnly**: The instance is a read-only instance.</p>
+         * <ul>
+         * <li><strong>Primary</strong>: The instance is a primary instance.</li>
+         * <li><strong>ReadOnly</strong>: The instance is a read-only instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("DbInstType")
         public String dbInstType;
 
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dm-*************</p>
          */
         @NameInMap("DmInstanceId")
         public String dmInstanceId;
 
         /**
-         * <p>The engine of the database that is run on the instance. Valid value: **MySQL**.</p>
+         * <p>The engine of the database that is run on the instance. Valid value: <strong>MySQL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The engine version of the database that is run on the instance. Valid values: **5.7**.</p>
+         * <p>The engine version of the database that is run on the instance. Valid values: <strong>5.7</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The time when the custom ApsaraDB RDS for MySQL instance expires. The value of this parameter is a UNIX timestamp. Unit: seconds.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the custom ApsaraDB RDS for MySQL instance is a subscription instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the custom ApsaraDB RDS for MySQL instance is a subscription instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12341434315</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
-         * <p>The type of the network. Valid values: **VPC**.</p>
+         * <p>The type of the network. Valid values: <strong>VPC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The billing method of the custom ApsaraDB RDS for MySQL instance. Valid values:</p>
-         * <br>
-         * <p>*   **Prepaid**: subscription</p>
-         * <p>*   **Postaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * <li><strong>Postaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The port used to connect to the custom ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("RdsInstType")
         public String rdsInstType;
@@ -377,12 +467,18 @@ public class DescribeDrdsDbInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The read ratio of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("ReadWeight")
         public Integer readWeight;
 
         /**
          * <p>The number of remaining days before the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainDays")
         public String remainDays;

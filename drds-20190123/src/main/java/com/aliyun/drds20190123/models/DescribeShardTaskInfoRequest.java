@@ -6,30 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeShardTaskInfoRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jjjjjj_ppppp</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds*********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the table that you want to convert or shard.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a1</p>
      */
     @NameInMap("SourceTableName")
     public String sourceTableName;
 
     /**
      * <p>The name of the table that is generated after you convert or shard the table.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2</p>
      */
     @NameInMap("TargetTableName")
     public String targetTableName;

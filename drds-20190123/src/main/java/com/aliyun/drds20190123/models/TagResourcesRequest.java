@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the resource is located.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The resource type. Set the value to INSTANCE.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -62,12 +76,18 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag that you want to add.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>color</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag that you want to add.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>red</p>
          */
         @NameInMap("Value")
         public String value;

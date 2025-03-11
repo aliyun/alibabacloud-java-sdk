@@ -12,12 +12,18 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6876277-ECFD-4658-AC1E-A7FAD8******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the API request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,36 +60,54 @@ public class DescribeRdsPerformanceSummaryResponseBody extends TeaModel {
     public static class DescribeRdsPerformanceSummaryResponseBodyRdsPerformanceInfos extends TeaModel {
         /**
          * <p>The number of active sessions of the RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ActiveSessions")
         public Integer activeSessions;
 
         /**
          * <p>The CPU utilization of an RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.26</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
          * <p>The IOPS of the RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17.62</p>
          */
         @NameInMap("Iops")
         public Float iops;
 
         /**
          * <p>The ID of an RDS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-**************</p>
          */
         @NameInMap("RdsId")
         public String rdsId;
 
         /**
          * <p>The disk usage of apsaradb for RDS. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4145144777</p>
          */
         @NameInMap("SpaceUsage")
         public Long spaceUsage;
 
         /**
          * <p>The total number of current RDS sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>162</p>
          */
         @NameInMap("TotalSessions")
         public Integer totalSessions;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateResourceGroupAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91C7CAB5-3B2E-4FB6-893C-0162C0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

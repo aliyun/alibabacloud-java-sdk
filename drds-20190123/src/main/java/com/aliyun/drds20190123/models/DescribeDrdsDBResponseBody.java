@@ -12,12 +12,18 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58FB0EC7-CF71-4E48-92FB-CF070D******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,51 +60,75 @@ public class DescribeDrdsDBResponseBody extends TeaModel {
     public static class DescribeDrdsDBResponseBodyData extends TeaModel {
         /**
          * <p>Indicates the time when the database was created. The value is in the UNIX timestamp format. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1602050276000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Indicates the storage type of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("DbInstType")
         public String dbInstType;
 
         /**
          * <p>Indicates the name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Indicates the type of the instance in which the database is deployed. Valid values:</p>
-         * <br>
-         * <p>*   **MASTER**: The instance is a primary instance.</p>
-         * <p>*   **SLAVE**: The instance is a read-only instance.</p>
+         * <ul>
+         * <li><strong>MASTER</strong>: The instance is a primary instance.</li>
+         * <li><strong>SLAVE</strong>: The instance is a read-only instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MASTER</p>
          */
         @NameInMap("InstRole")
         public String instRole;
 
         /**
          * <p>Indicates the database sharding method.</p>
-         * <br>
-         * <p>*   **HORIZONTAL**: The database is horizontally sharded.</p>
-         * <p>*   **VERTICAL**: The database is vertically sharded.</p>
+         * <ul>
+         * <li><strong>HORIZONTAL</strong>: The database is horizontally sharded.</li>
+         * <li><strong>VERTICAL</strong>: The database is vertically sharded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HORIZONTAL</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>Indicates the schema name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_test*******************</p>
          */
         @NameInMap("Schema")
         public String schema;
 
         /**
          * <p>Indicates the state of the database. Valid values:</p>
-         * <br>
-         * <p>*   **TO_BE_INIT**: The database is being created.</p>
-         * <p>*   **NORMAL**: The database is running.</p>
+         * <ul>
+         * <li><strong>TO_BE_INIT</strong>: The database is being created.</li>
+         * <li><strong>NORMAL</strong>: The database is running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;

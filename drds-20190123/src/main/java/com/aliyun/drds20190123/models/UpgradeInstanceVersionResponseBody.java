@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpgradeInstanceVersionResponseBody extends TeaModel {
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class SubmitHotExpandPreCheckTaskRequest extends TeaModel {
     /**
      * <p>The type of the database. Valid values:</p>
-     * <br>
-     * <p>*   RDS</p>
-     * <p>*   PolarDB</p>
+     * <ul>
+     * <li>RDS</li>
+     * <li>PolarDB</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
      */
     @NameInMap("DbInstType")
     public String dbInstType;
 
     /**
      * <p>The name of the PolarDB-X database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drd*********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TableList")
     public java.util.List<String> tableList;

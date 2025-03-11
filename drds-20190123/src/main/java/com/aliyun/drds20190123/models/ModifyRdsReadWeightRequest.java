@@ -6,24 +6,40 @@ import com.aliyun.tea.*;
 public class ModifyRdsReadWeightRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The names of the ApsaraDB RDS for MySQL instances. Separate the names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-<strong><strong><strong><strong><strong><strong><strong><strong>,rm-</strong></strong></strong></strong></strong></strong></strong></strong></p>
      */
     @NameInMap("InstanceNames")
     public String instanceNames;
 
     /**
      * <p>The weights of the ApsaraDB RDS for MySQL instances. Separate the weights with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14,86</p>
      */
     @NameInMap("Weights")
     public String weights;

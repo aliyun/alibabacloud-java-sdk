@@ -12,24 +12,36 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of instances returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8734773E-7B21-4A22-9106-CBD245F8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of instances returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -101,39 +113,58 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
     public static class DescribeDrdsInstancesResponseBodyInstancesInstanceVipsVip extends TeaModel {
         /**
          * <p>The virtual IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.23.<em><strong>.</strong></em></p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ports that are opened on the VIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The type of the VIP. Valid values:</p>
-         * <br>
-         * <p>*   intranet: a private IP address</p>
-         * <p>*   internet: a public IP address</p>
+         * <ul>
+         * <li>intranet: a private IP address</li>
+         * <li>internet: a public IP address</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>intranet</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bpxxxxxxxxxxxy</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bpxxxxxxxxxxxxx96</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
 
         /**
          * <p>The domain name that is mapped to the VIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdssen1243as.drds.aliyuncs.com</p>
          */
         @NameInMap("dns")
         public String dns;
@@ -215,95 +246,140 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
     public static class DescribeDrdsInstancesResponseBodyInstancesInstance extends TeaModel {
         /**
          * <p>The commodity code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdsPost</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The timestamp that indicates when the instance is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568620311000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdssen12****</p>
          */
         @NameInMap("DrdsInstanceId")
         public String drdsInstanceId;
 
         /**
          * <p>The timestamp that indicates when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4724323200000</p>
          */
         @NameInMap("ExpireDate")
         public Long expireDate;
 
         /**
          * <p>The role of the instance. Valid values:</p>
-         * <br>
-         * <p>*   MASTER: The instance is a primary instance.</p>
-         * <p>*   SLAVE: The instance is a read-only instance to analyze complex queries.</p>
-         * <p>*   SLAVE_FLOW: The instance is a read-only instance for high-concurrency scenarios.</p>
+         * <ul>
+         * <li>MASTER: The instance is a primary instance.</li>
+         * <li>SLAVE: The instance is a read-only instance to analyze complex queries.</li>
+         * <li>SLAVE_FLOW: The instance is a read-only instance for high-concurrency scenarios.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MASTER</p>
          */
         @NameInMap("InstRole")
         public String instRole;
 
         /**
          * <p>The instance series.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds.sn2.4c16g</p>
          */
         @NameInMap("InstanceSeries")
         public String instanceSeries;
 
         /**
          * <p>The specification of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds.sn2.4c16g.8C32G</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
          * <p>The tag of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **NORMAL**: The instance is a standard instance.</p>
-         * <p>*   **HA**: The instance is a high-availability (HA) instance.</p>
-         * <p>*   **VPC**: The instance is a VPC-based instance.</p>
+         * <ul>
+         * <li><strong>NORMAL</strong>: The instance is a standard instance.</li>
+         * <li><strong>HA</strong>: The instance is a high-availability (HA) instance.</li>
+         * <li><strong>VPC</strong>: The instance is a VPC-based instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The machine type of the instance. Valid value: ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("MachineType")
         public String machineType;
 
         /**
          * <p>The ID of the primary instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdssen12****</p>
          */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
         /**
          * <p>The network type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **CLASSIC**</p>
-         * <p>*   **VPC**</p>
+         * <ul>
+         * <li><strong>CLASSIC</strong></li>
+         * <li><strong>VPC</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLASSIC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The ID of the purchased instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdssen12****</p>
          */
         @NameInMap("OrderInstanceId")
         public String orderInstanceId;
 
         /**
          * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1</p>
          */
         @NameInMap("ProductVersion")
         public String productVersion;
@@ -316,39 +392,58 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2ljh3ye4****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUN</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **PUBLIC**: The returned instance is a shared instance.</p>
-         * <p>*   **PRIVATE**: The returned instance is a dedicated instance.</p>
+         * <ul>
+         * <li><strong>PUBLIC</strong>: The returned instance is a shared instance.</li>
+         * <li><strong>PRIVATE</strong>: The returned instance is a dedicated instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Version")
         public Long version;
 
         /**
          * <p>Indicates whether the version of the instance can be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgradable</p>
          */
         @NameInMap("VersionAction")
         public String versionAction;
@@ -361,28 +456,41 @@ public class DescribeDrdsInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the instance that is deployed in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drdssen12****</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
          * <p>The ID of the VPC to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp**********</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the zone in which the resource is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bpxxxxxxxxxxxxx96</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
          * <p>The edition of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **starter**: Starter Edition</p>
-         * <p>*   **enterprise**: Enterprise Edition</p>
-         * <p>*   **standard**: Standard Edition</p>
+         * <ul>
+         * <li><strong>starter</strong>: Starter Edition</li>
+         * <li><strong>enterprise</strong>: Enterprise Edition</li>
+         * <li><strong>standard</strong>: Standard Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         @NameInMap("series")
         public String series;

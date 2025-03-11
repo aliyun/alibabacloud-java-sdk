@@ -12,12 +12,18 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D99D4644-A70D-49A3-B8B4-767ACC50SE2R</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -79,6 +85,9 @@ public class CreateDrdsInstanceResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111111111</p>
          */
         @NameInMap("OrderId")
         public Long orderId;

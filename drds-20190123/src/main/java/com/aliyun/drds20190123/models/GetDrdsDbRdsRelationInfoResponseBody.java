@@ -12,12 +12,18 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>82FD0D9B-9A65-40D3-B1D9-8851B1D4AF75</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,6 +60,9 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
     public static class GetDrdsDbRdsRelationInfoResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the storage instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp16ad920ndxxxx02</p>
          */
         @NameInMap("RdsInstanceId")
         public String rdsInstanceId;
@@ -66,12 +75,18 @@ public class GetDrdsDbRdsRelationInfoResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the storage instance that is in use. If the specified instance in the request is a primary DRDS instance, the value of this parameter is the ID of the primary storage instance. If the specified instance in the request is a read-only DRDS instance, the value of this parameter is the ID of the secondary storage instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1l8xi1dd9xxxxbj</p>
          */
         @NameInMap("UsedInstanceId")
         public String usedInstanceId;
 
         /**
          * <p>The type of the storage instance that is in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("UsedInstanceType")
         public String usedInstanceType;

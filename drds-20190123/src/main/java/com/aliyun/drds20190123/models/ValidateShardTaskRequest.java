@@ -6,40 +6,64 @@ import com.aliyun.tea.*;
 public class ValidateShardTaskRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds23ds****</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region where the PolarDB-X 1.0 instance is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the table or table shard on which you want to perform the task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>buyer</p>
      */
     @NameInMap("SourceTableName")
     public String sourceTableName;
 
     /**
      * <p>The name of the table or table shard on which you perform the task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>buyer_new</p>
      */
     @NameInMap("TargetTableName")
     public String targetTableName;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **SINGLE_TO_SHARD**: converts a single table to a table shard.</p>
-     * <p>*   **SHARD_TO_SINGLE**: converts a table shard to a single table.</p>
-     * <p>*   **SHARD_TO_SHARD**: converts a table shard to another table shard.</p>
+     * <ul>
+     * <li><strong>SINGLE_TO_SHARD</strong>: converts a single table to a table shard.</li>
+     * <li><strong>SHARD_TO_SINGLE</strong>: converts a table shard to a single table.</li>
+     * <li><strong>SHARD_TO_SHARD</strong>: converts a table shard to another table shard.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SINGLE_TO_SHARD</p>
      */
     @NameInMap("TaskType")
     public String taskType;

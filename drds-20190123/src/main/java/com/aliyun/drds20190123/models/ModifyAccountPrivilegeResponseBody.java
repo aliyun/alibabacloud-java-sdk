@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyAccountPrivilegeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73559800-3c8c-11ec-bd40-99cfcff3fe1e</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

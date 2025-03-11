@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class RestartDrdsInstanceRequest extends TeaModel {
     /**
      * <p>The ID of a DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

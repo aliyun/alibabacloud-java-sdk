@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeBroadcastTablesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the database is sharded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsShard")
     public Boolean isShard;
@@ -18,30 +21,45 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>Indicates the number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86E420ED-43F2-4788-A58C-921849******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>Indicates the total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -110,46 +128,67 @@ public class DescribeBroadcastTablesResponseBody extends TeaModel {
     public static class DescribeBroadcastTablesResponseBodyList extends TeaModel {
         /**
          * <p>Indicates whether a table is a broadcast table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Broadcast")
         public Boolean broadcast;
 
         /**
          * <p>Indicates the type of the broadcast table. Valid values:</p>
-         * <br>
-         * <p>*   **1**: multi-write mode</p>
-         * <p>*   **2**: synchronous mode</p>
+         * <ul>
+         * <li><strong>1</strong>: multi-write mode</li>
+         * <li><strong>2</strong>: synchronous mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BroadcastType")
         public String broadcastType;
 
         /**
          * <p>Indicates the storage type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **0**: RDS</p>
-         * <p>*   **4**: PolarDB</p>
+         * <ul>
+         * <li><strong>0</strong>: RDS</li>
+         * <li><strong>4</strong>: PolarDB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DbInstType")
         public Integer dbInstType;
 
         /**
          * <p>Indicates whether the broadcast table was sharded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsShard")
         public Boolean isShard;
 
         /**
          * <p>Indicates the activation state of the broadcast table. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The broadcast table is activated.</p>
-         * <p>*   **2**: The broadcast table is being activated.</p>
-         * <p>*   **3**: An exception occurs when the broadcast table is being activated.</p>
+         * <ul>
+         * <li><strong>1</strong>: The broadcast table is activated.</li>
+         * <li><strong>2</strong>: The broadcast table is being activated.</li>
+         * <li><strong>3</strong>: An exception occurs when the broadcast table is being activated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>Indicates the name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nation</p>
          */
         @NameInMap("Table")
         public String table;

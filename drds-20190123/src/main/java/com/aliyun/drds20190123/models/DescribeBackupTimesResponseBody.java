@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeBackupTimesResponseBody extends TeaModel {
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4780A19F-5ECB-4C56-AD20-966A3FF9DE5R</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,12 +60,18 @@ public class DescribeBackupTimesResponseBody extends TeaModel {
     public static class DescribeBackupTimesResponseBodyRestoreTime extends TeaModel {
         /**
          * <p>Indicates the end time. The time is in the UNIX timestamp format. The time is in UTC. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568636922671</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>Indicates the start time. The time is in the UNIX timestamp format. The time must be in UTC. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568632853000</p>
          */
         @NameInMap("StartTime")
         public String startTime;

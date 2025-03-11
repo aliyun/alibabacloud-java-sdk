@@ -12,12 +12,18 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D64DE5944A1E541E0CB908A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,18 +60,27 @@ public class DescribeRecycleBinTablesResponseBody extends TeaModel {
     public static class DescribeRecycleBinTablesResponseBodyData extends TeaModel {
         /**
          * <p>The time when the table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-16 14:42:06</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The original name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIN_T4AG3CY5WWXPKHITCHJY</p>
          */
         @NameInMap("OriginalTableName")
         public String originalTableName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;

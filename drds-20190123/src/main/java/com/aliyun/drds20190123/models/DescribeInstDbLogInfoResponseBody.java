@@ -12,12 +12,18 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5438952-70EE-4FA5-87A9-080DB0ASD45F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,12 +60,18 @@ public class DescribeInstDbLogInfoResponseBody extends TeaModel {
     public static class DescribeInstDbLogInfoResponseBodyLogTimeRange extends TeaModel {
         /**
          * <p>The start time of the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568267711</p>
          */
         @NameInMap("SupportLatestTime")
         public Long supportLatestTime;
 
         /**
          * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568367711</p>
          */
         @NameInMap("SupportOldestTime")
         public Long supportOldestTime;

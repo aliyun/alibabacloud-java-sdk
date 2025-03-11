@@ -12,6 +12,9 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>293275B3-8FC0-4619-A26E-6F062FASD56R</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -62,32 +65,45 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the storage instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
          * <p>The ID of the storage instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****************</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>Storage layer instance status. Valid values:</p>
-         * <br>
-         * <p>*   **0**: creating</p>
-         * <p>*   **1**: In use</p>
-         * <p>*   **3**: Deleting</p>
-         * <p>*   **5**: restarting</p>
-         * <p>*   **6**: upgrading /Downgrading</p>
-         * <p>*   **7**: Recovering</p>
-         * <p>*   **8**: switching the Internet and intranet</p>
+         * <ul>
+         * <li><strong>0</strong>: creating</li>
+         * <li><strong>1</strong>: In use</li>
+         * <li><strong>3</strong>: Deleting</li>
+         * <li><strong>5</strong>: restarting</li>
+         * <li><strong>6</strong>: upgrading /Downgrading</li>
+         * <li><strong>7</strong>: Recovering</li>
+         * <li><strong>8</strong>: switching the Internet and intranet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DBInstanceStatus")
         public Integer DBInstanceStatus;
 
         /**
          * <p>The storage layer instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("DBInstanceType")
         public String DBInstanceType;
@@ -100,15 +116,22 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The version of the engine for the storage instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
         /**
          * <p>The network type of the storage layer. Valid values:</p>
-         * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **CLASSIC **: Classic Network</p>
+         * <ul>
+         * <li><strong>VPC</strong>: VPC</li>
+         * <li>**CLASSIC **: Classic Network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
@@ -121,12 +144,18 @@ public class DescribeDbInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the region where the storage instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the zone where the storage instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

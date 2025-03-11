@@ -6,15 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeRdsPerformanceSummaryRequest extends TeaModel {
     /**
      * <p>The ID of a DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-*****************</p>
+     */
     @NameInMap("RdsInstanceId")
     public java.util.List<String> rdsInstanceId;
 
     /**
      * <p>The ID of the region where the streaming domain resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

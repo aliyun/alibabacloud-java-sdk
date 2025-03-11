@@ -12,30 +12,45 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     /**
      * <p>The number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of tables returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83AC3D7E-461C-4D87-8ACD-6CC295******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of returned tables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -96,54 +111,80 @@ public class DescribeTablesResponseBody extends TeaModel {
     public static class DescribeTablesResponseBodyList extends TeaModel {
         /**
          * <p>Indicates whether full table scanning is allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowFullTableScan")
         public Boolean allowFullTableScan;
 
         /**
          * <p>Indicates whether the table is a replicated table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Broadcast")
         public Boolean broadcast;
 
         /**
          * <p>The type of the PolarDB-X 1.0 instance. Valid values:</p>
-         * <br>
-         * <p>*   0: The instance is a dedicated instance.</p>
-         * <p>*   1: The instance is a shard instance.</p>
+         * <ul>
+         * <li>0: The instance is a dedicated instance.</li>
+         * <li>1: The instance is a shard instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DbInstType")
         public Integer dbInstType;
 
         /**
          * <p>Indicates whether the table is locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsLocked")
         public Boolean isLocked;
 
         /**
          * <p>Indicates whether the table is sharded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsShard")
         public Boolean isShard;
 
         /**
          * <p>The shard key of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("ShardKey")
         public String shardKey;
 
         /**
          * <p>Indicates whether sharding tasks are performed on the table. Valid values:</p>
-         * <br>
-         * <p>*   0: No sharding task is performed on the table.</p>
-         * <p>*   1: Sharding tasks are performed on the table.</p>
+         * <ul>
+         * <li>0: No sharding task is performed on the table.</li>
+         * <li>1: Sharding tasks are performed on the table.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Table")
         public String table;

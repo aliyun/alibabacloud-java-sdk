@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class CheckDrdsDbNameRequest extends TeaModel {
     /**
      * <p>DRDS database name</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds_test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>DRDS instance ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

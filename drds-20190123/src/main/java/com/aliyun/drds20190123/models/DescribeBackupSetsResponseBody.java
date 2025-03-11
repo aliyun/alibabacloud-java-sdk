@@ -12,12 +12,18 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7103AEE3-9025-442F-B82B-BABD0A******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -73,6 +79,9 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
     public static class DescribeBackupSetsResponseBodyBackupSetsBackupSet extends TeaModel {
         /**
          * <p>Backup Recovery duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-05 11:31:38</p>
          */
         @NameInMap("BackupConsitentTime")
         public String backupConsitentTime;
@@ -85,70 +94,102 @@ public class DescribeBackupSetsResponseBody extends TeaModel {
 
         /**
          * <p>The end of the backup time which is in timestamp format (measured in millisecond).</p>
-         * <br>
-         * <p>>  0 indicates not finished.</p>
+         * <blockquote>
+         * <p> 0 indicates not finished.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1591327899000</p>
          */
         @NameInMap("BackupEndTime")
         public Long backupEndTime;
 
         /**
          * <p>The level of the backup. Valid values:</p>
-         * <br>
-         * <p>*   db: The database level.</p>
-         * <p>*   instance: the instance level.</p>
+         * <ul>
+         * <li>db: The database level.</li>
+         * <li>instance: the instance level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("BackupLevel")
         public String backupLevel;
 
         /**
          * <p>The backup method. Valid values:</p>
-         * <br>
-         * <p>*   logic: the logical backup.</p>
-         * <p>*   phy: fast backup</p>
+         * <ul>
+         * <li>logic: the logical backup.</li>
+         * <li>phy: fast backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>logic</p>
          */
         @NameInMap("BackupMode")
         public String backupMode;
 
         /**
          * <p>The beginning of the backup time which is in timestamp format (measured in millisecond).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1591327754000</p>
          */
         @NameInMap("BackupStartTime")
         public Long backupStartTime;
 
         /**
          * <p>The size of the backup set. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93.24</p>
          */
         @NameInMap("BackupTotalSize")
         public String backupTotalSize;
 
         /**
          * <p>The type of the backup. Valid values:</p>
-         * <br>
-         * <p>*   manual: indicates a manual backup.</p>
-         * <p>*   auto: indicates an automatic backup.</p>
+         * <ul>
+         * <li>manual: indicates a manual backup.</li>
+         * <li>auto: indicates an automatic backup.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
          * <p>Indicates whether the backup set can be restored. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableRecovery")
         public Boolean enableRecovery;
 
         /**
          * <p>The ID of the data backup file you want to use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ba30d5c4-a6dc-11ea-bd40-************</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The status of the backup instance. Valid values:</p>
-         * <br>
-         * <p>*   \-1: Failed</p>
-         * <p>*   0: Not started</p>
-         * <p>*   1: The storage instance is running.</p>
-         * <p>*   2: Success</p>
+         * <ul>
+         * <li>\-1: Failed</li>
+         * <li>0: Not started</li>
+         * <li>1: The storage instance is running.</li>
+         * <li>2: Success</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Long status;

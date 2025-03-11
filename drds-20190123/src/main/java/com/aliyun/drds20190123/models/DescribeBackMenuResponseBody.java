@@ -12,12 +12,18 @@ public class DescribeBackMenuResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60C21BE4-EDFE-454C-95ED-3A5C74******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,15 +60,22 @@ public class DescribeBackMenuResponseBody extends TeaModel {
     public static class DescribeBackMenuResponseBodyListList extends TeaModel {
         /**
          * <p>The backup method. Valid values:</p>
-         * <br>
-         * <p>*   **Logic **: logical backup</p>
-         * <p>*   **phy**: physical backup</p>
+         * <ul>
+         * <li>**Logic **: logical backup</li>
+         * <li><strong>phy</strong>: physical backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>phy</p>
          */
         @NameInMap("MenuName")
         public String menuName;
 
         /**
          * <p>Indicates whether backup recovery is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Support")
         public Boolean support;

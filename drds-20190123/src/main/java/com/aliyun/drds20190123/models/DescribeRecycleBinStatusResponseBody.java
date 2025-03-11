@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeRecycleBinStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACB5258F-25AF-4D7C-8FAA-B6FE60******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the table recycle bin. Valid values:</p>
-     * <br>
-     * <p>*   disable: The table recycle bin is enabled.</p>
-     * <p>*   enable: The table recycle bin is disabled.</p>
+     * <ul>
+     * <li>disable: The table recycle bin is enabled.</li>
+     * <li>enable: The table recycle bin is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>disable</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

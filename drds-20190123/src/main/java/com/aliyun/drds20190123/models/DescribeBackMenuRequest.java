@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeBackMenuRequest extends TeaModel {
     /**
      * <p>The ID of the DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;

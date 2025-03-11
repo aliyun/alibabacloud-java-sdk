@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class SetupRecycleBinStatusRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies the status of the table recycle bin. Valid values:</p>
-     * <br>
-     * <p>*   enable: The table recycle bin is enabled.</p>
-     * <p>*   disable: The table recycle bin is disabled.</p>
+     * <ul>
+     * <li>enable: The table recycle bin is enabled.</li>
+     * <li>disable: The table recycle bin is disabled.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("StatusAction")
     public String statusAction;

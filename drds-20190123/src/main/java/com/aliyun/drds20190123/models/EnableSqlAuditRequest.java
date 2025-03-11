@@ -6,32 +6,50 @@ import com.aliyun.tea.*;
 public class EnableSqlAuditRequest extends TeaModel {
     /**
      * <p>The name of the database for which you want to enable the SQL audit feature.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The ID of the PolarDB-X 1.0 instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>Specifies whether to backtrack historical SQL statements for auditing.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsRecall")
     public Boolean isRecall;
 
     /**
      * <p>The timestamp that indicates when the backtracking ends. Unit: milliseconds.</p>
-     * <br>
-     * <p>> The end time of the backtracking must be later than the start time of the backtracking.</p>
+     * <blockquote>
+     * <p>The end time of the backtracking must be later than the start time of the backtracking.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1568875132000</p>
      */
     @NameInMap("RecallEndTimestamp")
     public String recallEndTimestamp;
 
     /**
      * <p>The timestamp that indicates when the backtracking starts. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1568875132000</p>
      */
     @NameInMap("RecallStartTimestamp")
     public String recallStartTimestamp;

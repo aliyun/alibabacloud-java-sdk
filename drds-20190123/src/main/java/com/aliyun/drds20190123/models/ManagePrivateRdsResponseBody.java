@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ManagePrivateRdsResponseBody extends TeaModel {
     /**
      * <p>The parameter result set returned for the operation that is called for the custom ApsaraDB RDS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;requestId&quot;:&quot;E63C810A-4A13-47B6-BA67-C0E23A******&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0237BCD2-2C7A-4F86-A766-657AF6******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

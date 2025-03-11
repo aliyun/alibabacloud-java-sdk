@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class EnableInstanceIpv6AddressResponseBody extends TeaModel {
     /**
      * <p>The result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7E9F7F16-05B5-42DA-94D6-E36402******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

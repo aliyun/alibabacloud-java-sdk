@@ -12,12 +12,18 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EED1A59A-CFEA-5CF8-BB4A-090E75B3D05E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,6 +60,9 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
     public static class DescribePreCheckResultResponseBodyPreCheckResultSubCheckItems extends TeaModel {
         /**
          * <p>Indicates the error code that is returned by a subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1004</p>
          */
         @NameInMap("ErrorMsgCode")
         public String errorMsgCode;
@@ -124,6 +133,9 @@ public class DescribePreCheckResultResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the state of the precheck task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAIL</p>
          */
         @NameInMap("State")
         public String state;

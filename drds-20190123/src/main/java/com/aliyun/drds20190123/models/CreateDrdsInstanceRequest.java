@@ -6,142 +6,217 @@ import com.aliyun.tea.*;
 public class CreateDrdsInstanceRequest extends TeaModel {
     /**
      * <p>Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c1dd299c-10c6-11ea-bbbb-************</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies the description of the instance. The description must meet the following requirements:</p>
-     * <br>
-     * <p>*   The description cannot contain the prefix http:// or https://.</p>
-     * <p>*   The description must start with a letter or a Chinese character, and can contain uppercase and lowercase letters, Chinese characters, digits, underscores (\_), and hyphens (-).</p>
-     * <p>*   The description must be 2 to 256 characters in length.</p>
+     * <ul>
+     * <li>The description cannot contain the prefix http:// or https://.</li>
+     * <li>The description must start with a letter or a Chinese character, and can contain uppercase and lowercase letters, Chinese characters, digits, underscores (_), and hyphens (-).</li>
+     * <li>The description must be 2 to 256 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies the purchase duration of the subscription instance.</p>
-     * <br>
-     * <p>*   If the PricingCycle parameter is set to year, the value range of the Duration parameter is 1 to 3.</p>
-     * <p>*   If the PricingCycle parameter is set to month, the value range of the Duration parameter is 1 to 9.</p>
-     * <br>
-     * <p>>  This parameter only takes effect when the PayType parameter is set to drdsPre.</p>
+     * <ul>
+     * <li>If the PricingCycle parameter is set to year, the value range of the Duration parameter is 1 to 3.</li>
+     * <li>If the PricingCycle parameter is set to month, the value range of the Duration parameter is 1 to 9.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter only takes effect when the PayType parameter is set to drdsPre.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
      * <p>Specifies the instance type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **drds.sn2.4c16g**: The instance is of the Starter Edition.</p>
-     * <p>*   **drds.sn2.8c32g**: The instance is of the Standard Edition</p>
-     * <p>*   **drds.sn2.16c64g**: The instance is of the Enterprise Edition.</p>
+     * <ul>
+     * <li><strong>drds.sn2.4c16g</strong>: The instance is of the Starter Edition.</li>
+     * <li><strong>drds.sn2.8c32g</strong>: The instance is of the Standard Edition</li>
+     * <li><strong>drds.sn2.16c64g</strong>: The instance is of the Enterprise Edition.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds.sn2.4c16g</p>
      */
     @NameInMap("InstanceSeries")
     public String instanceSeries;
 
     /**
      * <p>Specifies whether to enable automatic renewal. Valid values:</p>
-     * <br>
-     * <p>*   **true**: If the PricingCycle parameter is set to month, the subscription is automatically renewed for one month. If the PricingCycle parameter is set to year, the subscription is automatically renewed for one year.</p>
-     * <p>*   **false**: The auto-renewal feature is disabled for the instance.</p>
-     * <br>
-     * <p>>  This parameter only takes effect when the PayType parameter is set to drdsPre.</p>
+     * <ul>
+     * <li><strong>true</strong>: If the PricingCycle parameter is set to month, the subscription is automatically renewed for one month. If the PricingCycle parameter is set to year, the subscription is automatically renewed for one year.</li>
+     * <li><strong>false</strong>: The auto-renewal feature is disabled for the instance.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter only takes effect when the PayType parameter is set to drdsPre.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsAutoRenew")
     public Boolean isAutoRenew;
 
     /**
      * <p>Specifies the ID of the primary instance. This parameter is only required when you create a read-only instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds***********</p>
      */
     @NameInMap("MasterInstId")
     public String masterInstId;
 
     /**
      * <p>Specifies the MySQL version that is supported by the instance. Valid values:</p>
-     * <br>
-     * <p>*   **5**: The instance is fully compatible with MySQL 5.x. This value is the default value.</p>
-     * <p>*   **8**: The instance is fully compatible with MySQL 8.0.</p>
-     * <br>
-     * <p>>  This parameter only takes effect when you create a primary instance. By default, the MySQL version of the read-only instance is the same as that of the primary instance.</p>
+     * <ul>
+     * <li><strong>5</strong>: The instance is fully compatible with MySQL 5.x. This value is the default value.</li>
+     * <li><strong>8</strong>: The instance is fully compatible with MySQL 8.0.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter only takes effect when you create a primary instance. By default, the MySQL version of the read-only instance is the same as that of the primary instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("MySQLVersion")
     public Integer mySQLVersion;
 
     /**
      * <p>Specifies the billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **drdsPre**: The instance uses the subscription billing method.</p>
-     * <p>*   **drdsPost**: The instance uses the pay-as-you-go billing method.</p>
-     * <p>*   **drdsRo**: By default, the pay-as-you-go billing method is used when you create read-only instances.</p>
+     * <ul>
+     * <li><strong>drdsPre</strong>: The instance uses the subscription billing method.</li>
+     * <li><strong>drdsPost</strong>: The instance uses the pay-as-you-go billing method.</li>
+     * <li><strong>drdsRo</strong>: By default, the pay-as-you-go billing method is used when you create read-only instances.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drdsPost</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>Specifies the unit of the subscription duration of the subscription instance. Valid values:</p>
-     * <br>
-     * <p>*   **year**: The unit of the subscription duration is year.</p>
-     * <p>*   **month**: The unit of the subscription duration is month.</p>
-     * <br>
-     * <p>>  This parameter is required if you set the PayType parameter to drdsPre.</p>
+     * <ul>
+     * <li><strong>year</strong>: The unit of the subscription duration is year.</li>
+     * <li><strong>month</strong>: The unit of the subscription duration is month.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if you set the PayType parameter to drdsPre.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>Specifies the number of instances to be created. You can set the value only to 1. The value specifies that you can create one instance each time.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Quantity")
     public Integer quantity;
 
     /**
      * <p>Specifies the region ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies the ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Specifies the specification code of the instance. The value consists of the instance type and the specified instance specification. For example, you can set the value to drds.sn2.4c16g.8c32g.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds.sn2.4c16g.8C32g</p>
      */
     @NameInMap("Specification")
     public String specification;
 
     /**
      * <p>Specifies the type of the instance. Set the value to PRIVATE. The value PRIVATE specifies that the instance is a dedicated instance.</p>
-     * <br>
-     * <p>>  You can also set the value to 1 to specify that the instance is a dedicated instance.</p>
+     * <blockquote>
+     * <p> You can also set the value to 1 to specify that the instance is a dedicated instance.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>Specifies the ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-**********</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>Specifies the ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-**********</p>
      */
     @NameInMap("VswitchId")
     public String vswitchId;
 
     /**
      * <p>Specifies the zone ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
 
     /**
      * <p>Specifies whether the instance is a high-availability instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("isHa")
     public Boolean isHa;

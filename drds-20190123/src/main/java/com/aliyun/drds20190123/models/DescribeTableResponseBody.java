@@ -12,12 +12,18 @@ public class DescribeTableResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B5644ABB-559A-4A1C-83F2-9E7209******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,36 +60,54 @@ public class DescribeTableResponseBody extends TeaModel {
     public static class DescribeTableResponseBodyDataList extends TeaModel {
         /**
          * <p>Indicates the name of a column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Id</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>Indicates the type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint(20)</p>
          */
         @NameInMap("ColumnType")
         public String columnType;
 
         /**
          * <p>Extra</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auto_increment</p>
          */
         @NameInMap("Extra")
         public String extra;
 
         /**
          * <p>Indicates the primary key of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRI</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
          * <p>Indicates whether the column can be empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NO</p>
          */
         @NameInMap("IsAllowNull")
         public String isAllowNull;
 
         /**
          * <p>Indicates whether the column is the primary key column of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("IsPk")
         public String isPk;

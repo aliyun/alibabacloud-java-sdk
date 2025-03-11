@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of database shards returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>509BDE17-505A-4B3B-854D-30D3F092502F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,12 +39,18 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of returned database shards.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public String total;
@@ -96,78 +111,117 @@ public class DescribeDrdsShardingDbsResponseBody extends TeaModel {
     public static class DescribeDrdsShardingDbsResponseBodyShardingDbsShardingDb extends TeaModel {
         /**
          * <p>The timeout period for a transaction to wait for the release of the data lock.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         @NameInMap("BlockingTimeout")
         public Integer blockingTimeout;
 
         /**
          * <p>The URL that is used to access the Apsara RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.100.64.100:11569</p>
          */
         @NameInMap("ConnectUrl")
         public String connectUrl;
 
         /**
          * <p>The properties of the connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connectTimeout=3000;autoReconnect=true;failOverReadOnly=false;socketTimeout=900000;rewriteBatchedStatements=true;characterEncoding=utf8</p>
          */
         @NameInMap("ConnectionProperties")
         public String connectionProperties;
 
         /**
          * <p>The ID of the Apsara RDS for MySQL instance that is used as the storage of the database shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1hjzn0yv5j2****</p>
          */
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
         /**
          * <p>The status of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("DbStatus")
         public String dbStatus;
 
         /**
          * <p>The engine of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The name of group on which the database shard is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMP1_1568171495522SABE_KUP4_0000</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The timeout period of an idle connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("IdleTimeOut")
         public Integer idleTimeOut;
 
         /**
          * <p>The maximum size of the connection pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("MaxPoolSize")
         public Integer maxPoolSize;
 
         /**
          * <p>The minimum size of the connection pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MinPoolSize")
         public Integer minPoolSize;
 
         /**
          * <p>The size of cache for the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreparedStatementCacheSize")
         public Integer preparedStatementCacheSize;
 
         /**
          * <p>The name of the database shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>temp1_zhk1_0000</p>
          */
         @NameInMap("ShardingDbName")
         public String shardingDbName;
 
         /**
          * <p>The username that is used to connect to the ApsaraDB RDS for MySQL instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg284mi8</p>
          */
         @NameInMap("UserName")
         public String userName;

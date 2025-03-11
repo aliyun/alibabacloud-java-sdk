@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeBackupDbsRequest extends TeaModel {
     /**
      * <p>Query by backup set ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>201908367</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The ID of a DRDS instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>drds************</p>
      */
     @NameInMap("DrdsInstanceId")
     public String drdsInstanceId;
 
     /**
      * <p>Query by restoration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1568632541236</p>
      */
     @NameInMap("PreferredRestoreTime")
     public String preferredRestoreTime;

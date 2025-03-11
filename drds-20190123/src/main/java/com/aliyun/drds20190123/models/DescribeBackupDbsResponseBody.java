@@ -12,12 +12,18 @@ public class DescribeBackupDbsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>842DFA7F-B09B-42A2-B115-E684AE******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

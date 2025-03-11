@@ -12,12 +12,18 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DB53EC68-463C-4187-8D2B-C2AD8C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,12 +60,18 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
     public static class DescribeRDSPerformanceResponseBodyDataValues extends TeaModel {
         /**
          * <p>The time point when the value of the monitoring metric was obtained. The value is in the UNIX timestamp format. The time is displayed in UTC. Unit: ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1603209660000</p>
          */
         @NameInMap("Date")
         public Long date;
 
         /**
          * <p>The value of the monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.58</p>
          */
         @NameInMap("Value")
         public String value;
@@ -90,26 +102,39 @@ public class DescribeRDSPerformanceResponseBody extends TeaModel {
     public static class DescribeRDSPerformanceResponseBodyData extends TeaModel {
         /**
          * <p>The name of the monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuusage</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The name of the node.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the storage type of the database is PolarDB for MySQL. If the storage type of the database is ApsaraDB RDS for MySQL, this parameter is not returned.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the storage type of the database is PolarDB for MySQL. If the storage type of the database is ApsaraDB RDS for MySQL, this parameter is not returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-*************</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
         /**
          * <p>The unit of the monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
          */
         @NameInMap("Unit")
         public String unit;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DSSDF-SEWE-23ERW</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -73,18 +79,27 @@ public class DescribeInstanceSwitchAzoneResponseBody extends TeaModel {
     public static class DescribeInstanceSwitchAzoneResponseBodyResult extends TeaModel {
         /**
          * <p>The ID of the source azoneId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         @NameInMap("OriginAzoneId")
         public String originAzoneId;
 
         /**
          * <p>regionId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>Indicates whether the job can be switched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SwitchAble")
         public Boolean switchAble;

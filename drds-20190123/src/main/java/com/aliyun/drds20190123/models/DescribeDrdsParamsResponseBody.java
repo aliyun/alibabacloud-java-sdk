@@ -12,12 +12,18 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F7F8080-9132-4279-85D0-B7E5C4305162</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,18 +60,27 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
     public static class DescribeDrdsParamsResponseBodyList extends TeaModel {
         /**
          * <p>Indicates the name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drds_test</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Indicates whether a restart is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NeedRestart")
         public Boolean needRestart;
 
         /**
          * <p>Indicates the default value of a parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("ParamDefaultValue")
         public String paramDefaultValue;
@@ -78,12 +93,18 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLOW_SQL_TIME</p>
          */
         @NameInMap("ParamEnglishName")
         public String paramEnglishName;
 
         /**
          * <p>Indicates the parameter level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
          */
         @NameInMap("ParamLevel")
         public String paramLevel;
@@ -96,24 +117,36 @@ public class DescribeDrdsParamsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the value range of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1000-900000]</p>
          */
         @NameInMap("ParamRanges")
         public String paramRanges;
 
         /**
          * <p>Indicates the type of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONFIG</p>
          */
         @NameInMap("ParamType")
         public String paramType;
 
         /**
          * <p>Indicates the value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("ParamValue")
         public String paramValue;
 
         /**
          * <p>Indicates the name of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>slowSqlTime</p>
          */
         @NameInMap("ParamVariableName")
         public String paramVariableName;

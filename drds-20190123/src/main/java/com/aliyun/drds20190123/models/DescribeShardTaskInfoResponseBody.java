@@ -12,12 +12,18 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
 
     /**
      * <p>Indicates the unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D64DE5944A1E541E0CB908A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,30 +60,45 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     public static class DescribeShardTaskInfoResponseBodyDataFull extends TeaModel {
         /**
          * <p>Indicates the number of remaining days before the tasks expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Expired")
         public Integer expired;
 
         /**
          * <p>Indicates the progress of the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>Indicates the start time when the tasks are performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-16 15:11:53</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>Indicates the number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public Integer total;
 
         /**
          * <p>Indicates the number of transactions processed by the database per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Tps")
         public Integer tps;
@@ -132,30 +153,45 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     public static class DescribeShardTaskInfoResponseBodyDataFullCheck extends TeaModel {
         /**
          * <p>Indicates the number of remaining days before the tasks expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Expired")
         public Integer expired;
 
         /**
          * <p>Indicates the progress of the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>Indicates the start time when the tasks are performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-16 15:12:53</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>Indicates the number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Total")
         public Integer total;
 
         /**
          * <p>Indicates the number of transactions processed by the database per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Tps")
         public Integer tps;
@@ -210,30 +246,45 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     public static class DescribeShardTaskInfoResponseBodyDataFullRevise extends TeaModel {
         /**
          * <p>Indicates the number of remaining days before the tasks expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Expired")
         public Integer expired;
 
         /**
          * <p>Indicates the progress of the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>Indicates the start time when the tasks are performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-16 15:12:53</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>Indicates the number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Total")
         public Integer total;
 
         /**
          * <p>Indicates the number of transactions processed by the database per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Tps")
         public Integer tps;
@@ -288,18 +339,27 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     public static class DescribeShardTaskInfoResponseBodyDataIncrement extends TeaModel {
         /**
          * <p>Indicates the latency of the incremental data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1568617906</p>
          */
         @NameInMap("Delay")
         public Integer delay;
 
         /**
          * <p>Indicates the start time when the incremental data synchronization is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-16 15:12:53</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>Indicates the number of transactions processed by the database per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Tps")
         public Integer tps;
@@ -338,30 +398,45 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     public static class DescribeShardTaskInfoResponseBodyDataReview extends TeaModel {
         /**
          * <p>Indicates the number of remaining days before the tasks expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Expired")
         public Integer expired;
 
         /**
          * <p>Indicates the progress of the tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>Indicates the start time when the tasks are performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-16 15:12:53</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>Indicates the number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Total")
         public Integer total;
 
         /**
          * <p>Indicates the number of transactions processed by the database per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Tps")
         public Integer tps;
@@ -416,6 +491,9 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
     public static class DescribeShardTaskInfoResponseBodyData extends TeaModel {
         /**
          * <p>Indicates the number of remaining days before the tasks to shard tables or convert tables expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Expired")
         public String expired;
@@ -446,6 +524,9 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the incremental data synchronization progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("Progress")
         public String progress;
@@ -458,12 +539,18 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the name of the table that you convert or shard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1</p>
          */
         @NameInMap("SourceTableName")
         public String sourceTableName;
 
         /**
          * <p>Indicates the current stage of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Stage")
         public String stage;
@@ -476,6 +563,9 @@ public class DescribeShardTaskInfoResponseBody extends TeaModel {
 
         /**
          * <p>Indicates the name of the table after you convert or shard the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2</p>
          */
         @NameInMap("TargetTableName")
         public String targetTableName;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDrdsTasksResponseBody extends TeaModel {
     /**
      * <p>Indicates the ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD412DF7-F21D-44CE-88FF-ED24917174A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -54,18 +60,27 @@ public class DescribeDrdsTasksResponseBody extends TeaModel {
     public static class DescribeDrdsTasksResponseBodyTasksTask extends TeaModel {
         /**
          * <p>Indicates the content of a task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upgrade_instance</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>Indicates the ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64148</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>Indicates the state of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILED</p>
          */
         @NameInMap("State")
         public String state;
