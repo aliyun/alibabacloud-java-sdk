@@ -27,6 +27,9 @@ public class CreateTenantShrinkRequest extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>The initialization parameters.</p>
+     */
     @NameInMap("CreateParams")
     public String createParamsShrink;
 
@@ -152,6 +155,12 @@ public class CreateTenantShrinkRequest extends TeaModel {
     @NameInMap("UserVpcId")
     public String userVpcId;
 
+    /**
+     * <p>The ID of the VPC owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-********</p>
+     */
     @NameInMap("UserVpcOwnerId")
     public String userVpcOwnerId;
 

@@ -3,9 +3,8 @@ package com.aliyun.oceanbasepro20190901.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstanceTopologyRequest extends TeaModel {
+public class DescribeProxyServiceRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +13,12 @@ public class DescribeInstanceTopologyRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    public static DescribeInstanceTopologyRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstanceTopologyRequest self = new DescribeInstanceTopologyRequest();
+    public static DescribeProxyServiceRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeProxyServiceRequest self = new DescribeProxyServiceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceTopologyRequest setInstanceId(String instanceId) {
+    public DescribeProxyServiceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

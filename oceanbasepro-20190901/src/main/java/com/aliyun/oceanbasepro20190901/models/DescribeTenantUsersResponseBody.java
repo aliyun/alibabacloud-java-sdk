@@ -149,6 +149,13 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <strong>example:</strong>
+         * <p>Encrypt,Decrypt</p>
+         */
+        @NameInMap("GlobalPermissions")
+        public String globalPermissions;
+
+        /**
          * <p>所属集群Id</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +213,14 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeTenantUsersResponseBodyTenantUsers setGlobalPermissions(String globalPermissions) {
+            this.globalPermissions = globalPermissions;
+            return this;
+        }
+        public String getGlobalPermissions() {
+            return this.globalPermissions;
         }
 
         public DescribeTenantUsersResponseBodyTenantUsers setInstanceId(String instanceId) {

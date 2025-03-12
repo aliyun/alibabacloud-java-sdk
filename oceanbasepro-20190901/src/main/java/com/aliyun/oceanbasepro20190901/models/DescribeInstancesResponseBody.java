@@ -653,7 +653,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>200</p>
          */
         @NameInMap("DiskSize")
-        public String diskSize;
+        public Long diskSize;
 
         /**
          * <p>The type of the storage disk where the cluster is deployed.<br>The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.</p>
@@ -789,6 +789,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Mem")
         public Long mem;
 
+        /**
+         * <p>The version of the OceanBase Database RedHat Package Managerment (RPM) package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.2.1.7-107030032024062709</p>
+         */
         @NameInMap("ObRpmVersion")
         public String obRpmVersion;
 
@@ -804,6 +810,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("PayType")
         public String payType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>3F、2F1A</p>
+         */
+        @NameInMap("ReplicaMode")
+        public String replicaMode;
 
         /**
          * <p>The information about cluster resources.</p>
@@ -833,6 +846,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Series")
         public String series;
 
+        /**
+         * <p>The specification type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dedicatedspec</p>
+         */
         @NameInMap("SpecType")
         public String specType;
 
@@ -988,11 +1007,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.deployType;
         }
 
-        public DescribeInstancesResponseBodyInstances setDiskSize(String diskSize) {
+        public DescribeInstancesResponseBodyInstances setDiskSize(Long diskSize) {
             this.diskSize = diskSize;
             return this;
         }
-        public String getDiskSize() {
+        public Long getDiskSize() {
             return this.diskSize;
         }
 
@@ -1114,6 +1133,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public DescribeInstancesResponseBodyInstances setReplicaMode(String replicaMode) {
+            this.replicaMode = replicaMode;
+            return this;
+        }
+        public String getReplicaMode() {
+            return this.replicaMode;
         }
 
         public DescribeInstancesResponseBodyInstances setResource(DescribeInstancesResponseBodyInstancesResource resource) {

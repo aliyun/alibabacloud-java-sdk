@@ -4,10 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The overview information about OceanBase instances.</p>
+     */
     @NameInMap("InstanceSummary")
     public DescribeInstanceSummaryResponseBodyInstanceSummary instanceSummary;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
@@ -37,27 +42,35 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
 
     public static class DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList extends TeaModel {
         /**
+         * <p>The number of expired instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ExpiredInstancesCount")
-        public String expiredInstancesCount;
+        public Long expiredInstancesCount;
 
         /**
+         * <p>The number of instances about to expire.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ImmediatelyExpiredInstancesCount")
-        public String immediatelyExpiredInstancesCount;
+        public Long immediatelyExpiredInstancesCount;
 
         /**
+         * <p>The number of recently created instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RecentCreatedInstancesCount")
-        public String recentCreatedInstancesCount;
+        public Long recentCreatedInstancesCount;
 
         /**
+         * <p>The ID of the region.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -65,45 +78,49 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public String region;
 
         /**
+         * <p>The total number of running instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RunningInstancesCount")
-        public String runningInstancesCount;
+        public Long runningInstancesCount;
 
         /**
+         * <p>The total number of instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("TotalInstancesCount")
-        public String totalInstancesCount;
+        public Long totalInstancesCount;
 
         public static DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList self = new DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setExpiredInstancesCount(String expiredInstancesCount) {
+        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setExpiredInstancesCount(Long expiredInstancesCount) {
             this.expiredInstancesCount = expiredInstancesCount;
             return this;
         }
-        public String getExpiredInstancesCount() {
+        public Long getExpiredInstancesCount() {
             return this.expiredInstancesCount;
         }
 
-        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setImmediatelyExpiredInstancesCount(String immediatelyExpiredInstancesCount) {
+        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setImmediatelyExpiredInstancesCount(Long immediatelyExpiredInstancesCount) {
             this.immediatelyExpiredInstancesCount = immediatelyExpiredInstancesCount;
             return this;
         }
-        public String getImmediatelyExpiredInstancesCount() {
+        public Long getImmediatelyExpiredInstancesCount() {
             return this.immediatelyExpiredInstancesCount;
         }
 
-        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setRecentCreatedInstancesCount(String recentCreatedInstancesCount) {
+        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setRecentCreatedInstancesCount(Long recentCreatedInstancesCount) {
             this.recentCreatedInstancesCount = recentCreatedInstancesCount;
             return this;
         }
-        public String getRecentCreatedInstancesCount() {
+        public Long getRecentCreatedInstancesCount() {
             return this.recentCreatedInstancesCount;
         }
 
@@ -115,19 +132,19 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
             return this.region;
         }
 
-        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setRunningInstancesCount(String runningInstancesCount) {
+        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setRunningInstancesCount(Long runningInstancesCount) {
             this.runningInstancesCount = runningInstancesCount;
             return this;
         }
-        public String getRunningInstancesCount() {
+        public Long getRunningInstancesCount() {
             return this.runningInstancesCount;
         }
 
-        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setTotalInstancesCount(String totalInstancesCount) {
+        public DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList setTotalInstancesCount(Long totalInstancesCount) {
             this.totalInstancesCount = totalInstancesCount;
             return this;
         }
-        public String getTotalInstancesCount() {
+        public Long getTotalInstancesCount() {
             return this.totalInstancesCount;
         }
 
@@ -135,6 +152,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
 
     public static class DescribeInstanceSummaryResponseBodyInstanceSummary extends TeaModel {
         /**
+         * <p>The total number of alerts during the query period.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -142,6 +161,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long alarmSummaryCount;
 
         /**
+         * <p>The total number of abnormal SQL statements.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -149,6 +170,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long anomalySQLCount;
 
         /**
+         * <p>The number of cluster instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -156,6 +179,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long clusterInstancesCount;
 
         /**
+         * <p>The number of expired instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -163,6 +188,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long expiredInstancesCount;
 
         /**
+         * <p>The total number of expired instances to be released.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -170,6 +197,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long immediatelyExpiredInstancesCount;
 
         /**
+         * <p>The total number of clusters with capacity risks.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -177,16 +206,23 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long insufficientDiskInstancesCount;
 
         /**
+         * <p>The number of overloaded instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("OverLoadInstancesCount")
         public Long overLoadInstancesCount;
 
+        /**
+         * <p>A list of regional instances.</p>
+         */
         @NameInMap("RegionalInstanceSummaryList")
         public java.util.List<DescribeInstanceSummaryResponseBodyInstanceSummaryRegionalInstanceSummaryList> regionalInstanceSummaryList;
 
         /**
+         * <p>The number of running instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -194,6 +230,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long runningInstancesCount;
 
         /**
+         * <p>The number of tenant instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -201,6 +239,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long tenantInstancesCount;
 
         /**
+         * <p>The total number of instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -208,6 +248,8 @@ public class DescribeInstanceSummaryResponseBody extends TeaModel {
         public Long totalInstancesCount;
 
         /**
+         * <p>The number of data transmission instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

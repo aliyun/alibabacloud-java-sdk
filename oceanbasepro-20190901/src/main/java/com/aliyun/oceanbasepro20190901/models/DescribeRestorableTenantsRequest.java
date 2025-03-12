@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRestorableTenantsRequest extends TeaModel {
     /**
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeRestorableTenantsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether the target cluster is online. <strong>Note</strong> This parameter is used for compatibility with earlier versions and can be left empty. When left empty, it specifies negation for the value of <code>isRemote</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +24,8 @@ public class DescribeRestorableTenantsRequest extends TeaModel {
     public Boolean isOnline;
 
     /**
+     * <p>This parameter is provided for compatibility with earlier versions and can be left empty.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +33,8 @@ public class DescribeRestorableTenantsRequest extends TeaModel {
     public Boolean isRemote;
 
     /**
+     * <p>The backup method.</p>
+     * 
      * <strong>example:</strong>
      * <p>native_logical</p>
      */
@@ -35,6 +42,8 @@ public class DescribeRestorableTenantsRequest extends TeaModel {
     public String method;
 
     /**
+     * <p>The restore method. This parameter is required when <code>IsRemote</code> is set to <code>true</code>, and is optional otherwise.</p>
+     * 
      * <strong>example:</strong>
      * <p>from_time_point</p>
      */
@@ -42,6 +51,8 @@ public class DescribeRestorableTenantsRequest extends TeaModel {
     public String restoreMode;
 
     /**
+     * <p>The type of the restore object.</p>
+     * 
      * <strong>example:</strong>
      * <p>tenant</p>
      */
@@ -49,6 +60,8 @@ public class DescribeRestorableTenantsRequest extends TeaModel {
     public String restoreObjectType;
 
     /**
+     * <p>The ID of the backup set.</p>
+     * 
      * <strong>example:</strong>
      * <p>bak-xxxxx</p>
      */

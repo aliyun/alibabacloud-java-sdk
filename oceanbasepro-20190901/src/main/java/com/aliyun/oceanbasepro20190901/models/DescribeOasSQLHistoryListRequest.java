@@ -26,6 +26,12 @@ public class DescribeOasSQLHistoryListRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>Specifies whether the SQL statement is a dynamic SQL statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DynamicSql")
     public Boolean dynamicSql;
 

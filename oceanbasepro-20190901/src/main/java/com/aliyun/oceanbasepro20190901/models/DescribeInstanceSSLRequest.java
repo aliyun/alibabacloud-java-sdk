@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLRequest extends TeaModel {
     /**
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -12,6 +13,9 @@ public class DescribeInstanceSSLRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("TenantId")
+    public String tenantId;
 
     public static DescribeInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSSLRequest self = new DescribeInstanceSSLRequest();
@@ -24,6 +28,14 @@ public class DescribeInstanceSSLRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstanceSSLRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

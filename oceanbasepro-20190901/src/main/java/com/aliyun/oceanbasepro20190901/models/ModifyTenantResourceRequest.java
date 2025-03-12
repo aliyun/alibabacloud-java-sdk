@@ -100,6 +100,7 @@ public class ModifyTenantResourceRequest extends TeaModel {
         return this.memory;
     }
 
+    @Deprecated
     public ModifyTenantResourceRequest setReadOnlyZoneList(String readOnlyZoneList) {
         this.readOnlyZoneList = readOnlyZoneList;
         return this;

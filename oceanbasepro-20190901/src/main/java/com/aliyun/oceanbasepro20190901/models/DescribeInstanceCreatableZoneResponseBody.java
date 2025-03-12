@@ -41,12 +41,21 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceCreatableZoneResponseBodyZoneList extends TeaModel {
+        @NameInMap("FullCopyId")
+        public String fullCopyId;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsInCluster")
         public Boolean isInCluster;
+
+        @NameInMap("LogicalZoneName")
+        public String logicalZoneName;
+
+        @NameInMap("ReplicateZoneIndex")
+        public Long replicateZoneIndex;
 
         /**
          * <p>DescribeInstanceCreatableZone</p>
@@ -62,12 +71,36 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstanceCreatableZoneResponseBodyZoneList setFullCopyId(String fullCopyId) {
+            this.fullCopyId = fullCopyId;
+            return this;
+        }
+        public String getFullCopyId() {
+            return this.fullCopyId;
+        }
+
         public DescribeInstanceCreatableZoneResponseBodyZoneList setIsInCluster(Boolean isInCluster) {
             this.isInCluster = isInCluster;
             return this;
         }
         public Boolean getIsInCluster() {
             return this.isInCluster;
+        }
+
+        public DescribeInstanceCreatableZoneResponseBodyZoneList setLogicalZoneName(String logicalZoneName) {
+            this.logicalZoneName = logicalZoneName;
+            return this;
+        }
+        public String getLogicalZoneName() {
+            return this.logicalZoneName;
+        }
+
+        public DescribeInstanceCreatableZoneResponseBodyZoneList setReplicateZoneIndex(Long replicateZoneIndex) {
+            this.replicateZoneIndex = replicateZoneIndex;
+            return this;
+        }
+        public Long getReplicateZoneIndex() {
+            return this.replicateZoneIndex;
         }
 
         public DescribeInstanceCreatableZoneResponseBodyZoneList setZone(String zone) {

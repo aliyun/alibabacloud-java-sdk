@@ -27,6 +27,9 @@ public class CreateTenantRequest extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>The initialization parameters.</p>
+     */
     @NameInMap("CreateParams")
     public java.util.Map<String, String> createParams;
 
@@ -152,6 +155,12 @@ public class CreateTenantRequest extends TeaModel {
     @NameInMap("UserVpcId")
     public String userVpcId;
 
+    /**
+     * <p>The ID of the VPC owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-********</p>
+     */
     @NameInMap("UserVpcOwnerId")
     public String userVpcOwnerId;
 

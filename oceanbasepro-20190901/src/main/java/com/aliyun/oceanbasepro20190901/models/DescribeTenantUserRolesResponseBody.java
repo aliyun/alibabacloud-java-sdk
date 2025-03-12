@@ -5,12 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantUserRolesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of roles of the user.<br>Valid values: </p>
+     * <p>ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.
+     * ReadOnly: a role that has only the read-only privilege SELECT.
+     * DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.
+     * DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
+     */
     @NameInMap("Role")
     public java.util.List<String> role;
 

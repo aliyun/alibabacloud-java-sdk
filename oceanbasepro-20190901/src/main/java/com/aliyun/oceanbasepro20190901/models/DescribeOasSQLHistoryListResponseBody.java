@@ -104,6 +104,12 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
 
+        /**
+         * <p>The average DB time, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AvgDbTime")
         public Double avgDbTime;
 
@@ -584,6 +590,12 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         @NameInMap("StrongConsistencyPercentage")
         public Double strongConsistencyPercentage;
 
+        /**
+         * <p>The total DB time, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SumDbTime")
         public Double sumDbTime;
 
@@ -640,6 +652,15 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
          */
         @NameInMap("UserName")
         public String userName;
+
+        /**
+         * <p>The wait event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("WaitEvent")
+        public String waitEvent;
 
         /**
          * <p>Eventually consistent transaction percentage during the execution period.</p>
@@ -1197,6 +1218,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+        public DescribeOasSQLHistoryListResponseBodyData setWaitEvent(String waitEvent) {
+            this.waitEvent = waitEvent;
+            return this;
+        }
+        public String getWaitEvent() {
+            return this.waitEvent;
         }
 
         public DescribeOasSQLHistoryListResponseBodyData setWeakConsistencyPercentage(Double weakConsistencyPercentage) {

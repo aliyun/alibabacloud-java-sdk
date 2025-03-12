@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantResponseBody extends TeaModel {
     /**
-     * <p>The zone information of the tenant.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
@@ -14,7 +14,7 @@ public class DescribeTenantResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The information about the tenant.</p>
      */
     @NameInMap("Tenant")
     public DescribeTenantResponseBodyTenant tenant;
@@ -41,12 +41,30 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit extends TeaModel {
+        /**
+         * <p>The maximum number of capacity units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("MaxCapacityUnit")
         public Integer maxCapacityUnit;
 
+        /**
+         * <p>The minimum number of capacity units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinCapacityUnit")
         public Integer minCapacityUnit;
 
+        /**
+         * <p>The number of used capacity units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UsedCapacit")
         public Integer usedCapacit;
 
@@ -83,6 +101,8 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantReadOnlyResourceCpu extends TeaModel {
         /**
+         * <p>The total number of CPU cores of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -90,12 +110,20 @@ public class DescribeTenantResponseBody extends TeaModel {
         public Float totalCpu;
 
         /**
+         * <p>The number of CPU cores in each resource unit of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
         @NameInMap("UnitCpu")
         public Float unitCpu;
 
+        /**
+         * <p>The number of CPU cores used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("UsedCpu")
         public Float usedCpu;
 
@@ -132,6 +160,8 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize extends TeaModel {
         /**
+         * <p>The size of disk space used by the tenant, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>86</p>
          */
@@ -154,9 +184,21 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize extends TeaModel {
+        /**
+         * <p>The total log disk size of the tenant, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
+         */
         @NameInMap("TotalLogDisk")
         public Integer totalLogDisk;
 
+        /**
+         * <p>The log disk size of each resource unit of the tenant, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
+         */
         @NameInMap("UnitLogDisk")
         public Integer unitLogDisk;
 
@@ -185,6 +227,8 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantReadOnlyResourceMemory extends TeaModel {
         /**
+         * <p>The total memory size of the tenant, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>64</p>
          */
@@ -192,6 +236,8 @@ public class DescribeTenantResponseBody extends TeaModel {
         public Float totalMemory;
 
         /**
+         * <p>The memory size of each resource unit of the tenant, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -199,6 +245,8 @@ public class DescribeTenantResponseBody extends TeaModel {
         public Float unitMemory;
 
         /**
+         * <p>The size of memory used by the tenant, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -237,21 +285,42 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantReadOnlyResource extends TeaModel {
+        /**
+         * <p>The information about capacity units.</p>
+         */
         @NameInMap("CapacityUnit")
         public DescribeTenantResponseBodyTenantReadOnlyResourceCapacityUnit capacityUnit;
 
+        /**
+         * <p>The number of CPU cores of each replica node in the cluster.</p>
+         */
         @NameInMap("Cpu")
         public DescribeTenantResponseBodyTenantReadOnlyResourceCpu cpu;
 
+        /**
+         * <p>The size of the data disk.</p>
+         */
         @NameInMap("DiskSize")
         public DescribeTenantResponseBodyTenantReadOnlyResourceDiskSize diskSize;
 
+        /**
+         * <p>The information about the log disk resources of the tenant.</p>
+         */
         @NameInMap("LogDiskSize")
         public DescribeTenantResponseBodyTenantReadOnlyResourceLogDiskSize logDiskSize;
 
+        /**
+         * <p>The information about the memory resources of the cluster.</p>
+         */
         @NameInMap("Memory")
         public DescribeTenantResponseBodyTenantReadOnlyResourceMemory memory;
 
+        /**
+         * <p>The number of resource units in the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UnitNum")
         public Integer unitNum;
 
@@ -312,22 +381,37 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantTenantConnections extends TeaModel {
         /**
-         * <p>The primary zone of the tenant.</p>
+         * <p>The type of the address.</p>
+         * <ul>
+         * <li>MASTER: the primary address, which supports both data read and write.</li>
+         * <li>READONLY: a read-only address.</li>
+         * <li>READWRITE: a read/write splitting address.</li>
+         * <li>CLOGSERVICE: a clog service address.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>MASTER</p>
+         * <p>READONLY</p>
          */
         @NameInMap("AddressType")
         public String addressType;
 
+        /**
+         * <p>The logical zones of the endpoints.</p>
+         */
         @NameInMap("ConnectionLogicalZones")
         public java.util.List<String> connectionLogicalZones;
 
+        /**
+         * <p>The type of the replica corresponding to the tenant connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FULL</p>
+         */
         @NameInMap("ConnectionReplicaType")
         public String connectionReplicaType;
 
         /**
-         * <p>The Internet address for accessing the tenant.</p>
+         * <p>The list of zones corresponding to the tenant connection.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cn-hangzhou-i&quot;, &quot;cn-hangzhou-j&quot;]</p>
@@ -335,11 +419,17 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("ConnectionZones")
         public java.util.List<String> connectionZones;
 
+        /**
+         * <p>Specifies whether to enable transaction splitting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableTransactionSplit")
         public Boolean enableTransactionSplit;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The Internet address for accessing the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>t32a7ru5u****mo.oceanbase.aliyuncs.com</p>
@@ -348,7 +438,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String internetAddress;
 
         /**
-         * <p>实例系列</p>
+         * <p>The status of the Internet address for accessing the tenant. Valid values:   </p>
+         * <ul>
+         * <li>CLOSED: The address is disabled.   </li>
+         * <li>ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </li>
+         * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </li>
+         * <li>ONLINE: The address is in service.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CLOSED</p>
@@ -356,14 +452,26 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("InternetAddressStatus")
         public String internetAddressStatus;
 
+        /**
+         * <p>The upper limit of the maximum number of public connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("InternetMaxConnectionLimit")
         public Long internetMaxConnectionLimit;
 
+        /**
+         * <p>The current value set for the maximum number of public connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2500</p>
+         */
         @NameInMap("InternetMaxConnectionNum")
         public Long internetMaxConnectionNum;
 
         /**
-         * <p>实例类型</p>
+         * <p>The Internet port for accessing the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -371,43 +479,44 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("InternetPort")
         public Integer internetPort;
 
+        /**
+         * <p>The port for direct loads of public connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3307</p>
+         */
         @NameInMap("InternetRpcPort")
         public Integer internetRpcPort;
 
         /**
-         * <p>The deployment type of the cluster. Valid values:  </p>
-         * <ul>
-         * <li>multiple: multi-IDC deployment   </li>
-         * <li>single: single-IDC deployment   </li>
-         * <li>dual: dual-IDC deployment</li>
-         * </ul>
+         * <p>The intranet address for accessing the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <p>t32a7ru5u****.oceanbase.aliyuncs.com</p>
+         * <p>t4nunwxr0****.oceanbase.aliyuncs.com</p>
          */
         @NameInMap("IntranetAddress")
         public String intranetAddress;
 
         /**
-         * <p>PayCore business database</p>
+         * <p>The primary zone corresponding to the address for accessing the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-i</p>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("IntranetAddressMasterZoneId")
         public String intranetAddressMasterZoneId;
 
         /**
-         * <p>The total number of CPU cores of the tenant.</p>
+         * <p>The standby zone corresponding to the address for accessing the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-j</p>
+         * <p>cn-hangzhou-g</p>
          */
         @NameInMap("IntranetAddressSlaveZoneId")
         public String intranetAddressSlaveZoneId;
 
         /**
-         * <p>付费类型</p>
+         * <p>The status of the intranet address for accessing the tenant.<br>The value ONLINE indicates that the address is in service.</p>
          * 
          * <strong>example:</strong>
          * <p>ONLINE</p>
@@ -416,40 +525,80 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String intranetAddressStatus;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The intranet port for accessing the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <p>3306</p>
+         * <p>2983</p>
          */
         @NameInMap("IntranetPort")
         public Integer intranetPort;
 
+        /**
+         * <p>The port for direct loads of private connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3307</p>
+         */
         @NameInMap("IntranetRpcPort")
         public Integer intranetRpcPort;
 
+        /**
+         * <p>The port of private SQL connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("IntranetSqlPort")
         public Integer intranetSqlPort;
 
+        /**
+         * <p>The current value set for the maximum number of private connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxConnectionLimit")
         public Long maxConnectionLimit;
 
         /**
+         * <p>The maximum number of connections.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
         @NameInMap("MaxConnectionNum")
         public Long maxConnectionNum;
 
+        /**
+         * <p>The ODP version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.3.1-xxxxxxxxx</p>
+         */
         @NameInMap("OdpVersion")
         public String odpVersion;
 
+        /**
+         * <p>The degree of parallelism (DOP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ParallelQueryDegree")
         public Long parallelQueryDegree;
 
+        /**
+         * <p>The ID of the OceanBase Database Proxy (ODP) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-xxxxxxx</p>
+         */
         @NameInMap("ProxyClusterId")
         public String proxyClusterId;
 
         /**
+         * <p>The ID of the tenant endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>obe-4tw51gp7****</p>
          */
@@ -457,25 +606,25 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String tenantEndpointId;
 
         /**
-         * <p>The primary zone corresponding to the address for accessing the tenant.</p>
+         * <p>Specifies whether to enable transaction splitting.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         @NameInMap("TransactionSplit")
         public Boolean transactionSplit;
 
         /**
-         * <p>The connection access information of the tenant.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bp11k1aypnzu1l3whi****</p>
+         * <p>vsw-bp1i7b94u2et716yl****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The service mode of the connection address. Valid values:<br>ReadWrite: provides strong-consistency read and write services.<br>ReadOnly: provides the read-only service to ensure ultimate consistency of data.<br>Clog: provides transaction log services.</p>
+         * <p>The ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1qiail1asmfe23t****</p>
@@ -707,12 +856,30 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResourceCapacityUnit extends TeaModel {
+        /**
+         * <p>The maximum number of capacity units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("MaxCapacityUnit")
         public Integer maxCapacityUnit;
 
+        /**
+         * <p>The minimum number of capacity units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinCapacityUnit")
         public Integer minCapacityUnit;
 
+        /**
+         * <p>The number of used capacity units.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UsedCapacit")
         public Integer usedCapacit;
 
@@ -749,14 +916,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantTenantResourceCpu extends TeaModel {
         /**
-         * <p>The data replica distribution mode of the tenant.    </p>
-         * <ul>
-         * <li>For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.</li>
-         * <li>For the basic version, N indicates the single-zone mode.</li>
-         * </ul>
-         * <blockquote>
-         * <p><br>N represents the number of nodes in a single zone.</p>
-         * </blockquote>
+         * <p>The total number of CPU cores of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -765,7 +925,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public Float totalCpu;
 
         /**
-         * <p>The zone corresponding to the tenant connection.</p>
+         * <p>The number of CPU cores in each resource unit of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -774,8 +934,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public Float unitCpu;
 
         /**
-         * <p>The tenant mode.<br>Valid values: 
-         * Oracle<br>MySQL</p>
+         * <p>The number of used CPU cores of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -816,7 +975,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantTenantResourceDiskSize extends TeaModel {
         /**
-         * <p>The total memory size of the tenant, in GB.</p>
+         * <p>The size of used disk space of the tenant, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -840,9 +999,21 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResourceLogDiskSize extends TeaModel {
+        /**
+         * <p>The total size of log disk of the tenant, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
+         */
         @NameInMap("TotalLogDisk")
         public Integer totalLogDisk;
 
+        /**
+         * <p>The log disk size of each resource unit of the tenant, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
+         */
         @NameInMap("UnitLogDisk")
         public Integer unitLogDisk;
 
@@ -871,7 +1042,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantTenantResourceMemory extends TeaModel {
         /**
-         * <p>The information about the memory resources of the tenant.</p>
+         * <p>The total memory size of the tenant, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>64</p>
@@ -880,7 +1051,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public Float totalMemory;
 
         /**
-         * <p>The time when the tenant was created.</p>
+         * <p>The memory size of each resource unit of the tenant, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -889,12 +1060,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         public Float unitMemory;
 
         /**
-         * <p>The status of the Internet address for accessing the tenant. Valid values:<br>Closed: The address is disabled.   </p>
-         * <ul>
-         * <li>ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </li>
-         * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </li>
-         * <li>ONLINE: The address is in service.</li>
-         * </ul>
+         * <p>The size of used memory of the tenant, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -934,35 +1100,38 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResource extends TeaModel {
+        /**
+         * <p>The information about capacity units.</p>
+         */
         @NameInMap("CapacityUnit")
         public DescribeTenantResponseBodyTenantTenantResourceCapacityUnit capacityUnit;
 
         /**
-         * <p>The enabling status of the Clog service.<br>CLOSED: The Clog service is disabled.  </p>
-         * <ul>
-         * <li>ONLINE: The Clog service is running.</li>
-         * </ul>
+         * <p>The information about the CPU resources of the tenant.</p>
          */
         @NameInMap("Cpu")
         public DescribeTenantResponseBodyTenantTenantResourceCpu cpu;
 
         /**
-         * <p>The status of the intranet address for accessing the tenant.<br>The value ONLINE indicates that the address is in service.</p>
+         * <p>The information about the disk resources of the tenant.</p>
          */
         @NameInMap("DiskSize")
         public DescribeTenantResponseBodyTenantTenantResourceDiskSize diskSize;
 
+        /**
+         * <p>The information about the log disk resources of the tenant.</p>
+         */
         @NameInMap("LogDiskSize")
         public DescribeTenantResponseBodyTenantTenantResourceLogDiskSize logDiskSize;
 
         /**
-         * <p>The description of the tenant.</p>
+         * <p>The information about the memory resources of the tenant.</p>
          */
         @NameInMap("Memory")
         public DescribeTenantResponseBodyTenantTenantResourceMemory memory;
 
         /**
-         * <p>Alibaba Cloud CLI</p>
+         * <p>The number of resource units for the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1026,21 +1195,66 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas extends TeaModel {
+        /**
+         * <p>The ID of the full-featured replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FullCopyId")
         public Integer fullCopyId;
 
+        /**
+         * <p>The name of the logical zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-f-z0</p>
+         */
         @NameInMap("LogicZoneName")
         public String logicZoneName;
 
+        /**
+         * <p>The ID of the read-only replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ReadOnlyCopyId")
         public String readOnlyCopyId;
 
+        /**
+         * <p>The type of the read-only replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROW_STORE</p>
+         */
+        @NameInMap("ReadOnlyReplicaType")
+        public String readOnlyReplicaType;
+
+        /**
+         * <p>The ID of the zone replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ZoneCopyId")
         public Integer zoneCopyId;
 
+        /**
+         * <p>The number of nodes in the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ZoneNodes")
-        public String zoneNodes;
+        public Long zoneNodes;
 
+        /**
+         * <p>The type of the zone replica.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FULL</p>
+         */
         @NameInMap("ZoneReplicaType")
         public String zoneReplicaType;
 
@@ -1073,6 +1287,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.readOnlyCopyId;
         }
 
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setReadOnlyReplicaType(String readOnlyReplicaType) {
+            this.readOnlyReplicaType = readOnlyReplicaType;
+            return this;
+        }
+        public String getReadOnlyReplicaType() {
+            return this.readOnlyReplicaType;
+        }
+
         public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setZoneCopyId(Integer zoneCopyId) {
             this.zoneCopyId = zoneCopyId;
             return this;
@@ -1081,11 +1303,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.zoneCopyId;
         }
 
-        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setZoneNodes(String zoneNodes) {
+        public DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas setZoneNodes(Long zoneNodes) {
             this.zoneNodes = zoneNodes;
             return this;
         }
-        public String getZoneNodes() {
+        public Long getZoneNodes() {
             return this.zoneNodes;
         }
 
@@ -1101,7 +1323,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenantTenantZones extends TeaModel {
         /**
-         * <p>是否允许开启读写分离地址</p>
+         * <p>The region where the zone of the tenant resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -1110,22 +1332,25 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The intranet port for accessing the tenant.</p>
+         * <p>The ID of the zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-i</p>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("TenantZoneId")
         public String tenantZoneId;
 
+        /**
+         * <p>The zone replicas of the tenant.</p>
+         */
         @NameInMap("TenantZoneReplicas")
         public java.util.List<DescribeTenantResponseBodyTenantTenantZonesTenantZoneReplicas> tenantZoneReplicas;
 
         /**
-         * <p>The character set.</p>
+         * <p>The role of the zone of the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <p>ReadOnly</p>
+         * <p>ReadWrite</p>
          */
         @NameInMap("TenantZoneRole")
         public String tenantZoneRole;
@@ -1171,338 +1396,19 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     public static class DescribeTenantResponseBodyTenant extends TeaModel {
         /**
-         * <p>DescribeTenant</p>
+         * <p>The list of zones.</p>
          */
         @NameInMap("AvailableZones")
         public java.util.List<String> availableZones;
 
         /**
-         * <p>The number of CPU cores in each resource unit of the tenant.</p>
+         * <p>The character set.</p>
          * 
          * <strong>example:</strong>
          * <p>utf8mb4</p>
          */
         @NameInMap("Charset")
         public String charset;
-
-        /**
-         * <p>地址类型</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CLOSED</p>
-         */
-        @NameInMap("ClogServiceStatus")
-        public String clogServiceStatus;
-
-        /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>utf8mb4_general_ci</p>
-         */
-        @NameInMap("Collation")
-        public String collation;
-
-        /**
-         * <p>You can call this operation to create a single tenant in a specific cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2021-09-17 15:52:17</p>
-         */
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        @NameInMap("DataMergeTime")
-        public String dataMergeTime;
-
-        /**
-         * <p>The list of zones.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1-1-1</p>
-         */
-        @NameInMap("DeployMode")
-        public String deployMode;
-
-        /**
-         * <p>The series of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>multiple</p>
-         */
-        @NameInMap("DeployType")
-        public String deployType;
-
-        /**
-         * <p>Indicates whether to enable read/write splitting endpoint.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>The information of the tenant.</p>
-         */
-        @NameInMap("Description")
-        public String description;
-
-        /**
-         * <p>You can call this operation to query the information of a specific tenant in a specific cluster.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cloud_essd_pl1</p>
-         */
-        @NameInMap("DiskType")
-        public String diskType;
-
-        /**
-         * <p>是否可以申请Binlog服务</p>
-         */
-        @NameInMap("EnableBinlogService")
-        public Boolean enableBinlogService;
-
-        /**
-         * <p>The intranet address for accessing the tenant.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("EnableClogService")
-        public Boolean enableClogService;
-
-        /**
-         * <p>The deployment type of the primary zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("EnableInternetAddressService")
-        public Boolean enableInternetAddressService;
-
-        @NameInMap("EnableParallelQuery")
-        public Boolean enableParallelQuery;
-
-        @NameInMap("EnableReadOnlyReplica")
-        public Boolean enableReadOnlyReplica;
-
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("EnableReadWriteSplit")
-        public Boolean enableReadWriteSplit;
-
-        /**
-         * <p>{
-         *     &quot;RequestId&quot;: &quot;EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C&quot;,
-         *     &quot;Tenant&quot;: {
-         *         &quot;TenantId&quot;: &quot;t33h8y08k****&quot;,
-         *         &quot;TenantName&quot;: &quot;pay_online&quot;,
-         *         &quot;TenantMode&quot;: &quot;Oracle&quot;,
-         *         &quot;VpcId&quot;: &quot;vpc-bp1d2q3mhg9i23ofi****&quot;,
-         *         &quot;Status&quot;: &quot;ONLINE&quot;,
-         *         &quot;PrimaryZone&quot;: &quot;cn-hangzhou-i&quot;,
-         *         &quot;DeployType&quot;: &quot;multiple&quot;,
-         *         &quot;DeployMode&quot;: &quot;1-1-1&quot;,
-         *         &quot;Description&quot;: &quot;PayCore business database&quot;,
-         *         &quot;CreateTime&quot;: &quot;2021-09-17 15:52:17&quot;,
-         *         &quot;TenantResource&quot;: {
-         *             &quot;UnitNum&quot;: 1,
-         *             &quot;Cpu&quot;: {
-         *                 &quot;UsedCpu&quot;: 8,
-         *                 &quot;TotalCpu&quot;: 10,
-         *                 &quot;UnitCpu&quot;: 8
-         *             },
-         *             &quot;Memory&quot;: {
-         *                 &quot;UsedMemory&quot;: 30,
-         *                 &quot;TotalMemory&quot;: 64,
-         *                 &quot;UnitMemory&quot;: 32
-         *             },
-         *             &quot;DiskSize&quot;: {
-         *                 &quot;UsedDiskSize&quot;: 86
-         *             }
-         *         },
-         *         &quot;TenantConnections&quot;: [
-         *             {
-         *                 &quot;ConnectionRole&quot;: &quot;ReadWrite&quot;,
-         *                 &quot;IntranetAddress&quot;: &quot;t32a7ru5u****.oceanbase.aliyuncs.com&quot;,
-         *                 &quot;IntranetPort&quot;: 3306,
-         *                 &quot;InternetAddress&quot;: &quot;t32a7ru5u<strong><strong>mo.oceanbase.aliyuncs.com&quot;,
-         *                 &quot;InternetPort&quot;: 3306,
-         *                 &quot;VpcId&quot;: &quot;vpc-bp1qiail1asmfe23t</strong></strong>&quot;,
-         *                 &quot;VSwitchId&quot;: &quot;vsw-bp11k1aypnzu1l3whi****&quot;,
-         *                 &quot;IntranetAddressMasterZoneId&quot;: &quot;cn-hangzhou-i&quot;,
-         *                 &quot;IntranetAddressSlaveZoneId&quot;: &quot;cn-hangzhou-j&quot;,
-         *                 &quot;IntranetAddressStatus&quot;: &quot;ONLINE&quot;,
-         *                 &quot;ConnectionZones&quot;: [
-         *                     &quot;cn-hangzhou-i&quot;
-         *                 ],
-         *                 &quot;InternetAddressStatus&quot;: &quot;CLOSED&quot;
-         *             }
-         *         ],
-         *         &quot;TenantZones&quot;: [
-         *             {
-         *                 &quot;TenantZoneId&quot;: &quot;cn-hangzhou-i&quot;,
-         *                 &quot;Region&quot;: &quot;cn-hangzhou&quot;,
-         *                 &quot;TenantZoneRole&quot;: &quot;ReadOnly&quot;
-         *             }
-         *         ],
-         *         &quot;ClogServiceStatus&quot;: &quot;CLOSED&quot;
-         *     }
-         * }</p>
-         * 
-         * <strong>example:</strong>
-         * <p>KAFKA_PUBLIC</p>
-         */
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("LowerCaseTableNames")
-        public Integer lowerCaseTableNames;
-
-        /**
-         * <pre><code>http(s)://[Endpoint]/?Action=DescribeTenant
-         * &amp;InstanceId=ob317v4uif****
-         * &amp;TenantId=ob2mr3oae0****
-         * &amp;Common request parameters
-         * </code></pre>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
-         */
-        @NameInMap("MasterIntranetAddressZone")
-        public String masterIntranetAddressZone;
-
-        /**
-         * <strong>example:</strong>
-         * <p>32</p>
-         */
-        @NameInMap("MaxParallelQueryDegree")
-        public Long maxParallelQueryDegree;
-
-        @NameInMap("OdpVersion")
-        public String odpVersion;
-
-        /**
-         * <strong>example:</strong>
-         * <p>POSTPAY</p>
-         */
-        @NameInMap("PayType")
-        public String payType;
-
-        /**
-         * <p>The type of the payment.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou-i</p>
-         */
-        @NameInMap("PrimaryZone")
-        public String primaryZone;
-
-        /**
-         * <p>Example 1</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RANDOM</p>
-         */
-        @NameInMap("PrimaryZoneDeployType")
-        public String primaryZoneDeployType;
-
-        @NameInMap("ReadOnlyResource")
-        public DescribeTenantResponseBodyTenantReadOnlyResource readOnlyResource;
-
-        @NameInMap("RecycleBinStatus")
-        public String recycleBinStatus;
-
-        /**
-         * <DescribeTenantResponse>
-         *     <RequestId>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</RequestId>
-         *     <Tenant>
-         *         <TenantId>t33h8y08k****</TenantId>
-         *         <TenantName>pay_online</TenantName>
-         *         <TenantMode>Oracle</TenantMode>
-         *         <VpcId>vpc-bp1d2q3mhg9i23ofi****</VpcId>
-         *         <Status>ONLINE</Status>
-         *         <PrimaryZone>cn-hangzhou-i</PrimaryZone>
-         *         <DeployType>multiple</DeployType>
-         *         <DeployMode>1-1-1</DeployMode>
-         *         <Description>PayCore business database</Description>
-         *         <CreateTime>2021-09-17 15:52:17</CreateTime>
-         *         <TenantResource>
-         *             <UnitNum>1</UnitNum>
-         *             <Cpu>
-         *                 <UsedCpu>8</UsedCpu>
-         *                 <TotalCpu>10</TotalCpu>
-         *                 <UnitCpu>8</UnitCpu>
-         *             </Cpu>
-         *             <Memory>
-         *                 <UsedMemory>30</UsedMemory>
-         *                 <TotalMemory>64</TotalMemory>
-         *                 <UnitMemory>32</UnitMemory>
-         *             </Memory>
-         *             <DiskSize>
-         *                 <UsedDiskSize>86</UsedDiskSize>
-         *             </DiskSize>
-         *         </TenantResource>
-         *         <TenantConnections>
-         *             <ConnectionRole>ReadWrite</ConnectionRole>
-         *             <IntranetAddress>t32a7ru5u****.oceanbase.aliyuncs.com</IntranetAddress>
-         *             <IntranetPort>3306</IntranetPort>
-         *             <InternetAddress>t32a7ru5u****mo.oceanbase.aliyuncs.com</InternetAddress>
-         *             <InternetPort>3306</InternetPort>
-         *             <VpcId>vpc-bp1qiail1asmfe23t****</VpcId>
-         *             <VSwitchId>vsw-bp11k1aypnzu1l3whi****</VSwitchId>
-         *             <IntranetAddressMasterZoneId>cn-hangzhou-i</IntranetAddressMasterZoneId>
-         *             <IntranetAddressSlaveZoneId>cn-hangzhou-j</IntranetAddressSlaveZoneId>
-         *             <IntranetAddressStatus>ONLINE</IntranetAddressStatus>
-         *             <ConnectionZones>cn-hangzhou-i</ConnectionZones>
-         *             <InternetAddressStatus>CLOSED</InternetAddressStatus>
-         *         </TenantConnections>
-         *         <TenantZones>
-         *             <TenantZoneId>cn-hangzhou-i</TenantZoneId>
-         *             <Region>cn-hangzhou</Region>
-         *             <TenantZoneRole>ReadOnly</TenantZoneRole>
-         *         </TenantZones>
-         *         <ClogServiceStatus>CLOSED</ClogServiceStatus>
-         *     </Tenant>
-         * </DescribeTenantResponse>
-         * 
-         * <strong>example:</strong>
-         * <p>normal</p>
-         */
-        @NameInMap("Series")
-        public String series;
-
-        /**
-         * <p>The character set.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ONLINE</p>
-         */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The status of the tenant.   </p>
-         * <ul>
-         * <li>PENDING_CREATE: The tenant is being created.   </li>
-         * <li>RESTORE: The tenant is being recovered.   </li>
-         * <li>ONLINE: The tenant is running.   </li>
-         * <li>SPEC_MODIFYING: The specification of the tenant is being modified.   </li>
-         * <li>ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.  </li>
-         * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.  </li>
-         * <li>PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.  </li>
-         * <li>PARAMETER_MODIFYING: Parameters are being modified.   </li>
-         * <li>WHITE_LIST_MODIFYING: The whitelist is being modified.</li>
-         * </ul>
-         */
-        @NameInMap("TenantConnections")
-        public java.util.List<DescribeTenantResponseBodyTenantTenantConnections> tenantConnections;
-
-        /**
-         * <p>The region where the zone of the tenant resides.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>t33h8y08k****</p>
-         */
-        @NameInMap("TenantId")
-        public String tenantId;
 
         /**
          * <p>The enabling status of the clog service.  </p>
@@ -1512,40 +1418,383 @@ public class DescribeTenantResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Oracle</p>
+         * <p>CLOSED</p>
+         */
+        @NameInMap("ClogServiceStatus")
+        public String clogServiceStatus;
+
+        /**
+         * <p>The collation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4_general_ci</p>
+         */
+        @NameInMap("Collation")
+        public String collation;
+
+        /**
+         * <p>The time when the tenant was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-21 11:15:47.0</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>The major compaction time of the tenant. This parameter is supported only in OceanBase Database V4.0.0 and later.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:36Z</p>
+         */
+        @NameInMap("DataMergeTime")
+        public String dataMergeTime;
+
+        /**
+         * <p>The data replica distribution mode of the tenant.    </p>
+         * <ul>
+         * <li>For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.</li>
+         * <li>For the basic version, N indicates the single-zone mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p><br>N represents the number of nodes in a single zone.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1-1-1</p>
+         */
+        @NameInMap("DeployMode")
+        public String deployMode;
+
+        /**
+         * <p>The deployment type of the cluster. Valid values:  </p>
+         * <ul>
+         * <li>multiple: multi-IDC deployment   </li>
+         * <li>single: single-IDC deployment   </li>
+         * <li>dual: dual-IDC deployment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>multiple</p>
+         */
+        @NameInMap("DeployType")
+        public String deployType;
+
+        /**
+         * <p>The description of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paycore database</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The type of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd_pl1</p>
+         */
+        @NameInMap("DiskType")
+        public String diskType;
+
+        /**
+         * <p>Indicates whether the binlog service is available for application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableBinlogService")
+        public Boolean enableBinlogService;
+
+        /**
+         * <p>Indicates whether the clog service is available. To enable the clog service, submit a ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("EnableClogService")
+        public Boolean enableClogService;
+
+        /**
+         * <p>Indicates whether the Internet address can be enabled for the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableInternetAddressService")
+        public Boolean enableInternetAddressService;
+
+        /**
+         * <p>Indicates whether parallel query can be enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableParallelQuery")
+        public Boolean enableParallelQuery;
+
+        /**
+         * <p>Indicates whether read-only replicas are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableReadOnlyReplica")
+        public Boolean enableReadOnlyReplica;
+
+        /**
+         * <p>Indicates whether to enable read/write splitting endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("EnableReadWriteSplit")
+        public Boolean enableReadWriteSplit;
+
+        /**
+         * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KAFKA_PUBLIC</p>
+         */
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        /**
+         * <p>Indicates whether the table name is case-sensitive. Valid values: </p>
+         * <ul>
+         * <li><strong>1</strong>: The table name is case-insensitive. </li>
+         * <li><strong>0</strong>: The table name is case-sensitive.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("LowerCaseTableNames")
+        public Integer lowerCaseTableNames;
+
+        /**
+         * <p>The zone where the primary node is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
+        @NameInMap("MasterIntranetAddressZone")
+        public String masterIntranetAddressZone;
+
+        /**
+         * <p>The maximum value of DOP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
+        @NameInMap("MaxParallelQueryDegree")
+        public Long maxParallelQueryDegree;
+
+        /**
+         * <p>The ODP version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.3.1-xxxxxxxxx</p>
+         */
+        @NameInMap("OdpVersion")
+        public String odpVersion;
+
+        /**
+         * <p>The parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>express_oltp</p>
+         */
+        @NameInMap("ParameterTemplate")
+        public String parameterTemplate;
+
+        /**
+         * <p>The type of the payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
+         */
+        @NameInMap("PayType")
+        public String payType;
+
+        /**
+         * <p>The primary zone of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
+        @NameInMap("PrimaryZone")
+        public String primaryZone;
+
+        /**
+         * <p>The deployment type of the primary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RANDOM</p>
+         */
+        @NameInMap("PrimaryZoneDeployType")
+        public String primaryZoneDeployType;
+
+        /**
+         * <p>The information about read-only resources.</p>
+         */
+        @NameInMap("ReadOnlyResource")
+        public DescribeTenantResponseBodyTenantReadOnlyResource readOnlyResource;
+
+        /**
+         * <p>The status of the recycle bin in the tenant. Valid values: </p>
+         * <ul>
+         * <li>ON: The recycly bin is enabled. </li>
+         * <li>OFF: The recycle bin is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
+         */
+        @NameInMap("RecycleBinStatus")
+        public String recycleBinStatus;
+
+        /**
+         * <p>The series of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
+        @NameInMap("Series")
+        public String series;
+
+        /**
+         * <p>The status of the tenant.</p>
+         * <ul>
+         * <li><p>ONLINE: The tenant is running.</p>
+         * </li>
+         * <li><p>PENDING_CREATE: The tenant is being created.</p>
+         * </li>
+         * <li><p>WAITING_ALLOCATE_MASTER_ADDRESS: The standby cluster is waiting for the primary address to be created.</p>
+         * </li>
+         * <li><p>ALLOCATING_MASTER_ADDRESS: The primary address is being created.</p>
+         * </li>
+         * <li><p>DELETING_MASTER_ADDRESS: The primary address is being deleted.</p>
+         * </li>
+         * <li><p>ALLOCATING_INTERNET_ADDRESS: The Internet address is being created.</p>
+         * </li>
+         * <li><p>PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being deleted.</p>
+         * </li>
+         * <li><p>ALLOCATING_READONLY_ADDRESS: The read-only address is being created.</p>
+         * </li>
+         * <li><p>DELETING_READONLY_ADDRESS: The read-only address is being deleted.</p>
+         * </li>
+         * <li><p>ALLOCATING_READWRITE_ADDRESS: The read/write splitting address is being created.</p>
+         * </li>
+         * <li><p>DELETING_READWRITE_ADDRESS: The read/write splitting address is being deleted.</p>
+         * </li>
+         * <li><p>ALLOCATING_CLOGSERVICE_ADDRESS: The clog address is being created.</p>
+         * </li>
+         * <li><p>DELETING_CLOGSERVICE_ADDRESS: The clog address is being deleted.</p>
+         * </li>
+         * <li><p>MODIFYING_ADDRESS: The domain name of the address is being modified.</p>
+         * </li>
+         * <li><p>MODIFYING_PRIMARY_ZONE: The primary zone is being switched.</p>
+         * </li>
+         * <li><p>MODIFYING_READONLY_ADDRESS: The read-only address is being modified.</p>
+         * </li>
+         * <li><p>MODIFYING_READWRITE_ADDRESS: The read/write splitting address is being modified.</p>
+         * </li>
+         * <li><p>SPEC_MODIFYING: The specifications of the tenant are being modified.</p>
+         * </li>
+         * <li><p>WHITE_LIST_MODIFYING: The allowlist is being modified.</p>
+         * </li>
+         * <li><p>CREATING_BINLOG: Binlogs are being created.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The connection information of the tenant.</p>
+         */
+        @NameInMap("TenantConnections")
+        public java.util.List<DescribeTenantResponseBodyTenantTenantConnections> tenantConnections;
+
+        /**
+         * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
+         */
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        /**
+         * <p>The maximum number of connections allowed in the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600</p>
+         */
+        @NameInMap("TenantMaxConnections")
+        public String tenantMaxConnections;
+
+        /**
+         * <p>The mode of the tenant.
+         * Valid values:</p>
+         * <ul>
+         * <li>Oracle   </li>
+         * <li>MySQL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("TenantMode")
         public String tenantMode;
 
         /**
-         * <p>The request type of the zone of the tenant.  ReadWrite: The zone supports data reads and writes. ReadOnly: The zone supports only data reads. For a high availability cluster with multiple IDCs, the primary zone provides ReadWrite services, and the standby zone provides ReadOnly services. For a high availability cluster with a single IDC, all zones provide ReadWrite services.</p>
+         * <p>The name of the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <p>pay_online</p>
+         * <p>forMySQLTenant</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
-         * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
+         * <p>The resource information of the tenant.</p>
          */
         @NameInMap("TenantResource")
         public DescribeTenantResponseBodyTenantTenantResource tenantResource;
 
         /**
-         * <p>The standby zone corresponding to the address for accessing the tenant.</p>
+         * <p>The information about zones in the tenant.</p>
          */
         @NameInMap("TenantZones")
         public java.util.List<DescribeTenantResponseBodyTenantTenantZones> tenantZones;
 
+        /**
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 
+        /**
+         * <p>The version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.2.1</p>
+         */
         @NameInMap("Version")
         public String version;
 
         /**
-         * <p>Indicates whether the clog service is available. To enable the clog service, submit a ticket.</p>
+         * <p>The Virtual Private Cloud (VPC) ID of the tenant. If no suitable VPC is available, create a VPC as prompted. For more information, see &quot;What is a VPC&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1d2q3mhg9i23ofi****</p>
@@ -1726,6 +1975,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.odpVersion;
         }
 
+        public DescribeTenantResponseBodyTenant setParameterTemplate(String parameterTemplate) {
+            this.parameterTemplate = parameterTemplate;
+            return this;
+        }
+        public String getParameterTemplate() {
+            return this.parameterTemplate;
+        }
+
         public DescribeTenantResponseBodyTenant setPayType(String payType) {
             this.payType = payType;
             return this;
@@ -1796,6 +2053,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getTenantId() {
             return this.tenantId;
+        }
+
+        public DescribeTenantResponseBodyTenant setTenantMaxConnections(String tenantMaxConnections) {
+            this.tenantMaxConnections = tenantMaxConnections;
+            return this;
+        }
+        public String getTenantMaxConnections() {
+            return this.tenantMaxConnections;
         }
 
         public DescribeTenantResponseBodyTenant setTenantMode(String tenantMode) {

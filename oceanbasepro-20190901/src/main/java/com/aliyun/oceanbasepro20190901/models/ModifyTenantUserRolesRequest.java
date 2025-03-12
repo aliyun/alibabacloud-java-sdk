@@ -4,6 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserRolesRequest extends TeaModel {
+    @NameInMap("GlobalPermissions")
+    public String globalPermissions;
+
     /**
      * <p>The type of the privilege modification operation.<br>Valid values:<br>update: updates all privileges. This is the default value.<br>add: adds a privilege.<br>delete: deletes a privilege.</p>
      * <p>This parameter is required.</p>
@@ -57,9 +60,24 @@ public class ModifyTenantUserRolesRequest extends TeaModel {
     @NameInMap("UserRole")
     public String userRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
+    @NameInMap("UserType")
+    public String userType;
+
     public static ModifyTenantUserRolesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTenantUserRolesRequest self = new ModifyTenantUserRolesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyTenantUserRolesRequest setGlobalPermissions(String globalPermissions) {
+        this.globalPermissions = globalPermissions;
+        return this;
+    }
+    public String getGlobalPermissions() {
+        return this.globalPermissions;
     }
 
     public ModifyTenantUserRolesRequest setInstanceId(String instanceId) {
@@ -100,6 +118,14 @@ public class ModifyTenantUserRolesRequest extends TeaModel {
     }
     public String getUserRole() {
         return this.userRole;
+    }
+
+    public ModifyTenantUserRolesRequest setUserType(String userType) {
+        this.userType = userType;
+        return this;
+    }
+    public String getUserType() {
+        return this.userType;
     }
 
 }

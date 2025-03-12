@@ -33,7 +33,7 @@ public class DescribeProcessStatsCompositionRequest extends TeaModel {
     public String serverIp;
 
     /**
-     * <p>The SQL statement. It supports LIKE clauses, and you may specify only part of the clauses in the SQL statement.</p>
+     * <p>The SQL statement, which can contain LIKE clauses. You can specify only part of the clauses in the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC</p>
@@ -42,7 +42,7 @@ public class DescribeProcessStatsCompositionRequest extends TeaModel {
     public String sqlText;
 
     /**
-     * <p>The state of the session.</p>
+     * <p>The status of the session.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
@@ -60,7 +60,7 @@ public class DescribeProcessStatsCompositionRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The user identifier (UID) of OceanBase Database.</p>
+     * <p>The user identifier (UID) of the OceanBase database.</p>
      * 
      * <strong>example:</strong>
      * <p>139*************</p>
@@ -69,10 +69,10 @@ public class DescribeProcessStatsCompositionRequest extends TeaModel {
     public String UId;
 
     /**
-     * <p>The username that you use to log in to the database.</p>
+     * <p>The username of the database.</p>
      * 
      * <strong>example:</strong>
-     * <p>test1</p>
+     * <p>[&quot;test_user&quot;]</p>
      */
     @NameInMap("Users")
     public String users;

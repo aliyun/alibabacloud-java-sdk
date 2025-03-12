@@ -194,6 +194,15 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @NameInMap("ExpectedWorkerCount")
         public Double expectedWorkerCount;
 
+        /**
+         * <p>The full SQL text. </p>
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test where c1 &gt; 1 and c2 &gt; 3;</p>
+         */
         @NameInMap("FullSqlText")
         public String fullSqlText;
 
@@ -278,6 +287,12 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @NameInMap("ObUserId")
         public Double obUserId;
 
+        /**
+         * <p>The parameter value of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****</p>
+         */
         @NameInMap("ParamsValue")
         public String paramsValue;
 
@@ -398,6 +413,12 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @NameInMap("Server")
         public String server;
 
+        /**
+         * <p>The SQL text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select ** from t</p>
+         */
         @NameInMap("SqlText")
         public String sqlText;
 

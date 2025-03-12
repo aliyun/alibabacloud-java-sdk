@@ -422,6 +422,47 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
 
     }
 
+    public static class CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig extends TeaModel {
+        @NameInMap("PartitionSize")
+        public Integer partitionSize;
+
+        @NameInMap("PartitionType")
+        public String partitionType;
+
+        @NameInMap("VirtualColumn")
+        public String virtualColumn;
+
+        public static CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig self = new CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig setPartitionSize(Integer partitionSize) {
+            this.partitionSize = partitionSize;
+            return this;
+        }
+        public Integer getPartitionSize() {
+            return this.partitionSize;
+        }
+
+        public CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig setPartitionType(String partitionType) {
+            this.partitionType = partitionType;
+            return this;
+        }
+        public String getPartitionType() {
+            return this.partitionType;
+        }
+
+        public CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig setVirtualColumn(String virtualColumn) {
+            this.virtualColumn = virtualColumn;
+            return this;
+        }
+        public String getVirtualColumn() {
+            return this.virtualColumn;
+        }
+
+    }
+
     public static class CreateProjectModifyRecordsRequestDatabasesTables extends TeaModel {
         @NameInMap("AdbTableSchema")
         public CreateProjectModifyRecordsRequestDatabasesTablesAdbTableSchema adbTableSchema;
@@ -449,6 +490,9 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ObkvPartitionConfig")
+        public CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig obkvPartitionConfig;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
@@ -503,6 +547,14 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateProjectModifyRecordsRequestDatabasesTables setObkvPartitionConfig(CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig obkvPartitionConfig) {
+            this.obkvPartitionConfig = obkvPartitionConfig;
+            return this;
+        }
+        public CreateProjectModifyRecordsRequestDatabasesTablesObkvPartitionConfig getObkvPartitionConfig() {
+            return this.obkvPartitionConfig;
         }
 
         public CreateProjectModifyRecordsRequestDatabasesTables setShardColumns(java.util.List<String> shardColumns) {

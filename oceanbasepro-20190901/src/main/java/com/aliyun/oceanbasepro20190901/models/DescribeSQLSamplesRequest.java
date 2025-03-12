@@ -34,6 +34,12 @@ public class DescribeSQLSamplesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to return the SQL text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ReturnSqlText")
     public Boolean returnSqlText;
 

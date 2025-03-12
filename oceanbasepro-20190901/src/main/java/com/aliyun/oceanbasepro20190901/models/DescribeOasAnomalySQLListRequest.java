@@ -35,6 +35,15 @@ public class DescribeOasAnomalySQLListRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>Specifies whether the specified SQL statements are dynamic SQL statements.</p>
+     * <blockquote>
+     * <p>This parameter specifies whether the values of the <code>SqlId</code> parameter are the IDs of dynamic SQL statements.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DynamicSql")
     public Boolean dynamicSql;
 
@@ -67,6 +76,15 @@ public class DescribeOasAnomalySQLListRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to merge dynamic SQL statements in the return result. </p>
+     * <blockquote>
+     * <p>This parameter specifies whether to aggregate the results of IN queries.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("MergeDynamicSql")
     public Boolean mergeDynamicSql;
 

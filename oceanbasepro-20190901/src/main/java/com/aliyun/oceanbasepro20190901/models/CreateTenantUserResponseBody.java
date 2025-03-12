@@ -79,6 +79,13 @@ public class CreateTenantUserResponseBody extends TeaModel {
     }
 
     public static class CreateTenantUserResponseBodyTenantUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Encrypt,Decrypt</p>
+         */
+        @NameInMap("GlobalPermissions")
+        public String globalPermissions;
+
         @NameInMap("Roles")
         public java.util.List<CreateTenantUserResponseBodyTenantUserRoles> roles;
 
@@ -102,6 +109,14 @@ public class CreateTenantUserResponseBody extends TeaModel {
         public static CreateTenantUserResponseBodyTenantUser build(java.util.Map<String, ?> map) throws Exception {
             CreateTenantUserResponseBodyTenantUser self = new CreateTenantUserResponseBodyTenantUser();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTenantUserResponseBodyTenantUser setGlobalPermissions(String globalPermissions) {
+            this.globalPermissions = globalPermissions;
+            return this;
+        }
+        public String getGlobalPermissions() {
+            return this.globalPermissions;
         }
 
         public CreateTenantUserResponseBodyTenantUser setRoles(java.util.List<CreateTenantUserResponseBodyTenantUserRoles> roles) {
