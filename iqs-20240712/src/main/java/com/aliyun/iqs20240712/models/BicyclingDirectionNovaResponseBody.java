@@ -10,13 +10,6 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
-    @NameInMap("success")
-    public Boolean success;
-
     public static BicyclingDirectionNovaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BicyclingDirectionNovaResponseBody self = new BicyclingDirectionNovaResponseBody();
         return TeaModel.build(map, self);
@@ -36,14 +29,6 @@ public class BicyclingDirectionNovaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public BicyclingDirectionNovaResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class BicyclingDirectionNovaResponseBodyDataPathsCost extends TeaModel {
