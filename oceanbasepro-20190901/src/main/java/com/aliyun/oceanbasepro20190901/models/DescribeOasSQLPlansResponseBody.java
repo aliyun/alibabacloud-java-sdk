@@ -345,6 +345,12 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public Long serverId;
 
+        /**
+         * <p>SQL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46939C87ECA<strong><strong>95ED0FF64F44B</strong></strong></p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
@@ -726,9 +732,25 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @NameInMap("MergedVersion")
         public Long mergedVersion;
 
+        /**
+         * <p>The ID of the outline used by the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3********</p>
+         */
         @NameInMap("OutlineId")
         public String outlineId;
 
+        /**
+         * <p>The outline status of the execution plan. Valid values:</p>
+         * <ul>
+         * <li><strong>Effective</strong>: indicates that the outline_data and outlIne_content fields exactly match with each other. </li>
+         * <li><strong>Unknown</strong>: indicates that the outline status is unknown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Effective</p>
+         */
         @NameInMap("OutlineStatus")
         public String outlineStatus;
 
@@ -780,6 +802,12 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @NameInMap("QuerySql")
         public String querySql;
 
+        /**
+         * <p>Indicates whether full table scan is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("TableScan")
         public Boolean tableScan;
 

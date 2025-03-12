@@ -27,6 +27,12 @@ public class DescribeOasSQLPlansRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <p>Specifies whether the SQL statement is dynamic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DynamicSql")
     public Boolean dynamicSql;
 
@@ -50,9 +56,21 @@ public class DescribeOasSQLPlansRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The unique identifier of the execution plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c4e9aaa797428df9a5a41828********</p>
+     */
     @NameInMap("PlanUnionHash")
     public String planUnionHash;
 
+    /**
+     * <p>Specifies whether to return an overview of the execution plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ReturnBriefInfo")
     public Boolean returnBriefInfo;
 

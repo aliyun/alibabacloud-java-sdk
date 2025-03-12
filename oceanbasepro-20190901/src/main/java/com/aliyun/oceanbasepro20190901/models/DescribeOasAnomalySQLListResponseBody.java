@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
     /**
-     * <p>The list of suspicious SQLs.</p>
+     * <p>The information about suspicious SQL statements.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeOasAnomalySQLListResponseBodyData> data;
@@ -58,63 +58,185 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
     }
 
     public static class DescribeOasAnomalySQLListResponseBodyDataSqlList extends TeaModel {
+        /**
+         * <p>The average CPU time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.24</p>
+         */
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
 
+        /**
+         * <p>The average DB time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AvgDbTime")
         public Double avgDbTime;
 
+        /**
+         * <p>The average response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.28</p>
+         */
         @NameInMap("AvgElapsedTime")
         public Double avgElapsedTime;
 
+        /**
+         * <p>The average plan generation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AvgGetPlanTime")
         public Double avgGetPlanTime;
 
+        /**
+         * <p>The average number of logical reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("AvgLogicalReads")
         public Float avgLogicalReads;
 
+        /**
+         * <p>The average number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("AvgRetryCount")
         public Float avgRetryCount;
 
+        /**
+         * <p>The total CPU time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.23</p>
+         */
         @NameInMap("CpuTime")
         public Double cpuTime;
 
+        /**
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_hsp****eway</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The diagnostic types.</p>
+         */
         @NameInMap("DiagTypes")
         public java.util.List<String> diagTypes;
 
+        /**
+         * <p>The diagnostic details. </p>
+         * <blockquote>
+         * <p>This parameter is deprecated.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Diagnosis")
         public String diagnosis;
 
+        /**
+         * <p>The total number of executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Executions")
         public Double executions;
 
+        /**
+         * <p>The last execution time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
+         */
         @NameInMap("LastExecutedTime")
-        public Double lastExecutedTime;
+        public String lastExecutedTime;
 
+        /**
+         * <p>The risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOW</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The ID of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3A645<strong><strong>789F13DE0CF6D084FF9</strong></strong></p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The prefix of the SQL text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test</p>
+         */
         @NameInMap("SqlTextShort")
         public String sqlTextShort;
 
+        /**
+         * <p>The suggestion on the suspicious SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Role\&quot;: \&quot;eSG\&quot;, \&quot;Result\&quot;: \&quot;100\&quot;, \&quot;Suggestion\&quot;: \&quot;TRACER_OTHER_ERR\&quot;}</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The total DB time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SumDbTime")
         public Double sumDbTime;
 
+        /**
+         * <p>The total response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11452126.36</p>
+         */
         @NameInMap("SumElapsedTime")
         public String sumElapsedTime;
 
+        /**
+         * <p>The total number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("SumRetryCount")
         public Float sumRetryCount;
 
+        /**
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -211,11 +333,11 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             return this.executions;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyDataSqlList setLastExecutedTime(Double lastExecutedTime) {
+        public DescribeOasAnomalySQLListResponseBodyDataSqlList setLastExecutedTime(String lastExecutedTime) {
             this.lastExecutedTime = lastExecutedTime;
             return this;
         }
-        public Double getLastExecutedTime() {
+        public String getLastExecutedTime() {
             return this.lastExecutedTime;
         }
 
@@ -295,6 +417,12 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
 
+        /**
+         * <p>The average DB time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AvgDbTime")
         public Double avgDbTime;
 
@@ -316,9 +444,21 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         @NameInMap("AvgGetPlanTime")
         public Double avgGetPlanTime;
 
+        /**
+         * <p>The average number of logical reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("AvgLogicalReads")
         public Float avgLogicalReads;
 
+        /**
+         * <p>The average number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("AvgRetryCount")
         public Float avgRetryCount;
 
@@ -348,10 +488,21 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
         /**
          * <p>The details of diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("Diagnosis")
         public String diagnosis;
 
+        /**
+         * <p>是否动态SQL</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DynamicSql")
         public Boolean dynamicSql;
 
@@ -391,6 +542,9 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The list of SQL statements.</p>
+         */
         @NameInMap("SqlList")
         public java.util.List<DescribeOasAnomalySQLListResponseBodyDataSqlList> sqlList;
 
@@ -409,6 +563,12 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <p>The total DB time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SumDbTime")
         public Double sumDbTime;
 
@@ -421,6 +581,12 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         @NameInMap("SumElapsedTime")
         public String sumElapsedTime;
 
+        /**
+         * <p>The total number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("SumRetryCount")
         public Float sumRetryCount;
 

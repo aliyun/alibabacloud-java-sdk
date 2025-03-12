@@ -32,6 +32,9 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     public static ModifyInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSSLRequest self = new ModifyInstanceSSLRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyInstanceSSLRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
 }

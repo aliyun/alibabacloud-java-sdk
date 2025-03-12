@@ -139,6 +139,7 @@ public class DescribeTenantMetricsRequest extends TeaModel {
         return this.startTime;
     }
 
+    @Deprecated
     public DescribeTenantMetricsRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
@@ -155,6 +156,7 @@ public class DescribeTenantMetricsRequest extends TeaModel {
         return this.tenantIdList;
     }
 
+    @Deprecated
     public DescribeTenantMetricsRequest setTenantName(String tenantName) {
         this.tenantName = tenantName;
         return this;

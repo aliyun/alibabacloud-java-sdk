@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantRequest extends TeaModel {
     /**
-     * <p>The status of the Internet address for accessing the tenant. Valid values:   </p>
-     * <ul>
-     * <li>CLOSED: The address is disabled.   </li>
-     * <li>ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </li>
-     * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </li>
-     * <li>ONLINE: The address is in service.</li>
-     * </ul>
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +15,7 @@ public class DescribeTenantRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether to enable transaction splitting.</p>
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

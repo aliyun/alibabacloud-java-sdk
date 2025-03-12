@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersHistoryResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
@@ -17,7 +17,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
      * <p>The list of parameter modification records.</p>
      */
     @NameInMap("Respond")
-    public java.util.List<DescribeParametersHistoryResponseBodyRespond> respond;
+    public DescribeParametersHistoryResponseBodyRespond respond;
 
     public static DescribeParametersHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeParametersHistoryResponseBody self = new DescribeParametersHistoryResponseBody();
@@ -32,11 +32,11 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeParametersHistoryResponseBody setRespond(java.util.List<DescribeParametersHistoryResponseBodyRespond> respond) {
+    public DescribeParametersHistoryResponseBody setRespond(DescribeParametersHistoryResponseBodyRespond respond) {
         this.respond = respond;
         return this;
     }
-    public java.util.List<DescribeParametersHistoryResponseBodyRespond> getRespond() {
+    public DescribeParametersHistoryResponseBodyRespond getRespond() {
         return this.respond;
     }
 
@@ -45,20 +45,16 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
          * <p>The time when the parameter modification was initiated.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-09-14 10:57:44</p>
+         * <p>2024-11-26T08:03:34Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The resource ID of the parameter type.    </p>
-         * <ul>
-         * <li>When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE.   </li>
-         * <li>When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.</li>
-         * </ul>
+         * <p>The resource ID of the parameter type. When you called this operation to query the modification history of cluster parameters, the value is DEFAULT_DIMENSION_VALUE. When you called this operation to query the modification history of tenant parameters, the value is the tenant ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>DEFAULT_DIMENSION_VALUE</p>
+         * <p>t69uo********</p>
          */
         @NameInMap("DimensionValue")
         public String dimensionValue;
@@ -76,25 +72,25 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
          * <p>The value of the parameter after the modification.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>30</p>
          */
         @NameInMap("NewValue")
         public String newValue;
 
         /**
-         * <p>The parameter value before modification.</p>
+         * <p>The value of the parameter before the modification.</p>
          * 
          * <strong>example:</strong>
-         * <p>300</p>
+         * <p>10</p>
          */
         @NameInMap("OldValue")
         public String oldValue;
 
         /**
-         * <p>The modification status. Valid values:    </p>
+         * <p>The modification status of the parameter. Valid values: </p>
          * <ul>
-         * <li>APPLIED: The modification was successful.   </li>
-         * <li>SCHEDULING: The modification was to be made.</li>
+         * <li>APPLIED: The parameter was modified.</li>
+         * <li>SCHEDULING: The parameter was to be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +103,7 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
          * <p>The time when the parameter modification took effect.</p>
          * 
          * <strong>example:</strong>
-         * <p>2021-09-14 10:57:44</p>
+         * <p>2024-11-26T08:03:34Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -177,25 +173,29 @@ public class DescribeParametersHistoryResponseBody extends TeaModel {
 
     public static class DescribeParametersHistoryResponseBodyRespond extends TeaModel {
         /**
-         * <p>The number of returned entries on each page.</p>
+         * <p>The number of the page to return.    </p>
+         * <ul>
+         * <li>Start value: 1   </li>
+         * <li>Default value: 1</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Default value: 10.</p>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The parameter modification history.</p>
+         * <p>The information about parameters.</p>
          */
         @NameInMap("Parameters")
         public java.util.List<DescribeParametersHistoryResponseBodyRespondParameters> parameters;
 
         /**
-         * <p>The number of parameter modification records.</p>
+         * <p>The total count, which takes effect in a pagination query.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>5</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

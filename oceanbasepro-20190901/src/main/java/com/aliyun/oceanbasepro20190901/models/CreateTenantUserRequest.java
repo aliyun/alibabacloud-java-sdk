@@ -23,6 +23,13 @@ public class CreateTenantUserRequest extends TeaModel {
     public String encryptionType;
 
     /**
+     * <strong>example:</strong>
+     * <p>Encrypt,Decrypt</p>
+     */
+    @NameInMap("GlobalPermissions")
+    public String globalPermissions;
+
+    /**
      * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
@@ -100,6 +107,14 @@ public class CreateTenantUserRequest extends TeaModel {
     }
     public String getEncryptionType() {
         return this.encryptionType;
+    }
+
+    public CreateTenantUserRequest setGlobalPermissions(String globalPermissions) {
+        this.globalPermissions = globalPermissions;
+        return this;
+    }
+    public String getGlobalPermissions() {
+        return this.globalPermissions;
     }
 
     public CreateTenantUserRequest setInstanceId(String instanceId) {

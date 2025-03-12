@@ -573,6 +573,18 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FullVerifySpeedMode")
         public String fullVerifySpeedMode;
 
+        @NameInMap("HbaseObjCheckMode")
+        public String hbaseObjCheckMode;
+
+        @NameInMap("HbaseObjMigMode")
+        public String hbaseObjMigMode;
+
+        @NameInMap("IndexDDLConcurrencyLimit")
+        public Integer indexDDLConcurrencyLimit;
+
+        @NameInMap("MaxConcurrentIndexDDLs")
+        public Integer maxConcurrentIndexDDLs;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -619,6 +631,38 @@ public class CreateProjectRequest extends TeaModel {
         }
         public String getFullVerifySpeedMode() {
             return this.fullVerifySpeedMode;
+        }
+
+        public CreateProjectRequestFullTransferConfig setHbaseObjCheckMode(String hbaseObjCheckMode) {
+            this.hbaseObjCheckMode = hbaseObjCheckMode;
+            return this;
+        }
+        public String getHbaseObjCheckMode() {
+            return this.hbaseObjCheckMode;
+        }
+
+        public CreateProjectRequestFullTransferConfig setHbaseObjMigMode(String hbaseObjMigMode) {
+            this.hbaseObjMigMode = hbaseObjMigMode;
+            return this;
+        }
+        public String getHbaseObjMigMode() {
+            return this.hbaseObjMigMode;
+        }
+
+        public CreateProjectRequestFullTransferConfig setIndexDDLConcurrencyLimit(Integer indexDDLConcurrencyLimit) {
+            this.indexDDLConcurrencyLimit = indexDDLConcurrencyLimit;
+            return this;
+        }
+        public Integer getIndexDDLConcurrencyLimit() {
+            return this.indexDDLConcurrencyLimit;
+        }
+
+        public CreateProjectRequestFullTransferConfig setMaxConcurrentIndexDDLs(Integer maxConcurrentIndexDDLs) {
+            this.maxConcurrentIndexDDLs = maxConcurrentIndexDDLs;
+            return this;
+        }
+        public Integer getMaxConcurrentIndexDDLs() {
+            return this.maxConcurrentIndexDDLs;
         }
 
         public CreateProjectRequestFullTransferConfig setNonePkUkTruncateDstTable(Boolean nonePkUkTruncateDstTable) {
@@ -1317,6 +1361,47 @@ public class CreateProjectRequest extends TeaModel {
 
     }
 
+    public static class CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig extends TeaModel {
+        @NameInMap("PartitionSize")
+        public Integer partitionSize;
+
+        @NameInMap("PartitionType")
+        public String partitionType;
+
+        @NameInMap("VirtualColumn")
+        public String virtualColumn;
+
+        public static CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig self = new CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig setPartitionSize(Integer partitionSize) {
+            this.partitionSize = partitionSize;
+            return this;
+        }
+        public Integer getPartitionSize() {
+            return this.partitionSize;
+        }
+
+        public CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig setPartitionType(String partitionType) {
+            this.partitionType = partitionType;
+            return this;
+        }
+        public String getPartitionType() {
+            return this.partitionType;
+        }
+
+        public CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig setVirtualColumn(String virtualColumn) {
+            this.virtualColumn = virtualColumn;
+            return this;
+        }
+        public String getVirtualColumn() {
+            return this.virtualColumn;
+        }
+
+    }
+
     public static class CreateProjectRequestTransferMappingDatabasesTables extends TeaModel {
         @NameInMap("AdbTableSchema")
         public CreateProjectRequestTransferMappingDatabasesTablesAdbTableSchema adbTableSchema;
@@ -1344,6 +1429,9 @@ public class CreateProjectRequest extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ObkvPartitionConfig")
+        public CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig obkvPartitionConfig;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
@@ -1398,6 +1486,14 @@ public class CreateProjectRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateProjectRequestTransferMappingDatabasesTables setObkvPartitionConfig(CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig obkvPartitionConfig) {
+            this.obkvPartitionConfig = obkvPartitionConfig;
+            return this;
+        }
+        public CreateProjectRequestTransferMappingDatabasesTablesObkvPartitionConfig getObkvPartitionConfig() {
+            return this.obkvPartitionConfig;
         }
 
         public CreateProjectRequestTransferMappingDatabasesTables setShardColumns(java.util.List<String> shardColumns) {

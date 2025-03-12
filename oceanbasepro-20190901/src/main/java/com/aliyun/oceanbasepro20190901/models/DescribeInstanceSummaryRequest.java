@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSummaryRequest extends TeaModel {
     /**
+     * <p>The number of the page to return.    </p>
+     * <ul>
+     * <li>Start value: 1   </li>
+     * <li>Default value: 1</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +18,12 @@ public class DescribeInstanceSummaryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of rows to return on each page.</p>
+     * <ul>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

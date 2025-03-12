@@ -13,6 +13,9 @@ public class DescribeSampleSqlRawTextsRequest extends TeaModel {
     @NameInMap("DbName")
     public String dbName;
 
+    @NameInMap("DynamicSql")
+    public Boolean dynamicSql;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -80,6 +83,14 @@ public class DescribeSampleSqlRawTextsRequest extends TeaModel {
     }
     public String getDbName() {
         return this.dbName;
+    }
+
+    public DescribeSampleSqlRawTextsRequest setDynamicSql(Boolean dynamicSql) {
+        this.dynamicSql = dynamicSql;
+        return this;
+    }
+    public Boolean getDynamicSql() {
+        return this.dynamicSql;
     }
 
     public DescribeSampleSqlRawTextsRequest setEndTime(String endTime) {

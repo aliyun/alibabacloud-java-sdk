@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRequest extends TeaModel {
     /**
-     * <p>The size of the data disk, in GB.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +14,12 @@ public class DescribeInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("MaxConnectionLimit")
-    public String maxConnectionLimit;
-
     /**
-     * <p>The information about the storage resources of the cluster.</p>
+     * <p>The number of the page to return.</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,14 +38,6 @@ public class DescribeInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DescribeInstanceRequest setMaxConnectionLimit(String maxConnectionLimit) {
-        this.maxConnectionLimit = maxConnectionLimit;
-        return this;
-    }
-    public String getMaxConnectionLimit() {
-        return this.maxConnectionLimit;
     }
 
     public DescribeInstanceRequest setPageNumber(Integer pageNumber) {

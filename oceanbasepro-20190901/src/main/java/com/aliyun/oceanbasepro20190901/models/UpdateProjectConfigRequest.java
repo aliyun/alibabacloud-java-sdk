@@ -101,6 +101,12 @@ public class UpdateProjectConfigRequest extends TeaModel {
     }
 
     public static class UpdateProjectConfigRequestFullTransferConfig extends TeaModel {
+        @NameInMap("IndexDDLConcurrencyLimit")
+        public Integer indexDDLConcurrencyLimit;
+
+        @NameInMap("MaxConcurrentIndexDDLs")
+        public Integer maxConcurrentIndexDDLs;
+
         /**
          * <strong>example:</strong>
          * <p>64</p>
@@ -132,6 +138,22 @@ public class UpdateProjectConfigRequest extends TeaModel {
         public static UpdateProjectConfigRequestFullTransferConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateProjectConfigRequestFullTransferConfig self = new UpdateProjectConfigRequestFullTransferConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateProjectConfigRequestFullTransferConfig setIndexDDLConcurrencyLimit(Integer indexDDLConcurrencyLimit) {
+            this.indexDDLConcurrencyLimit = indexDDLConcurrencyLimit;
+            return this;
+        }
+        public Integer getIndexDDLConcurrencyLimit() {
+            return this.indexDDLConcurrencyLimit;
+        }
+
+        public UpdateProjectConfigRequestFullTransferConfig setMaxConcurrentIndexDDLs(Integer maxConcurrentIndexDDLs) {
+            this.maxConcurrentIndexDDLs = maxConcurrentIndexDDLs;
+            return this;
+        }
+        public Integer getMaxConcurrentIndexDDLs() {
+            return this.maxConcurrentIndexDDLs;
         }
 
         public UpdateProjectConfigRequestFullTransferConfig setReadWorkerNum(Integer readWorkerNum) {

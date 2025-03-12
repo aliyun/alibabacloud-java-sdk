@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
@@ -14,13 +14,13 @@ public class DescribeTenantsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the OceanBase cluster.</p>
+     * <p>The information of tenants.</p>
      */
     @NameInMap("Tenants")
     public java.util.List<DescribeTenantsResponseBodyTenants> tenants;
 
     /**
-     * <p>The total memory size of the tenant, in GB.</p>
+     * <p>The total number of tenants in the specified OceanBase cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,6 +59,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
 
     public static class DescribeTenantsResponseBodyTenants extends TeaModel {
         /**
+         * <p>The character set.</p>
+         * 
          * <strong>example:</strong>
          * <p>utf8mb4</p>
          */
@@ -66,6 +68,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String charset;
 
         /**
+         * <p>The collation.</p>
+         * 
          * <strong>example:</strong>
          * <p>utf8mb4_general_ci</p>
          */
@@ -82,7 +86,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The number of CPU cores in each resource unit of the tenant.</p>
+         * <p>The time when the tenant was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-17 15:52:17.0</p>
@@ -91,7 +95,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The search keyword.</p>
+         * <p>The data replica distribution mode of the tenant.   </p>
+         * <ul>
+         * <li>For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.</li>
+         * <li>For the basic version, N indicates the single-zone mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p><br>N represents the number of nodes in a single zone.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1-1-1</p>
@@ -100,7 +111,12 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String deployMode;
 
         /**
-         * <p>The name of the tenant.<br>It must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>).  It cannot be set to sys.</p>
+         * <p>The deployment type of the tenant. <br></p>
+         * <ul>
+         * <li>multiple: multi-IDC deployment</li>
+         * <li>single: single-IDC deployment</li>
+         * <li>dual: dual-IDC deployment</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>multiple</p>
@@ -109,30 +125,25 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>Example 1</p>
+         * <p>The description of the tenant.</p>
          * 
          * <strong>example:</strong>
-         * <pre><code>http(s)://[Endpoint]/?Action=DescribeTenants
-         * &amp;InstanceId=ob317v4uif****
-         * &amp;TenantName=pay_online
-         * &amp;PageSize=10
-         * &amp;PageNumber=1
-         * &amp;TenantId=ob2mr3oae0****
-         * &amp;SearchKey=pay
-         * &amp;Common request parameters
-         * </code></pre>
+         * <p>PayCore business database</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether read-only replicas are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableReadOnlyReplica")
         public Boolean enableReadOnlyReplica;
 
         /**
-         * <p>The number of the page to return.<br>Start value: 1</p>
-         * <ul>
-         * <li>Default value: 1</li>
-         * </ul>
+         * <p>The total memory size of the tenant, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -141,7 +152,16 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Integer mem;
 
         /**
-         * <p>The return result of the request.</p>
+         * <p>The parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>express_oltp</p>
+         */
+        @NameInMap("ParameterTemplate")
+        public String parameterTemplate;
+
+        /**
+         * <p>The primary zone of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -170,7 +190,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>You can call this operation to query the tenants in an OceanBase cluster.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>t33h8y08k****</p>
@@ -179,30 +199,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>{
-         *     &quot;TotalCount&quot;: 1,
-         *     &quot;RequestId&quot;: &quot;EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C&quot;,
-         *     &quot;Tenants&quot;: [
-         *         {
-         *             &quot;VpcId&quot;: &quot;vpc-bp1d2q3mhg9i23ofi****&quot;,
-         *             &quot;Status&quot;: &quot;ONLINE&quot;,
-         *             &quot;PrimaryZone&quot;: &quot;cn-hangzhou-i&quot;,
-         *             &quot;DeployType&quot;: &quot;multiple&quot;,
-         *             &quot;DeployMode&quot;: &quot;1-1-1&quot;,
-         *             &quot;CreateTime&quot;: &quot;2021-09-17 15:52:17.0&quot;,
-         *             &quot;TenantName&quot;: &quot;pay_online&quot;,
-         *             &quot;Mem&quot;: 20,
-         *             &quot;Cpu&quot;: 10,
-         *             &quot;Description&quot;: &quot;PayCore business database&quot;,
-         *             &quot;TenantMode&quot;: &quot;Oracle&quot;,
-         *             &quot;TenantId&quot;: &quot;t33h8y08k****&quot;,
-         *             &quot;UnitCpu&quot;: 5,
-         *             &quot;UnitMem&quot;: 10,
-         *             &quot;UnitNum&quot;: 2,
-         *             &quot;UsedDiskSize&quot;: 10
-         *         }
-         *     ]
-         * }</p>
+         * <p>The tenant mode.<br>Valid values:<br>Oracle
+         * MySQL</p>
          * 
          * <strong>example:</strong>
          * <p>Oracle</p>
@@ -211,7 +209,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String tenantMode;
 
         /**
-         * <p>The information of tenants.</p>
+         * <p>The name of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>pay_online</p>
@@ -220,6 +218,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public String tenantName;
 
         /**
+         * <p>The number of CPU cores in each resource unit of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -227,6 +227,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Integer unitCpu;
 
         /**
+         * <p>The memory size of each resource unit of the tenant, in GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -234,6 +236,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Integer unitMem;
 
         /**
+         * <p>The number of resource units in the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -241,6 +245,8 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Integer unitNum;
 
         /**
+         * <p>The number of used disks of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -248,7 +254,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Double usedDiskSize;
 
         /**
-         * <p>The time when the tenant was created.</p>
+         * <p>The ID of the VPC.   <br>If no suitable VPC is available, create a VPC as prompted. For more information, see &quot;What is a VPC&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1d2q3mhg9i23ofi****</p>
@@ -331,6 +337,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
         public Integer getMem() {
             return this.mem;
+        }
+
+        public DescribeTenantsResponseBodyTenants setParameterTemplate(String parameterTemplate) {
+            this.parameterTemplate = parameterTemplate;
+            return this;
+        }
+        public String getParameterTemplate() {
+            return this.parameterTemplate;
         }
 
         public DescribeTenantsResponseBodyTenants setPrimaryZone(String primaryZone) {

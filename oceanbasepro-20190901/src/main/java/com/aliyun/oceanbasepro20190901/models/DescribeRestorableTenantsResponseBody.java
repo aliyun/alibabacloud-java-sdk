@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeRestorableTenantsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the tenants.</p>
+     */
     @NameInMap("Tenants")
     public java.util.List<DescribeRestorableTenantsResponseBodyTenants> tenants;
 
     /**
+     * <p>The total number.</p>
+     * 
      * <strong>example:</strong>
      * <p>6</p>
      */
@@ -52,6 +59,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
 
     public static class DescribeRestorableTenantsResponseBodyTenantsBackupSets extends TeaModel {
         /**
+         * <p>The ID of the full backup set used for restore.</p>
+         * 
          * <strong>example:</strong>
          * <p>bak-4n****gacpa8</p>
          */
@@ -59,6 +68,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String backupSetId;
 
         /**
+         * <p>The checkpoint of the backup set.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01\&quot;T\&quot;12:10:10.000\&quot;Z\&quot;</p>
          */
@@ -66,6 +77,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String checkpoint;
 
         /**
+         * <p>The ID of the backup set.</p>
+         * 
          * <strong>example:</strong>
          * <p>bak-xxxxx</p>
          */
@@ -73,6 +86,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String setId;
 
         /**
+         * <p>The ID of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>t5********</p>
          */
@@ -120,6 +135,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
 
     public static class DescribeRestorableTenantsResponseBodyTenantsTimeIntervalList extends TeaModel {
         /**
+         * <p>The end time of the restorable period.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-13T02:43:03Z</p>
          */
@@ -127,6 +144,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>Indicates whether the restore is based on archiving.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -134,6 +153,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public Boolean fromArchive;
 
         /**
+         * <p>The start time of the restorable period.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-01-20T16:00:00Z</p>
          */
@@ -141,6 +162,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The storage type of backup data.</p>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -188,16 +211,23 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
 
     public static class DescribeRestorableTenantsResponseBodyTenants extends TeaModel {
         /**
+         * <p>The name of the backup directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>backup</p>
          */
         @NameInMap("BackupBucketName")
         public String backupBucketName;
 
+        /**
+         * <p>The list of backup sets.</p>
+         */
         @NameInMap("BackupSets")
         public java.util.List<DescribeRestorableTenantsResponseBodyTenantsBackupSets> backupSets;
 
         /**
+         * <p>The ID of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>objnf3b2****</p>
          */
@@ -205,6 +235,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The name of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>testCluster</p>
          */
@@ -212,6 +244,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String clusterName;
 
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -219,6 +253,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public Long cpuNum;
 
         /**
+         * <p>The size of memory for the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -226,6 +262,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public Long memoryNum;
 
         /**
+         * <p>The backup method.</p>
+         * 
          * <strong>example:</strong>
          * <p>logical</p>
          */
@@ -233,6 +271,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String method;
 
         /**
+         * <p>The version of the OceanBase Database RPM package.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.2.3.1-2022080510****</p>
          */
@@ -240,6 +280,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String obRpmVersion;
 
         /**
+         * <p>The ID of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>tvd43v****</p>
          */
@@ -247,6 +289,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String obTenantId;
 
         /**
+         * <p>The major version of OceanBase Database.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.2.3.1</p>
          */
@@ -254,6 +298,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String obVersion;
 
         /**
+         * <p>The region of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -261,6 +307,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String sourceRegion;
 
         /**
+         * <p>The alias of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -268,6 +316,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String tenantAlias;
 
         /**
+         * <p>The remaining validity period, in days, of the backup data of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -275,6 +325,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public Integer tenantDataBackupRemainDays;
 
         /**
+         * <p>The ID of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>ob317v4uif****</p>
          */
@@ -282,6 +334,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The mode of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>Oracle</p>
          */
@@ -289,16 +343,23 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public String tenantMode;
 
         /**
+         * <p>The name of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>sbtest1</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <p>The list of restorable periods of the tenant.</p>
+         */
         @NameInMap("TimeIntervalList")
         public java.util.List<DescribeRestorableTenantsResponseBodyTenantsTimeIntervalList> timeIntervalList;
 
         /**
+         * <p>The number of nodes of the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -306,6 +367,8 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         public Long unitNum;
 
         /**
+         * <p>The size of disk space for the tenant.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */

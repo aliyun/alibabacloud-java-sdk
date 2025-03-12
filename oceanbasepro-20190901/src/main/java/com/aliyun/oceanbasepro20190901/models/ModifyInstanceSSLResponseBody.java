@@ -67,6 +67,9 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("TenantId")
+        public String tenantId;
+
         public static ModifyInstanceSSLResponseBodyInstanceSSL build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceSSLResponseBodyInstanceSSL self = new ModifyInstanceSSLResponseBodyInstanceSSL();
             return TeaModel.build(map, self);
@@ -86,6 +89,14 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ModifyInstanceSSLResponseBodyInstanceSSL setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
         }
 
     }

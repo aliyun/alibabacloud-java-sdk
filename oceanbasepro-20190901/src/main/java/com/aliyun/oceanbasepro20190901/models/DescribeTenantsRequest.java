@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTenantsRequest extends TeaModel {
     /**
-     * <p>The number of used disks of the tenant.</p>
+     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,10 @@ public class DescribeTenantsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
+     * <p>The number of the page to return.<br>Start value: 1</p>
+     * <ul>
+     * <li>Default value: 1</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +27,11 @@ public class DescribeTenantsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>You can call this operation to query the tenants in an OceanBase cluster.</p>
+     * <p>The number of rows to return on each page.   </p>
+     * <ul>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,7 +40,7 @@ public class DescribeTenantsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The primary zone of the tenant.</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>pay</p>
@@ -42,7 +49,7 @@ public class DescribeTenantsRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>Alibaba Cloud CLI</p>
+     * <p>The ID of the tenant.</p>
      * 
      * <strong>example:</strong>
      * <p>ob2mr3oae0****</p>
@@ -51,7 +58,7 @@ public class DescribeTenantsRequest extends TeaModel {
     public String tenantId;
 
     /**
-     * <p>The information of tenants.</p>
+     * <p>The name of the tenant.<br>It must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>).  It cannot be set to sys.</p>
      * 
      * <strong>example:</strong>
      * <p>pay_online</p>

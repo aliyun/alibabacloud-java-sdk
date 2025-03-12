@@ -78,7 +78,10 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         public Long outlineId;
 
         /**
-         * <p>表名称</p>
+         * <p>The name of the tenant. The tenant name must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>). It cannot be set to sys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster_info</p>
          */
         @NameInMap("TableName")
         public String tableName;
