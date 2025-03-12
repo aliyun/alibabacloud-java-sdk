@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApsSlsADBJobRequest extends TeaModel {
     /**
+     * <p>The name of the cross-account role.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-role</p>
      */
@@ -12,6 +14,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String acrossRole;
 
     /**
+     * <p>The cross-account UID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -19,6 +23,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String acrossUid;
 
     /**
+     * <p>The advanced configurations.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -28,6 +34,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String advancedConfig;
 
     /**
+     * <p>The information about columns.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public java.util.List<CreateApsSlsADBJobRequestColumns> columns;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +56,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The data source ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>327</p>
      */
@@ -55,6 +65,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public Long datasourceId;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +75,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The dirty data processing mode.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +87,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String dirtyDataHandleMode;
 
     /**
+     * <p>The dirty data processing mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>STOP</p>
      */
@@ -82,6 +96,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String dirtyDataProcessPattern;
 
     /**
+     * <p>Specifies whether to enable the consistency check.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -89,6 +105,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String exactlyOnce;
 
     /**
+     * <p>The number of full AnalyticDB compute units (ACUs).</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -96,6 +114,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String fullComputeUnit;
 
     /**
+     * <p>The advanced configurations of Hudi.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -105,6 +125,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String hudiAdvancedConfig;
 
     /**
+     * <p>The number of increment ACUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>168</p>
      */
@@ -112,7 +134,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String incrementalComputeUnit;
 
     /**
-     * <p>lakehosue ID。</p>
+     * <p>The lakehouse ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -121,6 +143,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public Long lakehouseId;
 
     /**
+     * <p>The latest offset.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -130,6 +154,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public Long maxOffsetsPerTrigger;
 
     /**
+     * <p>The Object Storage Service (OSS) URL.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://test*</p>
      */
@@ -137,6 +163,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String ossLocation;
 
     /**
+     * <p>The format of the output file.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -146,6 +174,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String outputFormat;
 
     /**
+     * <p>The information about partition.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -155,6 +185,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> partitionSpecs;
 
     /**
+     * <p>The password of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -164,6 +195,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The definition of the primary key.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -173,6 +206,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String primaryKeyDefinition;
 
     /**
+     * <p>The name of the SLS project.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -180,6 +215,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String project;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -189,6 +225,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -196,6 +234,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String resourceGroup;
 
     /**
+     * <p>源集群所处地域ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -203,6 +243,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String sourceRegionId;
 
     /**
+     * <p>The start offset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -212,7 +253,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String startingOffsets;
 
     /**
-     * <p>sls Store。</p>
+     * <p>The SLS Logstore.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -221,6 +262,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String store;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -230,6 +272,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The rules for generating the destination database.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -239,6 +283,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String targetGenerateRule;
 
     /**
+     * <p>The destination type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADB</p>
      */
@@ -246,6 +292,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String targetType;
 
     /**
+     * <p>The timestamp conversion.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -255,6 +303,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public CreateApsSlsADBJobRequestUnixTimestampConvert unixTimestampConvert;
 
     /**
+     * <p>The name of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -264,6 +313,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
     public String userName;
 
     /**
+     * <p>The name of the workload.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -535,6 +585,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
 
     public static class CreateApsSlsADBJobRequestColumns extends TeaModel {
         /**
+         * <p>The name of the mapping.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -542,6 +594,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
         public String mapName;
 
         /**
+         * <p>The type of the mapping.</p>
+         * 
          * <strong>example:</strong>
          * <p>int</p>
          */
@@ -549,6 +603,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
         public String mapType;
 
         /**
+         * <p>The name of the column.</p>
+         * 
          * <strong>example:</strong>
          * <p>id</p>
          */
@@ -556,6 +612,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The data type of the column.</p>
+         * 
          * <strong>example:</strong>
          * <p>bigint</p>
          */
@@ -603,6 +661,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
 
     public static class CreateApsSlsADBJobRequestUnixTimestampConvert extends TeaModel {
         /**
+         * <p>Specifies whether to enable the conversion of timestamps.</p>
+         * 
          * <strong>example:</strong>
          * <p>false。</p>
          */
@@ -610,6 +670,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
         public String convert;
 
         /**
+         * <p>The format of the timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p> APSyyyyMMdd</p>
          */
@@ -617,6 +679,8 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
         public String format;
 
         /**
+         * <p>Specifies whether to enable the timestamp conversion.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */

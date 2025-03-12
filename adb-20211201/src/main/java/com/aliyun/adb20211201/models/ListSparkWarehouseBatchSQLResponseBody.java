@@ -4,6 +4,9 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListSparkWarehouseBatchSQLResponseBodyData data;
 
@@ -50,6 +53,9 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The queried Spark SQL statements.</p>
+         */
         @NameInMap("Queries")
         public java.util.List<SparkBatchSQL> queries;
 

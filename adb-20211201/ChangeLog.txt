@@ -1,3 +1,18 @@
+2025-03-12 Version: 3.8.0
+- Support API CancelSparkWarehouseBatchSQL.
+- Support API DescribeSparkSQLDiagnosisAttribute.
+- Support API DescribeSparkSQLDiagnosisList.
+- Support API ExecuteSparkWarehouseBatchSQL.
+- Support API GetSparkWarehouseBatchSQL.
+- Support API ListSparkWarehouseBatchSQL.
+- Support API UpgradeKernelVersion.
+- Update API CreateDBCluster: add param ProductVersion.
+- Update API CreateDBCluster: add param SecondaryVSwitchId.
+- Update API CreateDBCluster: add param SecondaryZoneId.
+- Update API DescribeDBClusterAttribute: update response param.
+- Update API ListSparkApps: add param Filters.
+
+
 2025-02-11 Version: 3.7.0
 - Support API CancelSparkWarehouseBatchSQL.
 - Support API DescribeSparkSQLDiagnosisAttribute.

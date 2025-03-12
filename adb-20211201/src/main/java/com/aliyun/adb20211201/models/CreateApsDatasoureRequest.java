@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsDatasoureRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The information about the Databricks data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -23,6 +26,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public CreateApsDatasoureRequestDatabricksInfo databricksInfo;
 
     /**
+     * <p>The description of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -30,6 +35,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public String datasourceDescription;
 
     /**
+     * <p>The name of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +45,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public String datasourceName;
 
     /**
+     * <p>The type of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +55,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public String datasourceType;
 
     /**
+     * <p>The information about the Hive data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -57,6 +66,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public CreateApsDatasoureRequestHiveInfo hiveInfo;
 
     /**
+     * <p>The information about the source Apache Kafka instance.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -66,6 +77,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public CreateApsDatasoureRequestKafkaInfo kafkaInfo;
 
     /**
+     * <p>The mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>ALI_CLOUD_INSTANCE</p>
      */
@@ -73,6 +86,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public String mode;
 
     /**
+     * <p>The information about the source PolarDB for MySQL cluster.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -82,6 +97,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public CreateApsDatasoureRequestPolarDBMysqlInfo polarDBMysqlInfo;
 
     /**
+     * <p>The information about the source PolarDB-X instance.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -91,6 +108,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public CreateApsDatasoureRequestPolarDBXInfo polarDBXInfo;
 
     /**
+     * <p>The information about the source ApsaraDB RDS for MySQL instance.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -100,6 +119,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public CreateApsDatasoureRequestRdsMysqlInfo rdsMysqlInfo;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +129,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The information about the source Simple Log Service (SLS) instance or cluster.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -228,6 +250,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
     public static class CreateApsDatasoureRequestDatabricksInfo extends TeaModel {
         /**
+         * <p>The token that is used to access Databricks.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -235,6 +259,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String accessToken;
 
         /**
+         * <p>The URL of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx</p>
          */
@@ -266,6 +292,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
     public static class CreateApsDatasoureRequestHiveInfo extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -273,6 +301,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String clusterId;
 
         /**
+         * <p>The configuration of the host.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -280,6 +310,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String hostConfig;
 
         /**
+         * <p>The URL of the Hive Metastore.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -287,6 +319,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String metaStoreUri;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-uf*******h</p>
          */
@@ -294,6 +328,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String securityGroup;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1*****k</p>
          */
@@ -349,6 +385,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
     public static class CreateApsDatasoureRequestKafkaInfo extends TeaModel {
         /**
+         * <p>The ID of the Apache Kafka instance.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -356,6 +394,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String kafkaClusterId;
 
         /**
+         * <p>The topic of the Apache Kafka instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -387,6 +427,12 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
     public static class CreateApsDatasoureRequestPolarDBMysqlInfo extends TeaModel {
         /**
+         * <p>Specifies whether the data source is a cross-account resource. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -394,6 +440,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public Boolean across;
 
         /**
+         * <p>The name of the cross-account role.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-role</p>
          */
@@ -401,6 +449,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String acrossRole;
 
         /**
+         * <p>The cross-account UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456789*</p>
          */
@@ -408,6 +458,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String acrossUid;
 
         /**
+         * <p>The URL used to connect to the custom ApsaraDB RDS for MySQL instance.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -415,6 +467,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String connectUrl;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-bp*********</p>
          */
@@ -422,6 +476,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -429,6 +485,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -436,6 +494,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-******</p>
          */
@@ -443,6 +503,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String securityGroup;
 
         /**
+         * <p>The username used to access the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-user-name</p>
          */
@@ -530,6 +592,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
     public static class CreateApsDatasoureRequestPolarDBXInfo extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -555,6 +619,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
     public static class CreateApsDatasoureRequestRdsMysqlInfo extends TeaModel {
         /**
+         * <p>The URL used to connect to the read-only instance.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -562,6 +628,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String connectUrl;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-xxxxxxx</p>
          */
@@ -569,6 +637,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The password of the database account of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -576,6 +646,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -583,12 +655,17 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-******</p>
          */
         @NameInMap("SecurityGroup")
         public String securityGroup;
 
+        /**
+         * <p>The name of the database account of the instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -649,6 +726,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
     public static class CreateApsDatasoureRequestSlsInfo extends TeaModel {
         /**
+         * <p>Specifies whether the data source is a cross-account resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -656,6 +735,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public Boolean across;
 
         /**
+         * <p>The name of the cross-account role.</p>
+         * 
          * <strong>example:</strong>
          * <p>yyy</p>
          */
@@ -663,6 +744,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String acrossRole;
 
         /**
+         * <p>The cross-account UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxx</p>
          */
@@ -670,6 +753,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String acrossUid;
 
         /**
+         * <p>The SLS project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-project</p>
          */
@@ -677,6 +762,8 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -684,7 +771,7 @@ public class CreateApsDatasoureRequest extends TeaModel {
         public String sourceRegionId;
 
         /**
-         * <p>sls logstore。</p>
+         * <p>The name of the SLS Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>test-store</p>

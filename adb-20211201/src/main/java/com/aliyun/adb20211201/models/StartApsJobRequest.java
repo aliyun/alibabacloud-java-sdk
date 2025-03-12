@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartApsJobRequest extends TeaModel {
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class StartApsJobRequest extends TeaModel {
     public String apsJobId;
 
     /**
+     * <p>The region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The queried clusters.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -28,6 +34,12 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public java.util.List<DescribeAPSADBInstancesResponseBodyItems> items;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -35,6 +47,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +56,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -49,6 +65,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -56,6 +74,12 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -63,6 +87,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -148,6 +174,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
 
     public static class DescribeAPSADBInstancesResponseBodyItems extends TeaModel {
         /**
+         * <p>The specifications of the reserved computing resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>16ACU</p>
          */
@@ -155,6 +183,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         public String computeResource;
 
         /**
+         * <p>The description of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>adb_test</p>
          */
@@ -162,6 +192,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         public String DBClusterDescription;
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>am-bp1********</p>
          */
@@ -169,6 +201,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The status of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -176,6 +210,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         public String DBClusterStatus;
 
         /**
+         * <p>The amount of remaining reserved computing resources that are available in the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>24ACU</p>
          */
@@ -183,6 +219,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         public String reservedACU;
 
         /**
+         * <p>The specifications of the reserved storage resources.</p>
+         * 
          * <strong>example:</strong>
          * <p>24ACU</p>
          */
@@ -190,6 +228,8 @@ public class DescribeAPSADBInstancesResponseBody extends TeaModel {
         public Long storageResource;
 
         /**
+         * <p>The zone ID of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */

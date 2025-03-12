@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApsWorkloadNameRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyApsWorkloadNameRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyApsWorkloadNameRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ModifyApsWorkloadNameRequest extends TeaModel {
     public String workloadId;
 
     /**
+     * <p>The name of the workload.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

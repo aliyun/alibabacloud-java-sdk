@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSparkSQLDiagnosisAttributeResponseBody extends TeaModel {
     /**
+     * <p>The information about the request denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,16 +14,26 @@ public class DescribeSparkSQLDiagnosisAttributeResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The application ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query a list of Spark application IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>s202411071444hzdvk486d9d2001****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The queried diagnostic information.</p>
+     */
     @NameInMap("DiagnosisInfos")
     public java.util.List<Adb4MysqlSparkDiagnosisInfo> diagnosisInfos;
 
     /**
+     * <p>The execution duration of the query. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -29,22 +41,32 @@ public class DescribeSparkSQLDiagnosisAttributeResponseBody extends TeaModel {
     public Long elapsedTime;
 
     /**
+     * <p>The ID of the query executed within the Spark application.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("InnerQueryId")
     public Long innerQueryId;
 
+    /**
+     * <p>The operators sorted by metrics.</p>
+     */
     @NameInMap("OperatorListSortedByMetrics")
     public DescribeSparkSQLDiagnosisAttributeResponseBodyOperatorListSortedByMetrics operatorListSortedByMetrics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The Spark execution plan tree.</p>
+     */
     @NameInMap("Root")
     public OperatorNode root;
 
@@ -118,9 +140,15 @@ public class DescribeSparkSQLDiagnosisAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeSparkSQLDiagnosisAttributeResponseBodyOperatorListSortedByMetrics extends TeaModel {
+        /**
+         * <p>The operators sorted by the execution duration.</p>
+         */
         @NameInMap("OperatorListSortedByExclusiveTime")
         public java.util.List<SparkOperatorInfo> operatorListSortedByExclusiveTime;
 
+        /**
+         * <p>The operators sorted by the maximum memory used.</p>
+         */
         @NameInMap("OperatorListSortedByMaxMemory")
         public java.util.List<SparkOperatorInfo> operatorListSortedByMaxMemory;
 

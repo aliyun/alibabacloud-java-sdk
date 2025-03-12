@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExecuteSparkWarehouseBatchSQLResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

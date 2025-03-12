@@ -4,6 +4,10 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5m</p>
+     */
     @NameInMap("AutoStopInterval")
     public String autoStopInterval;
 
@@ -48,6 +52,10 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("EnableSpot")
     public Boolean enableSpot;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;spark.adb.version\&quot;:\&quot;3.5\&quot;}</p>
+     */
     @NameInMap("EngineParams")
     public String engineParamsShrink;
 
@@ -152,6 +160,10 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("SpecName")
     public String specName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>starting</p>
+     */
     @NameInMap("Status")
     public String status;
 

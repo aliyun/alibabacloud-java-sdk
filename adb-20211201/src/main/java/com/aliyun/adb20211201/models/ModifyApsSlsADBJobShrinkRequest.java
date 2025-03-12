@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     /**
+     * <p>The information about columns.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,6 +16,7 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String columnsShrink;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>dbName</p>
      */
@@ -30,6 +35,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String dbName;
 
     /**
+     * <p>The dirty data processing mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>STOP</p>
      */
@@ -37,6 +44,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String dirtyDataProcessPattern;
 
     /**
+     * <p>Specifies whether to enable the consistency check.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -44,6 +53,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String exactlyOnce;
 
     /**
+     * <p>The password of the database account.</p>
+     * 
      * <strong>example:</strong>
      * <p>test_123</p>
      */
@@ -51,6 +62,7 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,6 +72,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start offset.</p>
+     * 
      * <strong>example:</strong>
      * <p>end_cursor</p>
      */
@@ -67,6 +81,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String startingOffsets;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -74,6 +90,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The timestamp conversion.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -83,6 +101,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String unixTimestampConvert;
 
     /**
+     * <p>The name of the database account.</p>
+     * 
      * <strong>example:</strong>
      * <p>user-name</p>
      */
@@ -90,6 +110,7 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String userName;
 
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -99,6 +120,8 @@ public class ModifyApsSlsADBJobShrinkRequest extends TeaModel {
     public String workloadId;
 
     /**
+     * <p>The name of the workload.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-name</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteApsJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aps-*****</p>
      */
@@ -12,6 +14,8 @@ public class DeleteApsJobResponseBody extends TeaModel {
     public String apsJobId;
 
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DeleteApsJobResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class DeleteApsJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class DeleteApsJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +50,12 @@ public class DeleteApsJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -47,6 +63,8 @@ public class DeleteApsJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>-</strong></strong>-5D14-AC9F-*********</p>
      */
@@ -54,6 +72,8 @@ public class DeleteApsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

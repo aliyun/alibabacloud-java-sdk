@@ -667,8 +667,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建一站式链路</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request CreateAPSJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -748,8 +751,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建一站式链路</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request CreateAPSJobRequest
      * @return CreateAPSJobResponse
@@ -836,7 +842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作负载复制链路</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) replication job.</p>
      * 
      * @param request CreateApsCopyWorkloadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -897,7 +903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作负载复制链路</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) replication job.</p>
      * 
      * @param request CreateApsCopyWorkloadRequest
      * @return CreateApsCopyWorkloadResponse
@@ -908,8 +914,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建APS数据源。</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) data source.</p>
      * 
      * @param tmpReq CreateApsDatasoureRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1023,8 +1032,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建APS数据源。</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) data source.</p>
      * 
      * @param request CreateApsDatasoureRequest
      * @return CreateApsDatasoureResponse
@@ -1035,8 +1047,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Hive数据迁移链路。</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) job from a Hive data source.</p>
      * 
      * @param request CreateApsHiveJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1120,8 +1135,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Hive数据迁移链路。</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) job from a Hive data source.</p>
      * 
      * @param request CreateApsHiveJobRequest
      * @return CreateApsHiveJobResponse
@@ -1133,7 +1151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个SLS到ADB数仓的APS链路</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
      * 
      * @param tmpReq CreateApsSlsADBJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1308,7 +1326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个SLS到ADB数仓的APS链路</p>
+     * <p>Creates an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
      * 
      * @param request CreateApsSlsADBJobRequest
      * @return CreateApsSlsADBJobResponse
@@ -1323,7 +1341,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CreateDBCluster</p>
      * 
      * <b>summary</b> : 
-     * <p>The request ID.</p>
+     * <p>Creates an AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * 
      * @param request CreateDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1380,6 +1398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductForm", request.productForm);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.productVersion)) {
+            query.put("ProductVersion", request.productVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1402,6 +1424,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.restoreType)) {
             query.put("RestoreType", request.restoreType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryVSwitchId)) {
+            query.put("SecondaryVSwitchId", request.secondaryVSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secondaryZoneId)) {
+            query.put("SecondaryZoneId", request.secondaryZoneId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceDbClusterId)) {
@@ -1459,7 +1489,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>CreateDBCluster</p>
      * 
      * <b>summary</b> : 
-     * <p>The request ID.</p>
+     * <p>Creates an AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * 
      * @param request CreateDBClusterRequest
      * @return CreateDBClusterResponse
@@ -2138,8 +2168,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</p>
+     * <ul>
+     * <li>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</li>
+     * <li>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除aps任务</p>
+     * <p>Deletes an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request DeleteApsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2179,8 +2216,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Deleting backup sets is an asynchronous operation and may require 10 to 20 minutes to complete.</p>
+     * <ul>
+     * <li>You can delete up to 100 backup sets at a time. If you want to delete more than 100 backup sets, call this operation twice.</li>
+     * <li>To ensure data security, the system forcibly retains one valid backup set. If you want to delete the last backup set, the system prohibits your operation.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除aps任务</p>
+     * <p>Deletes an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request DeleteApsJobRequest
      * @return DeleteApsJobResponse
@@ -2812,8 +2856,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取APS联邦分析ADB实例列表</p>
+     * <p>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</p>
      * 
      * @param request DescribeAPSADBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2845,8 +2892,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to query the performance data of a cluster over a time range based on performance metrics. The collection granularity is 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取APS联邦分析ADB实例列表</p>
+     * <p>Queries a list of AnalyticDB for MySQL clusters for AnalyticDB Pipeline Service (APS) federated analytics.</p>
      * 
      * @param request DescribeAPSADBInstancesRequest
      * @return DescribeAPSADBInstancesResponse
@@ -3918,7 +3968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询APS Hive工作负载</p>
+     * <p>Queries the information about an AnalyticDB Pipeline Service (APS) job from a Hive data source.</p>
      * 
      * @param request DescribeApsHiveWorkloadRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3963,7 +4013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询APS Hive工作负载</p>
+     * <p>Queries the information about an AnalyticDB Pipeline Service (APS) job from a Hive data source.</p>
      * 
      * @param request DescribeApsHiveWorkloadRequest
      * @return DescribeApsHiveWorkloadResponse
@@ -4028,7 +4078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一站式链路列表</p>
+     * <p>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</p>
      * 
      * @param request DescribeApsJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4085,7 +4135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询一站式链路列表</p>
+     * <p>Queries a list of AnalyticDB Pipeline Service (APS) jobs.</p>
      * 
      * @param request DescribeApsJobsRequest
      * @return DescribeApsJobsResponse
@@ -4170,7 +4220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询aps任务进展。</p>
+     * <p>Queries the progress of an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request DescribeApsProgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4215,7 +4265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询aps任务进展。</p>
+     * <p>Queries the progress of an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request DescribeApsProgressRequest
      * @return DescribeApsProgressResponse
@@ -7792,6 +7842,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the diagnostic information about a Spark SQL query.</p>
+     * 
      * @param request DescribeSparkSQLDiagnosisAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSparkSQLDiagnosisAttributeResponse
@@ -7842,6 +7895,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the diagnostic information about a Spark SQL query.</p>
+     * 
      * @param request DescribeSparkSQLDiagnosisAttributeRequest
      * @return DescribeSparkSQLDiagnosisAttributeResponse
      */
@@ -7851,6 +7907,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the diagnostic information about Spark SQL queries.</p>
+     * 
      * @param request DescribeSparkSQLDiagnosisListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSparkSQLDiagnosisListResponse
@@ -7913,6 +7972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the diagnostic information about Spark SQL queries.</p>
+     * 
      * @param request DescribeSparkSQLDiagnosisListRequest
      * @return DescribeSparkSQLDiagnosisListResponse
      */
@@ -11311,8 +11373,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取当前ADB实例湖存储优化策略列表。</p>
+     * <p>Queries a list of lake storage optimization policies for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request ListApsOptimizationStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11352,8 +11417,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取当前ADB实例湖存储优化策略列表。</p>
+     * <p>Queries a list of lake storage optimization policies for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request ListApsOptimizationStrategyRequest
      * @return ListApsOptimizationStrategyResponse
@@ -11438,7 +11506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列取湖存储</p>
+     * <p>Queries a list of lake storages.</p>
      * 
      * @param request ListLakeStoragesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11471,7 +11539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列取湖存储</p>
+     * <p>Queries a list of lake storages.</p>
      * 
      * @param request ListLakeStoragesRequest
      * @return ListLakeStoragesResponse
@@ -12321,8 +12389,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改aps任务</p>
+     * <p>Modifies an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request ModifyApsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12370,8 +12441,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改aps任务</p>
+     * <p>Modifies an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request ModifyApsJobRequest
      * @return ModifyApsJobResponse
@@ -12383,7 +12457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改sls投递adb数仓任务</p>
+     * <p>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
      * 
      * @param tmpReq ModifyApsSlsADBJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12474,7 +12548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改sls投递adb数仓任务</p>
+     * <p>Modifies an AnalyticDB Pipeline Service (APS) job from Simple Log Service (SLS) to an AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
      * 
      * @param request ModifyApsSlsADBJobRequest
      * @return ModifyApsSlsADBJobResponse
@@ -12485,6 +12559,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the AnalyticDB Pipeline Service (APS) workload name.</p>
      * 
@@ -12534,6 +12611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the AnalyticDB Pipeline Service (APS) workload name.</p>
      * 
@@ -14159,7 +14239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动aps任务</p>
+     * <p>Starts an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request StartApsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14200,7 +14280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动aps任务</p>
+     * <p>Starts an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request StartApsJobRequest
      * @return StartApsJobResponse
@@ -14595,7 +14675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停aps任务</p>
+     * <p>Suspends an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request SuspendApsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14636,7 +14716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停aps任务</p>
+     * <p>Suspends an AnalyticDB Pipeline Service (APS) job.</p>
      * 
      * @param request SuspendApsJobRequest
      * @return SuspendApsJobResponse
@@ -14916,5 +14996,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSparkTemplateFileResponse updateSparkTemplateFile(UpdateSparkTemplateFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSparkTemplateFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the minor version of an AnalyticDB for MySQL cluster.</p>
+     * 
+     * @param request UpgradeKernelVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradeKernelVersionResponse
+     */
+    public UpgradeKernelVersionResponse upgradeKernelVersionWithOptions(UpgradeKernelVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBVersion)) {
+            query.put("DBVersion", request.DBVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.switchMode)) {
+            query.put("SwitchMode", request.switchMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradeKernelVersion"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeKernelVersionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpgradeKernelVersionResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the minor version of an AnalyticDB for MySQL cluster.</p>
+     * 
+     * @param request UpgradeKernelVersionRequest
+     * @return UpgradeKernelVersionResponse
+     */
+    public UpgradeKernelVersionResponse upgradeKernelVersion(UpgradeKernelVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradeKernelVersionWithOptions(request, runtime);
     }
 }
