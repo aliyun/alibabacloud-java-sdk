@@ -10,13 +10,6 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("success")
-    public Boolean success;
-
     public static TransitIntegratedDirectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TransitIntegratedDirectionResponseBody self = new TransitIntegratedDirectionResponseBody();
         return TeaModel.build(map, self);
@@ -36,14 +29,6 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public TransitIntegratedDirectionResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class TransitIntegratedDirectionResponseBodyDataCost extends TeaModel {
@@ -1185,6 +1170,25 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
 
     }
 
+    public static class TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline extends TeaModel {
+        @NameInMap("polyline")
+        public String polyline;
+
+        public static TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline build(java.util.Map<String, ?> map) throws Exception {
+            TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline self = new TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline();
+            return TeaModel.build(map, self);
+        }
+
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline setPolyline(String polyline) {
+            this.polyline = polyline;
+            return this;
+        }
+        public String getPolyline() {
+            return this.polyline;
+        }
+
+    }
+
     public static class TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxi extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1226,6 +1230,9 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
          */
         @NameInMap("originPoint")
         public String originPoint;
+
+        @NameInMap("polyline")
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline polyline;
 
         /**
          * <strong>example:</strong>
@@ -1293,6 +1300,14 @@ public class TransitIntegratedDirectionResponseBody extends TeaModel {
         }
         public String getOriginPoint() {
             return this.originPoint;
+        }
+
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxi setPolyline(TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline polyline) {
+            this.polyline = polyline;
+            return this;
+        }
+        public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxiPolyline getPolyline() {
+            return this.polyline;
         }
 
         public TransitIntegratedDirectionResponseBodyDataPathsSegmentsTaxi setPrice(String price) {

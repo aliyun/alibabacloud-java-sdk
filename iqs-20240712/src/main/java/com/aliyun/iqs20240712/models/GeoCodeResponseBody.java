@@ -10,13 +10,6 @@ public class GeoCodeResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
-    @NameInMap("success")
-    public Boolean success;
-
     public static GeoCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GeoCodeResponseBody self = new GeoCodeResponseBody();
         return TeaModel.build(map, self);
@@ -36,14 +29,6 @@ public class GeoCodeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public GeoCodeResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class GeoCodeResponseBodyDataBuilding extends TeaModel {

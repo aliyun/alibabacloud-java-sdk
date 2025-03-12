@@ -10,13 +10,6 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("success")
-    public Boolean success;
-
     public static PlaceSearchNovaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PlaceSearchNovaResponseBody self = new PlaceSearchNovaResponseBody();
         return TeaModel.build(map, self);
@@ -36,14 +29,6 @@ public class PlaceSearchNovaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public PlaceSearchNovaResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class PlaceSearchNovaResponseBodyDataImages extends TeaModel {

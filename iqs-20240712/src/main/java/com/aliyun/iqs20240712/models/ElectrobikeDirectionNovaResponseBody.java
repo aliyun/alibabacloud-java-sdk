@@ -10,13 +10,6 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>True</p>
-     */
-    @NameInMap("success")
-    public Boolean success;
-
     public static ElectrobikeDirectionNovaResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ElectrobikeDirectionNovaResponseBody self = new ElectrobikeDirectionNovaResponseBody();
         return TeaModel.build(map, self);
@@ -36,14 +29,6 @@ public class ElectrobikeDirectionNovaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public ElectrobikeDirectionNovaResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class ElectrobikeDirectionNovaResponseBodyDataPathsCost extends TeaModel {
