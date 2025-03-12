@@ -191,6 +191,12 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("Branch")
         public String branch;
 
+        @NameInMap("Endpoint")
+        public String endpoint;
+
+        @NameInMap("OrgId")
+        public String orgId;
+
         /**
          * <p>The owner of the code repository.</p>
          * <blockquote>
@@ -211,6 +217,9 @@ public class UpdateArtifactRequest extends TeaModel {
          */
         @NameInMap("Platform")
         public String platform;
+
+        @NameInMap("RepoId")
+        public Long repoId;
 
         /**
          * <p>The name of the repository.</p>
@@ -234,6 +243,22 @@ public class UpdateArtifactRequest extends TeaModel {
             return this.branch;
         }
 
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setOrgId(String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+        public String getOrgId() {
+            return this.orgId;
+        }
+
         public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setOwner(String owner) {
             this.owner = owner;
             return this;
@@ -248,6 +273,14 @@ public class UpdateArtifactRequest extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setRepoId(Long repoId) {
+            this.repoId = repoId;
+            return this;
+        }
+        public Long getRepoId() {
+            return this.repoId;
         }
 
         public UpdateArtifactRequestArtifactBuildPropertyCodeRepo setRepoName(String repoName) {
