@@ -4,9 +4,17 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainAttackMaxQpsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>613</p>
+     */
     @NameInMap("Qps")
     public String qps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>62F9BD81-8BCA-5B23-A3CB-3FB7CEB7A4CA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

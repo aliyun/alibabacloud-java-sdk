@@ -7,9 +7,17 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
     @NameInMap("Layer7CCRules")
     public java.util.List<DescribeLayer7CCRulesResponseBodyLayer7CCRules> layer7CCRules;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,24 +51,52 @@ public class DescribeLayer7CCRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeLayer7CCRulesResponseBodyLayer7CCRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>close</p>
+         */
         @NameInMap("Act")
         public String act;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>match</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testCcRule1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Ttl")
         public Integer ttl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/a/b/c</p>
+         */
         @NameInMap("Uri")
         public String uri;
 

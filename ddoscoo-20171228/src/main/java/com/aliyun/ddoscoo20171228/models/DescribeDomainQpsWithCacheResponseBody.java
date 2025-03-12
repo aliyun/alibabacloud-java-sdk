@@ -16,6 +16,10 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
     @NameInMap("CcJsQps")
     public java.util.List<String> ccJsQps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
@@ -31,9 +35,17 @@ public class DescribeDomainQpsWithCacheResponseBody extends TeaModel {
     @NameInMap("RegionBlocks")
     public java.util.List<String> regionBlocks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1577794500</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

@@ -4,18 +4,34 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>97935DF1-0289-4AA2-9DD1-72377838B16B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TagKeys")
     public java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
 
     public static class ListTagKeysResponseBodyTagKeys extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TagCount")
         public Integer tagCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 

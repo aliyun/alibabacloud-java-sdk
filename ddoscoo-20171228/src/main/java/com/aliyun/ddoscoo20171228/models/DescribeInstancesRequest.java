@@ -4,39 +4,91 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("Edition")
     public Integer edition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Enabled")
     public Integer enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1578931200000</p>
+     */
     @NameInMap("ExpireEndTime")
     public Long expireEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1578931200000</p>
+     */
     @NameInMap("ExpireStartTime")
     public Long expireStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;ddoscoo-cn-XXXXX&quot;]</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public String pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testRemark</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xx</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Status")
     public java.util.List<Integer> status;
 
@@ -153,9 +205,17 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 

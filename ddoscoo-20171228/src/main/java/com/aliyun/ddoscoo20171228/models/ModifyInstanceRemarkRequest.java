@@ -4,12 +4,20 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRemarkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-XXXXX</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

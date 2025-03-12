@@ -7,9 +7,17 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
     @NameInMap("DataList")
     public java.util.List<DescribeDomainAttackEventListResponseBodyDataList> dataList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,15 +51,31 @@ public class DescribeDomainAttackEventListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainAttackEventListResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1670918400</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("MaxQps")
         public Long maxQps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1666083600</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

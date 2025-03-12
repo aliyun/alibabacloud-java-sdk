@@ -4,6 +4,12 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DeleteLayer4RuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;InstanceId&quot;:&quot;0bcf28g5-d57c-11e7-9bs0-d89d6717dxbc&quot;,&quot;Protocol&quot;:&quot;tcp&quot;,&quot;FrontendPort&quot;:80}</p>
+     */
     @NameInMap("Listeners")
     public String listeners;
 

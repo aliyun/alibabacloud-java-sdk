@@ -7,12 +7,24 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
     @NameInMap("DDoSTrafficPoints")
     public java.util.List<DescribeDDoSTrafficResponseBodyDDoSTrafficPoints> DDoSTrafficPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23482234</p>
+     */
     @NameInMap("DefenseInBytes")
     public Long defenseInBytes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19284762</p>
+     */
     @NameInMap("SourceInBytes")
     public Long sourceInBytes;
 
@@ -54,12 +66,24 @@ public class DescribeDDoSTrafficResponseBody extends TeaModel {
     }
 
     public static class DescribeDDoSTrafficResponseBodyDDoSTrafficPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>129867</p>
+         */
         @NameInMap("DefenseMaxInBps")
         public Long defenseMaxInBps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>129867</p>
+         */
         @NameInMap("SourceMaxInBps")
         public Long sourceMaxInBps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>234082304</p>
+         */
         @NameInMap("Time")
         public Long time;
 

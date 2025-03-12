@@ -7,6 +7,10 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     @NameInMap("Listeners")
     public java.util.List<DescribeLayer4RuleAttributesResponseBodyListeners> listeners;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeLayer4RuleAttributesResponseBodyListenersConfigCcSblack extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Cnt")
         public Integer cnt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("During")
         public Integer during;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
         @NameInMap("Expires")
         public Integer expires;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -103,9 +123,17 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeLayer4RuleAttributesResponseBodyListenersConfigPayloadLen extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Max")
         public Integer max;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Min")
         public Integer min;
 
@@ -133,15 +161,31 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeLayer4RuleAttributesResponseBodyListenersConfigSla extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Cps")
         public Integer cps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CpsEnable")
         public Integer cpsEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Maxconn")
         public Integer maxconn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxconnEnable")
         public Integer maxconnEnable;
 
@@ -185,24 +229,52 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeLayer4RuleAttributesResponseBodyListenersConfigSlimit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Bps")
         public Long bps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Cps")
         public Integer cps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CpsEnable")
         public Integer cpsEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CpsMode")
         public Integer cpsMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Maxconn")
         public Integer maxconn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxconnEnable")
         public Integer maxconnEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Pps")
         public Long pps;
 
@@ -273,12 +345,20 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         @NameInMap("Cc")
         public DescribeLayer4RuleAttributesResponseBodyListenersConfigCc cc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("NodataConn")
         public String nodataConn;
 
         @NameInMap("PayloadLen")
         public DescribeLayer4RuleAttributesResponseBodyListenersConfigPayloadLen payloadLen;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PersistenceTimeout")
         public Integer persistenceTimeout;
 
@@ -288,6 +368,10 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         @NameInMap("Slimit")
         public DescribeLayer4RuleAttributesResponseBodyListenersConfigSlimit slimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Synproxy")
         public String synproxy;
 
@@ -358,12 +442,24 @@ public class DescribeLayer4RuleAttributesResponseBody extends TeaModel {
         @NameInMap("Config")
         public DescribeLayer4RuleAttributesResponseBodyListenersConfig config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-XXXXX</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tcp</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 

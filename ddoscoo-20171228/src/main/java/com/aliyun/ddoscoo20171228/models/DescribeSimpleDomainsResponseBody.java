@@ -7,6 +7,10 @@ public class DescribeSimpleDomainsResponseBody extends TeaModel {
     @NameInMap("DomainList")
     public java.util.List<String> domainList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

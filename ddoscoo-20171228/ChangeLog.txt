@@ -1,3 +1,19 @@
+2025-03-12 Version: 3.0.0
+- Delete API DescribeDomainAttackEvents.
+- Delete API DescribeDomainQps.
+- Update API ConfigLayer4Rule: add param ProxyEnable.
+- Update API ConfigLayer7BlackWhiteList: update param BlackList.
+- Update API ConfigLayer7BlackWhiteList: update param WhiteList.
+- Update API ConfigLayer7Cert: add param CertIdentifier.
+- Update API ConfigLayer7Cert: add param CertRegion.
+- Update API CreateLayer4Rule: add param ProxyEnable.
+- Update API DescribeDomainStatusCodeList: update response param.
+- Update API DescribeDomains: update response param.
+- Update API DescribeLayer4Rules: update response param.
+- Update API DescribleCertList: update response param.
+- Update API ListValueAdded: update response param.
+
+
 2023-04-25 Version: 2.0.3
 - Update sdk.
 

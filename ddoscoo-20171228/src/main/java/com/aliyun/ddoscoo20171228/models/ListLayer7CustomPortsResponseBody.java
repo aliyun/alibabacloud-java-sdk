@@ -7,6 +7,10 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
     @NameInMap("Layer7CustomPorts")
     public java.util.List<ListLayer7CustomPortsResponseBodyLayer7CustomPorts> layer7CustomPorts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,6 +42,10 @@ public class ListLayer7CustomPortsResponseBody extends TeaModel {
         @NameInMap("ProxyPorts")
         public java.util.List<String> proxyPorts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https</p>
+         */
         @NameInMap("ProxyType")
         public String proxyType;
 

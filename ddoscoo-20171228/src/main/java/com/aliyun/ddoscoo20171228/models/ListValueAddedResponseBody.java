@@ -4,6 +4,10 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ListValueAddedResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,20 +36,43 @@ public class ListValueAddedResponseBody extends TeaModel {
     }
 
     public static class ListValueAddedResponseBodyValueAddedList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1580918400000</p>
+         */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1575527305000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddos_fl_pre-cn-xxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5497558138880</p>
+         */
         @NameInMap("LogSize")
         public Long logSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("StoreRegion")
+        public String storeRegion;
 
         public static ListValueAddedResponseBodyValueAddedList build(java.util.Map<String, ?> map) throws Exception {
             ListValueAddedResponseBodyValueAddedList self = new ListValueAddedResponseBodyValueAddedList();
@@ -90,6 +117,14 @@ public class ListValueAddedResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListValueAddedResponseBodyValueAddedList setStoreRegion(String storeRegion) {
+            this.storeRegion = storeRegion;
+            return this;
+        }
+        public String getStoreRegion() {
+            return this.storeRegion;
         }
 
     }

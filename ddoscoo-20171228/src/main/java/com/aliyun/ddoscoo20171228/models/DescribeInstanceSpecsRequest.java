@@ -4,9 +4,19 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;ddoscoo-cn-XXXXX&quot;]</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

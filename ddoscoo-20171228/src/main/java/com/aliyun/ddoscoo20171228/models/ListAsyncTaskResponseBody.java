@@ -7,9 +7,17 @@ public class ListAsyncTaskResponseBody extends TeaModel {
     @NameInMap("AsyncTasks")
     public java.util.List<ListAsyncTaskResponseBodyAsyncTasks> asyncTasks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -43,24 +51,52 @@ public class ListAsyncTaskResponseBody extends TeaModel {
     }
 
     public static class ListAsyncTaskResponseBodyAsyncTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1533866201000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1533866201000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;instanceId&quot;: &quot;ddoscoo-1234-qrq2134&quot;}</p>
+         */
         @NameInMap("TaskParams")
         public String taskParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;instanceId&quot;: &quot;ddoscoo-1234-qrq2134&quot;, &quot;url&quot;: &quot;<a href="https://oss.xxx.xxx%22%7D">https://oss.xxx.xxx&quot;}</a></p>
+         */
         @NameInMap("TaskResult")
         public String taskResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TaskType")
         public Integer taskType;
 

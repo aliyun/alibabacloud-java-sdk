@@ -7,6 +7,10 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
     @NameInMap("HealthCheckStatusList")
     public java.util.List<DescribeHealthCheckStatusListResponseBodyHealthCheckStatusList> healthCheckStatusList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthCheckStatusListResponseBodyHealthCheckStatusListRealServerStatusList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -62,18 +74,34 @@ public class DescribeHealthCheckStatusListResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthCheckStatusListResponseBodyHealthCheckStatusList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-XXXXX</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tcp</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
         @NameInMap("RealServerStatusList")
         public java.util.List<DescribeHealthCheckStatusListResponseBodyHealthCheckStatusListRealServerStatusList> realServerStatusList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -7,6 +7,10 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     @NameInMap("InstanceDetails")
     public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetails> instanceDetails;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("Eip")
         public String eip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -65,9 +77,17 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         @NameInMap("EipInfoList")
         public java.util.List<DescribeInstanceDetailsResponseBodyInstanceDetailsEipInfoList> eipInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-XXXXX</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>coop-line-001</p>
+         */
         @NameInMap("Line")
         public String line;
 

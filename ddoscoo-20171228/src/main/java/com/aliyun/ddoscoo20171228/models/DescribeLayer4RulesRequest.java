@@ -4,21 +4,67 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeLayer4RulesRequest extends TeaModel {
+    /**
+     * <p>The type of forwarding protocol. Values:</p>
+     * <ul>
+     * <li><strong>tcp</strong>: Indicates TCP protocol.</li>
+     * <li><strong>udp</strong>: Indicates UDP protocol.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
+     */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
+    /**
+     * <p>The forwarding port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>233</p>
+     */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
+    /**
+     * <p>The ID of the DDoS protection instance to be queried.</p>
+     * <blockquote>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/91478.html">DescribeInstances</a> to query all DDoS protection instance IDs.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-zvp2ay9b****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>In paginated queries, specifies which page of data to return. The minimum value is <strong>1</strong>, indicating the first page of data.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Offset")
     public Integer offset;
 
+    /**
+     * <p>In paginated queries, specifies the number of results per page. The maximum value is <strong>50</strong>, indicating that each page can contain up to 50 results.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The source IP address of the request. You do not need to fill this in; it is automatically obtained by the system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

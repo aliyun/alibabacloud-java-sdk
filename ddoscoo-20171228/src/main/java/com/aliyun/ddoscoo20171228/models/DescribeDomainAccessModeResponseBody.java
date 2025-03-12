@@ -7,6 +7,10 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
     @NameInMap("DomainModeList")
     public java.util.List<DescribeDomainAccessModeResponseBodyDomainModeList> domainModeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeDomainAccessModeResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainAccessModeResponseBodyDomainModeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AccessMode")
         public Integer accessMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 

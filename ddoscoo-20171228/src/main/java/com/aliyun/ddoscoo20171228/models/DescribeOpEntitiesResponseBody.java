@@ -7,9 +7,17 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     @NameInMap("OpEntities")
     public java.util.List<DescribeOpEntitiesResponseBodyOpEntities> opEntities;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,21 +51,45 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
     }
 
     public static class DescribeOpEntitiesResponseBodyOpEntities extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2.2.2.2</p>
+         */
         @NameInMap("EntityObject")
         public String entityObject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EntityType")
         public Integer entityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1536715558000</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("OpAccount")
         public String opAccount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OpAction")
         public Integer opAction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;newEntity&quot;:{&quot;elasticBandwidth&quot;:30},&quot;oldEntity&quot;:{&quot;elasticBandwidth&quot;:200}}</p>
+         */
         @NameInMap("OpDesc")
         public String opDesc;
 
