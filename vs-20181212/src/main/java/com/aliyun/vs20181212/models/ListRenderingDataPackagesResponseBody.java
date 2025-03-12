@@ -53,6 +53,9 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
     }
 
     public static class ListRenderingDataPackagesResponseBodyDataPackages extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         /**
          * <strong>example:</strong>
          * <p>2024-10-15T10:23:06+08:00</p>
@@ -105,6 +108,14 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public static ListRenderingDataPackagesResponseBodyDataPackages build(java.util.Map<String, ?> map) throws Exception {
             ListRenderingDataPackagesResponseBodyDataPackages self = new ListRenderingDataPackagesResponseBodyDataPackages();
             return TeaModel.build(map, self);
+        }
+
+        public ListRenderingDataPackagesResponseBodyDataPackages setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public ListRenderingDataPackagesResponseBodyDataPackages setCreationTime(String creationTime) {
