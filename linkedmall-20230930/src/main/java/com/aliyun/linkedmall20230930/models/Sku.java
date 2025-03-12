@@ -91,6 +91,9 @@ public class Sku extends TeaModel {
     @NameInMap("shopId")
     public String shopId;
 
+    @NameInMap("skuAlias")
+    public String skuAlias;
+
     /**
      * <strong>example:</strong>
      * <p>660460842235822081</p>
@@ -232,6 +235,14 @@ public class Sku extends TeaModel {
     }
     public String getShopId() {
         return this.shopId;
+    }
+
+    public Sku setSkuAlias(String skuAlias) {
+        this.skuAlias = skuAlias;
+        return this;
+    }
+    public String getSkuAlias() {
+        return this.skuAlias;
     }
 
     public Sku setSkuId(String skuId) {

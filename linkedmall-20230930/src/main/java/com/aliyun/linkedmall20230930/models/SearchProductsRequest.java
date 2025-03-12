@@ -122,6 +122,8 @@ public class SearchProductsRequest extends TeaModel {
     public String orderDirection;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -129,6 +131,8 @@ public class SearchProductsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -160,6 +164,8 @@ public class SearchProductsRequest extends TeaModel {
     public String productStatus;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>PIDxxxx</p>
      */

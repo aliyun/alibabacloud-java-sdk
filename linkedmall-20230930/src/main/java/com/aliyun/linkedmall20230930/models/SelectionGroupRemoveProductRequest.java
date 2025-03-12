@@ -4,10 +4,15 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SelectionGroupRemoveProductRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("productIds")
     public java.util.List<String> productIds;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>PIDxxxxx</p>
      */
