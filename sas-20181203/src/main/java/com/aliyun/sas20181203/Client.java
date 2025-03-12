@@ -26593,6 +26593,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CurrentPage", request.currentPage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -30207,7 +30211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取风险数量统计数据</p>
+     * <p>Get the statistics of risk item counts</p>
      * 
      * @param request GetCheckCountStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30248,7 +30252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取风险数量统计数据</p>
+     * <p>Get the statistics of risk item counts</p>
      * 
      * @param request GetCheckCountStatisticRequest
      * @return GetCheckCountStatisticResponse
@@ -30600,7 +30604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取时间趋势统计数据</p>
+     * <p>Get time trend statistics data</p>
      * 
      * @param request GetCheckTimeDimensionStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30649,7 +30653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取时间趋势统计数据</p>
+     * <p>Get time trend statistics data</p>
      * 
      * @param request GetCheckTimeDimensionStatisticRequest
      * @return GetCheckTimeDimensionStatisticResponse
@@ -32535,6 +32539,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Query Asset Installation Code</p>
+     * 
+     * @param request GetInstallCodeForUuidRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstallCodeForUuidResponse
+     */
+    public GetInstallCodeForUuidResponse getInstallCodeForUuidWithOptions(GetInstallCodeForUuidRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstallCodeForUuid"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstallCodeForUuidResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstallCodeForUuidResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Asset Installation Code</p>
+     * 
+     * @param request GetInstallCodeForUuidRequest
+     * @return GetInstallCodeForUuidResponse
+     */
+    public GetInstallCodeForUuidResponse getInstallCodeForUuid(GetInstallCodeForUuidRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInstallCodeForUuidWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Count the number of security events for a single instance</p>
      * 
      * @param request GetInstanceAlarmStatisticsRequest
@@ -34147,7 +34200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Serverless应用授权详情</p>
+     * <p>Get Serverless Application Authorization Details</p>
      * 
      * @param request GetServerlessAppAuthDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34196,7 +34249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Serverless应用授权详情</p>
+     * <p>Get Serverless Application Authorization Details</p>
      * 
      * @param request GetServerlessAppAuthDetailRequest
      * @return GetServerlessAppAuthDetailResponse
@@ -34208,7 +34261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Serverless授权概览</p>
+     * <p>Get Serverless Authorization Overview</p>
      * 
      * @param request GetServerlessAuthSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34253,7 +34306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Serverless授权概览</p>
+     * <p>Get Serverless Authorization Overview</p>
      * 
      * @param request GetServerlessAuthSummaryRequest
      * @return GetServerlessAuthSummaryResponse
@@ -37153,7 +37206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示云产品配置检查规则</p>
+     * <p>Display cloud product configuration check rules</p>
      * 
      * @param request ListCheckRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37186,7 +37239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>展示云产品配置检查规则</p>
+     * <p>Display cloud product configuration check rules</p>
      * 
      * @param request ListCheckRuleRequest
      * @return ListCheckRuleResponse
@@ -37198,7 +37251,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出规则下面所有的生效机器</p>
+     * <p>List all effective machines under the rule</p>
      * 
      * @param request ListCheckRuleInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37231,7 +37284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出规则下面所有的生效机器</p>
+     * <p>List all effective machines under the rule</p>
      * 
      * @param request ListCheckRuleInstanceRequest
      * @return ListCheckRuleInstanceResponse
@@ -40027,8 +40080,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is only available to users who have purchased the cloud platform configuration check authorization or enabled the pay-as-you-go service for cloud platform configuration checks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询操作检查项下的实例结果列表</p>
+     * <p>Query the list of instance results under the operation check item</p>
      * 
      * @param request ListOperationCheckRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40060,8 +40116,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This interface is only available to users who have purchased the cloud platform configuration check authorization or enabled the pay-as-you-go service for cloud platform configuration checks.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询操作检查项下的实例结果列表</p>
+     * <p>Query the list of instance results under the operation check item</p>
      * 
      * @param request ListOperationCheckRequest
      * @return ListOperationCheckResponse
@@ -41840,6 +41899,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CurrentPage", request.currentPage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }
@@ -42596,7 +42659,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云产品配置检查的规则设置</p>
+     * <p>Modify Policy</p>
+     * 
+     * @param request ModifyBinarySecurityPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyBinarySecurityPolicyResponse
+     */
+    public ModifyBinarySecurityPolicyResponse modifyBinarySecurityPolicyWithOptions(ModifyBinarySecurityPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusters)) {
+            query.put("Clusters", request.clusters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            query.put("Policy", request.policy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIp)) {
+            query.put("SourceIp", request.sourceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyBinarySecurityPolicy"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBinarySecurityPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyBinarySecurityPolicyResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify Policy</p>
+     * 
+     * @param request ModifyBinarySecurityPolicyRequest
+     * @return ModifyBinarySecurityPolicyResponse
+     */
+    public ModifyBinarySecurityPolicyResponse modifyBinarySecurityPolicy(ModifyBinarySecurityPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyBinarySecurityPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the rule settings for cloud product configuration checks</p>
      * 
      * @param request ModifyCheckRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42653,7 +42789,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云产品配置检查的规则设置</p>
+     * <p>Modify the rule settings for cloud product configuration checks</p>
      * 
      * @param request ModifyCheckRuleRequest
      * @return ModifyCheckRuleResponse
@@ -43060,7 +43196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改ak对应的Trail配置信息</p>
+     * <p>Modify the Trail configuration information for the AK</p>
      * 
      * @param request ModifyCloudVendorTrialConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43109,7 +43245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改ak对应的Trail配置信息</p>
+     * <p>Modify the Trail configuration information for the AK</p>
      * 
      * @param request ModifyCloudVendorTrialConfigRequest
      * @return ModifyCloudVendorTrialConfigResponse
@@ -45359,7 +45495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>管理Serverless资产授权</p>
+     * <p>Manage Serverless Asset Authorization</p>
      * 
      * @param request ModifyServerlessAuthToMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45452,7 +45588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>管理Serverless资产授权</p>
+     * <p>Manage Serverless Asset Authorization</p>
      * 
      * @param request ModifyServerlessAuthToMachineRequest
      * @return ModifyServerlessAuthToMachineResponse
@@ -52969,6 +53105,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateOssScanConfigResponse updateOssScanConfig(UpdateOssScanConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateOssScanConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Change Postpaid Asset Authorization Version</p>
+     * 
+     * @param request UpdatePostPaidBindRelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePostPaidBindRelResponse
+     */
+    public UpdatePostPaidBindRelResponse updatePostPaidBindRelWithOptions(UpdatePostPaidBindRelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoBind)) {
+            query.put("AutoBind", request.autoBind);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoBindVersion)) {
+            query.put("AutoBindVersion", request.autoBindVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindAction)) {
+            query.put("BindAction", request.bindAction);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePostPaidBindRel"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePostPaidBindRelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdatePostPaidBindRelResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Change Postpaid Asset Authorization Version</p>
+     * 
+     * @param request UpdatePostPaidBindRelRequest
+     * @return UpdatePostPaidBindRelResponse
+     */
+    public UpdatePostPaidBindRelResponse updatePostPaidBindRel(UpdatePostPaidBindRelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updatePostPaidBindRelWithOptions(request, runtime);
     }
 
     /**

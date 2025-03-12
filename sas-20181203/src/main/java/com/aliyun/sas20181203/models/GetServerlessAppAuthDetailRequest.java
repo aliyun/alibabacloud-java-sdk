@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetServerlessAppAuthDetailRequest extends TeaModel {
     /**
+     * <p>SAE application ID.</p>
+     * <blockquote>
+     * <p>Obtain through the <a href="~~ListMachineApps~~">ListMachineApps</a> interface.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>3de9f2ac-f***769226df</p>
      */
@@ -12,6 +17,8 @@ public class GetServerlessAppAuthDetailRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>Application region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +26,12 @@ public class GetServerlessAppAuthDetailRequest extends TeaModel {
     public String appRegionId;
 
     /**
+     * <p>Server type: </p>
+     * <ul>
+     * <li><strong>RunD</strong></li>
+     * <li><strong>ECI</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RunD</p>
      */
@@ -26,6 +39,13 @@ public class GetServerlessAppAuthDetailRequest extends TeaModel {
     public String machineType;
 
     /**
+     * <p>Cloud product: </p>
+     * <ul>
+     * <li><strong>ASK</strong></li>
+     * <li><strong>SAE</strong></li>
+     * <li><strong>ACS</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SAE</p>
      */

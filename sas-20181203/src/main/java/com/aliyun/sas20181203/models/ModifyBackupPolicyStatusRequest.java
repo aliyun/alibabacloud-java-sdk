@@ -16,12 +16,12 @@ public class ModifyBackupPolicyStatusRequest extends TeaModel {
 
     /**
      * <p>The version of the anti-ransomware policy. Set the value to <strong>2.0.0</strong>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2.0.0</p>
      */
     @NameInMap("PolicyVersion")
+    @Deprecated
     public String policyVersion;
 
     /**
@@ -54,6 +54,7 @@ public class ModifyBackupPolicyStatusRequest extends TeaModel {
         return this.id;
     }
 
+    @Deprecated
     public ModifyBackupPolicyStatusRequest setPolicyVersion(String policyVersion) {
         this.policyVersion = policyVersion;
         return this;

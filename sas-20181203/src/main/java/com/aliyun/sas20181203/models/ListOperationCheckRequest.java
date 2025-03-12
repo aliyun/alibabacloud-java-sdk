@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListOperationCheckRequest extends TeaModel {
     /**
+     * <p>Check item ID.</p>
+     * <blockquote>
+     * <p>Obtain this parameter by calling the <a href="~~ListCheckResult~~">ListCheckResult</a> interface.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */
@@ -12,22 +17,37 @@ public class ListOperationCheckRequest extends TeaModel {
     public Long checkId;
 
     /**
+     * <p>Timestamp (in milliseconds) of the end time of the queried task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1719923175001</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>Language type for request and response messages, default value is zh. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>Information about the operated instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OperationTaskInstances")
     public java.util.List<ListOperationCheckRequestOperationTaskInstances> operationTaskInstances;
 
     /**
+     * <p>Timestamp (in milliseconds) of the start time of the queried task.</p>
+     * 
      * <strong>example:</strong>
      * <p>1719923175000</p>
      */
@@ -35,6 +55,11 @@ public class ListOperationCheckRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Task type corresponding to the task:</p>
+     * <ul>
+     * <li><strong>REPAIR</strong>: Repair task</li>
+     * <li><strong>ROLLBACK</strong>: Rollback task</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,6 +123,8 @@ public class ListOperationCheckRequest extends TeaModel {
 
     public static class ListOperationCheckRequestOperationTaskInstances extends TeaModel {
         /**
+         * <p>Cloud asset instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>r-bp1642ib4bg2bm****</p>
          */
@@ -105,6 +132,8 @@ public class ListOperationCheckRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -112,6 +141,11 @@ public class ListOperationCheckRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Asset vendor. Values:</p>
+         * <ul>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
          */

@@ -23,6 +23,19 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
      * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -63,6 +76,14 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListVulAutoRepairConfigRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ListVulAutoRepairConfigRequest setPageSize(Integer pageSize) {

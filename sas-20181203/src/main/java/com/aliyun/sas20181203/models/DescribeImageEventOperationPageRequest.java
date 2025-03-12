@@ -77,7 +77,7 @@ public class DescribeImageEventOperationPageRequest extends TeaModel {
     /**
      * <p>The source of the alert handling rule. Valid values:</p>
      * <ul>
-     * <li><strong>image</strong>: image.</li>
+     * <li><strong>default</strong>: image.</li>
      * <li><strong>agentless</strong>: agentless detection.</li>
      * </ul>
      * 

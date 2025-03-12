@@ -122,6 +122,39 @@ public class GetAuthSummaryResponseBody extends TeaModel {
     public GetAuthSummaryResponseBodyMachine machine;
 
     /**
+     * <p>Activate the pay-as-you-go service protection version for hosts and container security, which is the highest protection version among all bound hosts. Values:   - <strong>1</strong>: Free Edition  - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Antivirus Edition     - <strong>7</strong>: Flagship Edition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
+    @NameInMap("PostPaidHighestVersion")
+    public String postPaidHighestVersion;
+
+    /**
+     * <p>The pay-as-you-go service for host and container security adds an automatic binding identifier for new hosts, with values: - <strong>0</strong>: Off - <strong>1</strong>: On</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("PostPaidHostAutoBind")
+    public String postPaidHostAutoBind;
+
+    /**
+     * <p>The version for the pay-as-you-go service of host and container security to automatically bind new assets, with values: - <strong>1</strong>: Free Edition - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Antivirus Edition - <strong>7</strong>: Flagship Edition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
+    @NameInMap("PostPaidHostAutoBindVersion")
+    public String postPaidHostAutoBindVersion;
+
+    /**
+     * <p>Statistics on pay-as-you-go service authorization for host and container security.</p>
+     */
+    @NameInMap("PostPaidVersionSummary")
+    public java.util.List<GetAuthSummaryResponseBodyPostPaidVersionSummary> postPaidVersionSummary;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -213,6 +246,38 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         return this.machine;
     }
 
+    public GetAuthSummaryResponseBody setPostPaidHighestVersion(String postPaidHighestVersion) {
+        this.postPaidHighestVersion = postPaidHighestVersion;
+        return this;
+    }
+    public String getPostPaidHighestVersion() {
+        return this.postPaidHighestVersion;
+    }
+
+    public GetAuthSummaryResponseBody setPostPaidHostAutoBind(String postPaidHostAutoBind) {
+        this.postPaidHostAutoBind = postPaidHostAutoBind;
+        return this;
+    }
+    public String getPostPaidHostAutoBind() {
+        return this.postPaidHostAutoBind;
+    }
+
+    public GetAuthSummaryResponseBody setPostPaidHostAutoBindVersion(String postPaidHostAutoBindVersion) {
+        this.postPaidHostAutoBindVersion = postPaidHostAutoBindVersion;
+        return this;
+    }
+    public String getPostPaidHostAutoBindVersion() {
+        return this.postPaidHostAutoBindVersion;
+    }
+
+    public GetAuthSummaryResponseBody setPostPaidVersionSummary(java.util.List<GetAuthSummaryResponseBodyPostPaidVersionSummary> postPaidVersionSummary) {
+        this.postPaidVersionSummary = postPaidVersionSummary;
+        return this;
+    }
+    public java.util.List<GetAuthSummaryResponseBodyPostPaidVersionSummary> getPostPaidVersionSummary() {
+        return this.postPaidVersionSummary;
+    }
+
     public GetAuthSummaryResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -247,6 +312,24 @@ public class GetAuthSummaryResponseBody extends TeaModel {
          */
         @NameInMap("BindEcsCount")
         public Integer bindEcsCount;
+
+        /**
+         * <p>Bind the number of cores for postpaid authorization assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("PostPaidBindCoreCount")
+        public Integer postPaidBindCoreCount;
+
+        /**
+         * <p>The number of assets bound to the postpaid authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("PostPaidBindEcsCount")
+        public Integer postPaidBindEcsCount;
 
         /**
          * <p>The number of cores of the assets that are at risk.</p>
@@ -323,6 +406,22 @@ public class GetAuthSummaryResponseBody extends TeaModel {
             return this.bindEcsCount;
         }
 
+        public GetAuthSummaryResponseBodyMachine setPostPaidBindCoreCount(Integer postPaidBindCoreCount) {
+            this.postPaidBindCoreCount = postPaidBindCoreCount;
+            return this;
+        }
+        public Integer getPostPaidBindCoreCount() {
+            return this.postPaidBindCoreCount;
+        }
+
+        public GetAuthSummaryResponseBodyMachine setPostPaidBindEcsCount(Integer postPaidBindEcsCount) {
+            this.postPaidBindEcsCount = postPaidBindEcsCount;
+            return this;
+        }
+        public Integer getPostPaidBindEcsCount() {
+            return this.postPaidBindEcsCount;
+        }
+
         public GetAuthSummaryResponseBodyMachine setRiskCoreCount(Integer riskCoreCount) {
             this.riskCoreCount = riskCoreCount;
             return this;
@@ -369,6 +468,99 @@ public class GetAuthSummaryResponseBody extends TeaModel {
         }
         public Integer getUnBindEcsCount() {
             return this.unBindEcsCount;
+        }
+
+    }
+
+    public static class GetAuthSummaryResponseBodyPostPaidVersionSummary extends TeaModel {
+        /**
+         * <p>The type of authorization consumed during binding, with values: - <strong>ASSET</strong>: Consumes the number of authorized devices - <strong>CORE</strong>: Consumes the number of authorized cores - <strong>ASSET_AND_CORE</strong>: Consumes both the number of authorized devices and cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASSET</p>
+         */
+        @NameInMap("AuthBindType")
+        public String authBindType;
+
+        /**
+         * <p>Current version index, the higher the number, the newer the version, used for sorting. Values: - <strong>1</strong>: Free Edition - <strong>2</strong>: Anti-virus Edition - <strong>3</strong>: Advanced Edition - <strong>4</strong>: Enterprise Edition - <strong>5</strong>: Flagship Edition</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Index")
+        public Integer index;
+
+        /**
+         * <p>Number of authorized cores used. &gt; This parameter is valid when AuthBindType is set to CORE or ASSET_AND_CORE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("UsedCoreCount")
+        public Long usedCoreCount;
+
+        /**
+         * <p>Number of authorized devices used. &gt; This parameter is valid when AuthBindType is ASSET or ASSET_AND_CORE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("UsedEcsCount")
+        public Long usedEcsCount;
+
+        /**
+         * <p>Bound host assets with postpaid versions, values:   - <strong>1</strong>: Free version  - <strong>3</strong>: Enterprise version - <strong>5</strong>: Advanced version - <strong>6</strong>: Anti-virus version     - <strong>7</strong>: Flagship version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("Version")
+        public Integer version;
+
+        public static GetAuthSummaryResponseBodyPostPaidVersionSummary build(java.util.Map<String, ?> map) throws Exception {
+            GetAuthSummaryResponseBodyPostPaidVersionSummary self = new GetAuthSummaryResponseBodyPostPaidVersionSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setAuthBindType(String authBindType) {
+            this.authBindType = authBindType;
+            return this;
+        }
+        public String getAuthBindType() {
+            return this.authBindType;
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setUsedCoreCount(Long usedCoreCount) {
+            this.usedCoreCount = usedCoreCount;
+            return this;
+        }
+        public Long getUsedCoreCount() {
+            return this.usedCoreCount;
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setUsedEcsCount(Long usedEcsCount) {
+            this.usedEcsCount = usedEcsCount;
+            return this;
+        }
+        public Long getUsedEcsCount() {
+            return this.usedEcsCount;
+        }
+
+        public GetAuthSummaryResponseBodyPostPaidVersionSummary setVersion(Integer version) {
+            this.version = version;
+            return this;
+        }
+        public Integer getVersion() {
+            return this.version;
         }
 
     }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetServerlessAuthSummaryRequest extends TeaModel {
     /**
+     * <p>Application region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,12 @@ public class GetServerlessAuthSummaryRequest extends TeaModel {
     public String appRegionId;
 
     /**
+     * <p>Server type: </p>
+     * <ul>
+     * <li><strong>RunD</strong></li>
+     * <li><strong>ECI</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RunD</p>
      */
@@ -19,6 +27,13 @@ public class GetServerlessAuthSummaryRequest extends TeaModel {
     public String machineType;
 
     /**
+     * <p>Cloud product: </p>
+     * <ul>
+     * <li><strong>ASK</strong></li>
+     * <li><strong>SAE</strong></li>
+     * <li><strong>ACS</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SAE</p>
      */

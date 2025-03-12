@@ -5,12 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetCheckCountStatisticRequest extends TeaModel {
     /**
+     * <p>Type of data statistics. Values:  </p>
+     * <ul>
+     * <li><strong>user</strong>: Top 5 over-authorized users.  </li>
+     * <li><strong>role</strong>: Top 5 over-authorized roles.  </li>
+     * <li><strong>instance</strong>: Top 5 risky cloud products.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>instance</p>
      */
     @NameInMap("StatisticType")
     public String statisticType;
 
+    /**
+     * <p>List of cloud vendors.</p>
+     */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
 

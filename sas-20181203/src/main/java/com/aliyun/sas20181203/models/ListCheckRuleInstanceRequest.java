@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCheckRuleInstanceRequest extends TeaModel {
     /**
+     * <p>The page number of the current page when performing a paginated query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Instance list.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<ListCheckRuleInstanceRequestInstanceList> instanceList;
 
     /**
+     * <p>The maximum number of items per page in a paginated query. The default value is <strong>20</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -22,6 +29,10 @@ public class ListCheckRuleInstanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Rule ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">LisCheckRule</a> interface to get this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,6 +80,11 @@ public class ListCheckRuleInstanceRequest extends TeaModel {
 
     public static class ListCheckRuleInstanceRequestInstanceList extends TeaModel {
         /**
+         * <p>Asset instance ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>i-wz9fdluqx20mp2x7****</p>
          */
@@ -76,6 +92,11 @@ public class ListCheckRuleInstanceRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region where the asset is located.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> interface to get this parameter.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>cn-hongkong</p>
          */

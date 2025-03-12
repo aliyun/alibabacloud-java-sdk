@@ -401,6 +401,19 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Boolean trialPermission;
 
         /**
+         * <p>Check whether the data delivery period for ActionTrail is enabled for more than 30 days to establish a baseline of behaviour.</p>
+         * <ul>
+         * <li><strong>0</strong>: REQUIRED</li>
+         * <li><strong>1</strong>: NOT REQUIRED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TrialPermissionType")
+        public Integer trialPermissionType;
+
+        /**
          * <p>The cloud service provider.</p>
          * 
          * <strong>example:</strong>
@@ -549,6 +562,14 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
         public Boolean getTrialPermission() {
             return this.trialPermission;
+        }
+
+        public ListCheckResultResponseBodyChecks setTrialPermissionType(Integer trialPermissionType) {
+            this.trialPermissionType = trialPermissionType;
+            return this;
+        }
+        public Integer getTrialPermissionType() {
+            return this.trialPermissionType;
         }
 
         public ListCheckResultResponseBodyChecks setVendor(String vendor) {
