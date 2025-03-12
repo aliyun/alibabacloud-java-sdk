@@ -14,12 +14,30 @@ public class DisableRealtimeLogDeliveryRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The name of the Logstore where log entries are stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LogstoreName</p>
+     */
     @NameInMap("Logstore")
     public String logstore;
 
+    /**
+     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ProjectName</p>
+     */
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <p>The ID of the region where the Log Service project is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Region")
     public String region;
 

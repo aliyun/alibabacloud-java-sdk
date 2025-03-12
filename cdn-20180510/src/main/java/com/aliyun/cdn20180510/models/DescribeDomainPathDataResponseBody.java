@@ -56,6 +56,15 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     public DescribeDomainPathDataResponseBodyPathDataPerInterval pathDataPerInterval;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>809A6F10-8238-4A49-BE00-4B2D6305686E</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
      * <p>The start of the time range during which data was queried.</p>
      * 
      * <strong>example:</strong>
@@ -124,6 +133,14 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     }
     public DescribeDomainPathDataResponseBodyPathDataPerInterval getPathDataPerInterval() {
         return this.pathDataPerInterval;
+    }
+
+    public DescribeDomainPathDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDomainPathDataResponseBody setStartTime(String startTime) {

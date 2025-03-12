@@ -3,7 +3,7 @@ package com.aliyun.cdn20180510.models;
 
 import com.aliyun.tea.*;
 
-public class SetDomainServerCertificateResponse extends TeaModel {
+public class BatchSetGrayDomainFunctionResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SetDomainServerCertificateResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SetDomainServerCertificateResponseBody body;
+    public BatchSetGrayDomainFunctionResponseBody body;
 
-    public static SetDomainServerCertificateResponse build(java.util.Map<String, ?> map) throws Exception {
-        SetDomainServerCertificateResponse self = new SetDomainServerCertificateResponse();
+    public static BatchSetGrayDomainFunctionResponse build(java.util.Map<String, ?> map) throws Exception {
+        BatchSetGrayDomainFunctionResponse self = new BatchSetGrayDomainFunctionResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDomainServerCertificateResponse setHeaders(java.util.Map<String, String> headers) {
+    public BatchSetGrayDomainFunctionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SetDomainServerCertificateResponse extends TeaModel {
         return this.headers;
     }
 
-    public SetDomainServerCertificateResponse setStatusCode(Integer statusCode) {
+    public BatchSetGrayDomainFunctionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SetDomainServerCertificateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SetDomainServerCertificateResponse setBody(SetDomainServerCertificateResponseBody body) {
+    public BatchSetGrayDomainFunctionResponse setBody(BatchSetGrayDomainFunctionResponseBody body) {
         this.body = body;
         return this;
     }
-    public SetDomainServerCertificateResponseBody getBody() {
+    public BatchSetGrayDomainFunctionResponseBody getBody() {
         return this.body;
     }
 
