@@ -4,10 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
+    /**
+     * <p>Details of the returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyServerlessAuthToMachineResponseBodyData data;
 
     /**
+     * <p>本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。</p>
+     * 
      * <strong>example:</strong>
      * <p>A47F77A1***8CD37050E</p>
      */
@@ -37,6 +42,12 @@ public class ModifyServerlessAuthToMachineResponseBody extends TeaModel {
 
     public static class ModifyServerlessAuthToMachineResponseBodyData extends TeaModel {
         /**
+         * <p>Result code. Values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Success</li>
+         * <li><strong>1</strong>: Parameter error</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

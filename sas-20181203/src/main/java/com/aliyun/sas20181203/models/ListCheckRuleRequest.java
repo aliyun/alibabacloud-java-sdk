@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListCheckRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the check item.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> API to get the check item ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>58</p>
      */
@@ -12,6 +17,8 @@ public class ListCheckRuleRequest extends TeaModel {
     public Long checkId;
 
     /**
+     * <p>The name of the check item.</p>
+     * 
      * <strong>example:</strong>
      * <p>checkName</p>
      */
@@ -19,6 +26,8 @@ public class ListCheckRuleRequest extends TeaModel {
     public String checkName;
 
     /**
+     * <p>The page number displayed in a paginated query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +35,12 @@ public class ListCheckRuleRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Set the language type for the request and response messages. The default is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -33,6 +48,8 @@ public class ListCheckRuleRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The number of check items displayed per page in a paginated query. The default value is <strong>20</strong>, indicating 20 check items per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +57,11 @@ public class ListCheckRuleRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The type of rule. Default is <strong>WHITE</strong>. Values:</p>
+     * <ul>
+     * <li><strong>WHITE</strong>: Add to whitelist</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>WHITE</p>
      */
@@ -47,6 +69,12 @@ public class ListCheckRuleRequest extends TeaModel {
     public String ruleType;
 
     /**
+     * <p>The scope where the rule applies. Values:</p>
+     * <ul>
+     * <li><strong>INSTNACE</strong>: Instance</li>
+     * <li><strong>ITEM</strong>: Check item</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCheckTimeDimensionStatisticRequest extends TeaModel {
     /**
+     * <p>End time, in timestamp format.</p>
+     * 
      * <strong>example:</strong>
      * <p>1672285044000</p>
      */
@@ -12,6 +14,8 @@ public class GetCheckTimeDimensionStatisticRequest extends TeaModel {
     public Long endTimeStamp;
 
     /**
+     * <p>Start time, in timestamp format.</p>
+     * 
      * <strong>example:</strong>
      * <p>1672385044000</p>
      */
@@ -19,12 +23,21 @@ public class GetCheckTimeDimensionStatisticRequest extends TeaModel {
     public Long startTimeStamp;
 
     /**
+     * <p>Type of statistical data. Values:</p>
+     * <ul>
+     * <li><strong>CheckPassRate</strong>: Check item pass rate.</li>
+     * <li><strong>AssetPassRate</strong>: Asset pass rate.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AssetPassRate</p>
      */
     @NameInMap("StatisticType")
     public String statisticType;
 
+    /**
+     * <p>List of cloud vendors.</p>
+     */
     @NameInMap("Vendors")
     public java.util.List<String> vendors;
 

@@ -493,6 +493,15 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer podCount;
 
         /**
+         * <p>The billing method of the protection version currently bound to the asset. Values: - <strong>0</strong>: Subscription - <strong>1</strong>: Pay-as-you-go</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("PostPaidFlag")
+        public Integer postPaidFlag;
+
+        /**
          * <p>The region ID of the asset.</p>
          * 
          * <strong>example:</strong>
@@ -1011,6 +1020,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
         public Integer getPodCount() {
             return this.podCount;
+        }
+
+        public DescribeCloudCenterInstancesResponseBodyInstances setPostPaidFlag(Integer postPaidFlag) {
+            this.postPaidFlag = postPaidFlag;
+            return this;
+        }
+        public Integer getPostPaidFlag() {
+            return this.postPaidFlag;
         }
 
         public DescribeCloudCenterInstancesResponseBodyInstances setRegion(String region) {

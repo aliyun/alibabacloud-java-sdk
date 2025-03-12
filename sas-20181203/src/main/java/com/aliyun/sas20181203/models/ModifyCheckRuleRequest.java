@@ -4,13 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyCheckRuleRequest extends TeaModel {
+    /**
+     * <p>The list of instances to be added in this rule update. This parameter does not need to be passed if there are no instances to add.</p>
+     */
     @NameInMap("AddInstanceList")
     public java.util.List<ModifyCheckRuleRequestAddInstanceList> addInstanceList;
 
+    /**
+     * <p>The list of instances to be removed in this rule update. This parameter does not need to be passed if there are no instances to remove.</p>
+     */
     @NameInMap("DeleteInstanceList")
     public java.util.List<ModifyCheckRuleRequestDeleteInstanceList> deleteInstanceList;
 
     /**
+     * <p>Remarks.</p>
+     * 
      * <strong>example:</strong>
      * <p>testRemark</p>
      */
@@ -18,6 +26,10 @@ public class ModifyCheckRuleRequest extends TeaModel {
     public String remark;
 
     /**
+     * <p>Rule ID.</p>
+     * <blockquote>
+     * <p>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> API.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +39,11 @@ public class ModifyCheckRuleRequest extends TeaModel {
     public Long ruleId;
 
     /**
+     * <p>Rule type. Default is <strong>WHITE</strong>. Values:</p>
+     * <ul>
+     * <li><strong>WHITE</strong>: Add to whitelist</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>WHITE</p>
      */
@@ -34,6 +51,12 @@ public class ModifyCheckRuleRequest extends TeaModel {
     public String ruleType;
 
     /**
+     * <p>The scope of effect for modifying the rule:</p>
+     * <ul>
+     * <li><strong>INSTANCE</strong>: Instance</li>
+     * <li><strong>ITEM</strong>: Check item</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
      */
@@ -95,6 +118,8 @@ public class ModifyCheckRuleRequest extends TeaModel {
 
     public static class ModifyCheckRuleRequestAddInstanceList extends TeaModel {
         /**
+         * <p>The instance ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-wz9g8ljygfqs1ez3****</p>
          */
@@ -102,6 +127,8 @@ public class ModifyCheckRuleRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -133,6 +160,8 @@ public class ModifyCheckRuleRequest extends TeaModel {
 
     public static class ModifyCheckRuleRequestDeleteInstanceList extends TeaModel {
         /**
+         * <p>The instance ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-8vb0e8qdaj0yyxjo****</p>
          */
@@ -140,6 +169,8 @@ public class ModifyCheckRuleRequest extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The region ID of the asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */

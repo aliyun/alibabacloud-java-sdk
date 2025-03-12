@@ -224,6 +224,7 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
          * </blockquote>
          */
         @NameInMap("Hash")
+        @Deprecated
         public java.util.List<String> hash;
 
         /**
@@ -243,6 +244,7 @@ public class AddContainerDefenseRuleRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public AddContainerDefenseRuleRequestWhitelist setHash(java.util.List<String> hash) {
             this.hash = hash;
             return this;

@@ -14,6 +14,19 @@ public class DescribeVulWhitelistRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
      * <p>The number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +46,14 @@ public class DescribeVulWhitelistRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeVulWhitelistRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeVulWhitelistRequest setPageSize(Integer pageSize) {

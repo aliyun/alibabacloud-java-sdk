@@ -186,7 +186,7 @@ public class GetImageEventOperationResponseBody extends TeaModel {
         /**
          * <p>The source of the whitelist. Valid values:</p>
          * <ul>
-         * <li><strong>image</strong>: image</li>
+         * <li><strong>default</strong>: image</li>
          * <li><strong>agentless</strong>: agentless detection</li>
          * </ul>
          * 

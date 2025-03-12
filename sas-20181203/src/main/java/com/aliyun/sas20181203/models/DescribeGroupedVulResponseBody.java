@@ -111,6 +111,15 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         public Integer asapCount;
 
         /**
+         * <p>The timestamp when the vulnerability was first detected. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639371046000</p>
+         */
+        @NameInMap("GmtFirst")
+        public Long gmtFirst;
+
+        /**
          * <p>The timestamp when the vulnerability was last detected. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +137,19 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         @NameInMap("HandledCount")
         public Integer handledCount;
 
+        /**
+         * <p>The language type associated with the vulnerability. Valid values:</p>
+         * <ul>
+         * <li><strong>java</strong></li>
+         * <li><strong>php</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is valid only for a vulnerability of the sca type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
+         */
         @NameInMap("LanguageType")
         public String languageType;
 
@@ -245,6 +267,14 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         }
         public Integer getAsapCount() {
             return this.asapCount;
+        }
+
+        public DescribeGroupedVulResponseBodyGroupedVulItems setGmtFirst(Long gmtFirst) {
+            this.gmtFirst = gmtFirst;
+            return this;
+        }
+        public Long getGmtFirst() {
+            return this.gmtFirst;
         }
 
         public DescribeGroupedVulResponseBodyGroupedVulItems setGmtLast(Long gmtLast) {

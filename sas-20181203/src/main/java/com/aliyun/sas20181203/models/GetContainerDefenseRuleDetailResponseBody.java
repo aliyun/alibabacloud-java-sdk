@@ -180,6 +180,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
          * </blockquote>
          */
         @NameInMap("Hash")
+        @Deprecated
         public java.util.List<String> hash;
 
         /**
@@ -199,6 +200,7 @@ public class GetContainerDefenseRuleDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public GetContainerDefenseRuleDetailResponseBodyDataWhitelist setHash(java.util.List<String> hash) {
             this.hash = hash;
             return this;

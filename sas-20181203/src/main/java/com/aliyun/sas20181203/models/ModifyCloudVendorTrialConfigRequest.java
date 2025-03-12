@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudVendorTrialConfigRequest extends TeaModel {
     /**
+     * <p>The ID of the audit log configuration to be modified.</p>
+     * <blockquote>
+     * <p>The ID can be queried via <a href="~~DescribeCloudVendorAccountAKList~~">DescribeCloudVendorAccountAKList</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class ModifyCloudVendorTrialConfigRequest extends TeaModel {
     public Long authId;
 
     /**
+     * <p>Enter the multi-cloud configuration information:</p>
+     * <ul>
+     * <li>AWS: parameters sqsQueueName, sqsRegion</li>
+     * <li>Tencent: parameters kafkaUserName, kafkaBootstrapServers, kafkaTopic</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;sqsRegion\&quot;:\&quot;us-west-2\&quot;,\&quot;sqsQueueName\&quot;:\&quot;****\&quot;}</p>
      */
@@ -21,6 +31,12 @@ public class ModifyCloudVendorTrialConfigRequest extends TeaModel {
     public String authInfo;
 
     /**
+     * <p>Whether to delete this audit log configuration:</p>
+     * <ul>
+     * <li>true: Delete</li>
+     * <li>false: Do not delete</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +44,11 @@ public class ModifyCloudVendorTrialConfigRequest extends TeaModel {
     public Boolean deleteTrail;
 
     /**
+     * <p>Cloud asset vendor. Values:</p>
+     * <ul>
+     * <li><strong>Tencent</strong>: Tencent Cloud</li>
+     * <li><strong>AWS</strong>: AWS</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

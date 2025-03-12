@@ -228,6 +228,15 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     public Integer MVUnusedAuthCount;
 
     /**
+     * <p>When both the annual/monthly and pay-as-you-go services of Cloud Security Center\&quot;s host and container security are activated, the higher protection version among the two is selected. Values: - <strong>1</strong>: Free Edition - <strong>6</strong>: Anti-Virus Edition - <strong>5</strong>: Advanced Edition - <strong>3</strong>: Enterprise Edition - <strong>7</strong>: Ultimate Edition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
+    @NameInMap("MergedVersion")
+    public Integer mergedVersion;
+
+    /**
      * <p>Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: no</li>
@@ -248,6 +257,15 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
      */
     @NameInMap("OpenTime")
     public Long openTime;
+
+    /**
+     * <p>When activating the pay-as-you-go service for host and container security, this represents the highest protection version for the already bound assets. The values are as follows: - <strong>1</strong>: Free Edition - <strong>3</strong>: Enterprise Edition - <strong>5</strong>: Advanced Edition - <strong>6</strong>: Anti-Virus Edition - <strong>7</strong>: Flagship Edition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
+    @NameInMap("PostPayHostVersion")
+    public Integer postPayHostVersion;
 
     /**
      * <p>The instance ID of Security Center that uses the pay-as-you-go billing method.</p>
@@ -615,6 +633,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         return this.MVUnusedAuthCount;
     }
 
+    public DescribeVersionConfigResponseBody setMergedVersion(Integer mergedVersion) {
+        this.mergedVersion = mergedVersion;
+        return this;
+    }
+    public Integer getMergedVersion() {
+        return this.mergedVersion;
+    }
+
     public DescribeVersionConfigResponseBody setNewThreatAnalysis(Integer newThreatAnalysis) {
         this.newThreatAnalysis = newThreatAnalysis;
         return this;
@@ -629,6 +655,14 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     }
     public Long getOpenTime() {
         return this.openTime;
+    }
+
+    public DescribeVersionConfigResponseBody setPostPayHostVersion(Integer postPayHostVersion) {
+        this.postPayHostVersion = postPayHostVersion;
+        return this;
+    }
+    public Integer getPostPayHostVersion() {
+        return this.postPayHostVersion;
     }
 
     public DescribeVersionConfigResponseBody setPostPayInstanceId(String postPayInstanceId) {
