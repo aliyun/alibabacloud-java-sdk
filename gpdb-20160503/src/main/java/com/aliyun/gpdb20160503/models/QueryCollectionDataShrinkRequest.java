@@ -211,6 +211,9 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     @NameInMap("RelationalTableFilter")
     public String relationalTableFilterShrink;
 
+    @NameInMap("SparseVector")
+    public String sparseVectorShrink;
+
     /**
      * <p>Set the number of top results to return.</p>
      * <p>This parameter is required.</p>
@@ -370,6 +373,14 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     }
     public String getRelationalTableFilterShrink() {
         return this.relationalTableFilterShrink;
+    }
+
+    public QueryCollectionDataShrinkRequest setSparseVectorShrink(String sparseVectorShrink) {
+        this.sparseVectorShrink = sparseVectorShrink;
+        return this;
+    }
+    public String getSparseVectorShrink() {
+        return this.sparseVectorShrink;
     }
 
     public QueryCollectionDataShrinkRequest setTopK(Long topK) {

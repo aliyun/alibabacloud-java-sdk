@@ -9,7 +9,6 @@ public class GetSecretValueRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -54,6 +53,9 @@ public class GetSecretValueRequest extends TeaModel {
     @NameInMap("SecretName")
     public String secretName;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static GetSecretValueRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSecretValueRequest self = new GetSecretValueRequest();
         return TeaModel.build(map, self);
@@ -97,6 +99,14 @@ public class GetSecretValueRequest extends TeaModel {
     }
     public String getSecretName() {
         return this.secretName;
+    }
+
+    public GetSecretValueRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

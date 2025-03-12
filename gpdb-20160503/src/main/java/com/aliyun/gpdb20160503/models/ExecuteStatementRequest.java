@@ -9,7 +9,6 @@ public class ExecuteStatementRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -35,6 +34,9 @@ public class ExecuteStatementRequest extends TeaModel {
      */
     @NameInMap("Parameters")
     public java.util.List<?> parameters;
+
+    @NameInMap("RagWorkspaceCollection")
+    public ExecuteStatementRequestRagWorkspaceCollection ragWorkspaceCollection;
 
     /**
      * <p>The region ID of the instance.</p>
@@ -96,6 +98,9 @@ public class ExecuteStatementRequest extends TeaModel {
     @NameInMap("StatementName")
     public String statementName;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ExecuteStatementRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteStatementRequest self = new ExecuteStatementRequest();
         return TeaModel.build(map, self);
@@ -131,6 +136,14 @@ public class ExecuteStatementRequest extends TeaModel {
     }
     public java.util.List<?> getParameters() {
         return this.parameters;
+    }
+
+    public ExecuteStatementRequest setRagWorkspaceCollection(ExecuteStatementRequestRagWorkspaceCollection ragWorkspaceCollection) {
+        this.ragWorkspaceCollection = ragWorkspaceCollection;
+        return this;
+    }
+    public ExecuteStatementRequestRagWorkspaceCollection getRagWorkspaceCollection() {
+        return this.ragWorkspaceCollection;
     }
 
     public ExecuteStatementRequest setRegionId(String regionId) {
@@ -179,6 +192,44 @@ public class ExecuteStatementRequest extends TeaModel {
     }
     public String getStatementName() {
         return this.statementName;
+    }
+
+    public ExecuteStatementRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static class ExecuteStatementRequestRagWorkspaceCollection extends TeaModel {
+        @NameInMap("Collection")
+        public String collection;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        public static ExecuteStatementRequestRagWorkspaceCollection build(java.util.Map<String, ?> map) throws Exception {
+            ExecuteStatementRequestRagWorkspaceCollection self = new ExecuteStatementRequestRagWorkspaceCollection();
+            return TeaModel.build(map, self);
+        }
+
+        public ExecuteStatementRequestRagWorkspaceCollection setCollection(String collection) {
+            this.collection = collection;
+            return this;
+        }
+        public String getCollection() {
+            return this.collection;
+        }
+
+        public ExecuteStatementRequestRagWorkspaceCollection setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
     }
 
 }

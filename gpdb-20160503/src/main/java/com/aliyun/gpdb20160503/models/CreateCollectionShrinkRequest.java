@@ -3,7 +3,7 @@ package com.aliyun.gpdb20160503.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCollectionRequest extends TeaModel {
+public class CreateCollectionShrinkRequest extends TeaModel {
     /**
      * <p>The name of the collection that you want to create.</p>
      * <blockquote>
@@ -201,7 +201,7 @@ public class CreateCollectionRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("SparseVectorIndexConfig")
-    public CreateCollectionRequestSparseVectorIndexConfig sparseVectorIndexConfig;
+    public String sparseVectorIndexConfigShrink;
 
     @NameInMap("SupportSparse")
     public Boolean supportSparse;
@@ -215,12 +215,12 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static CreateCollectionRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateCollectionRequest self = new CreateCollectionRequest();
+    public static CreateCollectionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateCollectionShrinkRequest self = new CreateCollectionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateCollectionRequest setCollection(String collection) {
+    public CreateCollectionShrinkRequest setCollection(String collection) {
         this.collection = collection;
         return this;
     }
@@ -228,7 +228,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.collection;
     }
 
-    public CreateCollectionRequest setDBInstanceId(String DBInstanceId) {
+    public CreateCollectionShrinkRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -236,7 +236,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public CreateCollectionRequest setDimension(Long dimension) {
+    public CreateCollectionShrinkRequest setDimension(Long dimension) {
         this.dimension = dimension;
         return this;
     }
@@ -244,7 +244,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.dimension;
     }
 
-    public CreateCollectionRequest setExternalStorage(Integer externalStorage) {
+    public CreateCollectionShrinkRequest setExternalStorage(Integer externalStorage) {
         this.externalStorage = externalStorage;
         return this;
     }
@@ -252,7 +252,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.externalStorage;
     }
 
-    public CreateCollectionRequest setFullTextRetrievalFields(String fullTextRetrievalFields) {
+    public CreateCollectionShrinkRequest setFullTextRetrievalFields(String fullTextRetrievalFields) {
         this.fullTextRetrievalFields = fullTextRetrievalFields;
         return this;
     }
@@ -260,7 +260,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.fullTextRetrievalFields;
     }
 
-    public CreateCollectionRequest setHnswEfConstruction(String hnswEfConstruction) {
+    public CreateCollectionShrinkRequest setHnswEfConstruction(String hnswEfConstruction) {
         this.hnswEfConstruction = hnswEfConstruction;
         return this;
     }
@@ -268,7 +268,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.hnswEfConstruction;
     }
 
-    public CreateCollectionRequest setHnswM(Integer hnswM) {
+    public CreateCollectionShrinkRequest setHnswM(Integer hnswM) {
         this.hnswM = hnswM;
         return this;
     }
@@ -276,7 +276,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.hnswM;
     }
 
-    public CreateCollectionRequest setManagerAccount(String managerAccount) {
+    public CreateCollectionShrinkRequest setManagerAccount(String managerAccount) {
         this.managerAccount = managerAccount;
         return this;
     }
@@ -284,7 +284,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.managerAccount;
     }
 
-    public CreateCollectionRequest setManagerAccountPassword(String managerAccountPassword) {
+    public CreateCollectionShrinkRequest setManagerAccountPassword(String managerAccountPassword) {
         this.managerAccountPassword = managerAccountPassword;
         return this;
     }
@@ -292,7 +292,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.managerAccountPassword;
     }
 
-    public CreateCollectionRequest setMetadata(String metadata) {
+    public CreateCollectionShrinkRequest setMetadata(String metadata) {
         this.metadata = metadata;
         return this;
     }
@@ -300,7 +300,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.metadata;
     }
 
-    public CreateCollectionRequest setMetadataIndices(String metadataIndices) {
+    public CreateCollectionShrinkRequest setMetadataIndices(String metadataIndices) {
         this.metadataIndices = metadataIndices;
         return this;
     }
@@ -308,7 +308,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.metadataIndices;
     }
 
-    public CreateCollectionRequest setMetrics(String metrics) {
+    public CreateCollectionShrinkRequest setMetrics(String metrics) {
         this.metrics = metrics;
         return this;
     }
@@ -316,7 +316,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.metrics;
     }
 
-    public CreateCollectionRequest setNamespace(String namespace) {
+    public CreateCollectionShrinkRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -324,7 +324,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.namespace;
     }
 
-    public CreateCollectionRequest setOwnerId(Long ownerId) {
+    public CreateCollectionShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -332,7 +332,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateCollectionRequest setParser(String parser) {
+    public CreateCollectionShrinkRequest setParser(String parser) {
         this.parser = parser;
         return this;
     }
@@ -340,7 +340,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.parser;
     }
 
-    public CreateCollectionRequest setPqEnable(Integer pqEnable) {
+    public CreateCollectionShrinkRequest setPqEnable(Integer pqEnable) {
         this.pqEnable = pqEnable;
         return this;
     }
@@ -348,7 +348,7 @@ public class CreateCollectionRequest extends TeaModel {
         return this.pqEnable;
     }
 
-    public CreateCollectionRequest setRegionId(String regionId) {
+    public CreateCollectionShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -356,15 +356,15 @@ public class CreateCollectionRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateCollectionRequest setSparseVectorIndexConfig(CreateCollectionRequestSparseVectorIndexConfig sparseVectorIndexConfig) {
-        this.sparseVectorIndexConfig = sparseVectorIndexConfig;
+    public CreateCollectionShrinkRequest setSparseVectorIndexConfigShrink(String sparseVectorIndexConfigShrink) {
+        this.sparseVectorIndexConfigShrink = sparseVectorIndexConfigShrink;
         return this;
     }
-    public CreateCollectionRequestSparseVectorIndexConfig getSparseVectorIndexConfig() {
-        return this.sparseVectorIndexConfig;
+    public String getSparseVectorIndexConfigShrink() {
+        return this.sparseVectorIndexConfigShrink;
     }
 
-    public CreateCollectionRequest setSupportSparse(Boolean supportSparse) {
+    public CreateCollectionShrinkRequest setSupportSparse(Boolean supportSparse) {
         this.supportSparse = supportSparse;
         return this;
     }
@@ -372,42 +372,12 @@ public class CreateCollectionRequest extends TeaModel {
         return this.supportSparse;
     }
 
-    public CreateCollectionRequest setWorkspaceId(String workspaceId) {
+    public CreateCollectionShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public static class CreateCollectionRequestSparseVectorIndexConfig extends TeaModel {
-        @NameInMap("HnswEfConstruction")
-        public Integer hnswEfConstruction;
-
-        @NameInMap("HnswM")
-        public Integer hnswM;
-
-        public static CreateCollectionRequestSparseVectorIndexConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateCollectionRequestSparseVectorIndexConfig self = new CreateCollectionRequestSparseVectorIndexConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateCollectionRequestSparseVectorIndexConfig setHnswEfConstruction(Integer hnswEfConstruction) {
-            this.hnswEfConstruction = hnswEfConstruction;
-            return this;
-        }
-        public Integer getHnswEfConstruction() {
-            return this.hnswEfConstruction;
-        }
-
-        public CreateCollectionRequestSparseVectorIndexConfig setHnswM(Integer hnswM) {
-            this.hnswM = hnswM;
-            return this;
-        }
-        public Integer getHnswM() {
-            return this.hnswM;
-        }
-
     }
 
 }

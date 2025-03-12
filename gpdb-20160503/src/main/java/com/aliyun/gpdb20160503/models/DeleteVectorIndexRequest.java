@@ -78,6 +78,9 @@ public class DeleteVectorIndexRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Type")
+    public String type;
+
     public static DeleteVectorIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVectorIndexRequest self = new DeleteVectorIndexRequest();
         return TeaModel.build(map, self);
@@ -137,6 +140,14 @@ public class DeleteVectorIndexRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteVectorIndexRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

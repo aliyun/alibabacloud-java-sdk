@@ -9,7 +9,6 @@ public class DescribeTableRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -73,6 +72,9 @@ public class DescribeTableRequest extends TeaModel {
     @NameInMap("Table")
     public String table;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static DescribeTableRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTableRequest self = new DescribeTableRequest();
         return TeaModel.build(map, self);
@@ -132,6 +134,14 @@ public class DescribeTableRequest extends TeaModel {
     }
     public String getTable() {
         return this.table;
+    }
+
+    public DescribeTableRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
