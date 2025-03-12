@@ -102,6 +102,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceRegionId", request.resourceRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -137,8 +141,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>断开连接</p>
+     * <p>Disconnect Connection</p>
      * 
      * @param request CloseSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -178,8 +185,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>断开连接</p>
+     * <p>Disconnect Connection</p>
      * 
      * @param request CloseSessionRequest
      * @return CloseSessionResponse
@@ -374,8 +384,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建网络测试任务</p>
+     * <p>Create Network Test Task</p>
      * 
      * @param tmpReq CreateNetTestTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -453,8 +466,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建网络测试任务</p>
+     * <p>Create Network Test Task</p>
      * 
      * @param request CreateNetTestTaskRequest
      * @return CreateNetTestTaskResponse
@@ -465,8 +481,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Web Terminal会话</p>
+     * <p>Create Web Terminal Session</p>
      * 
      * @param request CreateSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -510,8 +529,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建Web Terminal会话</p>
+     * <p>Create Web Terminal Session</p>
      * 
      * @param request CreateSessionRequest
      * @return CreateSessionResponse
@@ -681,8 +703,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询网络测试结果</p>
+     * <p>Query Network Test Result</p>
      * 
      * @param request DescribeNetTestResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -718,8 +743,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询网络测试结果</p>
+     * <p>Query Network Test Result</p>
      * 
      * @param request DescribeNetTestResultRequest
      * @return DescribeNetTestResultResponse
@@ -1180,8 +1208,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>诊断任务列表</p>
+     * <p>List of Diagnostic Tasks</p>
      * 
      * @param request ListDiagnosticResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1229,8 +1260,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>诊断任务列表</p>
+     * <p>List of Diagnostic Tasks</p>
      * 
      * @param request ListDiagnosticResultsRequest
      * @return ListDiagnosticResultsResponse
@@ -1363,8 +1397,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>使用HPNZone和机型查询机型网络配置</p>
+     * <p>Query machine network configuration using HPNZone and machine type</p>
      * 
      * @param tmpReq ListMachineNetworkInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1406,8 +1443,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>使用HPNZone和机型查询机型网络配置</p>
+     * <p>Query machine network configuration using HPNZone and machine type</p>
      * 
      * @param request ListMachineNetworkInfoRequest
      * @return ListMachineNetworkInfoResponse
@@ -1467,8 +1507,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>网络测试列表</p>
+     * <p>Network Test List</p>
      * 
      * @param request ListNetTestResultsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1516,8 +1559,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, returning the frontend EndPoint, and initiating a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>网络测试列表</p>
+     * <p>Network Test List</p>
      * 
      * @param request ListNetTestResultsRequest
      * @return ListNetTestResultsResponse
@@ -1654,8 +1700,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户可以使用的集群类型</p>
+     * <p>Query the cluster types available to the user</p>
      * 
      * @param request ListUserClusterTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1683,8 +1732,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询用户可以使用的集群类型</p>
+     * <p>Query the cluster types available to the user</p>
      * @return ListUserClusterTypesResponse
      */
     public ListUserClusterTypesResponse listUserClusterTypes() throws Exception {

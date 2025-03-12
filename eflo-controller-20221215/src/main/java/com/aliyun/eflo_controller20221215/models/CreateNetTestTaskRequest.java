@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNetTestTaskRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i119982311660892626523</p>
      */
@@ -12,19 +14,30 @@ public class CreateNetTestTaskRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Cluster name</p>
+     * 
      * <strong>example:</strong>
      * <p>Eflo-YJ-Test-Cluster</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>Required when the test type is communication library testing</p>
+     */
     @NameInMap("CommTest")
     public CreateNetTestTaskRequestCommTest commTest;
 
+    /**
+     * <p>Fill in this field when the network test type is delay testing.</p>
+     */
     @NameInMap("DelayTest")
     public CreateNetTestTaskRequestDelayTest delayTest;
 
     /**
+     * <p>Network test type.
+     * For example: DelayTest for latency testing, TrafficTest for traffic testing, CommTest for communication library testing.</p>
+     * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
      */
@@ -32,6 +45,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
     public String netTestType;
 
     /**
+     * <p>Network mode</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -39,12 +54,17 @@ public class CreateNetTestTaskRequest extends TeaModel {
     public String networkMode;
 
     /**
+     * <p>Test port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>23604</p>
      */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>This field is empty if the TrafficModel is Fullmesh.</p>
+     */
     @NameInMap("TrafficTest")
     public CreateNetTestTaskRequestTrafficTest trafficTest;
 
@@ -119,6 +139,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestCommTestHosts extends TeaModel {
         /**
+         * <p>IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>169.253.253.15</p>
          */
@@ -126,6 +148,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String IP;
 
         /**
+         * <p>Node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-tw-bqisacl3z6l</p>
          */
@@ -133,6 +157,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Resource ID</p>
+         * 
          * <strong>example:</strong>
          * <p>i111670831721110797708</p>
          */
@@ -140,6 +166,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>VBw</p>
          */
@@ -187,16 +215,23 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestCommTest extends TeaModel {
         /**
+         * <p>Number of GPUs</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("GPUNum")
         public Long GPUNum;
 
+        /**
+         * <p>Resource ID</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<CreateNetTestTaskRequestCommTestHosts> hosts;
 
         /**
+         * <p>Communication library model</p>
+         * 
          * <strong>example:</strong>
          * <p>intention_v4</p>
          */
@@ -204,6 +239,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String model;
 
         /**
+         * <p>Communication library test category: ACCL or NCCL</p>
+         * 
          * <strong>example:</strong>
          * <p>ACCL</p>
          */
@@ -251,6 +288,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestDelayTestHosts extends TeaModel {
         /**
+         * <p>Network interface bond port</p>
+         * 
          * <strong>example:</strong>
          * <p>bond1</p>
          */
@@ -258,6 +297,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String bond;
 
         /**
+         * <p>Node IP</p>
+         * 
          * <strong>example:</strong>
          * <p>125.210.225.48</p>
          */
@@ -265,6 +306,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String IP;
 
         /**
+         * <p>Node ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-fou43an0a05</p>
          */
@@ -272,6 +315,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Resource ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-bcd3u1aee06</p>
          */
@@ -279,6 +324,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>NQU</p>
          */
@@ -333,6 +380,9 @@ public class CreateNetTestTaskRequest extends TeaModel {
     }
 
     public static class CreateNetTestTaskRequestDelayTest extends TeaModel {
+        /**
+         * <p>输入测试节点的hosts</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<CreateNetTestTaskRequestDelayTestHosts> hosts;
 
@@ -353,6 +403,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestTrafficTestClients extends TeaModel {
         /**
+         * <p>Network card bond interface</p>
+         * 
          * <strong>example:</strong>
          * <p>bond1</p>
          */
@@ -360,6 +412,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String bond;
 
         /**
+         * <p>Node IP</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
          */
@@ -367,6 +421,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String IP;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-tw-w5elqg7pw18</p>
          */
@@ -374,6 +430,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Resource ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-20s41p6cx01</p>
          */
@@ -381,6 +439,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xMv</p>
          */
@@ -436,6 +496,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
 
     public static class CreateNetTestTaskRequestTrafficTestServers extends TeaModel {
         /**
+         * <p>Network card bond interface</p>
+         * 
          * <strong>example:</strong>
          * <p>bond1</p>
          */
@@ -443,6 +505,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String bond;
 
         /**
+         * <p>Node IP</p>
+         * 
          * <strong>example:</strong>
          * <p>47.121.110.190</p>
          */
@@ -450,6 +514,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String IP;
 
         /**
+         * <p>Node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-tw-bqisacl3z6l</p>
          */
@@ -457,6 +523,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Resource ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-wwo3etaqu0b</p>
          */
@@ -464,6 +532,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xMv</p>
          */
@@ -518,10 +588,15 @@ public class CreateNetTestTaskRequest extends TeaModel {
     }
 
     public static class CreateNetTestTaskRequestTrafficTest extends TeaModel {
+        /**
+         * <p>Resource ID.</p>
+         */
         @NameInMap("Clients")
         public java.util.List<CreateNetTestTaskRequestTrafficTestClients> clients;
 
         /**
+         * <p>The duration of the workflow task in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -529,6 +604,9 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public Long duration;
 
         /**
+         * <p>Enter True/False when the protocol is RDMA, 
+         * this field is empty when the protocol is TCP.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -536,6 +614,8 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public Boolean GDR;
 
         /**
+         * <p>Network protocol, either RDMA or TCP.</p>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -543,16 +623,23 @@ public class CreateNetTestTaskRequest extends TeaModel {
         public String protocol;
 
         /**
+         * <p>Enter the number of concurrent connections when the protocol is TCP, or enter the configured QP value when the protocol is RDMA.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("QP")
         public Long QP;
 
+        /**
+         * <p>Service list</p>
+         */
         @NameInMap("Servers")
         public java.util.List<CreateNetTestTaskRequestTrafficTestServers> servers;
 
         /**
+         * <p>Traffic model, either MTON or Fullmesh.</p>
+         * 
          * <strong>example:</strong>
          * <p>Fullmesh</p>
          */

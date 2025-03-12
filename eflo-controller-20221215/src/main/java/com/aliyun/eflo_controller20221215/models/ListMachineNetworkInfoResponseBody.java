@@ -4,11 +4,14 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListMachineNetworkInfoResponseBody extends TeaModel {
+    /**
+     * <p>Array</p>
+     */
     @NameInMap("MachineNetworkInfo")
     public java.util.List<ListMachineNetworkInfoResponseBodyMachineNetworkInfo> machineNetworkInfo;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -39,6 +42,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
 
     public static class ListMachineNetworkInfoResponseBodyMachineNetworkInfo extends TeaModel {
         /**
+         * <p>Cluster network</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc/acl</p>
          */
@@ -46,6 +51,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String clusterNet;
 
         /**
+         * <p>Whether jumbo frame capability is enabled</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -53,6 +60,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public Boolean enableJumboFrame;
 
         /**
+         * <p>Cluster ID</p>
+         * 
          * <strong>example:</strong>
          * <p>B1</p>
          */
@@ -60,6 +69,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <p>Whether it is in DPU mode</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -67,6 +78,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public Boolean isDpuMode;
 
         /**
+         * <p>Machine type</p>
+         * 
          * <strong>example:</strong>
          * <p>efg1.nvga8n</p>
          */
@@ -74,6 +87,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String machineType;
 
         /**
+         * <p>Network architecture</p>
+         * 
          * <strong>example:</strong>
          * <p>XX-7.0</p>
          */
@@ -81,6 +96,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String netArch;
 
         /**
+         * <p>地域ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */

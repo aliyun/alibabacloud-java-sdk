@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListNetTestResultsRequest extends TeaModel {
     /**
+     * <p>Number of items per page in a paginated query. The maximum value is 100.</p>
+     * <p>Default value:</p>
+     * <ul>
+     * <li><p>If no value is set or the set value is less than 20, the default is 20.</p>
+     * </li>
+     * <li><p>If the set value is greater than 100, the default is 100.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +21,8 @@ public class ListNetTestResultsRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>Type of network test.</p>
+     * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
      */
@@ -19,6 +30,8 @@ public class ListNetTestResultsRequest extends TeaModel {
     public String netTestType;
 
     /**
+     * <p>Query token (Token), which should be the value of the NextToken parameter returned from the previous API call.</p>
+     * 
      * <strong>example:</strong>
      * <p>3a6b93229825ac667104463b56790c91</p>
      */
@@ -26,6 +39,8 @@ public class ListNetTestResultsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>Resource group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxno4vh5muoq</p>
      */
