@@ -145,12 +145,45 @@ public class UpsertCollectionDataRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class UpsertCollectionDataRequestRowsSparseVector extends TeaModel {
+        @NameInMap("Indices")
+        public java.util.List<Long> indices;
+
+        @NameInMap("Values")
+        public java.util.List<Double> values;
+
+        public static UpsertCollectionDataRequestRowsSparseVector build(java.util.Map<String, ?> map) throws Exception {
+            UpsertCollectionDataRequestRowsSparseVector self = new UpsertCollectionDataRequestRowsSparseVector();
+            return TeaModel.build(map, self);
+        }
+
+        public UpsertCollectionDataRequestRowsSparseVector setIndices(java.util.List<Long> indices) {
+            this.indices = indices;
+            return this;
+        }
+        public java.util.List<Long> getIndices() {
+            return this.indices;
+        }
+
+        public UpsertCollectionDataRequestRowsSparseVector setValues(java.util.List<Double> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<Double> getValues() {
+            return this.values;
+        }
+
+    }
+
     public static class UpsertCollectionDataRequestRows extends TeaModel {
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
+
+        @NameInMap("SparseVector")
+        public UpsertCollectionDataRequestRowsSparseVector sparseVector;
 
         /**
          * <p>This parameter is required.</p>
@@ -177,6 +210,14 @@ public class UpsertCollectionDataRequest extends TeaModel {
         }
         public java.util.Map<String, String> getMetadata() {
             return this.metadata;
+        }
+
+        public UpsertCollectionDataRequestRows setSparseVector(UpsertCollectionDataRequestRowsSparseVector sparseVector) {
+            this.sparseVector = sparseVector;
+            return this;
+        }
+        public UpsertCollectionDataRequestRowsSparseVector getSparseVector() {
+            return this.sparseVector;
         }
 
         public UpsertCollectionDataRequestRows setVector(java.util.List<Double> vector) {

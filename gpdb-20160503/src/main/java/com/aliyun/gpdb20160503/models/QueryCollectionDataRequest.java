@@ -211,6 +211,9 @@ public class QueryCollectionDataRequest extends TeaModel {
     @NameInMap("RelationalTableFilter")
     public QueryCollectionDataRequestRelationalTableFilter relationalTableFilter;
 
+    @NameInMap("SparseVector")
+    public QueryCollectionDataRequestSparseVector sparseVector;
+
     /**
      * <p>Set the number of top results to return.</p>
      * <p>This parameter is required.</p>
@@ -372,6 +375,14 @@ public class QueryCollectionDataRequest extends TeaModel {
         return this.relationalTableFilter;
     }
 
+    public QueryCollectionDataRequest setSparseVector(QueryCollectionDataRequestSparseVector sparseVector) {
+        this.sparseVector = sparseVector;
+        return this;
+    }
+    public QueryCollectionDataRequestSparseVector getSparseVector() {
+        return this.sparseVector;
+    }
+
     public QueryCollectionDataRequest setTopK(Long topK) {
         this.topK = topK;
         return this;
@@ -468,6 +479,36 @@ public class QueryCollectionDataRequest extends TeaModel {
         }
         public String getTableName() {
             return this.tableName;
+        }
+
+    }
+
+    public static class QueryCollectionDataRequestSparseVector extends TeaModel {
+        @NameInMap("Indices")
+        public java.util.List<Long> indices;
+
+        @NameInMap("Values")
+        public java.util.List<Double> values;
+
+        public static QueryCollectionDataRequestSparseVector build(java.util.Map<String, ?> map) throws Exception {
+            QueryCollectionDataRequestSparseVector self = new QueryCollectionDataRequestSparseVector();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryCollectionDataRequestSparseVector setIndices(java.util.List<Long> indices) {
+            this.indices = indices;
+            return this;
+        }
+        public java.util.List<Long> getIndices() {
+            return this.indices;
+        }
+
+        public QueryCollectionDataRequestSparseVector setValues(java.util.List<Double> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<Double> getValues() {
+            return this.values;
         }
 
     }

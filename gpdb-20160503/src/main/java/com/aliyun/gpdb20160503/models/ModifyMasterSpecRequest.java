@@ -26,6 +26,20 @@ public class ModifyMasterSpecRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</li>
+     * <li>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</li>
+     * <li>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</li>
+     * <li>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ADB.AIMedium.2</p>
+     */
     @NameInMap("MasterAISpec")
     public String masterAISpec;
 

@@ -8,7 +8,6 @@ public class DeleteSecretRequest extends TeaModel {
      * <p>The instance ID. You can call the DescribeDBInstances operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * <blockquote>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -53,6 +52,9 @@ public class DeleteSecretRequest extends TeaModel {
     @NameInMap("SecretName")
     public String secretName;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static DeleteSecretRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecretRequest self = new DeleteSecretRequest();
         return TeaModel.build(map, self);
@@ -96,6 +98,14 @@ public class DeleteSecretRequest extends TeaModel {
     }
     public String getSecretName() {
         return this.secretName;
+    }
+
+    public DeleteSecretRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

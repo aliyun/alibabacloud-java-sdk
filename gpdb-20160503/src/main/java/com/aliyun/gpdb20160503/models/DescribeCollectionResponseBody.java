@@ -93,6 +93,9 @@ public class DescribeCollectionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SparseVectorMetrics")
+    public String sparseVectorMetrics;
+
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
@@ -105,6 +108,9 @@ public class DescribeCollectionResponseBody extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("SupportSparse")
+    public Boolean supportSparse;
 
     public static DescribeCollectionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCollectionResponseBody self = new DescribeCollectionResponseBody();
@@ -191,12 +197,28 @@ public class DescribeCollectionResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeCollectionResponseBody setSparseVectorMetrics(String sparseVectorMetrics) {
+        this.sparseVectorMetrics = sparseVectorMetrics;
+        return this;
+    }
+    public String getSparseVectorMetrics() {
+        return this.sparseVectorMetrics;
+    }
+
     public DescribeCollectionResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeCollectionResponseBody setSupportSparse(Boolean supportSparse) {
+        this.supportSparse = supportSparse;
+        return this;
+    }
+    public Boolean getSupportSparse() {
+        return this.supportSparse;
     }
 
 }

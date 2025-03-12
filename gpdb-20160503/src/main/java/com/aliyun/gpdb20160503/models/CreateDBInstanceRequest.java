@@ -131,10 +131,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String deployMode;
 
     /**
-     * <p>Indicates whether to enable SSL encryption. The values are as follows:</p>
+     * <p>Specifies whether to enable SSL encryption. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enable SSL encryption.</li>
-     * <li><strong>false</strong> (default): Do not enable SSL encryption.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -252,6 +252,20 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    /**
+     * <p>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</li>
+     * <li>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</li>
+     * <li>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</li>
+     * <li>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ADB.AIMedium.2</p>
+     */
     @NameInMap("MasterAISpec")
     public String masterAISpec;
 
@@ -287,17 +301,19 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Billing type. The values are as follows:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: Pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: Subscription</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>If not specified, it will default to pay-as-you-go.</li>
-     * <li>When using the subscription billing model, there may be discounts for purchasing one year or longer at once. It is recommended to choose the billing type according to your needs.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If you do not specify this parameter, Postpaid is used.</p>
+     * </li>
+     * <li><p>You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Prepaid</p>
@@ -369,8 +385,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>IP whitelist.</p>
-     * <p>127.0.0.1 indicates that no external IP addresses are allowed to access. You can modify the IP whitelist by calling the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> interface after the instance is created.</p>
+     * <p>The IP address whitelist of the instance.</p>
+     * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
@@ -379,18 +395,20 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>ESSD cloud disk performance level. The values are as follows:</p>
+     * <p>The performance level of ESSDs. Valid values:</p>
      * <ul>
-     * <li><strong>pl0</strong>: PL0 level.</li>
-     * <li><strong>pl1</strong>: PL1 level.</li>
-     * <li><strong>pl2</strong>: PL2 level.</li>
+     * <li><strong>pl0</strong></li>
+     * <li><strong>pl1</strong></li>
+     * <li><strong>pl2</strong></li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>This parameter is effective only if the disk storage type is ESSD cloud disk.</li>
-     * <li>If not specified, it defaults to PL1 level.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter takes effect only when SegStorageType is set to cloud_essd.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, pl1 is used.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>pl1</p>

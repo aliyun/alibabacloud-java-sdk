@@ -35,7 +35,6 @@ public class CreateVectorIndexRequest extends TeaModel {
      * <blockquote>
      * <p>This value must be consistent with the length of the vector data (Rows. Vector) uploaded via the <a href="https://help.aliyun.com/document_detail/2401493.html">UpsertCollectionData</a> API.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -154,6 +153,9 @@ public class CreateVectorIndexRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Type")
+    public String type;
+
     public static CreateVectorIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVectorIndexRequest self = new CreateVectorIndexRequest();
         return TeaModel.build(map, self);
@@ -261,6 +263,14 @@ public class CreateVectorIndexRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateVectorIndexRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

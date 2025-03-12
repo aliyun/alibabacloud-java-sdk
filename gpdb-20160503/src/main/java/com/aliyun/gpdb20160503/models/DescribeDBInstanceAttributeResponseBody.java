@@ -470,6 +470,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
 
+        /**
+         * <p>The specifications of AI coordinator node resources of the instance. If the coordinator nodes of the instance are not AI nodes, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADB.AIMedium.2</p>
+         */
         @NameInMap("MasterAISpec")
         public String masterAISpec;
 
@@ -645,6 +651,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("SegNodeNum")
         public Integer segNodeNum;
 
+        /**
+         * <p>The specifications of AI compute node resources of the instance. If the compute nodes of the instance are not AI nodes, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ADB.AIMedium.2</p>
+         */
         @NameInMap("SegmentAISpec")
         public String segmentAISpec;
 

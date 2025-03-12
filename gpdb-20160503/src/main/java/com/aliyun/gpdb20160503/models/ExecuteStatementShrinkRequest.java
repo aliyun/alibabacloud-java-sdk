@@ -9,7 +9,6 @@ public class ExecuteStatementShrinkRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>gp-xxxxxxxxx</p>
@@ -35,6 +34,9 @@ public class ExecuteStatementShrinkRequest extends TeaModel {
      */
     @NameInMap("Parameters")
     public String parametersShrink;
+
+    @NameInMap("RagWorkspaceCollection")
+    public String ragWorkspaceCollectionShrink;
 
     /**
      * <p>The region ID of the instance.</p>
@@ -96,6 +98,9 @@ public class ExecuteStatementShrinkRequest extends TeaModel {
     @NameInMap("StatementName")
     public String statementName;
 
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
     public static ExecuteStatementShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteStatementShrinkRequest self = new ExecuteStatementShrinkRequest();
         return TeaModel.build(map, self);
@@ -131,6 +136,14 @@ public class ExecuteStatementShrinkRequest extends TeaModel {
     }
     public String getParametersShrink() {
         return this.parametersShrink;
+    }
+
+    public ExecuteStatementShrinkRequest setRagWorkspaceCollectionShrink(String ragWorkspaceCollectionShrink) {
+        this.ragWorkspaceCollectionShrink = ragWorkspaceCollectionShrink;
+        return this;
+    }
+    public String getRagWorkspaceCollectionShrink() {
+        return this.ragWorkspaceCollectionShrink;
     }
 
     public ExecuteStatementShrinkRequest setRegionId(String regionId) {
@@ -179,6 +192,14 @@ public class ExecuteStatementShrinkRequest extends TeaModel {
     }
     public String getStatementName() {
         return this.statementName;
+    }
+
+    public ExecuteStatementShrinkRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
