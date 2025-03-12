@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingDataPackagesRequest extends TeaModel {
+    @NameInMap("Category")
+    public String category;
+
     /**
      * <strong>example:</strong>
      * <p>dp-449ea3d16c0841b8bf33ec5bbc86a152</p>
@@ -42,6 +45,14 @@ public class ListRenderingDataPackagesRequest extends TeaModel {
     public static ListRenderingDataPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRenderingDataPackagesRequest self = new ListRenderingDataPackagesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRenderingDataPackagesRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public ListRenderingDataPackagesRequest setDataPackageId(String dataPackageId) {
