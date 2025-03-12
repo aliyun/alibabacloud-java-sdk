@@ -4,12 +4,20 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SlsConfigStatusList")
     public java.util.List<DescribeBatchSlsDispatchStatusResponseBodySlsConfigStatusList> slsConfigStatusList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,9 +51,17 @@ public class DescribeBatchSlsDispatchStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeBatchSlsDispatchStatusResponseBodySlsConfigStatusList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 

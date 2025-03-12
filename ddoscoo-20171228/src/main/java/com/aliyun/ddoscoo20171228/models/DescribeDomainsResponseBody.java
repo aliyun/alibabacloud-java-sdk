@@ -7,9 +7,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
     @NameInMap("Domains")
     public java.util.List<DescribeDomainsResponseBodyDomains> domains;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -46,6 +54,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("ProxyPorts")
         public java.util.List<String> proxyPorts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http</p>
+         */
         @NameInMap("ProxyType")
         public String proxyType;
 
@@ -73,9 +85,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsRealServers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
+         */
         @NameInMap("RealServer")
         public String realServer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RsType")
         public Integer rsType;
 
@@ -106,24 +126,55 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("BlackList")
         public java.util.List<String> blackList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CcEnabled")
         public Boolean ccEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CcRuleEnabled")
         public Boolean ccRuleEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("CcTemplate")
         public String ccTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testCertName</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        @NameInMap("CertRegion")
+        public String certRegion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxxxx.aliyunddos1006.com</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Http2Enable")
         public Boolean http2Enable;
 
@@ -133,9 +184,17 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("RealServers")
         public java.util.List<DescribeDomainsResponseBodyDomainsRealServers> realServers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SslCiphers")
         public String sslCiphers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("SslProtocols")
         public String sslProtocols;
 
@@ -185,6 +244,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
         public String getCertName() {
             return this.certName;
+        }
+
+        public DescribeDomainsResponseBodyDomains setCertRegion(String certRegion) {
+            this.certRegion = certRegion;
+            return this;
+        }
+        public String getCertRegion() {
+            return this.certRegion;
         }
 
         public DescribeDomainsResponseBodyDomains setCname(String cname) {

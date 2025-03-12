@@ -4,27 +4,67 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpTrafficRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("Eip")
     public String eip;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1536734120</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Interval")
     public Integer interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>233</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>http</p>
+     */
     @NameInMap("QueryProtocol")
     public String queryProtocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1536734112</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

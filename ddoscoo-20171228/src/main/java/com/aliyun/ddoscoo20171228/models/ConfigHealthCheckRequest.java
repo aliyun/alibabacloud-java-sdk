@@ -4,15 +4,39 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigHealthCheckRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
+     */
     @NameInMap("ForwardProtocol")
     public String forwardProtocol;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>233</p>
+     */
     @NameInMap("FrontendPort")
     public Integer frontendPort;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Type&quot;:&quot;tcp&quot;,&quot;Timeout&quot;:10,&quot;Port&quot;:80,&quot;Interval&quot;:10,&quot;Up&quot;:10,&quot;Down&quot;:40}&quot;}</p>
+     */
     @NameInMap("HealthCheck")
     public String healthCheck;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-XXXXXX</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

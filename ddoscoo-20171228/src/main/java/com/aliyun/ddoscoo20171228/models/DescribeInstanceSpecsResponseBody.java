@@ -7,6 +7,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     @NameInMap("InstanceSpecs")
     public java.util.List<DescribeInstanceSpecsResponseBodyInstanceSpecs> instanceSpecs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +36,73 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSpecsResponseBodyInstanceSpecs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("BandwidthMbps")
         public Integer bandwidthMbps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("BaseBandwidth")
         public Integer baseBandwidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("DefenseCount")
         public Integer defenseCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("DomainLimit")
         public Integer domainLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("ElasticBandwidth")
         public Integer elasticBandwidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-XXXXX</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("PortLimit")
         public Integer portLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("QpsLimit")
         public Integer qpsLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("SiteLimit")
         public Integer siteLimit;
 

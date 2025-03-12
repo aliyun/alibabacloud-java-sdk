@@ -4,18 +4,44 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class CreateLayer7RuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-XXXXX</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RsType")
     public Integer rsType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ProxyRules&quot;:[{&quot;ProxyPort&quot;:443,&quot;RealServers&quot;:[&quot;1.1.1.1:443&quot;]}],&quot;ProxyType&quot;:&quot;https&quot;},{&quot;ProxyRules&quot;:[{&quot;ProxyPort&quot;:80,&quot;RealServers&quot;:[&quot;1.1.1.1:80&quot;]}],&quot;ProxyType&quot;:&quot;http&quot;}]</p>
+     */
     @NameInMap("Rules")
     public String rules;
 

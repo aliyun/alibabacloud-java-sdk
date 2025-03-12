@@ -4,15 +4,31 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSlsStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-logstore</p>
+     */
     @NameInMap("SlsLogstore")
     public String slsLogstore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-project-xxxx-cn-hangzhou</p>
+     */
     @NameInMap("SlsProject")
     public String slsProject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SlsStatus")
     public Boolean slsStatus;
 

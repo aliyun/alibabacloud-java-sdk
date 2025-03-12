@@ -4,6 +4,10 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3B63C0DD-8AC5-44B2-95D6-064CA9296B9C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +36,100 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainStatusCodeListResponseBodyStatusCodeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>320</p>
+         */
         @NameInMap("Status200")
         public Long status200;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5776</p>
+         */
         @NameInMap("Status2XX")
         public Long status2XX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status3XX")
         public Long status3XX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status403")
         public Long status403;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34</p>
+         */
         @NameInMap("Status404")
         public Long status404;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("Status405")
         public Long status405;
 
+        @NameInMap("Status410")
+        public Long status410;
+
+        @NameInMap("Status499")
+        public Long status499;
+
+        /**
+         * <strong>example:</strong>
+         * <p>168</p>
+         */
         @NameInMap("Status4XX")
         public Long status4XX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status501")
         public Long status501;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Status502")
         public Long status502;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status503")
         public Long status503;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status504")
         public Long status504;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("Status5XX")
         public Long status5XX;
 
@@ -130,6 +192,22 @@ public class DescribeDomainStatusCodeListResponseBody extends TeaModel {
         }
         public Long getStatus405() {
             return this.status405;
+        }
+
+        public DescribeDomainStatusCodeListResponseBodyStatusCodeList setStatus410(Long status410) {
+            this.status410 = status410;
+            return this;
+        }
+        public Long getStatus410() {
+            return this.status410;
+        }
+
+        public DescribeDomainStatusCodeListResponseBodyStatusCodeList setStatus499(Long status499) {
+            this.status499 = status499;
+            return this;
+        }
+        public Long getStatus499() {
+            return this.status499;
         }
 
         public DescribeDomainStatusCodeListResponseBodyStatusCodeList setStatus4XX(Long status4XX) {

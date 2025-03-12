@@ -7,6 +7,10 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     @NameInMap("Listeners")
     public java.util.List<DescribeHealthCheckListResponseBodyListeners> listeners;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,59 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthCheckListResponseBodyListenersHealthCheck extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Down")
         public Integer down;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Timeout")
         public Integer timeout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tcp</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Up")
         public Integer up;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/a/b/c</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -128,15 +164,27 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthCheckListResponseBodyListeners extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>233</p>
+         */
         @NameInMap("FrontendPort")
         public Integer frontendPort;
 
         @NameInMap("HealthCheck")
         public DescribeHealthCheckListResponseBodyListenersHealthCheck healthCheck;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-XXXXX</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tcp</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 

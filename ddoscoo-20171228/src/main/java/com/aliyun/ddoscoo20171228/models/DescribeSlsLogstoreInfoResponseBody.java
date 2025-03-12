@@ -4,21 +4,41 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsLogstoreInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-logstore</p>
+     */
     @NameInMap("LogStore")
     public String logStore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-project-xxxx-cn-hangzhou</p>
+     */
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5497558138880</p>
+     */
     @NameInMap("Quota")
     public Long quota;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Ttl")
     public Integer ttl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Used")
     public Long used;
 

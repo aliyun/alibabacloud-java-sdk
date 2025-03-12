@@ -4,12 +4,28 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class CreateAsyncTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;timestamp&quot;: 1530276554, &quot;instanceId&quot;: &quot;ddoscoo-woieuroi234&quot;}</p>
+     */
     @NameInMap("TaskParams")
     public String taskParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskType")
     public Integer taskType;
 

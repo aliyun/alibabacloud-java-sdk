@@ -7,6 +7,10 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
     @NameInMap("DefenseCountStatistics")
     public DescribeDefenseCountStatisticsResponseBodyDefenseCountStatistics defenseCountStatistics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeDefenseCountStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseCountStatisticsResponseBodyDefenseCountStatistics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DefenseCountTotalUsageOfCurrentMonth")
         public Integer defenseCountTotalUsageOfCurrentMonth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FlowPackCountRemain")
         public Integer flowPackCountRemain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxUsableDefenseCountCurrentMonth")
         public Integer maxUsableDefenseCountCurrentMonth;
 

@@ -4,24 +4,58 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer7RuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ddoscoo-cn-XXXXXX</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;ProxyPorts&quot;:[80,8080],&quot;ProxyType&quot;:&quot;http&quot;},{&quot;ProxyPorts&quot;:[443],&quot;ProxyType&quot;:&quot;https&quot;}]rts\&quot;:[443],\&quot;ProxyType\&quot;:\&quot;https\&quot;}]</p>
+     */
     @NameInMap("ProxyTypeList")
     public String proxyTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;ProxyPorts&quot;:[80,8080],&quot;ProxyType&quot;:&quot;http&quot;},{&quot;ProxyPorts&quot;:[443],&quot;ProxyType&quot;:&quot;https&quot;}]rts\&quot;:[443],\&quot;ProxyType\&quot;:\&quot;https\&quot;}]</p>
+     */
     @NameInMap("ProxyTypes")
     public java.util.List<String> proxyTypes;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("RealServers")
     public java.util.List<String> realServers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RsType")
     public Integer rsType;
 

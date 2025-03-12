@@ -7,6 +7,10 @@ public class DescribeBackSourceCidrResponseBody extends TeaModel {
     @NameInMap("CidrList")
     public java.util.List<String> cidrList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

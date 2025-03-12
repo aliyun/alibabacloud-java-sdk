@@ -7,6 +7,10 @@ public class DescribleCertListResponseBody extends TeaModel {
     @NameInMap("CertList")
     public java.util.List<DescribleCertListResponseBodyCertList> certList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +36,69 @@ public class DescribleCertListResponseBody extends TeaModel {
     }
 
     public static class DescribleCertListResponseBodyCertList extends TeaModel {
+        @NameInMap("CertIdentifier")
+        public String certIdentifier;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Common")
         public String common;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DomainRelated")
         public Boolean domainRelated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-09-23</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DigiCert Inc</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testCertName</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-09-24</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
         public static DescribleCertListResponseBodyCertList build(java.util.Map<String, ?> map) throws Exception {
             DescribleCertListResponseBodyCertList self = new DescribleCertListResponseBodyCertList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribleCertListResponseBodyCertList setCertIdentifier(String certIdentifier) {
+            this.certIdentifier = certIdentifier;
+            return this;
+        }
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         public DescribleCertListResponseBodyCertList setCommon(String common) {

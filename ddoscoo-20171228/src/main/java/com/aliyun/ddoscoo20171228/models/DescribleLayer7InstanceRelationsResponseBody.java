@@ -7,6 +7,10 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
     @NameInMap("Layer7InstanceRelations")
     public java.util.List<DescribleLayer7InstanceRelationsResponseBodyLayer7InstanceRelations> layer7InstanceRelations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
         @NameInMap("EipList")
         public java.util.List<String> eipList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("FunctionVersion")
         public String functionVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ddoscoo-cn-XXXXX</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -95,6 +107,10 @@ public class DescribleLayer7InstanceRelationsResponseBody extends TeaModel {
     }
 
     public static class DescribleLayer7InstanceRelationsResponseBodyLayer7InstanceRelations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyun.com">www.aliyun.com</a></p>
+         */
         @NameInMap("Domain")
         public String domain;
 

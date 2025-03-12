@@ -7,9 +7,17 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
     @NameInMap("Events")
     public java.util.List<DescribeDDoSEventsResponseBodyEvents> events;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -43,15 +51,31 @@ public class DescribeDDoSEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeDDoSEventsResponseBodyEvents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3289457398</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Interval")
         public Integer interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3289457324</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>blackhole_start</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,21 +4,41 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpTrafficResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("AvgInBps")
     public Long avgInBps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("AvgOutBps")
     public Long avgOutBps;
 
     @NameInMap("IpTrafficPoints")
     public java.util.List<DescribeIpTrafficResponseBodyIpTrafficPoints> ipTrafficPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("MaxInBps")
     public Long maxInBps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("MaxOutBps")
     public Long maxOutBps;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,21 +96,45 @@ public class DescribeIpTrafficResponseBody extends TeaModel {
     }
 
     public static class DescribeIpTrafficResponseBodyIpTrafficPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ActConns")
         public Integer actConns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Cps")
         public Integer cps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("InactConns")
         public Integer inactConns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("MaxInbps")
         public Long maxInbps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("MaxOutbps")
         public Long maxOutbps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1536734112</p>
+         */
         @NameInMap("Time")
         public Long time;
 

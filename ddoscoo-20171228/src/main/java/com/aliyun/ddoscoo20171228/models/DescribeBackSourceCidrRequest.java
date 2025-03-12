@@ -7,12 +7,24 @@ public class DescribeBackSourceCidrRequest extends TeaModel {
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>coop-line-001</p>
+     */
     @NameInMap("Line")
     public String line;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

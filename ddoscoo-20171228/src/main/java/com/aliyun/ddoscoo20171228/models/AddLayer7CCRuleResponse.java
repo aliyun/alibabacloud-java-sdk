@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddLayer7CCRuleResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
     public AddLayer7CCRuleResponseBody body;
 
     public static AddLayer7CCRuleResponse build(java.util.Map<String, ?> map) throws Exception {
