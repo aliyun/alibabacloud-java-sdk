@@ -5,16 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateSessionRequest extends TeaModel {
     /**
+     * <p>Instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-kvw44e6dn04</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>Session type corresponding to the session package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>N	两种：
+     * Sol：基于串口[默认]
+     * Assistant：基于云助手</p>
+     */
     @NameInMap("SessionType")
     public String sessionType;
 
     /**
+     * <p>Initiation time, 13-digit timestamp.</p>
+     * 
      * <strong>example:</strong>
      * <p>1669340937156</p>
      */

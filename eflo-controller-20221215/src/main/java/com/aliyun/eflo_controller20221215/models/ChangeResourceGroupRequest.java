@@ -34,6 +34,9 @@ public class ChangeResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static ChangeResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeResourceGroupRequest self = new ChangeResourceGroupRequest();
         return TeaModel.build(map, self);
@@ -61,6 +64,14 @@ public class ChangeResourceGroupRequest extends TeaModel {
     }
     public String getResourceRegionId() {
         return this.resourceRegionId;
+    }
+
+    public ChangeResourceGroupRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

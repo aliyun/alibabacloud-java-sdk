@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateNetTestTaskShrinkRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i119982311660892626523</p>
      */
@@ -12,19 +14,30 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Cluster name</p>
+     * 
      * <strong>example:</strong>
      * <p>Eflo-YJ-Test-Cluster</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>Required when the test type is communication library testing</p>
+     */
     @NameInMap("CommTest")
     public String commTestShrink;
 
+    /**
+     * <p>Fill in this field when the network test type is delay testing.</p>
+     */
     @NameInMap("DelayTest")
     public String delayTestShrink;
 
     /**
+     * <p>Network test type.
+     * For example: DelayTest for latency testing, TrafficTest for traffic testing, CommTest for communication library testing.</p>
+     * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
      */
@@ -32,6 +45,8 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String netTestType;
 
     /**
+     * <p>Network mode</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -39,12 +54,17 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String networkMode;
 
     /**
+     * <p>Test port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>23604</p>
      */
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>This field is empty if the TrafficModel is Fullmesh.</p>
+     */
     @NameInMap("TrafficTest")
     public String trafficTestShrink;
 
