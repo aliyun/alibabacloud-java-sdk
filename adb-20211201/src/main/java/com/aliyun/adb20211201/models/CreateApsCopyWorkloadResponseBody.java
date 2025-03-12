@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
      */
@@ -12,6 +14,8 @@ public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -21,6 +25,8 @@ public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     public java.util.Map<String, ?> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -28,6 +34,12 @@ public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -35,6 +47,8 @@ public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
      */
@@ -42,6 +56,12 @@ public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

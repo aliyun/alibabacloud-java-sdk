@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SuspendApsJobRequest extends TeaModel {
     /**
+     * <p>The job ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class SuspendApsJobRequest extends TeaModel {
     public String apsJobId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SuspendApsJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aps-bj1xxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class SuspendApsJobResponseBody extends TeaModel {
     public String apsJobId;
 
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -19,6 +23,8 @@ public class SuspendApsJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error code returned when the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -26,6 +32,8 @@ public class SuspendApsJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -33,6 +41,8 @@ public class SuspendApsJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
      */
@@ -40,6 +50,12 @@ public class SuspendApsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

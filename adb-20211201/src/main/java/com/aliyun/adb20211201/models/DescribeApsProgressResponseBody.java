@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApsProgressResponseBody extends TeaModel {
     /**
+     * <p>The migration progress.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,6 +16,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
     public java.util.List<DescribeApsProgressResponseBodyApsHiveProgress> apsHiveProgress;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
      */
@@ -21,6 +25,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The success rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -28,6 +34,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
     public Integer successPercentage;
 
     /**
+     * <p>The total number of migrated tables returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +43,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
     public Integer successTableCount;
 
     /**
+     * <p>The total number of tables to be migrated.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -88,6 +98,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
 
     public static class DescribeApsProgressResponseBodyApsHiveProgress extends TeaModel {
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -95,6 +107,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         public String dbName;
 
         /**
+         * <p>The migration progress.</p>
+         * 
          * <strong>example:</strong>
          * <p>95</p>
          */
@@ -102,6 +116,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         public String progress;
 
         /**
+         * <p>The migration speed.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -109,6 +125,8 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         public String speed;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

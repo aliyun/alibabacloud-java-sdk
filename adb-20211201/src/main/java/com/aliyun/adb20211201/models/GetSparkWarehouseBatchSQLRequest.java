@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSparkWarehouseBatchSQLRequest extends TeaModel {
     /**
+     * <p>The name of the client, which can be up to 16 characters in length. Specify a descriptive name that makes it easy to identify.</p>
+     * 
      * <strong>example:</strong>
      * <p>DMS</p>
      */

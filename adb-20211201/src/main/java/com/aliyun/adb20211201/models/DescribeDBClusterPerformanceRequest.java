@@ -30,48 +30,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The performance metrics to be queried. Separate multiple values with commas (,). Valid values:</p>
-     * <ul>
-     * <li><p>CPU</p>
-     * <ul>
-     * <li><strong>AnalyticDB_CPU_Usage_Percentage</strong>: the average CPU utilization.</li>
-     * </ul>
-     * </li>
-     * <li><p>Connections</p>
-     * <ul>
-     * <li><strong>AnalyticDB_Instance_Connection_Count</strong>: the number of database connections.</li>
-     * </ul>
-     * </li>
-     * <li><p>Writes</p>
-     * <ul>
-     * <li><strong>AnalyticDB_TPS</strong>: the write transactions per second (TPS).</li>
-     * <li><strong>AnalyticDB_InsertRT</strong>: the write response time.</li>
-     * <li><strong>AnalyticDB_InsertBytes</strong>: the write throughput.</li>
-     * </ul>
-     * </li>
-     * <li><p>Queries</p>
-     * <ul>
-     * <li><strong>AnalyticDB_QPS</strong>: the queries per second (QPS).</li>
-     * <li><strong>AnalyticDB_QueryRT</strong>: the query response time.</li>
-     * <li><strong>AnalyticDB_QueryWaitTime</strong>: the query wait time.</li>
-     * </ul>
-     * </li>
-     * <li><p>Disks</p>
-     * <ul>
-     * <li><strong>AnalyticDB_Disk_IO_Avg_Usage_Percentage</strong>: the average I/O utilization.</li>
-     * <li><strong>AnalyticDB_Disk_IO_Avg_Waiting_Time</strong>: the average I/O wait time.</li>
-     * <li><strong>AnalyticDB_IO_Throughput</strong>: the disk throughput.</li>
-     * <li><strong>AnalyticDB_IOPS</strong>: the disk IOPS.</li>
-     * <li><strong>AnalyticDB_Disk_Usage</strong>: the disk space that is used.</li>
-     * <li><strong>AnalyticDB_Disk_Usage_Percentage</strong>: the disk usage.</li>
-     * <li><strong>AnalyticDB_Hot_Data_Usage</strong>: the disk space that is used by hot data.</li>
-     * <li><strong>AnalyticDB_Cold_Data_Usage</strong>: the disk space that is used by code data.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter must be specified.</p>
-     * </blockquote>
+     * <p>The key of the performance metric that you want to query. Separate multiple keys with commas (,). For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AnalyticDB_CPU_Usage_Percentage</p>

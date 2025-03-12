@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLakeStoragesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListLakeStoragesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The filter parameters that you want to use to query lake storages. Specify multiple parameters in an AND relationship. For example, if you want to query lake storage whose names are in the range of i-a123, or i-b123, and in the Stopped state, set this parameter to \&amp;Filter. 1.Name=InstanceName\&amp;Filter. 1.Value.1=i-a123\&amp;Filter.1.Value.2=i-b123\&amp;Filter.2.Name=Status\&amp;Filter. 2.Value=Stopped.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -23,6 +26,8 @@ public class ListLakeStoragesRequest extends TeaModel {
     public String filter;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +35,8 @@ public class ListLakeStoragesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -37,6 +44,7 @@ public class ListLakeStoragesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

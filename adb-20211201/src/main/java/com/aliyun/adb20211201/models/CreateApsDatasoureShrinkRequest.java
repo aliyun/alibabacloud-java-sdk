@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsDatasoureShrinkRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The information about the Databricks data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -23,6 +26,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String databricksInfoShrink;
 
     /**
+     * <p>The description of the data source.</p>
+     * 
      * <strong>example:</strong>
      * <p>description</p>
      */
@@ -30,6 +35,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String datasourceDescription;
 
     /**
+     * <p>The name of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +45,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String datasourceName;
 
     /**
+     * <p>The type of the data source.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +55,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String datasourceType;
 
     /**
+     * <p>The information about the Hive data source.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -57,6 +66,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String hiveInfoShrink;
 
     /**
+     * <p>The information about the source Apache Kafka instance.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -66,6 +77,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String kafkaInfoShrink;
 
     /**
+     * <p>The mode.</p>
+     * 
      * <strong>example:</strong>
      * <p>ALI_CLOUD_INSTANCE</p>
      */
@@ -73,6 +86,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String mode;
 
     /**
+     * <p>The information about the source PolarDB for MySQL cluster.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -82,6 +97,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String polarDBMysqlInfoShrink;
 
     /**
+     * <p>The information about the source PolarDB-X instance.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -91,6 +108,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String polarDBXInfoShrink;
 
     /**
+     * <p>The information about the source ApsaraDB RDS for MySQL instance.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -100,6 +119,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String rdsMysqlInfoShrink;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -109,6 +129,8 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The information about the source Simple Log Service (SLS) instance or cluster.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>

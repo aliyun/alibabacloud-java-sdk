@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAPSJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aps-bj1xxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateAPSJobResponseBody extends TeaModel {
     public String apsJobId;
 
     /**
+     * <p>The HTTP status code or the error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
      */
@@ -19,6 +23,8 @@ public class CreateAPSJobResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,12 @@ public class CreateAPSJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +45,8 @@ public class CreateAPSJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D1B8ED33-5E9B-512D-B188-1579ED6xxx</p>
      */
@@ -40,6 +54,12 @@ public class CreateAPSJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */

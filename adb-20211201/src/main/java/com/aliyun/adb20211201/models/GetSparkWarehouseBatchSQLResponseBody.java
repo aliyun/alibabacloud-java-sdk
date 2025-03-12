@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetSparkWarehouseBatchSQLResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;DBClusterId\&quot;: \&quot;amv-uf6485635fz852mn\&quot;, \&quot;Statements\&quot;: [{\&quot;Code\&quot;: \&quot;show databases\&quot;, \&quot;State\&quot;: \&quot;FINISHED\&quot;, \&quot;StatementId\&quot;: \&quot;sq202501141001sh8e12e080006846-0000\&quot;, \&quot;Result\&quot;: \&quot;+--------------------+n</p>
      */

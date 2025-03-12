@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
     /**
+     * <p>The queried job.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,6 +16,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
     public DescribeApsHiveWorkloadResponseBodyApsWorkload apsWorkload;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>86F92D26-B774-5FA1-8E53-******</p>
      */
@@ -43,6 +47,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
 
     public static class DescribeApsHiveWorkloadResponseBodyApsWorkload extends TeaModel {
         /**
+         * <p>The advanced configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>test.adv.config=value</p>
          */
@@ -50,6 +56,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String advancedConfig;
 
         /**
+         * <p>The policy to handle tables with the same name in the destination cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>Intercept</p>
          */
@@ -57,6 +65,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String conflictStrategy;
 
         /**
+         * <p>The time when the workload was created.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -66,6 +76,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-*******</p>
          */
@@ -73,6 +85,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -80,6 +94,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public Long datasourceId;
 
         /**
+         * <p>The name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>sls-******</p>
          */
@@ -87,6 +103,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String datasourceName;
 
         /**
+         * <p>The ID of the E-MapReduce (EMR) cluster.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -96,6 +114,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String emrClusterId;
 
         /**
+         * <p>The number of AnalyticDB compute units (ACUs) required for migration.</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -103,7 +123,7 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String fullComputeUnit;
 
         /**
-         * <p>hive meta store url。</p>
+         * <p>The URL of the Hive Metastore.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -114,6 +134,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String metaStoreUri;
 
         /**
+         * <p>The Object Storage Service (OSS) URL of the AnalyticDB for MySQL cluster data.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://******</p>
          */
@@ -121,6 +143,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String ossLocation;
 
         /**
+         * <p>The number of tasks that are allowed in parallel.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -128,6 +152,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public Long parallelism;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -135,6 +161,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group to which the SQL statement belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -142,6 +170,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String resourceGroup;
 
         /**
+         * <p>The status of the workload.</p>
+         * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
          */
@@ -149,6 +179,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The expression that manually matches the source database table whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc</p>
          */
@@ -156,6 +188,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String syncAllowExpression;
 
         /**
+         * <p>Manually match the blacklist expressions for source database tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>def</p>
          */
@@ -163,6 +197,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String syncDenyExpression;
 
         /**
+         * <p>The destination type.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */
@@ -170,6 +206,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String targetType;
 
         /**
+         * <p>The name of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-******</p>
          */
@@ -177,6 +215,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String vswitch;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aps-******</p>
          */
@@ -184,6 +224,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String workloadId;
 
         /**
+         * <p>The name of the workload.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -191,6 +233,8 @@ public class DescribeApsHiveWorkloadResponseBody extends TeaModel {
         public String workloadName;
 
         /**
+         * <p>The name of the workload.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

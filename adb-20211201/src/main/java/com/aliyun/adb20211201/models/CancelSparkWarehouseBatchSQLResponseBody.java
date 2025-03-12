@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelSparkWarehouseBatchSQLResponseBody extends TeaModel {
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

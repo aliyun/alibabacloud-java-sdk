@@ -106,6 +106,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepListStepList extends TeaModel {
         /**
+         * <p>The end time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-10T10:28:34Z</p>
          */
@@ -113,6 +115,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The start time of the job step. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-10T09:28:34Z</p>
          */
@@ -120,6 +124,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The description of the job step.</p>
+         * 
          * <strong>example:</strong>
          * <p>Prepare resources</p>
          */
@@ -127,6 +133,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String stepDesc;
 
         /**
+         * <p>The name of the job step.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrepareResources</p>
          */
@@ -134,6 +142,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String stepName;
 
         /**
+         * <p>The progress of the job step. Unit: %.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -141,6 +151,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String stepProgress;
 
         /**
+         * <p>The status of the job step. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN</li>
+         * <li>RUNNING</li>
+         * <li>SUCCEED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -223,6 +240,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo extends TeaModel {
         /**
+         * <p>The name of the job.</p>
+         * 
          * <strong>example:</strong>
          * <p>ScaleUpDBCluster</p>
          */
@@ -230,6 +249,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The progress of the job. Unit: %.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -237,12 +258,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String progress;
 
         /**
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li>NOT_RUN</li>
+         * <li>RUNNING</li>
+         * <li>SUCCEED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The job steps.</p>
+         */
         @NameInMap("StepList")
         public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfoStepList stepList;
 
@@ -421,6 +452,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         @NameInMap("DBVersion")
         public String DBVersion;
+
+        @NameInMap("DiskEncryption")
+        public Boolean diskEncryption;
 
         /**
          * <p>The engine of the cluster. <strong>AnalyticDB</strong> is returned.</p>
@@ -622,6 +656,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SecondaryVSwitchId")
+        public String secondaryVSwitchId;
+
+        @NameInMap("SecondaryZoneId")
+        public String secondaryZoneId;
+
         /**
          * <p>The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</p>
          * 
@@ -652,6 +692,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags tags;
 
+        /**
+         * <p>The job information.</p>
+         */
         @NameInMap("TaskInfo")
         public DescribeDBClusterAttributeResponseBodyItemsDBClusterTaskInfo taskInfo;
 
@@ -669,6 +712,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public Boolean userENIStatus;
 
         /**
+         * <p>The vSwitch connected to the ENI. Separate multiple vSwitches with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-rj9ixufmywqq98z******,vsw-rj95ij6wcz656v7******</p>
          */
@@ -676,6 +721,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String userENIVSwitchOptions;
 
         /**
+         * <p>The VPC information of the ENI.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-rj9hnedlfm645uj******</p>
          */
@@ -683,6 +730,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String userENIVpcId;
 
         /**
+         * <p>The zone associated with the ENI. Separate multiple zones with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k,cn-hangzhou-h</p>
          */
@@ -823,6 +872,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getDBVersion() {
             return this.DBVersion;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setDiskEncryption(Boolean diskEncryption) {
+            this.diskEncryption = diskEncryption;
+            return this;
+        }
+        public Boolean getDiskEncryption() {
+            return this.diskEncryption;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setEngine(String engine) {
@@ -967,6 +1024,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setSecondaryVSwitchId(String secondaryVSwitchId) {
+            this.secondaryVSwitchId = secondaryVSwitchId;
+            return this;
+        }
+        public String getSecondaryVSwitchId() {
+            return this.secondaryVSwitchId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setSecondaryZoneId(String secondaryZoneId) {
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setStorageResource(String storageResource) {

@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class SparkBatchSQLStatement extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>s20240122jsdx****</p>
+     */
+    @NameInMap("AppId")
+    public String appId;
+
+    /**
+     * <strong>example:</strong>
      * <p>SELECT 100</p>
      */
     @NameInMap("Code")
@@ -63,6 +70,14 @@ public class SparkBatchSQLStatement extends TeaModel {
     public static SparkBatchSQLStatement build(java.util.Map<String, ?> map) throws Exception {
         SparkBatchSQLStatement self = new SparkBatchSQLStatement();
         return TeaModel.build(map, self);
+    }
+
+    public SparkBatchSQLStatement setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public SparkBatchSQLStatement setCode(String code) {

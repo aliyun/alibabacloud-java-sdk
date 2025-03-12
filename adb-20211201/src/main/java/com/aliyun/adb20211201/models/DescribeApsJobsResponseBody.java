@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeApsJobsResponseBody extends TeaModel {
     /**
+     * <p>The queried APS jobs.</p>
+     * 
      * <strong>example:</strong>
      * <ul>
      * <li></li>
@@ -14,6 +16,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public java.util.List<DescribeApsJobsResponseBodyAPSJobs> APSJobs;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -21,6 +25,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>ok</p>
      */
@@ -28,6 +34,12 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -35,6 +47,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +56,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -49,6 +65,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-7F9D-5DBD-993E-</strong></strong></strong></p>
      */
@@ -56,6 +74,12 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -63,6 +87,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -148,6 +174,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
 
     public static class DescribeApsJobsResponseBodyAPSJobs extends TeaModel {
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>aps-******</p>
          */
@@ -155,6 +183,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public String apsJobId;
 
         /**
+         * <p>The name of the APS job.</p>
+         * 
          * <strong>example:</strong>
          * <p>data-sync-******</p>
          */
@@ -162,6 +192,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public String apsJobName;
 
         /**
+         * <p>The time when the APS job was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-06-28 15:00:04</p>
          */
@@ -169,6 +201,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The synchronization latency.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -176,6 +210,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public Long delay;
 
         /**
+         * <p>The destination cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>amv-*******</p>
          */
@@ -183,16 +219,23 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public String destinationInstanceID;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>The progress.</p>
+         */
         @NameInMap("Projress")
         public String projress;
 
         /**
+         * <p>The ID of the source instance or cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>pc-******</p>
          */
@@ -200,6 +243,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public String sourceInstanceID;
 
         /**
+         * <p>The status of the APS job.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -209,6 +254,8 @@ public class DescribeApsJobsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>

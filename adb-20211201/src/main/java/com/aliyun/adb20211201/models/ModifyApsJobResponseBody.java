@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyApsJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>aps-bj1xxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class ModifyApsJobResponseBody extends TeaModel {
     public String apsJobId;
 
     /**
+     * <p>The status code. A value of 200 indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
      */
@@ -19,6 +23,8 @@ public class ModifyApsJobResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +32,8 @@ public class ModifyApsJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class ModifyApsJobResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +50,12 @@ public class ModifyApsJobResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -47,6 +63,8 @@ public class ModifyApsJobResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>-3EEC-</strong></strong></strong>-9F06-******</p>
      */
@@ -54,6 +72,12 @@ public class ModifyApsJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
