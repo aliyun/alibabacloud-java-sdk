@@ -41,7 +41,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The number of cloud computers in the cloud computer pool. Default value: 1.</p>
+     * <p>The number of cloud computer shares. Default value: 1.</p>
      * <blockquote>
      * <p> This parameter takes effect only if you set <code>ResourceType</code> to <code>DesktopGroup</code>.</p>
      * </blockquote>
@@ -53,34 +53,11 @@ public class DescribePriceRequest extends TeaModel {
     public Integer groupDesktopCount;
 
     /**
-     * <p>The resource specifications.</p>
+     * <p>The specifications of the resource.</p>
      * <ul>
-     * <li><p>If you set <code>ResourceType</code> to <code>Desktop</code>, you must specify this parameter.</p>
-     * <ul>
-     * <li>ecd.basic.small</li>
-     * <li>ecd.basic.large</li>
-     * <li>ecd.advanced.large</li>
-     * <li>ecd.advanced.xlarge</li>
-     * <li>ecd.performance.2xlarge</li>
-     * <li>ecd.graphics.xlarge</li>
-     * <li>ecd.graphics.2xlarge</li>
-     * <li>ecd.advanced.xlarge_s8d2</li>
-     * <li>ecd.advanced.xlarge_s8d7</li>
-     * <li>ecd.graphics.1g72c</li>
-     * <li>eds.general.2c2g</li>
-     * <li>eds.general.2c4g</li>
-     * <li>eds.general.2c8g</li>
-     * <li>eds.general.4c8g</li>
-     * <li>eds.general.4c16g</li>
-     * <li>eds.general.8c16g</li>
-     * <li>eds.general.8c32g</li>
-     * <li>eds.general.16c32g</li>
-     * </ul>
-     * </li>
-     * <li><p>If you set <code>ResourceType</code> to <code>DesktopGroup</code>, set the value of this parameter to <code>large</code>.</p>
-     * </li>
-     * <li><p>If you set <code>ResourceType</code> to <code>Bandwidth</code>, you can leave this parameter empty.</p>
-     * </li>
+     * <li>This parameter is required if you set <code>ResourceType</code> to <code>Desktop</code>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the available cloud computer types that correspond to the value of <code>DesktopTypeId</code>.</li>
+     * <li>If you set <code>ResourceType</code> to <code>DesktopGroup</code>, set the value of this parameter to <code>large</code>.</li>
+     * <li>If you set <code>ResourceType</code> to <code>Bandwidth</code>, you can leave this parameter empty.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -167,13 +144,13 @@ public class DescribePriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>DesktopMonthPackage: the monthly subscription plan (also known as the 120-hour or 250-hour computing plan).</li>
-     * <li>Desktop (default): the pay-as-you-go cloud computer or the monthly subscription cloud computer (also known as the Unlimited computing plan).</li>
-     * <li>Bandwidth: the premium bandwidth plan.</li>
-     * <li>DesktopGroup: the cloud computer pool.</li>
+     * <li>DesktopMonthPackage: monthly subscription cloud computers that use hourly limit plans.</li>
+     * <li>Desktop (default): pay-as-you-go cloud computers/monthly subscription cloud computers that use unlimited plans.</li>
+     * <li>Bandwidth: premium bandwidth plans.</li>
+     * <li>DesktopGroup: cloud computer shares.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,6 +160,14 @@ public class DescribePriceRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The category of the system disk.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cloud_efficiency: the ultra disk</li>
+     * <li>cloud_auto: the standard SSD.</li>
+     * <li>cloud_essd: the Enterprise SSD (ESSD). Take note that only specific cloud computer types support ESSDs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -199,6 +184,14 @@ public class DescribePriceRequest extends TeaModel {
     public Integer rootDiskSizeGib;
 
     /**
+     * <p>The category of the data disk.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cloud_efficiency: the ultra disk</li>
+     * <li>cloud_auto: the standard SSD.</li>
+     * <li>cloud_essd: the ESSD. Take note that only specific cloud computer types support ESSDs.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */

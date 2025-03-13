@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the desktop group.</p>
+     * <p>The ID of the cloud computer share.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

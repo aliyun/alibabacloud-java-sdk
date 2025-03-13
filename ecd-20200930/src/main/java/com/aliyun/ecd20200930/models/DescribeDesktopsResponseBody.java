@@ -108,6 +108,146 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDesktopsResponseBodyDesktopsDesktopDurationList extends TeaModel {
+        @NameInMap("OrderInstanceId")
+        public String orderInstanceId;
+
+        @NameInMap("PackageCreationTime")
+        public String packageCreationTime;
+
+        @NameInMap("PackageExpiredTime")
+        public String packageExpiredTime;
+
+        @NameInMap("PackageId")
+        public String packageId;
+
+        @NameInMap("PackageStatus")
+        public String packageStatus;
+
+        @NameInMap("PackageType")
+        public String packageType;
+
+        @NameInMap("PackageUsedUpStrategy")
+        public String packageUsedUpStrategy;
+
+        @NameInMap("PeriodEndTime")
+        public String periodEndTime;
+
+        @NameInMap("PeriodStartTime")
+        public String periodStartTime;
+
+        @NameInMap("PostPaidLimitFee")
+        public Float postPaidLimitFee;
+
+        @NameInMap("TotalDuration")
+        public Long totalDuration;
+
+        @NameInMap("UsedDuration")
+        public Long usedDuration;
+
+        public static DescribeDesktopsResponseBodyDesktopsDesktopDurationList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsResponseBodyDesktopsDesktopDurationList self = new DescribeDesktopsResponseBodyDesktopsDesktopDurationList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setOrderInstanceId(String orderInstanceId) {
+            this.orderInstanceId = orderInstanceId;
+            return this;
+        }
+        public String getOrderInstanceId() {
+            return this.orderInstanceId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageCreationTime(String packageCreationTime) {
+            this.packageCreationTime = packageCreationTime;
+            return this;
+        }
+        public String getPackageCreationTime() {
+            return this.packageCreationTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageExpiredTime(String packageExpiredTime) {
+            this.packageExpiredTime = packageExpiredTime;
+            return this;
+        }
+        public String getPackageExpiredTime() {
+            return this.packageExpiredTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageId(String packageId) {
+            this.packageId = packageId;
+            return this;
+        }
+        public String getPackageId() {
+            return this.packageId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageStatus(String packageStatus) {
+            this.packageStatus = packageStatus;
+            return this;
+        }
+        public String getPackageStatus() {
+            return this.packageStatus;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageType(String packageType) {
+            this.packageType = packageType;
+            return this;
+        }
+        public String getPackageType() {
+            return this.packageType;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageUsedUpStrategy(String packageUsedUpStrategy) {
+            this.packageUsedUpStrategy = packageUsedUpStrategy;
+            return this;
+        }
+        public String getPackageUsedUpStrategy() {
+            return this.packageUsedUpStrategy;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPeriodEndTime(String periodEndTime) {
+            this.periodEndTime = periodEndTime;
+            return this;
+        }
+        public String getPeriodEndTime() {
+            return this.periodEndTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPeriodStartTime(String periodStartTime) {
+            this.periodStartTime = periodStartTime;
+            return this;
+        }
+        public String getPeriodStartTime() {
+            return this.periodStartTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPostPaidLimitFee(Float postPaidLimitFee) {
+            this.postPaidLimitFee = postPaidLimitFee;
+            return this;
+        }
+        public Float getPostPaidLimitFee() {
+            return this.postPaidLimitFee;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setTotalDuration(Long totalDuration) {
+            this.totalDuration = totalDuration;
+            return this;
+        }
+        public Long getTotalDuration() {
+            return this.totalDuration;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setUsedDuration(Long usedDuration) {
+            this.usedDuration = usedDuration;
+            return this;
+        }
+        public Long getUsedDuration() {
+            return this.usedDuration;
+        }
+
+    }
+
     public static class DescribeDesktopsResponseBodyDesktopsDisks extends TeaModel {
         /**
          * <p>The type of the disk. Valid values:</p>
@@ -596,6 +736,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
+
+        @NameInMap("DesktopDurationList")
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> desktopDurationList;
 
         /**
          * <p>The ID of the cloud computer pool to which cloud computers belong. Default value: null.``</p>
@@ -1170,6 +1313,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getDataDiskSize() {
             return this.dataDiskSize;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setDesktopDurationList(java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> desktopDurationList) {
+            this.desktopDurationList = desktopDurationList;
+            return this;
+        }
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> getDesktopDurationList() {
+            return this.desktopDurationList;
         }
 
         public DescribeDesktopsResponseBodyDesktops setDesktopGroupId(String desktopGroupId) {
