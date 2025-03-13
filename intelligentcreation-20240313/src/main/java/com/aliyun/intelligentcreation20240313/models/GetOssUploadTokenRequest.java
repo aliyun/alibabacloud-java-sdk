@@ -22,6 +22,9 @@ public class GetOssUploadTokenRequest extends TeaModel {
     @NameInMap("fileType")
     public String fileType;
 
+    @NameInMap("uploadType")
+    public Integer uploadType;
+
     public static GetOssUploadTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOssUploadTokenRequest self = new GetOssUploadTokenRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class GetOssUploadTokenRequest extends TeaModel {
     }
     public String getFileType() {
         return this.fileType;
+    }
+
+    public GetOssUploadTokenRequest setUploadType(Integer uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    public Integer getUploadType() {
+        return this.uploadType;
     }
 
 }

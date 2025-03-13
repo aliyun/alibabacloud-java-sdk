@@ -11,6 +11,12 @@ public class SaveAvatarProjectRequest extends TeaModel {
     @NameInMap("agentId")
     public String agentId;
 
+    @NameInMap("bitRate")
+    public String bitRate;
+
+    @NameInMap("frameRate")
+    public String frameRate;
+
     @NameInMap("frames")
     public java.util.List<SaveAvatarProjectRequestFrames> frames;
 
@@ -52,6 +58,9 @@ public class SaveAvatarProjectRequest extends TeaModel {
     @NameInMap("scaleType")
     public String scaleType;
 
+    @NameInMap("synchronizedDisplay")
+    public String synchronizedDisplay;
+
     public static SaveAvatarProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveAvatarProjectRequest self = new SaveAvatarProjectRequest();
         return TeaModel.build(map, self);
@@ -63,6 +72,22 @@ public class SaveAvatarProjectRequest extends TeaModel {
     }
     public String getAgentId() {
         return this.agentId;
+    }
+
+    public SaveAvatarProjectRequest setBitRate(String bitRate) {
+        this.bitRate = bitRate;
+        return this;
+    }
+    public String getBitRate() {
+        return this.bitRate;
+    }
+
+    public SaveAvatarProjectRequest setFrameRate(String frameRate) {
+        this.frameRate = frameRate;
+        return this;
+    }
+    public String getFrameRate() {
+        return this.frameRate;
     }
 
     public SaveAvatarProjectRequest setFrames(java.util.List<SaveAvatarProjectRequestFrames> frames) {
@@ -119,6 +144,14 @@ public class SaveAvatarProjectRequest extends TeaModel {
     }
     public String getScaleType() {
         return this.scaleType;
+    }
+
+    public SaveAvatarProjectRequest setSynchronizedDisplay(String synchronizedDisplay) {
+        this.synchronizedDisplay = synchronizedDisplay;
+        return this;
+    }
+    public String getSynchronizedDisplay() {
+        return this.synchronizedDisplay;
     }
 
     public static class SaveAvatarProjectRequestFramesLayersMaterial extends TeaModel {
@@ -276,6 +309,9 @@ public class SaveAvatarProjectRequest extends TeaModel {
         @NameInMap("speedRate")
         public String speedRate;
 
+        @NameInMap("voiceLanguage")
+        public String voiceLanguage;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -301,6 +337,14 @@ public class SaveAvatarProjectRequest extends TeaModel {
         }
         public String getSpeedRate() {
             return this.speedRate;
+        }
+
+        public SaveAvatarProjectRequestFramesVideoScript setVoiceLanguage(String voiceLanguage) {
+            this.voiceLanguage = voiceLanguage;
+            return this;
+        }
+        public String getVoiceLanguage() {
+            return this.voiceLanguage;
         }
 
         public SaveAvatarProjectRequestFramesVideoScript setVoiceTemplateId(String voiceTemplateId) {
