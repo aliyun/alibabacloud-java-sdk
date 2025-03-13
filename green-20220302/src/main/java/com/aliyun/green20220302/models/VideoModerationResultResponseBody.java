@@ -504,6 +504,129 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo extends TeaModel {
+        @NameInMap("confidence")
+        public Long confidence;
+
+        @NameInMap("label")
+        public String label;
+
+        @NameInMap("name")
+        public String name;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo setConfidence(Long confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Long getConfidence() {
+            return this.confidence;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData extends TeaModel {
+        @NameInMap("Location")
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation location;
+
+        @NameInMap("Logo")
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> logo;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData setLocation(VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation location) {
+            this.location = location;
+            return this;
+        }
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation getLocation() {
+            return this.location;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData setLogo(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> logo) {
+            this.logo = logo;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> getLogo() {
+            return this.logo;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure extends TeaModel {
         /**
          * <p>The information about the code of the identified figure.</p>
@@ -595,6 +718,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("CustomImage")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage;
 
+        @NameInMap("LogoData")
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> logoData;
+
         /**
          * <p>If the video contains a specific figure, the code of the identified figure is returned.</p>
          */
@@ -633,6 +759,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> getCustomImage() {
             return this.customImage;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResults setLogoData(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> logoData) {
+            this.logoData = logoData;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> getLogoData() {
+            return this.logoData;
         }
 
         public VideoModerationResultResponseBodyDataFrameResultFramesResults setPublicFigure(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure> publicFigure) {
