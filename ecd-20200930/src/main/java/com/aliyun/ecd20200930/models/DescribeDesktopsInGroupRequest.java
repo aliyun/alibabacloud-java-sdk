@@ -11,7 +11,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Long customStartTimePeriod;
 
     /**
-     * <p>The ID of the cloud computer pool.</p>
+     * <p>The ID of the cloud computer share.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,11 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Boolean ignoreDeleted;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The maximum number of entries per page.</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * <li>Maximum value: 100.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,7 +48,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -53,7 +57,7 @@ public class DescribeDesktopsInGroupRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The billing method of the desktop group.</p>
+     * <p>The billing method of the cloud computer share.</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>

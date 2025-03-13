@@ -4365,14 +4365,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</p>
+     * <p>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</p>
      * <ul>
-     * <li>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</li>
-     * <li>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</li>
+     * <li>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</li>
+     * <li>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a desktop group.</p>
+     * <p>Releases a cloud computer share.</p>
      * 
      * @param request DeleteDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4413,14 +4413,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Before you delete a desktop group, make sure that cloud desktops in the desktop group are not connected and no users are authorized to use the cloud desktops.</p>
+     * <p>  Before releasing a cloud computer share, ensure that no cloud computers within it are in the Connected state and that no end users have access permissions to it.</p>
      * <ul>
-     * <li>You cannot delete a subscription desktop group when cloud desktops in the group are in valid period.</li>
-     * <li>If you delete a pay-as-you-go desktop group, cloud desktops in the group are deleted.</li>
+     * <li>You cannot delete a cloud computer share with an active subscription if it contains cloud computers that have not yet expired.</li>
+     * <li>Deleting a pay-as-you-go cloud computer share will release all pay-as-you-go cloud computers within it.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a desktop group.</p>
+     * <p>Releases a cloud computer share.</p>
      * 
      * @param request DeleteDesktopGroupRequest
      * @return DeleteDesktopGroupResponse
@@ -6807,7 +6807,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cloud computers in a cloud computer pool by billing method.</p>
+     * <p>Queries the cloud computers in a share by billing method.</p>
      * 
      * @param request DescribeDesktopsInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6872,7 +6872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the cloud computers in a cloud computer pool by billing method.</p>
+     * <p>Queries the cloud computers in a share by billing method.</p>
      * 
      * @param request DescribeDesktopsInGroupRequest
      * @return DescribeDesktopsInGroupResponse
@@ -9523,7 +9523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables cloud desktops in a desktop group.</p>
+     * <p>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</p>
      * 
      * @param request DisableDesktopsInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9568,7 +9568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disables cloud desktops in a desktop group.</p>
+     * <p>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</p>
      * 
      * @param request DisableDesktopsInGroupRequest
      * @return DisableDesktopsInGroupResponse
