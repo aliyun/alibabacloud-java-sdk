@@ -466,6 +466,12 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("DatasetId")
         public String datasetId;
 
+        @NameInMap("DatasetVersion")
+        public String datasetVersion;
+
+        @NameInMap("MountAccess")
+        public String mountAccess;
+
         /**
          * <strong>example:</strong>
          * <p>/mnt/data</p>
@@ -500,6 +506,22 @@ public class CreateInstanceRequest extends TeaModel {
             return this.datasetId;
         }
 
+        public CreateInstanceRequestDatasets setDatasetVersion(String datasetVersion) {
+            this.datasetVersion = datasetVersion;
+            return this;
+        }
+        public String getDatasetVersion() {
+            return this.datasetVersion;
+        }
+
+        public CreateInstanceRequestDatasets setMountAccess(String mountAccess) {
+            this.mountAccess = mountAccess;
+            return this;
+        }
+        public String getMountAccess() {
+            return this.mountAccess;
+        }
+
         public CreateInstanceRequestDatasets setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
@@ -508,6 +530,7 @@ public class CreateInstanceRequest extends TeaModel {
             return this.mountPath;
         }
 
+        @Deprecated
         public CreateInstanceRequestDatasets setOptionType(String optionType) {
             this.optionType = optionType;
             return this;

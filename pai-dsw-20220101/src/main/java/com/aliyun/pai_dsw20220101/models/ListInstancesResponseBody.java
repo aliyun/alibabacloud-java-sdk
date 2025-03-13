@@ -224,6 +224,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("DatasetId")
         public String datasetId;
 
+        @NameInMap("DatasetVersion")
+        public String datasetVersion;
+
+        @NameInMap("MountAccess")
+        public String mountAccess;
+
         /**
          * <strong>example:</strong>
          * <p>/mnt/data</p>
@@ -251,6 +257,22 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getDatasetId() {
             return this.datasetId;
+        }
+
+        public ListInstancesResponseBodyInstancesDatasets setDatasetVersion(String datasetVersion) {
+            this.datasetVersion = datasetVersion;
+            return this;
+        }
+        public String getDatasetVersion() {
+            return this.datasetVersion;
+        }
+
+        public ListInstancesResponseBodyInstancesDatasets setMountAccess(String mountAccess) {
+            this.mountAccess = mountAccess;
+            return this;
+        }
+        public String getMountAccess() {
+            return this.mountAccess;
         }
 
         public ListInstancesResponseBodyInstancesDatasets setMountPath(String mountPath) {
