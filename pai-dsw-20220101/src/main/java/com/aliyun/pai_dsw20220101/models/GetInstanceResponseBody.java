@@ -822,6 +822,12 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("DatasetId")
         public String datasetId;
 
+        @NameInMap("DatasetVersion")
+        public String datasetVersion;
+
+        @NameInMap("MountAccess")
+        public String mountAccess;
+
         /**
          * <strong>example:</strong>
          * <p>/mnt/data</p>
@@ -853,6 +859,22 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getDatasetId() {
             return this.datasetId;
+        }
+
+        public GetInstanceResponseBodyDatasets setDatasetVersion(String datasetVersion) {
+            this.datasetVersion = datasetVersion;
+            return this;
+        }
+        public String getDatasetVersion() {
+            return this.datasetVersion;
+        }
+
+        public GetInstanceResponseBodyDatasets setMountAccess(String mountAccess) {
+            this.mountAccess = mountAccess;
+            return this;
+        }
+        public String getMountAccess() {
+            return this.mountAccess;
         }
 
         public GetInstanceResponseBodyDatasets setMountPath(String mountPath) {
