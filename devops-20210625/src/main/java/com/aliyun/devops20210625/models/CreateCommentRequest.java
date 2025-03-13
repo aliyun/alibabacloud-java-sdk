@@ -40,6 +40,9 @@ public class CreateCommentRequest extends TeaModel {
     @NameInMap("filePath")
     public String filePath;
 
+    @NameInMap("fromPachSetBizId")
+    public String fromPachSetBizId;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,6 +70,9 @@ public class CreateCommentRequest extends TeaModel {
      */
     @NameInMap("resolved")
     public Boolean resolved;
+
+    @NameInMap("toPatchSetBizId")
+    public String toPatchSetBizId;
 
     /**
      * <p>This parameter is required.</p>
@@ -137,6 +143,14 @@ public class CreateCommentRequest extends TeaModel {
         return this.filePath;
     }
 
+    public CreateCommentRequest setFromPachSetBizId(String fromPachSetBizId) {
+        this.fromPachSetBizId = fromPachSetBizId;
+        return this;
+    }
+    public String getFromPachSetBizId() {
+        return this.fromPachSetBizId;
+    }
+
     public CreateCommentRequest setLineNumber(Integer lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -167,6 +181,14 @@ public class CreateCommentRequest extends TeaModel {
     }
     public Boolean getResolved() {
         return this.resolved;
+    }
+
+    public CreateCommentRequest setToPatchSetBizId(String toPatchSetBizId) {
+        this.toPatchSetBizId = toPatchSetBizId;
+        return this;
+    }
+    public String getToPatchSetBizId() {
+        return this.toPatchSetBizId;
     }
 
     public CreateCommentRequest setLocalId(Long localId) {

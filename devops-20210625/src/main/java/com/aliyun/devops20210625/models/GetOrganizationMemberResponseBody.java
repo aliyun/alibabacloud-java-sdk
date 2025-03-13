@@ -138,7 +138,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p><a href="mailto:123@mail.com">123@mail.com</a></p>
+         * <p>(敏感字段，暂不返回)</p>
          */
         @NameInMap("email")
         public String email;
@@ -153,6 +153,10 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
         @NameInMap("identities")
         public GetOrganizationMemberResponseBodyMemberIdentities identities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>373***</p>
+         */
         @NameInMap("jobNumber")
         public String jobNumber;
 
@@ -172,7 +176,7 @@ public class GetOrganizationMemberResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1390000****</p>
+         * <p>(敏感字段，暂不返回)</p>
          */
         @NameInMap("mobile")
         public String mobile;
