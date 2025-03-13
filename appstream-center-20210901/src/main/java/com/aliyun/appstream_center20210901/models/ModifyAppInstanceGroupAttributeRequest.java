@@ -35,6 +35,20 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     @NameInMap("NodePool")
     public ModifyAppInstanceGroupAttributeRequestNodePool nodePool;
 
+    /**
+     * <p>Specifies whether only one application can be opened in a session.</p>
+     * <ul>
+     * <li>After you enable this feature, the system assigns a session to each application if you open multiple applications in a delivery group. This consumes a larger number of sessions.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PerSessionPerApp")
     public Boolean perSessionPerApp;
 
@@ -360,9 +374,26 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
     }
 
     public static class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile extends TeaModel {
+        /**
+         * <p>The ID of the File Storage NAS (NAS) file system used to store user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06ae94****</p>
+         */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
+        /**
+         * <p>Specifies whether user data roaming is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UserProfileSwitch")
         public Boolean userProfileSwitch;
 
@@ -426,6 +457,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends TeaModel {
         @NameInMap("StorageTypeList")
         public java.util.List<String> storageTypeList;
 
+        /**
+         * <p>The configurations of user data roaming.</p>
+         */
         @NameInMap("UserProfile")
         public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile userProfile;
 

@@ -596,6 +596,56 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     }
 
+    public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag type. Valid values: Custom and System.</p>
+         */
+        @NameInMap("Scope")
+        public String scope;
+
+        /**
+         * <p>The tag value.</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags self = new ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModels extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -696,6 +746,12 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
+         * <p>The type of the operating system.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Windows</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Windows</p>
          */
@@ -746,6 +802,12 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
+
+        /**
+         * <p>The tags added to the resources.</p>
+         */
+        @NameInMap("ResourceTags")
+        public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags> resourceTags;
 
         /**
          * <strong>example:</strong>
@@ -999,6 +1061,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getResourceStatus() {
             return this.resourceStatus;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setResourceTags(java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags> resourceTags) {
+            this.resourceTags = resourceTags;
+            return this;
+        }
+        public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsResourceTags> getResourceTags() {
+            return this.resourceTags;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setScalingDownAfterIdleMinutes(Integer scalingDownAfterIdleMinutes) {
