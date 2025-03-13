@@ -36,6 +36,12 @@ public class ImportImageRequest extends TeaModel {
     @NameInMap("BootMode")
     public String bootMode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <strong>The token can contain only ASCII characters and cannot exceed 64 characters in length.</strong> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -81,7 +87,7 @@ public class ImportImageRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The attributes of the custom image.</p>
+     * <p>The attributes of the image.</p>
      */
     @NameInMap("Features")
     public ImportImageRequestFeatures features;
@@ -521,6 +527,17 @@ public class ImportImageRequest extends TeaModel {
     }
 
     public static class ImportImageRequestFeatures extends TeaModel {
+        /**
+         * <p>The metadata access mode version of the image. Valid values:</p>
+         * <ul>
+         * <li>v1: You cannot set the metadata access mode to security hardening when you create instances from the image.</li>
+         * <li>v2: You can set the metadata access mode to security hardening when you create instances from the image.</li>
+         * </ul>
+         * <p>Default value: v1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("ImdsSupport")
         public String imdsSupport;
 

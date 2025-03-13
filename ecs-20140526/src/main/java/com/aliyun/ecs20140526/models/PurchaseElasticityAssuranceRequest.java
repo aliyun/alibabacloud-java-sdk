@@ -23,12 +23,12 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The term of the elasticity assurance. The unit of the term is determined by the PeriodUnit value. Valid values:</p>
+     * <p>The validity period of the elasticity assurance. The unit of the validity period is determined by the PeriodUnit value. Valid values:</p>
      * <ul>
      * <li>When the PeriodUnit parameter is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
      * <li>When the PeriodUnit parameter is set to Year, valid values are 1, 2, 3, 4, and 5.</li>
      * </ul>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,7 +37,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the term of the elasticity assurance. Valid values:</p>
+     * <p>The unit of the validity period of the elasticity assurance. Valid values:</p>
      * <ul>
      * <li>Month</li>
      * <li>Year</li>
@@ -175,7 +175,7 @@ public class PurchaseElasticityAssuranceRequest extends TeaModel {
          * <p>The type of the private pool that is associated with the elasticity assurance. Valid values:</p>
          * <ul>
          * <li>Open: open private pool. If you use the elasticity assurance to create ECS instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</li>
-         * <li>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the targeted private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</li>
+         * <li>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</li>
          * </ul>
          * <p>Default value: Open.</p>
          * 

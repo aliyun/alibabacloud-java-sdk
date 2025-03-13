@@ -115,11 +115,11 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The match mode of the private pool. Valid values:</p>
+         * <p>The new type of private pool. Valid values:</p>
          * <ul>
-         * <li>Open: open private pool. The system matches the instance with open private pools.</li>
-         * <li>Target: specified private pool. You must set the <code>PrivatePoolOptions.Id</code> parameter to specify the ID of a private pool.</li>
-         * <li>None: no private pool. The instance starts normally without using private pools.</li>
+         * <li>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</li>
+         * <li>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <code>PrivatePoolOptions.Id</code> to specify the ID of a private pool.</li>
+         * <li>None: no private pool. The capacity in private pools is not used to start the instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

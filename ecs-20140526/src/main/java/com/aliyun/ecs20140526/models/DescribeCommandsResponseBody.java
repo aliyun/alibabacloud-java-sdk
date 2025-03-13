@@ -155,6 +155,9 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("ParameterName")
         public String parameterName;
 
+        @NameInMap("PatternRegex")
+        public String patternRegex;
+
         /**
          * <p>The valid values of the custom parameter of the enumeration type.</p>
          */
@@ -202,6 +205,14 @@ public class DescribeCommandsResponseBody extends TeaModel {
         }
         public String getParameterName() {
             return this.parameterName;
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition setPatternRegex(String patternRegex) {
+            this.patternRegex = patternRegex;
+            return this;
+        }
+        public String getPatternRegex() {
+            return this.patternRegex;
         }
 
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinition setPossibleValues(DescribeCommandsResponseBodyCommandsCommandParameterDefinitionsParameterDefinitionPossibleValues possibleValues) {

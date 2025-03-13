@@ -54,6 +54,11 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     */
     @NameInMap("Disk")
     public java.util.List<ModifyInstanceSpecRequestDisk> disk;
 
@@ -121,6 +126,11 @@ public class ModifyInstanceSpecRequest extends TeaModel {
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Online</li>
+     * <li>Offline</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -372,6 +382,10 @@ public class ModifyInstanceSpecRequest extends TeaModel {
 
     public static class ModifyInstanceSpecRequestDisk extends TeaModel {
         /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -379,6 +393,10 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         public String category;
 
         /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -386,6 +404,10 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         public String diskId;
 
         /**
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */

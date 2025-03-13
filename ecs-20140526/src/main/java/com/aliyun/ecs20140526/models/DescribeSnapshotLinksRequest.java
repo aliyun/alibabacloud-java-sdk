@@ -30,7 +30,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -40,7 +40,7 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 10</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

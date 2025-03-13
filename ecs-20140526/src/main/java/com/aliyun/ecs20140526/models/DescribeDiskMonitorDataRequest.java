@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataRequest extends TeaModel {
     /**
-     * <p>The disk ID.</p>
+     * <p>The ID of the cloud disk that you want to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +38,9 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
      * <li>3600</li>
      * </ul>
      * <p>Default value: 60.</p>
+     * <blockquote>
+     * <p> Up to 400 monitoring data entries can be returned at a time. Make sure that the TotalCount value does not exceed 400. The value is calculated by using the following formula: TotalCount = (EndTime - StartTime)/Period.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -53,6 +56,9 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</p>
+     * <blockquote>
+     * <p> You can query the monitoring data in the last 30 days. If the value of <code>StartTime</code> is more than 30 days earlier than the current time, an error is returned.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

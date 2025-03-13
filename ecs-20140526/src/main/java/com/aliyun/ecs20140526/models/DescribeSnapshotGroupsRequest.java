@@ -23,7 +23,7 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 

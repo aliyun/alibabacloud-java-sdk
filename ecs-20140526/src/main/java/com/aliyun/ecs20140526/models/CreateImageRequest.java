@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     /**
-     * <p>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, you must use Architecture to specify the system architecture of the system disk. Valid values:</p>
+     * <p>The system architecture of the system disk. If you specify a data disk snapshot to create the system disk of the custom image, use Architecture to specify the system architecture of the system disk. Valid values:</p>
      * <ul>
      * <li>i386</li>
      * <li>x86_64</li>
@@ -70,7 +70,7 @@ public class CreateImageRequest extends TeaModel {
     public String detectionStrategy;
 
     /**
-     * <p>The information about the custom image.</p>
+     * <p>The information about the custom image. To create a custom image from multiple snapshots, specify the parameters in this parameter list.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
@@ -102,7 +102,7 @@ public class CreateImageRequest extends TeaModel {
     /**
      * <p>The image version.</p>
      * <blockquote>
-     * <p>If you specify an instance by configuring <code>InstanceId</code>, and the instance uses an Alibaba Cloud Marketplace image or a custom image that is created from an Alibaba Cloud Marketplace image, you must leave this parameter empty or set this parameter to the value of ImageVersion of the instance.</p>
+     * <p> If you specify an ECS instance that runs an Alibaba Cloud Marketplace image or a custom image derived from an Alibaba Cloud Marketplace image by using <code>InstanceId</code>, you must leave this parameter empty or set this parameter to the <code>ImageVersion</code> value of the image run by the specified ECS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class CreateImageRequest extends TeaModel {
     public String imageVersion;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the ECS instance from which to create the custom image. To create a custom image from an ECS instance, you must specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp1g6zv0ce8oghu7****</p>
@@ -175,9 +175,9 @@ public class CreateImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which to assign the custom image. If you do not specify this parameter, the image is assigned to the default resource group.</p>
+     * <p>The ID of the resource group to which to assign the custom image. If you leave this parameter empty, the image is assigned to the default resource group.</p>
      * <blockquote>
-     * <p> If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have the permissions to manage the default resource group and do not specify <code>ResourceGroupId</code>, the <code>Forbbiden: User not authorized to operate on the specified resource</code> error message is returned. You must specify the ID of a resource group that the RAM user has the permissions to manage or grant the RAM user the permissions to manage the default resource group before you call the CreateImage operation again.</p>
+     * <p> If you call the CreateImage operation as a Resource Access Management (RAM) user who does not have permissions on the default resource group and leave <code>ResourceGroupId</code> empty, the <code>Forbidden: User not authorized to operate on the specified resource</code> error message is returned. You must specify the ID of a resource group on which the RAM user has permissions or grant the RAM user permissions on the default resource group, and then call the CreateImage operation again.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -193,7 +193,10 @@ public class CreateImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the snapshot that you want to use to create the custom image.</p>
+     * <p>The ID of the snapshot from which to create the custom image.</p>
+     * <blockquote>
+     * <p> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <code>DiskDeviceMapping.SnapshotId</code>. To create a custom image from multiple snapshots, you can specify only <code>DiskDeviceMapping.SnapshotId</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>s-bp17441ohwkdca0****</p>
@@ -376,7 +379,7 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The device name of disk N in the custom image. Valid values:</p>
          * <ul>
-         * <li>For disks other than basic disks, such as standard SSDs, ultra disks, and enhanced SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</li>
+         * <li>For disks other than basic disks, such as standard SSDs, ultra disks, and Enterprise SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</li>
          * <li>For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.</li>
          * </ul>
          * 
@@ -387,7 +390,7 @@ public class CreateImageRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:</p>
+         * <p>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you leave this parameter empty, the disk type is determined by the corresponding snapshot. Valid values:</p>
          * <ul>
          * <li>system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.</li>
          * <li>data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.</li>
@@ -402,13 +405,13 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The size of disk N in the custom image. Unit: GiB. The valid values and default value of DiskDeviceMapping.N.Size vary based on the value of DiskDeviceMapping.N.SnapshotId.</p>
          * <ul>
-         * <li><p>If no corresponding snapshot IDs are specified in the value of DiskDeviceMapping.N.SnapshotId, DiskDeviceMapping.N.Size has the following valid values and default values:</p>
+         * <li><p>If you leave DiskDeviceMapping.N.SnapshotId empty, DiskDeviceMapping.N.Size has the following valid values and default values:</p>
          * <ul>
          * <li>For basic disks, the valid values range from 5 to 2000, and the default value is 5.</li>
          * <li>For other disks, the valid values range from 20 to 32768, and the default value is 20.</li>
          * </ul>
          * </li>
-         * <li><p>If a corresponding snapshot ID is specified in the value of DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</p>
+         * <li><p>If you specify DiskDeviceMapping.N.SnapshotId, the value of DiskDeviceMapping.N.Size must be greater than or equal to the size of the specified snapshot. The default value of DiskDeviceMapping.N.Size is the size of the specified snapshot.</p>
          * </li>
          * </ul>
          * 

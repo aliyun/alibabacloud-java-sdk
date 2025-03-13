@@ -20,7 +20,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned monitoring data entries.</p>
+     * <p>The total number of monitoring data entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

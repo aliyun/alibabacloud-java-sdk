@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
@@ -14,13 +14,13 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>Details about the resources that are associated with the prefix list.</p>
      */
     @NameInMap("PrefixListAssociations")
     public DescribePrefixListAssociationsResponseBodyPrefixListAssociations prefixListAssociations;
 
     /**
-     * <p>Details about the resources that are associated with the prefix list.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>38793DB8-A4B2-4AEC-BFD3-111234E9188D</p>
@@ -59,7 +59,7 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
 
     public static class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation extends TeaModel {
         /**
-         * <p>The type of the resource.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp11ujym6xsff6l0****</p>
@@ -68,6 +68,8 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The type of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>securitygroup</p>
          */

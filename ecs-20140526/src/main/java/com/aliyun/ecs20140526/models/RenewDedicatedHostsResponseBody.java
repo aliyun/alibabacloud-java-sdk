@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class RenewDedicatedHostsResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>23841229****</p>
+     */
+    @NameInMap("OrderId")
+    public String orderId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +23,14 @@ public class RenewDedicatedHostsResponseBody extends TeaModel {
     public static RenewDedicatedHostsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RenewDedicatedHostsResponseBody self = new RenewDedicatedHostsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RenewDedicatedHostsResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public RenewDedicatedHostsResponseBody setRequestId(String requestId) {

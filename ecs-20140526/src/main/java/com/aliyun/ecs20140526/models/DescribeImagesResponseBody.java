@@ -451,9 +451,17 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageFeatures extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>supported</p>
+         */
         @NameInMap("CpuOnlineDowngrade")
         public String cpuOnlineDowngrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>supported</p>
+         */
         @NameInMap("CpuOnlineUpgrade")
         public String cpuOnlineUpgrade;
 
@@ -470,9 +478,17 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("ImdsSupport")
         public String imdsSupport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>unsupported</p>
+         */
         @NameInMap("MemoryOnlineDowngrade")
         public String memoryOnlineDowngrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>unsupported</p>
+         */
         @NameInMap("MemoryOnlineUpgrade")
         public String memoryOnlineUpgrade;
 

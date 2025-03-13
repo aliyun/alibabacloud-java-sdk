@@ -216,10 +216,10 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public Integer queueNumber;
 
     /**
-     * <p>The number of queue pair (QP) queues supported by the elastic RDMA interface (ERI).</p>
-     * <p>If you want to attach multiple ERIs to an instance, we recommend that you specify QueuePairNumber for each ERI based on the value of <code>QueuePairNumber</code> supported by the instance type and the number of ERIs that you want to use. Make sure that the total number of QP queues of all ERIs does not exceed the maximum number of QP queues supported by the instance type. For information about the maximum number of QP queues supported by an instance type, see <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</p>
+     * <p>The number of queue pairs (QPs) supported by the elastic RDMA interface (ERI).</p>
+     * <p>If you want to attach multiple ERIs to an instance, we recommend that you specify QueuePairNumber for each ERI based on the value of <code>QueuePairNumber</code> supported by the instance type and the number of ERIs that you want to use. Make sure that the total number of QPs of all ERIs does not exceed the maximum number of QPs supported by the instance type. For information about the maximum number of QPs supported by an instance type, see <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</p>
      * <blockquote>
-     * <p> If you do not specify QueuePairNumber for an ERI, the maximum number of QP queues supported by the instance type may be used as the number of QP queues supported by the ERI. In this case, you cannot attach an additional ERI to the instance. However, you can attach other types of ENIs to the instance.</p>
+     * <p> If you do not specify QueuePairNumber for an ERI, the maximum number of QPs supported by the instance type may be used as the number of QPs supported by the ERI. In this case, you cannot attach an additional ERI to the instance. However, you can attach other types of ENIs to the instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -780,7 +780,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         public Integer queueNumber;
 
         /**
-         * <p>The number of queues supported by the ERI.</p>
+         * <p>The number of QPs supported by the ERI.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -791,8 +791,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         /**
          * <p>The Rx queue depth of the ENI.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p> This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
          * </blockquote>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter is applicable only to 7th-generation or later ECS instance types.</li>
+         * <li>This parameter is applicable to Linux images.</li>
+         * <li>A larger Rx queue depth yields higher inbound throughput and reduces packet loss rates but consumes more memory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>8192</p>
@@ -803,8 +809,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         /**
          * <p>The Tx queue depth of the ENI.</p>
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p> This parameter is in invitational preview and is not publicly available. To use this parameter, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
          * </blockquote>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter is applicable only to 7th-generation or later ECS instance types.</li>
+         * <li>This parameter is applicable to Linux images.</li>
+         * <li>A larger Tx queue depth yields higher outbound throughput and reduces packet loss rates but consumes more memory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>8192</p>

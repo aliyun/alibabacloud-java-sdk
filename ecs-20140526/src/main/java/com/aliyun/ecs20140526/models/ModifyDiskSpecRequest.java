@@ -4,6 +4,14 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
+    /**
+     * <blockquote>
+     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
+     */
     @NameInMap("DestinationZoneId")
     public String destinationZoneId;
 
