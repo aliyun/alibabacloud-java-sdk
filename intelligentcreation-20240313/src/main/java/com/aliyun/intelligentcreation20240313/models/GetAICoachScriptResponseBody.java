@@ -608,6 +608,12 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("nameList")
+        public java.util.List<String> nameList;
+
+        @NameInMap("operators")
+        public String operators;
+
         @NameInMap("parameters")
         public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListParameters> parameters;
 
@@ -636,6 +642,22 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setNameList(java.util.List<String> nameList) {
+            this.nameList = nameList;
+            return this;
+        }
+        public java.util.List<String> getNameList() {
+            return this.nameList;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setOperators(String operators) {
+            this.operators = operators;
+            return this;
+        }
+        public String getOperators() {
+            return this.operators;
         }
 
         public GetAICoachScriptResponseBodyPointsAnswerList setParameters(java.util.List<GetAICoachScriptResponseBodyPointsAnswerListParameters> parameters) {

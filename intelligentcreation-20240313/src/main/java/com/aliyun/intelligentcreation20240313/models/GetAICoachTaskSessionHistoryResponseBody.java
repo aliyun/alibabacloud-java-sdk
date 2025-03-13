@@ -143,6 +143,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         @NameInMap("audioUrl")
         public String audioUrl;
 
+        @NameInMap("evaluationFeedback")
+        public String evaluationFeedback;
+
         /**
          * <strong>example:</strong>
          * <p>{}</p>
@@ -170,6 +173,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         }
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        public GetAICoachTaskSessionHistoryResponseBodyConversationList setEvaluationFeedback(String evaluationFeedback) {
+            this.evaluationFeedback = evaluationFeedback;
+            return this;
+        }
+        public String getEvaluationFeedback() {
+            return this.evaluationFeedback;
         }
 
         public GetAICoachTaskSessionHistoryResponseBodyConversationList setEvaluationResult(String evaluationResult) {

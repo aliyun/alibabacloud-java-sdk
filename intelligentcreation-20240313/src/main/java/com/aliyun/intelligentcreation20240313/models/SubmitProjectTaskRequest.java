@@ -425,6 +425,12 @@ public class SubmitProjectTaskRequest extends TeaModel {
         @NameInMap("audioUrl")
         public String audioUrl;
 
+        @NameInMap("emotion")
+        public String emotion;
+
+        @NameInMap("pitchRate")
+        public String pitchRate;
+
         @NameInMap("speechOpen")
         public Boolean speechOpen;
 
@@ -444,6 +450,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
          */
         @NameInMap("type")
         public String type;
+
+        @NameInMap("voiceLanguage")
+        public String voiceLanguage;
 
         /**
          * <strong>example:</strong>
@@ -470,6 +479,22 @@ public class SubmitProjectTaskRequest extends TeaModel {
         }
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        public SubmitProjectTaskRequestFramesVideoScript setEmotion(String emotion) {
+            this.emotion = emotion;
+            return this;
+        }
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        public SubmitProjectTaskRequestFramesVideoScript setPitchRate(String pitchRate) {
+            this.pitchRate = pitchRate;
+            return this;
+        }
+        public String getPitchRate() {
+            return this.pitchRate;
         }
 
         public SubmitProjectTaskRequestFramesVideoScript setSpeechOpen(Boolean speechOpen) {
@@ -502,6 +527,14 @@ public class SubmitProjectTaskRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public SubmitProjectTaskRequestFramesVideoScript setVoiceLanguage(String voiceLanguage) {
+            this.voiceLanguage = voiceLanguage;
+            return this;
+        }
+        public String getVoiceLanguage() {
+            return this.voiceLanguage;
         }
 
         public SubmitProjectTaskRequestFramesVideoScript setVoiceTemplateId(Long voiceTemplateId) {

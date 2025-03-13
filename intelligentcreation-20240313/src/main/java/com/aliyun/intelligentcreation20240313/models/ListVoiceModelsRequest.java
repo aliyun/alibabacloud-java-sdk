@@ -28,6 +28,9 @@ public class ListVoiceModelsRequest extends TeaModel {
     @NameInMap("useScene")
     public String useScene;
 
+    @NameInMap("voiceLanguage")
+    public String voiceLanguage;
+
     /**
      * <strong>example:</strong>
      * <p>PRIVATE_VOICE</p>
@@ -70,6 +73,14 @@ public class ListVoiceModelsRequest extends TeaModel {
     }
     public String getUseScene() {
         return this.useScene;
+    }
+
+    public ListVoiceModelsRequest setVoiceLanguage(String voiceLanguage) {
+        this.voiceLanguage = voiceLanguage;
+        return this;
+    }
+    public String getVoiceLanguage() {
+        return this.voiceLanguage;
     }
 
     public ListVoiceModelsRequest setVoiceType(String voiceType) {
