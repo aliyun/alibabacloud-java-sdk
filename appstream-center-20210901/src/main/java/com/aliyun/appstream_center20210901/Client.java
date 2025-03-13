@@ -1942,6 +1942,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询云资源标签列表</p>
+     * 
+     * @param request ListTagCloudResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagCloudResourcesResponse
+     */
+    public ListTagCloudResourcesResponse listTagCloudResourcesWithOptions(ListTagCloudResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            body.put("ResourceIds", request.resourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            body.put("Scope", request.scope);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTagCloudResources"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagCloudResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagCloudResourcesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云资源标签列表</p>
+     * 
+     * @param request ListTagCloudResourcesRequest
+     * @return ListTagCloudResourcesResponse
+     */
+    public ListTagCloudResourcesResponse listTagCloudResources(ListTagCloudResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTagCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</p>
      * 
      * @param request ListTenantConfigRequest
@@ -2466,6 +2531,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>为云资源创建并绑定标签</p>
+     * 
+     * @param request TagCloudResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagCloudResourcesResponse
+     */
+    public TagCloudResourcesResponse tagCloudResourcesWithOptions(TagCloudResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            body.put("ResourceIds", request.resourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagCloudResources"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TagCloudResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TagCloudResourcesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>为云资源创建并绑定标签</p>
+     * 
+     * @param request TagCloudResourcesRequest
+     * @return TagCloudResourcesResponse
+     */
+    public TagCloudResourcesResponse tagCloudResources(TagCloudResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Unbinds a user and a session.</p>
      * 
      * @param request UnbindRequest
@@ -2527,6 +2649,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnbindResponse unbind(UnbindRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unbindWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes tags from cloud resources.</p>
+     * 
+     * @param request UntagCloudResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagCloudResourcesResponse
+     */
+    public UntagCloudResourcesResponse untagCloudResourcesWithOptions(UntagCloudResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            body.put("ResourceIds", request.resourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeys)) {
+            body.put("TagKeys", request.tagKeys);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagCloudResources"),
+            new TeaPair("version", "2021-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagCloudResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UntagCloudResourcesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes tags from cloud resources.</p>
+     * 
+     * @param request UntagCloudResourcesRequest
+     * @return UntagCloudResourcesResponse
+     */
+    public UntagCloudResourcesResponse untagCloudResources(UntagCloudResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.untagCloudResourcesWithOptions(request, runtime);
     }
 
     /**

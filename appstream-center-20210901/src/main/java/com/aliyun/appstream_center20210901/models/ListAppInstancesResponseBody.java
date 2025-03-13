@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAppInstancesResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the application instances.</p>
+     * <p>The app instances.</p>
      */
     @NameInMap("AppInstanceModels")
     public java.util.List<ListAppInstancesResponseBodyAppInstanceModels> appInstanceModels;
@@ -158,6 +158,19 @@ public class ListAppInstancesResponseBody extends TeaModel {
         @NameInMap("BindInfo")
         public ListAppInstancesResponseBodyAppInstanceModelsBindInfo bindInfo;
 
+        /**
+         * <p>The billing method of the app instance. Valid values:</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
@@ -188,6 +201,18 @@ public class ListAppInstancesResponseBody extends TeaModel {
         @NameInMap("MainEthPublicIp")
         public String mainEthPublicIp;
 
+        @NameInMap("NetworkInterfaceIp")
+        public String networkInterfaceIp;
+
+        /**
+         * <p>The ID of the node on which the app instance runs.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp13********</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -273,6 +298,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
         public String getMainEthPublicIp() {
             return this.mainEthPublicIp;
+        }
+
+        public ListAppInstancesResponseBodyAppInstanceModels setNetworkInterfaceIp(String networkInterfaceIp) {
+            this.networkInterfaceIp = networkInterfaceIp;
+            return this;
+        }
+        public String getNetworkInterfaceIp() {
+            return this.networkInterfaceIp;
         }
 
         public ListAppInstancesResponseBodyAppInstanceModels setNodeId(String nodeId) {

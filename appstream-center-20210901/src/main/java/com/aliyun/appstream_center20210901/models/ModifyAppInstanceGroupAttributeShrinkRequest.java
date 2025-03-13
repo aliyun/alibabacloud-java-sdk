@@ -35,6 +35,20 @@ public class ModifyAppInstanceGroupAttributeShrinkRequest extends TeaModel {
     @NameInMap("NodePool")
     public String nodePoolShrink;
 
+    /**
+     * <p>Specifies whether only one application can be opened in a session.</p>
+     * <ul>
+     * <li>After you enable this feature, the system assigns a session to each application if you open multiple applications in a delivery group. This consumes a larger number of sessions.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PerSessionPerApp")
     public Boolean perSessionPerApp;
 
