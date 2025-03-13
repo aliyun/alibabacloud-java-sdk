@@ -371,7 +371,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;
 
         /**
-         * <p>Details about the promotion rules.</p>
+         * <p>The information about the promotion rules.</p>
          */
         @NameInMap("Rules")
         public DescribeRenewalPriceResponseBodyPriceInfoRules rules;

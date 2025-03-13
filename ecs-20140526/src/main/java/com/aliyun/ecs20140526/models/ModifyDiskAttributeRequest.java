@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskAttributeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+     * <p>Specifies whether to enable performance burst for the disk if the disk supports performance burst. Valid values:</p>
      * <ul>
-     * <li>true: encrypts the disk.</li>
-     * <li>false: does not encrypt the disk.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
+     * <blockquote>
+     * <p> An error is reported if you specify this parameter for a disk that does not support performance burst.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -18,7 +21,12 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Boolean burstingEnabled;
 
     /**
-     * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+     * <p>Specifies whether to delete the automatic snapshots of the disk when the disk is released. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,12 +35,14 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public Boolean deleteAutoSnapshot;
 
     /**
-     * <p>Specifies whether to release the disk along with its associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
+     * <p>Specifies whether to release the disk together with the associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      * <p>An error is returned if you set <code>DeleteWithInstance</code> to <code>false</code> in one of the following cases:</p>
      * <ul>
      * <li>The disk is a local disk.</li>
      * <li>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</li>
      * </ul>
+     * <p>**</p>
+     * <p><strong>Warning</strong> If you set DeleteWithInstance to false and the instance to which the disk is attached is locked for security reasons, the DeleteWithInstance attribute of the disk is ignored and the disk is released together with the instance. If &quot;LockReason&quot; : &quot;security&quot; is displayed in the response when you query information about an instance, the instance is locked for security reasons.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -50,9 +60,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the disk.</p>
+     * <p>The ID of the disk whose attributes you want to modify.</p>
      * <blockquote>
-     * <p>You can specify the <code>DiskId</code> parameter or the <code>DiskIds.N</code> parameter, but you cannot specify both parameters at the same time.</p>
+     * <p> You can specify <code>DiskId</code> or <code>DiskIds.N</code>, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,9 +72,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The ID of disk N. Valid values of N: 0 to 100.</p>
+     * <p>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</p>
      * <blockquote>
-     * <p>You can specify the <code>DiskId</code> parameter or the <code>DiskIds.N</code> parameter, but you cannot specify both parameters at the same time.</p>
+     * <p> You can specify <code>DiskId</code> or <code>DiskIds.N</code>, but not both.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -83,14 +93,14 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public String diskName;
 
     /**
-     * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk. Valid values:</p>
+     * <p>Specifies whether to enable the automatic snapshot policy feature for the disk. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      * <blockquote>
-     * <p> By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to associate an automatic snapshot policy with a cloud disk before you can use the policy.</p>
+     * <p> By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesResponseBody extends TeaModel {
     /**
-     * <p>Details of the image templates.</p>
+     * <p>Details about the image templates.</p>
      */
     @NameInMap("ImagePipeline")
     public DescribeImagePipelinesResponseBodyImagePipeline imagePipeline;
@@ -112,6 +112,18 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
 
     public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions extends TeaModel {
         /**
+         * <p>Indicates whether to disable the feature that automatically adds a suffix to the name of the image created based on the image template. Valid value:</p>
+         * <ul>
+         * <li>disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
+         */
+        @NameInMap("ImageNameSuffix")
+        public String imageNameSuffix;
+
+        /**
          * <p>Indicates whether to retain Cloud Assistant. During the image building process, the system automatically installs Cloud Assistant in the intermediate instance to run commands. You can choose whether to retain Cloud Assistant in the new image created based on the image template. Valid values:</p>
          * <ul>
          * <li>true: retains Cloud Assistant.</li>
@@ -132,12 +144,198 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions setImageNameSuffix(String imageNameSuffix) {
+            this.imageNameSuffix = imageNameSuffix;
+            return this;
+        }
+        public String getImageNameSuffix() {
+            return this.imageNameSuffix;
+        }
+
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetAdvancedOptions setRetainCloudAssistant(Boolean retainCloudAssistant) {
             this.retainCloudAssistant = retainCloudAssistant;
             return this;
         }
         public Boolean getRetainCloudAssistant() {
             return this.retainCloudAssistant;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures extends TeaModel {
+        /**
+         * <p>Indicates whether the image supports the NVMe protocol. Valid values:</p>
+         * <ul>
+         * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
+         * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
+         * <li>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag extends TeaModel {
+        /**
+         * <p>The tag key of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags extends TeaModel {
+        @NameInMap("ImageTag")
+        public java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag> imageTag;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags setImageTag(java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag> imageTag) {
+            this.imageTag = imageTag;
+            return this;
+        }
+        public java.util.List<DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTagsImageTag> getImageTag() {
+            return this.imageTag;
+        }
+
+    }
+
+    public static class DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions extends TeaModel {
+        /**
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The image family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>family</p>
+         */
+        @NameInMap("ImageFamily")
+        public String imageFamily;
+
+        /**
+         * <p>The feature attributes of the image.</p>
+         */
+        @NameInMap("ImageFeatures")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures imageFeatures;
+
+        /**
+         * <p>The prefix of the image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imageName</p>
+         */
+        @NameInMap("ImageName")
+        public String imageName;
+
+        /**
+         * <p>The tags of the image.</p>
+         */
+        @NameInMap("ImageTags")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags imageTags;
+
+        public static DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions self = new DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions setImageFamily(String imageFamily) {
+            this.imageFamily = imageFamily;
+            return this;
+        }
+        public String getImageFamily() {
+            return this.imageFamily;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions setImageFeatures(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures imageFeatures) {
+            this.imageFeatures = imageFeatures;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageFeatures getImageFeatures() {
+            return this.imageFeatures;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions setImageTags(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags imageTags) {
+            this.imageTags = imageTags;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptionsImageTags getImageTags() {
+            return this.imageTags;
         }
 
     }
@@ -305,17 +503,17 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String bootMode;
 
         /**
-         * <p>The information of disk N from which a custom image is created.</p>
+         * <p>The information of disks from which the custom images are created.</p>
          * <ul>
-         * <li>When N is set to 1, a custom image is created from the system disk.</li>
-         * <li>When N is set to an integer in the range of 2 to 17, a custom image is created from a data disk.</li>
+         * <li>When the value of N is 1, a custom image is created from the system disk.</li>
+         * <li>When the value of N is an integer in the range of 2 to 17, a custom image is created from a data disk.</li>
          * </ul>
          */
         @NameInMap("DiskDeviceMappings")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsDiskDeviceMappings diskDeviceMappings;
 
         /**
-         * <p>The attributes of the custom image.</p>
+         * <p>The feature attributes of the image.</p>
          */
         @NameInMap("Features")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptionsFeatures features;
@@ -386,11 +584,9 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>Indicates whether to retain the imported image. After the image is imported, the system automatically deletes the source image to prevent unnecessary storage costs. You can also choose whether to retain it. Valid values:</p>
-         * <ul>
-         * <li>true: retains the image. After the image is imported, the source image is not deleted even if the image building task is canceled or fails.</li>
-         * <li>false: does not retain the image.</li>
-         * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -625,22 +821,36 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The image family.</p>
+         * <p>The family of the image created based on the image template.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFamily.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>null</p>
          */
         @NameInMap("ImageFamily")
+        @Deprecated
         public String imageFamily;
 
         /**
-         * <p>The name prefix of the image to be created based on the image template.</p>
+         * <p>The name prefix of the image created based on the image template.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageName.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>testImageName</p>
          */
         @NameInMap("ImageName")
+        @Deprecated
         public String imageName;
+
+        /**
+         * <p>The attributes of the image created based on the image template.</p>
+         */
+        @NameInMap("ImageOptions")
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions imageOptions;
 
         /**
          * <p>The ID of the image template.</p>
@@ -652,7 +862,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String imagePipelineId;
 
         /**
-         * <p>The properties and settings of the image template that you import.</p>
+         * <p>The attributes and settings of the imported image.</p>
          */
         @NameInMap("ImportImageOptions")
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImportImageOptions importImageOptions;
@@ -685,17 +895,16 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the image created based on the image template supports Non-Volatile Memory Express (NVMe). Valid values:</p>
-         * <ul>
-         * <li>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</li>
-         * <li>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</li>
-         * <li>auto: The system automatically checks whether the image supports the NVMe protocol. The system automatically checks whether the NVMe driver is installed on your image before the image is built. If you install or uninstall the NVMe driver during the image building task, the check result may be incorrect. We recommend that you set the value to supported or unsupported based on the image building content.</li>
-         * </ul>
+         * <p>Indicates whether the image created based on the image template supports the Non-Volatile Memory Express (NVMe) protocol.</p>
+         * <blockquote>
+         * <p> This parameter is no longer used. We recommend that you use ImageOptions.ImageFeatures.NvmeSupport.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
         @NameInMap("NvmeSupport")
+        @Deprecated
         public String nvmeSupport;
 
         /**
@@ -828,6 +1037,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.description;
         }
 
+        @Deprecated
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageFamily(String imageFamily) {
             this.imageFamily = imageFamily;
             return this;
@@ -836,12 +1046,21 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.imageFamily;
         }
 
+        @Deprecated
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageName(String imageName) {
             this.imageName = imageName;
             return this;
         }
         public String getImageName() {
             return this.imageName;
+        }
+
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImageOptions(DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions imageOptions) {
+            this.imageOptions = imageOptions;
+            return this;
+        }
+        public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSetImageOptions getImageOptions() {
+            return this.imageOptions;
         }
 
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setImagePipelineId(String imagePipelineId) {
@@ -884,6 +1103,7 @@ public class DescribeImagePipelinesResponseBody extends TeaModel {
             return this.name;
         }
 
+        @Deprecated
         public DescribeImagePipelinesResponseBodyImagePipelineImagePipelineSet setNvmeSupport(String nvmeSupport) {
             this.nvmeSupport = nvmeSupport;
             return this;

@@ -79,6 +79,7 @@ public class DescribeTasksRequest extends TeaModel {
      * <li>ExportImage</li>
      * <li>RedeployInstance</li>
      * <li>ModifyDiskSpec</li>
+     * <li>ArchiveSnapshot</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23841229****</p>
+     */
+    @NameInMap("OrderId")
+    public String orderId;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +31,14 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     public static PurchaseReservedInstancesOfferingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PurchaseReservedInstancesOfferingResponseBody self = new PurchaseReservedInstancesOfferingResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PurchaseReservedInstancesOfferingResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public PurchaseReservedInstancesOfferingResponseBody setRequestId(String requestId) {

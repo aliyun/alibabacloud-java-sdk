@@ -21,9 +21,33 @@ public class RenewElasticityAssurancesRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</p>
+     * <ul>
+     * <li>If you set <code>PeriodUnit</code> to Month, the default value is 1.</li>
+     * <li>If you set <code>PeriodUnit</code> to Year, the default value is 12.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if you set <code>AutoRenew</code> to <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 

@@ -33,6 +33,9 @@ public class DescribeUserDataResponseBody extends TeaModel {
 
     /**
      * <p>The user data of the instance.</p>
+     * <blockquote>
+     * <p> If no user data is configured for the instance, an empty string is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ZWNobyBoZWxsbyBlY321ABC</p>

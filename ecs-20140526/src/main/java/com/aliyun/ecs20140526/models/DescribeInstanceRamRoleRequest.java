@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleRequest extends TeaModel {
     /**
-     * <p>The IDs of ECS instances. You can specify up to 100 instance IDs in a single request.</p>
+     * <p>The IDs of ECS instances. You can specify up to 50 instance IDs in a single request.</p>
      * <blockquote>
      * <p> You must specify at least one parameter from <code>InstanceIds</code> and <code>RamRoleName</code>.</p>
      * </blockquote>

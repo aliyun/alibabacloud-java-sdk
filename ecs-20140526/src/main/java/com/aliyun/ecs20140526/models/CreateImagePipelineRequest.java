@@ -99,6 +99,7 @@ public class CreateImagePipelineRequest extends TeaModel {
      * <p>null</p>
      */
     @NameInMap("ImageFamily")
+    @Deprecated
     public String imageFamily;
 
     /**
@@ -109,7 +110,14 @@ public class CreateImagePipelineRequest extends TeaModel {
      * <p>testImageName</p>
      */
     @NameInMap("ImageName")
+    @Deprecated
     public String imageName;
+
+    /**
+     * <p>目标镜像属性。</p>
+     */
+    @NameInMap("ImageOptions")
+    public CreateImagePipelineRequestImageOptions imageOptions;
 
     /**
      * <p>The attributes and settings of the image that you want to import. If you set <code>BaseImageType</code> to OSS, you must specify this parameter.</p>
@@ -161,6 +169,7 @@ public class CreateImagePipelineRequest extends TeaModel {
      * <p>auto</p>
      */
     @NameInMap("NvmeSupport")
+    @Deprecated
     public String nvmeSupport;
 
     @NameInMap("OwnerAccount")
@@ -341,6 +350,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.description;
     }
 
+    @Deprecated
     public CreateImagePipelineRequest setImageFamily(String imageFamily) {
         this.imageFamily = imageFamily;
         return this;
@@ -349,12 +359,21 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.imageFamily;
     }
 
+    @Deprecated
     public CreateImagePipelineRequest setImageName(String imageName) {
         this.imageName = imageName;
         return this;
     }
     public String getImageName() {
         return this.imageName;
+    }
+
+    public CreateImagePipelineRequest setImageOptions(CreateImagePipelineRequestImageOptions imageOptions) {
+        this.imageOptions = imageOptions;
+        return this;
+    }
+    public CreateImagePipelineRequestImageOptions getImageOptions() {
+        return this.imageOptions;
     }
 
     public CreateImagePipelineRequest setImportImageOptions(CreateImagePipelineRequestImportImageOptions importImageOptions) {
@@ -389,6 +408,7 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.name;
     }
 
+    @Deprecated
     public CreateImagePipelineRequest setNvmeSupport(String nvmeSupport) {
         this.nvmeSupport = nvmeSupport;
         return this;
@@ -495,6 +515,18 @@ public class CreateImagePipelineRequest extends TeaModel {
 
     public static class CreateImagePipelineRequestAdvancedOptions extends TeaModel {
         /**
+         * <p>是否禁用目标镜像名称自动增加后缀。可能值：</p>
+         * <ul>
+         * <li>disable：禁用。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
+         */
+        @NameInMap("ImageNameSuffix")
+        public String imageNameSuffix;
+
+        /**
          * <p>Specifies whether to retain Cloud Assistant Agent that is installed during the image building process. During the image building process, the system automatically installs Cloud Assistant Agent on the intermediate instance to run commands. You can choose whether to retain Cloud Assistant Agent that is installed during the image building process in the new image. Valid values:</p>
          * <ul>
          * <li>true: retains Cloud Assistant Agent that is installed during the image building process in the new image.</li>
@@ -516,12 +548,180 @@ public class CreateImagePipelineRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateImagePipelineRequestAdvancedOptions setImageNameSuffix(String imageNameSuffix) {
+            this.imageNameSuffix = imageNameSuffix;
+            return this;
+        }
+        public String getImageNameSuffix() {
+            return this.imageNameSuffix;
+        }
+
         public CreateImagePipelineRequestAdvancedOptions setRetainCloudAssistant(Boolean retainCloudAssistant) {
             this.retainCloudAssistant = retainCloudAssistant;
             return this;
         }
         public Boolean getRetainCloudAssistant() {
             return this.retainCloudAssistant;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImageOptionsImageFeatures extends TeaModel {
+        /**
+         * <p>构建的目标镜像是否支持 NVMe。可能值：</p>
+         * <ul>
+         * <li>supported：支持。表示以该镜像创建的实例支持 NVMe 协议。</li>
+         * <li>unsupported：不支持。表示以该镜像创建的实例不支持 NVMe 协议。</li>
+         * <li>auto：自动检测。由系统自动检测您的镜像是否安装NVMe驱动，该行为发生在构建阶段前，若您在构建时安装或者卸载了NVMe驱动，可能会出现结果偏差，建议您根据构建内容设置为supported或unsupported。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
+        @NameInMap("NvmeSupport")
+        public String nvmeSupport;
+
+        public static CreateImagePipelineRequestImageOptionsImageFeatures build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImageOptionsImageFeatures self = new CreateImagePipelineRequestImageOptionsImageFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImageOptionsImageFeatures setNvmeSupport(String nvmeSupport) {
+            this.nvmeSupport = nvmeSupport;
+            return this;
+        }
+        public String getNvmeSupport() {
+            return this.nvmeSupport;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImageOptionsImageTags extends TeaModel {
+        /**
+         * <p>标签键。N 的取值范围：1~20。一旦传入该值，则不允许为空字符串。最多支持 128 个字符，不能以<code>aliyun</code>和<code>acs:</code>开头，不能包含<code>http://</code>或者<code>https://</code>。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>资源的标签值。N 的取值范围：1~20。一旦传入该值，可以为空字符串。最多支持 128 个字符，不能以<code>acs:</code>开头，不能包含<code>http://</code>或者<code>https://</code>。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateImagePipelineRequestImageOptionsImageTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImageOptionsImageTags self = new CreateImagePipelineRequestImageOptionsImageTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImageOptionsImageTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateImagePipelineRequestImageOptionsImageTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateImagePipelineRequestImageOptions extends TeaModel {
+        /**
+         * <p>描述信息。长度为2~256个英文或中文字符，不能以<code>http://</code>和<code>https://</code>开头。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>目标镜像族系。长度为 2~128 个英文或中文字符。必须以大小写字母或中文开头，不能以 aliyun 和 acs:开头，不能包含 http://或者 https://。可以包含数字、半角冒号（:）、下划线（_）或者短划线（-）。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>family</p>
+         */
+        @NameInMap("ImageFamily")
+        public String imageFamily;
+
+        /**
+         * <p>目标镜像特性相关属性。</p>
+         */
+        @NameInMap("ImageFeatures")
+        public CreateImagePipelineRequestImageOptionsImageFeatures imageFeatures;
+
+        /**
+         * <p>目标镜像名称前缀。长度为2~64个字符，必须以大小写字母或中文开头，不能以<code>http://</code>和<code>https://</code>开头。可以包含中文、英文、数字、半角冒号（:）、下划线（_）、半角句号（.）或者短划线（-）。</p>
+         * <p>最终完整的镜像名称由系统自动拼接名称前缀与构建任务ID（<code>ExecutionId</code>），格式为<code>{ImageName}_{ExecutionId}</code>。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
+         */
+        @NameInMap("ImageName")
+        public String imageName;
+
+        /**
+         * <p>目标镜像标签。</p>
+         */
+        @NameInMap("ImageTags")
+        public java.util.List<CreateImagePipelineRequestImageOptionsImageTags> imageTags;
+
+        public static CreateImagePipelineRequestImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateImagePipelineRequestImageOptions self = new CreateImagePipelineRequestImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateImagePipelineRequestImageOptions setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateImagePipelineRequestImageOptions setImageFamily(String imageFamily) {
+            this.imageFamily = imageFamily;
+            return this;
+        }
+        public String getImageFamily() {
+            return this.imageFamily;
+        }
+
+        public CreateImagePipelineRequestImageOptions setImageFeatures(CreateImagePipelineRequestImageOptionsImageFeatures imageFeatures) {
+            this.imageFeatures = imageFeatures;
+            return this;
+        }
+        public CreateImagePipelineRequestImageOptionsImageFeatures getImageFeatures() {
+            return this.imageFeatures;
+        }
+
+        public CreateImagePipelineRequestImageOptions setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public CreateImagePipelineRequestImageOptions setImageTags(java.util.List<CreateImagePipelineRequestImageOptionsImageTags> imageTags) {
+            this.imageTags = imageTags;
+            return this;
+        }
+        public java.util.List<CreateImagePipelineRequestImageOptionsImageTags> getImageTags() {
+            return this.imageTags;
         }
 
     }
@@ -665,7 +865,7 @@ public class CreateImagePipelineRequest extends TeaModel {
          * <li>BIOS: BIOS mode</li>
          * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
          * </ul>
-         * <p>Default value: BIOS. If you set Architecture to <code>arm64</code>, set the value to UEFI.</p>
+         * <p>Default value: BIOS. If you set Architecture to <code>arm64</code>, set this parameter to UEFI.</p>
          * <blockquote>
          * <p> Before you specify this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</p>
          * </blockquote>
@@ -761,12 +961,9 @@ public class CreateImagePipelineRequest extends TeaModel {
         public String platform;
 
         /**
-         * <p>Specifies whether to retain the imported original image. After the import is complete, the system automatically deletes the imported original image to prevent unnecessary storage fees. You can also choose to retain the imported original image. Valid values:</p>
-         * <ul>
-         * <li>true: retains the imported original image. After the import is complete, the imported original image is not deleted even if the image building task is canceled or fails.</li>
-         * <li>false: does not retain the imported original image.</li>
-         * </ul>
-         * <p>Default value: false.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>

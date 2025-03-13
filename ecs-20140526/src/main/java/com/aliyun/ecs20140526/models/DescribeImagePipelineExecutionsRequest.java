@@ -23,7 +23,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String imagePipelineId;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
      * <p>Default value: 50.</p>
      * 
      * <strong>example:</strong>

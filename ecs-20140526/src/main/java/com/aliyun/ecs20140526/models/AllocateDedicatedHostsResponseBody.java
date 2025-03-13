@@ -10,6 +10,9 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     @NameInMap("DedicatedHostIdSets")
     public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets;
 
+    @NameInMap("OrderId")
+    public String orderId;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -30,6 +33,14 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     }
     public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets getDedicatedHostIdSets() {
         return this.dedicatedHostIdSets;
+    }
+
+    public AllocateDedicatedHostsResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public AllocateDedicatedHostsResponseBody setRequestId(String requestId) {

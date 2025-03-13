@@ -493,6 +493,19 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface extends TeaModel {
         /**
+         * <p>Indicates whether to retain the ENI when the associated instance is released. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("DeleteOnRelease")
+        public Boolean deleteOnRelease;
+
+        /**
          * <p>The description of the secondary ENI.</p>
          * 
          * <strong>example:</strong>
@@ -574,6 +587,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface self = new DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setDeleteOnRelease(Boolean deleteOnRelease) {
+            this.deleteOnRelease = deleteOnRelease;
+            return this;
+        }
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setDescription(String description) {

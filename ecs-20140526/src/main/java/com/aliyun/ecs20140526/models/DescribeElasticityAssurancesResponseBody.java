@@ -305,6 +305,111 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule extends TeaModel {
+        /**
+         * <p>The time when the time-segmented assurance ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("EndHour")
+        public Integer endHour;
+
+        /**
+         * <p>The type of the recurrence rule. Valid values:</p>
+         * <ul>
+         * <li>Daily</li>
+         * <li>Weekly</li>
+         * <li>Monthly</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
+         */
+        @NameInMap("RecurrenceType")
+        public String recurrenceType;
+
+        /**
+         * <p>The recurrence value of the time-segmented assurance. Valid values:</p>
+         * <ul>
+         * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</li>
+         * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</li>
+         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can set RecurrenceValue to two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("RecurrenceValue")
+        public String recurrenceValue;
+
+        /**
+         * <p>The time when the time-segmented assurance takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("StartHour")
+        public Integer startHour;
+
+        public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule setEndHour(Integer endHour) {
+            this.endHour = endHour;
+            return this;
+        }
+        public Integer getEndHour() {
+            return this.endHour;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule setRecurrenceType(String recurrenceType) {
+            this.recurrenceType = recurrenceType;
+            return this;
+        }
+        public String getRecurrenceType() {
+            return this.recurrenceType;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule setRecurrenceValue(String recurrenceValue) {
+            this.recurrenceValue = recurrenceValue;
+            return this;
+        }
+        public String getRecurrenceValue() {
+            return this.recurrenceValue;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule setStartHour(Integer startHour) {
+            this.startHour = startHour;
+            return this;
+        }
+        public Integer getStartHour() {
+            return this.startHour;
+        }
+
+    }
+
+    public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules extends TeaModel {
+        @NameInMap("RecurrenceRule")
+        public java.util.List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule> recurrenceRule;
+
+        public static DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules self = new DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules setRecurrenceRule(java.util.List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule> recurrenceRule) {
+            this.recurrenceRule = recurrenceRule;
+            return this;
+        }
+        public java.util.List<DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRulesRecurrenceRule> getRecurrenceRule() {
+            return this.recurrenceRule;
+        }
+
+    }
+
     public static class DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -423,6 +528,19 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         public String latestStartTime;
 
         /**
+         * <p>The type of the elasticity assurance. Valid values:</p>
+         * <ul>
+         * <li>ElasticityAssurance: the general-purpose elasticity assurance.</li>
+         * <li>TimeDivisionElasticityAssurance: the time-segmented assurance of the elasticity assurance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ElasticityAssurance</p>
+         */
+        @NameInMap("PackageType")
+        public String packageType;
+
+        /**
          * <p>The ID of the elasticity assurance.</p>
          * 
          * <strong>example:</strong>
@@ -452,6 +570,12 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
          */
         @NameInMap("PrivatePoolOptionsName")
         public String privatePoolOptionsName;
+
+        /**
+         * <p>The recurrence rules of the time-segmented assurances.</p>
+         */
+        @NameInMap("RecurrenceRules")
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules recurrenceRules;
 
         /**
          * <p>The region ID of the elasticity assurance.</p>
@@ -587,6 +711,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             return this.latestStartTime;
         }
 
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setPackageType(String packageType) {
+            this.packageType = packageType;
+            return this;
+        }
+        public String getPackageType() {
+            return this.packageType;
+        }
+
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setPrivatePoolOptionsId(String privatePoolOptionsId) {
             this.privatePoolOptionsId = privatePoolOptionsId;
             return this;
@@ -609,6 +741,14 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
         public String getPrivatePoolOptionsName() {
             return this.privatePoolOptionsName;
+        }
+
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setRecurrenceRules(DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules recurrenceRules) {
+            this.recurrenceRules = recurrenceRules;
+            return this;
+        }
+        public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItemRecurrenceRules getRecurrenceRules() {
+            return this.recurrenceRules;
         }
 
         public DescribeElasticityAssurancesResponseBodyElasticityAssuranceSetElasticityAssuranceItem setRegionId(String regionId) {

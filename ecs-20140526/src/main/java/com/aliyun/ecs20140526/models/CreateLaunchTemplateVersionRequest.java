@@ -1477,6 +1477,23 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
 
     public static class CreateLaunchTemplateVersionRequestNetworkInterface extends TeaModel {
         /**
+         * <p>Specifies whether to release ENI N when the instance is released. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: true.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for secondary ENIs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("DeleteOnRelease")
+        public Boolean deleteOnRelease;
+
+        /**
          * <p>The description of the secondary ENI. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
          * 
          * <strong>example:</strong>
@@ -1544,7 +1561,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which to assign the secondary ENI. The security group and the secondary ENI must belong to the same VPC. The valid values of N in <code>SecurityGroupIds.N</code> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
+         * <p>The IDs of the security groups to which to assign the secondary ENI. The security groups and the secondary ENI must reside in the same VPC. The valid values of N in <code>SecurityGroupIds.N</code> vary based on the maximum number of security groups to which a secondary ENI can belong. For more information, see the &quot;Security group limits&quot; section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>. The value of N in <code>NetworkInterface.N</code> cannot be greater than 1.</p>
          * <blockquote>
          * <p> You cannot specify both <code>NetworkInterface.N.SecurityGroupId</code> and <code>NetworkInterface.N.SecurityGroupIds.N</code>.</p>
          * </blockquote>
@@ -1567,6 +1584,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public static CreateLaunchTemplateVersionRequestNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateVersionRequestNetworkInterface self = new CreateLaunchTemplateVersionRequestNetworkInterface();
             return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateVersionRequestNetworkInterface setDeleteOnRelease(Boolean deleteOnRelease) {
+            this.deleteOnRelease = deleteOnRelease;
+            return this;
+        }
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
         }
 
         public CreateLaunchTemplateVersionRequestNetworkInterface setDescription(String description) {
