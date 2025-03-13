@@ -83,14 +83,23 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
     /**
      * <p>Specifies whether to enable GPU acceleration.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false (true)</li>
+     * <li>true: enables GPU acceleration.</li>
+     * <li>false (default): disables GPU acceleration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +121,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     /**
      * <p>The name of the instance group.</p>
      * <blockquote>
-     * <p>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</p>
+     * <p> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -137,12 +146,22 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("InstanceGroupSpec")
     public String instanceGroupSpec;
 
+    /**
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Ipv6Bandwidth")
     public Integer ipv6Bandwidth;
 
     /**
-     * <p>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually call the operation to bind key pairs to individual cloud phone instances.</p>
-     * <p>Take note that binding key pairs to cloud phone instances is currently not supported during instance group resizing.</p>
+     * <p>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually bind key pairs to individual cloud phone instances.</p>
+     * <blockquote>
+     * <p> Binding key pairs to cloud phone instances is currently not supported during instance group resizing.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>kp-7o9xywwfutc1l****</p>
@@ -205,6 +224,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <p>The tags</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateAndroidInstanceGroupRequestTag> tag;
 
@@ -387,9 +409,21 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     }
 
     public static class CreateAndroidInstanceGroupRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("Value")
         public String value;
 
