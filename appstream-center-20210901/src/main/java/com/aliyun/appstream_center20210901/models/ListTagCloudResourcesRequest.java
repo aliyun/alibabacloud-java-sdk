@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagCloudResourcesRequest extends TeaModel {
     /**
+     * <p>The number of entries per page. Maximum value: 1000. Default value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      * 
@@ -15,16 +17,29 @@ public class ListTagCloudResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>ptnJAAAAAAAxNzE5OTEwNQ==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The resource IDs. You can specify up to 50 resource IDs. You do not need to specify this parameter if you set ResourceType to AliUid.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
+     * <p>The type of the cloud resource.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>AppId: app ID.</li>
+     * <li>WyId: Alibaba Cloud Workspace user ID.</li>
+     * <li>AppInstanceGroupId: delivery group ID.</li>
+     * <li>AliUid: tenant ID.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +49,14 @@ public class ListTagCloudResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tag type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>All (default): all tags.</li>
+     * <li>Custom: custom tag.</li>
+     * <li>System: system tag.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Custom</p>
      * 
