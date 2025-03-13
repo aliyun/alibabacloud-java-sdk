@@ -14,7 +14,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The details of the application.</p>
+     * <p>The application details.</p>
      */
     @NameInMap("Data")
     public GetRumAppInfoResponseBodyData data;
@@ -261,6 +261,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         @NameInMap("PropagatorTypes")
         public java.util.List<String> propagatorTypes;
 
+        /**
+         * <p>The sampling rate of a trace. Valid values: (0, 100].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SamplingRate")
         public Integer samplingRate;
 

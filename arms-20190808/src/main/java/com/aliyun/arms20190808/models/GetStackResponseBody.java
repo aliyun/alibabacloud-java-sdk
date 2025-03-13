@@ -93,6 +93,8 @@ public class GetStackResponseBody extends TeaModel {
         public String api;
 
         /**
+         * <p>Number of repeated method calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

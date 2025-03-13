@@ -14,7 +14,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The result of the operation.</p>
+     * <p>The result returned.</p>
      */
     @NameInMap("Data")
     public ListAddonReleasesResponseBodyData data;
@@ -226,6 +226,12 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         @NameInMap("Conditions")
         public java.util.List<ListAddonReleasesResponseBodyDataReleasesConditions> conditions;
 
+        /**
+         * <p>The configuration information of the add-on release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;port&quot;:&quot;9379&quot;}</p>
+         */
         @NameInMap("Config")
         public String config;
 
@@ -292,9 +298,21 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>Indicates whether the component is fully managed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Managed")
         public Boolean managed;
 
+        /**
+         * <p>The latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.4</p>
+         */
         @NameInMap("NextVersion")
         public String nextVersion;
 

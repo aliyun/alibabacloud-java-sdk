@@ -13,28 +13,28 @@ public class DoInsightsActionRequest extends TeaModel {
      * 
      * <pre><code>{
      *     &quot;regionId&quot;: string,  # The region ID.
-     *     &quot;startTime&quot;: string, # The beginning of the time range to query, in the yyyy-MM-dd HH:mm:ss format.
-     *     &quot;endTime&quot;: string, # The end of the time range to query, in the yyyy-MM-dd HH:mm:ss format.
+     *     &quot;startTime&quot;: string, #. The start time. Format: yyyy-MM-dd HH:mm:ss.
+     *     &quot;endTime&quot;: string, # The end time. Format: yyyy-MM-dd HH:mm:ss.
      *     &quot;edgeFilter&quot;: { # The edge filter condition.
-     *         &quot;includeTypes&quot;: [EdgeType], # The edge types to be included.
-     *         &quot;excludeTypes&quot;: [EdgeType], # The edge types to be excluded.
+     *         &quot;includeTypes&quot;: [enum], # The edge types to be included.
+     *         &quot;excludeTypes&quot;: [enum], # The edge types to be excluded.
      *         &quot;fromNodeFilter&quot;: { # The source node filter condition.
-     *             &quot;includeEntityTypes&quot;: [EntityType] # The entity types to be included.
-     *             &quot;excludeEntityTypes&quot;: [EntityType] # The entity types to be excluded.
+     *             &quot;includeEntityTypes&quot;: [enum] # The entity types to be included.
+     *             &quot;excludeEntityTypes&quot;: [enum] #The entity types to be excluded.
      *         },
-     *         &quot;toNodeFilter&quot;: {  # The destination node filter condition.
-     *             &quot;includeEntityTypes&quot;: [EntityType] # The entity types to be included.
-     *             &quot;excludeEntityTypes&quot;: [EntityType] # The entity types to be excluded.
+     *         &quot;toNodeFilter&quot;: {  #The target node filter condition.
+     *             &quot;includeEntityTypes&quot;: [enum] # The entity types to be included.
+     *             &quot;excludeEntityTypes&quot;: [enum] #The entity types to be excluded.
      *         }
      *     },
-     *     &quot;includeIsolatedNodes&quot;: bool, # Specifies whether to include isolated nodes.
+     *     &quot;includeIsolatedNodes&quot;: boolean, #Specifies whether to include isolated nodes.
      *     &quot;isolatedNodeFilter&quot;: { # The isolated node filter condition.
-     *         &quot;includeEntityTypes&quot;: [EntityType] # The entity types to be included.
-     *         &quot;excludeEntityTypes&quot;: [EntityType] # The entity types to be excluded.
+     *         &quot;includeEntityTypes&quot;: [enum] # The entity types to be included.
+     *         &quot;excludeEntityTypes&quot;: [enum] #The entity types to be excluded.
      *      },
-     *     &quot;queryMetrics&quot;: boolean, # Specifies whether to query related red metrics during the metric query.
-     *     &quot;timeoutSecs&quot;: int, # The timeout duration for querying metrics.
-     *     &quot;redOption&quot;: { # A metric query option.
+     *     &quot;queryMetrics&quot;: boolean, # Specifies whether to query RED metrics along with metrics.
+     *     &quot;timeoutSecs&quot;: int, # The timeout period of metric query.
+     *     &quot;redOption&quot;: { # The metric query option.
      *         &quot;skipRt&quot;: boolean,  # Specifies whether to skip querying the response time.
      *         &quot;skipCount&quot;: boolean, # Specifies whether to skip querying the number of requests.
      *         &quot;skipError&quot;: boolean # Specifies whether to skip querying the number of errors.
@@ -48,13 +48,13 @@ public class DoInsightsActionRequest extends TeaModel {
      * 
      * <pre><code>{
      *     &quot;regionId&quot;: string,  # The region ID.
-     *     &quot;startTime&quot;: string, # The beginning of the time range to query, in the yyyy-MM-dd HH:mm:ss format.
-     *     &quot;endTime&quot;: string,   # The end of the time range to query, in the yyyy-MM-dd HH:mm:ss format.
-     *     &quot;edgeIds&quot;: [string]  # The IDs of the edges to query.
-     *     &quot;nodeIds&quot;: [string]  # The IDs of the nodes to query.
-     *     &quot;redOption&quot;: { # A metric query option.
+     *     &quot;startTime&quot;: string, #. The start time. Format: yyyy-MM-dd HH:mm:ss.
+     *     &quot;endTime&quot;: string,   # The end time. Format: yyyy-MM-dd HH:mm:ss.
+     *     &quot;edgeIds&quot;: [string]  # The edge ID to be queried.
+     *     &quot;nodeIds&quot;: [string]  # The node ID to be queried.
+     *     &quot;redOption&quot;: { # The metric query option.
      *         &quot;skipRt&quot;: boolean,  # Specifies whether to skip querying the response time.
-     *         &quot;skipCount&quot;: boolean, # Specifies whether to skip querying the number of requests.
+     *         &quot;skipRt&quot;: boolean,  # Specifies whether to skip querying the number of requests.
      *         &quot;skipError&quot;: boolean # Specifies whether to skip querying the number of errors.
      *     }
      * }
@@ -117,12 +117,21 @@ public class DoInsightsActionRequest extends TeaModel {
     public String data;
 
     /**
-     * <p>The module type. Valid values:</p>
+     * <p>The module type.</p>
      * <ul>
-     * <li>QueryTopo: queries the topology.</li>
-     * <li>QueryTopoRed: queries the red topology metrics, such as the number of requests, response time, and number of errors.</li>
+     * <li><p>QueryTopo</p>
+     * <p>Queries topologies. A topology consists of edges and nodes, where each edge has a corresponding type and each node corresponds to an entity, which also has its type. By setting filter parameters such as the type of edges, the type of nodes, and the query time range, you can filter out the required topology data.</p>
+     * </li>
+     * <li><p>QueryTopoRed</p>
+     * <p>Queries topology RED metrics (number of requests, duration, number of errors). When querying a topology with the metric query option enabled, it might not be possible to retrieve all metric data due to the topology being too large. This module allows users to actively query for metric data of specified nodes and edges.</p>
+     * </li>
      * </ul>
-     * <p>Notice: The preceding features are still in canary release and are disabled by default. If you need to enable these features, submit a ticket in the Application Real-Time Monitoring Service (ARMS) console.</p>
+     * <p>Note: The aforementioned modules are currently in a canary release phase and are not enabled by default. If you need to enable them, please contact the ARMS on-duty number.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>QueryTopoRed</li>
+     * <li>QueryTopo</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8039,7 +8039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logon-free URL of a Browser Monitoring application.</p>
+     * <p>Queries the share URL of an application monitored by Browser Monitoring.</p>
      * 
      * @param request GetRetcodeShareUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8076,7 +8076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the logon-free URL of a Browser Monitoring application.</p>
+     * <p>Queries the share URL of an application monitored by Browser Monitoring.</p>
      * 
      * @param request GetRetcodeShareUrlRequest
      * @return GetRetcodeShareUrlResponse
@@ -8091,7 +8091,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a Real User Monitoring (RUM) application.</p>
+     * <p>Obtains the information about a single application in Browser Monitoring.</p>
      * 
      * @param request GetRumAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8143,7 +8143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a Real User Monitoring (RUM) application.</p>
+     * <p>Obtains the information about a single application in Browser Monitoring.</p>
      * 
      * @param request GetRumAppInfoRequest
      * @return GetRumAppInfoResponse
@@ -9567,6 +9567,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VSwitchId", request.vSwitchId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vcExtraInfo)) {
+            query.put("VcExtraInfo", request.vcExtraInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
             query.put("VpcId", request.vpcId);
         }
@@ -10020,7 +10024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Cms安装信息</p>
+     * <p>Queries the collection of cloud services.</p>
      * 
      * @deprecated OpenAPI ListCmsInstances is deprecated
      * 
@@ -10069,7 +10073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Cms安装信息</p>
+     * <p>Queries the collection of cloud services.</p>
      * 
      * @deprecated OpenAPI ListCmsInstances is deprecated
      * 
@@ -12086,124 +12090,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTraceAppsResponse listTraceApps(ListTraceAppsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTraceAppsWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Obtains the recording rule of a cluster monitored by Prometheus Service.</p>
-     * 
-     * @param request ManageGetRecordingRuleRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ManageGetRecordingRuleResponse
-     */
-    public ManageGetRecordingRuleResponse manageGetRecordingRuleWithOptions(ManageGetRecordingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryUserId)) {
-            query.put("QueryUserId", request.queryUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ManageGetRecordingRule"),
-            new TeaPair("version", "2019-08-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ManageGetRecordingRuleResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ManageGetRecordingRuleResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Obtains the recording rule of a cluster monitored by Prometheus Service.</p>
-     * 
-     * @param request ManageGetRecordingRuleRequest
-     * @return ManageGetRecordingRuleResponse
-     */
-    public ManageGetRecordingRuleResponse manageGetRecordingRule(ManageGetRecordingRuleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.manageGetRecordingRuleWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Edits the recording rule of a cluster monitored by Prometheus Service.</p>
-     * 
-     * @param request ManageRecordingRuleRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ManageRecordingRuleResponse
-     */
-    public ManageRecordingRuleResponse manageRecordingRuleWithOptions(ManageRecordingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
-            query.put("ClusterId", request.clusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryUserId)) {
-            query.put("QueryUserId", request.queryUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ruleYaml)) {
-            query.put("RuleYaml", request.ruleYaml);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ManageRecordingRule"),
-            new TeaPair("version", "2019-08-08"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ManageRecordingRuleResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ManageRecordingRuleResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Edits the recording rule of a cluster monitored by Prometheus Service.</p>
-     * 
-     * @param request ManageRecordingRuleRequest
-     * @return ManageRecordingRuleResponse
-     */
-    public ManageRecordingRuleResponse manageRecordingRule(ManageRecordingRuleRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.manageRecordingRuleWithOptions(request, runtime);
     }
 
     /**
