@@ -14,7 +14,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetPrometheusInstanceResponseBodyData data;
@@ -280,6 +280,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The time when the billing method was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-26T06:05:01Z</p>
          */
         @NameInMap("PaymentTypeUpdateTime")
         public String paymentTypeUpdateTime;
@@ -393,7 +396,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public Integer storageDuration;
 
         /**
-         * <p>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</p>
+         * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73\<em>\</em>\<em>&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5\<em>\</em>\<em>\</em>&quot;,&quot;sourceName&quot;:&quot;agent-321-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899\<em>\</em>\<em>&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789\</em>\<em>\</em>&quot;}]</p>
@@ -431,6 +434,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>V1</p>
+         */
         @NameInMap("Version")
         public String version;
 

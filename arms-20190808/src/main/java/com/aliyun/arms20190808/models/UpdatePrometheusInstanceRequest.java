@@ -16,6 +16,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     /**
      * <p>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</p>
      * 
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -24,6 +27,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
 
     /**
      * <p>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -70,6 +76,9 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POSTPAY</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;
@@ -85,7 +94,7 @@ public class UpdatePrometheusInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Prometheus resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxyexli2****</p>

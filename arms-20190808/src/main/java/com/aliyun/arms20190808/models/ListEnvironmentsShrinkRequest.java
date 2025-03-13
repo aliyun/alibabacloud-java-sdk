@@ -79,7 +79,10 @@ public class ListEnvironmentsShrinkRequest extends TeaModel {
     public String feePackage;
 
     /**
-     * <p>The region IDs.</p>
+     * <p>The region IDs to be queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing,cn-hangzhou</p>
      */
     @NameInMap("FilterRegionIds")
     public String filterRegionIds;

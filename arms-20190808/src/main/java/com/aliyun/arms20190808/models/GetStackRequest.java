@@ -43,6 +43,8 @@ public class GetStackRequest extends TeaModel {
     public String rpcID;
 
     /**
+     * <p>Span ID. You can get it from the <strong>Trace Explorer</strong> page of the ARMS console.</p>
+     * 
      * <strong>example:</strong>
      * <p>88c32dfa4b******</p>
      */

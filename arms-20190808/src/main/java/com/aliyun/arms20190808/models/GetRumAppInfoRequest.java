@@ -33,6 +33,12 @@ public class GetRumAppInfoRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The workspace. Specify this parameter value only in Cloud Monitor 2.0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Workspace")
     public String workspace;
 

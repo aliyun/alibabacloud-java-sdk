@@ -98,6 +98,9 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    @NameInMap("VcExtraInfo")
+    public String vcExtraInfo;
+
     /**
      * <p>The virtual private cloud (VPC) where the cluster resides.</p>
      * <p>This parameter is required.</p>
@@ -183,6 +186,14 @@ public class InstallManagedPrometheusRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public InstallManagedPrometheusRequest setVcExtraInfo(String vcExtraInfo) {
+        this.vcExtraInfo = vcExtraInfo;
+        return this;
+    }
+    public String getVcExtraInfo() {
+        return this.vcExtraInfo;
     }
 
     public InstallManagedPrometheusRequest setVpcId(String vpcId) {

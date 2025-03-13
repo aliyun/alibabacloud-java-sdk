@@ -1,3 +1,10 @@
+2025-03-13 Version: 11.0.0
+- Delete API ManageGetRecordingRule.
+- Delete API ManageRecordingRule.
+- Update API DescribeEnvironmentFeature: update response param.
+- Update API InstallManagedPrometheus: add param VcExtraInfo.
+
+
 2025-02-21 Version: 10.0.2
 - Update API CreateOrUpdateAlertRule: add param CheckCycle.
 - Update API CreateRumApp: add param Language.

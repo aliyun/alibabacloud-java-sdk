@@ -23,6 +23,12 @@ public class ListCmsInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The type of the cloud service integration. Valid values:</p>
+     * <ul>
+     * <li>direct: self-monitoring</li>
+     * <li>cms: Hybrid Cloud Monitoring</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>direct</p>
      */

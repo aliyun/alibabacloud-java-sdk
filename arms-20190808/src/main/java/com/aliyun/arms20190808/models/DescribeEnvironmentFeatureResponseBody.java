@@ -14,7 +14,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The struct returned.</p>
      */
     @NameInMap("Data")
     public DescribeEnvironmentFeatureResponseBodyData data;
@@ -500,6 +500,9 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @NameInMap("FeatureStatus")
         public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus featureStatus;
 
+        @NameInMap("config")
+        public String config;
+
         public static DescribeEnvironmentFeatureResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeEnvironmentFeatureResponseBodyData self = new DescribeEnvironmentFeatureResponseBodyData();
             return TeaModel.build(map, self);
@@ -519,6 +522,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
         public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus getFeatureStatus() {
             return this.featureStatus;
+        }
+
+        public DescribeEnvironmentFeatureResponseBodyData setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
     }
