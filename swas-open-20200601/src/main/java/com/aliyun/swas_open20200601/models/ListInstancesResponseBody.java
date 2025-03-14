@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the simple application servers.</p>
+     * <p>Details about the queried simple application servers.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
@@ -200,10 +200,10 @@ public class ListInstancesResponseBody extends TeaModel {
         public java.util.List<ListInstancesResponseBodyInstancesDisksDiskTags> diskTags;
 
         /**
-         * <p>The disk type. Valid values:</p>
+         * <p>The type of the disk. Valid values:</p>
          * <ul>
-         * <li>system: system disk</li>
-         * <li>data: data disk</li>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -240,7 +240,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The disk size. Unit: GiB.</p>
+         * <p>The size of the disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -491,9 +491,61 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class ListInstancesResponseBodyInstancesNetworkAttributes extends TeaModel {
+        @NameInMap("PeakBandwidth")
+        public Integer peakBandwidth;
+
+        @NameInMap("PrivateIpAddress")
+        public String privateIpAddress;
+
+        @NameInMap("PublicIpAddress")
+        public String publicIpAddress;
+
+        @NameInMap("PublicIpDdosStatus")
+        public String publicIpDdosStatus;
+
+        public static ListInstancesResponseBodyInstancesNetworkAttributes build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesNetworkAttributes self = new ListInstancesResponseBodyInstancesNetworkAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesNetworkAttributes setPeakBandwidth(Integer peakBandwidth) {
+            this.peakBandwidth = peakBandwidth;
+            return this;
+        }
+        public Integer getPeakBandwidth() {
+            return this.peakBandwidth;
+        }
+
+        public ListInstancesResponseBodyInstancesNetworkAttributes setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public ListInstancesResponseBodyInstancesNetworkAttributes setPublicIpAddress(String publicIpAddress) {
+            this.publicIpAddress = publicIpAddress;
+            return this;
+        }
+        public String getPublicIpAddress() {
+            return this.publicIpAddress;
+        }
+
+        public ListInstancesResponseBodyInstancesNetworkAttributes setPublicIpDdosStatus(String publicIpDdosStatus) {
+            this.publicIpDdosStatus = publicIpDdosStatus;
+            return this;
+        }
+        public String getPublicIpDdosStatus() {
+            return this.publicIpDdosStatus;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesResourceSpec extends TeaModel {
         /**
-         * <p>The bandwidth of the server. Unit: Mbps.</p>
+         * <p>The bandwidth. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -525,7 +577,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String diskCategory;
 
         /**
-         * <p>The disk size. Unit: GiB.</p>
+         * <p>The size of the disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -547,7 +599,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Double flow;
 
         /**
-         * <p>The memory size of the server. Unit: GiB.</p>
+         * <p>The size of the memory. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -732,7 +784,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String disableReason;
 
         /**
-         * <p>The disks that are attached to the simple application server.</p>
+         * <p>The information about the disks on the simple application server.</p>
          */
         @NameInMap("Disks")
         public java.util.List<ListInstancesResponseBodyInstancesDisks> disks;
@@ -788,6 +840,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
+        @NameInMap("NetworkAttributes")
+        public java.util.List<ListInstancesResponseBodyInstancesNetworkAttributes> networkAttributes;
+
         /**
          * <p>The ID of the instance plan.</p>
          * 
@@ -825,7 +880,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The specifications of the resource.</p>
+         * <p>The specifications of the resources on the simple application server.</p>
          */
         @NameInMap("ResourceSpec")
         public ListInstancesResponseBodyInstancesResourceSpec resourceSpec;
@@ -979,6 +1034,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getInstanceName() {
             return this.instanceName;
+        }
+
+        public ListInstancesResponseBodyInstances setNetworkAttributes(java.util.List<ListInstancesResponseBodyInstancesNetworkAttributes> networkAttributes) {
+            this.networkAttributes = networkAttributes;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyInstancesNetworkAttributes> getNetworkAttributes() {
+            return this.networkAttributes;
         }
 
         public ListInstancesResponseBodyInstances setPlanId(String planId) {
