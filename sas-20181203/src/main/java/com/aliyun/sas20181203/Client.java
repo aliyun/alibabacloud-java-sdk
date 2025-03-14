@@ -2757,12 +2757,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a defense rule against brute-force attacks.</p>
      * 
-     * @param request CreateAntiBruteForceRuleRequest
+     * @param tmpReq CreateAntiBruteForceRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAntiBruteForceRuleResponse
      */
-    public CreateAntiBruteForceRuleResponse createAntiBruteForceRuleWithOptions(CreateAntiBruteForceRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateAntiBruteForceRuleResponse createAntiBruteForceRuleWithOptions(CreateAntiBruteForceRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAntiBruteForceRuleShrinkRequest request = new CreateAntiBruteForceRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.protocolType)) {
+            request.protocolTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.protocolType, "ProtocolType", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRule)) {
             query.put("DefaultRule", request.defaultRule);
@@ -2778,6 +2784,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocolTypeShrink)) {
+            query.put("ProtocolType", request.protocolTypeShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
@@ -42108,12 +42118,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies a defense rule against brute-force attacks.</p>
      * 
-     * @param request ModifyAntiBruteForceRuleRequest
+     * @param tmpReq ModifyAntiBruteForceRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAntiBruteForceRuleResponse
      */
-    public ModifyAntiBruteForceRuleResponse modifyAntiBruteForceRuleWithOptions(ModifyAntiBruteForceRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyAntiBruteForceRuleResponse modifyAntiBruteForceRuleWithOptions(ModifyAntiBruteForceRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyAntiBruteForceRuleShrinkRequest request = new ModifyAntiBruteForceRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.protocolType)) {
+            request.protocolTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.protocolType, "ProtocolType", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRule)) {
             query.put("DefaultRule", request.defaultRule);
@@ -42133,6 +42149,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocolTypeShrink)) {
+            query.put("ProtocolType", request.protocolTypeShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {

@@ -3,7 +3,7 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyAntiBruteForceRuleRequest extends TeaModel {
+public class ModifyAntiBruteForceRuleShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to set the defense rule as the default rule. Valid values:</p>
      * <ul>
@@ -77,7 +77,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     public String name;
 
     @NameInMap("ProtocolType")
-    public ModifyAntiBruteForceRuleRequestProtocolType protocolType;
+    public String protocolTypeShrink;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
@@ -116,12 +116,12 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 
-    public static ModifyAntiBruteForceRuleRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyAntiBruteForceRuleRequest self = new ModifyAntiBruteForceRuleRequest();
+    public static ModifyAntiBruteForceRuleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyAntiBruteForceRuleShrinkRequest self = new ModifyAntiBruteForceRuleShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAntiBruteForceRuleRequest setDefaultRule(Boolean defaultRule) {
+    public ModifyAntiBruteForceRuleShrinkRequest setDefaultRule(Boolean defaultRule) {
         this.defaultRule = defaultRule;
         return this;
     }
@@ -129,7 +129,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.defaultRule;
     }
 
-    public ModifyAntiBruteForceRuleRequest setFailCount(Integer failCount) {
+    public ModifyAntiBruteForceRuleShrinkRequest setFailCount(Integer failCount) {
         this.failCount = failCount;
         return this;
     }
@@ -137,7 +137,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.failCount;
     }
 
-    public ModifyAntiBruteForceRuleRequest setForbiddenTime(Integer forbiddenTime) {
+    public ModifyAntiBruteForceRuleShrinkRequest setForbiddenTime(Integer forbiddenTime) {
         this.forbiddenTime = forbiddenTime;
         return this;
     }
@@ -145,7 +145,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.forbiddenTime;
     }
 
-    public ModifyAntiBruteForceRuleRequest setId(Long id) {
+    public ModifyAntiBruteForceRuleShrinkRequest setId(Long id) {
         this.id = id;
         return this;
     }
@@ -153,7 +153,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.id;
     }
 
-    public ModifyAntiBruteForceRuleRequest setName(String name) {
+    public ModifyAntiBruteForceRuleShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -161,15 +161,15 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.name;
     }
 
-    public ModifyAntiBruteForceRuleRequest setProtocolType(ModifyAntiBruteForceRuleRequestProtocolType protocolType) {
-        this.protocolType = protocolType;
+    public ModifyAntiBruteForceRuleShrinkRequest setProtocolTypeShrink(String protocolTypeShrink) {
+        this.protocolTypeShrink = protocolTypeShrink;
         return this;
     }
-    public ModifyAntiBruteForceRuleRequestProtocolType getProtocolType() {
-        return this.protocolType;
+    public String getProtocolTypeShrink() {
+        return this.protocolTypeShrink;
     }
 
-    public ModifyAntiBruteForceRuleRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyAntiBruteForceRuleShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -177,7 +177,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ModifyAntiBruteForceRuleRequest setSourceIp(String sourceIp) {
+    public ModifyAntiBruteForceRuleShrinkRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
     }
@@ -185,7 +185,7 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.sourceIp;
     }
 
-    public ModifyAntiBruteForceRuleRequest setSpan(Integer span) {
+    public ModifyAntiBruteForceRuleShrinkRequest setSpan(Integer span) {
         this.span = span;
         return this;
     }
@@ -193,53 +193,12 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
         return this.span;
     }
 
-    public ModifyAntiBruteForceRuleRequest setUuidList(java.util.List<String> uuidList) {
+    public ModifyAntiBruteForceRuleShrinkRequest setUuidList(java.util.List<String> uuidList) {
         this.uuidList = uuidList;
         return this;
     }
     public java.util.List<String> getUuidList() {
         return this.uuidList;
-    }
-
-    public static class ModifyAntiBruteForceRuleRequestProtocolType extends TeaModel {
-        @NameInMap("Rdp")
-        public String rdp;
-
-        @NameInMap("SqlServer")
-        public String sqlServer;
-
-        @NameInMap("Ssh")
-        public String ssh;
-
-        public static ModifyAntiBruteForceRuleRequestProtocolType build(java.util.Map<String, ?> map) throws Exception {
-            ModifyAntiBruteForceRuleRequestProtocolType self = new ModifyAntiBruteForceRuleRequestProtocolType();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyAntiBruteForceRuleRequestProtocolType setRdp(String rdp) {
-            this.rdp = rdp;
-            return this;
-        }
-        public String getRdp() {
-            return this.rdp;
-        }
-
-        public ModifyAntiBruteForceRuleRequestProtocolType setSqlServer(String sqlServer) {
-            this.sqlServer = sqlServer;
-            return this;
-        }
-        public String getSqlServer() {
-            return this.sqlServer;
-        }
-
-        public ModifyAntiBruteForceRuleRequestProtocolType setSsh(String ssh) {
-            this.ssh = ssh;
-            return this;
-        }
-        public String getSsh() {
-            return this.ssh;
-        }
-
     }
 
 }

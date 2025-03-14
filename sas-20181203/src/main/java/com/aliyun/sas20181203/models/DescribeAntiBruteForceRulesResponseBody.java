@@ -130,6 +130,47 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAntiBruteForceRulesResponseBodyRulesProtocolType extends TeaModel {
+        @NameInMap("Rdp")
+        public String rdp;
+
+        @NameInMap("SqlServer")
+        public String sqlServer;
+
+        @NameInMap("Ssh")
+        public String ssh;
+
+        public static DescribeAntiBruteForceRulesResponseBodyRulesProtocolType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAntiBruteForceRulesResponseBodyRulesProtocolType self = new DescribeAntiBruteForceRulesResponseBodyRulesProtocolType();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType setRdp(String rdp) {
+            this.rdp = rdp;
+            return this;
+        }
+        public String getRdp() {
+            return this.rdp;
+        }
+
+        public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType setSqlServer(String sqlServer) {
+            this.sqlServer = sqlServer;
+            return this;
+        }
+        public String getSqlServer() {
+            return this.sqlServer;
+        }
+
+        public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType setSsh(String ssh) {
+            this.ssh = ssh;
+            return this;
+        }
+        public String getSsh() {
+            return this.ssh;
+        }
+
+    }
+
     public static class DescribeAntiBruteForceRulesResponseBodyRules extends TeaModel {
         /**
          * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
@@ -209,6 +250,9 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("ProtocolType")
+        public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType protocolType;
 
         /**
          * <p>The period of time during which logon failures from an account are measured. Unit: minutes. If <strong>Span</strong> is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.</p>
@@ -292,6 +336,14 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeAntiBruteForceRulesResponseBodyRules setProtocolType(DescribeAntiBruteForceRulesResponseBodyRulesProtocolType protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType getProtocolType() {
+            return this.protocolType;
         }
 
         public DescribeAntiBruteForceRulesResponseBodyRules setSpan(Integer span) {

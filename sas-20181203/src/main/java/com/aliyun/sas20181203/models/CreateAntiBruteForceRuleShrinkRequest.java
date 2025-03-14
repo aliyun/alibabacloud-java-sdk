@@ -3,7 +3,7 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAntiBruteForceRuleRequest extends TeaModel {
+public class CreateAntiBruteForceRuleShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to set the defense rule as the default rule. Valid values:</p>
      * <ul>
@@ -63,7 +63,7 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
     public String name;
 
     @NameInMap("ProtocolType")
-    public CreateAntiBruteForceRuleRequestProtocolType protocolType;
+    public String protocolTypeShrink;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
@@ -104,12 +104,12 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 
-    public static CreateAntiBruteForceRuleRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAntiBruteForceRuleRequest self = new CreateAntiBruteForceRuleRequest();
+    public static CreateAntiBruteForceRuleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateAntiBruteForceRuleShrinkRequest self = new CreateAntiBruteForceRuleShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAntiBruteForceRuleRequest setDefaultRule(Boolean defaultRule) {
+    public CreateAntiBruteForceRuleShrinkRequest setDefaultRule(Boolean defaultRule) {
         this.defaultRule = defaultRule;
         return this;
     }
@@ -117,7 +117,7 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
         return this.defaultRule;
     }
 
-    public CreateAntiBruteForceRuleRequest setFailCount(Integer failCount) {
+    public CreateAntiBruteForceRuleShrinkRequest setFailCount(Integer failCount) {
         this.failCount = failCount;
         return this;
     }
@@ -125,7 +125,7 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
         return this.failCount;
     }
 
-    public CreateAntiBruteForceRuleRequest setForbiddenTime(Integer forbiddenTime) {
+    public CreateAntiBruteForceRuleShrinkRequest setForbiddenTime(Integer forbiddenTime) {
         this.forbiddenTime = forbiddenTime;
         return this;
     }
@@ -133,7 +133,7 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
         return this.forbiddenTime;
     }
 
-    public CreateAntiBruteForceRuleRequest setName(String name) {
+    public CreateAntiBruteForceRuleShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -141,15 +141,15 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateAntiBruteForceRuleRequest setProtocolType(CreateAntiBruteForceRuleRequestProtocolType protocolType) {
-        this.protocolType = protocolType;
+    public CreateAntiBruteForceRuleShrinkRequest setProtocolTypeShrink(String protocolTypeShrink) {
+        this.protocolTypeShrink = protocolTypeShrink;
         return this;
     }
-    public CreateAntiBruteForceRuleRequestProtocolType getProtocolType() {
-        return this.protocolType;
+    public String getProtocolTypeShrink() {
+        return this.protocolTypeShrink;
     }
 
-    public CreateAntiBruteForceRuleRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateAntiBruteForceRuleShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -157,7 +157,7 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public CreateAntiBruteForceRuleRequest setSourceIp(String sourceIp) {
+    public CreateAntiBruteForceRuleShrinkRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
     }
@@ -165,7 +165,7 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
         return this.sourceIp;
     }
 
-    public CreateAntiBruteForceRuleRequest setSpan(Integer span) {
+    public CreateAntiBruteForceRuleShrinkRequest setSpan(Integer span) {
         this.span = span;
         return this;
     }
@@ -173,53 +173,12 @@ public class CreateAntiBruteForceRuleRequest extends TeaModel {
         return this.span;
     }
 
-    public CreateAntiBruteForceRuleRequest setUuidList(java.util.List<String> uuidList) {
+    public CreateAntiBruteForceRuleShrinkRequest setUuidList(java.util.List<String> uuidList) {
         this.uuidList = uuidList;
         return this;
     }
     public java.util.List<String> getUuidList() {
         return this.uuidList;
-    }
-
-    public static class CreateAntiBruteForceRuleRequestProtocolType extends TeaModel {
-        @NameInMap("Rdp")
-        public String rdp;
-
-        @NameInMap("SqlServer")
-        public String sqlServer;
-
-        @NameInMap("Ssh")
-        public String ssh;
-
-        public static CreateAntiBruteForceRuleRequestProtocolType build(java.util.Map<String, ?> map) throws Exception {
-            CreateAntiBruteForceRuleRequestProtocolType self = new CreateAntiBruteForceRuleRequestProtocolType();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateAntiBruteForceRuleRequestProtocolType setRdp(String rdp) {
-            this.rdp = rdp;
-            return this;
-        }
-        public String getRdp() {
-            return this.rdp;
-        }
-
-        public CreateAntiBruteForceRuleRequestProtocolType setSqlServer(String sqlServer) {
-            this.sqlServer = sqlServer;
-            return this;
-        }
-        public String getSqlServer() {
-            return this.sqlServer;
-        }
-
-        public CreateAntiBruteForceRuleRequestProtocolType setSsh(String ssh) {
-            this.ssh = ssh;
-            return this;
-        }
-        public String getSsh() {
-            return this.ssh;
-        }
-
     }
 
 }
