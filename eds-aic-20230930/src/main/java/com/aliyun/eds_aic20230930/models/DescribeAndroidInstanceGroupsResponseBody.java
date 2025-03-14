@@ -168,6 +168,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> disks;
 
+        @NameInMap("EnableIpv6")
+        public Boolean enableIpv6;
+
         /**
          * <p>The error code.</p>
          * 
@@ -266,6 +269,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         @NameInMap("InstanceGroupStatus")
         public String instanceGroupStatus;
+
+        @NameInMap("Ipv6Bandwidth")
+        public Integer ipv6Bandwidth;
 
         /**
          * <p>The memory size.</p>
@@ -419,6 +425,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             return this.disks;
         }
 
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setEnableIpv6(Boolean enableIpv6) {
+            this.enableIpv6 = enableIpv6;
+            return this;
+        }
+        public Boolean getEnableIpv6() {
+            return this.enableIpv6;
+        }
+
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
@@ -505,6 +519,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getInstanceGroupStatus() {
             return this.instanceGroupStatus;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setIpv6Bandwidth(Integer ipv6Bandwidth) {
+            this.ipv6Bandwidth = ipv6Bandwidth;
+            return this;
+        }
+        public Integer getIpv6Bandwidth() {
+            return this.ipv6Bandwidth;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setMemory(Integer memory) {

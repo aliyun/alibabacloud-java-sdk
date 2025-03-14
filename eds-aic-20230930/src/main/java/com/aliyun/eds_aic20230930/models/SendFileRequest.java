@@ -21,6 +21,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("SourceFilePath")
     public String sourceFilePath;
 
+    @NameInMap("TargetFileName")
+    public String targetFileName;
+
     /**
      * <p>The endpoint of the OSS bucket in which the file is stored.</p>
      * <blockquote>
@@ -75,6 +78,14 @@ public class SendFileRequest extends TeaModel {
     }
     public String getSourceFilePath() {
         return this.sourceFilePath;
+    }
+
+    public SendFileRequest setTargetFileName(String targetFileName) {
+        this.targetFileName = targetFileName;
+        return this;
+    }
+    public String getTargetFileName() {
+        return this.targetFileName;
     }
 
     public SendFileRequest setUploadEndpoint(String uploadEndpoint) {

@@ -300,6 +300,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("ImageId")
+        public String imageId;
+
         /**
          * <p>The version of the image.</p>
          * 
@@ -564,6 +567,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setImageVersion(String imageVersion) {

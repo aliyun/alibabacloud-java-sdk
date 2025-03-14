@@ -3325,6 +3325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceFilePath", request.sourceFilePath);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetFileName)) {
+            query.put("TargetFileName", request.targetFileName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uploadEndpoint)) {
             query.put("UploadEndpoint", request.uploadEndpoint);
         }
