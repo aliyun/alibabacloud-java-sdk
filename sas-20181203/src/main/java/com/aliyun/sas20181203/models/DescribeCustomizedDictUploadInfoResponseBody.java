@@ -59,6 +59,15 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The security token.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    /**
      * <p>The OSS signature.</p>
      * 
      * <strong>example:</strong>
@@ -118,6 +127,14 @@ public class DescribeCustomizedDictUploadInfoResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeCustomizedDictUploadInfoResponseBody setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
     }
 
     public DescribeCustomizedDictUploadInfoResponseBody setSignature(String signature) {

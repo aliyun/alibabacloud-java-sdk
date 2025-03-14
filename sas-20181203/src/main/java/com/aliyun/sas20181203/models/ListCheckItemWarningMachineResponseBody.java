@@ -104,6 +104,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
          * <p>72</p>
          */
         @NameInMap("RiskId")
+        @Deprecated
         public Long riskId;
 
         /**
@@ -113,6 +114,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
          * <p>Alibaba Cloud Linux/Aliyun Linux 2 Baseline for China classified protection of cybersecurity-Level II</p>
          */
         @NameInMap("RiskName")
+        @Deprecated
         public String riskName;
 
         public static ListCheckItemWarningMachineResponseBodyListWarningRiskList build(java.util.Map<String, ?> map) throws Exception {
@@ -120,6 +122,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public ListCheckItemWarningMachineResponseBodyListWarningRiskList setRiskId(Long riskId) {
             this.riskId = riskId;
             return this;
@@ -128,6 +131,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             return this.riskId;
         }
 
+        @Deprecated
         public ListCheckItemWarningMachineResponseBodyListWarningRiskList setRiskName(String riskName) {
             this.riskName = riskName;
             return this;
@@ -351,6 +355,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
          * <p>The information about the baselines on which the risk item is detected.</p>
          */
         @NameInMap("WarningRiskList")
+        @Deprecated
         public java.util.List<ListCheckItemWarningMachineResponseBodyListWarningRiskList> warningRiskList;
 
         public static ListCheckItemWarningMachineResponseBodyList build(java.util.Map<String, ?> map) throws Exception {
@@ -518,6 +523,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             return this.uuid;
         }
 
+        @Deprecated
         public ListCheckItemWarningMachineResponseBodyList setWarningRiskList(java.util.List<ListCheckItemWarningMachineResponseBodyListWarningRiskList> warningRiskList) {
             this.warningRiskList = warningRiskList;
             return this;

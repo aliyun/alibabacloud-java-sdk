@@ -159,6 +159,15 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         public String policy;
 
         /**
+         * <p>The security token.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
+        @NameInMap("SecurityToken")
+        public String securityToken;
+
+        /**
          * <p>The signature that is calculated based on <strong>AccessKeySecret</strong> and <strong>Policy</strong>. When you call an Object Storage Service (OSS) API operation, OSS uses the signature information to verify the POST request.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +219,14 @@ public class GetHoneyPotUploadPolicyInfoResponseBody extends TeaModel {
         }
         public String getPolicy() {
             return this.policy;
+        }
+
+        public GetHoneyPotUploadPolicyInfoResponseBodyData setSecurityToken(String securityToken) {
+            this.securityToken = securityToken;
+            return this;
+        }
+        public String getSecurityToken() {
+            return this.securityToken;
         }
 
         public GetHoneyPotUploadPolicyInfoResponseBodyData setSignature(String signature) {
