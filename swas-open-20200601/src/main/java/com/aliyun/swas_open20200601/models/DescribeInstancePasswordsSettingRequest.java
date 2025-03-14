@@ -24,7 +24,7 @@ public class DescribeInstancePasswordsSettingRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/189315.html">ListRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the simple application server. You can call the <a href="https://help.aliyun.com/document_detail/2361076.html">ListRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

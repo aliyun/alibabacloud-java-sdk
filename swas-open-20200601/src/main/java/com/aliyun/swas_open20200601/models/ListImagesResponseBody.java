@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
     /**
-     * <p>The information of the image.</p>
+     * <p>Details of the queried images.</p>
      */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
