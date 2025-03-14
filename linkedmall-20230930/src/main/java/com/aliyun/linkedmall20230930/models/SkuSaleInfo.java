@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class SkuSaleInfo extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>不可售</p>
+     */
+    @NameInMap("canNotSellReason")
+    public String canNotSellReason;
+
+    /**
+     * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("canSell")
@@ -84,6 +91,14 @@ public class SkuSaleInfo extends TeaModel {
     public static SkuSaleInfo build(java.util.Map<String, ?> map) throws Exception {
         SkuSaleInfo self = new SkuSaleInfo();
         return TeaModel.build(map, self);
+    }
+
+    public SkuSaleInfo setCanNotSellReason(String canNotSellReason) {
+        this.canNotSellReason = canNotSellReason;
+        return this;
+    }
+    public String getCanNotSellReason() {
+        return this.canNotSellReason;
     }
 
     public SkuSaleInfo setCanSell(Boolean canSell) {

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SkuQueryParam extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("buyAmount")
+    public Integer buyAmount;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +32,14 @@ public class SkuQueryParam extends TeaModel {
     public static SkuQueryParam build(java.util.Map<String, ?> map) throws Exception {
         SkuQueryParam self = new SkuQueryParam();
         return TeaModel.build(map, self);
+    }
+
+    public SkuQueryParam setBuyAmount(Integer buyAmount) {
+        this.buyAmount = buyAmount;
+        return this;
+    }
+    public Integer getBuyAmount() {
+        return this.buyAmount;
     }
 
     public SkuQueryParam setProductId(String productId) {
