@@ -155,6 +155,9 @@ public class DescribeImageListResponseBody extends TeaModel {
         @NameInMap("ImageType")
         public String imageType;
 
+        @NameInMap("ImageVersion")
+        public String imageVersion;
+
         /**
          * <p>The language of the image.</p>
          * 
@@ -289,6 +292,14 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
         public String getImageType() {
             return this.imageType;
+        }
+
+        public DescribeImageListResponseBodyData setImageVersion(String imageVersion) {
+            this.imageVersion = imageVersion;
+            return this;
+        }
+        public String getImageVersion() {
+            return this.imageVersion;
         }
 
         public DescribeImageListResponseBodyData setLanguage(String language) {

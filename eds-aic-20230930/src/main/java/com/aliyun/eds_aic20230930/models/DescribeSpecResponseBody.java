@@ -84,6 +84,9 @@ public class DescribeSpecResponseBody extends TeaModel {
         @NameInMap("Core")
         public Integer core;
 
+        @NameInMap("MaxPhoneCount")
+        public String maxPhoneCount;
+
         /**
          * <p>Memory size.</p>
          * 
@@ -92,6 +95,9 @@ public class DescribeSpecResponseBody extends TeaModel {
          */
         @NameInMap("Memory")
         public Integer memory;
+
+        @NameInMap("MinPhoneCount")
+        public String minPhoneCount;
 
         @NameInMap("PhoneCount")
         public String phoneCount;
@@ -148,12 +154,28 @@ public class DescribeSpecResponseBody extends TeaModel {
             return this.core;
         }
 
+        public DescribeSpecResponseBodySpecInfoModel setMaxPhoneCount(String maxPhoneCount) {
+            this.maxPhoneCount = maxPhoneCount;
+            return this;
+        }
+        public String getMaxPhoneCount() {
+            return this.maxPhoneCount;
+        }
+
         public DescribeSpecResponseBodySpecInfoModel setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+        public DescribeSpecResponseBodySpecInfoModel setMinPhoneCount(String minPhoneCount) {
+            this.minPhoneCount = minPhoneCount;
+            return this;
+        }
+        public String getMinPhoneCount() {
+            return this.minPhoneCount;
         }
 
         public DescribeSpecResponseBodySpecInfoModel setPhoneCount(String phoneCount) {
