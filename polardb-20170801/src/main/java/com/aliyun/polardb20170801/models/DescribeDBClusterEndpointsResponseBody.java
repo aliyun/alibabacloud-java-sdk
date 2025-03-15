@@ -50,6 +50,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        @NameInMap("DashboardUsed")
+        public Boolean dashboardUsed;
+
         /**
          * <p>The IP address.</p>
          * 
@@ -131,6 +134,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeDBClusterEndpointsResponseBodyItemsAddressItems setDashboardUsed(Boolean dashboardUsed) {
+            this.dashboardUsed = dashboardUsed;
+            return this;
+        }
+        public Boolean getDashboardUsed() {
+            return this.dashboardUsed;
         }
 
         public DescribeDBClusterEndpointsResponseBodyItemsAddressItems setIPAddress(String IPAddress) {
@@ -305,9 +316,25 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("Nodes")
         public String nodes;
 
+        /**
+         * <p>The global consistency timeout policy. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: sends the request to the primary node.</li>
+         * <li><strong>2</strong>: downgrades the consistency level of a query to inconsistent read when a global consistent read in the query times out. No error message is returned to the client.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PolarSccTimeoutAction")
         public String polarSccTimeoutAction;
 
+        /**
+         * <p>Global consistency timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PolarSccWaitTimeout")
         public String polarSccWaitTimeout;
 
@@ -324,6 +351,16 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("ReadWriteMode")
         public String readWriteMode;
 
+        /**
+         * <p>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("SccMode")
         public String sccMode;
 

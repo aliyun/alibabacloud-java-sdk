@@ -689,6 +689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBName", request.DBName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -3097,6 +3101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.interfaceVersion)) {
+            query.put("InterfaceVersion", request.interfaceVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ruleNameList)) {
             query.put("RuleNameList", request.ruleNameList);
         }
@@ -3282,6 +3290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -6600,6 +6612,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.interfaceVersion)) {
+            query.put("InterfaceVersion", request.interfaceVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ruleNameList)) {
             query.put("RuleNameList", request.ruleNameList);
         }
@@ -9228,6 +9244,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>变更standby模式</p>
+     * 
+     * @param request ModifyDBClusterArchRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBClusterArchResponse
+     */
+    public ModifyDBClusterArchResponse modifyDBClusterArchWithOptions(ModifyDBClusterArchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotStandbyCluster)) {
+            query.put("HotStandbyCluster", request.hotStandbyCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyAZ)) {
+            query.put("StandbyAZ", request.standbyAZ);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBClusterArch"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterArchResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyDBClusterArchResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>变更standby模式</p>
+     * 
+     * @param request ModifyDBClusterArchRequest
+     * @return ModifyDBClusterArchResponse
+     */
+    public ModifyDBClusterArchResponse modifyDBClusterArch(ModifyDBClusterArchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBClusterArchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Enables or disables SQL collector for a PolarDB cluster. The features related to SQL collector include Audit Logs and SQL Explorer.</p>
      * 
      * @param request ModifyDBClusterAuditLogCollectorRequest
@@ -11489,6 +11566,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
             query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interfaceVersion)) {
+            query.put("InterfaceVersion", request.interfaceVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ruleConfig)) {

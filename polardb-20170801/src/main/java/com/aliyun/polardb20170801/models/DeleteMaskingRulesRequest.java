@@ -17,6 +17,9 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("InterfaceVersion")
+    public String interfaceVersion;
+
     /**
      * <p>The name of the masking rule. You can specify multiple masking rules at a time. Separate the masking rules with commas (,).</p>
      * <blockquote>
@@ -41,6 +44,14 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DeleteMaskingRulesRequest setInterfaceVersion(String interfaceVersion) {
+        this.interfaceVersion = interfaceVersion;
+        return this;
+    }
+    public String getInterfaceVersion() {
+        return this.interfaceVersion;
     }
 
     public DeleteMaskingRulesRequest setRuleNameList(String ruleNameList) {

@@ -128,6 +128,9 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("DBName")
     public String DBName;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -210,6 +213,14 @@ public class CreateAccountRequest extends TeaModel {
     }
     public String getDBName() {
         return this.DBName;
+    }
+
+    public CreateAccountRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public CreateAccountRequest setOwnerAccount(String ownerAccount) {

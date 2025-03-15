@@ -57,6 +57,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("BlktagUsed")
     public Long blktagUsed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("BurstingEnabled")
     public String burstingEnabled;
 
@@ -302,6 +306,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("ImciAutoIndex")
     public String imciAutoIndex;
 
+    /**
+     * <p>Indicates whether failover with hot replica is enabled. Valid values:</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code> (default)</li>
+     * </ul>
+     */
     @NameInMap("ImperceptibleSwitch")
     public String imperceptibleSwitch;
 
@@ -1264,6 +1275,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("DBNodeDescription")
         public String DBNodeDescription;
 
