@@ -23,6 +23,9 @@ public class DescribeAccountsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -78,6 +81,14 @@ public class DescribeAccountsRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeAccountsRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public DescribeAccountsRequest setOwnerAccount(String ownerAccount) {

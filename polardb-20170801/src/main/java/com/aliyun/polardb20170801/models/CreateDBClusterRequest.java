@@ -71,6 +71,10 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("BackupRetentionPolicyOnClusterDeletion")
     public String backupRetentionPolicyOnClusterDeletion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("BurstingEnabled")
     public String burstingEnabled;
 
@@ -220,7 +224,6 @@ public class CreateDBClusterRequest extends TeaModel {
      * &lt;props=&quot;china&quot;&gt;&gt; - For a Serverless cluster in both PolarDB PostgreSQL (Oracle Compatible) and PolarDB PostgreSQL, enter <strong>polar.pg.sl.small.c</strong>.</li>
      * </ul>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>polar.mysql.x4.medium</p>
@@ -637,9 +640,32 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
 
+    /**
+     * <p>Specifies whether to enable disk encryption. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> This parameter takes effect only when <strong>StorageType</strong> is set to one of the Standard Edition storage types.</p>
+     * </blockquote>
+     */
     @NameInMap("StorageEncryption")
     public Boolean storageEncryption;
 
+    /**
+     * <p>The ID of the custom key that is used for disk encryption in the region in which the instance resides. If this parameter is specified, disk encryption is automatically enabled and cannot be disabled afterwards. If you want to use the default service key for disk encryption, leave this parameter empty.</p>
+     * <p>You can obtain the ID of the key in the KMS console or create a key.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
+     * </blockquote>
+     * <blockquote>
+     * <p> This parameter takes effect only when <strong>StorageType</strong> is set to one of the Standard Edition storage types.</p>
+     * </blockquote>
+     */
     @NameInMap("StorageEncryptionKey")
     public String storageEncryptionKey;
 
@@ -657,13 +683,15 @@ public class CreateDBClusterRequest extends TeaModel {
     public String storagePayType;
 
     /**
-     * <p>Storage space for pay-by-space (subscription) billing. Unit: GB.</p>
+     * <p>The storage that is billed based on the subscription billing method. Unit: GB.</p>
      * <blockquote>
-     * <ul>
-     * <li>For PolarDB MySQL Standard Edition, the storage space range is 20 to 32000.</li>
-     * <li>When the Standard Edition storage type is ESSDAUTOPL, the storage space range is 40 to 64000, with a minimum step size of 10, meaning you can only enter values like 40, 50, 60, and so on.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>Valid values for the subscription storage capacity of a PolarDB for MySQL Standard Edition cluster: 20 to 32000.</p>
+     * </li>
+     * <li><p>Valid values for the subscription storage capacity of a Standard Edition cluster that uses the ESSD AUTOPL storage type: 40 to 64000, in increments of 10.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>50</p>

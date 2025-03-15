@@ -17,6 +17,9 @@ public class DescribeMaskingRulesRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("InterfaceVersion")
+    public String interfaceVersion;
+
     /**
      * <p>The name of the masking rule.</p>
      * 
@@ -37,6 +40,14 @@ public class DescribeMaskingRulesRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeMaskingRulesRequest setInterfaceVersion(String interfaceVersion) {
+        this.interfaceVersion = interfaceVersion;
+        return this;
+    }
+    public String getInterfaceVersion() {
+        return this.interfaceVersion;
     }
 
     public DescribeMaskingRulesRequest setRuleNameList(String ruleNameList) {
