@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryCubeOptimizationResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
@@ -15,6 +17,12 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
     public java.util.List<QueryCubeOptimizationResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +60,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
 
     public static class QueryCubeOptimizationResponseBodyResultCubePerformanceDiagnoseModel extends TeaModel {
         /**
+         * <p>The average duration of cache hits.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -59,6 +69,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double cacheCostTimeAvg;
 
         /**
+         * <p>The number of cache hits.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -66,6 +78,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Integer cacheQueryCount;
 
         /**
+         * <p>The average query duration associated with the SQL pattern.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0</p>
          */
@@ -73,6 +87,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double costTimeAvg;
 
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3e45b61a-9ba8-4c7c-8248-8dbe69945636</p>
          */
@@ -80,6 +96,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public String cubeId;
 
         /**
+         * <p>The name of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -87,6 +105,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public String cubeName;
 
         /**
+         * <p>The number of queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -94,6 +114,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Integer queryCount;
 
         /**
+         * <p>The average number of queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -101,6 +123,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double queryCountAvg;
 
         /**
+         * <p>The percentage of the number of queries that exceed the 5S.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -108,6 +132,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double queryOverFivePercentNum;
 
         /**
+         * <p>Query the proportion of more than 5S.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.5</p>
          */
@@ -115,6 +141,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public String queryOverFiveSecPercent;
 
         /**
+         * <p>The percentage of queries that exceed 10s.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -122,6 +150,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public String queryOverTenSecPercent;
 
         /**
+         * <p>The percentage of queries that exceed 10s.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.3</p>
          */
@@ -129,6 +159,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double queryOverTenSecPercentNum;
 
         /**
+         * <p>The number of times that the chart query times out.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -136,6 +168,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Integer queryTimeoutCount;
 
         /**
+         * <p>The percentage of timeout times for chart queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.3</p>
          */
@@ -143,6 +177,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double queryTimeoutCountPercent;
 
         /**
+         * <p>The average time consumed by the Quick engine query.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -150,6 +186,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double quickIndexCostTimeAvg;
 
         /**
+         * <p>The number of times that the Quick engine is hit.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -157,6 +195,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Integer quickIndexQueryCount;
 
         /**
+         * <p>The proportion of duplicate queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.1</p>
          */
@@ -164,6 +204,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public String repeatQueryPercent;
 
         /**
+         * <p>The number of duplicate queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -171,6 +213,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Double repeatQueryPercentNum;
 
         /**
+         * <p>The number of times the query is repeated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -178,6 +222,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public Integer repeatSqlQueryCount;
 
         /**
+         * <p>The proportion of duplicate queries.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.3</p>
          */
@@ -185,6 +231,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public String repeatSqlQueryPercent;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>6ea74bff-c818-4188-b462-dbb45a24dbac</p>
          */
@@ -192,6 +240,8 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>eco0sh0prods</p>
          */
@@ -375,12 +425,22 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
 
     public static class QueryCubeOptimizationResponseBodyResult extends TeaModel {
         /**
+         * <p>The type of the suggestion. Valid values:</p>
+         * <ul>
+         * <li><strong>OPEN_CACHE</strong>: Open cache.</li>
+         * <li><strong>OPEN_QUICK_ENGINE</strong>: Open FAST Cache.</li>
+         * <li><strong>INCREASE_CACHE_TIME</strong>: Increase the cache time.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OPENQUICKENGINE</p>
          */
         @NameInMap("AdviceType")
         public String adviceType;
 
+        /**
+         * <p>The diagnostic information about the dataset.</p>
+         */
         @NameInMap("CubePerformanceDiagnoseModel")
         public QueryCubeOptimizationResponseBodyResultCubePerformanceDiagnoseModel cubePerformanceDiagnoseModel;
 

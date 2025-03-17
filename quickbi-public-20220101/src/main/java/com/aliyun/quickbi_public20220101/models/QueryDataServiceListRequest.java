@@ -4,10 +4,18 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryDataServiceListRequest extends TeaModel {
+    /**
+     * <p>Data service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试sql</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>Page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,12 @@ public class QueryDataServiceListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of items per page in a paginated query:</p>
+     * <ul>
+     * <li>Default value: 10</li>
+     * <li>Maximum value: 1000</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +36,8 @@ public class QueryDataServiceListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>User ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dasdfdsa-csddf-dsadsa</p>
      */

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataSetBloodRequest extends TeaModel {
     /**
+     * <p>List of dataset IDs, separated by English commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DataSetBloodRequest extends TeaModel {
     public String dataSetIds;
 
     /**
+     * <p>Specify the owner of the report, which is the userId.</p>
+     * 
      * <strong>example:</strong>
      * <p>dasasgaj342351</p>
      */
@@ -21,6 +24,16 @@ public class DataSetBloodRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>Specify the type of report:</p>
+     * <ul>
+     * <li>REPORT: Workbooks</li>
+     * <li>dashboardOfflineQuery: Downloads</li>
+     * <li>DASHBOARD: Dashboard</li>
+     * <li>ANALYSIS: Ad Hoc Analysis</li>
+     * <li>SCREEN: Visualization Screen</li>
+     * <li>PAGE: Old dashboard</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PAGE</p>
      */

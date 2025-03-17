@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryUserTagValueListResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request for a list of user tags and their values.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryUserTagValueListResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,15 +63,29 @@ public class QueryUserTagValueListResponseBody extends TeaModel {
 
     public static class QueryUserTagValueListResponseBodyResult extends TeaModel {
         /**
+         * <p>Tag ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pop_001</p>
          */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <p>Tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Position</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Supervisor</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

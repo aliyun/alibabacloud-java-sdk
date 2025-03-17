@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7AAB95D-*****-****-*4FC0C976</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Data source information.</p>
+     */
     @NameInMap("Result")
     public GetDataSourceConnectionInfoResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
 
     public static class GetDataSourceConnectionInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Database connection string address (domain or IP).</p>
+         * 
          * <strong>example:</strong>
          * <p>172.<strong>.</strong>.48</p>
          */
@@ -59,6 +68,14 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>Permission level:</p>
+         * <ul>
+         * <li>0 -- Private</li>
+         * <li>1 -- Collaborative Editing (old)</li>
+         * <li>11 -- Collaborative Editing - Space Members</li>
+         * <li>12 -- Collaborative Editing - Specified to Individuals</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -66,6 +83,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String authLevel;
 
         /**
+         * <p>Quick BI user ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>U240****0880C6095</p>
          */
@@ -73,6 +92,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String creatorId;
 
         /**
+         * <p>Data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a201c85c-******</p>
          */
@@ -80,6 +101,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String dsId;
 
         /**
+         * <p>Data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>mysql</p>
          */
@@ -87,6 +110,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String dsType;
 
         /**
+         * <p>Version of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>5.7</p>
          */
@@ -94,6 +119,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String dsVersion;
 
         /**
+         * <p>Database instance, corresponding to the database name, and for ODPS, it is the project.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm*********t44ju1</p>
          */
@@ -101,6 +128,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String instance;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm*********t44ju1</p>
          */
@@ -108,6 +137,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Quick BI user ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>U240****0880C6095</p>
          */
@@ -115,6 +146,12 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>Whether the impala data source requires authentication to log in:</p>
+         * <ul>
+         * <li>true - Requires account and password login  </li>
+         * <li>false - No authentication required (default)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -122,6 +159,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public Boolean noSasl;
 
         /**
+         * <p>Primary data source type for multi-engine data sources.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin</p>
          */
@@ -129,6 +168,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String parentDsType;
 
         /**
+         * <p>Port.</p>
+         * 
          * <strong>example:</strong>
          * <p>3306</p>
          */
@@ -136,6 +177,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String port;
 
         /**
+         * <p>Used for front-end display when obtaining connection details for ODPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>prod-ossdoc</p>
          */
@@ -143,6 +186,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String project;
 
         /**
+         * <p>Database schema, only needs to be set for databases that support schemas.</p>
+         * 
          * <strong>example:</strong>
          * <p>Analysis</p>
          */
@@ -150,6 +195,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String schema;
 
         /**
+         * <p>Display name of the data source on the front end.</p>
+         * 
          * <strong>example:</strong>
          * <p>0327</p>
          */
@@ -157,6 +204,8 @@ public class GetDataSourceConnectionInfoResponseBody extends TeaModel {
         public String showName;
 
         /**
+         * <p>Workspace ID to which the data source belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0de6<strong>2-d</strong>-4720-8836-0cc****1394c</p>
          */

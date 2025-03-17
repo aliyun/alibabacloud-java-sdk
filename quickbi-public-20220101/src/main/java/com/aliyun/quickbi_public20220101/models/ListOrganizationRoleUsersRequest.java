@@ -4,10 +4,21 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationRoleUsersRequest extends TeaModel {
+    /**
+     * <p>Keyword for the nickname of the organization member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangsan</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>Page number.</p>
+     * <ul>
+     * <li>Default value is 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +26,11 @@ public class ListOrganizationRoleUsersRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Number of items per page.</p>
+     * <ul>
+     * <li>Default value is 10.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +38,13 @@ public class ListOrganizationRoleUsersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Organization role ID, including predefined roles and custom roles:</p>
+     * <ul>
+     * <li>Organization Administrator (predefined role): 111111111</li>
+     * <li>Permission Administrator (predefined role): 111111112</li>
+     * <li>Regular User (predefined role): 111111113</li>
+     * <li>Custom Role: The corresponding role ID for a custom role</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

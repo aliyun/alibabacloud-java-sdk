@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryDataServiceResponseBody extends TeaModel {
     /**
-     * <p>The list of parameter names of the returned parameters. The value is a string of the List type.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>78C1AA2D-9201-599E-A0BA-6FC462E57A95</p>
@@ -14,17 +14,19 @@ public class QueryDataServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>Returns the result of the interface query.</p>
      */
     @NameInMap("Result")
     public QueryDataServiceResponseBodyResult result;
 
     /**
-     * <p>{ &quot;area&quot;: [&quot;East China&quot;, &quot;North China&quot;], &quot;shopping_date&quot;: &quot;2019Q1&quot;, }</p>
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li><p>true: The request was successful</p>
+     * </li>
+     * <li><p>false: The request failed</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -63,7 +65,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
 
     public static class QueryDataServiceResponseBodyResultHeaders extends TeaModel {
         /**
-         * <p>The field name, which corresponds to the physical table field name.</p>
+         * <p>Aggregation operator. Only present for measure fields, such as SUM, AVG, and MAX.</p>
          * 
          * <strong>example:</strong>
          * <p>SUM</p>
@@ -72,11 +74,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         public String aggregator;
 
         /**
-         * <p>The granularity of the dimension field. This field is returned only when the requested field is a date dimension or a geographical dimension. Valid values:</p>
-         * <ul>
-         * <li>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</li>
-         * <li>Geographic information granularity: COUNTRY (international level), PROVINCE (provincial level), CITY (municipal level), XIAN (district /county), and REGION (regional level)</li>
-         * </ul>
+         * <p>Field name, corresponding to the physical table field name.</p>
          * 
          * <strong>example:</strong>
          * <p>The alias of the field. The key of the map data row in the result parameter values.</p>
@@ -85,7 +83,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         public String column;
 
         /**
-         * <p>The column header.</p>
+         * <p>The data type of the field. Common types include number, string, date, datetime, time, and geographic.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -94,7 +92,14 @@ public class QueryDataServiceResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The field type, which is used to distinguish whether the field type is a dimension or a measure.</p>
+         * <p>The granularity of the dimension field.
+         * This field is returned only when the requested field is a date or geographic dimension, with the following possible values:</p>
+         * <ul>
+         * <li><p>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</p>
+         * </li>
+         * <li><p>Geographic granularity: COUNTRY (country level), PROVINCE (province level), CITY (city level), XIAN (district/county level), REGION (region)</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>yearRegion</p>
@@ -103,7 +108,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         public String granularity;
 
         /**
-         * <p>The data type of the field. generally have number, string, date, datetime, time, and geographic.</p>
+         * <p>字段别名，结果参数values中map数据行的key。</p>
          * 
          * <strong>example:</strong>
          * <p>area</p>
@@ -112,7 +117,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>SELECT COMPANY_T_1_.\&quot;area\&quot; AS D_AREA_2_, COMPANY_T_1_.\&quot;city\&quot; AS D_CITY_3_, SUM(COMPANY_T_1_.\&quot;profit_amt\&quot;) AS D_PROFIT_4_ FROM \&quot;quickbi_test\&quot;.\&quot;company_sales_record_copy\&quot; AS COMPANY_T_1_ WHERE COMPANY_T_1_.\&quot;area\&quot; LIKE \&quot;% China East %\&quot; GROUP BY COMPANY_T_1_.\&quot;area\&quot;, COMPANY_T_1_.\&quot;city\&quot; HAVING SUM(COMPANY_T_1_.\&quot;order_amt\&quot;) &gt; 1 LIMIT 0,10</p>
+         * <p>Field type, used to distinguish between dimension and measure fields.</p>
          * 
          * <strong>example:</strong>
          * <p>StandardDimension</p>
@@ -177,22 +182,22 @@ public class QueryDataServiceResponseBody extends TeaModel {
 
     public static class QueryDataServiceResponseBodyResult extends TeaModel {
         /**
-         * <p>The SQL of the request query.</p>
+         * <p>Column headers.</p>
          */
         @NameInMap("Headers")
         public java.util.List<QueryDataServiceResponseBodyResultHeaders> headers;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The SQL of the query request.</p>
          * 
          * <strong>example:</strong>
-         * <p>The query result of the API operation is returned.</p>
+         * <p>SELECT COMPANY_T_1_.<code>area</code> AS D_AREA_2_, COMPANY_T_1_.<code>city</code> AS D_CITY_3_, SUM(COMPANY_T_1_.<code>profit_amt</code>) AS D_PROFIT_4_ FROM <code>quickbi_test</code>.<code>company_sales_record_copy</code> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<code>area</code> LIKE \&quot;%华东%\&quot; GROUP BY COMPANY_T_1_.<code>area</code>, COMPANY_T_1_.<code>city</code> HAVING SUM(COMPANY_T_1_.<code>order_amt</code>) &gt; 1 LIMIT 0, 10</p>
          */
         @NameInMap("Sql")
         public String sql;
 
         /**
-         * <p>Physical Field Name</p>
+         * <p>The queried results returned.</p>
          */
         @NameInMap("Values")
         public java.util.List<java.util.Map<String, ?>> values;

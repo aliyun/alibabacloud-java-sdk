@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTicketResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
@@ -12,6 +14,8 @@ public class CreateTicketResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The generated ticket value.</p>
+     * 
      * <strong>example:</strong>
      * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
      */
@@ -19,6 +23,12 @@ public class CreateTicketResponseBody extends TeaModel {
     public String result;
 
     /**
+     * <p>是否请求成功。取值范围：</p>
+     * <ul>
+     * <li>true：请求成功</li>
+     * <li>false：请求失败</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -79,6 +79,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
         @NameInMap("OperatorType")
         public String operatorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1113***************8500</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 

@@ -9,6 +9,7 @@ public class UpdateWorkspaceUserRoleRequest extends TeaModel {
      * <p>25</p>
      */
     @NameInMap("RoleId")
+    @Deprecated
     public Long roleId;
 
     @NameInMap("RoleIds")
@@ -37,6 +38,7 @@ public class UpdateWorkspaceUserRoleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public UpdateWorkspaceUserRoleRequest setRoleId(Long roleId) {
         this.roleId = roleId;
         return this;

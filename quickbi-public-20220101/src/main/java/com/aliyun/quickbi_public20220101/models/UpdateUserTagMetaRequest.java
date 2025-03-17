@@ -4,10 +4,23 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserTagMetaRequest extends TeaModel {
+    /**
+     * <p>The tag description.</p>
+     * <ul>
+     * <li>Format check: Maximum length is 255 characters.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Job Positions within the Department</p>
+     */
     @NameInMap("TagDescription")
     public String tagDescription;
 
     /**
+     * <p>The specified TagID.</p>
+     * <ul>
+     * <li>Format check: Maximum length is 64 characters.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +30,15 @@ public class UpdateUserTagMetaRequest extends TeaModel {
     public String tagId;
 
     /**
+     * <p>The tag name.</p>
+     * <ul>
+     * <li>Format check: Maximum length is 50 characters.</li>
+     * <li>Only Chinese, English, numbers, and /\|<a href=""></a> symbols are allowed.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Department</p>
      */
     @NameInMap("TagName")
     public String tagName;

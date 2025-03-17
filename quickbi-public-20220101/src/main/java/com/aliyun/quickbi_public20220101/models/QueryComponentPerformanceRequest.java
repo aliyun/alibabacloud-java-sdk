@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryComponentPerformanceRequest extends TeaModel {
     /**
+     * <p>The average duration (minutes).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,12 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     public Integer costTimeAvgMin;
 
     /**
+     * <p>The current page number of the workspace member list:</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +27,12 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of rows per page in a paged query.</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * <li>Maximum value: 1,000.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +40,12 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query type. Valid values:</p>
+     * <ul>
+     * <li><strong>lastDay</strong>: Yesterday</li>
+     * <li><strong>sevenDays</strong>: Within seven days</li>
+     * <li><strong>thirtyDays</strong>: Within 30 days</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +55,8 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The ID of the work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
+     * 
      * <strong>example:</strong>
      * <p>6b407e50-e774-406b-9956-da2425c2****</p>
      */
@@ -42,6 +64,8 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     public String reportId;
 
     /**
+     * <p>The resource types.</p>
+     * 
      * <strong>example:</strong>
      * <p>report</p>
      */
@@ -49,6 +73,7 @@ public class QueryComponentPerformanceRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

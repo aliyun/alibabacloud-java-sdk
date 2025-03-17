@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteUserGroupMembersResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>ABBAD906-3925-5D18-B23D-714053AB0AA2</p>
+     * <p>ABBAD906-****-5D18-B23D-****53AB0AA2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Returns the result of the interface execution. Possible values:</p>
+     * <ul>
+     * <li>true: Execution succeeded</li>
+     * <li>false: Execution failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,12 @@ public class DeleteUserGroupMembersResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: Request succeeded</li>
+     * <li>false: Request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

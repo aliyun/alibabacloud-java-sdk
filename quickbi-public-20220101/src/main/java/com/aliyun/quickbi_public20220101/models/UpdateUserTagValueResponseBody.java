@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateUserTagValueResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46e5374665ba4b679ee22e2a29270</p>
      */
@@ -12,6 +14,12 @@ public class UpdateUserTagValueResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returns the result of modifying the user tag. Possible values:</p>
+     * <ul>
+     * <li>true: Operation succeeded</li>
+     * <li>false: Operation failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,11 @@ public class UpdateUserTagValueResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request was successful. Value range:</p>
+     * <ul>
+     * <li>true: The request was successful - false: The request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

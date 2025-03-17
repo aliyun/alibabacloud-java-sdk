@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListApiDatasourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The query results are returned.</p>
+     */
     @NameInMap("Result")
     public ListApiDatasourceResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
 
     public static class ListApiDatasourceResponseBodyResultData extends TeaModel {
         /**
+         * <p>The ID of the API data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>0f2c3c6409be4dc0810f2a5785e816a8</p>
          */
@@ -59,6 +72,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public String apiId;
 
         /**
+         * <p>The parameter configuration of the query statement in JSON format. You can customize the parameter configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
          */
@@ -66,6 +81,11 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public String body;
 
         /**
+         * <p>The data volume of the API data source.</p>
+         * <ul>
+         * <li>Unit: Kbit/s</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0.39746094</p>
          */
@@ -73,6 +93,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public Float dataSize;
 
         /**
+         * <p>The last synchronization time of the API data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-25 16:19:43</p>
          */
@@ -80,6 +102,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public String dateUpdateTime;
 
         /**
+         * <p>The time when the quota plan was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-25 16:19:43</p>
          */
@@ -87,6 +111,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the optimization job was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-05-25 16:19:43</p>
          */
@@ -94,6 +120,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>REST_API_SYNC_0f2c3c6409be4dc0810f2a5785e816a8</p>
          */
@@ -101,16 +129,37 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The parameter configurations in the JSONArray format.</p>
+         * <ul>
+         * <li>name: parameter name</li>
+         * <li>value: the parameter value</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;:&quot;token&quot;,&quot;value&quot;:&quot;xxxxxxxxxxxx&quot;},{&quot;name&quot;:&quot;pageSize&quot;,&quot;value&quot;:100}]</p>
          */
         @NameInMap("Parameters")
         public String parameters;
 
+        /**
+         * <p>The name of the API data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test data source</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
         /**
+         * <p>The status of the API data source synchronization task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: the to be run.</li>
+         * <li>1: The is running.</li>
+         * <li>2: The is successfully.</li>
+         * <li>3: failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -205,10 +254,15 @@ public class ListApiDatasourceResponseBody extends TeaModel {
     }
 
     public static class ListApiDatasourceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The list of API data sources that were queried.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListApiDatasourceResponseBodyResultData> data;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -216,6 +270,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of rows per page set when the interface is requested.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -223,6 +279,8 @@ public class ListApiDatasourceResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

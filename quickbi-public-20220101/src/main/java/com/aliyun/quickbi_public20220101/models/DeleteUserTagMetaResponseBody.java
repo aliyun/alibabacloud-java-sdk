@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteUserTagMetaResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
@@ -12,6 +14,12 @@ public class DeleteUserTagMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The execution result of the deleted tag is returned. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,12 @@ public class DeleteUserTagMetaResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7FC9A6A6-****-5CED-B*****E891E4075</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Array of data source information.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListDataSourceResponseBodyResult> result;
 
     /**
+     * <p>Whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class ListDataSourceResponseBody extends TeaModel {
 
     public static class ListDataSourceResponseBodyResult extends TeaModel {
         /**
+         * <p>Quick BI user ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>281*****-485******-8</p>
          */
@@ -59,6 +68,8 @@ public class ListDataSourceResponseBody extends TeaModel {
         public String creatorId;
 
         /**
+         * <p>Owner\&quot;s nickname.</p>
+         * 
          * <strong>example:</strong>
          * <p>system</p>
          */
@@ -66,6 +77,8 @@ public class ListDataSourceResponseBody extends TeaModel {
         public String creatorName;
 
         /**
+         * <p>Data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7FC9A6A6-****-5CED-B*****E891E4075</p>
          */
@@ -73,6 +86,8 @@ public class ListDataSourceResponseBody extends TeaModel {
         public String datasourceId;
 
         /**
+         * <p>Data source type.</p>
+         * 
          * <strong>example:</strong>
          * <p>odps</p>
          */
@@ -80,6 +95,8 @@ public class ListDataSourceResponseBody extends TeaModel {
         public String dsType;
 
         /**
+         * <p>Creation time of the data source, in yyyy-MM-dd HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-16 13:17:39</p>
          */
@@ -87,6 +104,8 @@ public class ListDataSourceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-15 10:06:31</p>
          */
@@ -94,6 +113,8 @@ public class ListDataSourceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Primary data source type for multi-engine data sources.</p>
+         * 
          * <strong>example:</strong>
          * <p>dataphin</p>
          */
@@ -101,6 +122,8 @@ public class ListDataSourceResponseBody extends TeaModel {
         public String parentDsType;
 
         /**
+         * <p>Display name of the data source.</p>
+         * 
          * <strong>example:</strong>
          * <p>0327</p>
          */

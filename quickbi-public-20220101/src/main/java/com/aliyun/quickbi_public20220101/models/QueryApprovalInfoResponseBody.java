@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryApprovalInfoResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return the result of the interface execution.</p>
+     */
     @NameInMap("Result")
     public QueryApprovalInfoResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the API call was successful. Possible values are:</p>
+     * <ul>
+     * <li>true: success</li>
+     * <li>false: failure</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,26 +63,44 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
 
     public static class QueryApprovalInfoResponseBodyResultData extends TeaModel {
         /**
+         * <p>Applicant\&quot;s user ID, qbi user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1359508</p>
          */
         @NameInMap("ApplicantId")
         public String applicantId;
 
+        /**
+         * <p>Applicant\&quot;s nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Li Fei</p>
+         */
         @NameInMap("ApplicantName")
         public String applicantName;
 
         /**
+         * <p>Application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>64813ef6da58e80eef8ed2f9</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>Application reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Development needs</p>
+         */
         @NameInMap("ApplyReason")
         public String applyReason;
 
         /**
+         * <p>Approver\&quot;s user ID, qbi user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sdasascasxasd</p>
          */
@@ -79,6 +108,8 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String approverId;
 
         /**
+         * <p>Approver\&quot;s nickname.</p>
+         * 
          * <strong>example:</strong>
          * <p>data_fusion_002</p>
          */
@@ -86,6 +117,12 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public String approverName;
 
         /**
+         * <p>Whether the resource has been deleted:</p>
+         * <ul>
+         * <li>true: Deleted</li>
+         * <li>false: Not deleted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -93,6 +130,8 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Boolean deleteFlag;
 
         /**
+         * <p>Permission expiration date, timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1708568097135</p>
          */
@@ -100,6 +139,13 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Long expireDate;
 
         /**
+         * <p>Permission approval status:</p>
+         * <ul>
+         * <li>0: Under review, corresponding to 0 in the request parameters</li>
+         * <li>1: Approved, corresponding to 1 in the request parameters</li>
+         * <li>2: Rejected, corresponding to 1 in the request parameters</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -107,6 +153,8 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer flagStatus;
 
         /**
+         * <p>Application creation time, timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1687315758</p>
          */
@@ -114,32 +162,56 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
+         * <p>Application modification time, timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640595729000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Handling reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Development needs</p>
+         */
         @NameInMap("HandleReason")
         public String handleReason;
 
         /**
+         * <p>The ID of the resource for which permission is requested.</p>
+         * 
          * <strong>example:</strong>
          * <p>acl-ct4t2e4u2x4ej1bzur</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource for which permission is requested (e.g., report name, space name...).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Resources</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
+         * <p>The type of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>DASHBOARD</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Workspace</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -279,10 +351,15 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
     }
 
     public static class QueryApprovalInfoResponseBodyResult extends TeaModel {
+        /**
+         * <p>Array of approval flow information.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryApprovalInfoResponseBodyResultData> data;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -290,6 +367,8 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of records requested per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -297,6 +376,8 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The starting position of the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -304,6 +385,8 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer start;
 
         /**
+         * <p>The total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -311,6 +394,8 @@ public class QueryApprovalInfoResponseBody extends TeaModel {
         public Integer total;
 
         /**
+         * <p>The total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

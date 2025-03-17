@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the list of users under the specified workspace role.</p>
+     */
     @NameInMap("Result")
     public ListWorkspaceRoleUsersResponseBodyResult result;
 
     /**
+     * <p>是否请求成功。取值范围：</p>
+     * <ul>
+     * <li>true：请求成功</li>
+     * <li>false：请求失败</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,10 +62,18 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
     }
 
     public static class ListWorkspaceRoleUsersResponseBodyResultData extends TeaModel {
+        /**
+         * <p>Nickname of the organization member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test user</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
         /**
+         * <p>UserID of the organization member in Quick BI.</p>
+         * 
          * <strong>example:</strong>
          * <p>b5d8fd9348cc4327****afb604</p>
          */
@@ -62,12 +81,20 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>Workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7350a155-0e94-4c6c-8620-57bbec38****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>Workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test space</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -111,10 +138,15 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
     }
 
     public static class ListWorkspaceRoleUsersResponseBodyResult extends TeaModel {
+        /**
+         * <p>User list.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListWorkspaceRoleUsersResponseBodyResultData> data;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -122,6 +154,8 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of items per page as set in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -129,6 +163,8 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -136,6 +172,8 @@ public class ListWorkspaceRoleUsersResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

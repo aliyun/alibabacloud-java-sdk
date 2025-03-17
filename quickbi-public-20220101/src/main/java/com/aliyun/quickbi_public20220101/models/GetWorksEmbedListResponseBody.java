@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetWorksEmbedListResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>38C0F*<strong><strong>0-415</strong></strong>9F1-*****422BDB65</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Array of report objects</p>
+     */
     @NameInMap("Result")
     public GetWorksEmbedListResponseBodyResult result;
 
     /**
+     * <p>Whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +59,8 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
 
     public static class GetWorksEmbedListResponseBodyResultData extends TeaModel {
         /**
+         * <p>Embed time</p>
+         * 
          * <strong>example:</strong>
          * <p>YYYY-mm-DD hh:MM:ss</p>
          */
@@ -59,16 +68,26 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         public String embedTime;
 
         /**
+         * <p>Report ID</p>
+         * 
          * <strong>example:</strong>
          * <p>897ce25e-<strong><strong>-</strong></strong>-af84-d13c5610****</p>
          */
         @NameInMap("WorksId")
         public String worksId;
 
+        /**
+         * <p>Report name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("WorksName")
         public String worksName;
 
         /**
+         * <p>Report type</p>
+         * 
          * <strong>example:</strong>
          * <p>page</p>
          */
@@ -76,6 +95,8 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         public String worksType;
 
         /**
+         * <p>Workspace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>87c6b145-<strong><strong>-43e1-9426-8f93be23</strong></strong></p>
          */
@@ -130,10 +151,15 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
     }
 
     public static class GetWorksEmbedListResponseBodyResult extends TeaModel {
+        /**
+         * <p>Array of reports</p>
+         */
         @NameInMap("Data")
         public java.util.List<GetWorksEmbedListResponseBodyResultData> data;
 
         /**
+         * <p>Page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -141,6 +167,8 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
+         * <p>Number of items per page</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -148,6 +176,8 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>Total number of items</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -155,6 +185,8 @@ public class GetWorksEmbedListResponseBody extends TeaModel {
         public Long totalNum;
 
         /**
+         * <p>Total number of pages</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

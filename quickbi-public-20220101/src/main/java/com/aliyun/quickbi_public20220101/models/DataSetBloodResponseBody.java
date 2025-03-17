@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class DataSetBloodResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46e537a5****,3dadsu****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Array of works.</p>
+     */
     @NameInMap("Result")
     public java.util.List<DataSetBloodResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: Request succeeded</li>
+     * <li>false: Request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class DataSetBloodResponseBody extends TeaModel {
 
     public static class DataSetBloodResponseBodyResult extends TeaModel {
         /**
+         * <p>Work ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
          */
@@ -59,6 +72,16 @@ public class DataSetBloodResponseBody extends TeaModel {
         public String worksId;
 
         /**
+         * <p>Work types: - REPORT: </p>
+         * <ul>
+         * <li>REPORT: Workbooks</li>
+         * <li>dashboardOfflineQuery: Downloads</li>
+         * <li>DASHBOARD: Dashboard</li>
+         * <li>ANALYSIS: Ad Hoc Analysis</li>
+         * <li>SCREEN: Visualization Screen</li>
+         * <li>PAGE: Old dashboard</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PAGE</p>
          */
