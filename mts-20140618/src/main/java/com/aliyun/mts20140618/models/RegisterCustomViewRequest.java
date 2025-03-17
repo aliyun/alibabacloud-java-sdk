@@ -32,13 +32,14 @@ public class RegisterCustomViewRequest extends TeaModel {
     public String customGroupId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>http://<code>127.66.**.**</code>/image.jpeg</p>
      */
     @NameInMap("ImageUrl")
     public String imageUrl;
+
+    @NameInMap("LabelPrompt")
+    public String labelPrompt;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -87,6 +88,14 @@ public class RegisterCustomViewRequest extends TeaModel {
     }
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public RegisterCustomViewRequest setLabelPrompt(String labelPrompt) {
+        this.labelPrompt = labelPrompt;
+        return this;
+    }
+    public String getLabelPrompt() {
+        return this.labelPrompt;
     }
 
     public RegisterCustomViewRequest setOwnerAccount(String ownerAccount) {

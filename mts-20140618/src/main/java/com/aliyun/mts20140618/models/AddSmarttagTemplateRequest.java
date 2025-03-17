@@ -57,6 +57,12 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     @NameInMap("KnowledgeConfig")
     public String knowledgeConfig;
 
+    @NameInMap("LabelCustomCategoryIds")
+    public String labelCustomCategoryIds;
+
+    @NameInMap("LabelCustomParamsConfig")
+    public String labelCustomParamsConfig;
+
     /**
      * <strong>example:</strong>
      * <p>hmi</p>
@@ -174,6 +180,22 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     }
     public String getKnowledgeConfig() {
         return this.knowledgeConfig;
+    }
+
+    public AddSmarttagTemplateRequest setLabelCustomCategoryIds(String labelCustomCategoryIds) {
+        this.labelCustomCategoryIds = labelCustomCategoryIds;
+        return this;
+    }
+    public String getLabelCustomCategoryIds() {
+        return this.labelCustomCategoryIds;
+    }
+
+    public AddSmarttagTemplateRequest setLabelCustomParamsConfig(String labelCustomParamsConfig) {
+        this.labelCustomParamsConfig = labelCustomParamsConfig;
+        return this;
+    }
+    public String getLabelCustomParamsConfig() {
+        return this.labelCustomParamsConfig;
     }
 
     public AddSmarttagTemplateRequest setLabelType(String labelType) {
