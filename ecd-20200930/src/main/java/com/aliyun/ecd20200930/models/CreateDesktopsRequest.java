@@ -157,6 +157,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    @NameInMap("ExtendInfo")
+    public String extendInfo;
+
     /**
      * <p>The ID of the cloud computer pool.</p>
      * 
@@ -493,6 +496,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public java.util.List<String> getEndUserId() {
         return this.endUserId;
+    }
+
+    public CreateDesktopsRequest setExtendInfo(String extendInfo) {
+        this.extendInfo = extendInfo;
+        return this;
+    }
+    public String getExtendInfo() {
+        return this.extendInfo;
     }
 
     public CreateDesktopsRequest setGroupId(String groupId) {
