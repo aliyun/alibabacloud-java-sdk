@@ -26,15 +26,15 @@ public class ListDataLakeCatalogRequest extends TeaModel {
     @NameInMap("SearchKey")
     public String searchKey;
 
-    @NameInMap("SessionToken")
-    public String sessionToken;
-
     /**
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("Tid")
     public Long tid;
+
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
 
     public static ListDataLakeCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataLakeCatalogRequest self = new ListDataLakeCatalogRequest();
@@ -57,20 +57,20 @@ public class ListDataLakeCatalogRequest extends TeaModel {
         return this.searchKey;
     }
 
-    public ListDataLakeCatalogRequest setSessionToken(String sessionToken) {
-        this.sessionToken = sessionToken;
-        return this;
-    }
-    public String getSessionToken() {
-        return this.sessionToken;
-    }
-
     public ListDataLakeCatalogRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public ListDataLakeCatalogRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
