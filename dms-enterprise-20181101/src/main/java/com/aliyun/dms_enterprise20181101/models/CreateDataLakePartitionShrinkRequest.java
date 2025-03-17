@@ -67,6 +67,9 @@ public class CreateDataLakePartitionShrinkRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static CreateDataLakePartitionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataLakePartitionShrinkRequest self = new CreateDataLakePartitionShrinkRequest();
         return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class CreateDataLakePartitionShrinkRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public CreateDataLakePartitionShrinkRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

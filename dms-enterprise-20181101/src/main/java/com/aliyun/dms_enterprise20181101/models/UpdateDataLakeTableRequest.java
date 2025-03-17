@@ -47,6 +47,9 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static UpdateDataLakeTableRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDataLakeTableRequest self = new UpdateDataLakeTableRequest();
         return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class UpdateDataLakeTableRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public UpdateDataLakeTableRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

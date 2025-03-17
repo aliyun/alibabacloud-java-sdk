@@ -60,6 +60,9 @@ public class DeleteDataLakePartitionRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static DeleteDataLakePartitionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataLakePartitionRequest self = new DeleteDataLakePartitionRequest();
         return TeaModel.build(map, self);
@@ -119,6 +122,14 @@ public class DeleteDataLakePartitionRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public DeleteDataLakePartitionRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

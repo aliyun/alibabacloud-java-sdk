@@ -67,6 +67,9 @@ public class BatchCreateDataLakePartitionsRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static BatchCreateDataLakePartitionsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchCreateDataLakePartitionsRequest self = new BatchCreateDataLakePartitionsRequest();
         return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class BatchCreateDataLakePartitionsRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public BatchCreateDataLakePartitionsRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

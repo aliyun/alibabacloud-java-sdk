@@ -35,6 +35,9 @@ public class GetDataLakeCatalogRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static GetDataLakeCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDataLakeCatalogRequest self = new GetDataLakeCatalogRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GetDataLakeCatalogRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public GetDataLakeCatalogRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
