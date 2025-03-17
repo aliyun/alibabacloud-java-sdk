@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ManualRunMailTaskRequest extends TeaModel {
     /**
+     * <p>The ID of the email task in the subscription management interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

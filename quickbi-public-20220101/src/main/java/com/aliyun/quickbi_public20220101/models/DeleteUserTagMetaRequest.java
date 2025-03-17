@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserTagMetaRequest extends TeaModel {
     /**
+     * <p>The ID of the tag to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

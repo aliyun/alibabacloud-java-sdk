@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceRequest extends TeaModel {
     /**
+     * <p>Data source type.</p>
+     * 
      * <strong>example:</strong>
      * <p>mysql</p>
      */
@@ -12,6 +14,7 @@ public class ListDataSourceRequest extends TeaModel {
     public String dsType;
 
     /**
+     * <p>Workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

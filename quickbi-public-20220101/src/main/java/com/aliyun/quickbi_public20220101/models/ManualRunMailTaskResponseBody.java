@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ManualRunMailTaskResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>a4d1a221d-41za1-****</p>
      */
@@ -12,6 +14,8 @@ public class ManualRunMailTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the execution was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,12 @@ public class ManualRunMailTaskResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request was successful. Value range:</p>
+     * <ul>
+     * <li>true: The request succeeded </li>
+     * <li>false: The request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

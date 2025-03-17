@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationRolesResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the list of organization roles.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListOrganizationRolesResponseBodyResult> result;
 
     /**
+     * <p>是否请求成功。取值范围：</p>
+     * <ul>
+     * <li>true：请求成功</li>
+     * <li>false：请求失败</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,23 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
 
     public static class ListOrganizationRolesResponseBodyResultAuthConfigList extends TeaModel {
         /**
+         * <p>Permission type:</p>
+         * <ul>
+         * <li>quick_monitor: Metric monitoring</li>
+         * <li>subscription: Subscription management</li>
+         * <li>offline_download: Self-service data retrieval</li>
+         * <li>resource_package: Resource package management</li>
+         * <li>organization_ask: Organization identification code (AK/SK)</li>
+         * <li>developer_openapi: Open API</li>
+         * <li>data_service: Data service</li>
+         * <li>admin_authorize3rd: Embedded analysis</li>
+         * <li>component_manage: Custom component</li>
+         * <li>template_open: Custom template</li>
+         * <li>custom_driver: Custom driver (supported only in standalone deployment)</li>
+         * <li>open_platform_custom_plugin: Custom plugin (supported only in standalone deployment)</li>
+         * <li>enterprise_safety: Enterprise security</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>enterprise_safety</p>
          */
@@ -74,10 +102,19 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationRolesResponseBodyResult extends TeaModel {
+        /**
+         * <p>List of role permission configurations.</p>
+         */
         @NameInMap("AuthConfigList")
         public java.util.List<ListOrganizationRolesResponseBodyResultAuthConfigList> authConfigList;
 
         /**
+         * <p>Whether it is a predefined role. Possible values:</p>
+         * <ul>
+         * <li>true: Yes</li>
+         * <li>false: No</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -85,12 +122,20 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
         public Boolean isSystemRole;
 
         /**
+         * <p>Role ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>111111111</p>
          */
         @NameInMap("RoleId")
         public Long roleId;
 
+        /**
+         * <p>Role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Organization Admin</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 

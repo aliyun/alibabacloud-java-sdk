@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryDataServiceListResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>78C1AA2D-9201-599E-A0BA-6FC462E57A95</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("Result")
     public QueryDataServiceListResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Value range:</p>
+     * <ul>
+     * <li>true: The request was successful </li>
+     * <li>false: The request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,10 +62,19 @@ public class QueryDataServiceListResponseBody extends TeaModel {
     }
 
     public static class QueryDataServiceListResponseBodyResultDataContentFilter extends TeaModel {
+        /**
+         * <p>Combined conditions.</p>
+         */
         @NameInMap("Filters")
         public java.util.List<java.util.Map<String, ?>> filters;
 
         /**
+         * <p>Logical relationship between multiple SQL text keywords.</p>
+         * <ul>
+         * <li><strong>or</strong>: or</li>
+         * <li><strong>and</strong>: and</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>and</p>
          */
@@ -62,6 +82,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String logicalOperator;
 
         /**
+         * <p>Type.</p>
+         * <ul>
+         * <li>basic: basic</li>
+         * <li>combined: complex</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>basic</p>
          */
@@ -100,10 +126,18 @@ public class QueryDataServiceListResponseBody extends TeaModel {
     }
 
     public static class QueryDataServiceListResponseBodyResultDataContentReturnFieldsField extends TeaModel {
+        /**
+         * <p>Display name in the cube model (can be in Chinese or English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>date(year)</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
         /**
+         * <p>The corresponding physical field name.</p>
+         * 
          * <strong>example:</strong>
          * <p>shid_star</p>
          */
@@ -111,6 +145,18 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String column;
 
         /**
+         * <p>Data type.</p>
+         * <ul>
+         * <li>number: numeric</li>
+         * <li>string: string</li>
+         * <li>date: date</li>
+         * <li>datetime: datetime</li>
+         * <li>time: time</li>
+         * <li>geographic: geographic</li>
+         * <li>boolean: boolean</li>
+         * <li>url: URL</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>datetime</p>
          */
@@ -118,6 +164,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String dataType;
 
         /**
+         * <p>Unique identifier for the original field.</p>
+         * 
          * <strong>example:</strong>
          * <p>1c1f88cb7d</p>
          */
@@ -125,6 +173,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String fid;
 
         /**
+         * <p>This attribute is included for date and geographic dimensions, indicating the supported granularity.</p>
+         * 
          * <strong>example:</strong>
          * <p>yearRegion</p>
          */
@@ -132,6 +182,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String granularity;
 
         /**
+         * <p>Unique name of the cube field, mainly used for unique positioning in the returned result.</p>
+         * 
          * <strong>example:</strong>
          * <p>sss</p>
          */
@@ -139,6 +191,12 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Type.</p>
+         * <ul>
+         * <li>Dimension: Dimension</li>
+         * <li>Measure: Measure</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>dimension</p>
          */
@@ -210,6 +268,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
 
     public static class QueryDataServiceListResponseBodyResultDataContentReturnFields extends TeaModel {
         /**
+         * <p>Aggregation operator. For example, SUM, AVG, and MAX.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUM</p>
          */
@@ -217,19 +277,37 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String aggregator;
 
         /**
+         * <p>Field parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>s_number</p>
          */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>Remark for the returned field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Theme Configuration already exists</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>Corresponding cube field information.</p>
+         */
         @NameInMap("Field")
         public QueryDataServiceListResponseBodyResultDataContentReturnFieldsField field;
 
         /**
+         * <p>Sorting.</p>
+         * <ul>
+         * <li>asc: Ascending</li>
+         * <li>desc: Descending</li>
+         * <li>no: No sorting</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>no</p>
          */
@@ -285,25 +363,41 @@ public class QueryDataServiceListResponseBody extends TeaModel {
 
     public static class QueryDataServiceListResponseBodyResultDataContent extends TeaModel {
         /**
+         * <p>Cube identifier ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>56f9f34a-bdba-496a-91a3-a18b1ff73a80</p>
          */
         @NameInMap("CubeId")
         public String cubeId;
 
+        /**
+         * <p>Dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test data source</p>
+         */
         @NameInMap("CubeName")
         public String cubeName;
 
         /**
+         * <p>Detail or Summary</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Detail")
         public Boolean detail;
 
+        /**
+         * <p>Request parameter information.</p>
+         */
         @NameInMap("Filter")
         public QueryDataServiceListResponseBodyResultDataContentFilter filter;
 
+        /**
+         * <p>Return information.</p>
+         */
         @NameInMap("ReturnFields")
         public java.util.List<QueryDataServiceListResponseBodyResultDataContentReturnFields> returnFields;
 
@@ -355,33 +449,60 @@ public class QueryDataServiceListResponseBody extends TeaModel {
     }
 
     public static class QueryDataServiceListResponseBodyResultData extends TeaModel {
+        /**
+         * <p>The model of the data service in JSON format.</p>
+         */
         @NameInMap("Content")
         public QueryDataServiceListResponseBodyResultDataContent content;
 
         /**
+         * <p>Creator ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7cb94cd48701</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>Creator\&quot;s name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
+         * <p>Cube identifier ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d14e7448-0eb3-40d3-9375-4afef8de29fd</p>
          */
         @NameInMap("CubeId")
         public String cubeId;
 
+        /**
+         * <p>Dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test data source</p>
+         */
         @NameInMap("CubeName")
         public String cubeName;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
         /**
+         * <p>Creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-18 14:00:02.0</p>
          */
@@ -389,6 +510,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-03-21 18:02:36</p>
          */
@@ -396,29 +519,53 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Modifier\&quot;s userId.</p>
+         * 
          * <strong>example:</strong>
          * <p>7cb94cd48701</p>
          */
         @NameInMap("ModifierId")
         public String modifierId;
 
+        /**
+         * <p>Modifier\&quot;s name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("ModifierName")
         public String modifierName;
 
+        /**
+         * <p>Data service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test report</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Owner ID</p>
+         * 
          * <strong>example:</strong>
          * <p>862801339</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>Owner\&quot;s name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lisi</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>Unique ID of the data service.</p>
+         * 
          * <strong>example:</strong>
          * <p>dtsuq3i31f5j8v848b</p>
          */
@@ -426,12 +573,20 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public String sid;
 
         /**
+         * <p>Workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7350a155-0e94-4c6c-8620-57bbec38****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>Workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test workspace</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -571,10 +726,15 @@ public class QueryDataServiceListResponseBody extends TeaModel {
     }
 
     public static class QueryDataServiceListResponseBodyResult extends TeaModel {
+        /**
+         * <p>Data service information.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryDataServiceListResponseBodyResultData> data;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -582,6 +742,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of records per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -589,6 +751,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -596,6 +760,8 @@ public class QueryDataServiceListResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

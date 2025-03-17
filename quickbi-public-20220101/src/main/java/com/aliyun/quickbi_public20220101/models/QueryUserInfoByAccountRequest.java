@@ -13,7 +13,7 @@ public class QueryUserInfoByAccountRequest extends TeaModel {
      * <li>If the organization user is a RAM user, such as a <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>, the query account format is the head of the RAM user, that is, the RAM user to be entered is zhangsan.</li>
      * </ul>
      * </li>
-     * <li><p>ID：</p>
+     * <li><p>ID:</p>
      * <ul>
      * <li>Enter the UID of the account to query the account information.</li>
      * </ul>
@@ -27,6 +27,13 @@ public class QueryUserInfoByAccountRequest extends TeaModel {
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <p>当查询子账号出现重复报错时，输入主账号的账号名，
+     * 例如<a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>。</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a></p>
+     */
     @NameInMap("ParentAccountName")
     public String parentAccountName;
 

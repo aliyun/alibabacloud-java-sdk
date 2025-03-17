@@ -8,12 +8,11 @@ public class AddUserRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
      */
     @NameInMap("AccountName")
+    @Deprecated
     public String accountName;
 
     /**
@@ -66,6 +65,7 @@ public class AddUserRequest extends TeaModel {
         return this.accountId;
     }
 
+    @Deprecated
     public AddUserRequest setAccountName(String accountName) {
         this.accountName = accountName;
         return this;

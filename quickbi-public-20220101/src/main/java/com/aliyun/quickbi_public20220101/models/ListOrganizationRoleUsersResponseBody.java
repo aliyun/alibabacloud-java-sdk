@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationRoleUsersResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>BCE45E6D-9304-4F94-86BB-5A772B1615FF</p>
+     * <p>BCE45E6D-****-4F94-86BB-****2B1615FF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the list of users under the organization role.</p>
+     */
     @NameInMap("Result")
     public ListOrganizationRoleUsersResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: Request succeeded</li>
+     * <li>false: Request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,10 +62,18 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationRoleUsersResponseBodyResultData extends TeaModel {
+        /**
+         * <p>Nickname of the organization member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test User</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
         /**
+         * <p>UserID of the organization member in Quick BI.</p>
+         * 
          * <strong>example:</strong>
          * <p>b5d8fd9348cc4327****afb604</p>
          */
@@ -85,10 +104,15 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationRoleUsersResponseBodyResult extends TeaModel {
+        /**
+         * <p>User list.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListOrganizationRoleUsersResponseBodyResultData> data;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -96,6 +120,8 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of items per page as set in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -103,6 +129,8 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -110,6 +138,8 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

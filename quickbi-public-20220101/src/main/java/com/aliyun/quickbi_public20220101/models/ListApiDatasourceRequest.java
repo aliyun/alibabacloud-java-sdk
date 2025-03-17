@@ -4,10 +4,22 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListApiDatasourceRequest extends TeaModel {
+    /**
+     * <p>The keyword of the API data source name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
+     * <p>Current page number for API data source list:</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +27,12 @@ public class ListApiDatasourceRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of rows per page in a paged query.</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * <li>Valid values: 1 to 100.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +40,7 @@ public class ListApiDatasourceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

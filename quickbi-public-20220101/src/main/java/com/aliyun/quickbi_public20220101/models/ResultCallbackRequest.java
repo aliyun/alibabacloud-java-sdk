@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResultCallbackRequest extends TeaModel {
     /**
+     * <p>The ID of the approval process.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,21 @@ public class ResultCallbackRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The reason for the approval.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not a Division A analyst.</p>
      */
     @NameInMap("HandleReason")
     public String handleReason;
 
     /**
+     * <p>Approval result:</p>
+     * <ul>
+     * <li>1: passed</li>
+     * <li>2: rejected</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

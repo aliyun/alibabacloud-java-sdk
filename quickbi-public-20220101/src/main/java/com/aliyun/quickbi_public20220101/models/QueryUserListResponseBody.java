@@ -75,6 +75,9 @@ public class QueryUserListResponseBody extends TeaModel {
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
+        @NameInMap("IsDeleted")
+        public Boolean isDeleted;
+
         @NameInMap("JoinedDate")
         public Long joinedDate;
 
@@ -136,6 +139,14 @@ public class QueryUserListResponseBody extends TeaModel {
         }
         public Boolean getAuthAdminUser() {
             return this.authAdminUser;
+        }
+
+        public QueryUserListResponseBodyResultData setIsDeleted(Boolean isDeleted) {
+            this.isDeleted = isDeleted;
+            return this;
+        }
+        public Boolean getIsDeleted() {
+            return this.isDeleted;
         }
 
         public QueryUserListResponseBodyResultData setJoinedDate(Long joinedDate) {

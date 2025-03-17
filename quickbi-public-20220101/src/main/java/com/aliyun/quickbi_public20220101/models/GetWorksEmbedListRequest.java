@@ -4,10 +4,18 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class GetWorksEmbedListRequest extends TeaModel {
+    /**
+     * <p>Report name (fuzzy match)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test dataset</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>Page number (defaults to 1 if empty)</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +23,8 @@ public class GetWorksEmbedListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of items per page (defaults to 10 if empty)</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -22,6 +32,16 @@ public class GetWorksEmbedListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Report type</p>
+     * <ul>
+     * <li>page, Dashboard</li>
+     * <li>screen, Visualization Screen</li>
+     * <li>report, Workbooks</li>
+     * <li>ANALYSIS, Ad Hoc Analysis</li>
+     * <li>dashboardOfflineQuery, Downloads</li>
+     * <li>dataForm, Forms</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>page</p>
      */
@@ -29,6 +49,8 @@ public class GetWorksEmbedListRequest extends TeaModel {
     public String worksType;
 
     /**
+     * <p>Workspace ID</p>
+     * 
      * <strong>example:</strong>
      * <p>919818-<em><strong>-</strong></em>**-wdasd</p>
      */
