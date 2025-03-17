@@ -159,6 +159,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunDataAnalysisResponseBodyData extends TeaModel {
+        @NameInMap("attempts")
+        public java.util.List<?> attempts;
+
         /**
          * <strong>example:</strong>
          * <p>Access was denied, message: No such namespace namespaces/tech-scp-chain7.</p>
@@ -222,6 +225,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         public static RunDataAnalysisResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RunDataAnalysisResponseBodyData self = new RunDataAnalysisResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public RunDataAnalysisResponseBodyData setAttempts(java.util.List<?> attempts) {
+            this.attempts = attempts;
+            return this;
+        }
+        public java.util.List<?> getAttempts() {
+            return this.attempts;
         }
 
         public RunDataAnalysisResponseBodyData setErrorMessage(String errorMessage) {
