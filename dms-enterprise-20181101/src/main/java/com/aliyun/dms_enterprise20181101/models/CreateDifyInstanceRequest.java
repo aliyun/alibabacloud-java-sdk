@@ -86,6 +86,9 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("ModelOption")
     public String modelOption;
 
+    @NameInMap("NatGatewayOption")
+    public String natGatewayOption;
+
     @NameInMap("OssPath")
     public String ossPath;
 
@@ -388,6 +391,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
     }
     public String getModelOption() {
         return this.modelOption;
+    }
+
+    public CreateDifyInstanceRequest setNatGatewayOption(String natGatewayOption) {
+        this.natGatewayOption = natGatewayOption;
+        return this;
+    }
+    public String getNatGatewayOption() {
+        return this.natGatewayOption;
     }
 
     public CreateDifyInstanceRequest setOssPath(String ossPath) {
