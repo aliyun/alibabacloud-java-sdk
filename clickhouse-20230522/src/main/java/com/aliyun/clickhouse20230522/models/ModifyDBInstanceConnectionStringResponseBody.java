@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ModifyDBInstanceConnectionStringResponseBodyData data;
@@ -68,6 +68,12 @@ public class ModifyDBInstanceConnectionStringResponseBody extends TeaModel {
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The disabled database ports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9001,8123</p>
+         */
         @NameInMap("DisabledPorts")
         public String disabledPorts;
 

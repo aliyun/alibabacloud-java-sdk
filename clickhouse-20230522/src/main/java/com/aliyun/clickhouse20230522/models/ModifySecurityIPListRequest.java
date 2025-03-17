@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIPListRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifySecurityIPListRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The name of the whitelist whose settings you want to modify.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -21,6 +24,16 @@ public class ModifySecurityIPListRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>The modification mode.</p>
+     * <ul>
+     * <li>0: overwrites the original IP addresses and CIDR blocks in the whitelist.</li>
+     * <li>1: adds the IP addresses and CIDR blocks to the whitelist.</li>
+     * <li>2: removes the IP addresses and CIDR blocks from the whitelist.</li>
+     * </ul>
+     * <blockquote>
+     * <p> We recommend that you set the value to 0.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -28,6 +41,8 @@ public class ModifySecurityIPListRequest extends TeaModel {
     public String modifyMode;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -35,6 +50,8 @@ public class ModifySecurityIPListRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.0.0/24,172.16.0.0/24</p>
      */

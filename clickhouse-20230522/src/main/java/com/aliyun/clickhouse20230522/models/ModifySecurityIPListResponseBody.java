@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifySecurityIPListResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public ModifySecurityIPListResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
      */
@@ -37,6 +42,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
 
     public static class ModifySecurityIPListResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxx</p>
          */
@@ -44,6 +51,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public Integer DBInstanceID;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxx</p>
          */
@@ -51,6 +60,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The name of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -58,6 +69,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public String groupName;
 
         /**
+         * <p>The tag of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -65,6 +78,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public String groupTag;
 
         /**
+         * <p>The IP addresses and CIDR blocks in the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.0/24,172.16.0.0/24</p>
          */
@@ -72,6 +87,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
+         * <p>The IP address type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipv4</p>
          */
@@ -79,6 +96,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public String securityIPType;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -86,6 +105,8 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
         public Integer taskId;
 
         /**
+         * <p>The network type of the whitelist.</p>
+         * 
          * <strong>example:</strong>
          * <p>mix</p>
          */

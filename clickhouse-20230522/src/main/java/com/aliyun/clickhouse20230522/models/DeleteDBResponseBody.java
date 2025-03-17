@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DeleteDBResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>06798FEE-BEF2-5FAF-A30D-728973BBE97C</p>
      */
@@ -37,6 +42,8 @@ public class DeleteDBResponseBody extends TeaModel {
 
     public static class DeleteDBResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
@@ -44,6 +51,8 @@ public class DeleteDBResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>testdb001</p>
          */

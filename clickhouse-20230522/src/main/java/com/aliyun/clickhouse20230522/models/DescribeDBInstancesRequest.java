@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
     /**
+     * <p>The cluster IDs. Separate multiple cluster IDs with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-xxxxx,cx-xxxx</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceIds;
 
     /**
+     * <p>The cluster status.</p>
+     * 
      * <strong>example:</strong>
      * <p>active</p>
      */
@@ -19,6 +23,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceStatus;
 
     /**
+     * <p>The cluster description.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -44,6 +50,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -51,6 +59,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
      */

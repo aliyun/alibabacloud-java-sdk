@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityRequest extends TeaModel {
     /**
+     * <p>The name of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeAccountAuthorityRequest extends TeaModel {
     public String account;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeAccountAuthorityRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

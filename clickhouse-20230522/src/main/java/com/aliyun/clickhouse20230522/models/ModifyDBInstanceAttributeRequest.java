@@ -19,6 +19,7 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String attributeType;
 
     /**
+     * <p>The new value of the configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +29,7 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String attributeValue;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +48,7 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

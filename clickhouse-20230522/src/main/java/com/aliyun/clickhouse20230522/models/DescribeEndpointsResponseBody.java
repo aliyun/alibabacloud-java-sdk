@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DescribeEndpointsResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
      */
@@ -37,6 +42,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     public static class DescribeEndpointsResponseBodyDataEndpointsPorts extends TeaModel {
         /**
+         * <p>The port used to connect to the cluster. Valid values:</p>
+         * <ul>
+         * <li>8123: This value is returned when the value of Protocol is HttpPort.</li>
+         * <li>8443: This value is returned when the value of Protocol is HttpsPort.</li>
+         * <li>9000: This value is returned when the value of Protocol is TcpPort.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>8123</p>
          */
@@ -44,6 +56,13 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li>HttpPort</li>
+         * <li>HttpsPort</li>
+         * <li>TcpPort</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HttpPort</p>
          */
@@ -75,6 +94,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
 
     public static class DescribeEndpointsResponseBodyDataEndpoints extends TeaModel {
         /**
+         * <p>The endpoint of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-****-clickhouse.clickhouseserver.pre.rds.aliyuncs.com</p>
          */
@@ -82,6 +103,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.30.XX.XX</p>
          */
@@ -89,16 +112,27 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String IPAddress;
 
         /**
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li>VPC</li>
+         * <li>PUBLIC</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The details of the ports.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<DescribeEndpointsResponseBodyDataEndpointsPorts> ports;
 
         /**
+         * <p>The state of the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
@@ -106,6 +140,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-0xi8829****</p>
          */
@@ -113,7 +149,7 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf61z****</p>
@@ -122,6 +158,8 @@ public class DescribeEndpointsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf61z****</p>
          */
@@ -200,10 +238,19 @@ public class DescribeEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeEndpointsResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the endpoints.</p>
+         */
         @NameInMap("Endpoints")
         public java.util.List<DescribeEndpointsResponseBodyDataEndpoints> endpoints;
 
         /**
+         * <p>The network type of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>PUBLIC</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */

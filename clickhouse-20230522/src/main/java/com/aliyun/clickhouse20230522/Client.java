@@ -74,7 +74,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建账号</p>
+     * <p>Creates a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param tmpReq CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -145,7 +145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建账号</p>
+     * <p>Creates a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
@@ -157,7 +157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据库</p>
+     * <p>Creates an ApsaraDB for ClickHouse database.</p>
      * 
      * @param request CreateDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -206,7 +206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据库</p>
+     * <p>Creates an ApsaraDB for ClickHouse database.</p>
      * 
      * @param request CreateDBRequest
      * @return CreateDBResponse
@@ -218,7 +218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建企业版Clickhouse实例</p>
+     * <p>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -233,6 +233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupSetId)) {
+            query.put("BackupSetId", request.backupSetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -267,6 +271,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scaleMin)) {
             query.put("ScaleMin", request.scaleMin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDBInstanceId)) {
+            query.put("SourceDBInstanceId", request.sourceDBInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
@@ -305,7 +313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建企业版Clickhouse实例</p>
+     * <p>Creates an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -317,7 +325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请外网地址</p>
+     * <p>Applies for a public endpoint.</p>
      * 
      * @param request CreateEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -366,7 +374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>申请外网地址</p>
+     * <p>Applies for a public endpoint.</p>
      * 
      * @param request CreateEndpointRequest
      * @return CreateEndpointResponse
@@ -378,7 +386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除账号</p>
+     * <p>Deletes a database account from an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -427,7 +435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除账号</p>
+     * <p>Deletes a database account from an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -439,7 +447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库</p>
+     * <p>Deletes an ApsaraDB for ClickHouse database.</p>
      * 
      * @param request DeleteDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -484,7 +492,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据库</p>
+     * <p>Deletes an ApsaraDB for ClickHouse database.</p>
      * 
      * @param request DeleteDBRequest
      * @return DeleteDBResponse
@@ -496,7 +504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -537,7 +545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Releases an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request DeleteDBInstanceRequest
      * @return DeleteDBInstanceResponse
@@ -549,7 +557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除链接地址</p>
+     * <p>Releases a public endpoint.</p>
      * 
      * @param request DeleteEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -564,6 +572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceNetType)) {
+            query.put("DBInstanceNetType", request.DBInstanceNetType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -594,7 +606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除链接地址</p>
+     * <p>Releases a public endpoint.</p>
      * 
      * @param request DeleteEndpointRequest
      * @return DeleteEndpointResponse
@@ -606,7 +618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账号的授权信息</p>
+     * <p>Queries the permissions of a database account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -651,7 +663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账号的授权信息</p>
+     * <p>Queries the permissions of a database account.</p>
      * 
      * @param request DescribeAccountAuthorityRequest
      * @return DescribeAccountAuthorityResponse
@@ -663,7 +675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账号列表</p>
+     * <p>Queries database accounts for an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -716,7 +728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询账号列表</p>
+     * <p>Queries database accounts for an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -728,7 +740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例详情</p>
+     * <p>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -769,7 +781,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例详情</p>
+     * <p>Queries the details of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -781,7 +793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DB或者Table数据结构</p>
+     * <p>Queries the schema of a database or a table.</p>
      * 
      * @param request DescribeDBInstanceDataSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -830,7 +842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询DB或者Table数据结构</p>
+     * <p>Queries the schema of a database or a table.</p>
      * 
      * @param request DescribeDBInstanceDataSourcesRequest
      * @return DescribeDBInstanceDataSourcesResponse
@@ -842,7 +854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>Queries a list of ApsaraDB for ClickHouse clusters.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -903,7 +915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例列表</p>
+     * <p>Queries a list of ApsaraDB for ClickHouse clusters.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -915,7 +927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例访问地址</p>
+     * <p>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -956,7 +968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实例访问地址</p>
+     * <p>Queries the endpoint of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request DescribeEndpointsRequest
      * @return DescribeEndpointsResponse
@@ -1175,7 +1187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>慢查询趋势</p>
+     * <p>Queries the trend of slow query logs.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1232,7 +1244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>慢查询趋势</p>
+     * <p>Queries the trend of slow query logs.</p>
      * 
      * @param request DescribeSlowLogTrendRequest
      * @return DescribeSlowLogTrendResponse
@@ -1301,7 +1313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改账号的授权信息</p>
+     * <p>Modifies the permissions of a database account.</p>
      * 
      * @param tmpReq ModifyAccountAuthorityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1356,7 +1368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改账号的授权信息</p>
+     * <p>Modifies the permissions of a database account.</p>
      * 
      * @param request ModifyAccountAuthorityRequest
      * @return ModifyAccountAuthorityResponse
@@ -1368,7 +1380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改账号备注</p>
+     * <p>Modifies the description of a database account.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1417,7 +1429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改账号备注</p>
+     * <p>Modifies the description of a database account.</p>
      * 
      * @param request ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
@@ -1429,7 +1441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例的配置属性，包括名称、运维时间等</p>
+     * <p>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1482,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例的配置属性，包括名称、运维时间等</p>
+     * <p>Modifies the configurations of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBInstanceAttributeRequest
      * @return ModifyDBInstanceAttributeResponse
@@ -1494,7 +1506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例弹性配置</p>
+     * <p>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1502,7 +1514,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public ModifyDBInstanceClassResponse modifyDBInstanceClassWithOptions(ModifyDBInstanceClassRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleMax)) {
+            query.put("ScaleMax", request.scaleMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scaleMin)) {
+            query.put("ScaleMin", request.scaleMin);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1511,7 +1539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2023-05-22"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -1527,7 +1555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例弹性配置</p>
+     * <p>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
@@ -1558,6 +1586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceNetType)) {
+            query.put("DBInstanceNetType", request.DBInstanceNetType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.disablePorts)) {
@@ -1604,7 +1636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变更白名单</p>
+     * <p>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifySecurityIPListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1657,7 +1689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变更白名单</p>
+     * <p>Modifies the whitelist settings of an ApsaraDB for ClickHouse cluster.</p>
      * 
      * @param request ModifySecurityIPListRequest
      * @return ModifySecurityIPListResponse
@@ -1669,7 +1701,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置账号密码</p>
+     * <p>Resets the password of a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1722,7 +1754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重置账号密码</p>
+     * <p>Resets the password of a database account for an ApsaraDB for ClickHouse Enterprise Edition cluster.</p>
      * 
      * @param request ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
@@ -1893,7 +1925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级实例内核小版本</p>
+     * <p>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1946,7 +1978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>升级实例内核小版本</p>
+     * <p>Updates the minor engine version of an ApsaraDB for ClickHouse cluster that runs Enterprise Edition.</p>
      * 
      * @param request UpgradeMinorVersionRequest
      * @return UpgradeMinorVersionResponse

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,6 +24,8 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The maximum capacity for elastic scaling.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -28,7 +33,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Long scaleMax;
 
     /**
-     * <p>The minimum capacity for auto scaling.</p>
+     * <p>The minimum capacity for elastic scaling.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

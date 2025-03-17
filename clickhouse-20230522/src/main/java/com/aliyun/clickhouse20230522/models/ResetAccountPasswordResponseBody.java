@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordResponseBody extends TeaModel {
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("Data")
     public ResetAccountPasswordResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A6A077A-577C-536E-AC13-8E715D7A34C8</p>
      */
@@ -37,6 +42,8 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
 
     public static class ResetAccountPasswordResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -44,6 +51,8 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         public String account;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */

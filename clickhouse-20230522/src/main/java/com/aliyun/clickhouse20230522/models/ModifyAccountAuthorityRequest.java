@@ -15,6 +15,7 @@ public class ModifyAccountAuthorityRequest extends TeaModel {
     public String account;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

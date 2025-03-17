@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public CreateDBInstanceResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
@@ -37,6 +42,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
 
     public static class CreateDBInstanceResponseBodyData extends TeaModel {
         /**
+         * <p>The endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
          */
@@ -44,6 +51,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         public String connectionString;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
@@ -51,6 +60,8 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>21154955706****</p>
          */

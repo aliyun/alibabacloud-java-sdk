@@ -32,6 +32,22 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBInstanceNetType")
+    public String DBInstanceNetType;
+
+    /**
+     * <ul>
+     * <li><p>The database ports that you want to disable. Separate multiple ports with commas (,).</p>
+     * </li>
+     * <li><p>This parameter is supported only for clusters whose minor engine version is 24.10.1.11098_1 or later.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong> If you create a cluster whose minor engine version is earlier than 24.10.1.11098_1 and you update the minor engine version to 24.10.1.11098_1 or later, the cluster still does not support this parameter.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>9001,8123</p>
+     */
     @NameInMap("DisablePorts")
     public String disablePorts;
 
@@ -71,6 +87,14 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setDBInstanceNetType(String DBInstanceNetType) {
+        this.DBInstanceNetType = DBInstanceNetType;
+        return this;
+    }
+    public String getDBInstanceNetType() {
+        return this.DBInstanceNetType;
     }
 
     public ModifyDBInstanceConnectionStringRequest setDisablePorts(String disablePorts) {

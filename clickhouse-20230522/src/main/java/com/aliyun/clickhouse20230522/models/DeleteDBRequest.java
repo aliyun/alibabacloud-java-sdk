@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,7 +15,7 @@ public class DeleteDBRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The name of the destination database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

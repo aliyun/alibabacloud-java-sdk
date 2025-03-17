@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public ModifyDBInstanceClassResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
      */
@@ -37,6 +42,8 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
 
     public static class ModifyDBInstanceClassResponseBodyData extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxxxxx</p>
          */
@@ -44,6 +51,8 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public Long DBInstanceID;
 
         /**
+         * <p>The cluster name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxxxxx</p>
          */
@@ -51,6 +60,8 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
+         * <p>The maximum capacity for elastic scaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -58,6 +69,8 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public Long scaleMax;
 
         /**
+         * <p>The minimum capacity for elastic scaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -65,6 +78,8 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
         public Long scaleMin;
 
         /**
+         * <p>The task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>10000****</p>
          */

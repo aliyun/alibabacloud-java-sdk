@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstanceDataSourcesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F543E6CC-6868-523D-8D28-0E92CF977ED2</p>
      */
@@ -37,16 +42,26 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceDataSourcesResponseBodyDataColumns extends TeaModel {
         /**
+         * <p>The column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>c31</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The description of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used for test</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>dbtest</p>
          */
@@ -54,6 +69,12 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String DBName;
 
         /**
+         * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -61,6 +82,8 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String primaryKey;
 
         /**
+         * <p>The table name.</p>
+         * 
          * <strong>example:</strong>
          * <p>tableTest</p>
          */
@@ -68,6 +91,8 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The type of the stored data.</p>
+         * 
          * <strong>example:</strong>
          * <p>UInt64</p>
          */
@@ -130,10 +155,15 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceDataSourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The columns.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<DescribeDBInstanceDataSourcesResponseBodyDataColumns> columns;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
@@ -141,12 +171,17 @@ public class DescribeDBInstanceDataSourcesResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>The account.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
         @NameInMap("Schemas")
         public String schemas;
 
+        /**
+         * <p>The tables.</p>
+         */
         @NameInMap("Tables")
         public java.util.List<String> tables;
 

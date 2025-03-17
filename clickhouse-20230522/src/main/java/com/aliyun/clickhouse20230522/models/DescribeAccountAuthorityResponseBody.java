@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountAuthorityResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DescribeAccountAuthorityResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
@@ -37,19 +42,29 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
 
     public static class DescribeAccountAuthorityResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the database account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <p>The databases on which permissions are granted.</p>
+         */
         @NameInMap("AllowDatabases")
         public java.util.List<String> allowDatabases;
 
+        /**
+         * <p>The dictionaries on which permissions are granted.</p>
+         */
         @NameInMap("AllowDictionaries")
         public java.util.List<String> allowDictionaries;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */
@@ -57,6 +72,12 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>Indicates whether the DDL permissions are granted to the database account. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The account has the permissions to execute DDL statements.</li>
+         * <li><strong>false</strong>: The account does not have the permissions to execute DDL statements.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -64,15 +85,28 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         public Boolean ddlAuthority;
 
         /**
+         * <p>Indicates whether the DML permissions are granted to the database account. Valid values:</p>
+         * <ul>
+         * <li>0: The account has the permissions to read data from the database, write data to the database, and modify the settings of the database.</li>
+         * <li>1: The account only has the permissions to read data from the database.</li>
+         * <li>2: The account only has the permissions to read data from the database and modify the settings of the database.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("DmlAuthority")
         public Integer dmlAuthority;
 
+        /**
+         * <p>All databases.</p>
+         */
         @NameInMap("TotalDatabases")
         public java.util.List<String> totalDatabases;
 
+        /**
+         * <p>The database.</p>
+         */
         @NameInMap("TotalDictionaries")
         public java.util.List<String> totalDictionaries;
 

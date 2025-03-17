@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-06-07 10:03:00</p>
      */
@@ -30,6 +33,8 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String product;
 
     /**
+     * <p>The execution duration of slow SQL queries. Minimum value: <strong>1000</strong>. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3000</p>
      */
@@ -37,6 +42,8 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String queryDurationMs;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -44,6 +51,8 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The start of the time range to query. Specify the time in the yyyy-MM-dd hh:mm:ss format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2023-04-13 17:48:00</p>
      */

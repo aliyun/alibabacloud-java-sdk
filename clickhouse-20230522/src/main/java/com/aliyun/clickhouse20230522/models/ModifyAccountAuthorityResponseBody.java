@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountAuthorityResponseBody extends TeaModel {
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("Data")
     public ModifyAccountAuthorityResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>05321590-BB65-4720-8CB6-8218E041CDD0</p>
      */
@@ -37,6 +42,8 @@ public class ModifyAccountAuthorityResponseBody extends TeaModel {
 
     public static class ModifyAccountAuthorityResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the database account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -44,6 +51,8 @@ public class ModifyAccountAuthorityResponseBody extends TeaModel {
         public String account;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEndpointRequest extends TeaModel {
     /**
+     * <p>The prefix of the endpoint, which indicates the prefix of the value of the ConnectionString parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
      */
@@ -12,6 +14,7 @@ public class DeleteEndpointRequest extends TeaModel {
     public String connectionString;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,7 +23,12 @@ public class DeleteEndpointRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DBInstanceNetType")
+    public String DBInstanceNetType;
+
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -46,6 +54,14 @@ public class DeleteEndpointRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DeleteEndpointRequest setDBInstanceNetType(String DBInstanceNetType) {
+        this.DBInstanceNetType = DBInstanceNetType;
+        return this;
+    }
+    public String getDBInstanceNetType() {
+        return this.DBInstanceNetType;
     }
 
     public DeleteEndpointRequest setRegionId(String regionId) {

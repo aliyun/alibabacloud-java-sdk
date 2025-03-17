@@ -145,6 +145,9 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestCluster</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

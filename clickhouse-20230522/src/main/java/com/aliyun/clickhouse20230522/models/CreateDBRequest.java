@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDBRequest extends TeaModel {
     /**
+     * <p>Database remark information.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +14,7 @@ public class CreateDBRequest extends TeaModel {
     public String comment;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,10 +24,10 @@ public class CreateDBRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database. The name must meet the following requirements:</p>
+     * <p>The database name. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name can contain lowercase letters, digits, underscores (_), and hyphens (-).</li>
-     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
      * <li>The name can be up to 64 characters in length.</li>
      * </ul>
      * <blockquote>
