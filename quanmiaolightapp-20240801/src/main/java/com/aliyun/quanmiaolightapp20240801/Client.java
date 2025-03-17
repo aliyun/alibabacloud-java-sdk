@@ -1207,11 +1207,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.generateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.generateOptions, "generateOptions", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.textProcessTasks)) {
+            request.textProcessTasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textProcessTasks, "textProcessTasks", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoRoles)) {
             request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceIdentitySimilarityMinScore)) {
+            body.put("faceIdentitySimilarityMinScore", request.faceIdentitySimilarityMinScore);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.frameSampleMethodShrink)) {
             body.put("frameSampleMethod", request.frameSampleMethodShrink);
         }
@@ -1248,6 +1256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("taskId", request.taskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.textProcessTasksShrink)) {
+            body.put("textProcessTasks", request.textProcessTasksShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.videoExtraInfo)) {
             body.put("videoExtraInfo", request.videoExtraInfo);
         }
@@ -1262,6 +1274,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoRolesShrink)) {
             body.put("videoRoles", request.videoRolesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoShotFaceIdentityCount)) {
+            body.put("videoShotFaceIdentityCount", request.videoShotFaceIdentityCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {
@@ -1415,11 +1431,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.generateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.generateOptions, "generateOptions", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.textProcessTasks)) {
+            request.textProcessTasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textProcessTasks, "textProcessTasks", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoRoles)) {
             request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceIdentitySimilarityMinScore)) {
+            body.put("faceIdentitySimilarityMinScore", request.faceIdentitySimilarityMinScore);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.frameSampleMethodShrink)) {
             body.put("frameSampleMethod", request.frameSampleMethodShrink);
         }
@@ -1448,6 +1472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("snapshotInterval", request.snapshotInterval);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.textProcessTasksShrink)) {
+            body.put("textProcessTasks", request.textProcessTasksShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.videoExtraInfo)) {
             body.put("videoExtraInfo", request.videoExtraInfo);
         }
@@ -1462,6 +1490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoRolesShrink)) {
             body.put("videoRoles", request.videoRolesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoShotFaceIdentityCount)) {
+            body.put("videoShotFaceIdentityCount", request.videoShotFaceIdentityCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoUrl)) {

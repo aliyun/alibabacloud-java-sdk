@@ -66,8 +66,6 @@ public class RunHotTopicSummaryRequest extends TeaModel {
         public Integer summaryImageCount;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
          */
