@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
     /**
+     * <p>The status code. A value of 200 is returned if the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned data.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -33,6 +41,8 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
@@ -40,6 +50,12 @@ public class BindSentinelBlockFallbackDefinitionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

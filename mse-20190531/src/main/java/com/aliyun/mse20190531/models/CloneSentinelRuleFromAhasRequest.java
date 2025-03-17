@@ -41,6 +41,12 @@ public class CloneSentinelRuleFromAhasRequest extends TeaModel {
     @NameInMap("IsAHASPublicRegion")
     public Boolean isAHASPublicRegion;
 
+    /**
+     * <p>The name of the MSE application after migration. If this parameter is not specified, the name of the Application High Availability Service (AHAS) application is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spring-cloud-a</p>
+     */
     @NameInMap("MseAppName")
     public String mseAppName;
 

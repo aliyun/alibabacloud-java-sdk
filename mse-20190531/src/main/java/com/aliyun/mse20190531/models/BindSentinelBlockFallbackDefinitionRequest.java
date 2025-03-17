@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String appName;
 
     /**
+     * <p>Behavior ID. 0:the default behavior.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public Long fallbackId;
 
     /**
+     * <p>The microservice namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +48,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>Interface Name: The resource to which the rule applies. It must match the interface name in the console\&quot;s interface details.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,6 +58,7 @@ public class BindSentinelBlockFallbackDefinitionRequest extends TeaModel {
     public String resource;
 
     /**
+     * <p>Target rule type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

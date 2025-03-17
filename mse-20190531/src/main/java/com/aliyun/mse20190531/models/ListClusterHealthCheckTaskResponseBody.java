@@ -180,6 +180,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DescriptionEn")
+        public String descriptionEn;
+
         /**
          * <p>The ID.</p>
          * 
@@ -261,6 +264,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         @NameInMap("RiskName")
         public String riskName;
 
+        @NameInMap("RiskNameEn")
+        public String riskNameEn;
+
         /**
          * <p>The type of the risk.</p>
          * 
@@ -279,6 +285,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         @NameInMap("Situation")
         public String situation;
 
+        @NameInMap("SituationEn")
+        public String situationEn;
+
         /**
          * <p>The suggestion.</p>
          * 
@@ -287,6 +296,9 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
          */
         @NameInMap("Suggestion")
         public String suggestion;
+
+        @NameInMap("SuggestionEn")
+        public String suggestionEn;
 
         /**
          * <p>The ID of the associated parent task.</p>
@@ -326,6 +338,14 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setDescriptionEn(String descriptionEn) {
+            this.descriptionEn = descriptionEn;
+            return this;
+        }
+        public String getDescriptionEn() {
+            return this.descriptionEn;
         }
 
         public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setId(Integer id) {
@@ -392,6 +412,14 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             return this.riskName;
         }
 
+        public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setRiskNameEn(String riskNameEn) {
+            this.riskNameEn = riskNameEn;
+            return this;
+        }
+        public String getRiskNameEn() {
+            return this.riskNameEn;
+        }
+
         public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setRiskType(String riskType) {
             this.riskType = riskType;
             return this;
@@ -408,12 +436,28 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             return this.situation;
         }
 
+        public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setSituationEn(String situationEn) {
+            this.situationEn = situationEn;
+            return this;
+        }
+        public String getSituationEn() {
+            return this.situationEn;
+        }
+
         public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setSuggestion(String suggestion) {
             this.suggestion = suggestion;
             return this;
         }
         public String getSuggestion() {
             return this.suggestion;
+        }
+
+        public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setSuggestionEn(String suggestionEn) {
+            this.suggestionEn = suggestionEn;
+            return this;
+        }
+        public String getSuggestionEn() {
+            return this.suggestionEn;
         }
 
         public ListClusterHealthCheckTaskResponseBodyDataResultRiskList setTaskId(Long taskId) {

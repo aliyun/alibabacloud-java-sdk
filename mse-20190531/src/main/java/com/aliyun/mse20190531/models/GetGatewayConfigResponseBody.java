@@ -140,6 +140,88 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("FilterOpt")
+        public String filterOpt;
+
+        @NameInMap("LabelKey")
+        public String labelKey;
+
+        @NameInMap("LabelValue")
+        public String labelValue;
+
+        public static GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter self = new GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter setFilterOpt(String filterOpt) {
+            this.filterOpt = filterOpt;
+            return this;
+        }
+        public String getFilterOpt() {
+            return this.filterOpt;
+        }
+
+        public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter setLabelKey(String labelKey) {
+            this.labelKey = labelKey;
+            return this;
+        }
+        public String getLabelKey() {
+            return this.labelKey;
+        }
+
+        public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter setLabelValue(String labelValue) {
+            this.labelValue = labelValue;
+            return this;
+        }
+        public String getLabelValue() {
+            return this.labelValue;
+        }
+
+    }
+
+    public static class GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("IpListContent")
+        public String ipListContent;
+
+        public static GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs self = new GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs setIpListContent(String ipListContent) {
+            this.ipListContent = ipListContent;
+            return this;
+        }
+        public String getIpListContent() {
+            return this.ipListContent;
+        }
+
+    }
+
     public static class GetGatewayConfigResponseBodyDataSlsConfigDetails extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -512,6 +594,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         @NameInMap("EnableHttp3")
         public Boolean enableHttp3;
 
+        @NameInMap("EnableK8sSourceWorkloadFilter")
+        public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter enableK8sSourceWorkloadFilter;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -532,6 +617,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
          */
         @NameInMap("EnableWaf")
         public Boolean enableWaf;
+
+        @NameInMap("EnableXffTrustedCidrs")
+        public GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs enableXffTrustedCidrs;
 
         /**
          * <strong>example:</strong>
@@ -715,6 +803,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
             return this.enableHttp3;
         }
 
+        public GetGatewayConfigResponseBodyData setEnableK8sSourceWorkloadFilter(GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter enableK8sSourceWorkloadFilter) {
+            this.enableK8sSourceWorkloadFilter = enableK8sSourceWorkloadFilter;
+            return this;
+        }
+        public GetGatewayConfigResponseBodyDataEnableK8sSourceWorkloadFilter getEnableK8sSourceWorkloadFilter() {
+            return this.enableK8sSourceWorkloadFilter;
+        }
+
         public GetGatewayConfigResponseBodyData setEnableProxyProtocol(Boolean enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
@@ -737,6 +833,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
         public Boolean getEnableWaf() {
             return this.enableWaf;
+        }
+
+        public GetGatewayConfigResponseBodyData setEnableXffTrustedCidrs(GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs enableXffTrustedCidrs) {
+            this.enableXffTrustedCidrs = enableXffTrustedCidrs;
+            return this;
+        }
+        public GetGatewayConfigResponseBodyDataEnableXffTrustedCidrs getEnableXffTrustedCidrs() {
+            return this.enableXffTrustedCidrs;
         }
 
         public GetGatewayConfigResponseBodyData setGatewayUniqueId(String gatewayUniqueId) {

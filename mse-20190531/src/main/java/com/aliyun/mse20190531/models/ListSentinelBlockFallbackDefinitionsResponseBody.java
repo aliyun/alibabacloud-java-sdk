@@ -4,10 +4,15 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSentinelBlockFallbackDefinitionsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +20,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -22,6 +29,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4E9FDCFE-0738-493B-B801-82BDFBCB****</p>
      */
@@ -29,6 +38,12 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request was successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
 
     public static class ListSentinelBlockFallbackDefinitionsResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the application.</p>
+         * 
          * <strong>example:</strong>
          * <p>spring-cloud-a</p>
          */
@@ -89,6 +106,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>Behavior  detail.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;webRespStatusCode&quot;:429,&quot;webRespMessage&quot;:&quot;test&quot;,&quot;webFallbackMode&quot;:0,&quot;webRespContentType&quot;:0}</p>
          */
@@ -96,6 +115,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         public java.util.Map<String, ?> fallbackBehavior;
 
         /**
+         * <p>Behavior Id</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -103,6 +124,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The name of the behavior.</p>
+         * 
          * <strong>example:</strong>
          * <p>defaultFallback</p>
          */
@@ -110,6 +133,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The name of the Microservices namespace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
@@ -117,6 +142,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         public String namespace;
 
         /**
+         * <p>Behavior classification.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,6 +151,8 @@ public class ListSentinelBlockFallbackDefinitionsResponseBody extends TeaModel {
         public String resourceClassification;
 
         /**
+         * <p>Resource information bound to the behavior.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;/params/{hot}&quot;:[1]}</p>
          */

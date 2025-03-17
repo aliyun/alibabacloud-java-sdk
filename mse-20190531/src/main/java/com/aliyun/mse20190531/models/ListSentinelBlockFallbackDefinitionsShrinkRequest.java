@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListSentinelBlockFallbackDefinitionsShrinkRequest extends TeaModel {
     /**
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,7 @@ public class ListSentinelBlockFallbackDefinitionsShrinkRequest extends TeaModel 
     public String acceptLanguage;
 
     /**
+     * <p>The name of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,10 +27,14 @@ public class ListSentinelBlockFallbackDefinitionsShrinkRequest extends TeaModel 
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>Behavior Classification Set.</p>
+     */
     @NameInMap("ClassificationSet")
     public String classificationSetShrink;
 
     /**
+     * <p>The name of the Microservices namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

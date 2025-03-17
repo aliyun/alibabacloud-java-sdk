@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosConfigResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
      */
@@ -19,9 +23,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
-     * </blockquote>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>202</p>
@@ -29,11 +31,17 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
     @NameInMap("HttpCode")
     public String httpCode;
 
+    /**
+     * <p>Message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Deletes a Nacos configuration.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4FEFC13F-EB50-51E1-97D8-C5CBA8CD1B84</p>
@@ -42,6 +50,8 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Request result, with the following values: - <code>true</code>: The request was successful. - <code>false</code>: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
