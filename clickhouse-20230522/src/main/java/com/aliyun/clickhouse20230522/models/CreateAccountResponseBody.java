@@ -4,6 +4,9 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateAccountResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreateAccountResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class CreateAccountResponseBody extends TeaModel {
 
     public static class CreateAccountResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the database account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test1</p>
          */
@@ -46,6 +51,8 @@ public class CreateAccountResponseBody extends TeaModel {
         public String account;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp100p4q1g9z3****</p>
          */

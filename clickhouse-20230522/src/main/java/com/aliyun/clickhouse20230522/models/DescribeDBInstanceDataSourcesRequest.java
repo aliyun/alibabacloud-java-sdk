@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDataSourcesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeDBInstanceDataSourcesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The database name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dbtest</p>
      */
@@ -21,6 +24,8 @@ public class DescribeDBInstanceDataSourcesRequest extends TeaModel {
     public String DBName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -28,6 +33,8 @@ public class DescribeDBInstanceDataSourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>tableTest</p>
      */

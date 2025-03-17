@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateEndpointRequest extends TeaModel {
     /**
+     * <p>The prefix of the new endpoint. The prefix of the ConnectionString parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>cc-bp100p4q1g9z3****-clickhouse.clickhouseserver.rds.aliyuncs.com</p>
      */
@@ -12,6 +14,7 @@ public class CreateEndpointRequest extends TeaModel {
     public String connectionPrefix;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +25,10 @@ public class CreateEndpointRequest extends TeaModel {
 
     /**
      * <p>The network type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Public</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Public</p>
@@ -30,6 +37,7 @@ public class CreateEndpointRequest extends TeaModel {
     public String DBInstanceNetType;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

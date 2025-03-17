@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeMinorVersionRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -21,6 +24,11 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> If you set SwitchTimeMode to SpecifyTime, you must configure this parameter to specify the update time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2023-01-09T05:00:00Z</p>
      */
@@ -42,6 +50,11 @@ public class UpgradeMinorVersionRequest extends TeaModel {
     public String switchTimeMode;
 
     /**
+     * <p>The minor engine version to which you want to update.</p>
+     * <blockquote>
+     * <p> By default, TargetMinorVersion is not set and the minor engine version of the cluster is updated to the latest version.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>23.8.1.41495_6</p>
      */

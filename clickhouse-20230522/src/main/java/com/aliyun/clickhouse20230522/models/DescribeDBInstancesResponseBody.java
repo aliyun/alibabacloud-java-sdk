@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DescribeDBInstancesResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-xxx-xxx</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDataDBInstancesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -75,6 +84,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDataDBInstances extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1294****</p>
          */
@@ -82,6 +93,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String aliUid;
 
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>186681****</p>
          */
@@ -89,6 +102,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String bid;
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PrePaid: subscription</li>
+         * <li>PostPaid: pay-as-you-go</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -96,6 +115,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The time when the cluster was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-04 21:16:15</p>
          */
@@ -103,6 +124,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-xxxxxxx</p>
          */
@@ -110,6 +133,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
+         * <p>Indicates whether the release protection feature is enabled for the cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -117,6 +142,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String deletionProtection;
 
         /**
+         * <p>The cluster description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_desc</p>
          */
@@ -124,6 +151,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The engine type.</p>
+         * 
          * <strong>example:</strong>
          * <p>clickhouse</p>
          */
@@ -131,6 +160,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String engine;
 
         /**
+         * <p>The engine version.</p>
+         * 
          * <strong>example:</strong>
          * <p>22.8</p>
          */
@@ -138,6 +169,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
+         * <p>The time when the cluster expires.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-02-16 11:51:06</p>
          */
@@ -145,6 +178,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
+         * <p>The lock mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -152,6 +187,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockMode;
 
         /**
+         * <p>The reason why the cluster was locked.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -159,6 +196,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockReason;
 
         /**
+         * <p>The end time of the maintenance window.</p>
+         * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>
          */
@@ -166,6 +205,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
+         * <p>The start time of the maintenance window.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00Z</p>
          */
@@ -173,6 +214,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -180,6 +223,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfmzy****</p>
          */
@@ -187,6 +232,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The maximum capacity for elastic scaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -194,6 +241,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer scaleMax;
 
         /**
+         * <p>The minimum capacity for elastic scaling.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -201,16 +250,23 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer scaleMin;
 
         /**
+         * <p>The cluster status.</p>
+         * 
          * <strong>example:</strong>
          * <p>active</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDBInstancesResponseBodyDataDBInstancesTags> tags;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-8vb5mw****</p>
          */
@@ -218,7 +274,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf6kg****</p>
@@ -227,6 +283,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
          */
@@ -425,10 +483,15 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The clusters.</p>
+         */
         @NameInMap("DBInstances")
         public java.util.List<DescribeDBInstancesResponseBodyDataDBInstances> DBInstances;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -436,6 +499,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -443,6 +508,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

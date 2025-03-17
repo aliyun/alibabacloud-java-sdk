@@ -162,6 +162,9 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
         /**
          * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

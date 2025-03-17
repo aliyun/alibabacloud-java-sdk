@@ -42,6 +42,8 @@ public class ModifyAccountDescriptionResponseBody extends TeaModel {
 
     public static class ModifyAccountDescriptionResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the database account.</p>
+         * 
          * <strong>example:</strong>
          * <p>testuser</p>
          */
