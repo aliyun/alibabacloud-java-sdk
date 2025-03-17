@@ -26,6 +26,9 @@ public class ListDataLakeCatalogRequest extends TeaModel {
     @NameInMap("SearchKey")
     public String searchKey;
 
+    @NameInMap("SessionToken")
+    public String sessionToken;
+
     /**
      * <strong>example:</strong>
      * <p>3</p>
@@ -52,6 +55,14 @@ public class ListDataLakeCatalogRequest extends TeaModel {
     }
     public String getSearchKey() {
         return this.searchKey;
+    }
+
+    public ListDataLakeCatalogRequest setSessionToken(String sessionToken) {
+        this.sessionToken = sessionToken;
+        return this;
+    }
+    public String getSessionToken() {
+        return this.sessionToken;
     }
 
     public ListDataLakeCatalogRequest setTid(Long tid) {

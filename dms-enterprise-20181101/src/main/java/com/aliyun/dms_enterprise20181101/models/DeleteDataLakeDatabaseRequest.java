@@ -38,6 +38,9 @@ public class DeleteDataLakeDatabaseRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static DeleteDataLakeDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataLakeDatabaseRequest self = new DeleteDataLakeDatabaseRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class DeleteDataLakeDatabaseRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public DeleteDataLakeDatabaseRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

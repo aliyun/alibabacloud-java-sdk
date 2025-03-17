@@ -62,6 +62,9 @@ public class ListDataLakeFunctionNameRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static ListDataLakeFunctionNameRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataLakeFunctionNameRequest self = new ListDataLakeFunctionNameRequest();
         return TeaModel.build(map, self);
@@ -121,6 +124,14 @@ public class ListDataLakeFunctionNameRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public ListDataLakeFunctionNameRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }

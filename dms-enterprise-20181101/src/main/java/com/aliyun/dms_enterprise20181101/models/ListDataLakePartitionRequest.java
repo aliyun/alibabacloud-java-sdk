@@ -67,6 +67,9 @@ public class ListDataLakePartitionRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
+    @NameInMap("WorkspaceId")
+    public Long workspaceId;
+
     public static ListDataLakePartitionRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDataLakePartitionRequest self = new ListDataLakePartitionRequest();
         return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class ListDataLakePartitionRequest extends TeaModel {
     }
     public Long getTid() {
         return this.tid;
+    }
+
+    public ListDataLakePartitionRequest setWorkspaceId(Long workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public Long getWorkspaceId() {
+        return this.workspaceId;
     }
 
 }
