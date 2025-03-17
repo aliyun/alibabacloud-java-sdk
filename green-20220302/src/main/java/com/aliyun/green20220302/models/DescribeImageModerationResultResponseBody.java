@@ -102,6 +102,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
         public static DescribeImageModerationResultResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageModerationResultResponseBodyDataResult self = new DescribeImageModerationResultResponseBodyDataResult();
             return TeaModel.build(map, self);
@@ -129,6 +132,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public DescribeImageModerationResultResponseBodyDataResult setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
     }
