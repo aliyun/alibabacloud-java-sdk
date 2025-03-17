@@ -1310,6 +1310,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ForceExportInnerImage", request.forceExportInnerImage);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.formulaEnhancement)) {
+            query.put("FormulaEnhancement", request.formulaEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.option)) {
+            query.put("Option", request.option);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucket)) {
             query.put("OssBucket", request.ossBucket);
         }

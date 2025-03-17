@@ -21,6 +21,12 @@ public class SubmitConvertPdfToWordJobAdvanceRequest extends TeaModel {
     @NameInMap("ForceExportInnerImage")
     public Boolean forceExportInnerImage;
 
+    @NameInMap("FormulaEnhancement")
+    public Boolean formulaEnhancement;
+
+    @NameInMap("Option")
+    public String option;
+
     @NameInMap("OssBucket")
     public String ossBucket;
 
@@ -54,6 +60,22 @@ public class SubmitConvertPdfToWordJobAdvanceRequest extends TeaModel {
     }
     public Boolean getForceExportInnerImage() {
         return this.forceExportInnerImage;
+    }
+
+    public SubmitConvertPdfToWordJobAdvanceRequest setFormulaEnhancement(Boolean formulaEnhancement) {
+        this.formulaEnhancement = formulaEnhancement;
+        return this;
+    }
+    public Boolean getFormulaEnhancement() {
+        return this.formulaEnhancement;
+    }
+
+    public SubmitConvertPdfToWordJobAdvanceRequest setOption(String option) {
+        this.option = option;
+        return this;
+    }
+    public String getOption() {
+        return this.option;
     }
 
     public SubmitConvertPdfToWordJobAdvanceRequest setOssBucket(String ossBucket) {
