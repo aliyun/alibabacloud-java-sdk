@@ -1049,7 +1049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a migration task.</p>
+     * <p>Create a new migration task</p>
      * 
      * @param request AddMigrationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1126,7 +1126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a migration task.</p>
+     * <p>Create a new migration task</p>
      * 
      * @param request AddMigrationTaskRequest
      * @return AddMigrationTaskResponse
@@ -1600,7 +1600,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定流量防护行为</p>
+     * <p>Binds traffic protection behavior.</p>
      * 
      * @param request BindSentinelBlockFallbackDefinitionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1657,7 +1657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>绑定流量防护行为</p>
+     * <p>Binds traffic protection behavior.</p>
      * 
      * @param request BindSentinelBlockFallbackDefinitionRequest
      * @return BindSentinelBlockFallbackDefinitionResponse
@@ -1669,7 +1669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Resource Transfer</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1722,7 +1722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Resource Transfer</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -1734,10 +1734,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>mse-200-105</p>
+     * <blockquote>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Clones an existing Nacos configuration from a namespace to another namespace.</p>
+     * <p>Copy Nacos Configuration</p>
      * 
      * @param request CloneNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1798,10 +1800,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>mse-200-105</p>
+     * <blockquote>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Clones an existing Nacos configuration from a namespace to another namespace.</p>
+     * <p>Copy Nacos Configuration</p>
      * 
      * @param request CloneNacosConfigRequest
      * @return CloneNacosConfigResponse
@@ -1813,7 +1817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从AHAS侧复制规则</p>
+     * <p>Clones rules from Application High Availability Service.</p>
      * 
      * @param request CloneSentinelRuleFromAhasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1870,7 +1874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从AHAS侧复制规则</p>
+     * <p>Clones rules from Application High Availability Service.</p>
      * 
      * @param request CloneSentinelRuleFromAhasRequest
      * @return CloneSentinelRuleFromAhasResponse
@@ -2068,10 +2072,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.</p>
+     * <p>Please ensure that you fully understand the billing method and pricing of the MSE (Microservice Engine) product before using this interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Microservices Engine (MSE) instance, such as an MSE ZooKeeper instance or an MSE Nacos instance.</p>
+     * <p>Create an MSE registration and configuration center instance</p>
      * 
      * @param request CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2192,10 +2196,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.</p>
+     * <p>Please ensure that you fully understand the billing method and pricing of the MSE (Microservice Engine) product before using this interface.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Microservices Engine (MSE) instance, such as an MSE ZooKeeper instance or an MSE Nacos instance.</p>
+     * <p>Create an MSE registration and configuration center instance</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -4643,8 +4647,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The current OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除nacos指定配置</p>
+     * <p>Delete specified Nacos configuration</p>
      * 
      * @param request DeleteNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4700,8 +4709,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The current OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>删除nacos指定配置</p>
+     * <p>Delete specified Nacos configuration</p>
      * 
      * @param request DeleteNacosConfigRequest
      * @return DeleteNacosConfigResponse
@@ -7101,11 +7115,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries Nacos configurations.</p>
+     * <p>Get Nacos Configuration</p>
      * 
      * @param request GetNacosConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7163,11 +7177,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
+     * <p>This OpenAPI is not the Nacos-SDK API. For information related to the Nacos-SDK API, please refer to the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries Nacos configurations.</p>
+     * <p>Get Nacos Configuration</p>
      * 
      * @param request GetNacosConfigRequest
      * @return GetNacosConfigResponse
@@ -11106,7 +11120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询流量防护行为</p>
+     * <p>Obtains the custom behavior of traffic protection.</p>
      * 
      * @param tmpReq ListSentinelBlockFallbackDefinitionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11161,7 +11175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询流量防护行为</p>
+     * <p>Obtains the custom behavior of traffic protection.</p>
      * 
      * @param request ListSentinelBlockFallbackDefinitionsRequest
      * @return ListSentinelBlockFallbackDefinitionsResponse
@@ -14498,6 +14512,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateGatewayCircuitBreakerRuleResponse updateGatewayCircuitBreakerRule(UpdateGatewayCircuitBreakerRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateGatewayCircuitBreakerRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网关配置</p>
+     * 
+     * @param request UpdateGatewayConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGatewayConfigResponse
+     */
+    public UpdateGatewayConfigResponse updateGatewayConfigWithOptions(UpdateGatewayConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
+            query.put("ConfigName", request.configName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configValue)) {
+            query.put("ConfigValue", request.configValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayUniqueId)) {
+            query.put("GatewayUniqueId", request.gatewayUniqueId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGatewayConfig"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGatewayConfigResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateGatewayConfigResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网关配置</p>
+     * 
+     * @param request UpdateGatewayConfigRequest
+     * @return UpdateGatewayConfigResponse
+     */
+    public UpdateGatewayConfigResponse updateGatewayConfig(UpdateGatewayConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGatewayConfigWithOptions(request, runtime);
     }
 
     /**

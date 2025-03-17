@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -14,7 +14,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>Instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-cn-st21ri2****</p>
@@ -23,7 +23,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The message returned.</p>
+     * <p>Return message.</p>
      * 
      * <strong>example:</strong>
      * <p>The request is successfully processed.</p>
@@ -32,7 +32,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>Order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20574710974****</p>
@@ -41,7 +41,7 @@ public class CreateClusterResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dc63-465d-8ef5-20dc18af****</p>
@@ -50,10 +50,10 @@ public class CreateClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Request result, with the following values:</p>
      * <ul>
-     * <li><code>true</code>: The request was successful.</li>
-     * <li><code>false</code>: The request failed.</li>
+     * <li><code>true</code>: Request succeeded.</li>
+     * <li><code>false</code>: Request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

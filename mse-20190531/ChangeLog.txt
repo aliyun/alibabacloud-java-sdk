@@ -1,3 +1,9 @@
+2025-03-17 Version: 7.18.0
+- Support API UpdateGatewayConfig.
+- Update API GetGatewayConfig: update response param.
+- Update API ListClusterHealthCheckTask: update response param.
+
+
 2025-01-20 Version: 7.17.1
 - Update API AddGatewayRoute: update param EnableWaf.
 - Update API CloneSentinelRuleFromAhas: add param MseAppName.

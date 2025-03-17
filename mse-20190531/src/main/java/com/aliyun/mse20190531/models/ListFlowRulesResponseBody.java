@@ -30,6 +30,9 @@ public class ListFlowRulesResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
@@ -207,6 +210,12 @@ public class ListFlowRulesResponseBody extends TeaModel {
         @NameInMap("FallbackObject")
         public String fallbackObject;
 
+        /**
+         * <p>Requests source application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spring-cloud-a</p>
+         */
         @NameInMap("LimitApp")
         public String limitApp;
 
@@ -255,6 +264,12 @@ public class ListFlowRulesResponseBody extends TeaModel {
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>Interface resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResourceType")
         public Integer resourceType;
 

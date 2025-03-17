@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
+     * <p>The language in which the response is displayed. Values: zh (default): Chinese, en: English</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +14,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
+     * <p>Target resource group</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Resource ID, which is the ID of the registration and configuration center instance or the unique ID of the gateway</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,6 +35,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>Region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +45,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
+     * <p>Resource type, such as a registration and configuration center cluster or gateway instance</p>
+     * 
      * <strong>example:</strong>
      * <p>Cluster,Gateway</p>
      */

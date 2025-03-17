@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>The configuration information.</p>
+     * <p>Configuration information.</p>
      */
     @NameInMap("Configuration")
     public GetNacosConfigResponseBodyConfiguration configuration;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -20,7 +20,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>Message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B4EAB48C-BB4B-5B8D-B33B-35D69606C5AD</p>
@@ -38,7 +38,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>The result of the request, with values as follows:</p>
      * <ul>
      * <li><code>true</code>: The request was successful.</li>
      * <li><code>false</code>: The request failed.</li>
@@ -96,15 +96,39 @@ public class GetNacosConfigResponseBody extends TeaModel {
     }
 
     public static class GetNacosConfigResponseBodyConfigurationGrayVersions extends TeaModel {
+        /**
+         * <p>Gray version name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The priority of the current gray rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>Rules of the current gray version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a=b</p>
+         */
         @NameInMap("Rule")
         public String rule;
 
+        /**
+         * <p>Gray type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beta</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -149,7 +173,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
 
     public static class GetNacosConfigResponseBodyConfiguration extends TeaModel {
         /**
-         * <p>The name of the application.</p>
+         * <p>Application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -158,16 +182,16 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The list of IP addresses where the beta release of the configuration is performed.</p>
+         * <p>List of IPs for Beta release.</p>
          * 
          * <strong>example:</strong>
-         * <p>1.1.XX.XX,2.2.XX.XX</p>
+         * <p>1.1.XX.XX，2.2.XX.XX</p>
          */
         @NameInMap("BetaIps")
         public String betaIps;
 
         /**
-         * <p>The content of the configuration.</p>
+         * <p>Configuration content.</p>
          * 
          * <strong>example:</strong>
          * <p>log.level=error</p>
@@ -176,7 +200,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The ID of the configuration.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>log.yaml</p>
@@ -185,7 +209,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String dataId;
 
         /**
-         * <p>The description of the configuration.</p>
+         * <p>Configuration description.</p>
          * 
          * <strong>example:</strong>
          * <p>For testing</p>
@@ -194,7 +218,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String desc;
 
         /**
-         * <p>The encryption key.</p>
+         * <p>Encrypted key.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -202,11 +226,14 @@ public class GetNacosConfigResponseBody extends TeaModel {
         @NameInMap("EncryptedDataKey")
         public String encryptedDataKey;
 
+        /**
+         * <p>Current gray version information</p>
+         */
         @NameInMap("GrayVersions")
         public java.util.List<GetNacosConfigResponseBodyConfigurationGrayVersions> grayVersions;
 
         /**
-         * <p>The name of the configuration group.</p>
+         * <p>Configuration group name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -215,7 +242,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The message digest of the configuration.</p>
+         * <p>Message digest of the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>123rfsdf3</p>
@@ -224,7 +251,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String md5;
 
         /**
-         * <p>The tags of the configuration.</p>
+         * <p>Tags of the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>context</p>
@@ -233,7 +260,7 @@ public class GetNacosConfigResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The format of the configuration.</p>
+         * <p>Format of the configuration content.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>

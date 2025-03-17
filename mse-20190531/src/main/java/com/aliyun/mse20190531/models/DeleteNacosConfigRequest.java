@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosConfigRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>Language type of the returned information:</p>
      * <ul>
      * <li>zh: Chinese</li>
      * <li>en: English</li>
@@ -18,7 +18,11 @@ public class DeleteNacosConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>Whether it is a Beta release. Default is false.</p>
+     * <ul>
+     * <li><code>true</code>: Yes</li>
+     * <li><code>false</code>: No</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,7 +31,7 @@ public class DeleteNacosConfigRequest extends TeaModel {
     public Boolean beta;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Configuration ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +41,7 @@ public class DeleteNacosConfigRequest extends TeaModel {
     public String dataId;
 
     /**
-     * <p>The message returned.</p>
+     * <p>Group type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +51,7 @@ public class DeleteNacosConfigRequest extends TeaModel {
     public String group;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>Instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +61,7 @@ public class DeleteNacosConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The request is successfully processed.</p>
+     * <p>Namespace ID. Default is public.</p>
      * 
      * <strong>example:</strong>
      * <p>0e9d849b-****-8435da6c21ad</p>

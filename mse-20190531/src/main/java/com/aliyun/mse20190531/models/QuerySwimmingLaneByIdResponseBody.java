@@ -14,7 +14,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     public QuerySwimmingLaneByIdResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-100-000</p>
@@ -23,7 +23,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>The request was successfully processed.</p>
