@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoAnalysisTaskRequest extends TeaModel {
+    @NameInMap("faceIdentitySimilarityMinScore")
+    public Float faceIdentitySimilarityMinScore;
+
     @NameInMap("frameSampleMethod")
     public SubmitVideoAnalysisTaskRequestFrameSampleMethod frameSampleMethod;
 
@@ -41,6 +44,9 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     @NameInMap("snapshotInterval")
     public Double snapshotInterval;
 
+    @NameInMap("textProcessTasks")
+    public java.util.List<SubmitVideoAnalysisTaskRequestTextProcessTasks> textProcessTasks;
+
     @NameInMap("videoExtraInfo")
     public String videoExtraInfo;
 
@@ -57,6 +63,9 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     @NameInMap("videoRoles")
     public java.util.List<SubmitVideoAnalysisTaskRequestVideoRoles> videoRoles;
 
+    @NameInMap("videoShotFaceIdentityCount")
+    public Integer videoShotFaceIdentityCount;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -69,6 +78,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     public static SubmitVideoAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskRequest self = new SubmitVideoAnalysisTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoAnalysisTaskRequest setFaceIdentitySimilarityMinScore(Float faceIdentitySimilarityMinScore) {
+        this.faceIdentitySimilarityMinScore = faceIdentitySimilarityMinScore;
+        return this;
+    }
+    public Float getFaceIdentitySimilarityMinScore() {
+        return this.faceIdentitySimilarityMinScore;
     }
 
     public SubmitVideoAnalysisTaskRequest setFrameSampleMethod(SubmitVideoAnalysisTaskRequestFrameSampleMethod frameSampleMethod) {
@@ -127,6 +144,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
         return this.snapshotInterval;
     }
 
+    public SubmitVideoAnalysisTaskRequest setTextProcessTasks(java.util.List<SubmitVideoAnalysisTaskRequestTextProcessTasks> textProcessTasks) {
+        this.textProcessTasks = textProcessTasks;
+        return this;
+    }
+    public java.util.List<SubmitVideoAnalysisTaskRequestTextProcessTasks> getTextProcessTasks() {
+        return this.textProcessTasks;
+    }
+
     public SubmitVideoAnalysisTaskRequest setVideoExtraInfo(String videoExtraInfo) {
         this.videoExtraInfo = videoExtraInfo;
         return this;
@@ -157,6 +182,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     }
     public java.util.List<SubmitVideoAnalysisTaskRequestVideoRoles> getVideoRoles() {
         return this.videoRoles;
+    }
+
+    public SubmitVideoAnalysisTaskRequest setVideoShotFaceIdentityCount(Integer videoShotFaceIdentityCount) {
+        this.videoShotFaceIdentityCount = videoShotFaceIdentityCount;
+        return this;
+    }
+    public Integer getVideoShotFaceIdentityCount() {
+        return this.videoShotFaceIdentityCount;
     }
 
     public SubmitVideoAnalysisTaskRequest setVideoUrl(String videoUrl) {
@@ -216,6 +249,47 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
         }
         public Integer getPixel() {
             return this.pixel;
+        }
+
+    }
+
+    public static class SubmitVideoAnalysisTaskRequestTextProcessTasks extends TeaModel {
+        @NameInMap("modelCustomPromptTemplate")
+        public String modelCustomPromptTemplate;
+
+        @NameInMap("modelCustomPromptTemplateId")
+        public String modelCustomPromptTemplateId;
+
+        @NameInMap("modelId")
+        public String modelId;
+
+        public static SubmitVideoAnalysisTaskRequestTextProcessTasks build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestTextProcessTasks self = new SubmitVideoAnalysisTaskRequestTextProcessTasks();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestTextProcessTasks setModelCustomPromptTemplate(String modelCustomPromptTemplate) {
+            this.modelCustomPromptTemplate = modelCustomPromptTemplate;
+            return this;
+        }
+        public String getModelCustomPromptTemplate() {
+            return this.modelCustomPromptTemplate;
+        }
+
+        public SubmitVideoAnalysisTaskRequestTextProcessTasks setModelCustomPromptTemplateId(String modelCustomPromptTemplateId) {
+            this.modelCustomPromptTemplateId = modelCustomPromptTemplateId;
+            return this;
+        }
+        public String getModelCustomPromptTemplateId() {
+            return this.modelCustomPromptTemplateId;
+        }
+
+        public SubmitVideoAnalysisTaskRequestTextProcessTasks setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
         }
 
     }

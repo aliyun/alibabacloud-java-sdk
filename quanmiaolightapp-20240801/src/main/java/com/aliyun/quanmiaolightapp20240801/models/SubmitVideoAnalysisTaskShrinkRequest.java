@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
+    @NameInMap("faceIdentitySimilarityMinScore")
+    public Float faceIdentitySimilarityMinScore;
+
     @NameInMap("frameSampleMethod")
     public String frameSampleMethodShrink;
 
@@ -41,6 +44,9 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     @NameInMap("snapshotInterval")
     public Double snapshotInterval;
 
+    @NameInMap("textProcessTasks")
+    public String textProcessTasksShrink;
+
     @NameInMap("videoExtraInfo")
     public String videoExtraInfo;
 
@@ -57,6 +63,9 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     @NameInMap("videoRoles")
     public String videoRolesShrink;
 
+    @NameInMap("videoShotFaceIdentityCount")
+    public Integer videoShotFaceIdentityCount;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -69,6 +78,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     public static SubmitVideoAnalysisTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskShrinkRequest self = new SubmitVideoAnalysisTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoAnalysisTaskShrinkRequest setFaceIdentitySimilarityMinScore(Float faceIdentitySimilarityMinScore) {
+        this.faceIdentitySimilarityMinScore = faceIdentitySimilarityMinScore;
+        return this;
+    }
+    public Float getFaceIdentitySimilarityMinScore() {
+        return this.faceIdentitySimilarityMinScore;
     }
 
     public SubmitVideoAnalysisTaskShrinkRequest setFrameSampleMethodShrink(String frameSampleMethodShrink) {
@@ -127,6 +144,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
         return this.snapshotInterval;
     }
 
+    public SubmitVideoAnalysisTaskShrinkRequest setTextProcessTasksShrink(String textProcessTasksShrink) {
+        this.textProcessTasksShrink = textProcessTasksShrink;
+        return this;
+    }
+    public String getTextProcessTasksShrink() {
+        return this.textProcessTasksShrink;
+    }
+
     public SubmitVideoAnalysisTaskShrinkRequest setVideoExtraInfo(String videoExtraInfo) {
         this.videoExtraInfo = videoExtraInfo;
         return this;
@@ -157,6 +182,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     }
     public String getVideoRolesShrink() {
         return this.videoRolesShrink;
+    }
+
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoShotFaceIdentityCount(Integer videoShotFaceIdentityCount) {
+        this.videoShotFaceIdentityCount = videoShotFaceIdentityCount;
+        return this;
+    }
+    public Integer getVideoShotFaceIdentityCount() {
+        return this.videoShotFaceIdentityCount;
     }
 
     public SubmitVideoAnalysisTaskShrinkRequest setVideoUrl(String videoUrl) {

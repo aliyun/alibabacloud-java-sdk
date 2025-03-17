@@ -506,6 +506,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         @NameInMap("generateFinished")
         public Boolean generateFinished;
 
+        @NameInMap("index")
+        public Integer index;
+
         /**
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -515,6 +518,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
 
         @NameInMap("modelReduce")
         public Boolean modelReduce;
+
+        @NameInMap("reasonText")
+        public String reasonText;
 
         @NameInMap("text")
         public String text;
@@ -535,6 +541,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             return this.generateFinished;
         }
 
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResult setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
         public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResult setModelId(String modelId) {
             this.modelId = modelId;
             return this;
@@ -551,6 +565,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             return this.modelReduce;
         }
 
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResult setReasonText(String reasonText) {
+            this.reasonText = reasonText;
+            return this;
+        }
+        public String getReasonText() {
+            return this.reasonText;
+        }
+
         public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResult setText(String text) {
             this.text = text;
             return this;
@@ -564,6 +586,121 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             return this;
         }
         public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultUsage getUsage() {
+            return this.usage;
+        }
+
+    }
+
+    public static class RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage extends TeaModel {
+        @NameInMap("inputTokens")
+        public Long inputTokens;
+
+        @NameInMap("outputTokens")
+        public Long outputTokens;
+
+        @NameInMap("totalTokens")
+        public Long totalTokens;
+
+        public static RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage self = new RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage setInputTokens(Long inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Long getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage setOutputTokens(Long outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Long getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage setTotalTokens(Long totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
+    }
+
+    public static class RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults extends TeaModel {
+        @NameInMap("generateFinished")
+        public Boolean generateFinished;
+
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("modelId")
+        public String modelId;
+
+        @NameInMap("reasonText")
+        public String reasonText;
+
+        @NameInMap("text")
+        public String text;
+
+        @NameInMap("usage")
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage usage;
+
+        public static RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults self = new RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults setGenerateFinished(Boolean generateFinished) {
+            this.generateFinished = generateFinished;
+            return this;
+        }
+        public Boolean getGenerateFinished() {
+            return this.generateFinished;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults setReasonText(String reasonText) {
+            this.reasonText = reasonText;
+            return this;
+        }
+        public String getReasonText() {
+            return this.reasonText;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults setUsage(RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage usage) {
+            this.usage = usage;
+            return this;
+        }
+        public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResultsUsage getUsage() {
             return this.usage;
         }
 
@@ -1025,6 +1162,9 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         @NameInMap("videoGenerateResult")
         public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResult videoGenerateResult;
 
+        @NameInMap("videoGenerateResults")
+        public java.util.List<RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults> videoGenerateResults;
+
         @NameInMap("videoMindMappingGenerateResult")
         public RunVideoAnalysisResponseBodyPayloadOutputVideoMindMappingGenerateResult videoMindMappingGenerateResult;
 
@@ -1069,6 +1209,14 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         }
         public RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResult getVideoGenerateResult() {
             return this.videoGenerateResult;
+        }
+
+        public RunVideoAnalysisResponseBodyPayloadOutput setVideoGenerateResults(java.util.List<RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults> videoGenerateResults) {
+            this.videoGenerateResults = videoGenerateResults;
+            return this;
+        }
+        public java.util.List<RunVideoAnalysisResponseBodyPayloadOutputVideoGenerateResults> getVideoGenerateResults() {
+            return this.videoGenerateResults;
         }
 
         public RunVideoAnalysisResponseBodyPayloadOutput setVideoMindMappingGenerateResult(RunVideoAnalysisResponseBodyPayloadOutputVideoMindMappingGenerateResult videoMindMappingGenerateResult) {

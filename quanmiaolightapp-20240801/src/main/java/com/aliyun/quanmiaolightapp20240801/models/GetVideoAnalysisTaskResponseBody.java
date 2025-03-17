@@ -550,6 +550,18 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         @NameInMap("generateFinished")
         public Boolean generateFinished;
 
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("modelId")
+        public String modelId;
+
+        @NameInMap("modelReduce")
+        public Boolean modelReduce;
+
+        @NameInMap("reasonText")
+        public String reasonText;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -573,6 +585,38 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
             return this.generateFinished;
         }
 
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResult setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResult setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResult setModelReduce(Boolean modelReduce) {
+            this.modelReduce = modelReduce;
+            return this;
+        }
+        public Boolean getModelReduce() {
+            return this.modelReduce;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResult setReasonText(String reasonText) {
+            this.reasonText = reasonText;
+            return this;
+        }
+        public String getReasonText() {
+            return this.reasonText;
+        }
+
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResult setText(String text) {
             this.text = text;
             return this;
@@ -586,6 +630,121 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
             return this;
         }
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultUsage getUsage() {
+            return this.usage;
+        }
+
+    }
+
+    public static class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage extends TeaModel {
+        @NameInMap("inputTokens")
+        public Long inputTokens;
+
+        @NameInMap("outputTokens")
+        public Long outputTokens;
+
+        @NameInMap("totalTokens")
+        public Long totalTokens;
+
+        public static GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage build(java.util.Map<String, ?> map) throws Exception {
+            GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage self = new GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage setInputTokens(Long inputTokens) {
+            this.inputTokens = inputTokens;
+            return this;
+        }
+        public Long getInputTokens() {
+            return this.inputTokens;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage setOutputTokens(Long outputTokens) {
+            this.outputTokens = outputTokens;
+            return this;
+        }
+        public Long getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage setTotalTokens(Long totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
+    }
+
+    public static class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults extends TeaModel {
+        @NameInMap("generateFinished")
+        public Boolean generateFinished;
+
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("modelId")
+        public String modelId;
+
+        @NameInMap("reasonText")
+        public String reasonText;
+
+        @NameInMap("text")
+        public String text;
+
+        @NameInMap("usage")
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage usage;
+
+        public static GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults build(java.util.Map<String, ?> map) throws Exception {
+            GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults self = new GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults setGenerateFinished(Boolean generateFinished) {
+            this.generateFinished = generateFinished;
+            return this;
+        }
+        public Boolean getGenerateFinished() {
+            return this.generateFinished;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults setReasonText(String reasonText) {
+            this.reasonText = reasonText;
+            return this;
+        }
+        public String getReasonText() {
+            return this.reasonText;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults setUsage(GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage usage) {
+            this.usage = usage;
+            return this;
+        }
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResultsUsage getUsage() {
             return this.usage;
         }
 
@@ -894,6 +1053,9 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         @NameInMap("videoGenerateResult")
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResult videoGenerateResult;
 
+        @NameInMap("videoGenerateResults")
+        public java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults> videoGenerateResults;
+
         @NameInMap("videoMindMappingGenerateResult")
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoMindMappingGenerateResult videoMindMappingGenerateResult;
 
@@ -935,6 +1097,14 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResult getVideoGenerateResult() {
             return this.videoGenerateResult;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutput setVideoGenerateResults(java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults> videoGenerateResults) {
+            this.videoGenerateResults = videoGenerateResults;
+            return this;
+        }
+        public java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoGenerateResults> getVideoGenerateResults() {
+            return this.videoGenerateResults;
         }
 
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutput setVideoMindMappingGenerateResult(GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoMindMappingGenerateResult videoMindMappingGenerateResult) {
