@@ -84,12 +84,18 @@ public class RunDataAnalysisResponseBody extends TeaModel {
     }
 
     public static class RunDataAnalysisResponseBodyDataVisualizationData extends TeaModel {
+        @NameInMap("option")
+        public String option;
+
         /**
          * <strong>example:</strong>
          * <p>bar</p>
          */
         @NameInMap("plotType")
         public String plotType;
+
+        @NameInMap("stack")
+        public Boolean stack;
 
         @NameInMap("xAxis")
         public java.util.List<String> xAxis;
@@ -102,12 +108,28 @@ public class RunDataAnalysisResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunDataAnalysisResponseBodyDataVisualizationData setOption(String option) {
+            this.option = option;
+            return this;
+        }
+        public String getOption() {
+            return this.option;
+        }
+
         public RunDataAnalysisResponseBodyDataVisualizationData setPlotType(String plotType) {
             this.plotType = plotType;
             return this;
         }
         public String getPlotType() {
             return this.plotType;
+        }
+
+        public RunDataAnalysisResponseBodyDataVisualizationData setStack(Boolean stack) {
+            this.stack = stack;
+            return this;
+        }
+        public Boolean getStack() {
+            return this.stack;
         }
 
         public RunDataAnalysisResponseBodyDataVisualizationData setXAxis(java.util.List<String> xAxis) {
