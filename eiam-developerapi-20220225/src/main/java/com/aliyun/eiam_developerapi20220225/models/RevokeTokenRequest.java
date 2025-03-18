@@ -4,15 +4,40 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class RevokeTokenRequest extends TeaModel {
+    /**
+     * <p>The client ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
+     */
     @NameInMap("client_id")
     public String clientId;
 
+    /**
+     * <p>The client secret.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
+     */
     @NameInMap("client_secret")
     public String clientSecret;
 
+    /**
+     * <p>The token to be revoked.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ATxxxx</p>
+     */
     @NameInMap("token")
     public String token;
 
+    /**
+     * <p>The type of the token. Valid values: access_token refresh_token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>access_token</p>
+     */
     @NameInMap("token_type_hint")
     public String tokenTypeHint;
 

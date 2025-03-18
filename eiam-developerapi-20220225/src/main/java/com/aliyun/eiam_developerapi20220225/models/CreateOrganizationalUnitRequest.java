@@ -4,15 +4,42 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class CreateOrganizationalUnitRequest extends TeaModel {
+    /**
+     * <p>The description of the organizational unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test organizational unit</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The external ID of the organizational unit. The external ID can be used to map external data to the data of the organizational unit in Employee Identity and Access Management (EIAM) of Identity as a Service (IDaaS). By default, the external ID is the organizational unit ID.</p>
+     * <p>For organizational units with the same source type and source ID, each organizational unit has a unique external ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
+     */
     @NameInMap("organizationalUnitExternalId")
     public String organizationalUnitExternalId;
 
+    /**
+     * <p>The name of the organizational unit.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name001</p>
+     */
     @NameInMap("organizationalUnitName")
     public String organizationalUnitName;
 
+    /**
+     * <p>The ID of the parent organizational unit.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
+     */
     @NameInMap("parentId")
     public String parentId;
 

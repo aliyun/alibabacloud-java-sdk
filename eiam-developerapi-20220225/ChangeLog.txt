@@ -1,3 +1,16 @@
+2025-03-18 Version: 1.1.0
+- Support API AddUsersToGroup.
+- Support API CreateGroup.
+- Support API DeleteGroup.
+- Support API GetGroup.
+- Support API ListGroups.
+- Support API ListGroupsForUser.
+- Support API ListUsersForGroup.
+- Support API PatchGroup.
+- Support API RemoveUsersFromGroup.
+- Update API GetApplicationProvisioningScope: update response param.
+
+
 2023-10-24 Version: 1.0.8
 - Generated java 2022-02-25 for Eiam-developerapi.
 

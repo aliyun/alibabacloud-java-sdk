@@ -4,6 +4,12 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GenerateDeviceCodeRequest extends TeaModel {
+    /**
+     * <p>The authorization scope.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("scope")
     public String scope;
 

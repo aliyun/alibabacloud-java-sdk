@@ -7,6 +7,12 @@ public class AddUserToOrganizationalUnitsHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Bearer xxxx</p>
+     */
     @NameInMap("Authorization")
     public String authorization;
 

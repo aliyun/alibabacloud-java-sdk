@@ -4,42 +4,116 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <p>Custom fields</p>
+     */
     @NameInMap("customFields")
     public java.util.List<CreateUserRequestCustomFields> customFields;
 
+    /**
+     * <p>The description of the account. The description can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test user</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>display_name001</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>The email address of the user who owns the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:example@example.com">example@example.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>Indicates whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("emailVerified")
     public Boolean emailVerified;
 
+    /**
+     * <p>The password of the account. For information about the password rules, go to the Create User panel in the Identity as a Service (IDaaS) console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>Configure the initial password</p>
+     */
     @NameInMap("passwordInitializationConfig")
     public CreateUserRequestPasswordInitializationConfig passwordInitializationConfig;
 
+    /**
+     * <p>The mobile number of the user who owns the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>156xxxxxxx</p>
+     */
     @NameInMap("phoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>Indicates whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("phoneNumberVerified")
     public Boolean phoneNumberVerified;
 
+    /**
+     * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +. This parameter is required if a mobile number is specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("phoneRegion")
     public String phoneRegion;
 
+    /**
+     * <p>The ID of the primary organizational unit.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
+     */
     @NameInMap("primaryOrganizationalUnitId")
     public String primaryOrganizationalUnitId;
 
+    /**
+     * <p>The external ID of the account. The external ID can be used to map external data to the data of the account in EIAM of Identity as a Service (IDaaS). By default, the external ID is the account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
+     */
     @NameInMap("userExternalId")
     public String userExternalId;
 
+    /**
+     * <p>The username of the account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name001</p>
+     */
     @NameInMap("username")
     public String username;
 
@@ -153,9 +227,21 @@ public class CreateUserRequest extends TeaModel {
     }
 
     public static class CreateUserRequestCustomFields extends TeaModel {
+        /**
+         * <p>Field name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("fieldName")
         public String fieldName;
 
+        /**
+         * <p>Filed value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fieldValue_001</p>
+         */
         @NameInMap("fieldValue")
         public String fieldValue;
 
@@ -183,15 +269,39 @@ public class CreateUserRequest extends TeaModel {
     }
 
     public static class CreateUserRequestPasswordInitializationConfig extends TeaModel {
+        /**
+         * <p>Password  forced update</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("passwordForcedUpdateStatus")
         public String passwordForcedUpdateStatus;
 
+        /**
+         * <p>Password policy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
+         */
         @NameInMap("passwordInitializationPolicyPriority")
         public String passwordInitializationPolicyPriority;
 
+        /**
+         * <p>Password Initialization Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>random</p>
+         */
         @NameInMap("passwordInitializationType")
         public String passwordInitializationType;
 
+        /**
+         * <p>User Notification Channels</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms</p>
+         */
         @NameInMap("userNotificationChannels")
         public java.util.List<String> userNotificationChannels;
 

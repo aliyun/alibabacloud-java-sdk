@@ -4,6 +4,13 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GetUserIdByEmailRequest extends TeaModel {
+    /**
+     * <p>The email address of the user who owns the account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:example@example.com">example@example.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 

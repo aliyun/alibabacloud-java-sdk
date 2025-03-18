@@ -4,6 +4,12 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class CreateOrganizationalUnitResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the organizational unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
+     */
     @NameInMap("organizationalUnitId")
     public String organizationalUnitId;
 
