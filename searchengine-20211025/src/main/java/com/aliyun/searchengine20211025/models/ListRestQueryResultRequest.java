@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListRestQueryResultRequest extends TeaModel {
     /**
-     * <p>The instance endpoint.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>127.0.0.1</p>
-     */
-    @NameInMap("address")
-    public String address;
-
-    /**
      * <p>The name of the index table.</p>
      * 
      * <strong>example:</strong>
@@ -34,14 +25,6 @@ public class ListRestQueryResultRequest extends TeaModel {
     public static ListRestQueryResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRestQueryResultRequest self = new ListRestQueryResultRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListRestQueryResultRequest setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-    public String getAddress() {
-        return this.address;
     }
 
     public ListRestQueryResultRequest setIndexName(String indexName) {

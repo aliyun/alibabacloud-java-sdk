@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListPostQueryResultRequest extends TeaModel {
     /**
-     * <p>The instance endpoint.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>127.0.0.1</p>
-     */
-    @NameInMap("address")
-    public String address;
-
-    /**
      * <p>The request body.</p>
      * 
      * <strong>example:</strong>
@@ -34,14 +25,6 @@ public class ListPostQueryResultRequest extends TeaModel {
     public static ListPostQueryResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPostQueryResultRequest self = new ListPostQueryResultRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPostQueryResultRequest setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-    public String getAddress() {
-        return this.address;
     }
 
     public ListPostQueryResultRequest setBody(java.util.Map<String, ?> body) {

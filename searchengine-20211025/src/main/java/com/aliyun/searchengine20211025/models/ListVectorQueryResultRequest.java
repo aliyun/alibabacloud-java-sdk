@@ -5,15 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListVectorQueryResultRequest extends TeaModel {
     /**
-     * <p>The instance endpoint.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>127.0.0.1</p>
-     */
-    @NameInMap("address")
-    public String address;
-
-    /**
      * <p>The request body.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +12,9 @@ public class ListVectorQueryResultRequest extends TeaModel {
      */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
+
+    @NameInMap("path")
+    public String path;
 
     /**
      * <p>The query type. Valid values: vector, primary_key, and vector_text.</p>
@@ -45,20 +39,20 @@ public class ListVectorQueryResultRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListVectorQueryResultRequest setAddress(String address) {
-        this.address = address;
-        return this;
-    }
-    public String getAddress() {
-        return this.address;
-    }
-
     public ListVectorQueryResultRequest setBody(java.util.Map<String, ?> body) {
         this.body = body;
         return this;
     }
     public java.util.Map<String, ?> getBody() {
         return this.body;
+    }
+
+    public ListVectorQueryResultRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
     }
 
     public ListVectorQueryResultRequest setQueryType(String queryType) {
