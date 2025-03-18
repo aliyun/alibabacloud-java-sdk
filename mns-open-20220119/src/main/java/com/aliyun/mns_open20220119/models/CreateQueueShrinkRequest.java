@@ -13,6 +13,9 @@ public class CreateQueueShrinkRequest extends TeaModel {
     @NameInMap("DelaySeconds")
     public Long delaySeconds;
 
+    /**
+     * <p>The dead-letter queue policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public String dlqPolicyShrink;
 
@@ -40,7 +43,7 @@ public class CreateQueueShrinkRequest extends TeaModel {
     public Long maximumMessageSize;
 
     /**
-     * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
+     * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is consumed. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
      * 
      * <strong>example:</strong>
      * <p>345600</p>
@@ -67,6 +70,9 @@ public class CreateQueueShrinkRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateQueueShrinkRequestTag> tag;
 
@@ -158,6 +164,8 @@ public class CreateQueueShrinkRequest extends TeaModel {
 
     public static class CreateQueueShrinkRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1</p>
          */
@@ -165,6 +173,8 @@ public class CreateQueueShrinkRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

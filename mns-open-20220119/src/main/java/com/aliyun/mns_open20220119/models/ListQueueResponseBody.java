@@ -109,12 +109,30 @@ public class ListQueueResponseBody extends TeaModel {
     }
 
     public static class ListQueueResponseBodyDataPageDataDlqPolicy extends TeaModel {
+        /**
+         * <p>The queue to which dead-letter messages are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadLetterTargetQueue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Specifies whether to enable the dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The maximum number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxReceiveCount")
         public String maxReceiveCount;
 
@@ -193,7 +211,7 @@ public class ListQueueResponseBody extends TeaModel {
 
     public static class ListQueueResponseBodyDataPageData extends TeaModel {
         /**
-         * <p>The total number of messages that are in the Active state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+         * <p>The total number of messages that are in the Active state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -211,7 +229,7 @@ public class ListQueueResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The total number of messages that are in the Delayed state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+         * <p>The total number of the messages that are in the Delayed state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -228,11 +246,14 @@ public class ListQueueResponseBody extends TeaModel {
         @NameInMap("DelaySeconds")
         public Long delaySeconds;
 
+        /**
+         * <p>The dead-letter queue policy.</p>
+         */
         @NameInMap("DlqPolicy")
         public ListQueueResponseBodyDataPageDataDlqPolicy dlqPolicy;
 
         /**
-         * <p>The total number of messages that are in the Inactive state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
+         * <p>The total number of the messages that are in the Inactive state in the queue. The value is an approximate number. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

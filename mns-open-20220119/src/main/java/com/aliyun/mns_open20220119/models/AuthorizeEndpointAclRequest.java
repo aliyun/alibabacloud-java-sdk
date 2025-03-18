@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AuthorizeEndpointAclRequest extends TeaModel {
     /**
-     * <p>The ACL policy. Valid value:</p>
+     * <p>The ACL policy. Valid values:</p>
      * <ul>
-     * <li><strong>allow</strong>: indicates that the operation is initiated from an endpoint in CIDR whitelist. (Only allow is supported)</li>
+     * <li><strong>allow</strong>: indicates that this operation is included in the Cidr whitelist. (Only the allow is supported.)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -18,16 +18,16 @@ public class AuthorizeEndpointAclRequest extends TeaModel {
     public String aclStrategy;
 
     /**
-     * <p>The CIDR blocks.</p>
+     * <p>The list of CIDR block.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CidrList")
     public java.util.List<String> cidrList;
 
     /**
-     * <p>The type of the endpoint. Valid value:</p>
+     * <p>The type of the endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>public</strong>: indicates public endpoint. (Only public endpoint is supported.)</li>
+     * <li><strong>public</strong>: indicates public endpoint. (Only the public endpoint is supported.)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

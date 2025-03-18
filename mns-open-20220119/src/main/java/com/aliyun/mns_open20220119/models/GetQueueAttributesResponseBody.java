@@ -109,12 +109,30 @@ public class GetQueueAttributesResponseBody extends TeaModel {
     }
 
     public static class GetQueueAttributesResponseBodyDataDlqPolicy extends TeaModel {
+        /**
+         * <p>The queue to which dead-letter messages are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadLetterTargetQueue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Specifies whether to enable the dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The maximum number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxReceiveCount")
         public String maxReceiveCount;
 
@@ -151,6 +169,8 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
     public static class GetQueueAttributesResponseBodyDataTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1</p>
          */
@@ -158,6 +178,8 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -224,6 +246,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @NameInMap("DelaySeconds")
         public Long delaySeconds;
 
+        /**
+         * <p>The dead-letter queue policy.</p>
+         */
         @NameInMap("DlqPolicy")
         public GetQueueAttributesResponseBodyDataDlqPolicy dlqPolicy;
 
@@ -294,6 +319,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetQueueAttributesResponseBodyDataTags> tags;
 
