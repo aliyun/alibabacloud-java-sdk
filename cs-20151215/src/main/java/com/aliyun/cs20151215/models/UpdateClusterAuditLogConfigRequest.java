@@ -18,10 +18,10 @@ public class UpdateClusterAuditLogConfigRequest extends TeaModel {
     public Boolean disable;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> to which the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> that stores the cluster audit logs belongs.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/48873.html">Simple Log Service project</a> to which the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> storing the cluster audit logs belongs.</p>
      * <ul>
      * <li>Default value: k8s-log-{clusterid}.</li>
-     * <li>After the cluster audit log feature is enabled, a Logstore is created in the specified SLS project to store the cluster audit logs.</li>
+     * <li>After the cluster audit log feature is enabled, a Logstore is created in the specified Simple Log Service project to store cluster audit logs.</li>
      * <li>If you want to change the project after audit logging is enabled for the cluster, you can use this parameter to specify another project. You can perform this operation only in ACK managed clusters.</li>
      * </ul>
      * 

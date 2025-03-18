@@ -43,12 +43,30 @@ public class DescribeClusterResourcesResponse extends TeaModel {
     }
 
     public static class DescribeClusterResourcesResponseBodyDependencies extends TeaModel {
+        /**
+         * <p>The ID of the cluster to which the dependent resource is related.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc5ee03f63e43425cb6f71f1a1756****</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The dependent resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::VPC::NatGateway</p>
+         */
         @NameInMap("resource_type")
         public String resourceType;
 
+        /**
+         * <p>The dependent resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-wz9sphwk42sdtjixo****</p>
+         */
         @NameInMap("instance_id")
         public String instanceId;
 
@@ -281,7 +299,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior;
 
         /**
-         * <p>The resource creator. Valid values:</p>
+         * <p>The type of the resource creator. Valid values:</p>
          * <ul>
          * <li>user: The resource is created by the user.</li>
          * <li>system: The resource is created by the ACK management system.</li>

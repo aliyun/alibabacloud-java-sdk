@@ -44,7 +44,7 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The labels that you want to query. You can specify up to 20 labels.</p>
+     * <p>The list of labels that you want to query. You can specify up to 20 labels.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;key\&quot;:\&quot;env\&quot;,\&quot;value\&quot;,\&quot;dev\&quot;},{\&quot;key\&quot;:\&quot;dev\&quot;, \&quot;value\&quot;:\&quot;IT\&quot;}]</p>

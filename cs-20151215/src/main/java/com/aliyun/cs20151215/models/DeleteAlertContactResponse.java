@@ -43,12 +43,34 @@ public class DeleteAlertContactResponse extends TeaModel {
     }
 
     public static class DeleteAlertContactResponseBodyResult extends TeaModel {
+        /**
+         * <p>The deletion status.</p>
+         * <ul>
+         * <li>true: The alert contact was deleted.</li>
+         * <li>false: The alert contact failed to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("status")
         public Boolean status;
 
+        /**
+         * <p>The error message returned if the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Delete contact resource failed.</p>
+         */
         @NameInMap("msg")
         public String msg;
 
+        /**
+         * <p>An alert contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("contact_id")
         public String contactId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated. No need to pass values.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s</p>
@@ -15,10 +15,10 @@ public class UpgradeClusterRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>Specifies whether to update only the master nodes. Valid values:</p>
+     * <p>Specifies whether to upgrade only master nodes. Valid values:</p>
      * <ul>
-     * <li>true: updates only the master nodes.</li>
-     * <li>false: updates the master nodes and worker nodes.</li>
+     * <li>true: upgrades master nodes only.</li>
+     * <li>false: upgrades both master and worker nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public Boolean masterOnly;
 
     /**
-     * <p>The Kubernetes version to which you want to update the cluster.</p>
+     * <p>The target Kubernetes version for cluster upgrade.</p>
      * 
      * <strong>example:</strong>
      * <p>1.16.9-aliyun.1</p>
@@ -37,13 +37,13 @@ public class UpgradeClusterRequest extends TeaModel {
     public String nextVersion;
 
     /**
-     * <p>The rotation configuration.</p>
+     * <p>The rolling update configuration.</p>
      */
     @NameInMap("rolling_policy")
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
 
     /**
-     * <p>This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.</p>
+     * <p>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</p>
      * 
      * <strong>example:</strong>
      * <p>1.14.8-aliyun.1</p>
@@ -101,7 +101,7 @@ public class UpgradeClusterRequest extends TeaModel {
 
     public static class UpgradeClusterRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The maximum size of each batch.</p>
+         * <p>The maximum number of nodes concurrently upgraded per batch.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

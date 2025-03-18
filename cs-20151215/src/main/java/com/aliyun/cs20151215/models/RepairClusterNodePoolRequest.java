@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
     /**
-     * <p>Specifies whether to restart the instance of the node.</p>
+     * <p>Specifies whether to enable automatic instance restart.</p>
+     * <p>**</p>
+     * <p><strong>Warning</strong> This parameter is deprecated. Any configured values will be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -15,13 +17,13 @@ public class RepairClusterNodePoolRequest extends TeaModel {
     public Boolean autoRestart;
 
     /**
-     * <p>The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.</p>
+     * <p>The list of nodes. If not specified, all nodes in the node pool are selected.</p>
      */
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 
     /**
-     * <p>The repair operation to be performed. If not specified, all repair operations will be executed by default. Generally, there is no need to specify this in most scenarios.</p>
+     * <p>The list of repair operations to execute. If not specified, all repair operations are executed. Typically, you do not need to specify this parameter.</p>
      */
     @NameInMap("operations")
     public java.util.List<RepairClusterNodePoolRequestOperations> operations;
@@ -58,13 +60,13 @@ public class RepairClusterNodePoolRequest extends TeaModel {
 
     public static class RepairClusterNodePoolRequestOperations extends TeaModel {
         /**
-         * <p>List of repair operation parameters.</p>
+         * <p>The parameters of a repair operation.</p>
          */
         @NameInMap("args")
         public java.util.List<String> args;
 
         /**
-         * <p>Repair operation ID.</p>
+         * <p>The ID of a repair operation.</p>
          * 
          * <strong>example:</strong>
          * <p>remove.containerdContainer</p>

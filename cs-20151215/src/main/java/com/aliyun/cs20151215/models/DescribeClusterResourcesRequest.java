@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeClusterResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the resources created by cluster components.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("with_addon_resources")
     public Boolean withAddonResources;

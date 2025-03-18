@@ -14,7 +14,11 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The specification of the cluster.</p>
+     * <p>The specification of the clusters to query. Valid values:</p>
+     * <ul>
+     * <li>ack.pro.small: ACK Pro clusters.</li>
+     * <li>ack.standard: ACK Basic clusters.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ack.standard</p>
@@ -23,7 +27,12 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>The type of the cluster.</p>
+     * <p>The type of the clusters to query. Valid values:</p>
+     * <ul>
+     * <li>Kubernetes: ACK dedicated clusters.</li>
+     * <li>ManagedKubernetes: ACK managed clusters. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
+     * <li>ExternalKubernetes: registered clusters.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Kubernetes</p>
@@ -59,7 +68,13 @@ public class DescribeClustersForRegionRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The identifier of the cluster.</p>
+     * <p>The subtype of the clusters to query. Valid values:</p>
+     * <ul>
+     * <li>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+     * <li>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+     * <li>Serverless: ACK Serverless clusters. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+     * <li>Lingjun: ACK Lingjun Pro clusters.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Serverless</p>

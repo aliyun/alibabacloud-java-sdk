@@ -26,7 +26,7 @@ public class CheckServiceRoleRequest extends TeaModel {
 
     public static class CheckServiceRoleRequestRoles extends TeaModel {
         /**
-         * <p>The service role name.</p>
+         * <p>The name of the service role. For more information about ACK roles, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK roles</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersForRegionResponseBody extends TeaModel {
     /**
-     * <p>The details of the clusters.</p>
+     * <p>The information about the clusters returned.</p>
      */
     @NameInMap("clusters")
     public java.util.List<DescribeClustersForRegionResponseBodyClusters> clusters;
@@ -160,7 +160,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String nextVersion;
 
         /**
-         * <p>The subtype of the cluster. Valid values:</p>
+         * <p>The subtype of the clusters. Valid values:</p>
          * <ul>
          * <li>Default: ACK managed clusters. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
          * <li>Edge: ACK Edge clusters. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
@@ -258,7 +258,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>The list of cluster tags.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
@@ -291,7 +291,7 @@ public class DescribeClustersForRegionResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The vSwitches for the control plane of the cluster.</p>
+         * <p>The list of vSwitches on the control plane of the cluster.</p>
          */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;

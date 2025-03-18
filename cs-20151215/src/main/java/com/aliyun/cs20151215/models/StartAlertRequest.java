@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAlertRequest extends TeaModel {
     /**
-     * <p>The name of the alert rule set to be enabled.</p>
+     * <p>The name of the alert rule group.</p>
      * 
      * <strong>example:</strong>
      * <p>sample</p>
@@ -14,7 +14,7 @@ public class StartAlertRequest extends TeaModel {
     public String alertRuleGroupName;
 
     /**
-     * <p>The name of the alert rule to be enabled. If you do not specify an alert rule name, the alert rule set is enabled.</p>
+     * <p>The name of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>sample</p>

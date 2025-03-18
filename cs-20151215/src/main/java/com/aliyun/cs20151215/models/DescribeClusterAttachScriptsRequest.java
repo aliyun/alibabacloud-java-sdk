@@ -18,16 +18,25 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String arch;
 
     /**
-     * <p>Specifies whether to mount data disks to an existing instance when you add the instance to the cluster. You can add data disks to store container data and images. Valid values:</p>
+     * <p>Describes the expiration time of the generated token, formatted as a Unix timestamp. For example, 1739980800 represents 2025-02-20 00:00:00.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1740037333</p>
+     */
+    @NameInMap("expired")
+    public Long expired;
+
+    /**
+     * <p>Specifies whether to mount data disks to an existing instance when you manually add this instance to the cluster. You can add data disks to store container data and images. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: mounts data disks to the existing instance that you want to add. After a data disk is mounted, the original data on the disk is erased. Back up data before you mount a data disk.</li>
+     * <li><code>true</code>: mounts data disks to the existing instance. Back up the data first to prevent losses.</li>
      * <li><code>false</code>: does not mount data disks to the existing instance.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
-     * <p>How a data disk is mounted:</p>
+     * <p>Mounting rules:</p>
      * <ul>
-     * <li>If the Elastic Compute Service (ECS) instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.</li>
-     * <li>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</li>
+     * <li>If the Elastic Compute Service (ECS) instances are already mounted with data disks and the file system of the last data disk is uninitialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.</li>
+     * <li>If no data disk is mounted to the ECS instance, no new disk will be mounted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,10 +46,10 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Boolean formatDisk;
 
     /**
-     * <p>Specifies whether to retain the name of the existing instance when it is added to the cluster. If you do not retain the instance name, the instance is named in the <code>worker-k8s-for-cs-&lt;clusterid&gt;</code> format. Valid values:</p>
+     * <p>Specifies whether to retain the name of the existing instance when it is added to the cluster. ``Valid values:</p>
      * <ul>
      * <li><code>true</code>: retains the instance name.</li>
-     * <li><code>false</code>: does not retain the instance name.</li>
+     * <li><code>false</code>: renames the instance to worker-k8s-for-cs-\<clusterid>.</li>
      * </ul>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -53,7 +62,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     /**
      * <p>The ID of the node pool to which you want to add an existing node.</p>
      * <blockquote>
-     * <p> If you do not specify a node pool ID, the node is added to a default node pool.</p>
+     * <p> If not specified, the node is added to the default node pool.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +84,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String options;
 
     /**
-     * <p>The ApsaraDB RDS instances. If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
+     * <p>If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster will be automatically added to the whitelist of the ApsaraDB RDS instances.</p>
      */
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
@@ -91,6 +100,14 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     }
     public String getArch() {
         return this.arch;
+    }
+
+    public DescribeClusterAttachScriptsRequest setExpired(Long expired) {
+        this.expired = expired;
+        return this;
+    }
+    public Long getExpired() {
+        return this.expired;
     }
 
     public DescribeClusterAttachScriptsRequest setFormatDisk(Boolean formatDisk) {
