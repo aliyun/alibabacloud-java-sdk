@@ -40,7 +40,32 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         return this.supportResources;
     }
 
+    public static class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility extends TeaModel {
+        @NameInMap("Ability")
+        public java.util.List<String> ability;
+
+        public static DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility self = new DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility setAbility(java.util.List<String> ability) {
+            this.ability = ability;
+            return this;
+        }
+        public java.util.List<String> getAbility() {
+            return this.ability;
+        }
+
+    }
+
     public static class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
+        /**
+         * <p>Node product capability.</p>
+         */
+        @NameInMap("Ability")
+        public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility ability;
+
         /**
          * <p>The number of disks that you can purchase.</p>
          * 
@@ -113,6 +138,14 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         public static DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource self = new DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource setAbility(DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility ability) {
+            this.ability = ability;
+            return this;
+        }
+        public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResourceAbility getAbility() {
+            return this.ability;
         }
 
         public DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource setCanBuyCount(Long canBuyCount) {

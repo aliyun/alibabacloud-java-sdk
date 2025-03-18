@@ -91,6 +91,47 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysIpLists extends TeaModel {
+        @NameInMap("AllocationId")
+        public String allocationId;
+
+        @NameInMap("IpAddress")
+        public String ipAddress;
+
+        @NameInMap("UsingStatus")
+        public String usingStatus;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysIpLists build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysIpLists self = new DescribeNatGatewaysResponseBodyNatGatewaysIpLists();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysIpLists setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
+            return this;
+        }
+        public String getAllocationId() {
+            return this.allocationId;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysIpLists setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysIpLists setUsingStatus(String usingStatus) {
+            this.usingStatus = usingStatus;
+            return this;
+        }
+        public String getUsingStatus() {
+            return this.usingStatus;
+        }
+
+    }
+
     public static class DescribeNatGatewaysResponseBodyNatGateways extends TeaModel {
         /**
          * <p>The time when the NAT gateway was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -109,6 +150,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
+
+        @NameInMap("IpLists")
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> ipLists;
 
         /**
          * <p>The name of the NAT gateway.</p>
@@ -146,6 +190,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("Spec")
         public String spec;
 
+        @NameInMap("Status")
+        public String status;
+
         /**
          * <p>The ID of the vSwitch.</p>
          * 
@@ -174,6 +221,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getEnsRegionId() {
             return this.ensRegionId;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGateways setIpLists(java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> ipLists) {
+            this.ipLists = ipLists;
+            return this;
+        }
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> getIpLists() {
+            return this.ipLists;
         }
 
         public DescribeNatGatewaysResponseBodyNatGateways setName(String name) {
@@ -206,6 +261,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getSpec() {
             return this.spec;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGateways setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeNatGatewaysResponseBodyNatGateways setVSwitchId(String vSwitchId) {

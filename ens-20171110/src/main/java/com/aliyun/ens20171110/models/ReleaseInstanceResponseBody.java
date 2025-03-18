@@ -13,6 +13,9 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     public static ReleaseInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstanceResponseBody self = new ReleaseInstanceResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ReleaseInstanceResponseBody setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

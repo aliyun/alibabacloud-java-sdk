@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DetachInstanceSDGShrinkRequest extends TeaModel {
     /**
+     * <p>The IDs of the instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
+     * <p>The ID of the SDG.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

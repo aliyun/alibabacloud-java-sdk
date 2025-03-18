@@ -22,6 +22,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
     /**
      * <p>The ID of the ELB instance.</p>
      * 
@@ -117,6 +120,14 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeLoadBalancersRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     public DescribeLoadBalancersRequest setLoadBalancerId(String loadBalancerId) {

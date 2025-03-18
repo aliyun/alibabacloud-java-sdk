@@ -41,6 +41,9 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo extends TeaModel {
+        @NameInMap("Ability")
+        public java.util.List<String> ability;
+
         /**
          * <p>The ID of the region.</p>
          * 
@@ -104,6 +107,14 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public static DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo self = new DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo setAbility(java.util.List<String> ability) {
+            this.ability = ability;
+            return this;
+        }
+        public java.util.List<String> getAbility() {
+            return this.ability;
         }
 
         public DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo setArea(String area) {

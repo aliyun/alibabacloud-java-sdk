@@ -391,6 +391,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols extends TeaModel {
+        @NameInMap("BackendServerPort")
+        public Integer backendServerPort;
+
         /**
          * <p>The description of the listener.</p>
          * 
@@ -439,6 +442,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols build(java.util.Map<String, ?> map) throws Exception {
             DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols setBackendServerPort(Integer backendServerPort) {
+            this.backendServerPort = backendServerPort;
+            return this;
+        }
+        public Integer getBackendServerPort() {
+            return this.backendServerPort;
         }
 
         public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols setDescription(String description) {

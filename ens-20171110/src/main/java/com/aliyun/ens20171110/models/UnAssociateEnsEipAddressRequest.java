@@ -14,6 +14,9 @@ public class UnAssociateEnsEipAddressRequest extends TeaModel {
     @NameInMap("AllocationId")
     public String allocationId;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     public static UnAssociateEnsEipAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         UnAssociateEnsEipAddressRequest self = new UnAssociateEnsEipAddressRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class UnAssociateEnsEipAddressRequest extends TeaModel {
     }
     public String getAllocationId() {
         return this.allocationId;
+    }
+
+    public UnAssociateEnsEipAddressRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
 }

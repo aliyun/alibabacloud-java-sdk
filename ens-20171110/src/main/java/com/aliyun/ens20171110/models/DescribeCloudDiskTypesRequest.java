@@ -13,6 +13,9 @@ public class DescribeCloudDiskTypesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The edge nodes.</p>
+     */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 

@@ -42,6 +42,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("NetworkId")
     public String networkId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateNatGatewayRequestTag> tag;
 
@@ -109,9 +112,26 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
 
     public static class CreateNatGatewayRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The key must be up to 64 characters in length.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deep</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,6 +4,12 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenersRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
     /**
      * <p>The ID of the ELB instance.</p>
      * <p>This parameter is required.</p>
@@ -35,6 +41,22 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     public static DescribeLoadBalancerListenersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerListenersRequest self = new DescribeLoadBalancerListenersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLoadBalancerListenersRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeLoadBalancerListenersRequest setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
     }
 
     public DescribeLoadBalancerListenersRequest setLoadBalancerId(String loadBalancerId) {

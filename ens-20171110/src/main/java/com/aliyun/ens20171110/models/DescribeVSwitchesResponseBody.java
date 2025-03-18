@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -102,7 +102,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The time when the vSwitch was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the VPC was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-16T06:33:15Z</p>
@@ -120,7 +120,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The ID of the ENS node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-xian-unicom</p>
@@ -138,7 +138,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public Long freeIpCount;
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-25cdvfeq58pl****</p>

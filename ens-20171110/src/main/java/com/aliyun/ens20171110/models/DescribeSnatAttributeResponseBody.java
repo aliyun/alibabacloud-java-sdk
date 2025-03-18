@@ -22,6 +22,9 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("DestCIDR")
     public String destCIDR;
 
+    @NameInMap("EipAffinity")
+    public Boolean eipAffinity;
+
     /**
      * <p>The timeout period. Unit: seconds.</p>
      * 
@@ -31,6 +34,16 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
+    /**
+     * <p>Whether to enable operator affinity. Value taking:</p>
+     * <ul>
+     * <li>false:Do not open.</li>
+     * <li>true:Open.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IspAffinity")
     public Boolean ispAffinity;
 
@@ -164,6 +177,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     }
     public String getDestCIDR() {
         return this.destCIDR;
+    }
+
+    public DescribeSnatAttributeResponseBody setEipAffinity(Boolean eipAffinity) {
+        this.eipAffinity = eipAffinity;
+        return this;
+    }
+    public Boolean getEipAffinity() {
+        return this.eipAffinity;
     }
 
     public DescribeSnatAttributeResponseBody setIdleTimeout(Integer idleTimeout) {

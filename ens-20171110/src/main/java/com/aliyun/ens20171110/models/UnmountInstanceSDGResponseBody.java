@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UnmountInstanceSDGResponseBody extends TeaModel {
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public UnmountInstanceSDGResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
      */
@@ -37,6 +42,8 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
 
     public static class UnmountInstanceSDGResponseBodyDataResultFailedItems extends TeaModel {
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>sdg not found</p>
          */
@@ -44,6 +51,8 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
         public String errMessage;
 
         /**
+         * <p>The ID of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>aic-xxxxx-0</p>
          */
@@ -75,16 +84,23 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
 
     public static class UnmountInstanceSDGResponseBodyDataResult extends TeaModel {
         /**
+         * <p>The number of failed tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>Details about failed tasks.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<UnmountInstanceSDGResponseBodyDataResultFailedItems> failedItems;
 
         /**
+         * <p>The number of successful tasks.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -124,16 +140,27 @@ public class UnmountInstanceSDGResponseBody extends TeaModel {
 
     public static class UnmountInstanceSDGResponseBodyData extends TeaModel {
         /**
+         * <p>The response message. Success is returned for a successful request.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution result of the synchronization request.</p>
+         */
         @NameInMap("Result")
         public UnmountInstanceSDGResponseBodyDataResult result;
 
         /**
+         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <ul>
+         * <li>true: All tasks are successful.</li>
+         * <li>false: Failed tasks exist.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

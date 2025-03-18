@@ -8,7 +8,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <p>The page number.</p>
      * <ul>
      * <li>Pages start from page 1.</li>
-     * <li>Default value: 1.</li>
+     * <li>Default value: 1</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <ul>
      * <li>Maximum value: 50.</li>
      * <li>Default value: 10</li>

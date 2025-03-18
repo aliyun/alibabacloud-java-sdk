@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     /**
-     * <p>负载均衡实例后端服务器使用的端口，取值：<strong>1</strong>~<strong>65535</strong>。</p>
+     * <p>The port used by the backend ELB server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>

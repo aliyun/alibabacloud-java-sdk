@@ -92,6 +92,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntries extends TeaModel {
+        @NameInMap("EipAffinity")
+        public Boolean eipAffinity;
+
         /**
          * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
          * 
@@ -101,6 +104,18 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
 
+        /**
+         * <p>Whether to enable operator affinity. Value taking:</p>
+         * <ul>
+         * <li><p>false:Do not open.</p>
+         * </li>
+         * <li><p>true:Open.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IspAffinity")
         public Boolean ispAffinity;
 
@@ -190,6 +205,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         public static DescribeSnatTableEntriesResponseBodySnatTableEntries build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnatTableEntriesResponseBodySnatTableEntries self = new DescribeSnatTableEntriesResponseBodySnatTableEntries();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntries setEipAffinity(Boolean eipAffinity) {
+            this.eipAffinity = eipAffinity;
+            return this;
+        }
+        public Boolean getEipAffinity() {
+            return this.eipAffinity;
         }
 
         public DescribeSnatTableEntriesResponseBodySnatTableEntries setIdleTimeout(Integer idleTimeout) {

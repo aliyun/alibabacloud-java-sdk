@@ -92,6 +92,9 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersListener extends TeaModel {
+        @NameInMap("BackendServerPort")
+        public Integer backendServerPort;
+
         /**
          * <p>The timestamp when the listener was created.</p>
          * 
@@ -181,6 +184,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         public static DescribeLoadBalancerListenersResponseBodyListenersListener build(java.util.Map<String, ?> map) throws Exception {
             DescribeLoadBalancerListenersResponseBodyListenersListener self = new DescribeLoadBalancerListenersResponseBodyListenersListener();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerListenersResponseBodyListenersListener setBackendServerPort(Integer backendServerPort) {
+            this.backendServerPort = backendServerPort;
+            return this;
+        }
+        public Integer getBackendServerPort() {
+            return this.backendServerPort;
         }
 
         public DescribeLoadBalancerListenersResponseBodyListenersListener setCreateTime(String createTime) {

@@ -22,6 +22,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The node information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
+     */
     @NameInMap("EnsRegionIds")
     public String ensRegionIds;
 
@@ -35,7 +41,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,6 +67,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSnapshotName</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 

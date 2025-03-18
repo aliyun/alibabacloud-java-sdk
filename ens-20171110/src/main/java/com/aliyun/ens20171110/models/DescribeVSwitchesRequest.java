@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The ID of the edge node.</p>
+     * <p>The ID of the ENS node.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-xian-unicom</p>
@@ -14,7 +14,13 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The ID of the VPC to which the vSwitches belong.</p>
+     * <p>The node information.</p>
+     */
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
+    /**
+     * <p>The ID of the VPC to which the vSwitch belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-25cdvfeq58pl****</p>
@@ -23,17 +29,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The order in which you want to sort the returned data. Example: {&quot;EnsRegionId&quot;:&quot;desc&quot;}.</p>
-     * <p>By default, the nodes are sorted by IDs in descending order.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;EnsRegionId&quot;:&quot;desc&quot;}</p>
-     */
-    @NameInMap("OrderByParams")
-    public String orderByParams;
-
-    /**
-     * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +38,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,6 +54,12 @@ public class DescribeVSwitchesRequest extends TeaModel {
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
+
+    /**
+     * <p>The list of vSwitches in the network.</p>
+     */
+    @NameInMap("VSwitchIds")
+    public java.util.List<String> vSwitchIds;
 
     /**
      * <p>The name of the vSwitch.</p>
@@ -81,20 +83,20 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.ensRegionId;
     }
 
+    public DescribeVSwitchesRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
     public DescribeVSwitchesRequest setNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     public String getNetworkId() {
         return this.networkId;
-    }
-
-    public DescribeVSwitchesRequest setOrderByParams(String orderByParams) {
-        this.orderByParams = orderByParams;
-        return this;
-    }
-    public String getOrderByParams() {
-        return this.orderByParams;
     }
 
     public DescribeVSwitchesRequest setPageNumber(Integer pageNumber) {
@@ -119,6 +121,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public DescribeVSwitchesRequest setVSwitchIds(java.util.List<String> vSwitchIds) {
+        this.vSwitchIds = vSwitchIds;
+        return this;
+    }
+    public java.util.List<String> getVSwitchIds() {
+        return this.vSwitchIds;
     }
 
     public DescribeVSwitchesRequest setVSwitchName(String vSwitchName) {

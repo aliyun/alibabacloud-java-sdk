@@ -92,6 +92,9 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRouteTablesResponseBodyRouteTables extends TeaModel {
+        @NameInMap("AssociateType")
+        public String associateType;
+
         /**
          * <p>The time when the route table was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
@@ -101,6 +104,9 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The ID of the edge node.</p>
          * 
@@ -109,6 +115,9 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
+
+        @NameInMap("IsDefaultGatewayRouteTable")
+        public Boolean isDefaultGatewayRouteTable;
 
         /**
          * <p>The ID of the network.</p>
@@ -128,6 +137,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         @NameInMap("RouteTableId")
         public String routeTableId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-tf-vtb7</p>
+         */
         @NameInMap("RouteTableName")
         public String routeTableName;
 
@@ -167,6 +180,14 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeEnsRouteTablesResponseBodyRouteTables setAssociateType(String associateType) {
+            this.associateType = associateType;
+            return this;
+        }
+        public String getAssociateType() {
+            return this.associateType;
+        }
+
         public DescribeEnsRouteTablesResponseBodyRouteTables setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
@@ -175,12 +196,28 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
+        public DescribeEnsRouteTablesResponseBodyRouteTables setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public DescribeEnsRouteTablesResponseBodyRouteTables setEnsRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
             return this;
         }
         public String getEnsRegionId() {
             return this.ensRegionId;
+        }
+
+        public DescribeEnsRouteTablesResponseBodyRouteTables setIsDefaultGatewayRouteTable(Boolean isDefaultGatewayRouteTable) {
+            this.isDefaultGatewayRouteTable = isDefaultGatewayRouteTable;
+            return this;
+        }
+        public Boolean getIsDefaultGatewayRouteTable() {
+            return this.isDefaultGatewayRouteTable;
         }
 
         public DescribeEnsRouteTablesResponseBodyRouteTables setNetworkId(String networkId) {

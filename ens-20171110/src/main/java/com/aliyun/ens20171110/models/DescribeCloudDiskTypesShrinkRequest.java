@@ -13,6 +13,9 @@ public class DescribeCloudDiskTypesShrinkRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The edge nodes.</p>
+     */
     @NameInMap("EnsRegionIds")
     public String ensRegionIdsShrink;
 

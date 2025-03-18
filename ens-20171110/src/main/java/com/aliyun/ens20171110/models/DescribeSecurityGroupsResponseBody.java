@@ -14,7 +14,7 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -91,9 +91,47 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds extends TeaModel {
+        @NameInMap("InstanceId")
+        public java.util.List<String> instanceId;
+
+        public static DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds self = new DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds setInstanceId(java.util.List<String> instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public java.util.List<String> getInstanceId() {
+            return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds extends TeaModel {
+        @NameInMap("NetworkInterfaceId")
+        public java.util.List<String> networkInterfaceId;
+
+        public static DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds self = new DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds setNetworkInterfaceId(java.util.List<String> networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public java.util.List<String> getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+    }
+
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
         /**
-         * <p>The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-11-01T06:08:46Z</p>
@@ -118,6 +156,18 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
+
+        /**
+         * <p>The list of instance IDs.</p>
+         */
+        @NameInMap("InstanceIds")
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds instanceIds;
+
+        /**
+         * <p>The IDs of ENIs.</p>
+         */
+        @NameInMap("NetworkInterfaceIds")
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds networkInterfaceIds;
 
         /**
          * <p>The ID of the security group.</p>
@@ -164,6 +214,22 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         }
         public Integer getInstanceCount() {
             return this.instanceCount;
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setInstanceIds(DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds getInstanceIds() {
+            return this.instanceIds;
+        }
+
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setNetworkInterfaceIds(DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds networkInterfaceIds) {
+            this.networkInterfaceIds = networkInterfaceIds;
+            return this;
+        }
+        public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds getNetworkInterfaceIds() {
+            return this.networkInterfaceIds;
         }
 
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup setSecurityGroupId(String securityGroupId) {

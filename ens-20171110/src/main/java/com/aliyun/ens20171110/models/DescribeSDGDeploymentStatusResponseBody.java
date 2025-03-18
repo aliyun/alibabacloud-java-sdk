@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
     /**
-     * <p>The deployment information of the SDG.</p>
+     * <p>The list of SDG deployment information.</p>
      */
     @NameInMap("DeploymentStatus")
     public java.util.List<DescribeSDGDeploymentStatusResponseBodyDeploymentStatus> deploymentStatus;
@@ -29,7 +29,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>68B85217-03B8-5141-9216-EA4D7C496B9A</p>
@@ -115,6 +115,12 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         @NameInMap("MountType")
         public String mountType;
 
+        /**
+         * <p>The deployment phase of the SDG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attach</p>
+         */
         @NameInMap("Phase")
         public String phase;
 
@@ -128,7 +134,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>the deployment status of the shared data group SDG.</p>
+         * <p>The deployment status of the SDG.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>sdg_deploying</li>

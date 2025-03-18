@@ -69,6 +69,9 @@ public class CreateEnsRouteEntryRequest extends TeaModel {
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    @NameInMap("SourceCidrBlock")
+    public String sourceCidrBlock;
+
     public static CreateEnsRouteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEnsRouteEntryRequest self = new CreateEnsRouteEntryRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class CreateEnsRouteEntryRequest extends TeaModel {
     }
     public String getRouteTableId() {
         return this.routeTableId;
+    }
+
+    public CreateEnsRouteEntryRequest setSourceCidrBlock(String sourceCidrBlock) {
+        this.sourceCidrBlock = sourceCidrBlock;
+        return this;
+    }
+    public String getSourceCidrBlock() {
+        return this.sourceCidrBlock;
     }
 
 }

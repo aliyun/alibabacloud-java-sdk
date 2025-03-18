@@ -29,7 +29,7 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public String autoReleaseTime;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan. Examples:</p>
      * <ul>
      * <li><strong>true</strong>.</li>
      * <li><strong>false</strong> (default).</li>
@@ -128,7 +128,7 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public String instanceChargeStrategy;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method of the instance. Examples:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription.</li>
      * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
@@ -188,11 +188,12 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public Long internetMaxBandwidthOut;
 
     /**
-     * <p>The type of the IP address. Examples:</p>
+     * <p>The type of the IP address. Valid values:</p>
      * <ul>
      * <li><strong>ipv4</strong> (default).</li>
      * <li><strong>ipv6</strong>.</li>
-     * <li><strong>ipv4Andipv6</strong>.</li>
+     * <li><strong>ipv4Andipv6</strong> (single stack).</li>
+     * <li><strong>ipv4Withipv6</strong> (dual stack).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -329,7 +330,7 @@ public class RunInstancesShrinkRequest extends TeaModel {
     public String scheduleAreaLevel;
 
     /**
-     * <p>The scheduling price policy. Valid values:</p>
+     * <p>The scheduling price policy. Examples:</p>
      * <ul>
      * <li><strong>PriceHighPriority</strong>: The high price prevails.</li>
      * <li><strong>PriceLowPriority</strong>: The low price prevails.</li>
@@ -366,13 +367,24 @@ public class RunInstancesShrinkRequest extends TeaModel {
     @NameInMap("SecurityId")
     public String securityId;
 
+    /**
+     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+     * <ul>
+     * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * </ul>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("SpotDuration")
     public Integer spotDuration;
 
     /**
      * <p>The bidding policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instance is created as a regular pay-as-you-go instance.</li>
+     * <li>NoSpot: The elastic container instances are pay-as-you-go instances.</li>
      * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>

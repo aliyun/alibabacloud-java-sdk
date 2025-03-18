@@ -109,15 +109,45 @@ public class DescribeImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        /**
+         * <p>The format of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The format of the image.
+         * raw
+         * qcow2</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The type of the disk. Valid values:</p>
+         * <ul>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Data</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The ID of image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-test</p>
+         */
         @NameInMap("imageId")
         public String imageId;
 
@@ -198,6 +228,9 @@ public class DescribeImagesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The mappings between the disk and the snapshot in the image.</p>
+         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
@@ -254,6 +287,15 @@ public class DescribeImagesResponseBody extends TeaModel {
          */
         @NameInMap("Platform")
         public String platform;
+
+        /**
+         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
 
         /**
          * <p>The ID of the snapshot.</p>
@@ -331,6 +373,14 @@ public class DescribeImagesResponseBody extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public DescribeImagesResponseBodyImagesImage setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeImagesResponseBodyImagesImage setSnapshotId(String snapshotId) {

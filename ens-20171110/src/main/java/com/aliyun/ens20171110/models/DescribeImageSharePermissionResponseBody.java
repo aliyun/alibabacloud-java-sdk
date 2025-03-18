@@ -108,20 +108,39 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeImageSharePermissionResponseBodyAccountsAccount extends TeaModel {
+        @NameInMap("AliyunUid")
+        public String aliyunUid;
+
+        public static DescribeImageSharePermissionResponseBodyAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageSharePermissionResponseBodyAccountsAccount self = new DescribeImageSharePermissionResponseBodyAccountsAccount();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSharePermissionResponseBodyAccountsAccount setAliyunUid(String aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public String getAliyunUid() {
+            return this.aliyunUid;
+        }
+
+    }
+
     public static class DescribeImageSharePermissionResponseBodyAccounts extends TeaModel {
         @NameInMap("Account")
-        public java.util.List<String> account;
+        public java.util.List<DescribeImageSharePermissionResponseBodyAccountsAccount> account;
 
         public static DescribeImageSharePermissionResponseBodyAccounts build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSharePermissionResponseBodyAccounts self = new DescribeImageSharePermissionResponseBodyAccounts();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageSharePermissionResponseBodyAccounts setAccount(java.util.List<String> account) {
+        public DescribeImageSharePermissionResponseBodyAccounts setAccount(java.util.List<DescribeImageSharePermissionResponseBodyAccountsAccount> account) {
             this.account = account;
             return this;
         }
-        public java.util.List<String> getAccount() {
+        public java.util.List<DescribeImageSharePermissionResponseBodyAccountsAccount> getAccount() {
             return this.account;
         }
 

@@ -19,6 +19,12 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     @NameInMap("Images")
     public DescribeSelfImagesResponseBodyImages images;
 
+    @NameInMap("PageNumber")
+    public String pageNumber;
+
+    @NameInMap("PageSize")
+    public String pageSize;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -27,6 +33,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     public static DescribeSelfImagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSelfImagesResponseBody self = new DescribeSelfImagesResponseBody();
@@ -49,6 +58,22 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         return this.images;
     }
 
+    public DescribeSelfImagesResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSelfImagesResponseBody setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeSelfImagesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -57,16 +82,54 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeSelfImagesResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        /**
+         * <p>The format of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The format of the image.
+         * raw
+         * qcow2</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The type of the disk. Valid values:</p>
+         * <ul>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Data</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The ID of image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-test</p>
+         */
         @NameInMap("imageId")
         public String imageId;
 
@@ -160,6 +223,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The mappings between the disk and the snapshot in the image.</p>
+         */
         @NameInMap("DiskDeviceMappings")
         public DescribeSelfImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
@@ -246,6 +312,15 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
          */
         @NameInMap("Platform")
         public String platform;
+
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
 
         /**
          * <p>The snapshot ID.</p>
@@ -374,6 +449,14 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public DescribeSelfImagesResponseBodyImagesImage setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeSelfImagesResponseBodyImagesImage setSnapshotId(String snapshotId) {
