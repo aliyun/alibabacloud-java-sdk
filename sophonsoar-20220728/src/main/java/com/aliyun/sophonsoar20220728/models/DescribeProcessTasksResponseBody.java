@@ -171,6 +171,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @NameInMap("ErrTip")
         public String errTip;
 
+        @NameInMap("EventUuid")
+        public String eventUuid;
+
         /**
          * <p>The creation time of the handling task. The value is a 13-digit timestamp.</p>
          * 
@@ -225,6 +228,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         @NameInMap("RemoveTime")
         public Long removeTime;
 
+        @NameInMap("ReqUuid")
+        public String reqUuid;
+
         /**
          * <p>The scenario code of the handling task.</p>
          * 
@@ -278,6 +284,9 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
+
+        @NameInMap("TriggerSource")
+        public String triggerSource;
 
         /**
          * <p>The code of the cloud service that is associated with the handling task.</p>
@@ -349,6 +358,14 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             return this.errTip;
         }
 
+        public DescribeProcessTasksResponseBodyProcessTasks setEventUuid(String eventUuid) {
+            this.eventUuid = eventUuid;
+            return this;
+        }
+        public String getEventUuid() {
+            return this.eventUuid;
+        }
+
         public DescribeProcessTasksResponseBodyProcessTasks setGmtCreateMillis(Long gmtCreateMillis) {
             this.gmtCreateMillis = gmtCreateMillis;
             return this;
@@ -397,6 +414,14 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
             return this.removeTime;
         }
 
+        public DescribeProcessTasksResponseBodyProcessTasks setReqUuid(String reqUuid) {
+            this.reqUuid = reqUuid;
+            return this;
+        }
+        public String getReqUuid() {
+            return this.reqUuid;
+        }
+
         public DescribeProcessTasksResponseBodyProcessTasks setSceneCode(String sceneCode) {
             this.sceneCode = sceneCode;
             return this;
@@ -443,6 +468,14 @@ public class DescribeProcessTasksResponseBody extends TeaModel {
         }
         public Integer getTaskStatus() {
             return this.taskStatus;
+        }
+
+        public DescribeProcessTasksResponseBodyProcessTasks setTriggerSource(String triggerSource) {
+            this.triggerSource = triggerSource;
+            return this;
+        }
+        public String getTriggerSource() {
+            return this.triggerSource;
         }
 
         public DescribeProcessTasksResponseBodyProcessTasks setYunCode(String yunCode) {
