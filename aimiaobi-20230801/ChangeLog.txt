@@ -1,3 +1,26 @@
+2025-03-18 Version: 1.22.0
+- Support API RunDocWashing.
+- Update API GetHotTopicBroadcast: update param StepForCustomSummaryStyleConfig.
+- Update API RunBookIntroduction: add param KeyPointPrompt.
+- Update API RunBookIntroduction: add param SummaryPrompt.
+- Update API RunCommentGeneration: add param SessionId.
+- Update API RunCommentGeneration: update param Type.
+- Update API RunDocBrainmap: add param CleanCache.
+- Update API RunDocBrainmap: add param NodeNumber.
+- Update API RunDocBrainmap: add param Prompt.
+- Update API RunDocBrainmap: add param WordNumber.
+- Update API RunDocIntroduction: add param CleanCache.
+- Update API RunDocIntroduction: add param IntroductionPrompt.
+- Update API RunDocIntroduction: add param KeyPointPrompt.
+- Update API RunDocIntroduction: add param SummaryPrompt.
+- Update API RunDocSummary: add param CleanCache.
+- Update API RunDocTranslation: add param CleanCache.
+- Update API RunSearchGeneration: update param AgentContext.
+- Update API RunSearchSimilarArticles: update param ChatConfig.
+- Update API RunSearchSimilarArticles: update response param.
+- Update API SubmitCustomHotTopicBroadcastJob: update param HotTopicBroadcastConfig.
+
+
 2025-02-24 Version: 1.21.0
 - Support API ListStyleLearningResult.
 - Support API RunCommentGeneration.

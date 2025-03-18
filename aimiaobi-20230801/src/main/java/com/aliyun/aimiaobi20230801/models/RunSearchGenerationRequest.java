@@ -413,6 +413,9 @@ public class RunSearchGenerationRequest extends TeaModel {
         @NameInMap("MultimodalMediaSelection")
         public RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelection multimodalMediaSelection;
 
+        @NameInMap("SkipCurrentSupplement")
+        public Boolean skipCurrentSupplement;
+
         public static RunSearchGenerationRequestAgentContextBizContext build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationRequestAgentContextBizContext self = new RunSearchGenerationRequestAgentContextBizContext();
             return TeaModel.build(map, self);
@@ -424,6 +427,14 @@ public class RunSearchGenerationRequest extends TeaModel {
         }
         public RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelection getMultimodalMediaSelection() {
             return this.multimodalMediaSelection;
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setSkipCurrentSupplement(Boolean skipCurrentSupplement) {
+            this.skipCurrentSupplement = skipCurrentSupplement;
+            return this;
+        }
+        public Boolean getSkipCurrentSupplement() {
+            return this.skipCurrentSupplement;
         }
 
     }

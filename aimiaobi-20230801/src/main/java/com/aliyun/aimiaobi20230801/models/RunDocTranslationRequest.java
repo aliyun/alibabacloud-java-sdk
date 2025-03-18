@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocTranslationRequest extends TeaModel {
+    @NameInMap("CleanCache")
+    public Boolean cleanCache;
+
     /**
      * <strong>example:</strong>
      * <p>12345</p>
@@ -43,6 +46,14 @@ public class RunDocTranslationRequest extends TeaModel {
     public static RunDocTranslationRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDocTranslationRequest self = new RunDocTranslationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunDocTranslationRequest setCleanCache(Boolean cleanCache) {
+        this.cleanCache = cleanCache;
+        return this;
+    }
+    public Boolean getCleanCache() {
+        return this.cleanCache;
     }
 
     public RunDocTranslationRequest setDocId(String docId) {

@@ -88,6 +88,9 @@ public class RunSearchSimilarArticlesRequest extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("DatasetName")
+        public String datasetName;
+
         @NameInMap("Name")
         public String name;
 
@@ -102,6 +105,14 @@ public class RunSearchSimilarArticlesRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public RunSearchSimilarArticlesRequestChatConfigSearchParamSearchSources setDatasetName(String datasetName) {
+            this.datasetName = datasetName;
+            return this;
+        }
+        public String getDatasetName() {
+            return this.datasetName;
         }
 
         public RunSearchSimilarArticlesRequestChatConfigSearchParamSearchSources setName(String name) {

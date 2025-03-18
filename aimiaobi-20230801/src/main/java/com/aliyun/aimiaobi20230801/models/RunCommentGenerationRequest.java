@@ -48,6 +48,9 @@ public class RunCommentGenerationRequest extends TeaModel {
     @NameInMap("Sentiment")
     public java.util.Map<String, ?> sentiment;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -126,6 +129,14 @@ public class RunCommentGenerationRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getSentiment() {
         return this.sentiment;
+    }
+
+    public RunCommentGenerationRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public RunCommentGenerationRequest setSourceMaterial(String sourceMaterial) {

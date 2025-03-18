@@ -130,6 +130,9 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
     }
 
     public static class RunSearchSimilarArticlesResponseBodyPayloadOutputArticles extends TeaModel {
+        @NameInMap("DocId")
+        public String docId;
+
         /**
          * <strong>example:</strong>
          * <p>a26c2c1</p>
@@ -174,6 +177,14 @@ public class RunSearchSimilarArticlesResponseBody extends TeaModel {
         public static RunSearchSimilarArticlesResponseBodyPayloadOutputArticles build(java.util.Map<String, ?> map) throws Exception {
             RunSearchSimilarArticlesResponseBodyPayloadOutputArticles self = new RunSearchSimilarArticlesResponseBodyPayloadOutputArticles();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setDocId(String docId) {
+            this.docId = docId;
+            return this;
+        }
+        public String getDocId() {
+            return this.docId;
         }
 
         public RunSearchSimilarArticlesResponseBodyPayloadOutputArticles setDocUuid(String docUuid) {
