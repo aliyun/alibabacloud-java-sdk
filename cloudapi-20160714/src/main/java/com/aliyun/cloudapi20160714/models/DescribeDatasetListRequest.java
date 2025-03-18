@@ -13,6 +13,9 @@ public class DescribeDatasetListRequest extends TeaModel {
     @NameInMap("DatasetIds")
     public String datasetIds;
 
+    @NameInMap("DatasetName")
+    public String datasetName;
+
     /**
      * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
      * 
@@ -51,6 +54,14 @@ public class DescribeDatasetListRequest extends TeaModel {
     }
     public String getDatasetIds() {
         return this.datasetIds;
+    }
+
+    public DescribeDatasetListRequest setDatasetName(String datasetName) {
+        this.datasetName = datasetName;
+        return this;
+    }
+    public String getDatasetName() {
+        return this.datasetName;
     }
 
     public DescribeDatasetListRequest setPageNumber(Integer pageNumber) {
