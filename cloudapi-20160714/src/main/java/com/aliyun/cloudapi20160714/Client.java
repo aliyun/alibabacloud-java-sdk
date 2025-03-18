@@ -6864,6 +6864,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DatasetIds", request.datasetIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
+            query.put("DatasetName", request.datasetName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
