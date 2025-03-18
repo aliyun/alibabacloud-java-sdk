@@ -5,29 +5,56 @@ import com.aliyun.tea.*;
 
 public class GenerateTokenResponseBody extends TeaModel {
     /**
-     * <p>access_token。</p>
+     * <p>The access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ATxxx</p>
      */
     @NameInMap("access_token")
     public String accessToken;
 
+    /**
+     * <p>The time when the token expires. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1653288641</p>
+     */
     @NameInMap("expires_at")
     public Long expiresAt;
 
+    /**
+     * <p>The remaining validity period of the token. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1200</p>
+     */
     @NameInMap("expires_in")
     public Long expiresIn;
 
     /**
-     * <p>id_token。</p>
+     * <p>The ID token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxx</p>
      */
     @NameInMap("id_token")
     public String idToken;
 
     /**
-     * <p>refresh_token。</p>
+     * <p>The refresh token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RTxxx</p>
      */
     @NameInMap("refresh_token")
     public String refreshToken;
 
+    /**
+     * <p>The type of the token. Valid values: Basic Bearer</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Bearer</p>
+     */
     @NameInMap("token_type")
     public String tokenType;
 

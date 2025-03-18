@@ -4,6 +4,13 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GetUserIdByUsernameRequest extends TeaModel {
+    /**
+     * <p>The username of the account.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>username_001</p>
+     */
     @NameInMap("username")
     public String username;
 

@@ -7,24 +7,66 @@ public class PatchUserRequest extends TeaModel {
     @NameInMap("customFields")
     public java.util.List<PatchUserRequestCustomFields> customFields;
 
+    /**
+     * <p>The display name of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>display_name001</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>The email address of the user who owns the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:example@example.com">example@example.com</a></p>
+     */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>Indicates whether the email address is verified. This field is required if an email address is specified. If you have no special requirement, set this parameter to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("emailVerified")
     public Boolean emailVerified;
 
+    /**
+     * <p>The mobile number of the user who owns the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>156xxxxxxx</p>
+     */
     @NameInMap("phoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>Indicates whether the mobile number is verified. This field is required if a mobile number is specified. If you have no special requirement, set this parameter to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("phoneNumberVerified")
     public Boolean phoneNumberVerified;
 
+    /**
+     * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +. This parameter is required if a mobile number is specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("phoneRegion")
     public String phoneRegion;
 
+    /**
+     * <p>The username of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name001</p>
+     */
     @NameInMap("username")
     public String username;
 
@@ -98,21 +140,38 @@ public class PatchUserRequest extends TeaModel {
     }
 
     public static class PatchUserRequestCustomFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("fieldName")
         public String fieldName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_value</p>
+         */
         @NameInMap("fieldValue")
         public String fieldValue;
 
         /**
          * <p>字段操作类型，取值可选范围：</p>
-         * <p>- add：添加。</p>
-         * <p>- replace：替换。若对应扩展字段无设置值，会转换为add操作。</p>
-         * <p>- remove：移除。</p>
+         * <ul>
+         * <li>add：添加。</li>
+         * <li>replace：替换。若对应扩展字段无设置值，会转换为add操作。</li>
+         * <li>remove：移除。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>replace</p>
          */
         @NameInMap("operation")
         public String operation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>replace</p>
+         */
         @NameInMap("operator")
         @Deprecated
         public String operator;
@@ -146,6 +205,7 @@ public class PatchUserRequest extends TeaModel {
             return this.operation;
         }
 
+        @Deprecated
         public PatchUserRequestCustomFields setOperator(String operator) {
             this.operator = operator;
             return this;

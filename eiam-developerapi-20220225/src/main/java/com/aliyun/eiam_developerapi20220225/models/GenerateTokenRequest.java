@@ -4,39 +4,134 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class GenerateTokenRequest extends TeaModel {
+    /**
+     * <p>The client ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
+     */
     @NameInMap("client_id")
     public String clientId;
 
+    /**
+     * <p>The client secret. This parameter is required if grant_type is set to client_credentials.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
+     */
     @NameInMap("client_secret")
     public String clientSecret;
 
+    /**
+     * <p>The authorization code. This parameter is required if grant_type is set to authorization_code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The verification code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("code_verifier")
     public String codeVerifier;
 
+    /**
+     * <p>The device code. This parameter is required if grant_type is set to authorization_code.urn:ietf:params:oauth:grant-type:device_code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("device_code")
     public String deviceCode;
 
+    /**
+     * <p>The excluded tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ATxxx</p>
+     */
     @NameInMap("exclusive_tag")
     public String exclusiveTag;
 
+    /**
+     * <p>The authorization type. Valid values:</p>
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * <li></li>
+     * </ul>
+     * <!---->
+     * 
+     * <ul>
+     * <li>authorization_code</li>
+     * <li>urn:ietf:params:oauth:grant-type:device_code</li>
+     * <li>refresh_token</li>
+     * <li>client_credentials: You must specify the client_id and client_secret parameters.</li>
+     * <li>password: This option is not supported.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client_credentials</p>
+     */
     @NameInMap("grant_type")
     public String grantType;
 
+    /**
+     * <p>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>The redirect URI. This parameter is required if grant_type is set to authorization_code. The value of this parameter must be the same as the redirect URI in the request to obtain the authorization code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("redirect_uri")
     public String redirectUri;
 
+    /**
+     * <p>The refreshed token. This parameter is required if grant_type is set to refresh_token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ATxxx</p>
+     */
     @NameInMap("refresh_token")
     public String refreshToken;
 
+    /**
+     * <p>The authorization scope. Valid values:</p>
+     * <ul>
+     * <li>openid</li>
+     * <li>email</li>
+     * <li>phone</li>
+     * <li>profile</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx</p>
+     */
     @NameInMap("scope")
     public String scope;
 
+    /**
+     * <p>The username. This parameter is required if grant_type is set to password. The password authentication type is not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>uesrname_001</p>
+     */
     @NameInMap("username")
     public String username;
 

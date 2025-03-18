@@ -4,6 +4,12 @@ package com.aliyun.eiam_developerapi20220225.models;
 import com.aliyun.tea.*;
 
 public class RemoveUserFromOrganizationalUnitsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[ou_wovwffm62xifdziem7an7xxxxx]</p>
+     */
     @NameInMap("organizationalUnitIds")
     public java.util.List<String> organizationalUnitIds;
 
