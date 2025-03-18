@@ -147,8 +147,6 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
         public Integer summaryImageCount;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>摘要模型</p>
          */

@@ -48,6 +48,9 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     @NameInMap("Sentiment")
     public String sentimentShrink;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -126,6 +129,14 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     }
     public String getSentimentShrink() {
         return this.sentimentShrink;
+    }
+
+    public RunCommentGenerationShrinkRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public RunCommentGenerationShrinkRequest setSourceMaterial(String sourceMaterial) {

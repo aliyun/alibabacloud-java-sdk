@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocIntroductionRequest extends TeaModel {
+    @NameInMap("CleanCache")
+    public Boolean cleanCache;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -13,6 +16,12 @@ public class RunDocIntroductionRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("IntroductionPrompt")
+    public String introductionPrompt;
+
+    @NameInMap("KeyPointPrompt")
+    public String keyPointPrompt;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -21,6 +30,9 @@ public class RunDocIntroductionRequest extends TeaModel {
      */
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("SummaryPrompt")
+    public String summaryPrompt;
 
     /**
      * <p>This parameter is required.</p>
@@ -36,6 +48,14 @@ public class RunDocIntroductionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunDocIntroductionRequest setCleanCache(Boolean cleanCache) {
+        this.cleanCache = cleanCache;
+        return this;
+    }
+    public Boolean getCleanCache() {
+        return this.cleanCache;
+    }
+
     public RunDocIntroductionRequest setDocId(String docId) {
         this.docId = docId;
         return this;
@@ -44,12 +64,36 @@ public class RunDocIntroductionRequest extends TeaModel {
         return this.docId;
     }
 
+    public RunDocIntroductionRequest setIntroductionPrompt(String introductionPrompt) {
+        this.introductionPrompt = introductionPrompt;
+        return this;
+    }
+    public String getIntroductionPrompt() {
+        return this.introductionPrompt;
+    }
+
+    public RunDocIntroductionRequest setKeyPointPrompt(String keyPointPrompt) {
+        this.keyPointPrompt = keyPointPrompt;
+        return this;
+    }
+    public String getKeyPointPrompt() {
+        return this.keyPointPrompt;
+    }
+
     public RunDocIntroductionRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public RunDocIntroductionRequest setSummaryPrompt(String summaryPrompt) {
+        this.summaryPrompt = summaryPrompt;
+        return this;
+    }
+    public String getSummaryPrompt() {
+        return this.summaryPrompt;
     }
 
     public RunDocIntroductionRequest setWorkspaceId(String workspaceId) {

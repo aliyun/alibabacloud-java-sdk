@@ -13,6 +13,9 @@ public class RunBookIntroductionRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("KeyPointPrompt")
+    public String keyPointPrompt;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -21,6 +24,9 @@ public class RunBookIntroductionRequest extends TeaModel {
      */
     @NameInMap("SessionId")
     public String sessionId;
+
+    @NameInMap("SummaryPrompt")
+    public String summaryPrompt;
 
     /**
      * <p>This parameter is required.</p>
@@ -44,12 +50,28 @@ public class RunBookIntroductionRequest extends TeaModel {
         return this.docId;
     }
 
+    public RunBookIntroductionRequest setKeyPointPrompt(String keyPointPrompt) {
+        this.keyPointPrompt = keyPointPrompt;
+        return this;
+    }
+    public String getKeyPointPrompt() {
+        return this.keyPointPrompt;
+    }
+
     public RunBookIntroductionRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public RunBookIntroductionRequest setSummaryPrompt(String summaryPrompt) {
+        this.summaryPrompt = summaryPrompt;
+        return this;
+    }
+    public String getSummaryPrompt() {
+        return this.summaryPrompt;
     }
 
     public RunBookIntroductionRequest setWorkspaceId(String workspaceId) {

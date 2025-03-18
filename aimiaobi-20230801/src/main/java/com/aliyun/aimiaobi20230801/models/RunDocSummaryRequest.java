@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocSummaryRequest extends TeaModel {
+    @NameInMap("CleanCache")
+    public Boolean cleanCache;
+
     /**
      * <strong>example:</strong>
      * <p>12345</p>
@@ -38,6 +41,14 @@ public class RunDocSummaryRequest extends TeaModel {
     public static RunDocSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDocSummaryRequest self = new RunDocSummaryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunDocSummaryRequest setCleanCache(Boolean cleanCache) {
+        this.cleanCache = cleanCache;
+        return this;
+    }
+    public Boolean getCleanCache() {
+        return this.cleanCache;
     }
 
     public RunDocSummaryRequest setDocId(String docId) {
