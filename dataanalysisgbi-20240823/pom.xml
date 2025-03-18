@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dataanalysisgbi20240823</artifactId>
-  <version>1.3.4</version>
+  <version>1.3.5</version>
   <packaging>jar</packaging>
   <name>dataanalysisgbi20240823</name>
   <description>Alibaba Cloud DataAnalysisGBI (20240823) SDK for Java
