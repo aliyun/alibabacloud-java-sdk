@@ -4,6 +4,9 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class SubscribeRequest extends TeaModel {
+    /**
+     * <p>The dead-letter queue policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public SubscribeRequestDlqPolicy dlqPolicy;
 
@@ -168,9 +171,21 @@ public class SubscribeRequest extends TeaModel {
     }
 
     public static class SubscribeRequestDlqPolicy extends TeaModel {
+        /**
+         * <p>The queue to which dead-letter messages are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadLetterTargetQueue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Specifies whether to enable the dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEndpointAttributeResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetEndpointAttributeResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -110,9 +110,9 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
 
     public static class GetEndpointAttributeResponseBodyDataCidrList extends TeaModel {
         /**
-         * <p>The ACL policy. Valid value:</p>
+         * <p>The ACL policy. Valid values:</p>
          * <ul>
-         * <li><strong>allow</strong>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported)</li>
+         * <li><strong>allow</strong>: indicates that the current endpoint allows access from the corresponding CIDR block. (Only allow is supported.)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
         public String cidr;
 
         /**
-         * <p>The time when the list was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1701951224000</p>
@@ -172,7 +172,7 @@ public class GetEndpointAttributeResponseBody extends TeaModel {
 
     public static class GetEndpointAttributeResponseBodyData extends TeaModel {
         /**
-         * <p>The CIDR blocks.</p>
+         * <p>The list of CIDR block.</p>
          */
         @NameInMap("CidrList")
         public java.util.List<GetEndpointAttributeResponseBodyDataCidrList> cidrList;

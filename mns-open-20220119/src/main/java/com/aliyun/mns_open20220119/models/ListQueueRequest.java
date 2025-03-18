@@ -31,6 +31,9 @@ public class ListQueueRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListQueueRequestTag> tag;
 
@@ -73,6 +76,8 @@ public class ListQueueRequest extends TeaModel {
 
     public static class ListQueueRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1</p>
          */
@@ -80,6 +85,8 @@ public class ListQueueRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

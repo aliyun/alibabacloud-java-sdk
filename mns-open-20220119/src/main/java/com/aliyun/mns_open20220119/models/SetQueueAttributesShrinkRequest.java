@@ -13,6 +13,9 @@ public class SetQueueAttributesShrinkRequest extends TeaModel {
     @NameInMap("DelaySeconds")
     public Long delaySeconds;
 
+    /**
+     * <p>The dead-letter queue policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public String dlqPolicyShrink;
 

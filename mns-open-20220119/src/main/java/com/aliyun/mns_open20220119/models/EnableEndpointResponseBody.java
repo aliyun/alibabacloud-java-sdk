@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableEndpointResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class EnableEndpointResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -23,7 +23,7 @@ public class EnableEndpointResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123****</p>

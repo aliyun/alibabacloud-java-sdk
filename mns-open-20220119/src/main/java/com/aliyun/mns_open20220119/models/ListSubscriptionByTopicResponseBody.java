@@ -14,7 +14,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListSubscriptionByTopicResponseBodyData data;
@@ -109,9 +109,21 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy extends TeaModel {
+        /**
+         * <p>The queue to which dead-letter messages are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dead-letter-queue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Specifies whether to enable the dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
@@ -148,6 +160,9 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The dead-letter queue policy.</p>
+         */
         @NameInMap("DlqPolicy")
         public ListSubscriptionByTopicResponseBodyDataPageDataDlqPolicy dlqPolicy;
 

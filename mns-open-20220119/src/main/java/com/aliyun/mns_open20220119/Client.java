@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more ACLrules for an endpoint of a specified type.</p>
+     * <p>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
      * 
      * @param tmpReq AuthorizeEndpointAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -79,7 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds one or more ACLrules for an endpoint of a specified type.</p>
+     * <p>You can call this operation to add one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
      * 
      * @param request AuthorizeEndpointAclRequest
      * @return AuthorizeEndpointAclResponse
@@ -87,6 +87,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AuthorizeEndpointAclResponse authorizeEndpointAcl(AuthorizeEndpointAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.authorizeEndpointAclWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建事件规则</p>
+     * 
+     * @param tmpReq CreateEventRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEventRuleResponse
+     */
+    public CreateEventRuleResponse createEventRuleWithOptions(CreateEventRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateEventRuleShrinkRequest request = new CreateEventRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.endpoints)) {
+            request.endpointsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.endpoints, "Endpoints", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.eventTypes)) {
+            request.eventTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.eventTypes, "EventTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.matchRules)) {
+            request.matchRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.matchRules, "MatchRules", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {
+            query.put("Endpoints", request.endpointsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventTypesShrink)) {
+            query.put("EventTypes", request.eventTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchRulesShrink)) {
+            query.put("MatchRules", request.matchRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productName)) {
+            query.put("ProductName", request.productName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEventRule"),
+            new TeaPair("version", "2022-01-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEventRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateEventRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建事件规则</p>
+     * 
+     * @param request CreateEventRuleRequest
+     * @return CreateEventRuleResponse
+     */
+    public CreateEventRuleResponse createEventRule(CreateEventRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEventRuleWithOptions(request, runtime);
     }
 
     /**
@@ -241,6 +320,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除事件规则</p>
+     * 
+     * @param request DeleteEventRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventRuleResponse
+     */
+    public DeleteEventRuleResponse deleteEventRuleWithOptions(DeleteEventRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.productName)) {
+            query.put("ProductName", request.productName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEventRule"),
+            new TeaPair("version", "2022-01-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEventRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteEventRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除事件规则</p>
+     * 
+     * @param request DeleteEventRuleRequest
+     * @return DeleteEventRuleResponse
+     */
+    public DeleteEventRuleResponse deleteEventRule(DeleteEventRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEventRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a queue.</p>
      * 
      * @param request DeleteQueueRequest
@@ -339,7 +471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</p>
+     * <p>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</p>
      * 
      * @param request DisableEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -376,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to disable an endpoint of a specified type. After the endpoint is disabled, requests from the endpoint are blocked and an error is returned.</p>
+     * <p>You can call this operation to disenable the endpoint of a type. After the endpoint is disabled, all requests from the endpoint are blocked and an error is returned.</p>
      * 
      * @param request DisableEndpointRequest
      * @return DisableEndpointResponse
@@ -388,7 +520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
+     * <p>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
      * 
      * @param request EnableEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -425,7 +557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call this operation to enable an endpoint of a specified type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
+     * <p>You can call this operation to enable the endpoint of a type. If the endpoint is enabled, requests from the endpoint that are included in the access control lists (ACLs) are not blocked.</p>
      * 
      * @param request EnableEndpointRequest
      * @return EnableEndpointResponse
@@ -828,7 +960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more ACLs from an endpoint of a specified type.</p>
+     * <p>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
      * 
      * @param tmpReq RevokeEndpointAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -879,7 +1011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes one or more ACLs from an endpoint of a specified type.</p>
+     * <p>You can call this operation to delete one or more rules of access control lists (ACLs) for the endpoint of a type.</p>
      * 
      * @param request RevokeEndpointAclRequest
      * @return RevokeEndpointAclResponse

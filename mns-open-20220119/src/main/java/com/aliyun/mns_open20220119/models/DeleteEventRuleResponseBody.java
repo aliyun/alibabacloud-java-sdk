@@ -3,10 +3,8 @@ package com.aliyun.mns_open20220119.models;
 
 import com.aliyun.tea.*;
 
-public class RevokeEndpointAclResponseBody extends TeaModel {
+public class DeleteEventRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -14,8 +12,6 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The returned message.</p>
-     * 
      * <strong>example:</strong>
      * <p>operation success</p>
      */
@@ -23,8 +19,6 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
      * <p>06273500-249F-5863-121D-74D51123****</p>
      */
@@ -32,8 +26,6 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The response status.</p>
-     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -41,20 +33,18 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static RevokeEndpointAclResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RevokeEndpointAclResponseBody self = new RevokeEndpointAclResponseBody();
+    public static DeleteEventRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteEventRuleResponseBody self = new DeleteEventRuleResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RevokeEndpointAclResponseBody setCode(Long code) {
+    public DeleteEventRuleResponseBody setCode(Long code) {
         this.code = code;
         return this;
     }
@@ -62,7 +52,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         return this.code;
     }
 
-    public RevokeEndpointAclResponseBody setMessage(String message) {
+    public DeleteEventRuleResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -70,7 +60,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         return this.message;
     }
 
-    public RevokeEndpointAclResponseBody setRequestId(String requestId) {
+    public DeleteEventRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -78,7 +68,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RevokeEndpointAclResponseBody setStatus(String status) {
+    public DeleteEventRuleResponseBody setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -86,7 +76,7 @@ public class RevokeEndpointAclResponseBody extends TeaModel {
         return this.status;
     }
 
-    public RevokeEndpointAclResponseBody setSuccess(Boolean success) {
+    public DeleteEventRuleResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -13,6 +13,9 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("DelaySeconds")
     public Long delaySeconds;
 
+    /**
+     * <p>The dead-letter queue policy.</p>
+     */
     @NameInMap("DlqPolicy")
     public CreateQueueRequestDlqPolicy dlqPolicy;
 
@@ -40,7 +43,7 @@ public class CreateQueueRequest extends TeaModel {
     public Long maximumMessageSize;
 
     /**
-     * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
+     * <p>The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is consumed. Valid values: 60 to 604800. Unit: seconds. Default value: 345600.</p>
      * 
      * <strong>example:</strong>
      * <p>345600</p>
@@ -67,6 +70,9 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateQueueRequestTag> tag;
 
@@ -157,12 +163,30 @@ public class CreateQueueRequest extends TeaModel {
     }
 
     public static class CreateQueueRequestDlqPolicy extends TeaModel {
+        /**
+         * <p>The queue to which dead-letter messages are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deadLetterQueue</p>
+         */
         @NameInMap("DeadLetterTargetQueue")
         public String deadLetterTargetQueue;
 
+        /**
+         * <p>Specifies whether to enable the dead-letter message delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The maximum number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxReceiveCount")
         public Integer maxReceiveCount;
 
@@ -199,6 +223,8 @@ public class CreateQueueRequest extends TeaModel {
 
     public static class CreateQueueRequestTag extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1</p>
          */
@@ -206,6 +232,8 @@ public class CreateQueueRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
