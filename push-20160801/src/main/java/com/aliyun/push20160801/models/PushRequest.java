@@ -349,6 +349,9 @@ public class PushRequest extends TeaModel {
     @NameInMap("HarmonyUri")
     public String harmonyUri;
 
+    @NameInMap("IdempotentToken")
+    public String idempotentToken;
+
     /**
      * <strong>example:</strong>
      * <p>123</p>
@@ -879,6 +882,7 @@ public class PushRequest extends TeaModel {
         return this.androidVivoReceiptId;
     }
 
+    @Deprecated
     public PushRequest setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
         this.androidXiaoMiActivity = androidXiaoMiActivity;
         return this;
@@ -887,6 +891,7 @@ public class PushRequest extends TeaModel {
         return this.androidXiaoMiActivity;
     }
 
+    @Deprecated
     public PushRequest setAndroidXiaoMiNotifyBody(String androidXiaoMiNotifyBody) {
         this.androidXiaoMiNotifyBody = androidXiaoMiNotifyBody;
         return this;
@@ -895,6 +900,7 @@ public class PushRequest extends TeaModel {
         return this.androidXiaoMiNotifyBody;
     }
 
+    @Deprecated
     public PushRequest setAndroidXiaoMiNotifyTitle(String androidXiaoMiNotifyTitle) {
         this.androidXiaoMiNotifyTitle = androidXiaoMiNotifyTitle;
         return this;
@@ -1103,6 +1109,14 @@ public class PushRequest extends TeaModel {
         return this.harmonyUri;
     }
 
+    public PushRequest setIdempotentToken(String idempotentToken) {
+        this.idempotentToken = idempotentToken;
+        return this;
+    }
+    public String getIdempotentToken() {
+        return this.idempotentToken;
+    }
+
     public PushRequest setJobKey(String jobKey) {
         this.jobKey = jobKey;
         return this;
@@ -1135,6 +1149,7 @@ public class PushRequest extends TeaModel {
         return this.sendChannels;
     }
 
+    @Deprecated
     public PushRequest setSendSpeed(Integer sendSpeed) {
         this.sendSpeed = sendSpeed;
         return this;

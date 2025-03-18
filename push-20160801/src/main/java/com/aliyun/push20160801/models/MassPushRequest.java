@@ -13,6 +13,9 @@ public class MassPushRequest extends TeaModel {
     @NameInMap("AppKey")
     public Long appKey;
 
+    @NameInMap("IdempotentToken")
+    public String idempotentToken;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -30,6 +33,14 @@ public class MassPushRequest extends TeaModel {
     }
     public Long getAppKey() {
         return this.appKey;
+    }
+
+    public MassPushRequest setIdempotentToken(String idempotentToken) {
+        this.idempotentToken = idempotentToken;
+        return this;
+    }
+    public String getIdempotentToken() {
+        return this.idempotentToken;
     }
 
     public MassPushRequest setPushTask(java.util.List<MassPushRequestPushTask> pushTask) {
@@ -888,6 +899,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidVivoReceiptId;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
             this.androidXiaoMiActivity = androidXiaoMiActivity;
             return this;
@@ -896,6 +908,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidXiaoMiActivity;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidXiaoMiNotifyBody(String androidXiaoMiNotifyBody) {
             this.androidXiaoMiNotifyBody = androidXiaoMiNotifyBody;
             return this;
@@ -904,6 +917,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidXiaoMiNotifyBody;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidXiaoMiNotifyTitle(String androidXiaoMiNotifyTitle) {
             this.androidXiaoMiNotifyTitle = androidXiaoMiNotifyTitle;
             return this;
@@ -1136,6 +1150,7 @@ public class MassPushRequest extends TeaModel {
             return this.sendChannels;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setSendSpeed(Integer sendSpeed) {
             this.sendSpeed = sendSpeed;
             return this;
