@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRouteTablesRequest extends TeaModel {
+    @NameInMap("AssociateType")
+    public String associateType;
+
     /**
      * <p>The ID of the ENS node.</p>
      * 
@@ -12,6 +15,12 @@ public class DescribeEnsRouteTablesRequest extends TeaModel {
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
+
+    /**
+     * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
+     */
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
 
     /**
      * <p>The ID of the network.</p>
@@ -49,9 +58,23 @@ public class DescribeEnsRouteTablesRequest extends TeaModel {
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    @NameInMap("RouteTableName")
+    public String routeTableName;
+
+    @NameInMap("Type")
+    public String type;
+
     public static DescribeEnsRouteTablesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsRouteTablesRequest self = new DescribeEnsRouteTablesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEnsRouteTablesRequest setAssociateType(String associateType) {
+        this.associateType = associateType;
+        return this;
+    }
+    public String getAssociateType() {
+        return this.associateType;
     }
 
     public DescribeEnsRouteTablesRequest setEnsRegionId(String ensRegionId) {
@@ -60,6 +83,14 @@ public class DescribeEnsRouteTablesRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeEnsRouteTablesRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     public DescribeEnsRouteTablesRequest setNetworkId(String networkId) {
@@ -92,6 +123,22 @@ public class DescribeEnsRouteTablesRequest extends TeaModel {
     }
     public String getRouteTableId() {
         return this.routeTableId;
+    }
+
+    public DescribeEnsRouteTablesRequest setRouteTableName(String routeTableName) {
+        this.routeTableName = routeTableName;
+        return this;
+    }
+    public String getRouteTableName() {
+        return this.routeTableName;
+    }
+
+    public DescribeEnsRouteTablesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

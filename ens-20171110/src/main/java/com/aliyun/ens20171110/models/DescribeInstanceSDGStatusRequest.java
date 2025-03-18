@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSDGStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the AIC instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeInstanceSDGStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,16 +24,23 @@ public class DescribeInstanceSDGStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of SDGs that you want to query. By default, all SDGs are queried.</p>
+     */
     @NameInMap("SDGIds")
     public java.util.List<String> SDGIds;
 
     /**
+     * <p>The deployment status of the SDG.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */

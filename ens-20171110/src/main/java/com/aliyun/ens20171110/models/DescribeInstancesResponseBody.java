@@ -150,9 +150,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <p>The KMS key ID used by the cloud drive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fxxxxx</p>
+         */
         @NameInMap("EncryptKeyId")
         public String encryptKeyId;
 
+        /**
+         * <p>Specifies whether to encrypt the new system disk. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default): no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
@@ -433,6 +449,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6SetsIpv6Set extends TeaModel {
+        /**
+         * <p>IPv6 addresses N of the ENI. You can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:4005:396:3200:****:6609:821e:df7a</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -471,9 +493,28 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSetsPrivateIpSet extends TeaModel {
+        /**
+         * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Primary")
         public Boolean primary;
 
+        /**
+         * <p>The private IP address.</p>
+         * <blockquote>
+         * <p> This parameter is available only if ScheduleAreaLevel is set to Region and cannot be configured if ScheduleAreaLevel is set to other values. Otherwise, an error occurs. If you specify a private IP address, the number of instances must be 1. The private IP address takes effect only when the private IP address and the vSwitch ID are not empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10.75.66.***</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
@@ -520,21 +561,55 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaces extends TeaModel {
+        /**
+         * <p>The IPv6 addresses of the ENI. This parameter has a value only when <code>AdditionalAttributes.N</code> is set to <code>NETWORK_PRIMARY_ENI_IP</code>.</p>
+         */
         @NameInMap("Ipv6Sets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesIpv6Sets ipv6Sets;
 
+        /**
+         * <p>The MAC address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:3e:4f:5f:ca</p>
+         */
         @NameInMap("MacAddress")
         public String macAddress;
 
+        /**
+         * <p>The ID of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-0wlonoy6jo8532gfzuama****</p>
+         */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
+        /**
+         * <p>The primary IP address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
 
+        /**
+         * <p>The private IP addresses of the ENI.</p>
+         */
         @NameInMap("PrivateIpSets")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacesPrivateIpSets privateIpSets;
 
+        /**
+         * <p>The type of the disk. Valid values:</p>
+         * <ul>
+         * <li>system: system disk.</li>
+         * <li>data: data disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Secondary</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -1201,6 +1276,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InternetMaxBandwidthOut")
         public Integer internetMaxBandwidthOut;
 
+        /**
+         * <p>The name of the SSH key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terraform-example</p>
+         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
@@ -1219,6 +1300,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkAttributes")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkAttributes networkAttributes;
 
+        /**
+         * <p>The ENI attached to the instance.</p>
+         */
         @NameInMap("NetworkInterfaces")
         public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces;
 
@@ -1255,6 +1339,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("SecurityGroupIds")
         public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
 
+        /**
+         * <p>The ID of your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deleting</p>
+         */
         @NameInMap("ServiceStatus")
         public String serviceStatus;
 

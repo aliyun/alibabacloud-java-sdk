@@ -9,7 +9,7 @@ public class CreateImageRequest extends TeaModel {
      * <ul>
      * <li>true: The image is released when the instance is released.</li>
      * <li>false: The image is retained when the instance is released.</li>
-     * <li>If you leave this parameter empty, the default value is used.</li>
+     * <li>If you leave this property empty, false is used by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,6 +46,15 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <p>The region of the target OSS where the image is to be stored.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("TargetOSSRegionId")
+    public String targetOSSRegionId;
+
     public static CreateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageRequest self = new CreateImageRequest();
         return TeaModel.build(map, self);
@@ -81,6 +90,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getSnapshotId() {
         return this.snapshotId;
+    }
+
+    public CreateImageRequest setTargetOSSRegionId(String targetOSSRegionId) {
+        this.targetOSSRegionId = targetOSSRegionId;
+        return this;
+    }
+    public String getTargetOSSRegionId() {
+        return this.targetOSSRegionId;
     }
 
 }

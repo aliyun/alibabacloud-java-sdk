@@ -53,6 +53,9 @@ public class CreateNetworkRequest extends TeaModel {
     @NameInMap("NetworkName")
     public String networkName;
 
+    /**
+     * <p>The resource tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateNetworkRequestTag> tag;
 
@@ -102,9 +105,26 @@ public class CreateNetworkRequest extends TeaModel {
     }
 
     public static class CreateNetworkRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag that are to add to the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The key must be up to 64 characters in length.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

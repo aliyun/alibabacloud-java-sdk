@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
      * <p>This parameter is required.</p>
@@ -69,6 +72,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public static CreateLoadBalancerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerRequest self = new CreateLoadBalancerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLoadBalancerRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateLoadBalancerRequest setEnsRegionId(String ensRegionId) {

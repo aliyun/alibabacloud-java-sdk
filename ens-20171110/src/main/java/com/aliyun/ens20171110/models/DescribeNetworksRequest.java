@@ -14,6 +14,12 @@ public class DescribeNetworksRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The node information.</p>
+     */
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
+    /**
      * <p>The ID of the network.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +27,12 @@ public class DescribeNetworksRequest extends TeaModel {
      */
     @NameInMap("NetworkId")
     public String networkId;
+
+    /**
+     * <p>The ID of Network.</p>
+     */
+    @NameInMap("NetworkIds")
+    public java.util.List<String> networkIds;
 
     /**
      * <p>The name of the network.</p>
@@ -62,12 +74,28 @@ public class DescribeNetworksRequest extends TeaModel {
         return this.ensRegionId;
     }
 
+    public DescribeNetworksRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
     public DescribeNetworksRequest setNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
     public String getNetworkId() {
         return this.networkId;
+    }
+
+    public DescribeNetworksRequest setNetworkIds(java.util.List<String> networkIds) {
+        this.networkIds = networkIds;
+        return this;
+    }
+    public java.util.List<String> getNetworkIds() {
+        return this.networkIds;
     }
 
     public DescribeNetworksRequest setNetworkName(String networkName) {

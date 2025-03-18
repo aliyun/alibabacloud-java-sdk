@@ -32,7 +32,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the route.</p>
+     * <p>The information about the routes.</p>
      */
     @NameInMap("RouteEntrys")
     public java.util.List<DescribeEnsRouteEntryListResponseBodyRouteEntrys> routeEntrys;
@@ -102,6 +102,15 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String nextHopId;
 
         /**
+         * <p>The instance ID of the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testInstance</p>
+         */
+        @NameInMap("NextHopName")
+        public String nextHopName;
+
+        /**
          * <p>The type of the next hop. Valid values:</p>
          * 
          * <strong>example:</strong>
@@ -123,6 +132,14 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
             return this.nextHopId;
         }
 
+        public DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops setNextHopName(String nextHopName) {
+            this.nextHopName = nextHopName;
+            return this;
+        }
+        public String getNextHopName() {
+            return this.nextHopName;
+        }
+
         public DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops setNextHopType(String nextHopType) {
             this.nextHopType = nextHopType;
             return this;
@@ -134,6 +151,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrys extends TeaModel {
+        @NameInMap("CreationTime")
+        public String creationTime;
+
         /**
          * <p>Enter a description for the route.</p>
          * 
@@ -185,6 +205,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         @NameInMap("RouteTableId")
         public String routeTableId;
 
+        @NameInMap("SourceCidrBlock")
+        public String sourceCidrBlock;
+
         /**
          * <p>The status of the route entry. Valid values:</p>
          * 
@@ -206,6 +229,14 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public static DescribeEnsRouteEntryListResponseBodyRouteEntrys build(java.util.Map<String, ?> map) throws Exception {
             DescribeEnsRouteEntryListResponseBodyRouteEntrys self = new DescribeEnsRouteEntryListResponseBodyRouteEntrys();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEnsRouteEntryListResponseBodyRouteEntrys setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeEnsRouteEntryListResponseBodyRouteEntrys setDescription(String description) {
@@ -254,6 +285,14 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         }
         public String getRouteTableId() {
             return this.routeTableId;
+        }
+
+        public DescribeEnsRouteEntryListResponseBodyRouteEntrys setSourceCidrBlock(String sourceCidrBlock) {
+            this.sourceCidrBlock = sourceCidrBlock;
+            return this;
+        }
+        public String getSourceCidrBlock() {
+            return this.sourceCidrBlock;
         }
 
         public DescribeEnsRouteEntryListResponseBodyRouteEntrys setStatus(String status) {

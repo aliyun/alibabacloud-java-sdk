@@ -58,15 +58,41 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     }
 
     public static class DescribeImageInfosResponseBodyImagesImageDiskDeviceMappingsDiskDeviceMapping extends TeaModel {
+        /**
+         * <p>The format of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The format of the image.
+         * raw
+         * qcow2</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The size of the image. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The type of the disk. Valid values: System and Data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-test</p>
+         */
         @NameInMap("imageId")
         public String imageId;
 
@@ -153,6 +179,9 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The mappings between disks and snapshots in the image.</p>
+         */
         @NameInMap("DiskDeviceMappings")
         public DescribeImageInfosResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
@@ -200,6 +229,15 @@ public class DescribeImageInfosResponseBody extends TeaModel {
          */
         @NameInMap("OSType")
         public String OSType;
+
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
 
         public static DescribeImageInfosResponseBodyImagesImage build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageInfosResponseBodyImagesImage self = new DescribeImageInfosResponseBodyImagesImage();
@@ -268,6 +306,14 @@ public class DescribeImageInfosResponseBody extends TeaModel {
         }
         public String getOSType() {
             return this.OSType;
+        }
+
+        public DescribeImageInfosResponseBodyImagesImage setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

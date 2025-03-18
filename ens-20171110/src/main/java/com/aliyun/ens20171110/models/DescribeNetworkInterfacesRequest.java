@@ -14,6 +14,12 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
+     * <p>The node information.</p>
+     */
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
+    /**
      * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +51,12 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
+
+    /**
+     * <p>A list of multicast source IDs.</p>
+     */
+    @NameInMap("NetworkInterfaceIds")
+    public java.util.List<String> networkInterfaceIds;
 
     /**
      * <p>The name of the ENI.</p>
@@ -111,8 +123,8 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     /**
      * <p>The type of the ENI. Valid values:</p>
      * <ul>
-     * <li>Primary: primary ENI.</li>
-     * <li>Secondary: secondary ENI.</li>
+     * <li>Primary: the primary ENI.</li>
+     * <li>Secondary: the secondary ENI.</li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</p>
      * 
@@ -142,6 +154,14 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeNetworkInterfacesRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     public DescribeNetworkInterfacesRequest setInstanceId(String instanceId) {
@@ -174,6 +194,14 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     }
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
+    }
+
+    public DescribeNetworkInterfacesRequest setNetworkInterfaceIds(java.util.List<String> networkInterfaceIds) {
+        this.networkInterfaceIds = networkInterfaceIds;
+        return this;
+    }
+    public java.util.List<String> getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
     }
 
     public DescribeNetworkInterfacesRequest setNetworkInterfaceName(String networkInterfaceName) {

@@ -4,9 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSDGDeploymentStatusRequest extends TeaModel {
+    /**
+     * <p>The deployment type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>shared</p>
+     */
     @NameInMap("DeploymentType")
     public String deploymentType;
 
+    /**
+     * <p>IDs of Android in Container (AIC) instances.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
@@ -20,7 +29,7 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -28,6 +37,9 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of the nodes.</p>
+     */
     @NameInMap("RegionIds")
     public java.util.List<String> regionIds;
 
@@ -41,6 +53,12 @@ public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     @NameInMap("SDGId")
     public String SDGId;
 
+    /**
+     * <p>The deployment status of the SDG.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Status")
     public String status;
 

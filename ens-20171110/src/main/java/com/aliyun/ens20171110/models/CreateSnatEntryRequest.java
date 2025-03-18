@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateSnatEntryRequest extends TeaModel {
+    @NameInMap("EipAffinity")
+    public Boolean eipAffinity;
+
     /**
      * <p>The timeout period for idle connections. Valid values: <strong>1</strong> to <strong>86400</strong>. Unit: seconds.</p>
      * 
@@ -13,6 +16,16 @@ public class CreateSnatEntryRequest extends TeaModel {
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
+    /**
+     * <p>Whether to enable operator affinity. Value taking:</p>
+     * <ul>
+     * <li>false:Do not open.</li>
+     * <li>true:Open.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IspAffinity")
     public Boolean ispAffinity;
 
@@ -93,6 +106,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     public static CreateSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnatEntryRequest self = new CreateSnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSnatEntryRequest setEipAffinity(Boolean eipAffinity) {
+        this.eipAffinity = eipAffinity;
+        return this;
+    }
+    public Boolean getEipAffinity() {
+        return this.eipAffinity;
     }
 
     public CreateSnatEntryRequest setIdleTimeout(Integer idleTimeout) {

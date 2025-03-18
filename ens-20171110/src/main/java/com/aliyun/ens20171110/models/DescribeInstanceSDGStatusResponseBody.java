@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
+    /**
+     * <p>The deployment information of the SDGs.</p>
+     */
     @NameInMap("DeploymentStatus")
     public java.util.List<DescribeInstanceSDGStatusResponseBodyDeploymentStatus> deploymentStatus;
 
     /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
      */
@@ -29,6 +38,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of queried deployment records.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
 
     public static class DescribeInstanceSDGStatusResponseBodyDeploymentStatus extends TeaModel {
         /**
+         * <p>The ID of the edge node.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-guangzhou-26</p>
          */
@@ -89,6 +102,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
+         * <p>The ID of the AIC instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>aic-xxxx</p>
          */
@@ -96,6 +111,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The deployment type of the SDG.</p>
+         * 
          * <strong>example:</strong>
          * <p>shared</p>
          */
@@ -103,6 +120,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String mountType;
 
         /**
+         * <p>Deployment Phase</p>
+         * 
          * <strong>example:</strong>
          * <p>attach</p>
          */
@@ -110,6 +129,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String phase;
 
         /**
+         * <p>The ID of the SDG.</p>
+         * 
          * <strong>example:</strong>
          * <p>sdg-xxxxxxx</p>
          */
@@ -117,6 +138,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String SDGId;
 
         /**
+         * <p>The deployment status of the SDG.</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -124,6 +147,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The time when the status was last updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-02-17T02:44:31Z</p>
          */

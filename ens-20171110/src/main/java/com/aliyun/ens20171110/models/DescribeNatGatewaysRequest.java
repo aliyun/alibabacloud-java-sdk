@@ -13,6 +13,9 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
     /**
      * <p>The name of the NAT gateway.</p>
      * 
@@ -30,6 +33,9 @@ public class DescribeNatGatewaysRequest extends TeaModel {
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
+
+    @NameInMap("NatGatewayIds")
+    public java.util.List<String> natGatewayIds;
 
     /**
      * <p>The ID of the network.</p>
@@ -82,6 +88,14 @@ public class DescribeNatGatewaysRequest extends TeaModel {
         return this.ensRegionId;
     }
 
+    public DescribeNatGatewaysRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
+    }
+
     public DescribeNatGatewaysRequest setName(String name) {
         this.name = name;
         return this;
@@ -96,6 +110,14 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public DescribeNatGatewaysRequest setNatGatewayIds(java.util.List<String> natGatewayIds) {
+        this.natGatewayIds = natGatewayIds;
+        return this;
+    }
+    public java.util.List<String> getNatGatewayIds() {
+        return this.natGatewayIds;
     }
 
     public DescribeNatGatewaysRequest setNetworkId(String networkId) {

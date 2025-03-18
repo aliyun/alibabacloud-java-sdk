@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifySnatEntryRequest extends TeaModel {
+    @NameInMap("EipAffinity")
+    public Boolean eipAffinity;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -27,9 +30,20 @@ public class ModifySnatEntryRequest extends TeaModel {
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
+    @NameInMap("SnatIp")
+    public String snatIp;
+
     public static ModifySnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySnatEntryRequest self = new ModifySnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySnatEntryRequest setEipAffinity(Boolean eipAffinity) {
+        this.eipAffinity = eipAffinity;
+        return this;
+    }
+    public Boolean getEipAffinity() {
+        return this.eipAffinity;
     }
 
     public ModifySnatEntryRequest setIspAffinity(Boolean ispAffinity) {
@@ -54,6 +68,14 @@ public class ModifySnatEntryRequest extends TeaModel {
     }
     public String getSnatEntryName() {
         return this.snatEntryName;
+    }
+
+    public ModifySnatEntryRequest setSnatIp(String snatIp) {
+        this.snatIp = snatIp;
+        return this;
+    }
+    public String getSnatIp() {
+        return this.snatIp;
     }
 
 }

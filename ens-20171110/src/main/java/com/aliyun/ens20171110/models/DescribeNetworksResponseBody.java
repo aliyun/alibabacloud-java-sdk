@@ -91,6 +91,25 @@ public class DescribeNetworksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeNetworksResponseBodyNetworksNetworkRouteTableIds extends TeaModel {
+        @NameInMap("RouteTableId")
+        public java.util.List<String> routeTableId;
+
+        public static DescribeNetworksResponseBodyNetworksNetworkRouteTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworksResponseBodyNetworksNetworkRouteTableIds self = new DescribeNetworksResponseBodyNetworksNetworkRouteTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkRouteTableIds setRouteTableId(java.util.List<String> routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public java.util.List<String> getRouteTableId() {
+            return this.routeTableId;
+        }
+
+    }
+
     public static class DescribeNetworksResponseBodyNetworksNetworkVSwitchIds extends TeaModel {
         @NameInMap("VSwitchId")
         public java.util.List<String> vSwitchId;
@@ -147,6 +166,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        @NameInMap("GatewayRouteTableId")
+        public String gatewayRouteTableId;
+
         /**
          * <p>The ID of the network access control list (ACL).</p>
          * 
@@ -173,6 +195,15 @@ public class DescribeNetworksResponseBody extends TeaModel {
          */
         @NameInMap("NetworkName")
         public String networkName;
+
+        @NameInMap("RouteTableId")
+        public String routeTableId;
+
+        /**
+         * <p>The ID of the route table. Valid values of <strong>N</strong> are <strong>1</strong> to <strong>20</strong>, which specifies that you can disassociate a gateway endpoint from at most 20 route tables at a time.</p>
+         */
+        @NameInMap("RouteTableIds")
+        public DescribeNetworksResponseBodyNetworksNetworkRouteTableIds routeTableIds;
 
         /**
          * <p>The route table ID.</p>
@@ -239,6 +270,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
             return this.ensRegionId;
         }
 
+        public DescribeNetworksResponseBodyNetworksNetwork setGatewayRouteTableId(String gatewayRouteTableId) {
+            this.gatewayRouteTableId = gatewayRouteTableId;
+            return this;
+        }
+        public String getGatewayRouteTableId() {
+            return this.gatewayRouteTableId;
+        }
+
         public DescribeNetworksResponseBodyNetworksNetwork setNetworkAclId(String networkAclId) {
             this.networkAclId = networkAclId;
             return this;
@@ -261,6 +300,22 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
         public String getNetworkName() {
             return this.networkName;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setRouteTableIds(DescribeNetworksResponseBodyNetworksNetworkRouteTableIds routeTableIds) {
+            this.routeTableIds = routeTableIds;
+            return this;
+        }
+        public DescribeNetworksResponseBodyNetworksNetworkRouteTableIds getRouteTableIds() {
+            return this.routeTableIds;
         }
 
         public DescribeNetworksResponseBodyNetworksNetwork setRouterTableId(String routerTableId) {

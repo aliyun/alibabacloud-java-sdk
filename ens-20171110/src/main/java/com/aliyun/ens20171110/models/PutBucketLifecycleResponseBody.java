@@ -13,6 +13,12 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b8f93xxxxx4881xxxxxc71d991</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

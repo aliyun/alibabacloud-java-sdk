@@ -50,6 +50,12 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>Set one or more environment variables during EAIS instance initialization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[object Object]</p>
+     */
     @NameInMap("EnvironmentVar")
     public String environmentVar;
 

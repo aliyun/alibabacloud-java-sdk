@@ -46,6 +46,33 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("GatewayRouteTableId")
+    public String gatewayRouteTableId;
+
+    /**
+     * <p>List of HaVipIds.</p>
+     */
+    @NameInMap("HaVipIds")
+    public DescribeNetworkAttributeResponseBodyHaVipIds haVipIds;
+
+    /**
+     * <p>The instance IDs.</p>
+     */
+    @NameInMap("InstanceIds")
+    public DescribeNetworkAttributeResponseBodyInstanceIds instanceIds;
+
+    /**
+     * <p>List of ELB instances.</p>
+     */
+    @NameInMap("LoadBalancerIds")
+    public DescribeNetworkAttributeResponseBodyLoadBalancerIds loadBalancerIds;
+
+    /**
+     * <p>List of NAT Gateways.</p>
+     */
+    @NameInMap("NatGatewayIds")
+    public DescribeNetworkAttributeResponseBodyNatGatewayIds natGatewayIds;
+
     /**
      * <p>The ID of the network access control list (ACL).</p>
      * 
@@ -65,6 +92,12 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     public String networkId;
 
     /**
+     * <p>A list of multicast source IDs.</p>
+     */
+    @NameInMap("NetworkInterfaceIds")
+    public DescribeNetworkAttributeResponseBodyNetworkInterfaceIds networkInterfaceIds;
+
+    /**
      * <p>The name of the network.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +114,15 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RouteTableId")
+    public String routeTableId;
+
+    /**
+     * <p>List of routing table IDs.</p>
+     */
+    @NameInMap("RouteTableIds")
+    public DescribeNetworkAttributeResponseBodyRouteTableIds routeTableIds;
 
     /**
      * <p>The ID of the route table.</p>
@@ -155,6 +197,46 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         return this.ensRegionId;
     }
 
+    public DescribeNetworkAttributeResponseBody setGatewayRouteTableId(String gatewayRouteTableId) {
+        this.gatewayRouteTableId = gatewayRouteTableId;
+        return this;
+    }
+    public String getGatewayRouteTableId() {
+        return this.gatewayRouteTableId;
+    }
+
+    public DescribeNetworkAttributeResponseBody setHaVipIds(DescribeNetworkAttributeResponseBodyHaVipIds haVipIds) {
+        this.haVipIds = haVipIds;
+        return this;
+    }
+    public DescribeNetworkAttributeResponseBodyHaVipIds getHaVipIds() {
+        return this.haVipIds;
+    }
+
+    public DescribeNetworkAttributeResponseBody setInstanceIds(DescribeNetworkAttributeResponseBodyInstanceIds instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public DescribeNetworkAttributeResponseBodyInstanceIds getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public DescribeNetworkAttributeResponseBody setLoadBalancerIds(DescribeNetworkAttributeResponseBodyLoadBalancerIds loadBalancerIds) {
+        this.loadBalancerIds = loadBalancerIds;
+        return this;
+    }
+    public DescribeNetworkAttributeResponseBodyLoadBalancerIds getLoadBalancerIds() {
+        return this.loadBalancerIds;
+    }
+
+    public DescribeNetworkAttributeResponseBody setNatGatewayIds(DescribeNetworkAttributeResponseBodyNatGatewayIds natGatewayIds) {
+        this.natGatewayIds = natGatewayIds;
+        return this;
+    }
+    public DescribeNetworkAttributeResponseBodyNatGatewayIds getNatGatewayIds() {
+        return this.natGatewayIds;
+    }
+
     public DescribeNetworkAttributeResponseBody setNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -171,6 +253,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         return this.networkId;
     }
 
+    public DescribeNetworkAttributeResponseBody setNetworkInterfaceIds(DescribeNetworkAttributeResponseBodyNetworkInterfaceIds networkInterfaceIds) {
+        this.networkInterfaceIds = networkInterfaceIds;
+        return this;
+    }
+    public DescribeNetworkAttributeResponseBodyNetworkInterfaceIds getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
+    }
+
     public DescribeNetworkAttributeResponseBody setNetworkName(String networkName) {
         this.networkName = networkName;
         return this;
@@ -185,6 +275,22 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeNetworkAttributeResponseBody setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    public DescribeNetworkAttributeResponseBody setRouteTableIds(DescribeNetworkAttributeResponseBodyRouteTableIds routeTableIds) {
+        this.routeTableIds = routeTableIds;
+        return this;
+    }
+    public DescribeNetworkAttributeResponseBodyRouteTableIds getRouteTableIds() {
+        return this.routeTableIds;
     }
 
     public DescribeNetworkAttributeResponseBody setRouterTableId(String routerTableId) {
@@ -268,6 +374,120 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType> getCloudResourceSetType() {
             return this.cloudResourceSetType;
+        }
+
+    }
+
+    public static class DescribeNetworkAttributeResponseBodyHaVipIds extends TeaModel {
+        @NameInMap("HaVipId")
+        public java.util.List<String> haVipId;
+
+        public static DescribeNetworkAttributeResponseBodyHaVipIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAttributeResponseBodyHaVipIds self = new DescribeNetworkAttributeResponseBodyHaVipIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAttributeResponseBodyHaVipIds setHaVipId(java.util.List<String> haVipId) {
+            this.haVipId = haVipId;
+            return this;
+        }
+        public java.util.List<String> getHaVipId() {
+            return this.haVipId;
+        }
+
+    }
+
+    public static class DescribeNetworkAttributeResponseBodyInstanceIds extends TeaModel {
+        @NameInMap("InstanceId")
+        public java.util.List<String> instanceId;
+
+        public static DescribeNetworkAttributeResponseBodyInstanceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAttributeResponseBodyInstanceIds self = new DescribeNetworkAttributeResponseBodyInstanceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAttributeResponseBodyInstanceIds setInstanceId(java.util.List<String> instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public java.util.List<String> getInstanceId() {
+            return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeNetworkAttributeResponseBodyLoadBalancerIds extends TeaModel {
+        @NameInMap("LoadBalancerId")
+        public java.util.List<String> loadBalancerId;
+
+        public static DescribeNetworkAttributeResponseBodyLoadBalancerIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAttributeResponseBodyLoadBalancerIds self = new DescribeNetworkAttributeResponseBodyLoadBalancerIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAttributeResponseBodyLoadBalancerIds setLoadBalancerId(java.util.List<String> loadBalancerId) {
+            this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+        public java.util.List<String> getLoadBalancerId() {
+            return this.loadBalancerId;
+        }
+
+    }
+
+    public static class DescribeNetworkAttributeResponseBodyNatGatewayIds extends TeaModel {
+        @NameInMap("NatGatewayId")
+        public java.util.List<String> natGatewayId;
+
+        public static DescribeNetworkAttributeResponseBodyNatGatewayIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAttributeResponseBodyNatGatewayIds self = new DescribeNetworkAttributeResponseBodyNatGatewayIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAttributeResponseBodyNatGatewayIds setNatGatewayId(java.util.List<String> natGatewayId) {
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+        public java.util.List<String> getNatGatewayId() {
+            return this.natGatewayId;
+        }
+
+    }
+
+    public static class DescribeNetworkAttributeResponseBodyNetworkInterfaceIds extends TeaModel {
+        @NameInMap("NetworkInterfaceId")
+        public java.util.List<String> networkInterfaceId;
+
+        public static DescribeNetworkAttributeResponseBodyNetworkInterfaceIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAttributeResponseBodyNetworkInterfaceIds self = new DescribeNetworkAttributeResponseBodyNetworkInterfaceIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAttributeResponseBodyNetworkInterfaceIds setNetworkInterfaceId(java.util.List<String> networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public java.util.List<String> getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+    }
+
+    public static class DescribeNetworkAttributeResponseBodyRouteTableIds extends TeaModel {
+        @NameInMap("RouteTableId")
+        public java.util.List<String> routeTableId;
+
+        public static DescribeNetworkAttributeResponseBodyRouteTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAttributeResponseBodyRouteTableIds self = new DescribeNetworkAttributeResponseBodyRouteTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAttributeResponseBodyRouteTableIds setRouteTableId(java.util.List<String> routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public java.util.List<String> getRouteTableId() {
+            return this.routeTableId;
         }
 
     }

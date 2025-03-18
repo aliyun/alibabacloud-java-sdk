@@ -157,6 +157,9 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The status of the service. Valid values.</p>
+     */
     @NameInMap("ServiceStatus")
     public String serviceStatusShrink;
 

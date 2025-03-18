@@ -61,6 +61,9 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     @NameInMap("SnatIp")
     public String snatIp;
 
+    @NameInMap("SnatIps")
+    public java.util.List<String> snatIps;
+
     /**
      * <p>The source CIDR block specified in the SNAT entry.</p>
      * 
@@ -121,6 +124,14 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     }
     public String getSnatIp() {
         return this.snatIp;
+    }
+
+    public DescribeSnatTableEntriesRequest setSnatIps(java.util.List<String> snatIps) {
+        this.snatIps = snatIps;
+        return this;
+    }
+    public java.util.List<String> getSnatIps() {
+        return this.snatIps;
     }
 
     public DescribeSnatTableEntriesRequest setSourceCIDR(String sourceCIDR) {

@@ -14,6 +14,15 @@ public class CreateEipInstanceRequest extends TeaModel {
     public Long bandwidth;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26C28756-2586-17AF-B802-0DC50D8FDEBB</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The description of the EIP.</p>
      * 
      * <strong>example:</strong>
@@ -75,6 +84,9 @@ public class CreateEipInstanceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateEipInstanceRequestTag> tag;
 
@@ -89,6 +101,14 @@ public class CreateEipInstanceRequest extends TeaModel {
     }
     public Long getBandwidth() {
         return this.bandwidth;
+    }
+
+    public CreateEipInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateEipInstanceRequest setDescription(String description) {
@@ -148,9 +168,26 @@ public class CreateEipInstanceRequest extends TeaModel {
     }
 
     public static class CreateEipInstanceRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the instance. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
+         * <ul>
+         * <li>The key cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</li>
+         * <li>The key must be up to 64 characters in length.</li>
+         * <li>The tag key cannot be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

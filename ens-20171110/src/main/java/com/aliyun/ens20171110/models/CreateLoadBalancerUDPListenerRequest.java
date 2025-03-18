@@ -39,6 +39,8 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     public String eipTransmit;
 
     /**
+     * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>500</p>
      */
