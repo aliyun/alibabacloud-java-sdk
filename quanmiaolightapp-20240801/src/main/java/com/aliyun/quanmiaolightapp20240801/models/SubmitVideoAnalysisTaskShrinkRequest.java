@@ -44,6 +44,13 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     @NameInMap("snapshotInterval")
     public Double snapshotInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
+    @NameInMap("splitInterval")
+    public Integer splitInterval;
+
     @NameInMap("textProcessTasks")
     public String textProcessTasksShrink;
 
@@ -142,6 +149,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     }
     public Double getSnapshotInterval() {
         return this.snapshotInterval;
+    }
+
+    public SubmitVideoAnalysisTaskShrinkRequest setSplitInterval(Integer splitInterval) {
+        this.splitInterval = splitInterval;
+        return this;
+    }
+    public Integer getSplitInterval() {
+        return this.splitInterval;
     }
 
     public SubmitVideoAnalysisTaskShrinkRequest setTextProcessTasksShrink(String textProcessTasksShrink) {
