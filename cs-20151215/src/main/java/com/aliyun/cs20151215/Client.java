@@ -451,7 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the specified service role is granted required permissions within the current Alibaba Cloud account.</p>
+     * <p>Checks whether the specified service roles are granted to Container Service for Kubernetes (ACK) within the current Alibaba Cloud account. ACK can access other cloud services, such as Elastic Compute Service (ECS), Object Storage Service (OSS), File Storage NAS (NAS), and Server Load Balancer (SLB), only after ACK is assigned the required service roles.</p>
      * 
      * @param request CheckServiceRoleRequest
      * @param headers map
@@ -490,7 +490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the specified service role is granted required permissions within the current Alibaba Cloud account.</p>
+     * <p>Checks whether the specified service roles are granted to Container Service for Kubernetes (ACK) within the current Alibaba Cloud account. ACK can access other cloud services, such as Elastic Compute Service (ECS), Object Storage Service (OSS), File Storage NAS (NAS), and Server Load Balancer (SLB), only after ACK is assigned the required service roles.</p>
      * 
      * @param request CheckServiceRoleRequest
      * @return CheckServiceRoleResponse
@@ -765,18 +765,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes all request parameters for creating a Container Service for Kubernetes (ACK) cluster. For more information about how to call the API to create each type of ACK cluster, refer to the following topics:</p>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/90776.html">Call the API to create an ACK managed cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/197620.html">Call the API to create an ACK dedicated cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/144246.html">Call the API to create an ACK Serverless cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/128204.html">Call the API to create an ACK Edge cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/196321.html">Call the API to create an ACK Basic cluster that supports sandboxed containers</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/140623.html">Call the API to create an ACK Pro cluster that supports sandboxed containers</a></li>
-     * </ul>
+     * <h3><a href="#-openapi-"></a>Generate API request parameters in the ACK console</h3>
+     * <p>When you fail to create an ACK cluster by calling the CreateCluster operation due to invalid parameter settings, you can generate valid API request parameters in the ACK console. Procedure:</p>
+     * <ol>
+     * <li>Log on to the <a href="https://cs.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>On the <strong>Cluster</strong> page, click <strong>Cluster Templates</strong>.</li>
+     * <li>In the Select Cluster Template dialog box, select the type of cluster that you want to create and click Create. Then, configure the cluster setting parameters.</li>
+     * <li>After you configure the cluster parameters, click <strong>Generate API Request Parameters</strong> in the <strong>Confirm Order</strong> step.
+     * The API request parameters are displayed in the API Request Parameters dialog box.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>You can call the CreateCluster operation to create a Container Service for Kubernetes (ACK) cluster. ACK clusters include ACK managed clusters, ACK dedicated clusters, ACK Serverless clusters, ACK Edge clusters, ACK clusters that support sandboxed containers, and registered clusters. For more information about how to create different types of ACK clusters, see the following usage notes.</p>
+     * <p>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</p>
      * 
      * @param request CreateClusterRequest
      * @param headers map
@@ -1203,18 +1203,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic describes all request parameters for creating a Container Service for Kubernetes (ACK) cluster. For more information about how to call the API to create each type of ACK cluster, refer to the following topics:</p>
-     * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/90776.html">Call the API to create an ACK managed cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/197620.html">Call the API to create an ACK dedicated cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/144246.html">Call the API to create an ACK Serverless cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/128204.html">Call the API to create an ACK Edge cluster</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/196321.html">Call the API to create an ACK Basic cluster that supports sandboxed containers</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/140623.html">Call the API to create an ACK Pro cluster that supports sandboxed containers</a></li>
-     * </ul>
+     * <h3><a href="#-openapi-"></a>Generate API request parameters in the ACK console</h3>
+     * <p>When you fail to create an ACK cluster by calling the CreateCluster operation due to invalid parameter settings, you can generate valid API request parameters in the ACK console. Procedure:</p>
+     * <ol>
+     * <li>Log on to the <a href="https://cs.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <strong>Clusters</strong>.</li>
+     * <li>On the <strong>Cluster</strong> page, click <strong>Cluster Templates</strong>.</li>
+     * <li>In the Select Cluster Template dialog box, select the type of cluster that you want to create and click Create. Then, configure the cluster setting parameters.</li>
+     * <li>After you configure the cluster parameters, click <strong>Generate API Request Parameters</strong> in the <strong>Confirm Order</strong> step.
+     * The API request parameters are displayed in the API Request Parameters dialog box.</li>
+     * </ol>
      * 
      * <b>summary</b> : 
-     * <p>You can call the CreateCluster operation to create a Container Service for Kubernetes (ACK) cluster. ACK clusters include ACK managed clusters, ACK dedicated clusters, ACK Serverless clusters, ACK Edge clusters, ACK clusters that support sandboxed containers, and registered clusters. For more information about how to create different types of ACK clusters, see the following usage notes.</p>
+     * <p>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</p>
      * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
@@ -1762,6 +1762,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Warning:</p>
+     * <ul>
+     * <li>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</li>
+     * <li>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</li>
+     * <li>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</li>
+     * <li>Elastic container instances created on virtual nodes are automatically released.</li>
+     * <li>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</p>
      * 
@@ -1823,6 +1833,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Warning:</p>
+     * <ul>
+     * <li>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</li>
+     * <li>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</li>
+     * <li>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</li>
+     * <li>Elastic container instances created on virtual nodes are automatically released.</li>
+     * <li>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</p>
      * 
@@ -2701,6 +2721,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.arch)) {
             body.put("arch", request.arch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expired)) {
+            body.put("expired", request.expired);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.formatDisk)) {
@@ -3904,7 +3928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/121053.html">Register an external Kubernetes cluster</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the proxy configurations of a registered cluster based on the cluster ID.</p>
+     * <p>Queries the proxy configurations of a registered cluster by cluster ID.</p>
      * 
      * @deprecated OpenAPI DescribeExternalAgent is deprecated
      * 
@@ -3954,7 +3978,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/121053.html">Register an external Kubernetes cluster</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the proxy configurations of a registered cluster based on the cluster ID.</p>
+     * <p>Queries the proxy configurations of a registered cluster by cluster ID.</p>
      * 
      * @deprecated OpenAPI DescribeExternalAgent is deprecated
      * 
@@ -4987,7 +5011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</p>
+     * <p>You can call the GetClusterAuditProject operation to check whether the cluster has API Server auditing enabled and the corresponding Simple Log Service project that stores API Server audit logs.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5018,7 +5042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can call the GetClusterAuditProject operation to query the Simple Log Service (SLS) project that stores the audit logs of the API server of a cluster.</p>
+     * <p>You can call the GetClusterAuditProject operation to check whether the cluster has API Server auditing enabled and the corresponding Simple Log Service project that stores API Server audit logs.</p>
      * @return GetClusterAuditProjectResponse
      */
     public GetClusterAuditProjectResponse getClusterAuditProject(String clusterid) throws Exception {
@@ -5969,8 +5993,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resource_group_id", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            body.put("security_group_id", request.securityGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemEventsLogging)) {
             body.put("system_events_logging", request.systemEventsLogging);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
+            body.put("timezone", request.timezone);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vswitchIds)) {
@@ -7468,7 +7500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用告警</p>
+     * <p>Activates the specified alert rule(s).</p>
      * 
      * @param request StartAlertRequest
      * @param headers map
@@ -7511,7 +7543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用告警</p>
+     * <p>Activates the specified alert rule(s).</p>
      * 
      * @param request StartAlertRequest
      * @return StartAlertResponse
@@ -7811,7 +7843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>You can call the UpdateClusterAuditLogConfig operation to enable or disable the audit log feature in a Container Service for Kubernetes (ACK) cluster and update the audit log configuration. This operation also allows you to record requests to the Kubernetes API and the responses, which can be used to trace cluster operation history and troubleshoot cluster issues.</p>
@@ -7857,7 +7889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a> (SLS).</p>
+     * <p>Before you call this operation, ensure that you understand the billing methods and pricing of <a href="https://www.alibabacloud.com/product/log-service/pricing">Simple Log Service</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>You can call the UpdateClusterAuditLogConfig operation to enable or disable the audit log feature in a Container Service for Kubernetes (ACK) cluster and update the audit log configuration. This operation also allows you to record requests to the Kubernetes API and the responses, which can be used to trace cluster operation history and troubleshoot cluster issues.</p>
@@ -8069,7 +8101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services.</p>
+     * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</p>
      * 
      * @param request UpdateResourcesDeleteProtectionRequest
      * @param headers map
@@ -8120,7 +8152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services.</p>
+     * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</p>
      * 
      * @param request UpdateResourcesDeleteProtectionRequest
      * @return UpdateResourcesDeleteProtectionResponse

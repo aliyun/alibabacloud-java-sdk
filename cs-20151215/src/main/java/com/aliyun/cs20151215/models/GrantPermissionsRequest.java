@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantPermissionsRequest extends TeaModel {
     /**
-     * <p>The request parameters.</p>
+     * <p>The request body.</p>
      */
     @NameInMap("body")
     public java.util.List<GrantPermissionsRequestBody> body;
@@ -65,13 +65,19 @@ public class GrantPermissionsRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The predefined role. Valid values:</p>
+         * <p>The predefined role name. Valid values:</p>
          * <ul>
          * <li><code>admin</code>: administrator</li>
+         * <li><code>admin-view</code>: read-only administrator</li>
          * <li><code>ops</code>: O\&amp;M engineer</li>
          * <li><code>dev</code>: developer</li>
          * <li><code>restricted</code>: restricted user</li>
          * <li>Custom role</li>
+         * </ul>
+         * <p>Note:</p>
+         * <ul>
+         * <li>You cannot grant namespace-level permissions to the <code>admin</code>, <code>admin-view</code>, and <code>ops</code> roles.</li>
+         * <li>You cannot grant all cluster-level permissions to the <code>admin-view</code> role.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -85,7 +91,7 @@ public class GrantPermissionsRequest extends TeaModel {
          * <p>The authorization type. Valid values:</p>
          * <ul>
          * <li><code>cluster</code>: authorizes the RAM user or RAM role to manage the specified clusters.</li>
-         * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namepsaces.</li>
+         * <li><code>namespace</code>: authorizes the RAM user or RAM role to manage the specified namespaces.</li>
          * <li><code>all-clusters</code>: authorizes the RAM user or RAM role to manage all clusters.</li>
          * </ul>
          * <p>This parameter is required.</p>

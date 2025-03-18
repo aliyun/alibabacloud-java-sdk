@@ -22,7 +22,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The type of resources that you want to label. Valid value: <code>CLUSTER</code>.</p>
+     * <p>The type of resources that you want to label. Set the value to <code>CLUSTER</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,9 +34,9 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The tags that you want to add to the resources in key-value pairs. You can add up to 20 key-value pairs. Note:</p>
      * <ul>
-     * <li>The values must not be empty strings. A value must be 1 to 128 characters in length.</li>
-     * <li>A key or value must not start with <code>aliyun</code> or <code>acs:</code>.</li>
-     * <li>A key or value must not contain <code>http://</code> or <code>https://</code>.</li>
+     * <li>The values cannot be empty strings. A value must be 1 to 128 characters in length.</li>
+     * <li>A key or value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+     * <li>A key or value cannot contain <code>http://</code> or <code>https://</code>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      */

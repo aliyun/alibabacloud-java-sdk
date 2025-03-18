@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1ResponseBody extends TeaModel {
     /**
-     * <p>Details of the clusters.</p>
+     * <p>The queried cluster(s) details.</p>
      */
     @NameInMap("clusters")
     public java.util.List<DescribeClustersV1ResponseBodyClusters> clusters;
@@ -391,12 +391,14 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <li><code>initial</code>: The cluster is being created.</li>
          * <li><code>failed</code>: The cluster failed to be created.</li>
          * <li><code>running</code>: The cluster is running.</li>
-         * <li><code>updating</code>: The cluster is being updated.</li>
-         * <li><code>updating_failed</code>: The cluster failed to be updated.</li>
-         * <li><code>scaling</code>: The cluster is being scaled.</li>
-         * <li><code>stopped</code>: The cluster is stopped.</li>
+         * <li><code>upgrading</code>: The cluster is undergoing an upgrade.</li>
+         * <li><code>updating</code>: Cluster specification changes are being applied.</li>
+         * <li><code>removing</code>: Nodes are being removed from the node pool.</li>
+         * <li><code>draining</code>: Node draining is in progress.</li>
+         * <li><code>scaling</code>: Auto-scaling operation is in progress for the cluster.</li>
+         * <li><code>stopped</code>: The cluster has stopped running.</li>
          * <li><code>deleting</code>: The cluster is being deleted.</li>
-         * <li><code>deleted</code>: The cluster is deleted.</li>
+         * <li><code>deleted</code>: The cluster has been deleted.</li>
          * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
          * </ul>
          * 

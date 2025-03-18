@@ -12,6 +12,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the pods in the edge node pool can use the host network.</p>
+     * <p><code>true</code>: sets to host network.</p>
+     * <p><code>false</code>: sets to container network.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -26,7 +28,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public DescribeClusterNodePoolDetailResponseBodyInterconnectConfig interconnectConfig;
 
     /**
-     * <p>The network type of the edge node pool. Valid values: basic and enhanced. This parameter takes effect only for edge node pools.</p>
+     * <p>The network type of the edge node pool. This parameter takes effect only if you set the type parameter of the node pool to edge. Valid values:</p>
+     * <p><code>basic</code>: Internet.</p>
+     * <p><code>private</code>: private network.</p>
      * 
      * <strong>example:</strong>
      * <p>improved</p>
@@ -35,7 +39,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public String interconnectMode;
 
     /**
-     * <p>Indicates whether all nodes in the edge node pool can communicate with each other at Layer 3.</p>
+     * <p>Specifies whether all nodes in the edge node pool can communicate with each other at Layer 3.</p>
+     * <p><code>true</code>: The nodes in the edge node pool can communicate with each other at Layer 3.</p>
+     * <p><code>false</code>: The nodes in the edge node pool cannot communicate with each other at Layer 3.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,7 +50,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public Boolean intranet;
 
     /**
-     * <p>The configurations of the cluster.</p>
+     * <p>The configurations of the cluster in which the node pool is deployed.</p>
      */
     @NameInMap("kubernetes_config")
     public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig kubernetesConfig;
@@ -56,7 +62,8 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public DescribeClusterNodePoolDetailResponseBodyManagement management;
 
     /**
-     * <p>The maximum number of nodes that are supported by the edge node pool. The value of this parameter must be equal to or greater than 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster. In most cases, this parameter is set to a value larger than 0 for edge node pools. This parameter is set to 0 for node pools whose types are ess or default edge node pools.</p>
+     * <p>This parameter is deprecated.</p>
+     * <p>The maximum number of nodes allowed in an edge node pool.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -493,7 +500,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String nodeNameMode;
 
         /**
-         * <p>The custom script to be executed before nodes in the node pool are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+         * <p>The user-defined script that is executed before nodes are initialized. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>dGhpcyBpcyBhIGV4YW1wbGU</p>

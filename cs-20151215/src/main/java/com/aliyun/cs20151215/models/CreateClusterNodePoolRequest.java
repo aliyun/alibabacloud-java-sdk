@@ -22,7 +22,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     public Long count;
 
     /**
-     * <p>Specifies whether set the network type of the pod to host network.</p>
+     * <p>Specifies whether to set the network type of the pod to host network.</p>
      * <ul>
      * <li><code>true</code>: sets to host network.</li>
      * <li><code>false</code>: sets to container network.</li>
@@ -499,7 +499,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li><code>true</code>: installs the CloudMonitor agent on ECS nodes.</li>
          * <li><code>false</code>: does not install the CloudMonitor agent on ECS nodes.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -508,7 +508,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean cmsEnabled;
 
         /**
-         * <p>The CPU management policy of nodes. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
+         * <p>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
          * <ul>
          * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
          * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
@@ -575,7 +575,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String runtimeVersion;
 
         /**
-         * <p>The configuration of the taint.</p>
+         * <p>The configurations of the taints.</p>
          */
         @NameInMap("taints")
         public java.util.List<Taint> taints;
@@ -717,10 +717,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestManagementAutoUpgradePolicy extends TeaModel {
         /**
-         * <p>Specifies whether to allow auto update of the kubelet. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+         * <p>Specifies whether to allow the auto upgrade of the kubelet. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: allows auto update of the kubelet.</li>
-         * <li><code>false</code>: does not allow auto update of the kubelet.</li>
+         * <li><code>true</code>: allows the auto upgrade of the kubelet.</li>
+         * <li><code>false</code>: does not allow the auto upgrade of the kubelet.</li>
          * </ul>
          * <p>If <code>auto_upgrade</code> is set to true, the default value of this parameter is <code>true</code>. If <code>auto_upgrade</code> is set to false, the default value of this parameter is <code>false</code>.</p>
          * 
@@ -731,10 +731,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoUpgradeKubelet;
 
         /**
-         * <p>Specifies whether to allow auto update of the OS. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+         * <p>Specifies whether to allow the auto upgrade of the OS. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: allows auto update of the OS.</li>
-         * <li><code>false</code>: does not allow auto update of the OS.</li>
+         * <li><code>true</code>: allows the auto upgrade of the OS.</li>
+         * <li><code>false</code>: does not allow the auto upgrade of the OS.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          */
@@ -742,10 +742,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoUpgradeOs;
 
         /**
-         * <p>Specifies whether to allow auto update of the runtime. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
+         * <p>Specifies whether to allow the auto upgrade of the runtime. This parameter takes effect only if <code>auto_upgrade</code> is set to true. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: allows auto update of the runtime.</li>
-         * <li><code>false</code>: does not allow auto update of the runtime.</li>
+         * <li><code>true</code>: allows the auto upgrade of the runtime.</li>
+         * <li><code>false</code>: does not allow the auto upgrade of the runtime.</li>
          * </ul>
          * <p>Default value: <code>false</code>.</p>
          */
@@ -800,9 +800,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The severity levels of CVEs that can be automatically patched. Separate multiple levels with commas (,). Example: <code>asap,later</code>. Valid values:</p>
          * <ul>
-         * <li><code>asap</code>: high</li>
-         * <li><code>later</code>: medium</li>
-         * <li><code>nntf</code>: low</li>
+         * <li><code>asap</code>: high.</li>
+         * <li><code>later</code>: medium.</li>
+         * <li><code>nntf</code>: low.</li>
          * </ul>
          * <p>If <code>auto_vul_fix</code> is set to true, the default value of this parameter is <code>asap</code>.</p>
          * 
@@ -837,10 +837,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     public static class CreateClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto update. Valid values:</p>
+         * <p>Specifies whether to enable auto upgrade. Valid values:</p>
          * <ul>
-         * <li><code>true</code>: enables auto update.</li>
-         * <li><code>false</code>: disables auto update.</li>
+         * <li><code>true</code>: enables auto OS upgrade.</li>
+         * <li><code>false</code>: disables auto OS upgrade.</li>
          * </ul>
          * <p>**</p>
          * <p><strong>Caution</strong> This parameter is deprecated. Use the preceding auto_upgrade parameter instead.</p>
@@ -863,7 +863,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long maxUnavailable;
 
         /**
-         * <p>The number of additional nodes.</p>
+         * <p>The number of nodes that are temporarily added to the node pool during an auto upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -942,10 +942,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public CreateClusterNodePoolRequestManagementAutoRepairPolicy autoRepairPolicy;
 
         /**
-         * <p>Specifies whether to enable auto node update. This parameter takes effect only if <code>enable</code> is set to true.</p>
+         * <p>Specifies whether to enable auto node upgrade. This parameter takes effect only if <code>enable</code> is set to true.</p>
          * <ul>
-         * <li><code>true</code>: enables auto node update.</li>
-         * <li><code>false</code>: disables auto node update.</li>
+         * <li><code>true</code>: enables auto node upgrade.</li>
+         * <li><code>false</code>: disables auto node upgrade.</li>
          * </ul>
          * <p>If <code>enable</code> is set to true, the default value of this parameter is <code>true</code>. If <code>enable</code> is set to false, the default value of this parameter is <code>false</code>.</p>
          * 
@@ -956,7 +956,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean autoUpgrade;
 
         /**
-         * <p>The auto node update policy.</p>
+         * <p>The auto node upgrade policy.</p>
          */
         @NameInMap("auto_upgrade_policy")
         public CreateClusterNodePoolRequestManagementAutoUpgradePolicy autoUpgradePolicy;
@@ -987,7 +987,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li><code>true</code>: enables the managed node pool feature.</li>
          * <li><code>false</code>: disables the managed node pool feature. Other parameters in this section take effect only if enable is set to true.</li>
          * </ul>
-         * <p>Default value: false</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -996,7 +996,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The configurations of auto update. The configurations take effects only if <code>enable</code> is set to true.</p>
+         * <p>The configurations of auto upgrade. The configurations take effects only if <code>enable</code> is set to true.</p>
          */
         @NameInMap("upgrade_config")
         @Deprecated
@@ -1299,7 +1299,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li><code>true</code>: enables auto-renewal.</li>
          * <li><code>false</code>: disables auto-renewal.</li>
          * </ul>
-         * <p>Default value: <code>false</code></p>
+         * <p>Default value: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1310,10 +1310,10 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The auto-renewal period. Valid values:</p>
          * <ul>
-         * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3</li>
-         * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60</li>
+         * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3.</li>
+         * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</li>
          * </ul>
-         * <p>Default value: 1</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1322,7 +1322,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>This parameter is deprecated. Use the security_hardening_os parameter instead.</p>
+         * <p>This parameter is deprecated. Use security_hardening_os instead.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1382,13 +1382,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <ul>
          * <li><code>AliyunLinux</code>: Alibaba Cloud Linux 2.</li>
          * <li><code>AliyunLinuxSecurity</code>: Alibaba Cloud Linux 2 (UEFI).</li>
-         * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3.</li>
+         * <li><code>AliyunLinux3</code>: Alibaba Cloud Linux 3</li>
          * <li><code>AliyunLinux3Arm64</code>: Alibaba Cloud Linux 3 (ARM).</li>
          * <li><code>AliyunLinux3Security</code>: Alibaba Cloud Linux 3 (UEFI).</li>
          * <li><code>CentOS</code>: CentOS.</li>
          * <li><code>Windows</code>: Windows.</li>
          * <li><code>WindowsCore</code>: Windows Core.</li>
          * <li><code>ContainerOS</code>: ContainerOS.</li>
+         * <li><code>AliyunLinux3ContainerOptimized</code>: Alibaba Cloud Linux 3 Container-optimized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1413,7 +1414,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>The instance properties.</p>
+         * <p>The instance attributes.</p>
          */
         @NameInMap("instance_patterns")
         public java.util.List<InstancePatterns> instancePatterns;
@@ -1472,7 +1473,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean loginAsNonRoot;
 
         /**
-         * <p>The password for SSH logon. You must specify this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * <p>The password for SSH logon. You must set this parameter or <code>key_pair</code>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello1234</p>
@@ -1546,7 +1547,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The operating system distribution. Valid values:</p>
+         * <p>The OS distribution that is used. Valid values:</p>
          * <ul>
          * <li><code>CentOS</code></li>
          * <li><code>AliyunLinux</code></li>
@@ -1574,7 +1575,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
          * <li>If you do not specify this parameter, the default worker RAM role created by the cluster is used.</li>
          * <li>The specified RAM role must be a <strong>regular service role</strong> and the <strong>Select Trusted Service</strong> parameter must be set to <strong>Elastic Compute Service</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a normal service role</a>. If the specified RAM role is not the default worker RAM role created by the cluster, the name of the RAM role cannot start with <code>KubernetesMasterRole-</code> or <code>KubernetesWorkerRole-</code>.</li>
          * </ul>
-         * <p>This parameter is available only to users in the whitelist. To use this parameter, submit a ticket.</p>
          * <blockquote>
          * <p> This parameter is available only for ACK managed clusters that run Kubernetes 1.22 or later.</p>
          * </blockquote>
@@ -1586,7 +1586,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String ramRoleName;
 
         /**
-         * <p>A list of ApsaraDB RDS instances.</p>
+         * <p>The IDs of ApsaraDB RDS instances.</p>
          */
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
@@ -1594,7 +1594,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         /**
          * <p>The scaling mode of the scaling group. Valid values:</p>
          * <ul>
-         * <li><code>release</code>: the standard mode. ECS instances are created and released based on the resource usage.</li>
+         * <li><code>release</code>: the standard mode. ECS instances are created and released based on resource usage.</li>
          * <li><code>recycle</code>: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.</li>
          * </ul>
          * <p>Default value: <code>release</code>.</p>
@@ -1651,7 +1651,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long spotInstancePools;
 
         /**
-         * <p>Specifies whether to enable the supplementation of preemptible instances. If you set this parameter to true, when the scaling group receives a system message indicating that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:</p>
+         * <p>Indicates whether preemptible instances can be supplemented. If you set this parameter to true, when the scaling group receives a system message indicating that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables the supplementation of preemptible instances.</li>
          * <li><code>false</code>: disables the supplementation of preemptible instances.</li>
@@ -1699,7 +1699,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The categories of the system disk for nodes. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values: Valid values:</p>
+         * <p>The categories of the system disk for nodes. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values:</p>
          * <ul>
          * <li><code>cloud</code>: basic disk.</li>
          * <li><code>cloud_efficiency</code>: ultra disk.</li>
@@ -1713,12 +1713,12 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public java.util.List<String> systemDiskCategories;
 
         /**
-         * <p>The category of the system disk for nodes. Valid values:</p>
+         * <p>The category of the system disk. Valid values:</p>
          * <ul>
          * <li><code>cloud</code>: basic disk.</li>
          * <li><code>cloud_efficiency</code>: ultra disk.</li>
          * <li><code>cloud_ssd</code>: standard SSD.</li>
-         * <li><code>cloud_essd</code>: ESSD.</li>
+         * <li><code>cloud_essd</code>: Enterprise ESSD (ESSD).</li>
          * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
          * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
          * </ul>
@@ -1731,7 +1731,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</p>
+         * <p>The encryption algorithm that is used to encrypt the system disk. The value is aes-256.</p>
          * 
          * <strong>example:</strong>
          * <p>aes-256</p>
@@ -1740,7 +1740,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String systemDiskEncryptAlgorithm;
 
         /**
-         * <p>Specifies whether to encrypt the system disk. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.</p>
+         * <p>Specifies whether to encrypt the system disk. true: encrypts the system disk. false: does not encrypt the system disk.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1776,7 +1776,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The preset read/write IOPS of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>The preset IOPS of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <p>This parameter is supported only when <code>SystemDiskCategory</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * 
          * <strong>example:</strong>
@@ -1796,8 +1796,8 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public Long systemDiskSize;
 
         /**
-         * <p>The labels that you want to add only to ECS instances.</p>
-         * <p>The label key must be unique and cannot exceed 128 characters in length. The label key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
+         * <p>The tags that you want to add only to ECS instances.</p>
+         * <p>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value cannot start with aliyun or acs: or contain https:// or http://.</p>
          */
         @NameInMap("tags")
         public java.util.List<CreateClusterNodePoolRequestScalingGroupTags> tags;

@@ -8,7 +8,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public ContainerdConfig containerdConfig;
 
     /**
-     * <p>The parameters of the kubelet.</p>
+     * <p>The kubelet configuration.</p>
      */
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
@@ -20,7 +20,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public ModifyNodePoolNodeConfigRequestOsConfig osConfig;
 
     /**
-     * <p>The rolling policy configuration.</p>
+     * <p>The rolling update configuration.</p>
      */
     @NameInMap("rolling_policy")
     public ModifyNodePoolNodeConfigRequestRollingPolicy rollingPolicy;
@@ -64,7 +64,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
 
     public static class ModifyNodePoolNodeConfigRequestOsConfig extends TeaModel {
         /**
-         * <p>The sysctl configuration.</p>
+         * <p>Configuration for sysctl kernel parameters.</p>
          */
         @NameInMap("sysctl")
         public java.util.Map<String, ?> sysctl;

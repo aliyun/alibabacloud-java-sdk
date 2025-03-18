@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertContactRequest extends TeaModel {
     /**
+     * <p>The list of alert contact IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("contact_ids")

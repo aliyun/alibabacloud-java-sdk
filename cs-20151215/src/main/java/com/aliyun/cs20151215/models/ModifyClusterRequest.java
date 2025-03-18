@@ -39,7 +39,7 @@ public class ModifyClusterRequest extends TeaModel {
     public String apiServerEipId;
 
     /**
-     * <p>The name of the cluster.</p>
+     * <p>The cluster name.</p>
      * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The cluster name cannot start with a hyphen (-).</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <li><code>true</code>: enables cluster deletion protection.</li>
      * <li><code>false</code>: disables cluster deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -87,7 +87,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <li><code>true</code>: remaps the test domain name of the cluster.</li>
      * <li><code>false</code>: does not remap the test domain name of the cluster.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <li><code>true</code>: enables instance deletion protection.</li>
      * <li><code>false</code>: disables instance deletion protection.</li>
      * </ul>
-     * <p>Default value: <code>false</code>.</p>
+     * <p>Default value: <code>false</code></p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -140,16 +140,73 @@ public class ModifyClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>The ID of the security group for the control plane. </p>
+     * <ul>
+     * <li><p>If block rules are configured in the security group, ensure the security group rules allow traffic for protocols and ports required by the cluster. For recommended security group rules, see <a href="https://www.alibabacloud.com/help/en/ack/ack-managed-and-ack-dedicated/user-guide/configure-security-group-rules-to-enforce-access-control-on-ack-clusters?spm=a2c63.p38356.help-menu-85222.d_2_0_4_3.43e35d09s8oSlR">Configure and manage security groups for an ACK cluster</a>.</p>
+     * </li>
+     * <li><p>For non-ACK dedicated clusters: </p>
+     * <ul>
+     * <li>During security group updates, the cluster control plane and managed components (e.g., terway-controlplane) will restart briefly. Perform this operation during off-peak hours.</li>
+     * <li>After updating the control plane security group, the Elastic Network Interfaces (ENIs) used by the control plane and managed components will automatically join the new security group.</li>
+     * </ul>
+     * </li>
+     * <li><p>For ACK dedicated clusters:</p>
+     * <ul>
+     * <li>After updating the control plane security group, newly scaled-out master nodes will automatically apply the new security group. Existing control plane nodes remain unaffected.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1h6rk3pgct2a08***</p>
+     */
+    @NameInMap("security_group_id")
+    public String securityGroupId;
+
+    /**
      * <p>The storage configurations of system events.</p>
      */
     @NameInMap("system_events_logging")
     public ModifyClusterRequestSystemEventsLogging systemEventsLogging;
 
     /**
+     * <p>The time zone configuration for the cluster.</p>
+     * <ul>
+     * <li><p>After modifying the time zone, cluster inspection configurations will adopt the new time zone.</p>
+     * </li>
+     * <li><p>For ACK managed clusters:</p>
+     * <ul>
+     * <li>During time zone updates, the cluster control plane and managed components (e.g., terway-controlplane) will restart briefly. Perform this operation during off-peak hours.</li>
+     * <li>After updating the time zone:<ul>
+     * <li>Newly scaled-out nodes will automatically apply the new time zone.</li>
+     * <li>Existing nodes remain unaffected. Reset the node to apply changes to existing nodes.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * <li><p>For ACK dedicated clusters:</p>
+     * <ul>
+     * <li>After updating the time zone:<ul>
+     * <li>Newly scaled-out nodes (including control plane nodes) automatically apply the new time zone.</li>
+     * <li>Existing nodes (including control plane nodes) remain unaffected. Reset the node to apply changes to existing nodes.</li>
+     * <li>For control plane nodes, perform a scale-out followed by a scale-in to apply the new time zone to all control plane nodes.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
+     */
+    @NameInMap("timezone")
+    public String timezone;
+
+    /**
      * <p>The vSwitches of the control plane. This parameter can be used to change the vSwitches of the control plane in an ACK managed cluster. Take note of the following items:</p>
      * <ul>
      * <li>This parameter overwrites the existing configuration. You must specify all vSwitches of the control plane.</li>
-     * <li>The control plane restarts during the change process. Exercise caution when you perform this operation.</li>
+     * <li>The control plane components restarts during the change process. Exercise caution when you perform this operation.</li>
      * <li>Ensure that all security groups of the cluster, including the security groups of the control plane, all node pools, and container network, are allowed to access the CIDR blocks of the new vSwitches. This ensures that the nodes and containers can connect to the API server.</li>
      * <li>If the new vSwitches of the control plane are configured with an ACL, ensure that the ACL allows communication between the new vSwitches and CIDR blocks such as those of the cluster nodes and the container network.</li>
      * </ul>
@@ -274,12 +331,28 @@ public class ModifyClusterRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public ModifyClusterRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
     public ModifyClusterRequest setSystemEventsLogging(ModifyClusterRequestSystemEventsLogging systemEventsLogging) {
         this.systemEventsLogging = systemEventsLogging;
         return this;
     }
     public ModifyClusterRequestSystemEventsLogging getSystemEventsLogging() {
         return this.systemEventsLogging;
+    }
+
+    public ModifyClusterRequest setTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    public String getTimezone() {
+        return this.timezone;
     }
 
     public ModifyClusterRequest setVswitchIds(java.util.List<String> vswitchIds) {
@@ -335,12 +408,12 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestControlPlaneConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal for control plane nodes. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables auto-renewal.</li>
          * <li><code>false</code>: disables auto-renewal.</li>
          * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p>Default value: <code>false</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -349,7 +422,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal period of the instance. Valid values: 1, 2, 3, 6, and 12.</p>
+         * <p>The auto-renewal period of control plane nodes. Valid values: 1, 2, 3, 6, and 12.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -359,7 +432,7 @@ public class ModifyClusterRequest extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method of control plane nodes. Valid values:</p>
          * <ul>
          * <li><code>PrePaid</code>: subscription.</li>
          * <li><code>PostPaid</code>: pay-as-you-go.</li>
@@ -431,7 +504,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
+         * <p>The type of instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
@@ -474,8 +547,8 @@ public class ModifyClusterRequest extends TeaModel {
         public Long period;
 
         /**
-         * <p>The billing cycle of the instance. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
-         * <p>Valid value: <code>Month</code>.</p>
+         * <p>The billing cycle of control plane nodes. This parameter takes effect only when <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Set the value to <code>Month</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -502,7 +575,7 @@ public class ModifyClusterRequest extends TeaModel {
          * <li><code>true</code>: enables Alibaba Cloud Linux Security Hardening.</li>
          * <li><code>false</code>: disables Alibaba Cloud Linux Security Hardening.</li>
          * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p>Default value: <code>false</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -549,12 +622,12 @@ public class ModifyClusterRequest extends TeaModel {
         public Boolean systemDiskBurstingEnabled;
 
         /**
-         * <p>The type of the node system disk. Valid values:</p>
+         * <p>The category of the system disk for nodes. Valid values:</p>
          * <ul>
          * <li><code>cloud</code>: basic disk.</li>
          * <li><code>cloud_efficiency</code>: ultra disk.</li>
          * <li><code>cloud_ssd</code>: standard SSD.</li>
-         * <li><code>cloud_essd</code>: enhanced SSD (ESSD).</li>
+         * <li><code>cloud_essd</code>: Enterprise ESSD (ESSD).</li>
          * <li><code>cloud_auto</code>: ESSD AutoPL disk.</li>
          * <li><code>cloud_essd_entry</code>: ESSD Entry disk.</li>
          * </ul>
@@ -575,7 +648,7 @@ public class ModifyClusterRequest extends TeaModel {
         public String systemDiskPerformanceLevel;
 
         /**
-         * <p>The preset read/write input/output operations per second (IOPS) of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS} Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
+         * <p>The preset read/write input/output operations per second (IOPS) of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * 
          * <strong>example:</strong>
@@ -803,7 +876,7 @@ public class ModifyClusterRequest extends TeaModel {
 
     public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
         /**
-         * <p>The frequency of automatic cluster updates. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
+         * <p>The frequency of auto cluster update. For more information, see <a href="https://help.aliyun.com/document_detail/2712866.html">Update frequency</a>.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>patch: the latest patch version.</li>
