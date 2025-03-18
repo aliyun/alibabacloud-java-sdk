@@ -1252,6 +1252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("snapshotInterval", request.snapshotInterval);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.splitInterval)) {
+            body.put("splitInterval", request.splitInterval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("taskId", request.taskId);
         }
@@ -1470,6 +1474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotInterval)) {
             body.put("snapshotInterval", request.snapshotInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.splitInterval)) {
+            body.put("splitInterval", request.splitInterval);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.textProcessTasksShrink)) {
