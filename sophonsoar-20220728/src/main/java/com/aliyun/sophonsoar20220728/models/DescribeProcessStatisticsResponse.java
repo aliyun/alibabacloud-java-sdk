@@ -3,7 +3,7 @@ package com.aliyun.sophonsoar20220728.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApiListResponse extends TeaModel {
+public class DescribeProcessStatisticsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeApiListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeApiListResponseBody body;
+    public DescribeProcessStatisticsResponseBody body;
 
-    public static DescribeApiListResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApiListResponse self = new DescribeApiListResponse();
+    public static DescribeProcessStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeProcessStatisticsResponse self = new DescribeProcessStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApiListResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeProcessStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeApiListResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeApiListResponse setStatusCode(Integer statusCode) {
+    public DescribeProcessStatisticsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeApiListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeApiListResponse setBody(DescribeApiListResponseBody body) {
+    public DescribeProcessStatisticsResponse setBody(DescribeProcessStatisticsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeApiListResponseBody getBody() {
+    public DescribeProcessStatisticsResponseBody getBody() {
         return this.body;
     }
 

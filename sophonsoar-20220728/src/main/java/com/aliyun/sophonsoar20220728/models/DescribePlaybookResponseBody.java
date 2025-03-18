@@ -42,15 +42,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
 
     public static class DescribePlaybookResponseBodyPlaybook extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account that is used to create the playbook.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>124xxxxx3435</p>
-         */
-        @NameInMap("Creator")
-        public String creator;
-
-        /**
          * <p>The description of the playbook.</p>
          * 
          * <strong>example:</strong>
@@ -125,15 +116,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
          */
         @NameInMap("LastExeTime")
         public Long lastExeTime;
-
-        /**
-         * <p>The ID of the Alibaba Cloud account that is used to modify the playbook.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>124xxxxx3435</p>
-         */
-        @NameInMap("Modifier")
-        public String modifier;
 
         /**
          * <p>The status of the playbook. Valid values:</p>
@@ -215,14 +197,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribePlaybookResponseBodyPlaybook setCreator(String creator) {
-            this.creator = creator;
-            return this;
-        }
-        public String getCreator() {
-            return this.creator;
-        }
-
         public DescribePlaybookResponseBodyPlaybook setDescription(String description) {
             this.description = description;
             return this;
@@ -277,14 +251,6 @@ public class DescribePlaybookResponseBody extends TeaModel {
         }
         public Long getLastExeTime() {
             return this.lastExeTime;
-        }
-
-        public DescribePlaybookResponseBodyPlaybook setModifier(String modifier) {
-            this.modifier = modifier;
-            return this;
-        }
-        public String getModifier() {
-            return this.modifier;
         }
 
         public DescribePlaybookResponseBodyPlaybook setOnlineActive(Boolean onlineActive) {

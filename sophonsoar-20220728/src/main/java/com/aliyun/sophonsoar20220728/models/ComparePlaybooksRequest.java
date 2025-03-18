@@ -18,9 +18,9 @@ public class ComparePlaybooksRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UUID of the second version.</p>
+     * <p>The ID of the second version.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+     * <p> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class ComparePlaybooksRequest extends TeaModel {
     public Integer newPlaybookReleaseId;
 
     /**
-     * <p>The UUID of the first version.</p>
+     * <p>The ID of the first version.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the UUIDs of versions.</p>
+     * <p> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the IDs of versions. The system automatically generates IDs for new versions.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

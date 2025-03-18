@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePlaybookRequest extends TeaModel {
     /**
-     * <p>The description of the playbook.</p>
+     * <p>Description of the playbook.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a new version</p>
@@ -14,7 +14,7 @@ public class CreatePlaybookRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The name of the playbook.</p>
+     * <p>Name of the playbook.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreatePlaybookRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>Language type for receiving messages. Values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -36,6 +36,16 @@ public class CreatePlaybookRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Playbook TaskFlow type.</p>
+     * <ul>
+     * <li><strong>x6</strong> : x6</li>
+     * <li><strong>bpmn</strong>: bpmn</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>x6</p>
+     */
     @NameInMap("TaskflowType")
     public String taskflowType;
 

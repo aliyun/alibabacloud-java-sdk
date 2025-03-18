@@ -43,6 +43,9 @@ public class DescribeProcessTasksRequest extends TeaModel {
     @NameInMap("EntityUuid")
     public String entityUuid;
 
+    @NameInMap("EventUuid")
+    public String eventUuid;
+
     /**
      * <p>The field that you use to sort the result.</p>
      * <blockquote>
@@ -62,7 +65,7 @@ public class DescribeProcessTasksRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</p>
@@ -202,6 +205,9 @@ public class DescribeProcessTasksRequest extends TeaModel {
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    @NameInMap("TriggerSource")
+    public String triggerSource;
+
     /**
      * <p>The cloud service that is associated with the handling task. The value is a string. Valid values:</p>
      * <ul>
@@ -253,6 +259,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
         return this.entityUuid;
     }
 
+    public DescribeProcessTasksRequest setEventUuid(String eventUuid) {
+        this.eventUuid = eventUuid;
+        return this;
+    }
+    public String getEventUuid() {
+        return this.eventUuid;
+    }
+
     public DescribeProcessTasksRequest setOrderField(String orderField) {
         this.orderField = orderField;
         return this;
@@ -261,11 +275,11 @@ public class DescribeProcessTasksRequest extends TeaModel {
         return this.orderField;
     }
 
-    public DescribeProcessTasksRequest setPageNumber(String pageNumber) {
+    public DescribeProcessTasksRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Long getPageNumber() {
         return this.pageNumber;
     }
 
@@ -363,6 +377,14 @@ public class DescribeProcessTasksRequest extends TeaModel {
     }
     public String getTaskStatus() {
         return this.taskStatus;
+    }
+
+    public DescribeProcessTasksRequest setTriggerSource(String triggerSource) {
+        this.triggerSource = triggerSource;
+        return this;
+    }
+    public String getTriggerSource() {
+        return this.triggerSource;
     }
 
     public DescribeProcessTasksRequest setYunCode(String yunCode) {

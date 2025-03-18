@@ -64,7 +64,11 @@ public class ComparePlaybooksResponseBody extends TeaModel {
         public Boolean _new;
 
         /**
-         * <p>Indicates whether the configurations of the two versions are the same. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <p>Indicates whether the configurations of the two versions are the same. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>

@@ -3,7 +3,7 @@ package com.aliyun.sophonsoar20220728.models;
 
 import com.aliyun.tea.*;
 
-public class DescribePopApiVersionListResponse extends TeaModel {
+public class ConvertPlaybookResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribePopApiVersionListResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribePopApiVersionListResponseBody body;
+    public ConvertPlaybookResponseBody body;
 
-    public static DescribePopApiVersionListResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribePopApiVersionListResponse self = new DescribePopApiVersionListResponse();
+    public static ConvertPlaybookResponse build(java.util.Map<String, ?> map) throws Exception {
+        ConvertPlaybookResponse self = new ConvertPlaybookResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribePopApiVersionListResponse setHeaders(java.util.Map<String, String> headers) {
+    public ConvertPlaybookResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribePopApiVersionListResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribePopApiVersionListResponse setStatusCode(Integer statusCode) {
+    public ConvertPlaybookResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribePopApiVersionListResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribePopApiVersionListResponse setBody(DescribePopApiVersionListResponseBody body) {
+    public ConvertPlaybookResponse setBody(ConvertPlaybookResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribePopApiVersionListResponseBody getBody() {
+    public ConvertPlaybookResponseBody getBody() {
         return this.body;
     }
 
