@@ -5,26 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstanceResourcesRequest extends TeaModel {
     /**
-     * <p>End time of resource usage. 
-     * <notice>Note: Only supports querying service instances on private deployments.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2022-03-01T12:00:00</p>
-     */
-    @NameInMap("ExpireTimeEnd")
-    public String expireTimeEnd;
-
-    /**
-     * <p>Start time of resource usage. 
-     * <notice>Note: Only supports querying service instances on private deployments.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>2022-01-01T12:00:00</p>
-     */
-    @NameInMap("ExpireTimeStart")
-    public String expireTimeStart;
-
-    /**
      * <p>The filter conditions. Vaild values:</p>
      * <ul>
      * <li><p>ExpireTimeStart：
@@ -74,19 +54,6 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The billing method of the read-only instance. Valid values:</p>
-     * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>Subscription</p>
-     */
-    @NameInMap("PayType")
-    public String payType;
-
-    /**
      * <p>The region ID. Valid values:</p>
      * <ul>
      * <li>cn-hangzhou: China (Hangzhou).</li>
@@ -98,12 +65,6 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
-     */
-    @NameInMap("ResourceARN")
-    public java.util.List<String> resourceARN;
 
     /**
      * <p>The ID of the service instance.</p>
@@ -135,22 +96,6 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServiceInstanceResourcesRequest setExpireTimeEnd(String expireTimeEnd) {
-        this.expireTimeEnd = expireTimeEnd;
-        return this;
-    }
-    public String getExpireTimeEnd() {
-        return this.expireTimeEnd;
-    }
-
-    public ListServiceInstanceResourcesRequest setExpireTimeStart(String expireTimeStart) {
-        this.expireTimeStart = expireTimeStart;
-        return this;
-    }
-    public String getExpireTimeStart() {
-        return this.expireTimeStart;
-    }
-
     public ListServiceInstanceResourcesRequest setFilters(java.util.List<ListServiceInstanceResourcesRequestFilters> filters) {
         this.filters = filters;
         return this;
@@ -175,28 +120,12 @@ public class ListServiceInstanceResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListServiceInstanceResourcesRequest setPayType(String payType) {
-        this.payType = payType;
-        return this;
-    }
-    public String getPayType() {
-        return this.payType;
-    }
-
     public ListServiceInstanceResourcesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ListServiceInstanceResourcesRequest setResourceARN(java.util.List<String> resourceARN) {
-        this.resourceARN = resourceARN;
-        return this;
-    }
-    public java.util.List<String> getResourceARN() {
-        return this.resourceARN;
     }
 
     public ListServiceInstanceResourcesRequest setServiceInstanceId(String serviceInstanceId) {

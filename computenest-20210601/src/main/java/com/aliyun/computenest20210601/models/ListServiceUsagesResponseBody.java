@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceUsagesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -37,6 +37,12 @@ public class ListServiceUsagesResponseBody extends TeaModel {
     @NameInMap("ServiceUsages")
     public java.util.List<ListServiceUsagesResponseBodyServiceUsages> serviceUsages;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -117,7 +123,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
          * <p>The service name.</p>
          * 
          * <strong>example:</strong>
-         * <p>LobeChat社区版</p>
+         * <p>LobelChat</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -165,7 +171,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         public Long userAliUid;
 
         /**
-         * <p>The information about the applicant.</p>
+         * <p>The information about the applicants.</p>
          */
         @NameInMap("UserInformation")
         public java.util.Map<String, String> userInformation;
