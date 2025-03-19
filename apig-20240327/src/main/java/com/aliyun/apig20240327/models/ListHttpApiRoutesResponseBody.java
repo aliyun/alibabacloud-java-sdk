@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListHttpApiRoutesResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public ListHttpApiRoutesResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBEEB8C1-108E-50F0-9BEA-DED79553C309</p>
      */
@@ -66,10 +75,15 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
     }
 
     public static class ListHttpApiRoutesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of routes.</p>
+         */
         @NameInMap("items")
         public java.util.List<HttpRoute> items;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -77,6 +91,8 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -84,6 +100,8 @@ public class ListHttpApiRoutesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */

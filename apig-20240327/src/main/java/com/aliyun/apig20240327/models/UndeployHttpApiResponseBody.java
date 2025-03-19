@@ -3,10 +3,8 @@ package com.aliyun.apig20240327.models;
 
 import com.aliyun.tea.*;
 
-public class GetPolicyResponseBody extends TeaModel {
+public class UndeployHttpApiResponseBody extends TeaModel {
     /**
-     * <p>Response code.</p>
-     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -14,14 +12,6 @@ public class GetPolicyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
-     */
-    @NameInMap("data")
-    public PolicyDetailInfo data;
-
-    /**
-     * <p>Response message.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,20 +19,18 @@ public class GetPolicyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
-     * 
      * <strong>example:</strong>
-     * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32A***</p>
+     * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
-    public static GetPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetPolicyResponseBody self = new GetPolicyResponseBody();
+    public static UndeployHttpApiResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UndeployHttpApiResponseBody self = new UndeployHttpApiResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetPolicyResponseBody setCode(String code) {
+    public UndeployHttpApiResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -50,15 +38,7 @@ public class GetPolicyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetPolicyResponseBody setData(PolicyDetailInfo data) {
-        this.data = data;
-        return this;
-    }
-    public PolicyDetailInfo getData() {
-        return this.data;
-    }
-
-    public GetPolicyResponseBody setMessage(String message) {
+    public UndeployHttpApiResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -66,7 +46,7 @@ public class GetPolicyResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetPolicyResponseBody setRequestId(String requestId) {
+    public UndeployHttpApiResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

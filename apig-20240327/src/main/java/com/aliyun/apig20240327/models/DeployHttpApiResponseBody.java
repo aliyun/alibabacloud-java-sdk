@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeployHttpApiResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class DeployHttpApiResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>响应消息。</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +23,8 @@ public class DeployHttpApiResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C2D1C68-0D93-5561-8EE6-FDB7BF067A30</p>
      */

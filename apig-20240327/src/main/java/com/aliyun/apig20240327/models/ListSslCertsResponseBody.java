@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListSslCertsResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public ListSslCertsResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListSslCertsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AADF7197-3384-52AF-A2DE-A66696734129</p>
      */
@@ -66,10 +75,15 @@ public class ListSslCertsResponseBody extends TeaModel {
     }
 
     public static class ListSslCertsResponseBodyData extends TeaModel {
+        /**
+         * <p>List of certificate information.</p>
+         */
         @NameInMap("items")
         public java.util.List<SslCertMetaInfo> items;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -77,6 +91,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -84,6 +100,8 @@ public class ListSslCertsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

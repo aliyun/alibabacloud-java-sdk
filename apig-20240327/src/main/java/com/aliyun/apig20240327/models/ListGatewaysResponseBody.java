@@ -602,6 +602,9 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>List of sub domain information</p>
+         */
         @NameInMap("subDomainInfos")
         public java.util.List<SubDomainInfo> subDomainInfos;
 

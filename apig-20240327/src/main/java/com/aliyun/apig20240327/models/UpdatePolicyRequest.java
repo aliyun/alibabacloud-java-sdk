@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolicyRequest extends TeaModel {
     /**
+     * <p>Policy configuration</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class UpdatePolicyRequest extends TeaModel {
     @NameInMap("config")
     public String config;
 
+    /**
+     * <p>Description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a timeout policy description</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Policy name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

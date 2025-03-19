@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListZonesResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("data")
     public ListZonesResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListZonesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E8079207-B651-592A-A565-23E9EE5673B0</p>
      */
@@ -67,6 +76,8 @@ public class ListZonesResponseBody extends TeaModel {
 
     public static class ListZonesResponseBodyDataItems extends TeaModel {
         /**
+         * <p>可用区ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-c</p>
          */
@@ -89,6 +100,9 @@ public class ListZonesResponseBody extends TeaModel {
     }
 
     public static class ListZonesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of availability zones.</p>
+         */
         @NameInMap("items")
         public java.util.List<ListZonesResponseBodyDataItems> items;
 

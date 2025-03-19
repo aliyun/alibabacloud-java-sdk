@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetResourceOverviewResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Resource information.</p>
+     */
     @NameInMap("data")
     public GetResourceOverviewResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetResourceOverviewResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD19A442-93C5-5C97-AFA0-B9C57EBD781B</p>
      */
@@ -67,6 +76,8 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyDataApi extends TeaModel {
         /**
+         * <p>Number of published APIs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +85,8 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public Long publishedCount;
 
         /**
+         * <p>Number of APIs.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -105,6 +118,8 @@ public class GetResourceOverviewResponseBody extends TeaModel {
 
     public static class GetResourceOverviewResponseBodyDataGateway extends TeaModel {
         /**
+         * <p>Number of running gateways.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -112,6 +127,8 @@ public class GetResourceOverviewResponseBody extends TeaModel {
         public Long runningCount;
 
         /**
+         * <p>Number of gateway instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -142,9 +159,15 @@ public class GetResourceOverviewResponseBody extends TeaModel {
     }
 
     public static class GetResourceOverviewResponseBodyData extends TeaModel {
+        /**
+         * <p>API information.</p>
+         */
         @NameInMap("api")
         public GetResourceOverviewResponseBodyDataApi api;
 
+        /**
+         * <p>Gateway information.</p>
+         */
         @NameInMap("gateway")
         public GetResourceOverviewResponseBodyDataGateway gateway;
 

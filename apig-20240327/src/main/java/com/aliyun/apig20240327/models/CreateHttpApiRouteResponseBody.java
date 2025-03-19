@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRouteResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public CreateHttpApiRouteResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
@@ -76,7 +76,7 @@ public class CreateHttpApiRouteResponseBody extends TeaModel {
 
     public static class CreateHttpApiRouteResponseBodyData extends TeaModel {
         /**
-         * <p>Route ID。</p>
+         * <p>The route ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hr-cr82undlhtgrlej***</p>

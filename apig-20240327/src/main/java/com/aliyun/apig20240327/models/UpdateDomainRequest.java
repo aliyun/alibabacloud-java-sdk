@@ -4,11 +4,36 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainRequest extends TeaModel {
+    /**
+     * <p>CA certificate identifier</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
+     */
     @NameInMap("caCertIdentifier")
     public String caCertIdentifier;
 
+    /**
+     * <p>Certificate identifier</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
+     */
     @NameInMap("certIdentifier")
     public String certIdentifier;
+
+    /**
+     * <p>Client CA Certificate</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIIFBTCCAu2gAwIBAgIUORLpYPGSFD1YOP6PMbE7Wd/mpTQwDQYJKoZIhvcNAQEL
+     * BQAwE************************************************2VwVOJ2gqX3
+     * YuGaxvIbDy0iQJ1GMerPRyzJTeVEtdIKT29u0PdFRr4KZWom35qX7G4=
+     * -----END CERTIFICATE-----</p>
+     */
+    @NameInMap("clientCACert")
+    public String clientCACert;
 
     /**
      * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
@@ -27,6 +52,12 @@ public class UpdateDomainRequest extends TeaModel {
      */
     @NameInMap("http2Option")
     public String http2Option;
+
+    /**
+     * <p>Whether to enable mTLS mutual authentication</p>
+     */
+    @NameInMap("mTLSEnabled")
+    public Boolean mTLSEnabled;
 
     /**
      * <p>The protocol type supported by the domain.</p>
@@ -87,6 +118,14 @@ public class UpdateDomainRequest extends TeaModel {
         return this.certIdentifier;
     }
 
+    public UpdateDomainRequest setClientCACert(String clientCACert) {
+        this.clientCACert = clientCACert;
+        return this;
+    }
+    public String getClientCACert() {
+        return this.clientCACert;
+    }
+
     public UpdateDomainRequest setForceHttps(Boolean forceHttps) {
         this.forceHttps = forceHttps;
         return this;
@@ -101,6 +140,14 @@ public class UpdateDomainRequest extends TeaModel {
     }
     public String getHttp2Option() {
         return this.http2Option;
+    }
+
+    public UpdateDomainRequest setMTLSEnabled(Boolean mTLSEnabled) {
+        this.mTLSEnabled = mTLSEnabled;
+        return this;
+    }
+    public Boolean getMTLSEnabled() {
+        return this.mTLSEnabled;
     }
 
     public UpdateDomainRequest setProtocol(String protocol) {

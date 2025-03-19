@@ -5,19 +5,40 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
     /**
+     * <p>Gateway ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtg***</p>
      */
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>List of service configuration information.</p>
+     */
     @NameInMap("serviceConfigs")
     public java.util.List<CreateServiceRequestServiceConfigs> serviceConfigs;
 
     /**
+     * <p>Service source:</p>
+     * <ul>
+     * <li>MSE_NACOS: Services in MSE Nacos.</li>
+     * <li>K8S: Services in the K8S cluster of container service.</li>
+     * <li>VIP: Fixed address service.</li>
+     * <li>DNS: DNS domain name service.</li>
+     * <li>FC3: Function Compute service.</li>
+     * <li>SAE_K8S_SERVICE: SAE K8S service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MSE_NACOS</p>
      */
@@ -62,13 +83,28 @@ public class CreateServiceRequest extends TeaModel {
     }
 
     public static class CreateServiceRequestServiceConfigs extends TeaModel {
+        /**
+         * <p>List of domain names or fixed addresses.</p>
+         */
         @NameInMap("addresses")
         public java.util.List<String> addresses;
 
+        /**
+         * <p>AI service configuration.</p>
+         */
         @NameInMap("aiServiceConfig")
         public AiServiceConfig aiServiceConfig;
 
         /**
+         * <p>List of DNS server addresses.</p>
+         */
+        @NameInMap("dnsServers")
+        public java.util.List<String> dnsServers;
+
+        /**
+         * <p>Service group name.
+         * Needs to be specified when <code>sourceType</code> is MSE_NACOS.</p>
+         * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
          */
@@ -76,6 +112,8 @@ public class CreateServiceRequest extends TeaModel {
         public String groupName;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>user-service</p>
          */
@@ -83,6 +121,13 @@ public class CreateServiceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>Namespace of the service:</p>
+         * <ul>
+         * <li>When <code>sourceType</code> is K8S, it represents the namespace where the K8S service is located.</li>
+         * <li>When <code>sourceType</code> is MSE_NACOS, it represents the namespace in Nacos.</li>
+         * </ul>
+         * <p>It needs to be specified when <code>sourceType</code> is K8S or MSE_NACOS.</p>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
          */
@@ -90,6 +135,8 @@ public class CreateServiceRequest extends TeaModel {
         public String namespace;
 
         /**
+         * <p>Function version or alias.</p>
+         * 
          * <strong>example:</strong>
          * <p>LATEST</p>
          */
@@ -115,6 +162,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public AiServiceConfig getAiServiceConfig() {
             return this.aiServiceConfig;
+        }
+
+        public CreateServiceRequestServiceConfigs setDnsServers(java.util.List<String> dnsServers) {
+            this.dnsServers = dnsServers;
+            return this;
+        }
+        public java.util.List<String> getDnsServers() {
+            return this.dnsServers;
         }
 
         public CreateServiceRequestServiceConfigs setGroupName(String groupName) {

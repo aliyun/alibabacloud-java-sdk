@@ -4,10 +4,15 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class DeployHttpApiRequest extends TeaModel {
+    /**
+     * <p>Rest API deployment configuration. Required when deploying an HTTP API as a Rest API.</p>
+     */
     @NameInMap("restApiConfig")
     public DeployHttpApiRequestRestApiConfig restApiConfig;
 
     /**
+     * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
+     * 
      * <strong>example:</strong>
      * <p>hr-cr82undlhtgrl***</p>
      */
@@ -36,10 +41,15 @@ public class DeployHttpApiRequest extends TeaModel {
     }
 
     public static class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs extends TeaModel {
+        /**
+         * <p>Configuration of matching conditions related to API deployment.</p>
+         */
         @NameInMap("match")
         public HttpApiBackendMatchConditions match;
 
         /**
+         * <p>Service port, do not provide for dynamic ports.</p>
+         * 
          * <strong>example:</strong>
          * <p>8080</p>
          */
@@ -47,6 +57,12 @@ public class DeployHttpApiRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>Service protocol:</p>
+         * <ul>
+         * <li>HTTP.</li>
+         * <li>HTTPS.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>HTTP</p>
          */
@@ -54,6 +70,8 @@ public class DeployHttpApiRequest extends TeaModel {
         public String protocol;
 
         /**
+         * <p>Service ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>svc-cr6pk4tlhtgm58e***</p>
          */
@@ -61,6 +79,8 @@ public class DeployHttpApiRequest extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>Service version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v1</p>
          */
@@ -68,6 +88,8 @@ public class DeployHttpApiRequest extends TeaModel {
         public String version;
 
         /**
+         * <p>Weight, range [1,100], valid only in the by-ratio scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>49</p>
          */
@@ -131,22 +153,32 @@ public class DeployHttpApiRequest extends TeaModel {
 
     public static class DeployHttpApiRequestRestApiConfigEnvironment extends TeaModel {
         /**
+         * <p>API publication scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>SingleService</p>
          */
         @NameInMap("backendScene")
         public String backendScene;
 
+        /**
+         * <p>List of user domains.</p>
+         */
         @NameInMap("customDomainIds")
         public java.util.List<String> customDomainIds;
 
         /**
+         * <p>Environment ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>env-cpqnr6tlhtgubc***</p>
          */
         @NameInMap("environmentId")
         public String environmentId;
 
+        /**
+         * <p>Existing service configurations. Only one entry is allowed in a single-service scenario, while multiple entries are allowed in scenarios such as by ratio or by content.</p>
+         */
         @NameInMap("serviceConfigs")
         public java.util.List<DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs> serviceConfigs;
 
@@ -190,13 +222,24 @@ public class DeployHttpApiRequest extends TeaModel {
     }
 
     public static class DeployHttpApiRequestRestApiConfig extends TeaModel {
+        /**
+         * <p>Publication description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户服务API发布。</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Publication environment configuration.</p>
+         */
         @NameInMap("environment")
         public DeployHttpApiRequestRestApiConfigEnvironment environment;
 
         /**
+         * <p>Historical version number. If this field is specified, the publication information will be based on the historical version information.</p>
+         * 
          * <strong>example:</strong>
          * <p>apr-xxx</p>
          */
