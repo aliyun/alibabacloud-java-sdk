@@ -1223,6 +1223,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Query Permission Policy List</p>
+     * 
+     * @param request ListPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPoliciesResponse
+     */
+    public ListPoliciesResponse listPoliciesWithOptions(ListPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPolicies"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListPoliciesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Permission Policy List</p>
+     * 
+     * @param request ListPoliciesRequest
+     * @return ListPoliciesResponse
+     */
+    public ListPoliciesResponse listPolicies(ListPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询服务类别</p>
      * 
      * @param request ListServiceCategoriesRequest
@@ -1348,14 +1405,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListServiceInstanceResourcesResponse listServiceInstanceResourcesWithOptions(ListServiceInstanceResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.expireTimeEnd)) {
-            query.put("ExpireTimeEnd", request.expireTimeEnd);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.expireTimeStart)) {
-            query.put("ExpireTimeStart", request.expireTimeStart);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
             query.put("Filters", request.filters);
         }
@@ -1368,16 +1417,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
-            query.put("PayType", request.payType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceARN)) {
-            query.put("ResourceARN", request.resourceARN);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
