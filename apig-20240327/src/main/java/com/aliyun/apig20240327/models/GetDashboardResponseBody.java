@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDashboardResponseBody extends TeaModel {
     /**
+     * <p>Response code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>Response data</p>
+     */
     @NameInMap("data")
     public GetDashboardResponseBodyData data;
 
     /**
+     * <p>Backend error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -22,6 +29,8 @@ public class GetDashboardResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -29,7 +38,7 @@ public class GetDashboardResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
@@ -38,6 +47,8 @@ public class GetDashboardResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the request was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -99,6 +110,8 @@ public class GetDashboardResponseBody extends TeaModel {
 
     public static class GetDashboardResponseBodyData extends TeaModel {
         /**
+         * <p>Gateway unique identifier</p>
+         * 
          * <strong>example:</strong>
          * <p>gw-co370icmjeu****</p>
          */
@@ -106,6 +119,8 @@ public class GetDashboardResponseBody extends TeaModel {
         public String gatewayId;
 
         /**
+         * <p>Dashboard name</p>
+         * 
          * <strong>example:</strong>
          * <p>PLUGIN</p>
          */
@@ -113,6 +128,8 @@ public class GetDashboardResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Dashboard title</p>
+         * 
          * <strong>example:</strong>
          * <p>APIG Plugin</p>
          */
@@ -120,6 +137,8 @@ public class GetDashboardResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <p>Dashboard URL link</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://sls.console.aliyun.com/lognext/project/xxxxx">https://sls.console.aliyun.com/lognext/project/xxxxx</a></p>
          */

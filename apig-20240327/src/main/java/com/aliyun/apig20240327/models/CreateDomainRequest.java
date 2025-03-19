@@ -23,6 +23,19 @@ public class CreateDomainRequest extends TeaModel {
     public String certIdentifier;
 
     /**
+     * <p>Client CA Certificate</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----
+     * MIIFBTCCAu2gAwIBAgIUORLpYPGSFD1YOP6PMbE7Wd/mpTQwDQYJKoZIhvcNAQEL
+     * BQAwE************************************************2VwVOJ2gqX3
+     * YuGaxvIbDy0iQJ1GMerPRyzJTeVEtdIKT29u0PdFRr4KZWom35qX7G4=
+     * -----END CERTIFICATE-----</p>
+     */
+    @NameInMap("clientCACert")
+    public String clientCACert;
+
+    /**
      * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +52,12 @@ public class CreateDomainRequest extends TeaModel {
      */
     @NameInMap("http2Option")
     public String http2Option;
+
+    /**
+     * <p>Whether to enable mTLS mutual authentication</p>
+     */
+    @NameInMap("mTLSEnabled")
+    public Boolean mTLSEnabled;
 
     /**
      * <p>Domain name.</p>
@@ -118,6 +137,14 @@ public class CreateDomainRequest extends TeaModel {
         return this.certIdentifier;
     }
 
+    public CreateDomainRequest setClientCACert(String clientCACert) {
+        this.clientCACert = clientCACert;
+        return this;
+    }
+    public String getClientCACert() {
+        return this.clientCACert;
+    }
+
     public CreateDomainRequest setForceHttps(Boolean forceHttps) {
         this.forceHttps = forceHttps;
         return this;
@@ -132,6 +159,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public String getHttp2Option() {
         return this.http2Option;
+    }
+
+    public CreateDomainRequest setMTLSEnabled(Boolean mTLSEnabled) {
+        this.mTLSEnabled = mTLSEnabled;
+        return this;
+    }
+    public Boolean getMTLSEnabled() {
+        return this.mTLSEnabled;
     }
 
     public CreateDomainRequest setName(String name) {

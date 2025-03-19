@@ -5,19 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetDashboardShrinkRequest extends TeaModel {
     /**
+     * <p>zh: Chinese
+     * en: English</p>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
     @NameInMap("acceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>API ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-c9uuekzmia8q2****</p>
+     */
     @NameInMap("apiId")
     public String apiId;
 
+    /**
+     * <p>Filter configuration</p>
+     */
     @NameInMap("filter")
     public String filterShrink;
 
     /**
+     * <p>Dashboard name:</p>
+     * <ul>
+     * <li>LOG: Access log</li>
+     * <li>PLUGIN: Plugin log</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PLUGIN</p>
      */
@@ -25,6 +43,8 @@ public class GetDashboardShrinkRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>Plugin ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>pls-dn82a9djd8z****</p>
      */
@@ -32,6 +52,11 @@ public class GetDashboardShrinkRequest extends TeaModel {
     public String pluginClassId;
 
     /**
+     * <p>Dashboard source:</p>
+     * <ul>
+     * <li>SLS: Log dashboard</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SLS</p>
      */

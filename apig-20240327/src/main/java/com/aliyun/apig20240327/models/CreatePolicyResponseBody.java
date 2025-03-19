@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyResponseBody extends TeaModel {
     /**
+     * <p>Response status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Response data.</p>
+     */
     @NameInMap("data")
     public CreatePolicyResponseBodyData data;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,7 +29,7 @@ public class CreatePolicyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>393E2630-DBE7-5221-AB35-9E7406754***</p>
@@ -69,6 +76,8 @@ public class CreatePolicyResponseBody extends TeaModel {
 
     public static class CreatePolicyResponseBodyData extends TeaModel {
         /**
+         * <p>Policy ID</p>
+         * 
          * <strong>example:</strong>
          * <p>p-cq7l5s5lhtgi6qasr***</p>
          */

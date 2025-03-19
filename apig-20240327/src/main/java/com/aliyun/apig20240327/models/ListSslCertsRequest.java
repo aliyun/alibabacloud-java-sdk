@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSslCertsRequest extends TeaModel {
     /**
+     * <p>Name matching keyword.</p>
+     * 
      * <strong>example:</strong>
      * <p>ali</p>
      */
@@ -12,6 +14,8 @@ public class ListSslCertsRequest extends TeaModel {
     public String certNameLike;
 
     /**
+     * <p>Domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>fun.iot.evideocloud.com.cn</p>
      */
@@ -19,6 +23,8 @@ public class ListSslCertsRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Page number, default is 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListSslCertsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, default is 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

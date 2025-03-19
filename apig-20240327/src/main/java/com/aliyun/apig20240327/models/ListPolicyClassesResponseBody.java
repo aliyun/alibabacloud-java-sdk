@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPolicyClassesResponseBody extends TeaModel {
     /**
+     * <p>Response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Policy template information.</p>
+     */
     @NameInMap("data")
     public ListPolicyClassesResponseBodyData data;
 
     /**
+     * <p>ResponseMessage</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class ListPolicyClassesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>23B45FA9-7208-5E55-B5CE-B6B2567DD822</p>
      */
@@ -66,10 +75,15 @@ public class ListPolicyClassesResponseBody extends TeaModel {
     }
 
     public static class ListPolicyClassesResponseBodyData extends TeaModel {
+        /**
+         * <p>List of policy templates</p>
+         */
         @NameInMap("items")
         public java.util.List<PolicyClassInfo> items;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -77,6 +91,8 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>Page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -84,6 +100,8 @@ public class ListPolicyClassesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of items.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

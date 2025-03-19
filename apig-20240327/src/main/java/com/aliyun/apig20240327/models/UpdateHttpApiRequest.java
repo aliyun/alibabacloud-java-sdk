@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpApiRequest extends TeaModel {
     /**
-     * <p>List of AI protocols.</p>
+     * <p>The AI protocols.</p>
      */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
+    /**
+     * <p>The authentication configuration.</p>
+     */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>Base path of the API, which must start with a \&quot;/\&quot;.</p>
+     * <p>The API base path, which must start with a forward slash (/).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,37 +27,40 @@ public class UpdateHttpApiRequest extends TeaModel {
     public String basePath;
 
     /**
-     * <p>List of API deployment configurations.</p>
+     * <p>The deployment configurations.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>API description.</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
-     * <p>更新API描述</p>
+     * <p>API for testing</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable authentication.</p>
+     */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
     /**
-     * <p>Configuration information for the HTTP Ingress API.</p>
+     * <p>The HTTP Ingress API configurations.</p>
      */
     @NameInMap("ingressConfig")
     public UpdateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>List of API access protocols.</p>
+     * <p>The protocols that are used to access the API.</p>
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
     /**
-     * <p>API versioning configuration.</p>
+     * <p>The versioning configurations.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
@@ -138,7 +144,7 @@ public class UpdateHttpApiRequest extends TeaModel {
 
     public static class UpdateHttpApiRequestIngressConfig extends TeaModel {
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cr6ql0tlhtgmc****</p>
@@ -147,7 +153,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>Ingress Class being listened to.</p>
+         * <p>The Ingress class for listening.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -156,7 +162,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>Whether to update the address in the Ingress Status.</p>
+         * <p>Specifies whether to update the address in Ingress Status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -165,7 +171,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public Boolean overrideIngressIp;
 
         /**
-         * <p>Source ID.</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgtr****</p>
@@ -174,7 +180,7 @@ public class UpdateHttpApiRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>Watched namespace.</p>
+         * <p>The namespace for listening.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

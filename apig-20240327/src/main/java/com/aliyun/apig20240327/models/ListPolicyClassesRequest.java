@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListPolicyClassesRequest extends TeaModel {
     /**
+     * <p>Types of attachment points supported by the policy.</p>
+     * <ul>
+     * <li>HttpApi: HttpApi.</li>
+     * <li>Operation: Operation of HttpApi.</li>
+     * <li>GatewayRoute: Gateway route.</li>
+     * <li>GatewayService: Gateway service.</li>
+     * <li>GatewayServicePort: Gateway service port.</li>
+     * <li>Domain: Gateway domain.</li>
+     * <li>Gateway: Gateway.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Operation</p>
      */
@@ -12,6 +23,13 @@ public class ListPolicyClassesRequest extends TeaModel {
     public String attachResourceType;
 
     /**
+     * <p>Direction of the policy.</p>
+     * <ul>
+     * <li>Outbound: OutBound.</li>
+     * <li>Inbound: InBound.</li>
+     * <li>Both directions: Both.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>InBound</p>
      */
@@ -19,6 +37,8 @@ public class ListPolicyClassesRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>Page number, default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +46,8 @@ public class ListPolicyClassesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +55,8 @@ public class ListPolicyClassesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Type of the policy template.</p>
+     * 
      * <strong>example:</strong>
      * <p>FlowControl</p>
      */

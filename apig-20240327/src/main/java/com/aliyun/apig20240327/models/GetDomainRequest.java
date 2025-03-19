@@ -4,6 +4,12 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class GetDomainRequest extends TeaModel {
+    /**
+     * <p>Indicates whether include domain related resource information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("withStatistics")
     public Boolean withStatistics;
 

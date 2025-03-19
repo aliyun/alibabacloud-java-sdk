@@ -88,7 +88,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Resource Group Transfer</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
@@ -139,7 +139,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>资源转组</p>
+     * <p>Resource Group Transfer</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -173,12 +173,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("certIdentifier", request.certIdentifier);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientCACert)) {
+            body.put("clientCACert", request.clientCACert);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.forceHttps)) {
             body.put("forceHttps", request.forceHttps);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.http2Option)) {
             body.put("http2Option", request.http2Option);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mTLSEnabled)) {
+            body.put("mTLSEnabled", request.mTLSEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -476,7 +484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a route for HttpApi</p>
+     * <p>Creates a route for an HTTP API.</p>
      * 
      * @param request CreateHttpApiRouteRequest
      * @param headers map
@@ -535,7 +543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a route for HttpApi</p>
+     * <p>Creates a route for an HTTP API.</p>
      * 
      * @param request CreateHttpApiRouteRequest
      * @return CreateHttpApiRouteResponse
@@ -548,7 +556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建策略</p>
+     * <p>Create Policy</p>
      * 
      * @param request CreatePolicyRequest
      * @param headers map
@@ -599,7 +607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建策略</p>
+     * <p>Create Policy</p>
      * 
      * @param request CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -612,7 +620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建策略资源挂载</p>
+     * <p>Create policy resource mount</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @param headers map
@@ -667,7 +675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建策略资源挂载</p>
+     * <p>Create policy resource mount</p>
      * 
      * @param request CreatePolicyAttachmentRequest
      * @return CreatePolicyAttachmentResponse
@@ -679,8 +687,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The interface supports creating multiple services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建服务</p>
+     * <p>Create Service</p>
      * 
      * @param request CreateServiceRequest
      * @param headers map
@@ -730,8 +741,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The interface supports creating multiple services.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建服务</p>
+     * <p>Create Service</p>
      * 
      * @param request CreateServiceRequest
      * @return CreateServiceResponse
@@ -930,7 +944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete HTTP API</p>
+     * <p>Deletes an HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -961,7 +975,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete HTTP API</p>
+     * <p>Deletes an HTTP API.</p>
      * @return DeleteHttpApiResponse
      */
     public DeleteHttpApiResponse deleteHttpApi(String httpApiId) throws Exception {
@@ -1056,7 +1070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除策略</p>
+     * <p>Delete Policy</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1087,7 +1101,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除策略</p>
+     * <p>Delete Policy</p>
      * @return DeletePolicyResponse
      */
     public DeletePolicyResponse deletePolicy(String policyId) throws Exception {
@@ -1098,7 +1112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除策略资源挂载</p>
+     * <p>Delete policy resource attachment</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1129,7 +1143,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除策略资源挂载</p>
+     * <p>Delete policy resource attachment</p>
      * @return DeletePolicyAttachmentResponse
      */
     public DeletePolicyAttachmentResponse deletePolicyAttachment(String policyAttachmentId) throws Exception {
@@ -1140,7 +1154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>部署HttpApi</p>
+     * <p>Deploy HttpApi</p>
      * 
      * @param request DeployHttpApiRequest
      * @param headers map
@@ -1183,7 +1197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>部署HttpApi</p>
+     * <p>Deploy HttpApi</p>
      * 
      * @param request DeployHttpApiRequest
      * @return DeployHttpApiResponse
@@ -1238,7 +1252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取监控/日志大盘接口</p>
+     * <p>Get Monitoring/Logging Dashboard Interface</p>
      * 
      * @param tmpReq GetDashboardRequest
      * @param headers map
@@ -1303,7 +1317,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取监控/日志大盘接口</p>
+     * <p>Get Monitoring/Logging Dashboard Interface</p>
      * 
      * @param request GetDashboardRequest
      * @return GetDashboardResponse
@@ -1642,7 +1656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询策略资源挂载</p>
+     * <p>Query Policy Resource Attachment</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1673,7 +1687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询策略资源挂载</p>
+     * <p>Query Policy Resource Attachment</p>
      * @return GetPolicyAttachmentResponse
      */
     public GetPolicyAttachmentResponse getPolicyAttachment(String policyAttachmentId) throws Exception {
@@ -1684,7 +1698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源概览信息</p>
+     * <p>Get resource overview information</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1715,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取资源概览信息</p>
+     * <p>Get resource overview information</p>
      * @return GetResourceOverviewResponse
      */
     public GetResourceOverviewResponse getResourceOverview() throws Exception {
@@ -1726,7 +1740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务详情</p>
+     * <p>Get Service Details</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1757,7 +1771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务详情</p>
+     * <p>Get Service Details</p>
      * @return GetServiceResponse
      */
     public GetServiceResponse getService(String serviceId) throws Exception {
@@ -1768,7 +1782,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取链路追踪配置</p>
+     * <p>Retrieve Tracing Configuration</p>
      * 
      * @param request GetTraceConfigRequest
      * @param headers map
@@ -1807,7 +1821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取链路追踪配置</p>
+     * <p>Retrieve Tracing Configuration</p>
      * 
      * @param request GetTraceConfigRequest
      * @return GetTraceConfigResponse
@@ -2230,7 +2244,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建HttpApi的路由</p>
+     * <p>Create a route for HttpApi</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @param headers map
@@ -2317,7 +2331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建HttpApi的路由</p>
+     * <p>Create a route for HttpApi</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @return ListHttpApiRoutesResponse
@@ -2434,7 +2448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListPolicyClasses。</p>
+     * <p>ListPolicyClasses</p>
      * 
      * @param request ListPolicyClassesRequest
      * @param headers map
@@ -2489,7 +2503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListPolicyClasses。</p>
+     * <p>ListPolicyClasses</p>
      * 
      * @param request ListPolicyClassesRequest
      * @return ListPolicyClassesResponse
@@ -2502,7 +2516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务列表</p>
+     * <p>Get Service List</p>
      * 
      * @param request ListServicesRequest
      * @param headers map
@@ -2561,7 +2575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取服务列表</p>
+     * <p>Get Service List</p>
      * 
      * @param request ListServicesRequest
      * @return ListServicesResponse
@@ -2574,7 +2588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSslCerts。</p>
+     * <p>ListSslCerts</p>
      * 
      * @param request ListSslCertsRequest
      * @param headers map
@@ -2625,7 +2639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListSslCerts。</p>
+     * <p>ListSslCerts</p>
      * 
      * @param request ListSslCertsRequest
      * @return ListSslCertsResponse
@@ -2638,7 +2652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取云原生API网关region下的可用区</p>
+     * <p>Retrieve the availability zones under a cloud-native API gateway region</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2669,7 +2683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取云原生API网关region下的可用区</p>
+     * <p>Retrieve the availability zones under a cloud-native API gateway region</p>
      * @return ListZonesResponse
      */
     public ListZonesResponse listZones() throws Exception {
@@ -2722,6 +2736,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>取消部署HttpApi</p>
+     * 
+     * @param request UndeployHttpApiRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UndeployHttpApiResponse
+     */
+    public UndeployHttpApiResponse undeployHttpApiWithOptions(String httpApiId, UndeployHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            body.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeId)) {
+            body.put("routeId", request.routeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UndeployHttpApi"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/http-apis/" + com.aliyun.openapiutil.Client.getEncodeParam(httpApiId) + "/undeploy"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UndeployHttpApiResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UndeployHttpApiResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消部署HttpApi</p>
+     * 
+     * @param request UndeployHttpApiRequest
+     * @return UndeployHttpApiResponse
+     */
+    public UndeployHttpApiResponse undeployHttpApi(String httpApiId, UndeployHttpApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.undeployHttpApiWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>只有类型为<strong>容器服务</strong>的来源允许更新监听Ingress的配置。</p>
+     * 
+     * <b>summary</b> : 
      * <p>UpdateDomain</p>
      * 
      * @param request UpdateDomainRequest
@@ -2740,12 +2813,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("certIdentifier", request.certIdentifier);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientCACert)) {
+            body.put("clientCACert", request.clientCACert);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.forceHttps)) {
             body.put("forceHttps", request.forceHttps);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.http2Option)) {
             body.put("http2Option", request.http2Option);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mTLSEnabled)) {
+            body.put("mTLSEnabled", request.mTLSEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
@@ -2788,6 +2869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>只有类型为<strong>容器服务</strong>的来源允许更新监听Ingress的配置。</p>
+     * 
      * <b>summary</b> : 
      * <p>UpdateDomain</p>
      * 
@@ -2970,7 +3054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update HTTP API</p>
+     * <p>Updates an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRequest
      * @param headers map
@@ -3041,7 +3125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update HTTP API</p>
+     * <p>Updates an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRequest
      * @return UpdateHttpApiResponse
@@ -3174,7 +3258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新策略</p>
+     * <p>Update Policy</p>
      * 
      * @param request UpdatePolicyRequest
      * @param headers map
@@ -3221,7 +3305,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新策略</p>
+     * <p>Update Policy</p>
      * 
      * @param request UpdatePolicyRequest
      * @return UpdatePolicyResponse

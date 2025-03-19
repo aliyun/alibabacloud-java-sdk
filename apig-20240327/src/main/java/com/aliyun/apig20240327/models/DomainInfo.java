@@ -7,6 +7,9 @@ public class DomainInfo extends TeaModel {
     @NameInMap("certIdentifier")
     public String certIdentifier;
 
+    @NameInMap("clientCACert")
+    public String clientCACert;
+
     @NameInMap("createFrom")
     public String createFrom;
 
@@ -18,6 +21,9 @@ public class DomainInfo extends TeaModel {
 
     @NameInMap("forceHttps")
     public Boolean forceHttps;
+
+    @NameInMap("mTLSEnabled")
+    public Boolean mTLSEnabled;
 
     @NameInMap("name")
     public String name;
@@ -51,6 +57,14 @@ public class DomainInfo extends TeaModel {
         return this.certIdentifier;
     }
 
+    public DomainInfo setClientCACert(String clientCACert) {
+        this.clientCACert = clientCACert;
+        return this;
+    }
+    public String getClientCACert() {
+        return this.clientCACert;
+    }
+
     public DomainInfo setCreateFrom(String createFrom) {
         this.createFrom = createFrom;
         return this;
@@ -81,6 +95,14 @@ public class DomainInfo extends TeaModel {
     }
     public Boolean getForceHttps() {
         return this.forceHttps;
+    }
+
+    public DomainInfo setMTLSEnabled(Boolean mTLSEnabled) {
+        this.mTLSEnabled = mTLSEnabled;
+        return this;
+    }
+    public Boolean getMTLSEnabled() {
+        return this.mTLSEnabled;
     }
 
     public DomainInfo setName(String name) {

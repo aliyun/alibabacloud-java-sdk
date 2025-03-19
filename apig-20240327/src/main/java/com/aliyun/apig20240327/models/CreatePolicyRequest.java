@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
     /**
+     * <p>Policy type, including RateLimit, ConcurrencyLimit, CircuitBreaker, HttpRewrite, HeaderModify, Cors, Authentication, FlowCopy, Timeout, Retry, IpAccessControl, DirectResponse, Redirect, Fallback, ServiceTls, ServiceLb, ServicePortTls, Waf, JWTAuth, OIDCAuth, ExternalZAuth, AiProxy, ModelRouter, AiStatistics, AiSecurityGuard, AiFallback, ModelMapper, AiTokenRateLimit, AiCache, DynamicRoute</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreatePolicyRequest extends TeaModel {
     public String className;
 
     /**
+     * <p>Policy configuration</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,10 +24,17 @@ public class CreatePolicyRequest extends TeaModel {
     @NameInMap("config")
     public String config;
 
+    /**
+     * <p>Policy description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>timeout policy</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Policy name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

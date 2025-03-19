@@ -75,9 +75,18 @@ public class GetDomainResponseBody extends TeaModel {
     }
 
     public static class GetDomainResponseBodyDataStatisticsInfo extends TeaModel {
+        /**
+         * <p>The array of related resource infomations.</p>
+         */
         @NameInMap("resourceStatistics")
         public java.util.List<ResourceStatistic> resourceStatistics;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("totalCount")
         public String totalCount;
 
@@ -114,9 +123,21 @@ public class GetDomainResponseBody extends TeaModel {
         @NameInMap("algorithm")
         public String algorithm;
 
+        /**
+         * <p>CA certificate identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>876****-cn-hangzhou</p>
+         */
         @NameInMap("caCertIdentifier")
         public String caCertIdentifier;
 
+        /**
+         * <p>Certificate Identifier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>645****-cn-hangzhou</p>
+         */
         @NameInMap("certIdentifier")
         public String certIdentifier;
 
@@ -128,6 +149,22 @@ public class GetDomainResponseBody extends TeaModel {
          */
         @NameInMap("certName")
         public String certName;
+
+        /**
+         * <p>Client CA Cert</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/mpTQwDQYJKoZIhvcNAQEL
+         * BxSbrGeJ8i0576Gn7Qezyho9abZOUhGaPeoB
+         * AIHWWl428uUSG/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+         * yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy+ZMJ8r4swA4swHwYDVR0jBBgwFoAU
+         * qroVyYKk7ylhcSn+ZMJ8r4swA4swDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B
+         * xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx=
+         * -----END CERTIFICATE-----</p>
+         */
+        @NameInMap("clientCACert")
+        public String clientCACert;
 
         /**
          * <p>Where it was created from.</p>
@@ -193,6 +230,15 @@ public class GetDomainResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("mTLSEnabled")
+        public Boolean mTLSEnabled;
+
+        /**
          * <p>Domain name.</p>
          * 
          * <strong>example:</strong>
@@ -232,6 +278,12 @@ public class GetDomainResponseBody extends TeaModel {
         @NameInMap("protocol")
         public String protocol;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzvlxzgo5b4si</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
@@ -244,9 +296,15 @@ public class GetDomainResponseBody extends TeaModel {
         @NameInMap("sans")
         public String sans;
 
+        /**
+         * <p>The array of domain related resource information</p>
+         */
         @NameInMap("statisticsInfo")
         public GetDomainResponseBodyDataStatisticsInfo statisticsInfo;
 
+        /**
+         * <p>The TLS cipher suites config.</p>
+         */
         @NameInMap("tlsCipherSuitesConfig")
         public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
@@ -314,6 +372,14 @@ public class GetDomainResponseBody extends TeaModel {
             return this.certName;
         }
 
+        public GetDomainResponseBodyData setClientCACert(String clientCACert) {
+            this.clientCACert = clientCACert;
+            return this;
+        }
+        public String getClientCACert() {
+            return this.clientCACert;
+        }
+
         public GetDomainResponseBodyData setCreateFrom(String createFrom) {
             this.createFrom = createFrom;
             return this;
@@ -368,6 +434,14 @@ public class GetDomainResponseBody extends TeaModel {
         }
         public String getIssuer() {
             return this.issuer;
+        }
+
+        public GetDomainResponseBodyData setMTLSEnabled(Boolean mTLSEnabled) {
+            this.mTLSEnabled = mTLSEnabled;
+            return this;
+        }
+        public Boolean getMTLSEnabled() {
+            return this.mTLSEnabled;
         }
 
         public GetDomainResponseBodyData setName(String name) {

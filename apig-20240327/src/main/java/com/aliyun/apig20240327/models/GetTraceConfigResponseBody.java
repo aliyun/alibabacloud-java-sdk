@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTraceConfigResponseBody extends TeaModel {
     /**
+     * <p>Response Code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("code")
     public Integer code;
 
+    /**
+     * <p>Response Data</p>
+     */
     @NameInMap("data")
     public GetTraceConfigResponseBodyData data;
 
     /**
+     * <p>Error Message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetTraceConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>2F46B9E7-67EF-5C8A-BA52-D38D5B32AF2C</p>
      */
@@ -29,6 +38,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Boolean	Request Result, with the following values:
+     * true: Request succeeded.
+     * false: Request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +95,10 @@ public class GetTraceConfigResponseBody extends TeaModel {
 
     public static class GetTraceConfigResponseBodyData extends TeaModel {
         /**
+         * <p>Whether to Enable Tracing:
+         * true: Enabled
+         * false: Disabled</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +106,8 @@ public class GetTraceConfigResponseBody extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>Sampling Rate</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -96,6 +115,8 @@ public class GetTraceConfigResponseBody extends TeaModel {
         public Integer sampleRatio;
 
         /**
+         * <p>Service ID, present when the tracing type is SKYWALKING</p>
+         * 
          * <strong>example:</strong>
          * <p>ss-co370icmjeu****</p>
          */
@@ -103,6 +124,8 @@ public class GetTraceConfigResponseBody extends TeaModel {
         public String serviceId;
 
         /**
+         * <p>服务端口，链路追踪类型为SKYWALKING时存在该参数</p>
+         * 
          * <strong>example:</strong>
          * <p>8090</p>
          */
@@ -110,6 +133,14 @@ public class GetTraceConfigResponseBody extends TeaModel {
         public String servicePort;
 
         /**
+         * <p>Tracing Type:</p>
+         * <ul>
+         * <li>XTRACE</li>
+         * <li>SKYWALKING</li>
+         * <li>OPENTELEMETRY</li>
+         * <li>OTSKYWALKING</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SKYWALKING</p>
          */
