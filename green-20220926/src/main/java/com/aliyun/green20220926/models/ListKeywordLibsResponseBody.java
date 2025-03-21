@@ -105,6 +105,9 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         @NameInMap("LibName")
         public String libName;
 
+        @NameInMap("ServiceCodes")
+        public String serviceCodes;
+
         /**
          * <p>UID。</p>
          * 
@@ -149,6 +152,14 @@ public class ListKeywordLibsResponseBody extends TeaModel {
         }
         public String getLibName() {
             return this.libName;
+        }
+
+        public ListKeywordLibsResponseBodyData setServiceCodes(String serviceCodes) {
+            this.serviceCodes = serviceCodes;
+            return this;
+        }
+        public String getServiceCodes() {
+            return this.serviceCodes;
         }
 
         public ListKeywordLibsResponseBodyData setUid(String uid) {

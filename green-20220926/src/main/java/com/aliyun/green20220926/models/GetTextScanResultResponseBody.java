@@ -88,6 +88,9 @@ public class GetTextScanResultResponseBody extends TeaModel {
         @NameInMap("Confidence")
         public Float confidence;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <strong>example:</strong>
          * <p>political_n</p>
@@ -106,6 +109,14 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
         public Float getConfidence() {
             return this.confidence;
+        }
+
+        public GetTextScanResultResponseBodyDataItemsResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetTextScanResultResponseBodyDataItemsResult setLabel(String label) {
@@ -169,6 +180,9 @@ public class GetTextScanResultResponseBody extends TeaModel {
 
         @NameInMap("Result")
         public java.util.List<GetTextScanResultResponseBodyDataItemsResult> result;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         /**
          * <strong>example:</strong>
@@ -280,6 +294,14 @@ public class GetTextScanResultResponseBody extends TeaModel {
         }
         public java.util.List<GetTextScanResultResponseBodyDataItemsResult> getResult() {
             return this.result;
+        }
+
+        public GetTextScanResultResponseBodyDataItems setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public GetTextScanResultResponseBodyDataItems setScanResult(String scanResult) {

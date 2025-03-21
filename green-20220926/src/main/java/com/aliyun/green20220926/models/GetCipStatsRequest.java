@@ -39,6 +39,9 @@ public class GetCipStatsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("ServiceCode")
+    public String serviceCode;
+
     /**
      * <strong>example:</strong>
      * <p>2024-03-10 10:00:00</p>
@@ -52,6 +55,9 @@ public class GetCipStatsRequest extends TeaModel {
      */
     @NameInMap("SubUid")
     public String subUid;
+
+    @NameInMap("Type")
+    public String type;
 
     public static GetCipStatsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCipStatsRequest self = new GetCipStatsRequest();
@@ -98,6 +104,14 @@ public class GetCipStatsRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public GetCipStatsRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
     public GetCipStatsRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -112,6 +126,14 @@ public class GetCipStatsRequest extends TeaModel {
     }
     public String getSubUid() {
         return this.subUid;
+    }
+
+    public GetCipStatsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
