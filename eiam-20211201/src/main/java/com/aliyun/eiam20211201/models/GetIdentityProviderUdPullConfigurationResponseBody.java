@@ -145,6 +145,55 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     }
 
+    public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0 45 1 * * ?</p>
+         */
+        @NameInMap("PeriodicSyncCron")
+        public String periodicSyncCron;
+
+        @NameInMap("PeriodicSyncTimes")
+        public Integer periodicSyncTimes;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cron</p>
+         */
+        @NameInMap("PeriodicSyncType")
+        public String periodicSyncType;
+
+        public static GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig self = new GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig setPeriodicSyncCron(String periodicSyncCron) {
+            this.periodicSyncCron = periodicSyncCron;
+            return this;
+        }
+        public String getPeriodicSyncCron() {
+            return this.periodicSyncCron;
+        }
+
+        public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig setPeriodicSyncTimes(Integer periodicSyncTimes) {
+            this.periodicSyncTimes = periodicSyncTimes;
+            return this;
+        }
+        public Integer getPeriodicSyncTimes() {
+            return this.periodicSyncTimes;
+        }
+
+        public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig setPeriodicSyncType(String periodicSyncType) {
+            this.periodicSyncType = periodicSyncType;
+            return this;
+        }
+        public String getPeriodicSyncType() {
+            return this.periodicSyncType;
+        }
+
+    }
+
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPullProtectedRule extends TeaModel {
         /**
          * <p>同步保护规则-删除组数量</p>
@@ -286,6 +335,9 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         @NameInMap("LdapUdPullConfig")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig ldapUdPullConfig;
 
+        @NameInMap("PeriodicSyncConfig")
+        public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig periodicSyncConfig;
+
         /**
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -348,6 +400,14 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         }
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig getLdapUdPullConfig() {
             return this.ldapUdPullConfig;
+        }
+
+        public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration setPeriodicSyncConfig(GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig periodicSyncConfig) {
+            this.periodicSyncConfig = periodicSyncConfig;
+            return this;
+        }
+        public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig getPeriodicSyncConfig() {
+            return this.periodicSyncConfig;
         }
 
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration setPeriodicSyncStatus(String periodicSyncStatus) {

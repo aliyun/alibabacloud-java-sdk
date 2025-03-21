@@ -49,6 +49,9 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     @NameInMap("LdapUdPullConfig")
     public SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig ldapUdPullConfig;
 
+    @NameInMap("PeriodicSyncConfig")
+    public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig periodicSyncConfig;
+
     /**
      * <strong>example:</strong>
      * <p>disabled</p>
@@ -111,6 +114,14 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     }
     public SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig getLdapUdPullConfig() {
         return this.ldapUdPullConfig;
+    }
+
+    public SetIdentityProviderUdPullConfigurationRequest setPeriodicSyncConfig(SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig periodicSyncConfig) {
+        this.periodicSyncConfig = periodicSyncConfig;
+        return this;
+    }
+    public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig getPeriodicSyncConfig() {
+        return this.periodicSyncConfig;
     }
 
     public SetIdentityProviderUdPullConfigurationRequest setPeriodicSyncStatus(String periodicSyncStatus) {
@@ -243,6 +254,55 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         }
         public String getUserObjectClassCustomFilter() {
             return this.userObjectClassCustomFilter;
+        }
+
+    }
+
+    public static class SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0 45 1 * * ?</p>
+         */
+        @NameInMap("PeriodicSyncCron")
+        public String periodicSyncCron;
+
+        @NameInMap("PeriodicSyncTimes")
+        public java.util.List<Integer> periodicSyncTimes;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cron</p>
+         */
+        @NameInMap("PeriodicSyncType")
+        public String periodicSyncType;
+
+        public static SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig build(java.util.Map<String, ?> map) throws Exception {
+            SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig self = new SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig setPeriodicSyncCron(String periodicSyncCron) {
+            this.periodicSyncCron = periodicSyncCron;
+            return this;
+        }
+        public String getPeriodicSyncCron() {
+            return this.periodicSyncCron;
+        }
+
+        public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig setPeriodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
+            this.periodicSyncTimes = periodicSyncTimes;
+            return this;
+        }
+        public java.util.List<Integer> getPeriodicSyncTimes() {
+            return this.periodicSyncTimes;
+        }
+
+        public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig setPeriodicSyncType(String periodicSyncType) {
+            this.periodicSyncType = periodicSyncType;
+            return this;
+        }
+        public String getPeriodicSyncType() {
+            return this.periodicSyncType;
         }
 
     }
