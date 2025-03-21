@@ -73,6 +73,18 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <p>The encoding type. The possible values are:</p>
+         * <ul>
+         * <li><p>H264</p>
+         * </li>
+         * <li><p>H265</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>H264</p>
+         */
         @NameInMap("CodecName")
         public String codecName;
 

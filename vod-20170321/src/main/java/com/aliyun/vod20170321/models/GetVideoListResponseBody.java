@@ -255,6 +255,9 @@ public class GetVideoListResponseBody extends TeaModel {
         @NameInMap("Title")
         public String title;
 
+        @NameInMap("UserData")
+        public String userData;
+
         /**
          * <p>The ID of the audio or video file.</p>
          * 
@@ -403,6 +406,14 @@ public class GetVideoListResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public GetVideoListResponseBodyVideoListVideo setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
         public GetVideoListResponseBodyVideoListVideo setVideoId(String videoId) {

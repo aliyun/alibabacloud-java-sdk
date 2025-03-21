@@ -4,10 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeMediaDistributionResponseBody extends TeaModel {
+    /**
+     * <p>The distribution list of media assets. The data is displayed based on the statistical cycle of the natural hour, day, week, or month of the start and end time.</p>
+     */
     @NameInMap("MediaDistributionList")
     public java.util.List<DescribeMediaDistributionResponseBodyMediaDistributionList> mediaDistributionList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
@@ -15,6 +20,8 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of media assets returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -52,6 +59,8 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
 
     public static class DescribeMediaDistributionResponseBodyMediaDistributionList extends TeaModel {
         /**
+         * <p>The number of media assets that are queried during the specified time range.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -59,6 +68,8 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
         public Long count;
 
         /**
+         * <p>The end of the time range during which data is queried (exclusive). The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-11-14T00:00:00Z</p>
          */
@@ -66,6 +77,8 @@ public class DescribeMediaDistributionResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The start of the time range during which data is queried (inclusive). The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2017-11-13T00:00:00Z</p>
          */

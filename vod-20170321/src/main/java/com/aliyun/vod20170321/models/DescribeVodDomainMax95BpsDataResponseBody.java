@@ -4,10 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
+    /**
+     * <p>Details of the 95th percentile bandwidth.</p>
+     */
     @NameInMap("DetailData")
     public DescribeVodDomainMax95BpsDataResponseBodyDetailData detailData;
 
     /**
+     * <p>The domain name for CDN.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The 95th percentile bandwidth in the Chinese mainland.</p>
+     * 
      * <strong>example:</strong>
      * <p>16777590.28</p>
      */
@@ -22,6 +29,12 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String domesticMax95Bps;
 
     /**
+     * <p>The end of the time range to query.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>2017-01-11T13:00:00Z</p>
      */
@@ -29,6 +42,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The 95th percentile bandwidth.</p>
+     * 
      * <strong>example:</strong>
      * <p>16777590.28</p>
      */
@@ -36,6 +51,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String max95Bps;
 
     /**
+     * <p>The 95th percentile bandwidth outside the Chinese mainland.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -43,6 +60,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String overseasMax95Bps;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
      */
@@ -50,6 +69,9 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The beginning of the time range to query.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>
      */
@@ -127,6 +149,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
 
     public static class DescribeVodDomainMax95BpsDataResponseBodyDetailDataMax95Detail extends TeaModel {
         /**
+         * <p>The billable region where the peak 95 data was collected.</p>
+         * 
          * <strong>example:</strong>
          * <p>CN</p>
          */
@@ -134,6 +158,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         public String area;
 
         /**
+         * <p>The 95th percentile bandwidth.</p>
+         * 
          * <strong>example:</strong>
          * <p>16777590.28</p>
          */
@@ -141,6 +167,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         public Float max95Bps;
 
         /**
+         * <p>The time corresponding to the 95th percentile bandwidth peak.</p>
+         * 
          * <strong>example:</strong>
          * <p>2015-12-11T21:05:00Z</p>
          */
@@ -148,6 +176,8 @@ public class DescribeVodDomainMax95BpsDataResponseBody extends TeaModel {
         public String max95BpsPeakTime;
 
         /**
+         * <p>The timestamp of the returned data.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-18 10:11:32</p>
          */

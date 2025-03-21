@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetVodDomainSSLCertificateResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F4C6D5BE-BF13-45*****6C-516EA8906DCD</p>
      */

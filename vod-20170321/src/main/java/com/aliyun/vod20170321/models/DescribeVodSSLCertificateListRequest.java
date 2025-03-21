@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVodSSLCertificateListRequest extends TeaModel {
     /**
+     * <p>The accelerated domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>example.com</p>
      */
@@ -15,6 +17,8 @@ public class DescribeVodSSLCertificateListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class DescribeVodSSLCertificateListRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: integers from 1 to 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +35,8 @@ public class DescribeVodSSLCertificateListRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The keyword that is used to query certificates.</p>
+     * 
      * <strong>example:</strong>
      * <p>certabc</p>
      */

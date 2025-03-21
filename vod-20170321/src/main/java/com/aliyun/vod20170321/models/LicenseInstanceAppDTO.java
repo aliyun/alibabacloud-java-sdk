@@ -137,6 +137,9 @@ public class LicenseInstanceAppDTO extends TeaModel {
         @NameInMap("FeatureIds")
         public String featureIds;
 
+        @NameInMap("IsTrial")
+        public Boolean isTrial;
+
         @NameInMap("SdkId")
         public Integer sdkId;
 
@@ -171,6 +174,14 @@ public class LicenseInstanceAppDTO extends TeaModel {
         }
         public String getFeatureIds() {
             return this.featureIds;
+        }
+
+        public LicenseInstanceAppDTOLicenseConfigs setIsTrial(Boolean isTrial) {
+            this.isTrial = isTrial;
+            return this;
+        }
+        public Boolean getIsTrial() {
+            return this.isTrial;
         }
 
         public LicenseInstanceAppDTOLicenseConfigs setSdkId(Integer sdkId) {
