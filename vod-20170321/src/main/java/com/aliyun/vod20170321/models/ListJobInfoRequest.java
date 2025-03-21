@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListJobInfoRequest extends TeaModel {
     /**
+     * <p>The type of the task. Valid values:</p>
+     * <ul>
+     * <li>transcode</li>
+     * <li>snapshot</li>
+     * <li>ai</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,7 @@ public class ListJobInfoRequest extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The ID of the media asset.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

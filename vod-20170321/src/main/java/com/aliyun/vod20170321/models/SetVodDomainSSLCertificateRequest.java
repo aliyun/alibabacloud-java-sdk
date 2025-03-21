@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SetVodDomainSSLCertificateRequest extends TeaModel {
     /**
+     * <p>The ID of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>12342707</p>
      */
@@ -12,6 +14,8 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public Long certId;
 
     /**
+     * <p>The name of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>cert_name</p>
      */
@@ -19,6 +23,13 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String certName;
 
     /**
+     * <p>The region of the certificate. Valid values:</p>
+     * <ul>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * </ul>
+     * <p>Default value: <strong>cn-hangzhou</strong></p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +37,12 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String certRegion;
 
     /**
+     * <p>The type of the certificate.</p>
+     * <ul>
+     * <li><strong>upload</strong>: a user-uploaded SSL certificate.</li>
+     * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cas</p>
      */
@@ -33,6 +50,7 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String certType;
 
     /**
+     * <p>VOD acceleration domain.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +60,8 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to <strong>staging</strong>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
+     * 
      * <strong>example:</strong>
      * <p>staging</p>
      */
@@ -52,6 +72,8 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The private key. This parameter is required only if you enable the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -59,6 +81,11 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String SSLPri;
 
     /**
+     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +95,8 @@ public class SetVodDomainSSLCertificateRequest extends TeaModel {
     public String SSLProtocol;
 
     /**
+     * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */

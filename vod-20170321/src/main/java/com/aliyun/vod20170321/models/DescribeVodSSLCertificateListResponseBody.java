@@ -4,10 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
+    /**
+     * <p>The information about certificates.</p>
+     */
     @NameInMap("CertificateListModel")
     public DescribeVodSSLCertificateListResponseBodyCertificateListModel certificateListModel;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
 
     public static class DescribeVodSSLCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
         /**
+         * <p>The ID of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>235437</p>
          */
@@ -44,6 +51,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public Long certId;
 
         /**
+         * <p>The name of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <p>video-ssl</p>
          */
@@ -51,6 +60,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public String certName;
 
         /**
+         * <p>The region of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -58,6 +69,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public String certRegion;
 
         /**
+         * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -65,6 +78,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public String common;
 
         /**
+         * <p>The fingerprint of the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -72,6 +87,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public String fingerprint;
 
         /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -79,6 +96,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public String issuer;
 
         /**
+         * <p>The time when the certificate was last modified. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1512388610</p>
          */
@@ -168,10 +187,15 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVodSSLCertificateListResponseBodyCertificateListModel extends TeaModel {
+        /**
+         * <p>The list of certificates.</p>
+         */
         @NameInMap("CertList")
         public DescribeVodSSLCertificateListResponseBodyCertificateListModelCertList certList;
 
         /**
+         * <p>The number of certificates that are returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -179,6 +203,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -186,6 +212,8 @@ public class DescribeVodSSLCertificateListResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page. Valid values: integers from 1 to 1000.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

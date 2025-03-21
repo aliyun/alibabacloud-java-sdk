@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetTranscodeTaskResponseBody extends TeaModel {
+    /**
+     * <p>The nonexistent job ID.</p>
+     */
     @NameInMap("NonExistJobIds")
     public java.util.List<String> nonExistJobIds;
 
@@ -16,6 +19,9 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of transcode job information.</p>
+     */
     @NameInMap("TranscodeJobInfoList")
     public java.util.List<GetTranscodeTaskResponseBodyTranscodeJobInfoList> transcodeJobInfoList;
 
@@ -63,42 +69,121 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile extends TeaModel {
+        /**
+         * <p>List of audio streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;AudioStreamList&quot;: &quot;[{\&quot;Bitrate\&quot;:\&quot;64.533\&quot;,\&quot;ChannelLayout\&quot;:\&quot;stereo\&quot;,\&quot;Channels\&quot;:\&quot;2\&quot;,\&quot;CodecLongName\&quot;:\&quot;AAC (Advanced Audio Coding)\&quot;,\&quot;CodecName\&quot;:\&quot;aac\&quot;,\&quot;CodecTag\&quot;:\&quot;0x6134706d\&quot;,\&quot;CodecTagString\&quot;:\&quot;mp4a\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/44100\&quot;,\&quot;Duration\&quot;:\&quot;12.615533\&quot;,\&quot;Index\&quot;:\&quot;1\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;SampleFmt\&quot;:\&quot;fltp\&quot;,\&quot;Samplerate\&quot;:\&quot;44100\&quot;,\&quot;StartTime\&quot;:\&quot;-0.046440\&quot;,\&quot;Timebase\&quot;:\&quot;1/44100\&quot;}]</p>
+         */
         @NameInMap("AudioStreamList")
         public String audioStreamList;
 
+        /**
+         * <p>Average bitrate of the transcoded output file. Unit: Kbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>964</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <p>Duration of the transcoded output file. Unit: seconds (s).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>Encryption configuration used for the transcoded output file. Values:</p>
+         * <ul>
+         * <li>AliyunVoDEncryption: Alibaba Cloud Video Encryption (private encryption).</li>
+         * <li>HLSEncryption: HLS standard encryption.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;EncryptType\&quot;:\&quot;AliyunVoDEncryption\&quot;}</p>
+         */
         @NameInMap("Encryption")
         public String encryption;
 
+        /**
+         * <p>Size of the transcoded output file. Unit: bytes (B).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>851076</p>
+         */
         @NameInMap("Filesize")
         public Long filesize;
 
+        /**
+         * <p>Container format of the transcoded output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m3u8</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>Frame rate of the transcoded output file. Unit: frames per second (fps).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <p>Height of the video frame in the transcoded output file. Unit: pixels (px).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <p>OSS address of the transcoded output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-%7BDestMd5%7D-od-S00000001-200000.mp4">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/883f5d*****f20aaa352f/c3be4f073*****7d5193ec8-{DestMd5}-od-S00000001-200000.mp4</a></p>
+         */
         @NameInMap("OutputFileUrl")
         public String outputFileUrl;
 
+        /**
+         * <p>List of subtitle streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("SubtitleStreamList")
         public String subtitleStreamList;
 
+        /**
+         * <p>List of video streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;AvgFPS\&quot;:\&quot;30.0\&quot;,\&quot;Bitrate\&quot;:\&quot;933.814\&quot;,\&quot;CodecLongName\&quot;:\&quot;H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\&quot;,\&quot;CodecName\&quot;:\&quot;h264\&quot;,\&quot;CodecTag\&quot;:\&quot;0x31637661\&quot;,\&quot;CodecTagString\&quot;:\&quot;avc1\&quot;,\&quot;CodecTimeBase\&quot;:\&quot;1/60\&quot;,\&quot;Dar\&quot;:\&quot;9:16\&quot;,\&quot;Duration\&quot;:\&quot;12.033333\&quot;,\&quot;Fps\&quot;:\&quot;30.0\&quot;,\&quot;HasBFrames\&quot;:\&quot;2\&quot;,\&quot;Height\&quot;:\&quot;360\&quot;,\&quot;Index\&quot;:\&quot;0\&quot;,\&quot;Lang\&quot;:\&quot;und\&quot;,\&quot;Level\&quot;:\&quot;30\&quot;,\&quot;PixFmt\&quot;:\&quot;yuv420p\&quot;,\&quot;Profile\&quot;:\&quot;High\&quot;,\&quot;Sar\&quot;:\&quot;81:256\&quot;,\&quot;StartTime\&quot;:\&quot;0.000000\&quot;,\&quot;Timebase\&quot;:\&quot;1/15360\&quot;,\&quot;Width\&quot;:\&quot;640\&quot;}]</p>
+         */
         @NameInMap("VideoStreamList")
         public String videoStreamList;
 
+        /**
+         * <p>List of watermarks used for transcoding.</p>
+         */
         @NameInMap("WatermarkIdList")
         public java.util.List<String> watermarkIdList;
 
+        /**
+         * <p>Width of the video frame in the transcoded output file. Unit: pixels (px).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>640</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -214,39 +299,125 @@ public class GetTranscodeTaskResponseBody extends TeaModel {
     }
 
     public static class GetTranscodeTaskResponseBodyTranscodeJobInfoList extends TeaModel {
+        /**
+         * <p>The complete time of the transcoding job. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-26T08:30:16Z</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <p>The creation time of the transcoding job. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (UTC time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-26T08:27:16Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The clarity and audio quality types are defined as follows:</p>
+         * <ul>
+         * <li>SD: Standard Definition.</li>
+         * <li>HD: High Definition.</li>
+         * <li>FHD: Full High Definition.</li>
+         * <li>OD: Original Definition.</li>
+         * <li>2K: 2K.</li>
+         * <li>4K: 4K.</li>
+         * <li>SQ: Standard Audio Quality.</li>
+         * <li>HQ: High Audio Quality.</li>
+         * <li>AUTO: Adaptive Bitrate.  This is only available when the transcoding template is configured with packaging settings. Please refer to <a href="https://api.aliyun-inc.com/~~52839~~?spm=openapi-amp.newDocPublishment.0.0.65b0281fNUFIXC">the Transcoding Template Configuration - Package Setting</a> for more details.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This value represents the clarity label configured in the transcoding template and does not indicate the actual resolution range of the transcoded output file.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>LD</p>
+         */
         @NameInMap("Definition")
         public String definition;
 
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ErrorMessage</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The OSS address of the source file for transcoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv">http://outin-40564*****e1403e7.oss-cn-shanghai.aliyuncs.com/customerTrans/5b95e568f8e*****47f38e/31f1184c-*****b2a2-f94-c213f.wmv</a></p>
+         */
         @NameInMap("InputFileUrl")
         public String inputFileUrl;
 
+        /**
+         * <p>Information about the transcoded output files.</p>
+         */
         @NameInMap("OutputFile")
         public GetTranscodeTaskResponseBodyTranscodeJobInfoListOutputFile outputFile;
 
+        /**
+         * <p>The priority of the transcoding task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The ID of the transcode job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38f0e513c88*****85515f9d50be188</p>
+         */
         @NameInMap("TranscodeJobId")
         public String transcodeJobId;
 
+        /**
+         * <p>The status of the transcoding job:</p>
+         * <p>Transcoding: Transcoding in progress.
+         * TranscodeSuccess: Transcoding successful.
+         * TranscodeFail: Transcoding failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Transcoding</p>
+         */
         @NameInMap("TranscodeJobStatus")
         public String transcodeJobStatus;
 
+        /**
+         * <p>The processing progress of the transcoding job. The value range is [0, 100].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("TranscodeProgress")
         public Long transcodeProgress;
 
+        /**
+         * <p>The ID of the template used for the transcode job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>174b0534fea3*****b51c8f0ad1374</p>
+         */
         @NameInMap("TranscodeTemplateId")
         public String transcodeTemplateId;
 

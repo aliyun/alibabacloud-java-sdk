@@ -4,10 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetJobDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details of the AI task. This parameter takes effect only when the TaskType parameter is set to AI.</p>
+     */
     @NameInMap("AIJobDetail")
     public GetJobDetailResponseBodyAIJobDetail AIJobDetail;
 
     /**
+     * <p>The type of the task. Valid values:</p>
+     * 
      * <strong>example:</strong>
      * <p>transcode</p>
      */
@@ -15,15 +20,23 @@ public class GetJobDetailResponseBody extends TeaModel {
     public String jobType;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6708D849-F109-1A6C-AC91-************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the snapshot task. This parameter takes effect only when the jobType parameter is set to Snapshot.</p>
+     */
     @NameInMap("SnapshotJobDetail")
     public GetJobDetailResponseBodySnapshotJobDetail snapshotJobDetail;
 
+    /**
+     * <p>The details of the transcoding task. This parameter takes effect only when the jobType parameter is set to Transcode.</p>
+     */
     @NameInMap("TranscodeJobDetail")
     public GetJobDetailResponseBodyTranscodeJobDetail transcodeJobDetail;
 
@@ -74,6 +87,8 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodyAIJobDetail extends TeaModel {
         /**
+         * <p>The end time of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:46Z</p>
          */
@@ -81,6 +96,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
          */
@@ -88,6 +105,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>5c9dff751ba**********59d50a967f5</p>
          */
@@ -95,6 +114,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The type of the AI task.</p>
+         * 
          * <strong>example:</strong>
          * <p>AIVideoCensor</p>
          */
@@ -102,6 +123,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobType;
 
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>30e5d7**********bd900764de7c0102</p>
          */
@@ -109,6 +132,16 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String mediaId;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li>reserved</li>
+         * <li>init</li>
+         * <li>success</li>
+         * <li>fail</li>
+         * <li>processing</li>
+         * <li>analysing</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -116,6 +149,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The template configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;AuditRange&quot;:[&quot;video&quot;,&quot;image-cover&quot;,&quot;text-title&quot;],&quot;AuditContent&quot;:[&quot;screen&quot;],&quot;AuditItem&quot;:[&quot;terrorism&quot;,&quot;porn&quot;],&quot;AuditAutoBlock&quot;:&quot;no&quot;}</p>
          */
@@ -123,6 +158,12 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
+         * <p>The trigger mode. Valid values:</p>
+         * <ul>
+         * <li>Auto</li>
+         * <li>Manual</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Auto</p>
          */
@@ -130,6 +171,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String trigger;
 
         /**
+         * <p>The ID of the user who submitted the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>139109*****84930</p>
          */
@@ -217,6 +260,8 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodySnapshotJobDetail extends TeaModel {
         /**
+         * <p>The time when the task was complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:45Z</p>
          */
@@ -224,6 +269,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
          */
@@ -231,6 +278,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>63df12s0**********4hdq249t82kr91</p>
          */
@@ -238,6 +287,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>Configuration of normal snapshots.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;inl&quot;:0,&quot;num&quot;:32,&quot;tm&quot;:5,&quot;wd&quot;:&quot;352&quot;,&quot;ft&quot;:&quot;normal&quot;,&quot;hg&quot;:&quot;640&quot;}</p>
          */
@@ -245,6 +296,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String normalConfig;
 
         /**
+         * <p>The sprite configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;pad&quot;:&quot;0&quot;,&quot;lines&quot;:&quot;10&quot;,&quot;mgin&quot;:&quot;0&quot;,&quot;cols&quot;:&quot;10&quot;,&quot;ikcp&quot;:&quot;false&quot;,&quot;hg&quot;:&quot;68&quot;}</p>
          */
@@ -252,6 +305,13 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String spriteConfig;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li>Processing</li>
+         * <li>Fail</li>
+         * <li>Success</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -259,6 +319,12 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The trigger mode. Valid values:</p>
+         * <ul>
+         * <li>Auto</li>
+         * <li>Manual</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Auto</p>
          */
@@ -266,6 +332,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String trigger;
 
         /**
+         * <p>The ID of the user who submitted the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>139109*****84930</p>
          */
@@ -273,6 +341,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public Long userId;
 
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>30e5d7**********bd900764de7c0102</p>
          */
@@ -360,6 +430,8 @@ public class GetJobDetailResponseBody extends TeaModel {
 
     public static class GetJobDetailResponseBodyTranscodeJobDetail extends TeaModel {
         /**
+         * <p>The time when the task was complete.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:34Z</p>
          */
@@ -367,6 +439,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String completeTime;
 
         /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-14T07:39:25Z</p>
          */
@@ -374,6 +448,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The definition.</p>
+         * 
          * <strong>example:</strong>
          * <p>HD</p>
          */
@@ -381,6 +457,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String definition;
 
         /**
+         * <p>The ID of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2dc1634e**********3f1d22d1a0174e</p>
          */
@@ -388,6 +466,15 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li>Submitted</li>
+         * <li>Transcoding</li>
+         * <li>TranscodeSuccess</li>
+         * <li>TranscodeFail</li>
+         * <li>TranscodeCancelled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TranscodeSuccess</p>
          */
@@ -395,6 +482,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The ID of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>dbfaaec9e**********bf0b81219244c</p>
          */
@@ -402,6 +491,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The ID of the user who submitted the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>139109*****84930</p>
          */
@@ -409,6 +500,8 @@ public class GetJobDetailResponseBody extends TeaModel {
         public Long userId;
 
         /**
+         * <p>The ID of the media asset.</p>
+         * 
          * <strong>example:</strong>
          * <p>30e5d7**********bd900764de7c0102</p>
          */

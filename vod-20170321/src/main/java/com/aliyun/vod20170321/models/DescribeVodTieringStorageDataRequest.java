@@ -4,6 +4,9 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodTieringStorageDataRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     /**
      * <p>The end time at which data is obtained. The end time must be later than the start time. The difference cannot exceed 31 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * 
@@ -51,6 +54,14 @@ public class DescribeVodTieringStorageDataRequest extends TeaModel {
     public static DescribeVodTieringStorageDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodTieringStorageDataRequest self = new DescribeVodTieringStorageDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodTieringStorageDataRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public DescribeVodTieringStorageDataRequest setEndTime(String endTime) {

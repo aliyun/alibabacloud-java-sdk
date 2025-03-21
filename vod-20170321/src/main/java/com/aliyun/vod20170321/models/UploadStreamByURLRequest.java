@@ -75,6 +75,13 @@ public class UploadStreamByURLRequest extends TeaModel {
     @NameInMap("StreamURL")
     public String streamURL;
 
+    /**
+     * <p>Metadata information for uploading media files, in JSON string format.</p>
+     * <p>For more information, please refer to the table below for UploadMetadata.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AddressMapping&quot;:&quot;1&quot;,&quot;CustomPath&quot;:&quot;test/xxx&quot;,&quot;CustomFileName&quot;:&quot;xxx.mp4&quot;,&quot;isOverwritePath&quot;:&quot;0&quot;}</p>
+     */
     @NameInMap("UploadMetadata")
     public String uploadMetadata;
 
