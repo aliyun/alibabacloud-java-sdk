@@ -239,6 +239,12 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("Sn")
         public String sn;
 
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         /**
          * <p>Zone ID</p>
          * 
@@ -347,6 +353,22 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
         public String getSn() {
             return this.sn;
+        }
+
+        public ListClusterNodesResponseBodyNodes setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public ListClusterNodesResponseBodyNodes setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public ListClusterNodesResponseBodyNodes setZoneId(String zoneId) {
