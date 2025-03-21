@@ -76,6 +76,9 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The protocol types supported by the anti-brute force rule for interception.</p>
+     */
     @NameInMap("ProtocolType")
     public ModifyAntiBruteForceRuleRequestProtocolType protocolType;
 
@@ -202,12 +205,42 @@ public class ModifyAntiBruteForceRuleRequest extends TeaModel {
     }
 
     public static class ModifyAntiBruteForceRuleRequestProtocolType extends TeaModel {
+        /**
+         * <p>Whether to modify the RDP interception method, which is enabled by default. Values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enable</li>
+         * <li><strong>off</strong>: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Rdp")
         public String rdp;
 
+        /**
+         * <p>Whether to modify the SQL Server interception method, which is disabled by default. Values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enable</li>
+         * <li><strong>off</strong>: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("SqlServer")
         public String sqlServer;
 
+        /**
+         * <p>Whether to modify the SSH interception method, which is enabled by default. Values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enable</li>
+         * <li><strong>off</strong>: Disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Ssh")
         public String ssh;
 

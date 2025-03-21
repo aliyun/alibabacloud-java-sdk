@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCycleTaskListRequest extends TeaModel {
+    @NameInMap("ConfigId")
+    public String configId;
+
     /**
      * <p>The number of the page to return.</p>
      * 
@@ -43,7 +46,6 @@ public class DescribeCycleTaskListRequest extends TeaModel {
      * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
      * <li><strong>EMG_VUL_SCHEDULE_SCAN</strong>: urgent vulnerability scan task</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>IMAGE_SCAN</p>
@@ -54,6 +56,14 @@ public class DescribeCycleTaskListRequest extends TeaModel {
     public static DescribeCycleTaskListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCycleTaskListRequest self = new DescribeCycleTaskListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCycleTaskListRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
     }
 
     public DescribeCycleTaskListRequest setCurrentPage(Integer currentPage) {

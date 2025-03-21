@@ -20,7 +20,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the details of the defense rule.</p>
+     * <p>An array that consists of the defense rules returned.</p>
      */
     @NameInMap("Rules")
     public java.util.List<DescribeAntiBruteForceRulesResponseBodyRules> rules;
@@ -131,12 +131,42 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAntiBruteForceRulesResponseBodyRulesProtocolType extends TeaModel {
+        /**
+         * <p>RDP interception method, values: </p>
+         * <ul>
+         * <li><strong>on</strong>: enable </li>
+         * <li><strong>off</strong>: disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Rdp")
         public String rdp;
 
+        /**
+         * <p>SqlServer interception mode, with values: </p>
+         * <ul>
+         * <li><strong>on</strong>: enable </li>
+         * <li><strong>off</strong>: disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("SqlServer")
         public String sqlServer;
 
+        /**
+         * <p>SSH interception method, with values: </p>
+         * <ul>
+         * <li><strong>on</strong>: enabled </li>
+         * <li><strong>off</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Ssh")
         public String ssh;
 
@@ -173,7 +203,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
 
     public static class DescribeAntiBruteForceRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
+         * <p>防暴力破解规则创建时间戳。单位：毫秒。</p>
          * 
          * <strong>example:</strong>
          * <p>1669800181000</p>
@@ -184,11 +214,11 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the defense rule is the default rule. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The defense rule is the default rule.</li>
-         * <li><strong>false</strong>: The defense rule is not the default rule.</li>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
          * </ul>
          * <blockquote>
-         * <p>The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</p>
+         * <p> The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -207,7 +237,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         public Boolean enableSmartRule;
 
         /**
-         * <p>The threshold of logon failures that is specified in the defense rule.</p>
+         * <p>The threshold of logon failures that you specify.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -251,6 +281,9 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The types of protocols that the brute force cracking rule supports to intercept.</p>
+         */
         @NameInMap("ProtocolType")
         public DescribeAntiBruteForceRulesResponseBodyRulesProtocolType protocolType;
 

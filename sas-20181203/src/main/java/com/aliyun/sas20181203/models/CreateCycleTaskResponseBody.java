@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateCycleTaskResponseBody extends TeaModel {
+    @NameInMap("ConfigId")
+    public String configId;
+
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
      * 
@@ -16,6 +19,14 @@ public class CreateCycleTaskResponseBody extends TeaModel {
     public static CreateCycleTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCycleTaskResponseBody self = new CreateCycleTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCycleTaskResponseBody setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
     }
 
     public CreateCycleTaskResponseBody setRequestId(String requestId) {
