@@ -3,7 +3,7 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class UpdateNodeGroupResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
      * 
@@ -13,12 +13,12 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
+    public static UpdateNodeGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateNodeGroupResponseBody self = new UpdateNodeGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
+    public UpdateNodeGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

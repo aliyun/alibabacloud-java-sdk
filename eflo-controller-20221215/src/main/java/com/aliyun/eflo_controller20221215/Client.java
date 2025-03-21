@@ -81,7 +81,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resource Group Change</p>
+     * <p>Target Resource Group</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -130,7 +130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resource Group Change</p>
+     * <p>Target Resource Group</p>
      * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
@@ -481,6 +481,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建集群下的节点分组</p>
+     * 
+     * @param tmpReq CreateNodeGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNodeGroupResponse
+     */
+    public CreateNodeGroupResponse createNodeGroupWithOptions(CreateNodeGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateNodeGroupShrinkRequest request = new CreateNodeGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeGroup)) {
+            request.nodeGroupShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeGroup, "NodeGroup", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeUnit)) {
+            request.nodeUnitShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeUnit, "NodeUnit", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupShrink)) {
+            body.put("NodeGroup", request.nodeGroupShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeUnitShrink)) {
+            body.put("NodeUnit", request.nodeUnitShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNodeGroup"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNodeGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateNodeGroupResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建集群下的节点分组</p>
+     * 
+     * @param request CreateNodeGroupRequest
+     * @return CreateNodeGroupResponse
+     */
+    public CreateNodeGroupResponse createNodeGroup(CreateNodeGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNodeGroupWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</p>
      * 
@@ -594,6 +661,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除节点分组</p>
+     * 
+     * @param request DeleteNodeGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNodeGroupResponse
+     */
+    public DeleteNodeGroupResponse deleteNodeGroupWithOptions(DeleteNodeGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            body.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            body.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNodeGroup"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNodeGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteNodeGroupResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除节点分组</p>
+     * 
+     * @param request DeleteNodeGroupRequest
+     * @return DeleteNodeGroupResponse
+     */
+    public DeleteNodeGroupResponse deleteNodeGroup(DeleteNodeGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNodeGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Cluster Details</p>
      * 
      * @param request DescribeClusterRequest
@@ -639,6 +759,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeClusterResponse describeCluster(DescribeClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>诊断任务查询接口</p>
+     * 
+     * @param request DescribeDiagnosticResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDiagnosticResultResponse
+     */
+    public DescribeDiagnosticResultResponse describeDiagnosticResultWithOptions(DescribeDiagnosticResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diagnosticId)) {
+            body.put("DiagnosticId", request.diagnosticId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDiagnosticResult"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDiagnosticResultResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeDiagnosticResultResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>诊断任务查询接口</p>
+     * 
+     * @param request DescribeDiagnosticResultRequest
+     * @return DescribeDiagnosticResultResponse
+     */
+    public DescribeDiagnosticResultResponse describeDiagnosticResult(DescribeDiagnosticResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDiagnosticResultWithOptions(request, runtime);
     }
 
     /**
@@ -2393,5 +2562,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新节点分组</p>
+     * 
+     * @param request UpdateNodeGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNodeGroupResponse
+     */
+    public UpdateNodeGroupResponse updateNodeGroupWithOptions(UpdateNodeGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.newNodeGroupName)) {
+            body.put("NewNodeGroupName", request.newNodeGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
+            body.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNodeGroup"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNodeGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateNodeGroupResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新节点分组</p>
+     * 
+     * @param request UpdateNodeGroupRequest
+     * @return UpdateNodeGroupResponse
+     */
+    public UpdateNodeGroupResponse updateNodeGroup(UpdateNodeGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateNodeGroupWithOptions(request, runtime);
     }
 }

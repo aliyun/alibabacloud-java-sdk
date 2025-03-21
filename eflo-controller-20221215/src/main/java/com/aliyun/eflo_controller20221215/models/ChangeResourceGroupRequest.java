@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>Target Resource Group</p>
+     * <p>System-defined parameter. Value: <strong>ChangeResourceGroup</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Resource ID</p>
+     * <p>$.parameters[1].schema.example</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>Region ID</p>
+     * <p>Resource Group Change</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +34,12 @@ public class ChangeResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
+    /**
+     * <p>$.parameters[3].schema.enumValueTitles</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Node</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

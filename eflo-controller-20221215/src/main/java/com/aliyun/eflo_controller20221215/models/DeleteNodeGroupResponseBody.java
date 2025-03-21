@@ -3,22 +3,22 @@ package com.aliyun.eflo_controller20221215.models;
 
 import com.aliyun.tea.*;
 
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class DeleteNodeGroupResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
+     * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
+    public static DeleteNodeGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteNodeGroupResponseBody self = new DeleteNodeGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
+    public DeleteNodeGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
