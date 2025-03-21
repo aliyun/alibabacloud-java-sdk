@@ -8,6 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
+        this._productId = "Searchplat";
         com.aliyun.gateway.pop.Client gatewayClient = new com.aliyun.gateway.pop.Client();
         this._spi = gatewayClient;
         this._endpointRule = "";
@@ -532,6 +533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("csi_level", request.csiLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSearch)) {
+            body.put("enable_search", request.enableSearch);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.messages)) {
             body.put("messages", request.messages);
         }
@@ -628,5 +633,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getTextSparseEmbeddingWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>联网搜索</p>
+     * 
+     * @param request GetWebSearchRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWebSearchResponse
+     */
+    public GetWebSearchResponse getWebSearchWithOptions(String workspaceName, String serviceId, GetWebSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
+            body.put("top_k", request.topK);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.way)) {
+            body.put("way", request.way);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWebSearch"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/web-search/" + serviceId + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetWebSearchResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>联网搜索</p>
+     * 
+     * @param request GetWebSearchRequest
+     * @return GetWebSearchResponse
+     */
+    public GetWebSearchResponse getWebSearch(String workspaceName, String serviceId, GetWebSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWebSearchWithOptions(workspaceName, serviceId, request, headers, runtime);
     }
 }

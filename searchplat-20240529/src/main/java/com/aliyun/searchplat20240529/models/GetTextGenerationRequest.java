@@ -7,6 +7,9 @@ public class GetTextGenerationRequest extends TeaModel {
     @NameInMap("csi_level")
     public String csiLevel;
 
+    @NameInMap("enable_search")
+    public Boolean enableSearch;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -14,7 +17,7 @@ public class GetTextGenerationRequest extends TeaModel {
     public java.util.List<GetTextGenerationRequestMessages> messages;
 
     @NameInMap("parameters")
-    public java.util.Map<String, String> parameters;
+    public java.util.Map<String, ?> parameters;
 
     @NameInMap("stream")
     public Boolean stream;
@@ -32,6 +35,14 @@ public class GetTextGenerationRequest extends TeaModel {
         return this.csiLevel;
     }
 
+    public GetTextGenerationRequest setEnableSearch(Boolean enableSearch) {
+        this.enableSearch = enableSearch;
+        return this;
+    }
+    public Boolean getEnableSearch() {
+        return this.enableSearch;
+    }
+
     public GetTextGenerationRequest setMessages(java.util.List<GetTextGenerationRequestMessages> messages) {
         this.messages = messages;
         return this;
@@ -40,11 +51,11 @@ public class GetTextGenerationRequest extends TeaModel {
         return this.messages;
     }
 
-    public GetTextGenerationRequest setParameters(java.util.Map<String, String> parameters) {
+    public GetTextGenerationRequest setParameters(java.util.Map<String, ?> parameters) {
         this.parameters = parameters;
         return this;
     }
-    public java.util.Map<String, String> getParameters() {
+    public java.util.Map<String, ?> getParameters() {
         return this.parameters;
     }
 
