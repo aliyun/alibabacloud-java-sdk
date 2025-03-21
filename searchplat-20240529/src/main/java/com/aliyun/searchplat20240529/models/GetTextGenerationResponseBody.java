@@ -53,13 +53,54 @@ public class GetTextGenerationResponseBody extends TeaModel {
         return this.usage;
     }
 
+    public static class GetTextGenerationResponseBodyResultSearchResults extends TeaModel {
+        @NameInMap("title")
+        public String title;
+
+        @NameInMap("url")
+        public String url;
+
+        public static GetTextGenerationResponseBodyResultSearchResults build(java.util.Map<String, ?> map) throws Exception {
+            GetTextGenerationResponseBodyResultSearchResults self = new GetTextGenerationResponseBodyResultSearchResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTextGenerationResponseBodyResultSearchResults setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public GetTextGenerationResponseBodyResultSearchResults setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class GetTextGenerationResponseBodyResult extends TeaModel {
+        @NameInMap("search_results")
+        public java.util.List<GetTextGenerationResponseBodyResultSearchResults> searchResults;
+
         @NameInMap("text")
         public String text;
 
         public static GetTextGenerationResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetTextGenerationResponseBodyResult self = new GetTextGenerationResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetTextGenerationResponseBodyResult setSearchResults(java.util.List<GetTextGenerationResponseBodyResultSearchResults> searchResults) {
+            this.searchResults = searchResults;
+            return this;
+        }
+        public java.util.List<GetTextGenerationResponseBodyResultSearchResults> getSearchResults() {
+            return this.searchResults;
         }
 
         public GetTextGenerationResponseBodyResult setText(String text) {
