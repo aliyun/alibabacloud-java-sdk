@@ -4,9 +4,19 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class GetLicenseRequest extends TeaModel {
+    /**
+     * <p>ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c31238fcb74e482588a72de90cd7dba3</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

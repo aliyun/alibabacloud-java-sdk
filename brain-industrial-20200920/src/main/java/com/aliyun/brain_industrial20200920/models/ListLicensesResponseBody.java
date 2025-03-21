@@ -4,39 +4,83 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class ListLicensesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("LicenseList")
     public java.util.List<ListLicensesResponseBodyLicenseList> licenseList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FAC892CE-5A94-5616-91DC-629B09CC6792</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>42</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalPage")
     public String totalPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalPageCount")
     public String totalPageCount;
 
@@ -142,6 +186,10 @@ public class ListLicensesResponseBody extends TeaModel {
     }
 
     public static class ListLicensesResponseBodyLicenseList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-10-14 14:15:45</p>
+         */
         @NameInMap("ActivateTime")
         public String activateTime;
 
@@ -151,42 +199,86 @@ public class ListLicensesResponseBody extends TeaModel {
         @NameInMap("AllDuration")
         public String allDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-10-14 13:17:20</p>
+         */
         @NameInMap("BuyTime")
         public String buyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>72</p>
+         */
         @NameInMap("CpuLimit")
         public Integer cpuLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-10-14 14:15:45</p>
+         */
         @NameInMap("EffectTime")
         public String effectTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-10-14 14:15:45</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>451f14ee73604aesdfe4da606764ce09</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aics_1000</p>
+         */
         @NameInMap("LicenseSpecCode")
         public String licenseSpecCode;
 
         @NameInMap("LicenseSpecName")
         public String licenseSpecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>brainindustrial_aicsruntime_public_cn</p>
+         */
         @NameInMap("LicenseSpecType")
         public String licenseSpecType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>256</p>
+         */
         @NameInMap("MemoryLimit")
         public Integer memoryLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>activated</p>
+         */
         @NameInMap("Status")
         public String status;
 

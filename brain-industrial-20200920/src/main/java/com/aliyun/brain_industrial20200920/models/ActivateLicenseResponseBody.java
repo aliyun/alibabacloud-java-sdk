@@ -4,24 +4,50 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class ActivateLicenseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ActivateLicenseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65308A66-8764-53EE-8D4A-201E86CA88C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -87,24 +113,48 @@ public class ActivateLicenseResponseBody extends TeaModel {
     }
 
     public static class ActivateLicenseResponseBodyDataActivateRecord extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-29 15:03:12</p>
+         */
         @NameInMap("ActivateTime")
         public String activateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-29 15:01:15</p>
+         */
         @NameInMap("BuyTime")
         public String buyTime;
 
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-05-01 00:00:00</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>activated</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -175,6 +225,10 @@ public class ActivateLicenseResponseBody extends TeaModel {
         @NameInMap("ActivateRecord")
         public java.util.List<ActivateLicenseResponseBodyDataActivateRecord> activateRecord;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-29 15:03:12</p>
+         */
         @NameInMap("ActivateTime")
         public String activateTime;
 
@@ -184,42 +238,88 @@ public class ActivateLicenseResponseBody extends TeaModel {
         @NameInMap("ApplicableSpecs")
         public String applicableSpecs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-04-29 15:00:15</p>
+         */
         @NameInMap("BuyTime")
         public String buyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>72</p>
+         */
         @NameInMap("CpuLimit")
         public Integer cpuLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-01 00:00:00</p>
+         */
         @NameInMap("EffectTime")
         public String effectTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-05-01 00:00:00</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXXX</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c39128fcb74e482546a72de90cdsaba3</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
         @NameInMap("LicenseSpecName")
         public String licenseSpecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>256</p>
+         */
         @NameInMap("MemoryLimit")
         public Integer memoryLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>activated</p>
+         */
         @NameInMap("Status")
         public String status;
 

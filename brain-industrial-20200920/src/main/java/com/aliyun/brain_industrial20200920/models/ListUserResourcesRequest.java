@@ -4,6 +4,10 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class ListUserResourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BrainIndustrial</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 

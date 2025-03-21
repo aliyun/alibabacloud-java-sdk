@@ -7,21 +7,43 @@ public class ListUserResourcesResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public java.util.List<ListUserResourcesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65308A66-8764-53EE-8D4A-201E86CA88C5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -90,21 +112,45 @@ public class ListUserResourcesResponseBody extends TeaModel {
         @NameInMap("chargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>brainindustrial_simupostpaid_public_cn</p>
+         */
         @NameInMap("commodityCode")
         public String commodityCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-12-21</p>
+         */
         @NameInMap("endDate")
         public String endDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345ea3cff446e8837078c2baffbe83</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20240902</p>
+         */
         @NameInMap("startDate")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("status")
         public String status;
 
