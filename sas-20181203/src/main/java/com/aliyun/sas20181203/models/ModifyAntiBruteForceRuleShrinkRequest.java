@@ -76,6 +76,9 @@ public class ModifyAntiBruteForceRuleShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The protocol types supported by the anti-brute force rule for interception.</p>
+     */
     @NameInMap("ProtocolType")
     public String protocolTypeShrink;
 
