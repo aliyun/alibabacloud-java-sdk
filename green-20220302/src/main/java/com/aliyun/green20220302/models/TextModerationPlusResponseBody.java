@@ -133,6 +133,82 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     }
 
+    public static class TextModerationPlusResponseBodyDataAttackResult extends TeaModel {
+        /**
+         * <p>The level of prompt attack</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("AttackLevel")
+        public String attackLevel;
+
+        /**
+         * <p>The confidence</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>safe</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>safe</p>
+         */
+        @NameInMap("Label")
+        public String label;
+
+        public static TextModerationPlusResponseBodyDataAttackResult build(java.util.Map<String, ?> map) throws Exception {
+            TextModerationPlusResponseBodyDataAttackResult self = new TextModerationPlusResponseBodyDataAttackResult();
+            return TeaModel.build(map, self);
+        }
+
+        public TextModerationPlusResponseBodyDataAttackResult setAttackLevel(String attackLevel) {
+            this.attackLevel = attackLevel;
+            return this;
+        }
+        public String getAttackLevel() {
+            return this.attackLevel;
+        }
+
+        public TextModerationPlusResponseBodyDataAttackResult setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public TextModerationPlusResponseBodyDataAttackResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public TextModerationPlusResponseBodyDataAttackResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+    }
+
     public static class TextModerationPlusResponseBodyDataResultCustomizedHit extends TeaModel {
         /**
          * <p>The terms that are hit. Multiple terms are separated by commas (,).</p>
@@ -265,6 +341,79 @@ public class TextModerationPlusResponseBody extends TeaModel {
 
     }
 
+    public static class TextModerationPlusResponseBodyDataSensitiveResult extends TeaModel {
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
+        @NameInMap("Label")
+        public String label;
+
+        /**
+         * <p>The sensitive data.</p>
+         */
+        @NameInMap("SensitiveData")
+        public java.util.List<String> sensitiveData;
+
+        /**
+         * <p>The level of sensitivity data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S1</p>
+         */
+        @NameInMap("SensitiveLevel")
+        public String sensitiveLevel;
+
+        public static TextModerationPlusResponseBodyDataSensitiveResult build(java.util.Map<String, ?> map) throws Exception {
+            TextModerationPlusResponseBodyDataSensitiveResult self = new TextModerationPlusResponseBodyDataSensitiveResult();
+            return TeaModel.build(map, self);
+        }
+
+        public TextModerationPlusResponseBodyDataSensitiveResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public TextModerationPlusResponseBodyDataSensitiveResult setLabel(String label) {
+            this.label = label;
+            return this;
+        }
+        public String getLabel() {
+            return this.label;
+        }
+
+        public TextModerationPlusResponseBodyDataSensitiveResult setSensitiveData(java.util.List<String> sensitiveData) {
+            this.sensitiveData = sensitiveData;
+            return this;
+        }
+        public java.util.List<String> getSensitiveData() {
+            return this.sensitiveData;
+        }
+
+        public TextModerationPlusResponseBodyDataSensitiveResult setSensitiveLevel(String sensitiveLevel) {
+            this.sensitiveLevel = sensitiveLevel;
+            return this;
+        }
+        public String getSensitiveLevel() {
+            return this.sensitiveLevel;
+        }
+
+    }
+
     public static class TextModerationPlusResponseBodyData extends TeaModel {
         /**
          * <p>The suggestion.</p>
@@ -272,6 +421,27 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("Advice")
         public java.util.List<TextModerationPlusResponseBodyDataAdvice> advice;
 
+        /**
+         * <p>The level of prompt attack</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
+        @NameInMap("AttackLevel")
+        public String attackLevel;
+
+        /**
+         * <p>The result of prompt attack detect</p>
+         */
+        @NameInMap("AttackResult")
+        public java.util.List<TextModerationPlusResponseBodyDataAttackResult> attackResult;
+
+        /**
+         * <p>The id of data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text1234</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
@@ -299,6 +469,21 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <p>The level of sensitivity data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S0</p>
+         */
+        @NameInMap("SensitiveLevel")
+        public String sensitiveLevel;
+
+        /**
+         * <p>The result of sensitivity data detect</p>
+         */
+        @NameInMap("SensitiveResult")
+        public java.util.List<TextModerationPlusResponseBodyDataSensitiveResult> sensitiveResult;
+
         public static TextModerationPlusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TextModerationPlusResponseBodyData self = new TextModerationPlusResponseBodyData();
             return TeaModel.build(map, self);
@@ -310,6 +495,22 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public java.util.List<TextModerationPlusResponseBodyDataAdvice> getAdvice() {
             return this.advice;
+        }
+
+        public TextModerationPlusResponseBodyData setAttackLevel(String attackLevel) {
+            this.attackLevel = attackLevel;
+            return this;
+        }
+        public String getAttackLevel() {
+            return this.attackLevel;
+        }
+
+        public TextModerationPlusResponseBodyData setAttackResult(java.util.List<TextModerationPlusResponseBodyDataAttackResult> attackResult) {
+            this.attackResult = attackResult;
+            return this;
+        }
+        public java.util.List<TextModerationPlusResponseBodyDataAttackResult> getAttackResult() {
+            return this.attackResult;
         }
 
         public TextModerationPlusResponseBodyData setDataId(String dataId) {
@@ -342,6 +543,22 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public Float getScore() {
             return this.score;
+        }
+
+        public TextModerationPlusResponseBodyData setSensitiveLevel(String sensitiveLevel) {
+            this.sensitiveLevel = sensitiveLevel;
+            return this;
+        }
+        public String getSensitiveLevel() {
+            return this.sensitiveLevel;
+        }
+
+        public TextModerationPlusResponseBodyData setSensitiveResult(java.util.List<TextModerationPlusResponseBodyDataSensitiveResult> sensitiveResult) {
+            this.sensitiveResult = sensitiveResult;
+            return this;
+        }
+        public java.util.List<TextModerationPlusResponseBodyDataSensitiveResult> getSensitiveResult() {
+            return this.sensitiveResult;
         }
 
     }
