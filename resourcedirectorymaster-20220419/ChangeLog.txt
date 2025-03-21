@@ -1,3 +1,10 @@
+2025-03-21 Version: 2.2.0
+- Support API SetMemberDisplayNameSyncStatus.
+- Update API GetResourceDirectory: update response param.
+- Update API ListControlPolicies: add param Tag.
+- Update API ListControlPolicies: update response param.
+
+
 2025-02-12 Version: 2.1.1
 - Update API GetResourceDirectory: update response param.
 - Update API ListControlPolicies: add param Tag.

@@ -22,8 +22,8 @@ public class ListControlPoliciesRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The page number.</p>
+     * <p>Page starts from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListControlPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +54,9 @@ public class ListControlPoliciesRequest extends TeaModel {
     @NameInMap("PolicyType")
     public String policyType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListControlPoliciesRequestTag> tag;
 
@@ -103,9 +106,21 @@ public class ListControlPoliciesRequest extends TeaModel {
     }
 
     public static class ListControlPoliciesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_value</p>
+         */
         @NameInMap("Value")
         public String value;
 

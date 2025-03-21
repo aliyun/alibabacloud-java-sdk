@@ -17,9 +17,22 @@ public class ListAccountsRequest extends TeaModel {
     @NameInMap("IncludeTags")
     public Boolean includeTags;
 
+    /**
+     * <p>The number of entries per page. After you configure this parameter, token-based paging is preferentially used.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

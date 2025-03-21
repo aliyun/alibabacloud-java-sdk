@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListControlPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The information of the access control policies.</p>
+     * <p>The access control policies.</p>
      */
     @NameInMap("ControlPolicies")
     public ListControlPoliciesResponseBodyControlPolicies controlPolicies;
@@ -92,9 +92,21 @@ public class ListControlPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListControlPoliciesResponseBodyControlPoliciesControlPolicyTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag_value</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -212,6 +224,9 @@ public class ListControlPoliciesResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public ListControlPoliciesResponseBodyControlPoliciesControlPolicyTags tags;
 
