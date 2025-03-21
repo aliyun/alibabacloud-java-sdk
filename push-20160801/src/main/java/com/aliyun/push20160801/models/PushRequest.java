@@ -249,6 +249,7 @@ public class PushRequest extends TeaModel {
      * <p><a href="https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png">https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png</a></p>
      */
     @NameInMap("AndroidXiaomiBigPictureUrl")
+    @Deprecated
     public String androidXiaomiBigPictureUrl;
 
     /**
@@ -256,6 +257,7 @@ public class PushRequest extends TeaModel {
      * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
      */
     @NameInMap("AndroidXiaomiImageUrl")
+    @Deprecated
     public String androidXiaomiImageUrl;
 
     /**
@@ -268,8 +270,6 @@ public class PushRequest extends TeaModel {
     public Long appKey;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>hello</p>
      */
@@ -490,6 +490,27 @@ public class PushRequest extends TeaModel {
      */
     @NameInMap("iOSInterruptionLevel")
     public String iOSInterruptionLevel;
+
+    @NameInMap("iOSLiveActivityAttributes")
+    public String iOSLiveActivityAttributes;
+
+    @NameInMap("iOSLiveActivityAttributesType")
+    public String iOSLiveActivityAttributesType;
+
+    @NameInMap("iOSLiveActivityContentState")
+    public String iOSLiveActivityContentState;
+
+    @NameInMap("iOSLiveActivityDismissalDate")
+    public Long iOSLiveActivityDismissalDate;
+
+    @NameInMap("iOSLiveActivityEvent")
+    public String iOSLiveActivityEvent;
+
+    @NameInMap("iOSLiveActivityId")
+    public String iOSLiveActivityId;
+
+    @NameInMap("iOSLiveActivityStaleDate")
+    public Long iOSLiveActivityStaleDate;
 
     /**
      * <strong>example:</strong>
@@ -909,6 +930,7 @@ public class PushRequest extends TeaModel {
         return this.androidXiaoMiNotifyTitle;
     }
 
+    @Deprecated
     public PushRequest setAndroidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
         this.androidXiaomiBigPictureUrl = androidXiaomiBigPictureUrl;
         return this;
@@ -917,6 +939,7 @@ public class PushRequest extends TeaModel {
         return this.androidXiaomiBigPictureUrl;
     }
 
+    @Deprecated
     public PushRequest setAndroidXiaomiImageUrl(String androidXiaomiImageUrl) {
         this.androidXiaomiImageUrl = androidXiaomiImageUrl;
         return this;
@@ -1276,6 +1299,62 @@ public class PushRequest extends TeaModel {
     }
     public String getIOSInterruptionLevel() {
         return this.iOSInterruptionLevel;
+    }
+
+    public PushRequest setIOSLiveActivityAttributes(String iOSLiveActivityAttributes) {
+        this.iOSLiveActivityAttributes = iOSLiveActivityAttributes;
+        return this;
+    }
+    public String getIOSLiveActivityAttributes() {
+        return this.iOSLiveActivityAttributes;
+    }
+
+    public PushRequest setIOSLiveActivityAttributesType(String iOSLiveActivityAttributesType) {
+        this.iOSLiveActivityAttributesType = iOSLiveActivityAttributesType;
+        return this;
+    }
+    public String getIOSLiveActivityAttributesType() {
+        return this.iOSLiveActivityAttributesType;
+    }
+
+    public PushRequest setIOSLiveActivityContentState(String iOSLiveActivityContentState) {
+        this.iOSLiveActivityContentState = iOSLiveActivityContentState;
+        return this;
+    }
+    public String getIOSLiveActivityContentState() {
+        return this.iOSLiveActivityContentState;
+    }
+
+    public PushRequest setIOSLiveActivityDismissalDate(Long iOSLiveActivityDismissalDate) {
+        this.iOSLiveActivityDismissalDate = iOSLiveActivityDismissalDate;
+        return this;
+    }
+    public Long getIOSLiveActivityDismissalDate() {
+        return this.iOSLiveActivityDismissalDate;
+    }
+
+    public PushRequest setIOSLiveActivityEvent(String iOSLiveActivityEvent) {
+        this.iOSLiveActivityEvent = iOSLiveActivityEvent;
+        return this;
+    }
+    public String getIOSLiveActivityEvent() {
+        return this.iOSLiveActivityEvent;
+    }
+
+    public PushRequest setIOSLiveActivityId(String iOSLiveActivityId) {
+        this.iOSLiveActivityId = iOSLiveActivityId;
+        return this;
+    }
+    public String getIOSLiveActivityId() {
+        return this.iOSLiveActivityId;
+    }
+
+    public PushRequest setIOSLiveActivityStaleDate(Long iOSLiveActivityStaleDate) {
+        this.iOSLiveActivityStaleDate = iOSLiveActivityStaleDate;
+        return this;
+    }
+    public Long getIOSLiveActivityStaleDate() {
+        return this.iOSLiveActivityStaleDate;
     }
 
     public PushRequest setIOSMusic(String iOSMusic) {
