@@ -4,12 +4,23 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class ActivateLicenseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>XXX</p>
+     */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
+    /**
+     * <p>ID</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12bea6b4489fsde7b903fe05934a0adx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
