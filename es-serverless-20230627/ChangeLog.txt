@@ -1,3 +1,9 @@
+2025-03-21 Version: 2.1.1
+- Update API ListSpecReviewTasks: add param pageNumber.
+- Update API ListSpecReviewTasks: add param pageSize.
+- Update API ListSpecReviewTasks: add param status.
+
+
 2024-07-24 Version: 2.1.0
 - Support API CancelSpecReviewTask.
 - Support API CreateSnapshot.
