@@ -305,6 +305,7 @@ public class MassPushRequest extends TeaModel {
          * <p><a href="https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png">https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png</a></p>
          */
         @NameInMap("AndroidXiaomiBigPictureUrl")
+        @Deprecated
         public String androidXiaomiBigPictureUrl;
 
         /**
@@ -312,11 +313,10 @@ public class MassPushRequest extends TeaModel {
          * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
          */
         @NameInMap("AndroidXiaomiImageUrl")
+        @Deprecated
         public String androidXiaomiImageUrl;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>hello</p>
          */
@@ -507,6 +507,27 @@ public class MassPushRequest extends TeaModel {
          */
         @NameInMap("iOSInterruptionLevel")
         public String iOSInterruptionLevel;
+
+        @NameInMap("iOSLiveActivityAttributes")
+        public String iOSLiveActivityAttributes;
+
+        @NameInMap("iOSLiveActivityAttributesType")
+        public String iOSLiveActivityAttributesType;
+
+        @NameInMap("iOSLiveActivityContentState")
+        public String iOSLiveActivityContentState;
+
+        @NameInMap("iOSLiveActivityDismissalDate")
+        public Long iOSLiveActivityDismissalDate;
+
+        @NameInMap("iOSLiveActivityEvent")
+        public String iOSLiveActivityEvent;
+
+        @NameInMap("iOSLiveActivityId")
+        public String iOSLiveActivityId;
+
+        @NameInMap("iOSLiveActivityStaleDate")
+        public Long iOSLiveActivityStaleDate;
 
         /**
          * <strong>example:</strong>
@@ -926,6 +947,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidXiaoMiNotifyTitle;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
             this.androidXiaomiBigPictureUrl = androidXiaomiBigPictureUrl;
             return this;
@@ -934,6 +956,7 @@ public class MassPushRequest extends TeaModel {
             return this.androidXiaomiBigPictureUrl;
         }
 
+        @Deprecated
         public MassPushRequestPushTask setAndroidXiaomiImageUrl(String androidXiaomiImageUrl) {
             this.androidXiaomiImageUrl = androidXiaomiImageUrl;
             return this;
@@ -1237,6 +1260,62 @@ public class MassPushRequest extends TeaModel {
         }
         public String getIOSInterruptionLevel() {
             return this.iOSInterruptionLevel;
+        }
+
+        public MassPushRequestPushTask setIOSLiveActivityAttributes(String iOSLiveActivityAttributes) {
+            this.iOSLiveActivityAttributes = iOSLiveActivityAttributes;
+            return this;
+        }
+        public String getIOSLiveActivityAttributes() {
+            return this.iOSLiveActivityAttributes;
+        }
+
+        public MassPushRequestPushTask setIOSLiveActivityAttributesType(String iOSLiveActivityAttributesType) {
+            this.iOSLiveActivityAttributesType = iOSLiveActivityAttributesType;
+            return this;
+        }
+        public String getIOSLiveActivityAttributesType() {
+            return this.iOSLiveActivityAttributesType;
+        }
+
+        public MassPushRequestPushTask setIOSLiveActivityContentState(String iOSLiveActivityContentState) {
+            this.iOSLiveActivityContentState = iOSLiveActivityContentState;
+            return this;
+        }
+        public String getIOSLiveActivityContentState() {
+            return this.iOSLiveActivityContentState;
+        }
+
+        public MassPushRequestPushTask setIOSLiveActivityDismissalDate(Long iOSLiveActivityDismissalDate) {
+            this.iOSLiveActivityDismissalDate = iOSLiveActivityDismissalDate;
+            return this;
+        }
+        public Long getIOSLiveActivityDismissalDate() {
+            return this.iOSLiveActivityDismissalDate;
+        }
+
+        public MassPushRequestPushTask setIOSLiveActivityEvent(String iOSLiveActivityEvent) {
+            this.iOSLiveActivityEvent = iOSLiveActivityEvent;
+            return this;
+        }
+        public String getIOSLiveActivityEvent() {
+            return this.iOSLiveActivityEvent;
+        }
+
+        public MassPushRequestPushTask setIOSLiveActivityId(String iOSLiveActivityId) {
+            this.iOSLiveActivityId = iOSLiveActivityId;
+            return this;
+        }
+        public String getIOSLiveActivityId() {
+            return this.iOSLiveActivityId;
+        }
+
+        public MassPushRequestPushTask setIOSLiveActivityStaleDate(Long iOSLiveActivityStaleDate) {
+            this.iOSLiveActivityStaleDate = iOSLiveActivityStaleDate;
+            return this;
+        }
+        public Long getIOSLiveActivityStaleDate() {
+            return this.iOSLiveActivityStaleDate;
         }
 
         public MassPushRequestPushTask setIOSMusic(String iOSMusic) {

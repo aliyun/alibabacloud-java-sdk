@@ -1103,6 +1103,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("iOSInterruptionLevel", request.iOSInterruptionLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSLiveActivityAttributes)) {
+            query.put("iOSLiveActivityAttributes", request.iOSLiveActivityAttributes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSLiveActivityAttributesType)) {
+            query.put("iOSLiveActivityAttributesType", request.iOSLiveActivityAttributesType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSLiveActivityContentState)) {
+            query.put("iOSLiveActivityContentState", request.iOSLiveActivityContentState);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSLiveActivityDismissalDate)) {
+            query.put("iOSLiveActivityDismissalDate", request.iOSLiveActivityDismissalDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSLiveActivityEvent)) {
+            query.put("iOSLiveActivityEvent", request.iOSLiveActivityEvent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSLiveActivityId)) {
+            query.put("iOSLiveActivityId", request.iOSLiveActivityId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iOSLiveActivityStaleDate)) {
+            query.put("iOSLiveActivityStaleDate", request.iOSLiveActivityStaleDate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.iOSMusic)) {
             query.put("iOSMusic", request.iOSMusic);
         }
