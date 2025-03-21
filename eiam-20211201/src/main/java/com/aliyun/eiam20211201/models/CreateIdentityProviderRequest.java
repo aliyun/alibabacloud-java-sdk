@@ -1148,6 +1148,55 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     }
 
+    public static class CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0 45 1 * * ?</p>
+         */
+        @NameInMap("PeriodicSyncCron")
+        public String periodicSyncCron;
+
+        @NameInMap("PeriodicSyncTimes")
+        public java.util.List<Integer> periodicSyncTimes;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cron</p>
+         */
+        @NameInMap("PeriodicSyncType")
+        public String periodicSyncType;
+
+        public static CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig self = new CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig setPeriodicSyncCron(String periodicSyncCron) {
+            this.periodicSyncCron = periodicSyncCron;
+            return this;
+        }
+        public String getPeriodicSyncCron() {
+            return this.periodicSyncCron;
+        }
+
+        public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig setPeriodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
+            this.periodicSyncTimes = periodicSyncTimes;
+            return this;
+        }
+        public java.util.List<Integer> getPeriodicSyncTimes() {
+            return this.periodicSyncTimes;
+        }
+
+        public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig setPeriodicSyncType(String periodicSyncType) {
+            this.periodicSyncType = periodicSyncType;
+            return this;
+        }
+        public String getPeriodicSyncType() {
+            return this.periodicSyncType;
+        }
+
+    }
+
     public static class CreateIdentityProviderRequestUdPullConfigUdSyncScopeConfig extends TeaModel {
         /**
          * <p>同步来源节点</p>
@@ -1206,6 +1255,9 @@ public class CreateIdentityProviderRequest extends TeaModel {
         @NameInMap("IncrementalCallbackStatus")
         public String incrementalCallbackStatus;
 
+        @NameInMap("PeriodicSyncConfig")
+        public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig periodicSyncConfig;
+
         /**
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -1239,6 +1291,14 @@ public class CreateIdentityProviderRequest extends TeaModel {
         }
         public String getIncrementalCallbackStatus() {
             return this.incrementalCallbackStatus;
+        }
+
+        public CreateIdentityProviderRequestUdPullConfig setPeriodicSyncConfig(CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig periodicSyncConfig) {
+            this.periodicSyncConfig = periodicSyncConfig;
+            return this;
+        }
+        public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig getPeriodicSyncConfig() {
+            return this.periodicSyncConfig;
         }
 
         public CreateIdentityProviderRequestUdPullConfig setPeriodicSyncStatus(String periodicSyncStatus) {

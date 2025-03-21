@@ -444,6 +444,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Create Conditional Access Policy</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Conditional Access Policy</p>
+     * 
+     * @param request CreateConditionalAccessPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConditionalAccessPolicyResponse
+     */
+    public CreateConditionalAccessPolicyResponse createConditionalAccessPolicyWithOptions(CreateConditionalAccessPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyName)) {
+            query.put("ConditionalAccessPolicyName", request.conditionalAccessPolicyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyType)) {
+            query.put("ConditionalAccessPolicyType", request.conditionalAccessPolicyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionsConfig)) {
+            query.put("ConditionsConfig", request.conditionsConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decisionConfig)) {
+            query.put("DecisionConfig", request.decisionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decisionType)) {
+            query.put("DecisionType", request.decisionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluateAt)) {
+            query.put("EvaluateAt", request.evaluateAt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateConditionalAccessPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConditionalAccessPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateConditionalAccessPolicyResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Create Conditional Access Policy</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create Conditional Access Policy</p>
+     * 
+     * @param request CreateConditionalAccessPolicyRequest
+     * @return CreateConditionalAccessPolicyResponse
+     */
+    public CreateConditionalAccessPolicyResponse createConditionalAccessPolicy(CreateConditionalAccessPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createConditionalAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>创建域名。</p>
      * 
@@ -1125,6 +1216,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteApplicationClientSecretResponse deleteApplicationClientSecret(DeleteApplicationClientSecretRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteApplicationClientSecretWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Conditional Access Policy</p>
+     * 
+     * @param request DeleteConditionalAccessPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConditionalAccessPolicyResponse
+     */
+    public DeleteConditionalAccessPolicyResponse deleteConditionalAccessPolicyWithOptions(DeleteConditionalAccessPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyId)) {
+            query.put("ConditionalAccessPolicyId", request.conditionalAccessPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConditionalAccessPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConditionalAccessPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteConditionalAccessPolicyResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Conditional Access Policy</p>
+     * 
+     * @param request DeleteConditionalAccessPolicyRequest
+     * @return DeleteConditionalAccessPolicyResponse
+     */
+    public DeleteConditionalAccessPolicyResponse deleteConditionalAccessPolicy(DeleteConditionalAccessPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteConditionalAccessPolicyWithOptions(request, runtime);
     }
 
     /**
@@ -1886,6 +2036,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disable Conditional Access Policy</p>
+     * 
+     * @param request DisableConditionalAccessPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableConditionalAccessPolicyResponse
+     */
+    public DisableConditionalAccessPolicyResponse disableConditionalAccessPolicyWithOptions(DisableConditionalAccessPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyId)) {
+            query.put("ConditionalAccessPolicyId", request.conditionalAccessPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableConditionalAccessPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableConditionalAccessPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DisableConditionalAccessPolicyResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disable Conditional Access Policy</p>
+     * 
+     * @param request DisableConditionalAccessPolicyRequest
+     * @return DisableConditionalAccessPolicyResponse
+     */
+    public DisableConditionalAccessPolicyResponse disableConditionalAccessPolicy(DisableConditionalAccessPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableConditionalAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>禁用指定域名代理Token。</p>
      * 
@@ -2367,6 +2576,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enable Conditional Access Policy</p>
+     * 
+     * @param request EnableConditionalAccessPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableConditionalAccessPolicyResponse
+     */
+    public EnableConditionalAccessPolicyResponse enableConditionalAccessPolicyWithOptions(EnableConditionalAccessPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyId)) {
+            query.put("ConditionalAccessPolicyId", request.conditionalAccessPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableConditionalAccessPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableConditionalAccessPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new EnableConditionalAccessPolicyResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enable Conditional Access Policy</p>
+     * 
+     * @param request EnableConditionalAccessPolicyRequest
+     * @return EnableConditionalAccessPolicyResponse
+     */
+    public EnableConditionalAccessPolicyResponse enableConditionalAccessPolicy(EnableConditionalAccessPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableConditionalAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>启用指定域名代理Token。</p>
      * 
@@ -2841,6 +3109,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetApplicationSsoConfigResponse getApplicationSsoConfig(GetApplicationSsoConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getApplicationSsoConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Query Conditional Access Policy</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Conditional Access Policy</p>
+     * 
+     * @param request GetConditionalAccessPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConditionalAccessPolicyResponse
+     */
+    public GetConditionalAccessPolicyResponse getConditionalAccessPolicyWithOptions(GetConditionalAccessPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyId)) {
+            query.put("ConditionalAccessPolicyId", request.conditionalAccessPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConditionalAccessPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetConditionalAccessPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetConditionalAccessPolicyResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Query Conditional Access Policy</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Get Conditional Access Policy</p>
+     * 
+     * @param request GetConditionalAccessPolicyRequest
+     * @return GetConditionalAccessPolicyResponse
+     */
+    public GetConditionalAccessPolicyResponse getConditionalAccessPolicy(GetConditionalAccessPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getConditionalAccessPolicyWithOptions(request, runtime);
     }
 
     /**
@@ -3997,6 +4324,132 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Paginated query for the list of conditional access policies</p>
+     * 
+     * <b>summary</b> : 
+     * <p>List of Conditional Access Policies</p>
+     * 
+     * @param request ListConditionalAccessPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConditionalAccessPoliciesResponse
+     */
+    public ListConditionalAccessPoliciesResponse listConditionalAccessPoliciesWithOptions(ListConditionalAccessPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.previousToken)) {
+            query.put("PreviousToken", request.previousToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConditionalAccessPolicies"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListConditionalAccessPoliciesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListConditionalAccessPoliciesResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Paginated query for the list of conditional access policies</p>
+     * 
+     * <b>summary</b> : 
+     * <p>List of Conditional Access Policies</p>
+     * 
+     * @param request ListConditionalAccessPoliciesRequest
+     * @return ListConditionalAccessPoliciesResponse
+     */
+    public ListConditionalAccessPoliciesResponse listConditionalAccessPolicies(ListConditionalAccessPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listConditionalAccessPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>List Conditional Access Policies Associated with Network Zones</p>
+     * 
+     * <b>summary</b> : 
+     * <p>List Conditional Access Policies Associated with Network Areas</p>
+     * 
+     * @param request ListConditionalAccessPoliciesForNetworkZoneRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConditionalAccessPoliciesForNetworkZoneResponse
+     */
+    public ListConditionalAccessPoliciesForNetworkZoneResponse listConditionalAccessPoliciesForNetworkZoneWithOptions(ListConditionalAccessPoliciesForNetworkZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkZoneId)) {
+            query.put("NetworkZoneId", request.networkZoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConditionalAccessPoliciesForNetworkZone"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListConditionalAccessPoliciesForNetworkZoneResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListConditionalAccessPoliciesForNetworkZoneResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>List Conditional Access Policies Associated with Network Zones</p>
+     * 
+     * <b>summary</b> : 
+     * <p>List Conditional Access Policies Associated with Network Areas</p>
+     * 
+     * @param request ListConditionalAccessPoliciesForNetworkZoneRequest
+     * @return ListConditionalAccessPoliciesForNetworkZoneResponse
+     */
+    public ListConditionalAccessPoliciesForNetworkZoneResponse listConditionalAccessPoliciesForNetworkZone(ListConditionalAccessPoliciesForNetworkZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listConditionalAccessPoliciesForNetworkZoneWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>列表查询域名代理Token信息。</p>
      * 
@@ -4670,7 +5123,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表某个网络访问端点下的访问路径。</p>
+     * <p>列表查询某个网络访问端点下的访问路径。</p>
      * 
      * @param request ListNetworkAccessPathsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4711,7 +5164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表某个网络访问端点下的访问路径。</p>
+     * <p>列表查询某个网络访问端点下的访问路径。</p>
      * 
      * @param request ListNetworkAccessPathsRequest
      * @return ListNetworkAccessPathsResponse
@@ -6154,6 +6607,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LdapUdPullConfig", request.ldapUdPullConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.periodicSyncConfig)) {
+            query.put("PeriodicSyncConfig", request.periodicSyncConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.periodicSyncStatus)) {
             query.put("PeriodicSyncStatus", request.periodicSyncStatus);
         }
@@ -6682,6 +7139,148 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApplicationDescriptionResponse updateApplicationDescription(UpdateApplicationDescriptionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateApplicationDescriptionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Conditional Access Policy</p>
+     * 
+     * @param request UpdateConditionalAccessPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConditionalAccessPolicyResponse
+     */
+    public UpdateConditionalAccessPolicyResponse updateConditionalAccessPolicyWithOptions(UpdateConditionalAccessPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyId)) {
+            query.put("ConditionalAccessPolicyId", request.conditionalAccessPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyName)) {
+            query.put("ConditionalAccessPolicyName", request.conditionalAccessPolicyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionsConfig)) {
+            query.put("ConditionsConfig", request.conditionsConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decisionConfig)) {
+            query.put("DecisionConfig", request.decisionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.decisionType)) {
+            query.put("DecisionType", request.decisionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            query.put("Priority", request.priority);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConditionalAccessPolicy"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConditionalAccessPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConditionalAccessPolicyResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Conditional Access Policy</p>
+     * 
+     * @param request UpdateConditionalAccessPolicyRequest
+     * @return UpdateConditionalAccessPolicyResponse
+     */
+    public UpdateConditionalAccessPolicyResponse updateConditionalAccessPolicy(UpdateConditionalAccessPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateConditionalAccessPolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy Description</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Conditional Access Policy Description</p>
+     * 
+     * @param request UpdateConditionalAccessPolicyDescriptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConditionalAccessPolicyDescriptionResponse
+     */
+    public UpdateConditionalAccessPolicyDescriptionResponse updateConditionalAccessPolicyDescriptionWithOptions(UpdateConditionalAccessPolicyDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionalAccessPolicyId)) {
+            query.put("ConditionalAccessPolicyId", request.conditionalAccessPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConditionalAccessPolicyDescription"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConditionalAccessPolicyDescriptionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateConditionalAccessPolicyDescriptionResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Update Conditional Access Policy Description</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Update Conditional Access Policy Description</p>
+     * 
+     * @param request UpdateConditionalAccessPolicyDescriptionRequest
+     * @return UpdateConditionalAccessPolicyDescriptionResponse
+     */
+    public UpdateConditionalAccessPolicyDescriptionResponse updateConditionalAccessPolicyDescription(UpdateConditionalAccessPolicyDescriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateConditionalAccessPolicyDescriptionWithOptions(request, runtime);
     }
 
     /**
