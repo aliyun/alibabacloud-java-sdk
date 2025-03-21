@@ -64,6 +64,9 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         @NameInMap("MessageModel")
         public String messageModel;
 
+        @NameInMap("Online")
+        public String online;
+
         /**
          * <p>The expression based on which consumers in the consumer group subscribe to the topic.</p>
          * 
@@ -94,6 +97,14 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         }
         public String getMessageModel() {
             return this.messageModel;
+        }
+
+        public OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList setOnline(String online) {
+            this.online = online;
+            return this;
+        }
+        public String getOnline() {
+            return this.online;
         }
 
         public OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList setSubString(String subString) {
