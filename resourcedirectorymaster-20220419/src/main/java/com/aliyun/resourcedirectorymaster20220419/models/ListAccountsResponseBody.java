@@ -10,6 +10,12 @@ public class ListAccountsResponseBody extends TeaModel {
     @NameInMap("Accounts")
     public ListAccountsResponseBodyAccounts accounts;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TGlzdFJlc291cm****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

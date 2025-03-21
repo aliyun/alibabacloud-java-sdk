@@ -1970,7 +1970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>\<em>\</em>\* Co., Ltd.</p>
+     * <p>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</p>
      * 
      * @param request GetResourceDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1999,7 +1999,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>\<em>\</em>\* Co., Ltd.</p>
+     * <p>Queries the information of a resource directory. If you use a management account to call this API operation, the system returns the information of the resource directory that is enabled by using the management account. If you use a member to call this operation, the system returns the information of</p>
      * @return GetResourceDirectoryResponse
      */
     public GetResourceDirectoryResponse getResourceDirectory() throws Exception {
@@ -2077,7 +2077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all the members in a resource directory.</p>
+     * <p>Queries a list of members in a resource directory.</p>
      * 
      * @param request ListAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2141,7 +2141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can use only the management account of a resource directory or a delegated administrator account of a trusted service to call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries all the members in a resource directory.</p>
+     * <p>Queries a list of members in a resource directory.</p>
      * 
      * @param request ListAccountsRequest
      * @return ListAccountsResponse
@@ -3645,6 +3645,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Enables or disables the Member Display Name Synchronization feature.</p>
+     * 
+     * @param request SetMemberDisplayNameSyncStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetMemberDisplayNameSyncStatusResponse
+     */
+    public SetMemberDisplayNameSyncStatusResponse setMemberDisplayNameSyncStatusWithOptions(SetMemberDisplayNameSyncStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetMemberDisplayNameSyncStatus"),
+            new TeaPair("version", "2022-04-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetMemberDisplayNameSyncStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetMemberDisplayNameSyncStatusResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables or disables the Member Display Name Synchronization feature.</p>
+     * 
+     * @param request SetMemberDisplayNameSyncStatusRequest
+     * @return SetMemberDisplayNameSyncStatusResponse
+     */
+    public SetMemberDisplayNameSyncStatusResponse setMemberDisplayNameSyncStatus(SetMemberDisplayNameSyncStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setMemberDisplayNameSyncStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Adds tags to the members in a resource directory.</p>
      * 
      * @param request TagResourcesRequest
@@ -4021,7 +4070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新成员的结算账号</p>
+     * <p>Updates the billing account of a member.</p>
      * 
      * @param request UpdatePayerForAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4062,7 +4111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新成员的结算账号</p>
+     * <p>Updates the billing account of a member.</p>
      * 
      * @param request UpdatePayerForAccountRequest
      * @return UpdatePayerForAccountResponse
