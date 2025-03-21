@@ -95,7 +95,51 @@ public class GetCipStatsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetCipStatsResponseBodyDataLabelStatChartImageTreeChar extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetCipStatsResponseBodyDataLabelStatChartImageTreeChar build(java.util.Map<String, ?> map) throws Exception {
+            GetCipStatsResponseBodyDataLabelStatChartImageTreeChar self = new GetCipStatsResponseBodyDataLabelStatChartImageTreeChar();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartImageTreeChar setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartImageTreeChar setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartImageTreeChar setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetCipStatsResponseBodyDataLabelStatChartTreeChart extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
@@ -113,6 +157,14 @@ public class GetCipStatsResponseBody extends TeaModel {
         public static GetCipStatsResponseBodyDataLabelStatChartTreeChart build(java.util.Map<String, ?> map) throws Exception {
             GetCipStatsResponseBodyDataLabelStatChartTreeChart self = new GetCipStatsResponseBodyDataLabelStatChartTreeChart();
             return TeaModel.build(map, self);
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartTreeChart setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetCipStatsResponseBodyDataLabelStatChartTreeChart setName(String name) {
@@ -134,6 +186,9 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
@@ -151,6 +206,14 @@ public class GetCipStatsResponseBody extends TeaModel {
         public static GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart build(java.util.Map<String, ?> map) throws Exception {
             GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart self = new GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart();
             return TeaModel.build(map, self);
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public GetCipStatsResponseBodyDataLabelStatChartVoiceTreeChart setName(String name) {
@@ -206,6 +269,9 @@ public class GetCipStatsResponseBody extends TeaModel {
     }
 
     public static class GetCipStatsResponseBodyDataLabelStatChart extends TeaModel {
+        @NameInMap("ImageTreeChar")
+        public java.util.List<GetCipStatsResponseBodyDataLabelStatChartImageTreeChar> imageTreeChar;
+
         /**
          * <strong>example:</strong>
          * <p>nickNameDetection</p>
@@ -235,6 +301,14 @@ public class GetCipStatsResponseBody extends TeaModel {
         public static GetCipStatsResponseBodyDataLabelStatChart build(java.util.Map<String, ?> map) throws Exception {
             GetCipStatsResponseBodyDataLabelStatChart self = new GetCipStatsResponseBodyDataLabelStatChart();
             return TeaModel.build(map, self);
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChart setImageTreeChar(java.util.List<GetCipStatsResponseBodyDataLabelStatChartImageTreeChar> imageTreeChar) {
+            this.imageTreeChar = imageTreeChar;
+            return this;
+        }
+        public java.util.List<GetCipStatsResponseBodyDataLabelStatChartImageTreeChar> getImageTreeChar() {
+            return this.imageTreeChar;
         }
 
         public GetCipStatsResponseBodyDataLabelStatChart setServiceCode(String serviceCode) {
@@ -359,6 +433,9 @@ public class GetCipStatsResponseBody extends TeaModel {
         @NameInMap("LabelStatChart")
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChart> labelStatChart;
 
+        @NameInMap("TotalStat")
+        public java.util.Map<String, ?> totalStat;
+
         @NameInMap("Uids")
         public java.util.List<String> uids;
 
@@ -382,6 +459,14 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChart> getLabelStatChart() {
             return this.labelStatChart;
+        }
+
+        public GetCipStatsResponseBodyData setTotalStat(java.util.Map<String, ?> totalStat) {
+            this.totalStat = totalStat;
+            return this;
+        }
+        public java.util.Map<String, ?> getTotalStat() {
+            return this.totalStat;
         }
 
         public GetCipStatsResponseBodyData setUids(java.util.List<String> uids) {

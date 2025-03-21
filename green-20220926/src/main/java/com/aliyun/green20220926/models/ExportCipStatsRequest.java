@@ -18,6 +18,9 @@ public class ExportCipStatsRequest extends TeaModel {
     @NameInMap("EndDate")
     public String endDate;
 
+    @NameInMap("ExportType")
+    public String exportType;
+
     /**
      * <strong>example:</strong>
      * <p>xx</p>
@@ -39,6 +42,9 @@ public class ExportCipStatsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("ServiceCode")
+    public String serviceCode;
+
     /**
      * <strong>example:</strong>
      * <p>2024-04-15 09:00:00</p>
@@ -52,6 +58,9 @@ public class ExportCipStatsRequest extends TeaModel {
      */
     @NameInMap("SubUid")
     public String subUid;
+
+    @NameInMap("Type")
+    public String type;
 
     public static ExportCipStatsRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportCipStatsRequest self = new ExportCipStatsRequest();
@@ -72,6 +81,14 @@ public class ExportCipStatsRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public ExportCipStatsRequest setExportType(String exportType) {
+        this.exportType = exportType;
+        return this;
+    }
+    public String getExportType() {
+        return this.exportType;
     }
 
     public ExportCipStatsRequest setLabel(String label) {
@@ -98,6 +115,14 @@ public class ExportCipStatsRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public ExportCipStatsRequest setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    public String getServiceCode() {
+        return this.serviceCode;
+    }
+
     public ExportCipStatsRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -112,6 +137,14 @@ public class ExportCipStatsRequest extends TeaModel {
     }
     public String getSubUid() {
         return this.subUid;
+    }
+
+    public ExportCipStatsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
