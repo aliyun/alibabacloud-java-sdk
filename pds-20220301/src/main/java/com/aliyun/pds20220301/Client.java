@@ -192,6 +192,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导出审计日志</p>
+     * 
+     * @param request AuditLogExportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AuditLogExportResponse
+     */
+    public AuditLogExportResponse auditLogExportWithOptions(AuditLogExportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("file_name", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            body.put("order_by", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AuditLogExport"),
+            new TeaPair("version", "2022-03-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v2/audit_log/export"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new AuditLogExportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出审计日志</p>
+     * 
+     * @param request AuditLogExportRequest
+     * @return AuditLogExportResponse
+     */
+    public AuditLogExportResponse auditLogExport(AuditLogExportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.auditLogExportWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>For more information, see &quot;OAuth 2.0 For Web Server Applications&quot; at <a href="https://www.alibabacloud.com/help/en/pds/drive-and-photo-service-dev/user-guide/oauth-2-0-access-process-for-web-server-applications">OAuth 2.0 For Web Server Applications</a> in User Guide.</p>
      * 
@@ -6914,7 +6973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取视频的DRM License</p>
+     * <p>Obtain the digital rights management (DRM) license of a video.</p>
      * 
      * @param request VideoDRMLicenseRequest
      * @param headers map
@@ -6952,7 +7011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取视频的DRM License</p>
+     * <p>Obtain the digital rights management (DRM) license of a video.</p>
      * 
      * @param request VideoDRMLicenseRequest
      * @return VideoDRMLicenseResponse
