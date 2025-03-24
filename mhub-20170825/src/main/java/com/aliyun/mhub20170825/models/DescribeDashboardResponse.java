@@ -3,7 +3,7 @@ package com.aliyun.mhub20170825.models;
 
 import com.aliyun.tea.*;
 
-public class QueryAppInfoResponse extends TeaModel {
+public class DescribeDashboardResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class QueryAppInfoResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public QueryAppInfoResponseBody body;
+    public DescribeDashboardResponseBody body;
 
-    public static QueryAppInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryAppInfoResponse self = new QueryAppInfoResponse();
+    public static DescribeDashboardResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDashboardResponse self = new DescribeDashboardResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryAppInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeDashboardResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class QueryAppInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryAppInfoResponse setStatusCode(Integer statusCode) {
+    public DescribeDashboardResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class QueryAppInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryAppInfoResponse setBody(QueryAppInfoResponseBody body) {
+    public DescribeDashboardResponse setBody(DescribeDashboardResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryAppInfoResponseBody getBody() {
+    public DescribeDashboardResponseBody getBody() {
         return this.body;
     }
 

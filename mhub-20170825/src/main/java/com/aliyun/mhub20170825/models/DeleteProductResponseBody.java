@@ -4,9 +4,17 @@ package com.aliyun.mhub20170825.models;
 import com.aliyun.tea.*;
 
 public class DeleteProductResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRODUCT_NOT_ALONE</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>126D4DDD-05A5-49B1-B18C-39C4A929BFB2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

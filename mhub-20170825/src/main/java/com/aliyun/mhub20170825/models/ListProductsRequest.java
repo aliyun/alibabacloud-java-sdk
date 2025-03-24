@@ -4,17 +4,29 @@ package com.aliyun.mhub20170825.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Offset")
     public Integer offset;
 
-    @NameInMap("Size")
-    public Integer size;
+    @NameInMap("ProductName")
+    public String productName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Simple")
     public Boolean simple;
 
-    @NameInMap("ProductName")
-    public String productName;
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("Size")
+    public Integer size;
 
     public static ListProductsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductsRequest self = new ListProductsRequest();
@@ -29,12 +41,12 @@ public class ListProductsRequest extends TeaModel {
         return this.offset;
     }
 
-    public ListProductsRequest setSize(Integer size) {
-        this.size = size;
+    public ListProductsRequest setProductName(String productName) {
+        this.productName = productName;
         return this;
     }
-    public Integer getSize() {
-        return this.size;
+    public String getProductName() {
+        return this.productName;
     }
 
     public ListProductsRequest setSimple(Boolean simple) {
@@ -45,12 +57,12 @@ public class ListProductsRequest extends TeaModel {
         return this.simple;
     }
 
-    public ListProductsRequest setProductName(String productName) {
-        this.productName = productName;
+    public ListProductsRequest setSize(Integer size) {
+        this.size = size;
         return this;
     }
-    public String getProductName() {
-        return this.productName;
+    public Integer getSize() {
+        return this.size;
     }
 
 }

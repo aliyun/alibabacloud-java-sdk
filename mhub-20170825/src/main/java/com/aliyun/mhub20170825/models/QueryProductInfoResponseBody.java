@@ -7,6 +7,10 @@ public class QueryProductInfoResponseBody extends TeaModel {
     @NameInMap("ProductInfo")
     public QueryProductInfoResponseBodyProductInfo productInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>126D4DDD-05A5-49B1-B18C-39C4A929BFB2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,32 +36,32 @@ public class QueryProductInfoResponseBody extends TeaModel {
     }
 
     public static class QueryProductInfoResponseBodyProductInfo extends TeaModel {
-        @NameInMap("IndustryId")
-        public Integer industryId;
-
         @NameInMap("EncodedIcon")
         public String encodedIcon;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Readonly")
-        public Boolean readonly;
 
         @NameInMap("IconName")
         public String iconName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("IndustryId")
+        public Integer industryId;
+
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Readonly")
+        public Boolean readonly;
+
         public static QueryProductInfoResponseBodyProductInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryProductInfoResponseBodyProductInfo self = new QueryProductInfoResponseBodyProductInfo();
             return TeaModel.build(map, self);
-        }
-
-        public QueryProductInfoResponseBodyProductInfo setIndustryId(Integer industryId) {
-            this.industryId = industryId;
-            return this;
-        }
-        public Integer getIndustryId() {
-            return this.industryId;
         }
 
         public QueryProductInfoResponseBodyProductInfo setEncodedIcon(String encodedIcon) {
@@ -66,6 +70,22 @@ public class QueryProductInfoResponseBody extends TeaModel {
         }
         public String getEncodedIcon() {
             return this.encodedIcon;
+        }
+
+        public QueryProductInfoResponseBodyProductInfo setIconName(String iconName) {
+            this.iconName = iconName;
+            return this;
+        }
+        public String getIconName() {
+            return this.iconName;
+        }
+
+        public QueryProductInfoResponseBodyProductInfo setIndustryId(Integer industryId) {
+            this.industryId = industryId;
+            return this;
+        }
+        public Integer getIndustryId() {
+            return this.industryId;
         }
 
         public QueryProductInfoResponseBodyProductInfo setName(String name) {
@@ -82,14 +102,6 @@ public class QueryProductInfoResponseBody extends TeaModel {
         }
         public Boolean getReadonly() {
             return this.readonly;
-        }
-
-        public QueryProductInfoResponseBodyProductInfo setIconName(String iconName) {
-            this.iconName = iconName;
-            return this;
-        }
-        public String getIconName() {
-            return this.iconName;
         }
 
     }
