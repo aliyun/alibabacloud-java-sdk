@@ -3,7 +3,7 @@ package com.aliyun.appstream_center20210903.models;
 
 import com.aliyun.tea.*;
 
-public class ListLFUAppResponse extends TeaModel {
+public class RestartAppResourcesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListLFUAppResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListLFUAppResponseBody body;
+    public RestartAppResourcesResponseBody body;
 
-    public static ListLFUAppResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListLFUAppResponse self = new ListLFUAppResponse();
+    public static RestartAppResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        RestartAppResourcesResponse self = new RestartAppResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListLFUAppResponse setHeaders(java.util.Map<String, String> headers) {
+    public RestartAppResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListLFUAppResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListLFUAppResponse setStatusCode(Integer statusCode) {
+    public RestartAppResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListLFUAppResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListLFUAppResponse setBody(ListLFUAppResponseBody body) {
+    public RestartAppResourcesResponse setBody(RestartAppResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListLFUAppResponseBody getBody() {
+    public RestartAppResourcesResponseBody getBody() {
         return this.body;
     }
 
