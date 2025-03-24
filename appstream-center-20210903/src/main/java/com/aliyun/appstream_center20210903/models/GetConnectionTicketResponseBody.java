@@ -236,14 +236,17 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
 
     public static class GetConnectionTicketResponseBodyBindQueueInfo extends TeaModel {
-        @NameInMap("Length")
-        public Integer length;
+        @NameInMap("QueueStatus")
+        public String queueStatus;
 
         @NameInMap("Rank")
         public Integer rank;
 
-        @NameInMap("RemainingTimeMin")
-        public Integer remainingTimeMin;
+        @NameInMap("ReadyTimeout")
+        public Long readyTimeout;
+
+        @NameInMap("RemainingTime")
+        public Long remainingTime;
 
         @NameInMap("RequestKey")
         public String requestKey;
@@ -251,20 +254,20 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         @NameInMap("TargetId")
         public String targetId;
 
-        @NameInMap("WaitTimeMin")
-        public Integer waitTimeMin;
+        @NameInMap("WaitTime")
+        public Long waitTime;
 
         public static GetConnectionTicketResponseBodyBindQueueInfo build(java.util.Map<String, ?> map) throws Exception {
             GetConnectionTicketResponseBodyBindQueueInfo self = new GetConnectionTicketResponseBodyBindQueueInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetConnectionTicketResponseBodyBindQueueInfo setLength(Integer length) {
-            this.length = length;
+        public GetConnectionTicketResponseBodyBindQueueInfo setQueueStatus(String queueStatus) {
+            this.queueStatus = queueStatus;
             return this;
         }
-        public Integer getLength() {
-            return this.length;
+        public String getQueueStatus() {
+            return this.queueStatus;
         }
 
         public GetConnectionTicketResponseBodyBindQueueInfo setRank(Integer rank) {
@@ -275,12 +278,20 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             return this.rank;
         }
 
-        public GetConnectionTicketResponseBodyBindQueueInfo setRemainingTimeMin(Integer remainingTimeMin) {
-            this.remainingTimeMin = remainingTimeMin;
+        public GetConnectionTicketResponseBodyBindQueueInfo setReadyTimeout(Long readyTimeout) {
+            this.readyTimeout = readyTimeout;
             return this;
         }
-        public Integer getRemainingTimeMin() {
-            return this.remainingTimeMin;
+        public Long getReadyTimeout() {
+            return this.readyTimeout;
+        }
+
+        public GetConnectionTicketResponseBodyBindQueueInfo setRemainingTime(Long remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public Long getRemainingTime() {
+            return this.remainingTime;
         }
 
         public GetConnectionTicketResponseBodyBindQueueInfo setRequestKey(String requestKey) {
@@ -299,12 +310,12 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             return this.targetId;
         }
 
-        public GetConnectionTicketResponseBodyBindQueueInfo setWaitTimeMin(Integer waitTimeMin) {
-            this.waitTimeMin = waitTimeMin;
+        public GetConnectionTicketResponseBodyBindQueueInfo setWaitTime(Long waitTime) {
+            this.waitTime = waitTime;
             return this;
         }
-        public Integer getWaitTimeMin() {
-            return this.waitTimeMin;
+        public Long getWaitTime() {
+            return this.waitTime;
         }
 
     }

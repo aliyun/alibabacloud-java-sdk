@@ -28,6 +28,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    @NameInMap("AutoConnectInQueue")
+    public Boolean autoConnectInQueue;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -56,6 +59,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("ClientOS")
     public String clientOS;
 
+    @NameInMap("ClientType")
+    public String clientType;
+
     /**
      * <strong>example:</strong>
      * <p>2.0.1-D-20211008.101607</p>
@@ -72,6 +78,9 @@ public class GetConnectionTicketRequest extends TeaModel {
      */
     @NameInMap("EndUserId")
     public String endUserId;
+
+    @NameInMap("EnvironmentConfig")
+    public String environmentConfig;
 
     /**
      * <strong>example:</strong>
@@ -171,6 +180,14 @@ public class GetConnectionTicketRequest extends TeaModel {
         return this.appVersion;
     }
 
+    public GetConnectionTicketRequest setAutoConnectInQueue(Boolean autoConnectInQueue) {
+        this.autoConnectInQueue = autoConnectInQueue;
+        return this;
+    }
+    public Boolean getAutoConnectInQueue() {
+        return this.autoConnectInQueue;
+    }
+
     public GetConnectionTicketRequest setBizRegionId(String bizRegionId) {
         this.bizRegionId = bizRegionId;
         return this;
@@ -203,6 +220,14 @@ public class GetConnectionTicketRequest extends TeaModel {
         return this.clientOS;
     }
 
+    public GetConnectionTicketRequest setClientType(String clientType) {
+        this.clientType = clientType;
+        return this;
+    }
+    public String getClientType() {
+        return this.clientType;
+    }
+
     public GetConnectionTicketRequest setClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
@@ -225,6 +250,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public GetConnectionTicketRequest setEnvironmentConfig(String environmentConfig) {
+        this.environmentConfig = environmentConfig;
+        return this;
+    }
+    public String getEnvironmentConfig() {
+        return this.environmentConfig;
     }
 
     public GetConnectionTicketRequest setLoginRegionId(String loginRegionId) {
