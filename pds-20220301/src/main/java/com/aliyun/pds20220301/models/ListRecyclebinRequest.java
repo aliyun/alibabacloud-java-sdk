@@ -15,8 +15,8 @@ public class ListRecyclebinRequest extends TeaModel {
     public String driveId;
 
     /**
-     * <p>Specifies the returned fields.</p>
-     * <p>1\. If you set this parameter to \*, all fields of the file are returned.</p>
+     * <p>The fields of an entry (file or folder) to return.</p>
+     * <p>1\. If you set this parameter to \*, all fields are returned.</p>
      * <p>2\. If you set this parameter to a null value or leave this parameter empty, the fields, such as file creator, file modifier, and custom tags, are not returned.</p>
      * <p>The default value is a null value, which indicates that only some fields are returned.</p>
      * 
@@ -29,8 +29,8 @@ public class ListRecyclebinRequest extends TeaModel {
     public String fields;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 200. Default value: 50.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 200. Default value: 50.</p>
+     * <p>The number of returned entries must be less than or equal to the value of this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -39,7 +39,7 @@ public class ListRecyclebinRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker. By default, this parameter is left empty.</p>
+     * <p>The name of the entry after which the list begins. Entries whose names are alphabetically after the value of this parameter are returned. If you do not specify this parameter, all entries are returned. This parameter is left empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -47,6 +47,9 @@ public class ListRecyclebinRequest extends TeaModel {
     @NameInMap("marker")
     public String marker;
 
+    /**
+     * <p>The thumbnail configurations. Up to five thumbnails can be returned at a time. The value contains key-value pairs. You can customize the keys. The URL of a thumbnail is returned based on the key.</p>
+     */
     @NameInMap("thumbnail_processes")
     public java.util.Map<String, ImageProcess> thumbnailProcesses;
 

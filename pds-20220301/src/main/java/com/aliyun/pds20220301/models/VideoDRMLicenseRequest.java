@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class VideoDRMLicenseRequest extends TeaModel {
     /**
+     * <p>The type of DRM encryption.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>fairplay</li>
+     * <li>widevine</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,8 @@ public class VideoDRMLicenseRequest extends TeaModel {
     public String drmType;
 
     /**
+     * <p>The request that is initiated to obtain the license.</p>
+     * 
      * <strong>example:</strong>
      * <p>CAES6B8SQgpACioSENGxDhqCLIVwwCBOyPayyWoSENGxDhqCLIVwwCBOyPayyWpI88aJmwYQARoQdRV32</p>
      */
