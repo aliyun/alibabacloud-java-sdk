@@ -4,6 +4,12 @@ package com.aliyun.mhub20170825.models;
 import com.aliyun.tea.*;
 
 public class QueryAppInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
