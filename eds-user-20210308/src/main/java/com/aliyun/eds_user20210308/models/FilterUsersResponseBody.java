@@ -99,6 +99,66 @@ public class FilterUsersResponseBody extends TeaModel {
 
     }
 
+    public static class FilterUsersResponseBodyUsersOrgList extends TeaModel {
+        @NameInMap("OrgId")
+        public String orgId;
+
+        @NameInMap("OrgName")
+        public String orgName;
+
+        public static FilterUsersResponseBodyUsersOrgList build(java.util.Map<String, ?> map) throws Exception {
+            FilterUsersResponseBodyUsersOrgList self = new FilterUsersResponseBodyUsersOrgList();
+            return TeaModel.build(map, self);
+        }
+
+        public FilterUsersResponseBodyUsersOrgList setOrgId(String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        public FilterUsersResponseBodyUsersOrgList setOrgName(String orgName) {
+            this.orgName = orgName;
+            return this;
+        }
+        public String getOrgName() {
+            return this.orgName;
+        }
+
+    }
+
+    public static class FilterUsersResponseBodyUsersSupportLoginIdps extends TeaModel {
+        @NameInMap("IdpId")
+        public String idpId;
+
+        @NameInMap("IdpName")
+        public String idpName;
+
+        public static FilterUsersResponseBodyUsersSupportLoginIdps build(java.util.Map<String, ?> map) throws Exception {
+            FilterUsersResponseBodyUsersSupportLoginIdps self = new FilterUsersResponseBodyUsersSupportLoginIdps();
+            return TeaModel.build(map, self);
+        }
+
+        public FilterUsersResponseBodyUsersSupportLoginIdps setIdpId(String idpId) {
+            this.idpId = idpId;
+            return this;
+        }
+        public String getIdpId() {
+            return this.idpId;
+        }
+
+        public FilterUsersResponseBodyUsersSupportLoginIdps setIdpName(String idpName) {
+            this.idpName = idpName;
+            return this;
+        }
+        public String getIdpName() {
+            return this.idpName;
+        }
+
+    }
+
     public static class FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues extends TeaModel {
         /**
          * <p>The property value.</p>
@@ -353,6 +413,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        @NameInMap("OrgList")
+        public java.util.List<FilterUsersResponseBodyUsersOrgList> orgList;
+
         /**
          * <p>The type of the account ownership.</p>
          * <p>Valid values:</p>
@@ -424,6 +487,9 @@ public class FilterUsersResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public Long status;
+
+        @NameInMap("SupportLoginIdps")
+        public java.util.List<FilterUsersResponseBodyUsersSupportLoginIdps> supportLoginIdps;
 
         /**
          * <p>The information about the properties.</p>
@@ -508,6 +574,14 @@ public class FilterUsersResponseBody extends TeaModel {
             return this.isTenantManager;
         }
 
+        public FilterUsersResponseBodyUsers setOrgList(java.util.List<FilterUsersResponseBodyUsersOrgList> orgList) {
+            this.orgList = orgList;
+            return this;
+        }
+        public java.util.List<FilterUsersResponseBodyUsersOrgList> getOrgList() {
+            return this.orgList;
+        }
+
         public FilterUsersResponseBodyUsers setOwnerType(String ownerType) {
             this.ownerType = ownerType;
             return this;
@@ -562,6 +636,14 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public Long getStatus() {
             return this.status;
+        }
+
+        public FilterUsersResponseBodyUsers setSupportLoginIdps(java.util.List<FilterUsersResponseBodyUsersSupportLoginIdps> supportLoginIdps) {
+            this.supportLoginIdps = supportLoginIdps;
+            return this;
+        }
+        public java.util.List<FilterUsersResponseBodyUsersSupportLoginIdps> getSupportLoginIdps() {
+            return this.supportLoginIdps;
         }
 
         public FilterUsersResponseBodyUsers setUserSetPropertiesModels(java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModels> userSetPropertiesModels) {

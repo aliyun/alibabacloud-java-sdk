@@ -160,6 +160,36 @@ public class DescribeUsersResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeUsersResponseBodyUsersProperties extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeUsersResponseBodyUsersProperties build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersResponseBodyUsersProperties self = new DescribeUsersResponseBodyUsersProperties();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersResponseBodyUsersProperties setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeUsersResponseBodyUsersProperties setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeUsersResponseBodyUsers extends TeaModel {
         /**
          * <p>The work address of the convenience user.</p>
@@ -196,6 +226,9 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         @NameInMap("EndUserId")
         public String endUserId;
+
+        @NameInMap("ExternalName")
+        public String externalName;
 
         @NameInMap("Extras")
         public DescribeUsersResponseBodyUsersExtras extras;
@@ -302,6 +335,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("Properties")
+        public java.util.List<DescribeUsersResponseBodyUsersProperties> properties;
+
         @NameInMap("RealNickName")
         public String realNickName;
 
@@ -385,6 +421,14 @@ public class DescribeUsersResponseBody extends TeaModel {
             return this.endUserId;
         }
 
+        public DescribeUsersResponseBodyUsers setExternalName(String externalName) {
+            this.externalName = externalName;
+            return this;
+        }
+        public String getExternalName() {
+            return this.externalName;
+        }
+
         public DescribeUsersResponseBodyUsers setExtras(DescribeUsersResponseBodyUsersExtras extras) {
             this.extras = extras;
             return this;
@@ -463,6 +507,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public DescribeUsersResponseBodyUsers setProperties(java.util.List<DescribeUsersResponseBodyUsersProperties> properties) {
+            this.properties = properties;
+            return this;
+        }
+        public java.util.List<DescribeUsersResponseBodyUsersProperties> getProperties() {
+            return this.properties;
         }
 
         public DescribeUsersResponseBodyUsers setRealNickName(String realNickName) {
