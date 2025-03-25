@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePromptTemplateResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9B6CBF-47E6-5D76-9C5D-B814DD5ABxxx</p>
      */

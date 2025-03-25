@@ -4,13 +4,21 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class GetPromptTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The template content.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>The template name.</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6e49109bfeb94a39bb268f4e483ccxxx</p>
      */
@@ -18,6 +26,8 @@ public class GetPromptTemplateResponseBody extends TeaModel {
     public String promptTemplateId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8C56C7AF-6573-19CE-B018-E05E1EDCF4C5</p>
      */
@@ -25,6 +35,8 @@ public class GetPromptTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The variables of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;theme&quot;]</p>
      */
@@ -32,6 +44,8 @@ public class GetPromptTemplateResponseBody extends TeaModel {
     public java.util.List<String> variables;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-us9hjmt32nysdxxx</p>
      */

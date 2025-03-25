@@ -137,6 +137,9 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         @NameInMap("DocName")
         public String docName;
 
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
         /**
          * <p>The error message.</p>
          * 
@@ -188,6 +191,14 @@ public class GetIndexJobStatusResponseBody extends TeaModel {
         }
         public String getDocName() {
             return this.docName;
+        }
+
+        public GetIndexJobStatusResponseBodyDataDocuments setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
         }
 
         public GetIndexJobStatusResponseBodyDataDocuments setMessage(String message) {

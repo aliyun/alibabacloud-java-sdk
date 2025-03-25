@@ -4,9 +4,15 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class UpdatePromptTemplateRequest extends TeaModel {
+    /**
+     * <p>The template content.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>The template name.</p>
+     */
     @NameInMap("name")
     public String name;
 

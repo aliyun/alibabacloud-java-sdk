@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListPromptTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of returned entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,16 +14,23 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The token that determines the start position of the next query.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc270401186b433f975d7e1faaa34e0e</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The templates.</p>
+     */
     @NameInMap("promptTemplates")
     public java.util.List<ListPromptTemplatesResponseBodyPromptTemplates> promptTemplates;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FE9B6CBF-47E6-5D76-9C5D-B814DD5AB071</p>
      */
@@ -29,6 +38,8 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -36,6 +47,8 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>llm-us9hjmt32nysdxxx</p>
      */
@@ -96,13 +109,21 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListPromptTemplatesResponseBodyPromptTemplates extends TeaModel {
+        /**
+         * <p>The template content</p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>The template name.</p>
+         */
         @NameInMap("name")
         public String name;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d6935b7efbe34d11b13df9307151cf8c</p>
          */
@@ -110,12 +131,17 @@ public class ListPromptTemplatesResponseBody extends TeaModel {
         public String promptTemplateId;
 
         /**
+         * <p>The template type.</p>
+         * 
          * <strong>example:</strong>
          * <p>&quot;System&quot;</p>
          */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The variables of the template.</p>
+         */
         @NameInMap("variables")
         public java.util.List<String> variables;
 
