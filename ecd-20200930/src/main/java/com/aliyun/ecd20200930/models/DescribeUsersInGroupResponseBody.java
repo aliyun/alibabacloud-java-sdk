@@ -20,7 +20,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The total number of authorized users that is connected to cloud computers in the cloud computer pool.</p>
+     * <p>The total number of authorized users that are connected to cloud computers of the cloud computer share.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -37,8 +37,11 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("UserOuPath")
+    public String userOuPath;
+
     /**
-     * <p>The total number of authorized users of the cloud computer pool.</p>
+     * <p>The total number of authorized users of the cloud computer share.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,6 +84,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeUsersInGroupResponseBody setUserOuPath(String userOuPath) {
+        this.userOuPath = userOuPath;
+        return this;
+    }
+    public String getUserOuPath() {
+        return this.userOuPath;
     }
 
     public DescribeUsersInGroupResponseBody setUsersCount(Integer usersCount) {

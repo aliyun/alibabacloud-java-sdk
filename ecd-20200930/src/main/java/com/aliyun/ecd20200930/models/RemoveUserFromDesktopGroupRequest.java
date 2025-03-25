@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer pool for which you want to remove the authorized users.</p>
+     * <p>The ID of the cloud computer share.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -14,14 +14,13 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of cloud computer pools.</p>
+     * <p>The IDs of the cloud computer shares.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
      * <p>The IDs of the authorized users that you want to remove.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
@@ -35,6 +34,9 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("UserOuPath")
+    public String userOuPath;
 
     public static RemoveUserFromDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveUserFromDesktopGroupRequest self = new RemoveUserFromDesktopGroupRequest();
@@ -71,6 +73,14 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RemoveUserFromDesktopGroupRequest setUserOuPath(String userOuPath) {
+        this.userOuPath = userOuPath;
+        return this;
+    }
+    public String getUserOuPath() {
+        return this.userOuPath;
     }
 
 }

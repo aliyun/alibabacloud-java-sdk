@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyUserToDesktopGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer pool whose end users you want to change.</p>
+     * <p>The ID of the cloud computer share.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

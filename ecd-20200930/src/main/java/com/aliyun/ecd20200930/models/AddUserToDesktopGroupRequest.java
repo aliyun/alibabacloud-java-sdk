@@ -14,7 +14,7 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the desktop group that you want to assign to more regular users.</p>
+     * <p>The ID of the cloud computer share.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-2i8qxpv6t1a03****</p>
@@ -23,14 +23,13 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the desktop groups.</p>
+     * <p>The IDs of the cloud computer shares.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
 
     /**
      * <p>The regular users to whom you want to assign the desktop group.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
@@ -44,6 +43,9 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("UserOuPath")
+    public String userOuPath;
 
     public static AddUserToDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddUserToDesktopGroupRequest self = new AddUserToDesktopGroupRequest();
@@ -88,6 +90,14 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public AddUserToDesktopGroupRequest setUserOuPath(String userOuPath) {
+        this.userOuPath = userOuPath;
+        return this;
+    }
+    public String getUserOuPath() {
+        return this.userOuPath;
     }
 
 }

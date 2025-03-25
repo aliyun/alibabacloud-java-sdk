@@ -638,6 +638,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
+    @NameInMap("UserOuPath")
+    public String userOuPath;
+
     /**
      * <p>Specifies whether to enable disk encryption.</p>
      * 
@@ -1095,6 +1098,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getTimerGroupId() {
         return this.timerGroupId;
+    }
+
+    public CreateDesktopGroupRequest setUserOuPath(String userOuPath) {
+        this.userOuPath = userOuPath;
+        return this;
+    }
+    public String getUserOuPath() {
+        return this.userOuPath;
     }
 
     public CreateDesktopGroupRequest setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {

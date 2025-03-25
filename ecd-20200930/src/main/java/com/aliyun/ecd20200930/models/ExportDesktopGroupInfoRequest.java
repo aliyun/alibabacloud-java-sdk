@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class ExportDesktopGroupInfoRequest extends TeaModel {
     /**
-     * <p>The billing method of the cloud computer pool.</p>
+     * <p>The billing method of the cloud computer share.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>PostPaid: pay-as-you-go.</p>
-     * </li>
-     * <li><p>PrePaid: subscription.</p>
-     * </li>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * <li>PrePaid: subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,13 +19,13 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the cloud computer pools.</p>
+     * <p>The IDs of the cloud computer shares.</p>
      */
     @NameInMap("DesktopGroupId")
     public java.util.List<String> desktopGroupId;
 
     /**
-     * <p>The name of the cloud computer pool.</p>
+     * <p>The name of the cloud computer share.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -36,13 +34,13 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String desktopGroupName;
 
     /**
-     * <p>The authorized user IDs of cloud computer pools.</p>
+     * <p>The IDs of the users to be authorized.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
-     * <p>The time when the subscription cloud computer pool expires.</p>
+     * <p>The expiration date of the subscription cloud computer share.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-12-31T15:59Z</p>
@@ -80,7 +78,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network to which the cloud computer pool belongs.</p>
+     * <p>The ID of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-467671****</p>
@@ -89,7 +87,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The ID of the policy that is associated with the cloud computer pool.</p>
+     * <p>The ID of the security policy.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-53iyi2aar0nd6****</p>
@@ -108,7 +106,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The tags attached to the cloud computer pool. You can specify 1 to 20 tags.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ExportDesktopGroupInfoRequestTag> tag;
@@ -216,7 +214,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
 
     public static class ExportDesktopGroupInfoRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. If you specify the <code>Tag</code> parameter, you must also specify the <code>Key</code> parameter. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. You cannot specify an empty string as a tag key.</p>
+         * <p>The tag key. You cannot specify an empty string as a tag key. A tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -225,7 +223,7 @@ public class ExportDesktopGroupInfoRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. You can specify an empty string as a tag key. A tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
