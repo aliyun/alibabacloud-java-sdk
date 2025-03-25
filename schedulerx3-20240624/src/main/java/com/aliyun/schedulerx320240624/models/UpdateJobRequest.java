@@ -27,6 +27,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Calendar")
     public String calendar;
 
+    @NameInMap("ChildJobId")
+    public String childJobId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -169,6 +172,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getCalendar() {
         return this.calendar;
+    }
+
+    public UpdateJobRequest setChildJobId(String childJobId) {
+        this.childJobId = childJobId;
+        return this;
+    }
+    public String getChildJobId() {
+        return this.childJobId;
     }
 
     public UpdateJobRequest setClusterId(String clusterId) {
