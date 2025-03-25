@@ -28,6 +28,9 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("FilterWithAssignedResource")
+    public String filterWithAssignedResourceShrink;
+
     @NameInMap("FilterWithAssignedResources")
     public String filterWithAssignedResourcesShrink;
 
@@ -39,6 +42,9 @@ public class DescribeUsersShrinkRequest extends TeaModel {
      */
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("IsQueryAllSubOrgs")
+    public Boolean isQueryAllSubOrgs;
 
     /**
      * <p>The number of entries per page.</p>
@@ -115,6 +121,14 @@ public class DescribeUsersShrinkRequest extends TeaModel {
         return this.filter;
     }
 
+    public DescribeUsersShrinkRequest setFilterWithAssignedResourceShrink(String filterWithAssignedResourceShrink) {
+        this.filterWithAssignedResourceShrink = filterWithAssignedResourceShrink;
+        return this;
+    }
+    public String getFilterWithAssignedResourceShrink() {
+        return this.filterWithAssignedResourceShrink;
+    }
+
     public DescribeUsersShrinkRequest setFilterWithAssignedResourcesShrink(String filterWithAssignedResourcesShrink) {
         this.filterWithAssignedResourcesShrink = filterWithAssignedResourcesShrink;
         return this;
@@ -129,6 +143,14 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeUsersShrinkRequest setIsQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+        this.isQueryAllSubOrgs = isQueryAllSubOrgs;
+        return this;
+    }
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     public DescribeUsersShrinkRequest setMaxResults(Long maxResults) {

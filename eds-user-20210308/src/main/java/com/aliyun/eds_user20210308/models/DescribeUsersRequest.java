@@ -28,6 +28,9 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("FilterWithAssignedResource")
+    public java.util.Map<String, String> filterWithAssignedResource;
+
     @NameInMap("FilterWithAssignedResources")
     public java.util.Map<String, Boolean> filterWithAssignedResources;
 
@@ -39,6 +42,9 @@ public class DescribeUsersRequest extends TeaModel {
      */
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("IsQueryAllSubOrgs")
+    public Boolean isQueryAllSubOrgs;
 
     /**
      * <p>The number of entries per page.</p>
@@ -115,6 +121,14 @@ public class DescribeUsersRequest extends TeaModel {
         return this.filter;
     }
 
+    public DescribeUsersRequest setFilterWithAssignedResource(java.util.Map<String, String> filterWithAssignedResource) {
+        this.filterWithAssignedResource = filterWithAssignedResource;
+        return this;
+    }
+    public java.util.Map<String, String> getFilterWithAssignedResource() {
+        return this.filterWithAssignedResource;
+    }
+
     public DescribeUsersRequest setFilterWithAssignedResources(java.util.Map<String, Boolean> filterWithAssignedResources) {
         this.filterWithAssignedResources = filterWithAssignedResources;
         return this;
@@ -129,6 +143,14 @@ public class DescribeUsersRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeUsersRequest setIsQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {
+        this.isQueryAllSubOrgs = isQueryAllSubOrgs;
+        return this;
+    }
+    public Boolean getIsQueryAllSubOrgs() {
+        return this.isQueryAllSubOrgs;
     }
 
     public DescribeUsersRequest setMaxResults(Long maxResults) {

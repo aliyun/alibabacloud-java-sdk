@@ -69,6 +69,12 @@ public class FilterUsersRequest extends TeaModel {
     @NameInMap("IncludeDesktopGroupCount")
     public Boolean includeDesktopGroupCount;
 
+    @NameInMap("IncludeOrgInfo")
+    public Boolean includeOrgInfo;
+
+    @NameInMap("IncludeSupportIdps")
+    public Boolean includeSupportIdps;
+
     @NameInMap("IsQueryAllSubOrgs")
     public Boolean isQueryAllSubOrgs;
 
@@ -164,6 +170,22 @@ public class FilterUsersRequest extends TeaModel {
     }
     public Boolean getIncludeDesktopGroupCount() {
         return this.includeDesktopGroupCount;
+    }
+
+    public FilterUsersRequest setIncludeOrgInfo(Boolean includeOrgInfo) {
+        this.includeOrgInfo = includeOrgInfo;
+        return this;
+    }
+    public Boolean getIncludeOrgInfo() {
+        return this.includeOrgInfo;
+    }
+
+    public FilterUsersRequest setIncludeSupportIdps(Boolean includeSupportIdps) {
+        this.includeSupportIdps = includeSupportIdps;
+        return this;
+    }
+    public Boolean getIncludeSupportIdps() {
+        return this.includeSupportIdps;
     }
 
     public FilterUsersRequest setIsQueryAllSubOrgs(Boolean isQueryAllSubOrgs) {

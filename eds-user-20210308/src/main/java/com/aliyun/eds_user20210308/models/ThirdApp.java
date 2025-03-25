@@ -180,7 +180,7 @@ public class ThirdApp extends TeaModel {
         public java.util.List<String> grantTypes;
 
         @NameInMap("IdTokenAlgorithmType")
-        public Integer idTokenAlgorithmType;
+        public String idTokenAlgorithmType;
 
         @NameInMap("IdTokenEffectiveTime")
         public Integer idTokenEffectiveTime;
@@ -244,11 +244,11 @@ public class ThirdApp extends TeaModel {
             return this.grantTypes;
         }
 
-        public ThirdAppOidcSsoConfig setIdTokenAlgorithmType(Integer idTokenAlgorithmType) {
+        public ThirdAppOidcSsoConfig setIdTokenAlgorithmType(String idTokenAlgorithmType) {
             this.idTokenAlgorithmType = idTokenAlgorithmType;
             return this;
         }
-        public Integer getIdTokenAlgorithmType() {
+        public String getIdTokenAlgorithmType() {
             return this.idTokenAlgorithmType;
         }
 
