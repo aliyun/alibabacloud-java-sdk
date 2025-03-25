@@ -37,23 +37,25 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     public String interfaceVersion;
 
     /**
-     * <p>The parameter that is used to specify the masking rule that you want to modify and the value in the JSON format. All parameter values are of the string type. Example: <code>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</code>. Parameters in the function:</p>
+     * <p>The parameter that is used to specify the masking rule that you want to modify and the value in the JSON format. All parameter values are of the string type. Example: <code>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</code>. Where,</p>
      * <ul>
      * <li><code>&quot;auto&quot;</code>: specifies that the dynamic masking algorithm is supported. This parameter is required.</li>
      * <li><code>&quot;databases&quot;</code>: Optional. The names of databases to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the masking rule applies to all databases in the cluster.</li>
      * <li><code>&quot;tables&quot;</code>: Optional. The names of tables to which the masking rule is applied. Separate the names with commas (,). If you leave this parameter empty, the rule applies to all tables in the cluster.</li>
      * <li><code>&quot;columns&quot;</code>: Required. The names of fields to which the masking rule is applied. Separate the names with commas (,).</li>
-     * <li><code>&quot;description&quot;</code>: Optional. The description of the masking rule. The description can be up to 64 characters in length.</li>
-     * <li><code>&quot;enabled&quot;</code>: Required. Specifies whether to enable the masking rule. Valid values: <strong>true</strong> and <strong>false</strong>.</li>
+     * <li><code>&quot;description&quot;</code>: Optional. The description of the masking rule. The description is up to 64 characters in length.</li>
+     * <li><code>&quot;enabled&quot;</code>: Required. Specifies whether to enable the masking rule. Valid values: <strong>true</strong> (enable) and <strong>false</strong> (disable).</li>
      * <li><code>&quot;applies_to&quot;</code>: The names of database accounts to which the masking rule is applied. Separate the names with commas (,).</li>
      * <li><code>&quot;exempted&quot;</code>: The names of database accounts to which the masking rule is not applied. Separate the names with commas (,).</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>If you specify <code>RuleName</code>, <code>RuleConfig</code> parameter is required. </li>
-     * <li>You need to select either <code>&quot;applies_to&quot;</code> or <code>&quot;exempted&quot;</code>.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If you specify <code>RuleName</code>, <code>RuleConfig</code> parameter is required.</p>
+     * </li>
+     * <li><p>You need to select either <code>&quot;applies_to&quot;</code> or <code>&quot;exempted&quot;</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</p>
@@ -64,11 +66,13 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     /**
      * <p>The name of the data masking rule. You can specify only one rule name at a time.</p>
      * <blockquote>
-     * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeMaskingRules</a> operation to query the details of all masking rules for a specified cluster, such as the names of the masking rules.</li>
-     * <li>If the rule name does not exist in the cluster, the system automatically creates a masking rule based on the name and the value of <code>RuleConfig</code>.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeMaskingRules</a> operation to query the details of all masking rules for a specified cluster, such as the names of the masking rules.</p>
+     * </li>
+     * <li><p>If the rule name does not exist in the cluster, the system automatically creates a masking rule based on the name and the value of <code>RuleConfig</code>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>testrule</p>
