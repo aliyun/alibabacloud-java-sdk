@@ -480,6 +480,88 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDesktopsResponseBodyDesktopsOsUpdatePackages extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Kb")
+        public String kb;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static DescribeDesktopsResponseBodyDesktopsOsUpdatePackages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsResponseBodyDesktopsOsUpdatePackages self = new DescribeDesktopsResponseBodyDesktopsOsUpdatePackages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsOsUpdatePackages setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsOsUpdatePackages setKb(String kb) {
+            this.kb = kb;
+            return this;
+        }
+        public String getKb() {
+            return this.kb;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsOsUpdatePackages setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class DescribeDesktopsResponseBodyDesktopsOsUpdate extends TeaModel {
+        @NameInMap("CheckId")
+        public String checkId;
+
+        @NameInMap("PackageCount")
+        public Integer packageCount;
+
+        @NameInMap("Packages")
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsOsUpdatePackages> packages;
+
+        public static DescribeDesktopsResponseBodyDesktopsOsUpdate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsResponseBodyDesktopsOsUpdate self = new DescribeDesktopsResponseBodyDesktopsOsUpdate();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsOsUpdate setCheckId(String checkId) {
+            this.checkId = checkId;
+            return this;
+        }
+        public String getCheckId() {
+            return this.checkId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsOsUpdate setPackageCount(Integer packageCount) {
+            this.packageCount = packageCount;
+            return this;
+        }
+        public Integer getPackageCount() {
+            return this.packageCount;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsOsUpdate setPackages(java.util.List<DescribeDesktopsResponseBodyDesktopsOsUpdatePackages> packages) {
+            this.packages = packages;
+            return this;
+        }
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsOsUpdatePackages> getPackages() {
+            return this.packages;
+        }
+
+    }
+
     public static class DescribeDesktopsResponseBodyDesktopsResourceGroups extends TeaModel {
         /**
          * <p>The ID of the enterprise resource group.</p>
@@ -1030,6 +1112,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("OsType")
         public String osType;
 
+        @NameInMap("OsUpdate")
+        public DescribeDesktopsResponseBodyDesktopsOsUpdate osUpdate;
+
         /**
          * <p>The information about the OS platform.</p>
          * <p>Valid values:</p>
@@ -1569,6 +1654,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setOsUpdate(DescribeDesktopsResponseBodyDesktopsOsUpdate osUpdate) {
+            this.osUpdate = osUpdate;
+            return this;
+        }
+        public DescribeDesktopsResponseBodyDesktopsOsUpdate getOsUpdate() {
+            return this.osUpdate;
         }
 
         public DescribeDesktopsResponseBodyDesktops setPlatform(String platform) {

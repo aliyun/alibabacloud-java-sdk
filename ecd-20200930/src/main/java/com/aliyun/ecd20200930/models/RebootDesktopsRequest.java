@@ -14,6 +14,9 @@ public class RebootDesktopsRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    @NameInMap("OsUpdate")
+    public Boolean osUpdate;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -35,6 +38,14 @@ public class RebootDesktopsRequest extends TeaModel {
     }
     public java.util.List<String> getDesktopId() {
         return this.desktopId;
+    }
+
+    public RebootDesktopsRequest setOsUpdate(Boolean osUpdate) {
+        this.osUpdate = osUpdate;
+        return this;
+    }
+    public Boolean getOsUpdate() {
+        return this.osUpdate;
     }
 
     public RebootDesktopsRequest setRegionId(String regionId) {

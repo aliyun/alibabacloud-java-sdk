@@ -1050,6 +1050,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("EndUserGroupCoordinate")
         public String endUserGroupCoordinate;
 
+        @NameInMap("FileMigrate")
+        public String fileMigrate;
+
         /**
          * <p>Transfers files.</p>
          * 
@@ -1897,6 +1900,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("WatermarkType")
         public String watermarkType;
 
+        @NameInMap("WuyingKeeper")
+        public String wuyingKeeper;
+
         /**
          * <p>Specifies whether to provide the AI Assistant function in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace desktop clients (including the Windows client and the macOS client).</p>
          * <blockquote>
@@ -2125,6 +2131,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getEndUserGroupCoordinate() {
             return this.endUserGroupCoordinate;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setFileMigrate(String fileMigrate) {
+            this.fileMigrate = fileMigrate;
+            return this;
+        }
+        public String getFileMigrate() {
+            return this.fileMigrate;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setFileTransfer(String fileTransfer) {
@@ -2717,6 +2731,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getWatermarkType() {
             return this.watermarkType;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWuyingKeeper(String wuyingKeeper) {
+            this.wuyingKeeper = wuyingKeeper;
+            return this;
+        }
+        public String getWuyingKeeper() {
+            return this.wuyingKeeper;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setWyAssistant(String wyAssistant) {

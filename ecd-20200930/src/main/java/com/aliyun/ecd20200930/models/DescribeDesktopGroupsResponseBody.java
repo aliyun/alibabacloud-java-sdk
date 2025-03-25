@@ -684,6 +684,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsTags> tags;
 
+        @NameInMap("UserOuPath")
+        public String userOuPath;
+
         /**
          * <p>The version number of the cloud computer pool.</p>
          * 
@@ -1074,6 +1077,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setUserOuPath(String userOuPath) {
+            this.userOuPath = userOuPath;
+            return this;
+        }
+        public String getUserOuPath() {
+            return this.userOuPath;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setVersion(Integer version) {

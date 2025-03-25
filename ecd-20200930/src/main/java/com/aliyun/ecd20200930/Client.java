@@ -297,7 +297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds authorized end users of a desktop group.</p>
+     * <p>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</p>
      * 
      * @param request AddUserToDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -326,6 +326,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userOuPath)) {
+            query.put("UserOuPath", request.userOuPath);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -350,7 +354,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds authorized end users of a desktop group.</p>
+     * <p>Adds authorized users for a cloud computer share. The system automatically assigns cloud computers from a share to authorized users based on administrator-configured rules.</p>
      * 
      * @param request AddUserToDesktopGroupRequest
      * @return AddUserToDesktopGroupResponse
@@ -2807,6 +2811,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timerGroupId)) {
             query.put("TimerGroupId", request.timerGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userOuPath)) {
+            query.put("UserOuPath", request.userOuPath);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.volumeEncryptionEnabled)) {
@@ -9149,7 +9157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</p>
+     * <p>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</p>
      * 
      * @param request DescribeUsersInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9222,7 +9230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about authorized users in a cloud computer pool, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</p>
+     * <p>Queries the information about authorized users of a cloud computer share, including the usernames, email addresses, mobile numbers, and cloud computer IDs.</p>
      * 
      * @param request DescribeUsersInGroupRequest
      * @return DescribeUsersInGroupResponse
@@ -9852,7 +9860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.</p>
+     * <p>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</p>
      * 
      * @param request ExportDesktopGroupInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9933,7 +9941,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports cloud computer pools. The list of cloud computer pools is saved as an XLSX file. Each entry of cloud computer pool data includes the ID and name of the cloud computer pool, the ID and name of the office network, the cloud computer pool template, and the name of the security policy.</p>
+     * <p>Exports cloud computer shares and saves the list as an XLSX file. Each entry includes the ID and name of the cloud computer share, the ID and name of the office network, the cloud computer share template, and the name of the security policy.</p>
      * 
      * @param request ExportDesktopGroupInfoRequest
      * @return ExportDesktopGroupInfoResponse
@@ -14149,7 +14157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the end users of a cloud computer pool into new end users.</p>
+     * <p>Replaces the existing authorized users of a cloud computer share with different users</p>
      * 
      * @param request ModifyUserToDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14198,7 +14206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the end users of a cloud computer pool into new end users.</p>
+     * <p>Replaces the existing authorized users of a cloud computer share with different users</p>
      * 
      * @param request ModifyUserToDesktopGroupRequest
      * @return ModifyUserToDesktopGroupResponse
@@ -14297,6 +14305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osUpdate)) {
+            query.put("OsUpdate", request.osUpdate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -14502,7 +14514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.</p>
+     * <p>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</p>
      * 
      * @param request RemoveUserFromDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14525,6 +14537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userOuPath)) {
+            query.put("UserOuPath", request.userOuPath);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -14551,7 +14567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes authorized users of cloud computer pools. The removed users can no longer connect to cloud computers in the cloud computer pool.</p>
+     * <p>Revokes user access permissions for a cloud computer share. Once access permissions for a cloud computer share are revoked from a user, the user can no longer access any cloud computers within that share.</p>
      * 
      * @param request RemoveUserFromDesktopGroupRequest
      * @return RemoveUserFromDesktopGroupResponse
@@ -14624,7 +14640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renew a subscription cloud computer pool.</p>
+     * <p>Renews a shared cloud computer.</p>
      * 
      * @param request RenewDesktopGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14681,7 +14697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renew a subscription cloud computer pool.</p>
+     * <p>Renews a shared cloud computer.</p>
      * 
      * @param request RenewDesktopGroupRequest
      * @return RenewDesktopGroupResponse
@@ -14901,11 +14917,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can call this operation to reset only cloud computers in a cloud computer pool.</p>
+     * <p> You can call this operation to reset only cloud computers from a cloud computer share.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets cloud computers.</p>
+     * <p>Resets cloud computers of a cloud computer share.</p>
      * 
      * @param request ResetDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14971,11 +14987,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can call this operation to reset only cloud computers in a cloud computer pool.</p>
+     * <p> You can call this operation to reset only cloud computers from a cloud computer share.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Resets cloud computers.</p>
+     * <p>Resets cloud computers of a cloud computer share.</p>
      * 
      * @param request ResetDesktopsRequest
      * @return ResetDesktopsResponse
@@ -15383,7 +15399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.</p>
+     * <p>Configures a scheduled start, stop, restart, or reset task for a cloud computer share.</p>
      * 
      * @param request SetDesktopGroupTimerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15440,7 +15456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures a scheduled task for a cloud computer pool, such as starting, stopping, restarting or resting cloud computers in the pool.</p>
+     * <p>Configures a scheduled start, stop, restart, or reset task for a cloud computer share.</p>
      * 
      * @param request SetDesktopGroupTimerRequest
      * @return SetDesktopGroupTimerResponse
@@ -15452,7 +15468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.</p>
+     * <p>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</p>
      * 
      * @param request SetDesktopGroupTimerStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15501,7 +15517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Sets the status of a scheduled task for a cloud computer pool. For example, you enable or disable the scheduled task.</p>
+     * <p>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</p>
      * 
      * @param request SetDesktopGroupTimerStatusRequest
      * @return SetDesktopGroupTimerStatusResponse
@@ -15897,6 +15913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.desktopId)) {
             query.put("DesktopId", request.desktopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osUpdate)) {
+            query.put("OsUpdate", request.osUpdate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

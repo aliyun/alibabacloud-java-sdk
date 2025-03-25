@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     /**
-     * <p>Details about connection records of the end user.</p>
+     * <p>The connection records.</p>
      */
     @NameInMap("ConnectionRecords")
     public java.util.List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> connectionRecords;
@@ -59,7 +59,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
 
     public static class DescribeUserConnectionRecordsResponseBodyConnectionRecords extends TeaModel {
         /**
-         * <p>The duration for which the end user is connected to the cloud computer. Unit: seconds.</p>
+         * <p>The connection duration. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3405035000</p>

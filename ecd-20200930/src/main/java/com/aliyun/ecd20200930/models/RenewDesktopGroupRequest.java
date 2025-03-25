@@ -33,7 +33,7 @@ public class RenewDesktopGroupRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The ID of the cloud computer pool.</p>
+     * <p>The ID of the shared group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

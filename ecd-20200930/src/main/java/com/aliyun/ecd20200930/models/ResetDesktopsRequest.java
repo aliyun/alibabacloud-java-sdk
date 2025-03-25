@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ResetDesktopsRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud computer pool. If you specify the <code>DesktopId</code> parameter, ignore the <code>DesktopGroupId</code> parameter. If you do not specify the <code>DesktopId</code> parameter, specify the <code>DesktopGroupId</code> parameter in the call to request all IDs of the cloud computers in the specified pool.</p>
+     * <p>The ID of the cloud computer share.</p>
+     * <ul>
+     * <li>If you specify <code>DesktopId</code>, ignore <code>DesktopGroupId</code>.</li>
+     * <li>If you leave <code>DesktopId</code> empty, the system obtains the IDs of all cloud computers within the share specified by <code>DesktopGroupId</code>.``</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>dg-07if7qsxoxkb6****</p>
@@ -14,7 +18,7 @@ public class ResetDesktopsRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The IDs of the cloud computer pools.</p>
+     * <p>The IDs of the cloud computer shares.</p>
      */
     @NameInMap("DesktopGroupIds")
     public java.util.List<String> desktopGroupIds;
@@ -35,10 +39,15 @@ public class ResetDesktopsRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billing method of the cloud computer share.</p>
      * <blockquote>
-     * <p>This parameter is available only when you reset cloud computer pools. If you leave this parameter empty, all cloud computers in the specified cloud computer pool are reset, regardless of how the cloud computers are billed.</p>
+     * <p> This parameter takes effect when you reset a cloud computer share. If you leave this parameter empty, all cloud computers in that share are reset.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * <li>PrePaid: subscription.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
