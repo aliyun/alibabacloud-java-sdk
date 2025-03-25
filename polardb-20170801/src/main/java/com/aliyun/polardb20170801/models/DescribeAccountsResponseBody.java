@@ -174,8 +174,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The type of the account. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: a standard account</li>
-         * <li><strong>Super</strong>: a privileged account</li>
+         * <li><strong>Normal</strong>: standard account.</li>
+         * <li><strong>Super</strong>: privileged account.</li>
+         * <li><strong>ReadOnly</strong>: global read-only account.</li>
          * </ul>
          * 
          * <strong>example:</strong>

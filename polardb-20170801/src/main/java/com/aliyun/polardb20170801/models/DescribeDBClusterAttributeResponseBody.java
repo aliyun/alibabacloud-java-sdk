@@ -39,6 +39,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    @NameInMap("AutoUpgradeMinorVersion")
+    public String autoUpgradeMinorVersion;
+
     /**
      * <p>Maximum number of blktags in the file system.</p>
      * 
@@ -740,6 +743,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getArchitecture() {
         return this.architecture;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setAutoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
+        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+        return this;
+    }
+    public String getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion;
     }
 
     public DescribeDBClusterAttributeResponseBody setBlktagTotal(Long blktagTotal) {
@@ -1493,6 +1504,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("SubCluster")
         public String subCluster;
 
+        @NameInMap("SubGroupDescription")
+        public String subGroupDescription;
+
         /**
          * <p>Availability zone ID.</p>
          * 
@@ -1697,6 +1711,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getSubCluster() {
             return this.subCluster;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBNodes setSubGroupDescription(String subGroupDescription) {
+            this.subGroupDescription = subGroupDescription;
+            return this;
+        }
+        public String getSubGroupDescription() {
+            return this.subGroupDescription;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBNodes setZoneId(String zoneId) {

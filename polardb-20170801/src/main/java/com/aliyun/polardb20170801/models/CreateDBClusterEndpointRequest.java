@@ -7,8 +7,8 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic association of newly added nodes with the cluster endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong>: enables automatic association of newly added nodes with the cluster endpoint.</li>
-     * <li><strong>Disable</strong> (default): disables automatic association of newly added nodes with the cluster endpoint.</li>
+     * <li><strong>Enable</strong></li>
+     * <li><strong>Disable</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,11 +173,6 @@ public class CreateDBClusterEndpointRequest extends TeaModel {
      * <ul>
      * <li><strong>ON</strong></li>
      * <li><strong>OFF</strong></li>
-     * </ul>
-     * <p>Enumerated values:</p>
-     * <ul>
-     * <li>on</li>
-     * <li>off</li>
      * </ul>
      * 
      * <strong>example:</strong>

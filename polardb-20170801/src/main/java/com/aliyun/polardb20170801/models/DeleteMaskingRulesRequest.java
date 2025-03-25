@@ -17,6 +17,13 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Deletes data masking or encryption rules. Valid values:</p>
+     * <p>v1: deletes data masking rules. v2: deletes data encryption rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("InterfaceVersion")
     public String interfaceVersion;
 
