@@ -17,6 +17,9 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DownloadTaskType")
+    public String downloadTaskType;
+
     public static DescribeDownloadRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDownloadRecordsRequest self = new DescribeDownloadRecordsRequest();
         return TeaModel.build(map, self);
@@ -28,6 +31,14 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDownloadRecordsRequest setDownloadTaskType(String downloadTaskType) {
+        this.downloadTaskType = downloadTaskType;
+        return this;
+    }
+    public String getDownloadTaskType() {
+        return this.downloadTaskType;
     }
 
 }
