@@ -41,6 +41,9 @@ public class ListNamespacesRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("Tag")
+    public java.util.List<ListNamespacesRequestTag> tag;
+
     public static ListNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNamespacesRequest self = new ListNamespacesRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,44 @@ public class ListNamespacesRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public ListNamespacesRequest setTag(java.util.List<ListNamespacesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListNamespacesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListNamespacesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListNamespacesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListNamespacesRequestTag self = new ListNamespacesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNamespacesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListNamespacesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

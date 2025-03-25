@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class CreateApplicationRequest extends TeaModel {
+public class CreateApplicationShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
@@ -83,14 +83,14 @@ public class CreateApplicationRequest extends TeaModel {
     public String switchEnable;
 
     @NameInMap("Tags")
-    public java.util.List<CreateApplicationRequestTags> tags;
+    public String tagsShrink;
 
-    public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateApplicationRequest self = new CreateApplicationRequest();
+    public static CreateApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateApplicationShrinkRequest self = new CreateApplicationShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateApplicationRequest setAcceptLanguage(String acceptLanguage) {
+    public CreateApplicationShrinkRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -98,7 +98,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public CreateApplicationRequest setAppName(String appName) {
+    public CreateApplicationShrinkRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -106,7 +106,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateApplicationRequest setLanguage(String language) {
+    public CreateApplicationShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -114,7 +114,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.language;
     }
 
-    public CreateApplicationRequest setNamespace(String namespace) {
+    public CreateApplicationShrinkRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -122,7 +122,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.namespace;
     }
 
-    public CreateApplicationRequest setRegion(String region) {
+    public CreateApplicationShrinkRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -130,7 +130,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.region;
     }
 
-    public CreateApplicationRequest setSentinelEnable(String sentinelEnable) {
+    public CreateApplicationShrinkRequest setSentinelEnable(String sentinelEnable) {
         this.sentinelEnable = sentinelEnable;
         return this;
     }
@@ -138,7 +138,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.sentinelEnable;
     }
 
-    public CreateApplicationRequest setSource(String source) {
+    public CreateApplicationShrinkRequest setSource(String source) {
         this.source = source;
         return this;
     }
@@ -146,7 +146,7 @@ public class CreateApplicationRequest extends TeaModel {
         return this.source;
     }
 
-    public CreateApplicationRequest setSwitchEnable(String switchEnable) {
+    public CreateApplicationShrinkRequest setSwitchEnable(String switchEnable) {
         this.switchEnable = switchEnable;
         return this;
     }
@@ -154,42 +154,12 @@ public class CreateApplicationRequest extends TeaModel {
         return this.switchEnable;
     }
 
-    public CreateApplicationRequest setTags(java.util.List<CreateApplicationRequestTags> tags) {
-        this.tags = tags;
+    public CreateApplicationShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<CreateApplicationRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class CreateApplicationRequestTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateApplicationRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            CreateApplicationRequestTags self = new CreateApplicationRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateApplicationRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateApplicationRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }
