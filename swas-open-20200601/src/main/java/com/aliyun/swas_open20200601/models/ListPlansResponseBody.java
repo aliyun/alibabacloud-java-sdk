@@ -40,6 +40,47 @@ public class ListPlansResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListPlansResponseBodyPlansTags extends TeaModel {
+        @NameInMap("CnTitle")
+        public String cnTitle;
+
+        @NameInMap("Color")
+        public String color;
+
+        @NameInMap("EnTitle")
+        public String enTitle;
+
+        public static ListPlansResponseBodyPlansTags build(java.util.Map<String, ?> map) throws Exception {
+            ListPlansResponseBodyPlansTags self = new ListPlansResponseBodyPlansTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPlansResponseBodyPlansTags setCnTitle(String cnTitle) {
+            this.cnTitle = cnTitle;
+            return this;
+        }
+        public String getCnTitle() {
+            return this.cnTitle;
+        }
+
+        public ListPlansResponseBodyPlansTags setColor(String color) {
+            this.color = color;
+            return this;
+        }
+        public String getColor() {
+            return this.color;
+        }
+
+        public ListPlansResponseBodyPlansTags setEnTitle(String enTitle) {
+            this.enTitle = enTitle;
+            return this;
+        }
+        public String getEnTitle() {
+            return this.enTitle;
+        }
+
+    }
+
     public static class ListPlansResponseBodyPlans extends TeaModel {
         /**
          * <p>The peak bandwidth. Unit: Mbit/s.</p>
@@ -106,6 +147,9 @@ public class ListPlansResponseBody extends TeaModel {
         @NameInMap("Flow")
         public Integer flow;
 
+        @NameInMap("IspType")
+        public String ispType;
+
         /**
          * <p>The memory size. Unit: GB.</p>
          * 
@@ -113,7 +157,7 @@ public class ListPlansResponseBody extends TeaModel {
          * <p>1</p>
          */
         @NameInMap("Memory")
-        public Integer memory;
+        public Float memory;
 
         /**
          * <p>The monthly price of the plan.</p>
@@ -122,7 +166,7 @@ public class ListPlansResponseBody extends TeaModel {
          * <p>60</p>
          */
         @NameInMap("OriginPrice")
-        public Double originPrice;
+        public String originPrice;
 
         /**
          * <p>The ID of the plan.</p>
@@ -136,6 +180,9 @@ public class ListPlansResponseBody extends TeaModel {
         @NameInMap("PlanType")
         public String planType;
 
+        @NameInMap("PublicIpNum")
+        public String publicIpNum;
+
         /**
          * <p>The operating system types supported by the plan.</p>
          * 
@@ -144,6 +191,9 @@ public class ListPlansResponseBody extends TeaModel {
          */
         @NameInMap("SupportPlatform")
         public String supportPlatform;
+
+        @NameInMap("Tags")
+        public java.util.List<ListPlansResponseBodyPlansTags> tags;
 
         public static ListPlansResponseBodyPlans build(java.util.Map<String, ?> map) throws Exception {
             ListPlansResponseBodyPlans self = new ListPlansResponseBodyPlans();
@@ -198,19 +248,27 @@ public class ListPlansResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public ListPlansResponseBodyPlans setMemory(Integer memory) {
+        public ListPlansResponseBodyPlans setIspType(String ispType) {
+            this.ispType = ispType;
+            return this;
+        }
+        public String getIspType() {
+            return this.ispType;
+        }
+
+        public ListPlansResponseBodyPlans setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
-        public Integer getMemory() {
+        public Float getMemory() {
             return this.memory;
         }
 
-        public ListPlansResponseBodyPlans setOriginPrice(Double originPrice) {
+        public ListPlansResponseBodyPlans setOriginPrice(String originPrice) {
             this.originPrice = originPrice;
             return this;
         }
-        public Double getOriginPrice() {
+        public String getOriginPrice() {
             return this.originPrice;
         }
 
@@ -230,12 +288,28 @@ public class ListPlansResponseBody extends TeaModel {
             return this.planType;
         }
 
+        public ListPlansResponseBodyPlans setPublicIpNum(String publicIpNum) {
+            this.publicIpNum = publicIpNum;
+            return this;
+        }
+        public String getPublicIpNum() {
+            return this.publicIpNum;
+        }
+
         public ListPlansResponseBodyPlans setSupportPlatform(String supportPlatform) {
             this.supportPlatform = supportPlatform;
             return this;
         }
         public String getSupportPlatform() {
             return this.supportPlatform;
+        }
+
+        public ListPlansResponseBodyPlans setTags(java.util.List<ListPlansResponseBodyPlansTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListPlansResponseBodyPlansTags> getTags() {
+            return this.tags;
         }
 
     }

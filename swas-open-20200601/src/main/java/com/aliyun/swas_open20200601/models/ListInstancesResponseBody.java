@@ -852,6 +852,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("PlanId")
         public String planId;
 
+        @NameInMap("PlanType")
+        public String planType;
+
         /**
          * <p>The public IP address.</p>
          * 
@@ -1050,6 +1053,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getPlanId() {
             return this.planId;
+        }
+
+        public ListInstancesResponseBodyInstances setPlanType(String planType) {
+            this.planType = planType;
+            return this;
+        }
+        public String getPlanType() {
+            return this.planType;
         }
 
         public ListInstancesResponseBodyInstances setPublicIpAddress(String publicIpAddress) {
