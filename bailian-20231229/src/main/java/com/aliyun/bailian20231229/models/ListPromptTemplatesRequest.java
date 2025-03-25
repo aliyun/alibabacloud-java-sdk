@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPromptTemplatesRequest extends TeaModel {
     /**
+     * <p>The maximum number of returned entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The keyword that is used to search for templates.</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc270401186b433f975d7e1faaa34e0e</p>
      */
@@ -22,6 +29,8 @@ public class ListPromptTemplatesRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The type of the template. Valid values: · System · Custom</p>
+     * 
      * <strong>example:</strong>
      * <p>System</p>
      */

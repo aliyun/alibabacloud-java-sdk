@@ -131,6 +131,9 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         @NameInMap("DocumentType")
         public String documentType;
 
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
         /**
          * <p>The primary key ID of the document.</p>
          * 
@@ -208,6 +211,14 @@ public class ListIndexDocumentsResponseBody extends TeaModel {
         }
         public String getDocumentType() {
             return this.documentType;
+        }
+
+        public ListIndexDocumentsResponseBodyDataDocuments setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
         }
 
         public ListIndexDocumentsResponseBodyDataDocuments setId(String id) {
