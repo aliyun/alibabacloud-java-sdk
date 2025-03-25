@@ -133,7 +133,40 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
     }
 
+    public static class ListClusterNodesResponseBodyNodesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListClusterNodesResponseBodyNodesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListClusterNodesResponseBodyNodesTags self = new ListClusterNodesResponseBodyNodesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClusterNodesResponseBodyNodesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListClusterNodesResponseBodyNodesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListClusterNodesResponseBodyNodes extends TeaModel {
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
         /**
          * <p>Creation time</p>
          * 
@@ -178,6 +211,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
          */
         @NameInMap("ImageId")
         public String imageId;
+
+        @NameInMap("ImageName")
+        public String imageName;
 
         /**
          * <p>Machine type</p>
@@ -239,9 +275,27 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("Sn")
         public String sn;
 
+        @NameInMap("Tags")
+        public java.util.List<ListClusterNodesResponseBodyNodesTags> tags;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        /**
+         * <p>专有网络交换机ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1mxqhw8o20tgv3xk47h</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>专有网络ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-0jltf9vinjz3if3lltdy7</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -257,6 +311,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public static ListClusterNodesResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             ListClusterNodesResponseBodyNodes self = new ListClusterNodesResponseBodyNodes();
             return TeaModel.build(map, self);
+        }
+
+        public ListClusterNodesResponseBodyNodes setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
         }
 
         public ListClusterNodesResponseBodyNodes setCreateTime(String createTime) {
@@ -297,6 +359,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public ListClusterNodesResponseBodyNodes setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
         }
 
         public ListClusterNodesResponseBodyNodes setMachineType(String machineType) {
@@ -353,6 +423,22 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
         public String getSn() {
             return this.sn;
+        }
+
+        public ListClusterNodesResponseBodyNodes setTags(java.util.List<ListClusterNodesResponseBodyNodesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListClusterNodesResponseBodyNodesTags> getTags() {
+            return this.tags;
+        }
+
+        public ListClusterNodesResponseBodyNodes setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
         public ListClusterNodesResponseBodyNodes setVSwitchId(String vSwitchId) {

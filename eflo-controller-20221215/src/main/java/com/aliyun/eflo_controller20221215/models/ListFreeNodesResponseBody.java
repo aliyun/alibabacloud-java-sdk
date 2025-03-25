@@ -57,7 +57,40 @@ public class ListFreeNodesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListFreeNodesResponseBodyNodesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListFreeNodesResponseBodyNodesTags build(java.util.Map<String, ?> map) throws Exception {
+            ListFreeNodesResponseBodyNodesTags self = new ListFreeNodesResponseBodyNodesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFreeNodesResponseBodyNodesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListFreeNodesResponseBodyNodesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListFreeNodesResponseBodyNodes extends TeaModel {
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
         /**
          * <p>Creation time</p>
          * 
@@ -103,6 +136,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("OperatingState")
+        public String operatingState;
+
         /**
          * <p>Resource group ID</p>
          * 
@@ -121,6 +157,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("Sn")
         public String sn;
 
+        @NameInMap("Tags")
+        public java.util.List<ListFreeNodesResponseBodyNodesTags> tags;
+
         /**
          * <p>Availability zone ID</p>
          * 
@@ -133,6 +172,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public static ListFreeNodesResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             ListFreeNodesResponseBodyNodes self = new ListFreeNodesResponseBodyNodes();
             return TeaModel.build(map, self);
+        }
+
+        public ListFreeNodesResponseBodyNodes setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
         }
 
         public ListFreeNodesResponseBodyNodes setCreateTime(String createTime) {
@@ -175,6 +222,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
             return this.nodeId;
         }
 
+        public ListFreeNodesResponseBodyNodes setOperatingState(String operatingState) {
+            this.operatingState = operatingState;
+            return this;
+        }
+        public String getOperatingState() {
+            return this.operatingState;
+        }
+
         public ListFreeNodesResponseBodyNodes setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -189,6 +244,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
         public String getSn() {
             return this.sn;
+        }
+
+        public ListFreeNodesResponseBodyNodes setTags(java.util.List<ListFreeNodesResponseBodyNodesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListFreeNodesResponseBodyNodesTags> getTags() {
+            return this.tags;
         }
 
         public ListFreeNodesResponseBodyNodes setZoneId(String zoneId) {

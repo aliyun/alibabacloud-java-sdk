@@ -49,6 +49,9 @@ public class ListFreeNodesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tags")
+    public java.util.List<ListFreeNodesRequestTags> tags;
+
     public static ListFreeNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFreeNodesRequest self = new ListFreeNodesRequest();
         return TeaModel.build(map, self);
@@ -92,6 +95,48 @@ public class ListFreeNodesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListFreeNodesRequest setTags(java.util.List<ListFreeNodesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListFreeNodesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListFreeNodesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>129</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListFreeNodesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListFreeNodesRequestTags self = new ListFreeNodesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFreeNodesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListFreeNodesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
