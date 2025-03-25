@@ -167,6 +167,9 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         @NameInMap("enableDecimal2")
         public Boolean enableDecimal2;
 
+        @NameInMap("enableDr")
+        public Boolean enableDr;
+
         /**
          * <p>Indicates whether the routing of the Tunnel resource group is enabled.</p>
          * <ul>
@@ -268,6 +271,14 @@ public class UpdateProjectBasicMetaRequest extends TeaModel {
         }
         public Boolean getEnableDecimal2() {
             return this.enableDecimal2;
+        }
+
+        public UpdateProjectBasicMetaRequestProperties setEnableDr(Boolean enableDr) {
+            this.enableDr = enableDr;
+            return this;
+        }
+        public Boolean getEnableDr() {
+            return this.enableDr;
         }
 
         public UpdateProjectBasicMetaRequestProperties setEnableTunnelQuotaRoute(Boolean enableTunnelQuotaRoute) {
