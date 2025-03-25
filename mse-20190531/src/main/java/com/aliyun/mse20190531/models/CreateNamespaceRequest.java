@@ -21,6 +21,9 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateNamespaceRequestTag> tag;
+
     public static CreateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNamespaceRequest self = new CreateNamespaceRequest();
         return TeaModel.build(map, self);
@@ -48,6 +51,44 @@ public class CreateNamespaceRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateNamespaceRequest setTag(java.util.List<CreateNamespaceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateNamespaceRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateNamespaceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateNamespaceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateNamespaceRequestTag self = new CreateNamespaceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNamespaceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateNamespaceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

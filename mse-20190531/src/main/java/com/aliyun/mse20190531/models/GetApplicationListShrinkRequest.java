@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class GetApplicationListRequest extends TeaModel {
+public class GetApplicationListShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
@@ -111,14 +111,14 @@ public class GetApplicationListRequest extends TeaModel {
     public Boolean switchEnable;
 
     @NameInMap("Tags")
-    public java.util.List<GetApplicationListRequestTags> tags;
+    public String tagsShrink;
 
-    public static GetApplicationListRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetApplicationListRequest self = new GetApplicationListRequest();
+    public static GetApplicationListShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetApplicationListShrinkRequest self = new GetApplicationListShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetApplicationListRequest setAcceptLanguage(String acceptLanguage) {
+    public GetApplicationListShrinkRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -126,7 +126,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public GetApplicationListRequest setAppId(String appId) {
+    public GetApplicationListShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -134,7 +134,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.appId;
     }
 
-    public GetApplicationListRequest setAppName(String appName) {
+    public GetApplicationListShrinkRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -142,7 +142,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.appName;
     }
 
-    public GetApplicationListRequest setLanguage(String language) {
+    public GetApplicationListShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -150,7 +150,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.language;
     }
 
-    public GetApplicationListRequest setNamespace(String namespace) {
+    public GetApplicationListShrinkRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -158,7 +158,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.namespace;
     }
 
-    public GetApplicationListRequest setPageNumber(Integer pageNumber) {
+    public GetApplicationListShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -166,7 +166,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public GetApplicationListRequest setPageSize(Integer pageSize) {
+    public GetApplicationListShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -174,7 +174,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetApplicationListRequest setRegion(String region) {
+    public GetApplicationListShrinkRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -182,7 +182,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.region;
     }
 
-    public GetApplicationListRequest setSentinelEnable(Boolean sentinelEnable) {
+    public GetApplicationListShrinkRequest setSentinelEnable(Boolean sentinelEnable) {
         this.sentinelEnable = sentinelEnable;
         return this;
     }
@@ -190,7 +190,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.sentinelEnable;
     }
 
-    public GetApplicationListRequest setSource(String source) {
+    public GetApplicationListShrinkRequest setSource(String source) {
         this.source = source;
         return this;
     }
@@ -198,7 +198,7 @@ public class GetApplicationListRequest extends TeaModel {
         return this.source;
     }
 
-    public GetApplicationListRequest setSwitchEnable(Boolean switchEnable) {
+    public GetApplicationListShrinkRequest setSwitchEnable(Boolean switchEnable) {
         this.switchEnable = switchEnable;
         return this;
     }
@@ -206,42 +206,12 @@ public class GetApplicationListRequest extends TeaModel {
         return this.switchEnable;
     }
 
-    public GetApplicationListRequest setTags(java.util.List<GetApplicationListRequestTags> tags) {
-        this.tags = tags;
+    public GetApplicationListShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<GetApplicationListRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class GetApplicationListRequestTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static GetApplicationListRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            GetApplicationListRequestTags self = new GetApplicationListRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public GetApplicationListRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GetApplicationListRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

@@ -74,6 +74,9 @@ public class ListNamespacesResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         /**
          * <strong>example:</strong>
          * <p>2024-09-02T09:49:48.000+0000</p>
@@ -146,6 +149,14 @@ public class ListNamespacesResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public ListNamespacesResponseBodyDataResult setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public ListNamespacesResponseBodyDataResult setUpdateTime(Long updateTime) {

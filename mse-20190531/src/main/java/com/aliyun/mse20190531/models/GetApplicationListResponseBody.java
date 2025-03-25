@@ -160,6 +160,9 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("Status")
         public Long status;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         /**
          * <p>The user ID.</p>
          * 
@@ -244,6 +247,14 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
         public Long getStatus() {
             return this.status;
+        }
+
+        public GetApplicationListResponseBodyDataResult setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public GetApplicationListResponseBodyDataResult setUserId(String userId) {
