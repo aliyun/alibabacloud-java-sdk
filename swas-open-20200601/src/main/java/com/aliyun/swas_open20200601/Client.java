@@ -4209,6 +4209,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.planType)) {
+            query.put("PlanType", request.planType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.publicIpAddresses)) {
             query.put("PublicIpAddresses", request.publicIpAddresses);
         }

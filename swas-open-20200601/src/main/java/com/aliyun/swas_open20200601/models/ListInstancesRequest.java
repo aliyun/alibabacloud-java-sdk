@@ -55,6 +55,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PlanType")
+    public String planType;
+
     /**
      * <p>The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</p>
      * <blockquote>
@@ -154,6 +157,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstancesRequest setPlanType(String planType) {
+        this.planType = planType;
+        return this;
+    }
+    public String getPlanType() {
+        return this.planType;
     }
 
     public ListInstancesRequest setPublicIpAddresses(String publicIpAddresses) {
