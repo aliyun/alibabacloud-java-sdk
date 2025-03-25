@@ -17,12 +17,6 @@ public class QueryContentRequest extends TeaModel {
     @NameInMap("Collection")
     public String collection;
 
-    /**
-     * <p>Text content for retrieval.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>What is ADBPG?</p>
-     */
     @NameInMap("Content")
     public String content;
 
