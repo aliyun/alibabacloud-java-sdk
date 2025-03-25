@@ -91,6 +91,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Calendar")
         public String calendar;
 
+        @NameInMap("ChildJobId")
+        public String childJobId;
+
         /**
          * <strong>example:</strong>
          * <p>{&quot;cleanMode&quot;:&quot;NUM_ONLY&quot;,&quot;totalRemain&quot;:300}</p>
@@ -276,6 +279,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getCalendar() {
             return this.calendar;
+        }
+
+        public ListJobsResponseBodyDataRecords setChildJobId(String childJobId) {
+            this.childJobId = childJobId;
+            return this;
+        }
+        public String getChildJobId() {
+            return this.childJobId;
         }
 
         public ListJobsResponseBodyDataRecords setCleanMode(String cleanMode) {
