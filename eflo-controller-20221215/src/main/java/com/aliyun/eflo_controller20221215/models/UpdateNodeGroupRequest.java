@@ -18,6 +18,9 @@ public class UpdateNodeGroupRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    @NameInMap("UserData")
+    public String userData;
+
     public static UpdateNodeGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNodeGroupRequest self = new UpdateNodeGroupRequest();
         return TeaModel.build(map, self);
@@ -37,6 +40,14 @@ public class UpdateNodeGroupRequest extends TeaModel {
     }
     public String getNodeGroupId() {
         return this.nodeGroupId;
+    }
+
+    public UpdateNodeGroupRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

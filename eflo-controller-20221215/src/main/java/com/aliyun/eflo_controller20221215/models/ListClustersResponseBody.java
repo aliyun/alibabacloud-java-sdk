@@ -57,6 +57,36 @@ public class ListClustersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListClustersResponseBodyClustersTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListClustersResponseBodyClustersTags build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyClustersTags self = new ListClustersResponseBodyClustersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersResponseBodyClustersTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListClustersResponseBodyClustersTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListClustersResponseBodyClusters extends TeaModel {
         /**
          * <p>Cluster description</p>
@@ -165,6 +195,9 @@ public class ListClustersResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public java.util.List<ListClustersResponseBodyClustersTags> tags;
 
         /**
          * <p>Task ID</p>
@@ -292,6 +325,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListClustersResponseBodyClusters setTags(java.util.List<ListClustersResponseBodyClustersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListClustersResponseBodyClustersTags> getTags() {
+            return this.tags;
         }
 
         public ListClustersResponseBodyClusters setTaskId(String taskId) {

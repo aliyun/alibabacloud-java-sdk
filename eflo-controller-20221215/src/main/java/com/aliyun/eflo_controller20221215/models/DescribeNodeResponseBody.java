@@ -154,6 +154,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("Sn")
     public String sn;
 
+    @NameInMap("UserData")
+    public String userData;
+
     /**
      * <p>Zone ID</p>
      * 
@@ -302,6 +305,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
     public String getSn() {
         return this.sn;
+    }
+
+    public DescribeNodeResponseBody setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public DescribeNodeResponseBody setZoneId(String zoneId) {

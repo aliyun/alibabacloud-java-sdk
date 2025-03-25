@@ -91,6 +91,9 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
+        @NameInMap("UserData")
+        public String userData;
+
         public static CreateNodeGroupRequestNodeGroup build(java.util.Map<String, ?> map) throws Exception {
             CreateNodeGroupRequestNodeGroup self = new CreateNodeGroupRequestNodeGroup();
             return TeaModel.build(map, self);
@@ -134,6 +137,14 @@ public class CreateNodeGroupRequest extends TeaModel {
         }
         public String getNodeGroupName() {
             return this.nodeGroupName;
+        }
+
+        public CreateNodeGroupRequestNodeGroup setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
     }

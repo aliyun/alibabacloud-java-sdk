@@ -41,6 +41,12 @@ public class ListClusterNodesRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public java.util.List<ListClusterNodesRequestTags> tags;
+
     public static ListClusterNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterNodesRequest self = new ListClusterNodesRequest();
         return TeaModel.build(map, self);
@@ -76,6 +82,52 @@ public class ListClusterNodesRequest extends TeaModel {
     }
     public String getNodeGroupId() {
         return this.nodeGroupId;
+    }
+
+    public ListClusterNodesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListClusterNodesRequest setTags(java.util.List<ListClusterNodesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListClusterNodesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListClusterNodesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListClusterNodesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListClusterNodesRequestTags self = new ListClusterNodesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClusterNodesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListClusterNodesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

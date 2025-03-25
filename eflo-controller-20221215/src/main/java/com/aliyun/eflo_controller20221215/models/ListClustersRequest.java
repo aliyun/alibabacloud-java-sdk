@@ -31,6 +31,9 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tags")
+    public java.util.List<ListClustersRequestTags> tags;
+
     public static ListClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClustersRequest self = new ListClustersRequest();
         return TeaModel.build(map, self);
@@ -58,6 +61,44 @@ public class ListClustersRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListClustersRequest setTags(java.util.List<ListClustersRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListClustersRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListClustersRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListClustersRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersRequestTags self = new ListClustersRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListClustersRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
