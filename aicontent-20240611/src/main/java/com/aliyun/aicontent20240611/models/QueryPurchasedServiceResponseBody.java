@@ -3,7 +3,7 @@ package com.aliyun.aicontent20240611.models;
 
 import com.aliyun.tea.*;
 
-public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody extends TeaModel {
+public class QueryPurchasedServiceResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>[]</p>
@@ -46,12 +46,12 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
     @NameInMap("success")
     public Boolean success;
 
-    public static AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody self = new AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody();
+    public static QueryPurchasedServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        QueryPurchasedServiceResponseBody self = new QueryPurchasedServiceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setData(java.util.List<AliyunConsoleServiceInfoDTO> data) {
+    public QueryPurchasedServiceResponseBody setData(java.util.List<AliyunConsoleServiceInfoDTO> data) {
         this.data = data;
         return this;
     }
@@ -59,7 +59,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         return this.data;
     }
 
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setErrCode(String errCode) {
+    public QueryPurchasedServiceResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -67,7 +67,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         return this.errCode;
     }
 
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setErrMessage(String errMessage) {
+    public QueryPurchasedServiceResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -75,7 +75,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         return this.errMessage;
     }
 
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public QueryPurchasedServiceResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -83,7 +83,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         return this.httpStatusCode;
     }
 
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setRequestId(String requestId) {
+    public QueryPurchasedServiceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -91,7 +91,7 @@ public class AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody exten
         return this.requestId;
     }
 
-    public AliyunConsoleOpenApiQueryAliyunConsoleServiceListResponseBody setSuccess(Boolean success) {
+    public QueryPurchasedServiceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
