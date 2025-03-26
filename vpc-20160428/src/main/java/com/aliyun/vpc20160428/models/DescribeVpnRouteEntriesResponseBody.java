@@ -40,11 +40,17 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The information about route entries of the VPN gateway in dual-tunnel mode.</p>
+     * <blockquote>
+     * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in dual-tunnel mode.</p>
+     * </blockquote>
+     */
     @NameInMap("VpnRouteCounts")
     public DescribeVpnRouteEntriesResponseBodyVpnRouteCounts vpnRouteCounts;
 
     /**
-     * <p>The list of route entries.</p>
+     * <p>The route entry list.</p>
      */
     @NameInMap("VpnRouteEntries")
     public DescribeVpnRouteEntriesResponseBodyVpnRouteEntries vpnRouteEntries;
@@ -103,12 +109,38 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnRouteEntriesResponseBodyVpnRouteCountsVpnRouteCount extends TeaModel {
+        /**
+         * <p>The number of route entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("RouteCount")
         public Integer routeCount;
 
+        /**
+         * <p>The route type. Valid values:</p>
+         * <ul>
+         * <li><strong>custom</strong> (default): destination-based route.</li>
+         * <li><strong>bgp</strong> : BGP route entry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bgp</p>
+         */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
 
+        /**
+         * <p>The source of the BGP route. Valid values:</p>
+         * <ul>
+         * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
+         * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPN_BGP</p>
+         */
         @NameInMap("Source")
         public String source;
 
@@ -234,7 +266,11 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         public String routeEntryType;
 
         /**
-         * <p>The source CIDR block of the route entry.</p>
+         * <p>The source of the BGP route. Valid values:</p>
+         * <ul>
+         * <li><strong>CLOUD</strong>: advertised from a cloud service associated with the VPN gateway.</li>
+         * <li><strong>VPN_BGP</strong>: indicates that the current route is learned by using BGP of the VPN gateway. For example, the BGP is used to learn the route of the on-premises data center.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>192.168.10.0/24</p>

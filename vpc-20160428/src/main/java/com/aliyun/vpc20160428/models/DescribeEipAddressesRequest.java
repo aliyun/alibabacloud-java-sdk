@@ -229,6 +229,17 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("SegmentInstanceId")
     public String segmentInstanceId;
 
+    /**
+     * <p>Indicates whether the instance is managed. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no.</li>
+     * </ul>
+     * <p>If you do not specify this parameter, all instances are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 

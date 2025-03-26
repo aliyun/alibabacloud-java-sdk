@@ -1,3 +1,10 @@
+2025-03-26 Version: 7.14.0
+- Support API ModifyEipForwardMode.
+- Update API AllocateEipAddress: add request parameters Tag.
+- Update API AllocateEipAddressPro: add request parameters Tag.
+- Update API CreateCommonBandwidthPackage: add request parameters Tag.
+
+
 2025-02-10 Version: 7.13.2
 - Update API AssociateVpcCidrBlock: update response param.
 - Update API CreateRouteEntries: update param RouteEntries.

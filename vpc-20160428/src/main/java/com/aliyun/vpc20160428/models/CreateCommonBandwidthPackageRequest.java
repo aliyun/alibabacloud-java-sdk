@@ -128,6 +128,9 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateCommonBandwidthPackageRequestTag> tag;
+
     /**
      * <p>The zone of the Internet Shared Bandwidth instance. This parameter is required if you create an Internet Shared Bandwidth instance for a cloud box.</p>
      * 
@@ -254,12 +257,50 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
         return this.securityProtectionTypes;
     }
 
+    public CreateCommonBandwidthPackageRequest setTag(java.util.List<CreateCommonBandwidthPackageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateCommonBandwidthPackageRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateCommonBandwidthPackageRequest setZone(String zone) {
         this.zone = zone;
         return this;
     }
     public String getZone() {
         return this.zone;
+    }
+
+    public static class CreateCommonBandwidthPackageRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCommonBandwidthPackageRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCommonBandwidthPackageRequestTag self = new CreateCommonBandwidthPackageRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCommonBandwidthPackageRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCommonBandwidthPackageRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -4,10 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
+    /**
+     * <p>The zones.</p>
+     */
     @NameInMap("AvailableZoneIdList")
     public java.util.List<DescribeVpnGatewayAvailableZonesResponseBodyAvailableZoneIdList> availableZoneIdList;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -15,6 +20,8 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>29784052-931F-543D-A612-36B3838163FA</p>
      */
@@ -52,6 +59,8 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
 
     public static class DescribeVpnGatewayAvailableZonesResponseBodyAvailableZoneIdList extends TeaModel {
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */
@@ -59,6 +68,8 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
         public String zoneId;
 
         /**
+         * <p>The zone name.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
          */

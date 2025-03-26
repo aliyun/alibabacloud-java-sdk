@@ -250,6 +250,9 @@ public class AllocateEipAddressRequest extends TeaModel {
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 
+    @NameInMap("Tag")
+    public java.util.List<AllocateEipAddressRequestTag> tag;
+
     /**
      * <p>The zone of the EIP.</p>
      * <p>When the service type of the IP address pool specified by <strong>PublicIpAddressPoolId</strong> is CloudBox, the default value is the zone of the IP address pool.</p>
@@ -442,12 +445,50 @@ public class AllocateEipAddressRequest extends TeaModel {
         return this.securityProtectionTypes;
     }
 
+    public AllocateEipAddressRequest setTag(java.util.List<AllocateEipAddressRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<AllocateEipAddressRequestTag> getTag() {
+        return this.tag;
+    }
+
     public AllocateEipAddressRequest setZone(String zone) {
         this.zone = zone;
         return this;
     }
     public String getZone() {
         return this.zone;
+    }
+
+    public static class AllocateEipAddressRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static AllocateEipAddressRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            AllocateEipAddressRequestTag self = new AllocateEipAddressRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public AllocateEipAddressRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public AllocateEipAddressRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

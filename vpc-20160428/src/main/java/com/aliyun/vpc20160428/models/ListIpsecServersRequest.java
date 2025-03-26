@@ -15,7 +15,7 @@ public class ListIpsecServersRequest extends TeaModel {
 
     /**
      * <p>The name of the IPsec server.</p>
-     * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -58,8 +58,7 @@ public class ListIpsecServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the IPsec server belongs.</p>
-     * <p>The IPsec server has the same resource group as its associated VPN gateway instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     * <p>The IPsec server and its associated VPN gateway belong to the same resource group. You can call <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> to query the ID of the resource group to which the VPN gateway belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>

@@ -43,7 +43,6 @@ public class CreateFlowLogRequest extends TeaModel {
      * <li>The name must start and end with a lowercase letter or a digit.</li>
      * <li>The name must be 3 to 63 characters in length.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogStore</p>
@@ -64,7 +63,6 @@ public class CreateFlowLogRequest extends TeaModel {
      * <li>The name must start and end with a lowercase letter or a digit.</li>
      * <li>The name must be 3 to 63 characters in length.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogProject</p>
