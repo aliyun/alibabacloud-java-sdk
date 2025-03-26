@@ -1184,6 +1184,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request CloneCenterPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloneCenterPolicyResponse
+     */
+    public CloneCenterPolicyResponse cloneCenterPolicyWithOptions(CloneCenterPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloneCenterPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CloneCenterPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CloneCenterPolicyResponse());
+        }
+
+    }
+
+    /**
+     * @param request CloneCenterPolicyRequest
+     * @return CloneCenterPolicyResponse
+     */
+    public CloneCenterPolicyResponse cloneCenterPolicy(CloneCenterPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cloneCenterPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Clones an existing policy to quickly create a policy.</p>
      * 
@@ -2339,6 +2398,441 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCdsFileShareLinkResponse createCdsFileShareLink(CreateCdsFileShareLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCdsFileShareLinkWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request CreateCenterPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCenterPolicyResponse
+     */
+    public CreateCenterPolicyResponse createCenterPolicyWithOptions(CreateCenterPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adminAccess)) {
+            query.put("AdminAccess", request.adminAccess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appContentProtection)) {
+            query.put("AppContentProtection", request.appContentProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeAccessPolicyRule)) {
+            query.put("AuthorizeAccessPolicyRule", request.authorizeAccessPolicyRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeSecurityPolicyRule)) {
+            query.put("AuthorizeSecurityPolicyRule", request.authorizeSecurityPolicyRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cameraRedirect)) {
+            query.put("CameraRedirect", request.cameraRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
+            query.put("ClientType", request.clientType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clipboard)) {
+            query.put("Clipboard", request.clipboard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.colorEnhancement)) {
+            query.put("ColorEnhancement", request.colorEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuDownGradeDuration)) {
+            query.put("CpuDownGradeDuration", request.cpuDownGradeDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuProcessors)) {
+            query.put("CpuProcessors", request.cpuProcessors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuProtectedMode)) {
+            query.put("CpuProtectedMode", request.cpuProtectedMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuRateLimit)) {
+            query.put("CpuRateLimit", request.cpuRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuSampleDuration)) {
+            query.put("CpuSampleDuration", request.cpuSampleDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuSingleRateLimit)) {
+            query.put("CpuSingleRateLimit", request.cpuSingleRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceConnectHint)) {
+            query.put("DeviceConnectHint", request.deviceConnectHint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceRedirects)) {
+            query.put("DeviceRedirects", request.deviceRedirects);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceRules)) {
+            query.put("DeviceRules", request.deviceRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disconnectKeepSession)) {
+            query.put("DisconnectKeepSession", request.disconnectKeepSession);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disconnectKeepSessionTime)) {
+            query.put("DisconnectKeepSessionTime", request.disconnectKeepSessionTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayMode)) {
+            query.put("DisplayMode", request.displayMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveRule)) {
+            query.put("DomainResolveRule", request.domainResolveRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveRuleType)) {
+            query.put("DomainResolveRuleType", request.domainResolveRuleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSessionRateLimiting)) {
+            query.put("EnableSessionRateLimiting", request.enableSessionRateLimiting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserApplyAdminCoordinate)) {
+            query.put("EndUserApplyAdminCoordinate", request.endUserApplyAdminCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserGroupCoordinate)) {
+            query.put("EndUserGroupCoordinate", request.endUserGroupCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileMigrate)) {
+            query.put("FileMigrate", request.fileMigrate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
+            query.put("GpuAcceleration", request.gpuAcceleration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.html5FileTransfer)) {
+            query.put("Html5FileTransfer", request.html5FileTransfer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internetCommunicationProtocol)) {
+            query.put("InternetCommunicationProtocol", request.internetCommunicationProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
+            query.put("LocalDrive", request.localDrive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxReconnectTime)) {
+            query.put("MaxReconnectTime", request.maxReconnectTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryDownGradeDuration)) {
+            query.put("MemoryDownGradeDuration", request.memoryDownGradeDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryProcessors)) {
+            query.put("MemoryProcessors", request.memoryProcessors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryProtectedMode)) {
+            query.put("MemoryProtectedMode", request.memoryProtectedMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryRateLimit)) {
+            query.put("MemoryRateLimit", request.memoryRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memorySampleDuration)) {
+            query.put("MemorySampleDuration", request.memorySampleDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memorySingleRateLimit)) {
+            query.put("MemorySingleRateLimit", request.memorySingleRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileRestart)) {
+            query.put("MobileRestart", request.mobileRestart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileShutdown)) {
+            query.put("MobileShutdown", request.mobileShutdown);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netRedirect)) {
+            query.put("NetRedirect", request.netRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netRedirectRule)) {
+            query.put("NetRedirectRule", request.netRedirectRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noOperationDisconnect)) {
+            query.put("NoOperationDisconnect", request.noOperationDisconnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noOperationDisconnectTime)) {
+            query.put("NoOperationDisconnectTime", request.noOperationDisconnectTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.printerRedirect)) {
+            query.put("PrinterRedirect", request.printerRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualityEnhancement)) {
+            query.put("QualityEnhancement", request.qualityEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEventDuration)) {
+            query.put("RecordEventDuration", request.recordEventDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEventFilePaths)) {
+            query.put("RecordEventFilePaths", request.recordEventFilePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEventRegisters)) {
+            query.put("RecordEventRegisters", request.recordEventRegisters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEvents)) {
+            query.put("RecordEvents", request.recordEvents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recording)) {
+            query.put("Recording", request.recording);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingAudio)) {
+            query.put("RecordingAudio", request.recordingAudio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingDuration)) {
+            query.put("RecordingDuration", request.recordingDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingEndTime)) {
+            query.put("RecordingEndTime", request.recordingEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingExpires)) {
+            query.put("RecordingExpires", request.recordingExpires);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingFps)) {
+            query.put("RecordingFps", request.recordingFps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingStartTime)) {
+            query.put("RecordingStartTime", request.recordingStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotify)) {
+            query.put("RecordingUserNotify", request.recordingUserNotify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotifyMessage)) {
+            query.put("RecordingUserNotifyMessage", request.recordingUserNotifyMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remoteCoordinate)) {
+            query.put("RemoteCoordinate", request.remoteCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resetDesktop)) {
+            query.put("ResetDesktop", request.resetDesktop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionHeight)) {
+            query.put("ResolutionHeight", request.resolutionHeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionModel)) {
+            query.put("ResolutionModel", request.resolutionModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionWidth)) {
+            query.put("ResolutionWidth", request.resolutionWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeValue)) {
+            query.put("ScopeValue", request.scopeValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionMaxRateKbps)) {
+            query.put("SessionMaxRateKbps", request.sessionMaxRateKbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smoothEnhancement)) {
+            query.put("SmoothEnhancement", request.smoothEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusMonitor)) {
+            query.put("StatusMonitor", request.statusMonitor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamingMode)) {
+            query.put("StreamingMode", request.streamingMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetFps)) {
+            query.put("TargetFps", request.targetFps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskbar)) {
+            query.put("Taskbar", request.taskbar);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usbRedirect)) {
+            query.put("UsbRedirect", request.usbRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usbSupplyRedirectRule)) {
+            query.put("UsbSupplyRedirectRule", request.usbSupplyRedirectRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncAvgKbps)) {
+            query.put("VideoEncAvgKbps", request.videoEncAvgKbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncMaxQP)) {
+            query.put("VideoEncMaxQP", request.videoEncMaxQP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncMinQP)) {
+            query.put("VideoEncMinQP", request.videoEncMinQP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncPeakKbps)) {
+            query.put("VideoEncPeakKbps", request.videoEncPeakKbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncPolicy)) {
+            query.put("VideoEncPolicy", request.videoEncPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoRedirect)) {
+            query.put("VideoRedirect", request.videoRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visualQuality)) {
+            query.put("VisualQuality", request.visualQuality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermark)) {
+            query.put("Watermark", request.watermark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkAntiCam)) {
+            query.put("WatermarkAntiCam", request.watermarkAntiCam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkColor)) {
+            query.put("WatermarkColor", request.watermarkColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkColumnAmount)) {
+            query.put("WatermarkColumnAmount", request.watermarkColumnAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkCustomText)) {
+            query.put("WatermarkCustomText", request.watermarkCustomText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkDegree)) {
+            query.put("WatermarkDegree", request.watermarkDegree);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkFontSize)) {
+            query.put("WatermarkFontSize", request.watermarkFontSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkFontStyle)) {
+            query.put("WatermarkFontStyle", request.watermarkFontStyle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkPower)) {
+            query.put("WatermarkPower", request.watermarkPower);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkRowAmount)) {
+            query.put("WatermarkRowAmount", request.watermarkRowAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkSecurity)) {
+            query.put("WatermarkSecurity", request.watermarkSecurity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkTransparencyValue)) {
+            query.put("WatermarkTransparencyValue", request.watermarkTransparencyValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkType)) {
+            query.put("WatermarkType", request.watermarkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wuyingKeeper)) {
+            query.put("WuyingKeeper", request.wuyingKeeper);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wyAssistant)) {
+            query.put("WyAssistant", request.wyAssistant);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCenterPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCenterPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateCenterPolicyResponse());
+        }
+
+    }
+
+    /**
+     * @param request CreateCenterPolicyRequest
+     * @return CreateCenterPolicyResponse
+     */
+    public CreateCenterPolicyResponse createCenterPolicy(CreateCenterPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCenterPolicyWithOptions(request, runtime);
     }
 
     /**
@@ -4209,6 +4703,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DeleteCenterPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCenterPolicyResponse
+     */
+    public DeleteCenterPolicyResponse deleteCenterPolicyWithOptions(DeleteCenterPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupIds)) {
+            query.put("PolicyGroupIds", request.policyGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCenterPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCenterPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCenterPolicyResponse());
+        }
+
+    }
+
+    /**
+     * @param request DeleteCenterPolicyRequest
+     * @return DeleteCenterPolicyResponse
+     */
+    public DeleteCenterPolicyResponse deleteCenterPolicy(DeleteCenterPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCenterPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Deletes team spaces.</p>
      * 
@@ -5508,6 +6057,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCensResponse describeCens(DescribeCensRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCensWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询中心化策略</p>
+     * 
+     * @param request DescribeCenterPolicyListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCenterPolicyListResponse
+     */
+    public DescribeCenterPolicyListResponse describeCenterPolicyListWithOptions(DescribeCenterPolicyListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCenterPolicyList"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCenterPolicyListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCenterPolicyListResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询中心化策略</p>
+     * 
+     * @param request DescribeCenterPolicyListRequest
+     * @return DescribeCenterPolicyListResponse
+     */
+    public DescribeCenterPolicyListResponse describeCenterPolicyList(DescribeCenterPolicyListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCenterPolicyListWithOptions(request, runtime);
     }
 
     /**
@@ -8698,6 +9316,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeResourceByCenterPolicyIdRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeResourceByCenterPolicyIdResponse
+     */
+    public DescribeResourceByCenterPolicyIdResponse describeResourceByCenterPolicyIdWithOptions(DescribeResourceByCenterPolicyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeResourceByCenterPolicyId"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourceByCenterPolicyIdResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeResourceByCenterPolicyIdResponse());
+        }
+
+    }
+
+    /**
+     * @param request DescribeResourceByCenterPolicyIdRequest
+     * @return DescribeResourceByCenterPolicyIdResponse
+     */
+    public DescribeResourceByCenterPolicyIdResponse describeResourceByCenterPolicyId(DescribeResourceByCenterPolicyIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeResourceByCenterPolicyIdWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This is a central operation and can be called only by using services in the China (Shanghai) region.</p>
      * <ul>
@@ -11843,6 +12520,453 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ModifyCenterPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCenterPolicyResponse
+     */
+    public ModifyCenterPolicyResponse modifyCenterPolicyWithOptions(ModifyCenterPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adminAccess)) {
+            query.put("AdminAccess", request.adminAccess);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appContentProtection)) {
+            query.put("AppContentProtection", request.appContentProtection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeAccessPolicyRule)) {
+            query.put("AuthorizeAccessPolicyRule", request.authorizeAccessPolicyRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizeSecurityPolicyRule)) {
+            query.put("AuthorizeSecurityPolicyRule", request.authorizeSecurityPolicyRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
+            query.put("BusinessType", request.businessType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cameraRedirect)) {
+            query.put("CameraRedirect", request.cameraRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
+            query.put("ClientType", request.clientType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clipboard)) {
+            query.put("Clipboard", request.clipboard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.colorEnhancement)) {
+            query.put("ColorEnhancement", request.colorEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuDownGradeDuration)) {
+            query.put("CpuDownGradeDuration", request.cpuDownGradeDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuProcessors)) {
+            query.put("CpuProcessors", request.cpuProcessors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuProtectedMode)) {
+            query.put("CpuProtectedMode", request.cpuProtectedMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuRateLimit)) {
+            query.put("CpuRateLimit", request.cpuRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuSampleDuration)) {
+            query.put("CpuSampleDuration", request.cpuSampleDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuSingleRateLimit)) {
+            query.put("CpuSingleRateLimit", request.cpuSingleRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceConnectHint)) {
+            query.put("DeviceConnectHint", request.deviceConnectHint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceRedirects)) {
+            query.put("DeviceRedirects", request.deviceRedirects);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceRules)) {
+            query.put("DeviceRules", request.deviceRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disconnectKeepSession)) {
+            query.put("DisconnectKeepSession", request.disconnectKeepSession);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disconnectKeepSessionTime)) {
+            query.put("DisconnectKeepSessionTime", request.disconnectKeepSessionTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayMode)) {
+            query.put("DisplayMode", request.displayMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveRule)) {
+            query.put("DomainResolveRule", request.domainResolveRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveRuleType)) {
+            query.put("DomainResolveRuleType", request.domainResolveRuleType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableSessionRateLimiting)) {
+            query.put("EnableSessionRateLimiting", request.enableSessionRateLimiting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserApplyAdminCoordinate)) {
+            query.put("EndUserApplyAdminCoordinate", request.endUserApplyAdminCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserGroupCoordinate)) {
+            query.put("EndUserGroupCoordinate", request.endUserGroupCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileMigrate)) {
+            query.put("FileMigrate", request.fileMigrate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
+            query.put("GpuAcceleration", request.gpuAcceleration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.html5FileTransfer)) {
+            query.put("Html5FileTransfer", request.html5FileTransfer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internetCommunicationProtocol)) {
+            query.put("InternetCommunicationProtocol", request.internetCommunicationProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.localDrive)) {
+            query.put("LocalDrive", request.localDrive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxReconnectTime)) {
+            query.put("MaxReconnectTime", request.maxReconnectTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryDownGradeDuration)) {
+            query.put("MemoryDownGradeDuration", request.memoryDownGradeDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryProcessors)) {
+            query.put("MemoryProcessors", request.memoryProcessors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryProtectedMode)) {
+            query.put("MemoryProtectedMode", request.memoryProtectedMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryRateLimit)) {
+            query.put("MemoryRateLimit", request.memoryRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memorySampleDuration)) {
+            query.put("MemorySampleDuration", request.memorySampleDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memorySingleRateLimit)) {
+            query.put("MemorySingleRateLimit", request.memorySingleRateLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileRestart)) {
+            query.put("MobileRestart", request.mobileRestart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileShutdown)) {
+            query.put("MobileShutdown", request.mobileShutdown);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netRedirect)) {
+            query.put("NetRedirect", request.netRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.netRedirectRule)) {
+            query.put("NetRedirectRule", request.netRedirectRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noOperationDisconnect)) {
+            query.put("NoOperationDisconnect", request.noOperationDisconnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noOperationDisconnectTime)) {
+            query.put("NoOperationDisconnectTime", request.noOperationDisconnectTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            query.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.printerRedirect)) {
+            query.put("PrinterRedirect", request.printerRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualityEnhancement)) {
+            query.put("QualityEnhancement", request.qualityEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEventDuration)) {
+            query.put("RecordEventDuration", request.recordEventDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEventFilePaths)) {
+            query.put("RecordEventFilePaths", request.recordEventFilePaths);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEventRegisters)) {
+            query.put("RecordEventRegisters", request.recordEventRegisters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordEvents)) {
+            query.put("RecordEvents", request.recordEvents);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recording)) {
+            query.put("Recording", request.recording);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingAudio)) {
+            query.put("RecordingAudio", request.recordingAudio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingDuration)) {
+            query.put("RecordingDuration", request.recordingDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingEndTime)) {
+            query.put("RecordingEndTime", request.recordingEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingExpires)) {
+            query.put("RecordingExpires", request.recordingExpires);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingFps)) {
+            query.put("RecordingFps", request.recordingFps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingStartTime)) {
+            query.put("RecordingStartTime", request.recordingStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotify)) {
+            query.put("RecordingUserNotify", request.recordingUserNotify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordingUserNotifyMessage)) {
+            query.put("RecordingUserNotifyMessage", request.recordingUserNotifyMessage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remoteCoordinate)) {
+            query.put("RemoteCoordinate", request.remoteCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resetDesktop)) {
+            query.put("ResetDesktop", request.resetDesktop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionHeight)) {
+            query.put("ResolutionHeight", request.resolutionHeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionModel)) {
+            query.put("ResolutionModel", request.resolutionModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionWidth)) {
+            query.put("ResolutionWidth", request.resolutionWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revokeAccessPolicyRule)) {
+            query.put("RevokeAccessPolicyRule", request.revokeAccessPolicyRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.revokeSecurityPolicyRule)) {
+            query.put("RevokeSecurityPolicyRule", request.revokeSecurityPolicyRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeValue)) {
+            query.put("ScopeValue", request.scopeValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionMaxRateKbps)) {
+            query.put("SessionMaxRateKbps", request.sessionMaxRateKbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.smoothEnhancement)) {
+            query.put("SmoothEnhancement", request.smoothEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statusMonitor)) {
+            query.put("StatusMonitor", request.statusMonitor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamingMode)) {
+            query.put("StreamingMode", request.streamingMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetFps)) {
+            query.put("TargetFps", request.targetFps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskbar)) {
+            query.put("Taskbar", request.taskbar);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usbRedirect)) {
+            query.put("UsbRedirect", request.usbRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usbSupplyRedirectRule)) {
+            query.put("UsbSupplyRedirectRule", request.usbSupplyRedirectRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncAvgKbps)) {
+            query.put("VideoEncAvgKbps", request.videoEncAvgKbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncMaxQP)) {
+            query.put("VideoEncMaxQP", request.videoEncMaxQP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncMinQP)) {
+            query.put("VideoEncMinQP", request.videoEncMinQP);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncPeakKbps)) {
+            query.put("VideoEncPeakKbps", request.videoEncPeakKbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEncPolicy)) {
+            query.put("VideoEncPolicy", request.videoEncPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoRedirect)) {
+            query.put("VideoRedirect", request.videoRedirect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visualQuality)) {
+            query.put("VisualQuality", request.visualQuality);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermark)) {
+            query.put("Watermark", request.watermark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkAntiCam)) {
+            query.put("WatermarkAntiCam", request.watermarkAntiCam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkColor)) {
+            query.put("WatermarkColor", request.watermarkColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkColumnAmount)) {
+            query.put("WatermarkColumnAmount", request.watermarkColumnAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkCustomText)) {
+            query.put("WatermarkCustomText", request.watermarkCustomText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkDegree)) {
+            query.put("WatermarkDegree", request.watermarkDegree);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkFontSize)) {
+            query.put("WatermarkFontSize", request.watermarkFontSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkFontStyle)) {
+            query.put("WatermarkFontStyle", request.watermarkFontStyle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkPower)) {
+            query.put("WatermarkPower", request.watermarkPower);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkRowAmount)) {
+            query.put("WatermarkRowAmount", request.watermarkRowAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkSecurity)) {
+            query.put("WatermarkSecurity", request.watermarkSecurity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkTransparencyValue)) {
+            query.put("WatermarkTransparencyValue", request.watermarkTransparencyValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkType)) {
+            query.put("WatermarkType", request.watermarkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wuyingKeeper)) {
+            query.put("WuyingKeeper", request.wuyingKeeper);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wyAssistant)) {
+            query.put("WyAssistant", request.wyAssistant);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCenterPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCenterPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyCenterPolicyResponse());
+        }
+
+    }
+
+    /**
+     * @param request ModifyCenterPolicyRequest
+     * @return ModifyCenterPolicyResponse
+     */
+    public ModifyCenterPolicyResponse modifyCenterPolicy(ModifyCenterPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCenterPolicyWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Modifies team spaces.</p>
      * 
@@ -14021,6 +15145,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPolicyGroupResponse modifyPolicyGroup(ModifyPolicyGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPolicyGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ModifyResourceCenterPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyResourceCenterPolicyResponse
+     */
+    public ModifyResourceCenterPolicyResponse modifyResourceCenterPolicyWithOptions(ModifyResourceCenterPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupIds)) {
+            query.put("PolicyGroupIds", request.policyGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupType)) {
+            query.put("PolicyGroupType", request.policyGroupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            query.put("ResourceIds", request.resourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceRegionId)) {
+            query.put("ResourceRegionId", request.resourceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyResourceCenterPolicy"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyResourceCenterPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyResourceCenterPolicyResponse());
+        }
+
+    }
+
+    /**
+     * @param request ModifyResourceCenterPolicyRequest
+     * @return ModifyResourceCenterPolicyResponse
+     */
+    public ModifyResourceCenterPolicyResponse modifyResourceCenterPolicy(ModifyResourceCenterPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyResourceCenterPolicyWithOptions(request, runtime);
     }
 
     /**
