@@ -4,8 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    @NameInMap("ExpiredTime")
+    public java.util.List<String> expiredTime;
+
     @NameInMap("FeeOfInstances")
-    public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
+    public java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances> feeOfInstances;
+
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
 
     @NameInMap("OrderId")
     public String orderId;
@@ -18,12 +27,36 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyRCInstanceChargeTypeResponseBody setFeeOfInstances(ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
+    public ModifyRCInstanceChargeTypeResponseBody setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    public ModifyRCInstanceChargeTypeResponseBody setExpiredTime(java.util.List<String> expiredTime) {
+        this.expiredTime = expiredTime;
+        return this;
+    }
+    public java.util.List<String> getExpiredTime() {
+        return this.expiredTime;
+    }
+
+    public ModifyRCInstanceChargeTypeResponseBody setFeeOfInstances(java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances> feeOfInstances) {
         this.feeOfInstances = feeOfInstances;
         return this;
     }
-    public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
+    public java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances> getFeeOfInstances() {
         return this.feeOfInstances;
+    }
+
+    public ModifyRCInstanceChargeTypeResponseBody setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public ModifyRCInstanceChargeTypeResponseBody setOrderId(String orderId) {
@@ -42,7 +75,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {
+    public static class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
@@ -52,12 +85,12 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance build(java.util.Map<String, ?> map) throws Exception {
-            ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance self = new ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance();
+        public static ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances build(java.util.Map<String, ?> map) throws Exception {
+            ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances self = new ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances();
             return TeaModel.build(map, self);
         }
 
-        public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setCurrency(String currency) {
+        public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -65,7 +98,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setFee(String fee) {
+        public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances setFee(String fee) {
             this.fee = fee;
             return this;
         }
@@ -73,31 +106,12 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
             return this.fee;
         }
 
-        public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setInstanceId(String instanceId) {
+        public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
-        }
-
-    }
-
-    public static class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances extends TeaModel {
-        @NameInMap("FeeOfInstance")
-        public java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> feeOfInstance;
-
-        public static ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances build(java.util.Map<String, ?> map) throws Exception {
-            ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances self = new ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances setFeeOfInstance(java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> feeOfInstance) {
-            this.feeOfInstance = feeOfInstance;
-            return this;
-        }
-        public java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> getFeeOfInstance() {
-            return this.feeOfInstance;
         }
 
     }

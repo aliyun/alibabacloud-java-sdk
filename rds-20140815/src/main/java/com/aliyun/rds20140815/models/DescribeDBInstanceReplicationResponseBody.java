@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether to enable the native replication mode. Valid values:</p>
+     * <p>Indicates whether the native replication mods is enabled. Valid values:</p>
      * <ul>
      * <li><strong>ON</strong></li>
      * <li><strong>OFF</strong></li>
@@ -46,6 +46,12 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
 
     /**
      * <p>The current replication status. Valid values:</p>
+     * <ul>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Connecting</strong></li>
+     * <li><strong>Stopped</strong></li>
+     * <li><strong>Error</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Running

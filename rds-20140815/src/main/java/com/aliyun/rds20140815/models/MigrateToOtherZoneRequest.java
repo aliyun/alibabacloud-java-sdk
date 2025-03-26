@@ -51,6 +51,31 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Long DBInstanceStorage;
 
     /**
+     * <p>The storage type of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
+     * <li><strong>general_essd</strong>: general Enterprise SSD (ESSD). This is the recommended storage type.</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</li>
+     * </ul>
+     * <p>The default value of this parameter is determined by the instance type specified by the <strong>DBInstanceClass</strong> parameter.</p>
+     * <ul>
+     * <li>If the instance type specifies the local SSD storage type, the default value of this parameter is <strong>local_ssd</strong>.</li>
+     * <li>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <strong>cloud_essd</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Serverless instances support only PL1 ESSDs and general ESSDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>local_ssd</p>
+     */
+    @NameInMap("DBInstanceStorageType")
+    public String DBInstanceStorageType;
+
+    /**
      * <p>The time when you want the change to take effect. Valid values:</p>
      * <ul>
      * <li><strong>Immediately</strong> (default): The change immediately takes effect.</li>
@@ -211,6 +236,14 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     }
     public Long getDBInstanceStorage() {
         return this.DBInstanceStorage;
+    }
+
+    public MigrateToOtherZoneRequest setDBInstanceStorageType(String DBInstanceStorageType) {
+        this.DBInstanceStorageType = DBInstanceStorageType;
+        return this;
+    }
+    public String getDBInstanceStorageType() {
+        return this.DBInstanceStorageType;
     }
 
     public MigrateToOtherZoneRequest setEffectiveTime(String effectiveTime) {

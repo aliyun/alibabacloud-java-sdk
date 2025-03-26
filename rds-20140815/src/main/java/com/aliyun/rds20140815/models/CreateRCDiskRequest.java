@@ -57,7 +57,6 @@ public class CreateRCDiskRequest extends TeaModel {
      * <li><strong>elastic_ephemeral_disk_standard</strong>: standard elastic ephemeral disk</li>
      * <li><strong>elastic_ephemeral_disk_premium</strong>: premium elastic ephemeral disk</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
@@ -83,6 +82,9 @@ public class CreateRCDiskRequest extends TeaModel {
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     /**
      * <p>The performance level (PL) of the disk if the disk is an ESSD. Valid values:</p>
@@ -183,7 +185,6 @@ public class CreateRCDiskRequest extends TeaModel {
 
     /**
      * <p>The zone ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-a</p>
@@ -242,6 +243,14 @@ public class CreateRCDiskRequest extends TeaModel {
     }
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    public CreateRCDiskRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public CreateRCDiskRequest setPerformanceLevel(String performanceLevel) {

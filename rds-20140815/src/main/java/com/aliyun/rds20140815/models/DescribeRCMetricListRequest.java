@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCMetricListRequest extends TeaModel {
+    @NameInMap("Dimensions")
+    public String dimensions;
+
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Example: <code>2024-08-06 10:15:00</code>.</p>
      * 
@@ -96,6 +99,14 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public static DescribeRCMetricListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCMetricListRequest self = new DescribeRCMetricListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRCMetricListRequest setDimensions(String dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    public String getDimensions() {
+        return this.dimensions;
     }
 
     public DescribeRCMetricListRequest setEndTime(String endTime) {

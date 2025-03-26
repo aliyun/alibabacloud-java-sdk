@@ -25,6 +25,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Cpu")
     public Integer cpu;
 
+    @NameInMap("CreateMode")
+    public Integer createMode;
+
     /**
      * <p>The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
      * 
@@ -406,6 +409,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public Integer getCpu() {
         return this.cpu;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setCreateMode(Integer createMode) {
+        this.createMode = createMode;
+        return this;
+    }
+    public Integer getCreateMode() {
+        return this.createMode;
     }
 
     public DescribeRCInstanceAttributeResponseBody setCreationTime(String creationTime) {
