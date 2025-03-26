@@ -20,7 +20,29 @@ public class RunSqlGenerationResponseBody extends TeaModel {
         return this.data;
     }
 
+    public static class RunSqlGenerationResponseBodyDataChat extends TeaModel {
+        @NameInMap("text")
+        public String text;
+
+        public static RunSqlGenerationResponseBodyDataChat build(java.util.Map<String, ?> map) throws Exception {
+            RunSqlGenerationResponseBodyDataChat self = new RunSqlGenerationResponseBodyDataChat();
+            return TeaModel.build(map, self);
+        }
+
+        public RunSqlGenerationResponseBodyDataChat setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
     public static class RunSqlGenerationResponseBodyData extends TeaModel {
+        @NameInMap("chat")
+        public RunSqlGenerationResponseBodyDataChat chat;
+
         /**
          * <strong>example:</strong>
          * <p>Access was denied, message: No such namespace namespaces/tech-scp-chain7.</p>
@@ -75,6 +97,14 @@ public class RunSqlGenerationResponseBody extends TeaModel {
         public static RunSqlGenerationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RunSqlGenerationResponseBodyData self = new RunSqlGenerationResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public RunSqlGenerationResponseBodyData setChat(RunSqlGenerationResponseBodyDataChat chat) {
+            this.chat = chat;
+            return this;
+        }
+        public RunSqlGenerationResponseBodyDataChat getChat() {
+            return this.chat;
         }
 
         public RunSqlGenerationResponseBodyData setErrorMessage(String errorMessage) {
