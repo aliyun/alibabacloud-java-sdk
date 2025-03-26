@@ -4,6 +4,12 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the IP address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pippool-6wetvn6fumkgycssx****</p>
+     */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 

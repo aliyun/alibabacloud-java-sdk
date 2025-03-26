@@ -4,6 +4,16 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribePublicIpAddressRequest extends TeaModel {
+    /**
+     * <p>The IP version. Valid values:</p>
+     * <ul>
+     * <li><strong>IPv4</strong> (default)</li>
+     * <li><strong>IPv6</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 

@@ -996,6 +996,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityProtectionTypes", request.securityProtectionTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
             query.put("Zone", request.zone);
         }
@@ -1125,6 +1129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityProtectionTypes", request.securityProtectionTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1170,10 +1178,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Applies for contiguous elastic IP addresses (EIPs).</p>
      * 
+     * @deprecated OpenAPI AllocateEipSegmentAddress is deprecated
+     * 
      * @param request AllocateEipSegmentAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AllocateEipSegmentAddressResponse
      */
+    @Deprecated
+    // Deprecated
     public AllocateEipSegmentAddressResponse allocateEipSegmentAddressWithOptions(AllocateEipSegmentAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1262,9 +1274,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Applies for contiguous elastic IP addresses (EIPs).</p>
      * 
+     * @deprecated OpenAPI AllocateEipSegmentAddress is deprecated
+     * 
      * @param request AllocateEipSegmentAddressRequest
      * @return AllocateEipSegmentAddressResponse
      */
+    @Deprecated
+    // Deprecated
     public AllocateEipSegmentAddressResponse allocateEipSegmentAddress(AllocateEipSegmentAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocateEipSegmentAddressWithOptions(request, runtime);
@@ -4033,6 +4049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityProtectionTypes)) {
             query.put("SecurityProtectionTypes", request.securityProtectionTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.zone)) {
@@ -8127,8 +8147,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you create an SSL client certificate, make sure that an SSL server is created on the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794075.html">CreateSslVpnServer</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建SSL-VPN客户端证书</p>
+     * <p>Creates an SSL client certificate.</p>
      * 
      * @param request CreateSslVpnClientCertRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8192,8 +8215,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you create an SSL client certificate, make sure that an SSL server is created on the VPN gateway. For more information, see <a href="https://help.aliyun.com/document_detail/2794075.html">CreateSslVpnServer</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建SSL-VPN客户端证书</p>
+     * <p>Creates an SSL client certificate.</p>
      * 
      * @param request CreateSslVpnClientCertRequest
      * @return CreateSslVpnClientCertResponse
@@ -13885,11 +13911,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteSslVpnClientCert</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
-     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL client certificate is being deleted.
-     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL client certificate is deleted.</p>
+     * <p>  If you delete an SSL client certificate, all SSL-VPN client connections to the SSL server are disconnected. You need to reinitiate connections from SSL clients.
+     *     For example, SSL client certificate 1 and SSL client certificate 2 are created on an SSL server. After you delete certificate 1, all client connections associated with certificate 1 and certificate 2 are disconnected from the SSL server.
+     *     *   If clients associated with certificate 1 require SSL-VPN connections, you need to install other certificates on the clients and reinitiate connections from the clients.
+     *     *   If clients associated with certificate 2 require SSL-VPN connections, you can directly reinitiate connections from the clients.</p>
      * <ul>
-     * <li>You cannot repeatedly call <strong>DeleteSslVpnClientCert</strong> to delete an SSL client certificate from the same VPN gateway within the specified period of time.</li>
+     * <li><strong>DeleteSslVpnClientCert</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL client certificate is being deleted.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL client certificate is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call <strong>DeleteSslVpnClientCert</strong> within the specified period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -13954,11 +13986,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>DeleteSslVpnClientCert</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/73720.html">DescribeVpnGateway</a> to query the status of the task.
-     *     *   If the VPN gateway is in the <strong>updating</strong> state, the SSL client certificate is being deleted.
-     *     *   If the VPN gateway is in the <strong>active</strong> state, the SSL client certificate is deleted.</p>
+     * <p>  If you delete an SSL client certificate, all SSL-VPN client connections to the SSL server are disconnected. You need to reinitiate connections from SSL clients.
+     *     For example, SSL client certificate 1 and SSL client certificate 2 are created on an SSL server. After you delete certificate 1, all client connections associated with certificate 1 and certificate 2 are disconnected from the SSL server.
+     *     *   If clients associated with certificate 1 require SSL-VPN connections, you need to install other certificates on the clients and reinitiate connections from the clients.
+     *     *   If clients associated with certificate 2 require SSL-VPN connections, you can directly reinitiate connections from the clients.</p>
      * <ul>
-     * <li>You cannot repeatedly call <strong>DeleteSslVpnClientCert</strong> to delete an SSL client certificate from the same VPN gateway within the specified period of time.</li>
+     * <li><strong>DeleteSslVpnClientCert</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the status of the task.<ul>
+     * <li>If the VPN gateway is in the <strong>updating</strong> state, the SSL client certificate is being deleted.</li>
+     * <li>If the VPN gateway is in the <strong>active</strong> state, the SSL client certificate is deleted.</li>
+     * </ul>
+     * </li>
+     * <li>You cannot call <strong>DeleteSslVpnClientCert</strong> within the specified period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -21833,7 +21871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于地域查询可以创建双隧道VPN与IPSec连接（CEN）的可用区</p>
+     * <p>Queries zones that support IPsec-VPN connections in a region.</p>
      * 
      * @param request DescribeVpnGatewayAvailableZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21866,7 +21904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于地域查询可以创建双隧道VPN与IPSec连接（CEN）的可用区</p>
+     * <p>Queries zones that support IPsec-VPN connections in a region.</p>
      * 
      * @param request DescribeVpnGatewayAvailableZonesRequest
      * @return DescribeVpnGatewayAvailableZonesResponse
@@ -27298,6 +27336,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Modifies the EIP forwarding mode.</p>
+     * 
+     * @param request ModifyEipForwardModeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyEipForwardModeResponse
+     */
+    public ModifyEipForwardModeResponse modifyEipForwardModeWithOptions(ModifyEipForwardModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyEipForwardMode"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyEipForwardModeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyEipForwardModeResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the EIP forwarding mode.</p>
+     * 
+     * @param request ModifyEipForwardModeRequest
+     * @return ModifyEipForwardModeResponse
+     */
+    public ModifyEipForwardModeResponse modifyEipForwardMode(ModifyEipForwardModeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyEipForwardModeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the configuration of an Express Cloud Connect (ECC) instance.</p>
      * 
      * @param request ModifyExpressCloudConnectionAttributeRequest
@@ -28989,7 +29104,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyIpv6InternetBandwidth</strong> operation to modify the Internet bandwidth value of an IPv6 CIDR block within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the Internet bandwidth value of an IPv6 address.</p>
+     * <p>Modifies the Internet bandwidth of an IPv6 address.</p>
      * 
      * @param request ModifyIpv6InternetBandwidthRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29073,7 +29188,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You cannot repeatedly call the <strong>ModifyIpv6InternetBandwidth</strong> operation to modify the Internet bandwidth value of an IPv6 CIDR block within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the Internet bandwidth value of an IPv6 address.</p>
+     * <p>Modifies the Internet bandwidth of an IPv6 address.</p>
      * 
      * @param request ModifyIpv6InternetBandwidthRequest
      * @return ModifyIpv6InternetBandwidthResponse
@@ -34708,7 +34823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>连续EIP组转换为公网IP地址池</p>
+     * <p>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</p>
      * 
      * @param request TransformEipSegmentToPublicIpAddressPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34765,7 +34880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>连续EIP组转换为公网IP地址池</p>
+     * <p>Migrate contiguous EIP groups to IP address pool by calling TransformEipSegmentToPublicIpAddressPool.</p>
      * 
      * @param request TransformEipSegmentToPublicIpAddressPoolRequest
      * @return TransformEipSegmentToPublicIpAddressPoolResponse

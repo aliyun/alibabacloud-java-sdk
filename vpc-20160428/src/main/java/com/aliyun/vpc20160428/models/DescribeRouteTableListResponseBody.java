@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteTableListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the route table.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,11 +14,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
-     * <ul>
-     * <li><strong>VSwitch</strong>: vSwitch</li>
-     * <li><strong>Gateway</strong>: IPv4 gateway</li>
-     * </ul>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -27,7 +23,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the vRouter to which the route table belongs.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>
@@ -36,13 +32,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The description of the route table.</p>
+     * <p>The detailed information about the route tables.</p>
      */
     @NameInMap("RouterTableList")
     public DescribeRouteTableListResponseBodyRouterTableList routerTableList;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the route table belongs.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,8 +112,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * <p>The key of the tag that is added to the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>type</p>
@@ -126,8 +121,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>The value of the tag that is added to the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>ingress</p>
@@ -198,7 +192,11 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType extends TeaModel {
         /**
-         * <p>The tags.</p>
+         * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
+         * <ul>
+         * <li><strong>VSwitch</strong>: vSwitch</li>
+         * <li><strong>Gateway</strong>: IPv4 gateway</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VSwitch</p>
@@ -207,11 +205,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public String associateType;
 
         /**
-         * <p>The type of the router to which the route table belongs. Valid values:</p>
-         * <ul>
-         * <li><strong>VRouter</strong></li>
-         * <li><strong>VBR</strong></li>
-         * </ul>
+         * <p>The time when the route table was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-22T10:40:25Z</p>
@@ -220,7 +214,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The information about the vSwitches.</p>
+         * <p>The information about the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>This is Route Table.</p>
@@ -235,7 +229,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds gatewayIds;
 
         /**
-         * <p>The value of tag N added to the resource.</p>
+         * <p>The ID of the Alibaba Cloud account to which the route table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>253460731706911258</p>
@@ -244,7 +238,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public Long ownerId;
 
         /**
-         * <p>The detailed information about the IPv4 gateway.</p>
+         * <p>The ID of the resource group to which the route table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph****</p>
@@ -255,9 +249,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         /**
          * <p>Whether to receive the propagation routes. Valid Values:</p>
          * <ul>
-         * <li><p><strong>True</strong>: The propagation route is received.</p>
+         * <li><p><strong>true</strong>: received.</p>
          * </li>
-         * <li><p><strong>False</strong>: The propagation route is not received.</p>
+         * <li><p><strong>false</strong>: not received.</p>
          * </li>
          * </ul>
          * 
@@ -268,7 +262,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public Boolean routePropagationEnable;
 
         /**
-         * <p>The key of tag N added to the resource.</p>
+         * <p>The ID of the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp145q7glnuzdvzu2****</p>
@@ -286,7 +280,11 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public String routeTableName;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The type of the route table. Valid values:</p>
+         * <ul>
+         * <li><strong>Custom</strong></li>
+         * <li><strong>System</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -295,7 +293,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public String routeTableType;
 
         /**
-         * <p>The tag added to the route table.</p>
+         * <p>The ID of the vRouter to which the route table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vrt-bp1lhl0taikrteen8****</p>
@@ -304,7 +302,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public String routerId;
 
         /**
-         * <p>The detailed information about the IPv4 gateway.</p>
+         * <p>The type of the vRouter to which the route table belongs. Valid values:</p>
+         * <ul>
+         * <li><p><strong>VRouter</strong>: a vRouter.</p>
+         * </li>
+         * <li><p><strong>VBR</strong>: a VBR.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VRouter</p>
@@ -313,7 +317,12 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public String routerType;
 
         /**
-         * <p>The name of the route table.</p>
+         * <p>The status of the route table. Valid values:</p>
+         * <ul>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -334,7 +343,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds;
 
         /**
-         * <p>The ID of the resource group to which the route table belongs.</p>
+         * <p>The ID of the VPC to which the route table belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp15zckdt37pq72****</p>

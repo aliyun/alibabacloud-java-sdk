@@ -108,8 +108,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The IP address of the VPN gateway.</p>
-     * <p>This parameter is returned only if the VPN gateway supports IPsec-VPN connections in single-tunnel mode.</p>
+     * <p>The private IP address of the vSwitch that is used by the system when the VPN gateway is deployed.</p>
+     * <p>The parameter is returned only for VPN gateways that support single-tunnel IPsec-VPN connections. The IPsec-VPN feature must be enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>172.27.30.24</p>
@@ -136,6 +136,9 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the resource group to which the VPN gateway belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>
      */

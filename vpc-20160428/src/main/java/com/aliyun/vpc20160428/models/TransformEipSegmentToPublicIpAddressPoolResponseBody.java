@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaModel {
     /**
+     * <p>The ID of the IP address pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>pippool-6wetvn6fumkgycssx****</p>
      */
@@ -12,6 +14,8 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
     public String publicIpAddressPoolId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
@@ -19,6 +23,8 @@ public class TransformEipSegmentToPublicIpAddressPoolResponseBody extends TeaMod
     public String requestId;
 
     /**
+     * <p>The ID of the resource group to which the IP address pool belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4pcdvf****</p>
      */
