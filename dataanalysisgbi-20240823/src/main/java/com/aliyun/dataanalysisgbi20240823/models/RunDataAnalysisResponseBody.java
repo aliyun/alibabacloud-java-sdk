@@ -53,6 +53,25 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         return this.message;
     }
 
+    public static class RunDataAnalysisResponseBodyDataChat extends TeaModel {
+        @NameInMap("text")
+        public String text;
+
+        public static RunDataAnalysisResponseBodyDataChat build(java.util.Map<String, ?> map) throws Exception {
+            RunDataAnalysisResponseBodyDataChat self = new RunDataAnalysisResponseBodyDataChat();
+            return TeaModel.build(map, self);
+        }
+
+        public RunDataAnalysisResponseBodyDataChat setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
     public static class RunDataAnalysisResponseBodyDataSqlData extends TeaModel {
         @NameInMap("column")
         public java.util.List<String> column;
@@ -184,6 +203,9 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         @NameInMap("attempts")
         public java.util.List<?> attempts;
 
+        @NameInMap("chat")
+        public RunDataAnalysisResponseBodyDataChat chat;
+
         /**
          * <strong>example:</strong>
          * <p>Access was denied, message: No such namespace namespaces/tech-scp-chain7.</p>
@@ -255,6 +277,14 @@ public class RunDataAnalysisResponseBody extends TeaModel {
         }
         public java.util.List<?> getAttempts() {
             return this.attempts;
+        }
+
+        public RunDataAnalysisResponseBodyData setChat(RunDataAnalysisResponseBodyDataChat chat) {
+            this.chat = chat;
+            return this;
+        }
+        public RunDataAnalysisResponseBodyDataChat getChat() {
+            return this.chat;
         }
 
         public RunDataAnalysisResponseBodyData setErrorMessage(String errorMessage) {
