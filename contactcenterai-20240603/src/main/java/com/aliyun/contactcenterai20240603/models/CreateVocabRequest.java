@@ -11,9 +11,6 @@ public class CreateVocabRequest extends TeaModel {
     @NameInMap("audioModelCode")
     public String audioModelCode;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("description")
     public String description;
 
