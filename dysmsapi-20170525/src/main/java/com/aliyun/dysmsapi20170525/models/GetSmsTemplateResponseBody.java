@@ -198,6 +198,9 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     @NameInMap("VariableAttribute")
     public String variableAttribute;
 
+    @NameInMap("VendorAuditStatus")
+    public java.util.Map<String, ?> vendorAuditStatus;
+
     public static GetSmsTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSmsTemplateResponseBody self = new GetSmsTemplateResponseBody();
         return TeaModel.build(map, self);
@@ -353,6 +356,14 @@ public class GetSmsTemplateResponseBody extends TeaModel {
     }
     public String getVariableAttribute() {
         return this.variableAttribute;
+    }
+
+    public GetSmsTemplateResponseBody setVendorAuditStatus(java.util.Map<String, ?> vendorAuditStatus) {
+        this.vendorAuditStatus = vendorAuditStatus;
+        return this;
+    }
+    public java.util.Map<String, ?> getVendorAuditStatus() {
+        return this.vendorAuditStatus;
     }
 
     public static class GetSmsTemplateResponseBodyAuditInfo extends TeaModel {
