@@ -1,3 +1,12 @@
+2025-03-26 Version: 1.9.9
+- Update API CreateScalingConfiguration: add request parameters ResourcePoolOptions.
+- Update API DescribeElasticStrength: add response parameters Body.ElasticStrength.
+- Update API DescribeElasticStrength: add response parameters Body.ResourcePools.$.InventoryHealth.
+- Update API DescribeElasticStrength: add response parameters Body.ResourcePools.$.Status.
+- Update API DescribeScalingConfigurations: add response parameters Body.ScalingConfigurations.$.ResourcePoolOptions.
+- Update API ModifyScalingConfiguration: add request parameters ResourcePoolOptions.
+
+
 2025-02-18 Version: 1.9.8
 - Update API CreateScalingGroup: update param CapacityOptions.
 - Update API DescribeScalingActivities: update response param.

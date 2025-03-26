@@ -925,6 +925,36 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions extends TeaModel {
+        @NameInMap("PrivatePoolIds")
+        public java.util.List<String> privatePoolIds;
+
+        @NameInMap("Strategy")
+        public String strategy;
+
+        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions setPrivatePoolIds(java.util.List<String> privatePoolIds) {
+            this.privatePoolIds = privatePoolIds;
+            return this;
+        }
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions setStrategy(String strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public String getStrategy() {
+            return this.strategy;
+        }
+
+    }
+
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsSchedulerOptions extends TeaModel {
         /**
          * <blockquote>
@@ -1467,6 +1497,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("ResourcePoolOptions")
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions resourcePoolOptions;
 
         /**
          * <p>The ID of the scaling configuration.</p>
@@ -2102,6 +2135,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setResourcePoolOptions(DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions resourcePoolOptions) {
+            this.resourcePoolOptions = resourcePoolOptions;
+            return this;
+        }
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsResourcePoolOptions getResourcePoolOptions() {
+            return this.resourcePoolOptions;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setScalingConfigurationId(String scalingConfigurationId) {

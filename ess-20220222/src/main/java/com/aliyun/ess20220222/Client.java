@@ -2122,6 +2122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcePoolOptions)) {
+            query.put("ResourcePoolOptions", request.resourcePoolOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.scalingConfigurationName)) {
             query.put("ScalingConfigurationName", request.scalingConfigurationName);
         }
@@ -6804,9 +6808,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <p>  To rename a scaling configuration in a scaling group, ensure the new name is unique within that group.</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459374.html">DescribeEciScalingConfigurations</a> operation to check the modification result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7047,9 +7051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.</p>
+     * <p>  To rename a scaling configuration in a scaling group, ensure the new name is unique within that group.</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459378.html">ModifyEciScalingConfiguration</a> operation to check the modification result.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459374.html">DescribeEciScalingConfigurations</a> operation to check the modification result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7493,6 +7497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourcePoolOptions)) {
+            query.put("ResourcePoolOptions", request.resourcePoolOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scalingConfigurationId)) {

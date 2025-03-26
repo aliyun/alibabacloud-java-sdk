@@ -182,6 +182,19 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
+        /**
+         * <p>Indicates how prices are compared. Valid values:</p>
+         * <ul>
+         * <li><p>PricePerUnit: Prices are compared based on the price per instance capacity.</p>
+         * <p>Capacity is determined by the weights assigned to instance types in the scaling group. If no weight is specified, a default weight of 1 is used, meaning each instance is assigned a capacity of 1.</p>
+         * </li>
+         * <li><p>PricePerVCpu: Prices are compared based on the price per vCPU.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PricePerUnit</p>
+         */
         @NameInMap("PriceComparisonMode")
         public String priceComparisonMode;
 

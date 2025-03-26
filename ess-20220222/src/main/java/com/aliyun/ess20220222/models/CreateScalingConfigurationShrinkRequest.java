@@ -400,6 +400,9 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    @NameInMap("ResourcePoolOptions")
+    public CreateScalingConfigurationShrinkRequestResourcePoolOptions resourcePoolOptions;
+
     /**
      * <p>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
      * <p>The name of the scaling configuration must be unique in a region. If you do not specify this parameter, the scaling configuration ID is used.</p>
@@ -920,6 +923,14 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    public CreateScalingConfigurationShrinkRequest setResourcePoolOptions(CreateScalingConfigurationShrinkRequestResourcePoolOptions resourcePoolOptions) {
+        this.resourcePoolOptions = resourcePoolOptions;
+        return this;
+    }
+    public CreateScalingConfigurationShrinkRequestResourcePoolOptions getResourcePoolOptions() {
+        return this.resourcePoolOptions;
     }
 
     public CreateScalingConfigurationShrinkRequest setScalingConfigurationName(String scalingConfigurationName) {
@@ -2306,6 +2317,36 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+    }
+
+    public static class CreateScalingConfigurationShrinkRequestResourcePoolOptions extends TeaModel {
+        @NameInMap("PrivatePoolIds")
+        public java.util.List<String> privatePoolIds;
+
+        @NameInMap("Strategy")
+        public String strategy;
+
+        public static CreateScalingConfigurationShrinkRequestResourcePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateScalingConfigurationShrinkRequestResourcePoolOptions self = new CreateScalingConfigurationShrinkRequestResourcePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateScalingConfigurationShrinkRequestResourcePoolOptions setPrivatePoolIds(java.util.List<String> privatePoolIds) {
+            this.privatePoolIds = privatePoolIds;
+            return this;
+        }
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        public CreateScalingConfigurationShrinkRequestResourcePoolOptions setStrategy(String strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public String getStrategy() {
+            return this.strategy;
         }
 
     }
