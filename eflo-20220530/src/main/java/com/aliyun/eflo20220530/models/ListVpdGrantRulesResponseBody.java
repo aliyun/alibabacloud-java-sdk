@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListVpdGrantRulesResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class ListVpdGrantRulesResponseBody extends TeaModel {
     public static ListVpdGrantRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVpdGrantRulesResponseBody self = new ListVpdGrantRulesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListVpdGrantRulesResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListVpdGrantRulesResponseBody setCode(Integer code) {

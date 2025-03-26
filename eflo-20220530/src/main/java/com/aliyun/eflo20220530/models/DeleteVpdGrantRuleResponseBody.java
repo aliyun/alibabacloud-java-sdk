@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteVpdGrantRuleResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +52,14 @@ public class DeleteVpdGrantRuleResponseBody extends TeaModel {
     public static DeleteVpdGrantRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteVpdGrantRuleResponseBody self = new DeleteVpdGrantRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVpdGrantRuleResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DeleteVpdGrantRuleResponseBody setCode(Integer code) {

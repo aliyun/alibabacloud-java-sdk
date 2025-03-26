@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteErAttachmentResponseBody extends TeaModel {
     /**
+     * <p>访问被拒绝的详细原因。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +73,14 @@ public class DeleteErAttachmentResponseBody extends TeaModel {
     public static DeleteErAttachmentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteErAttachmentResponseBody self = new DeleteErAttachmentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteErAttachmentResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DeleteErAttachmentResponseBody setCode(Integer code) {

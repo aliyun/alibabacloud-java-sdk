@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListNodeInfosForPodResponseBody extends TeaModel {
     /**
+     * <p>The information about the request denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class ListNodeInfosForPodResponseBody extends TeaModel {
     public static ListNodeInfosForPodResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNodeInfosForPodResponseBody self = new ListNodeInfosForPodResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListNodeInfosForPodResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListNodeInfosForPodResponseBody setCode(Integer code) {

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVccGrantRuleResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +52,14 @@ public class CreateVccGrantRuleResponseBody extends TeaModel {
     public static CreateVccGrantRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVccGrantRuleResponseBody self = new CreateVccGrantRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVccGrantRuleResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CreateVccGrantRuleResponseBody setCode(Integer code) {

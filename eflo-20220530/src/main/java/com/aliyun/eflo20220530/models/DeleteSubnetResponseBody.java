@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteSubnetResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why the access was denied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +56,14 @@ public class DeleteSubnetResponseBody extends TeaModel {
     public static DeleteSubnetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSubnetResponseBody self = new DeleteSubnetResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSubnetResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DeleteSubnetResponseBody setCode(Integer code) {

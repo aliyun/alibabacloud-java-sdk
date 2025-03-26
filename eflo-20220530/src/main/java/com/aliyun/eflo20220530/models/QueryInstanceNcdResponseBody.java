@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryInstanceNcdResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class QueryInstanceNcdResponseBody extends TeaModel {
     public static QueryInstanceNcdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryInstanceNcdResponseBody self = new QueryInstanceNcdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryInstanceNcdResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryInstanceNcdResponseBody setCode(Integer code) {

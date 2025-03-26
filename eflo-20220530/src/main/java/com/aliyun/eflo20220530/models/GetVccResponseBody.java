@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetVccResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class GetVccResponseBody extends TeaModel {
     public static GetVccResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVccResponseBody self = new GetVccResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetVccResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetVccResponseBody setCode(Integer code) {
@@ -918,6 +935,15 @@ public class GetVccResponseBody extends TeaModel {
         public Boolean attachErStatus;
 
         /**
+         * <p>bandwidth</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("Bandwidth")
+        public Integer bandwidth;
+
+        /**
          * <p>The bandwidth of the port.</p>
          * 
          * <strong>example:</strong>
@@ -1271,6 +1297,14 @@ public class GetVccResponseBody extends TeaModel {
         }
         public Boolean getAttachErStatus() {
             return this.attachErStatus;
+        }
+
+        public GetVccResponseBodyContent setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Integer getBandwidth() {
+            return this.bandwidth;
         }
 
         public GetVccResponseBodyContent setBandwidthStr(String bandwidthStr) {

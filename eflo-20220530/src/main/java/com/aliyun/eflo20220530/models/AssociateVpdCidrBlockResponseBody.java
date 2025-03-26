@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class AssociateVpdCidrBlockResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why the access was denied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class AssociateVpdCidrBlockResponseBody extends TeaModel {
     public static AssociateVpdCidrBlockResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssociateVpdCidrBlockResponseBody self = new AssociateVpdCidrBlockResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AssociateVpdCidrBlockResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public AssociateVpdCidrBlockResponseBody setCode(Integer code) {
