@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateElasticNetworkInterfaceResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class UpdateElasticNetworkInterfaceResponseBody extends TeaModel {
     public static UpdateElasticNetworkInterfaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateElasticNetworkInterfaceResponseBody self = new UpdateElasticNetworkInterfaceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateElasticNetworkInterfaceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public UpdateElasticNetworkInterfaceResponseBody setCode(Integer code) {

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateErAttachmentResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +52,14 @@ public class UpdateErAttachmentResponseBody extends TeaModel {
     public static UpdateErAttachmentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateErAttachmentResponseBody self = new UpdateErAttachmentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateErAttachmentResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public UpdateErAttachmentResponseBody setCode(Integer code) {

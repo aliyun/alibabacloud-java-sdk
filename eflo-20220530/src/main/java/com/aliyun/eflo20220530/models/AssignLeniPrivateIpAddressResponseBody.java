@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class AssignLeniPrivateIpAddressResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * <blockquote>
+     * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +52,14 @@ public class AssignLeniPrivateIpAddressResponseBody extends TeaModel {
     public static AssignLeniPrivateIpAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssignLeniPrivateIpAddressResponseBody self = new AssignLeniPrivateIpAddressResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AssignLeniPrivateIpAddressResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public AssignLeniPrivateIpAddressResponseBody setCode(Integer code) {

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVpdResponseBody extends TeaModel {
     /**
+     * <p>The details about the failed permission verification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class CreateVpdResponseBody extends TeaModel {
     public static CreateVpdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVpdResponseBody self = new CreateVpdResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVpdResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CreateVpdResponseBody setCode(Integer code) {

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListVccFlowInfosResponseBody extends TeaModel {
     /**
+     * <p>访问被拒绝的详细原因。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class ListVccFlowInfosResponseBody extends TeaModel {
     public static ListVccFlowInfosResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVccFlowInfosResponseBody self = new ListVccFlowInfosResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListVccFlowInfosResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListVccFlowInfosResponseBody setCode(Integer code) {

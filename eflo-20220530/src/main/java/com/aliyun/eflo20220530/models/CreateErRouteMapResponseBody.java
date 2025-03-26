@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateErRouteMapResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) authentication failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class CreateErRouteMapResponseBody extends TeaModel {
     public static CreateErRouteMapResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateErRouteMapResponseBody self = new CreateErRouteMapResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateErRouteMapResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CreateErRouteMapResponseBody setCode(Integer code) {

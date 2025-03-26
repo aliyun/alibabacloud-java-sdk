@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVccRouteEntryResponseBody extends TeaModel {
     /**
+     * <p>The detailed information about the failed permission verification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class CreateVccRouteEntryResponseBody extends TeaModel {
     public static CreateVccRouteEntryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateVccRouteEntryResponseBody self = new CreateVccRouteEntryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVccRouteEntryResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CreateVccRouteEntryResponseBody setCode(Integer code) {

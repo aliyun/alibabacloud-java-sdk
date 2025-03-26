@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListVccsResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class ListVccsResponseBody extends TeaModel {
     public static ListVccsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVccsResponseBody self = new ListVccsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListVccsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListVccsResponseBody setCode(Integer code) {

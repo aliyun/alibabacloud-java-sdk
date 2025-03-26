@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class RefundVccResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * <blockquote>
+     * <p> This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +55,14 @@ public class RefundVccResponseBody extends TeaModel {
     public static RefundVccResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefundVccResponseBody self = new RefundVccResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RefundVccResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public RefundVccResponseBody setCode(Integer code) {

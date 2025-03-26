@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetVpdRouteEntryResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class GetVpdRouteEntryResponseBody extends TeaModel {
     public static GetVpdRouteEntryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVpdRouteEntryResponseBody self = new GetVpdRouteEntryResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetVpdRouteEntryResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetVpdRouteEntryResponseBody setCode(Integer code) {

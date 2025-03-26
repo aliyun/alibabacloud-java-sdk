@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeSlrResponseBody extends TeaModel {
     /**
+     * <p>The information about the request denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class DescribeSlrResponseBody extends TeaModel {
     public static DescribeSlrResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlrResponseBody self = new DescribeSlrResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSlrResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DescribeSlrResponseBody setCode(Integer code) {

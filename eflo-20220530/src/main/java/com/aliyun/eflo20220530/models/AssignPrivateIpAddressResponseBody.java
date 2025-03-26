@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressResponseBody extends TeaModel {
     /**
+     * <p>The detailed reason why the access was denied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class AssignPrivateIpAddressResponseBody extends TeaModel {
     public static AssignPrivateIpAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AssignPrivateIpAddressResponseBody self = new AssignPrivateIpAddressResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AssignPrivateIpAddressResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public AssignPrivateIpAddressResponseBody setCode(Integer code) {

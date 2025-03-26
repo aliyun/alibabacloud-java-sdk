@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetLniPrivateIpAddressResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
     public static GetLniPrivateIpAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetLniPrivateIpAddressResponseBody self = new GetLniPrivateIpAddressResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetLniPrivateIpAddressResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetLniPrivateIpAddressResponseBody setCode(Integer code) {
@@ -156,6 +173,15 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The subnet instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subnet-aj93mko8</p>
+         */
+        @NameInMap("SubnetId")
+        public String subnetId;
+
         public static GetLniPrivateIpAddressResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
             GetLniPrivateIpAddressResponseBodyContent self = new GetLniPrivateIpAddressResponseBodyContent();
             return TeaModel.build(map, self);
@@ -231,6 +257,14 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetLniPrivateIpAddressResponseBodyContent setSubnetId(String subnetId) {
+            this.subnetId = subnetId;
+            return this;
+        }
+        public String getSubnetId() {
+            return this.subnetId;
         }
 
     }

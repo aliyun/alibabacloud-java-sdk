@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListErsResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class ListErsResponseBody extends TeaModel {
     public static ListErsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListErsResponseBody self = new ListErsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListErsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListErsResponseBody setCode(Integer code) {

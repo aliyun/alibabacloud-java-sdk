@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateElasticNetworkInterfaceResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
      * <p>The response status code.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +49,14 @@ public class CreateElasticNetworkInterfaceResponseBody extends TeaModel {
     public static CreateElasticNetworkInterfaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateElasticNetworkInterfaceResponseBody self = new CreateElasticNetworkInterfaceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateElasticNetworkInterfaceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CreateElasticNetworkInterfaceResponseBody setCode(Integer code) {
