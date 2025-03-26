@@ -986,6 +986,17 @@ public class CreateScalingGroupRequest extends TeaModel {
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
+        /**
+         * <p>The cost comparison method. Valid values:</p>
+         * <ul>
+         * <li>PricePerUnit: compares costs based on unit price divided by instance capacities (weights). The capacity of an instance in a scaling group is determined by the weight of the instance type used. If no weight is set, the capacity defaults to 1.</li>
+         * <li>PricePerVCpu: compares costs based on unit price divided by the number of vCPUs.</li>
+         * </ul>
+         * <p>Default value: PricePerUnit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PricePerUnit</p>
+         */
         @NameInMap("PriceComparisonMode")
         public String priceComparisonMode;
 
@@ -1458,7 +1469,7 @@ public class CreateScalingGroupRequest extends TeaModel {
 
     public static class CreateScalingGroupRequestTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key that you want to add to the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>Department</p>
@@ -1467,10 +1478,10 @@ public class CreateScalingGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
+         * <p>Specifies whether to propagate the tag that you want to add to the scaling group. Valid values:</p>
          * <ul>
-         * <li>true: propagates the tag to new instances.</li>
-         * <li>false: does not propagate the tag to any instance.</li>
+         * <li>true: propagates the tag to only instances that are newly created.</li>
+         * <li>false: does not propagate the tag to any instances.</li>
          * </ul>
          * <p>Default value: false.</p>
          * 
@@ -1481,7 +1492,7 @@ public class CreateScalingGroupRequest extends TeaModel {
         public Boolean propagate;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value that you want to add to the scaling group.</p>
          * 
          * <strong>example:</strong>
          * <p>Finance</p>

@@ -404,6 +404,9 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    @NameInMap("ResourcePoolOptions")
+    public ModifyScalingConfigurationRequestResourcePoolOptions resourcePoolOptions;
+
     /**
      * <p>The ID of the scaling configuration that you want to modify.</p>
      * <p>This parameter is required.</p>
@@ -901,6 +904,14 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    public ModifyScalingConfigurationRequest setResourcePoolOptions(ModifyScalingConfigurationRequestResourcePoolOptions resourcePoolOptions) {
+        this.resourcePoolOptions = resourcePoolOptions;
+        return this;
+    }
+    public ModifyScalingConfigurationRequestResourcePoolOptions getResourcePoolOptions() {
+        return this.resourcePoolOptions;
     }
 
     public ModifyScalingConfigurationRequest setScalingConfigurationId(String scalingConfigurationId) {
@@ -2292,6 +2303,36 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
         }
         public java.util.List<String> getSecurityGroupIds() {
             return this.securityGroupIds;
+        }
+
+    }
+
+    public static class ModifyScalingConfigurationRequestResourcePoolOptions extends TeaModel {
+        @NameInMap("PrivatePoolIds")
+        public java.util.List<String> privatePoolIds;
+
+        @NameInMap("Strategy")
+        public String strategy;
+
+        public static ModifyScalingConfigurationRequestResourcePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingConfigurationRequestResourcePoolOptions self = new ModifyScalingConfigurationRequestResourcePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingConfigurationRequestResourcePoolOptions setPrivatePoolIds(java.util.List<String> privatePoolIds) {
+            this.privatePoolIds = privatePoolIds;
+            return this;
+        }
+        public java.util.List<String> getPrivatePoolIds() {
+            return this.privatePoolIds;
+        }
+
+        public ModifyScalingConfigurationRequestResourcePoolOptions setStrategy(String strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public String getStrategy() {
+            return this.strategy;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthResponseBody extends TeaModel {
+    @NameInMap("ElasticStrength")
+    public String elasticStrength;
+
     /**
      * <p>The scaling strength models.</p>
      */
@@ -39,6 +42,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     public static DescribeElasticStrengthResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticStrengthResponseBody self = new DescribeElasticStrengthResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticStrengthResponseBody setElasticStrength(String elasticStrength) {
+        this.elasticStrength = elasticStrength;
+        return this;
+    }
+    public String getElasticStrength() {
+        return this.elasticStrength;
     }
 
     public DescribeElasticStrengthResponseBody setElasticStrengthModels(java.util.List<DescribeElasticStrengthResponseBodyElasticStrengthModels> elasticStrengthModels) {
@@ -382,6 +393,58 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth extends TeaModel {
+        @NameInMap("AdequacyScore")
+        public Integer adequacyScore;
+
+        @NameInMap("HealthScore")
+        public Integer healthScore;
+
+        @NameInMap("HotScore")
+        public Integer hotScore;
+
+        @NameInMap("SupplyScore")
+        public Integer supplyScore;
+
+        public static DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth self = new DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth setAdequacyScore(Integer adequacyScore) {
+            this.adequacyScore = adequacyScore;
+            return this;
+        }
+        public Integer getAdequacyScore() {
+            return this.adequacyScore;
+        }
+
+        public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth setHealthScore(Integer healthScore) {
+            this.healthScore = healthScore;
+            return this;
+        }
+        public Integer getHealthScore() {
+            return this.healthScore;
+        }
+
+        public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth setHotScore(Integer hotScore) {
+            this.hotScore = hotScore;
+            return this;
+        }
+        public Integer getHotScore() {
+            return this.hotScore;
+        }
+
+        public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth setSupplyScore(Integer supplyScore) {
+            this.supplyScore = supplyScore;
+            return this;
+        }
+        public Integer getSupplyScore() {
+            return this.supplyScore;
+        }
+
+    }
+
     public static class DescribeElasticStrengthResponseBodyResourcePools extends TeaModel {
         /**
          * <p>The error code returned when the scaling strength is the weakest.</p>
@@ -401,6 +464,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("InventoryHealth")
+        public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth inventoryHealth;
+
         /**
          * <p>The error message returned when the scaling strength is the weakest.</p>
          * 
@@ -409,6 +475,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
          */
         @NameInMap("Msg")
         public String msg;
+
+        @NameInMap("Status")
+        public String status;
 
         /**
          * <p>The scaling strength of the resource pool.</p>
@@ -455,12 +524,28 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
             return this.instanceType;
         }
 
+        public DescribeElasticStrengthResponseBodyResourcePools setInventoryHealth(DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth inventoryHealth) {
+            this.inventoryHealth = inventoryHealth;
+            return this;
+        }
+        public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth getInventoryHealth() {
+            return this.inventoryHealth;
+        }
+
         public DescribeElasticStrengthResponseBodyResourcePools setMsg(String msg) {
             this.msg = msg;
             return this;
         }
         public String getMsg() {
             return this.msg;
+        }
+
+        public DescribeElasticStrengthResponseBodyResourcePools setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeElasticStrengthResponseBodyResourcePools setStrength(Double strength) {

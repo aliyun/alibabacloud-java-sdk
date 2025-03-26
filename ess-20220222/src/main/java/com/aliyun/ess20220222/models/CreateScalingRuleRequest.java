@@ -73,7 +73,7 @@ public class CreateScalingRuleRequest extends TeaModel {
     public Integer estimatedInstanceWarmup;
 
     /**
-     * <p>The Hybrid Cloud Monitoring metrics.</p>
+     * <p>The Hybrid Cloud Monitoring metrics. For more information, see <a href="https://help.aliyun.com/document_detail/2852162.html">Create a custom target tracking scaling rule</a>.</p>
      */
     @NameInMap("HybridMetrics")
     public java.util.List<CreateScalingRuleRequestHybridMetrics> hybridMetrics;
