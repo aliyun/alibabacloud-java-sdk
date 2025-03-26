@@ -67,7 +67,7 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
         public String portRange;
 
         @NameInMap("Priority")
-        public String priority;
+        public Integer priority;
 
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
@@ -112,11 +112,11 @@ public class AuthorizeRCSecurityGroupPermissionRequest extends TeaModel {
             return this.portRange;
         }
 
-        public AuthorizeRCSecurityGroupPermissionRequestSecurityGroupPermissions setPriority(String priority) {
+        public AuthorizeRCSecurityGroupPermissionRequestSecurityGroupPermissions setPriority(Integer priority) {
             this.priority = priority;
             return this;
         }
-        public String getPriority() {
+        public Integer getPriority() {
             return this.priority;
         }
 

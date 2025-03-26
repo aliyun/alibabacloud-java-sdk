@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstancesRequest extends TeaModel {
+    @NameInMap("HostIp")
+    public String hostIp;
+
     /**
      * <p>The instance ID.</p>
      * 
@@ -12,6 +15,9 @@ public class DescribeRCInstancesRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("InstanceIds")
+    public String instanceIds;
 
     /**
      * <p>The page number.</p>
@@ -34,6 +40,9 @@ public class DescribeRCInstancesRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("PublicIp")
+    public String publicIp;
 
     /**
      * <p>The region ID.</p>
@@ -61,12 +70,28 @@ public class DescribeRCInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRCInstancesRequest setHostIp(String hostIp) {
+        this.hostIp = hostIp;
+        return this;
+    }
+    public String getHostIp() {
+        return this.hostIp;
+    }
+
     public DescribeRCInstancesRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeRCInstancesRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     public DescribeRCInstancesRequest setPageNumber(Integer pageNumber) {
@@ -83,6 +108,14 @@ public class DescribeRCInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRCInstancesRequest setPublicIp(String publicIp) {
+        this.publicIp = publicIp;
+        return this;
+    }
+    public String getPublicIp() {
+        return this.publicIp;
     }
 
     public DescribeRCInstancesRequest setRegionId(String regionId) {

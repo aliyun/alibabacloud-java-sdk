@@ -265,6 +265,15 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("InstanceTypeFamily")
+        public String instanceTypeFamily;
+
+        @NameInMap("PublicIp")
+        public String publicIp;
+
         /**
          * <p>The region ID.</p>
          * 
@@ -273,6 +282,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
 
         @NameInMap("SpotStrategy")
         public String spotStrategy;
@@ -391,12 +403,44 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeRCInstancesResponseBodyRCInstances setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setPublicIp(String publicIp) {
+            this.publicIp = publicIp;
+            return this;
+        }
+        public String getPublicIp() {
+            return this.publicIp;
+        }
+
         public DescribeRCInstancesResponseBodyRCInstances setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setSpotStrategy(String spotStrategy) {

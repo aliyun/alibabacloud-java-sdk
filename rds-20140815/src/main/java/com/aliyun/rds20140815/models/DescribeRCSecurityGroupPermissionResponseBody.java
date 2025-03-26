@@ -76,6 +76,9 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
     }
 
     public static class DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions extends TeaModel {
+        @NameInMap("CreateTime")
+        public String createTime;
+
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
@@ -106,6 +109,14 @@ public class DescribeRCSecurityGroupPermissionResponseBody extends TeaModel {
         public static DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions build(java.util.Map<String, ?> map) throws Exception {
             DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions self = new DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeRCSecurityGroupPermissionResponseBodySecurityGroupPermissions setDestCidrIp(String destCidrIp) {

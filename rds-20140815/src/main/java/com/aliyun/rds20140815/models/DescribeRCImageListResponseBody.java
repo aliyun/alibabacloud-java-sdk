@@ -108,6 +108,47 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeRCImageListResponseBodyImagesDiskDeviceMappings extends TeaModel {
+        @NameInMap("Device")
+        public String device;
+
+        @NameInMap("Size")
+        public String size;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeRCImageListResponseBodyImagesDiskDeviceMappings build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCImageListResponseBodyImagesDiskDeviceMappings self = new DescribeRCImageListResponseBodyImagesDiskDeviceMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCImageListResponseBodyImagesDiskDeviceMappings setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public DescribeRCImageListResponseBodyImagesDiskDeviceMappings setSize(String size) {
+            this.size = size;
+            return this;
+        }
+        public String getSize() {
+            return this.size;
+        }
+
+        public DescribeRCImageListResponseBodyImagesDiskDeviceMappings setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeRCImageListResponseBodyImages extends TeaModel {
         /**
          * <p>The image architecture. Valid values:</p>
@@ -139,6 +180,9 @@ public class DescribeRCImageListResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("DiskDeviceMappings")
+        public java.util.List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> diskDeviceMappings;
 
         /**
          * <p>The image ID.</p>
@@ -278,6 +322,14 @@ public class DescribeRCImageListResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeRCImageListResponseBodyImages setDiskDeviceMappings(java.util.List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> diskDeviceMappings) {
+            this.diskDeviceMappings = diskDeviceMappings;
+            return this;
+        }
+        public java.util.List<DescribeRCImageListResponseBodyImagesDiskDeviceMappings> getDiskDeviceMappings() {
+            return this.diskDeviceMappings;
         }
 
         public DescribeRCImageListResponseBodyImages setImageId(String imageId) {

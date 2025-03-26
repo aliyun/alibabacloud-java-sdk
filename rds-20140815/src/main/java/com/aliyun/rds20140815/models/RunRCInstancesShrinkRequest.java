@@ -7,7 +7,6 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</p>
      * <p>Valid values: <strong>1</strong> to <strong>10</strong>. Default value: <strong>1</strong>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -257,6 +256,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
 
     @NameInMap("UserData")
     public String userData;
+
+    @NameInMap("UserDataInBase64")
+    public Boolean userDataInBase64;
 
     /**
      * <p>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</p>
@@ -542,6 +544,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public RunRCInstancesShrinkRequest setUserDataInBase64(Boolean userDataInBase64) {
+        this.userDataInBase64 = userDataInBase64;
+        return this;
+    }
+    public Boolean getUserDataInBase64() {
+        return this.userDataInBase64;
     }
 
     public RunRCInstancesShrinkRequest setVSwitchId(String vSwitchId) {

@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBProxyEndpointRequest extends TeaModel {
+    /**
+     * <p>Consistency read timeout, in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("CausalConsistReadTimeout")
     public String causalConsistReadTimeout;
 
@@ -238,6 +244,8 @@ public class ModifyDBProxyEndpointRequest extends TeaModel {
     public String vSwitchId;
 
     /**
+     * <p>The virtual private cloud (VPC) ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-2zeusejj******</p>
      */

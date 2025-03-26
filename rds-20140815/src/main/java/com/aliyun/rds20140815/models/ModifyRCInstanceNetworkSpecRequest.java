@@ -4,15 +4,43 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyRCInstanceNetworkSpecRequest extends TeaModel {
+    /**
+     * <p>The ID of the RDS Custom instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-dh2jf9n6j4s14926****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum outbound public bandwidth. Unit: Mbit/s.</p>
+     * <p>Valid values: 0 to 1024. Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("InternetMaxBandwidthOut")
     public String internetMaxBandwidthOut;
 
+    /**
+     * <p>The billing method of the bandwidth. Only the <strong>pay-by-traffic</strong> billing method is supported.</p>
+     * <blockquote>
+     * <p> If the <strong>pay-by-traffic</strong> billing method is used for network usage, the maximum inbound and outbound bandwidths are used as the upper limits of bandwidths instead of guaranteed performance specifications. In scenarios where demand outstrips resource supplies, these maximum bandwidth values may not be limited.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
+     */
     @NameInMap("NetworkChargeType")
     public String networkChargeType;
 
+    /**
+     * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

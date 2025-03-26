@@ -4,6 +4,12 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The consistency read timeout period. Unit: milliseconds. Default value: <strong>10</strong> Unit: milliseconds. Valid values: <strong>0 to 60000</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("CausalConsistReadTimeout")
     public String causalConsistReadTimeout;
 
@@ -72,6 +78,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
      * <li><strong>ConnectionPersist</strong>: the status of the connection pooling feature. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates that the connection pooling feature is disabled. The value 1 indicates that the session-level connection pooling feature is enabled. The value 2 indicates that the transaction-level connection pooling feature is enabled.</li>
      * <li><strong>ReadWriteSpliting</strong>: the status of the read/write splitting feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
      * <li><strong>AZProximityAccess</strong>: the status of the nearest access feature. Valid values: <strong>0</strong> and <strong>1</strong>. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.</li>
+     * <li><strong>CausalConsistRead</strong>: the read consistency settings. Valid values: <strong>0</strong>, <strong>1</strong>, and <strong>2</strong>. The value 0 indicates eventual consistency. The value 1 indicates session consistency. The value 2 indicates global consistency.</li>
      * <li><strong>PinPreparedStmt</strong>: an internal parameter that is available only for ApsaraDB RDS for PostgrSQL instances.</li>
      * </ul>
      * <blockquote>
@@ -112,6 +119,12 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DbProxyEndpointReadWriteMode")
     public String dbProxyEndpointReadWriteMode;
 
+    /**
+     * <p>The virtual private cloud (VPC) ID of the proxy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-****</p>
+     */
     @NameInMap("DbProxyEndpointVpcId")
     public String dbProxyEndpointVpcId;
 

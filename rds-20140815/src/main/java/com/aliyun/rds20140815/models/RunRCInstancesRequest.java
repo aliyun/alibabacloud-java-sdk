@@ -7,7 +7,6 @@ public class RunRCInstancesRequest extends TeaModel {
     /**
      * <p>The number of RDS Custom instances that you want to create. The parameter is available if you want to create multiple RDS Custom instances at a time.</p>
      * <p>Valid values: <strong>1</strong> to <strong>10</strong>. Default value: <strong>1</strong>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -257,6 +256,9 @@ public class RunRCInstancesRequest extends TeaModel {
 
     @NameInMap("UserData")
     public String userData;
+
+    @NameInMap("UserDataInBase64")
+    public Boolean userDataInBase64;
 
     /**
      * <p>The vSwitch ID of the instance. You must specify this parameter when you create an instance of the virtual private cloud (VPC) type. The specified vSwitch and security group must belong to the same VPC.</p>
@@ -544,6 +546,14 @@ public class RunRCInstancesRequest extends TeaModel {
         return this.userData;
     }
 
+    public RunRCInstancesRequest setUserDataInBase64(Boolean userDataInBase64) {
+        this.userDataInBase64 = userDataInBase64;
+        return this;
+    }
+    public Boolean getUserDataInBase64() {
+        return this.userDataInBase64;
+    }
+
     public RunRCInstancesRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -609,6 +619,9 @@ public class RunRCInstancesRequest extends TeaModel {
         @NameInMap("DeleteWithInstance")
         public Boolean deleteWithInstance;
 
+        @NameInMap("Device")
+        public String device;
+
         /**
          * <p>Specifies whether to encrypt the cloud disk. Valid values:</p>
          * <ul>
@@ -640,6 +653,9 @@ public class RunRCInstancesRequest extends TeaModel {
         @NameInMap("Size")
         public Integer size;
 
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
         public static RunRCInstancesRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             RunRCInstancesRequestDataDisk self = new RunRCInstancesRequestDataDisk();
             return TeaModel.build(map, self);
@@ -659,6 +675,14 @@ public class RunRCInstancesRequest extends TeaModel {
         }
         public Boolean getDeleteWithInstance() {
             return this.deleteWithInstance;
+        }
+
+        public RunRCInstancesRequestDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
         }
 
         public RunRCInstancesRequestDataDisk setEncrypted(String encrypted) {
@@ -683,6 +707,14 @@ public class RunRCInstancesRequest extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+        public RunRCInstancesRequestDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
     }

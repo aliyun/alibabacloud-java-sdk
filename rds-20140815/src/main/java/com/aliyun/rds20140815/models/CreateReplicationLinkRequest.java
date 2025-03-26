@@ -101,6 +101,9 @@ public class CreateReplicationLinkRequest extends TeaModel {
     @NameInMap("SourcePort")
     public Long sourcePort;
 
+    @NameInMap("TargetAddress")
+    public String targetAddress;
+
     /**
      * <p>The task ID of the successful dry run.</p>
      * 
@@ -194,6 +197,14 @@ public class CreateReplicationLinkRequest extends TeaModel {
     }
     public Long getSourcePort() {
         return this.sourcePort;
+    }
+
+    public CreateReplicationLinkRequest setTargetAddress(String targetAddress) {
+        this.targetAddress = targetAddress;
+        return this;
+    }
+    public String getTargetAddress() {
+        return this.targetAddress;
     }
 
     public CreateReplicationLinkRequest setTaskId(Long taskId) {

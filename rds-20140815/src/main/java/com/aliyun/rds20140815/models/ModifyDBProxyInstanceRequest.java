@@ -327,6 +327,12 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         @NameInMap("destVSwitchId")
         public String destVSwitchId;
 
+        /**
+         * <p>The target vpc id corresponding to the proxy instance migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2vcicu73rdylp****</p>
+         */
         @NameInMap("destVpcId")
         public String destVpcId;
 
