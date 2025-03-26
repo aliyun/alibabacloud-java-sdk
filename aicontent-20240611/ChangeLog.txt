@@ -1,3 +1,32 @@
+2025-03-26 Version: 2.0.0
+- Support API CreateAccessWarrant.
+- Support API CreateProject.
+- Support API ExecuteAITeacherChineseCompositionTutoringWorkflowRun.
+- Support API ExecuteAITeacherEnglishCompositionTutoringWorkflowRun.
+- Support API ExecuteAITeacherEnglishParaphraseChatMessage.
+- Support API ExecuteTextbookAssistantDialogue.
+- Support API ExecuteTextbookAssistantDifficulty.
+- Support API ExecuteTextbookAssistantGrammarCheck.
+- Support API ExecuteTextbookAssistantRefineByContext.
+- Support API ExecuteTextbookAssistantRetryConversation.
+- Support API ExecuteTextbookAssistantStartConversation.
+- Support API ExecuteTextbookAssistantSuggestion.
+- Support API ExecuteTextbookAssistantTranslate.
+- Support API GetTextbookAssistantToken.
+- Support API ListTextbookAssistantArticles.
+- Support API ListTextbookAssistantBookDirectories.
+- Support API ListTextbookAssistantBooks.
+- Support API ListTextbookAssistantGradeVolumes.
+- Support API QueryApplicationAccessId.
+- Support API QueryProject.
+- Support API QueryProjectList.
+- Support API QueryPurchasedService.
+- Support API UpdateProject.
+- Update API AliyunConsoleOpenApiQueryAliyunConsoleServiceList: update response parameters Body.data.$' type has changed.
+- Update API AliyunConsoleOpenApiQueryAliyunConsoleServiceList: update response parameters Body.data.$' ref has changed.
+- Update API AliyunConsoleOpenApiQueryAliyunConsoleServiceList: delete response parameters Body.data.$.
+
+
 2025-01-02 Version: 1.3.1
 - Update API GetAITeacherSyncDialogueSuggestion: update response param.
 
