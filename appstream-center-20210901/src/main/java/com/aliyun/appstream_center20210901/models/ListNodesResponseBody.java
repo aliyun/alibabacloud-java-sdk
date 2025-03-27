@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The resource nodes.</p>
+     */
     @NameInMap("NodeModels")
     public java.util.List<ListNodesResponseBodyNodeModels> nodeModels;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListNodesResponseBody extends TeaModel {
     public Integer perPageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -29,6 +38,8 @@ public class ListNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +93,16 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyNodeModels extends TeaModel {
         /**
+         * <p>The billing method of the resource node.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>Prepaid: subscription</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
          */
@@ -89,6 +110,11 @@ public class ListNodesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The ID of the resource node.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>i-bp13********</p>
          */

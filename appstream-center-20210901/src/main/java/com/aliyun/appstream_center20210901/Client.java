@@ -255,6 +255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppInstanceGroupId", request.appInstanceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstancePersistentId)) {
+            body.put("AppInstancePersistentId", request.appInstancePersistentId);
+        }
+
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authorizeUserIds)) {
             bodyFlat.put("AuthorizeUserIds", request.authorizeUserIds);
@@ -532,6 +536,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.appPolicyId)) {
             body.put("AppPolicyId", request.appPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authMode)) {
+            body.put("AuthMode", request.authMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
@@ -1745,7 +1753,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点列表</p>
+     * <p>Queries resource nodes.</p>
      * 
      * @param request ListNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1794,7 +1802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询节点列表</p>
+     * <p>Queries resource nodes.</p>
      * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
@@ -2342,7 +2350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月交付组节点数量升级</p>
+     * <p>Changes the number of nodes in a subscription delivery group.</p>
      * 
      * @param tmpReq ModifyNodePoolAmountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2393,7 +2401,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>包年包月交付组节点数量升级</p>
+     * <p>Changes the number of nodes in a subscription delivery group.</p>
      * 
      * @param request ModifyNodePoolAmountRequest
      * @return ModifyNodePoolAmountResponse

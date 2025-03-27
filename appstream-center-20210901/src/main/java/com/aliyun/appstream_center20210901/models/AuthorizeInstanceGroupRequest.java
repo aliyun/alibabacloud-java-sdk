@@ -13,6 +13,9 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    @NameInMap("AppInstancePersistentId")
+    public String appInstancePersistentId;
+
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
@@ -42,6 +45,14 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     }
     public String getAppInstanceGroupId() {
         return this.appInstanceGroupId;
+    }
+
+    public AuthorizeInstanceGroupRequest setAppInstancePersistentId(String appInstancePersistentId) {
+        this.appInstancePersistentId = appInstancePersistentId;
+        return this;
+    }
+    public String getAppInstancePersistentId() {
+        return this.appInstancePersistentId;
     }
 
     public AuthorizeInstanceGroupRequest setAuthorizeUserIds(java.util.List<String> authorizeUserIds) {
