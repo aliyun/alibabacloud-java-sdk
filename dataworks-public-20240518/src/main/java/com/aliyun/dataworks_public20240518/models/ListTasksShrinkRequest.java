@@ -98,7 +98,29 @@ public class ListTasksShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The type of the task. Valid values:</p>
+     * <ul>
+     * <li>ODPS_SQL</li>
+     * <li>SPARK</li>
+     * <li>PY_ODPS</li>
+     * <li>PY_ODPS3</li>
+     * <li>ODPS_SCRIPT</li>
+     * <li>ODPS_MR</li>
+     * <li>COMPONENT_SQL</li>
+     * <li>EMR_HIVE</li>
+     * <li>EMR_MR</li>
+     * <li>EMR_SPARK_SQL</li>
+     * <li>EMR_SPARK</li>
+     * <li>EMR_SHELL</li>
+     * <li>EMR_PRESTO</li>
+     * <li>EMR_IMPALA</li>
+     * <li>SPARK_STREAMING</li>
+     * <li>EMR_KYUUBI</li>
+     * <li>EMR_TRINO</li>
+     * <li>HOLOGRES_SQL</li>
+     * <li>HOLOGRES_SYNC_DDL</li>
+     * <li>HOLOGRES_SYNC_DATA</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ODPS_SQL</p>

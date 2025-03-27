@@ -27,7 +27,7 @@ public class MoveNodeRequest extends TeaModel {
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

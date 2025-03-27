@@ -66,7 +66,7 @@ public class UpdateDataQualityRuleRequest extends TeaModel {
     public UpdateDataQualityRuleRequestSamplingConfig samplingConfig;
 
     /**
-     * <p>The strength of the rule.</p>
+     * <p>The strength of the rule. Valid values:</p>
      * <ul>
      * <li>Normal</li>
      * <li>High</li>

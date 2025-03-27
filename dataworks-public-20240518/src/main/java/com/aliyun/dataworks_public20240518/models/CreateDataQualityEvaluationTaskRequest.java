@@ -12,6 +12,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     /**
      * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,6 +54,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -81,6 +83,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     /**
      * <p>The monitored object of the monitor.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Target")
     public CreateDataQualityEvaluationTaskRequestTarget target;
@@ -178,14 +181,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -253,14 +256,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -327,14 +330,14 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class CreateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -1032,6 +1035,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
          * <li>emr</li>
          * <li>analyticdb_for_postgresql</li>
          * </ul>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>maxcompute</p>
@@ -1050,6 +1054,7 @@ public class CreateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The ID of the table in Data Map.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.api_test.ods_openapi_log_d</p>

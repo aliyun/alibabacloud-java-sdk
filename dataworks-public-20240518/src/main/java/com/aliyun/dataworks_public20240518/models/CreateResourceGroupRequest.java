@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2kqofrgXXXXX</p>
@@ -26,7 +26,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Boolean autoRenewEnabled;
 
     /**
-     * <p>The idempotent identifier of the client is used to ensure idempotent operation of creating a common resource group.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of a common resource group. It must start with a letter and can contain letters, numbers, and underscores (_). It can be up to 128 characters in length.</p>
+     * <p>The name of the serverless resource group. The name can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The duration of the payment.</p>
+     * <p>The subscription duration.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +74,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>Note for creating a common resource group, which can contain letters, Chinese characters, numbers, underscores (_), and a maximum of 128 characters.</p>
+     * <p>The description of the serverless resource group. The description can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>Create a serverless resource group for common tasks</p>
@@ -83,7 +83,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The specifications of the resource group. Unit: compute unit (CU). This parameter is required only when you set the PaymentType parameter to PrePaid.</p>
+     * <p>The specifications of the serverless resource group. Unit: CU. This parameter is required only if you set the PaymentType parameter to PrePaid.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

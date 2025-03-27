@@ -259,7 +259,7 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
 
     public static class UpdateDIAlarmRuleRequestNotificationSettings extends TeaModel {
         /**
-         * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+         * <p>This parameter is deprecated and replaced by the MuteInterval parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -331,7 +331,7 @@ public class UpdateDIAlarmRuleRequest extends TeaModel {
 
     public static class UpdateDIAlarmRuleRequestTriggerConditions extends TeaModel {
         /**
-         * <p>The types of DDL operations for which the alert rule takes effect.</p>
+         * <p>This parameter is deprecated and replaced by the DdlTypes parameter.</p>
          */
         @NameInMap("DdlReportTags")
         @Deprecated

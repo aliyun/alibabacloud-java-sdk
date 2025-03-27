@@ -71,8 +71,8 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         /**
          * <p>The environment of the workspace. Valid values:</p>
          * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
+         * <li>Prod</li>
+         * <li>Dev</li>
          * </ul>
          * 
          * <strong>example:</strong>

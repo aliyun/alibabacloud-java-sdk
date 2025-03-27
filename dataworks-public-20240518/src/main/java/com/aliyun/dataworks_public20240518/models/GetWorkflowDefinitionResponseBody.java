@@ -178,6 +178,8 @@ public class GetWorkflowDefinitionResponseBody extends TeaModel {
         public String spec;
 
         /**
+         * <p>The ID of the workflow on the scheduling side after publishing.</p>
+         * 
          * <strong>example:</strong>
          * <p>700006657495</p>
          */

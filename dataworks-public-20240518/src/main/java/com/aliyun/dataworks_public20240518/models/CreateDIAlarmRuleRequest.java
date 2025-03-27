@@ -153,7 +153,7 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
 
     public static class CreateDIAlarmRuleRequestNotificationSettingsNotificationChannels extends TeaModel {
         /**
-         * <p>The alert notification methods. Valid values:</p>
+         * <p>The alert notification method. Valid values:</p>
          * <ul>
          * <li>Mail</li>
          * <li>Phone</li>
@@ -245,7 +245,7 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
 
     public static class CreateDIAlarmRuleRequestNotificationSettings extends TeaModel {
         /**
-         * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
+         * <p>This parameter is deprecated and replaced by the MuteInterval parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -255,7 +255,7 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
         public Integer inhibitionInterval;
 
         /**
-         * <p>告警抑制间隔时长，单位分钟，默认5分钟。</p>
+         * <p>The duration of the alert suppression interval. Default value: 5. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -317,14 +317,14 @@ public class CreateDIAlarmRuleRequest extends TeaModel {
 
     public static class CreateDIAlarmRuleRequestTriggerConditions extends TeaModel {
         /**
-         * <p>The types of DDL operations for which the alert rule takes effect.</p>
+         * <p>This parameter is deprecated and replaced by the DdlTypes parameter.</p>
          */
         @NameInMap("DdlReportTags")
         @Deprecated
         public java.util.List<String> ddlReportTags;
 
         /**
-         * <p>在DDL通知的时候才生效，需要生效的DDL列表。</p>
+         * <p>The types of DDL operations for which the alert rule takes effect.</p>
          */
         @NameInMap("DdlTypes")
         public java.util.List<String> ddlTypes;

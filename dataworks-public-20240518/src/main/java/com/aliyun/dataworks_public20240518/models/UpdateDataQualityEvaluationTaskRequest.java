@@ -195,14 +195,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -270,14 +270,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -344,14 +344,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class UpdateDataQualityEvaluationTaskRequestDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
         /**
-         * <p>阈值表达式。</p>
-         * <p>波动率类型规则必须使用表达式方式表示波动阈值。如：</p>
+         * <p>The threshold expression.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>波动上升大于0.01： $checkValue &gt; 0.01 </li>
-         * <li>波动下降大于0.01：$checkValue &lt; -0.01 </li>
-         * <li>波动率绝对值：abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>固定值类型规则也可以使用表达式方式配置阈值，如果同时配置，表达式优先级高于Operator和Value</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -486,7 +486,7 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
         /**
          * <p>The threshold calculation method. Valid values:</p>
          * <ul>
-         * <li>Fluctuation</li>
+         * <li>Fluctation</li>
          * <li>Auto</li>
          * <li>FluctationDiscreate</li>
          * <li>Average</li>
@@ -577,24 +577,23 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
 
     public static class UpdateDataQualityEvaluationTaskRequestDataQualityRulesSamplingConfig extends TeaModel {
         /**
-         * <p>The metrics used for sampling.
-         * Valid values:</p>
+         * <p>The metrics used for sampling. Valid values:</p>
          * <ul>
-         * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
-         * <li>DuplicatedCount: the number of duplicated values of the field.</li>
-         * <li>TableSize: the table size.</li>
-         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
-         * <li>Max: the maximum value of the field.</li>
-         * <li>GroupCount: the field value and the number of rows for each field value.</li>
          * <li>Count: the number of rows in the table.</li>
-         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
          * <li>Min: the minimum value of the field.</li>
+         * <li>Max: the maximum value of the field.</li>
          * <li>Avg: the average value of the field.</li>
          * <li>DistinctCount: the number of unique values of the field after deduplication.</li>
-         * <li>NullValueCount: the number of rows in which the field value is null.</li>
-         * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
-         * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
          * <li>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</li>
+         * <li>DuplicatedCount: the number of duplicated values of the field.</li>
+         * <li>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</li>
+         * <li>TableSize: the table size.</li>
+         * <li>NullValueCount: the number of rows in which the field value is null.</li>
+         * <li>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</li>
+         * <li>GroupCount: the field value and the number of rows for each field value.</li>
+         * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
+         * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
+         * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
          * </ul>
          * 
          * <strong>example:</strong>

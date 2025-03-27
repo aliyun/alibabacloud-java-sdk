@@ -62,8 +62,8 @@ public class ListProjectMembersResponseBody extends TeaModel {
         /**
          * <p>The type of the role. Valid values:</p>
          * <ul>
-         * <li>UserCustom: custom role</li>
-         * <li>System: built-in role</li>
+         * <li>UserCustom: user-defined role</li>
+         * <li>System: system role</li>
          * </ul>
          * 
          * <strong>example:</strong>

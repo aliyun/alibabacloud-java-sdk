@@ -1,3 +1,15 @@
+2025-03-27 Version: 6.1.0
+- Support API DeleteCertificate.
+- Support API GetCertificate.
+- Support API ImportCertificate.
+- Support API ListCertificates.
+- Support API TestDataSourceConnectivity.
+- Update API CreateDIJob: add request parameters JobType.
+- Update API CreateRoute: add request parameters ResourceGroupId.
+- Update API GetDIJob: add response parameters Body.PagingInfo.JobType.
+- Update API ListResourceGroups: add response parameters Body.PagingInfo.ResourceGroupList.$.AliyunResourceTags.
+
+
 2025-02-18 Version: 6.0.1
 - Update API ExecuteAdhocWorkflowInstance: update param EnvType.
 - Update API GetDIJobLog: add param NodeType.

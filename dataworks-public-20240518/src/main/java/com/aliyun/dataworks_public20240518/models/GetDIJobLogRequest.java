@@ -41,9 +41,25 @@ public class GetDIJobLogRequest extends TeaModel {
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The type of the node. This parameter is applicable only to the tasks that are run on serverless resource groups. Valid values:</p>
+     * <ul>
+     * <li><strong>MASTER</strong>: the master node, which is used to query the logs of JobManagers.</li>
+     * <li><strong>WORKER</strong>: the worker node, which is used to query the logs of TaskManagers.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MASTER</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <p>The page number of the pagination query. The value is a positive integer greater than or equal to 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 

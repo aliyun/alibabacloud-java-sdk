@@ -57,6 +57,48 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags extends TeaModel {
+        /**
+         * <p>Tag Key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>Tag Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags build(java.util.Map<String, ?> map) throws Exception {
+            ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags self = new ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListResourceGroupsResponseBodyPagingInfoResourceGroupListSpec extends TeaModel {
         /**
          * <p>Quantity</p>
@@ -108,6 +150,12 @@ public class ListResourceGroupsResponseBody extends TeaModel {
          */
         @NameInMap("AliyunResourceGroupId")
         public String aliyunResourceGroupId;
+
+        /**
+         * <p>Alibaba Cloud tag list</p>
+         */
+        @NameInMap("AliyunResourceTags")
+        public java.util.List<ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags> aliyunResourceTags;
 
         /**
          * <p>The creation time, which is a 64-bit timestamp.</p>
@@ -191,7 +239,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The type of resource group. Valid values:</p>
+         * <p>The type of the resource group. Valid values:</p>
          * <ul>
          * <li>CommonV2: serverless resource group</li>
          * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
@@ -217,13 +265,15 @@ public class ListResourceGroupsResponseBody extends TeaModel {
          * <li>Normal: The resource group is running or in use.</li>
          * <li>Stop: The resource group is expired.</li>
          * <li>Deleted: The resource group is released or destroyed.</li>
-         * <li>Creating: The resource group is being started.</li>
-         * <li>CreateFailed: The resource group fails to be started.</li>
+         * <li>Creating: The resource group is being created.</li>
+         * <li>CreateFailed: The resource group fails to be created.</li>
          * <li>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</li>
          * <li>UpdateFailed: The resource group fails to be scaled out or upgraded.</li>
          * <li>Deleting: The resource group is being released or destroyed.</li>
          * <li>DeleteFailed: The resource group fails to be released or destroyed.</li>
          * <li>Timeout: The operations that are performed on the resource group time out.</li>
+         * <li>Freezed: The resource group is frozen.</li>
+         * <li>Starting: The resource group is being started.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,6 +293,14 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         }
         public String getAliyunResourceGroupId() {
             return this.aliyunResourceGroupId;
+        }
+
+        public ListResourceGroupsResponseBodyPagingInfoResourceGroupList setAliyunResourceTags(java.util.List<ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags> aliyunResourceTags) {
+            this.aliyunResourceTags = aliyunResourceTags;
+            return this;
+        }
+        public java.util.List<ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags> getAliyunResourceTags() {
+            return this.aliyunResourceTags;
         }
 
         public ListResourceGroupsResponseBodyPagingInfoResourceGroupList setCreateTime(Long createTime) {

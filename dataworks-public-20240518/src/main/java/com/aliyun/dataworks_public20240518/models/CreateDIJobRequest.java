@@ -46,6 +46,9 @@ public class CreateDIJobRequest extends TeaModel {
     @NameInMap("JobSettings")
     public CreateDIJobRequestJobSettings jobSettings;
 
+    @NameInMap("JobType")
+    public String jobType;
+
     /**
      * <p>The synchronization type. Valid values:</p>
      * <ul>
@@ -169,6 +172,14 @@ public class CreateDIJobRequest extends TeaModel {
     }
     public CreateDIJobRequestJobSettings getJobSettings() {
         return this.jobSettings;
+    }
+
+    public CreateDIJobRequest setJobType(String jobType) {
+        this.jobType = jobType;
+        return this;
+    }
+    public String getJobType() {
+        return this.jobType;
     }
 
     public CreateDIJobRequest setMigrationType(String migrationType) {
@@ -414,8 +425,8 @@ public class CreateDIJobRequest extends TeaModel {
          * <li>runtime.offline.concurrent: specifies the maximum number of parallel threads that are allowed for a batch synchronization task.</li>
          * <li>runtime.enable.auto.create.schema: specifies whether schemas are automatically created in the destination of a synchronization task.</li>
          * <li>runtime.realtime.concurrent: specifies the maximum number of parallel threads that are allowed for a real-time synchronization task.</li>
-         * <li>runtime.realtime.failover.minute.dataxcdc: The maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</li>
-         * <li>runtime.realtime.failover.times.dataxcdc: The maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</li>
+         * <li>runtime.realtime.failover.minute.dataxcdc: specifies the maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</li>
+         * <li>runtime.realtime.failover.times.dataxcdc: specifies the maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -460,22 +471,22 @@ public class CreateDIJobRequest extends TeaModel {
         /**
          * <p>The channel control settings for the synchronization task. You can configure special channel control settings for the following synchronization links: data synchronization between Hologres data sources and data synchronization from Hologres to Kafka.</p>
          * <ol>
-         * <li>Data synchronization from Hologres to Kafka</li>
+         * <li>Holo2Kafka</li>
          * </ol>
          * <ul>
          * <li>Example: {&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}}</li>
          * <li>kafkaClientProperties: the parameters related to a Kafka producer, which are used when you write data to a Kafka data source.</li>
          * <li>keyColumns: the names of Kafka columns to which you want to write data.</li>
-         * <li>writeMode: the writing format. Valid values: json and canal.</li>
+         * <li>writeMode: the writing format of the Kafka data source. Valid values: json and canal.</li>
          * </ul>
          * <ol start="2">
-         * <li>Data synchronization between Hologres data sources</li>
+         * <li>Holo2Holo</li>
          * </ol>
          * <ul>
          * <li>Example: {&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</li>
          * <li>conflictMode: the policy used to handle a conflict that occurs during data writing to Hologres. Valid values: replace and ignore.</li>
          * <li>writeMode: the mode in which you want to write data to Hologres. Valid values: replay and insert.</li>
-         * <li>dynamicColumnAction: the method used to write data to dynamic columns in a Hologres table. Valid values: replay, insert, and ignore.</li>
+         * <li>dynamicColumnAction: the mode in which you want to write data to dynamic columns in a Hologres table. Valid values: replay, insert, and ignore.</li>
          * </ul>
          * 
          * <strong>example:</strong>

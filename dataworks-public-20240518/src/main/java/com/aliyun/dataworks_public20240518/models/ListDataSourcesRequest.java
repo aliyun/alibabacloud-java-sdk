@@ -32,7 +32,7 @@ public class ListDataSourcesRequest extends TeaModel {
      * <li>Desc: descending order</li>
      * <li>Asc: ascending order</li>
      * </ul>
-     * <p>Default value: Asc</p>
+     * <p>Default value: Desc</p>
      * 
      * <strong>example:</strong>
      * <p>Asc</p>
@@ -76,7 +76,7 @@ public class ListDataSourcesRequest extends TeaModel {
      * <li>Id</li>
      * <li>Name</li>
      * </ul>
-     * <p>Default value: Id</p>
+     * <p>Default value: CreateTime</p>
      * 
      * <strong>example:</strong>
      * <p>Id</p>
@@ -88,7 +88,7 @@ public class ListDataSourcesRequest extends TeaModel {
      * <p>The tag of the data source. This parameter specifies a filter condition.</p>
      * <ul>
      * <li>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <code>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</code>.</li>
-     * <li>If you do not configure this parameter, tag-based filtering is not performed.</li>
+     * <li>If you do not configure this parameter, tag-based filtering is not performed. You can specify up to 10 tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>
