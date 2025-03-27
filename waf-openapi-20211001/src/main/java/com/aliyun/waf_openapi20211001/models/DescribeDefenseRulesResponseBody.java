@@ -58,6 +58,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseRulesResponseBodyRules extends TeaModel {
+        @NameInMap("ActionExternal")
+        public String actionExternal;
+
         /**
          * <p>The details of the protection rule. The value is a string that contains multiple parameters in the JSON format. For more information, see the &quot;<strong>Rule parameters</strong>&quot; section in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
          * 
@@ -104,6 +107,18 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DetailRuleIds")
+        public String detailRuleIds;
+
+        @NameInMap("ExternalInfo")
+        public String externalInfo;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
         /**
          * <p>The most recent time when the protection rule was modified.</p>
          * 
@@ -130,6 +145,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
          */
         @NameInMap("RuleName")
         public String ruleName;
+
+        @NameInMap("RuleType")
+        public String ruleType;
 
         /**
          * <p>The status of the protection rule. Valid values:</p>
@@ -158,6 +176,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDefenseRulesResponseBodyRules setActionExternal(String actionExternal) {
+            this.actionExternal = actionExternal;
+            return this;
+        }
+        public String getActionExternal() {
+            return this.actionExternal;
+        }
+
         public DescribeDefenseRulesResponseBodyRules setConfig(String config) {
             this.config = config;
             return this;
@@ -182,6 +208,38 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             return this.defenseScene;
         }
 
+        public DescribeDefenseRulesResponseBodyRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setDetailRuleIds(String detailRuleIds) {
+            this.detailRuleIds = detailRuleIds;
+            return this;
+        }
+        public String getDetailRuleIds() {
+            return this.detailRuleIds;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setExternalInfo(String externalInfo) {
+            this.externalInfo = externalInfo;
+            return this;
+        }
+        public String getExternalInfo() {
+            return this.externalInfo;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
         public DescribeDefenseRulesResponseBodyRules setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -204,6 +262,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
         public String getRuleName() {
             return this.ruleName;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
         }
 
         public DescribeDefenseRulesResponseBodyRules setStatus(Integer status) {
