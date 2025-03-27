@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunVideoAnalysisShrinkRequest extends TeaModel {
+    @NameInMap("excludeGenerateOptions")
+    public String excludeGenerateOptionsShrink;
+
     @NameInMap("faceIdentitySimilarityMinScore")
     public Float faceIdentitySimilarityMinScore;
 
@@ -93,6 +96,14 @@ public class RunVideoAnalysisShrinkRequest extends TeaModel {
     public static RunVideoAnalysisShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunVideoAnalysisShrinkRequest self = new RunVideoAnalysisShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunVideoAnalysisShrinkRequest setExcludeGenerateOptionsShrink(String excludeGenerateOptionsShrink) {
+        this.excludeGenerateOptionsShrink = excludeGenerateOptionsShrink;
+        return this;
+    }
+    public String getExcludeGenerateOptionsShrink() {
+        return this.excludeGenerateOptionsShrink;
     }
 
     public RunVideoAnalysisShrinkRequest setFaceIdentitySimilarityMinScore(Float faceIdentitySimilarityMinScore) {

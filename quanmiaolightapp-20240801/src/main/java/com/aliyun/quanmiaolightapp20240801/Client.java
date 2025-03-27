@@ -1199,6 +1199,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RunVideoAnalysisShrinkRequest request = new RunVideoAnalysisShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeGenerateOptions)) {
+            request.excludeGenerateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeGenerateOptions, "excludeGenerateOptions", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.frameSampleMethod)) {
             request.frameSampleMethodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.frameSampleMethod, "frameSampleMethod", "json");
         }
@@ -1216,6 +1220,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeGenerateOptionsShrink)) {
+            body.put("excludeGenerateOptions", request.excludeGenerateOptionsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.faceIdentitySimilarityMinScore)) {
             body.put("faceIdentitySimilarityMinScore", request.faceIdentitySimilarityMinScore);
         }
@@ -1427,6 +1435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitVideoAnalysisTaskShrinkRequest request = new SubmitVideoAnalysisTaskShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.excludeGenerateOptions)) {
+            request.excludeGenerateOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.excludeGenerateOptions, "excludeGenerateOptions", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.frameSampleMethod)) {
             request.frameSampleMethodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.frameSampleMethod, "frameSampleMethod", "json");
         }
@@ -1444,6 +1456,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deduplicationId)) {
+            body.put("deduplicationId", request.deduplicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeGenerateOptionsShrink)) {
+            body.put("excludeGenerateOptions", request.excludeGenerateOptionsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.faceIdentitySimilarityMinScore)) {
             body.put("faceIdentitySimilarityMinScore", request.faceIdentitySimilarityMinScore);
         }

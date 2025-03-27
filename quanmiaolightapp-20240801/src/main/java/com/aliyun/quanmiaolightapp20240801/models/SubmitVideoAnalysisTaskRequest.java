@@ -4,6 +4,16 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoAnalysisTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("deduplicationId")
+    public String deduplicationId;
+
+    @NameInMap("excludeGenerateOptions")
+    public java.util.List<String> excludeGenerateOptions;
+
     @NameInMap("faceIdentitySimilarityMinScore")
     public Float faceIdentitySimilarityMinScore;
 
@@ -85,6 +95,22 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     public static SubmitVideoAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskRequest self = new SubmitVideoAnalysisTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoAnalysisTaskRequest setDeduplicationId(String deduplicationId) {
+        this.deduplicationId = deduplicationId;
+        return this;
+    }
+    public String getDeduplicationId() {
+        return this.deduplicationId;
+    }
+
+    public SubmitVideoAnalysisTaskRequest setExcludeGenerateOptions(java.util.List<String> excludeGenerateOptions) {
+        this.excludeGenerateOptions = excludeGenerateOptions;
+        return this;
+    }
+    public java.util.List<String> getExcludeGenerateOptions() {
+        return this.excludeGenerateOptions;
     }
 
     public SubmitVideoAnalysisTaskRequest setFaceIdentitySimilarityMinScore(Float faceIdentitySimilarityMinScore) {
