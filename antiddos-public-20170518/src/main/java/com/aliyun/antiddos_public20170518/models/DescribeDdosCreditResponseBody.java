@@ -12,15 +12,22 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E1F7BD73-8E9D-58D9-8658-CFC97112C641</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,25 +64,35 @@ public class DescribeDdosCreditResponseBody extends TeaModel {
     public static class DescribeDdosCreditResponseBodyDdosCredit extends TeaModel {
         /**
          * <p>The time period after which blackhole filtering is automatically deactivated in the specified region. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("BlackholeTime")
         public Integer blackholeTime;
 
         /**
-         * <p>The security credit score. The full score is **1000**.</p>
+         * <p>The security credit score. The full score is <strong>1000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>550</p>
          */
         @NameInMap("Score")
         public Integer score;
 
         /**
          * <p>The security credit level. Valid values:</p>
-         * <br>
-         * <p>*   **A**: outstanding</p>
-         * <p>*   **B**: excellent</p>
-         * <p>*   **C**: good</p>
-         * <p>*   **D**: average</p>
-         * <p>*   **E**: poor</p>
-         * <p>*   **F**: poorer</p>
+         * <ul>
+         * <li><strong>A</strong>: outstanding</li>
+         * <li><strong>B</strong>: excellent</li>
+         * <li><strong>C</strong>: good</li>
+         * <li><strong>D</strong>: average</li>
+         * <li><strong>E</strong>: poor</li>
+         * <li><strong>F</strong>: poorer</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>D</p>
          */
         @NameInMap("ScoreLevel")
         public String scoreLevel;

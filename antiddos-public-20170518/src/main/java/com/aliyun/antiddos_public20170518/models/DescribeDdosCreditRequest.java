@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeDdosCreditRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;

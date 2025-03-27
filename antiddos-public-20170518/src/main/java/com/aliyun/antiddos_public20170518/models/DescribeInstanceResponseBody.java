@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of the asset.</p>
+     * <p>The details of the assets.</p>
      */
     @NameInMap("InstanceList")
     public DescribeInstanceResponseBodyInstanceList instanceList;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C728D7E9-9A39-52E0-966B-5C33118BDBB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the assets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -54,80 +60,112 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public static class DescribeInstanceResponseBodyInstanceListInstance extends TeaModel {
         /**
          * <p>The basic protection threshold for the asset. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5200</p>
          */
         @NameInMap("BlackholeThreshold")
         public Integer blackholeThreshold;
 
         /**
          * <p>The traffic scrubbing threshold for the asset. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("DefenseBpsThreshold")
         public Integer defenseBpsThreshold;
 
         /**
          * <p>The packet scrubbing threshold for the asset. Unit: packets per second (pps).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70000</p>
          */
         @NameInMap("DefensePpsThreshold")
         public Integer defensePpsThreshold;
 
         /**
          * <p>The burstable protection threshold for the asset. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12310</p>
          */
         @NameInMap("ElasticThreshold")
         public Integer elasticThreshold;
 
         /**
          * <p>The ID of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cb6x80tfgocid****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.199.XX.XX</p>
          */
         @NameInMap("InstanceIp")
         public String instanceIp;
 
         /**
          * <p>The name of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>launch-advisor-2021****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The DDoS mitigation status of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **mitigating**: indicates that traffic scrubbing is triggered for the asset.</p>
-         * <p>*   **blackholed**: indicates that blackhole filtering is triggered for the asset.</p>
-         * <p>*   **normal**: indicates that the instance is normal.</p>
+         * <ul>
+         * <li><strong>mitigating</strong>: indicates that traffic scrubbing is triggered for the asset.</li>
+         * <li><strong>blackholed</strong>: indicates that blackhole filtering is triggered for the asset.</li>
+         * <li><strong>normal</strong>: indicates that the instance is normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
-         * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: ECS instance</p>
-         * <p>*   **slb**: SLB instance</p>
-         * <p>*   **eip**: EIP</p>
+         * <p>The type of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The IP protocol that is supported by the asset. Valid values:</p>
-         * <br>
-         * <p>*   **v4**: IPv4</p>
-         * <p>*   **v6**: IPv6</p>
+         * <ul>
+         * <li><strong>v4</strong>: IPv4</li>
+         * <li><strong>v6</strong>: IPv6</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>v4</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
          * <p>Indicates whether the asset is associated with an Anti-DDoS Origin Basic instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsBgppack")
         public Boolean isBgppack;

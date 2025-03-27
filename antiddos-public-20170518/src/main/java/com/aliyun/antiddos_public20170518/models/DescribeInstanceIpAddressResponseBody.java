@@ -12,12 +12,18 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC0907F8-A9F3-5E11-977B-D59CD98C64ED</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of the assets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -54,67 +60,107 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
     public static class DescribeInstanceIpAddressResponseBodyInstanceListIpAddressConfig extends TeaModel {
         /**
          * <p>The basic protection threshold for the asset. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5200</p>
          */
         @NameInMap("BlackholeThreshold")
         public Integer blackholeThreshold;
 
         /**
-         * <p>The traffic scrubbing threshold for the asset. Unit: Mbit/s.</p>
+         * <p>The traffic scrubbing threshold for the asset measured in Mbit/s. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("DefenseBpsThreshold")
         public Integer defenseBpsThreshold;
 
         /**
-         * <p>The packet scrubbing threshold for the asset. Unit: packets per second (pps).</p>
+         * <p>The traffic scrubbing threshold for the asset measured in packets per second (PPS). Unit: PPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70000</p>
          */
         @NameInMap("DefensePpsThreshold")
         public Integer defensePpsThreshold;
 
         /**
          * <p>The burstable protection threshold for the asset. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12310</p>
          */
         @NameInMap("ElasticThreshold")
         public Integer elasticThreshold;
 
         /**
          * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("InstanceIp")
         public String instanceIp;
 
         /**
          * <p>The DDoS mitigation status of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **defense**: indicates that traffic scrubbing is performed on the asset.</p>
-         * <p>*   **blackhole**: indicates that blackhole filtering is triggered for the asset.</p>
-         * <p>*   **normal**: indicates that no DDoS attacks are launched against the asset.</p>
+         * <ul>
+         * <li><strong>mitigating</strong>: indicates that traffic scrubbing is in progress.</li>
+         * <li><strong>blackholed</strong>: indicates that blackhole filtering is triggered for the asset.</li>
+         * <li><strong>normal</strong>: indicates that no DDoS attacks are launched against the asset.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("IpStatus")
         public String ipStatus;
 
         /**
-         * <p>The IP protocol that is supported by the asset. Valid values:</p>
-         * <br>
-         * <p>*   **v4**: IPv4</p>
-         * <p>*   **v6**: IPv6</p>
+         * <p>The IP version of the IP address. Valid values:</p>
+         * <ul>
+         * <li><strong>v4</strong>: IPv4.</li>
+         * <li><strong>v6</strong>: IPv6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>v4</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
          * <p>Indicates whether the asset is added to the instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsBgppack")
         public Boolean isBgppack;
 
+        /**
+         * <p>Indicates whether best-effort protection is enabled for the asset. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: no.</li>
+         * <li><strong>1</strong>: yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("IsFullProtection")
         public Integer isFullProtection;
 
         /**
          * <p>The region code of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-dg-a01</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -209,31 +255,45 @@ public class DescribeInstanceIpAddressResponseBody extends TeaModel {
     public static class DescribeInstanceIpAddressResponseBodyInstanceList extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cb6x80tfgocid****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>launch-advisor-2021****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The DDoS mitigation status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: normal</p>
-         * <p>*   **abnormal**: under DDoS attacks</p>
+         * <ul>
+         * <li><strong>normal</strong>: not under DDoS attacks.</li>
+         * <li><strong>abnormal</strong>: under DDoS attacks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
          * <p>The type of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **ecs**: ECS instance</p>
-         * <p>*   **slb**: SLB instance</p>
-         * <p>*   **eip**: EIP</p>
+         * <ul>
+         * <li><strong>ecs</strong></li>
+         * <li><strong>slb</strong></li>
+         * <li><strong>eip</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
