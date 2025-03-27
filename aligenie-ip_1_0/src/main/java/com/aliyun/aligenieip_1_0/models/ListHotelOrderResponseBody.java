@@ -156,12 +156,24 @@ public class ListHotelOrderResponseBody extends TeaModel {
     }
 
     public static class ListHotelOrderResponseBodyResult extends TeaModel {
+        @NameInMap("Amt")
+        public Long amt;
+
         /**
          * <strong>example:</strong>
          * <p>21.5</p>
          */
         @NameInMap("ApplyAmt")
         public Long applyAmt;
+
+        @NameInMap("DeliveryMethod")
+        public String deliveryMethod;
+
+        @NameInMap("DeliveryRoomName")
+        public String deliveryRoomName;
+
+        @NameInMap("DeliveryTime")
+        public Long deliveryTime;
 
         /**
          * <strong>example:</strong>
@@ -170,12 +182,30 @@ public class ListHotelOrderResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        @NameInMap("Icon")
+        public String icon;
+
+        @NameInMap("ItemId")
+        public Long itemId;
+
+        @NameInMap("ItemType")
+        public String itemType;
+
+        @NameInMap("Name")
+        public String name;
+
         /**
          * <strong>example:</strong>
          * <p>20220808180132000114508555527711</p>
          */
         @NameInMap("OrderNo")
         public String orderNo;
+
+        @NameInMap("OrderStatus")
+        public String orderStatus;
+
+        @NameInMap("PaymentMethod")
+        public String paymentMethod;
 
         /**
          * <strong>example:</strong>
@@ -191,12 +221,18 @@ public class ListHotelOrderResponseBody extends TeaModel {
         @NameInMap("RoomNo")
         public String roomNo;
 
+        @NameInMap("StartTime")
+        public Long startTime;
+
         /**
          * <strong>example:</strong>
          * <p>INIT</p>
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("SumAmt")
+        public Long sumAmt;
 
         /**
          * <strong>example:</strong>
@@ -224,12 +260,44 @@ public class ListHotelOrderResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListHotelOrderResponseBodyResult setAmt(Long amt) {
+            this.amt = amt;
+            return this;
+        }
+        public Long getAmt() {
+            return this.amt;
+        }
+
         public ListHotelOrderResponseBodyResult setApplyAmt(Long applyAmt) {
             this.applyAmt = applyAmt;
             return this;
         }
         public Long getApplyAmt() {
             return this.applyAmt;
+        }
+
+        public ListHotelOrderResponseBodyResult setDeliveryMethod(String deliveryMethod) {
+            this.deliveryMethod = deliveryMethod;
+            return this;
+        }
+        public String getDeliveryMethod() {
+            return this.deliveryMethod;
+        }
+
+        public ListHotelOrderResponseBodyResult setDeliveryRoomName(String deliveryRoomName) {
+            this.deliveryRoomName = deliveryRoomName;
+            return this;
+        }
+        public String getDeliveryRoomName() {
+            return this.deliveryRoomName;
+        }
+
+        public ListHotelOrderResponseBodyResult setDeliveryTime(Long deliveryTime) {
+            this.deliveryTime = deliveryTime;
+            return this;
+        }
+        public Long getDeliveryTime() {
+            return this.deliveryTime;
         }
 
         public ListHotelOrderResponseBodyResult setGmtCreate(Long gmtCreate) {
@@ -240,12 +308,60 @@ public class ListHotelOrderResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public ListHotelOrderResponseBodyResult setIcon(String icon) {
+            this.icon = icon;
+            return this;
+        }
+        public String getIcon() {
+            return this.icon;
+        }
+
+        public ListHotelOrderResponseBodyResult setItemId(Long itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public Long getItemId() {
+            return this.itemId;
+        }
+
+        public ListHotelOrderResponseBodyResult setItemType(String itemType) {
+            this.itemType = itemType;
+            return this;
+        }
+        public String getItemType() {
+            return this.itemType;
+        }
+
+        public ListHotelOrderResponseBodyResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
         public ListHotelOrderResponseBodyResult setOrderNo(String orderNo) {
             this.orderNo = orderNo;
             return this;
         }
         public String getOrderNo() {
             return this.orderNo;
+        }
+
+        public ListHotelOrderResponseBodyResult setOrderStatus(String orderStatus) {
+            this.orderStatus = orderStatus;
+            return this;
+        }
+        public String getOrderStatus() {
+            return this.orderStatus;
+        }
+
+        public ListHotelOrderResponseBodyResult setPaymentMethod(String paymentMethod) {
+            this.paymentMethod = paymentMethod;
+            return this;
+        }
+        public String getPaymentMethod() {
+            return this.paymentMethod;
         }
 
         public ListHotelOrderResponseBodyResult setQuantity(Long quantity) {
@@ -264,12 +380,28 @@ public class ListHotelOrderResponseBody extends TeaModel {
             return this.roomNo;
         }
 
+        public ListHotelOrderResponseBodyResult setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
         public ListHotelOrderResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListHotelOrderResponseBodyResult setSumAmt(Long sumAmt) {
+            this.sumAmt = sumAmt;
+            return this;
+        }
+        public Long getSumAmt() {
+            return this.sumAmt;
         }
 
         public ListHotelOrderResponseBodyResult setType(String type) {
