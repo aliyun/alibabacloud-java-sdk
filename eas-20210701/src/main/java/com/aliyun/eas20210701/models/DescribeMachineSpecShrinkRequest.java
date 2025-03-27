@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeMachineSpecShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("InstanceTypes")
     @Deprecated
     public String instanceTypesShrink;

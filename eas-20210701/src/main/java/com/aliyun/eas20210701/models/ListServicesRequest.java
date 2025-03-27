@@ -95,6 +95,9 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     /**
      * <p>The server role.</p>
      * <p>Valid values:</p>
@@ -417,6 +420,14 @@ public class ListServicesRequest extends TeaModel {
     }
     public String getResourceName() {
         return this.resourceName;
+    }
+
+    public ListServicesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ListServicesRequest setRole(String role) {
