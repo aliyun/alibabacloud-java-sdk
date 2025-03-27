@@ -56,6 +56,9 @@ public class SubmitHotelOrderRequest extends TeaModel {
         @NameInMap("Quantity")
         public Long quantity;
 
+        @NameInMap("Remark")
+        public String remark;
+
         public static SubmitHotelOrderRequestPayloadItemList build(java.util.Map<String, ?> map) throws Exception {
             SubmitHotelOrderRequestPayloadItemList self = new SubmitHotelOrderRequestPayloadItemList();
             return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class SubmitHotelOrderRequest extends TeaModel {
         }
         public Long getQuantity() {
             return this.quantity;
+        }
+
+        public SubmitHotelOrderRequestPayloadItemList setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
     }
