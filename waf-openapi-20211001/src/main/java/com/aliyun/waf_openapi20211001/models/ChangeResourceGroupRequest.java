@@ -28,7 +28,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the protected object in Web Application Firewall (WAF) that you want to manage.</p>
+     * <p>The ID of the protected object that you want to manage.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The resource type. The value is fixed as defenseresource.</p>
+     * <p>The resource type. Set the value to defenseresource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

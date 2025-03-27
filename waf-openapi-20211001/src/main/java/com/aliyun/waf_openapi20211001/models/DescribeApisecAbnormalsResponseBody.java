@@ -157,7 +157,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public String apiTag;
 
         /**
-         * <p>The time at which the risk was detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684252800</p>
@@ -172,7 +172,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public java.util.List<String> examples;
 
         /**
-         * <p>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The time at which the API was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1701138088</p>
@@ -203,7 +203,7 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long ignoreTime;
 
         /**
-         * <p>The time at which the risk was last active. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1684252800</p>
@@ -212,6 +212,8 @@ public class DescribeApisecAbnormalsResponseBody extends TeaModel {
         public Long lastestTime;
 
         /**
+         * <p>The time at which the risk was last detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1684252800</p>
          */

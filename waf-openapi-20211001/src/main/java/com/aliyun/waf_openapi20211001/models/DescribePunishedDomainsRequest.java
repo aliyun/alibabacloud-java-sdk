@@ -24,6 +24,12 @@ public class DescribePunishedDomainsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The type of punishment. Valid values:</p>
+     * <ul>
+     * <li><strong>beian</strong> (default): the filing center.</li>
+     * <li><strong>punishCenter</strong>: the punishment center.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>beian</p>
      */

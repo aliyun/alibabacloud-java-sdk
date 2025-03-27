@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+     * <p> Obtain the ID of the WAF instance by calling the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyTemplateResourcesRequest extends TeaModel {
     /**
-     * <p>The protected object groups that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
+     * <p>The protected object groups that you want to associate with the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
      */
     @NameInMap("BindResourceGroups")
     public java.util.List<String> bindResourceGroups;
 
     /**
-     * <p>The protected objects that you want to associate with the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
+     * <p>The protected objects that you want to associate with the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
      */
     @NameInMap("BindResources")
     public java.util.List<String> bindResources;
@@ -30,10 +30,10 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,13 +62,13 @@ public class ModifyTemplateResourcesRequest extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The protected object groups that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;group1&quot;,&quot;group2&quot;,...] format.</p>
+     * <p>The protected object groups that you want to disassociate from the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
      */
     @NameInMap("UnbindResourceGroups")
     public java.util.List<String> unbindResourceGroups;
 
     /**
-     * <p>The protected objects that you want to disassociate from the protection rule template. Specify the value of this parameter in the [&quot;XX1&quot;,&quot;XX2&quot;,...] format.</p>
+     * <p>The protected objects that you want to disassociate from the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
      */
     @NameInMap("UnbindResources")
     public java.util.List<String> unbindResources;

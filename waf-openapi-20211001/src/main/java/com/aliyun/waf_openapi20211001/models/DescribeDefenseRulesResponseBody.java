@@ -14,7 +14,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of protection rules.</p>
+     * <p>The protection rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<DescribeDefenseRulesResponseBodyRules> rules;
@@ -81,7 +81,22 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         public String defenseOrigin;
 
         /**
-         * <p>The scenario in which the protection rule is used. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+         * <p>The protection module for which the protection rule is created. Valid values:</p>
+         * <ul>
+         * <li><strong>waf_group</strong>: the basic protection rule module.</li>
+         * <li><strong>waf_base_compliance</strong>: the protocol compliance feature of the basic protection rule module.</li>
+         * <li><strong>waf_base_sema</strong>: the semantic analysis feature of the basic protection rule module.</li>
+         * <li><strong>cc</strong>: the HTTP flood protection module.</li>
+         * <li><strong>antiscan_dirscan</strong>: the directory traversal blocking feature of the scan protection module.</li>
+         * <li><strong>antiscan_highfreq</strong>: the high-frequency scanning blocking feature of the scan protection module.</li>
+         * <li><strong>antiscan_scantools</strong>: the scanner blocking feature of the scan protection module.</li>
+         * <li><strong>ip_blacklist</strong>: the IP address blacklist module.</li>
+         * <li><strong>custom_acl</strong>: the custom rule module.</li>
+         * <li><strong>region_block</strong>: the region blacklist module.</li>
+         * <li><strong>tamperproof</strong>: the website tamper-proofing module.</li>
+         * <li><strong>dlp</strong>: the data leakage prevention module.</li>
+         * <li><strong>custom_response_block</strong>: the custom response module.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>waf_group</p>

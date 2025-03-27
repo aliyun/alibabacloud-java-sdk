@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApisecStatisticsResponseBody extends TeaModel {
     /**
-     * <p>The check results.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public DescribeApisecStatisticsResponseBodyData data;

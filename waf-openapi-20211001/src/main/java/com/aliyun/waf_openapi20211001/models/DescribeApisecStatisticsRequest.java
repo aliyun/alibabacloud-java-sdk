@@ -7,7 +7,7 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
      * <blockquote>
-     * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+     * <p> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
      * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
@@ -53,10 +53,10 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The type of statistics to be detected. Valid values:</p>
+     * <p>The type of the statistics. Valid values:</p>
      * <ul>
-     * <li><strong>risk</strong>: risk impact statistics</li>
-     * <li><strong>event</strong>: attack impact statistics</li>
+     * <li><strong>risk</strong>: risk-related statistics.</li>
+     * <li><strong>event</strong>: event-related statistics.</li>
      * </ul>
      * 
      * <strong>example:</strong>

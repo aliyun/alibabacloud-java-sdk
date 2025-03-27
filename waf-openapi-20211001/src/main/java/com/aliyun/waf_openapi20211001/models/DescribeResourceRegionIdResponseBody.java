@@ -14,7 +14,7 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The region IDs.</p>
+     * <p>The region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode.</p>
      */
     @NameInMap("ResourceRegionIds")
     public java.util.List<String> resourceRegionIds;

@@ -18,14 +18,14 @@ public class ModifyCloudResourceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The configurations of the listeners.</p>
+     * <p>The listener configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
-     * <p>The configurations of the forwarding rule.</p>
+     * <p>The forwarding configurations.</p>
      */
     @NameInMap("Redirect")
     public String redirectShrink;

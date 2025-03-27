@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreatePostpaidInstanceRequest extends TeaModel {
     /**
-     * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
      * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 

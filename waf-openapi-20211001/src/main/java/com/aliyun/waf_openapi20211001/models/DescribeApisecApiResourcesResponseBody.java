@@ -184,7 +184,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         /**
          * <p>The business purpose of the API.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purpose of the API.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
         public Integer follow;
 
         /**
-         * <p>The most recent access time of the API. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+         * <p>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683388800</p>

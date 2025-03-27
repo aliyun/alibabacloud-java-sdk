@@ -5872,6 +5872,152 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Retrieves time-series data for all network traffic, including both malicious and legitimate requests.</p>
+     * 
+     * @param tmpReq DescribeNetworkFlowTimeSeriesMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNetworkFlowTimeSeriesMetricResponse
+     */
+    public DescribeNetworkFlowTimeSeriesMetricResponse describeNetworkFlowTimeSeriesMetricWithOptions(DescribeNetworkFlowTimeSeriesMetricRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeNetworkFlowTimeSeriesMetricShrinkRequest request = new DescribeNetworkFlowTimeSeriesMetricShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
+            query.put("Metric", request.metric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNetworkFlowTimeSeriesMetric"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNetworkFlowTimeSeriesMetricResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeNetworkFlowTimeSeriesMetricResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves time-series data for all network traffic, including both malicious and legitimate requests.</p>
+     * 
+     * @param request DescribeNetworkFlowTimeSeriesMetricRequest
+     * @return DescribeNetworkFlowTimeSeriesMetricResponse
+     */
+    public DescribeNetworkFlowTimeSeriesMetricResponse describeNetworkFlowTimeSeriesMetric(DescribeNetworkFlowTimeSeriesMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNetworkFlowTimeSeriesMetricWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves top aggregated traffic statistics, sorted by various dimensions, including malicious and legitimate requests.</p>
+     * 
+     * @param tmpReq DescribeNetworkFlowTopNMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNetworkFlowTopNMetricResponse
+     */
+    public DescribeNetworkFlowTopNMetricResponse describeNetworkFlowTopNMetricWithOptions(DescribeNetworkFlowTopNMetricRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeNetworkFlowTopNMetricShrinkRequest request = new DescribeNetworkFlowTopNMetricShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
+            query.put("Metric", request.metric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNetworkFlowTopNMetric"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNetworkFlowTopNMetricResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeNetworkFlowTopNMetricResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Retrieves top aggregated traffic statistics, sorted by various dimensions, including malicious and legitimate requests.</p>
+     * 
+     * @param request DescribeNetworkFlowTopNMetricRequest
+     * @return DescribeNetworkFlowTopNMetricResponse
+     */
+    public DescribeNetworkFlowTopNMetricResponse describeNetworkFlowTopNMetric(DescribeNetworkFlowTopNMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNetworkFlowTopNMetricWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the protection status of Web Application Firewall (WAF).</p>
      * 
      * @param request DescribePauseProtectionStatusRequest
@@ -6355,7 +6501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</p>
+     * <p>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode. The resources refer to Application Load Balancer (ALB) and Microservices Engine (MSE) instances.</p>
      * 
      * @param request DescribeResourceRegionIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6400,7 +6546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) in cloud native mode. The resources include Application Load Balancer (ALB) instances, Microservices Engine (MSE) instances, and custom domain names bound to web applications in Function Compute.</p>
+     * <p>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode. The resources refer to Application Load Balancer (ALB) and Microservices Engine (MSE) instances.</p>
      * 
      * @param request DescribeResourceRegionIdRequest
      * @return DescribeResourceRegionIdResponse
@@ -7049,6 +7195,275 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRuleHitsTopUrlResponse describeRuleHitsTopUrl(DescribeRuleHitsTopUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRuleHitsTopUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs of attack traffic. Each log records the details of a request that matches protection rules.</p>
+     * 
+     * @param tmpReq DescribeSecurityEventLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecurityEventLogsResponse
+     */
+    public DescribeSecurityEventLogsResponse describeSecurityEventLogsWithOptions(DescribeSecurityEventLogsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSecurityEventLogsShrinkRequest request = new DescribeSecurityEventLogsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSecurityEventLogs"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityEventLogsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeSecurityEventLogsResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the logs of attack traffic. Each log records the details of a request that matches protection rules.</p>
+     * 
+     * @param request DescribeSecurityEventLogsRequest
+     * @return DescribeSecurityEventLogsResponse
+     */
+    public DescribeSecurityEventLogsResponse describeSecurityEventLogs(DescribeSecurityEventLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSecurityEventLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the time series data of attack traffic. Attack requests refer to requests that match protection rules and are identified as risky.</p>
+     * 
+     * @param tmpReq DescribeSecurityEventTimeSeriesMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecurityEventTimeSeriesMetricResponse
+     */
+    public DescribeSecurityEventTimeSeriesMetricResponse describeSecurityEventTimeSeriesMetricWithOptions(DescribeSecurityEventTimeSeriesMetricRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSecurityEventTimeSeriesMetricShrinkRequest request = new DescribeSecurityEventTimeSeriesMetricShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
+            query.put("Metric", request.metric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSecurityEventTimeSeriesMetric"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityEventTimeSeriesMetricResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeSecurityEventTimeSeriesMetricResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the time series data of attack traffic. Attack requests refer to requests that match protection rules and are identified as risky.</p>
+     * 
+     * @param request DescribeSecurityEventTimeSeriesMetricRequest
+     * @return DescribeSecurityEventTimeSeriesMetricResponse
+     */
+    public DescribeSecurityEventTimeSeriesMetricResponse describeSecurityEventTimeSeriesMetric(DescribeSecurityEventTimeSeriesMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSecurityEventTimeSeriesMetricWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries top N data entries of attack traffic. The system performs statistical aggregation on attack traffic from specific dimensions and returns top N data entries.</p>
+     * 
+     * @param tmpReq DescribeSecurityEventTopNMetricRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSecurityEventTopNMetricResponse
+     */
+    public DescribeSecurityEventTopNMetricResponse describeSecurityEventTopNMetricWithOptions(DescribeSecurityEventTopNMetricRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSecurityEventTopNMetricShrinkRequest request = new DescribeSecurityEventTopNMetricShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metric)) {
+            query.put("Metric", request.metric);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSecurityEventTopNMetric"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSecurityEventTopNMetricResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeSecurityEventTopNMetricResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <ul>
+     * <li>Requests that match the protection rules of the whitelist module.</li>
+     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
+     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries top N data entries of attack traffic. The system performs statistical aggregation on attack traffic from specific dimensions and returns top N data entries.</p>
+     * 
+     * @param request DescribeSecurityEventTopNMetricRequest
+     * @return DescribeSecurityEventTopNMetricResponse
+     */
+    public DescribeSecurityEventTopNMetricResponse describeSecurityEventTopNMetric(DescribeSecurityEventTopNMetricRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSecurityEventTopNMetricWithOptions(request, runtime);
     }
 
     /**
