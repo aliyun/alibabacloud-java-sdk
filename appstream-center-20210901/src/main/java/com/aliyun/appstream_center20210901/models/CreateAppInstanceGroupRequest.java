@@ -24,6 +24,16 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>App</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AuthMode")
+    public String authMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("AutoPay")
@@ -178,6 +188,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
     }
     public String getAppPolicyId() {
         return this.appPolicyId;
+    }
+
+    public CreateAppInstanceGroupRequest setAuthMode(String authMode) {
+        this.authMode = authMode;
+        return this;
+    }
+    public String getAuthMode() {
+        return this.authMode;
     }
 
     public CreateAppInstanceGroupRequest setAutoPay(Boolean autoPay) {
@@ -802,6 +820,16 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         @NameInMap("PerSessionPerApp")
         public Boolean perSessionPerApp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DYNAMIC</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("PersistentAppInstanceScheduleMode")
+        public String persistentAppInstanceScheduleMode;
+
         @NameInMap("SessionPreOpen")
         public String sessionPreOpen;
 
@@ -836,6 +864,14 @@ public class CreateAppInstanceGroupRequest extends TeaModel {
         }
         public Boolean getPerSessionPerApp() {
             return this.perSessionPerApp;
+        }
+
+        public CreateAppInstanceGroupRequestRuntimePolicy setPersistentAppInstanceScheduleMode(String persistentAppInstanceScheduleMode) {
+            this.persistentAppInstanceScheduleMode = persistentAppInstanceScheduleMode;
+            return this;
+        }
+        public String getPersistentAppInstanceScheduleMode() {
+            return this.persistentAppInstanceScheduleMode;
         }
 
         public CreateAppInstanceGroupRequestRuntimePolicy setSessionPreOpen(String sessionPreOpen) {

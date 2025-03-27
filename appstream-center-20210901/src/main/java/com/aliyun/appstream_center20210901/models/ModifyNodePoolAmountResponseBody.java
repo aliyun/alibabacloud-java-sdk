@@ -4,10 +4,15 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodePoolAmountResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyNodePoolAmountResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
@@ -37,6 +42,8 @@ public class ModifyNodePoolAmountResponseBody extends TeaModel {
 
     public static class ModifyNodePoolAmountResponseBodyData extends TeaModel {
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>23429322113****</p>
          */

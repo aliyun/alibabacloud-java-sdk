@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAmountRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,12 +15,18 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
+     * <p>The parameters related to the configuration change of the node pool.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodePool")
     public ModifyNodePoolAmountRequestNodePool nodePool;
 
     /**
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +66,7 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
 
     public static class ModifyNodePoolAmountRequestNodePool extends TeaModel {
         /**
+         * <p>The total number of subscription nodes after the change.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,12 +76,21 @@ public class ModifyNodePoolAmountRequest extends TeaModel {
         public Integer nodeAmount;
 
         /**
+         * <p>The change mode of subscription nodes.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>EXPAND_FROM_POST_PAID_EXPLICIT: changes from specified pay-as-you-go nodes</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>EXPAND_FROM_POST_PAID_EXPLICIT</p>
          */
         @NameInMap("PrePaidNodeAmountModifyMode")
         public String prePaidNodeAmountModifyMode;
 
+        /**
+         * <p>The nodes for which you want to change the billing method.</p>
+         */
         @NameInMap("PrePaidNodeAmountModifyNodeIds")
         public java.util.List<String> prePaidNodeAmountModifyNodeIds;
 

@@ -24,6 +24,16 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>App</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AuthMode")
+    public String authMode;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("AutoPay")
@@ -178,6 +188,14 @@ public class CreateAppInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getAppPolicyId() {
         return this.appPolicyId;
+    }
+
+    public CreateAppInstanceGroupShrinkRequest setAuthMode(String authMode) {
+        this.authMode = authMode;
+        return this;
+    }
+    public String getAuthMode() {
+        return this.authMode;
     }
 
     public CreateAppInstanceGroupShrinkRequest setAutoPay(Boolean autoPay) {
