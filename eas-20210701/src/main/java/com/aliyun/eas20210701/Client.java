@@ -487,6 +487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateGatewayIntranetLinkedVpcResponse createGatewayIntranetLinkedVpcWithOptions(String ClusterId, String GatewayId, CreateGatewayIntranetLinkedVpcRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthoritativeDns)) {
+            query.put("EnableAuthoritativeDns", request.enableAuthoritativeDns);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
         }
@@ -2194,7 +2198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用机器规格</p>
+     * <p>Queries a list of instance types for an available instance in a shared resource group.</p>
      * 
      * @param tmpReq DescribeMachineSpecRequest
      * @param headers map
@@ -2239,7 +2243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用机器规格</p>
+     * <p>Queries a list of instance types for an available instance in a shared resource group.</p>
      * 
      * @param request DescribeMachineSpecRequest
      * @return DescribeMachineSpecResponse
@@ -2248,6 +2252,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeMachineSpecWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询可用的地域信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegionsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRegions"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/regions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRegionsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询可用的地域信息</p>
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegions() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeRegionsWithOptions(headers, runtime);
     }
 
     /**
@@ -4076,6 +4122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
             query.put("ResourceName", request.resourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.role)) {

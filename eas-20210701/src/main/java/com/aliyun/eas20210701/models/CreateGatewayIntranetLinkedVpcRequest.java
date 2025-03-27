@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
+    @NameInMap("EnableAuthoritativeDns")
+    public Boolean enableAuthoritativeDns;
+
     /**
      * <p>The vSwitch ID.</p>
      * 
@@ -25,6 +28,14 @@ public class CreateGatewayIntranetLinkedVpcRequest extends TeaModel {
     public static CreateGatewayIntranetLinkedVpcRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGatewayIntranetLinkedVpcRequest self = new CreateGatewayIntranetLinkedVpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateGatewayIntranetLinkedVpcRequest setEnableAuthoritativeDns(Boolean enableAuthoritativeDns) {
+        this.enableAuthoritativeDns = enableAuthoritativeDns;
+        return this;
+    }
+    public Boolean getEnableAuthoritativeDns() {
+        return this.enableAuthoritativeDns;
     }
 
     public CreateGatewayIntranetLinkedVpcRequest setVSwitchId(String vSwitchId) {

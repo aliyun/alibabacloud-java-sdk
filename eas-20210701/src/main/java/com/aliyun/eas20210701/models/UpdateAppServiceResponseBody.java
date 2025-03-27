@@ -8,7 +8,7 @@ public class UpdateAppServiceResponseBody extends TeaModel {
      * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Succee</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;

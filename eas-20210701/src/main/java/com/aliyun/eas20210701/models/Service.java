@@ -34,6 +34,9 @@ public class Service extends TeaModel {
     @NameInMap("ExtraData")
     public String extraData;
 
+    @NameInMap("Gateway")
+    public String gateway;
+
     @NameInMap("Gpu")
     public Integer gpu;
 
@@ -66,6 +69,9 @@ public class Service extends TeaModel {
 
     @NameInMap("PendingInstance")
     public Integer pendingInstance;
+
+    @NameInMap("QuotaId")
+    public String quotaId;
 
     @NameInMap("Reason")
     public String reason;
@@ -221,6 +227,14 @@ public class Service extends TeaModel {
         return this.extraData;
     }
 
+    public Service setGateway(String gateway) {
+        this.gateway = gateway;
+        return this;
+    }
+    public String getGateway() {
+        return this.gateway;
+    }
+
     public Service setGpu(Integer gpu) {
         this.gpu = gpu;
         return this;
@@ -307,6 +321,14 @@ public class Service extends TeaModel {
     }
     public Integer getPendingInstance() {
         return this.pendingInstance;
+    }
+
+    public Service setQuotaId(String quotaId) {
+        this.quotaId = quotaId;
+        return this;
+    }
+    public String getQuotaId() {
+        return this.quotaId;
     }
 
     public Service setReason(String reason) {

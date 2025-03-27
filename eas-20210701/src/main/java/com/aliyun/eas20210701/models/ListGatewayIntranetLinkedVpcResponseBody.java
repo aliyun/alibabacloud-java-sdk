@@ -58,6 +58,9 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     }
 
     public static class ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList extends TeaModel {
+        @NameInMap("AuthoritativeDnsEnabled")
+        public Boolean authoritativeDnsEnabled;
+
         /**
          * <p>The IP address.</p>
          * 
@@ -126,6 +129,14 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         public static ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList self = new ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList setAuthoritativeDnsEnabled(Boolean authoritativeDnsEnabled) {
+            this.authoritativeDnsEnabled = authoritativeDnsEnabled;
+            return this;
+        }
+        public Boolean getAuthoritativeDnsEnabled() {
+            return this.authoritativeDnsEnabled;
         }
 
         public ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList setIp(String ip) {
