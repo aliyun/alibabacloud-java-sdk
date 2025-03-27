@@ -16234,6 +16234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OutputConfig", request.outputConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateConfig)) {
+            query.put("TemplateConfig", request.templateConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
             query.put("UserData", request.userData);
         }
