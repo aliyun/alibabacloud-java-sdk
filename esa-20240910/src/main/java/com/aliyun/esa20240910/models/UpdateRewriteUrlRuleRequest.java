@@ -15,7 +15,7 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Query string after rewriting.</p>
+     * <p>The query string after rewriting.</p>
      * 
      * <strong>example:</strong>
      * <p>example=123</p>
@@ -27,6 +27,7 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
      * <p>Query string rewrite type. Value range:</p>
      * <ul>
      * <li>static: Static mode.</li>
+     * <li>dynamic: Dynamic mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,6 +40,7 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
      * <p>URI rewrite type. Value range:</p>
      * <ul>
      * <li>static: Static mode.</li>
+     * <li>dynamic: Dynamic mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +53,11 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteUriType;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -60,7 +66,7 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Value range:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -73,13 +79,16 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>example=123</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
@@ -92,7 +101,7 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Target URI after rewriting.</p>
+     * <p>The target URI after rewriting.</p>
      * 
      * <strong>example:</strong>
      * <p>/image/example.jpg</p>
@@ -159,6 +168,14 @@ public class UpdateRewriteUrlRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateRewriteUrlRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateRewriteUrlRuleRequest setSiteId(Long siteId) {

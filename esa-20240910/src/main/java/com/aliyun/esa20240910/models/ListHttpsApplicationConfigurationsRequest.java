@@ -14,12 +14,12 @@ public class ListHttpsApplicationConfigurationsRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Configuration type, which can be used to query global or rule configurations. Value range:</p>
+     * <p>Configuration type, which can be used to query global or rule-based configurations. Possible values:</p>
      * <ul>
      * <li>global: Query global configuration.</li>
-     * <li>rule: Query rule configuration.</li>
+     * <li>rule: Query rule-based configuration.</li>
      * </ul>
-     * <p>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</p>
+     * <p>This parameter is optional. If not provided, it will not distinguish between global and rule-based configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>global</p>

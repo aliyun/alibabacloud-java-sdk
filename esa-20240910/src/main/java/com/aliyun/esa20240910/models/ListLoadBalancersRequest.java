@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
     /**
-     * <p>Name matching strategy when querying by name:</p>
+     * <p>The name matching strategy when querying by name:</p>
      * <ul>
      * <li>fuzzy: Fuzzy match;</li>
      * <li>exact: Exact match, equivalent to an equality query.</li>
@@ -18,7 +18,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String matchType;
 
     /**
-     * <p>Name of the load balancer, which can be used for querying by name.</p>
+     * <p>The name of the load balancer, which can be used to query by name.</p>
      * 
      * <strong>example:</strong>
      * <p>lb.example.com</p>
@@ -27,7 +27,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Sorting field, currently only supports sorting by id. \&quot;id\&quot; indicates ascending order by id, \&quot;-id\&quot; indicates descending order by id. The id is positively correlated with the creation time. If not provided, it defaults to descending order by id.</p>
+     * <p>The sorting field. Currently, only sorting by id is supported. \&quot;id\&quot; indicates ascending order by id, and \&quot;-id\&quot; indicates descending order by id. The id size is positively correlated with the creation time. If not provided, it defaults to descending order by id.</p>
      * 
      * <strong>example:</strong>
      * <p>id</p>
@@ -36,7 +36,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>Page number for paginated queries.</p>
+     * <p>The page number for paginated queries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -45,7 +45,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size for paginated queries, with a value range of 1-500.</p>
+     * <p>The page size for paginated queries, with a value range of 1-500.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +54,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

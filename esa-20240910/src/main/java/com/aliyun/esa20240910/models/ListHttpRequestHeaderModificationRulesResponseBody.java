@@ -20,7 +20,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>Page size, default is <strong>500</strong>, range: <strong>1~500</strong>.</p>
+     * <p>Page size, default <strong>500</strong>, with a range of <strong>1~500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -110,7 +110,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
 
     public static class ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification extends TeaModel {
         /**
-         * <p>Request header name.</p>
+         * <p>The name of the request header.</p>
          * 
          * <strong>example:</strong>
          * <p>headerName</p>
@@ -119,10 +119,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String name;
 
         /**
-         * <p>Operation method. Value range:</p>
+         * <p>The operation type. The value range is as follows:</p>
          * <ul>
-         * <li>add: Add. </li>
-         * <li>del: Delete. </li>
+         * <li>add: Add.</li>
+         * <li>del: Delete.</li>
          * <li>modify: Modify.</li>
          * </ul>
          * 
@@ -202,7 +202,11 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public java.util.List<ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification> requestHeaderModification;
 
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -211,10 +215,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String rule;
 
         /**
-         * <p>Rule switch. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +228,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String ruleEnable;
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -233,7 +237,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public String ruleName;
 
         /**
-         * <p>Rule execution sequence.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +246,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         public Integer sequence;
 
         /**
-         * <p>Version number of the site configuration.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

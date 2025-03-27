@@ -76,7 +76,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String cacheReserveEligibility;
 
     /**
-     * <p>When generating the cache key, check if the cookie exists. If it does, add the cookie name (case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
+     * <p>When generating the cache key, check if the cookie exists. If it does, add the cookie name (cookie names are case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>cookiename</p>
@@ -85,7 +85,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String checkPresenceCookie;
 
     /**
-     * <p>When generating the cache key, check if the header exists. If it does, add the header name (case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
+     * <p>When generating the cache key, check if the header exists. If it does, add the header name (header names are case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>headername</p>
@@ -118,7 +118,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     /**
      * <p>Edge cache mode. Value range:</p>
      * <ul>
-     * <li>follow_origin: Follow origin cache policy (if exists), otherwise use default cache policy.</li>
+     * <li>follow_origin: Follow origin cache policy (if exists), otherwise use the default cache policy.</li>
      * <li>no_cache: Do not cache.</li>
      * <li>override_origin: Override origin cache policy.</li>
      * <li>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</li>
@@ -167,7 +167,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String includeHeader;
 
     /**
-     * <p>Query strings to be retained or deleted. Supports multiple values, separated by spaces.</p>
+     * <p>The query strings to be retained or deleted, supporting multiple values separated by spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -200,7 +200,11 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -209,10 +213,10 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Value range:</p>
+     * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Value range:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -222,7 +226,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -231,7 +235,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Rule execution sequence.</p>
+     * <p>Rule execution order. The smaller the value, the higher the priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -253,7 +257,7 @@ public class GetCacheRuleResponseBody extends TeaModel {
     public String serveStale;
 
     /**
-     * <p>Site version number.</p>
+     * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -264,8 +268,8 @@ public class GetCacheRuleResponseBody extends TeaModel {
     /**
      * <p>Query string sorting. Value range:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListWafPhasesResponseBody extends TeaModel {
     /**
-     * <p>The WAF rule categories.</p>
+     * <p>List of WAF operation phases.</p>
      */
     @NameInMap("Phases")
     public java.util.List<ListWafPhasesResponseBodyPhases> phases;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -42,7 +42,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
 
     public static class ListWafPhasesResponseBodyPhasesRulesets extends TeaModel {
         /**
-         * <p>The ID of the WAF ruleset.<a href="~~2850233~~"></a></p>
+         * <p>ID of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -51,7 +51,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the WAF ruleset.</p>
+         * <p>Name of the WAF ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -60,13 +60,13 @@ public class ListWafPhasesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The rule configurations in the WAF ruleset.</p>
+         * <p>List of rule configurations in the WAF ruleset.</p>
          */
         @NameInMap("Rules")
         public java.util.List<WafRuleConfig> rules;
 
         /**
-         * <p>The configurations shared by the rules in the WAF ruleset.</p>
+         * <p>Shared configuration for rules in the WAF ruleset.</p>
          */
         @NameInMap("Shared")
         public WafBatchRuleShared shared;
@@ -112,7 +112,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
 
     public static class ListWafPhasesResponseBodyPhases extends TeaModel {
         /**
-         * <p>The name of the WAF rule category.</p>
+         * <p>Name of the WAF operation phase.</p>
          * 
          * <strong>example:</strong>
          * <p>http_custom</p>
@@ -121,7 +121,7 @@ public class ListWafPhasesResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>The WAF rulesets.</p>
+         * <p>List of WAF rulesets.</p>
          */
         @NameInMap("Rulesets")
         public java.util.List<ListWafPhasesResponseBodyPhasesRulesets> rulesets;

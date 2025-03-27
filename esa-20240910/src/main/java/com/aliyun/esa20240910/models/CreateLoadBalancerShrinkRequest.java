@@ -56,7 +56,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public Long fallbackPool;
 
     /**
-     * <p>Monitor configuration for health checks.</p>
+     * <p>Monitor configuration, used for health checks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String monitorShrink;
 
     /**
-     * <p>The name of the load balancer, which must meet domain name format validation and be a subdomain under the site.</p>
+     * <p>The name of the load balancer, which must meet the domain name format validation and be a subdomain under the site.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,11 +119,11 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String rulesShrink;
 
     /**
-     * <p>Session persistence, with values:</p>
+     * <p>Session persistence, with possible values:</p>
      * <ul>
      * <li>off: Not enabled.</li>
      * <li>ip: Session persistence by IP.</li>
-     * <li>cookie: Not enabled for session persistence.</li>
+     * <li>cookie: Session persistence by cookie.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     /**
      * <p>Load balancing strategy.</p>
      * <ul>
-     * <li>geo: Geographical strategy.</li>
+     * <li>geo: Geographic strategy.</li>
      * <li>random: Weighted round-robin.</li>
      * <li>order: Primary and backup method.</li>
      * </ul>
@@ -158,7 +158,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String steeringPolicy;
 
     /**
-     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, you can use a comma-separated list of secondary regions as the key.</p>
+     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>

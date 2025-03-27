@@ -15,7 +15,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Whether to enable GRPC, default is disabled. Value range:</p>
+     * <p>Whether to enable GRPC, default is disabled. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -28,7 +28,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String grpc;
 
     /**
-     * <p>Whether to enable HTTP2 origin, default is disabled. Value range:</p>
+     * <p>Whether to enable HTTP2 origin, default is disabled. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -41,7 +41,11 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String http2Origin;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -50,10 +54,10 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
      * <ul>
-     * <li>on: Enable</li>
-     * <li>off: Disable</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +67,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -71,8 +75,11 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("Sequence")
+    public Integer sequence;
+
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -82,7 +89,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Whether to enable smart routing service, default is disabled. Value range:</p>
+     * <p>Whether to enable the smart routing service, default is disabled. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -95,7 +102,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String smartRouting;
 
     /**
-     * <p>Maximum upload file size, in MB, value range: 100～500.</p>
+     * <p>Maximum upload file size, in MB, with a range of 100 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -104,7 +111,7 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     public String uploadMaxFilesize;
 
     /**
-     * <p>Whether to enable Websocket, default is enabled. Value range:</p>
+     * <p>Whether to enable Websocket, default is enabled. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -167,6 +174,14 @@ public class UpdateNetworkOptimizationRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateNetworkOptimizationRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateNetworkOptimizationRequest setSiteId(Long siteId) {

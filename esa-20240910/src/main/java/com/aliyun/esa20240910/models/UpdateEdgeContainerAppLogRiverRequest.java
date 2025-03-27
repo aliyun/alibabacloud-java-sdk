@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateEdgeContainerAppLogRiverRequest extends TeaModel {
     /**
+     * <p>The application ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2852396.html">ListEdgeContainerApps</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-88068867578379****</p>
      */
@@ -12,6 +14,8 @@ public class UpdateEdgeContainerAppLogRiverRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The log path of the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/hello.log</p>
      */
@@ -19,6 +23,8 @@ public class UpdateEdgeContainerAppLogRiverRequest extends TeaModel {
     public String path;
 
     /**
+     * <p>Specifies whether to collect the standard output of the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

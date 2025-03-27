@@ -153,6 +153,9 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("FingerprintSha256")
+        public String fingerprintSha256;
+
         /**
          * <p>The certificate ID.</p>
          * 
@@ -215,6 +218,9 @@ public class ListClientCertificatesResponseBody extends TeaModel {
          */
         @NameInMap("SAN")
         public String SAN;
+
+        @NameInMap("SerialNumber")
+        public String serialNumber;
 
         /**
          * <p>The signature algorithm of the certificate.</p>
@@ -281,6 +287,14 @@ public class ListClientCertificatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListClientCertificatesResponseBodyResult setFingerprintSha256(String fingerprintSha256) {
+            this.fingerprintSha256 = fingerprintSha256;
+            return this;
+        }
+        public String getFingerprintSha256() {
+            return this.fingerprintSha256;
+        }
+
         public ListClientCertificatesResponseBodyResult setId(String id) {
             this.id = id;
             return this;
@@ -335,6 +349,14 @@ public class ListClientCertificatesResponseBody extends TeaModel {
         }
         public String getSAN() {
             return this.SAN;
+        }
+
+        public ListClientCertificatesResponseBodyResult setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
         }
 
         public ListClientCertificatesResponseBodyResult setSignatureAlgorithm(String signatureAlgorithm) {

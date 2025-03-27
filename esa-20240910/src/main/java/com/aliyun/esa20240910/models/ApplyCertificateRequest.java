@@ -25,7 +25,7 @@ public class ApplyCertificateRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Certificate type. Possible values: lets_encrypt: Let\&quot;s Encrypt certificate; digicert_single: Digicert single domain certificate; digicert_wildcard: Digicert wildcard certificate.</p>
+     * <p>The certificate type. Valid values: lets_encrypt, digicert_single, and digicert_wildcard.</p>
      * 
      * <strong>example:</strong>
      * <p>lets_encrypt</p>

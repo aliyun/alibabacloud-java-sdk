@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateWaitingRoomRuleRequest extends TeaModel {
     /**
-     * <p>The rule content, which is a policy or conditional expression.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +19,10 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Specifies whether to enable the rule. Valid values:</p>
+     * <p>Rule switch. This parameter is not required when adding global configuration. Value range:</p>
      * <ul>
-     * <li>on</li>
-     * <li>off</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,7 +33,7 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>The rule name.</p>
+     * <p>Rule name. This parameter is not required when adding global configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +43,7 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +53,7 @@ public class UpdateWaitingRoomRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The ID of the waiting room bypass rule that you want to update. You can call <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> to obtain the ID.</p>
+     * <p>The ID of the waiting room bypass rule to be updated, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomRules</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

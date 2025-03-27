@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRedirectRulesResponseBody extends TeaModel {
     /**
-     * <p>The configuration list of the the URL redirect rule.</p>
+     * <p>List of redirect configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListRedirectRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>The page number returned.</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
@@ -38,7 +38,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>Total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>Total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,7 +110,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
 
     public static class ListRedirectRulesResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -119,10 +119,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>Configuration type. Possible values:</p>
          * <ul>
-         * <li>global: global configuration.</li>
-         * <li>rule: rule configuration.</li>
+         * <li>global: Global configuration.</li>
+         * <li>rule: Rule configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +132,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Indicates whether the feature of retaining the query string is enabled. Valid values:</p>
+         * <p>Preserve query string. Value range:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,11 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public String reserveQueryString;
 
         /**
-         * <p>The rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -154,10 +158,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +171,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -176,7 +180,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +189,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>The version of the website configurations.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, with the default being version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -194,7 +198,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public Integer siteVersion;
 
         /**
-         * <p>The response code that you want to use to indicate URL redirection. Valid values:</p>
+         * <p>Response status code used by the node to respond to the client with the redirect address. Possible values:</p>
          * <ul>
          * <li>301</li>
          * <li>302</li>
@@ -210,7 +214,7 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public String statusCode;
 
         /**
-         * <p>The destination URL to which requests are redirected.</p>
+         * <p>Target URL after redirection.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>
@@ -219,9 +223,10 @@ public class ListRedirectRulesResponseBody extends TeaModel {
         public String targetUrl;
 
         /**
-         * <p>The redirect type. Valid values:</p>
+         * <p>Redirect type. Possible values:</p>
          * <ul>
-         * <li>static</li>
+         * <li>static: Static mode.</li>
+         * <li>dynamic: Dynamic mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>

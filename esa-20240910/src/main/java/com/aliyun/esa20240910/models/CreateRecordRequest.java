@@ -48,8 +48,8 @@ public class CreateRecordRequest extends TeaModel {
     /**
      * <p>The origin host policy. This policy takes effect when the record type is CNAME. You can set the policy in two modes:</p>
      * <ul>
-     * <li><strong>follow_hostname</strong>: Follow the host record.</li>
-     * <li><strong>follow_origin_domain</strong>: match the origin\&quot;s domain name.</li>
+     * <li>follow_hostname: Follow the host record.</li>
+     * <li>follow_origin_domain: match the origin\&quot;s domain name.</li>
      * </ul>
      * 
      * <strong>example:</strong>

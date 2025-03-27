@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHttpRequestHeaderModificationRuleRequest extends TeaModel {
     /**
-     * <p>The configuration ID, which can be obtained by calling the <a href="~~ListHttpRequestHeaderModificationRules~~">ListHttpRequestHeaderModificationRules</a> operation.</p>
+     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetHttpRequestHeaderModificationRuleRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

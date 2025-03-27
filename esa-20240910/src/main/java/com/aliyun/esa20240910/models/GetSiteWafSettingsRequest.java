@@ -4,11 +4,17 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class GetSiteWafSettingsRequest extends TeaModel {
+    /**
+     * <p>Specifies the configuration path. If not provided, all configurations will be retrieved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bot_management</p>
+     */
     @NameInMap("Path")
     public String path;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +23,7 @@ public class GetSiteWafSettingsRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version of the website.</p>
+     * <p>Site version.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

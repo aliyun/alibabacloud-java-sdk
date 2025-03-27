@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
-     * <p>Load Balancer ID.</p>
+     * <p>Load balancer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>99867648760****</p>

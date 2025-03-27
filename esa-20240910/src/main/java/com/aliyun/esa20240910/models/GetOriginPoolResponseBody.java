@@ -165,7 +165,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
          * <p>The AccessKey required when AuthType is set to private_cross_account or private.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI5tSpj224hDfLmXEx****</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
@@ -198,7 +198,7 @@ public class GetOriginPoolResponseBody extends TeaModel {
          * <p>The SecretKey required when AuthType is set to private_cross_account or private.</p>
          * 
          * <strong>example:</strong>
-         * <p>tzXL8ub4GtjkjZOJhS****</p>
+         * <p>yourAccessKeySecret</p>
          */
         @NameInMap("SecretKey")
         public String secretKey;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchGetExpressionFieldsRequest extends TeaModel {
     /**
-     * <p>The regular expressions.</p>
+     * <p>List of expressions.</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -14,7 +14,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
     public java.util.List<BatchGetExpressionFieldsRequestExpressions> expressions;
 
     /**
-     * <p>The WAF rule category.</p>
+     * <p>WAF Phase</p>
      * 
      * <strong>example:</strong>
      * <p>http_bot</p>
@@ -23,7 +23,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
     public String phase;
 
     /**
-     * <p>The website ID.</p>
+     * <p>Site ID</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -62,7 +62,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
 
     public static class BatchGetExpressionFieldsRequestExpressions extends TeaModel {
         /**
-         * <p>The content of the regular expression.</p>
+         * <p>Content of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>ip.src eq 1.1.1.1</p>
@@ -71,7 +71,7 @@ public class BatchGetExpressionFieldsRequest extends TeaModel {
         public String expression;
 
         /**
-         * <p>The ID of the regular expression.</p>
+         * <p>The sequence number of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

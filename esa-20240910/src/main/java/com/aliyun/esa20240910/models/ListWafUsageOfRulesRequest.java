@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListWafUsageOfRulesRequest extends TeaModel {
     /**
-     * <p>The WAF rule category.</p>
+     * <p>Name of the WAF operation phase.</p>
      * 
      * <strong>example:</strong>
-     * <p>http_anti_scan</p>
+     * <p>http_custom</p>
      */
     @NameInMap("Phase")
     public String phase;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * 
      * <strong>example:</strong>
-     * <p>ListWafUsageOfRules</p>
+     * <p>1</p>
      */
     @NameInMap("SiteId")
     public Long siteId;

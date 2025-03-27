@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafTemplateRulesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -14,7 +14,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned template rules.</p>
+     * <p>The list of returned template rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListWafTemplateRulesResponseBodyRules> rules;
@@ -42,13 +42,13 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
 
     public static class ListWafTemplateRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The configuration of the rule.</p>
+         * <p>Rule configuration.</p>
          */
         @NameInMap("Config")
         public WafRuleConfig config;
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP Directory Traversal Rule [Template]</p>
@@ -57,7 +57,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The WAF rule category.</p>
+         * <p>WAF operation phase.</p>
          * 
          * <strong>example:</strong>
          * <p>http_anti_scan</p>
@@ -66,7 +66,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         public String phase;
 
         /**
-         * <p>Indicates whether the rule is enabled.</p>
+         * <p>Rule status.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -75,7 +75,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The rule type.</p>
+         * <p>Rule type.</p>
          * 
          * <strong>example:</strong>
          * <p>http_directory_traversal</p>

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>esa20240910</artifactId>
-  <version>2.21.1</version>
+  <version>2.22.0</version>
   <packaging>jar</packaging>
   <name>esa20240910</name>
   <description>Alibaba Cloud ESA (20240910) SDK for Java
@@ -66,7 +66,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.6</version>
+      <version>0.3.7</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -98,7 +98,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>

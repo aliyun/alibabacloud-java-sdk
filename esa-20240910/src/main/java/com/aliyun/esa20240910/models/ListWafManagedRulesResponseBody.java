@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafManagedRulesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>Page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,7 +23,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -32,13 +32,13 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The managed rules.</p>
+     * <p>List of managed rules.</p>
      */
     @NameInMap("Rules")
     public java.util.List<ListWafManagedRulesResponseBodyRules> rules;
 
     /**
-     * <p>The total number of filtered rules.</p>
+     * <p>Total number of rules after filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +93,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
 
     public static class ListWafManagedRulesResponseBodyRules extends TeaModel {
         /**
-         * <p>The action that WAF performs on requests that match the managed rule.</p>
+         * <p>Protection action of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>deny</p>
@@ -102,7 +102,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The ID of the managed rule.</p>
+         * <p>ID of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -111,13 +111,16 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the managed rule.</p>
+         * <p>Name of the managed rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL注入</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The protection level of the managed rule.</p>
+         * <p>Protection level of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -126,7 +129,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
         public Integer protectionLevel;
 
         /**
-         * <p>The status of the protection rule.</p>
+         * <p>Protection status of the managed rule.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>

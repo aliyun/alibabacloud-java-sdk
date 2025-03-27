@@ -23,7 +23,7 @@ public class GetCertificateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Certificate information.</p>
+     * <p>The certificate information.</p>
      */
     @NameInMap("Result")
     public GetCertificateResponseBodyResult result;
@@ -110,7 +110,7 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyResultDCV extends TeaModel {
         /**
-         * <p>DCV ID.</p>
+         * <p>The DCV ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bababf7cdd1546a2ad04c0def1f4c980</p>
@@ -119,7 +119,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>DCV name. For the DNS type, it is the TXT record name; for the HTTP type, it is the URL.</p>
+         * <p>The DCV name. It is a TXT record name if Type is DNS or URL if Type is HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></p>
@@ -128,7 +128,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>Verification status.</p>
+         * <p>The verification status.</p>
          * 
          * <strong>example:</strong>
          * <p>pending</p>
@@ -137,7 +137,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>DCV type. Possible values: DNS; HTTP.</p>
+         * <p>The DCV type. Valid values: DNS and HTTP.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -146,7 +146,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>DCV content.</p>
+         * <p>The DCV content.</p>
          * 
          * <strong>example:</strong>
          * <p>pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow.KfzYo4LH3EgOt7a73G-RqZkbR0eYtLfEUmtmqGmr4FQ</p>
@@ -203,7 +203,7 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyResult extends TeaModel {
         /**
-         * <p>Certificate application error code.</p>
+         * <p>The error code returned for certificate application.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -212,7 +212,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long applyCode;
 
         /**
-         * <p>Certificate application error message.</p>
+         * <p>The error message returned for certificate application.</p>
          * 
          * <strong>example:</strong>
          * <p>canceled</p>
@@ -248,7 +248,7 @@ public class GetCertificateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>DCV information.</p>
+         * <p>The Domain Control Validation (DCV) information.</p>
          */
         @NameInMap("DCV")
         public java.util.List<GetCertificateResponseBodyResultDCV> DCV;

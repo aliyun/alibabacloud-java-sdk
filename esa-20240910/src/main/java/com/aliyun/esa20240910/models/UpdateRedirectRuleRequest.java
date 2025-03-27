@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateRedirectRuleRequest extends TeaModel {
     /**
-     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867474.html">ListRedirectRules</a> API.</p>
+     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867474.html">ListRedirectRules</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Preserve query string. The value range is:</p>
+     * <p>Preserve query string. Value range:</p>
      * <ul>
-     * <li>on: enabled.</li>
-     * <li>off: disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,11 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     public String reserveQueryString;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -37,10 +41,10 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule enable status, supports:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
-     * <li><strong>on</strong>: indicates enabled.</li>
-     * <li><strong>off</strong>: indicates disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +54,7 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -58,8 +62,11 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("Sequence")
+    public Integer sequence;
+
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +76,7 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The response status code used by the node when responding to the client with a redirect address. The value range is:</p>
+     * <p>The response status code used by the node to respond with the redirect address to the client. Value range:</p>
      * <ul>
      * <li>301</li>
      * <li>302</li>
@@ -85,7 +92,7 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     public String statusCode;
 
     /**
-     * <p>Target URL after redirection.</p>
+     * <p>The target URL after redirection.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.exapmle.com/index.html">http://www.exapmle.com/index.html</a></p>
@@ -94,9 +101,10 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     public String targetUrl;
 
     /**
-     * <p>Redirect type. The value range is:</p>
+     * <p>Redirect type. Value range:</p>
      * <ul>
-     * <li>static: static mode.</li>
+     * <li>static: Static mode.</li>
+     * <li>dynamic: Dynamic mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,6 +156,14 @@ public class UpdateRedirectRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateRedirectRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateRedirectRuleRequest setSiteId(Long siteId) {

@@ -11,7 +11,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
     public java.util.List<ListOriginRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>The current page number.</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The size of each page.</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>Total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -150,7 +150,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         public String originHost;
 
         /**
-         * <p>The origin server port accessed when using the HTTP protocol.</p>
+         * <p>The port of the origin server to access when using the HTTP protocol for origin requests.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -159,7 +159,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         public String originHttpPort;
 
         /**
-         * <p>The origin server port to access when using the HTTPS protocol for back-to-origin requests.</p>
+         * <p>The port of the origin server to access when using the HTTPS protocol for origin requests.</p>
          * 
          * <strong>example:</strong>
          * <p>4433</p>
@@ -167,15 +167,25 @@ public class ListOriginRulesResponseBody extends TeaModel {
         @NameInMap("OriginHttpsPort")
         public String originHttpsPort;
 
+        /**
+         * <p>mTLS switch. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("OriginMtls")
         public String originMtls;
 
         /**
          * <p>Protocol used for the origin request. Value range:</p>
          * <ul>
-         * <li>http: Use HTTP protocol for origin requests.</li>
-         * <li>https: Use HTTPS protocol for origin requests.</li>
-         * <li>follow: Follow the client\&quot;s protocol for origin requests.</li>
+         * <li>http: Use HTTP protocol for origin.</li>
+         * <li>https: Use HTTPS protocol for origin.</li>
+         * <li>follow: Follow the client\&quot;s protocol for origin.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -185,7 +195,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         public String originScheme;
 
         /**
-         * <p>SNI carried in the origin request.</p>
+         * <p>SNI carried in the back-to-origin request.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>
@@ -193,15 +203,25 @@ public class ListOriginRulesResponseBody extends TeaModel {
         @NameInMap("OriginSni")
         public String originSni;
 
+        /**
+         * <p>Origin certificate verification switch. Value range:</p>
+         * <ul>
+         * <li>on: Enable.</li>
+         * <li>off: Disable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("OriginVerify")
         public String originVerify;
 
         /**
-         * <p>Use range slicing to download files from the origin. The value range is:</p>
+         * <p>Use range slicing to download files from the origin. Value range:</p>
          * <ul>
-         * <li>on: enabled</li>
-         * <li>off: disabled</li>
-         * <li>force: forced</li>
+         * <li>on: Enable</li>
+         * <li>off: Disable</li>
+         * <li>force: Force</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,8 +230,15 @@ public class ListOriginRulesResponseBody extends TeaModel {
         @NameInMap("Range")
         public String range;
 
+        @NameInMap("RangeChunkSize")
+        public String rangeChunkSize;
+
         /**
-         * <p>Rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -220,10 +247,10 @@ public class ListOriginRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Rule switch. Value range:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
          * <ul>
-         * <li>on: Enabled</li>
-         * <li>off: Disabled</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +260,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>Rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -242,7 +269,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>Rule execution sequence.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -251,7 +278,7 @@ public class ListOriginRulesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>Site version number.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version of the site for which the configuration is effective, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -350,6 +377,14 @@ public class ListOriginRulesResponseBody extends TeaModel {
         }
         public String getRange() {
             return this.range;
+        }
+
+        public ListOriginRulesResponseBodyConfigs setRangeChunkSize(String rangeChunkSize) {
+            this.rangeChunkSize = rangeChunkSize;
+            return this;
+        }
+        public String getRangeChunkSize() {
+            return this.rangeChunkSize;
         }
 
         public ListOriginRulesResponseBodyConfigs setRule(String rule) {

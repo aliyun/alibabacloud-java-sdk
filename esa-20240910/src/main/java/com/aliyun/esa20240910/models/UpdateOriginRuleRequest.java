@@ -33,7 +33,7 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originHost;
 
     /**
-     * <p>The port of the origin server when using HTTP protocol for origin requests.</p>
+     * <p>Port of the origin server when using HTTP protocol for origin pull.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -42,7 +42,7 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originHttpPort;
 
     /**
-     * <p>The port of the origin server when using HTTPS protocol for origin requests.</p>
+     * <p>Port of the origin server when using HTTPS protocol for origin pull.</p>
      * 
      * <strong>example:</strong>
      * <p>4433</p>
@@ -50,15 +50,25 @@ public class UpdateOriginRuleRequest extends TeaModel {
     @NameInMap("OriginHttpsPort")
     public String originHttpsPort;
 
+    /**
+     * <p>mTLS switch. Valid values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("OriginMtls")
     public String originMtls;
 
     /**
-     * <p>Protocol used for the origin request. Possible values:</p>
+     * <p>Protocol used for the origin request. Valid values:</p>
      * <ul>
-     * <li>http: Use HTTP protocol for origin requests.</li>
-     * <li>https: Use HTTPS protocol for origin requests.</li>
-     * <li>follow: Follow the client\&quot;s protocol for origin requests.</li>
+     * <li>http: Use HTTP protocol for origin pull.</li>
+     * <li>https: Use HTTPS protocol for origin pull.</li>
+     * <li>follow: Follow the client\&quot;s protocol for origin pull.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +78,7 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String originScheme;
 
     /**
-     * <p>The SNI carried in the origin request.</p>
+     * <p>SNI carried in the origin request.</p>
      * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
@@ -76,11 +86,21 @@ public class UpdateOriginRuleRequest extends TeaModel {
     @NameInMap("OriginSni")
     public String originSni;
 
+    /**
+     * <p>Origin certificate verification switch. Valid values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("OriginVerify")
     public String originVerify;
 
     /**
-     * <p>Use range chunked transfer to download files from the origin. Possible values:</p>
+     * <p>Use range chunking for origin pull file download. Valid values:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -93,8 +113,15 @@ public class UpdateOriginRuleRequest extends TeaModel {
     @NameInMap("Range")
     public String range;
 
+    @NameInMap("RangeChunkSize")
+    public String rangeChunkSize;
+
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -103,7 +130,7 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -116,7 +143,7 @@ public class UpdateOriginRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -124,8 +151,11 @@ public class UpdateOriginRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("Sequence")
+    public Integer sequence;
+
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -219,6 +249,14 @@ public class UpdateOriginRuleRequest extends TeaModel {
         return this.range;
     }
 
+    public UpdateOriginRuleRequest setRangeChunkSize(String rangeChunkSize) {
+        this.rangeChunkSize = rangeChunkSize;
+        return this;
+    }
+    public String getRangeChunkSize() {
+        return this.rangeChunkSize;
+    }
+
     public UpdateOriginRuleRequest setRule(String rule) {
         this.rule = rule;
         return this;
@@ -241,6 +279,14 @@ public class UpdateOriginRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateOriginRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateOriginRuleRequest setSiteId(Long siteId) {
