@@ -13,6 +13,9 @@ public class DescribeHaVipsRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
     /**
      * <p>The IP address of the HAVIP.</p>
      * 
@@ -102,6 +105,14 @@ public class DescribeHaVipsRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeHaVipsRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     public DescribeHaVipsRequest setHaVipAddress(String haVipAddress) {

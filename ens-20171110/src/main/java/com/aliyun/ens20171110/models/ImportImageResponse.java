@@ -3,7 +3,7 @@ package com.aliyun.ens20171110.models;
 
 import com.aliyun.tea.*;
 
-public class AddDeviceInternetPortResponse extends TeaModel {
+public class ImportImageResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AddDeviceInternetPortResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AddDeviceInternetPortResponseBody body;
+    public ImportImageResponseBody body;
 
-    public static AddDeviceInternetPortResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddDeviceInternetPortResponse self = new AddDeviceInternetPortResponse();
+    public static ImportImageResponse build(java.util.Map<String, ?> map) throws Exception {
+        ImportImageResponse self = new ImportImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddDeviceInternetPortResponse setHeaders(java.util.Map<String, String> headers) {
+    public ImportImageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AddDeviceInternetPortResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddDeviceInternetPortResponse setStatusCode(Integer statusCode) {
+    public ImportImageResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AddDeviceInternetPortResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AddDeviceInternetPortResponse setBody(AddDeviceInternetPortResponseBody body) {
+    public ImportImageResponse setBody(ImportImageResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddDeviceInternetPortResponseBody getBody() {
+    public ImportImageResponseBody getBody() {
         return this.body;
     }
 

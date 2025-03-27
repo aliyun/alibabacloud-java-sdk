@@ -78,10 +78,10 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
         /**
          * <p>The type of the disk.</p>
          * <ul>
-         * <li>cloud_efficiency: ultra disk.</li>
-         * <li>cloud_ssd: all-flash disk.</li>
-         * <li>local_hdd: local HDD.</li>
-         * <li>local_ssd: local SSD.</li>
+         * <li>cloud_efficiency:ultra disk.</li>
+         * <li>cloud_ssd:all-flash disk.</li>
+         * <li>local_hdd:local HDD.</li>
+         * <li>local_ssd:local SSD.</li>
          * </ul>
          * 
          * <strong>example:</strong>
