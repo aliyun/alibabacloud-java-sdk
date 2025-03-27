@@ -23,16 +23,16 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>Runtime configuration.</p>
+     * <p>The runtime configuration.</p>
      */
     @NameInMap("DefaultRunProperties")
     public CreateWorkflowInstancesRequestDefaultRunProperties defaultRunProperties;
 
     /**
-     * <p>The project environment.</p>
+     * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod (production)</li>
-     * <li>Dev</li>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Task parameters. Set parameters for a specific task. In JSON format, the key is the Task ID. For more information about the value format, see Task Script parameters (Task.Script. GetTask of the Parameter interface).</p>
+     * <p>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -80,10 +80,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public String taskParameters;
 
     /**
-     * <p>The type of the workflow instance.</p>
+     * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SupplementData: Retroactive data</li>
-     * <li>ManualWorkflow: manual workflow</li>
+     * <li>SupplementData</li>
+     * <li>ManualWorkflow</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -94,7 +94,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the workflow to which the workflow belongs. The default value of WorkflowId for retroactive data is 1.</p>
+     * <p>The ID of the workflow to which the instance belongs. This parameter is set to 1 for auto triggered tasks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>Workflow parameters. The priority is higher than the task parameters. JSON format.</p>
+     * <p>The workflow parameters. The priority of workflow parameters is higher than that of task parameters. You can call the GetTask operation to obtain the format of the workflow parameters by querying the Parameters parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{ 
@@ -210,11 +210,11 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
 
     public static class CreateWorkflowInstancesRequestDefaultRunPropertiesAlert extends TeaModel {
         /**
-         * <p>The notification method.</p>
+         * <p>The alert notification method. Valid values:</p>
          * <ul>
-         * <li>Sms: Sms only</li>
-         * <li>Mail: Mail only</li>
-         * <li>SmsMail: SMS and email.</li>
+         * <li>Sms</li>
+         * <li>Mail</li>
+         * <li>SmsMail</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,11 +224,11 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String noticeType;
 
         /**
-         * <p>The alert policy.</p>
+         * <p>The alerting policy. Valid values:</p>
          * <ul>
-         * <li>Success: successful alert</li>
-         * <li>Failure: failed alarm</li>
-         * <li>SuccessFailure: alerts for both success and failure</li>
+         * <li>SUCCESS: An alert is reported when data backfill succeeds.</li>
+         * <li>FAILURE: An alert is reported when data backfill fails.</li>
+         * <li>SuccessFailure: An alert is reported regardless of whether data backfill succeeds or fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,8 +262,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
 
     public static class CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis extends TeaModel {
         /**
-         * <p>Whether to block the operation if the analysis fails.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether to block the running of the instance if the analysis fails.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -272,8 +271,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public Boolean blocked;
 
         /**
-         * <p>Whether to enable analysis.</p>
-         * <p>This parameter is required.</p>
+         * <p>Specifies whether to enable the analysis feature.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -306,7 +304,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
 
     public static class CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy extends TeaModel {
         /**
-         * <p>The end runtime. This field is required if the policy is set.</p>
+         * <p>The time when the instance finishes running. This parameter is required if you specify the RunPolicy parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>23:59:59</p>
@@ -315,7 +313,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The default value is false.</p>
+         * <p>Specifies whether the instance can be run immediately during the time period in the future. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -324,7 +322,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public Boolean immediately;
 
         /**
-         * <p>The start time. This field is required if the policy is set.</p>
+         * <p>The time when the instance starts to run. This parameter is required if you specify the RunPolicy parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -333,10 +331,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The type of the time period. This field is required if the policy is set.</p>
+         * <p>The type of the time period during which the data is backfilled. This parameter is required if you specify the RunPolicy parameter. Valid values:</p>
          * <ul>
-         * <li>Daily: every day</li>
-         * <li>Weekend: Weekends only</li>
+         * <li>Daily</li>
+         * <li>Weekend</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -386,49 +384,48 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
 
     public static class CreateWorkflowInstancesRequestDefaultRunProperties extends TeaModel {
         /**
-         * <p>Alarm configuration.</p>
+         * <p>The alert settings.</p>
          */
         @NameInMap("Alert")
         public CreateWorkflowInstancesRequestDefaultRunPropertiesAlert alert;
 
         /**
-         * <p>Analyze the configuration.</p>
-         * <p>This parameter is required.</p>
+         * <p>The analysis of the configurations.</p>
          */
         @NameInMap("Analysis")
         public CreateWorkflowInstancesRequestDefaultRunPropertiesAnalysis analysis;
 
         /**
-         * <p>The list of project IDs that do not need to be run.</p>
+         * <p>The IDs of the projects that do not need to be run.</p>
          */
         @NameInMap("ExcludeProjectIds")
         public java.util.List<Long> excludeProjectIds;
 
         /**
-         * <p>The list of task IDs that you do not want to run.</p>
+         * <p>The IDs of the tasks that do not need to be run.</p>
          */
         @NameInMap("ExcludeTaskIds")
         public java.util.List<Long> excludeTaskIds;
 
         /**
-         * <p>The list of project IDs to be run.</p>
+         * <p>The IDs of the projects that need to be run.</p>
          */
         @NameInMap("IncludeProjectIds")
         public java.util.List<Long> includeProjectIds;
 
         /**
-         * <p>The list of task IDs to be run.</p>
+         * <p>The IDs of the tasks that need to be run.</p>
          */
         @NameInMap("IncludeTaskIds")
         public java.util.List<Long> includeTaskIds;
 
         /**
-         * <p>The data replenishment mode. The default value is ManualSelection.</p>
+         * <p>The data backfill mode. Default value: ManualSelection. Valid values:</p>
          * <ul>
-         * <li>General: In normal mode, only one \&quot;roottaskkids\&quot; can be filled in, and \&quot;IncludeTaskIds\&quot; is optional. If not, the content in \&quot;roottaskkids\&quot; will be included by default.</li>
-         * <li>ManualSelection: manually select, \&quot;roottaskkids\&quot; can be filled in multiple, \&quot;IncludeTaskIds\&quot; optional, if not, the content in \&quot;roottaskkids\&quot; will be included by default.</li>
-         * <li>Chain: the link, \&quot;roottaskkids\&quot; is empty, and \&quot;IncludeTaskIds\&quot; is filled with two IDs, which are the start and end tasks respectively.</li>
-         * <li>AllDownstream: all downstream, \&quot;roottaskkids\&quot; can only be filled in one</li>
+         * <li>General: You can specify only one root task ID. The <code>IncludeTaskIds</code> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <code>RootTaskIds</code> parameter are included by default.``</li>
+         * <li>ManualSelection: You can specify multiple root tasks IDs. The <code>IncludeTaskIds</code> parameter is optional. If you do not specify the IncludeTaskIds parameter, the tasks that are specified by the <code>RootTaskIds</code> parameter are included by default.``</li>
+         * <li>Chain: The value of the <code>RootTaskIds</code> parameter is left empty. You must set the <code>IncludeTaskIds</code> parameter to the start task ID and the end task ID.</li>
+         * <li>AllDownstream: You can specify only one root task ID.``</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -438,10 +435,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The running sequence. Default value: Asc.</p>
+         * <p>The running order. Default value: Asc. Valid values:</p>
          * <ul>
-         * <li>Asc: ascending order by business date.</li>
-         * <li>Desc: descending order by business date.</li>
+         * <li>Asc: The tasks are sorted by data timestamp in ascending order.</li>
+         * <li>Desc: The tasks are sorted by data timestamp in descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -451,8 +448,7 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public String order;
 
         /**
-         * <p>The number of rows that the task has. Values from 2 to 10 are parallelism and 1 is serial.</p>
-         * <p>This parameter is required.</p>
+         * <p>The number of tasks that can be run in parallel. If you specify the value to 2 to 10, the value indicates the number of tasks that can be run in parallel. If you specify the value to 1, the tasks are run one by one.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -461,19 +457,19 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         public Integer parallelism;
 
         /**
-         * <p>The ID list of the root task.</p>
+         * <p>The root task IDs.</p>
          */
         @NameInMap("RootTaskIds")
         public java.util.List<Long> rootTaskIds;
 
         /**
-         * <p>Run the policy. If this field is empty, the task configuration is followed.</p>
+         * <p>The data backfill policy. If you leave this parameter empty, the runtime configuration is used.</p>
          */
         @NameInMap("RunPolicy")
         public CreateWorkflowInstancesRequestDefaultRunPropertiesRunPolicy runPolicy;
 
         /**
-         * <p>The identifier of the custom scheduling Resource Group. If this field is empty, the task configuration is followed.</p>
+         * <p>The identifier of the custom resource group for scheduling. If you leave this parameter empty, the runtime configuration is used.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>

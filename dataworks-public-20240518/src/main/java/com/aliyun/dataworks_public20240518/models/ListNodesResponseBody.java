@@ -454,7 +454,7 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyPagingInfoNodesOutputsVariablesNode node;
 
         /**
-         * <p>The scope of the variable. Valid value:</p>
+         * <p>The scope of the variable. Valid values:</p>
          * <ul>
          * <li>NodeParameter</li>
          * <li>NodeContext</li>
@@ -469,7 +469,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The type of the variable. Valid value:</p>
+         * <p>The type of the variable. Valid values:</p>
          * <ul>
          * <li>NoKvVariableExpression</li>
          * <li>Constant</li>
@@ -825,7 +825,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>

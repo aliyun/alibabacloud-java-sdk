@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkflowShrinkRequest extends TeaModel {
     /**
-     * <p>The client-side unique code of the workflow for asynchronous and idempotent implementation. If not specified during creation, the system will automatically generate the code, which will be uniquely bound to the resource ID. If you specify this parameter when updating and deleting resources, it should be consistent with the client unique code when creating resources.</p>
+     * <p>The unique code of the client. This parameter is used to create a workflow asynchronously and implement the idempotence of the workflow. If you do not specify this parameter when you create the workflow, the system automatically generates a unique code. The unique code is uniquely associated with the workflow ID. If you specify this parameter when you update or delete the workflow, the value of this parameter must be the unique code that is used to create the workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>Workflow_0bc5213917368545132902xxxxxxxx</p>
@@ -14,7 +14,7 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String clientUniqueCode;
 
     /**
-     * <p>Dependency information.</p>
+     * <p>The dependency information.</p>
      */
     @NameInMap("Dependencies")
     public String dependenciesShrink;
@@ -29,10 +29,10 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project environment.</p>
+     * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod: Production</li>
-     * <li>Dev: Development</li>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The ID of the workflow.</p>
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The name.</p>
+     * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The list of parameters.</p>
+     * <p>The parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>para1=$bizdate para2=$[yyyymmdd]</p>
@@ -87,13 +87,13 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     public String parameters;
 
     /**
-     * <p>The list of workflow tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The list of tasks.</p>
+     * <p>The tasks.</p>
      */
     @NameInMap("Tasks")
     public String tasksShrink;

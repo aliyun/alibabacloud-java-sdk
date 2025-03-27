@@ -179,7 +179,7 @@ public class CreateDataQualityRuleTemplateRequest extends TeaModel {
          * <li>GroupCount: the field value and the number of rows for each field value.</li>
          * <li>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</li>
          * <li>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</li>
-         * <li>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</li>
+         * <li>UserDefinedSql: specifies that data is sampled by executing custom SQL statements.</li>
          * </ul>
          * 
          * <strong>example:</strong>

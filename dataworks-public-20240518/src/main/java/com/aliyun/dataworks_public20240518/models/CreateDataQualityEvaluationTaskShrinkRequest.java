@@ -12,6 +12,7 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,6 +54,7 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -81,6 +83,7 @@ public class CreateDataQualityEvaluationTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>The monitored object of the monitor.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Target")
     public String targetShrink;

@@ -102,19 +102,6 @@ public class ListProjectsShrinkRequest extends TeaModel {
      * <li>Updating</li>
      * <li>UpdateFailed</li>
      * </ul>
-     * <!---->
-     * 
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Available</p>

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteAdhocWorkflowInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>业务日期。</p>
-     * <p>This parameter is required.</p>
+     * <p>The data timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>

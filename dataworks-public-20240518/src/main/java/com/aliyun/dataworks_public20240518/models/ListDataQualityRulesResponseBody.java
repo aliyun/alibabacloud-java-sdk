@@ -43,13 +43,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
-         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -118,13 +118,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
-         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>
@@ -193,13 +193,13 @@ public class ListDataQualityRulesResponseBody extends TeaModel {
     public static class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned extends TeaModel {
         /**
          * <p>The threshold expression.</p>
-         * <p>The volatility type rule must use an expression to represent the volatility threshold. For example:</p>
+         * <p>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</p>
          * <ul>
-         * <li>Fluctuation rise greater than 0.01: $checkValue &gt; 0.01</li>
-         * <li>Fluctuation drop greater than 0.01:$checkValue &lt; -0.01</li>
-         * <li>Absolute volatility: abs($checkValue) &gt; 0.01</li>
+         * <li>$checkValue &gt; 0.01</li>
+         * <li>$checkValue &lt; -0.01</li>
+         * <li>abs($checkValue) &gt; 0.01</li>
          * </ul>
-         * <p>You can also use expressions to configure thresholds for fixed-Value rules. If you configure them at the same time, the expression priority is higher than Operator and Value.</p>
+         * <p>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>$checkValue &gt; 0.01</p>

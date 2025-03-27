@@ -985,7 +985,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public java.util.List<GetDIJobResponseBodyPagingInfoDestinationDataSourceSettings> destinationDataSourceSettings;
 
         /**
-         * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</p>
+         * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB_For_MySQL, Kafka, Hive.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -1026,6 +1026,9 @@ public class GetDIJobResponseBody extends TeaModel {
         @NameInMap("JobStatus")
         public String jobStatus;
 
+        @NameInMap("JobType")
+        public String jobType;
+
         /**
          * <p>The synchronization type. Valid values:</p>
          * <ul>
@@ -1065,7 +1068,7 @@ public class GetDIJobResponseBody extends TeaModel {
         public java.util.List<GetDIJobResponseBodyPagingInfoSourceDataSourceSettings> sourceDataSourceSettings;
 
         /**
-         * <p>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse.</p>
+         * <p>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SQLServer, Doris, ClickHouse.</p>
          * 
          * <strong>example:</strong>
          * <p>Mysql</p>
@@ -1159,6 +1162,14 @@ public class GetDIJobResponseBody extends TeaModel {
         }
         public String getJobStatus() {
             return this.jobStatus;
+        }
+
+        public GetDIJobResponseBodyPagingInfo setJobType(String jobType) {
+            this.jobType = jobType;
+            return this;
+        }
+        public String getJobType() {
+            return this.jobType;
         }
 
         public GetDIJobResponseBodyPagingInfo setMigrationType(String migrationType) {

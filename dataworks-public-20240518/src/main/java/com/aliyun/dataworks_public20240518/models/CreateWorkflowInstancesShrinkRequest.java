@@ -23,16 +23,16 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>Runtime configuration.</p>
+     * <p>The runtime configuration.</p>
      */
     @NameInMap("DefaultRunProperties")
     public String defaultRunPropertiesShrink;
 
     /**
-     * <p>The project environment.</p>
+     * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod (production)</li>
-     * <li>Dev</li>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>Task parameters. Set parameters for a specific task. In JSON format, the key is the Task ID. For more information about the value format, see Task Script parameters (Task.Script. GetTask of the Parameter interface).</p>
+     * <p>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -80,10 +80,10 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String taskParameters;
 
     /**
-     * <p>The type of the workflow instance.</p>
+     * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SupplementData: Retroactive data</li>
-     * <li>ManualWorkflow: manual workflow</li>
+     * <li>SupplementData</li>
+     * <li>ManualWorkflow</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -94,7 +94,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the workflow to which the workflow belongs. The default value of WorkflowId for retroactive data is 1.</p>
+     * <p>The ID of the workflow to which the instance belongs. This parameter is set to 1 for auto triggered tasks.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>Workflow parameters. The priority is higher than the task parameters. JSON format.</p>
+     * <p>The workflow parameters. The priority of workflow parameters is higher than that of task parameters. You can call the GetTask operation to obtain the format of the workflow parameters by querying the Parameters parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>{ 

@@ -312,8 +312,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
         /**
          * <p>The instance generation mode. Valid values:</p>
-         * <p>T+1</p>
-         * <p>Immediately</p>
+         * <ul>
+         * <li>T+1</li>
+         * <li>Immediately</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>T+1</p>
@@ -431,8 +433,10 @@ public class ListUpstreamTasksResponseBody extends TeaModel {
 
         /**
          * <p>The scheduling dependency type. Valid values:</p>
-         * <p>Normal: same-cycle scheduling dependency</p>
-         * <p>CrossCycle: cross-cycle scheduling dependency</p>
+         * <ul>
+         * <li>Normal: same-cycle scheduling dependency</li>
+         * <li>CrossCycle: cross-cycle scheduling dependency</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>

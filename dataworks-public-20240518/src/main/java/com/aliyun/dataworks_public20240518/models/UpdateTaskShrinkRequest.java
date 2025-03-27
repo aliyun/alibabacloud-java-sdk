@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskShrinkRequest extends TeaModel {
     /**
-     * <p>The client unique code of the task, which uniquely identifies a task. It is used to implement asynchronous and idempotent functions. If it is not specified during creation, the system will automatically generate the code, which will be uniquely bound to the resource ID. If you specify this parameter when updating and deleting resources, it should be consistent with the client unique code when creating resources.</p>
+     * <p>The unique code of the client. This code uniquely identifies a task. This parameter is used to create a task asynchronously and implement the idempotence of the task. If you do not specify this parameter when you create the task, the system automatically generates a unique code. The unique code is uniquely associated with the task ID. If you specify this parameter when you update or delete the task, the value of this parameter must be the unique code that is used to create the task.</p>
      * 
      * <strong>example:</strong>
      * <p>Task_0bc5213917368545132902xxxxxxxx</p>
@@ -14,19 +14,19 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String clientUniqueCode;
 
     /**
-     * <p>The associated data source information.</p>
+     * <p>The information about the associated data source.</p>
      */
     @NameInMap("DataSource")
     public String dataSourceShrink;
 
     /**
-     * <p>Dependency information.</p>
+     * <p>The dependency information.</p>
      */
     @NameInMap("Dependencies")
     public String dependenciesShrink;
 
     /**
-     * <p>The description.</p>
+     * <p>The description of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -35,10 +35,10 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The project environment.</p>
+     * <p>The environment of the workspace. Valid values:</p>
      * <ul>
-     * <li>Prod: Production</li>
-     * <li>Dev: Development</li>
+     * <li>Prod: production environment</li>
+     * <li>Dev: development environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,16 +58,16 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Enter information.</p>
+     * <p>The input information.</p>
      */
     @NameInMap("Inputs")
     public String inputsShrink;
 
     /**
-     * <p>The instance generation mode.</p>
+     * <p>The instance generation mode. Valid values:</p>
      * <ul>
-     * <li>T +1 (second born)</li>
-     * <li>Immediately (generate now)</li>
+     * <li>T+1</li>
+     * <li>Immediately</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +77,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String instanceMode;
 
     /**
-     * <p>The name.</p>
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String outputsShrink;
 
     /**
-     * <p>The account ID of the owner of the task.</p>
+     * <p>The account ID of the task owner.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The retry interval, in seconds.</p>
+     * <p>The rerun interval. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -112,11 +112,11 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public Integer rerunInterval;
 
     /**
-     * <p>The configuration of whether the task is allowed to rerun.</p>
+     * <p>The rerun mode. Valid values:</p>
      * <ul>
-     * <li>AllDenied: failure or success cannot be rerun.</li>
-     * <li>FailureAllowed: only failures can be rerun</li>
-     * <li>AllAllowed: you can run again if you fail or succeed.</li>
+     * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
+     * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
+     * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -127,7 +127,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String rerunMode;
 
     /**
-     * <p>The number of retries that take effect when the task is set to rerun.</p>
+     * <p>The number of times that the task is rerun. This parameter takes effect only if the RerunMode parameter is set to AllAllowed or FailureAllowed.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -136,26 +136,26 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public Integer rerunTimes;
 
     /**
-     * <p>Configuration of the runtime environment, such as resource group information.</p>
+     * <p>The configurations of the runtime environment, such as the resource group information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeResource")
     public String runtimeResourceShrink;
 
     /**
-     * <p>Run the script information.</p>
+     * <p>The script information.</p>
      */
     @NameInMap("Script")
     public String scriptShrink;
 
     /**
-     * <p>The list of task tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The timeout period of the task execution, in seconds.</p>
+     * <p>The timeout period of task running. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -164,7 +164,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public Integer timeout;
 
     /**
-     * <p>The trigger method of the task.</p>
+     * <p>The trigger method.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Trigger")

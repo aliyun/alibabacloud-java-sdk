@@ -64,7 +64,11 @@ public class ListDataSourcesResponseBody extends TeaModel {
         public Object connectionProperties;
 
         /**
-         * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values: InstanceMode, UrlMode, and CdhMode. The value InstanceMode indicates the instance mode. The value UrlMode indicates the connection string mode. The value CdhMode indicates the CDH cluster mode.</p>
+         * <p>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</p>
+         * <ul>
+         * <li>InstanceMode: instance mode</li>
+         * <li>UrlMode: connection string mode</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>UrlMode</p>

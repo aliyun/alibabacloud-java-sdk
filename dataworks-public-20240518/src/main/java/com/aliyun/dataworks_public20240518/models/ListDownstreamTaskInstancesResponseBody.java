@@ -1040,10 +1040,6 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter. Valid values:</p>
-         * <ul>
-         * <li>Prod: production environment</li>
-         * <li>Dev: development environment</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Prod</p>

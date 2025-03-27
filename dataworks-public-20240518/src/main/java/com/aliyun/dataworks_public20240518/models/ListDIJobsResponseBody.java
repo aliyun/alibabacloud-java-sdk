@@ -52,7 +52,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         public Long DIJobId;
 
         /**
-         * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, Datahub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive. If you do not configure this parameter, the API operation returns synchronization tasks that use all type of destinations.</p>
+         * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, DataHub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>

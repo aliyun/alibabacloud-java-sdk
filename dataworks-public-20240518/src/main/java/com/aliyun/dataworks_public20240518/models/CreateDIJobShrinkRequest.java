@@ -46,6 +46,9 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
+    @NameInMap("JobType")
+    public String jobType;
+
     /**
      * <p>The synchronization type. Valid values:</p>
      * <ul>
@@ -169,6 +172,14 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     }
     public String getJobSettingsShrink() {
         return this.jobSettingsShrink;
+    }
+
+    public CreateDIJobShrinkRequest setJobType(String jobType) {
+        this.jobType = jobType;
+        return this;
+    }
+    public String getJobType() {
+        return this.jobType;
     }
 
     public CreateDIJobShrinkRequest setMigrationType(String migrationType) {

@@ -24,6 +24,15 @@ public class CreateRouteRequest extends TeaModel {
     @NameInMap("NetworkId")
     public Long networkId;
 
+    /**
+     * <p>Unique identifier of the serverless resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Serverless_res_group_524257424564736_6831777003XXXXX</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static CreateRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRouteRequest self = new CreateRouteRequest();
         return TeaModel.build(map, self);
@@ -43,6 +52,14 @@ public class CreateRouteRequest extends TeaModel {
     }
     public Long getNetworkId() {
         return this.networkId;
+    }
+
+    public CreateRouteRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }
