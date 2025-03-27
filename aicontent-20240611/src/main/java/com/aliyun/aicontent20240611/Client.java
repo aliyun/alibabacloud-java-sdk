@@ -1401,6 +1401,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>进行对话-流式输出</p>
+     * 
+     * @param request ExecuteTextbookAssistantSseDialogueRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteTextbookAssistantSseDialogueResponse
+     */
+    public ExecuteTextbookAssistantSseDialogueResponse executeTextbookAssistantSseDialogueWithOptions(ExecuteTextbookAssistantSseDialogueRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authToken)) {
+            body.put("authToken", request.authToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chatId)) {
+            body.put("chatId", request.chatId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenario)) {
+            body.put("scenario", request.scenario);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userMessage)) {
+            body.put("userMessage", request.userMessage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteTextbookAssistantSseDialogue"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/textbookAssistant/dialogue/ExecuteSseDialogue"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteTextbookAssistantSseDialogueResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ExecuteTextbookAssistantSseDialogueResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>进行对话-流式输出</p>
+     * 
+     * @param request ExecuteTextbookAssistantSseDialogueRequest
+     * @return ExecuteTextbookAssistantSseDialogueResponse
+     */
+    public ExecuteTextbookAssistantSseDialogueResponse executeTextbookAssistantSseDialogue(ExecuteTextbookAssistantSseDialogueRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeTextbookAssistantSseDialogueWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>开启自由对话</p>
      * 
      * @param request ExecuteTextbookAssistantStartConversationRequest
@@ -1789,6 +1853,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量获取文章详情</p>
+     * 
+     * @param request ListTextbookAssistantArticleDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTextbookAssistantArticleDetailsResponse
+     */
+    public ListTextbookAssistantArticleDetailsResponse listTextbookAssistantArticleDetailsWithOptions(ListTextbookAssistantArticleDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.articleIdList)) {
+            body.put("articleIdList", request.articleIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authToken)) {
+            body.put("authToken", request.authToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTextbookAssistantArticleDetails"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/textbookAssistant/teachingResource/ListArticleDetails"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTextbookAssistantArticleDetailsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTextbookAssistantArticleDetailsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量获取文章详情</p>
+     * 
+     * @param request ListTextbookAssistantArticleDetailsRequest
+     * @return ListTextbookAssistantArticleDetailsResponse
+     */
+    public ListTextbookAssistantArticleDetailsResponse listTextbookAssistantArticleDetails(ListTextbookAssistantArticleDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTextbookAssistantArticleDetailsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取文章列表</p>
      * 
      * @param request ListTextbookAssistantArticlesRequest
@@ -2033,6 +2153,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTextbookAssistantGradeVolumesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文章内容详情</p>
+     * 
+     * @param request ListTextbookAssistantSceneDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTextbookAssistantSceneDetailsResponse
+     */
+    public ListTextbookAssistantSceneDetailsResponse listTextbookAssistantSceneDetailsWithOptions(ListTextbookAssistantSceneDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authToken)) {
+            body.put("authToken", request.authToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneIdList)) {
+            body.put("sceneIdList", request.sceneIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTextbookAssistantSceneDetails"),
+            new TeaPair("version", "20240611"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/textbookAssistant/teachingResource/ListSceneDetails"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTextbookAssistantSceneDetailsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTextbookAssistantSceneDetailsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文章内容详情</p>
+     * 
+     * @param request ListTextbookAssistantSceneDetailsRequest
+     * @return ListTextbookAssistantSceneDetailsResponse
+     */
+    public ListTextbookAssistantSceneDetailsResponse listTextbookAssistantSceneDetails(ListTextbookAssistantSceneDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTextbookAssistantSceneDetailsWithOptions(request, headers, runtime);
     }
 
     /**
