@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeactivateVersionManagementRequest extends TeaModel {
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+     * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

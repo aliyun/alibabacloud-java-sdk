@@ -4,6 +4,12 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class SetCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The certificate ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>babaffe176ae44e2ad16d3e309b9e506</p>
+     */
     @NameInMap("Id")
     public String id;
 

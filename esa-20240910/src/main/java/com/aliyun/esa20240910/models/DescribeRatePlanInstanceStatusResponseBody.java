@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRatePlanInstanceStatusResponseBody extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>xcdn-91fknmb80f0g***</p>
@@ -14,15 +14,15 @@ public class DescribeRatePlanInstanceStatusResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Instance status, with possible values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li>running: Running</li>
-     * <li>renewing: Renewing</li>
-     * <li>upgrading: Upgrading</li>
-     * <li>releasePrepaidService: Prepaid service released due to expiration</li>
-     * <li>creating: Creating</li>
-     * <li>downgrading: Downgrading</li>
-     * <li>ceasePrepaidService: Prepaid service ceased upon expiration</li>
+     * <li>running: The instance is running.</li>
+     * <li>renewing: The instance is being renewed.</li>
+     * <li>upgrading: The configuration of the instance is being upgraded.</li>
+     * <li>releasePrepaidService: The instance is released due to expiration.</li>
+     * <li>creating: The instance is being created.</li>
+     * <li>downgrading: The configuration of the instance is being downgraded.</li>
+     * <li>ceasePrepaidService: The instance has expired.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeRatePlanInstanceStatusResponseBody extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>60423A7F-A83D-1E24-B80E-86DD25790759</p>

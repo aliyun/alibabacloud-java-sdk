@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetSiteNameExclusiveResponseBody extends TeaModel {
     /**
-     * <p>Feature switch. Possible values:</p>
+     * <p>Indicates whether site hold is enabled. Valid values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on</li>
+     * <li>off</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetSiteNameExclusiveResponseBody extends TeaModel {
     public String enable;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35C66C7B-671H-4297-9187-2C4477247A78</p>

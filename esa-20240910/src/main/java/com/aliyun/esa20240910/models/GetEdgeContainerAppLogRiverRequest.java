@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppLogRiverRequest extends TeaModel {
     /**
+     * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>app-880688675****88</p>
      */

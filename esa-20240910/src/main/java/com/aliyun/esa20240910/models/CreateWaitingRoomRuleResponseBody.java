@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWaitingRoomRuleResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -13,6 +13,12 @@ public class CreateWaitingRoomRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Waiting room bypass rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>420072638347264</p>
+     */
     @NameInMap("WaitingRoomRuleId")
     public Long waitingRoomRuleId;
 

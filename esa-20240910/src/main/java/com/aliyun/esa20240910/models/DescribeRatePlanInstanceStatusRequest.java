@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRatePlanInstanceStatusRequest extends TeaModel {
     /**
-     * <p>Instance ID, obtained from the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> API.</p>
+     * <p>The instance ID, which can be obtained by calling the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>xcdn-91fknmb80f0g***</p>

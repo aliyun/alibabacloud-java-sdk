@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListManagedRulesGroupsResponseBody extends TeaModel {
     /**
-     * <p>The information about the managed rule groups.</p>
+     * <p>List of managed rule group information.</p>
      */
     @NameInMap("ManagedRulesGroups")
     public java.util.List<ListManagedRulesGroupsResponseBodyManagedRulesGroups> managedRulesGroups;
 
     /**
-     * <p>The page number returned.</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -38,7 +38,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of managed rule groups returned.</p>
+     * <p>Total number of records after filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -93,7 +93,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
 
     public static class ListManagedRulesGroupsResponseBodyManagedRulesGroups extends TeaModel {
         /**
-         * <p>The name of the managed rule group.</p>
+         * <p>Name of the managed rule group.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -102,7 +102,7 @@ public class ListManagedRulesGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of rules in the managed rule group.</p>
+         * <p>Number of rules within the managed rule group.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>

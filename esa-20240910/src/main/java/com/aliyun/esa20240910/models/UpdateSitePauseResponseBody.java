@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSitePauseResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6abd807e-ed2a-44de-ac54-ac38a62472e6</p>

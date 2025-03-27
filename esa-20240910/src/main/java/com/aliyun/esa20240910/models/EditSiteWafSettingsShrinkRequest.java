@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class EditSiteWafSettingsShrinkRequest extends TeaModel {
     /**
-     * <p>The WAF configuration of the website in the JSON format.</p>
+     * <p>WAF configuration information for the site, passed in JSON format.</p>
      */
     @NameInMap("Settings")
     public String settingsShrink;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class EditSiteWafSettingsShrinkRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version of the website.</p>
+     * <p>Site version.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

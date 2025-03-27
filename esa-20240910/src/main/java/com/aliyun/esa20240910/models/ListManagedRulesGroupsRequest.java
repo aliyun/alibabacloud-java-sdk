@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListManagedRulesGroupsRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>Page number, used to specify the page number for pagination queries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListManagedRulesGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Page size, used to specify the number of items per page for pagination queries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

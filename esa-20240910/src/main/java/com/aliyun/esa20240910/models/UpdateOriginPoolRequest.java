@@ -85,7 +85,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
          * <p>The AccessKey required for private authentication.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI5t7fKVT****atQpfNes</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
@@ -118,7 +118,7 @@ public class UpdateOriginPoolRequest extends TeaModel {
          * <p>The SecretKey required for private authentication.</p>
          * 
          * <strong>example:</strong>
-         * <p>VIxuvJSA2S0****YoZ3nkp208dy5w7</p>
+         * <p>yourAccessKeySecret</p>
          */
         @NameInMap("SecretKey")
         public String secretKey;

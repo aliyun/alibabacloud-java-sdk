@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetEdgeContainerAppLogRiverResponseBody extends TeaModel {
     /**
+     * <p>The log path of the container. It must be an absolute path that starts with a forward slash (/). You can use asterisks (\*) and question marks (?) as wildcards.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/hello.log</p>
      */
@@ -12,12 +14,17 @@ public class GetEdgeContainerAppLogRiverResponseBody extends TeaModel {
     public String path;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the standard output of the container is collected.</p>
+     */
     @NameInMap("Stdout")
     public Boolean stdout;
 

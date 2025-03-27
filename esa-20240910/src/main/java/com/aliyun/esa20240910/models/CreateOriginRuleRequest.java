@@ -40,6 +40,16 @@ public class CreateOriginRuleRequest extends TeaModel {
     @NameInMap("OriginHttpsPort")
     public String originHttpsPort;
 
+    /**
+     * <p>mTLS switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("OriginMtls")
     public String originMtls;
 
@@ -58,7 +68,7 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String originScheme;
 
     /**
-     * <p>The SNI carried in the origin request.</p>
+     * <p>SNI carried in the origin request.</p>
      * 
      * <strong>example:</strong>
      * <p>origin.example.com</p>
@@ -66,11 +76,21 @@ public class CreateOriginRuleRequest extends TeaModel {
     @NameInMap("OriginSni")
     public String originSni;
 
+    /**
+     * <p>Origin certificate verification switch. Possible values:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("OriginVerify")
     public String originVerify;
 
     /**
-     * <p>Use range chunking for downloading files from the origin. Possible values:</p>
+     * <p>Use range chunking for origin downloads. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -83,8 +103,15 @@ public class CreateOriginRuleRequest extends TeaModel {
     @NameInMap("Range")
     public String range;
 
+    @NameInMap("RangeChunkSize")
+    public String rangeChunkSize;
+
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configurations. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -93,7 +120,7 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding global configurations. Possible values:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -106,13 +133,16 @@ public class CreateOriginRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding global configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
@@ -210,6 +240,14 @@ public class CreateOriginRuleRequest extends TeaModel {
         return this.range;
     }
 
+    public CreateOriginRuleRequest setRangeChunkSize(String rangeChunkSize) {
+        this.rangeChunkSize = rangeChunkSize;
+        return this;
+    }
+    public String getRangeChunkSize() {
+        return this.rangeChunkSize;
+    }
+
     public CreateOriginRuleRequest setRule(String rule) {
         this.rule = rule;
         return this;
@@ -232,6 +270,14 @@ public class CreateOriginRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateOriginRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public CreateOriginRuleRequest setSiteId(Long siteId) {

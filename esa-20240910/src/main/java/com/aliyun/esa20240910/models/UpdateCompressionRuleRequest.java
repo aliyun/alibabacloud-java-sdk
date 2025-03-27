@@ -7,8 +7,8 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     /**
      * <p>Brotli compression. Value range:</p>
      * <ul>
-     * <li>on: enabled.</li>
-     * <li>off: disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,8 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     /**
      * <p>Gzip compression. Value range:</p>
      * <ul>
-     * <li>on: enabled.</li>
-     * <li>off: disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,11 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String gzip;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>To match all incoming requests: Set the value to true</li>
+     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -50,10 +54,10 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule enable status, supports:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
-     * <li><strong>on</strong>: indicates enabled.</li>
-     * <li><strong>off</strong>: indicates disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,13 +67,16 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
@@ -81,6 +88,16 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     @NameInMap("SiteId")
     public Long siteId;
 
+    /**
+     * <p>Zstd compression. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Zstd")
     public String zstd;
 
@@ -135,6 +152,14 @@ public class UpdateCompressionRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateCompressionRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateCompressionRuleRequest setSiteId(Long siteId) {

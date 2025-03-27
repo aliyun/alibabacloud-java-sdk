@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
     /**
+     * <p>The log path of the container.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/hello.log</p>
      */
@@ -12,6 +14,8 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
     public String path;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>42DE97FA-45D2-5615-9A31-55D9EC0D7563</p>
      */
@@ -19,6 +23,8 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the standard output of the container is collected.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

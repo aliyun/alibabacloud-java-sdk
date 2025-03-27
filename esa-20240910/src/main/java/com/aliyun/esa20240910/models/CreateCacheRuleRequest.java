@@ -28,7 +28,7 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String browserCacheMode;
 
     /**
-     * <p>Browser cache expiration time in seconds.</p>
+     * <p>Browser cache expiration time, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -50,10 +50,10 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String bypassCache;
 
     /**
-     * <p>Cache deception protection. Used to defend against web cache deception attacks, only the cache content that passes the validation will be cached. Value range:</p>
+     * <p>Cache deception defense. Used to defend against web cache deception attacks; only the verified cache content will be cached. Value range:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String edgeCacheMode;
 
     /**
-     * <p>Edge cache expiration time in seconds.</p>
+     * <p>Edge cache expiration time, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -118,7 +118,7 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String edgeCacheTtl;
 
     /**
-     * <p>Status code cache expiration time in seconds.</p>
+     * <p>Status code cache expiration time, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -169,7 +169,11 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String queryStringMode;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -178,7 +182,7 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -191,7 +195,7 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -199,11 +203,14 @@ public class CreateCacheRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("Sequence")
+    public Integer sequence;
+
     /**
-     * <p>Serve stale cache. When enabled, the node can still respond to user requests with expired cached files when the origin server is unavailable. Value range:</p>
+     * <p>Serve stale cache. When enabled, the node can still use the expired cached files to respond to user requests even if the origin server is unavailable. Value range:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -245,7 +252,7 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String sortQueryStringForCache;
 
     /**
-     * <p>When generating the cache key, add the client device type. Possible values:</p>
+     * <p>When generating the cache key, include the client device type. Possible values:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -258,7 +265,7 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String userDeviceType;
 
     /**
-     * <p>When generating the cache key, add the client\&quot;s geographic location. Possible values:</p>
+     * <p>Include the client\&quot;s geographical location when generating the cache key. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -271,7 +278,11 @@ public class CreateCacheRuleRequest extends TeaModel {
     public String userGeo;
 
     /**
-     * <p>When generating cache keys, include the client\&quot;s language type. The value can be: - on: enabled. - off: disabled.</p>
+     * <p>Include the client\&quot;s language type when generating the cache key. Value range:</p>
+     * <ul>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -426,6 +437,14 @@ public class CreateCacheRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateCacheRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public CreateCacheRuleRequest setServeStale(String serveStale) {

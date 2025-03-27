@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNetworkOptimizationRequest extends TeaModel {
     /**
-     * <p>ConfigId of the configuration, which can be obtained by calling the ListNetworkOptimizations.</p>
+     * <p>Configuration ConfigId, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869051.html">ListNetworkOptimizations</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

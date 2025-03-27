@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCompressionRulesResponseBody extends TeaModel {
     /**
-     * <p>The configured compression rules.</p>
+     * <p>List of compression rule configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListCompressionRulesResponseBodyConfigs> configs;
 
     /**
-     * <p>The page number.</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>Page size.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -38,7 +38,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>Total number of items.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -47,7 +47,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>Total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -110,10 +110,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
 
     public static class ListCompressionRulesResponseBodyConfigs extends TeaModel {
         /**
-         * <p>Indicates whether Brotli compression is enabled. Valid values:</p>
+         * <p>Brotli compression. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String brotli;
 
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -132,10 +132,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>Configuration type. Possible values:</p>
          * <ul>
-         * <li>global: global configuration.</li>
-         * <li>rule: rule configuration.</li>
+         * <li>global: Global configuration.</li>
+         * <li>rule: Rule-based configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,10 +145,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Indicates whether Gzip compression is enabled. Valid values:</p>
+         * <p>Gzip compression. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,11 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String gzip;
 
         /**
-         * <p>The rule content.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -167,10 +171,10 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -180,7 +184,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -189,7 +193,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,7 +202,7 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>The version of the website configurations.</p>
+         * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -206,6 +210,12 @@ public class ListCompressionRulesResponseBody extends TeaModel {
         @NameInMap("SiteVersion")
         public Integer siteVersion;
 
+        /**
+         * <p>Zstd compression. Value range: - on: Enable. - off: Disable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Zstd")
         public String zstd;
 

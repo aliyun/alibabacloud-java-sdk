@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetRoutineResponseBody extends TeaModel {
     /**
-     * <p>The code versions.</p>
-     */
-    @NameInMap("CodeVersions")
-    public java.util.List<GetRoutineResponseBodyCodeVersions> codeVersions;
-
-    /**
      * <p>The time when the routine was created.</p>
      * 
      * <strong>example:</strong>
@@ -44,18 +38,6 @@ public class GetRoutineResponseBody extends TeaModel {
     public java.util.List<GetRoutineResponseBodyEnvs> envs;
 
     /**
-     * <p>The records associated with the routine.</p>
-     */
-    @NameInMap("RelatedRecords")
-    public java.util.List<GetRoutineResponseBodyRelatedRecords> relatedRecords;
-
-    /**
-     * <p>The routes associated with the routine.</p>
-     */
-    @NameInMap("RelatedRoutes")
-    public java.util.List<GetRoutineResponseBodyRelatedRoutes> relatedRoutes;
-
-    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -67,14 +49,6 @@ public class GetRoutineResponseBody extends TeaModel {
     public static GetRoutineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRoutineResponseBody self = new GetRoutineResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetRoutineResponseBody setCodeVersions(java.util.List<GetRoutineResponseBodyCodeVersions> codeVersions) {
-        this.codeVersions = codeVersions;
-        return this;
-    }
-    public java.util.List<GetRoutineResponseBodyCodeVersions> getCodeVersions() {
-        return this.codeVersions;
     }
 
     public GetRoutineResponseBody setCreateTime(String createTime) {
@@ -109,87 +83,12 @@ public class GetRoutineResponseBody extends TeaModel {
         return this.envs;
     }
 
-    public GetRoutineResponseBody setRelatedRecords(java.util.List<GetRoutineResponseBodyRelatedRecords> relatedRecords) {
-        this.relatedRecords = relatedRecords;
-        return this;
-    }
-    public java.util.List<GetRoutineResponseBodyRelatedRecords> getRelatedRecords() {
-        return this.relatedRecords;
-    }
-
-    public GetRoutineResponseBody setRelatedRoutes(java.util.List<GetRoutineResponseBodyRelatedRoutes> relatedRoutes) {
-        this.relatedRoutes = relatedRoutes;
-        return this;
-    }
-    public java.util.List<GetRoutineResponseBodyRelatedRoutes> getRelatedRoutes() {
-        return this.relatedRoutes;
-    }
-
     public GetRoutineResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public static class GetRoutineResponseBodyCodeVersions extends TeaModel {
-        /**
-         * <p>The description of the code version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test ver code desc</p>
-         */
-        @NameInMap("CodeDescription")
-        public String codeDescription;
-
-        /**
-         * <p>The code version.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1710120201067203242</p>
-         */
-        @NameInMap("CodeVersion")
-        public String codeVersion;
-
-        /**
-         * <p>The time when the code version was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-03-11T01:23:21Z</p>
-         */
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        public static GetRoutineResponseBodyCodeVersions build(java.util.Map<String, ?> map) throws Exception {
-            GetRoutineResponseBodyCodeVersions self = new GetRoutineResponseBodyCodeVersions();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRoutineResponseBodyCodeVersions setCodeDescription(String codeDescription) {
-            this.codeDescription = codeDescription;
-            return this;
-        }
-        public String getCodeDescription() {
-            return this.codeDescription;
-        }
-
-        public GetRoutineResponseBodyCodeVersions setCodeVersion(String codeVersion) {
-            this.codeVersion = codeVersion;
-            return this;
-        }
-        public String getCodeVersion() {
-            return this.codeVersion;
-        }
-
-        public GetRoutineResponseBodyCodeVersions setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
     }
 
     public static class GetRoutineResponseBodyEnvs extends TeaModel {
@@ -278,169 +177,6 @@ public class GetRoutineResponseBody extends TeaModel {
         }
         public String getSpecName() {
             return this.specName;
-        }
-
-    }
-
-    public static class GetRoutineResponseBodyRelatedRecords extends TeaModel {
-        /**
-         * <p>The record ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>509348423011904</p>
-         */
-        @NameInMap("RecordId")
-        public Long recordId;
-
-        /**
-         * <p>The record name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test-record-1.example.com</p>
-         */
-        @NameInMap("RecordName")
-        public String recordName;
-
-        /**
-         * <p>The website ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>54362329990032</p>
-         */
-        @NameInMap("SiteId")
-        public Long siteId;
-
-        /**
-         * <p>The website name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
-        @NameInMap("SiteName")
-        public String siteName;
-
-        public static GetRoutineResponseBodyRelatedRecords build(java.util.Map<String, ?> map) throws Exception {
-            GetRoutineResponseBodyRelatedRecords self = new GetRoutineResponseBodyRelatedRecords();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRoutineResponseBodyRelatedRecords setRecordId(Long recordId) {
-            this.recordId = recordId;
-            return this;
-        }
-        public Long getRecordId() {
-            return this.recordId;
-        }
-
-        public GetRoutineResponseBodyRelatedRecords setRecordName(String recordName) {
-            this.recordName = recordName;
-            return this;
-        }
-        public String getRecordName() {
-            return this.recordName;
-        }
-
-        public GetRoutineResponseBodyRelatedRecords setSiteId(Long siteId) {
-            this.siteId = siteId;
-            return this;
-        }
-        public Long getSiteId() {
-            return this.siteId;
-        }
-
-        public GetRoutineResponseBodyRelatedRecords setSiteName(String siteName) {
-            this.siteName = siteName;
-            return this;
-        }
-        public String getSiteName() {
-            return this.siteName;
-        }
-
-    }
-
-    public static class GetRoutineResponseBodyRelatedRoutes extends TeaModel {
-        @NameInMap("ByPass")
-        public String byPass;
-
-        /**
-         * <p>The route.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><em>.example.com/path1</em></p>
-         */
-        @NameInMap("Route")
-        public String route;
-
-        /**
-         * <p>The route ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>d501cb8a2c951f32922d260040780c06</p>
-         */
-        @NameInMap("RouteId")
-        public String routeId;
-
-        /**
-         * <p>The website ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>54362329990032</p>
-         */
-        @NameInMap("SiteId")
-        public Long siteId;
-
-        /**
-         * <p>The website name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example.com</p>
-         */
-        @NameInMap("SiteName")
-        public String siteName;
-
-        public static GetRoutineResponseBodyRelatedRoutes build(java.util.Map<String, ?> map) throws Exception {
-            GetRoutineResponseBodyRelatedRoutes self = new GetRoutineResponseBodyRelatedRoutes();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRoutineResponseBodyRelatedRoutes setByPass(String byPass) {
-            this.byPass = byPass;
-            return this;
-        }
-        public String getByPass() {
-            return this.byPass;
-        }
-
-        public GetRoutineResponseBodyRelatedRoutes setRoute(String route) {
-            this.route = route;
-            return this;
-        }
-        public String getRoute() {
-            return this.route;
-        }
-
-        public GetRoutineResponseBodyRelatedRoutes setRouteId(String routeId) {
-            this.routeId = routeId;
-            return this;
-        }
-        public String getRouteId() {
-            return this.routeId;
-        }
-
-        public GetRoutineResponseBodyRelatedRoutes setSiteId(Long siteId) {
-            this.siteId = siteId;
-            return this;
-        }
-        public Long getSiteId() {
-            return this.siteId;
-        }
-
-        public GetRoutineResponseBodyRelatedRoutes setSiteName(String siteName) {
-            this.siteName = siteName;
-            return this;
-        }
-        public String getSiteName() {
-            return this.siteName;
         }
 
     }

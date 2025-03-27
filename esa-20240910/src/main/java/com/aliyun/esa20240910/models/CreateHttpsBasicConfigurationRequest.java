@@ -14,7 +14,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ciphersuite;
 
     /**
-     * <p>Cipher suite group. Default is all cipher suites. Possible values:</p>
+     * <p>Cipher suite group. Default uses all cipher suites. Value range:</p>
      * <ul>
      * <li>all: All cipher suites.</li>
      * <li>strict: Strong cipher suites.</li>
@@ -28,7 +28,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ciphersuiteGroup;
 
     /**
-     * <p>Whether to enable HTTP2. Default is enabled. Possible values:</p>
+     * <p>Whether to enable HTTP2. Default is enabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -41,7 +41,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String http2;
 
     /**
-     * <p>Whether to enable HTTP3. Default is enabled. Possible values:</p>
+     * <p>Whether to enable HTTP3. Default is enabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -54,7 +54,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String http3;
 
     /**
-     * <p>Whether to enable HTTPS. Default is enabled. Possible values:</p>
+     * <p>Whether to enable HTTPS. Default is enabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -67,7 +67,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String https;
 
     /**
-     * <p>Whether to enable OCSP. Default is disabled. Possible values:</p>
+     * <p>Whether to enable OCSP. Default is disabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -80,7 +80,11 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ocspStapling;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -89,7 +93,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -102,13 +106,16 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
@@ -121,7 +128,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Whether to enable TLS1.0. Default is disabled. Possible values:</p>
+     * <p>Whether to enable TLS1.0. Default is disabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -134,7 +141,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String tls10;
 
     /**
-     * <p>Whether to enable TLS1.1. Default is enabled. Possible values:</p>
+     * <p>Whether to enable TLS1.1. Default is enabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -147,7 +154,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String tls11;
 
     /**
-     * <p>Whether to enable TLS1.2. Default is enabled. Possible values:</p>
+     * <p>Whether to enable TLS1.2. Default is enabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -160,7 +167,7 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     public String tls12;
 
     /**
-     * <p>Whether to enable TLS1.3. Default is enabled. Possible values:</p>
+     * <p>Whether to enable TLS1.3. Default is enabled. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -247,6 +254,14 @@ public class CreateHttpsBasicConfigurationRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateHttpsBasicConfigurationRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public CreateHttpsBasicConfigurationRequest setSiteId(Long siteId) {

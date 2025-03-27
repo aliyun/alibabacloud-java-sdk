@@ -94,6 +94,9 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
+        @NameInMap("ExecutionCount")
+        public Integer executionCount;
+
         /**
          * <p>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</p>
          * 
@@ -219,6 +222,14 @@ public class ListScheduledPreloadJobsResponseBody extends TeaModel {
         }
         public String getErrorInfo() {
             return this.errorInfo;
+        }
+
+        public ListScheduledPreloadJobsResponseBodyJobs setExecutionCount(Integer executionCount) {
+            this.executionCount = executionCount;
+            return this;
+        }
+        public Integer getExecutionCount() {
+            return this.executionCount;
         }
 
         public ListScheduledPreloadJobsResponseBodyJobs setFailedFileOss(String failedFileOss) {

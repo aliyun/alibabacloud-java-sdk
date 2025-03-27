@@ -18,7 +18,11 @@ public class CreateImageTransformRequest extends TeaModel {
     public String enable;
 
     /**
-     * <p>Rule content, specifically the strategy or condition expression being implemented.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>To match all incoming requests: Set the value to true</li>
+     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
@@ -27,10 +31,10 @@ public class CreateImageTransformRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,13 +44,16 @@ public class CreateImageTransformRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
@@ -102,6 +109,14 @@ public class CreateImageTransformRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateImageTransformRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public CreateImageTransformRequest setSiteId(Long siteId) {

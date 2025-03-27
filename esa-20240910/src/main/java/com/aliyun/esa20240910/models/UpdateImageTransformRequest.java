@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateImageTransformRequest extends TeaModel {
     /**
-     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> API.</p>
+     * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,8 @@ public class UpdateImageTransformRequest extends TeaModel {
     /**
      * <p>Indicates whether to enable image transformation. Possible values:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,11 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String enable;
 
     /**
-     * <p>Rule content, which specifies the strategy or condition expression to be implemented.</p>
+     * <p>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>To match all incoming requests: Set the value to true.</li>
+     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
@@ -37,10 +41,10 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
      * <ul>
-     * <li><strong>on</strong>: Enabled.</li>
-     * <li><strong>off</strong>: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +54,7 @@ public class UpdateImageTransformRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -58,8 +62,11 @@ public class UpdateImageTransformRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("Sequence")
+    public Integer sequence;
+
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,6 +118,14 @@ public class UpdateImageTransformRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateImageTransformRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateImageTransformRequest setSiteId(Long siteId) {

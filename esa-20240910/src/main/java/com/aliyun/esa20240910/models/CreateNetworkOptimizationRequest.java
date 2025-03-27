@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetworkOptimizationRequest extends TeaModel {
     /**
-     * <p>Indicates whether to enable GRPC, disabled by default. Possible values:</p>
+     * <p>Whether to enable GRPC, disabled by default. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -18,7 +18,7 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public String grpc;
 
     /**
-     * <p>Indicates whether to enable HTTP2 origin, disabled by default. Possible values:</p>
+     * <p>Whether to enable HTTP2 origin, disabled by default. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -31,7 +31,11 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public String http2Origin;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -40,10 +44,10 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
      * <ul>
-     * <li>on: Enable</li>
-     * <li>off: Disable</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,13 +57,16 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
@@ -72,7 +79,7 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Version number of the site configuration. For sites with version management enabled, this parameter specifies the version to which the configuration applies, defaulting to version 0.</p>
+     * <p>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the configuration, defaulting to version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -81,7 +88,7 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>Indicates whether to enable smart routing service, disabled by default. Possible values:</p>
+     * <p>Whether to enable smart routing service, disabled by default. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -94,7 +101,7 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public String smartRouting;
 
     /**
-     * <p>Maximum file size for upload, in MB. Range: 100～500.</p>
+     * <p>Maximum upload file size in MB, range: 100～500.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -103,7 +110,7 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     public String uploadMaxFilesize;
 
     /**
-     * <p>Indicates whether to enable Websocket, enabled by default. Possible values:</p>
+     * <p>Whether to enable Websocket, enabled by default. Possible values:</p>
      * <ul>
      * <li>on: Enable</li>
      * <li>off: Disable</li>
@@ -158,6 +165,14 @@ public class CreateNetworkOptimizationRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateNetworkOptimizationRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public CreateNetworkOptimizationRequest setSiteId(Long siteId) {

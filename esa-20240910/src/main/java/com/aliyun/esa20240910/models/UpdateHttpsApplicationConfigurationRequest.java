@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     /**
-     * <p>Feature switch, default is disabled. Values:</p>
+     * <p>Feature switch, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvc;
 
     /**
-     * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Values:</p>
+     * <p>Whether the Alt-Svc header includes the clear parameter, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcClear;
 
     /**
-     * <p>Alt-Svc validity period in seconds, default is 86400 seconds.</p>
+     * <p>Alt-Svc validity period, in seconds, default is 86400 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>86400</p>
@@ -40,10 +40,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String altSvcMa;
 
     /**
-     * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Values:</p>
+     * <p>Whether the Alt-Svc header includes the persist parameter, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>Whether to enable HSTS, default is disabled. Values:</p>
+     * <p>Whether to enable HSTS, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,10 +76,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hsts;
 
     /**
-     * <p>Whether to include subdomains in HSTS, default is disabled. Values:</p>
+     * <p>Whether to include subdomains in HSTS, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsIncludeSubdomains;
 
     /**
-     * <p>HSTS expiration time in seconds.</p>
+     * <p>HSTS expiration time, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -98,10 +98,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsMaxAge;
 
     /**
-     * <p>Whether to enable HSTS preload, default is disabled. Values:</p>
+     * <p>Whether to enable HSTS preload, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,10 +111,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String hstsPreload;
 
     /**
-     * <p>Whether to enable forced HTTPS, default is disabled. Values:</p>
+     * <p>Whether to enable forced HTTPS, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String httpsForce;
 
     /**
-     * <p>Forced HTTPS redirect status code. Values:</p>
+     * <p>Forced HTTPS redirect status code, value range:</p>
      * <ul>
      * <li>301</li>
      * <li>302</li>
@@ -139,7 +139,11 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String httpsForceCode;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -148,10 +152,10 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: Enabled.</li>
+     * <li>off: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,13 +165,16 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
@@ -294,6 +301,14 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateHttpsApplicationConfigurationRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateHttpsApplicationConfigurationRequest setSiteId(Long siteId) {

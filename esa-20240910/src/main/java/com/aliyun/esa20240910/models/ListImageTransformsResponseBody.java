@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListImageTransformsResponseBody extends TeaModel {
     /**
-     * <p>The configurations.</p>
+     * <p>Configuration list.</p>
      */
     @NameInMap("Configs")
     public java.util.List<ListImageTransformsResponseBodyConfigs> configs;
 
     /**
-     * <p>The page number returned.</p>
+     * <p>Current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>500</strong>.</p>
+     * <p>Page size. Range: <strong>1~500</strong>, default is <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
@@ -38,7 +38,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records returned.</p>
+     * <p>Total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -47,7 +47,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>Total number of pages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -110,7 +110,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
 
     public static class ListImageTransformsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The configuration ID,</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>395386449776640</p>
@@ -119,10 +119,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>Configuration type. Possible values:</p>
          * <ul>
-         * <li>global: global configuration.</li>
-         * <li>rule: rule configuration.</li>
+         * <li>global: Global configuration;</li>
+         * <li>rule: Rule configuration;</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,10 +132,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String configType;
 
         /**
-         * <p>Indicates whether cache reserve is enabled. Indicates whether the task name is valid. Valid values:</p>
+         * <p>Switch. Possible values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,11 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String enable;
 
         /**
-         * <p>The rule content, which is a policy or conditional expression.</p>
+         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <ul>
+         * <li>Match all incoming requests: Set the value to true</li>
+         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
@@ -154,10 +158,10 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String rule;
 
         /**
-         * <p>Indicates whether the rule is enabled. Valid values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +171,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -176,7 +180,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +189,7 @@ public class ListImageTransformsResponseBody extends TeaModel {
         public Integer sequence;
 
         /**
-         * <p>The version number of the website.</p>
+         * <p>Site configuration version number. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -27,6 +27,7 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
 
     /**
      * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>

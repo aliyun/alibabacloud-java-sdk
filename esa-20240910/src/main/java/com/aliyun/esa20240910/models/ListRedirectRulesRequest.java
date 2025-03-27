@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRedirectRulesRequest extends TeaModel {
     /**
-     * <p>The configuration ID,</p>
+     * <p>Configuration ID.</p>
      * 
      * <strong>example:</strong>
      * <p>35281609698****</p>
@@ -14,10 +14,10 @@ public class ListRedirectRulesRequest extends TeaModel {
     public Long configId;
 
     /**
-     * <p>The type of the configuration. Valid values:</p>
+     * <p>Configuration type. Possible values:</p>
      * <ul>
-     * <li>global: global configuration.</li>
-     * <li>rule: rule configuration.</li>
+     * <li>global: Global configuration.</li>
+     * <li>rule: Rule configuration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListRedirectRulesRequest extends TeaModel {
     public String configType;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>Page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class ListRedirectRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1 to 500</strong>.</p>
+     * <p>Page size, default is <strong>500</strong>, and the value range is <strong>1~500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,7 +45,7 @@ public class ListRedirectRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule name.</p>
+     * <p>Rule name, which can be used to find the rule with the specified name.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -54,7 +54,7 @@ public class ListRedirectRulesRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class ListRedirectRulesRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>The version of the website configurations.</p>
+     * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, with the default being version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

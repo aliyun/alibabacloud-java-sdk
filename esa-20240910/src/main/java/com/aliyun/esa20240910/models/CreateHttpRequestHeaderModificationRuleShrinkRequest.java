@@ -12,7 +12,11 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String requestHeaderModificationShrink;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>To match all incoming requests: Set the value to true</li>
+     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -21,7 +25,7 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -34,13 +38,16 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
@@ -53,7 +60,7 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     public Long siteId;
 
     /**
-     * <p>Version number of the site configuration. For sites with version management enabled, this parameter specifies the version to apply the configuration to, defaulting to version 0.</p>
+     * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -96,6 +103,14 @@ public class CreateHttpRequestHeaderModificationRuleShrinkRequest extends TeaMod
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateHttpRequestHeaderModificationRuleShrinkRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public CreateHttpRequestHeaderModificationRuleShrinkRequest setSiteId(Long siteId) {

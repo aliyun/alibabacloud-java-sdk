@@ -50,10 +50,10 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String bypassCache;
 
     /**
-     * <p>Cache deception defense. Used to defend against web cache deception attacks, only the cache content that passes the validation will be cached. Value range:</p>
+     * <p>Cache deception defense. Used to defend against web cache deception attacks; only the cache content that passes the validation will be cached. Value range:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String cacheDeceptionArmor;
 
     /**
-     * <p>Cache reservation eligibility. Used to control whether user requests bypass the cache reservation node during origin pull. Value range:</p>
+     * <p>Cache retention eligibility. Used to control whether user requests bypass the cache retention node when returning to the origin. Value range:</p>
      * <ul>
-     * <li>bypass_cache_reserve: Requests bypass cache reservation.</li>
-     * <li>eligible_for_cache_reserve: Eligible for cache reservation.</li>
+     * <li>bypass_cache_reserve: Requests bypass cache retention.</li>
+     * <li>eligible_for_cache_reserve: Eligible for cache retention.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     /**
      * <p>Edge cache mode. Value range:</p>
      * <ul>
-     * <li>follow_origin: Follow origin cache policy (if exists), otherwise use default cache policy.</li>
+     * <li>follow_origin: Follow origin cache policy (if exists), otherwise use the default cache policy.</li>
      * <li>no_cache: Do not cache.</li>
      * <li>override_origin: Override origin cache policy.</li>
      * <li>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</li>
@@ -137,7 +137,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String edgeStatusCodeCacheTtl;
 
     /**
-     * <p>Include specified cookie names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
+     * <p>Include the specified cookie names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>cookiename</p>
@@ -146,7 +146,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String includeCookie;
 
     /**
-     * <p>Include specified header names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
+     * <p>Include the specified header names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>headername</p>
@@ -155,7 +155,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String includeHeader;
 
     /**
-     * <p>Query strings to be reserved or excluded, supporting multiple values separated by spaces.</p>
+     * <p>Query strings to be retained or excluded, supporting multiple values separated by spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -164,7 +164,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String queryString;
 
     /**
-     * <p>Query string handling mode when generating cache keys. Values:</p>
+     * <p>The processing mode of query strings when generating cache keys. Values:</p>
      * <ul>
      * <li>ignore_all: Ignore all.</li>
      * <li>exclude_query_string: Exclude specified query strings.</li>
@@ -179,7 +179,11 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String queryStringMode;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -188,7 +192,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Value range:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -201,7 +205,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -209,11 +213,14 @@ public class UpdateCacheRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
+    @NameInMap("Sequence")
+    public Integer sequence;
+
     /**
-     * <p>Serve stale cache. When enabled, the node can still respond to user requests with expired cached files when the origin server is unavailable. Value range:</p>
+     * <p>Serve stale cache. When enabled, the node can still use the expired cached files to respond to user requests even if the origin server is unavailable. Value range:</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -246,10 +253,10 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String sortQueryStringForCache;
 
     /**
-     * <p>Include client device type when generating cache keys. Value range:</p>
+     * <p>When generating cache keys, include the client device type. Value range: </p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: enabled. </li>
+     * <li>off: disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -259,7 +266,7 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String userDeviceType;
 
     /**
-     * <p>Include client geographic location when generating cache keys. Value range:</p>
+     * <p>Include the client\&quot;s geographical location when generating the cache key. Value range:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -272,10 +279,10 @@ public class UpdateCacheRuleRequest extends TeaModel {
     public String userGeo;
 
     /**
-     * <p>When generating cache keys, include the client\&quot;s language type. Value range: </p>
+     * <p>Include the client\&quot;s language type when generating the cache key. Value range:</p>
      * <ul>
-     * <li>on: enabled. </li>
-     * <li>off: disabled.</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -439,6 +446,14 @@ public class UpdateCacheRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public UpdateCacheRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public UpdateCacheRuleRequest setServeStale(String serveStale) {

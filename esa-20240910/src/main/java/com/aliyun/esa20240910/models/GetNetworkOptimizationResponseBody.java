@@ -29,8 +29,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     /**
      * <p>Whether to enable GRPC, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enabled</li>
-     * <li>off: Disabled</li>
+     * <li>on: Enable</li>
+     * <li>off: Disable</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     /**
      * <p>Whether to enable HTTP2 origin, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enabled</li>
-     * <li>off: Disabled</li>
+     * <li>on: Enable</li>
+     * <li>off: Disable</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,11 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: Set the value to true</li>
+     * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
@@ -71,10 +75,10 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
-     * <li>on: Enabled</li>
-     * <li>off: Disabled</li>
+     * <li>on: Enable.</li>
+     * <li>off: Disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +88,7 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
@@ -93,7 +97,7 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>Rule execution sequence.</p>
+     * <p>Rule execution order. The smaller the value, the higher the priority.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -102,7 +106,7 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public Integer sequence;
 
     /**
-     * <p>Site version number.</p>
+     * <p>Site configuration version number. For sites with version management enabled, this parameter can specify the effective site version, defaulting to version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,8 +117,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     /**
      * <p>Whether to enable smart routing service, default is disabled. Value range:</p>
      * <ul>
-     * <li>on: Enabled</li>
-     * <li>off: Disabled</li>
+     * <li>on: Enable</li>
+     * <li>off: Disable</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +128,7 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     public String smartRouting;
 
     /**
-     * <p>Maximum upload file size, in MB, value range: 100～500.</p>
+     * <p>Maximum upload file size in MB, with a range from 100 to 500.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -135,8 +139,8 @@ public class GetNetworkOptimizationResponseBody extends TeaModel {
     /**
      * <p>Whether to enable Websocket, default is enabled. Value range:</p>
      * <ul>
-     * <li>on: Enabled</li>
-     * <li>off: Disabled</li>
+     * <li>on: Enable</li>
+     * <li>off: Disable</li>
      * </ul>
      * 
      * <strong>example:</strong>

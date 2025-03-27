@@ -12,7 +12,11 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends TeaModel {
     public java.util.List<CreateHttpResponseHeaderModificationRuleRequestResponseHeaderModification> responseHeaderModification;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>To match all incoming requests: Set the value to true</li>
+     * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -21,7 +25,7 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Possible values:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
      * <ul>
      * <li>on: Enable.</li>
      * <li>off: Disable.</li>
@@ -34,13 +38,16 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID. You can obtain this by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
@@ -98,6 +105,14 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends TeaModel {
         return this.ruleName;
     }
 
+    public CreateHttpResponseHeaderModificationRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
+    }
+
     public CreateHttpResponseHeaderModificationRuleRequest setSiteId(Long siteId) {
         this.siteId = siteId;
         return this;
@@ -126,10 +141,10 @@ public class CreateHttpResponseHeaderModificationRuleRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Operation method. Possible values:</p>
+         * <p>Operation type. Possible values:</p>
          * <ul>
          * <li>add: Add.</li>
-         * <li>del: Delete.</li>
+         * <li>del: Delete</li>
          * <li>modify: Modify.</li>
          * </ul>
          * <p>This parameter is required.</p>

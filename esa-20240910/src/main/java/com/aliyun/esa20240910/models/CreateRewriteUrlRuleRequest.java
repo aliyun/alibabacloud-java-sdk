@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRewriteUrlRuleRequest extends TeaModel {
     /**
-     * <p>Query string after rewriting.</p>
+     * <p>The query string after rewriting.</p>
      * 
      * <strong>example:</strong>
      * <p>example=123</p>
@@ -16,7 +16,8 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     /**
      * <p>Query string rewrite type. Value range:</p>
      * <ul>
-     * <li>static: Static mode.</li>
+     * <li>static: static mode.</li>
+     * <li>dynamic: dynamic mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +32,8 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     /**
      * <p>URI rewrite type. Value range:</p>
      * <ul>
-     * <li>static: Static mode.</li>
+     * <li>static: static mode.</li>
+     * <li>dynamic: dynamic mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,11 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rewriteUriType;
 
     /**
-     * <p>Rule content.</p>
+     * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+     * <ul>
+     * <li>Match all incoming requests: set the value to true</li>
+     * <li>Match specific requests: set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>(http.host eq &quot;video.example.com&quot;)</p>
@@ -53,10 +59,10 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String rule;
 
     /**
-     * <p>Rule switch. Value range:</p>
+     * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
      * <ul>
-     * <li>on: Enable.</li>
-     * <li>off: Disable.</li>
+     * <li>on: enable.</li>
+     * <li>off: disable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,13 +72,16 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public String ruleEnable;
 
     /**
-     * <p>Rule name.</p>
+     * <p>Rule name. This parameter is not required when adding a global configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>rule_example</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
+
+    @NameInMap("Sequence")
+    public Integer sequence;
 
     /**
      * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
@@ -85,7 +94,7 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public Long siteId;
 
     /**
-     * <p>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</p>
+     * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -94,7 +103,7 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     public Integer siteVersion;
 
     /**
-     * <p>Target URI after rewriting.</p>
+     * <p>The target URI after rewriting.</p>
      * 
      * <strong>example:</strong>
      * <p>/image/example.jpg</p>
@@ -153,6 +162,14 @@ public class CreateRewriteUrlRuleRequest extends TeaModel {
     }
     public String getRuleName() {
         return this.ruleName;
+    }
+
+    public CreateRewriteUrlRuleRequest setSequence(Integer sequence) {
+        this.sequence = sequence;
+        return this;
+    }
+    public Integer getSequence() {
+        return this.sequence;
     }
 
     public CreateRewriteUrlRuleRequest setSiteId(Long siteId) {

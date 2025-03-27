@@ -113,7 +113,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
          * <p>The AccessKey required for private authentication.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI5tMfEib****ahybCpZqp</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
@@ -146,7 +146,7 @@ public class ListOriginPoolsResponseBody extends TeaModel {
          * <p>The SecretKey required for private authentication.</p>
          * 
          * <strong>example:</strong>
-         * <p>VIxuvJSA2****fgYoZ3nkp208dy5w7</p>
+         * <p>yourAccessKeySecret</p>
          */
         @NameInMap("SecretKey")
         public String secretKey;

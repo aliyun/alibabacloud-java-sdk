@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWafUsageOfRulesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -14,7 +14,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The usage details of WAF rules of the website.</p>
+     * <p>List of site usage.</p>
      */
     @NameInMap("Sites")
     public java.util.List<ListWafUsageOfRulesResponseBodySites> sites;
@@ -42,7 +42,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
 
     public static class ListWafUsageOfRulesResponseBodySites extends TeaModel {
         /**
-         * <p>The website ID.</p>
+         * <p>Site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -51,7 +51,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The website name.</p>
+         * <p>Site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -60,7 +60,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The usage of WAF rules or WAF rulesets.</p>
+         * <p>Usage of WAF rules/WAF rule sets.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -25,7 +25,6 @@ public class CreateRoutineRequest extends TeaModel {
 
     /**
      * <p>The specification of the routine.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>5ms</p>

@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class SetClientCertificateHostnamesResponseBody extends TeaModel {
+    @NameInMap("Hostnames")
+    public java.util.List<String> hostnames;
+
     /**
      * <p>The ID of the client CA certificate.</p>
      * 
@@ -43,6 +46,14 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
     public static SetClientCertificateHostnamesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetClientCertificateHostnamesResponseBody self = new SetClientCertificateHostnamesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SetClientCertificateHostnamesResponseBody setHostnames(java.util.List<String> hostnames) {
+        this.hostnames = hostnames;
+        return this;
+    }
+    public java.util.List<String> getHostnames() {
+        return this.hostnames;
     }
 
     public SetClientCertificateHostnamesResponseBody setId(String id) {
