@@ -62,6 +62,9 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
     /**
      * <p>The page number. Default value: 1.</p>
      * 
@@ -144,6 +147,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeEnsEipAddressesRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     public DescribeEnsEipAddressesRequest setPageNumber(Integer pageNumber) {

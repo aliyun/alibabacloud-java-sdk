@@ -55,6 +55,9 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("TargetOSSRegionId")
     public String targetOSSRegionId;
 
+    @NameInMap("WithDataDisks")
+    public Boolean withDataDisks;
+
     public static CreateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageRequest self = new CreateImageRequest();
         return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public String getTargetOSSRegionId() {
         return this.targetOSSRegionId;
+    }
+
+    public CreateImageRequest setWithDataDisks(Boolean withDataDisks) {
+        this.withDataDisks = withDataDisks;
+        return this;
+    }
+    public Boolean getWithDataDisks() {
+        return this.withDataDisks;
     }
 
 }

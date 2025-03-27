@@ -151,51 +151,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Configures Network Address Translation (NAT) rules for an instance. This operation is an asynchronous API operation. For more information about the configurations, see the API documentation of GetDeviceInternetPort.</p>
-     * 
-     * @param request AddDeviceInternetPortRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return AddDeviceInternetPortResponse
-     */
-    public AddDeviceInternetPortResponse addDeviceInternetPortWithOptions(AddDeviceInternetPortRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "AddDeviceInternetPort"),
-            new TeaPair("version", "2017-11-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AddDeviceInternetPortResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AddDeviceInternetPortResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Configures Network Address Translation (NAT) rules for an instance. This operation is an asynchronous API operation. For more information about the configurations, see the API documentation of GetDeviceInternetPort.</p>
-     * 
-     * @param request AddDeviceInternetPortRequest
-     * @return AddDeviceInternetPortResponse
-     */
-    public AddDeviceInternetPortResponse addDeviceInternetPort(AddDeviceInternetPortRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.addDeviceInternetPortWithOptions(request, runtime);
-    }
-
-    /**
      * <b>description</b> :
      * <h1><a href="#"></a>Usage notes</h1>
      * <ul>
@@ -2055,6 +2010,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetOSSRegionId)) {
             query.put("TargetOSSRegionId", request.targetOSSRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withDataDisks)) {
+            query.put("WithDataDisks", request.withDataDisks);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4023,51 +3982,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteBucketLifecycleResponse deleteBucketLifecycle(DeleteBucketLifecycleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteBucketLifecycleWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes Network Address Translation (NAT) rules for a server or container based on the ID.</p>
-     * 
-     * @param request DeleteDeviceInternetPortRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteDeviceInternetPortResponse
-     */
-    public DeleteDeviceInternetPortResponse deleteDeviceInternetPortWithOptions(DeleteDeviceInternetPortRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteDeviceInternetPort"),
-            new TeaPair("version", "2017-11-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeviceInternetPortResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDeviceInternetPortResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Deletes Network Address Translation (NAT) rules for a server or container based on the ID.</p>
-     * 
-     * @param request DeleteDeviceInternetPortRequest
-     * @return DeleteDeviceInternetPortResponse
-     */
-    public DeleteDeviceInternetPortResponse deleteDeviceInternetPort(DeleteDeviceInternetPortRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteDeviceInternetPortWithOptions(request, runtime);
     }
 
     /**
@@ -6869,6 +6783,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnsRegionId", request.ensRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ensRegionIds)) {
+            query.put("EnsRegionIds", request.ensRegionIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -8508,6 +8426,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceBandwidthDetailResponse describeInstanceBandwidthDetail(DescribeInstanceBandwidthDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceBandwidthDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改启动配置，只支持异构实例(PCFarm裸金属)。</p>
+     * 
+     * @param request DescribeInstanceBootConfigurationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInstanceBootConfigurationResponse
+     */
+    public DescribeInstanceBootConfigurationResponse describeInstanceBootConfigurationWithOptions(DescribeInstanceBootConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bootSet)) {
+            query.put("BootSet", request.bootSet);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bootType)) {
+            query.put("BootType", request.bootType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskSet)) {
+            query.put("DiskSet", request.diskSet);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInstanceBootConfiguration"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceBootConfigurationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeInstanceBootConfigurationResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改启动配置，只支持异构实例(PCFarm裸金属)。</p>
+     * 
+     * @param request DescribeInstanceBootConfigurationRequest
+     * @return DescribeInstanceBootConfigurationResponse
+     */
+    public DescribeInstanceBootConfigurationResponse describeInstanceBootConfiguration(DescribeInstanceBootConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceBootConfigurationWithOptions(request, runtime);
     }
 
     /**
@@ -10554,6 +10533,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnsRegionId", request.ensRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ensRegionIds)) {
+            query.put("EnsRegionIds", request.ensRegionIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isp)) {
             query.put("Isp", request.isp);
         }
@@ -12022,51 +12005,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the network address translation (NAT) rule details of a device such as a server or container by its ID.</p>
-     * 
-     * @param request GetDeviceInternetPortRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetDeviceInternetPortResponse
-     */
-    public GetDeviceInternetPortResponse getDeviceInternetPortWithOptions(GetDeviceInternetPortRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetDeviceInternetPort"),
-            new TeaPair("version", "2017-11-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceInternetPortResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetDeviceInternetPortResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Queries the network address translation (NAT) rule details of a device such as a server or container by its ID.</p>
-     * 
-     * @param request GetDeviceInternetPortRequest
-     * @return GetDeviceInternetPortResponse
-     */
-    public GetDeviceInternetPortResponse getDeviceInternetPort(GetDeviceInternetPortRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDeviceInternetPortWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Queries the storage usage in the previous billing cycle and the cumulative number of calls in this month.</p>
      * 
      * @param request GetOssStorageAndAccByBucketsRequest
@@ -12159,6 +12097,105 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetOssUsageDataResponse getOssUsageData(GetOssUsageDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getOssUsageDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用ImportImage导入一份您的镜像文件到云服务器。</p>
+     * 
+     * @param tmpReq ImportImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportImageResponse
+     */
+    public ImportImageResponse importImageWithOptions(ImportImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ImportImageShrinkRequest request = new ImportImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.diskDeviceMapping)) {
+            request.diskDeviceMappingShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.diskDeviceMapping, "DiskDeviceMapping", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.architecture)) {
+            query.put("Architecture", request.architecture);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.computeType)) {
+            query.put("ComputeType", request.computeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskDeviceMappingShrink)) {
+            query.put("DiskDeviceMapping", request.diskDeviceMappingShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageFormat)) {
+            query.put("ImageFormat", request.imageFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            query.put("ImageName", request.imageName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSBucket)) {
+            query.put("OSSBucket", request.OSSBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSObject)) {
+            query.put("OSSObject", request.OSSObject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSSRegion)) {
+            query.put("OSSRegion", request.OSSRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSType)) {
+            query.put("OSType", request.OSType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.OSVersion)) {
+            query.put("OSVersion", request.OSVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetOSSRegionId)) {
+            query.put("TargetOSSRegionId", request.targetOSSRegionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportImage"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ImportImageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ImportImageResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用ImportImage导入一份您的镜像文件到云服务器。</p>
+     * 
+     * @param request ImportImageRequest
+     * @return ImportImageResponse
+     */
+    public ImportImageResponse importImage(ImportImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importImageWithOptions(request, runtime);
     }
 
     /**
@@ -15754,51 +15791,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>summary</b> : 
-     * <p>Resets an instance including its image.</p>
-     * 
-     * @param request ResetDeviceInstanceRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ResetDeviceInstanceResponse
-     */
-    public ResetDeviceInstanceResponse resetDeviceInstanceWithOptions(ResetDeviceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ResetDeviceInstance"),
-            new TeaPair("version", "2017-11-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ResetDeviceInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ResetDeviceInstanceResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Resets an instance including its image.</p>
-     * 
-     * @param request ResetDeviceInstanceRequest
-     * @return ResetDeviceInstanceResponse
-     */
-    public ResetDeviceInstanceResponse resetDeviceInstance(ResetDeviceInstanceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.resetDeviceInstanceWithOptions(request, runtime);
-    }
-
-    /**
      * <b>description</b> :
      * <p>When you call this operation, take note of the following items:</p>
      * <ul>
@@ -15920,51 +15912,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResizeDiskResponse resizeDisk(ResizeDiskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resizeDiskWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Restarts applications deployed on an instance and returns the restart results in a synchronous manner.</p>
-     * 
-     * @param request RestartDeviceInstanceRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return RestartDeviceInstanceResponse
-     */
-    public RestartDeviceInstanceResponse restartDeviceInstanceWithOptions(RestartDeviceInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RestartDeviceInstance"),
-            new TeaPair("version", "2017-11-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new RestartDeviceInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new RestartDeviceInstanceResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Restarts applications deployed on an instance and returns the restart results in a synchronous manner.</p>
-     * 
-     * @param request RestartDeviceInstanceRequest
-     * @return RestartDeviceInstanceResponse
-     */
-    public RestartDeviceInstanceResponse restartDeviceInstance(RestartDeviceInstanceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.restartDeviceInstanceWithOptions(request, runtime);
     }
 
     /**

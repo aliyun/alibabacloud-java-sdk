@@ -13,6 +13,9 @@ public class DescribeSecondaryPublicIpAddressesRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("EnsRegionIds")
+    public java.util.List<String> ensRegionIds;
+
     /**
      * <p>The Internet service provider. Valid values:</p>
      * <ul>
@@ -74,6 +77,14 @@ public class DescribeSecondaryPublicIpAddressesRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public DescribeSecondaryPublicIpAddressesRequest setEnsRegionIds(java.util.List<String> ensRegionIds) {
+        this.ensRegionIds = ensRegionIds;
+        return this;
+    }
+    public java.util.List<String> getEnsRegionIds() {
+        return this.ensRegionIds;
     }
 
     public DescribeSecondaryPublicIpAddressesRequest setIsp(String isp) {
