@@ -14,9 +14,9 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The time after which the IP address blacklist becomes invalid. Unit: seconds.</p>
+     * <p>The timestamp after which the IP address blacklist becomes invalid. Unit: seconds.</p>
      * <blockquote>
-     * <p> If you set the value to <strong>0</strong>, the blacklist is permanently valid.</p>
+     * <p> If you set the parameter to <strong>0</strong>, the IP address blacklist is always valid.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,7 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public Long expiredTime;
 
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,10 @@ public class CreateMajorProtectionBlackIpRequest extends TeaModel {
     public String ipList;
 
     /**
-     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-     * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>

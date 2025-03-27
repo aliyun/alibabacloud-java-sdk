@@ -18,7 +18,7 @@ public class CreateCloudResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The configurations of the listeners.</p>
+     * <p>The listener configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
@@ -34,7 +34,7 @@ public class CreateCloudResourceRequest extends TeaModel {
     public String ownerUserId;
 
     /**
-     * <p>The configurations of the forwarding rule.</p>
+     * <p>The forwarding configurations.</p>
      */
     @NameInMap("Redirect")
     public CreateCloudResourceRequestRedirect redirect;
@@ -63,7 +63,7 @@ public class CreateCloudResourceRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags to add to the resource.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCloudResourceRequestTag> tag;
@@ -131,7 +131,7 @@ public class CreateCloudResourceRequest extends TeaModel {
 
     public static class CreateCloudResourceRequestListenCertificates extends TeaModel {
         /**
-         * <p>The type of the HTTPS certificate. Valid values:</p>
+         * <p>The type of the certificate. Valid values:</p>
          * <ul>
          * <li><strong>default</strong>: default certificate.</li>
          * <li><strong>extension</strong>: additional certificate.</li>
@@ -180,7 +180,7 @@ public class CreateCloudResourceRequest extends TeaModel {
 
     public static class CreateCloudResourceRequestListen extends TeaModel {
         /**
-         * <p>An array of certificates.</p>
+         * <p>The certificates.</p>
          */
         @NameInMap("Certificates")
         public java.util.List<CreateCloudResourceRequestListenCertificates> certificates;
@@ -189,7 +189,7 @@ public class CreateCloudResourceRequest extends TeaModel {
          * <p>The type of the cipher suites that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: all cipher suites.</li>
-         * <li><strong>2</strong>: strong cipher suites. You can set the parameter to this value only if you set <strong>TLSVersion</strong> to <strong>tlsv1.2</strong>.</li>
+         * <li><strong>2</strong>: strong cipher suites. This value is available only if you set <strong>TLSVersion</strong> to <strong>tlsv1.2</strong>.</li>
          * <li><strong>99</strong>: custom cipher suites.</li>
          * </ul>
          * 
@@ -235,7 +235,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public Boolean http2Enabled;
 
         /**
-         * <p>The port of the resource that you want to add to WAF.</p>
+         * <p>The port of the cloud service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The type of the protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
          * <li><strong>http</strong></li>
          * <li><strong>https</strong></li>
@@ -259,7 +259,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The instance ID of the cloud service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,11 +269,12 @@ public class CreateCloudResourceRequest extends TeaModel {
         public String resourceInstanceId;
 
         /**
-         * <p>The cloud service. Valid values:</p>
+         * <p>The type of the cloud service that you want to add. Valid values:</p>
          * <ul>
          * <li><strong>clb4</strong>: Layer 4 CLB.</li>
          * <li><strong>clb7</strong>: Layer 7 CLB.</li>
          * <li><strong>ecs</strong>: ECS.</li>
+         * <li><strong>nlb</strong>: Network Load Balancer (NLB).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -284,7 +285,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public String resourceProduct;
 
         /**
-         * <p>The Transport Layer Security (TLS) version. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+         * <p>The Transport Layer Security (TLS) version that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
          * <ul>
          * <li><strong>tlsv1</strong></li>
          * <li><strong>tlsv1.1</strong></li>
@@ -431,7 +432,7 @@ public class CreateCloudResourceRequest extends TeaModel {
          * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
          * <ul>
          * <li><strong>true</strong> (default)</li>
-         * <li><strong>false:</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -441,9 +442,9 @@ public class CreateCloudResourceRequest extends TeaModel {
         public Boolean keepalive;
 
         /**
-         * <p>The number of requests that reuse persistent connections. Valid values: 60 to 1000.</p>
+         * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
          * <blockquote>
-         * <p> This parameter specifies the number of requests that can reuse persistent connections after you enable the persistent connection feature.</p>
+         * <p> This parameter specifies the number of persistent connections that can be reused after you enable the persistent connection feature.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -453,9 +454,9 @@ public class CreateCloudResourceRequest extends TeaModel {
         public Integer keepaliveRequests;
 
         /**
-         * <p>The timeout period for idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
+         * <p>The timeout period of idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
          * <blockquote>
-         * <p> If no new requests are initiated over the idle persistent connection within the specified timeout period, the connection is closed</p>
+         * <p> This parameter specifies the period of time after which an idle persistent connection is closed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -465,7 +466,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public Integer keepaliveTimeout;
 
         /**
-         * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -474,16 +475,16 @@ public class CreateCloudResourceRequest extends TeaModel {
         public Integer readTimeout;
 
         /**
-         * <p>The custom header fields. Specify the value in the [<strong>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</strong>] format. <em><strong>key</strong></em> specifies the key of the custom header field. <em><strong>value</strong></em> specifies the value of the custom header field.</p>
+         * <p>The custom header fields. Specify the value in the [<strong>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</strong>] format. <em><strong>key</strong></em> specifies the key of a custom header field. <em><strong>value</strong></em> specifies the value of a custom header field.</p>
          * <blockquote>
-         * <p> If the request contains the custom header field, WAF overwrites the original value of the field with the specified value.</p>
+         * <p> If a request contains a custom header field, WAF overwrites the original value of the field with the specified value.</p>
          * </blockquote>
          */
         @NameInMap("RequestHeaders")
         public java.util.List<CreateCloudResourceRequestRedirectRequestHeaders> requestHeaders;
 
         /**
-         * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -492,7 +493,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public Integer writeTimeout;
 
         /**
-         * <p>The method that WAF uses to obtain the originating IP address of a client. Valid values:</p>
+         * <p>The method that is used to obtain the originating IP address of a client. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: No Layer 7 proxies are deployed in front of WAF.</li>
          * <li><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the originating IP address of the client.</li>
@@ -515,7 +516,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public java.util.List<String> xffHeaders;
 
         /**
-         * <p>Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+         * <p>Specifies whether to use the X-Forward-For-Proto header field to pass the protocol used by WAF to forward requests to the origin server. Valid values:</p>
          * <ul>
          * <li><strong>true</strong> (default)</li>
          * <li><strong>false</strong></li>
@@ -608,7 +609,7 @@ public class CreateCloudResourceRequest extends TeaModel {
 
     public static class CreateCloudResourceRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey1</p>
@@ -617,7 +618,7 @@ public class CreateCloudResourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue1</p>

@@ -18,7 +18,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The configurations of the listeners.</p>
+     * <p>The listener configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Listen")
@@ -34,7 +34,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String ownerUserId;
 
     /**
-     * <p>The configurations of the forwarding rule.</p>
+     * <p>The forwarding configurations.</p>
      */
     @NameInMap("Redirect")
     public String redirectShrink;
@@ -63,7 +63,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>The tags to add to the resource.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateCloudResourceShrinkRequestTag> tag;
@@ -131,7 +131,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
 
     public static class CreateCloudResourceShrinkRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TagKey1</p>
@@ -140,7 +140,7 @@ public class CreateCloudResourceShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue1</p>

@@ -84,7 +84,7 @@ public class DescribeSensitiveRequestLogRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the WAF instance. Valid value:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
      * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>

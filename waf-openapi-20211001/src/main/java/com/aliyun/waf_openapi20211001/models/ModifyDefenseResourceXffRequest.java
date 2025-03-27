@@ -97,6 +97,9 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The response header.</p>
+     */
     @NameInMap("ResponseHeaders")
     public java.util.List<ModifyDefenseResourceXffRequestResponseHeaders> responseHeaders;
 
@@ -200,9 +203,21 @@ public class ModifyDefenseResourceXffRequest extends TeaModel {
     }
 
     public static class ModifyDefenseResourceXffRequestResponseHeaders extends TeaModel {
+        /**
+         * <p>Specifies the key for a custom response header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Header-Key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Specifies the value for a custom response header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Header-Value</p>
+         */
         @NameInMap("Value")
         public String value;
 

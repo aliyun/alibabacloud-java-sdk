@@ -122,9 +122,9 @@ public class DescribeSensitiveRequestLogResponseBody extends TeaModel {
         public Long requestTime;
 
         /**
-         * <p>The sensitive data. The value of this parameter is a JSON string that contains multiple parameters. The Key of JSON is the sensitive information type identifier (including default and custom types), and the Value is the sensitive information data list.</p>
+         * <p>The details of sensitive data. The value is a string that consists of a JSON struct. The JSON struct contains key-value pairs. In a key-value pair, a key indicates the identifier of a sensitive data type, including built-in and custom types, and a value indicates specific sensitive data.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

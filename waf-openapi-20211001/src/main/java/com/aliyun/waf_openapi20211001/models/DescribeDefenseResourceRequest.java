@@ -18,10 +18,10 @@ public class DescribeDefenseResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>

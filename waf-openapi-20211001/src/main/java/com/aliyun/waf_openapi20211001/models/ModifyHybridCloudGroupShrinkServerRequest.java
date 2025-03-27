@@ -48,10 +48,10 @@ public class ModifyHybridCloudGroupShrinkServerRequest extends TeaModel {
     public String mids;
 
     /**
-     * <p>The region in which the WAF instance is deployed. Valid value:</p>
+     * <p>The region of the WAF instance. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the protected object.</p>
+     * <p>The protected object.</p>
      */
     @NameInMap("Resource")
     public DescribeDefenseResourceResponseBodyResource resource;
@@ -41,9 +41,21 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeDefenseResourceResponseBodyResourceResponseHeaders extends TeaModel {
+        /**
+         * <p>Specifies the key for a custom response header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Header-Key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Specifies the value for a custom response header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Header-Value</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -225,6 +237,9 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
         @NameInMap("ResourceOrigin")
         public String resourceOrigin;
 
+        /**
+         * <p>The response header.</p>
+         */
         @NameInMap("ResponseHeaders")
         public java.util.List<DescribeDefenseResourceResponseBodyResourceResponseHeaders> responseHeaders;
 
