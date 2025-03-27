@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDdosEventListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details of a DDoS attack event.</p>
+     * <p>The details of the DDoS attack events.</p>
      */
     @NameInMap("DdosEventList")
     public DescribeDdosEventListResponseBodyDdosEventList ddosEventList;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC0907F8-A9F3-5E11-977B-D59CD98C64ED</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of DDoS attack events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -54,47 +60,69 @@ public class DescribeDdosEventListResponseBody extends TeaModel {
     public static class DescribeDdosEventListResponseBodyDdosEventListDdosEvent extends TeaModel {
         /**
          * <p>The status of the DDoS attack event. Valid values:</p>
-         * <br>
-         * <p>*   **mitigating**: indicates that traffic scrubbing is in progress.</p>
-         * <p>*   **blackholed**: indicates that blackhole filtering is triggered for the asset.</p>
-         * <p>*   **normal**: indicates that the DDoS attack event ends.</p>
+         * <ul>
+         * <li><strong>mitigating</strong>: indicates that traffic scrubbing is in progress.</li>
+         * <li><strong>blackholed</strong>: indicates that blackhole filtering is triggered for the asset.</li>
+         * <li><strong>normal</strong>: indicates that the DDoS attack event ends.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("DdosStatus")
         public String ddosStatus;
 
         /**
          * <p>The type of the DDoS attack event. Valid values:</p>
-         * <br>
-         * <p>*   **defense**: an attack event that triggers traffic scrubbing</p>
-         * <p>*   **blackhole**: an attack event that triggers blackhole filtering</p>
+         * <ul>
+         * <li><strong>defense</strong>: an attack event that triggers traffic scrubbing</li>
+         * <li><strong>blackhole</strong>: an attack event that triggers blackhole filtering</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>blackhole</p>
          */
         @NameInMap("DdosType")
         public String ddosType;
 
         /**
          * <p>The time of the last attack. The value is a UNIX timestamp. Unit: milliseconds.</p>
-         * <br>
-         * <p>> This parameter is returned only when the asset is attacked multiple times within a DDoS attack event.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the asset is attacked multiple times within a DDoS attack event.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1637817679000</p>
          */
         @NameInMap("DelayTime")
         public Long delayTime;
 
         /**
          * <p>The end time of the DDoS attack event. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637817679000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The start time of the DDoS attack event. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637812279000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The time when blackhole filtering is deactivated. The value is a UNIX timestamp. Unit: milliseconds.</p>
-         * <br>
-         * <p>> This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the value of the <strong>DdosType</strong> parameter is <strong>blackhole</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1637814079000</p>
          */
         @NameInMap("UnBlackholeTime")
         public Long unBlackholeTime;

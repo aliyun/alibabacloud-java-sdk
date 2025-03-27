@@ -6,22 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeDdosCountRequest extends TeaModel {
     /**
      * <p>The region ID of the asset to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
     /**
      * <p>The type of the asset to query. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: ECS instance</p>
-     * <p>*   **slb**: SLB instance</p>
-     * <p>*   **eip**: EIP</p>
-     * <br>
+     * <ul>
+     * <li><strong>ecs</strong>: Elastic Compute Service (ECS) instances.</li>
+     * <li><strong>slb</strong>: Server Load Balancer (SLB) instances.</li>
+     * <li><strong>eip</strong>: elastic IP addresses (EIPs).</li>
+     * <li><strong>ipv6</strong>: IPv6 gateways.</li>
+     * <li><strong>swas</strong>: simple application servers.</li>
+     * <li><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</li>
+     * <li><strong>ga_basic</strong>: Global Accelerator (GA) instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

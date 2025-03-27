@@ -6,20 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeBgpPackByIpRequest extends TeaModel {
     /**
      * <p>The region ID of the asset to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
     /**
      * <p>The IP address of the asset to query.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstance](https://help.aliyun.com/document_detail/354191.html) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/472620.html">DescribeInstanceIpAddress</a> operation to query the IDs of Elastic Compute Service (ECS) instances, Server Load Balancer (SLB) instances, and elastic IP addresses (EIPs) within the current Alibaba Cloud account.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>118.31.XX.XX</p>
      */
     @NameInMap("Ip")
     public String ip;

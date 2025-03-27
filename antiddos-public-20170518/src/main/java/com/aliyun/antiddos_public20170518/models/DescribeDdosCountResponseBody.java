@@ -12,6 +12,9 @@ public class DescribeDdosCountResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7D66C762-324E-51CE-B461-2007996087B2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeDdosCountResponseBody extends TeaModel {
     public static class DescribeDdosCountResponseBodyDdosCount extends TeaModel {
         /**
          * <p>The number of assets for which blackhole filtering is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BlackholeCount")
         public Integer blackholeCount;
 
         /**
          * <p>The number of assets for which traffic scrubbing is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("DefenseCount")
         public Integer defenseCount;
 
         /**
          * <p>The total number of assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InstacenCount")
         public Integer instacenCount;

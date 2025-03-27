@@ -5,62 +5,91 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceIpAddressRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The region ID of the asset.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
     /**
      * <p>The DDoS mitigation status of the asset. Valid values:</p>
-     * <br>
-     * <p>*   **defense**: queries assets for which traffic scrubbing is performed.</p>
-     * <p>*   **blackhole**: queries assets for which blackhole filtering is triggered.</p>
+     * <ul>
+     * <li><strong>defense</strong>: queries assets for which traffic scrubbing is performed.</li>
+     * <li><strong>blackhole</strong>: queries assets for which blackhole filtering is triggered.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("DdosStatus")
     public String ddosStatus;
 
     /**
      * <p>The ID of the instance to which the asset is added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1cb6x80tfgocid****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
     /**
      * <p>The name of the asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>launch-advisor-2021****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The type of the asset. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: ECS instance</p>
-     * <p>*   **slb**: SLB instance</p>
-     * <p>*   **eip**: EIP</p>
-     * <br>
+     * <p>The type of the asset that is assigned a public IP address. Valid values:</p>
+     * <ul>
+     * <li><strong>ecs</strong>: ECS instances.</li>
+     * <li><strong>slb</strong>: SLB instances.</li>
+     * <li><strong>eip</strong>: EIPs.</li>
+     * <li><strong>ipv6</strong>: IPv6 gateways.</li>
+     * <li><strong>swas</strong>: simple application servers.</li>
+     * <li><strong>waf</strong>: Web Application Firewall (WAF) instances of the Exclusive edition.</li>
+     * <li><strong>ga_basic</strong>: Global Accelerator (GA) instances.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

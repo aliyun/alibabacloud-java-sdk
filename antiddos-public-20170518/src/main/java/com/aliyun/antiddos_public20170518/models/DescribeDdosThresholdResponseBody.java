@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDdosThresholdResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9B3C090-55AD-59C6-979E-FCFD81E7D9E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,67 +42,97 @@ public class DescribeDdosThresholdResponseBody extends TeaModel {
 
     public static class DescribeDdosThresholdResponseBodyThresholdsThreshold extends TeaModel {
         /**
-         * <p>If the value of the **DdosType** parameter is **defense**, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.</p>
-         * <br>
-         * <p>If the value of the **DdosType** parameter is **blackhole**, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.</p>
+         * <p>If the value of the <strong>DdosType</strong> parameter is <strong>defense</strong>, the Bps parameter indicates the current traffic scrubbing threshold. Unit: Mbit/s.</p>
+         * <p>If the value of the <strong>DdosType</strong> parameter is <strong>blackhole</strong>, the Bps parameter indicates the basic protection threshold. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Bps")
         public Integer bps;
 
         /**
          * <p>The type of the threshold. Valid values:</p>
-         * <br>
-         * <p>*   **defense**: traffic scrubbing threshold</p>
-         * <p>*   **blackhole**: DDoS mitigation threshold</p>
+         * <ul>
+         * <li><strong>defense</strong>: traffic scrubbing threshold</li>
+         * <li><strong>blackhole</strong>: DDoS mitigation threshold</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>defense</p>
          */
         @NameInMap("DdosType")
         public String ddosType;
 
         /**
          * <p>The burstable protection threshold (the maximum DDoS mitigation threshold). Unit: Mbit/s.</p>
-         * <br>
-         * <p>> This parameter is returned only when the value of the **DdosType** parameter is **blackhole**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the value of the <strong>DdosType</strong> parameter is <strong>blackhole</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12310</p>
          */
         @NameInMap("ElasticBps")
         public Integer elasticBps;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp10bclrt56fblts****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>Indicates whether the threshold is automatically adjusted. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</p>
-         * <p>*   **false**: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</p>
+         * <ul>
+         * <li><strong>true</strong>: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</li>
+         * <li><strong>false</strong>: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsAuto")
         public Boolean isAuto;
 
         /**
          * <p>The maximum traffic scrubbing threshold. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("MaxBps")
         public Integer maxBps;
 
         /**
          * <p>The maximum packet scrubbing threshold. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150000</p>
          */
         @NameInMap("MaxPps")
         public Integer maxPps;
 
         /**
          * <p>The packet scrubbing threshold. Unit: pps.</p>
-         * <br>
-         * <p>> This parameter is returned only when the value of the **DdosType** parameter is **defense**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the value of the <strong>DdosType</strong> parameter is <strong>defense</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>150000</p>
          */
         @NameInMap("Pps")
         public Integer pps;

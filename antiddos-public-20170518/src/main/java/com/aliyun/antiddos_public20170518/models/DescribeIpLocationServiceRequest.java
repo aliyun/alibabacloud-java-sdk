@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeIpLocationServiceRequest extends TeaModel {
     /**
      * <p>The IP address of the asset to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121.199.XX.XX</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;

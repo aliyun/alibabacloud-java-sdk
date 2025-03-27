@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeBgpPackByIpResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code of the request.</p>
-     * <br>
-     * <p>For more information about status codes, see [Common parameters](https://help.aliyun.com/document_detail/118841.html).</p>
+     * <p>For more information about status codes, see <a href="https://help.aliyun.com/document_detail/118841.html">Common parameters</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -20,15 +22,22 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E46A08E4-A1CD-5BE9-B580-C4D6E9BC5484</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -73,30 +82,45 @@ public class DescribeBgpPackByIpResponseBody extends TeaModel {
     public static class DescribeBgpPackByIpResponseBodyDdosbgpInfo extends TeaModel {
         /**
          * <p>The basic protection threshold of the instance. Unit: Gbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("BaseThreshold")
         public Integer baseThreshold;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ddosbgp-cn-n6w1r7nz****</p>
          */
         @NameInMap("DdosbgpInstanceId")
         public String ddosbgpInstanceId;
 
         /**
          * <p>The burstable protection threshold of the instance. Unit: Gbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>301</p>
          */
         @NameInMap("ElasticThreshold")
         public Integer elasticThreshold;
 
         /**
          * <p>The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640448000000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The IP address of the asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>118.31.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;

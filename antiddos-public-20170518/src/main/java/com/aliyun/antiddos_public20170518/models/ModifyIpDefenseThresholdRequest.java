@@ -5,72 +5,99 @@ import com.aliyun.tea.*;
 
 public class ModifyIpDefenseThresholdRequest extends TeaModel {
     /**
-     * <p>Specifies the traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset.</p>
-     * <br>
+     * <p>The traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset. When you modify Bps, Pps is required. Otherwise, Bps does not take effect.</p>
      * <p>You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:</p>
-     * <br>
-     * <p>*   For more information about how to query the Internet traffic of an ECS instance, see [Query monitoring information of an instance](https://help.aliyun.com/document_detail/25482.html).</p>
-     * <p>*   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](https://help.aliyun.com/document_detail/85982.html).</p>
+     * <ul>
+     * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
+     * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
+     * <li>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Bps")
     public Integer bps;
 
     /**
      * <p>The region ID of the asset.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/353250.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DdosRegionId")
     public String ddosRegionId;
 
     /**
      * <p>The ID of the asset.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstance](https://help.aliyun.com/document_detail/354191.html) operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf6idy3c57psf7vu****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the asset. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: ECS instance</p>
-     * <p>*   **slb**: SLB instance</p>
-     * <p>*   **eip**: EIP</p>
-     * <br>
+     * <ul>
+     * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
+     * <li><strong>slb</strong>: a Server Load Balancer (SLB) instance.</li>
+     * <li><strong>eip</strong>: an elastic IP address (EIP).</li>
+     * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
+     * <li><strong>swas</strong>: a simple application server.</li>
+     * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
+     * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The IP address of the asset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;
 
     /**
      * <p>Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:</p>
-     * <br>
-     * <p>*   **true**: automatically adjusts the scrubbing threshold. You do not need to configure the **Bps** and **Pps** parameters.</p>
-     * <p>*   **false**: The scrubbing threshold is not automatically adjusted. You must configure the **Bps** and **Pps** parameters. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: automatically adjusts the scrubbing threshold. You do not need to configure the <strong>Bps</strong> and <strong>Pps</strong> parameters.</li>
+     * <li><strong>false</strong>: The scrubbing threshold is not automatically adjusted. You must configure the <strong>Bps</strong> and <strong>Pps</strong> parameters. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsAuto")
     public Boolean isAuto;
 
     /**
-     * <p>Specifies the packet scrubbing threshold. Unit: packets per second (pps).</p>
-     * <br>
+     * <p>The packet scrubbing threshold. Unit: packets per second (PPS). When you modify Pps, Bps is required. Otherwise, Pps does not take effect.</p>
      * <p>The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:</p>
-     * <br>
-     * <p>*   For more information about how to query the number of packets of an ECS instance, see [Query monitoring information of an instance](https://help.aliyun.com/document_detail/25482.html).</p>
-     * <p>*   For more information about how to query the number of packets of an SLB instance, see [View monitoring data in the console](https://help.aliyun.com/document_detail/85982.html).</p>
+     * <ul>
+     * <li>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</li>
+     * <li>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</li>
+     * <li>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>70000</p>
      */
     @NameInMap("Pps")
     public Integer pps;
