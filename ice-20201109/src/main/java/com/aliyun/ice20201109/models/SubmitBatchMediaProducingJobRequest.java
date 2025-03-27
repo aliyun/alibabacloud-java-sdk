@@ -54,6 +54,9 @@ public class SubmitBatchMediaProducingJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    @NameInMap("TemplateConfig")
+    public String templateConfig;
+
     /**
      * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
      */
@@ -95,6 +98,14 @@ public class SubmitBatchMediaProducingJobRequest extends TeaModel {
     }
     public String getOutputConfig() {
         return this.outputConfig;
+    }
+
+    public SubmitBatchMediaProducingJobRequest setTemplateConfig(String templateConfig) {
+        this.templateConfig = templateConfig;
+        return this;
+    }
+    public String getTemplateConfig() {
+        return this.templateConfig;
     }
 
     public SubmitBatchMediaProducingJobRequest setUserData(String userData) {
