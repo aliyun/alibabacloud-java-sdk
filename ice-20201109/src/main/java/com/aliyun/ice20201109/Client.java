@@ -2028,10 +2028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -2106,10 +2103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -2125,10 +2119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -2191,10 +2182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -2210,10 +2198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -2264,10 +2249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -4466,13 +4448,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can only delete a channel that is not running.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p> You can only delete a channel that is not running.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -4513,13 +4490,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can only delete a channel that is not running.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p> You can only delete a channel that is not running.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -4535,13 +4507,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can delete an input only when it is not associated with a MediaLive channel.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can delete an input only when it is not associated with a MediaLive channel.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -4582,13 +4549,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can delete an input only when it is not associated with a MediaLive channel.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can delete an input only when it is not associated with a MediaLive channel.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -4604,13 +4566,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can only delete a security group not associated with an input.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can only delete a security group not associated with an input.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -4651,13 +4608,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can only delete a security group not associated with an input.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can only delete a security group not associated with an input.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -7916,10 +7868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -7960,10 +7909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -7979,10 +7925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -8023,10 +7966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -8042,10 +7982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -8086,10 +8023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -11495,10 +11429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -11559,10 +11490,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -11578,10 +11506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -11638,10 +11563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -11657,10 +11579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -11721,10 +11640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><h2><a href="#qps-"></a>QPS limit</h2>
-     * </li>
-     * </ul>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -12360,8 +12276,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSmartVoiceGroupsResponse
      */
-    public ListSmartVoiceGroupsResponse listSmartVoiceGroupsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public ListSmartVoiceGroupsResponse listSmartVoiceGroupsWithOptions(ListSmartVoiceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListSmartVoiceGroups"),
             new TeaPair("version", "2020-11-09"),
@@ -12384,11 +12304,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries a list of speaker groups, including the name, gender, and sample audio of each speaker. The list is grouped by scenario.</p>
+     * 
+     * @param request ListSmartVoiceGroupsRequest
      * @return ListSmartVoiceGroupsResponse
      */
-    public ListSmartVoiceGroupsResponse listSmartVoiceGroups() throws Exception {
+    public ListSmartVoiceGroupsResponse listSmartVoiceGroups(ListSmartVoiceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listSmartVoiceGroupsWithOptions(runtime);
+        return this.listSmartVoiceGroupsWithOptions(request, runtime);
     }
 
     /**
@@ -15610,13 +15532,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -15657,13 +15574,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can call this operation only when the channel is idle. You cannot start a channel repeatedly.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -15935,13 +15847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li></li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -15982,13 +15888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li></li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -20489,13 +20389,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify a MediaLive channel only when it is not running.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify a MediaLive channel only when it is not running.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -20574,13 +20469,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify a MediaLive channel only when it is not running.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify a MediaLive channel only when it is not running.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -20596,13 +20486,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify an input only when it is not associated with a MediaLive channel.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify an input only when it is not associated with a MediaLive channel.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -20667,13 +20552,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify an input only when it is not associated with a MediaLive channel.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify an input only when it is not associated with a MediaLive channel.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -20689,13 +20569,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify a security group only when it is not associated with a MediaLive input.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify a security group only when it is not associated with a MediaLive input.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
@@ -20750,13 +20625,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <ul>
-     * <li><ul>
-     * <li>You can modify a security group only when it is not associated with a MediaLive input.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <h2><a href="#qps-"></a>QPS limit</h2>
+     * <p>  You can modify a security group only when it is not associated with a MediaLive input.</p>
+     * <h2>QPS limit</h2>
      * <p>This operation can be called up to 50 times per second for each Alibaba Cloud account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
