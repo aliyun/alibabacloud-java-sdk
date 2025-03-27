@@ -566,6 +566,118 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
     }
 
+    public static class GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues self = new GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        public static GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules self = new GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyPointsAnswerListAnswerValues extends TeaModel {
+        @NameInMap("answerName")
+        public String answerName;
+
+        @NameInMap("answerWeight")
+        public Integer answerWeight;
+
+        @NameInMap("keywordValues")
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues> keywordValues;
+
+        @NameInMap("keywordWeight")
+        public Integer keywordWeight;
+
+        @NameInMap("scoringRules")
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules> scoringRules;
+
+        public static GetAICoachScriptResponseBodyPointsAnswerListAnswerValues build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyPointsAnswerListAnswerValues self = new GetAICoachScriptResponseBodyPointsAnswerListAnswerValues();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValues setAnswerName(String answerName) {
+            this.answerName = answerName;
+            return this;
+        }
+        public String getAnswerName() {
+            return this.answerName;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValues setAnswerWeight(Integer answerWeight) {
+            this.answerWeight = answerWeight;
+            return this;
+        }
+        public Integer getAnswerWeight() {
+            return this.answerWeight;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValues setKeywordValues(java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues> keywordValues) {
+            this.keywordValues = keywordValues;
+            return this;
+        }
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesKeywordValues> getKeywordValues() {
+            return this.keywordValues;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValues setKeywordWeight(Integer keywordWeight) {
+            this.keywordWeight = keywordWeight;
+            return this;
+        }
+        public Integer getKeywordWeight() {
+            return this.keywordWeight;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerListAnswerValues setScoringRules(java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules> scoringRules) {
+            this.scoringRules = scoringRules;
+            return this;
+        }
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValuesScoringRules> getScoringRules() {
+            return this.scoringRules;
+        }
+
+    }
+
     public static class GetAICoachScriptResponseBodyPointsAnswerListParameters extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -605,6 +717,12 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
 
     public static class GetAICoachScriptResponseBodyPointsAnswerList extends TeaModel {
+        @NameInMap("answerValues")
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValues> answerValues;
+
+        @NameInMap("enabledKeyword")
+        public Boolean enabledKeyword;
+
         @NameInMap("name")
         public String name;
 
@@ -634,6 +752,22 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         public static GetAICoachScriptResponseBodyPointsAnswerList build(java.util.Map<String, ?> map) throws Exception {
             GetAICoachScriptResponseBodyPointsAnswerList self = new GetAICoachScriptResponseBodyPointsAnswerList();
             return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setAnswerValues(java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValues> answerValues) {
+            this.answerValues = answerValues;
+            return this;
+        }
+        public java.util.List<GetAICoachScriptResponseBodyPointsAnswerListAnswerValues> getAnswerValues() {
+            return this.answerValues;
+        }
+
+        public GetAICoachScriptResponseBodyPointsAnswerList setEnabledKeyword(Boolean enabledKeyword) {
+            this.enabledKeyword = enabledKeyword;
+            return this;
+        }
+        public Boolean getEnabledKeyword() {
+            return this.enabledKeyword;
         }
 
         public GetAICoachScriptResponseBodyPointsAnswerList setName(String name) {
