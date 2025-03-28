@@ -1,3 +1,13 @@
+2025-03-28 Version: 2.5.3
+- Update API CreateChangeSet: add request parameters ResourceGroupId.
+- Update API CreateChangeSet: add request parameters Tags.
+- Update API GetChangeSet: add response parameters Body.ResourceGroupId.
+- Update API GetChangeSet: add response parameters Body.Tags.
+- Update API ListChangeSets: add response parameters Body.ChangeSets.$.ResourceGroupId.
+- Update API ListChangeSets: add response parameters Body.ChangeSets.$.Tags.
+- Update API ListTemplates: add response parameters Body.Templates.$.TemplateUrl.
+
+
 2024-12-04 Version: 2.5.2
 - Update API GetTemplate: update response param.
 - Update API GetTemplateParameterConstraints: update response param.

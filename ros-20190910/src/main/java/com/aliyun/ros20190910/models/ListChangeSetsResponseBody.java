@@ -91,6 +91,36 @@ public class ListChangeSetsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListChangeSetsResponseBodyChangeSetsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListChangeSetsResponseBodyChangeSetsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListChangeSetsResponseBodyChangeSetsTags self = new ListChangeSetsResponseBodyChangeSetsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListChangeSetsResponseBodyChangeSetsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListChangeSetsResponseBodyChangeSetsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListChangeSetsResponseBodyChangeSets extends TeaModel {
         /**
          * <p>The ID of the change set.</p>
@@ -155,6 +185,9 @@ public class ListChangeSetsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The ID of the stack with which the change set is associated.</p>
          * 
@@ -190,6 +223,9 @@ public class ListChangeSetsResponseBody extends TeaModel {
          */
         @NameInMap("StatusReason")
         public String statusReason;
+
+        @NameInMap("Tags")
+        public java.util.List<ListChangeSetsResponseBodyChangeSetsTags> tags;
 
         public static ListChangeSetsResponseBodyChangeSets build(java.util.Map<String, ?> map) throws Exception {
             ListChangeSetsResponseBodyChangeSets self = new ListChangeSetsResponseBodyChangeSets();
@@ -252,6 +288,14 @@ public class ListChangeSetsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListChangeSetsResponseBodyChangeSets setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListChangeSetsResponseBodyChangeSets setStackId(String stackId) {
             this.stackId = stackId;
             return this;
@@ -282,6 +326,14 @@ public class ListChangeSetsResponseBody extends TeaModel {
         }
         public String getStatusReason() {
             return this.statusReason;
+        }
+
+        public ListChangeSetsResponseBodyChangeSets setTags(java.util.List<ListChangeSetsResponseBodyChangeSetsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListChangeSetsResponseBodyChangeSetsTags> getTags() {
+            return this.tags;
         }
 
     }
