@@ -66,6 +66,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList extends TeaModel {
+        @NameInMap("ColumnActions")
+        public java.util.List<String> columnActions;
+
         /**
          * <p>The description of the column on which you request permissions.</p>
          * 
@@ -98,6 +101,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList setColumnActions(java.util.List<String> columnActions) {
+            this.columnActions = columnActions;
+            return this;
+        }
+        public java.util.List<String> getColumnActions() {
+            return this.columnActions;
+        }
+
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList setColumnComment(String columnComment) {
             this.columnComment = columnComment;
             return this;
@@ -125,6 +136,9 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
     }
 
     public static class GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList extends TeaModel {
+        @NameInMap("Actions")
+        public java.util.List<String> actions;
+
         /**
          * <p>The information about the column fields in the object on which you request permissions.</p>
          */
@@ -143,6 +157,14 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         public static GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList build(java.util.Map<String, ?> map) throws Exception {
             GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList self = new GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList();
             return TeaModel.build(map, self);
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList setActions(java.util.List<String> actions) {
+            this.actions = actions;
+            return this;
+        }
+        public java.util.List<String> getActions() {
+            return this.actions;
         }
 
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaList setColumnMetaList(java.util.List<GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContentProjectMetaObjectMetaListColumnMetaList> columnMetaList) {

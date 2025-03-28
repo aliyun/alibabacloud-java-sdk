@@ -847,6 +847,12 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("IgnoreParentSkipRunningProperty")
         public String ignoreParentSkipRunningProperty;
 
+        /**
+         * <p>The ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1h4b5a8ogkbll2f3tr</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 

@@ -14,7 +14,7 @@ public class ListFilesRequest extends TeaModel {
     public String exactFileName;
 
     /**
-     * <p>The path of the files.</p>
+     * <p>The path of the folder to which files belong.</p>
      * 
      * <strong>example:</strong>
      * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>
@@ -49,6 +49,9 @@ public class ListFilesRequest extends TeaModel {
      */
     @NameInMap("Keyword")
     public String keyword;
+
+    @NameInMap("LastEditUser")
+    public String lastEditUser;
 
     /**
      * <p>Whether the query result contains the path of the folder where the file is located.</p>
@@ -184,6 +187,14 @@ public class ListFilesRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListFilesRequest setLastEditUser(String lastEditUser) {
+        this.lastEditUser = lastEditUser;
+        return this;
+    }
+    public String getLastEditUser() {
+        return this.lastEditUser;
     }
 
     public ListFilesRequest setNeedAbsoluteFolderPath(Boolean needAbsoluteFolderPath) {

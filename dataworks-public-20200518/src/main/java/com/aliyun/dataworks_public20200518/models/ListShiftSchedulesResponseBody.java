@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListShiftSchedulesResponseBody extends TeaModel {
     /**
-     * <p>The pagination data.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("Paging")
     public ListShiftSchedulesResponseBodyPaging paging;

@@ -48,8 +48,10 @@ public class ListLineageResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <p>true</p>
-     * <p>false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -113,8 +115,10 @@ public class ListLineageResponseBody extends TeaModel {
     public static class ListLineageResponseBodyDataDataEntityListRelationList extends TeaModel {
         /**
          * <p>The data channel. Valid values:</p>
-         * <pre><code>FIRST_PARTY: DataWorks platformTHIRD_PARTY: user registration
-         * </code></pre>
+         * <ul>
+         * <li><strong>FIRST_PARTY: DataWorks platform</strong></li>
+         * <li><strong>THIRD_PARTY: user registration</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>THIRD_PARTY</p>
@@ -123,7 +127,7 @@ public class ListLineageResponseBody extends TeaModel {
         public String channel;
 
         /**
-         * <p>The name of the data source.</p>
+         * <p>The data source.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>

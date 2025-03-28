@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFileVersionsResponseBody extends TeaModel {
     /**
-     * <p>The file versions returned.</p>
+     * <p>The file versions.</p>
      */
     @NameInMap("Data")
     public ListFileVersionsResponseBodyData data;
@@ -339,7 +339,7 @@ public class ListFileVersionsResponseBody extends TeaModel {
 
     public static class ListFileVersionsResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the file version.</p>
+         * <p>The details of file versions.</p>
          */
         @NameInMap("FileVersions")
         public java.util.List<ListFileVersionsResponseBodyDataFileVersions> fileVersions;

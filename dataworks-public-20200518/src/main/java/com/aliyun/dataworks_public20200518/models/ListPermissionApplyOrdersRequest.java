@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionApplyOrdersRequest extends TeaModel {
+    @NameInMap("ApplyType")
+    public String applyType;
+
+    @NameInMap("CatalogName")
+    public String catalogName;
+
     /**
      * <p>The end of the time range to query. You can query all the permissions request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.</p>
      * 
@@ -15,7 +21,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
 
     /**
      * <p>The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>odps</p>
@@ -58,7 +63,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
 
     /**
      * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -128,6 +132,22 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
     public static ListPermissionApplyOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPermissionApplyOrdersRequest self = new ListPermissionApplyOrdersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPermissionApplyOrdersRequest setApplyType(String applyType) {
+        this.applyType = applyType;
+        return this;
+    }
+    public String getApplyType() {
+        return this.applyType;
+    }
+
+    public ListPermissionApplyOrdersRequest setCatalogName(String catalogName) {
+        this.catalogName = catalogName;
+        return this;
+    }
+    public String getCatalogName() {
+        return this.catalogName;
     }
 
     public ListPermissionApplyOrdersRequest setEndTime(Long endTime) {

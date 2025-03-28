@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListLineageRequest extends TeaModel {
     /**
-     * <p>The lineage type. Valid values:\
-     * up: ancestor lineage\
-     * down: descendant lineage</p>
+     * <p>The lineage type. Valid values:</p>
+     * <ul>
+     * <li>up: ancestor lineage</li>
+     * <li>down: descendant lineage</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

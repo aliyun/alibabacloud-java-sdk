@@ -114,7 +114,7 @@ public class ListFilesResponseBody extends TeaModel {
 
     public static class ListFilesResponseBodyDataFiles extends TeaModel {
         /**
-         * <p>The path of the folder where the file is located.</p>
+         * <p>The path of the folder to which the file belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Business_process/my_first_business_process/MaxCompute/ods_layer</p>

@@ -142,6 +142,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
         /**
          * <p>The description of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Verify that the primary key is unique</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -271,6 +274,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the monitoring rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>View table fluctuations</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -284,6 +290,12 @@ public class GetQualityRuleResponseBody extends TeaModel {
         @NameInMap("RuleType")
         public Integer ruleType;
 
+        /**
+         * <p>The variable settings inserted before the custom rule. Format: x=a,y=b.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x=a,y=b</p>
+         */
         @NameInMap("TaskSetting")
         public String taskSetting;
 
