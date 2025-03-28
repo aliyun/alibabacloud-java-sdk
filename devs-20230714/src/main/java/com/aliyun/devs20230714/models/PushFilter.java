@@ -4,9 +4,17 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class PushFilter extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>master</p>
+     */
     @NameInMap("branch")
     public String branch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prod-.*</p>
+     */
     @NameInMap("tag")
     public String tag;
 

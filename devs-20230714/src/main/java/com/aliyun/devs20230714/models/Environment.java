@@ -4,15 +4,31 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class Environment extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-19T09:34:38Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test env</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("generation")
     public Integer generation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Environment</p>
+     */
     @NameInMap("kind")
     public String kind;
 
@@ -21,15 +37,19 @@ public class Environment extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-env</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo-project</p>
+     */
     @NameInMap("projectName")
     public String projectName;
-
-    @NameInMap("resourceVersion")
-    public Integer resourceVersion;
 
     /**
      * <p>This parameter is required.</p>
@@ -40,6 +60,10 @@ public class Environment extends TeaModel {
     @NameInMap("status")
     public EnvironmentStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1455541096***548</p>
+     */
     @NameInMap("uid")
     public String uid;
 
@@ -102,14 +126,6 @@ public class Environment extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
-    }
-
-    public Environment setResourceVersion(Integer resourceVersion) {
-        this.resourceVersion = resourceVersion;
-        return this;
-    }
-    public Integer getResourceVersion() {
-        return this.resourceVersion;
     }
 
     public Environment setSpec(EnvironmentSpec spec) {

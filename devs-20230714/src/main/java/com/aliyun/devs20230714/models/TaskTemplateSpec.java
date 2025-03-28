@@ -7,6 +7,10 @@ public class TaskTemplateSpec extends TeaModel {
     @NameInMap("context")
     public Context context;
 
+    /**
+     * <strong>example:</strong>
+     * <p>build&amp;deploy.</p>
+     */
     @NameInMap("description")
     public String description;
 

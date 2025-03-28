@@ -4,12 +4,24 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class Installation extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://github.com/login/oauth/authorize?client_id=86059a1b2bb20d3e5fc3&scope=repo,repo:status,delete_repo">https://github.com/login/oauth/authorize?client_id=86059a1b2bb20d3e5fc3&amp;scope=repo,repo:status,delete_repo</a></p>
+     */
     @NameInMap("actionUri")
     public String actionUri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Please click &quot;actionUri&quot; to complete the OAuth authorization process</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>finished</p>
+     */
     @NameInMap("stage")
     public String stage;
 

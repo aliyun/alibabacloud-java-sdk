@@ -4,15 +4,27 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class ListProjectsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>spring-boot</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
     @NameInMap("labelSelector")
     public java.util.List<String> labelSelector;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 

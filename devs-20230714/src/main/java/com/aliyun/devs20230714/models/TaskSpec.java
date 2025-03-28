@@ -7,6 +7,10 @@ public class TaskSpec extends TeaModel {
     @NameInMap("context")
     public Context context;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-task-template</p>
+     */
     @NameInMap("templateName")
     public String templateName;
 

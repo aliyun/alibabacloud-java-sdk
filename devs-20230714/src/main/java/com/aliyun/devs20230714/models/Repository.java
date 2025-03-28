@@ -4,15 +4,24 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class Repository extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-19T09:34:38Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-description</p>
+     */
     @NameInMap("description")
     public String description;
 
-    @NameInMap("generation")
-    public Integer generation;
-
+    /**
+     * <strong>example:</strong>
+     * <p>Repository</p>
+     */
     @NameInMap("kind")
     public String kind;
 
@@ -21,12 +30,12 @@ public class Repository extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-repository</p>
      */
     @NameInMap("name")
     public String name;
-
-    @NameInMap("resourceVersion")
-    public Integer resourceVersion;
 
     /**
      * <p>This parameter is required.</p>
@@ -34,6 +43,10 @@ public class Repository extends TeaModel {
     @NameInMap("spec")
     public RepositorySpec spec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1455541096***548</p>
+     */
     @NameInMap("uid")
     public String uid;
 
@@ -58,14 +71,6 @@ public class Repository extends TeaModel {
         return this.description;
     }
 
-    public Repository setGeneration(Integer generation) {
-        this.generation = generation;
-        return this;
-    }
-    public Integer getGeneration() {
-        return this.generation;
-    }
-
     public Repository setKind(String kind) {
         this.kind = kind;
         return this;
@@ -88,14 +93,6 @@ public class Repository extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public Repository setResourceVersion(Integer resourceVersion) {
-        this.resourceVersion = resourceVersion;
-        return this;
-    }
-    public Integer getResourceVersion() {
-        return this.resourceVersion;
     }
 
     public Repository setSpec(RepositorySpec spec) {

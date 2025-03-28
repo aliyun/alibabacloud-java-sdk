@@ -13,9 +13,17 @@ public class TaskStatus extends TeaModel {
     @NameInMap("latestExecError")
     public TaskExecError latestExecError;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("phase")
     public String phase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("statusGeneration")
     public Long statusGeneration;
 

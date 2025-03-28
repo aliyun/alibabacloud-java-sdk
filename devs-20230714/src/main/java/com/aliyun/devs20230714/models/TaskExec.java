@@ -7,12 +7,20 @@ public class TaskExec extends TeaModel {
     @NameInMap("context")
     public Context context;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task-1</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("runAfters")
     public java.util.List<RunAfter> runAfters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>serverless-runner</p>
+     */
     @NameInMap("taskTemplate")
     public String taskTemplate;
 

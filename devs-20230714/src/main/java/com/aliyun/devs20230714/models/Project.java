@@ -4,15 +4,24 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class Project extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-19T09:34:38Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-description</p>
+     */
     @NameInMap("description")
     public String description;
 
-    @NameInMap("generation")
-    public Integer generation;
-
+    /**
+     * <strong>example:</strong>
+     * <p>Project</p>
+     */
     @NameInMap("kind")
     public String kind;
 
@@ -21,24 +30,22 @@ public class Project extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-project</p>
      */
     @NameInMap("name")
     public String name;
 
-    @NameInMap("resourceVersion")
-    public Integer resourceVersion;
-
-    @NameInMap("spec")
-    public ProjectSpec spec;
-
     @NameInMap("status")
     public ProjectStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1455541096***548</p>
+     */
     @NameInMap("uid")
     public String uid;
-
-    @NameInMap("updatedTime")
-    public String updatedTime;
 
     public static Project build(java.util.Map<String, ?> map) throws Exception {
         Project self = new Project();
@@ -59,14 +66,6 @@ public class Project extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public Project setGeneration(Integer generation) {
-        this.generation = generation;
-        return this;
-    }
-    public Integer getGeneration() {
-        return this.generation;
     }
 
     public Project setKind(String kind) {
@@ -93,22 +92,6 @@ public class Project extends TeaModel {
         return this.name;
     }
 
-    public Project setResourceVersion(Integer resourceVersion) {
-        this.resourceVersion = resourceVersion;
-        return this;
-    }
-    public Integer getResourceVersion() {
-        return this.resourceVersion;
-    }
-
-    public Project setSpec(ProjectSpec spec) {
-        this.spec = spec;
-        return this;
-    }
-    public ProjectSpec getSpec() {
-        return this.spec;
-    }
-
     public Project setStatus(ProjectStatus status) {
         this.status = status;
         return this;
@@ -123,14 +106,6 @@ public class Project extends TeaModel {
     }
     public String getUid() {
         return this.uid;
-    }
-
-    public Project setUpdatedTime(String updatedTime) {
-        this.updatedTime = updatedTime;
-        return this;
-    }
-    public String getUpdatedTime() {
-        return this.updatedTime;
     }
 
 }

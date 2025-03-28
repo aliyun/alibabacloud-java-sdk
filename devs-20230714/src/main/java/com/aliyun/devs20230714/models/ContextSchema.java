@@ -4,18 +4,38 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class ContextSchema extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://git-scm.com/">git</a> address for <a href="https://git-scm.com/docs/git-clone">git clone</a>.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:git@gitlab.alibaba-inc.com">git@gitlab.alibaba-inc.com</a>:serverless/lambda.git</p>
+     */
     @NameInMap("hint")
     public String hint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gitRepoUrl</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("required")
     public Boolean required;
 
+    /**
+     * <strong>example:</strong>
+     * <p>string</p>
+     */
     @NameInMap("type")
     public String type;
 

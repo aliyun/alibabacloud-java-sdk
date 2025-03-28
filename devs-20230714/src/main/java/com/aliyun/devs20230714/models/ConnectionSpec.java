@@ -12,6 +12,9 @@ public class ConnectionSpec extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>github</p>
      */
     @NameInMap("platform")
     public String platform;

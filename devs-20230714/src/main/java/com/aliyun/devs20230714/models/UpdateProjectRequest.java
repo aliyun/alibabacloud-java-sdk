@@ -7,9 +7,6 @@ public class UpdateProjectRequest extends TeaModel {
     @NameInMap("body")
     public Project body;
 
-    @NameInMap("force")
-    public Boolean force;
-
     public static UpdateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectRequest self = new UpdateProjectRequest();
         return TeaModel.build(map, self);
@@ -21,14 +18,6 @@ public class UpdateProjectRequest extends TeaModel {
     }
     public Project getBody() {
         return this.body;
-    }
-
-    public UpdateProjectRequest setForce(Boolean force) {
-        this.force = force;
-        return this;
-    }
-    public Boolean getForce() {
-        return this.force;
     }
 
 }

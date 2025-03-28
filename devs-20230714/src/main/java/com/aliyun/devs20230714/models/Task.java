@@ -4,18 +4,31 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class Task extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-19T09:34:38Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
-    @NameInMap("deletionTime")
-    public String deletionTime;
-
+    /**
+     * <strong>example:</strong>
+     * <p>Task example.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("generation")
     public Integer generation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Task</p>
+     */
     @NameInMap("kind")
     public String kind;
 
@@ -24,10 +37,17 @@ public class Task extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-task</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("resourceVersion")
     public Integer resourceVersion;
 
@@ -37,6 +57,10 @@ public class Task extends TeaModel {
     @NameInMap("status")
     public TaskStatus status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1455541096***548</p>
+     */
     @NameInMap("uid")
     public String uid;
 
@@ -51,14 +75,6 @@ public class Task extends TeaModel {
     }
     public String getCreatedTime() {
         return this.createdTime;
-    }
-
-    public Task setDeletionTime(String deletionTime) {
-        this.deletionTime = deletionTime;
-        return this;
-    }
-    public String getDeletionTime() {
-        return this.deletionTime;
     }
 
     public Task setDescription(String description) {

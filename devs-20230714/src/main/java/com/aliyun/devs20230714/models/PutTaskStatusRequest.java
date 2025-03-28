@@ -7,6 +7,10 @@ public class PutTaskStatusRequest extends TeaModel {
     @NameInMap("body")
     public Task body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("force")
     public Boolean force;
 

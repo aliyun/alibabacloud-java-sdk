@@ -7,6 +7,10 @@ public class PutPipelineStatusRequest extends TeaModel {
     @NameInMap("body")
     public Pipeline body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("force")
     public Boolean force;
 

@@ -4,9 +4,17 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class Checkout extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>+001691d0768ca49e9550beeb59fbc163f33b7e88:refs/remotes/origin/master</p>
+     */
     @NameInMap("ref")
     public String ref;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https:/your_token/@github.com/buptwzj/test-initRepo4.git</p>
+     */
     @NameInMap("remote")
     public String remote;
 

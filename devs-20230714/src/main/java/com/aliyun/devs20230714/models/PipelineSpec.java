@@ -7,6 +7,10 @@ public class PipelineSpec extends TeaModel {
     @NameInMap("context")
     public Context context;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-pipeline-template</p>
+     */
     @NameInMap("templateName")
     public String templateName;
 

@@ -4,9 +4,17 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class PullRequestFilter extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>feature-.*</p>
+     */
     @NameInMap("sourceBranch")
     public String sourceBranch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>master</p>
+     */
     @NameInMap("targetBranch")
     public String targetBranch;
 

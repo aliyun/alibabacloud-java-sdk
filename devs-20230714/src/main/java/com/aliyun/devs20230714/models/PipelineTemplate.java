@@ -4,18 +4,38 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class PipelineTemplate extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-19T09:34:38Z</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-19T09:34:38Z</p>
+     */
     @NameInMap("deletionTime")
     public String deletionTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PipelineTemplate example.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("generation")
     public Integer generation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PipelineTemplate</p>
+     */
     @NameInMap("kind")
     public String kind;
 
@@ -24,16 +44,27 @@ public class PipelineTemplate extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-pipeline-template</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("resourceVersion")
     public Integer resourceVersion;
 
     @NameInMap("spec")
     public PipelineTemplateSpec spec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1455541096***548</p>
+     */
     @NameInMap("uid")
     public String uid;
 
