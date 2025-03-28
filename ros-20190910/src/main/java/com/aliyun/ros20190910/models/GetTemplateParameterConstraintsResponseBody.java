@@ -89,9 +89,21 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("AllowedValues")
         public java.util.List<?> allowedValues;
 
+        /**
+         * <p>Behavior of the parameter</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QueryError</p>
+         */
         @NameInMap("Behavior")
         public String behavior;
 
+        /**
+         * <p>The reason for the parameter behavior</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No resource property refer to the parameter</p>
+         */
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
@@ -237,12 +249,30 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     }
 
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails extends TeaModel {
+        /**
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query property SlaveZoneIds.* in resource rds error, error message: query 8 seconds timeout</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>Resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::RDS::DBInstance</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -361,6 +391,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("QueryErrors")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors;
 
+        /**
+         * <p>Query the details of timeout.</p>
+         */
         @NameInMap("QueryTimeoutDetails")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails> queryTimeoutDetails;
 

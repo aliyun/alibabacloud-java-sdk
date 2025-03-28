@@ -197,7 +197,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
          * <li>IMM: Intelligent Media Management (IMM)</li>
          * <li>IOT: IoT Platform</li>
          * <li>KMS: Key Management Service (KMS)</li>
-         * <li>NAS: Apsara File Storage NAS (NAS)</li>
+         * <li>NAS: File Storage NAS (NAS)</li>
          * <li>NLP: Natural Language Processing (NLP)</li>
          * <li>OSS: Object Storage Service (OSS)</li>
          * <li>OTS: Tablestore</li>

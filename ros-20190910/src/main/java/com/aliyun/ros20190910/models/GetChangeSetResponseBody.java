@@ -103,6 +103,9 @@ public class GetChangeSetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the stack with which the change set is associated.</p>
      * 
@@ -138,6 +141,9 @@ public class GetChangeSetResponseBody extends TeaModel {
      */
     @NameInMap("StatusReason")
     public String statusReason;
+
+    @NameInMap("Tags")
+    public java.util.List<GetChangeSetResponseBodyTags> tags;
 
     /**
      * <p>The template body of the change set.</p>
@@ -261,6 +267,14 @@ public class GetChangeSetResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetChangeSetResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetChangeSetResponseBody setStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -291,6 +305,14 @@ public class GetChangeSetResponseBody extends TeaModel {
     }
     public String getStatusReason() {
         return this.statusReason;
+    }
+
+    public GetChangeSetResponseBody setTags(java.util.List<GetChangeSetResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetChangeSetResponseBodyTags> getTags() {
+        return this.tags;
     }
 
     public GetChangeSetResponseBody setTemplateBody(String templateBody) {
@@ -442,6 +464,36 @@ public class GetChangeSetResponseBody extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class GetChangeSetResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetChangeSetResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetChangeSetResponseBodyTags self = new GetChangeSetResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChangeSetResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetChangeSetResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

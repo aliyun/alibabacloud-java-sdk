@@ -4,14 +4,17 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    /**
+     * <p>Filter.</p>
+     */
     @NameInMap("Filters")
     public java.util.List<ListTemplatesRequestFilters> filters;
 
     /**
-     * <p>Specifies whether to query the tag information. Valid values:</p>
+     * <p>Whether to query tag information. Values:  </p>
      * <ul>
-     * <li>Enabled</li>
-     * <li>Disabled (default)</li>
+     * <li>Enabled: Query.  </li>
+     * <li>Disabled (default): Do not query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,9 +24,7 @@ public class ListTemplatesRequest extends TeaModel {
     public String includeTags;
 
     /**
-     * <p>The page number.\
-     * Pages start from page 1.\
-     * Default value: 1.</p>
+     * <p>The page number of the template list.<br>Start value: 1.<br>Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,9 +33,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.\
-     * Valid values: 1 to 50.\
-     * Default value: 10.</p>
+     * <p>The number of entries per page in a paginated query.<br>Value range: 1~50.<br>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -43,8 +42,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the resource group.\
-     * For more information about resource groups, see the &quot;Resource Group&quot; section of <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * <p>The ID of the resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -53,12 +51,12 @@ public class ListTemplatesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The sharing type of the template.</p>
-     * <p>Valid values:</p>
+     * <p>The sharing type of the template.  </p>
+     * <p>Values:  </p>
      * <ul>
-     * <li>Private (default): The template belongs to the template owner.</li>
-     * <li>Shared: The template is shared with other users.</li>
-     * <li>Official: The template is the shared template of the official version.</li>
+     * <li>Private (default): The template is owned by the user.  </li>
+     * <li>Shared: The template is shared by other users.  </li>
+     * <li>Official: The template is officially shared.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,13 +66,13 @@ public class ListTemplatesRequest extends TeaModel {
     public String shareType;
 
     /**
-     * <p>The tags. You can specify up to 20 tags.</p>
+     * <p>Tags. A maximum of 20 tags are supported.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTemplatesRequestTag> tag;
 
     /**
-     * <p>The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or letter.</p>
+     * <p>The name of the template. This parameter is effective only when ShareType is Private.<br>The length must not exceed 255 characters and must start with a digit or a letter. It can contain digits, letters, hyphens (-), and underscores (_).</p>
      * 
      * <strong>example:</strong>
      * <p>MyTemplate</p>
@@ -152,9 +150,26 @@ public class ListTemplatesRequest extends TeaModel {
     }
 
     public static class ListTemplatesRequestFilters extends TeaModel {
+        /**
+         * <p>The name of the filter. You can choose one or more names for the query. Value range:  </p>
+         * <ul>
+         * <li>Categories: Template categories  </li>
+         * <li>DeployTypes: Deployment types  </li>
+         * <li>ApplicationScenes: Application scenarios  </li>
+         * <li>BasicServices: Basic services  </li>
+         * <li>ResourceTypes: Resource types  </li>
+         * <li>TemplateNames: Template names</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Categories</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The list of filter values.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -183,8 +198,8 @@ public class ListTemplatesRequest extends TeaModel {
 
     public static class ListTemplatesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. This parameter takes effect only when ShareType is set to Private.</p>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>The key of the tag. This parameter is effective only when ShareType is Private.  </p>
+         * <p>A maximum of 20 tag keys are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>usage</p>
@@ -193,8 +208,8 @@ public class ListTemplatesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. This parameter takes effect only when ShareType is set to Private.</p>
-         * <p>You can specify up to 20 tag values.</p>
+         * <p>The value of the tag. This parameter is effective only when ShareType is Private.  </p>
+         * <p>A maximum of 20 tag values are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>deploy</p>

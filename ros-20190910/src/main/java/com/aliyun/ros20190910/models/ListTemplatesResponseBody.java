@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The page number.\
-     * Pages start from page 1.</p>
+     * <p>The page number of the template list.<br>Start value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,7 +14,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,7 +32,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The templates.</p>
+     * <p>The list of templates.</p>
      */
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
@@ -94,7 +93,7 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     public static class ListTemplatesResponseBodyTemplatesTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>Tag key of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>usage</p>
@@ -103,7 +102,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>Tag value of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -135,11 +134,17 @@ public class ListTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <p>Supplementary information for public templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DeploymentDuration&quot;:null,&quot;Title&quot;:&quot;Self-Built_ElasticSearch_Snapshot_Saved_To_OSS&quot;,&quot;Labels&quot;:{&quot;ResourceTypes&quot;:[&quot;ALIYUN::ECS::Instance&quot;,&quot;ALIYUN::ECS::SecurityGroup&quot;,&quot;ALIYUN::ECS::VPC&quot;,&quot;ALIYUN::ECS::VSwitch&quot;,&quot;ALIYUN::OSS::Bucket&quot;,&quot;ALIYUN::ROS::WaitCondition&quot;,&quot;ALIYUN::ROS::WaitConditionHandle&quot;],&quot;DeployTypes&quot;:[&quot;ROS&quot;],&quot;ApplicationScenes&quot;:[&quot;其他&quot;]},&quot;Provider&quot;:&quot;ROS&quot;,&quot;Categories&quot;:[&quot;Solution&quot;]}</p>
+         */
         @NameInMap("AdditionalInfo")
         public java.util.Map<String, ?> additionalInfo;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>Creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-10-15T08:17:14.000000</p>
@@ -148,7 +153,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the template.</p>
+         * <p>Template description.</p>
          * 
          * <strong>example:</strong>
          * <p>test-description</p>
@@ -157,7 +162,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the template belongs.</p>
+         * <p>ID of the Alibaba Cloud account to which the template belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>151266687691****</p>
@@ -166,7 +171,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>Resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4ph6aiy****</p>
@@ -176,10 +181,10 @@ public class ListTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The sharing type of the template.</p>
-         * <p>Valid values:</p>
+         * <p>Values:</p>
          * <ul>
-         * <li>Private: The template belongs to the template owner.</li>
-         * <li>Shared: The template is shared with other users.</li>
+         * <li>Private: The template is owned by the user themselves.</li>
+         * <li>Shared: The template is shared by other users.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,13 +194,13 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String shareType;
 
         /**
-         * <p>The tags of the template.</p>
+         * <p>Tags of the template.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTemplatesResponseBodyTemplatesTags> tags;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the template.</p>
+         * <p>The ARN of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ros:<em>:151266687691</em><em><strong>:template/a52f81be-496f-4e1c-a286-8852ab54</strong></em>*</p>
@@ -204,7 +209,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateARN;
 
         /**
-         * <p>The template ID.</p>
+         * <p>Template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4d4f5aa2-3260-4e47-863b-763fbb12****</p>
@@ -213,7 +218,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The template name.</p>
+         * <p>Template name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -222,7 +227,16 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The latest version of the template.</p>
+         * <p>Link to the template</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://ros-public-templates.oss-cn-hangzhou.aliyuncs.com/demo.yml">https://ros-public-templates.oss-cn-hangzhou.aliyuncs.com/demo.yml</a></p>
+         */
+        @NameInMap("TemplateUrl")
+        public String templateUrl;
+
+        /**
+         * <p>Latest template version name.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -231,7 +245,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateVersion;
 
         /**
-         * <p>The time when the template was last updated.</p>
+         * <p>The last update time of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-10-15T08:17:14.000000</p>
@@ -322,6 +336,14 @@ public class ListTemplatesResponseBody extends TeaModel {
         }
         public String getTemplateName() {
             return this.templateName;
+        }
+
+        public ListTemplatesResponseBodyTemplates setTemplateUrl(String templateUrl) {
+            this.templateUrl = templateUrl;
+            return this;
+        }
+        public String getTemplateUrl() {
+            return this.templateUrl;
         }
 
         public ListTemplatesResponseBodyTemplates setTemplateVersion(String templateVersion) {

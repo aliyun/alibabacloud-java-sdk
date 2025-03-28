@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8C5D90E1-66B6-496C-9371-3807F8DA80A8</p>
@@ -14,7 +14,7 @@ public class UpdateTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>Template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5ecd1e10-b0e9-4389-a565-e4c15efc****</p>
@@ -22,6 +22,12 @@ public class UpdateTemplateResponseBody extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The template version affected by this operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("TemplateVersion")
     public String templateVersion;
 

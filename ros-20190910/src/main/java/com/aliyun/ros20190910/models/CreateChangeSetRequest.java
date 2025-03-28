@@ -158,6 +158,9 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("ReplacementOption")
     public String replacementOption;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The resources that you want to import to the stack.</p>
      */
@@ -264,6 +267,9 @@ public class CreateChangeSetRequest extends TeaModel {
      */
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateChangeSetRequestTags> tags;
 
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -443,6 +449,14 @@ public class CreateChangeSetRequest extends TeaModel {
         return this.replacementOption;
     }
 
+    public CreateChangeSetRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateChangeSetRequest setResourcesToImport(java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport) {
         this.resourcesToImport = resourcesToImport;
         return this;
@@ -497,6 +511,14 @@ public class CreateChangeSetRequest extends TeaModel {
     }
     public String getStackPolicyURL() {
         return this.stackPolicyURL;
+    }
+
+    public CreateChangeSetRequest setTags(java.util.List<CreateChangeSetRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateChangeSetRequestTags> getTags() {
+        return this.tags;
     }
 
     public CreateChangeSetRequest setTemplateBody(String templateBody) {
@@ -671,6 +693,36 @@ public class CreateChangeSetRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+    }
+
+    public static class CreateChangeSetRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateChangeSetRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateChangeSetRequestTags self = new CreateChangeSetRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateChangeSetRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateChangeSetRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

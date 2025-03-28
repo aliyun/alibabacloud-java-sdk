@@ -10,6 +10,19 @@ public class DeleteStackRequest extends TeaModel {
     @NameInMap("DeleteOptions")
     public java.util.List<String> deleteOptions;
 
+    /**
+     * <p>The maximum number of concurrent operations that can be performed on resources.</p>
+     * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</li>
+     * <li>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Parallelism")
     public Long parallelism;
 

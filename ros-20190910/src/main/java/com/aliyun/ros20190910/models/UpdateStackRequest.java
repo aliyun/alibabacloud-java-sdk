@@ -281,6 +281,7 @@ public class UpdateStackRequest extends TeaModel {
         return this.clientToken;
     }
 
+    @Deprecated
     public UpdateStackRequest setDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
