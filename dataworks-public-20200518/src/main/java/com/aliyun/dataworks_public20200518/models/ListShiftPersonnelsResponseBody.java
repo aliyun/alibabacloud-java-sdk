@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListShiftPersonnelsResponseBody extends TeaModel {
     /**
-     * <p>The pagination data.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("Paging")
     public ListShiftPersonnelsResponseBodyPaging paging;
@@ -136,7 +136,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>A list of on-duty engineers in a shift schedule.</p>
+         * <p>The on-duty engineers in the shift schedule.</p>
          */
         @NameInMap("ShiftPersons")
         public java.util.List<ListShiftPersonnelsResponseBodyPagingShiftPersons> shiftPersons;

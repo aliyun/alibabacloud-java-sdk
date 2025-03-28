@@ -212,6 +212,12 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("IgnoreParentSkipRunningProperty")
     public Boolean ignoreParentSkipRunningProperty;
 
+    /**
+     * <p>Custom image ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp1h4b5a8ogkbll2f3tr</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 

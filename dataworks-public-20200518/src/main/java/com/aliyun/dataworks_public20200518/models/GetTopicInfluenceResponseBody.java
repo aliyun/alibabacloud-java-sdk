@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicInfluenceResponseBody extends TeaModel {
     /**
-     * <p>The list of baseline instances affected by the event.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public GetTopicInfluenceResponseBodyData data;
@@ -271,7 +271,7 @@ public class GetTopicInfluenceResponseBody extends TeaModel {
 
     public static class GetTopicInfluenceResponseBodyData extends TeaModel {
         /**
-         * <p>The list of affected baseline instances.</p>
+         * <p>The affected baseline instances.</p>
          */
         @NameInMap("Influences")
         public java.util.List<GetTopicInfluenceResponseBodyDataInfluences> influences;

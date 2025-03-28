@@ -152,7 +152,7 @@ public class ListTablesResponseBody extends TeaModel {
 
     public static class ListTablesResponseBodyDataTableEntityList extends TeaModel {
         /**
-         * <p>Table entity information.</p>
+         * <p>The information about the table.</p>
          */
         @NameInMap("EntityContent")
         public ListTablesResponseBodyDataTableEntityListEntityContent entityContent;
@@ -200,7 +200,7 @@ public class ListTablesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>Entity array.</p>
+         * <p>An array of entities.</p>
          */
         @NameInMap("TableEntityList")
         public java.util.List<ListTablesResponseBodyDataTableEntityList> tableEntityList;

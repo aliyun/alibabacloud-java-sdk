@@ -16,7 +16,7 @@ public class UpdateFileRequest extends TeaModel {
     public String advancedSettings;
 
     /**
-     * <p>Whether the scheduling configuration takes effect immediately after the release.</p>
+     * <p>Specifies whether scheduling configurations immediately take effect after the node is deployed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -184,7 +184,7 @@ public class UpdateFileRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>Scheduling configuration-&gt; previous cycle-&gt; whether to skip the upstream empty run attribute.</p>
+     * <p>Specifies whether to skip the dry-run property of the ancestor nodes of the node. This parameter corresponds to the Skip the dry-run property of the ancestor node parameter that is displayed after you configure the Depend On parameter in the Dependencies section of the Properties tab in the DataWorks console.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -192,6 +192,12 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("IgnoreParentSkipRunningProperty")
     public Boolean ignoreParentSkipRunningProperty;
 
+    /**
+     * <p>The ID of the custom image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-uf6d7npxk1hhek8ng0cb</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 

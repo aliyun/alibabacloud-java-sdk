@@ -136,7 +136,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public Integer checkerId;
 
         /**
-         * <p>The description of the system defense rule.</p>
+         * <p>The description of the monitoring rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Verify table rules</p>
@@ -591,7 +591,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The details of the monitoring rule.</p>
+         * <p>The details of the monitoring rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<ListQualityRulesResponseBodyDataRules> rules;

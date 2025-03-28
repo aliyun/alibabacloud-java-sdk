@@ -1213,6 +1213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a data synchronization task.</p>
      * 
@@ -1272,6 +1275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You cannot configure scheduling properties for a task by calling this operation. If you want to configure scheduling properties for a task, you can call the UpdateFile operation.<a href="~~2780137~~"></a></p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a data synchronization task.</p>
      * 
@@ -2557,8 +2563,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplyReason", request.applyReason);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applyType)) {
+            query.put("ApplyType", request.applyType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.applyUserIds)) {
             query.put("ApplyUserIds", request.applyUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            query.put("CatalogName", request.catalogName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deadline)) {
@@ -12970,6 +12984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Keyword", request.keyword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lastEditUser)) {
+            body.put("LastEditUser", request.lastEditUser);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.needAbsoluteFolderPath)) {
             body.put("NeedAbsoluteFolderPath", request.needAbsoluteFolderPath);
         }
@@ -14154,6 +14172,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPermissionApplyOrdersResponse listPermissionApplyOrdersWithOptions(ListPermissionApplyOrdersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applyType)) {
+            query.put("ApplyType", request.applyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogName)) {
+            query.put("CatalogName", request.catalogName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
         }
@@ -15364,63 +15390,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a directory to the left-side navigation pane of DataAnalysis.</p>
-     * 
-     * @param request MountDirectoryRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return MountDirectoryResponse
-     */
-    public MountDirectoryResponse mountDirectoryWithOptions(MountDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
-            body.put("TargetId", request.targetId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
-            body.put("TargetType", request.targetType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetUserId)) {
-            body.put("TargetUserId", request.targetUserId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "MountDirectory"),
-            new TeaPair("version", "2020-05-18"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new MountDirectoryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new MountDirectoryResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Adds a directory to the left-side navigation pane of DataAnalysis.</p>
-     * 
-     * @param request MountDirectoryRequest
-     * @return MountDirectoryResponse
-     */
-    public MountDirectoryResponse mountDirectory(MountDirectoryRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.mountDirectoryWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Undeploys a node.</p>
      * 
      * @param request OfflineNodeRequest
@@ -16315,75 +16284,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeInstanceResponse resumeInstance(ResumeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeInstanceWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Revokes permissions on table fields from a user.</p>
-     * 
-     * @param request RevokeColumnPermissionRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return RevokeColumnPermissionResponse
-     */
-    public RevokeColumnPermissionResponse revokeColumnPermissionWithOptions(RevokeColumnPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.columns)) {
-            query.put("Columns", request.columns);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.maxComputeProjectName)) {
-            query.put("MaxComputeProjectName", request.maxComputeProjectName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.revokeUserId)) {
-            query.put("RevokeUserId", request.revokeUserId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.revokeUserName)) {
-            query.put("RevokeUserName", request.revokeUserName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
-            query.put("TableName", request.tableName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            query.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RevokeColumnPermission"),
-            new TeaPair("version", "2020-05-18"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new RevokeColumnPermissionResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new RevokeColumnPermissionResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Revokes permissions on table fields from a user.</p>
-     * 
-     * @param request RevokeColumnPermissionRequest
-     * @return RevokeColumnPermissionResponse
-     */
-    public RevokeColumnPermissionResponse revokeColumnPermission(RevokeColumnPermissionRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.revokeColumnPermissionWithOptions(request, runtime);
     }
 
     /**
@@ -18018,63 +17918,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TopTenErrorTimesInstanceResponse topTenErrorTimesInstance(TopTenErrorTimesInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.topTenErrorTimesInstanceWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Removes a directory from the left-side navigation pane of DataAnalysis.</p>
-     * 
-     * @param request UmountDirectoryRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UmountDirectoryResponse
-     */
-    public UmountDirectoryResponse umountDirectoryWithOptions(UmountDirectoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.targetId)) {
-            body.put("TargetId", request.targetId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetType)) {
-            body.put("TargetType", request.targetType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.targetUserId)) {
-            body.put("TargetUserId", request.targetUserId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UmountDirectory"),
-            new TeaPair("version", "2020-05-18"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UmountDirectoryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UmountDirectoryResponse());
-        }
-
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Removes a directory from the left-side navigation pane of DataAnalysis.</p>
-     * 
-     * @param request UmountDirectoryRequest
-     * @return UmountDirectoryResponse
-     */
-    public UmountDirectoryResponse umountDirectory(UmountDirectoryRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.umountDirectoryWithOptions(request, runtime);
     }
 
     /**

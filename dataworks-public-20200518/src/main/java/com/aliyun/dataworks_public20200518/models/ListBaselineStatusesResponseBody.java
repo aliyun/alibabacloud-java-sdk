@@ -128,6 +128,15 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         public String baselineName;
 
         /**
+         * <p>The type of the baseline, including DAILY and HOURLY. Separate multiple types with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAILY,HOURLY</p>
+         */
+        @NameInMap("BaselineType")
+        public String baselineType;
+
+        /**
          * <p>The data timestamp.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +263,14 @@ public class ListBaselineStatusesResponseBody extends TeaModel {
         }
         public String getBaselineName() {
             return this.baselineName;
+        }
+
+        public ListBaselineStatusesResponseBodyDataBaselineStatuses setBaselineType(String baselineType) {
+            this.baselineType = baselineType;
+            return this;
+        }
+        public String getBaselineType() {
+            return this.baselineType;
         }
 
         public ListBaselineStatusesResponseBodyDataBaselineStatuses setBizdate(Long bizdate) {

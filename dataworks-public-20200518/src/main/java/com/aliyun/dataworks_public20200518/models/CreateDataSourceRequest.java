@@ -9,8 +9,8 @@ public class CreateDataSourceRequest extends TeaModel {
      * <ul>
      * <li><p>odps</p>
      * <pre><code>{
-     *   &quot;accessId&quot;: &quot;xssssss&quot;,
-     *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+     *   &quot;accessId&quot;: &quot;*****&quot;,
+     *   &quot;accessKey&quot;: &quot;*****&quot;,
      *   &quot;authType&quot;: 2,
      *   &quot;endpoint&quot;: &quot;http://service.odps.aliyun.com/api&quot;,
      *   &quot;project&quot;: &quot;xsaxsax&quot;,
@@ -44,8 +44,8 @@ public class CreateDataSourceRequest extends TeaModel {
      * </li>
      * <li><p>oss</p>
      * <pre><code>{
-     *   &quot;accessId&quot;: &quot;sssssxx&quot;,
-     *   &quot;accessKey&quot;: &quot;xsaxaxsaxs&quot;,
+     *   &quot;accessId&quot;: &quot;*****&quot;,
+     *   &quot;accessKey&quot;: &quot;*****&quot;,
      *   &quot;bucket&quot;: &quot;xsa-xs-xs&quot;,
      *   &quot;endpoint&quot;: &quot;http://oss-cn-shanghai.aliyuncs.com&quot;,
      *   &quot;tag&quot;: &quot;public&quot;
@@ -102,11 +102,11 @@ public class CreateDataSourceRequest extends TeaModel {
      * </li>
      * <li><p>emr</p>
      * <pre><code>{
-     *   &quot;accessId&quot;: &quot;xsaxsa&quot;,
+     *   &quot;accessId&quot;: &quot;*****&quot;,
      *   &quot;emrClusterId&quot;: &quot;C-dsads&quot;,
      *   &quot;emrResourceQueueName&quot;: &quot;default&quot;,
      *   &quot;emrEndpoint&quot;: &quot;emr.aliyuncs.com&quot;,
-     *   &quot;accessKey&quot;: &quot;dsadsad&quot;,
+     *   &quot;accessKey&quot;: &quot;*****&quot;,
      *   &quot;emrUserId&quot;: &quot;224833315798889783&quot;,
      *   &quot;name&quot;: &quot;sasdsadsa&quot;,
      *   &quot;emrAccessMode&quot;: &quot;simple&quot;,
@@ -149,8 +149,8 @@ public class CreateDataSourceRequest extends TeaModel {
      * </li>
      * <li><p>holo</p>
      * <pre><code>{
-     *   &quot;accessId&quot;: &quot;xsaxsaxs&quot;,
-     *   &quot;accessKey&quot;: &quot;xsaxsaxsa&quot;,
+     *   &quot;accessId&quot;: &quot;*****&quot;,
+     *   &quot;accessKey&quot;: &quot;*****&quot;,
      *   &quot;database&quot;: &quot;xsaxsaxsa&quot;,
      *   &quot;instanceId&quot;: &quot;xsaxa&quot;,
      *   &quot;tag&quot;: &quot;aliyun&quot;

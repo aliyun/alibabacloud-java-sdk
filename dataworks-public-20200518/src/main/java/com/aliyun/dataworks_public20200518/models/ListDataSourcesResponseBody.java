@@ -115,7 +115,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * }
          * </code></pre>
          * </li>
-         * <li><p>MySQL</p>
+         * <li><p>mysql</p>
          * <pre><code>{
          *   &quot;configType&quot;: &quot;1&quot;,
          *   &quot;database&quot;: &quot;mysql_d111b&quot;,
@@ -127,7 +127,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * }
          * </code></pre>
          * </li>
-         * <li><p>ApsaraDB RDS for SQL Server</p>
+         * <li><p>sqlserver</p>
          * <pre><code>{
          *   &quot;configType&quot;: &quot;1&quot;,
          *   &quot;jdbcUrl&quot;: &quot;jdbc:sqlserver://rm-xxxxx.sqlserver.rds.aliyuncs.com:1433;DatabaseName=sqlserver_db1&quot;,
@@ -137,10 +137,10 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * }
          * </code></pre>
          * </li>
-         * <li><p>Object Storage Service (OSS)</p>
+         * <li><p>oss</p>
          * <pre><code>{
-         *   &quot;accessId&quot;: &quot;LTAINbR9Uxxxx&quot;,
-         *   &quot;accessKey&quot;: &quot;***&quot;,
+         *   &quot;accessId&quot;: &quot;***********&quot;,
+         *   &quot;accessKey&quot;: &quot;***********&quot;,
          *   &quot;bucket&quot;: &quot;bigxxx1223&quot;,
          *   &quot;configType&quot;: &quot;1&quot;,
          *   &quot;endpoint&quot;: &quot;http://oss-cn-hangzhou.aliyuncs.com&quot;,
@@ -148,7 +148,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * }
          * </code></pre>
          * </li>
-         * <li><p>ApsaraDB RDS for PostgreSQL</p>
+         * <li><p>postgresql</p>
          * <pre><code>{
          *   &quot;configType&quot;: &quot;1&quot;,
          *   &quot;database&quot;: &quot;cdp_xxx&quot;,
@@ -160,7 +160,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
          * }
          * </code></pre>
          * </li>
-         * <li><p>AnalyticDB for MySQL</p>
+         * <li><p>ads</p>
          * <pre><code>{
          *   &quot;configType&quot;: &quot;1&quot;,
          *   &quot;password&quot;: &quot;***&quot;,

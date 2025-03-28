@@ -470,7 +470,7 @@ public class UpdateBaselineRequest extends TeaModel {
 
     public static class UpdateBaselineRequestOvertimeSettings extends TeaModel {
         /**
-         * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that does not exceed 24.</p>
+         * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
