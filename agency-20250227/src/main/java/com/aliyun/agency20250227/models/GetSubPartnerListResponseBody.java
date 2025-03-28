@@ -4,9 +4,6 @@ package com.aliyun.agency20250227.models;
 import com.aliyun.tea.*;
 
 public class GetSubPartnerListResponseBody extends TeaModel {
-    @NameInMap("Data")
-    public GetSubPartnerListResponseBodyData data;
-
     @NameInMap("Message")
     public String message;
 
@@ -33,6 +30,9 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SubPartnerList")
+    public java.util.List<GetSubPartnerListResponseBodySubPartnerList> subPartnerList;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -50,14 +50,6 @@ public class GetSubPartnerListResponseBody extends TeaModel {
     public static GetSubPartnerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSubPartnerListResponseBody self = new GetSubPartnerListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetSubPartnerListResponseBody setData(GetSubPartnerListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetSubPartnerListResponseBodyData getData() {
-        return this.data;
     }
 
     public GetSubPartnerListResponseBody setMessage(String message) {
@@ -92,6 +84,14 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetSubPartnerListResponseBody setSubPartnerList(java.util.List<GetSubPartnerListResponseBodySubPartnerList> subPartnerList) {
+        this.subPartnerList = subPartnerList;
+        return this;
+    }
+    public java.util.List<GetSubPartnerListResponseBodySubPartnerList> getSubPartnerList() {
+        return this.subPartnerList;
+    }
+
     public GetSubPartnerListResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -108,14 +108,10 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public static class GetSubPartnerListResponseBodyData extends TeaModel {
+    public static class GetSubPartnerListResponseBodySubPartnerList extends TeaModel {
         @NameInMap("Address")
         public String address;
 
-        /**
-         * <strong>example:</strong>
-         * <p>ACTIVE_PERIOD</p>
-         */
         @NameInMap("AgreementStatus")
         public String agreementStatus;
 
@@ -134,39 +130,27 @@ public class GetSubPartnerListResponseBody extends TeaModel {
         @NameInMap("District")
         public String district;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2025-02-28 01:00:00</p>
-         */
         @NameInMap("JoinTime")
         public String joinTime;
 
         @NameInMap("MasterAccount")
         public String masterAccount;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1708588696796450</p>
-         */
         @NameInMap("MasterUid")
         public String masterUid;
 
-        /**
-         * <strong>example:</strong>
-         * <p>P1233453</p>
-         */
         @NameInMap("Pid")
         public String pid;
 
         @NameInMap("Province")
         public String province;
 
-        public static GetSubPartnerListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetSubPartnerListResponseBodyData self = new GetSubPartnerListResponseBodyData();
+        public static GetSubPartnerListResponseBodySubPartnerList build(java.util.Map<String, ?> map) throws Exception {
+            GetSubPartnerListResponseBodySubPartnerList self = new GetSubPartnerListResponseBodySubPartnerList();
             return TeaModel.build(map, self);
         }
 
-        public GetSubPartnerListResponseBodyData setAddress(String address) {
+        public GetSubPartnerListResponseBodySubPartnerList setAddress(String address) {
             this.address = address;
             return this;
         }
@@ -174,7 +158,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.address;
         }
 
-        public GetSubPartnerListResponseBodyData setAgreementStatus(String agreementStatus) {
+        public GetSubPartnerListResponseBodySubPartnerList setAgreementStatus(String agreementStatus) {
             this.agreementStatus = agreementStatus;
             return this;
         }
@@ -182,7 +166,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.agreementStatus;
         }
 
-        public GetSubPartnerListResponseBodyData setAgreementStatusDesc(String agreementStatusDesc) {
+        public GetSubPartnerListResponseBodySubPartnerList setAgreementStatusDesc(String agreementStatusDesc) {
             this.agreementStatusDesc = agreementStatusDesc;
             return this;
         }
@@ -190,7 +174,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.agreementStatusDesc;
         }
 
-        public GetSubPartnerListResponseBodyData setCity(String city) {
+        public GetSubPartnerListResponseBodySubPartnerList setCity(String city) {
             this.city = city;
             return this;
         }
@@ -198,7 +182,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.city;
         }
 
-        public GetSubPartnerListResponseBodyData setCompanyName(String companyName) {
+        public GetSubPartnerListResponseBodySubPartnerList setCompanyName(String companyName) {
             this.companyName = companyName;
             return this;
         }
@@ -206,7 +190,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.companyName;
         }
 
-        public GetSubPartnerListResponseBodyData setContact(String contact) {
+        public GetSubPartnerListResponseBodySubPartnerList setContact(String contact) {
             this.contact = contact;
             return this;
         }
@@ -214,7 +198,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.contact;
         }
 
-        public GetSubPartnerListResponseBodyData setDistrict(String district) {
+        public GetSubPartnerListResponseBodySubPartnerList setDistrict(String district) {
             this.district = district;
             return this;
         }
@@ -222,7 +206,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.district;
         }
 
-        public GetSubPartnerListResponseBodyData setJoinTime(String joinTime) {
+        public GetSubPartnerListResponseBodySubPartnerList setJoinTime(String joinTime) {
             this.joinTime = joinTime;
             return this;
         }
@@ -230,7 +214,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.joinTime;
         }
 
-        public GetSubPartnerListResponseBodyData setMasterAccount(String masterAccount) {
+        public GetSubPartnerListResponseBodySubPartnerList setMasterAccount(String masterAccount) {
             this.masterAccount = masterAccount;
             return this;
         }
@@ -238,7 +222,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.masterAccount;
         }
 
-        public GetSubPartnerListResponseBodyData setMasterUid(String masterUid) {
+        public GetSubPartnerListResponseBodySubPartnerList setMasterUid(String masterUid) {
             this.masterUid = masterUid;
             return this;
         }
@@ -246,7 +230,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.masterUid;
         }
 
-        public GetSubPartnerListResponseBodyData setPid(String pid) {
+        public GetSubPartnerListResponseBodySubPartnerList setPid(String pid) {
             this.pid = pid;
             return this;
         }
@@ -254,7 +238,7 @@ public class GetSubPartnerListResponseBody extends TeaModel {
             return this.pid;
         }
 
-        public GetSubPartnerListResponseBodyData setProvince(String province) {
+        public GetSubPartnerListResponseBodySubPartnerList setProvince(String province) {
             this.province = province;
             return this;
         }
