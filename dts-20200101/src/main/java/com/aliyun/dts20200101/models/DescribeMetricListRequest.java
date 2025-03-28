@@ -68,10 +68,10 @@ public class DescribeMetricListRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>Specifies whether to query the metrics of the cluster or a node. Valid values:</p>
+     * <p>Indicates whether the metrics of the cluster or a node are queried. Valid values:</p>
      * <ul>
-     * <li><strong>CLUSTER</strong>: query the metrics of the cluster.</li>
-     * <li><strong>NODE</strong>: query the metrics of a node.</li>
+     * <li><strong>CLUSTER</strong>: The metrics of the cluster are queried.</li>
+     * <li><strong>NODE</strong>: The metrics of a node are queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +94,7 @@ public class DescribeMetricListRequest extends TeaModel {
     public String param;
 
     /**
-     * <p>The monitoring interval. Unit: seconds. Minimum value: 15.</p>
+     * <p>The monitoring interval. Unit: seconds. The minimum value is 15.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

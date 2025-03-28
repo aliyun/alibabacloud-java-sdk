@@ -65,6 +65,12 @@ public class CountJobByConditionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID, global parameter that does not need to be passed in by the current API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Resource group ID, global parameter that does not need to be passed in by the current API.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterMonitorRuleRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtsClustervcwn1oeyu5fx4yf</p>
      */
@@ -15,12 +17,20 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The ID of the region in which the instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -53,6 +53,15 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The total number of data rows that were failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("FailedTableCount")
+    public Long failedTableCount;
+
+    /**
      * <p>The total number of data rows that were verified.</p>
      * 
      * <strong>example:</strong>
@@ -155,6 +164,14 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     }
     public String getErrMessage() {
         return this.errMessage;
+    }
+
+    public DescribeDataCheckTableDetailsResponseBody setFailedTableCount(Long failedTableCount) {
+        this.failedTableCount = failedTableCount;
+        return this;
+    }
+    public Long getFailedTableCount() {
+        return this.failedTableCount;
     }
 
     public DescribeDataCheckTableDetailsResponseBody setFinishedCount(Long finishedCount) {

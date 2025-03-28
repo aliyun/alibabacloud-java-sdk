@@ -49,6 +49,12 @@ public class StopDedicatedClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID. This parameter is a global parameter and not required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The resource group ID. This parameter is a global parameter and not required.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
