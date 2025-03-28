@@ -6,28 +6,49 @@ import com.aliyun.tea.*;
 public class OAuthCredential extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1716176924603</p>
      */
     @NameInMap("createdTime")
     public Long createdTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1716263324603</p>
      */
     @NameInMap("expiration")
     public Long expiration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4d77bfae284770d94ebeed6b0199ebfd65e3943ba4f1e44dc36d792a93ba0d13</p>
+     */
     @NameInMap("refreshToken")
     public String refreshToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_info projects pull_requests hook gists emails</p>
+     */
     @NameInMap("scope")
     public String scope;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4e84246b6b3962cd3d207aad1ea2f911</p>
      */
     @NameInMap("token")
     public String token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bearer</p>
+     */
     @NameInMap("type")
     public String type;
 

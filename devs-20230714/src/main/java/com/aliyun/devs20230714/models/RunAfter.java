@@ -4,6 +4,10 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class RunAfter extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>task-1</p>
+     */
     @NameInMap("name")
     public String name;
 

@@ -4,6 +4,10 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class TaskWorker extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>serverless-runner</p>
+     */
     @NameInMap("presetWorker")
     public String presetWorker;
 

@@ -4,6 +4,10 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class DeleteProjectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("force")
     public Boolean force;
 

@@ -6,28 +6,54 @@ import com.aliyun.tea.*;
 public class RepositorySpec extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://github.com/DDofDD/start-springboot-lfgy.git">https://github.com/DDofDD/start-springboot-lfgy.git</a></p>
      */
     @NameInMap("cloneUrl")
     public String cloneUrl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>awesome-connection</p>
      */
     @NameInMap("connectionName")
     public String connectionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-repo-name</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>312649</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-org-name</p>
+     */
     @NameInMap("owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>github</p>
+     */
     @NameInMap("platform")
     public String platform;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://github.com/my-org-name/my-repo-name">https://github.com/my-org-name/my-repo-name</a></p>
+     */
     @NameInMap("webUrl")
     public String webUrl;
 

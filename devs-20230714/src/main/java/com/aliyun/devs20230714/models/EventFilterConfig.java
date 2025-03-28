@@ -4,31 +4,20 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class EventFilterConfig extends TeaModel {
-    @NameInMap("pullRequest")
-    public PullRequestFilter pullRequest;
-
-    @NameInMap("push")
-    public PushFilter push;
+    @NameInMap("branch")
+    public BranchFilter branch;
 
     public static EventFilterConfig build(java.util.Map<String, ?> map) throws Exception {
         EventFilterConfig self = new EventFilterConfig();
         return TeaModel.build(map, self);
     }
 
-    public EventFilterConfig setPullRequest(PullRequestFilter pullRequest) {
-        this.pullRequest = pullRequest;
+    public EventFilterConfig setBranch(BranchFilter branch) {
+        this.branch = branch;
         return this;
     }
-    public PullRequestFilter getPullRequest() {
-        return this.pullRequest;
-    }
-
-    public EventFilterConfig setPush(PushFilter push) {
-        this.push = push;
-        return this;
-    }
-    public PushFilter getPush() {
-        return this.push;
+    public BranchFilter getBranch() {
+        return this.branch;
     }
 
 }

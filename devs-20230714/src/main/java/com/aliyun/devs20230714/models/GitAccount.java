@@ -4,18 +4,38 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class GitAccount extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://gitee.com/assets/no_portrait.png">https://gitee.com/assets/no_portrait.png</a></p>
+     */
     @NameInMap("avatar")
     public String avatar;
 
+    /**
+     * <strong>example:</strong>
+     * <p>your_displayname</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>your_username</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://gitlab.com">https://gitlab.com</a></p>
+     */
     @NameInMap("uri")
     public String uri;
 

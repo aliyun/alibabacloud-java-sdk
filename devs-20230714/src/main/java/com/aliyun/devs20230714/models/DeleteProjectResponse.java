@@ -10,9 +10,6 @@ public class DeleteProjectResponse extends TeaModel {
     @NameInMap("statusCode")
     public Integer statusCode;
 
-    @NameInMap("body")
-    public DeleteProjectResponseBody body;
-
     public static DeleteProjectResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteProjectResponse self = new DeleteProjectResponse();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DeleteProjectResponse extends TeaModel {
     }
     public Integer getStatusCode() {
         return this.statusCode;
-    }
-
-    public DeleteProjectResponse setBody(DeleteProjectResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteProjectResponseBody getBody() {
-        return this.body;
     }
 
 }

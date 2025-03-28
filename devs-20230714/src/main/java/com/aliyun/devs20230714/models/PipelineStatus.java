@@ -7,6 +7,10 @@ public class PipelineStatus extends TeaModel {
     @NameInMap("latestExecError")
     public TaskExecError latestExecError;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("phase")
     public String phase;
 

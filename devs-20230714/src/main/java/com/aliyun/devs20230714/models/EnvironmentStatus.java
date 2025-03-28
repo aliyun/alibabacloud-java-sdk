@@ -4,37 +4,40 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class EnvironmentStatus extends TeaModel {
-    @NameInMap("infraStackStatus")
-    public InfraStackStatus infraStackStatus;
+    @NameInMap("latestEnvironmentDeploymentName")
+    public String latestEnvironmentDeploymentName;
 
-    @NameInMap("latestReleaseDetail")
-    public ReleaseDetail latestReleaseDetail;
-
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("observedGeneration")
     public Long observedGeneration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-19T09:34:38Z</p>
+     */
     @NameInMap("observedTime")
     public String observedTime;
+
+    @NameInMap("servicesInstances")
+    public java.util.Map<String, ServiceInstance> servicesInstances;
+
+    @NameInMap("servicesWithPendingChanges")
+    public java.util.List<String> servicesWithPendingChanges;
 
     public static EnvironmentStatus build(java.util.Map<String, ?> map) throws Exception {
         EnvironmentStatus self = new EnvironmentStatus();
         return TeaModel.build(map, self);
     }
 
-    public EnvironmentStatus setInfraStackStatus(InfraStackStatus infraStackStatus) {
-        this.infraStackStatus = infraStackStatus;
+    public EnvironmentStatus setLatestEnvironmentDeploymentName(String latestEnvironmentDeploymentName) {
+        this.latestEnvironmentDeploymentName = latestEnvironmentDeploymentName;
         return this;
     }
-    public InfraStackStatus getInfraStackStatus() {
-        return this.infraStackStatus;
-    }
-
-    public EnvironmentStatus setLatestReleaseDetail(ReleaseDetail latestReleaseDetail) {
-        this.latestReleaseDetail = latestReleaseDetail;
-        return this;
-    }
-    public ReleaseDetail getLatestReleaseDetail() {
-        return this.latestReleaseDetail;
+    public String getLatestEnvironmentDeploymentName() {
+        return this.latestEnvironmentDeploymentName;
     }
 
     public EnvironmentStatus setObservedGeneration(Long observedGeneration) {
@@ -51,6 +54,22 @@ public class EnvironmentStatus extends TeaModel {
     }
     public String getObservedTime() {
         return this.observedTime;
+    }
+
+    public EnvironmentStatus setServicesInstances(java.util.Map<String, ServiceInstance> servicesInstances) {
+        this.servicesInstances = servicesInstances;
+        return this;
+    }
+    public java.util.Map<String, ServiceInstance> getServicesInstances() {
+        return this.servicesInstances;
+    }
+
+    public EnvironmentStatus setServicesWithPendingChanges(java.util.List<String> servicesWithPendingChanges) {
+        this.servicesWithPendingChanges = servicesWithPendingChanges;
+        return this;
+    }
+    public java.util.List<String> getServicesWithPendingChanges() {
+        return this.servicesWithPendingChanges;
     }
 
 }

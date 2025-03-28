@@ -4,15 +4,27 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class ListEnvironmentsShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dev</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
     @NameInMap("labelSelector")
     public String labelSelectorShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
