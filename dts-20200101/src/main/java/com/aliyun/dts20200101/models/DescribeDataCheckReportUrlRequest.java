@@ -38,6 +38,12 @@ public class DescribeDataCheckReportUrlRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>Resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzawhxxc****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

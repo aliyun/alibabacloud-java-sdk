@@ -54,7 +54,7 @@ public class DescribeClusterOperateLogsRequest extends TeaModel {
     public String ownerID;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The number of the page to return. Specify the parameter to a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

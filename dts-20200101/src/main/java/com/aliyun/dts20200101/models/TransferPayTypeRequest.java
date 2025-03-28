@@ -57,6 +57,19 @@ public class TransferPayTypeRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The new instance class of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original instance class of the DTS instance.</p>
+     * <ul>
+     * <li>DTS supports the following instance classes for a data migration instance: <strong>xxlarge</strong>, <strong>xlarge</strong>, <strong>large</strong>, <strong>medium</strong>, and <strong>small</strong>.</li>
+     * <li>DTS supports the following instance classes for a data synchronization instance: <strong>large</strong>, <strong>medium</strong>, <strong>small</strong>, and <strong>micro</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization channels</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>small</p>
+     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 

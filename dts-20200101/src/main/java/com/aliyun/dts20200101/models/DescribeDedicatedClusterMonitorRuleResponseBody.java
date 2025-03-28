@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     /**
+     * <p>The alert threshold for CPU utilization. Unit: percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String cpuAlarmThreshold;
 
     /**
+     * <p>The ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>dtsClustervcwn1oeyu5fx4yf</p>
      */
@@ -19,6 +23,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String dedicatedClusterId;
 
     /**
+     * <p>The alert threshold for disk usage. Unit: percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -26,6 +32,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String diskAlarmThreshold;
 
     /**
+     * <p>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>46</p>
      */
@@ -33,6 +41,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String duAlarmThreshold;
 
     /**
+     * <p>The error code returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>InternalError</p>
      */
@@ -40,6 +50,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message returned if the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
      */
@@ -47,6 +59,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -54,6 +68,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>The alert threshold for memory usage. Unit: percentage.</p>
+     * 
      * <strong>example:</strong>
      * <p>80</p>
      */
@@ -61,6 +77,12 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String memAlarmThreshold;
 
     /**
+     * <p>Indicates whether the alert feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: The alert feature is enabled.</li>
+     * <li><strong>0</strong>: The alert feature is disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -68,6 +90,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String noticeSwitch;
 
     /**
+     * <p>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>186****7653</p>
      */
@@ -75,6 +99,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String phones;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
      */
@@ -82,6 +108,8 @@ public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
