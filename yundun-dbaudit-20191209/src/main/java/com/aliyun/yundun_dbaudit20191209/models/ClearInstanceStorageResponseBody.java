@@ -4,9 +4,17 @@ package com.aliyun.yundun_dbaudit20191209.models;
 import com.aliyun.tea.*;
 
 public class ClearInstanceStorageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dbaudit-cn-78v1gc****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>482EF142-BFA5-43FF-B4B0-84A4B0763639</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,17 +4,37 @@ package com.aliyun.yundun_dbaudit20191209.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
-
+    /**
+     * <strong>example:</strong>
+     * <p>52EcpzBpR86EEpcc.9xyfvym3cKAXsdV2SSFZnouWTRzf1</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>dbaudit-cn-78v1gc****</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
+     */
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -22,22 +42,6 @@ public class ListTagResourcesRequest extends TeaModel {
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagResourcesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public ListTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public ListTagResourcesRequest setNextToken(String nextToken) {
@@ -48,12 +52,28 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListTagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
+    }
+
+    public ListTagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
@@ -65,9 +85,17 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testapi</p>
+         */
         @NameInMap("Value")
         public String value;
 
