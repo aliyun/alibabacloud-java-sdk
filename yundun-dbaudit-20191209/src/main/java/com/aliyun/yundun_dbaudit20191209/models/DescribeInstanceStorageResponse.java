@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceStorageResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
     @NameInMap("body")
-    @Validation(required = true)
     public DescribeInstanceStorageResponseBody body;
 
     public static DescribeInstanceStorageResponse build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +24,14 @@ public class DescribeInstanceStorageResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeInstanceStorageResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public DescribeInstanceStorageResponse setBody(DescribeInstanceStorageResponseBody body) {
