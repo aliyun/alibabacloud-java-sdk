@@ -172,6 +172,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建会话分析任务</p>
+     * 
+     * @param request CreateDialogAnalysisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDialogAnalysisTaskResponse
+     */
+    public CreateDialogAnalysisTaskResponse createDialogAnalysisTaskWithOptions(String workspaceId, CreateDialogAnalysisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.analysisNodes)) {
+            body.put("analysisNodes", request.analysisNodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conversationList)) {
+            body.put("conversationList", request.conversationList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metaData)) {
+            body.put("metaData", request.metaData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playCode)) {
+            body.put("playCode", request.playCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("requestId", request.requestId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDialogAnalysisTask"),
+            new TeaPair("version", "2024-06-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/api/virtualHuman/dialog/analysis/submit"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDialogAnalysisTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateDialogAnalysisTaskResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建会话分析任务</p>
+     * 
+     * @param request CreateDialogAnalysisTaskRequest
+     * @return CreateDialogAnalysisTaskResponse
+     */
+    public CreateDialogAnalysisTaskResponse createDialogAnalysisTask(String workspaceId, CreateDialogAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDialogAnalysisTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建财报总结任务</p>
      * 
      * @param request CreateDocsSummaryTaskRequest
@@ -1870,6 +1938,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.metaData)) {
             body.put("metaData", request.metaData);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.opType)) {
+            body.put("opType", request.opType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.recommend)) {

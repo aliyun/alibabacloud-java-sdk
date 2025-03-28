@@ -36,6 +36,13 @@ public class RealTimeDialogRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>common</p>
+     */
+    @NameInMap("opType")
+    public String opType;
+
+    /**
+     * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("recommend")
@@ -106,6 +113,14 @@ public class RealTimeDialogRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getMetaData() {
         return this.metaData;
+    }
+
+    public RealTimeDialogRequest setOpType(String opType) {
+        this.opType = opType;
+        return this;
+    }
+    public String getOpType() {
+        return this.opType;
     }
 
     public RealTimeDialogRequest setRecommend(Boolean recommend) {
