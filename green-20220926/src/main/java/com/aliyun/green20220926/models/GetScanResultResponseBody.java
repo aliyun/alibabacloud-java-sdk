@@ -145,6 +145,9 @@ public class GetScanResultResponseBody extends TeaModel {
     }
 
     public static class GetScanResultResponseBodyDataItems extends TeaModel {
+        @NameInMap("AttackLevel")
+        public String attackLevel;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -239,6 +242,9 @@ public class GetScanResultResponseBody extends TeaModel {
         @NameInMap("PageNum")
         public Long pageNum;
 
+        @NameInMap("RequestFrom")
+        public String requestFrom;
+
         /**
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -278,6 +284,9 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         @NameInMap("Score")
         public Float score;
+
+        @NameInMap("SensitiveLevel")
+        public String sensitiveLevel;
 
         /**
          * <strong>example:</strong>
@@ -351,6 +360,14 @@ public class GetScanResultResponseBody extends TeaModel {
         public static GetScanResultResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             GetScanResultResponseBodyDataItems self = new GetScanResultResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public GetScanResultResponseBodyDataItems setAttackLevel(String attackLevel) {
+            this.attackLevel = attackLevel;
+            return this;
+        }
+        public String getAttackLevel() {
+            return this.attackLevel;
         }
 
         public GetScanResultResponseBodyDataItems setContent(String content) {
@@ -465,6 +482,14 @@ public class GetScanResultResponseBody extends TeaModel {
             return this.pageNum;
         }
 
+        public GetScanResultResponseBodyDataItems setRequestFrom(String requestFrom) {
+            this.requestFrom = requestFrom;
+            return this;
+        }
+        public String getRequestFrom() {
+            return this.requestFrom;
+        }
+
         public GetScanResultResponseBodyDataItems setRequestId(String requestId) {
             this.requestId = requestId;
             return this;
@@ -527,6 +552,14 @@ public class GetScanResultResponseBody extends TeaModel {
         }
         public Float getScore() {
             return this.score;
+        }
+
+        public GetScanResultResponseBodyDataItems setSensitiveLevel(String sensitiveLevel) {
+            this.sensitiveLevel = sensitiveLevel;
+            return this;
+        }
+        public String getSensitiveLevel() {
+            return this.sensitiveLevel;
         }
 
         public GetScanResultResponseBodyDataItems setServiceCode(String serviceCode) {
