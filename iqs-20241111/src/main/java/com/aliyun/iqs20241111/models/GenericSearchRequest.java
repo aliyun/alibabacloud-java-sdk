@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class GenericSearchRequest extends TeaModel {
+    @NameInMap("enableRerank")
+    public Boolean enableRerank;
+
     @NameInMap("industry")
     public String industry;
 
@@ -20,6 +23,15 @@ public class GenericSearchRequest extends TeaModel {
     @NameInMap("query")
     public String query;
 
+    @NameInMap("returnMainText")
+    public Boolean returnMainText;
+
+    @NameInMap("returnMarkdownText")
+    public Boolean returnMarkdownText;
+
+    @NameInMap("returnSummary")
+    public Boolean returnSummary;
+
     @NameInMap("sessionId")
     public String sessionId;
 
@@ -33,6 +45,14 @@ public class GenericSearchRequest extends TeaModel {
     public static GenericSearchRequest build(java.util.Map<String, ?> map) throws Exception {
         GenericSearchRequest self = new GenericSearchRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenericSearchRequest setEnableRerank(Boolean enableRerank) {
+        this.enableRerank = enableRerank;
+        return this;
+    }
+    public Boolean getEnableRerank() {
+        return this.enableRerank;
     }
 
     public GenericSearchRequest setIndustry(String industry) {
@@ -57,6 +77,30 @@ public class GenericSearchRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public GenericSearchRequest setReturnMainText(Boolean returnMainText) {
+        this.returnMainText = returnMainText;
+        return this;
+    }
+    public Boolean getReturnMainText() {
+        return this.returnMainText;
+    }
+
+    public GenericSearchRequest setReturnMarkdownText(Boolean returnMarkdownText) {
+        this.returnMarkdownText = returnMarkdownText;
+        return this;
+    }
+    public Boolean getReturnMarkdownText() {
+        return this.returnMarkdownText;
+    }
+
+    public GenericSearchRequest setReturnSummary(Boolean returnSummary) {
+        this.returnSummary = returnSummary;
+        return this;
+    }
+    public Boolean getReturnSummary() {
+        return this.returnSummary;
     }
 
     public GenericSearchRequest setSessionId(String sessionId) {
