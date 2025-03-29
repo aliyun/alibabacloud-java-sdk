@@ -170,6 +170,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenericSearchResponse genericSearchWithOptions(GenericSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRerank)) {
+            query.put("enableRerank", request.enableRerank);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.industry)) {
             query.put("industry", request.industry);
         }
@@ -180,6 +184,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnMainText)) {
+            query.put("returnMainText", request.returnMainText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnMarkdownText)) {
+            query.put("returnMarkdownText", request.returnMarkdownText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.returnSummary)) {
+            query.put("returnSummary", request.returnSummary);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {

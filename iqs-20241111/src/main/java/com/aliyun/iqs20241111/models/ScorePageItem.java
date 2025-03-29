@@ -120,6 +120,9 @@ public class ScorePageItem extends TeaModel {
     @NameInMap("snippet")
     public String snippet;
 
+    @NameInMap("summary")
+    public String summary;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -260,6 +263,14 @@ public class ScorePageItem extends TeaModel {
     }
     public String getSnippet() {
         return this.snippet;
+    }
+
+    public ScorePageItem setSummary(String summary) {
+        this.summary = summary;
+        return this;
+    }
+    public String getSummary() {
+        return this.summary;
     }
 
     public ScorePageItem setTitle(String title) {
