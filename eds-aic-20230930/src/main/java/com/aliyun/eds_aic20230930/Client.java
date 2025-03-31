@@ -606,6 +606,123 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建云机节点</p>
+     * 
+     * @param request CreateCloudPhoneNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudPhoneNodeResponse
+     */
+    public CreateCloudPhoneNodeResponse createCloudPhoneNodeWithOptions(CreateCloudPhoneNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.count)) {
+            query.put("Count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkId)) {
+            query.put("NetworkId", request.networkId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            query.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneCount)) {
+            query.put("PhoneCount", request.phoneCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionHeight)) {
+            query.put("ResolutionHeight", request.resolutionHeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resolutionWidth)) {
+            query.put("ResolutionWidth", request.resolutionWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverShareDataVolume)) {
+            query.put("ServerShareDataVolume", request.serverShareDataVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverType)) {
+            query.put("ServerType", request.serverType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudPhoneNode"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudPhoneNodeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateCloudPhoneNodeResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建云机节点</p>
+     * 
+     * @param request CreateCloudPhoneNodeRequest
+     * @return CreateCloudPhoneNodeResponse
+     */
+    public CreateCloudPhoneNodeResponse createCloudPhoneNode(CreateCloudPhoneNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudPhoneNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create Custom Image</p>
      * 
      * @param request CreateCustomImageRequest
@@ -976,6 +1093,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAppsResponse deleteApps(DeleteAppsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAppsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>释放服务器</p>
+     * 
+     * @param request DeleteCloudPhoneNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudPhoneNodesResponse
+     */
+    public DeleteCloudPhoneNodesResponse deleteCloudPhoneNodesWithOptions(DeleteCloudPhoneNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            body.put("NodeIds", request.nodeIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudPhoneNodes"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudPhoneNodesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCloudPhoneNodesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>释放服务器</p>
+     * 
+     * @param request DeleteCloudPhoneNodesRequest
+     * @return DeleteCloudPhoneNodesResponse
+     */
+    public DeleteCloudPhoneNodesResponse deleteCloudPhoneNodes(DeleteCloudPhoneNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudPhoneNodesWithOptions(request, runtime);
     }
 
     /**
@@ -1517,6 +1683,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeBackupFilesResponse describeBackupFiles(DescribeBackupFilesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeBackupFilesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云手机节点</p>
+     * 
+     * @param request DescribeCloudPhoneNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudPhoneNodesResponse
+     */
+    public DescribeCloudPhoneNodesResponse describeCloudPhoneNodesWithOptions(DescribeCloudPhoneNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            query.put("ChargeType", request.chargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            query.put("NodeIds", request.nodeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
+            query.put("NodeName", request.nodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverType)) {
+            query.put("ServerType", request.serverType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudPhoneNodes"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudPhoneNodesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCloudPhoneNodesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询云手机节点</p>
+     * 
+     * @param request DescribeCloudPhoneNodesRequest
+     * @return DescribeCloudPhoneNodesResponse
+     */
+    public DescribeCloudPhoneNodesResponse describeCloudPhoneNodes(DescribeCloudPhoneNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudPhoneNodesWithOptions(request, runtime);
     }
 
     /**
@@ -2724,6 +2967,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改云机节点信息</p>
+     * 
+     * @param request ModifyCloudPhoneNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCloudPhoneNodeResponse
+     */
+    public ModifyCloudPhoneNodeResponse modifyCloudPhoneNodeWithOptions(ModifyCloudPhoneNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCloudPhoneNode"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCloudPhoneNodeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyCloudPhoneNodeResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云机节点信息</p>
+     * 
+     * @param request ModifyCloudPhoneNodeRequest
+     * @return ModifyCloudPhoneNodeResponse
+     */
+    public ModifyCloudPhoneNodeResponse modifyCloudPhoneNode(ModifyCloudPhoneNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCloudPhoneNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the billing method. Currently, this operation only allows you to change the billing method from pay-as-you-go to subscription.</p>
      * 
      * @param request ModifyInstanceChargeTypeRequest
@@ -3185,6 +3473,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RenewAndroidInstanceGroupsResponse renewAndroidInstanceGroups(RenewAndroidInstanceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewAndroidInstanceGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费服务器</p>
+     * 
+     * @param request RenewCloudPhoneNodesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RenewCloudPhoneNodesResponse
+     */
+    public RenewCloudPhoneNodesResponse renewCloudPhoneNodesWithOptions(RenewCloudPhoneNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            body.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            body.put("NodeIds", request.nodeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            body.put("PeriodUnit", request.periodUnit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewCloudPhoneNodes"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new RenewCloudPhoneNodesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new RenewCloudPhoneNodesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>续费服务器</p>
+     * 
+     * @param request RenewCloudPhoneNodesRequest
+     * @return RenewCloudPhoneNodesResponse
+     */
+    public RenewCloudPhoneNodesResponse renewCloudPhoneNodes(RenewCloudPhoneNodesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewCloudPhoneNodesWithOptions(request, runtime);
     }
 
     /**
