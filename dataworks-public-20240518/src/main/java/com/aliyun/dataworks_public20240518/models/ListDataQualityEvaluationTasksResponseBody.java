@@ -376,6 +376,9 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
     }
 
     public static class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks extends TeaModel {
+        @NameInMap("DataSourceId")
+        public Long dataSourceId;
+
         /**
          * <p>The description of the data quality monitoring task. The description can be up to 65,535 characters in length.</p>
          * 
@@ -448,6 +451,14 @@ public class ListDataQualityEvaluationTasksResponseBody extends TeaModel {
         public static ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks build(java.util.Map<String, ?> map) throws Exception {
             ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks self = new ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks();
             return TeaModel.build(map, self);
+        }
+
+        public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks setDataSourceId(Long dataSourceId) {
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+        public Long getDataSourceId() {
+            return this.dataSourceId;
         }
 
         public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasks setDescription(String description) {

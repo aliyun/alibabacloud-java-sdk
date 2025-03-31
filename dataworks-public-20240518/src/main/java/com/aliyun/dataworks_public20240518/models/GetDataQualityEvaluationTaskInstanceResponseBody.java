@@ -40,6 +40,589 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails extends TeaModel {
+        @NameInMap("CheckedValue")
+        public String checkedValue;
+
+        @NameInMap("ReferencedValue")
+        public String referencedValue;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails setCheckedValue(String checkedValue) {
+            this.checkedValue = checkedValue;
+            return this;
+        }
+        public String getCheckedValue() {
+            return this.checkedValue;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails setReferencedValue(String referencedValue) {
+            this.referencedValue = referencedValue;
+            return this;
+        }
+        public String getReferencedValue() {
+            return this.referencedValue;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical extends TeaModel {
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected extends TeaModel {
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned extends TeaModel {
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds extends TeaModel {
+        @NameInMap("Critical")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical critical;
+
+        @NameInMap("Expected")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected expected;
+
+        @NameInMap("Warned")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned warned;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds setCritical(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical critical) {
+            this.critical = critical;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsCritical getCritical() {
+            return this.critical;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds setExpected(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected expected) {
+            this.expected = expected;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsExpected getExpected() {
+            return this.expected;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds setWarned(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned warned) {
+            this.warned = warned;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholdsWarned getWarned() {
+            return this.warned;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig extends TeaModel {
+        @NameInMap("ReferencedSamplesFilter")
+        public String referencedSamplesFilter;
+
+        @NameInMap("Thresholds")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds thresholds;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig setReferencedSamplesFilter(String referencedSamplesFilter) {
+            this.referencedSamplesFilter = referencedSamplesFilter;
+            return this;
+        }
+        public String getReferencedSamplesFilter() {
+            return this.referencedSamplesFilter;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig setThresholds(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds thresholds) {
+            this.thresholds = thresholds;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfigThresholds getThresholds() {
+            return this.thresholds;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers extends TeaModel {
+        @NameInMap("ErrorDataFilter")
+        public String errorDataFilter;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers setErrorDataFilter(String errorDataFilter) {
+            this.errorDataFilter = errorDataFilter;
+            return this;
+        }
+        public String getErrorDataFilter() {
+            return this.errorDataFilter;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig extends TeaModel {
+        @NameInMap("Metric")
+        public String metric;
+
+        @NameInMap("MetricParameters")
+        public String metricParameters;
+
+        @NameInMap("SamplingFilter")
+        public String samplingFilter;
+
+        @NameInMap("SettingConfig")
+        public String settingConfig;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig setMetric(String metric) {
+            this.metric = metric;
+            return this;
+        }
+        public String getMetric() {
+            return this.metric;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig setMetricParameters(String metricParameters) {
+            this.metricParameters = metricParameters;
+            return this;
+        }
+        public String getMetricParameters() {
+            return this.metricParameters;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig setSamplingFilter(String samplingFilter) {
+            this.samplingFilter = samplingFilter;
+            return this;
+        }
+        public String getSamplingFilter() {
+            return this.samplingFilter;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig setSettingConfig(String settingConfig) {
+            this.settingConfig = settingConfig;
+            return this;
+        }
+        public String getSettingConfig() {
+            return this.settingConfig;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget extends TeaModel {
+        @NameInMap("DatabaseType")
+        public String databaseType;
+
+        @NameInMap("TableGuid")
+        public String tableGuid;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget setDatabaseType(String databaseType) {
+            this.databaseType = databaseType;
+            return this;
+        }
+        public String getDatabaseType() {
+            return this.databaseType;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget setTableGuid(String tableGuid) {
+            this.tableGuid = tableGuid;
+            return this;
+        }
+        public String getTableGuid() {
+            return this.tableGuid;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule extends TeaModel {
+        @NameInMap("CheckingConfig")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig checkingConfig;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("ErrorHandlers")
+        public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers> errorHandlers;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("SamplingConfig")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig samplingConfig;
+
+        @NameInMap("Severity")
+        public String severity;
+
+        @NameInMap("Target")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget target;
+
+        @NameInMap("TemplateCode")
+        public String templateCode;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setCheckingConfig(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig checkingConfig) {
+            this.checkingConfig = checkingConfig;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleCheckingConfig getCheckingConfig() {
+            return this.checkingConfig;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setErrorHandlers(java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers> errorHandlers) {
+            this.errorHandlers = errorHandlers;
+            return this;
+        }
+        public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleErrorHandlers> getErrorHandlers() {
+            return this.errorHandlers;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setSamplingConfig(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig samplingConfig) {
+            this.samplingConfig = samplingConfig;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleSamplingConfig getSamplingConfig() {
+            return this.samplingConfig;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setSeverity(String severity) {
+            this.severity = severity;
+            return this;
+        }
+        public String getSeverity() {
+            return this.severity;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setTarget(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget target) {
+            this.target = target;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRuleTarget getTarget() {
+            return this.target;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule setTemplateCode(String templateCode) {
+            this.templateCode = templateCode;
+            return this;
+        }
+        public String getTemplateCode() {
+            return this.templateCode;
+        }
+
+    }
+
+    public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults extends TeaModel {
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("Details")
+        public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails> details;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Rule")
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule rule;
+
+        @NameInMap("Sample")
+        public String sample;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TaskInstanceId")
+        public Long taskInstanceId;
+
+        public static GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults build(java.util.Map<String, ?> map) throws Exception {
+            GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults self = new GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults();
+            return TeaModel.build(map, self);
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults setDetails(java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails> details) {
+            this.details = details;
+            return this;
+        }
+        public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsDetails> getDetails() {
+            return this.details;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults setRule(GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule rule) {
+            this.rule = rule;
+            return this;
+        }
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResultsRule getRule() {
+            return this.rule;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults setSample(String sample) {
+            this.sample = sample;
+            return this;
+        }
+        public String getSample() {
+            return this.sample;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults setTaskInstanceId(Long taskInstanceId) {
+            this.taskInstanceId = taskInstanceId;
+            return this;
+        }
+        public Long getTaskInstanceId() {
+            return this.taskInstanceId;
+        }
+
+    }
+
     public static class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskHooks extends TeaModel {
         /**
          * <p>The hook trigger condition. When this condition is met, the hook action is triggered. Only two conditional expressions are supported:</p>
@@ -577,6 +1160,9 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public Long projectId;
 
+        @NameInMap("Results")
+        public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults> results;
+
         /**
          * <p>The status of the data quality monitoring instance.</p>
          * <ul>
@@ -655,6 +1241,14 @@ public class GetDataQualityEvaluationTaskInstanceResponseBody extends TeaModel {
         }
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstance setResults(java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults> results) {
+            this.results = results;
+            return this;
+        }
+        public java.util.List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceResults> getResults() {
+            return this.results;
         }
 
         public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstance setStatus(String status) {
