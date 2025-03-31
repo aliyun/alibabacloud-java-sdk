@@ -709,7 +709,7 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
          * <p>The access key ID of your Amazon S3 account.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAIKh***</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;
