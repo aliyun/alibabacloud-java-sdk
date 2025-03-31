@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>devs20230714</artifactId>
-  <version>2.0.0</version>
+  <version>2.1.0</version>
   <packaging>jar</packaging>
   <name>devs20230714</name>
   <description>Alibaba Cloud Devs (20230714) SDK for Java

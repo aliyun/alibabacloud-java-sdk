@@ -394,6 +394,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>手动触发环境部署</p>
+     * 
+     * @param request DeployEnvironmentRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeployEnvironmentResponse
+     */
+    public DeployEnvironmentResponse deployEnvironmentWithOptions(String projectName, String name, DeployEnvironmentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeployEnvironment"),
+            new TeaPair("version", "2023-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-07-14/projects/" + com.aliyun.openapiutil.Client.getEncodeParam(projectName) + "/environments/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + "/deploy"),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeployEnvironmentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeployEnvironmentResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手动触发环境部署</p>
+     * 
+     * @param request DeployEnvironmentRequest
+     * @return DeployEnvironmentResponse
+     */
+    public DeployEnvironmentResponse deployEnvironment(String projectName, String name, DeployEnvironmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deployEnvironmentWithOptions(projectName, name, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取环境信息</p>
      * 
      * @param headers map
@@ -432,6 +479,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getEnvironmentWithOptions(projectName, name, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询环境部署信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEnvironmentDeploymentResponse
+     */
+    public GetEnvironmentDeploymentResponse getEnvironmentDeploymentWithOptions(String name, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEnvironmentDeployment"),
+            new TeaPair("version", "2023-07-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-07-14/environmentdeployments/" + com.aliyun.openapiutil.Client.getEncodeParam(name) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEnvironmentDeploymentResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetEnvironmentDeploymentResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询环境部署信息</p>
+     * @return GetEnvironmentDeploymentResponse
+     */
+    public GetEnvironmentDeploymentResponse getEnvironmentDeployment(String name) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getEnvironmentDeploymentWithOptions(name, headers, runtime);
     }
 
     /**
