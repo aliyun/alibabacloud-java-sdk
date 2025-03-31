@@ -36,6 +36,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfoDeploymentPolicyNetwork extends TeaModel {
+        @NameInMap("EnableENIMapping")
+        public Boolean enableENIMapping;
+
         @NameInMap("EnableExternalIpAddress")
         public Boolean enableExternalIpAddress;
 
@@ -45,6 +48,14 @@ public class GetJobResponseBody extends TeaModel {
         public static GetJobResponseBodyJobInfoDeploymentPolicyNetwork build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfoDeploymentPolicyNetwork self = new GetJobResponseBodyJobInfoDeploymentPolicyNetwork();
             return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicyNetwork setEnableENIMapping(Boolean enableENIMapping) {
+            this.enableENIMapping = enableENIMapping;
+            return this;
+        }
+        public Boolean getEnableENIMapping() {
+            return this.enableENIMapping;
         }
 
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork setEnableExternalIpAddress(Boolean enableExternalIpAddress) {
@@ -103,6 +114,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("AllocationSpec")
         public String allocationSpec;
 
+        @NameInMap("Level")
+        public String level;
+
         @NameInMap("Network")
         public GetJobResponseBodyJobInfoDeploymentPolicyNetwork network;
 
@@ -120,6 +134,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getAllocationSpec() {
             return this.allocationSpec;
+        }
+
+        public GetJobResponseBodyJobInfoDeploymentPolicy setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
         public GetJobResponseBodyJobInfoDeploymentPolicy setNetwork(GetJobResponseBodyJobInfoDeploymentPolicyNetwork network) {
