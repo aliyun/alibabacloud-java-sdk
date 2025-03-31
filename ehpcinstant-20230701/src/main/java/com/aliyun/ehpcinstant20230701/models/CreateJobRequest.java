@@ -159,6 +159,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("AllocationSpec")
         public String allocationSpec;
 
+        @NameInMap("Level")
+        public String level;
+
         @NameInMap("Network")
         public CreateJobRequestDeploymentPolicyNetwork network;
 
@@ -176,6 +179,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getAllocationSpec() {
             return this.allocationSpec;
+        }
+
+        public CreateJobRequestDeploymentPolicy setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
         public CreateJobRequestDeploymentPolicy setNetwork(CreateJobRequestDeploymentPolicyNetwork network) {
