@@ -28,6 +28,9 @@ public class CreateGroupIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Tags")
+    public String tags;
+
     public static CreateGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupIdRequest self = new CreateGroupIdRequest();
         return TeaModel.build(map, self);
@@ -47,6 +50,14 @@ public class CreateGroupIdRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateGroupIdRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }
