@@ -6,30 +6,49 @@ import com.aliyun.tea.*;
 public class UpdateChainRequest extends TeaModel {
     /**
      * <p>The configuration of the delivery chain in the JSON format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chainconfig</p>
      */
     @NameInMap("ChainConfig")
     public String chainConfig;
 
     /**
      * <p>The ID of the delivery chain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chi-02ymhtwl3cq8****</p>
      */
     @NameInMap("ChainId")
     public String chainId;
 
     /**
      * <p>The description of the delivery chain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-4cdrlqmhn4gm****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the delivery chain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;

@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteNamespaceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns3</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

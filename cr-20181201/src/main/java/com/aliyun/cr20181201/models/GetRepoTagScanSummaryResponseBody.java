@@ -6,48 +6,74 @@ import com.aliyun.tea.*;
 public class GetRepoTagScanSummaryResponseBody extends TeaModel {
     /**
      * <p>The number of medium-severity vulnerabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The number of low-severity vulnerabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("HighSeverity")
     public Integer highSeverity;
 
     /**
      * <p>The number of high-severity vulnerabilities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>89</p>
+     */
     @NameInMap("LowSeverity")
     public Integer lowSeverity;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>81</p>
      */
     @NameInMap("MediumSeverity")
     public Integer mediumSeverity;
 
     /**
      * <p>The total number of vulnerabilities detected on images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC648259-91A7-4502-BED3-EDF64361FA83</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>196</p>
      */
     @NameInMap("TotalSeverity")
     public Integer totalSeverity;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("UnknownSeverity")
     public Integer unknownSeverity;

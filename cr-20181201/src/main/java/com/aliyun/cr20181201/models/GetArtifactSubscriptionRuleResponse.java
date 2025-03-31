@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class GetRepoTagManifestResponse extends TeaModel {
+public class GetArtifactSubscriptionRuleResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetRepoTagManifestResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetRepoTagManifestResponseBody body;
+    public GetArtifactSubscriptionRuleResponseBody body;
 
-    public static GetRepoTagManifestResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetRepoTagManifestResponse self = new GetRepoTagManifestResponse();
+    public static GetArtifactSubscriptionRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetArtifactSubscriptionRuleResponse self = new GetArtifactSubscriptionRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRepoTagManifestResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetArtifactSubscriptionRuleResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetRepoTagManifestResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetRepoTagManifestResponse setStatusCode(Integer statusCode) {
+    public GetArtifactSubscriptionRuleResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetRepoTagManifestResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetRepoTagManifestResponse setBody(GetRepoTagManifestResponseBody body) {
+    public GetArtifactSubscriptionRuleResponse setBody(GetArtifactSubscriptionRuleResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetRepoTagManifestResponseBody getBody() {
+    public GetArtifactSubscriptionRuleResponseBody getBody() {
         return this.body;
     }
 

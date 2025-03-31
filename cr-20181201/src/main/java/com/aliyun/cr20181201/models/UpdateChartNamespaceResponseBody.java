@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class UpdateChartNamespaceResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: successful</li>
+     * <li><code>false</code>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6877B80A-2895-44C4-BC9E-703B157DEE66</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListChartRepositoryResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -36,12 +48,18 @@ public class ListChartRepositoryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AB62FB8-6873-4032-8515-4578D27523B7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -110,66 +128,98 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     public static class ListChartRepositoryResponseBodyRepositories extends TeaModel {
         /**
          * <p>The time when the repository was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571926644000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The time when the repository was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571930329000</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         /**
          * <p>The ID of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crcr-gpsu7b8chmxk****</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The name of the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The name of the namespace to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1</p>
          */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
         /**
          * <p>The status of the repository. Valid values:</p>
-         * <br>
-         * <p>*   `NORMAL`: The repository is normal.</p>
-         * <p>*   `DELETING`: The repository is being deleted.</p>
+         * <ul>
+         * <li><code>NORMAL</code>: The repository is normal.</li>
+         * <li><code>DELETING</code>: The repository is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("RepoStatus")
         public String repoStatus;
 
         /**
          * <p>The type of the repository. Valid values:</p>
-         * <br>
-         * <p>*   `PRIVATE`: a private repository</p>
-         * <p>*   `PUBLIC`: a public repository</p>
+         * <ul>
+         * <li><code>PRIVATE</code>: a private repository</li>
+         * <li><code>PUBLIC</code>: a public repository</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         @NameInMap("RepoType")
         public String repoType;
 
         /**
          * <p>The ID of the resource group to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2ikd5rxxxxxx</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The summary about the repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Summary")
         public String summary;

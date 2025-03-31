@@ -6,48 +6,76 @@ import com.aliyun.tea.*;
 public class CreateRepositoryRequest extends TeaModel {
     /**
      * <p>The description of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
      */
     @NameInMap("Detail")
     public String detail;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace to which the image repository belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace01</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
     /**
      * <p>The type of the repository. Valid values:</p>
-     * <br>
-     * <p>*   `PUBLIC`: The repository is a public repository.</p>
-     * <p>*   `PRIVATE`: The repository is a private repository.</p>
+     * <ul>
+     * <li><code>PUBLIC</code>: The repository is a public repository.</li>
+     * <li><code>PRIVATE</code>: The repository is a private repository.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("RepoType")
     public String repoType;
 
     /**
      * <p>The summary about the repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
      */
     @NameInMap("Summary")
     public String summary;
 
     /**
      * <p>Specifies whether to enable the feature of image tag immutability. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables the feature of image tag immutability.</p>
-     * <p>*   `false`: disables the feature of image tag immutability.</p>
+     * <ul>
+     * <li><code>true</code>: enables the feature of image tag immutability.</li>
+     * <li><code>false</code>: disables the feature of image tag immutability.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("TagImmutability")
     public Boolean tagImmutability;

@@ -6,72 +6,112 @@ import com.aliyun.tea.*;
 public class UpdateEventCenterRuleShrinkRequest extends TeaModel {
     /**
      * <p>The event notification channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EVENT_BRIDGE</p>
      */
     @NameInMap("EventChannel")
     public String eventChannel;
 
     /**
      * <p>The event configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *         &quot;notifyMethod&quot;:&quot;http&quot;,
+     *         &quot;notifyConfig&quot;:{
+     *             &quot;Url&quot;:&quot;<a href="http://www.aliyundoc.com">http://www.aliyundoc.com</a>&quot;,
+     *             &quot;id&quot;:&quot;MaAV3HgTkO5Fh8l1V********&quot;,
+     *         },
+     *         &quot;notifyFilter&quot;:{}
+     *     }</p>
      */
     @NameInMap("EventConfig")
     public String eventConfig;
 
     /**
      * <p>The event scope. Valid values:</p>
-     * <br>
-     * <p>*   `INSTANCE`</p>
-     * <p>*   `NAMESPACE`</p>
-     * <p>*   `REPO`</p>
-     * <br>
-     * <p>Default value: `INSTANCE`</p>
+     * <ul>
+     * <li><code>INSTANCE</code></li>
+     * <li><code>NAMESPACE</code></li>
+     * <li><code>REPO</code></li>
+     * </ul>
+     * <p>Default value: <code>INSTANCE</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
      */
     @NameInMap("EventScope")
     public String eventScope;
 
     /**
      * <p>The type of the event. Valid values:</p>
-     * <br>
-     * <p>*   `cr:Artifact:DeliveryChainCompleted`: The delivery chain is processed.</p>
-     * <p>*   `cr:Artifact:SynchronizationCompleted`: The image is replicated.</p>
-     * <p>*   `cr:Artifact:BuildCompleted`: The image is built.</p>
-     * <p>*   `cr:Artifact:ScanCompleted`: The image is scanned.</p>
-     * <p>*   `cr:Artifact:SigningCompleted`: The image is signed.</p>
+     * <ul>
+     * <li><code>cr:Artifact:DeliveryChainCompleted</code>: The delivery chain is processed.</li>
+     * <li><code>cr:Artifact:SynchronizationCompleted</code>: The image is replicated.</li>
+     * <li><code>cr:Artifact:BuildCompleted</code>: The image is built.</li>
+     * <li><code>cr:Artifact:ScanCompleted</code>: The image is scanned.</li>
+     * <li><code>cr:Artifact:SigningCompleted</code>: The image is signed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cr:Artifact:DeliveryChainCompleted</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The namespaces to which the event notification rule applies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns</p>
      */
     @NameInMap("Namespaces")
     public String namespacesShrink;
 
     /**
      * <p>The names of the repositories to which the event notification rule applies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reponame</p>
      */
     @NameInMap("RepoNames")
     public String repoNamesShrink;
 
     /**
      * <p>The regular expression for image tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.*</p>
      */
     @NameInMap("RepoTagFilterPattern")
     public String repoTagFilterPattern;
 
     /**
      * <p>The ID of the event notification rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crecr-n6pbhgjxt*****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The name of the event notification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chain-demo</p>
      */
     @NameInMap("RuleName")
     public String ruleName;

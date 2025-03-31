@@ -6,39 +6,56 @@ import com.aliyun.tea.*;
 public class ListInstanceRequest extends TeaModel {
     /**
      * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("InstanceName")
+    @Deprecated
     public String instanceName;
 
     /**
      * <p>The status of the instance. Valid values:</p>
-     * <br>
-     * <p>*   `PENDING`: The instance is being initialized.</p>
-     * <p>*   `INIT_ERROR`: The initialization of the instance fails.</p>
-     * <p>*   `STARTING`: The instance is being started.</p>
-     * <p>*   `RUNNING`: The instance is running.</p>
-     * <p>*   `STOPPING`: The instance is being stopped.</p>
-     * <p>*   `STOPPED`: The instance is stopped.</p>
-     * <p>*   `DELETING`: The instance is being deleted.</p>
-     * <p>*   `DELETED`: The instance is deleted.</p>
+     * <ul>
+     * <li><code>PENDING</code>: The instance is being initialized.</li>
+     * <li><code>INIT_ERROR</code>: The initialization of the instance fails.</li>
+     * <li><code>STARTING</code>: The instance is being started.</li>
+     * <li><code>RUNNING</code>: The instance is running.</li>
+     * <li><code>STOPPING</code>: The instance is being stopped.</li>
+     * <li><code>STOPPED</code>: The instance is stopped.</li>
+     * <li><code>DELETING</code>: The instance is being deleted.</li>
+     * <li><code>DELETED</code>: The instance is deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmv36i4is****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -48,6 +65,7 @@ public class ListInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ListInstanceRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;

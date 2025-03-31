@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class CreateInstanceVpcEndpointLinkedVpcResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4978DCC-ECBD-40B0-A714-EE6959B22C77</p>
      */
     @NameInMap("RequestId")
     public String requestId;

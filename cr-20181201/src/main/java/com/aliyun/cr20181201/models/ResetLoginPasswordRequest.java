@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ResetLoginPasswordRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The new password that you specify to log on to the instance. The password must be 8 to 32 bits in length, and must contain at least two of the following character types: letters, special characters, and digits.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Password")
     public String password;

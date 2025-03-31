@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetInstanceEndpointResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the access control list (ACL) feature is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AclEnable")
     public Boolean aclEnable;
@@ -18,6 +21,9 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -30,24 +36,36 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the ACL feature is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8F3D5EC5-39D1-4C53-A198-48C54C658FA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("Status")
     public String status;
@@ -124,12 +142,18 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     public static class GetInstanceEndpointResponseBodyAclEntries extends TeaModel {
         /**
          * <p>Remarks for public IP address whitelists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The public IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         @NameInMap("Entry")
         public String entry;
@@ -160,15 +184,22 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     public static class GetInstanceEndpointResponseBodyDomains extends TeaModel {
         /**
          * <p>The domain name that is used to access the Container Registry Enterprise Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shanghai-instance1-registry.cn-shanghai.cr.aliyuncs.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The type of the domain name. Valid values:</p>
-         * <br>
-         * <p>*   `SYSTEM`: a system domain name.</p>
-         * <p>*   `USER`: a user domain name.</p>
+         * <ul>
+         * <li><code>SYSTEM</code>: a system domain name.</li>
+         * <li><code>USER</code>: a user domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("Type")
         public String type;

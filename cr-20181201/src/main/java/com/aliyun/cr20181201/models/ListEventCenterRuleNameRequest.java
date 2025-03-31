@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListEventCenterRuleNameRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

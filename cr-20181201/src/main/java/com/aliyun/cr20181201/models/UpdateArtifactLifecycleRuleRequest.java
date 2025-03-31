@@ -4,33 +4,95 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateArtifactLifecycleRuleRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically execute the lifecycle management rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Auto")
     public Boolean auto;
 
+    /**
+     * <p>Specifies whether to enable lifecycle management for the artifact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableDeleteTag")
     public Boolean enableDeleteTag;
 
+    /**
+     * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-r6ym0lerldp****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-ns</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <p>The name of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_1</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The number of images that you want to retain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("RetentionTagCount")
     public Long retentionTagCount;
 
+    /**
+     * <p>The rule ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cralr-luq6qiegzvx****</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>The execution cycle of the lifecycle management rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEEK</p>
+     */
     @NameInMap("ScheduleTime")
     public String scheduleTime;
 
+    /**
+     * <p>The deletion scope of artifacts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REPO</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <p>The regular expression that indicates which image tags you want to retain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.<em>production_.</em></p>
+     */
     @NameInMap("TagRegexp")
     public String tagRegexp;
 

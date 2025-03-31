@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class GetRepoBuildRecordStatusRequest extends TeaModel {
     /**
      * <p>The ID of the image building record.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a78ec6fb-16ea-4649-93b7-f52afba7d****</p>
      */
     @NameInMap("BuildRecordId")
     public String buildRecordId;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-jnzm47ihjmgc****</p>
      */
     @NameInMap("RepoId")
     public String repoId;

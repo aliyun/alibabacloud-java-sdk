@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class DeleteChartRepositoryRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo01</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace01</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;

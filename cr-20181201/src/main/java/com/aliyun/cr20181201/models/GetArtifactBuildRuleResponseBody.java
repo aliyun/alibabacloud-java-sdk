@@ -4,27 +4,55 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactBuildRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ACCELERATED_IMAGE</p>
+     */
     @NameInMap("ArtifactType")
     public String artifactType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crabr-o2670wqz2n70****</p>
+     */
     @NameInMap("BuildRuleId")
     public String buildRuleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("Parameters")
     public GetArtifactBuildRuleResponseBodyParameters parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7A3E98F6-296C-54AC-A612-B75E7777D4C1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crr-8dz3aedjqlmk****</p>
+     */
     @NameInMap("ScopeId")
     public String scopeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>REPOSITORY</p>
+     */
     @NameInMap("ScopeType")
     public String scopeType;
 
@@ -101,6 +129,9 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         @NameInMap("ImageIndexOnly")
         public Boolean imageIndexOnly;
 
+        @NameInMap("PriorityFile")
+        public String priorityFile;
+
         public static GetArtifactBuildRuleResponseBodyParameters build(java.util.Map<String, ?> map) throws Exception {
             GetArtifactBuildRuleResponseBodyParameters self = new GetArtifactBuildRuleResponseBodyParameters();
             return TeaModel.build(map, self);
@@ -112,6 +143,14 @@ public class GetArtifactBuildRuleResponseBody extends TeaModel {
         }
         public Boolean getImageIndexOnly() {
             return this.imageIndexOnly;
+        }
+
+        public GetArtifactBuildRuleResponseBodyParameters setPriorityFile(String priorityFile) {
+            this.priorityFile = priorityFile;
+            return this;
+        }
+        public String getPriorityFile() {
+            return this.priorityFile;
         }
 
     }

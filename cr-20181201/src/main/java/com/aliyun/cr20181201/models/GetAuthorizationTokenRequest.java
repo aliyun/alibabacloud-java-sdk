@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetAuthorizationTokenRequest extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcvaduwb</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

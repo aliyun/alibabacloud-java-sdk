@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListInstanceRegionResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
@@ -27,6 +34,9 @@ public class ListInstanceRegionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11F182E1-0F84-4F5B-8D3B-61E991482727</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,12 +81,18 @@ public class ListInstanceRegionResponseBody extends TeaModel {
     public static class ListInstanceRegionResponseBodyRegions extends TeaModel {
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Shenzhen)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("RegionId")
         public String regionId;

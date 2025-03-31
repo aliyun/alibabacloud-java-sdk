@@ -5,19 +5,31 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which you want to move the resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekz5nlvlaksnvi</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-8qong6ve5p3mhlgt</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The region ID of the resource group.</p>
+     * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen-finance-1</p>
      */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;

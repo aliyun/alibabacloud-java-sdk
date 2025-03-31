@@ -6,27 +6,43 @@ import com.aliyun.tea.*;
 public class DeleteInstanceVpcEndpointLinkedVpcRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the module that you want to access. Valid values:</p>
-     * <br>
-     * <p>*   `Registry`: the image repository.</p>
-     * <p>*   `Chart`: a Helm chart.</p>
+     * <ul>
+     * <li><code>Registry</code>: the image repository.</li>
+     * <li><code>Chart</code>: a Helm chart.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Chart</p>
      */
     @NameInMap("ModuleName")
     public String moduleName;
 
     /**
      * <p>The ID of the VPC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6pa68zxnnlc48dd****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-uf6pa68zxnnlc48dd****</p>
      */
     @NameInMap("VswitchId")
     public String vswitchId;

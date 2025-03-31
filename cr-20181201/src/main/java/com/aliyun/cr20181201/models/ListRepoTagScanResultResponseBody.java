@@ -6,39 +6,58 @@ import com.aliyun.tea.*;
 public class ListRepoTagScanResultResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56B5C92F-F5D9-46E0-823F-EC71D1892DAA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of vulnerabilities detected on images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>196</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -113,81 +132,121 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
     public static class ListRepoTagScanResultResponseBodyVulnerabilities extends TeaModel {
         /**
          * <p>The ID of the image layer where the vulnerability was detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha256:123456717b8e40b6480979b739010d8d549989602bcdd07922119aec6f9dbe57</p>
          */
         @NameInMap("AddedBy")
         public String addedBy;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vulnerability</p>
          */
         @NameInMap("AliasName")
         public String aliasName;
 
         /**
          * <p>The URL of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://security-tracker.debian.org/tracker/CVE-2009-5155">https://security-tracker.debian.org/tracker/CVE-2009-5155</a></p>
          */
         @NameInMap("CveLink")
         public String cveLink;
 
         /**
          * <p>The directory of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test.txt</p>
          */
         @NameInMap("CveLocation")
         public String cveLocation;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2009-5155</p>
          */
         @NameInMap("CveName")
         public String cveName;
 
         /**
          * <p>The description of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The cause of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eglibc</p>
          */
         @NameInMap("Feature")
         public String feature;
 
         /**
          * <p>The command used to fix the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yum install -y xxx</p>
          */
         @NameInMap("FixCmd")
         public String fixCmd;
 
         /**
          * <p>The type of the vulnerability. Valid values:</p>
-         * <br>
-         * <p>*   `cve`: image system vulnerability</p>
-         * <p>*   `sca`: image application vulnerability</p>
+         * <ul>
+         * <li><code>cve</code>: image system vulnerability</li>
+         * <li><code>sca</code>: image application vulnerability</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("ScanType")
         public String scanType;
 
         /**
          * <p>The severity of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Medium</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The version of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.19-6.9</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
          * <p>The version where the vulnerability was fixed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.19-18+deb8u5</p>
          */
         @NameInMap("VersionFixed")
         public String versionFixed;
 
         /**
          * <p>The format of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dpkg</p>
          */
         @NameInMap("VersionFormat")
         public String versionFormat;

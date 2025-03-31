@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteEventCenterRuleRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the event notification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crecr-n6pbhgjx*****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

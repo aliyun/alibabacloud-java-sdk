@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetRepoBuildRecordStatusResponseBody extends TeaModel {
     /**
      * <p>The status of the image building.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("BuildStatus")
     public String buildStatus;
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79174CBA-8556-443A-8976-22C922D7BE37</p>
      */
     @NameInMap("RequestId")
     public String requestId;

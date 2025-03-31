@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class DeleteRepoBuildRuleRequest extends TeaModel {
     /**
      * <p>The ID of the image building rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crbr-36tffn0kouvi****</p>
      */
     @NameInMap("BuildRuleId")
     public String buildRuleId;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-xwvi3osiy4ff****</p>
      */
     @NameInMap("RepoId")
     public String repoId;

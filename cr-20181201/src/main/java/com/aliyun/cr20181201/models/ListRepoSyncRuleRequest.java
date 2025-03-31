@@ -6,42 +6,64 @@ import com.aliyun.tea.*;
 public class ListRepoSyncRuleRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-namespace</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-repo</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The ID of the destination instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-k77rd2eo9ztt****</p>
      */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
 
     /**
      * <p>The region ID of the destination instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("TargetRegionId")
     public String targetRegionId;

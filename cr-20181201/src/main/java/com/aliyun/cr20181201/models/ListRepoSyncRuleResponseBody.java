@@ -6,42 +6,60 @@ import com.aliyun.tea.*;
 public class ListRepoSyncRuleResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>838D1602-6D8F-47FB-B60A-656645D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The synchronization rules.</p>
+     * <p>The queried synchronization rules.</p>
      */
     @NameInMap("SyncRules")
     public java.util.List<ListRepoSyncRuleResponseBodySyncRules> syncRules;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -110,116 +128,182 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
     public static class ListRepoSyncRuleResponseBodySyncRules extends TeaModel {
         /**
          * <p>The time when the synchronization rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572604642000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
-         * <p>Indicates whether images are synchronized across Alibaba Cloud accounts. Valid values:</p>
-         * <br>
-         * <p>*   `true`: Images are synchronized across Alibaba Cloud accounts.</p>
-         * <p>*   `false`: Images are synchronized within the same Alibaba Cloud account.</p>
-         * <br>
-         * <p>Default value: `false`</p>
+         * <p>Indicates whether the synchronization is performed across Alibaba Cloud accounts. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: Images are synchronized across Alibaba Cloud accounts.</li>
+         * <li><code>false</code>: Images are synchronized within the same Alibaba Cloud account.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CrossUser")
         public Boolean crossUser;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         @NameInMap("LocalInstanceId")
         public String localInstanceId;
 
         /**
-         * <p>The namespace name of the source instance.</p>
+         * <p>The name of the namespace in the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("LocalNamespaceName")
         public String localNamespaceName;
 
         /**
          * <p>The region ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("LocalRegionId")
         public String localRegionId;
 
         /**
-         * <p>The image repository name of the source instance.</p>
+         * <p>The name of the repository in the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-repo-local</p>
          */
         @NameInMap("LocalRepoName")
         public String localRepoName;
 
         /**
          * <p>The time when the synchronization rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572604642000</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         /**
+         * <p>The regular expression that is used to filter repositories.</p>
+         * <blockquote>
+         * <p> This parameter is valid only when SyncScope is set to <code>NAMESPACE</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>.*</p>
+         */
+        @NameInMap("RepoNameFilter")
+        public String repoNameFilter;
+
+        /**
          * <p>The synchronization direction. Valid values:</p>
-         * <br>
-         * <p>*   `FROM`: Images are synchronized from the source instance to the destination instance.</p>
-         * <p>*   `TO`: Images are synchronized from the destination instance to the source instance.</p>
+         * <ul>
+         * <li><code>FROM</code>: Images are synchronized from the source instance to the destination instance.</li>
+         * <li><code>TO</code>: Images are synchronized from the destination instance to the source instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FROM</p>
          */
         @NameInMap("SyncDirection")
         public String syncDirection;
 
         /**
          * <p>The ID of the synchronization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crsr-7lph66uloi6h****</p>
          */
         @NameInMap("SyncRuleId")
         public String syncRuleId;
 
         /**
          * <p>The name of the synchronization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sync-rule-1</p>
          */
         @NameInMap("SyncRuleName")
         public String syncRuleName;
 
         /**
          * <p>The synchronization scope. Valid values:</p>
-         * <br>
-         * <p>*   `NAMESPACE`: synchronizes the image tags in a namespace that meet the synchronization rule.</p>
-         * <p>*   `REPO`: synchronizes the image tags in an image repository that meet the synchronization rule.</p>
+         * <ul>
+         * <li><code>NAMESPACE</code>: synchronizes the image tags in a namespace that meet the synchronization rule.</li>
+         * <li><code>REPO</code>: synchronizes the image tags in an image repository that meet the synchronization rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NAMESPACE</p>
          */
         @NameInMap("SyncScope")
         public String syncScope;
 
         /**
          * <p>The policy that is applied to trigger the synchronization rule. Valid values:</p>
-         * <br>
-         * <p>*   `INITIATIVE`: The synchronization rule is positively triggered.</p>
-         * <p>*   `PASSIVE`: The synchronization rule is passively triggered.</p>
+         * <ul>
+         * <li><code>INITIATIVE</code>: The synchronization rule is positively triggered.</li>
+         * <li><code>PASSIVE</code>: The synchronization rule is passively triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PASSIVE</p>
          */
         @NameInMap("SyncTrigger")
         public String syncTrigger;
 
         /**
          * <p>The regular expression that is used to filter image tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.*</p>
          */
         @NameInMap("TagFilter")
         public String tagFilter;
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-k77rd2eo9ztt****</p>
          */
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
         /**
-         * <p>The namespace name of the destination instance.</p>
+         * <p>The name of the namespace in the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TargetNamespaceName")
         public String targetNamespaceName;
 
         /**
          * <p>The region ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("TargetRegionId")
         public String targetRegionId;
 
         /**
-         * <p>The image repository name of the destination instance.</p>
+         * <p>The name of the repository in the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-repo-target</p>
          */
         @NameInMap("TargetRepoName")
         public String targetRepoName;
@@ -283,6 +367,14 @@ public class ListRepoSyncRuleResponseBody extends TeaModel {
         }
         public Long getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public ListRepoSyncRuleResponseBodySyncRules setRepoNameFilter(String repoNameFilter) {
+            this.repoNameFilter = repoNameFilter;
+            return this;
+        }
+        public String getRepoNameFilter() {
+            return this.repoNameFilter;
         }
 
         public ListRepoSyncRuleResponseBodySyncRules setSyncDirection(String syncDirection) {

@@ -4,24 +4,59 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoSyncTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ns</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
+    /**
+     * <p>The ID of the synchronization task record, which is the same as SyncBatchTaskId in the response.</p>
+     * <blockquote>
+     * <p> If an image meets multiple synchronization rules and multiple synchronization tasks are generated for the image, these synchronization tasks use the same SyncBatchTaskId.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>crsr-7lph66uloi6h****</p>
+     */
     @NameInMap("SyncRecordId")
     public String syncRecordId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nginx</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

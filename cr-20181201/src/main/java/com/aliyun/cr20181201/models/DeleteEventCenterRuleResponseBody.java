@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteEventCenterRuleResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

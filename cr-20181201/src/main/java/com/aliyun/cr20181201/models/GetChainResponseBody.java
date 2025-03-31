@@ -7,39 +7,83 @@ public class GetChainResponseBody extends TeaModel {
     @NameInMap("ChainConfig")
     public GetChainResponseBodyChainConfig chainConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chi-0ops0gsmw5x2****</p>
+     */
     @NameInMap("ChainId")
     public String chainId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1638255427000</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cri-4cdrlqmhn4gm****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1638259914000</p>
+     */
     @NameInMap("ModifiedTime")
     public Long modifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C87993B5-7D61-5CAC-8D64-1AC732DD69FF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ScopeExclude")
     public java.util.List<String> scopeExclude;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crr-nyrh2oko32xb****</p>
+     */
     @NameInMap("ScopeId")
     public String scopeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>REPOSITORY</p>
+     */
     @NameInMap("ScopeType")
     public String scopeType;
 
@@ -153,24 +197,52 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     public static class GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BLOCK</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>identification,hc_image_exploit</p>
+         */
         @NameInMap("BaselineList")
         public String baselineList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("IssueCount")
         public String issueCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HIGH</p>
+         */
         @NameInMap("IssueLevel")
         public String issueLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CVE-2020-8286,CVE-2020-8285</p>
+         */
         @NameInMap("IssueList")
         public String issueList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("Logic")
         public String logic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mutate_cockhorse,abnormal_program</p>
+         */
         @NameInMap("MaliciousList")
         public String maliciousList;
 
@@ -241,9 +313,17 @@ public class GetChainResponseBody extends TeaModel {
         @NameInMap("DenyPolicy")
         public GetChainResponseBodyChainConfigNodesNodeConfigDenyPolicy denyPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Retry")
         public Integer retry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ACR_SCAN_SERVICE</p>
+         */
         @NameInMap("ScanEngine")
         public String scanEngine;
 
@@ -290,12 +370,20 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     public static class GetChainResponseBodyChainConfigNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
         @NameInMap("NodeConfig")
         public GetChainResponseBodyChainConfigNodesNodeConfig nodeConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VULNERABILITY_SCANNING</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
@@ -331,6 +419,10 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     public static class GetChainResponseBodyChainConfigRoutersFrom extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DOCKER_IMAGE_BUILD</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
@@ -350,6 +442,10 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     public static class GetChainResponseBodyChainConfigRoutersTo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DOCKER_IMAGE_PUSH</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
@@ -399,9 +495,17 @@ public class GetChainResponseBody extends TeaModel {
     }
 
     public static class GetChainResponseBodyChainConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cci-lz3ycgo69ukt****</p>
+         */
         @NameInMap("ChainConfigId")
         public String chainConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsActive")
         public Boolean isActive;
 
@@ -411,6 +515,10 @@ public class GetChainResponseBody extends TeaModel {
         @NameInMap("Routers")
         public java.util.List<GetChainResponseBodyChainConfigRouters> routers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Version")
         public String version;
 

@@ -4,15 +4,43 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateArtifactLifecycleRuleResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AA66379-B880-5123-9F6A-96BB25D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cralr-b6thg027zmk1****</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

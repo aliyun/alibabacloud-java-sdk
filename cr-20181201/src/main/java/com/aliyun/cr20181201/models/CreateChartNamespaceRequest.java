@@ -6,31 +6,44 @@ import com.aliyun.tea.*;
 public class CreateChartNamespaceRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically create repositories in the namespace. Valid values:</p>
-     * <br>
-     * <p>\-`  true `: automatically creates repositories in the namespace.</p>
-     * <br>
-     * <p>\-`  false `: does not automatically create repositories in the namespace.</p>
+     * <p>\-<code> true</code>: automatically creates repositories in the namespace.</p>
+     * <p>\-<code> false</code>: does not automatically create repositories in the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
     /**
      * <p>The default repository type. Valid values:</p>
-     * <br>
-     * <p>*   `PUBLIC`: a public repository</p>
-     * <p>*   `PRIVATE`: a private repository</p>
+     * <ul>
+     * <li><code>PUBLIC</code>: a public repository</li>
+     * <li><code>PRIVATE</code>: a private repository</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace01</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

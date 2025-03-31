@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteChartNamespaceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the chart namespace that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns2</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

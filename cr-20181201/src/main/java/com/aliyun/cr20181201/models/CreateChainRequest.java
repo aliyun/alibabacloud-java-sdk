@@ -6,36 +6,56 @@ import com.aliyun.tea.*;
 public class CreateChainRequest extends TeaModel {
     /**
      * <p>The configuration of the delivery chain in the JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chainconfig</p>
      */
     @NameInMap("ChainConfig")
     public String chainConfig;
 
     /**
      * <p>The description of the delivery chain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-4cdrlqmhn4gm****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the delivery chain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The name of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;

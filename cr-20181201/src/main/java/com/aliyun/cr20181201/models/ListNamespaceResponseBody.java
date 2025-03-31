@@ -4,24 +4,50 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListNamespaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     @NameInMap("Namespaces")
     public java.util.List<ListNamespaceResponseBodyNamespaces> namespaces;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B7E5FCA5-55ED-451C-9649-0BB2B93387D0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,24 +113,52 @@ public class ListNamespaceResponseBody extends TeaModel {
     }
 
     public static class ListNamespaceResponseBodyNamespaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoCreateRepo")
         public Boolean autoCreateRepo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
         @NameInMap("DefaultRepoType")
         public String defaultRepoType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cri-94klsruryslx****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>crn-tiw8t3f8i5lt****</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("NamespaceStatus")
         public String namespaceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-acfm4n5kzyf2fbi</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

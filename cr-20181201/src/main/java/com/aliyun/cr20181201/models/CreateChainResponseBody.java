@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateChainResponseBody extends TeaModel {
     /**
      * <p>The ID of the delivery chain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chi-02ymhtwl3cq8****</p>
      */
     @NameInMap("ChainId")
     public String chainId;
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4BC03B36-E515-5806-99AC-268AE3C0****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,9 +4,21 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetChainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chi-0ops0gsmw5x2****</p>
+     */
     @NameInMap("ChainId")
     public String chainId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-4cdrlqmhn4gm****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

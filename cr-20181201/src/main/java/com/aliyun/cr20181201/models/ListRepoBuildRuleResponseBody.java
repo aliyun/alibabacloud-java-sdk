@@ -12,39 +12,58 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42D782C8-E8F6-4A32-BEA0-6A6AC854C22A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -116,24 +135,36 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the image building rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crbr-khys0nd3asbe****</p>
          */
         @NameInMap("BuildRuleId")
         public String buildRuleId;
 
         /**
          * <p>The directory of the Dockerfile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         @NameInMap("DockerfileLocation")
         public String dockerfileLocation;
 
         /**
          * <p>The name of the Dockerfile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dockerfile</p>
          */
         @NameInMap("DockerfileName")
         public String dockerfileName;
 
         /**
          * <p>The tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.1</p>
          */
         @NameInMap("ImageTag")
         public String imageTag;
@@ -143,15 +174,22 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the push that triggers the building rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v0.1</p>
          */
         @NameInMap("PushName")
         public String pushName;
 
         /**
          * <p>The type of the push that triggers the image building rule. Valid values:</p>
-         * <br>
-         * <p>*   GIT_BRANCH: branch push</p>
-         * <p>*   GIT_TAG: tag push</p>
+         * <ul>
+         * <li>GIT_BRANCH: branch push</li>
+         * <li>GIT_TAG: tag push</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GIT_BRANCH</p>
          */
         @NameInMap("PushType")
         public String pushType;

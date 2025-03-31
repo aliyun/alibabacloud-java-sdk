@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>314CB661-35A5-5F01-A623-3EC6F87FF52F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

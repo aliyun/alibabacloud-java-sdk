@@ -6,30 +6,50 @@ import com.aliyun.tea.*;
 public class DeleteChartReleaseRequest extends TeaModel {
     /**
      * <p>The name of the chart.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chart3</p>
      */
     @NameInMap("Chart")
     public String chart;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The version of the chart that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1.0</p>
      */
     @NameInMap("Release")
     public String release;
 
     /**
      * <p>The name of the repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;

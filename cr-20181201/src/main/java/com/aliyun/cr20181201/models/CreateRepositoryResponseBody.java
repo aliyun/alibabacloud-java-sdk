@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateRepositoryResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-xwvi3osiy4ff****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>886FB272-15C3-44FC-AA54-F4ABD5B93A28</p>
      */
     @NameInMap("RequestId")
     public String requestId;

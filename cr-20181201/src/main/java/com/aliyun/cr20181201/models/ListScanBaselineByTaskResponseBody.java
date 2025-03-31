@@ -4,27 +4,67 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListScanBaselineByTaskResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: successful</li>
+     * <li><code>false</code>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5259118F-79E2-57E9-9AEA-551586F4FAED</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried baseline risks.</p>
+     */
     @NameInMap("ScanBaselines")
     public java.util.List<ListScanBaselineByTaskResponseBodyScanBaselines> scanBaselines;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -90,48 +130,126 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
     }
 
     public static class ListScanBaselineByTaskResponseBodyScanBaselines extends TeaModel {
+        /**
+         * <p>The category of the baseline risk.</p>
+         */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
+        /**
+         * <p>The suggestion on handling the baseline risk.</p>
+         */
         @NameInMap("BaselineDetailAdvice")
         public String baselineDetailAdvice;
 
+        /**
+         * <p>The description of the baseline risk.</p>
+         */
         @NameInMap("BaselineDetailDescription")
         public String baselineDetailDescription;
 
+        /**
+         * <p>The path and content of the baseline risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>usr/local/www/project/environments/dev/common/config/paramsxxx</p>
+         */
         @NameInMap("BaselineDetailPrompt")
         public String baselineDetailPrompt;
 
+        /**
+         * <p>The number of baseline risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("BaselineItemCount")
         public Integer baselineItemCount;
 
+        /**
+         * <p>The name of the baseline risk.</p>
+         */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
+        /**
+         * <p>The name of the baseline risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak_leak</p>
+         */
         @NameInMap("BaselineNameKey")
         public String baselineNameKey;
 
+        /**
+         * <p>The severity of the baseline risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("BaselineNameLevel")
         public String baselineNameLevel;
 
+        /**
+         * <p>The time when the image was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1695090008000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The time when the image was first scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-10 15:33:26</p>
+         */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
+        /**
+         * <p>The quantity of baseline risks whose severity is high.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HighRiskItemCount")
         public Integer highRiskItemCount;
 
+        /**
+         * <p>The quantity of baseline risks whose severity is low.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LowRiskItemCount")
         public Integer lowRiskItemCount;
 
+        /**
+         * <p>The quantity of baseline risks whose severity is medium.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MiddleRiskItemCount")
         public Integer middleRiskItemCount;
 
+        /**
+         * <p>The ID of the image scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2328fcaa-f28a-405d-a357-asdvfrew23</p>
+         */
         @NameInMap("ScanTaskId")
         public String scanTaskId;
 
+        /**
+         * <p>The time when the image was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684220824226</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

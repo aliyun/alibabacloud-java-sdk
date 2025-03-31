@@ -6,84 +6,129 @@ import com.aliyun.tea.*;
 public class GetChartRepositoryResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The time when the chart repository was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1563767620000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The time when the chart repository was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1563767700000</p>
      */
     @NameInMap("ModifiedTime")
     public Long modifiedTime;
 
     /**
      * <p>The ID of the chart repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crcr-c7letfwev5oq****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The name of the chart repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace to which the chart repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
     /**
      * <p>The status of the chart repository. Valid values:</p>
-     * <br>
-     * <p>*   `NORMAL`: The repository is normal.</p>
-     * <p>*   `DELETING`: The repository is being deleted.</p>
+     * <ul>
+     * <li><code>NORMAL</code>: The repository is normal.</li>
+     * <li><code>DELETING</code>: The repository is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("RepoStatus")
     public String repoStatus;
 
     /**
      * <p>The type of the chart repository. Valid values:</p>
-     * <br>
-     * <p>*   `PUBLIC`: a public repository</p>
-     * <p>*   `PRIVATE`: a private repository</p>
+     * <ul>
+     * <li><code>PUBLIC</code>: a public repository</li>
+     * <li><code>PRIVATE</code>: a private repository</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("RepoType")
     public String repoType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3F6AB56-DEF4-4FF5-8DE4-680362C0E21F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmv36i4is****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The summary about the chart repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Summary")
     public String summary;

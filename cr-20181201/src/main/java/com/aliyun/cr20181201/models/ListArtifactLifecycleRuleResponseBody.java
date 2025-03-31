@@ -4,24 +4,67 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F92D82F9-A4C4-5A4A-97B9-E495BF1B****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>_</p>
+     */
     @NameInMap("Rules")
     public java.util.List<ListArtifactLifecycleRuleResponseBodyRules> rules;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,42 +130,120 @@ public class ListArtifactLifecycleRuleResponseBody extends TeaModel {
     }
 
     public static class ListArtifactLifecycleRuleResponseBodyRules extends TeaModel {
+        /**
+         * <p>Indicates whether the lifecycle management rule is automatically executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Auto")
         public Boolean auto;
 
+        /**
+         * <p>The time when the lifecycle management rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638187989000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether lifecycle management is enabled for the artifact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableDeleteTag")
         public Boolean enableDeleteTag;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-brlg4cbj2yl****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the lifecycle management rule was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678341923385</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-ns</p>
+         */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The time when the lifecycle management rule is next executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1638187989000</p>
+         */
         @NameInMap("NextTime")
         public Long nextTime;
 
+        /**
+         * <p>The name of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_1</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The number of retained images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("RetentionTagCount")
         public Long retentionTagCount;
 
+        /**
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cralr-yqx1q5sir6d****</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The execution cycle of the lifecycle management rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEK</p>
+         */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
+        /**
+         * <p>The deletion scope of artifacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTANCE</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>The regular expression that indicates which image tags are retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.*-alpine</p>
+         */
         @NameInMap("TagRegexp")
         public String tagRegexp;
 

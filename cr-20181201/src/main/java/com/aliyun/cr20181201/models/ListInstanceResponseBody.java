@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstanceResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,30 +21,45 @@ public class ListInstanceResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2A9BA68-B264-4953-9154-CE61B1C03BA6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12121</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -108,9 +126,21 @@ public class ListInstanceResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResponseBodyInstancesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_key</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_value</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -140,58 +170,88 @@ public class ListInstanceResponseBody extends TeaModel {
     public static class ListInstanceResponseBodyInstances extends TeaModel {
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1562849679000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-sgedpenzw80e****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The issue occurs on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss bucket already exists</p>
          */
         @NameInMap("InstanceIssue")
         public String instanceIssue;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The edition of the Container Registry Enterprise Edition instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enterprise_Basic</p>
          */
         @NameInMap("InstanceSpecification")
         public String instanceSpecification;
 
         /**
          * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         /**
          * <p>The time when the instance was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1562849760000</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2h3aexpy****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tags of the instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListInstanceResponseBodyInstancesTags> tags;
 

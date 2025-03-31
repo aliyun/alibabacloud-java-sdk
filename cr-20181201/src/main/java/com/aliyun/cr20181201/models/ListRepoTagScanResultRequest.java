@@ -6,74 +6,110 @@ import com.aliyun.tea.*;
 public class ListRepoTagScanResultRequest extends TeaModel {
     /**
      * <p>The digest of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha256:6b0b094f8a904f8fb6602427aed0d1fa</p>
      */
     @NameInMap("Digest")
     public String digest;
 
     /**
-     * <p>The parameter whose value that you want to query. Fox example, if the value is `FixCmd`, only the `FixCmd` parameter is returned.</p>
+     * <p>The parameter whose value that you want to query. Fox example, if the value is <code>FixCmd</code>, only the <code>FixCmd</code> parameter is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FixCmd</p>
      */
     @NameInMap("FilterValue")
     public String filterValue;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-2j88dtld8yel****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-uf082u9dg8do****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The ID of the security scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6b0b094f-8a90-4f8f-b660-2427aed0****</p>
      */
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
     /**
      * <p>The type of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   `cve`: image system vulnerability</p>
-     * <p>*   `sca`: image application vulnerability</p>
+     * <ul>
+     * <li><code>cve</code>: image system vulnerability</li>
+     * <li><code>sca</code>: image application vulnerability</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>sca</p>
      */
     @NameInMap("ScanType")
     public String scanType;
 
     /**
      * <p>The severity of the vulnerability. Valid values:</p>
-     * <br>
-     * <p>*   `High`</p>
-     * <p>*   `Medium`</p>
-     * <p>*   `Low`</p>
-     * <p>*   `Unknown`</p>
+     * <ul>
+     * <li><code>High</code></li>
+     * <li><code>Medium</code></li>
+     * <li><code>Low</code></li>
+     * <li><code>Unknown</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>High</p>
      */
     @NameInMap("Severity")
     public String severity;
 
     /**
      * <p>The name of the image tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
      * <p>The keyword for fuzzy search used in scanning. The value can be a CVE name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CVE-2021</p>
      */
     @NameInMap("VulQueryKey")
     public String vulQueryKey;

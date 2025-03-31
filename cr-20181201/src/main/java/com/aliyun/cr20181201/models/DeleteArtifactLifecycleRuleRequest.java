@@ -4,9 +4,23 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteArtifactLifecycleRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the Container Registry instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-brlg4cbj2ylkrqqq</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The rule ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cralr-3v8pao9k7chb8q62</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

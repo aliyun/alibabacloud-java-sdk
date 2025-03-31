@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateEventCenterRuleResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>031572FA-7D8F-4C05-B790-1071E0E05DE6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the event notification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crecr-n6pbhgjxt*****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

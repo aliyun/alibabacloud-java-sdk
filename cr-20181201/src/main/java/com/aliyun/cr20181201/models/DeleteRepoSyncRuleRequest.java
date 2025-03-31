@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteRepoSyncRuleRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-hpdfkc6utbaq****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the synchronization rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crsr-gk5p2ns1kzns****</p>
      */
     @NameInMap("SyncRuleId")
     public String syncRuleId;
