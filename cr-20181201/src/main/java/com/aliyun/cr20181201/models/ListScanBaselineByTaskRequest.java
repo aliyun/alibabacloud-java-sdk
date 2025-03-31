@@ -4,27 +4,75 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListScanBaselineByTaskRequest extends TeaModel {
+    /**
+     * <p>The image digest.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha256:1c89806cfaf66d2990e2cf1131ebd56ff24b133745a33abf1228*************</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-***********</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The severity of the risk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>High</p>
+     */
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The repository ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-**************</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the image scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3e526d7e-4b45-4703-b046-***********</p>
+     */
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
+    /**
+     * <p>The image tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.36</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

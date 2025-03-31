@@ -4,15 +4,31 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateBuildRecordByRecordResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>crbr-ly77w5i3t31f****</p>
+     */
     @NameInMap("BuildRecordId")
     public String buildRecordId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

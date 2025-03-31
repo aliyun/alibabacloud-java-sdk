@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstanceEndpointResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1B21A877-66A2-4095-90EB-20A7781A4A67</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,7 +76,10 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
     public static class ListInstanceEndpointResponseBodyEndpointsAclEntries extends TeaModel {
         /**
-         * <p>Details about the ACL.</p>
+         * <p>The information about the ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Entry")
         public String entry;
@@ -89,13 +101,23 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
     public static class ListInstanceEndpointResponseBodyEndpointsDomains extends TeaModel {
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name of the Container Registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t****-registry.cn-shanghai.cr.aliyuncs.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>Type</p>
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li>SYSTEM: system domain name.</li>
+         * <li>USER: user domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("Type")
         public String type;
@@ -126,6 +148,9 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     public static class ListInstanceEndpointResponseBodyEndpointsLinkedVpcs extends TeaModel {
         /**
          * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -147,43 +172,55 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
 
     public static class ListInstanceEndpointResponseBodyEndpoints extends TeaModel {
         /**
-         * <p>Indicates whether the access control list (ACL) feature is enabled.</p>
+         * <p>Indicates whether the endpoint is added to an access control list (ACL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AclEnable")
         public Boolean aclEnable;
 
         /**
-         * <p>The ACL configured for the instance.</p>
+         * <p>The ACLs that are configured for the instance.</p>
          */
         @NameInMap("AclEntries")
         public java.util.List<ListInstanceEndpointResponseBodyEndpointsAclEntries> aclEntries;
 
         /**
-         * <p>Domain names.</p>
+         * <p>The list of domain names of the Container Registry instance.</p>
          */
         @NameInMap("Domains")
         public java.util.List<ListInstanceEndpointResponseBodyEndpointsDomains> domains;
 
         /**
-         * <p>Indicates whether the ACL feature is enabled.</p>
+         * <p>Indicates whether the endpoint is added to an ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
          * <p>The type of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         @NameInMap("EndpointType")
         public String endpointType;
 
         /**
-         * <p>The virtual private clouds (VPCs) that are associated with the instance.</p>
+         * <p>The VPCs associated with the instance.</p>
          */
         @NameInMap("LinkedVpcs")
         public java.util.List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> linkedVpcs;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The status of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public String status;

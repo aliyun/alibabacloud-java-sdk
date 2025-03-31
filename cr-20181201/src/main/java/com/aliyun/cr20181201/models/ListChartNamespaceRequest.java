@@ -6,33 +6,50 @@ import com.aliyun.tea.*;
 public class ListChartNamespaceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
     /**
      * <p>The status of the namespace. Valid values:</p>
-     * <br>
-     * <p>*   `NORMAL`: The namespace is normal.</p>
-     * <p>*   `DELETING`: The namespace is being deleted.</p>
+     * <ul>
+     * <li><code>NORMAL</code>: The namespace is normal.</li>
+     * <li><code>DELETING</code>: The namespace is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("NamespaceStatus")
     public String namespaceStatus;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

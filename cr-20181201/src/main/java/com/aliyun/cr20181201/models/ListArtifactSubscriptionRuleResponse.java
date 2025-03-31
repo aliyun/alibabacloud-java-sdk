@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class GetRepoTagLayersResponse extends TeaModel {
+public class ListArtifactSubscriptionRuleResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetRepoTagLayersResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetRepoTagLayersResponseBody body;
+    public ListArtifactSubscriptionRuleResponseBody body;
 
-    public static GetRepoTagLayersResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetRepoTagLayersResponse self = new GetRepoTagLayersResponse();
+    public static ListArtifactSubscriptionRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListArtifactSubscriptionRuleResponse self = new ListArtifactSubscriptionRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRepoTagLayersResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListArtifactSubscriptionRuleResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetRepoTagLayersResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetRepoTagLayersResponse setStatusCode(Integer statusCode) {
+    public ListArtifactSubscriptionRuleResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetRepoTagLayersResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetRepoTagLayersResponse setBody(GetRepoTagLayersResponseBody body) {
+    public ListArtifactSubscriptionRuleResponse setBody(ListArtifactSubscriptionRuleResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetRepoTagLayersResponseBody getBody() {
+    public ListArtifactSubscriptionRuleResponseBody getBody() {
         return this.body;
     }
 

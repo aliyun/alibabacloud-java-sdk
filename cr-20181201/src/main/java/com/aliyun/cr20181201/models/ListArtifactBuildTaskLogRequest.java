@@ -6,24 +6,40 @@ import com.aliyun.tea.*;
 public class ListArtifactBuildTaskLogRequest extends TeaModel {
     /**
      * <p>The ID of the artifact build task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i2a-1yu****</p>
      */
     @NameInMap("BuildTaskId")
     public String buildTaskId;
 
     /**
      * <p>The ID of the Container Registry instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-shac42yvqzvq****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

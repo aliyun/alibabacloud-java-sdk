@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class UpdateChartNamespaceRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically create repositories in the namespace. Valid values:</p>
-     * <br>
-     * <p>*   `true`: automatically creates repositories in the namespace.</p>
-     * <p>*   `false`: does not automatically create repositories in the namespace.</p>
+     * <ul>
+     * <li><code>true</code>: automatically creates repositories in the namespace.</li>
+     * <li><code>false</code>: does not automatically create repositories in the namespace.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
     /**
      * <p>The default type of the repository. Valid values:</p>
-     * <br>
-     * <p>*   `PUBLIC`: a public repository</p>
-     * <p>*   `PRIVATE`: a private repository</p>
+     * <ul>
+     * <li><code>PUBLIC</code>: a public repository</li>
+     * <li><code>PRIVATE</code>: a private repository</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
      */
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the namespace to which the repository belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

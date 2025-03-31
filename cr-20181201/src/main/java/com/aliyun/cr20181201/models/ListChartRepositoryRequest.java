@@ -6,40 +6,60 @@ import com.aliyun.tea.*;
 public class ListChartRepositoryRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The name of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace to which the repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
     /**
      * <p>The status of the chart repositories that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   `ALL`: query repositories of all status.</p>
-     * <p>*   `NORMAL`: query normal repositories.</p>
-     * <p>*   `DELETING`: query repositories that are being deleted.</p>
+     * <ul>
+     * <li><code>ALL</code>: query repositories of all status.</li>
+     * <li><code>NORMAL</code>: query normal repositories.</li>
+     * <li><code>DELETING</code>: query repositories that are being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("RepoStatus")
     public String repoStatus;

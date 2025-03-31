@@ -12,36 +12,54 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -110,18 +128,27 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     public static class ListRepoBuildRecordLogResponseBodyBuildRecordLogs extends TeaModel {
         /**
          * <p>The stage of the building that is recorded in the log entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GIT_CLONE</p>
          */
         @NameInMap("BuildStage")
         public String buildStage;
 
         /**
          * <p>The line number of the log entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("LineNumber")
         public Integer lineNumber;
 
         /**
          * <p>The content of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fetch stage begin</p>
          */
         @NameInMap("Message")
         public String message;

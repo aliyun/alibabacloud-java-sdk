@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class DeleteRepoTagRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-xwvi3osiy4ff****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The tag of the image.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.24</p>
      */
     @NameInMap("Tag")
     public String tag;

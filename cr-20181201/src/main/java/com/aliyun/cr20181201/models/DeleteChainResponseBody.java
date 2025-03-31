@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteChainResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DB1809A8-E1C8-5707-BAF8-D4FC1C11****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

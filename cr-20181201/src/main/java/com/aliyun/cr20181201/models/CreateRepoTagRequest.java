@@ -6,30 +6,50 @@ import com.aliyun.tea.*;
 public class CreateRepoTagRequest extends TeaModel {
     /**
      * <p>The source image tag.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("FromTag")
     public String fromTag;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-shac42yvqzv****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
     /**
      * <p>The name of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The image tag that you want to create.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
      */
     @NameInMap("ToTag")
     public String toTag;

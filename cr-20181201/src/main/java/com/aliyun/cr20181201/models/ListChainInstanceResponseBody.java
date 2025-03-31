@@ -12,42 +12,63 @@ public class ListChainInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The version of the delivery chain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The execution record of the delivery chain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>30</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>Indicates whether the operation is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the Container Registry instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>838D1602-6D8F-47FB-B60A-656645D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The name of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -124,18 +145,27 @@ public class ListChainInstanceResponseBody extends TeaModel {
     public static class ListChainInstanceResponseBodyChainInstancesChain extends TeaModel {
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chi-m42gbku0****</p>
          */
         @NameInMap("ChainId")
         public String chainId;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-chain</p>
          */
         @NameInMap("ChainName")
         public String chainName;
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public Long version;
@@ -180,52 +210,75 @@ public class ListChainInstanceResponseBody extends TeaModel {
 
         /**
          * <p>1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F4CF4DDB-BEF2-5575-<strong><strong>-</strong></strong>***</p>
          */
         @NameInMap("ChainInstanceId")
         public String chainInstanceId;
 
         /**
          * <p>The ID of the Container Registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1636685856000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The ID of the delivery chain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-repo</p>
          */
         @NameInMap("RepoName")
         public String repoName;
 
         /**
          * <p>The execution result of the delivery chain. Valid values:</p>
-         * <br>
-         * <p>*   `SUCCESS`</p>
-         * <p>*   `FAILED`</p>
-         * <p>*   `CANCELED`</p>
-         * <p>*   `DENIED`</p>
+         * <ul>
+         * <li><code>SUCCESS</code></li>
+         * <li><code>FAILED</code></li>
+         * <li><code>CANCELED</code></li>
+         * <li><code>DENIED</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test-ns</p>
          */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
         /**
          * <p>The list of the execution records of delivery chains.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>test-repo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1636685776000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the delivery chain. Valid values:</p>
-         * <br>
-         * <p>*   `RUNNING`</p>
-         * <p>*   `COMPLETE`</p>
-         * <p>*   `CANCELING`</p>
-         * <p>*   `CANCELED`</p>
+         * <ul>
+         * <li><code>RUNNING</code></li>
+         * <li><code>COMPLETE</code></li>
+         * <li><code>CANCELING</code></li>
+         * <li><code>CANCELED</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         @NameInMap("Status")
         public String status;

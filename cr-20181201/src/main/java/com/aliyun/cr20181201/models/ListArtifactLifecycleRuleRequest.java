@@ -4,15 +4,40 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListArtifactLifecycleRuleRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable lifecycle management for the artifact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableDeleteTag")
     public Boolean enableDeleteTag;
 
+    /**
+     * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-eztul9ucz76q****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,24 +4,67 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: successful</li>
+     * <li><code>false</code>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>52AE49C8-B91A-5C1A-821F-C34324B42F7C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried malicious files.</p>
+     */
     @NameInMap("ScanMaliciousFiles")
     public java.util.List<ListScanMaliciousFileByTaskResponseBodyScanMaliciousFiles> scanMaliciousFiles;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,27 +130,75 @@ public class ListScanMaliciousFileByTaskResponseBody extends TeaModel {
     }
 
     public static class ListScanMaliciousFileByTaskResponseBodyScanMaliciousFiles extends TeaModel {
+        /**
+         * <p>The time when the image was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10 11:42:06</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The path of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tenant/0000000000000000/</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <p>The time when the image was first scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10 11:42:06</p>
+         */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
 
+        /**
+         * <p>The severity of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remind</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The MD5 hash value of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e76c9759783cbbc9be0ff91ca3xxxxxx</p>
+         */
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
+        /**
+         * <p>The type of the malicious file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Suspected to contain Webshell code</p>
+         */
         @NameInMap("MaliciousName")
         public String maliciousName;
 
+        /**
+         * <p>The ID of the image scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe2d8980-de45-4f55-b57d-e438e6d2e972</p>
+         */
         @NameInMap("ScanTaskId")
         public String scanTaskId;
 
+        /**
+         * <p>The time when the image was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10 11:42:06</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

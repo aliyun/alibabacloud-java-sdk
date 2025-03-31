@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class ListInstanceEndpointRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the module that you want to access. Valid values:</p>
-     * <br>
-     * <p>*   `Registry`: the image repository.</p>
-     * <p>*   `Chart`: a Helm chart.</p>
+     * <ul>
+     * <li><code>Registry</code>: image repositories.</li>
+     * <li><code>Chart</code>: Helm charts.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Chart</p>
      */
     @NameInMap("ModuleName")
     public String moduleName;
 
+    /**
+     * <p>Specify whether to return endpoints in simple mode. If yes, no access control information about the endpoint is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Summary")
     public Boolean summary;
 

@@ -6,43 +6,63 @@ import com.aliyun.tea.*;
 public class GetAuthorizationTokenResponseBody extends TeaModel {
     /**
      * <p>The temporary password returned after you call this API operation is a Security Token Service (STS) token whose validity period is 1 hour. Take note of the following items when you log on to Container Registry instances by using an STS token:</p>
-     * <br>
-     * <p>*   If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.</p>
-     * <p>*   If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.</p>
-     * <p>*   You can use an STS token to access only Container Registry instances to which the STS token is scoped.</p>
+     * <ul>
+     * <li>If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.</li>
+     * <li>If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.</li>
+     * <li>You can use an STS token to access only Container Registry instances to which the STS token is scoped.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>shaunadadakks:uuczxnjcyeyhdjadkkajsjdjadhyucb</p>
      */
     @NameInMap("AuthorizationToken")
     public String authorizationToken;
 
     /**
      * <p>Indicates whether the API call is successful.</p>
-     * <br>
-     * <p>*   `true`: successful</p>
-     * <p>*   `false`: failed</p>
+     * <ul>
+     * <li><code>true</code>: successful</li>
+     * <li><code>false</code>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1571242083000</p>
      */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
     /**
      * <p>The username that is used to log on to the Container Registry instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The timestamp when the temporary password expires. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E069EB86-E6AD-4A98-ADDE-0E993390239A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The password that is used to log on to the Container Registry instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>temp_user_cr</p>
      */
     @NameInMap("TempUsername")
     public String tempUsername;

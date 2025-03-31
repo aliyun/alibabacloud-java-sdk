@@ -4,9 +4,23 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactLifecycleRuleRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-hpdfkc6utbaq****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The rule ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cralr-a18bkiajy81****</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

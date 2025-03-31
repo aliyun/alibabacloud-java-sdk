@@ -6,102 +6,156 @@ import com.aliyun.tea.*;
 public class GetRepositoryResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The time when the repository was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1570759546000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The details of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Detail")
     public String detail;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The time when the repository was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1570759546100</p>
      */
     @NameInMap("ModifiedTime")
     public Long modifiedTime;
 
     /**
      * <p>Indicates how the repository was created. Valid values:</p>
-     * <br>
-     * <p>*   `MANUAL`: The repository was manually created.</p>
-     * <p>*   `AUTO`: The repository was automatically created.</p>
+     * <ul>
+     * <li><code>MANUAL</code>: The repository was manually created.</li>
+     * <li><code>AUTO</code>: The repository was automatically created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MANUAL</p>
      */
     @NameInMap("RepoBuildType")
     public String repoBuildType;
 
     /**
      * <p>The ID of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-l5eoubonp0l****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The name of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
     /**
      * <p>The status of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("RepoStatus")
     public String repoStatus;
 
     /**
      * <p>The type of the repository. Valid values:</p>
-     * <br>
-     * <p>*   `PUBLIC`: public repository.</p>
-     * <p>*   `PRIVATE`: private repository.</p>
+     * <ul>
+     * <li><code>PUBLIC</code>: public repository.</li>
+     * <li><code>PRIVATE</code>: private repository.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("RepoType")
     public String repoType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>915E6734-3E50-4640-8DBA-126D2D94DE29</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmv36i4is****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The summary of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Automatically created repository</p>
      */
     @NameInMap("Summary")
     public String summary;
 
     /**
      * <p>Indicates whether the feature of image tag immutability is enabled. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The feature of image tag immutability is enabled.</p>
-     * <p>*   `false`: The feature of image tag immutability is disabled.</p>
+     * <ul>
+     * <li><code>true</code>: The feature of image tag immutability is enabled.</li>
+     * <li><code>false</code>: The feature of image tag immutability is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("TagImmutability")
     public Boolean tagImmutability;

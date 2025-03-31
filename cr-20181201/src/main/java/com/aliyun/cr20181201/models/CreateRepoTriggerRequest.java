@@ -6,47 +6,74 @@ import com.aliyun.tea.*;
 public class CreateRepoTriggerRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-xwvi3osiy4ff****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The name of the trigger.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trigger1</p>
      */
     @NameInMap("TriggerName")
     public String triggerName;
 
     /**
      * <p>The image tag based on which the trigger is set.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If `TriggerType` is set to `ALL`, `TriggerTag` can be set to a string or an array, for example, `*`.</p>
-     * <br>
-     * <p>*   If `TriggerType` is set to `TAG_LIST`, `TriggerTag` must be set to an array, for example, `[1]`.</p>
-     * <p>*   If `TriggerType` is set to `TAG_REG_EXP`, `TriggerTag` must be set to a string, for example, `*`.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If <code>TriggerType</code> is set to <code>ALL</code>, <code>TriggerTag</code> can be set to a string or an array, for example, <code>*</code>.</p>
+     * </li>
+     * <li><p>If <code>TriggerType</code> is set to <code>TAG_LIST</code>, <code>TriggerTag</code> must be set to an array, for example, <code>[1]</code>.</p>
+     * </li>
+     * <li><p>If <code>TriggerType</code> is set to <code>TAG_REG_EXP</code>, <code>TriggerTag</code> must be set to a string, for example, <code>*</code>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[1]</p>
      */
     @NameInMap("TriggerTag")
     public String triggerTag;
 
     /**
      * <p>The type of the trigger. Valid values:</p>
-     * <br>
-     * <p>*   `ALL`: a trigger that supports both tags and regular expressions.</p>
-     * <p>*   `TAG_LIST`: a tag-based trigger.</p>
-     * <p>*   `TAG_REG_EXP`: a regular expression-based trigger.</p>
+     * <ul>
+     * <li><code>ALL</code>: a trigger that supports both tags and regular expressions.</li>
+     * <li><code>TAG_LIST</code>: a tag-based trigger.</li>
+     * <li><code>TAG_REG_EXP</code>: a regular expression-based trigger.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("TriggerType")
     public String triggerType;
 
     /**
      * <p>The URL of the trigger.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.mysite.com">http://www.mysite.com</a></p>
      */
     @NameInMap("TriggerUrl")
     public String triggerUrl;

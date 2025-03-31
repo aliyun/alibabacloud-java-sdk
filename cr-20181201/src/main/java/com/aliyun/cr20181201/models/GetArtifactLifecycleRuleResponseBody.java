@@ -4,51 +4,151 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the lifecycle management rule is automatically executed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Auto")
     public Boolean auto;
 
+    /**
+     * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The time when the lifecycle management rule was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1571926439000</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>Indicates whether lifecycle management is enabled for the artifact.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableDeleteTag")
     public Boolean enableDeleteTag;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The time when the lifecycle management rule was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1638259914000</p>
+     */
     @NameInMap("ModifiedTime")
     public Long modifiedTime;
 
+    /**
+     * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-namespace</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <p>The time when the lifecycle management rule is next executed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1701878400000</p>
+     */
     @NameInMap("NextTime")
     public Long nextTime;
 
+    /**
+     * <p>The name of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-repo</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>724402D0-75CD-4794-BC20-7D37208****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of retained images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("RetentionTagCount")
     public Long retentionTagCount;
 
+    /**
+     * <p>The rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cralr-a18bkiajy8****</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>The execution cycle of the lifecycle management rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEEK</p>
+     */
     @NameInMap("ScheduleTime")
     public String scheduleTime;
 
+    /**
+     * <p>The deletion scope of artifacts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE</p>
+     */
     @NameInMap("Scope")
     public String scope;
 
+    /**
+     * <p>The regular expression that indicates which image tags are retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.*-alpine</p>
+     */
     @NameInMap("TagRegexp")
     public String tagRegexp;
 

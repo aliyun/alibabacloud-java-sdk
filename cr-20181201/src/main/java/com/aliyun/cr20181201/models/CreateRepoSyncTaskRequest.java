@@ -4,33 +4,89 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoSyncTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-hpdfkc6utbaq****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Override")
     public Boolean override;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-iql7jalx4g0****</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag1</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-ibxs3piklys3****</p>
+     */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
+     */
     @NameInMap("TargetNamespace")
     public String targetNamespace;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("TargetRegionId")
     public String targetRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo1</p>
+     */
     @NameInMap("TargetRepoName")
     public String targetRepoName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag1</p>
+     */
     @NameInMap("TargetTag")
     public String targetTag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345***</p>
+     */
     @NameInMap("TargetUserId")
     public String targetUserId;
 

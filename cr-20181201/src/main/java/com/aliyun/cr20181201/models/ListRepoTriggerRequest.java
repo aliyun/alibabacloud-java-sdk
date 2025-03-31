@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ListRepoTriggerRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-tquyps22md8p****</p>
      */
     @NameInMap("RepoId")
     public String repoId;

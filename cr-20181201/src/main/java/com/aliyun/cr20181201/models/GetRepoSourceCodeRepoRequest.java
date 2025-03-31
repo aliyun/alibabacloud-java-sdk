@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetRepoSourceCodeRepoRequest extends TeaModel {
     /**
      * <p>The ID of the Container Registry instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-shac42yvqzvq****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-gzsrlevmvoaq****</p>
      */
     @NameInMap("RepoId")
     public String repoId;

@@ -4,24 +4,51 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoSyncTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7640819A-FB5B-4E25-A227-97717F62****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about synchronization tasks.</p>
+     */
     @NameInMap("SyncTasks")
     public java.util.List<ListRepoSyncTaskResponseBodySyncTasks> syncTasks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,18 +114,38 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
     }
 
     public static class ListRepoSyncTaskResponseBodySyncTasksImageFrom extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1</p>
+         */
         @NameInMap("ImageTag")
         public String imageTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
@@ -150,18 +197,38 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
     }
 
     public static class ListRepoSyncTaskResponseBodySyncTasksImageTo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>v0.1</p>
+         */
         @NameInMap("ImageTag")
         public String imageTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cri-k77rd2eo9zttneqo</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
@@ -213,12 +280,24 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
     }
 
     public static class ListRepoSyncTaskResponseBodySyncTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1572839126000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CrossUser")
         public Boolean crossUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CustomLink")
         public Boolean customLink;
 
@@ -228,24 +307,75 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         @NameInMap("ImageTo")
         public ListRepoSyncTaskResponseBodySyncTasksImageTo imageTo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1572839133000</p>
+         */
         @NameInMap("ModifedTime")
         public Long modifedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15DEEB56-9271-4FDD-AC4D-C3A5CC2C****</p>
+         */
         @NameInMap("SyncBatchTaskId")
         public String syncBatchTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>crsr-7lph66uloi6h****</p>
+         */
         @NameInMap("SyncRuleId")
         public String syncRuleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rst-4kfd7fk6pohk****</p>
+         */
         @NameInMap("SyncTaskId")
         public String syncTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SyncTransAccelerate")
         public Boolean syncTransAccelerate;
 
+        /**
+         * <p>The error message that is returned if the synchronization task fails.</p>
+         * <blockquote>
+         * <p> The system uses this parameter to return an error message if the synchronization task fails.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to use Object Storage Service (OSS).</li>
+         * <li>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</li>
+         * <li>UNSUPPORTED_FORMAT: The manifest and config formats of the image to be synchronized are not supported.</li>
+         * <li>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</li>
+         * <li>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</li>
+         * <li>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NETWORK_ERROR</p>
+         */
+        @NameInMap("TaskIssue")
+        public String taskIssue;
+
+        /**
+         * <p>The status of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PASSIVE</p>
+         */
         @NameInMap("TaskTrigger")
         public String taskTrigger;
 
@@ -332,6 +462,14 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
         public Boolean getSyncTransAccelerate() {
             return this.syncTransAccelerate;
+        }
+
+        public ListRepoSyncTaskResponseBodySyncTasks setTaskIssue(String taskIssue) {
+            this.taskIssue = taskIssue;
+            return this;
+        }
+        public String getTaskIssue() {
+            return this.taskIssue;
         }
 
         public ListRepoSyncTaskResponseBodySyncTasks setTaskStatus(String taskStatus) {

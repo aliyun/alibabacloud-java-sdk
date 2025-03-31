@@ -4,39 +4,115 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoSyncRuleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-hpdfkc6utbaq****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>repo1</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The rule that is used to filter repositories.</p>
+     * <blockquote>
+     * <p> This parameter is valid only when SyncScope is set to <code>NAMESPACE</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>.*</p>
+     */
+    @NameInMap("RepoNameFilter")
+    public String repoNameFilter;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rule</p>
+     */
     @NameInMap("SyncRuleName")
     public String syncRuleName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REPO</p>
+     */
     @NameInMap("SyncScope")
     public String syncScope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PASSIVE</p>
+     */
     @NameInMap("SyncTrigger")
     public String syncTrigger;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.*</p>
+     */
     @NameInMap("TagFilter")
     public String tagFilter;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-ibxs3piklys3****</p>
+     */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
+     */
     @NameInMap("TargetNamespaceName")
     public String targetNamespaceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("TargetRegionId")
     public String targetRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>repo1</p>
+     */
     @NameInMap("TargetRepoName")
     public String targetRepoName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12645940***</p>
+     */
     @NameInMap("TargetUserId")
     public String targetUserId;
 
@@ -67,6 +143,14 @@ public class CreateRepoSyncRuleRequest extends TeaModel {
     }
     public String getRepoName() {
         return this.repoName;
+    }
+
+    public CreateRepoSyncRuleRequest setRepoNameFilter(String repoNameFilter) {
+        this.repoNameFilter = repoNameFilter;
+        return this;
+    }
+    public String getRepoNameFilter() {
+        return this.repoNameFilter;
     }
 
     public CreateRepoSyncRuleRequest setSyncRuleName(String syncRuleName) {

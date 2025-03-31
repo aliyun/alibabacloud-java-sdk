@@ -6,27 +6,42 @@ import com.aliyun.tea.*;
 public class UpdateNamespaceRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically create a repository when an image is pushed to the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
     /**
      * <p>The default type of the repository. Valid values:</p>
-     * <br>
-     * <p>*   `PUBLIC`: The repository is a public repository.</p>
-     * <p>*   `PRIVATE`: The repository is a private repository.</p>
+     * <ul>
+     * <li><code>PUBLIC</code>: The repository is a public repository.</li>
+     * <li><code>PRIVATE</code>: The repository is a private repository.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;

@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class DeleteRepositoryRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-l4933wbcmun2****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The name of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-repo</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace to which the repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-namespace</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;

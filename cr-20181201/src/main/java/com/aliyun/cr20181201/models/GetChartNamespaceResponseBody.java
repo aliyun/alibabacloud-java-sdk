@@ -6,70 +6,107 @@ import com.aliyun.tea.*;
 public class GetChartNamespaceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether a repository was automatically created in the namespace. Valid values:</p>
-     * <br>
-     * <p>*   `true`: A repository was automatically created in the namespace.</p>
-     * <p>*   `false`: No repository was automatically created in the namespace.</p>
+     * <ul>
+     * <li><code>true</code>: A repository was automatically created in the namespace.</li>
+     * <li><code>false</code>: No repository was automatically created in the namespace.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The default repository type. Valid values:</p>
-     * <br>
-     * <p>*   `PUBLIC`: a public repository.</p>
-     * <p>*   `PRIVATE`: a private repository.</p>
+     * <ul>
+     * <li><code>PUBLIC</code>: a public repository.</li>
+     * <li><code>PRIVATE</code>: a private repository.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
      */
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crcn-43dhbjbyt2xl****</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ns1</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
     /**
      * <p>The status of the namespace. Valid values:</p>
-     * <br>
-     * <p>*   `NORMAL`: The namespace is normal.</p>
-     * <p>*   `DELETING`: The namespace is being deleted.</p>
+     * <ul>
+     * <li><code>NORMAL</code>: The namespace is normal.</li>
+     * <li><code>DELETING</code>: The namespace is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("NamespaceStatus")
     public String namespaceStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD71CF13-93AA-4805-848B-69B2DD543A9A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmv36i4is****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListRepoTriggerResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2CA76D52-A8F0-4D0B-854E-FBD9F6C99049</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,43 +81,65 @@ public class ListRepoTriggerResponseBody extends TeaModel {
     public static class ListRepoTriggerResponseBodyTriggers extends TeaModel {
         /**
          * <p>The type of the event that activates the trigger. Valid values:</p>
-         * <br>
-         * <p>*   `BUILD_SUCCESS`: The trigger is activated when an image building task is successful.</p>
-         * <p>*   `BUILD_Fail`: The trigger is activated when an image building task fails.</p>
+         * <ul>
+         * <li><code>BUILD_SUCCESS</code>: The trigger is activated when an image building task is successful.</li>
+         * <li><code>BUILD_Fail</code>: The trigger is activated when an image building task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUILD_SUCCESS</p>
          */
         @NameInMap("RepoEvent")
         public String repoEvent;
 
         /**
          * <p>The ID of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crw-vriyql9eq7ep****</p>
          */
         @NameInMap("TriggerId")
         public String triggerId;
 
         /**
          * <p>The name of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TriggerName")
         public String triggerName;
 
         /**
          * <p>The image tag based on which the trigger is set.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("TriggerTag")
         public String triggerTag;
 
         /**
          * <p>The type of the trigger. Valid values:</p>
-         * <br>
-         * <p>*   `ALL`: a trigger that supports both tags and regular expressions.</p>
-         * <p>*   `TAG_LISTTAG`: a tag-based trigger.</p>
-         * <p>*   `TAG_REG_EXP`: a regular expression-based trigger.</p>
+         * <ul>
+         * <li><code>ALL</code>: a trigger that supports both tags and regular expressions.</li>
+         * <li><code>TAG_LISTTAG</code>: a tag-based trigger.</li>
+         * <li><code>TAG_REG_EXP</code>: a regular expression-based trigger.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("TriggerType")
         public String triggerType;
 
         /**
          * <p>The URL of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.test.com">https://www.test.com</a></p>
          */
         @NameInMap("TriggerUrl")
         public String triggerUrl;

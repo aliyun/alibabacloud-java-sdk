@@ -4,24 +4,48 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepositoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("Repositories")
     public java.util.List<ListRepositoryResponseBodyRepositories> repositories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5241C090-DA69-4B0F-8E3F-2F24FDE1110E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,39 +111,87 @@ public class ListRepositoryResponseBody extends TeaModel {
     }
 
     public static class ListRepositoryResponseBodyRepositories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1564153576000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcv****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1564153576000</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MANUAL</p>
+         */
         @NameInMap("RepoBuildType")
         public String repoBuildType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>crr-03cuozrsqhkw****</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("RepoStatus")
         public String repoStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
         @NameInMap("RepoType")
         public String repoType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-acfm4n5kzyfxxxx</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test OK</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("TagImmutability")
         public Boolean tagImmutability;
 

@@ -4,18 +4,40 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactBuildRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ACCELERATED_IMAGE</p>
+     */
     @NameInMap("ArtifactType")
     public String artifactType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crabr-o2670wqz2n70****</p>
+     */
     @NameInMap("BuildRuleId")
     public String buildRuleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-xkx6vujuhay0****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>crr-8dz3aedjqlmk****</p>
+     */
     @NameInMap("ScopeId")
     public String scopeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>REPOSITORY</p>
+     */
     @NameInMap("ScopeType")
     public String scopeType;
 

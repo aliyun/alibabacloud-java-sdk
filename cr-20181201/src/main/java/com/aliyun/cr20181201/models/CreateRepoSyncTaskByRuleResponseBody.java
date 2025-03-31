@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class CreateRepoSyncTaskByRuleResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request is successful.</p>
-     * <p>*   `false`: The request fails.</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17A4C658-AE8F-4A08-821F-EDCB5FC74EE8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rst-biu4u4pm4it5****</p>
      */
     @NameInMap("SyncTaskId")
     public String syncTaskId;

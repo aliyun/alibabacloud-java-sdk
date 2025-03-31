@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class CreateBuildRecordByRuleRequest extends TeaModel {
     /**
      * <p>The ID of the image building rule.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crbr-1j95g4bu2s1i****</p>
      */
     @NameInMap("BuildRuleId")
     public String buildRuleId;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-asd6vujuhay0****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-8dz3aedjqlmk****</p>
      */
     @NameInMap("RepoId")
     public String repoId;

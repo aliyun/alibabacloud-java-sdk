@@ -12,36 +12,54 @@ public class ListChartReleaseResponseBody extends TeaModel {
 
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F68823F6-F1B5-4A4E-8421-A83CAB8F2963</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -110,42 +128,63 @@ public class ListChartReleaseResponseBody extends TeaModel {
     public static class ListChartReleaseResponseBodyChartReleases extends TeaModel {
         /**
          * <p>The name of the chart version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chart1</p>
          */
         @NameInMap("Chart")
         public String chart;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The time when the chart was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571930323000</p>
          */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
         /**
          * <p>The version number of the chart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0</p>
          */
         @NameInMap("Release")
         public String release;
 
         /**
          * <p>The ID of the chart repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crcr-gpsu7b8chmxk****</p>
          */
         @NameInMap("RepoId")
         public String repoId;
 
         /**
          * <p>The size of the chart of the version. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2826</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
          * <p>The status of the chart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLED</p>
          */
         @NameInMap("Status")
         public String status;

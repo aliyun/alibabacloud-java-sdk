@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class GetRepositoryRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-03cuozrsqhkw****</p>
      */
     @NameInMap("RepoId")
     public String repoId;
 
     /**
      * <p>The name of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RepoName")
     public String repoName;
 
     /**
      * <p>The name of the namespace to which the repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;

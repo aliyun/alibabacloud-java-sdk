@@ -6,63 +6,98 @@ import com.aliyun.tea.*;
 public class UpdateRepoSourceCodeRepoRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic image building when code is committed. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables automatic image building when code is committed.</p>
-     * <p>*   `false`: disables automatic image building when code is committed.</p>
+     * <ul>
+     * <li><code>true</code>: enables automatic image building when code is committed.</li>
+     * <li><code>false</code>: disables automatic image building when code is committed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoBuild")
     public String autoBuild;
 
     /**
      * <p>The ID of the source code repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-cp7d6sget5r****</p>
      */
     @NameInMap("CodeRepoId")
     public String codeRepoId;
 
     /**
      * <p>The name of the source code repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>repo</p>
      */
     @NameInMap("CodeRepoName")
     public String codeRepoName;
 
     /**
      * <p>The namespace to which the source code repository belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace</p>
      */
     @NameInMap("CodeRepoNamespaceName")
     public String codeRepoNamespaceName;
 
     /**
      * <p>The type of the source code hosting platform. Valid values: GITHUB, GITLAB, GITEE, CODE, and CODEUP.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GITHUB</p>
      */
     @NameInMap("CodeRepoType")
     public String codeRepoType;
 
     /**
      * <p>Specifies whether to disable building caches. Valid values:</p>
-     * <br>
-     * <p>*   `true`: disables building caches.</p>
-     * <p>*   `false`: enables building caches.</p>
+     * <ul>
+     * <li><code>true</code>: disables building caches.</li>
+     * <li><code>false</code>: enables building caches.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisableCacheBuild")
     public String disableCacheBuild;
 
     /**
      * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-shac42yvqzvq****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Specifies whether to enable Build With Servers Deployed Outside Chinese Mainland. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables Build With Servers Deployed Outside Chinese Mainland.</p>
-     * <p>*   `false`: disables Build With Servers Deployed Outside Chinese Mainland.</p>
+     * <ul>
+     * <li><code>true</code>: enables Build With Servers Deployed Outside Chinese Mainland.</li>
+     * <li><code>false</code>: disables Build With Servers Deployed Outside Chinese Mainland.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("OverseaBuild")
     public String overseaBuild;
 
     /**
      * <p>The ID of the image repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-gzsrlevmvoa****</p>
      */
     @NameInMap("RepoId")
     public String repoId;

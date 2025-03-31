@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteChainRequest extends TeaModel {
     /**
      * <p>The ID of the delivery pipeline.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chi-02ymhtwl3cq8****</p>
      */
     @NameInMap("ChainId")
     public String chainId;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-4cdrlqmhn4gm****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

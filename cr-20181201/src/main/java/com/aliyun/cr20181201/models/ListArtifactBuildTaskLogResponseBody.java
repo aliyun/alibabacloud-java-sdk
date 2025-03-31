@@ -12,27 +12,40 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
 
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Indicates whether the API call is successful.</p>
-     * <br>
-     * <p>*   `true`: successful</p>
-     * <p>*   `false`: failed</p>
+     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: successful</li>
+     * <li><code>false</code>: failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C4C7DD0C-C9D6-437A-A7EE-121EFD70D002</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of log entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,12 +98,18 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
     public static class ListArtifactBuildTaskLogResponseBodyBuildTaskLogs extends TeaModel {
         /**
          * <p>The row number of the log entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LineNumber")
         public Integer lineNumber;
 
         /**
-         * <p>The content of the log entry.</p>
+         * <p>The log data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Start Build</p>
          */
         @NameInMap("Message")
         public String message;

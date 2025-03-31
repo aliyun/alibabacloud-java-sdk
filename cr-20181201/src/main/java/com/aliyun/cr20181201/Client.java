@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels an artifact building task.</p>
+     * 
+     * @param request CancelArtifactBuildTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelArtifactBuildTaskResponse
+     */
     public CancelArtifactBuildTaskResponse cancelArtifactBuildTaskWithOptions(CancelArtifactBuildTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -51,14 +59,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelArtifactBuildTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelArtifactBuildTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelArtifactBuildTaskResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels an artifact building task.</p>
+     * 
+     * @param request CancelArtifactBuildTaskRequest
+     * @return CancelArtifactBuildTaskResponse
+     */
     public CancelArtifactBuildTaskResponse cancelArtifactBuildTask(CancelArtifactBuildTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelArtifactBuildTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels an image building task of a repository.</p>
+     * 
+     * @param request CancelRepoBuildRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelRepoBuildRecordResponse
+     */
     public CancelRepoBuildRecordResponse cancelRepoBuildRecordWithOptions(CancelRepoBuildRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -88,14 +116,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelRepoBuildRecordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelRepoBuildRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelRepoBuildRecordResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels an image building task of a repository.</p>
+     * 
+     * @param request CancelRepoBuildRecordRequest
+     * @return CancelRepoBuildRecordResponse
+     */
     public CancelRepoBuildRecordResponse cancelRepoBuildRecord(CancelRepoBuildRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelRepoBuildRecordWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a single replication task.</p>
+     * 
+     * @param request CancelRepoSyncTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelRepoSyncTaskResponse
+     */
+    public CancelRepoSyncTaskResponse cancelRepoSyncTaskWithOptions(CancelRepoSyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncTaskId)) {
+            query.put("SyncTaskId", request.syncTaskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelRepoSyncTask"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelRepoSyncTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CancelRepoSyncTaskResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Cancels a single replication task.</p>
+     * 
+     * @param request CancelRepoSyncTaskRequest
+     * @return CancelRepoSyncTaskResponse
+     */
+    public CancelRepoSyncTaskResponse cancelRepoSyncTask(CancelRepoSyncTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelRepoSyncTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which a resource belongs.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -125,21 +226,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ChangeResourceGroupResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which a resource belongs.</p>
+     * 
+     * @param request ChangeResourceGroupRequest
+     * @return ChangeResourceGroupResponse
+     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
     }
 
     /**
-      * You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see [Specifications of different editions](https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc).
-      * Accelerated images can be built in the following regions: China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Guangzhou), China (Zhangjiakou), China (Hong Kong), US (Virginia), US (Silicon Valley), Singapore, Japan (Tokyo), and Malaysia (Kuala Lumpur).
-      *
-      * @param tmpReq CreateArtifactBuildRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateArtifactBuildRuleResponse
+     * <b>description</b> :
+     * <p>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
+     * Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create image repository acceleration rules for image building.</p>
+     * 
+     * @param tmpReq CreateArtifactBuildRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateArtifactBuildRuleResponse
      */
     public CreateArtifactBuildRuleResponse createArtifactBuildRuleWithOptions(CreateArtifactBuildRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
@@ -184,21 +301,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactBuildRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactBuildRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateArtifactBuildRuleResponse());
+        }
+
     }
 
     /**
-      * You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see [Specifications of different editions](https://www.alibabacloud.com/help/zh/container-registry/latest/what-is-container-registry#section-go7-lhg-qbc).
-      * Accelerated images can be built in the following regions: China (Hangzhou), China (Shanghai), China (Beijing), China (Shenzhen), China (Guangzhou), China (Zhangjiakou), China (Hong Kong), US (Virginia), US (Silicon Valley), Singapore, Japan (Tokyo), and Malaysia (Kuala Lumpur).
-      *
-      * @param request CreateArtifactBuildRuleRequest
-      * @return CreateArtifactBuildRuleResponse
+     * <b>description</b> :
+     * <p>You can create building rules of accelerated images only for image repositories of Container Registry Advanced Edition instances. You cannot create building rules of accelerated images for image repositories of Container Registry Basic Edition instances. For more information, see <a href="https://www.alibabacloud.com/help/en/acr/product-overview/what-is-container-registry?spm=openapi-amp.newDocPublishment.0.0.bf82281fRj7rmV#section-n3q-ps7-x6k">Specifications of different editions</a>.
+     * Accelerated images are not supported in Alibaba Finance Cloud regions or Alibaba Gov Cloud regions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create image repository acceleration rules for image building.</p>
+     * 
+     * @param request CreateArtifactBuildRuleRequest
+     * @return CreateArtifactBuildRuleResponse
      */
     public CreateArtifactBuildRuleResponse createArtifactBuildRule(CreateArtifactBuildRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createArtifactBuildRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a lifecycle management rule for an artifact.</p>
+     * 
+     * @param request CreateArtifactLifecycleRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateArtifactLifecycleRuleResponse
+     */
     public CreateArtifactLifecycleRuleResponse createArtifactLifecycleRuleWithOptions(CreateArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -252,14 +386,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactLifecycleRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactLifecycleRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateArtifactLifecycleRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a lifecycle management rule for an artifact.</p>
+     * 
+     * @param request CreateArtifactLifecycleRuleRequest
+     * @return CreateArtifactLifecycleRuleResponse
+     */
     public CreateArtifactLifecycleRuleResponse createArtifactLifecycleRule(CreateArtifactLifecycleRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an artifact subscription rule.</p>
+     * 
+     * @param request CreateArtifactSubscriptionRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateArtifactSubscriptionRuleResponse
+     */
+    public CreateArtifactSubscriptionRuleResponse createArtifactSubscriptionRuleWithOptions(CreateArtifactSubscriptionRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerate)) {
+            query.put("Accelerate", request.accelerate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceName)) {
+            query.put("NamespaceName", request.namespaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.override)) {
+            query.put("Override", request.override);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoName)) {
+            query.put("RepoName", request.repoName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceNamespaceName)) {
+            query.put("SourceNamespaceName", request.sourceNamespaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceProvider)) {
+            query.put("SourceProvider", request.sourceProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceRepoName)) {
+            query.put("SourceRepoName", request.sourceRepoName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagCount)) {
+            query.put("TagCount", request.tagCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagRegexp)) {
+            query.put("TagRegexp", request.tagRegexp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateArtifactSubscriptionRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactSubscriptionRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateArtifactSubscriptionRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an artifact subscription rule.</p>
+     * 
+     * @param request CreateArtifactSubscriptionRuleRequest
+     * @return CreateArtifactSubscriptionRuleResponse
+     */
+    public CreateArtifactSubscriptionRuleResponse createArtifactSubscriptionRule(CreateArtifactSubscriptionRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createArtifactSubscriptionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an artifact subscription task.</p>
+     * 
+     * @param request CreateArtifactSubscriptionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateArtifactSubscriptionTaskResponse
+     */
+    public CreateArtifactSubscriptionTaskResponse createArtifactSubscriptionTaskWithOptions(CreateArtifactSubscriptionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateArtifactSubscriptionTask"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateArtifactSubscriptionTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateArtifactSubscriptionTaskResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an artifact subscription task.</p>
+     * 
+     * @param request CreateArtifactSubscriptionTaskRequest
+     * @return CreateArtifactSubscriptionTaskResponse
+     */
+    public CreateArtifactSubscriptionTaskResponse createArtifactSubscriptionTask(CreateArtifactSubscriptionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createArtifactSubscriptionTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image building record based on an existing record.</p>
+     * 
+     * @param request CreateBuildRecordByRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBuildRecordByRecordResponse
+     */
     public CreateBuildRecordByRecordResponse createBuildRecordByRecordWithOptions(CreateBuildRecordByRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -289,14 +585,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBuildRecordByRecordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBuildRecordByRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateBuildRecordByRecordResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image building record based on an existing record.</p>
+     * 
+     * @param request CreateBuildRecordByRecordRequest
+     * @return CreateBuildRecordByRecordResponse
+     */
     public CreateBuildRecordByRecordResponse createBuildRecordByRecord(CreateBuildRecordByRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBuildRecordByRecordWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image building record based on a rule.</p>
+     * 
+     * @param request CreateBuildRecordByRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBuildRecordByRuleResponse
+     */
     public CreateBuildRecordByRuleResponse createBuildRecordByRuleWithOptions(CreateBuildRecordByRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -326,14 +642,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBuildRecordByRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBuildRecordByRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateBuildRecordByRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image building record based on a rule.</p>
+     * 
+     * @param request CreateBuildRecordByRuleRequest
+     * @return CreateBuildRecordByRuleResponse
+     */
     public CreateBuildRecordByRuleResponse createBuildRecordByRule(CreateBuildRecordByRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBuildRecordByRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a delivery chain.</p>
+     * 
+     * @param request CreateChainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateChainResponse
+     */
     public CreateChainResponse createChainWithOptions(CreateChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -379,14 +715,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChainResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChainResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateChainResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a delivery chain.</p>
+     * 
+     * @param request CreateChainRequest
+     * @return CreateChainResponse
+     */
     public CreateChainResponse createChain(CreateChainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createChainWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a chart namespace in an instance.</p>
+     * 
+     * @param request CreateChartNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateChartNamespaceResponse
+     */
     public CreateChartNamespaceResponse createChartNamespaceWithOptions(CreateChartNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -420,14 +776,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChartNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChartNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateChartNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a chart namespace in an instance.</p>
+     * 
+     * @param request CreateChartNamespaceRequest
+     * @return CreateChartNamespaceResponse
+     */
     public CreateChartNamespaceResponse createChartNamespace(CreateChartNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createChartNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a chart repository.</p>
+     * 
+     * @param request CreateChartRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateChartRepositoryResponse
+     */
     public CreateChartRepositoryResponse createChartRepositoryWithOptions(CreateChartRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -465,14 +841,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChartRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChartRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateChartRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a chart repository.</p>
+     * 
+     * @param request CreateChartRepositoryRequest
+     * @return CreateChartRepositoryResponse
+     */
     public CreateChartRepositoryResponse createChartRepository(CreateChartRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createChartRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a whitelist policy for the public endpoint of the instance.</p>
+     * 
+     * @param request CreateInstanceEndpointAclPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstanceEndpointAclPolicyResponse
+     */
     public CreateInstanceEndpointAclPolicyResponse createInstanceEndpointAclPolicyWithOptions(CreateInstanceEndpointAclPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -510,20 +906,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceEndpointAclPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceEndpointAclPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateInstanceEndpointAclPolicyResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a whitelist policy for the public endpoint of the instance.</p>
+     * 
+     * @param request CreateInstanceEndpointAclPolicyRequest
+     * @return CreateInstanceEndpointAclPolicyResponse
+     */
     public CreateInstanceEndpointAclPolicyResponse createInstanceEndpointAclPolicy(CreateInstanceEndpointAclPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createInstanceEndpointAclPolicyWithOptions(request, runtime);
     }
 
     /**
-      * A maximum of three VPCs can be associated with a Container Registry instance. If you want to associate more VPCs, contact Alibaba Cloud technical support.
-      *
-      * @param request CreateInstanceVpcEndpointLinkedVpcRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateInstanceVpcEndpointLinkedVpcResponse
+     * <b>description</b> :
+     * <p>The VPC quota must be purchased separately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a virtual private cloud (VPC) with a Container Registry instance.</p>
+     * 
+     * @param request CreateInstanceVpcEndpointLinkedVpcRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateInstanceVpcEndpointLinkedVpcResponse
      */
     public CreateInstanceVpcEndpointLinkedVpcResponse createInstanceVpcEndpointLinkedVpcWithOptions(CreateInstanceVpcEndpointLinkedVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -562,20 +974,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceVpcEndpointLinkedVpcResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceVpcEndpointLinkedVpcResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateInstanceVpcEndpointLinkedVpcResponse());
+        }
+
     }
 
     /**
-      * A maximum of three VPCs can be associated with a Container Registry instance. If you want to associate more VPCs, contact Alibaba Cloud technical support.
-      *
-      * @param request CreateInstanceVpcEndpointLinkedVpcRequest
-      * @return CreateInstanceVpcEndpointLinkedVpcResponse
+     * <b>description</b> :
+     * <p>The VPC quota must be purchased separately.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a virtual private cloud (VPC) with a Container Registry instance.</p>
+     * 
+     * @param request CreateInstanceVpcEndpointLinkedVpcRequest
+     * @return CreateInstanceVpcEndpointLinkedVpcResponse
      */
     public CreateInstanceVpcEndpointLinkedVpcResponse createInstanceVpcEndpointLinkedVpc(CreateInstanceVpcEndpointLinkedVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createInstanceVpcEndpointLinkedVpcWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a namespace of image repositories.</p>
+     * 
+     * @param request CreateNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNamespaceResponse
+     */
     public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -609,14 +1038,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a namespace of image repositories.</p>
+     * 
+     * @param request CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
     public CreateNamespaceResponse createNamespace(CreateNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image building rule for a repository.</p>
+     * 
+     * @param request CreateRepoBuildRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoBuildRuleResponse
+     */
     public CreateRepoBuildRuleResponse createRepoBuildRuleWithOptions(CreateRepoBuildRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -670,14 +1119,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoBuildRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoBuildRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoBuildRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image building rule for a repository.</p>
+     * 
+     * @param request CreateRepoBuildRuleRequest
+     * @return CreateRepoBuildRuleResponse
+     */
     public CreateRepoBuildRuleResponse createRepoBuildRule(CreateRepoBuildRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoBuildRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Binds a source code repository to an image repository.</p>
+     * 
+     * @param request CreateRepoSourceCodeRepoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoSourceCodeRepoResponse
+     */
     public CreateRepoSourceCodeRepoResponse createRepoSourceCodeRepoWithOptions(CreateRepoSourceCodeRepoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -727,14 +1196,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSourceCodeRepoResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSourceCodeRepoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoSourceCodeRepoResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Binds a source code repository to an image repository.</p>
+     * 
+     * @param request CreateRepoSourceCodeRepoRequest
+     * @return CreateRepoSourceCodeRepoResponse
+     */
     public CreateRepoSourceCodeRepoResponse createRepoSourceCodeRepo(CreateRepoSourceCodeRepoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoSourceCodeRepoWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image synchronization rule for an image repository.</p>
+     * 
+     * @param request CreateRepoSyncRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoSyncRuleResponse
+     */
     public CreateRepoSyncRuleResponse createRepoSyncRuleWithOptions(CreateRepoSyncRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -748,6 +1237,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.repoName)) {
             query.put("RepoName", request.repoName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoNameFilter)) {
+            query.put("RepoNameFilter", request.repoNameFilter);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.syncRuleName)) {
@@ -800,14 +1293,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSyncRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSyncRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoSyncRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image synchronization rule for an image repository.</p>
+     * 
+     * @param request CreateRepoSyncRuleRequest
+     * @return CreateRepoSyncRuleResponse
+     */
     public CreateRepoSyncRuleResponse createRepoSyncRule(CreateRepoSyncRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoSyncRuleWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CreateRepoSyncTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoSyncTaskResponse
+     */
     public CreateRepoSyncTaskResponse createRepoSyncTaskWithOptions(CreateRepoSyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -865,14 +1375,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSyncTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSyncTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoSyncTaskResponse());
+        }
+
     }
 
+    /**
+     * @param request CreateRepoSyncTaskRequest
+     * @return CreateRepoSyncTaskResponse
+     */
     public CreateRepoSyncTaskResponse createRepoSyncTask(CreateRepoSyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoSyncTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image replication task based on a manual replication rule.</p>
+     * 
+     * @param request CreateRepoSyncTaskByRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoSyncTaskByRuleResponse
+     */
     public CreateRepoSyncTaskByRuleResponse createRepoSyncTaskByRuleWithOptions(CreateRepoSyncTaskByRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -906,14 +1433,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSyncTaskByRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoSyncTaskByRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoSyncTaskByRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image replication task based on a manual replication rule.</p>
+     * 
+     * @param request CreateRepoSyncTaskByRuleRequest
+     * @return CreateRepoSyncTaskByRuleResponse
+     */
     public CreateRepoSyncTaskByRuleResponse createRepoSyncTaskByRule(CreateRepoSyncTaskByRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoSyncTaskByRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image tag based on an existing image tag in an image repository.</p>
+     * 
+     * @param request CreateRepoTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoTagResponse
+     */
     public CreateRepoTagResponse createRepoTagWithOptions(CreateRepoTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -951,14 +1498,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoTagResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoTagResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image tag based on an existing image tag in an image repository.</p>
+     * 
+     * @param request CreateRepoTagRequest
+     * @return CreateRepoTagResponse
+     */
     public CreateRepoTagResponse createRepoTag(CreateRepoTagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoTagWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CreateRepoTagScanTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoTagScanTaskResponse
+     */
     public CreateRepoTagScanTaskResponse createRepoTagScanTaskWithOptions(CreateRepoTagScanTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -996,14 +1560,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoTagScanTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoTagScanTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoTagScanTaskResponse());
+        }
+
     }
 
+    /**
+     * @param request CreateRepoTagScanTaskRequest
+     * @return CreateRepoTagScanTaskResponse
+     */
     public CreateRepoTagScanTaskResponse createRepoTagScanTask(CreateRepoTagScanTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoTagScanTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a trigger for a repository.</p>
+     * 
+     * @param request CreateRepoTriggerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepoTriggerResponse
+     */
     public CreateRepoTriggerResponse createRepoTriggerWithOptions(CreateRepoTriggerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1045,14 +1626,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoTriggerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepoTriggerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepoTriggerResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a trigger for a repository.</p>
+     * 
+     * @param request CreateRepoTriggerRequest
+     * @return CreateRepoTriggerResponse
+     */
     public CreateRepoTriggerResponse createRepoTrigger(CreateRepoTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepoTriggerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image repository.</p>
+     * 
+     * @param request CreateRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRepositoryResponse
+     */
     public CreateRepositoryResponse createRepositoryWithOptions(CreateRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1098,14 +1699,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates an image repository.</p>
+     * 
+     * @param request CreateRepositoryRequest
+     * @return CreateRepositoryResponse
+     */
     public CreateRepositoryResponse createRepository(CreateRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an artifact lifecycle management rule.</p>
+     * 
+     * @param request DeleteArtifactLifecycleRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteArtifactLifecycleRuleResponse
+     */
     public DeleteArtifactLifecycleRuleResponse deleteArtifactLifecycleRuleWithOptions(DeleteArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1131,14 +1752,87 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteArtifactLifecycleRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteArtifactLifecycleRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteArtifactLifecycleRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an artifact lifecycle management rule.</p>
+     * 
+     * @param request DeleteArtifactLifecycleRuleRequest
+     * @return DeleteArtifactLifecycleRuleResponse
+     */
     public DeleteArtifactLifecycleRuleResponse deleteArtifactLifecycleRule(DeleteArtifactLifecycleRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an artifact subscription rule.</p>
+     * 
+     * @param request DeleteArtifactSubscriptionRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteArtifactSubscriptionRuleResponse
+     */
+    public DeleteArtifactSubscriptionRuleResponse deleteArtifactSubscriptionRuleWithOptions(DeleteArtifactSubscriptionRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteArtifactSubscriptionRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteArtifactSubscriptionRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteArtifactSubscriptionRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an artifact subscription rule.</p>
+     * 
+     * @param request DeleteArtifactSubscriptionRuleRequest
+     * @return DeleteArtifactSubscriptionRuleResponse
+     */
+    public DeleteArtifactSubscriptionRuleResponse deleteArtifactSubscriptionRule(DeleteArtifactSubscriptionRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteArtifactSubscriptionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a delivery pipeline.</p>
+     * 
+     * @param request DeleteChainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteChainResponse
+     */
     public DeleteChainResponse deleteChainWithOptions(DeleteChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1164,20 +1858,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChainResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChainResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteChainResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a delivery pipeline.</p>
+     * 
+     * @param request DeleteChainRequest
+     * @return DeleteChainResponse
+     */
     public DeleteChainResponse deleteChain(DeleteChainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChainWithOptions(request, runtime);
     }
 
     /**
-      * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
-      *
-      * @param request DeleteChartNamespaceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteChartNamespaceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a chart namespace from an instance.</p>
+     * 
+     * @param request DeleteChartNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteChartNamespaceResponse
      */
     public DeleteChartNamespaceResponse deleteChartNamespaceWithOptions(DeleteChartNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1204,20 +1916,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChartNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChartNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteChartNamespaceResponse());
+        }
+
     }
 
     /**
-      * >  If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.
-      *
-      * @param request DeleteChartNamespaceRequest
-      * @return DeleteChartNamespaceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If you delete a chart namespace, all repositories in the namespace and the charts in all repositories are deleted.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a chart namespace from an instance.</p>
+     * 
+     * @param request DeleteChartNamespaceRequest
+     * @return DeleteChartNamespaceResponse
      */
     public DeleteChartNamespaceResponse deleteChartNamespace(DeleteChartNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChartNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a chart version from a chart repository.</p>
+     * 
+     * @param request DeleteChartReleaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteChartReleaseResponse
+     */
     public DeleteChartReleaseResponse deleteChartReleaseWithOptions(DeleteChartReleaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1255,14 +1986,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChartReleaseResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChartReleaseResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteChartReleaseResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a chart version from a chart repository.</p>
+     * 
+     * @param request DeleteChartReleaseRequest
+     * @return DeleteChartReleaseResponse
+     */
     public DeleteChartReleaseResponse deleteChartRelease(DeleteChartReleaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChartReleaseWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a chart repository from an instance.</p>
+     * 
+     * @param request DeleteChartRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteChartRepositoryResponse
+     */
     public DeleteChartRepositoryResponse deleteChartRepositoryWithOptions(DeleteChartRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1292,14 +2043,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChartRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteChartRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteChartRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a chart repository from an instance.</p>
+     * 
+     * @param request DeleteChartRepositoryRequest
+     * @return DeleteChartRepositoryResponse
+     */
     public DeleteChartRepositoryResponse deleteChartRepository(DeleteChartRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChartRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an event notification rule.</p>
+     * 
+     * @param request DeleteEventCenterRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEventCenterRuleResponse
+     */
     public DeleteEventCenterRuleResponse deleteEventCenterRuleWithOptions(DeleteEventCenterRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1325,14 +2096,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEventCenterRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEventCenterRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteEventCenterRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an event notification rule.</p>
+     * 
+     * @param request DeleteEventCenterRuleRequest
+     * @return DeleteEventCenterRuleResponse
+     */
     public DeleteEventCenterRuleResponse deleteEventCenterRule(DeleteEventCenterRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEventCenterRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a whitelist policy for the public endpoint of an instance.</p>
+     * 
+     * @param request DeleteInstanceEndpointAclPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstanceEndpointAclPolicyResponse
+     */
     public DeleteInstanceEndpointAclPolicyResponse deleteInstanceEndpointAclPolicyWithOptions(DeleteInstanceEndpointAclPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1366,14 +2157,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceEndpointAclPolicyResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceEndpointAclPolicyResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteInstanceEndpointAclPolicyResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a whitelist policy for the public endpoint of an instance.</p>
+     * 
+     * @param request DeleteInstanceEndpointAclPolicyRequest
+     * @return DeleteInstanceEndpointAclPolicyResponse
+     */
     public DeleteInstanceEndpointAclPolicyResponse deleteInstanceEndpointAclPolicy(DeleteInstanceEndpointAclPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceEndpointAclPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates a virtual private cloud (VPC) from an instance.</p>
+     * 
+     * @param request DeleteInstanceVpcEndpointLinkedVpcRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstanceVpcEndpointLinkedVpcResponse
+     */
     public DeleteInstanceVpcEndpointLinkedVpcResponse deleteInstanceVpcEndpointLinkedVpcWithOptions(DeleteInstanceVpcEndpointLinkedVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1407,20 +2218,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceVpcEndpointLinkedVpcResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceVpcEndpointLinkedVpcResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteInstanceVpcEndpointLinkedVpcResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disassociates a virtual private cloud (VPC) from an instance.</p>
+     * 
+     * @param request DeleteInstanceVpcEndpointLinkedVpcRequest
+     * @return DeleteInstanceVpcEndpointLinkedVpcResponse
+     */
     public DeleteInstanceVpcEndpointLinkedVpcResponse deleteInstanceVpcEndpointLinkedVpc(DeleteInstanceVpcEndpointLinkedVpcRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceVpcEndpointLinkedVpcWithOptions(request, runtime);
     }
 
     /**
-      * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
-      *
-      * @param request DeleteNamespaceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteNamespaceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a namespace.</p>
+     * 
+     * @param request DeleteNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNamespaceResponse
      */
     public DeleteNamespaceResponse deleteNamespaceWithOptions(DeleteNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1447,20 +2276,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteNamespaceResponse());
+        }
+
     }
 
     /**
-      * > After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.
-      *
-      * @param request DeleteNamespaceRequest
-      * @return DeleteNamespaceResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>After you delete a namespace, all repositories in the namespace and all images in these repositories are deleted as well.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a namespace.</p>
+     * 
+     * @param request DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
      */
     public DeleteNamespaceResponse deleteNamespace(DeleteNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an image building rule of a repository.</p>
+     * 
+     * @param request DeleteRepoBuildRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRepoBuildRuleResponse
+     */
     public DeleteRepoBuildRuleResponse deleteRepoBuildRuleWithOptions(DeleteRepoBuildRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1490,14 +2338,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoBuildRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoBuildRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRepoBuildRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an image building rule of a repository.</p>
+     * 
+     * @param request DeleteRepoBuildRuleRequest
+     * @return DeleteRepoBuildRuleResponse
+     */
     public DeleteRepoBuildRuleResponse deleteRepoBuildRule(DeleteRepoBuildRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRepoBuildRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an image replication rule of an image repository.</p>
+     * 
+     * @param request DeleteRepoSyncRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRepoSyncRuleResponse
+     */
     public DeleteRepoSyncRuleResponse deleteRepoSyncRuleWithOptions(DeleteRepoSyncRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1523,14 +2391,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoSyncRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoSyncRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRepoSyncRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an image replication rule of an image repository.</p>
+     * 
+     * @param request DeleteRepoSyncRuleRequest
+     * @return DeleteRepoSyncRuleResponse
+     */
     public DeleteRepoSyncRuleResponse deleteRepoSyncRule(DeleteRepoSyncRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRepoSyncRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an image tag.</p>
+     * 
+     * @param request DeleteRepoTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRepoTagResponse
+     */
     public DeleteRepoTagResponse deleteRepoTagWithOptions(DeleteRepoTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1560,14 +2448,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoTagResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRepoTagResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an image tag.</p>
+     * 
+     * @param request DeleteRepoTagRequest
+     * @return DeleteRepoTagResponse
+     */
     public DeleteRepoTagResponse deleteRepoTag(DeleteRepoTagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRepoTagWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a trigger of an image repository.</p>
+     * 
+     * @param request DeleteRepoTriggerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRepoTriggerResponse
+     */
     public DeleteRepoTriggerResponse deleteRepoTriggerWithOptions(DeleteRepoTriggerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1597,20 +2505,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoTriggerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepoTriggerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRepoTriggerResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a trigger of an image repository.</p>
+     * 
+     * @param request DeleteRepoTriggerRequest
+     * @return DeleteRepoTriggerResponse
+     */
     public DeleteRepoTriggerResponse deleteRepoTrigger(DeleteRepoTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRepoTriggerWithOptions(request, runtime);
     }
 
     /**
-      * If you delete a repository, all images in the repository are also deleted.
-      *
-      * @param request DeleteRepositoryRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteRepositoryResponse
+     * <b>description</b> :
+     * <p>If you delete a repository, all images in the repository are also deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an image repository.</p>
+     * 
+     * @param request DeleteRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRepositoryResponse
      */
     public DeleteRepositoryResponse deleteRepositoryWithOptions(DeleteRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1645,20 +2569,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRepositoryResponse());
+        }
+
     }
 
     /**
-      * If you delete a repository, all images in the repository are also deleted.
-      *
-      * @param request DeleteRepositoryRequest
-      * @return DeleteRepositoryResponse
+     * <b>description</b> :
+     * <p>If you delete a repository, all images in the repository are also deleted.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an image repository.</p>
+     * 
+     * @param request DeleteRepositoryRequest
+     * @return DeleteRepositoryResponse
      */
     public DeleteRepositoryResponse deleteRepository(DeleteRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetArtifactBuildRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactBuildRuleResponse
+     */
     public GetArtifactBuildRuleResponse getArtifactBuildRuleWithOptions(GetArtifactBuildRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1676,14 +2614,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactBuildRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactBuildRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetArtifactBuildRuleResponse());
+        }
+
     }
 
+    /**
+     * @param request GetArtifactBuildRuleRequest
+     * @return GetArtifactBuildRuleResponse
+     */
     public GetArtifactBuildRuleResponse getArtifactBuildRule(GetArtifactBuildRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getArtifactBuildRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an artifact building task.</p>
+     * 
+     * @param request GetArtifactBuildTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactBuildTaskResponse
+     */
     public GetArtifactBuildTaskResponse getArtifactBuildTaskWithOptions(GetArtifactBuildTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1701,14 +2656,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactBuildTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactBuildTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetArtifactBuildTaskResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an artifact building task.</p>
+     * 
+     * @param request GetArtifactBuildTaskRequest
+     * @return GetArtifactBuildTaskResponse
+     */
     public GetArtifactBuildTaskResponse getArtifactBuildTask(GetArtifactBuildTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getArtifactBuildTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * 
+     * @param request GetArtifactLifecycleRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactLifecycleRuleResponse
+     */
     public GetArtifactLifecycleRuleResponse getArtifactLifecycleRuleWithOptions(GetArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1726,20 +2701,171 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactLifecycleRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactLifecycleRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetArtifactLifecycleRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * 
+     * @param request GetArtifactLifecycleRuleRequest
+     * @return GetArtifactLifecycleRuleResponse
+     */
     public GetArtifactLifecycleRuleResponse getArtifactLifecycleRule(GetArtifactLifecycleRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
     /**
-      * The ID of the Container Registry instance.
-      *
-      * @param request GetAuthorizationTokenRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetAuthorizationTokenResponse
+     * <b>summary</b> : 
+     * <p>Queries the information about an artifact subscription rule.</p>
+     * 
+     * @param request GetArtifactSubscriptionRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactSubscriptionRuleResponse
+     */
+    public GetArtifactSubscriptionRuleResponse getArtifactSubscriptionRuleWithOptions(GetArtifactSubscriptionRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetArtifactSubscriptionRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactSubscriptionRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetArtifactSubscriptionRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about an artifact subscription rule.</p>
+     * 
+     * @param request GetArtifactSubscriptionRuleRequest
+     * @return GetArtifactSubscriptionRuleResponse
+     */
+    public GetArtifactSubscriptionRuleResponse getArtifactSubscriptionRule(GetArtifactSubscriptionRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getArtifactSubscriptionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an artifact subscription task.</p>
+     * 
+     * @param request GetArtifactSubscriptionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactSubscriptionTaskResponse
+     */
+    public GetArtifactSubscriptionTaskResponse getArtifactSubscriptionTaskWithOptions(GetArtifactSubscriptionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetArtifactSubscriptionTask"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactSubscriptionTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetArtifactSubscriptionTaskResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an artifact subscription task.</p>
+     * 
+     * @param request GetArtifactSubscriptionTaskRequest
+     * @return GetArtifactSubscriptionTaskResponse
+     */
+    public GetArtifactSubscriptionTaskResponse getArtifactSubscriptionTask(GetArtifactSubscriptionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getArtifactSubscriptionTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an artifact subscription task.</p>
+     * 
+     * @param request GetArtifactSubscriptionTaskResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetArtifactSubscriptionTaskResultResponse
+     */
+    public GetArtifactSubscriptionTaskResultResponse getArtifactSubscriptionTaskResultWithOptions(GetArtifactSubscriptionTaskResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetArtifactSubscriptionTaskResult"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetArtifactSubscriptionTaskResultResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetArtifactSubscriptionTaskResultResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of an artifact subscription task.</p>
+     * 
+     * @param request GetArtifactSubscriptionTaskResultRequest
+     * @return GetArtifactSubscriptionTaskResultResponse
+     */
+    public GetArtifactSubscriptionTaskResultResponse getArtifactSubscriptionTaskResult(GetArtifactSubscriptionTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getArtifactSubscriptionTaskResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The ID of the Container Registry instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</p>
+     * 
+     * @param request GetAuthorizationTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAuthorizationTokenResponse
      */
     public GetAuthorizationTokenResponse getAuthorizationTokenWithOptions(GetAuthorizationTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1762,20 +2888,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAuthorizationTokenResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAuthorizationTokenResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAuthorizationTokenResponse());
+        }
+
     }
 
     /**
-      * The ID of the Container Registry instance.
-      *
-      * @param request GetAuthorizationTokenRequest
-      * @return GetAuthorizationTokenResponse
+     * <b>description</b> :
+     * <p>The ID of the Container Registry instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a temporary username and a token that you can use to log on to a Container Registry instance.</p>
+     * 
+     * @param request GetAuthorizationTokenRequest
+     * @return GetAuthorizationTokenResponse
      */
     public GetAuthorizationTokenResponse getAuthorizationToken(GetAuthorizationTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAuthorizationTokenWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetChainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChainResponse
+     */
     public GetChainResponse getChainWithOptions(GetChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1801,14 +2941,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChainResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetChainResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetChainResponse());
+        }
+
     }
 
+    /**
+     * @param request GetChainRequest
+     * @return GetChainResponse
+     */
     public GetChainResponse getChain(GetChainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChainWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a chart namespace in an instance.</p>
+     * 
+     * @param request GetChartNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChartNamespaceResponse
+     */
     public GetChartNamespaceResponse getChartNamespaceWithOptions(GetChartNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1834,14 +2991,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChartNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetChartNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetChartNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries a chart namespace in an instance.</p>
+     * 
+     * @param request GetChartNamespaceRequest
+     * @return GetChartNamespaceResponse
+     */
     public GetChartNamespaceResponse getChartNamespace(GetChartNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChartNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a chart repository.</p>
+     * 
+     * @param request GetChartRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChartRepositoryResponse
+     */
     public GetChartRepositoryResponse getChartRepositoryWithOptions(GetChartRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1871,14 +3048,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChartRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetChartRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetChartRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a chart repository.</p>
+     * 
+     * @param request GetChartRepositoryRequest
+     * @return GetChartRepositoryResponse
+     */
     public GetChartRepositoryResponse getChartRepository(GetChartRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getChartRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * @param request GetInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceResponse
+     */
     public GetInstanceResponse getInstanceWithOptions(GetInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1900,14 +3097,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * @param request GetInstanceRequest
+     * @return GetInstanceResponse
+     */
     public GetInstanceResponse getInstance(GetInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the number of instances.</p>
+     * 
+     * @param request GetInstanceCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceCountResponse
+     */
     public GetInstanceCountResponse getInstanceCountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1921,14 +3138,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceCountResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceCountResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceCountResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the number of instances.</p>
+     * @return GetInstanceCountResponse
+     */
     public GetInstanceCountResponse getInstanceCount() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceCountWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoint of an instance.</p>
+     * 
+     * @param request GetInstanceEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceEndpointResponse
+     */
     public GetInstanceEndpointResponse getInstanceEndpointWithOptions(GetInstanceEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1958,14 +3193,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceEndpointResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceEndpointResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceEndpointResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoint of an instance.</p>
+     * 
+     * @param request GetInstanceEndpointRequest
+     * @return GetInstanceEndpointResponse
+     */
     public GetInstanceEndpointResponse getInstanceEndpoint(GetInstanceEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceEndpointWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the quota usage of an instance.</p>
+     * 
+     * @param request GetInstanceUsageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceUsageResponse
+     */
     public GetInstanceUsageResponse getInstanceUsageWithOptions(GetInstanceUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1987,14 +3242,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceUsageResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceUsageResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceUsageResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the quota usage of an instance.</p>
+     * 
+     * @param request GetInstanceUsageRequest
+     * @return GetInstanceUsageResponse
+     */
     public GetInstanceUsageResponse getInstanceUsage(GetInstanceUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceUsageWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of the virtual private clouds (VPCs) in which a Container Registry instance is deployed.</p>
+     * 
+     * @param request GetInstanceVpcEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstanceVpcEndpointResponse
+     */
     public GetInstanceVpcEndpointResponse getInstanceVpcEndpointWithOptions(GetInstanceVpcEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2020,14 +3295,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceVpcEndpointResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceVpcEndpointResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceVpcEndpointResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of the virtual private clouds (VPCs) in which a Container Registry instance is deployed.</p>
+     * 
+     * @param request GetInstanceVpcEndpointRequest
+     * @return GetInstanceVpcEndpointResponse
+     */
     public GetInstanceVpcEndpointResponse getInstanceVpcEndpoint(GetInstanceVpcEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceVpcEndpointWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a namespace.</p>
+     * 
+     * @param request GetNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNamespaceResponse
+     */
     public GetNamespaceResponse getNamespaceWithOptions(GetNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2057,20 +3352,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a namespace.</p>
+     * 
+     * @param request GetNamespaceRequest
+     * @return GetNamespaceResponse
+     */
     public GetNamespaceResponse getNamespace(GetNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNamespaceWithOptions(request, runtime);
     }
 
     /**
-      * ****
-      *
-      * @param request GetRepoBuildRecordRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetRepoBuildRecordResponse
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about image building records of a repository.</p>
+     * 
+     * @param request GetRepoBuildRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepoBuildRecordResponse
      */
     public GetRepoBuildRecordResponse getRepoBuildRecordWithOptions(GetRepoBuildRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2097,20 +3408,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoBuildRecordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoBuildRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepoBuildRecordResponse());
+        }
+
     }
 
     /**
-      * ****
-      *
-      * @param request GetRepoBuildRecordRequest
-      * @return GetRepoBuildRecordResponse
+     * <b>description</b> :
+     * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about image building records of a repository.</p>
+     * 
+     * @param request GetRepoBuildRecordRequest
+     * @return GetRepoBuildRecordResponse
      */
     public GetRepoBuildRecordResponse getRepoBuildRecord(GetRepoBuildRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepoBuildRecordWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of an image building task.</p>
+     * 
+     * @param request GetRepoBuildRecordStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepoBuildRecordStatusResponse
+     */
     public GetRepoBuildRecordStatusResponse getRepoBuildRecordStatusWithOptions(GetRepoBuildRecordStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2140,14 +3468,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoBuildRecordStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoBuildRecordStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepoBuildRecordStatusResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the status of an image building task.</p>
+     * 
+     * @param request GetRepoBuildRecordStatusRequest
+     * @return GetRepoBuildRecordStatusResponse
+     */
     public GetRepoBuildRecordStatusResponse getRepoBuildRecordStatus(GetRepoBuildRecordStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepoBuildRecordStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about the source code repository that is bound to an image repository.</p>
+     * 
+     * @param request GetRepoSourceCodeRepoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepoSourceCodeRepoResponse
+     */
     public GetRepoSourceCodeRepoResponse getRepoSourceCodeRepoWithOptions(GetRepoSourceCodeRepoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2173,14 +3521,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoSourceCodeRepoResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoSourceCodeRepoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepoSourceCodeRepoResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about the source code repository that is bound to an image repository.</p>
+     * 
+     * @param request GetRepoSourceCodeRepoRequest
+     * @return GetRepoSourceCodeRepoResponse
+     */
     public GetRepoSourceCodeRepoResponse getRepoSourceCodeRepo(GetRepoSourceCodeRepoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepoSourceCodeRepoWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an image synchronization task in an instance.</p>
+     * 
+     * @param request GetRepoSyncTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepoSyncTaskResponse
+     */
     public GetRepoSyncTaskResponse getRepoSyncTaskWithOptions(GetRepoSyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2206,14 +3574,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoSyncTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoSyncTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepoSyncTaskResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries an image synchronization task in an instance.</p>
+     * 
+     * @param request GetRepoSyncTaskRequest
+     * @return GetRepoSyncTaskResponse
+     */
     public GetRepoSyncTaskResponse getRepoSyncTask(GetRepoSyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepoSyncTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The version of the repository.</p>
+     * 
+     * @param request GetRepoTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepoTagResponse
+     */
     public GetRepoTagResponse getRepoTagWithOptions(GetRepoTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2231,96 +3619,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepoTagResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The version of the repository.</p>
+     * 
+     * @param request GetRepoTagRequest
+     * @return GetRepoTagResponse
+     */
     public GetRepoTagResponse getRepoTag(GetRepoTagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepoTagWithOptions(request, runtime);
     }
 
-    public GetRepoTagLayersResponse getRepoTagLayersWithOptions(GetRepoTagLayersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.digest)) {
-            query.put("Digest", request.digest);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.repoId)) {
-            query.put("RepoId", request.repoId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
-            query.put("Tag", request.tag);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetRepoTagLayers"),
-            new TeaPair("version", "2018-12-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagLayersResponse());
-    }
-
-    public GetRepoTagLayersResponse getRepoTagLayers(GetRepoTagLayersRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getRepoTagLayersWithOptions(request, runtime);
-    }
-
-    public GetRepoTagManifestResponse getRepoTagManifestWithOptions(GetRepoTagManifestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("InstanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.repoId)) {
-            query.put("RepoId", request.repoId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.schemaVersion)) {
-            query.put("SchemaVersion", request.schemaVersion);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
-            query.put("Tag", request.tag);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetRepoTagManifest"),
-            new TeaPair("version", "2018-12-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagManifestResponse());
-    }
-
-    public GetRepoTagManifestResponse getRepoTagManifest(GetRepoTagManifestRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getRepoTagManifestWithOptions(request, runtime);
-    }
-
+    /**
+     * @param request GetRepoTagScanStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepoTagScanStatusResponse
+     */
     public GetRepoTagScanStatusResponse getRepoTagScanStatusWithOptions(GetRepoTagScanStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2358,14 +3681,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagScanStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagScanStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepoTagScanStatusResponse());
+        }
+
     }
 
+    /**
+     * @param request GetRepoTagScanStatusRequest
+     * @return GetRepoTagScanStatusResponse
+     */
     public GetRepoTagScanStatusResponse getRepoTagScanStatus(GetRepoTagScanStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepoTagScanStatusWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetRepoTagScanSummaryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepoTagScanSummaryResponse
+     */
     public GetRepoTagScanSummaryResponse getRepoTagScanSummaryWithOptions(GetRepoTagScanSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2403,14 +3740,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagScanSummaryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepoTagScanSummaryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepoTagScanSummaryResponse());
+        }
+
     }
 
+    /**
+     * @param request GetRepoTagScanSummaryRequest
+     * @return GetRepoTagScanSummaryResponse
+     */
     public GetRepoTagScanSummaryResponse getRepoTagScanSummary(GetRepoTagScanSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepoTagScanSummaryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries details about an image repository.</p>
+     * 
+     * @param request GetRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRepositoryResponse
+     */
     public GetRepositoryResponse getRepositoryWithOptions(GetRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2444,14 +3798,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries details about an image repository.</p>
+     * 
+     * @param request GetRepositoryRequest
+     * @return GetRepositoryResponse
+     */
     public GetRepositoryResponse getRepository(GetRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the log entries of an artifact building task.</p>
+     * 
+     * @param request ListArtifactBuildTaskLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListArtifactBuildTaskLogResponse
+     */
     public ListArtifactBuildTaskLogResponse listArtifactBuildTaskLogWithOptions(ListArtifactBuildTaskLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2469,14 +3843,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactBuildTaskLogResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactBuildTaskLogResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListArtifactBuildTaskLogResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the log entries of an artifact building task.</p>
+     * 
+     * @param request ListArtifactBuildTaskLogRequest
+     * @return ListArtifactBuildTaskLogResponse
+     */
     public ListArtifactBuildTaskLogResponse listArtifactBuildTaskLog(ListArtifactBuildTaskLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listArtifactBuildTaskLogWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * 
+     * @param request ListArtifactLifecycleRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListArtifactLifecycleRuleResponse
+     */
     public ListArtifactLifecycleRuleResponse listArtifactLifecycleRuleWithOptions(ListArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2494,14 +3888,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactLifecycleRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactLifecycleRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListArtifactLifecycleRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the lifecycle management rules of an artifact.</p>
+     * 
+     * @param request ListArtifactLifecycleRuleRequest
+     * @return ListArtifactLifecycleRuleResponse
+     */
     public ListArtifactLifecycleRuleResponse listArtifactLifecycleRule(ListArtifactLifecycleRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the subscription rules of artifacts.</p>
+     * 
+     * @param request ListArtifactSubscriptionRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListArtifactSubscriptionRuleResponse
+     */
+    public ListArtifactSubscriptionRuleResponse listArtifactSubscriptionRuleWithOptions(ListArtifactSubscriptionRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListArtifactSubscriptionRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactSubscriptionRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListArtifactSubscriptionRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists the subscription rules of artifacts.</p>
+     * 
+     * @param request ListArtifactSubscriptionRuleRequest
+     * @return ListArtifactSubscriptionRuleResponse
+     */
+    public ListArtifactSubscriptionRuleResponse listArtifactSubscriptionRule(ListArtifactSubscriptionRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listArtifactSubscriptionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists artifact subscription tasks.</p>
+     * 
+     * @param request ListArtifactSubscriptionTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListArtifactSubscriptionTaskResponse
+     */
+    public ListArtifactSubscriptionTaskResponse listArtifactSubscriptionTaskWithOptions(ListArtifactSubscriptionTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListArtifactSubscriptionTask"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListArtifactSubscriptionTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListArtifactSubscriptionTaskResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists artifact subscription tasks.</p>
+     * 
+     * @param request ListArtifactSubscriptionTaskRequest
+     * @return ListArtifactSubscriptionTaskResponse
+     */
+    public ListArtifactSubscriptionTaskResponse listArtifactSubscriptionTask(ListArtifactSubscriptionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listArtifactSubscriptionTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries delivery chains.</p>
+     * 
+     * @param request ListChainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChainResponse
+     */
     public ListChainResponse listChainWithOptions(ListChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2539,14 +4043,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChainResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListChainResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListChainResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries delivery chains.</p>
+     * 
+     * @param request ListChainRequest
+     * @return ListChainResponse
+     */
     public ListChainResponse listChain(ListChainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChainWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The response code.</p>
+     * 
+     * @param request ListChainInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChainInstanceResponse
+     */
     public ListChainInstanceResponse listChainInstanceWithOptions(ListChainInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2584,14 +4108,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChainInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListChainInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListChainInstanceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The response code.</p>
+     * 
+     * @param request ListChainInstanceRequest
+     * @return ListChainInstanceResponse
+     */
     public ListChainInstanceResponse listChainInstance(ListChainInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChainInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the chart namespaces of a Container Registry instance.</p>
+     * 
+     * @param request ListChartNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChartNamespaceResponse
+     */
     public ListChartNamespaceResponse listChartNamespaceWithOptions(ListChartNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2629,14 +4173,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChartNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListChartNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListChartNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the chart namespaces of a Container Registry instance.</p>
+     * 
+     * @param request ListChartNamespaceRequest
+     * @return ListChartNamespaceResponse
+     */
     public ListChartNamespaceResponse listChartNamespace(ListChartNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChartNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the versions of a chart in a chart repository.</p>
+     * 
+     * @param request ListChartReleaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChartReleaseResponse
+     */
     public ListChartReleaseResponse listChartReleaseWithOptions(ListChartReleaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2678,14 +4242,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChartReleaseResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListChartReleaseResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListChartReleaseResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the versions of a chart in a chart repository.</p>
+     * 
+     * @param request ListChartReleaseRequest
+     * @return ListChartReleaseResponse
+     */
     public ListChartReleaseResponse listChartRelease(ListChartReleaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChartReleaseWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the chart repositories of a Container Registry instance.</p>
+     * 
+     * @param request ListChartRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListChartRepositoryResponse
+     */
     public ListChartRepositoryResponse listChartRepositoryWithOptions(ListChartRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2727,14 +4311,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListChartRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListChartRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListChartRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the chart repositories of a Container Registry instance.</p>
+     * 
+     * @param request ListChartRepositoryRequest
+     * @return ListChartRepositoryResponse
+     */
     public ListChartRepositoryResponse listChartRepository(ListChartRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listChartRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the historical events of an event rule.</p>
+     * 
+     * @param request ListEventCenterRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEventCenterRecordResponse
+     */
     public ListEventCenterRecordResponse listEventCenterRecordWithOptions(ListEventCenterRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2752,14 +4356,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventCenterRecordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventCenterRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListEventCenterRecordResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the historical events of an event rule.</p>
+     * 
+     * @param request ListEventCenterRecordRequest
+     * @return ListEventCenterRecordResponse
+     */
     public ListEventCenterRecordResponse listEventCenterRecord(ListEventCenterRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEventCenterRecordWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the names of event notification rules.</p>
+     * 
+     * @param request ListEventCenterRuleNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEventCenterRuleNameResponse
+     */
     public ListEventCenterRuleNameResponse listEventCenterRuleNameWithOptions(ListEventCenterRuleNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2777,14 +4401,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventCenterRuleNameResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListEventCenterRuleNameResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListEventCenterRuleNameResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the names of event notification rules.</p>
+     * 
+     * @param request ListEventCenterRuleNameRequest
+     * @return ListEventCenterRuleNameResponse
+     */
     public ListEventCenterRuleNameResponse listEventCenterRuleName(ListEventCenterRuleNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEventCenterRuleNameWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries Container Registry instances.</p>
+     * 
+     * @param request ListInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceResponse
+     */
     public ListInstanceResponse listInstanceWithOptions(ListInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2822,14 +4466,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstanceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries Container Registry instances.</p>
+     * 
+     * @param request ListInstanceRequest
+     * @return ListInstanceResponse
+     */
     public ListInstanceResponse listInstance(ListInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of a Container Registry instance.</p>
+     * 
+     * @param request ListInstanceEndpointRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceEndpointResponse
+     */
     public ListInstanceEndpointResponse listInstanceEndpointWithOptions(ListInstanceEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2859,14 +4523,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceEndpointResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceEndpointResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstanceEndpointResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of a Container Registry instance.</p>
+     * 
+     * @param request ListInstanceEndpointRequest
+     * @return ListInstanceEndpointResponse
+     */
     public ListInstanceEndpointResponse listInstanceEndpoint(ListInstanceEndpointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstanceEndpointWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries regions in which you can create Container Registry instances.</p>
+     * 
+     * @param request ListInstanceRegionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInstanceRegionResponse
+     */
     public ListInstanceRegionResponse listInstanceRegionWithOptions(ListInstanceRegionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2888,14 +4572,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceRegionResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceRegionResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstanceRegionResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries regions in which you can create Container Registry instances.</p>
+     * 
+     * @param request ListInstanceRegionRequest
+     * @return ListInstanceRegionResponse
+     */
     public ListInstanceRegionResponse listInstanceRegion(ListInstanceRegionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listInstanceRegionWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>cri-94klsruryslx****</p>
+     * 
+     * @param request ListNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNamespaceResponse
+     */
     public ListNamespaceResponse listNamespaceWithOptions(ListNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2933,14 +4637,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>cri-94klsruryslx****</p>
+     * 
+     * @param request ListNamespaceRequest
+     * @return ListNamespaceResponse
+     */
     public ListNamespaceResponse listNamespace(ListNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image building records of an image repository.</p>
+     * 
+     * @param request ListRepoBuildRecordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoBuildRecordResponse
+     */
     public ListRepoBuildRecordResponse listRepoBuildRecordWithOptions(ListRepoBuildRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2974,14 +4698,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoBuildRecordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoBuildRecordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoBuildRecordResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image building records of an image repository.</p>
+     * 
+     * @param request ListRepoBuildRecordRequest
+     * @return ListRepoBuildRecordResponse
+     */
     public ListRepoBuildRecordResponse listRepoBuildRecord(ListRepoBuildRecordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoBuildRecordWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the log of an image building record.</p>
+     * 
+     * @param request ListRepoBuildRecordLogRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoBuildRecordLogResponse
+     */
     public ListRepoBuildRecordLogResponse listRepoBuildRecordLogWithOptions(ListRepoBuildRecordLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3015,14 +4759,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoBuildRecordLogResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoBuildRecordLogResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoBuildRecordLogResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the log of an image building record.</p>
+     * 
+     * @param request ListRepoBuildRecordLogRequest
+     * @return ListRepoBuildRecordLogResponse
+     */
     public ListRepoBuildRecordLogResponse listRepoBuildRecordLog(ListRepoBuildRecordLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoBuildRecordLogWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image building rules of a repository.</p>
+     * 
+     * @param request ListRepoBuildRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoBuildRuleResponse
+     */
     public ListRepoBuildRuleResponse listRepoBuildRuleWithOptions(ListRepoBuildRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3056,14 +4820,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoBuildRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoBuildRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoBuildRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image building rules of a repository.</p>
+     * 
+     * @param request ListRepoBuildRuleRequest
+     * @return ListRepoBuildRuleResponse
+     */
     public ListRepoBuildRuleResponse listRepoBuildRule(ListRepoBuildRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoBuildRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image synchronization rules of a repository.</p>
+     * 
+     * @param request ListRepoSyncRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoSyncRuleResponse
+     */
     public ListRepoSyncRuleResponse listRepoSyncRuleWithOptions(ListRepoSyncRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3109,14 +4893,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoSyncRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoSyncRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoSyncRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image synchronization rules of a repository.</p>
+     * 
+     * @param request ListRepoSyncRuleRequest
+     * @return ListRepoSyncRuleResponse
+     */
     public ListRepoSyncRuleResponse listRepoSyncRule(ListRepoSyncRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoSyncRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Indicates whether automatic link is used.</p>
+     * 
+     * @param request ListRepoSyncTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoSyncTaskResponse
+     */
     public ListRepoSyncTaskResponse listRepoSyncTaskWithOptions(ListRepoSyncTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3162,14 +4966,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoSyncTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoSyncTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoSyncTaskResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Indicates whether automatic link is used.</p>
+     * 
+     * @param request ListRepoSyncTaskRequest
+     * @return ListRepoSyncTaskResponse
+     */
     public ListRepoSyncTaskResponse listRepoSyncTask(ListRepoSyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoSyncTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image tags in a repository.</p>
+     * 
+     * @param request ListRepoTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoTagResponse
+     */
     public ListRepoTagResponse listRepoTagWithOptions(ListRepoTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3203,14 +5027,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoTagResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoTagResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image tags in a repository.</p>
+     * 
+     * @param request ListRepoTagRequest
+     * @return ListRepoTagResponse
+     */
     public ListRepoTagResponse listRepoTag(ListRepoTagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoTagWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the results of a security scan that is created for an image tag.</p>
+     * 
+     * @param request ListRepoTagScanResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoTagScanResultResponse
+     */
     public ListRepoTagScanResultResponse listRepoTagScanResultWithOptions(ListRepoTagScanResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3272,14 +5116,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoTagScanResultResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoTagScanResultResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoTagScanResultResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the results of a security scan that is created for an image tag.</p>
+     * 
+     * @param request ListRepoTagScanResultRequest
+     * @return ListRepoTagScanResultResponse
+     */
     public ListRepoTagScanResultResponse listRepoTagScanResult(ListRepoTagScanResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoTagScanResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the triggers of a repository.</p>
+     * 
+     * @param request ListRepoTriggerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepoTriggerResponse
+     */
     public ListRepoTriggerResponse listRepoTriggerWithOptions(ListRepoTriggerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3305,14 +5169,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoTriggerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepoTriggerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepoTriggerResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the triggers of a repository.</p>
+     * 
+     * @param request ListRepoTriggerRequest
+     * @return ListRepoTriggerResponse
+     */
     public ListRepoTriggerResponse listRepoTrigger(ListRepoTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepoTriggerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image repositories.</p>
+     * 
+     * @param request ListRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRepositoryResponse
+     */
     public ListRepositoryResponse listRepositoryWithOptions(ListRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3354,14 +5238,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries image repositories.</p>
+     * 
+     * @param request ListRepositoryRequest
+     * @return ListRepositoryResponse
+     */
     public ListRepositoryResponse listRepository(ListRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the baseline risks of a scan task by page.</p>
+     * 
+     * @param request ListScanBaselineByTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScanBaselineByTaskResponse
+     */
     public ListScanBaselineByTaskResponse listScanBaselineByTaskWithOptions(ListScanBaselineByTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3379,14 +5286,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScanBaselineByTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListScanBaselineByTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListScanBaselineByTaskResponse());
+        }
+
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the baseline risks of a scan task by page.</p>
+     * 
+     * @param request ListScanBaselineByTaskRequest
+     * @return ListScanBaselineByTaskResponse
+     */
     public ListScanBaselineByTaskResponse listScanBaselineByTask(ListScanBaselineByTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listScanBaselineByTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the malicious files of a scan task by page.</p>
+     * 
+     * @param request ListScanMaliciousFileByTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListScanMaliciousFileByTaskResponse
+     */
     public ListScanMaliciousFileByTaskResponse listScanMaliciousFileByTaskWithOptions(ListScanMaliciousFileByTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3404,14 +5337,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListScanMaliciousFileByTaskResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListScanMaliciousFileByTaskResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListScanMaliciousFileByTaskResponse());
+        }
+
     }
 
+    /**
+     * <b>description</b> :
+     * <p>Before you call this operation, use a Security Center scan engine to scan the image.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the malicious files of a scan task by page.</p>
+     * 
+     * @param request ListScanMaliciousFileByTaskRequest
+     * @return ListScanMaliciousFileByTaskResponse
+     */
     public ListScanMaliciousFileByTaskResponse listScanMaliciousFileByTask(ListScanMaliciousFileByTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listScanMaliciousFileByTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to cloud resources. Instance resources are supported.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3449,14 +5405,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to cloud resources. Instance resources are supported.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Resets the logon password of a Container Registry instance.</p>
+     * 
+     * @param request ResetLoginPasswordRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ResetLoginPasswordResponse
+     */
     public ResetLoginPasswordResponse resetLoginPasswordWithOptions(ResetLoginPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3482,14 +5458,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetLoginPasswordResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ResetLoginPasswordResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ResetLoginPasswordResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Resets the logon password of a Container Registry instance.</p>
+     * 
+     * @param request ResetLoginPasswordRequest
+     * @return ResetLoginPasswordResponse
+     */
     public ResetLoginPasswordResponse resetLoginPassword(ResetLoginPasswordRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetLoginPasswordWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to resources. Instance resources are supported.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3523,14 +5519,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to resources. Instance resources are supported.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources. Instance resources are supported.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3568,14 +5584,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources. Instance resources are supported.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a lifecycle management rule of an artifact.</p>
+     * 
+     * @param request UpdateArtifactLifecycleRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateArtifactLifecycleRuleResponse
+     */
     public UpdateArtifactLifecycleRuleResponse updateArtifactLifecycleRuleWithOptions(UpdateArtifactLifecycleRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3633,14 +5669,127 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateArtifactLifecycleRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateArtifactLifecycleRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateArtifactLifecycleRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a lifecycle management rule of an artifact.</p>
+     * 
+     * @param request UpdateArtifactLifecycleRuleRequest
+     * @return UpdateArtifactLifecycleRuleResponse
+     */
     public UpdateArtifactLifecycleRuleResponse updateArtifactLifecycleRule(UpdateArtifactLifecycleRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateArtifactLifecycleRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an artifact subscription rule.</p>
+     * 
+     * @param request UpdateArtifactSubscriptionRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateArtifactSubscriptionRuleResponse
+     */
+    public UpdateArtifactSubscriptionRuleResponse updateArtifactSubscriptionRuleWithOptions(UpdateArtifactSubscriptionRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerate)) {
+            query.put("Accelerate", request.accelerate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceName)) {
+            query.put("NamespaceName", request.namespaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.override)) {
+            query.put("Override", request.override);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
+            query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repoName)) {
+            query.put("RepoName", request.repoName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceNamespaceName)) {
+            query.put("SourceNamespaceName", request.sourceNamespaceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceProvider)) {
+            query.put("SourceProvider", request.sourceProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceRepoName)) {
+            query.put("SourceRepoName", request.sourceRepoName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagCount)) {
+            query.put("TagCount", request.tagCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagRegexp)) {
+            query.put("TagRegexp", request.tagRegexp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateArtifactSubscriptionRule"),
+            new TeaPair("version", "2018-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateArtifactSubscriptionRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateArtifactSubscriptionRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an artifact subscription rule.</p>
+     * 
+     * @param request UpdateArtifactSubscriptionRuleRequest
+     * @return UpdateArtifactSubscriptionRuleResponse
+     */
+    public UpdateArtifactSubscriptionRuleResponse updateArtifactSubscriptionRule(UpdateArtifactSubscriptionRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateArtifactSubscriptionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the information about a delivery chain, such as the node execution sequence of the delivery chain.</p>
+     * 
+     * @param request UpdateChainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateChainResponse
+     */
     public UpdateChainResponse updateChainWithOptions(UpdateChainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3682,14 +5831,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChainResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChainResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateChainResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the information about a delivery chain, such as the node execution sequence of the delivery chain.</p>
+     * 
+     * @param request UpdateChainRequest
+     * @return UpdateChainResponse
+     */
     public UpdateChainResponse updateChain(UpdateChainRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateChainWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a chart namespace.</p>
+     * 
+     * @param request UpdateChartNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateChartNamespaceResponse
+     */
     public UpdateChartNamespaceResponse updateChartNamespaceWithOptions(UpdateChartNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3723,14 +5892,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChartNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChartNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateChartNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a chart namespace.</p>
+     * 
+     * @param request UpdateChartNamespaceRequest
+     * @return UpdateChartNamespaceResponse
+     */
     public UpdateChartNamespaceResponse updateChartNamespace(UpdateChartNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateChartNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a chart repository of a Container Registry instance.</p>
+     * 
+     * @param request UpdateChartRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateChartRepositoryResponse
+     */
     public UpdateChartRepositoryResponse updateChartRepositoryWithOptions(UpdateChartRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3768,14 +5957,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChartRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChartRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateChartRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a chart repository of a Container Registry instance.</p>
+     * 
+     * @param request UpdateChartRepositoryRequest
+     * @return UpdateChartRepositoryResponse
+     */
     public UpdateChartRepositoryResponse updateChartRepository(UpdateChartRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateChartRepositoryWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an event notification rule.</p>
+     * 
+     * @param tmpReq UpdateEventCenterRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEventCenterRuleResponse
+     */
     public UpdateEventCenterRuleResponse updateEventCenterRuleWithOptions(UpdateEventCenterRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateEventCenterRuleShrinkRequest request = new UpdateEventCenterRuleShrinkRequest();
@@ -3843,14 +6052,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEventCenterRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEventCenterRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateEventCenterRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an event notification rule.</p>
+     * 
+     * @param request UpdateEventCenterRuleRequest
+     * @return UpdateEventCenterRuleResponse
+     */
     public UpdateEventCenterRuleResponse updateEventCenterRule(UpdateEventCenterRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEventCenterRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of an instance endpoint.</p>
+     * 
+     * @param request UpdateInstanceEndpointStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceEndpointStatusResponse
+     */
     public UpdateInstanceEndpointStatusResponse updateInstanceEndpointStatusWithOptions(UpdateInstanceEndpointStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3884,14 +6113,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceEndpointStatusResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceEndpointStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateInstanceEndpointStatusResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the status of an instance endpoint.</p>
+     * 
+     * @param request UpdateInstanceEndpointStatusRequest
+     * @return UpdateInstanceEndpointStatusResponse
+     */
     public UpdateInstanceEndpointStatusResponse updateInstanceEndpointStatus(UpdateInstanceEndpointStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceEndpointStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a namespace.</p>
+     * 
+     * @param request UpdateNamespaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNamespaceResponse
+     */
     public UpdateNamespaceResponse updateNamespaceWithOptions(UpdateNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3925,14 +6174,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNamespaceResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNamespaceResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateNamespaceResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a namespace.</p>
+     * 
+     * @param request UpdateNamespaceRequest
+     * @return UpdateNamespaceResponse
+     */
     public UpdateNamespaceResponse updateNamespace(UpdateNamespaceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateNamespaceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an image building rule for a repository.</p>
+     * 
+     * @param request UpdateRepoBuildRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRepoBuildRuleResponse
+     */
     public UpdateRepoBuildRuleResponse updateRepoBuildRuleWithOptions(UpdateRepoBuildRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3990,14 +6259,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepoBuildRuleResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepoBuildRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRepoBuildRuleResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates an image building rule for a repository.</p>
+     * 
+     * @param request UpdateRepoBuildRuleRequest
+     * @return UpdateRepoBuildRuleResponse
+     */
     public UpdateRepoBuildRuleResponse updateRepoBuildRule(UpdateRepoBuildRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRepoBuildRuleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the URL of the source code repository that is bound to an image repository.</p>
+     * 
+     * @param request UpdateRepoSourceCodeRepoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRepoSourceCodeRepoResponse
+     */
     public UpdateRepoSourceCodeRepoResponse updateRepoSourceCodeRepoWithOptions(UpdateRepoSourceCodeRepoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4051,14 +6340,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepoSourceCodeRepoResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepoSourceCodeRepoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRepoSourceCodeRepoResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the URL of the source code repository that is bound to an image repository.</p>
+     * 
+     * @param request UpdateRepoSourceCodeRepoRequest
+     * @return UpdateRepoSourceCodeRepoResponse
+     */
     public UpdateRepoSourceCodeRepoResponse updateRepoSourceCodeRepo(UpdateRepoSourceCodeRepoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRepoSourceCodeRepoWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a trigger of an image repository.</p>
+     * 
+     * @param request UpdateRepoTriggerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRepoTriggerResponse
+     */
     public UpdateRepoTriggerResponse updateRepoTriggerWithOptions(UpdateRepoTriggerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4104,14 +6413,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepoTriggerResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepoTriggerResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRepoTriggerResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a trigger of an image repository.</p>
+     * 
+     * @param request UpdateRepoTriggerRequest
+     * @return UpdateRepoTriggerResponse
+     */
     public UpdateRepoTriggerResponse updateRepoTrigger(UpdateRepoTriggerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRepoTriggerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
+     * 
+     * @param request UpdateRepositoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRepositoryResponse
+     */
     public UpdateRepositoryResponse updateRepositoryWithOptions(UpdateRepositoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4161,9 +6490,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepositoryResponse());
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRepositoryResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRepositoryResponse());
+        }
+
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
+     * 
+     * @param request UpdateRepositoryRequest
+     * @return UpdateRepositoryResponse
+     */
     public UpdateRepositoryResponse updateRepository(UpdateRepositoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRepositoryWithOptions(request, runtime);

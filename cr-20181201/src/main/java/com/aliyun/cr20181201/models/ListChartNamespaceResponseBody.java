@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListChartNamespaceResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
@@ -24,24 +30,36 @@ public class ListChartNamespaceResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F56D589D-AF7F-4900-BA46-62C780AC2C10</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -110,46 +128,72 @@ public class ListChartNamespaceResponseBody extends TeaModel {
     public static class ListChartNamespaceResponseBodyNamespaces extends TeaModel {
         /**
          * <p>Indicates whether a repository was automatically created when a chart is pushed to the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoCreateRepo")
         public Boolean autoCreateRepo;
 
         /**
          * <p>The default repository type. Valid values:</p>
-         * <br>
-         * <p>*   `PUBLIC`: a public repository</p>
-         * <p>*   `PRIVATE`: a private repository</p>
+         * <ul>
+         * <li><code>PUBLIC</code>: a public repository</li>
+         * <li><code>PRIVATE</code>: a private repository</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         @NameInMap("DefaultRepoType")
         public String defaultRepoType;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-kmsiwlxxdcva****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
         /**
          * <p>The status of the namespace. Valid values:</p>
-         * <br>
-         * <p>*   `NORMAL`: The namespace is normal.</p>
-         * <p>*   `DELETING`: The namespace is being deleted.</p>
+         * <ul>
+         * <li><code>NORMAL</code>: The namespace is normal.</li>
+         * <li><code>DELETING</code>: The namespace is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("NamespaceStatus")
         public String namespaceStatus;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4n5kzyf****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

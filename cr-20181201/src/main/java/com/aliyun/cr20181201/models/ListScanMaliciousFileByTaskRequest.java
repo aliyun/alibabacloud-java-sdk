@@ -4,27 +4,75 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListScanMaliciousFileByTaskRequest extends TeaModel {
+    /**
+     * <p>The image digest.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha256:aa4bffff6406785e930dab1f94c9a1297ba22xxxx71d71504a015764*********</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-gu94qynvpwk*****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The severity of the malicious file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>High</p>
+     */
     @NameInMap("Level")
     public String level;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The image repository ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crr-h1y4l279wb8*****</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the image scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79ee6bc2-3288-4c56-b967-**********</p>
+     */
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
+    /**
+     * <p>The image tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>V6.11</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

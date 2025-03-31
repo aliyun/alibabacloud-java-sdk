@@ -4,18 +4,38 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagScanStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BC648259-91A7-4502-BED3-EDF64361FA83</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACR_SCAN_SERVICE</p>
+     */
     @NameInMap("ScanService")
     public String scanService;
 
+    /**
+     * <strong>example:</strong>
+     * <p>COMPLETE</p>
+     */
     @NameInMap("Status")
     public String status;
 

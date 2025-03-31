@@ -6,30 +6,47 @@ import com.aliyun.tea.*;
 public class UpdateInstanceEndpointStatusRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the instance endpoint. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables the instance endpoint.</p>
-     * <p>*   `false`: disables the instance endpoint</p>
+     * <ul>
+     * <li><code>true</code>: enables the instance endpoint.</li>
+     * <li><code>false</code>: disables the instance endpoint</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
 
     /**
      * <p>The type of the endpoint. Set the value to Internet.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the module that you want to access. Valid values:</p>
-     * <br>
-     * <p>*   `Registry`: the image repository.</p>
-     * <p>*   `Chart`: a Helm chart.</p>
+     * <ul>
+     * <li><code>Registry</code>: the image repository.</li>
+     * <li><code>Chart</code>: a Helm chart.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Chart</p>
      */
     @NameInMap("ModuleName")
     public String moduleName;

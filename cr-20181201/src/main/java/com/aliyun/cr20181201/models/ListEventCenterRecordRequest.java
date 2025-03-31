@@ -6,42 +6,71 @@ import com.aliyun.tea.*;
 public class ListEventCenterRecordRequest extends TeaModel {
     /**
      * <p>The type of the event. Valid values:</p>
-     * <br>
-     * <p>*   `cr:Artifact:DeliveryChainCompleted`: The delivery chain is processed.</p>
-     * <p>*   `cr:Artifact:SynchronizationCompleted`: The image is replicated.</p>
-     * <p>*   `cr:Artifact:BuildCompleted`: The image is built.</p>
-     * <p>*   `cr:Artifact:ScanCompleted`: The image is scanned.</p>
-     * <p>*   `cr:Artifact:SigningCompleted`: The image is signed.</p>
+     * <ul>
+     * <li><code>cr:Artifact:DeliveryChainCompleted</code>: The delivery chain is processed.</li>
+     * <li><code>cr:Artifact:SynchronizationCompleted</code>: The image is replicated.</li>
+     * <li><code>cr:Artifact:BuildCompleted</code>: The image is built.</li>
+     * <li><code>cr:Artifact:ScanCompleted</code>: The image is scanned.</li>
+     * <li><code>cr:Artifact:SigningCompleted</code>: The image is signed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cr:Artifact:DeliveryChainCompleted</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
      * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cri-kmsiwlxxdcva****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the namespace to which the repository belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
     /**
      * <p>The ID of the event notification rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>crecr-n6pbhgjxtla***</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

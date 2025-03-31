@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateRepoSourceCodeRepoResponseBody extends TeaModel {
     /**
      * <p>The return value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F56D589D-AF7F-4900-BA46-62C780AC2C10</p>
      */
     @NameInMap("RequestId")
     public String requestId;
