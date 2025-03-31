@@ -35,7 +35,7 @@ public class SetOriginClientCertificateHostnamesResponseBody extends TeaModel {
      * <p>123456789****</p>
      */
     @NameInMap("SiteId")
-    public String siteId;
+    public Long siteId;
 
     /**
      * <p>The website name.</p>
@@ -75,11 +75,11 @@ public class SetOriginClientCertificateHostnamesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SetOriginClientCertificateHostnamesResponseBody setSiteId(String siteId) {
+    public SetOriginClientCertificateHostnamesResponseBody setSiteId(Long siteId) {
         this.siteId = siteId;
         return this;
     }
-    public String getSiteId() {
+    public Long getSiteId() {
         return this.siteId;
     }
 

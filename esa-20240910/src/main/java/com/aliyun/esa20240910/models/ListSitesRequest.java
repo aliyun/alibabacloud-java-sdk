@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListSitesRequest extends TeaModel {
     /**
-     * <p>Access type. Values:</p>
+     * <p>The DNS setup. Valid values:</p>
      * <ul>
-     * <li><strong>NS</strong>: Access through NS hosting.</li>
-     * <li><strong>CNAME</strong>: Access through CNAME.</li>
+     * <li><strong>NS</strong></li>
+     * <li><strong>CNAME</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class ListSitesRequest extends TeaModel {
     public String accessType;
 
     /**
-     * <p>Acceleration region. Values:</p>
+     * <p>The service location. Valid values:</p>
      * <ul>
-     * <li><strong>domestic</strong>: China mainland only.</li>
-     * <li><strong>global</strong>: Global.</li>
-     * <li><strong>overseas</strong>: Global (excluding China mainland).</li>
+     * <li><strong>domestic</strong>: the Chinese mainland</li>
+     * <li><strong>global</strong>: global</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class ListSitesRequest extends TeaModel {
     public String coverage;
 
     /**
-     * <p>Enterprise edition only. When set to <strong>true</strong>, it indicates that only enterprise edition sites are queried.</p>
+     * <p>Specifies whether to query only websites on Enterprise plans. Valid values: <strong>true and false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,10 +41,10 @@ public class ListSitesRequest extends TeaModel {
     public Boolean onlyEnterprise;
 
     /**
-     * <p>Sorting field, default sorted by creation time, supports:</p>
+     * <p>Sorting field. By default, it sorts by creation time, supporting the following options:</p>
      * <ul>
-     * <li>gmtCreate: Site creation time</li>
-     * <li>visitTime: Site access time</li>
+     * <li>gmtCreate: website creation time</li>
+     * <li>visitTime：website visit time</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ListSitesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>Page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,7 +63,7 @@ public class ListSitesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size. Default value: <strong>500</strong>.</p>
+     * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -72,12 +72,12 @@ public class ListSitesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Plan subscription type. Values:</p>
+     * <p>The plan type. Valid values:</p>
      * <ul>
-     * <li><strong>basicplan</strong>: Basic plan.</li>
-     * <li><strong>standardplan</strong>: Standard plan.</li>
-     * <li><strong>advancedplan</strong>: Advanced plan.</li>
-     * <li><strong>enterpriseplan</strong>: Enterprise plan.</li>
+     * <li><strong>basicplan</strong>: Entrance</li>
+     * <li><strong>standardplan</strong>: Pro</li>
+     * <li><strong>advancedplan</strong>: Premium</li>
+     * <li><strong>enterpriseplan</strong>: Enterprise</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class ListSitesRequest extends TeaModel {
     public String planSubscribeType;
 
     /**
-     * <p>Resource group ID. Used as a filter condition for the query.</p>
+     * <p>The ID of the resource group. This parameter specifies a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzd3styujvyei</p>
@@ -96,7 +96,7 @@ public class ListSitesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Site name. Used as a filter condition for the query.</p>
+     * <p>The website name. This parameter specifies a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -105,12 +105,12 @@ public class ListSitesRequest extends TeaModel {
     public String siteName;
 
     /**
-     * <p>Search match pattern for the site name. The default is exact match, with values:</p>
+     * <p>The match mode to search for the website name. Default value: exact. Valid values:</p>
      * <ul>
-     * <li><strong>prefix</strong>: Prefix match.</li>
-     * <li><strong>suffix</strong>: Suffix match.</li>
-     * <li><strong>exact</strong>: Exact match.</li>
-     * <li><strong>fuzzy</strong>: Fuzzy match.</li>
+     * <li><strong>prefix</strong>: match by prefix.</li>
+     * <li><strong>suffix</strong>: match by suffix.</li>
+     * <li><strong>exact</strong>: exact match.</li>
+     * <li><strong>fuzzy</strong>: fuzzy match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class ListSitesRequest extends TeaModel {
     public String siteSearchType;
 
     /**
-     * <p>Site status. Used as a filter condition for the query.</p>
+     * <p>The website status. This parameter specifies a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>pending</p>
@@ -129,7 +129,7 @@ public class ListSitesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Tag filtering rules.</p>
+     * <p>The tag filtering rule.</p>
      */
     @NameInMap("TagFilter")
     public java.util.List<ListSitesRequestTagFilter> tagFilter;
@@ -237,7 +237,7 @@ public class ListSitesRequest extends TeaModel {
 
     public static class ListSitesRequestTagFilter extends TeaModel {
         /**
-         * <p>Tag key, used as a filter condition for the query.</p>
+         * <p>The tag key. This parameter specifies a filter condition for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>tag1</p>
@@ -246,7 +246,7 @@ public class ListSitesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag value, used as a filter condition for the query.</p>
+         * <p>The tag value. This parameter specifies a filter condition for the query.</p>
          * 
          * <strong>example:</strong>
          * <p>aaa</p>

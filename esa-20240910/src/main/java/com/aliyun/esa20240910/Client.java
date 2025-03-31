@@ -7956,6 +7956,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询站点中国大陆网络接入优化配置</p>
+     * 
+     * @param request GetCrossBorderOptimizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCrossBorderOptimizationResponse
+     */
+    public GetCrossBorderOptimizationResponse getCrossBorderOptimizationWithOptions(GetCrossBorderOptimizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCrossBorderOptimization"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetCrossBorderOptimizationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetCrossBorderOptimizationResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点中国大陆网络接入优化配置</p>
+     * 
+     * @param request GetCrossBorderOptimizationRequest
+     * @return GetCrossBorderOptimizationResponse
+     */
+    public GetCrossBorderOptimizationResponse getCrossBorderOptimization(GetCrossBorderOptimizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCrossBorderOptimizationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query Site Developer Mode Configuration</p>
      * 
      * @param request GetDevelopmentModeRequest
@@ -12649,7 +12694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Site List</p>
+     * <p>Queries the information about websites in your account, such as the name, status, and configuration of each website.</p>
      * 
      * @param tmpReq ListSitesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12688,7 +12733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Site List</p>
+     * <p>Queries the information about websites in your account, such as the name, status, and configuration of each website.</p>
      * 
      * @param request ListSitesRequest
      * @return ListSitesResponse
@@ -15313,6 +15358,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCompressionRuleResponse updateCompressionRule(UpdateCompressionRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCompressionRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改站点中国大陆网络接入优化配置</p>
+     * 
+     * @param request UpdateCrossBorderOptimizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateCrossBorderOptimizationResponse
+     */
+    public UpdateCrossBorderOptimizationResponse updateCrossBorderOptimizationWithOptions(UpdateCrossBorderOptimizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCrossBorderOptimization"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCrossBorderOptimizationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateCrossBorderOptimizationResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改站点中国大陆网络接入优化配置</p>
+     * 
+     * @param request UpdateCrossBorderOptimizationRequest
+     * @return UpdateCrossBorderOptimizationResponse
+     */
+    public UpdateCrossBorderOptimizationResponse updateCrossBorderOptimization(UpdateCrossBorderOptimizationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCrossBorderOptimizationWithOptions(request, runtime);
     }
 
     /**
