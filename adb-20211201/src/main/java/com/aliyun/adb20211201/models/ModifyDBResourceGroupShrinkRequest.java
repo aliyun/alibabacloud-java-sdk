@@ -139,6 +139,9 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
+    @NameInMap("RayConfig")
+    public String rayConfigShrink;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
@@ -285,6 +288,14 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     }
     public Integer getMinGpuQuantity() {
         return this.minGpuQuantity;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setRayConfigShrink(String rayConfigShrink) {
+        this.rayConfigShrink = rayConfigShrink;
+        return this;
+    }
+    public String getRayConfigShrink() {
+        return this.rayConfigShrink;
     }
 
     public ModifyDBResourceGroupShrinkRequest setRegionId(String regionId) {

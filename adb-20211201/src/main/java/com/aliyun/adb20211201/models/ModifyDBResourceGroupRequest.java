@@ -139,6 +139,9 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
+    @NameInMap("RayConfig")
+    public ModifyDBResourceGroupRequestRayConfig rayConfig;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
@@ -287,6 +290,14 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.minGpuQuantity;
     }
 
+    public ModifyDBResourceGroupRequest setRayConfig(ModifyDBResourceGroupRequestRayConfig rayConfig) {
+        this.rayConfig = rayConfig;
+        return this;
+    }
+    public ModifyDBResourceGroupRequestRayConfig getRayConfig() {
+        return this.rayConfig;
+    }
+
     public ModifyDBResourceGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -325,6 +336,132 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     }
     public String getTargetResourceGroupName() {
         return this.targetResourceGroupName;
+    }
+
+    public static class ModifyDBResourceGroupRequestRayConfigWorkerGroups extends TeaModel {
+        @NameInMap("AllocateUnit")
+        public String allocateUnit;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("MaxWorkerQuantity")
+        public Integer maxWorkerQuantity;
+
+        @NameInMap("MinWorkerQuantity")
+        public Integer minWorkerQuantity;
+
+        @NameInMap("WorkerDiskCapacity")
+        public String workerDiskCapacity;
+
+        @NameInMap("WorkerSpecName")
+        public String workerSpecName;
+
+        @NameInMap("WorkerSpecType")
+        public String workerSpecType;
+
+        public static ModifyDBResourceGroupRequestRayConfigWorkerGroups build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBResourceGroupRequestRayConfigWorkerGroups self = new ModifyDBResourceGroupRequestRayConfigWorkerGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigWorkerGroups setAllocateUnit(String allocateUnit) {
+            this.allocateUnit = allocateUnit;
+            return this;
+        }
+        public String getAllocateUnit() {
+            return this.allocateUnit;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigWorkerGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigWorkerGroups setMaxWorkerQuantity(Integer maxWorkerQuantity) {
+            this.maxWorkerQuantity = maxWorkerQuantity;
+            return this;
+        }
+        public Integer getMaxWorkerQuantity() {
+            return this.maxWorkerQuantity;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigWorkerGroups setMinWorkerQuantity(Integer minWorkerQuantity) {
+            this.minWorkerQuantity = minWorkerQuantity;
+            return this;
+        }
+        public Integer getMinWorkerQuantity() {
+            return this.minWorkerQuantity;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigWorkerGroups setWorkerDiskCapacity(String workerDiskCapacity) {
+            this.workerDiskCapacity = workerDiskCapacity;
+            return this;
+        }
+        public String getWorkerDiskCapacity() {
+            return this.workerDiskCapacity;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigWorkerGroups setWorkerSpecName(String workerSpecName) {
+            this.workerSpecName = workerSpecName;
+            return this;
+        }
+        public String getWorkerSpecName() {
+            return this.workerSpecName;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfigWorkerGroups setWorkerSpecType(String workerSpecType) {
+            this.workerSpecType = workerSpecType;
+            return this;
+        }
+        public String getWorkerSpecType() {
+            return this.workerSpecType;
+        }
+
+    }
+
+    public static class ModifyDBResourceGroupRequestRayConfig extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("HeadSpec")
+        public String headSpec;
+
+        @NameInMap("WorkerGroups")
+        public java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> workerGroups;
+
+        public static ModifyDBResourceGroupRequestRayConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBResourceGroupRequestRayConfig self = new ModifyDBResourceGroupRequestRayConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBResourceGroupRequestRayConfig setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfig setHeadSpec(String headSpec) {
+            this.headSpec = headSpec;
+            return this;
+        }
+        public String getHeadSpec() {
+            return this.headSpec;
+        }
+
+        public ModifyDBResourceGroupRequestRayConfig setWorkerGroups(java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> workerGroups) {
+            this.workerGroups = workerGroups;
+            return this;
+        }
+        public java.util.List<ModifyDBResourceGroupRequestRayConfigWorkerGroups> getWorkerGroups() {
+            return this.workerGroups;
+        }
+
     }
 
     public static class ModifyDBResourceGroupRequestRules extends TeaModel {

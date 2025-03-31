@@ -112,7 +112,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
 
     public static class DescribeAvailableAdvicesResponseBodyItems extends TeaModel {
         /**
-         * <p>The date when the suggestion is generated.The date is in the yyyyMMdd format.</p>
+         * <p>The date when the suggestion is generated. The date is in the yyyyMMdd format.</p>
          * 
          * <strong>example:</strong>
          * <p>20221124</p>

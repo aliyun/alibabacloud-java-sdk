@@ -664,7 +664,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
          * <p>Specifies whether to enable the conversion of timestamps.</p>
          * 
          * <strong>example:</strong>
-         * <p>false。</p>
+         * <p>false</p>
          */
         @NameInMap("Convert")
         public String convert;
