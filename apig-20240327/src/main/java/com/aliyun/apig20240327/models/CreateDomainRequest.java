@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>CA Certificate Identifier.</p>
+     * <p>The CA certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -14,7 +14,7 @@ public class CreateDomainRequest extends TeaModel {
     public String caCertIdentifier;
 
     /**
-     * <p>Certificate Unique Identifier.</p>
+     * <p>The certificate ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1ef1da5f-38ed-69b3-****-037781890265</p>
@@ -23,7 +23,7 @@ public class CreateDomainRequest extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>Client CA Certificate</p>
+     * <p>The client CA certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----
@@ -36,7 +36,7 @@ public class CreateDomainRequest extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>Set the HTTPS protocol type, whether to enable forced HTTPS redirection.</p>
+     * <p>Specifies whether to enable forcible HTTPS redirection.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -45,7 +45,13 @@ public class CreateDomainRequest extends TeaModel {
     public Boolean forceHttps;
 
     /**
-     * <p>HTTP/2 settings.</p>
+     * <p>The HTTP/2 configuration.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>GlobalConfig</li>
+     * <li>Close</li>
+     * <li>Open</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Open</p>
@@ -54,13 +60,13 @@ public class CreateDomainRequest extends TeaModel {
     public String http2Option;
 
     /**
-     * <p>Whether to enable mTLS mutual authentication</p>
+     * <p>Specifies whether to enable mutual authentication.</p>
      */
     @NameInMap("mTLSEnabled")
     public Boolean mTLSEnabled;
 
     /**
-     * <p>Domain name.</p>
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,10 +76,10 @@ public class CreateDomainRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The protocol type supported by the domain.</p>
+     * <p>The protocol type supported by the domain name.</p>
      * <ul>
-     * <li>HTTP: Supports only HTTP protocol.</li>
-     * <li>HTTPS: Supports only HTTPS protocol.</li>
+     * <li>HTTP: Only HTTP is supported.</li>
+     * <li>HTTPS: Only HTTPS is supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -84,7 +90,7 @@ public class CreateDomainRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/151181.html">resource group ID</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzoiafjtr7zyq</p>
@@ -93,13 +99,13 @@ public class CreateDomainRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The TLS cipher suites config.</p>
+     * <p>The cipher suite configuration.</p>
      */
     @NameInMap("tlsCipherSuitesConfig")
     public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
     /**
-     * <p>Maximum TLS protocol version, supports up to TLS 1.3.</p>
+     * <p>The maximum version of the TLS protocol. Up to TLS 1.3 is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.3</p>
@@ -108,7 +114,7 @@ public class CreateDomainRequest extends TeaModel {
     public String tlsMax;
 
     /**
-     * <p>Minimum TLS protocol version, supports down to TLS 1.0.</p>
+     * <p>The minimum version of the TLS protocol. Down to TLS 1.0 is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>TLS1.0</p>

@@ -155,7 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Create Domain.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Domain</p>
+     * <p>Creates a domain name.</p>
      * 
      * @param request CreateDomainRequest
      * @param headers map
@@ -241,7 +241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Create Domain.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Domain</p>
+     * <p>Creates a domain name.</p>
      * 
      * @param request CreateDomainRequest
      * @return CreateDomainResponse
@@ -336,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an API of HTTP type</p>
+     * <p>Creates an HTTP API.</p>
      * 
      * @param request CreateHttpApiRequest
      * @param headers map
@@ -419,7 +419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an API of HTTP type</p>
+     * <p>Creates an HTTP API.</p>
      * 
      * @param request CreateHttpApiRequest
      * @return CreateHttpApiResponse
@@ -688,10 +688,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The interface supports creating multiple services.</p>
+     * <p>You can call this operation to create multiple services at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Service</p>
+     * <p>Creates a service.</p>
      * 
      * @param request CreateServiceRequest
      * @param headers map
@@ -742,10 +742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The interface supports creating multiple services.</p>
+     * <p>You can call this operation to create multiple services at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create Service</p>
+     * <p>Creates a service.</p>
      * 
      * @param request CreateServiceRequest
      * @return CreateServiceResponse
@@ -1252,7 +1252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Monitoring/Logging Dashboard Interface</p>
+     * <p>Obtains data from dashboards.</p>
      * 
      * @param tmpReq GetDashboardRequest
      * @param headers map
@@ -1288,8 +1288,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pluginClassId", request.pluginClassId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("pluginId", request.pluginId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamCluster)) {
+            query.put("upstreamCluster", request.upstreamCluster);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1317,7 +1325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Monitoring/Logging Dashboard Interface</p>
+     * <p>Obtains data from dashboards.</p>
      * 
      * @param request GetDashboardRequest
      * @return GetDashboardResponse
@@ -1330,7 +1338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query domain details</p>
+     * <p>Queries the information about a domain name.</p>
      * 
      * @param request GetDomainRequest
      * @param headers map
@@ -1369,7 +1377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query domain details</p>
+     * <p>Queries the information about a domain name.</p>
      * 
      * @param request GetDomainRequest
      * @return GetDomainResponse
@@ -1572,7 +1580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of an HttpApi route</p>
+     * <p>Queries the details of a route of an HTTP API.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1603,7 +1611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get the details of an HttpApi route</p>
+     * <p>Queries the details of a route of an HTTP API.</p>
      * @return GetHttpApiRouteResponse
      */
     public GetHttpApiRouteResponse getHttpApiRoute(String httpApiId, String routeId) throws Exception {
@@ -1614,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetPolicy</p>
+     * <p>Queries a policy.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1645,7 +1653,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetPolicy</p>
+     * <p>Queries a policy.</p>
      * @return GetPolicyResponse
      */
     public GetPolicyResponse getPolicy(String policyId) throws Exception {
@@ -1740,7 +1748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service Details</p>
+     * <p>Queries the details of a service.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1771,7 +1779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service Details</p>
+     * <p>Queries the details of a service.</p>
      * @return GetServiceResponse
      */
     public GetServiceResponse getService(String serviceId) throws Exception {
@@ -1834,7 +1842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Import HttpApi</p>
+     * <p>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</p>
      * 
      * @param request ImportHttpApiRequest
      * @param headers map
@@ -1909,7 +1917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Import HttpApi</p>
+     * <p>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</p>
      * 
      * @param request ImportHttpApiRequest
      * @return ImportHttpApiResponse
@@ -1922,7 +1930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListDomains</p>
+     * <p>Queries a list of domain names.</p>
      * 
      * @param request ListDomainsRequest
      * @param headers map
@@ -1977,7 +1985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListDomains</p>
+     * <p>Queries a list of domain names.</p>
      * 
      * @param request ListDomainsRequest
      * @return ListDomainsResponse
@@ -2074,7 +2082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the list of created cloud-native gateways</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param tmpReq ListGatewaysRequest
      * @param headers map
@@ -2143,7 +2151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve the list of created cloud-native gateways</p>
+     * <p>Queries a list of instances.</p>
      * 
      * @param request ListGatewaysRequest
      * @return ListGatewaysResponse
@@ -2244,7 +2252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a route for HttpApi</p>
+     * <p>Queries the routes of an HTTP API.</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @param headers map
@@ -2331,7 +2339,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a route for HttpApi</p>
+     * <p>Queries the routes of an HTTP API.</p>
      * 
      * @param request ListHttpApiRoutesRequest
      * @return ListHttpApiRoutesResponse
@@ -2344,7 +2352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List HTTP APIs</p>
+     * <p>Queries a list of HTTP APIs.</p>
      * 
      * @param request ListHttpApisRequest
      * @param headers map
@@ -2382,6 +2390,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("types", request.types);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withAPIsPublishedToEnvironment)) {
+            query.put("withAPIsPublishedToEnvironment", request.withAPIsPublishedToEnvironment);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.withAuthPolicyInEnvironmentId)) {
             query.put("withAuthPolicyInEnvironmentId", request.withAuthPolicyInEnvironmentId);
         }
@@ -2410,6 +2422,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("withPluginAttachmentByPluginId", request.withPluginAttachmentByPluginId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withPolicyConfigs)) {
+            query.put("withPolicyConfigs", request.withPolicyConfigs);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -2435,7 +2451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List HTTP APIs</p>
+     * <p>Queries a list of HTTP APIs.</p>
      * 
      * @param request ListHttpApisRequest
      * @return ListHttpApisResponse
@@ -2516,7 +2532,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service List</p>
+     * <p>Queries a list of services.</p>
      * 
      * @param request ListServicesRequest
      * @param headers map
@@ -2575,7 +2591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Service List</p>
+     * <p>Queries a list of services.</p>
      * 
      * @param request ListServicesRequest
      * @return ListServicesResponse
@@ -2791,11 +2807,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>只有类型为<strong>容器服务</strong>的来源允许更新监听Ingress的配置。</p>
-     * 
      * <b>summary</b> : 
-     * <p>UpdateDomain</p>
+     * <p>Updates a domain name.</p>
      * 
      * @param request UpdateDomainRequest
      * @param headers map
@@ -2869,11 +2882,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>只有类型为<strong>容器服务</strong>的来源允许更新监听Ingress的配置。</p>
-     * 
      * <b>summary</b> : 
-     * <p>UpdateDomain</p>
+     * <p>Updates a domain name.</p>
      * 
      * @param request UpdateDomainRequest
      * @return UpdateDomainResponse
@@ -3190,7 +3200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the route of HttpApi</p>
+     * <p>Updates the route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @param headers map
@@ -3245,7 +3255,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update the route of HttpApi</p>
+     * <p>Updates the route of an HTTP API.</p>
      * 
      * @param request UpdateHttpApiRouteRequest
      * @return UpdateHttpApiRouteResponse

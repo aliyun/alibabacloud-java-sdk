@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
     /**
-     * <p>Gateway Id.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-xxx</p>
@@ -14,7 +14,7 @@ public class ListDomainsRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>Domain name, fuzzy search.</p>
+     * <p>The domain name keyword for fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,7 @@ public class ListDomainsRequest extends TeaModel {
     public String nameLike;
 
     /**
-     * <p>Page number, default is 1.</p>
+     * <p>The page number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListDomainsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of items per page, default is 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class ListDomainsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ahr5uil8raz0rq3b</p>

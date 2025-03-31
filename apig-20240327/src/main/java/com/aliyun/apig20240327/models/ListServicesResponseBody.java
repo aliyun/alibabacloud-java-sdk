@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class ListServicesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("data")
     public ListServicesResponseBodyData data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class ListServicesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>585657D2-1C20-5B8A-AF17-D727C6490BE4</p>
@@ -76,13 +76,13 @@ public class ListServicesResponseBody extends TeaModel {
 
     public static class ListServicesResponseBodyData extends TeaModel {
         /**
-         * <p>Service list.</p>
+         * <p>The services.</p>
          */
         @NameInMap("items")
         public java.util.List<Service> items;
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -91,7 +91,7 @@ public class ListServicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -100,7 +100,7 @@ public class ListServicesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>

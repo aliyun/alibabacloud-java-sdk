@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class CreateHttpApiRequest extends TeaModel {
     /**
-     * <p>The AI protocols list.</p>
+     * <p>The AI API protocols. Valid value:</p>
+     * <ul>
+     * <li>OpenAI/v1</li>
+     * </ul>
      */
     @NameInMap("aiProtocols")
     public java.util.List<String> aiProtocols;
 
+    /**
+     * <p>The authentication configurations.</p>
+     */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>Base path of the API, which must start with a \&quot;/\&quot;.</p>
+     * <p>The API base path, which must start with a forward slash (/).</p>
      * 
      * <strong>example:</strong>
      * <p>/v1</p>
@@ -23,31 +29,34 @@ public class CreateHttpApiRequest extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The deploy configs.</p>
+     * <p>The API deployment configurations. Currently, only AI APIs support deployment configurations, and only a single deployment configuration can be passed.</p>
      */
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
     /**
-     * <p>Description of the API.</p>
+     * <p>The API description.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试专用API。</p>
+     * <p>API for testing</p>
      */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Specifies whether to enable authentication.</p>
+     */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
     /**
-     * <p>Configuration information for the HTTP Ingress API.</p>
+     * <p>The HTTP Ingress configurations.</p>
      */
     @NameInMap("ingressConfig")
     public CreateHttpApiRequestIngressConfig ingressConfig;
 
     /**
-     * <p>Name of the API.</p>
+     * <p>The API name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,13 +66,13 @@ public class CreateHttpApiRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>List of API access protocols.</p>
+     * <p>The protocols that are used to call the API.</p>
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzgvmlotionbi</p>
@@ -72,7 +81,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Type of the HTTP API.</p>
+     * <p>The API type. Valid values:</p>
      * <ul>
      * <li>Http</li>
      * <li>Rest</li>
@@ -87,7 +96,7 @@ public class CreateHttpApiRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>Versioning configuration for the API.</p>
+     * <p>The versioning configuration of the API.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;
@@ -195,7 +204,7 @@ public class CreateHttpApiRequest extends TeaModel {
 
     public static class CreateHttpApiRequestIngressConfig extends TeaModel {
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * 
          * <strong>example:</strong>
          * <p>env-cq146allhtgk***</p>
@@ -204,7 +213,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>Ingress Class being listened to.</p>
+         * <p>The Ingress Class for listening.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -213,7 +222,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String ingressClass;
 
         /**
-         * <p>Whether to update the address in the Ingress Status.</p>
+         * <p>Specifies whether to update the address in Ingress Status.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -222,7 +231,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public Boolean overrideIngressIp;
 
         /**
-         * <p>Source ID.</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src-crdddallhtgtr***</p>
@@ -231,7 +240,7 @@ public class CreateHttpApiRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>Namespace being watched.</p>
+         * <p>The namespace for listening.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
