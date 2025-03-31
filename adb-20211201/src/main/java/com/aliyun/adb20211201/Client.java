@@ -1518,6 +1518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rayConfig)) {
+            request.rayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayConfig, "RayConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
             request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
         }
@@ -1581,6 +1585,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.minGpuQuantity)) {
             query.put("MinGpuQuantity", request.minGpuQuantity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rayConfigShrink)) {
+            query.put("RayConfig", request.rayConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -13429,6 +13437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rayConfig)) {
+            request.rayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rayConfig, "RayConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
             request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
         }
@@ -13488,6 +13500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.minGpuQuantity)) {
             query.put("MinGpuQuantity", request.minGpuQuantity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rayConfigShrink)) {
+            query.put("RayConfig", request.rayConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

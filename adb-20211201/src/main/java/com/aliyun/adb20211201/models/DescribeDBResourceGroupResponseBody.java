@@ -40,6 +40,165 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups extends TeaModel {
+        @NameInMap("AllocateUnit")
+        public String allocateUnit;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("MaxWorkerQuantity")
+        public Integer maxWorkerQuantity;
+
+        @NameInMap("MinWorkerQuantity")
+        public Integer minWorkerQuantity;
+
+        @NameInMap("WorkerDiskCapacity")
+        public String workerDiskCapacity;
+
+        @NameInMap("WorkerSpecName")
+        public String workerSpecName;
+
+        @NameInMap("WorkerSpecType")
+        public String workerSpecType;
+
+        public static DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups self = new DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups setAllocateUnit(String allocateUnit) {
+            this.allocateUnit = allocateUnit;
+            return this;
+        }
+        public String getAllocateUnit() {
+            return this.allocateUnit;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups setMaxWorkerQuantity(Integer maxWorkerQuantity) {
+            this.maxWorkerQuantity = maxWorkerQuantity;
+            return this;
+        }
+        public Integer getMaxWorkerQuantity() {
+            return this.maxWorkerQuantity;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups setMinWorkerQuantity(Integer minWorkerQuantity) {
+            this.minWorkerQuantity = minWorkerQuantity;
+            return this;
+        }
+        public Integer getMinWorkerQuantity() {
+            return this.minWorkerQuantity;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups setWorkerDiskCapacity(String workerDiskCapacity) {
+            this.workerDiskCapacity = workerDiskCapacity;
+            return this;
+        }
+        public String getWorkerDiskCapacity() {
+            return this.workerDiskCapacity;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups setWorkerSpecName(String workerSpecName) {
+            this.workerSpecName = workerSpecName;
+            return this;
+        }
+        public String getWorkerSpecName() {
+            return this.workerSpecName;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups setWorkerSpecType(String workerSpecType) {
+            this.workerSpecType = workerSpecType;
+            return this;
+        }
+        public String getWorkerSpecType() {
+            return this.workerSpecType;
+        }
+
+    }
+
+    public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("HeadSpec")
+        public String headSpec;
+
+        @NameInMap("RayClusterAddress")
+        public String rayClusterAddress;
+
+        @NameInMap("RayDashboardAddress")
+        public String rayDashboardAddress;
+
+        @NameInMap("RayGrafanaAddress")
+        public String rayGrafanaAddress;
+
+        @NameInMap("WorkerGroups")
+        public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups> workerGroups;
+
+        public static DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig self = new DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setHeadSpec(String headSpec) {
+            this.headSpec = headSpec;
+            return this;
+        }
+        public String getHeadSpec() {
+            return this.headSpec;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setRayClusterAddress(String rayClusterAddress) {
+            this.rayClusterAddress = rayClusterAddress;
+            return this;
+        }
+        public String getRayClusterAddress() {
+            return this.rayClusterAddress;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setRayDashboardAddress(String rayDashboardAddress) {
+            this.rayDashboardAddress = rayDashboardAddress;
+            return this;
+        }
+        public String getRayDashboardAddress() {
+            return this.rayDashboardAddress;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setRayGrafanaAddress(String rayGrafanaAddress) {
+            this.rayGrafanaAddress = rayGrafanaAddress;
+            return this;
+        }
+        public String getRayGrafanaAddress() {
+            return this.rayGrafanaAddress;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setWorkerGroups(java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups> workerGroups) {
+            this.workerGroups = workerGroups;
+            return this;
+        }
+        public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigWorkerGroups> getWorkerGroups() {
+            return this.workerGroups;
+        }
+
+    }
+
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoRules extends TeaModel {
         /**
          * <p>The name of the resource group.</p>
@@ -241,6 +400,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("MinGpuQuantity")
         public Integer minGpuQuantity;
 
+        @NameInMap("RayConfig")
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig rayConfig;
+
         /**
          * <p>The job resubmission rules.</p>
          */
@@ -432,6 +594,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
         public Integer getMinGpuQuantity() {
             return this.minGpuQuantity;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setRayConfig(DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig rayConfig) {
+            this.rayConfig = rayConfig;
+            return this;
+        }
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig getRayConfig() {
+            return this.rayConfig;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setRules(java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRules> rules) {

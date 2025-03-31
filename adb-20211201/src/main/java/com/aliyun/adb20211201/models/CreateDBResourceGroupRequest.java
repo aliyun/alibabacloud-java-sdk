@@ -148,6 +148,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
+    @NameInMap("RayConfig")
+    public CreateDBResourceGroupRequestRayConfig rayConfig;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
@@ -297,6 +300,14 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         return this.minGpuQuantity;
     }
 
+    public CreateDBResourceGroupRequest setRayConfig(CreateDBResourceGroupRequestRayConfig rayConfig) {
+        this.rayConfig = rayConfig;
+        return this;
+    }
+    public CreateDBResourceGroupRequestRayConfig getRayConfig() {
+        return this.rayConfig;
+    }
+
     public CreateDBResourceGroupRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -327,6 +338,132 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     }
     public String getTargetResourceGroupName() {
         return this.targetResourceGroupName;
+    }
+
+    public static class CreateDBResourceGroupRequestRayConfigWorkerGroups extends TeaModel {
+        @NameInMap("AllocateUnit")
+        public String allocateUnit;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        @NameInMap("MaxWorkerQuantity")
+        public Integer maxWorkerQuantity;
+
+        @NameInMap("MinWorkerQuantity")
+        public Integer minWorkerQuantity;
+
+        @NameInMap("WorkerDiskCapacity")
+        public String workerDiskCapacity;
+
+        @NameInMap("WorkerSpecName")
+        public String workerSpecName;
+
+        @NameInMap("WorkerSpecType")
+        public String workerSpecType;
+
+        public static CreateDBResourceGroupRequestRayConfigWorkerGroups build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBResourceGroupRequestRayConfigWorkerGroups self = new CreateDBResourceGroupRequestRayConfigWorkerGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBResourceGroupRequestRayConfigWorkerGroups setAllocateUnit(String allocateUnit) {
+            this.allocateUnit = allocateUnit;
+            return this;
+        }
+        public String getAllocateUnit() {
+            return this.allocateUnit;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigWorkerGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigWorkerGroups setMaxWorkerQuantity(Integer maxWorkerQuantity) {
+            this.maxWorkerQuantity = maxWorkerQuantity;
+            return this;
+        }
+        public Integer getMaxWorkerQuantity() {
+            return this.maxWorkerQuantity;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigWorkerGroups setMinWorkerQuantity(Integer minWorkerQuantity) {
+            this.minWorkerQuantity = minWorkerQuantity;
+            return this;
+        }
+        public Integer getMinWorkerQuantity() {
+            return this.minWorkerQuantity;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigWorkerGroups setWorkerDiskCapacity(String workerDiskCapacity) {
+            this.workerDiskCapacity = workerDiskCapacity;
+            return this;
+        }
+        public String getWorkerDiskCapacity() {
+            return this.workerDiskCapacity;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigWorkerGroups setWorkerSpecName(String workerSpecName) {
+            this.workerSpecName = workerSpecName;
+            return this;
+        }
+        public String getWorkerSpecName() {
+            return this.workerSpecName;
+        }
+
+        public CreateDBResourceGroupRequestRayConfigWorkerGroups setWorkerSpecType(String workerSpecType) {
+            this.workerSpecType = workerSpecType;
+            return this;
+        }
+        public String getWorkerSpecType() {
+            return this.workerSpecType;
+        }
+
+    }
+
+    public static class CreateDBResourceGroupRequestRayConfig extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("HeadSpec")
+        public String headSpec;
+
+        @NameInMap("WorkerGroups")
+        public java.util.List<CreateDBResourceGroupRequestRayConfigWorkerGroups> workerGroups;
+
+        public static CreateDBResourceGroupRequestRayConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBResourceGroupRequestRayConfig self = new CreateDBResourceGroupRequestRayConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBResourceGroupRequestRayConfig setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public CreateDBResourceGroupRequestRayConfig setHeadSpec(String headSpec) {
+            this.headSpec = headSpec;
+            return this;
+        }
+        public String getHeadSpec() {
+            return this.headSpec;
+        }
+
+        public CreateDBResourceGroupRequestRayConfig setWorkerGroups(java.util.List<CreateDBResourceGroupRequestRayConfigWorkerGroups> workerGroups) {
+            this.workerGroups = workerGroups;
+            return this;
+        }
+        public java.util.List<CreateDBResourceGroupRequestRayConfigWorkerGroups> getWorkerGroups() {
+            return this.workerGroups;
+        }
+
     }
 
     public static class CreateDBResourceGroupRequestRules extends TeaModel {

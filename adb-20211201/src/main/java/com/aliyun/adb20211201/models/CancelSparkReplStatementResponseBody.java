@@ -106,7 +106,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>StackOverflow Exception：</p>
+         * <p>StackOverflow Exception:</p>
          */
         @NameInMap("Error")
         public String error;
