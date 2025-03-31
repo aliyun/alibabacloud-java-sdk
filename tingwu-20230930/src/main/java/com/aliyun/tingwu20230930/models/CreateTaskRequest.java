@@ -233,6 +233,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("Identity")
+        public String identity;
+
         @NameInMap("Title")
         public String title;
 
@@ -247,6 +250,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public CreateTaskRequestParametersContentExtractionExtractionContents setIdentity(String identity) {
+            this.identity = identity;
+            return this;
+        }
+        public String getIdentity() {
+            return this.identity;
         }
 
         public CreateTaskRequestParametersContentExtractionExtractionContents setTitle(String title) {
@@ -436,6 +447,66 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getTranslateLlmSceneEnabled() {
             return this.translateLlmSceneEnabled;
+        }
+
+    }
+
+    public static class CreateTaskRequestParametersIdentityRecognitionIdentityContents extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static CreateTaskRequestParametersIdentityRecognitionIdentityContents build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersIdentityRecognitionIdentityContents self = new CreateTaskRequestParametersIdentityRecognitionIdentityContents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersIdentityRecognitionIdentityContents setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateTaskRequestParametersIdentityRecognitionIdentityContents setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class CreateTaskRequestParametersIdentityRecognition extends TeaModel {
+        @NameInMap("IdentityContents")
+        public java.util.List<CreateTaskRequestParametersIdentityRecognitionIdentityContents> identityContents;
+
+        @NameInMap("SceneIntroduction")
+        public String sceneIntroduction;
+
+        public static CreateTaskRequestParametersIdentityRecognition build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersIdentityRecognition self = new CreateTaskRequestParametersIdentityRecognition();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersIdentityRecognition setIdentityContents(java.util.List<CreateTaskRequestParametersIdentityRecognitionIdentityContents> identityContents) {
+            this.identityContents = identityContents;
+            return this;
+        }
+        public java.util.List<CreateTaskRequestParametersIdentityRecognitionIdentityContents> getIdentityContents() {
+            return this.identityContents;
+        }
+
+        public CreateTaskRequestParametersIdentityRecognition setSceneIntroduction(String sceneIntroduction) {
+            this.sceneIntroduction = sceneIntroduction;
+            return this;
+        }
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
         }
 
     }
@@ -823,6 +894,12 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("ExtraParams")
         public CreateTaskRequestParametersExtraParams extraParams;
 
+        @NameInMap("IdentityRecognition")
+        public CreateTaskRequestParametersIdentityRecognition identityRecognition;
+
+        @NameInMap("IdentityRecognitionEnabled")
+        public Boolean identityRecognitionEnabled;
+
         @NameInMap("MeetingAssistance")
         public CreateTaskRequestParametersMeetingAssistance meetingAssistance;
 
@@ -922,6 +999,22 @@ public class CreateTaskRequest extends TeaModel {
         }
         public CreateTaskRequestParametersExtraParams getExtraParams() {
             return this.extraParams;
+        }
+
+        public CreateTaskRequestParameters setIdentityRecognition(CreateTaskRequestParametersIdentityRecognition identityRecognition) {
+            this.identityRecognition = identityRecognition;
+            return this;
+        }
+        public CreateTaskRequestParametersIdentityRecognition getIdentityRecognition() {
+            return this.identityRecognition;
+        }
+
+        public CreateTaskRequestParameters setIdentityRecognitionEnabled(Boolean identityRecognitionEnabled) {
+            this.identityRecognitionEnabled = identityRecognitionEnabled;
+            return this;
+        }
+        public Boolean getIdentityRecognitionEnabled() {
+            return this.identityRecognitionEnabled;
         }
 
         public CreateTaskRequestParameters setMeetingAssistance(CreateTaskRequestParametersMeetingAssistance meetingAssistance) {
