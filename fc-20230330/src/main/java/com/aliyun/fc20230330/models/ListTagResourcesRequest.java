@@ -29,7 +29,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

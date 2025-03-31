@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
     /**
-     * <p>The provisioned instance configurations.</p>
+     * <p>The provisioned configuration information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public PutProvisionConfigInput body;
 
     /**
-     * <p>The function alias or LATEST.</p>
+     * <p>The function alias.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

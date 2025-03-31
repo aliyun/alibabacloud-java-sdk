@@ -90,14 +90,15 @@ public class ListAsyncTasksRequest extends TeaModel {
     /**
      * <p>The state of asynchronous tasks. The following items list the states of an asynchronous task:</p>
      * <ul>
-     * <li>Enqueued: The asynchronous invocation is enqueued and is waiting to be executed.</li>
+     * <li>Enqueued: The asynchronous invocation is enqueued and waiting to be executed.</li>
+     * <li>Dequeued: The asynchronous invocation is dequeued and waiting to be triggered.</li>
+     * <li>Running: The invocation is being executed.</li>
      * <li>Succeeded: The invocation is successful.</li>
      * <li>Failed: The invocation fails.</li>
-     * <li>Running: The invocation is being executed.</li>
      * <li>Stopped: The invocation is terminated.</li>
      * <li>Stopping: The invocation is being terminated.</li>
+     * <li>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages expires.</li>
      * <li>Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</li>
-     * <li>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period has elapsed.</li>
      * <li>Retrying: The asynchronous invocation is being retried due to an execution error.</li>
      * </ul>
      * 

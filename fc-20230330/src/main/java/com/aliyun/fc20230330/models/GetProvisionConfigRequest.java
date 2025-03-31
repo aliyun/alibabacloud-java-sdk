@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetProvisionConfigRequest extends TeaModel {
     /**
-     * <p>The function alias or LATEST.</p>
+     * <p>The function alias.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

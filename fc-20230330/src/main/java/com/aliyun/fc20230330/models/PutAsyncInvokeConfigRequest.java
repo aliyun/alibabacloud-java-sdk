@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutAsyncInvokeConfigRequest extends TeaModel {
     /**
-     * <p>The asynchronous invocation configurations.</p>
+     * <p>The configurations of asynchronous function invocations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

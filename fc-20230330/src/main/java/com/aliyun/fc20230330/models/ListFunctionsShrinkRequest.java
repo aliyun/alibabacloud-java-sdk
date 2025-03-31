@@ -3,7 +3,7 @@ package com.aliyun.fc20230330.models;
 
 import com.aliyun.tea.*;
 
-public class ListFunctionsRequest extends TeaModel {
+public class ListFunctionsShrinkRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
@@ -50,14 +50,14 @@ public class ListFunctionsRequest extends TeaModel {
     public String runtime;
 
     @NameInMap("tags")
-    public java.util.List<Tag> tags;
+    public String tagsShrink;
 
-    public static ListFunctionsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListFunctionsRequest self = new ListFunctionsRequest();
+    public static ListFunctionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListFunctionsShrinkRequest self = new ListFunctionsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListFunctionsRequest setDescription(String description) {
+    public ListFunctionsShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -65,7 +65,7 @@ public class ListFunctionsRequest extends TeaModel {
         return this.description;
     }
 
-    public ListFunctionsRequest setFcVersion(String fcVersion) {
+    public ListFunctionsShrinkRequest setFcVersion(String fcVersion) {
         this.fcVersion = fcVersion;
         return this;
     }
@@ -73,7 +73,7 @@ public class ListFunctionsRequest extends TeaModel {
         return this.fcVersion;
     }
 
-    public ListFunctionsRequest setGpuType(String gpuType) {
+    public ListFunctionsShrinkRequest setGpuType(String gpuType) {
         this.gpuType = gpuType;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListFunctionsRequest extends TeaModel {
         return this.gpuType;
     }
 
-    public ListFunctionsRequest setLimit(Integer limit) {
+    public ListFunctionsShrinkRequest setLimit(Integer limit) {
         this.limit = limit;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListFunctionsRequest extends TeaModel {
         return this.limit;
     }
 
-    public ListFunctionsRequest setNextToken(String nextToken) {
+    public ListFunctionsShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -97,7 +97,7 @@ public class ListFunctionsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListFunctionsRequest setPrefix(String prefix) {
+    public ListFunctionsShrinkRequest setPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
@@ -105,7 +105,7 @@ public class ListFunctionsRequest extends TeaModel {
         return this.prefix;
     }
 
-    public ListFunctionsRequest setRuntime(String runtime) {
+    public ListFunctionsShrinkRequest setRuntime(String runtime) {
         this.runtime = runtime;
         return this;
     }
@@ -113,12 +113,12 @@ public class ListFunctionsRequest extends TeaModel {
         return this.runtime;
     }
 
-    public ListFunctionsRequest setTags(java.util.List<Tag> tags) {
-        this.tags = tags;
+    public ListFunctionsShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<Tag> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

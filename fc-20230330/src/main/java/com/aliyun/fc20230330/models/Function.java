@@ -48,6 +48,9 @@ public class Function extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("disableOndemand")
+    public Boolean disableOndemand;
+
     /**
      * <strong>example:</strong>
      * <p>512</p>
@@ -271,6 +274,14 @@ public class Function extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public Function setDisableOndemand(Boolean disableOndemand) {
+        this.disableOndemand = disableOndemand;
+        return this;
+    }
+    public Boolean getDisableOndemand() {
+        return this.disableOndemand;
     }
 
     public Function setDiskSize(Integer diskSize) {
