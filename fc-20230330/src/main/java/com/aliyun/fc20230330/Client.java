@@ -542,7 +542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a function version.</p>
+     * <p><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -573,7 +573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a function version.</p>
+     * <p><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></p>
      * @return DeleteFunctionVersionResponse
      */
     public DeleteFunctionVersionResponse deleteFunctionVersion(String functionName, String versionId) throws Exception {
@@ -1743,16 +1743,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>列出函数。</p>
      * 
-     * @param request ListFunctionsRequest
+     * @param tmpReq ListFunctionsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFunctionsResponse
      */
-    public ListFunctionsResponse listFunctionsWithOptions(ListFunctionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListFunctionsResponse listFunctionsWithOptions(ListFunctionsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListFunctionsShrinkRequest request = new ListFunctionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fcVersion)) {
             query.put("fcVersion", request.fcVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuType)) {
+            query.put("gpuType", request.gpuType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
@@ -1765,6 +1779,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.prefix)) {
             query.put("prefix", request.prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runtime)) {
+            query.put("runtime", request.runtime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -1,3 +1,10 @@
+2025-03-31 Version: 4.1.7
+- Update API ListFunctions: add request parameters description.
+- Update API ListFunctions: add request parameters gpuType.
+- Update API ListFunctions: add request parameters runtime.
+- Update API ListFunctions: add request parameters tags.
+
+
 2025-02-26 Version: 4.1.6
 - Update API DeleteProvisionConfig: update param qualifier.
 - Update API GetProvisionConfig: update param qualifier.

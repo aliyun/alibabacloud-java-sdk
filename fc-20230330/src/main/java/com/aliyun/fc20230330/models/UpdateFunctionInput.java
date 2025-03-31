@@ -30,6 +30,9 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    @NameInMap("disableOndemand")
+    public Boolean disableOndemand;
+
     /**
      * <strong>example:</strong>
      * <p>512</p>
@@ -160,6 +163,14 @@ public class UpdateFunctionInput extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateFunctionInput setDisableOndemand(Boolean disableOndemand) {
+        this.disableOndemand = disableOndemand;
+        return this;
+    }
+    public Boolean getDisableOndemand() {
+        return this.disableOndemand;
     }
 
     public UpdateFunctionInput setDiskSize(Integer diskSize) {
