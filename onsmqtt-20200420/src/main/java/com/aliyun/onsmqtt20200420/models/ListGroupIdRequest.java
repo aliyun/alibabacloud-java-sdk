@@ -14,6 +14,9 @@ public class ListGroupIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Tags")
+    public String tags;
+
     public static ListGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupIdRequest self = new ListGroupIdRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class ListGroupIdRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ListGroupIdRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

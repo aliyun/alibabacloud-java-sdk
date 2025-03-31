@@ -40,6 +40,36 @@ public class ListGroupIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListGroupIdResponseBodyDataTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListGroupIdResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupIdResponseBodyDataTags self = new ListGroupIdResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupIdResponseBodyDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListGroupIdResponseBodyDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListGroupIdResponseBodyData extends TeaModel {
         /**
          * <p>The time when the group was created.</p>
@@ -80,6 +110,9 @@ public class ListGroupIdResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Tags")
+        public java.util.List<ListGroupIdResponseBodyDataTags> tags;
 
         /**
          * <p>The time when the group was last updated.</p>
@@ -125,6 +158,14 @@ public class ListGroupIdResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListGroupIdResponseBodyData setTags(java.util.List<ListGroupIdResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListGroupIdResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public ListGroupIdResponseBodyData setUpdateTime(Long updateTime) {
