@@ -69,8 +69,14 @@ public class GetTaskInfoResponseBody extends TeaModel {
         @NameInMap("AutoChapters")
         public String autoChapters;
 
+        @NameInMap("ContentExtraction")
+        public String contentExtraction;
+
         @NameInMap("CustomPrompt")
         public String customPrompt;
+
+        @NameInMap("IdentityRecognition")
+        public String identityRecognition;
 
         @NameInMap("MeetingAssistance")
         public String meetingAssistance;
@@ -106,12 +112,28 @@ public class GetTaskInfoResponseBody extends TeaModel {
             return this.autoChapters;
         }
 
+        public GetTaskInfoResponseBodyDataResult setContentExtraction(String contentExtraction) {
+            this.contentExtraction = contentExtraction;
+            return this;
+        }
+        public String getContentExtraction() {
+            return this.contentExtraction;
+        }
+
         public GetTaskInfoResponseBodyDataResult setCustomPrompt(String customPrompt) {
             this.customPrompt = customPrompt;
             return this;
         }
         public String getCustomPrompt() {
             return this.customPrompt;
+        }
+
+        public GetTaskInfoResponseBodyDataResult setIdentityRecognition(String identityRecognition) {
+            this.identityRecognition = identityRecognition;
+            return this;
+        }
+        public String getIdentityRecognition() {
+            return this.identityRecognition;
         }
 
         public GetTaskInfoResponseBodyDataResult setMeetingAssistance(String meetingAssistance) {
