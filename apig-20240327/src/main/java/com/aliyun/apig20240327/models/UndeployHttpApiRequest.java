@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UndeployHttpApiRequest extends TeaModel {
     /**
+     * <p>The environment ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-cqsmtellhtgvo***</p>
      */
@@ -12,6 +14,8 @@ public class UndeployHttpApiRequest extends TeaModel {
     public String environmentId;
 
     /**
+     * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
+     * 
      * <strong>example:</strong>
      * <p>hr-cr82undlhtgrle***</p>
      */

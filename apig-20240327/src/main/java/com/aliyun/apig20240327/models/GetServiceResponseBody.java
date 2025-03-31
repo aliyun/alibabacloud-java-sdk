@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceResponseBody extends TeaModel {
     /**
-     * <p>Response status code.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -14,13 +14,13 @@ public class GetServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Service details data.</p>
+     * <p>The service details.</p>
      */
     @NameInMap("data")
     public Service data;
 
     /**
-     * <p>Response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class GetServiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FA9BB94-915B-5299-A694-49FCC7F5DD00</p>

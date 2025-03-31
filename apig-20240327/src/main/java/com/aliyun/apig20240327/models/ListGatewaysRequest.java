@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListGatewaysRequest extends TeaModel {
     /**
-     * <p>Query exactly by Gateway ID.</p>
+     * <p>The instance ID. If you specify an ID, an exact search is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cpv4sqdl****</p>
@@ -14,7 +14,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>Keyword, search with full match, case-insensitive.</p>
+     * <p>The search keyword. A full match is performed. The search is case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>dev</p>
@@ -23,7 +23,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>Query exactly by Gateway name.</p>
+     * <p>The instance name. If you specify a name, an exact search is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>itemcenter-gateway</p>
@@ -32,7 +32,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Page number.</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListGatewaysRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ListGatewaysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekz3wes3hnre5a</p>
@@ -59,7 +59,7 @@ public class ListGatewaysRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Filter list by tags</p>
+     * <p>The tags that you want to use for the search.</p>
      */
     @NameInMap("tag")
     public java.util.List<ListGatewaysRequestTag> tag;
@@ -127,7 +127,7 @@ public class ListGatewaysRequest extends TeaModel {
 
     public static class ListGatewaysRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The key of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
@@ -136,7 +136,7 @@ public class ListGatewaysRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The value of tag N.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>

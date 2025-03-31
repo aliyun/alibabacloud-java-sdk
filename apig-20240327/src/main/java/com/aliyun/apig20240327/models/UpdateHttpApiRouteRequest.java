@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateHttpApiRouteRequest extends TeaModel {
     /**
-     * <p>Backend service configuration for the route.</p>
+     * <p>The backend service configurations of the route.</p>
      */
     @NameInMap("backendConfig")
     public UpdateHttpApiRouteRequestBackendConfig backendConfig;
 
     /**
-     * <p>Route description.</p>
+     * <p>The route description.</p>
      * 
      * <strong>example:</strong>
      * <p>test route</p>
@@ -20,13 +20,13 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>List of domain IDs.</p>
+     * <p>The domain IDs.</p>
      */
     @NameInMap("domainIds")
     public java.util.List<String> domainIds;
 
     /**
-     * <p>Environment ID.</p>
+     * <p>The environment ID.</p>
      * 
      * <strong>example:</strong>
      * <p>env-cquqsollhtgid***</p>
@@ -35,7 +35,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     public String environmentId;
 
     /**
-     * <p>Route match rule.</p>
+     * <p>The rules for matching the route.</p>
      */
     @NameInMap("match")
     public HttpRouteMatch match;
@@ -87,7 +87,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
 
     public static class UpdateHttpApiRouteRequestBackendConfigServices extends TeaModel {
         /**
-         * <p>Service port, do not pass in for dynamic ports.</p>
+         * <p>The service port. If you want to use a dynamic port, do not pass this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -96,10 +96,10 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>Service protocol:</p>
+         * <p>The protocol. Valid values:</p>
          * <ul>
-         * <li>HTTP.</li>
-         * <li>HTTPS.</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Service ID.</p>
+         * <p>The service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>svc-cr6pk4tlhtgm58e***</p>
@@ -118,7 +118,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>Service version.</p>
+         * <p>The service version.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -127,7 +127,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String version;
 
         /**
-         * <p>Percentage value of traffic ratio.</p>
+         * <p>The percentage value of traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>49</p>
@@ -184,7 +184,14 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
 
     public static class UpdateHttpApiRouteRequestBackendConfig extends TeaModel {
         /**
-         * <p>Backend service scenario.</p>
+         * <p>The backend service scenario.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>SingleService</li>
+         * <li>MultiServiceByRatio</li>
+         * <li>Redirect</li>
+         * <li>Mock</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -193,7 +200,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String scene;
 
         /**
-         * <p>List of backend services.</p>
+         * <p>The backend services.</p>
          */
         @NameInMap("services")
         public java.util.List<UpdateHttpApiRouteRequestBackendConfigServices> services;

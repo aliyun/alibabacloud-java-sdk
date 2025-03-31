@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
     /**
-     * <p>Gateway ID.</p>
+     * <p>The gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtg***</p>
@@ -14,7 +14,7 @@ public class CreateServiceRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>Resource group ID.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxx</p>
@@ -23,20 +23,29 @@ public class CreateServiceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>List of service configuration information.</p>
+     * <p>The list of service configurations.</p>
      */
     @NameInMap("serviceConfigs")
     public java.util.List<CreateServiceRequestServiceConfigs> serviceConfigs;
 
     /**
-     * <p>Service source:</p>
+     * <p>The service source. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: Services in MSE Nacos.</li>
-     * <li>K8S: Services in the K8S cluster of container service.</li>
-     * <li>VIP: Fixed address service.</li>
-     * <li>DNS: DNS domain name service.</li>
-     * <li>FC3: Function Compute service.</li>
-     * <li>SAE_K8S_SERVICE: SAE K8S service.</li>
+     * <li>MSE_NACOS: a service in an MSE Nacos instance</li>
+     * <li>K8S: a service in a Kubernetes (K8s) cluster in Container Service for Kubernetes (ACK)</li>
+     * <li>VIP: a fixed IP address</li>
+     * <li>DNS: a Domain Name System (DNS) domain name</li>
+     * <li>FC3: a service in Function Compute</li>
+     * <li>SAE_K8S_SERVICE: a service in a K8s cluster in Serverless App Engine (SAE)</li>
+     * </ul>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>SAE_K8S_SERVICE</li>
+     * <li>K8S</li>
+     * <li>FC3</li>
+     * <li>DNS</li>
+     * <li>VIP</li>
+     * <li>MSE_NACOS</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,26 +93,25 @@ public class CreateServiceRequest extends TeaModel {
 
     public static class CreateServiceRequestServiceConfigs extends TeaModel {
         /**
-         * <p>List of domain names or fixed addresses.</p>
+         * <p>The list of domain names or fixed addresses.</p>
          */
         @NameInMap("addresses")
         public java.util.List<String> addresses;
 
         /**
-         * <p>AI service configuration.</p>
+         * <p>The AI service configurations.</p>
          */
         @NameInMap("aiServiceConfig")
         public AiServiceConfig aiServiceConfig;
 
         /**
-         * <p>List of DNS server addresses.</p>
+         * <p>The list of DNS service addresses.</p>
          */
         @NameInMap("dnsServers")
         public java.util.List<String> dnsServers;
 
         /**
-         * <p>Service group name.
-         * Needs to be specified when <code>sourceType</code> is MSE_NACOS.</p>
+         * <p>The service group name. This parameter is required if sourceType is set to MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -112,7 +120,7 @@ public class CreateServiceRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>Service name.</p>
+         * <p>The service name.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -121,12 +129,11 @@ public class CreateServiceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Namespace of the service:</p>
+         * <p>The service namespace. This parameter is required when sourceType is set to K8S or MSE_NACOS.</p>
          * <ul>
-         * <li>When <code>sourceType</code> is K8S, it represents the namespace where the K8S service is located.</li>
-         * <li>When <code>sourceType</code> is MSE_NACOS, it represents the namespace in Nacos.</li>
+         * <li>If sourceType is set to K8S, this parameter specifies the namespace where the K8s service resides.</li>
+         * <li>If sourceType is set to MSE_NACOS, this parameter specifies a namespace in Nacos.</li>
          * </ul>
-         * <p>It needs to be specified when <code>sourceType</code> is K8S or MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
@@ -135,7 +142,7 @@ public class CreateServiceRequest extends TeaModel {
         public String namespace;
 
         /**
-         * <p>Function version or alias.</p>
+         * <p>The function version or alias.</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDashboardRequest extends TeaModel {
     /**
-     * <p>zh: Chinese
-     * en: English</p>
+     * <p>The language. Valid values: zh (Chinese) and en (English).</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -24,16 +23,16 @@ public class GetDashboardRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>Filter configuration</p>
+     * <p>The filter configurations.</p>
      */
     @NameInMap("filter")
     public GetDashboardRequestFilter filter;
 
     /**
-     * <p>Dashboard name:</p>
+     * <p>The dashboard name.</p>
      * <ul>
-     * <li>LOG: Access log</li>
-     * <li>PLUGIN: Plugin log</li>
+     * <li>LOG: access logs</li>
+     * <li>PLUGIN: plug-in logs</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +42,7 @@ public class GetDashboardRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Plugin ID.</p>
+     * <p>The plug-in ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pls-dn82a9djd8z****</p>
@@ -51,10 +50,13 @@ public class GetDashboardRequest extends TeaModel {
     @NameInMap("pluginClassId")
     public String pluginClassId;
 
+    @NameInMap("pluginId")
+    public String pluginId;
+
     /**
-     * <p>Dashboard source:</p>
+     * <p>The dashboard source. Valid values:</p>
      * <ul>
-     * <li>SLS: Log dashboard</li>
+     * <li>SLS: Simple Log Service</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,6 +64,9 @@ public class GetDashboardRequest extends TeaModel {
      */
     @NameInMap("source")
     public String source;
+
+    @NameInMap("upstreamCluster")
+    public String upstreamCluster;
 
     public static GetDashboardRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDashboardRequest self = new GetDashboardRequest();
@@ -108,6 +113,14 @@ public class GetDashboardRequest extends TeaModel {
         return this.pluginClassId;
     }
 
+    public GetDashboardRequest setPluginId(String pluginId) {
+        this.pluginId = pluginId;
+        return this;
+    }
+    public String getPluginId() {
+        return this.pluginId;
+    }
+
     public GetDashboardRequest setSource(String source) {
         this.source = source;
         return this;
@@ -116,9 +129,17 @@ public class GetDashboardRequest extends TeaModel {
         return this.source;
     }
 
+    public GetDashboardRequest setUpstreamCluster(String upstreamCluster) {
+        this.upstreamCluster = upstreamCluster;
+        return this;
+    }
+    public String getUpstreamCluster() {
+        return this.upstreamCluster;
+    }
+
     public static class GetDashboardRequestFilter extends TeaModel {
         /**
-         * <p>Route name</p>
+         * <p>The route name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-route</p>

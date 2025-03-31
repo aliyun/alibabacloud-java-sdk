@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDomainRequest extends TeaModel {
     /**
-     * <p>Indicates whether include domain related resource information.</p>
+     * <p>Specifies whether to return online resource information.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
