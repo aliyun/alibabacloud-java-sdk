@@ -3,13 +3,9 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeInstanceTDEStatusRequest extends TeaModel {
+public class DescribeTairKVCacheInferInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the Tair (Redis OSS-compatible) instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query instance IDs.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>r-bp1zxszhcgatnx****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -29,12 +25,12 @@ public class DescribeInstanceTDEStatusRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static DescribeInstanceTDEStatusRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeInstanceTDEStatusRequest self = new DescribeInstanceTDEStatusRequest();
+    public static DescribeTairKVCacheInferInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeTairKVCacheInferInstanceAttributeRequest self = new DescribeTairKVCacheInferInstanceAttributeRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceTDEStatusRequest setInstanceId(String instanceId) {
+    public DescribeTairKVCacheInferInstanceAttributeRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -42,7 +38,7 @@ public class DescribeInstanceTDEStatusRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeInstanceTDEStatusRequest setOwnerAccount(String ownerAccount) {
+    public DescribeTairKVCacheInferInstanceAttributeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -50,7 +46,7 @@ public class DescribeInstanceTDEStatusRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeInstanceTDEStatusRequest setOwnerId(Long ownerId) {
+    public DescribeTairKVCacheInferInstanceAttributeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -58,7 +54,7 @@ public class DescribeInstanceTDEStatusRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeInstanceTDEStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DescribeTairKVCacheInferInstanceAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -66,7 +62,7 @@ public class DescribeInstanceTDEStatusRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeInstanceTDEStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DescribeTairKVCacheInferInstanceAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -74,7 +70,7 @@ public class DescribeInstanceTDEStatusRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeInstanceTDEStatusRequest setSecurityToken(String securityToken) {
+    public DescribeTairKVCacheInferInstanceAttributeRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

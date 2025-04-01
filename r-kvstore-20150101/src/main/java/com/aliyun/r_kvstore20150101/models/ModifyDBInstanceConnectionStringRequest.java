@@ -56,9 +56,9 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port number that is used to connect to the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
+     * <p>The port number of the instance. Valid values: <strong>1024</strong> to <strong>65535</strong>.</p>
      * <blockquote>
-     * <p>You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
+     * <p> You must specify one of the <strong>NewConnectionString</strong> and <strong>Port</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

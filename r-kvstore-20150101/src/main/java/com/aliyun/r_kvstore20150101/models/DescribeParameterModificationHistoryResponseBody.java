@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
     /**
-     * <p>Details of the parameter modification records.</p>
+     * <p>The modification records of the parameters.</p>
      */
     @NameInMap("HistoricalParameters")
     public DescribeParameterModificationHistoryResponseBodyHistoricalParameters historicalParameters;

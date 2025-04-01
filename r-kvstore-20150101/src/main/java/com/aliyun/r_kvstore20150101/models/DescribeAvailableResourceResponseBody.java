@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     /**
-     * <p>Details of the zones.</p>
+     * <p>Details about the zones.</p>
      */
     @NameInMap("AvailableZones")
     public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
@@ -191,7 +191,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String shardNumber;
 
         /**
-         * <p>The available node types.</p>
+         * <p>The supported node types.</p>
          */
         @NameInMap("SupportedNodeTypes")
         public SupportedNodeTypes supportedNodeTypes;
@@ -254,7 +254,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>The numbers of shards that are allowed.</p>
+         * <p>The numbers of available shards.</p>
          */
         @NameInMap("SupportedShardNumbers")
         public SupportedShardNumbers supportedShardNumbers;
@@ -303,7 +303,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class SupportedEngineVersion extends TeaModel {
         /**
-         * <p>The available instance architectures.</p>
+         * <p>The available architectures.</p>
          */
         @NameInMap("SupportedArchitectureTypes")
         public SupportedArchitectureTypes supportedArchitectureTypes;
@@ -363,8 +363,8 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * <p>The instance series. Valid values:</p>
          * <ul>
-         * <li><strong>enhanced_performance_type</strong>: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
-         * <li><strong>hybrid_storage</strong>: ApsaraDB for Redis Community Edition hybrid-storage instance</li>
+         * <li><strong>enhanced_performance_type</strong>: Tair (Enterprise Edition) DRAM-based instance</li>
+         * <li><strong>hybrid_storage</strong>: Redis Open-Source Edition hybrid-storage instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -436,7 +436,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String editionType;
 
         /**
-         * <p>The available instance series.</p>
+         * <p>The instance series types.</p>
          */
         @NameInMap("SupportedSeriesTypes")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypesSupportedEditionTypeSupportedSeriesTypes supportedSeriesTypes;
@@ -494,7 +494,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The available instance editions.</p>
+         * <p>The instance edition types.</p>
          */
         @NameInMap("SupportedEditionTypes")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEnginesSupportedEngineSupportedEditionTypes supportedEditionTypes;
@@ -543,6 +543,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
         /**
+         * <p>An internal parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("IsMainSale")
+        public Boolean isMainSale;
+
+        /**
          * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
@@ -552,7 +561,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The available database engines.</p>
+         * <p>The supported engines.</p>
          */
         @NameInMap("SupportedEngines")
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneSupportedEngines supportedEngines;
@@ -578,6 +587,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setIsMainSale(Boolean isMainSale) {
+            this.isMainSale = isMainSale;
+            return this;
+        }
+        public Boolean getIsMainSale() {
+            return this.isMainSale;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setRegionId(String regionId) {

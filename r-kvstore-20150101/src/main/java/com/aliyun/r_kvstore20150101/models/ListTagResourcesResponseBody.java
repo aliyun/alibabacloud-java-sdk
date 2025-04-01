@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the instances and tags.</p>
+     * <p>Details about the instances and tags.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -68,7 +68,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type. The return value is <strong>ALIYUN::KVSTORE::INSTANCE</strong>. This value indicates an ApsaraDB for Redis instance.</p>
+         * <p>The resource type. The return value is <strong>ALIYUN::KVSTORE::INSTANCE</strong>. This value indicates a Tair (Redis OSS-compatible) instance.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::KVSTORE::INSTANCE</p>

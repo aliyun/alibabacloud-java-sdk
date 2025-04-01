@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlushInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

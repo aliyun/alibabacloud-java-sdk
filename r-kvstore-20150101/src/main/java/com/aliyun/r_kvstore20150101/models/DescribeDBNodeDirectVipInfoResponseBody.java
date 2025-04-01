@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBNodeDirectVipInfoResponseBody extends TeaModel {
     /**
-     * <p>The virtual IP addresses (VIPs) of shards in an ApsaraDB for Redis cluster instance.</p>
+     * <p>The VIP information of shards in the cluster instance.</p>
      */
     @NameInMap("DirectVipInfo")
     public DescribeDBNodeDirectVipInfoResponseBodyDirectVipInfo directVipInfo;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
     /**
-     * <p>The configuration parameters.</p>
+     * <p>The configuration parameters that have not taken effect.</p>
      */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;

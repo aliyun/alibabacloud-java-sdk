@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
     /**
-     * <p>Details of the instances.</p>
+     * <p>Details about the instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstances> instances;
@@ -367,7 +367,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The nodes.</p>
+         * <p>Details about the nodes.</p>
          */
         @NameInMap("InstanceNodeList")
         public java.util.List<DescribeDedicatedClusterInstanceListResponseBodyInstancesInstanceNodeList> instanceNodeList;
@@ -423,7 +423,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
          * <ul>
          * <li><p>If the return value is <strong>0</strong>, the proxy mode is disabled for the instance. If the return value is an integer greater than <strong>0</strong>, such as <strong>1</strong>, the proxy mode is enabled for the instance.</p>
          * </li>
-         * <li><p>This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</p>
+         * <li><p>This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
          * </li>
          * </ul>
          * 
@@ -445,7 +445,7 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         /**
          * <p>The number of shards.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the instance is a cluster instance. For more information about cluster instances, see <a href="https://help.aliyun.com/document_detail/52228.html">Cluster master-replica instances</a>.</p>
+         * <p> This parameter is returned only when the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMinorVersionRequest extends TeaModel {
     /**
-     * <p>The time when the minor version is updated. Valid values:</p>
+     * <p>The time when you want to update the minor version. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: The minor version is immediately updated.</li>
-     * <li><strong>MaintainTime</strong>: The minor version is updated within the maintenance window.</li>
+     * <li><strong>Immediately</strong> (default): immediately updates the minor version.</li>
+     * <li><strong>MaintainTime</strong>: updates the minor version during the maintenance window.</li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/61000.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

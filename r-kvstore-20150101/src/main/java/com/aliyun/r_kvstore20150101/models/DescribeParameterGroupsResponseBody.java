@@ -44,8 +44,8 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * <p>The service category. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Community Edition</li>
-         * <li><strong>1</strong>: Enhanced Edition (Tair)</li>
+         * <li><strong>0</strong>: Redis Open-Source Edition</li>
+         * <li><strong>1</strong>: Tair (Enterprise Edition)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -66,9 +66,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         /**
          * <p>The engine type. Valid values:</p>
          * <ul>
-         * <li><strong>redis</strong>: Redis or Tair DRAM-based instance</li>
-         * <li><strong>tair_pena</strong>: Tair persistent memory-optimized instance</li>
-         * <li><strong>tair_pdb</strong>: Tair ESSD-based instance</li>
+         * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
+         * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
+         * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
          * </ul>
          * 
          * <strong>example:</strong>

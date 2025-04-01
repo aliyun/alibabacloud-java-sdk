@@ -157,6 +157,9 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
     @NameInMap("Tags")
     public DescribeTairKVCacheCustomInstanceAttributeResponseBodyTags tags;
 
+    @NameInMap("UseEni")
+    public Boolean useEni;
+
     /**
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>
@@ -372,6 +375,14 @@ public class DescribeTairKVCacheCustomInstanceAttributeResponseBody extends TeaM
     }
     public DescribeTairKVCacheCustomInstanceAttributeResponseBodyTags getTags() {
         return this.tags;
+    }
+
+    public DescribeTairKVCacheCustomInstanceAttributeResponseBody setUseEni(Boolean useEni) {
+        this.useEni = useEni;
+        return this;
+    }
+    public Boolean getUseEni() {
+        return this.useEni;
     }
 
     public DescribeTairKVCacheCustomInstanceAttributeResponseBody setVSwitchId(String vSwitchId) {

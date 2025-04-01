@@ -11,7 +11,7 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
      * <li><strong>false</strong>: disabled</li>
      * </ul>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/130206.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/473829.html">ModifyAuditLogConfig</a> operation to enable or disable the audit log feature for a Tair (Redis OSS-compatible) instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

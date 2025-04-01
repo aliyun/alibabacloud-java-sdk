@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneRequest extends TeaModel {
     /**
-     * <p>The ID of the ApsaraDB for Redis instance.</p>
+     * <p>The ID of the Tair (Redis OSS-compatible) instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,13 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies the time when the database is switched after data is migrated. Valid values:</p>
+     * <p>The time when the database is switched after the instance is migrated. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: immediately switched after the data is migrated.</li>
-     * <li><strong>MaintainTime</strong>: switched within the maintenance window.</li>
-     * <li><strong>0</strong>: immediately switched after the data is migrated.</li>
-     * <li><strong>1</strong>: switched within the maintenance window.</li>
+     * <li><strong>Immediately</strong>: The database is immediately switched after the instance is migrated.</li>
+     * <li><strong>MaintainTime</strong>: The database is switched within the maintenance window.</li>
      * </ul>
      * <blockquote>
-     * <p> Default value: <strong>Immediately</strong>.</p>
+     * <p> Default value: Immediately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,6 +36,44 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of read replicas in the primary zone.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The <strong>ReadOnlyCount</strong> and <strong>SlaveReadOnlyCount</strong> parameters are applicable only to cloud-native instances for which read/write splitting is enabled. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of read replicas in the primary and secondary zones of the instance. This operation does not allow you to increase or decrease the number of nodes. Therefore, the sum of the values of <code>ReadOnlyCount and SlaveReadOnlyCount</code> must be the same as that before the migration.</p>
+     * </li>
+     * <li><p>If you do not specify these parameters when you migrate an instance from a single zone to multiple zones, one read replica is migrated to the secondary zone, and all other read replicas remain in the primary zone.</p>
+     * </li>
+     * <li><p>If the instance is a cluster instance, the preceding parameters indicate the number of read replicas per shard in the primary and secondary zones of the instance.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ReadOnlyCount")
+    public Integer readOnlyCount;
+
+    /**
+     * <p>The number of replica nodes in the primary zone.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters are applicable only to cloud-native instances. When you migrate an instance to multiple zones, you can use these parameters to adjust the distribution of replica nodes in the primary and secondary zones of the instance. This operation does not allow you to increase or decrease the number of nodes. Therefore, the sum of the values of <code>ReplicaCount and SlaveReplicaCount</code> must be the same as that before the migration.</p>
+     * </li>
+     * <li><p>If you do not specify these parameters when you migrate an instance from a single zone to multiple zones, one replica node is migrated to the secondary zone, and all other replica nodes remain in the primary zone.</p>
+     * </li>
+     * <li><p>If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes per shard in the primary and secondary zones of the instance.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("ReplicaCount")
+    public Integer replicaCount;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -45,9 +81,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the destination secondary zone. You can call the <a href="~~DescribeZones~~">DescribeZones</a> operation to query zone IDs.</p>
+     * <p>The ID of the secondary zone to which you want to migrate the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query zone IDs.</p>
      * <blockquote>
-     * <p> You can specify this parameter to deploy the master node and replica node in different zones to implement zone-disaster recovery. This helps withstand data center-level breakdowns.</p>
+     * <p> If you specify this parameter, the master node and replica node of the instance can be deployed in different zones and disaster recovery is implemented across zones. The instance can withstand failures in data centers.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,13 +96,33 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The number of read replicas in the secondary zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SlaveReadOnlyCount")
+    public Integer slaveReadOnlyCount;
+
+    /**
+     * <p>The number of replica nodes in the secondary zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("SlaveReplicaCount")
+    public Integer slaveReplicaCount;
+
+    /**
      * <p>The ID of the vSwitch.</p>
      * <blockquote>
-     * <ul>
-     * <li>The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.</li>
-     * <li>If the network type of the instance is VPC, this parameter is required.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>The zone where the vSwitch resides must be the same as the ID of the destination zone.</p>
+     * </li>
+     * <li><p>If the network type of the instance is VPC, this parameter is required.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp1e7clcw529l773d****</p>
@@ -75,7 +131,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the destination primary zone. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query zone IDs.</p>
+     * <p>The ID of the destination primary zone. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query zone IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,6 +177,22 @@ public class MigrateToOtherZoneRequest extends TeaModel {
         return this.ownerId;
     }
 
+    public MigrateToOtherZoneRequest setReadOnlyCount(Integer readOnlyCount) {
+        this.readOnlyCount = readOnlyCount;
+        return this;
+    }
+    public Integer getReadOnlyCount() {
+        return this.readOnlyCount;
+    }
+
+    public MigrateToOtherZoneRequest setReplicaCount(Integer replicaCount) {
+        this.replicaCount = replicaCount;
+        return this;
+    }
+    public Integer getReplicaCount() {
+        return this.replicaCount;
+    }
+
     public MigrateToOtherZoneRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -151,6 +223,22 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public MigrateToOtherZoneRequest setSlaveReadOnlyCount(Integer slaveReadOnlyCount) {
+        this.slaveReadOnlyCount = slaveReadOnlyCount;
+        return this;
+    }
+    public Integer getSlaveReadOnlyCount() {
+        return this.slaveReadOnlyCount;
+    }
+
+    public MigrateToOtherZoneRequest setSlaveReplicaCount(Integer slaveReplicaCount) {
+        this.slaveReplicaCount = slaveReplicaCount;
+        return this;
+    }
+    public Integer getSlaveReplicaCount() {
+        return this.slaveReplicaCount;
     }
 
     public MigrateToOtherZoneRequest setVSwitchId(String vSwitchId) {

@@ -13,21 +13,61 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The Sentinel-compatible mode, which is applicable to non-cluster instances. For more information about the parameter, see the relevant documentation.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("ParamNoLooseSentinelEnabled")
     public String paramNoLooseSentinelEnabled;
 
+    /**
+     * <p>Indicates whether Sentinel commands can be run without requiring a password when the Sentinel mode is enabled. Valid values: Valid values: yes and no. Default value: no. After you set this parameter to yes, you can run Sentinel commands in a virtual private cloud (VPC) without the need to enable the password-free access feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>no</p>
+     */
     @NameInMap("ParamNoLooseSentinelPasswordFreeAccess")
     public String paramNoLooseSentinelPasswordFreeAccess;
 
+    /**
+     * <p>After you enable the Sentinel mode and set the ParamNoLooseSentinelPasswordFreeAccess parameter to yes, you can use this parameter to specify an additional list of commands that can be run without requiring a password. By default, this parameter is empty. After you configure this parameter, you can run the specified commands without a password on any connection. Proceed with caution. The commands must be written in lowercase letters. Multiple commands are separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("ParamNoLooseSentinelPasswordFreeCommands")
     public String paramNoLooseSentinelPasswordFreeCommands;
 
+    /**
+     * <p>The synchronization mode.</p>
+     * <ul>
+     * <li><strong>semisync</strong></li>
+     * <li><strong>async</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>async</p>
+     */
     @NameInMap("ParamReplMode")
     public String paramReplMode;
 
+    /**
+     * <p>The degradation threshold time of the semi-synchronous replication mode. This parameter is required only when semi-synchronous replication is enabled. Unit: milliseconds. Valid values: 10 to 60000.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("ParamReplTimeout")
     public String paramReplTimeout;
 
+    /**
+     * <p>The Sentinel-compatible mode, which is applicable to cluster instances in proxy mode or read/write splitting instances. For more information about the parameter, see the relevant documentation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ParamSentinelCompatEnable")
     public String paramSentinelCompatEnable;
 

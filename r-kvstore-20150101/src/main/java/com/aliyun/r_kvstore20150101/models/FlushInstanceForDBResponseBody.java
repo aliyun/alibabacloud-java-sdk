@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FlushInstanceForDBResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>5D622714-AEDD-4609-9167-F5DDD3D1****</p>

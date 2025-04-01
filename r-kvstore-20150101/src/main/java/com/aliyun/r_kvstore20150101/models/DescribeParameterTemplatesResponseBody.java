@@ -14,7 +14,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The major version that is run on the instance.</p>
+     * <p>The major version of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>5.0</p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
     /**
      * <p>The compatible engine version. Valid values:</p>
-     * <p>ApsaraDB for Redis Community Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</p>
+     * <p>Redis Open Source Edition: 5.0, 6.0, and 7.0. Tair DRAM-based instances: 5.0 and 6.0. Tair persistent memory-optimized instances: 6.0. Tair ESSD-based instances: 4.0.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -88,6 +88,9 @@ public class DescribeParameterGroupTemplateListResponseBody extends TeaModel {
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open AOF persistence mode</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;

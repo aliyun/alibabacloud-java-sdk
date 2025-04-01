@@ -14,13 +14,13 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The information about proxy nodes.</p>
+     * <p>The detailed proxy information, including information about proxy nodes.</p>
      */
     @NameInMap("RedisProxyList")
     public DescribeLogicInstanceTopologyResponseBodyRedisProxyList redisProxyList;
 
     /**
-     * <p>Details of data shards, including node information such as NodeInfo.</p>
+     * <p>Details of data shards, which includes node information such as NodeInfo.</p>
      */
     @NameInMap("RedisShardList")
     public DescribeLogicInstanceTopologyResponseBodyRedisShardList redisShardList;
@@ -73,7 +73,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo extends TeaModel {
         /**
-         * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -111,8 +111,8 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li><strong>db</strong>: a data node.</li>
-         * <li><strong>normal</strong>: a management node, which can be a proxy node or a Configserver node. For specific instances, the return value of this parameter is proxy or cs, instead of normal.</li>
+         * <li><strong>proxy</strong>: proxy node</li>
+         * <li><strong>db</strong>: data node</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo extends TeaModel {
         /**
-         * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
          * 
          * <strong>example:</strong>
          * <p>96</p>
@@ -238,10 +238,10 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The type of the child instance. Valid values:</p>
+         * <p>子实例类型，返回值：</p>
          * <ul>
-         * <li><strong>master</strong>: master node</li>
-         * <li><strong>readonly</strong>: read-only instance</li>
+         * <li><strong>master</strong>：主节点类型。</li>
+         * <li><strong>readonly</strong>：只读实例类型。</li>
          * </ul>
          * 
          * <strong>example:</strong>

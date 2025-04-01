@@ -5,6 +5,22 @@ import com.aliyun.tea.*;
 
 public class DeleteShardingNodeRequest extends TeaModel {
     /**
+     * <p>The time when you want to delete the proxy nodes for instance in the proxy mode. Valid values:</p>
+     * <ul>
+     * <li><strong>0 or Immediately</strong> (default): immediately delete the proxy nodes.</li>
+     * <li><strong>1 or MaintainTime</strong>: delete the proxy nodes during the maintenance window.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Immediately</p>
+     */
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    /**
      * <p>Specifies whether to enable forced transmission during a configuration change. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): Before the configuration change, the system checks the minor version of the instance. If the minor version of the instance is outdated, an error is reported. You must update the minor version of the instance and try again.</li>
@@ -72,6 +88,14 @@ public class DeleteShardingNodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteShardingNodeRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
     public DeleteShardingNodeRequest setForceTrans(Boolean forceTrans) {
         this.forceTrans = forceTrans;
         return this;
@@ -88,6 +112,7 @@ public class DeleteShardingNodeRequest extends TeaModel {
         return this.instanceId;
     }
 
+    @Deprecated
     public DeleteShardingNodeRequest setNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;

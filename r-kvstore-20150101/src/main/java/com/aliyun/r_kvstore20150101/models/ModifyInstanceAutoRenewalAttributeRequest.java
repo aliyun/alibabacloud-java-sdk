@@ -7,11 +7,11 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables auto-renewal.</li>
-     * <li><strong>false</strong>: disables auto-renewal.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>false</strong>.</p>
+     * <p> The default value is <strong>false</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,6 +50,15 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    /**
+     * <p>The service. Set the value to kvstore.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kvstore</p>
+     */
+    @NameInMap("Product")
+    public String product;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -103,6 +112,14 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
     public ModifyInstanceAutoRenewalAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

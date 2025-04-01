@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     /**
-     * <p>Details about each node in an ApsaraDB for Redis instance.</p>
+     * <p>Details about each node in the instance.</p>
      */
     @NameInMap("Node")
     public DescribeRoleZoneInfoResponseBodyNode node;
@@ -96,7 +96,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
          * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
          * <blockquote>
          * <ul>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/206173.html">EnableAdditionalBandwidth</a> operation to specify the increased bandwidth.</li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/473771.html">EnableAdditionalBandwidth</a> operation to specify the increased bandwidth.</li>
          * <li>You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.</li>
          * </ul>
          * </blockquote>
@@ -162,7 +162,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
          * <li><strong>1</strong>: The minor version is the latest version.</li>
          * </ul>
          * <blockquote>
-         * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> operation.</p>
+         * <p> To update the minor version, call the <a href="https://help.aliyun.com/document_detail/473777.html">ModifyInstanceMinorVersion</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         public Boolean isOpenBandWidthService;
 
         /**
-         * <p>This parameter is used only for internal maintenance of ApsaraDB for Redis instances.</p>
+         * <p>This parameter is used only for internal maintenance of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>10065****</p>

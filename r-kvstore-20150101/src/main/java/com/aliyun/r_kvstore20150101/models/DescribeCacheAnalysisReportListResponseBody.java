@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     /**
-     * <p>Details of the offline key analytics tasks.</p>
+     * <p>The list of the offline key analysis reports.</p>
      */
     @NameInMap("DailyTasks")
     public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
@@ -167,7 +167,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         public String date;
 
         /**
-         * <p>Details of the offline key analytics tasks.</p>
+         * <p>Details about the offline key analysis reports.</p>
          */
         @NameInMap("Tasks")
         public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks tasks;

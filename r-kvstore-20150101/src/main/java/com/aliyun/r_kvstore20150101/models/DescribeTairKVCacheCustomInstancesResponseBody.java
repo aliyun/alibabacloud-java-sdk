@@ -208,6 +208,9 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkType")
         public String networkType;
 
+        @NameInMap("PrivateIp")
+        public String privateIp;
+
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -238,6 +241,9 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
 
         @NameInMap("Tags")
         public DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstanceTags tags;
+
+        @NameInMap("UseEni")
+        public Boolean useEni;
 
         /**
          * <strong>example:</strong>
@@ -345,6 +351,14 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
             return this.networkType;
         }
 
+        public DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstance setPrivateIp(String privateIp) {
+            this.privateIp = privateIp;
+            return this;
+        }
+        public String getPrivateIp() {
+            return this.privateIp;
+        }
+
         public DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstance setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -383,6 +397,14 @@ public class DescribeTairKVCacheCustomInstancesResponseBody extends TeaModel {
         }
         public DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstanceTags getTags() {
             return this.tags;
+        }
+
+        public DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstance setUseEni(Boolean useEni) {
+            this.useEni = useEni;
+            return this;
+        }
+        public Boolean getUseEni() {
+            return this.useEni;
         }
 
         public DescribeTairKVCacheCustomInstancesResponseBodyInstancesKVStoreInstance setVSwitchId(String vSwitchId) {

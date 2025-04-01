@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogicInstanceTopologyRequest extends TeaModel {
     /**
-     * <p>The ID of the instance whose topology information you want to query.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

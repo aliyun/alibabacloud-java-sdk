@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
-     * <p>The filter condition that is used to return tasks based on the settings of task cancellation. Default value: -1. Valid values:</p>
+     * <p>The filter condition that is used to return events based on the settings of event cancellation. Default value: -1. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: returns all tasks.</li>
-     * <li><strong>0</strong>: returns only tasks that cannot be canceled.</li>
-     * <li><strong>1</strong>: returns only tasks that can be canceled.</li>
+     * <li><strong>-1</strong>: returns all events.</li>
+     * <li><strong>0</strong>: returns only O\&amp;M events that cannot be canceled.</li>
+     * <li><strong>1</strong>: returns only O\&amp;M events that can be canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowCancel;
 
     /**
-     * <p>The filter condition that is used to return tasks based on the settings of the switching time. Default value: -1. Valid values:</p>
+     * <p>The filter condition that is used to return events based on the settings of the switching time. Default value: -1. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: returns all tasks.</li>
-     * <li><strong>0</strong>: returns only tasks for which the switching time cannot be changed.</li>
-     * <li><strong>1</strong>: returns only tasks for which the switching time can be changed.</li>
+     * <li><strong>-1</strong>: returns all events.</li>
+     * <li><strong>0</strong>: returns only O\&amp;M events for which the switching time cannot be changed.</li>
+     * <li><strong>-1</strong>: returns only O\&amp;M events for which the switching time can be changed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
-     * <p>The region ID of the O&amp;M task. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the O&amp;M task. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <blockquote>
      * <p>A value of <strong>all</strong> indicates all region IDs.</p>
      * </blockquote>
@@ -119,14 +119,14 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The status of operation and maintenance events. It is used to filter and return tasks. The values are as follows:. Valid values:</p>
+     * <p>The status of an O\&amp;M event. This parameter is used to filter returned tasks. Valid values:</p>
      * <ul>
-     * <li><strong>-1</strong>: All events.</li>
-     * <li><strong>3</strong>: Events awaiting processing.</li>
-     * <li><strong>4</strong>: Events being processed.</li>
-     * <li><strong>5</strong>: Events that have successfully ended.</li>
-     * <li><strong>6</strong>: Events that have ended in failure.</li>
-     * <li><strong>7</strong>: Events that have been canceled.</li>
+     * <li><strong>-1</strong>: filters all events.</li>
+     * <li><strong>3</strong>: filters pending events.</li>
+     * <li><strong>4</strong>: filters in-progress events.</li>
+     * <li><strong>5</strong>: filters successful events.</li>
+     * <li><strong>6</strong>: filters failed events.</li>
+     * <li><strong>7</strong>: filters canceled events.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,18 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The type of the O\&amp;M task. If left blank, all types will be queried.</p>
+     * <p>The type of the O\&amp;M event. If this parameter is not specified, all types of O\&amp;M events are queried.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>rds_apsradb_upgrade: minor version update</li>
+     * <li>rds_apsaradb_ha: primary/secondary switchover</li>
+     * <li>rds_apsaradb_ssl_update: SSL certificate update</li>
+     * <li>rds_apsaradb_major_upgrade: major version upgrade</li>
+     * <li>rds_apsradb_transfer: instance migration</li>
+     * <li>rds_apsaradb_modify_config: network upgrade</li>
+     * <li>rds_apsaradb_modify_config: instance parameter adjustment</li>
+     * <li>rds_apsaradb_maxscale: proxy minor version update</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>all</p>
