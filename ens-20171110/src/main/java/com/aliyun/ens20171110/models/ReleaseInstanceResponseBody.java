@@ -13,6 +13,21 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The type of the resource.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>instance</li>
+     * <li>eip</li>
+     * <li>disk</li>
+     * <li>network</li>
+     * <li>natgateway</li>
+     * <li>vswitch</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>eip</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

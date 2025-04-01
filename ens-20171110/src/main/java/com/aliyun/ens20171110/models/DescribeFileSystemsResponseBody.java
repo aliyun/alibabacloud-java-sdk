@@ -192,6 +192,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The ID of the region.</p>
          * 
@@ -305,6 +308,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystems setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeFileSystemsResponseBodyFileSystems setEnsRegionId(String ensRegionId) {

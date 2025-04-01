@@ -14,6 +14,16 @@ public class UnAssociateEnsEipAddressRequest extends TeaModel {
     @NameInMap("AllocationId")
     public String allocationId;
 
+    /**
+     * <p>Specifies whether to forcefully release the instance if it is in the Running status. Valid values:</p>
+     * <ul>
+     * <li>true. If you set the Force parameter to true, temporary data in the memory and storage of the instance is erased and cannot be restored after you call the operation, which is similar to the effect of a power-off action.</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 

@@ -151,6 +151,12 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrys extends TeaModel {
+        /**
+         * <p>The time when the entry was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-16T03:50:05Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -205,6 +211,12 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         @NameInMap("RouteTableId")
         public String routeTableId;
 
+        /**
+         * <p>The new source CIDR block of the inbound or outbound traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.XXX.XXX.0/24</p>
+         */
         @NameInMap("SourceCidrBlock")
         public String sourceCidrBlock;
 

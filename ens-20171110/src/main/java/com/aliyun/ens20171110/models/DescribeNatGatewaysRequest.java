@@ -13,6 +13,9 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The node information.</p>
+     */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
@@ -34,6 +37,9 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The IDs of NAT Gateways.</p>
+     */
     @NameInMap("NatGatewayIds")
     public java.util.List<String> natGatewayIds;
 

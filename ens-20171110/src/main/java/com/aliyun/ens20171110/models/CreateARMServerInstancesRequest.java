@@ -40,6 +40,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
+    @NameInMap("Cidr")
+    public String cidr;
+
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
      * <p>This parameter is required.</p>
@@ -245,6 +248,14 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     }
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
+    }
+
+    public CreateARMServerInstancesRequest setCidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
+    public String getCidr() {
+        return this.cidr;
     }
 
     public CreateARMServerInstancesRequest setEnsRegionId(String ensRegionId) {
