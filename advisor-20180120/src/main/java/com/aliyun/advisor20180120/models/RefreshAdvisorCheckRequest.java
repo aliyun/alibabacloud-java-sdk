@@ -41,6 +41,9 @@ public class RefreshAdvisorCheckRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("Token")
+    public String token;
+
     public static RefreshAdvisorCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         RefreshAdvisorCheckRequest self = new RefreshAdvisorCheckRequest();
         return TeaModel.build(map, self);
@@ -100,6 +103,14 @@ public class RefreshAdvisorCheckRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public RefreshAdvisorCheckRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
     public static class RefreshAdvisorCheckRequestResourceDimensionList extends TeaModel {

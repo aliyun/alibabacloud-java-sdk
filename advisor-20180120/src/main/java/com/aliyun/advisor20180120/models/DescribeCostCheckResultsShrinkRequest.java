@@ -10,21 +10,40 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
     @NameInMap("CheckIds")
     public String checkIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Category</p>
+     */
     @NameInMap("GroupBy")
     public String groupBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Product")
     public String product;
 
     @NameInMap("RegionIds")
     public String regionIdsShrink;
 
+    @NameInMap("ResourceGroupIdList")
+    public String resourceGroupIdListShrink;
+
     @NameInMap("ResourceIds")
     public String resourceIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SYNC_********_TASK</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Severity")
     public Integer severity;
 
@@ -80,6 +99,14 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
     }
     public String getRegionIdsShrink() {
         return this.regionIdsShrink;
+    }
+
+    public DescribeCostCheckResultsShrinkRequest setResourceGroupIdListShrink(String resourceGroupIdListShrink) {
+        this.resourceGroupIdListShrink = resourceGroupIdListShrink;
+        return this;
+    }
+    public String getResourceGroupIdListShrink() {
+        return this.resourceGroupIdListShrink;
     }
 
     public DescribeCostCheckResultsShrinkRequest setResourceIdsShrink(String resourceIdsShrink) {

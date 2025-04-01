@@ -4,18 +4,36 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeCostCheckAdvicesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>566331F9-****-550F-B745-A730331F97A9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,9 +83,17 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
     }
 
     public static class DescribeCostCheckAdvicesResponseBodyDataAdviceListTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>autoTest-7</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>basic</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -95,42 +121,96 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
     }
 
     public static class DescribeCostCheckAdvicesResponseBodyDataAdviceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AccountFolderId")
         public String accountFolderId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AccountFolderName")
         public String accountFolderName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111******767</p>
+         */
         @NameInMap("AliyunId")
         public Long aliyunId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;Domains\&quot;: [{\&quot;Status\&quot;: \&quot;success\&quot;, \&quot;\&quot;: \&quot;cn\&quot;, \&quot;DomainName\&quot;: \&quot;www.****.com\&quot;, Region\&quot;Desc\&quot;: \&quot;ok\&quot;}]}</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>Email</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-03-05T02:02:00Z</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-03-05T02:02:00Z</p>
+         */
         @NameInMap("GmtDeleted")
         public Long gmtDeleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-2ze5*****ef7d2lk63in</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1200***bles_df</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-02-04T16:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -140,9 +220,17 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -293,15 +381,31 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         @NameInMap("AdviceList")
         public java.util.List<DescribeCostCheckAdvicesResponseBodyDataAdviceList> adviceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EcsHighCpuUtilization</p>
+         */
         @NameInMap("CheckId")
         public String checkId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
