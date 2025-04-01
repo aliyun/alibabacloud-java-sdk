@@ -111,6 +111,15 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The namespace of the repository</p>
+         * 
+         * <strong>example:</strong>
+         * <p>computenest</p>
+         */
+        @NameInMap("Namespace")
+        public String namespace;
+
+        /**
          * <p>The image repo ID.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +169,14 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
         public String getModifiedTime() {
             return this.modifiedTime;
+        }
+
+        public ListAcrImageRepositoriesResponseBodyRepositories setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public ListAcrImageRepositoriesResponseBodyRepositories setRepoId(String repoId) {

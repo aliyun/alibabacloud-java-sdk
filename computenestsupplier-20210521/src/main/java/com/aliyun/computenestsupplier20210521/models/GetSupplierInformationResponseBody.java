@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetSupplierInformationResponseBody extends TeaModel {
     /**
+     * <p>Acr container namespace</p>
+     * 
+     * <strong>example:</strong>
+     * <p>computenest</p>
+     */
+    @NameInMap("AcrNamespace")
+    public String acrNamespace;
+
+    /**
      * <p>The delivery settings.</p>
      */
     @NameInMap("DeliverySettings")
@@ -85,6 +94,14 @@ public class GetSupplierInformationResponseBody extends TeaModel {
     public static GetSupplierInformationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSupplierInformationResponseBody self = new GetSupplierInformationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSupplierInformationResponseBody setAcrNamespace(String acrNamespace) {
+        this.acrNamespace = acrNamespace;
+        return this;
+    }
+    public String getAcrNamespace() {
+        return this.acrNamespace;
     }
 
     public GetSupplierInformationResponseBody setDeliverySettings(GetSupplierInformationResponseBodyDeliverySettings deliverySettings) {

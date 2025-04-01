@@ -191,9 +191,22 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("Branch")
         public String branch;
 
+        /**
+         * <p>The endpoint. 
+         * The URL address used to access the privately deployed GitLab instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://121.40.25.0">http://121.40.25.0</a></p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The organization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>455231</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
@@ -210,7 +223,17 @@ public class UpdateArtifactRequest extends TeaModel {
         public String owner;
 
         /**
-         * <p>The platform where the code repository is hosted.</p>
+         * <p>The platform type. Valid values:</p>
+         * <ul>
+         * <li><p>github</p>
+         * </li>
+         * <li><p>gitee</p>
+         * </li>
+         * <li><p>gitlab</p>
+         * </li>
+         * <li><p>codeup</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>github</p>
@@ -218,6 +241,12 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The repository ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103</p>
+         */
         @NameInMap("RepoId")
         public Long repoId;
 
