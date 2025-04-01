@@ -953,6 +953,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.databasesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.databases, "Databases", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.transferMapping)) {
+            request.transferMappingShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transferMapping, "TransferMapping", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.databasesShrink)) {
             body.put("Databases", request.databasesShrink);
@@ -960,6 +964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferMappingShrink)) {
+            body.put("TransferMapping", request.transferMappingShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5407,6 +5415,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSlowSQLListResponse describeSlowSQLList(DescribeSlowSQLListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSlowSQLListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按照客户端IP、用户、SQLID的维度统计SQL数据执行情况</p>
+     * 
+     * @param request DescribeSqlAuditStatRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSqlAuditStatResponse
+     */
+    public DescribeSqlAuditStatResponse describeSqlAuditStatWithOptions(DescribeSqlAuditStatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSqlAuditStat"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSqlAuditStatResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeSqlAuditStatResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>按照客户端IP、用户、SQLID的维度统计SQL数据执行情况</p>
+     * 
+     * @param request DescribeSqlAuditStatRequest
+     * @return DescribeSqlAuditStatResponse
+     */
+    public DescribeSqlAuditStatResponse describeSqlAuditStat(DescribeSqlAuditStatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSqlAuditStatWithOptions(request, runtime);
     }
 
     /**
