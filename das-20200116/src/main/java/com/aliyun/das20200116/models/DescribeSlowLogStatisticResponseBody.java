@@ -916,6 +916,9 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         @NameInMap("RowsSent")
         public Long rowsSent;
 
+        @NameInMap("RuleId")
+        public String ruleId;
+
         /**
          * <strong>example:</strong>
          * <p>SELECT \&quot;Hello, World!\&quot; FROM DUAL</p>
@@ -1617,6 +1620,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
         public Long getRowsSent() {
             return this.rowsSent;
+        }
+
+        public DescribeSlowLogStatisticResponseBodyDataDataLogs setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         public DescribeSlowLogStatisticResponseBodyDataDataLogs setSQLText(String SQLText) {

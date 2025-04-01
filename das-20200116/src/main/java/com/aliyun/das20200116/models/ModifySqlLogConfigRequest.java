@@ -20,6 +20,9 @@ public class ModifySqlLogConfigRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("EnableAudit")
+    public Boolean enableAudit;
+
     /**
      * <p>A reserved parameter.</p>
      */
@@ -93,6 +96,14 @@ public class ModifySqlLogConfigRequest extends TeaModel {
     }
     public Boolean getEnable() {
         return this.enable;
+    }
+
+    public ModifySqlLogConfigRequest setEnableAudit(Boolean enableAudit) {
+        this.enableAudit = enableAudit;
+        return this;
+    }
+    public Boolean getEnableAudit() {
+        return this.enableAudit;
     }
 
     public ModifySqlLogConfigRequest setFilters(java.util.List<ModifySqlLogConfigRequestFilters> filters) {
