@@ -36,6 +36,9 @@ public class RunCompletionRequest extends TeaModel {
     @NameInMap("TemplateIds")
     public java.util.List<Long> templateIds;
 
+    @NameInMap("variables")
+    public java.util.List<RunCompletionRequestVariables> variables;
+
     public static RunCompletionRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCompletionRequest self = new RunCompletionRequest();
         return TeaModel.build(map, self);
@@ -87,6 +90,14 @@ public class RunCompletionRequest extends TeaModel {
     }
     public java.util.List<Long> getTemplateIds() {
         return this.templateIds;
+    }
+
+    public RunCompletionRequest setVariables(java.util.List<RunCompletionRequestVariables> variables) {
+        this.variables = variables;
+        return this;
+    }
+    public java.util.List<RunCompletionRequestVariables> getVariables() {
+        return this.variables;
     }
 
     public static class RunCompletionRequestDialogueSentences extends TeaModel {
@@ -335,6 +346,36 @@ public class RunCompletionRequest extends TeaModel {
         }
         public String getSceneIntroduction() {
             return this.sceneIntroduction;
+        }
+
+    }
+
+    public static class RunCompletionRequestVariables extends TeaModel {
+        @NameInMap("variableCode")
+        public String variableCode;
+
+        @NameInMap("variableValue")
+        public String variableValue;
+
+        public static RunCompletionRequestVariables build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionRequestVariables self = new RunCompletionRequestVariables();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCompletionRequestVariables setVariableCode(String variableCode) {
+            this.variableCode = variableCode;
+            return this;
+        }
+        public String getVariableCode() {
+            return this.variableCode;
+        }
+
+        public RunCompletionRequestVariables setVariableValue(String variableValue) {
+            this.variableValue = variableValue;
+            return this;
+        }
+        public String getVariableValue() {
+            return this.variableValue;
         }
 
     }
