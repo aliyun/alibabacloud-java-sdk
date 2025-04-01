@@ -14407,6 +14407,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVSwitchResponse deleteVSwitchWithOptions(DeleteVSwitchRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -37246,7 +37250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>撤回VPC已发布路由</p>
+     * <p>Withdraw advertised Virtual Private Cloud (VPC) routes.</p>
      * 
      * @param request WithdrawVpcPublishedRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37319,7 +37323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>撤回VPC已发布路由</p>
+     * <p>Withdraw advertised Virtual Private Cloud (VPC) routes.</p>
      * 
      * @param request WithdrawVpcPublishedRouteEntriesRequest
      * @return WithdrawVpcPublishedRouteEntriesResponse

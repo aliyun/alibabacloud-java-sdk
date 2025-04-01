@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVSwitchRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -39,6 +42,14 @@ public class DeleteVSwitchRequest extends TeaModel {
     public static DeleteVSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVSwitchRequest self = new DeleteVSwitchRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVSwitchRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteVSwitchRequest setOwnerAccount(String ownerAccount) {
