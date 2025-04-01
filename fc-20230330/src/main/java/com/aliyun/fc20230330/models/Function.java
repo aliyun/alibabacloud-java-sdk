@@ -109,6 +109,9 @@ public class Function extends TeaModel {
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
+    @NameInMap("invocationRestriction")
+    public OpenStructFunctionRestriction invocationRestriction;
+
     /**
      * <strong>example:</strong>
      * <p>2023-05-01T08:15:27Z</p>
@@ -362,6 +365,14 @@ public class Function extends TeaModel {
     }
     public Boolean getInternetAccess() {
         return this.internetAccess;
+    }
+
+    public Function setInvocationRestriction(OpenStructFunctionRestriction invocationRestriction) {
+        this.invocationRestriction = invocationRestriction;
+        return this;
+    }
+    public OpenStructFunctionRestriction getInvocationRestriction() {
+        return this.invocationRestriction;
     }
 
     public Function setLastModifiedTime(String lastModifiedTime) {
