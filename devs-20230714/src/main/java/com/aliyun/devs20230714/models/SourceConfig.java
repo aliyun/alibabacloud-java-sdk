@@ -4,6 +4,9 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class SourceConfig extends TeaModel {
+    @NameInMap("oss")
+    public OpenStructOssSourceConfig oss;
+
     @NameInMap("repository")
     public RepositorySourceConfig repository;
 
@@ -13,6 +16,14 @@ public class SourceConfig extends TeaModel {
     public static SourceConfig build(java.util.Map<String, ?> map) throws Exception {
         SourceConfig self = new SourceConfig();
         return TeaModel.build(map, self);
+    }
+
+    public SourceConfig setOss(OpenStructOssSourceConfig oss) {
+        this.oss = oss;
+        return this;
+    }
+    public OpenStructOssSourceConfig getOss() {
+        return this.oss;
     }
 
     public SourceConfig setRepository(RepositorySourceConfig repository) {
