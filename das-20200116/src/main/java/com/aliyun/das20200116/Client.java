@@ -1729,10 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is available only for ApsaraDB for Redis instances that meet the following requirements:<ul>
      * <li>The instance is a Community Edition instance that uses a major version of 5.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1790,10 +1787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is available only for ApsaraDB for Redis instances that meet the following requirements:<ul>
      * <li>The instance is a Community Edition instance that uses a major version of 5.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1818,10 +1812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<ul>
      * <li>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For more information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -1875,10 +1866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is applicable only to ApsaraDB for Redis instances that meet the following requirements:<ul>
      * <li>The ApsaraDB for Redis instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For more information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2507,10 +2495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<ul>
      * <li>The instance is ApsaraDB for Redis Community Edition instances that use a major version of 5.0 or later or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2576,10 +2561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<ul>
      * <li>The instance is ApsaraDB for Redis Community Edition instances that use a major version of 5.0 or later or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a> and <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2604,10 +2586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<ul>
      * <li>The instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> and <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -2673,10 +2652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.</li>
      * <li>This operation is available only for an ApsaraDB for Redis instance of one of the following versions:<ul>
      * <li>The instance is a Community Edition instance that uses a major version of 4.0 or later or a performance-enhanced instance of the Enhanced Edition (Tair).</li>
-     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.<blockquote>
-     * <p> For information about how to query and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/95268.html">DescribeEngineVersion</a> and <a href="https://help.aliyun.com/document_detail/129381.html">ModifyInstanceMinorVersion</a>.</p>
-     * </blockquote>
-     * </li>
+     * <li>The ApsaraDB for Redis instance is updated to the latest minor version.</li>
      * </ul>
      * </li>
      * </ul>
@@ -7652,6 +7628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifySqlLogConfigResponse modifySqlLogConfigWithOptions(ModifySqlLogConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAudit)) {
+            query.put("EnableAudit", request.enableAudit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
             query.put("Filters", request.filters);
         }

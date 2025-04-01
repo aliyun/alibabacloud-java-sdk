@@ -14,7 +14,7 @@ public class DescribeHotBigKeysRequest extends TeaModel {
     public String consoleContext;
 
     /**
-     * <p>The ID of the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID.</p>
+     * <p>The ID of the ApsaraDB for Redis instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeHotBigKeysRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the data shard on the ApsaraDB for Redis instance. You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to query the ID.</p>
+     * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
      * 
      * <strong>example:</strong>
      * <p>r-****-db-0</p>

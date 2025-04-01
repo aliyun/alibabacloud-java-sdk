@@ -336,6 +336,9 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         @NameInMap("Scnt")
         public Long scnt;
 
+        @NameInMap("SqlCommand")
+        public Long sqlCommand;
+
         /**
          * <p>The ID of the SQL statement.</p>
          * 
@@ -627,6 +630,14 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         }
         public Long getScnt() {
             return this.scnt;
+        }
+
+        public DescribeSqlLogTaskResponseBodyDataQueries setSqlCommand(Long sqlCommand) {
+            this.sqlCommand = sqlCommand;
+            return this;
+        }
+        public Long getSqlCommand() {
+            return this.sqlCommand;
         }
 
         public DescribeSqlLogTaskResponseBodyDataQueries setSqlId(String sqlId) {

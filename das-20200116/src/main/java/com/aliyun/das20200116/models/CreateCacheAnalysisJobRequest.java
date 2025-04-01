@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCacheAnalysisJobRequest extends TeaModel {
     /**
-     * <p>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/61081.html">DescribeBackups</a> operation to query the ID.</p>
+     * <p>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the ID.</p>
      * <ul>
      * <li>If you need to specify multiple backup file IDs, separate them with commas (,). For example, you can set this parameter to <code>12345,67890</code>.</li>
      * <li>If you do not specify this parameter, the system automatically backs up the task and performs cache analysis on the backup file.</li>
@@ -30,7 +30,7 @@ public class CreateCacheAnalysisJobRequest extends TeaModel {
     /**
      * <p>The ID of the data node on the instance. You can specify this parameter to query the monitoring information about the specified node.</p>
      * <blockquote>
-     * <p> If you specify the BackupSetId parameter, the system ignores the NodeId parameter. You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query the node ID.</p>
+     * <p> If you specify the BackupSetId parameter, the system ignores the NodeId parameter. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query the node ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
