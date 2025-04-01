@@ -20,7 +20,7 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The result returned.</p>
      * 
      * <strong>example:</strong>
      * <p>{msg: &quot;&quot;, code: 200, success: true}</p>

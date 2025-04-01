@@ -14,7 +14,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The region where the namespace resides.</p>
+     * <p>The information about a namespace.</p>
      */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
@@ -126,6 +126,16 @@ public class CreateNamespaceResponseBody extends TeaModel {
     }
 
     public static class CreateNamespaceResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the SAE built-in registry is enabled:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableMicroRegistration")
         public Boolean enableMicroRegistration;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPublishedServicesRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

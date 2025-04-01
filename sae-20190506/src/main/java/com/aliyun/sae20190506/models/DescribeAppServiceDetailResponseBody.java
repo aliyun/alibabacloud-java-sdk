@@ -20,7 +20,7 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data that is returned.</p>
      */
     @NameInMap("Data")
     public DescribeAppServiceDetailResponseBodyData data;
@@ -415,12 +415,24 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The port used by the service.</p>
+         */
         @NameInMap("ServicePorts")
         public java.util.List<Long> servicePorts;
 
+        /**
+         * <p>The protocol used by the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
+         */
         @NameInMap("ServiceProtocol")
         public String serviceProtocol;
 
+        /**
+         * <p>The tag of the service.</p>
+         */
         @NameInMap("ServiceTags")
         public java.util.List<String> serviceTags;
 

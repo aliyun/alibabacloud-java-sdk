@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebApplicationRequest extends TeaModel {
     /**
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

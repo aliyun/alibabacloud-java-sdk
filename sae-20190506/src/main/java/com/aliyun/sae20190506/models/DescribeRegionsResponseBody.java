@@ -20,7 +20,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>No request parameters are required.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,13 +29,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The regions.</p>
      */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DDE85827-B0B3-4E56-86E8-17C42009****</p>
@@ -101,30 +101,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
         /**
-         * <p>The list of regions.</p>
-         */
-        @NameInMap("LocalName")
-        public String localName;
-
-        /**
-         * <p>The ID of the region. Valid values:</p>
-         * <ul>
-         * <li><strong>cn-hangzhou</strong>: the ID of the China (Hangzhou) region</li>
-         * <li><strong>cn-shanghai</strong>: the ID of the China (Shanghai) region</li>
-         * <li><strong>cn-beijing</strong>: the ID of the China (Beijing) region</li>
-         * <li><strong>cn-zhangjiakou</strong>: the ID of the China (Zhangjiakou) region</li>
-         * <li><strong>cn-shenzhen</strong>: the ID of the China (Shenzhen) region</li>
-         * <li><strong>cn-guangzhou</strong>: the ID of the China (Guangzhou) region</li>
-         * <li><strong>cn-hongkong</strong>: the ID of the China (Hong Kong) region</li>
-         * <li><strong>ap-southeast-1</strong>: the ID of the Singapore region</li>
-         * <li><strong>us-west-1</strong>: the ID of the US (Silicon Valley) region</li>
-         * </ul>
-         */
-        @NameInMap("RecommendZones")
-        public DescribeRegionsResponseBodyRegionsRegionRecommendZones recommendZones;
-
-        /**
-         * <p>The name of the region. Valid values:</p>
+         * <p>The region name. Valid values:</p>
          * <ul>
          * <li><strong>China (Hangzhou)</strong></li>
          * <li><strong>China (Shanghai)</strong></li>
@@ -133,18 +110,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
          * <li><strong>China (Shenzhen)</strong></li>
          * <li><strong>China (Guangzhou)</strong></li>
          * <li><strong>China (Hong Kong)</strong></li>
-         * <li><strong>Singapore (Singapore)</strong></li>
+         * <li><strong>Singapore</strong></li>
          * <li><strong>US (Silicon Valley)</strong></li>
          * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>sae.cn-shanghai.aliyuncs.com</p>
          */
-        @NameInMap("RegionEndpoint")
-        public String regionEndpoint;
+        @NameInMap("LocalName")
+        public String localName;
 
         /**
-         * <p>The endpoint of the region. Valid values:</p>
+         * <p>The recommended zones.</p>
+         */
+        @NameInMap("RecommendZones")
+        public DescribeRegionsResponseBodyRegionsRegionRecommendZones recommendZones;
+
+        /**
+         * <p>The endpoint for the region. Valid values:</p>
          * <ul>
          * <li><strong>sae.cn-hangzhou.aliyuncs.com</strong></li>
          * <li><strong>sae.cn-shanghai.aliyuncs.com</strong></li>
@@ -155,6 +135,26 @@ public class DescribeRegionsResponseBody extends TeaModel {
          * <li><strong>sae.cn-hongkong.aliyuncs.com</strong></li>
          * <li><strong>sae.ap-southeast-1.aliyuncs.com</strong></li>
          * <li><strong>sae.us-west-1.aliyuncs.com</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sae.cn-shanghai.aliyuncs.com</p>
+         */
+        @NameInMap("RegionEndpoint")
+        public String regionEndpoint;
+
+        /**
+         * <p>The region ID. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: the ID of the China (Hangzhou) region</li>
+         * <li><strong>cn-shanghai</strong>: the ID of the China (Shanghai) region</li>
+         * <li><strong>cn-beijing</strong>: the ID of the China (Beijing) region</li>
+         * <li><strong>cn-zhangjiakou</strong>: the ID of the China (Zhangjiakou) region</li>
+         * <li><strong>cn-shenzhen</strong>: the ID of the China (Shenzhen) region</li>
+         * <li><strong>cn-guangzhou</strong>: the ID of the China (Guangzhou) region</li>
+         * <li><strong>cn-hongkong</strong>: the ID of the China (Hong Kong) region</li>
+         * <li><strong>ap-southeast-1</strong>: the ID of the Singapore region</li>
+         * <li><strong>us-west-1</strong>: the ID of the US (Silicon Valley) region</li>
          * </ul>
          * 
          * <strong>example:</strong>

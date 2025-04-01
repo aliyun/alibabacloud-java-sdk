@@ -18,7 +18,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Configurations of internal-facing SLB instances.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationSlbsResponseBodyData data;
@@ -135,12 +135,33 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataInternet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>wwe</p>
+         */
         @NameInMap("Cookie")
         public String cookie;
 
+        /**
+         * <strong>example:</strong>
+         * <p>56</p>
+         */
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
+        /**
+         * <p>The timestamp when the canary release rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741247308294</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
+         */
         @NameInMap("HttpsCaCertId")
         public String httpsCaCertId;
 
@@ -171,9 +192,17 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("StickySession")
         public Boolean stickySession;
 
+        /**
+         * <strong>example:</strong>
+         * <p>insert</p>
+         */
         @NameInMap("StickySessionType")
         public String stickySessionType;
 
@@ -205,6 +234,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
         public Integer getCookieTimeout() {
             return this.cookieTimeout;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataInternet setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeApplicationSlbsResponseBodyDataInternet setHttpsCaCertId(String httpsCaCertId) {
@@ -266,12 +303,33 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyDataIntranet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>wwe</p>
+         */
         @NameInMap("Cookie")
         public String cookie;
 
+        /**
+         * <strong>example:</strong>
+         * <p>56</p>
+         */
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
+        /**
+         * <p>The timestamp when the canary release rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741247308294</p>
+         */
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1513561019707729_16f37aae5f3_-375882821_-169099****</p>
+         */
         @NameInMap("HttpsCaCertId")
         public String httpsCaCertId;
 
@@ -302,9 +360,17 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("StickySession")
         public Boolean stickySession;
 
+        /**
+         * <strong>example:</strong>
+         * <p>insert</p>
+         */
         @NameInMap("StickySessionType")
         public String stickySessionType;
 
@@ -336,6 +402,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
         public Integer getCookieTimeout() {
             return this.cookieTimeout;
+        }
+
+        public DescribeApplicationSlbsResponseBodyDataIntranet setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeApplicationSlbsResponseBodyDataIntranet setHttpsCaCertId(String httpsCaCertId) {
@@ -398,7 +472,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
     public static class DescribeApplicationSlbsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
+         * <p>The configurations of the Internet-facing SLB instance.</p>
          */
         @NameInMap("Internet")
         public java.util.List<DescribeApplicationSlbsResponseBodyDataInternet> internet;
@@ -412,9 +486,17 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PayBySpec</p>
+         */
         @NameInMap("InternetSlbChargeType")
         public String internetSlbChargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("InternetSlbExpired")
         public Boolean internetSlbExpired;
 
@@ -428,7 +510,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public String internetSlbId;
 
         /**
-         * <p>The ID of the SSL certificate issued by Alibaba Cloud.</p>
+         * <p>The configurations of the internal-facing SLB instance.</p>
          */
         @NameInMap("Intranet")
         public java.util.List<DescribeApplicationSlbsResponseBodyDataIntranet> intranet;
@@ -446,9 +528,17 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PayBySpec</p>
+         */
         @NameInMap("IntranetSlbChargeType")
         public String intranetSlbChargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IntranetSlbExpired")
         public Boolean intranetSlbExpired;
 

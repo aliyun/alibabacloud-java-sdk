@@ -5,11 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetArmsTopNMetricRequest extends TeaModel {
     /**
-     * <p>The SAE application type. Valid values:</p>
+     * <p>The CPU allocation policy. Valid values:</p>
      * <ul>
-     * <li><strong>micro_service</strong></li>
-     * <li><strong>web</strong></li>
-     * <li><strong>job</strong></li>
+     * <li><strong>request</strong>: CPU cores are allocated only when a request is initiated.</li>
+     * <li><strong>always</strong>: Fixed CPU cores are always allocated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,10 +18,10 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     public String appSource;
 
     /**
-     * <p>The CPU allocation policy. Valid values:</p>
+     * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
      * <ul>
-     * <li><strong>request</strong>: CPU cores are allocated only when a request is initiated.</li>
-     * <li><strong>always</strong>: Fixed CPU cores are always allocated.</li>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +31,12 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     public String cpuStrategy;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The SAE application type. Valid values:</p>
+     * <ul>
+     * <li><strong>micro_service</strong></li>
+     * <li><strong>web</strong></li>
+     * <li><strong>job</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +46,7 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The number of entries to return. Valid values: 0 to 100.</p>
+     * <p>The beginning of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +56,7 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The field based on which you want to sort the returned entries.</p>
+     * <p>The number of entries to return. Valid values: 0 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +66,7 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The field based on which you want to sort the returned entries.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +76,7 @@ public class GetArmsTopNMetricRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The end of the time range to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -163,6 +163,10 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("EdasContainerVersion")
     public String edasContainerVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableImageAccl")
     public Boolean enableImageAccl;
 

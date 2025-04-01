@@ -26,11 +26,7 @@ public class GetArmsTopNMetricResponseBody extends TeaModel {
     public java.util.List<GetArmsTopNMetricResponseBodyData> data;
 
     /**
-     * <p>The additional information that is returned. The following limits are imposed on the ID:</p>
-     * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
-     * </ul>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -39,10 +35,10 @@ public class GetArmsTopNMetricResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
      * 
      * <strong>example:</strong>
-     * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
+     * <p>3B763F98-0BA2-5C23-B6B8-558568D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

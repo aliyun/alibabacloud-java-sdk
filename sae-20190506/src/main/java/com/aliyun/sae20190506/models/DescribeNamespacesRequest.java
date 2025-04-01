@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespacesRequest extends TeaModel {
     /**
-     * <p>1</p>
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeNamespacesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>10</p>
+     * <p>The number of entries per page. Valid values: 0 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

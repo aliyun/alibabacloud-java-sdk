@@ -5,13 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWarningEventMetricResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. The following limits are imposed on the ID:</p>
-     * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
-     * </ul>
+     * <p>The number of Warning events.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +14,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of applications.</p>
+     * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
      */
     @NameInMap("Data")
     public java.util.List<GetWarningEventMetricResponseBodyData> data;
@@ -42,16 +36,18 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</p>
+     * <p>3B763F98-0BA2-5C23-B6B8-558568D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the list of applications was obtained. The following limits are imposed on the ID:</p>
+     * <p>The HTTP status code. The following limits are imposed on the ID:</p>
      * <ul>
-     * <li><strong>true</strong>: The namespaces were obtained.</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +103,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
 
     public static class GetWarningEventMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The details of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -116,7 +112,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -125,7 +121,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace ID.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -134,7 +130,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The number of Warning events.</p>
+         * <p>The namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

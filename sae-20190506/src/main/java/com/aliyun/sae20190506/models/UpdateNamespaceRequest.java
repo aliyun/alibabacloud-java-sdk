@@ -4,6 +4,17 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class UpdateNamespaceRequest extends TeaModel {
+    /**
+     * <p>Indicates whether to enable SAE built-in registry:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>If you set this parameter to true, a shared registry is created for the namespace. The registry cannot be disabled after it is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableMicroRegistration")
     public Boolean enableMicroRegistration;
 
@@ -26,7 +37,7 @@ public class UpdateNamespaceRequest extends TeaModel {
     public String namespaceDescription;
 
     /**
-     * <p>The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the <code>&lt;RegionId&gt;:&lt;NamespaceId&gt;</code> format. The <code>NamespaceId</code> variable can contain only lowercase letters and digits. Example: <code>cn-beijing:test</code>. The value of the NamespaceId variable cannot exceed 32 characters in length. For more information about <strong>RegionId</strong>, you can call the <a href="https://help.aliyun.com/document_detail/126213.html">DescribeRegions</a> operation to obtain the IDs of regions supported by SAE.</p>
+     * <p>The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the <code>&lt;RegionId&gt;:&lt;NamespaceId&gt;</code> format. The <code>NamespaceId</code> variable can contain only lowercase letters and digits. Example: <code>cn-beijing:test</code>. The value of the Namespaceid variable cannot exceed 32 characters in length. For more information about <strong>RegionId</strong>, you can call the <a href="https://help.aliyun.com/document_detail/2834842.html">DescribeRegions</a> operation to obtain the IDs of regions supported by SAE.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>

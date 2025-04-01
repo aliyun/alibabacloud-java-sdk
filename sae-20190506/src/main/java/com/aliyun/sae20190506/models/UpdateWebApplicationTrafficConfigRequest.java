@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateWebApplicationTrafficConfigRequest extends TeaModel {
     /**
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateWebApplicationTrafficConfigRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The traffic configurations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

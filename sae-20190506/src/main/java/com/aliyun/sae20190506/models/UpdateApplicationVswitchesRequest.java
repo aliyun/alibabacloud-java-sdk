@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationVswitchesRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
     public String appId;
 
     /**
+     * <p>The ID of the vSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

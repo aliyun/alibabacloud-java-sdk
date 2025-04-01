@@ -13,6 +13,27 @@ public class GetWebshellTokenRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the container.</p>
+     * <p>Note:</p>
+     * <ul>
+     * <li><p>If this parameter is specified, Cloud Assistant runs the command in the specified container of the instance.</p>
+     * </li>
+     * <li><p>If this parameter is specified, the command can run only on Linux instances on which Cloud Assistant Agent 2.2.3.344 or later is installed.</p>
+     * <ul>
+     * <li>For information about how to query the version of Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/64921.html">Install Cloud Assistant Agent</a>.</li>
+     * <li>For information about how to upgrade Cloud Assistant Agent, see <a href="https://help.aliyun.com/document_detail/134383.html">Upgrade or disable upgrades for Cloud Assistant Agent</a>.</li>
+     * </ul>
+     * </li>
+     * <li><p>If this parameter is specified, the <code>Username</code> parameter that is specified in a request to call this operation and the <code>WorkingDir</code> parameter that is specified in a request to call the <a href="https://help.aliyun.com/document_detail/64844.html">CreateCommand</a> operation do not take effect. You can run the command only in the default working directory of the container by using the default user of the container. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+     * </li>
+     * <li><p>If this parameter is specified, only shell scripts can be run in Linux containers. You cannot add a command in the format similar to <code>#!/usr/bin/python</code> at the beginning of a script to specify a script interpreter. For more information, see <a href="https://help.aliyun.com/document_detail/456641.html">Use Cloud Assistant to run commands in containers</a>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ad-helper</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 

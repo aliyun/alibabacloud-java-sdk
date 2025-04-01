@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeComponentsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the component version was obtained. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the component version was obtained.</li>
-     * <li><strong>false</strong>: indicates that the component version could not be obtained.</li>
+     * <li><strong>2xx</strong>: The request was successful.</li>
+     * <li><strong>3xx</strong>: The request was redirected.</li>
+     * <li><strong>4xx</strong>: The request failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,23 @@ public class DescribeComponentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The component type.</p>
+     * <p>The details of the supported components.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeComponentsResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
+     * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> section of this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +45,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -54,6 +54,12 @@ public class DescribeComponentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the component version was obtained. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The applications were obtained.</li>
+     * <li><strong>false</strong>: The applications failed to be queried.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -61,7 +67,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The details of the component.</p>
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -132,11 +138,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
 
     public static class DescribeComponentsResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the component is expired. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The component is expired.</li>
-         * <li><strong>false</strong>: The component is not expired.</li>
-         * </ul>
+         * <p>The description of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>Open JDK 8</p>
@@ -145,7 +147,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
         public String componentDescription;
 
         /**
-         * <p>The description of the component.</p>
+         * <p>The component ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Open JDK 8</p>
@@ -154,10 +156,10 @@ public class DescribeComponentsResponseBody extends TeaModel {
         public String componentKey;
 
         /**
-         * <p>The error code.</p>
+         * <p>Indicates whether the component is expired. Valid values:</p>
          * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+         * <li><strong>true</strong>: The component is expired.</li>
+         * <li><strong>false</strong>: The component is not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +169,7 @@ public class DescribeComponentsResponseBody extends TeaModel {
         public Boolean expired;
 
         /**
-         * <p>The ID of the component.</p>
+         * <p>The type of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>JDK</p>

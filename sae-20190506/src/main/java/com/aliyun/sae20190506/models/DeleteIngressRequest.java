@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIngressRequest extends TeaModel {
     /**
-     * <p>87</p>
+     * <p>The ID of the routing rule that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/153934.html">ListIngresses</a> operation to obtain the ID of a routing rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

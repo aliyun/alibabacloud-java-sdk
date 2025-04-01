@@ -3,7 +3,7 @@ package com.aliyun.sae20190506.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteApplicationResponseBody extends TeaModel {
+public class UnbindNlbResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
@@ -20,13 +20,13 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
-    public DeleteApplicationResponseBodyData data;
+    public UnbindNlbResponseBodyData data;
 
     /**
-     * <p>The error code. Valid values:</p>
+     * <p>The status code. Valid values:</p>
      * <ul>
      * <li>If the request was successful, <strong>ErrorCode</strong> is not returned.</li>
      * <li>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> section of this topic.</li>
@@ -49,7 +49,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,10 +58,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application is deleted. Valid values:</p>
+     * <p>Indicates whether the internal-facing or Internet-facing NLB instance was disassociated. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The applications were deleted</li>
-     * <li><strong>false</strong>: The applications failed to be deleted.</li>
+     * <li><strong>true</strong>: The NLB instance was disassociated.</li>
+     * <li><strong>false</strong>: The NLB instance failed to be disassociated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,17 +74,17 @@ public class DeleteApplicationResponseBody extends TeaModel {
      * <p>The ID of the trace. The ID is used to query the details of a request.</p>
      * 
      * <strong>example:</strong>
-     * <p>0a98a02315955564772843261e****</p>
+     * <p>0a981dd515966966104121683d****</p>
      */
     @NameInMap("TraceId")
     public String traceId;
 
-    public static DeleteApplicationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteApplicationResponseBody self = new DeleteApplicationResponseBody();
+    public static UnbindNlbResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UnbindNlbResponseBody self = new UnbindNlbResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteApplicationResponseBody setCode(String code) {
+    public UnbindNlbResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -92,15 +92,15 @@ public class DeleteApplicationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteApplicationResponseBody setData(DeleteApplicationResponseBodyData data) {
+    public UnbindNlbResponseBody setData(UnbindNlbResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public DeleteApplicationResponseBodyData getData() {
+    public UnbindNlbResponseBodyData getData() {
         return this.data;
     }
 
-    public DeleteApplicationResponseBody setErrorCode(String errorCode) {
+    public UnbindNlbResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -108,7 +108,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public DeleteApplicationResponseBody setMessage(String message) {
+    public UnbindNlbResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -116,7 +116,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeleteApplicationResponseBody setRequestId(String requestId) {
+    public UnbindNlbResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -124,7 +124,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteApplicationResponseBody setSuccess(Boolean success) {
+    public UnbindNlbResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -132,7 +132,7 @@ public class DeleteApplicationResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DeleteApplicationResponseBody setTraceId(String traceId) {
+    public UnbindNlbResponseBody setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
@@ -140,22 +140,22 @@ public class DeleteApplicationResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public static class DeleteApplicationResponseBodyData extends TeaModel {
+    public static class UnbindNlbResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the change order. The ID can be used to query the status of the change task.</p>
          * 
          * <strong>example:</strong>
-         * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>
+         * <p>ba386059-69b1-4e65-b1e5-0682d9fa****</p>
          */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
-        public static DeleteApplicationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            DeleteApplicationResponseBodyData self = new DeleteApplicationResponseBodyData();
+        public static UnbindNlbResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UnbindNlbResponseBodyData self = new UnbindNlbResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DeleteApplicationResponseBodyData setChangeOrderId(String changeOrderId) {
+        public UnbindNlbResponseBodyData setChangeOrderId(String changeOrderId) {
             this.changeOrderId = changeOrderId;
             return this;
         }

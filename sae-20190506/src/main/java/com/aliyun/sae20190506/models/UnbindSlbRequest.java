@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindSlbRequest extends TeaModel {
     /**
-     * <p>true</p>
+     * <p>The ID of the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class UnbindSlbRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>true</p>
+     * <p>Specifies whether to disassociate the Internet-facing SLB instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: dissociates the Internet-facing SLB instance.</li>
+     * <li><strong>false</strong>: does not dissociate the Internet-facing SLB instance.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -24,7 +28,11 @@ public class UnbindSlbRequest extends TeaModel {
     public Boolean internet;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to disassociate the internal-facing SLB instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: dissociates the internal-facing SLB instance.</li>
+     * <li><strong>false</strong>: does not dissociate the internal-facing SLB instance.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

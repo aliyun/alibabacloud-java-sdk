@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWebApplicationRevisionsRequest extends TeaModel {
     /**
+     * <p>The number of applications returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,7 @@ public class ListWebApplicationRevisionsRequest extends TeaModel {
     public Integer limit;
 
     /**
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class ListWebApplicationRevisionsRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>A2RN</p>
      */

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteGreyTagRouteResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The information was queried.</li>
-     * <li><strong>false</strong>: The information failed to be queried.</li>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,27 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the canary release rule. The ID is globally unique.</p>
+     * <p>The information about the canary release rule.</p>
      */
     @NameInMap("Data")
     public DeleteGreyTagRouteResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: The call was successful.</li>
-     * <li><strong>3xx</strong>: The call was redirected.</li>
-     * <li><strong>4xx</strong>: The call failed.</li>
-     * <li><strong>5xx</strong>: A server error occurred.</li>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,11 +49,7 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned information. Valid values:</p>
-     * <ul>
-     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
-     * <li>An error code: If the call fails, an error code is returned.</li>
-     * </ul>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>
@@ -58,6 +58,12 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the information of the change order was queried. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The information was queried.</li>
+     * <li><strong>false</strong>: The information failed to be queried.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -65,7 +71,7 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The information about the canary release rule.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -136,11 +142,7 @@ public class DeleteGreyTagRouteResponseBody extends TeaModel {
 
     public static class DeleteGreyTagRouteResponseBodyData extends TeaModel {
         /**
-         * <p>The returned error code. Valid values:</p>
-         * <ul>
-         * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-         * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
-         * </ul>
+         * <p>The ID of the canary release rule. The ID is globally unique.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>

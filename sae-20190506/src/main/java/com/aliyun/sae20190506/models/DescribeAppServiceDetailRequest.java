@@ -14,9 +14,21 @@ public class DescribeAppServiceDetailRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The ID of the MSE Nacos instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse-cn-sco3r0u****</p>
+     */
     @NameInMap("NacosInstanceId")
     public String nacosInstanceId;
 
+    /**
+     * <p>The ID of the namespace for the MSE Nacos instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
+     */
     @NameInMap("NacosNamespaceId")
     public String nacosNamespaceId;
 

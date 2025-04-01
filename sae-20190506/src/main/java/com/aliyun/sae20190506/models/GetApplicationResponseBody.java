@@ -4,10 +4,19 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The details of the application.</p>
+     */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
 
     /**
+     * <p>The additional information returned. Valid values:</p>
+     * <ul>
+     * <li>When a request is successful, <strong>success</strong>is returned.</li>
+     * <li>An error code is returned when a request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +24,8 @@ public class GetApplicationResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
      */
@@ -22,6 +33,8 @@ public class GetApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622920113732501e****</p>
      */
@@ -66,10 +79,15 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplication extends TeaModel {
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("AppDescription")
         public String appDescription;
 
         /**
+         * <p>The application ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>443d638a-ef76-47c4-b707-61197d******</p>
          */
@@ -77,6 +95,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -84,6 +104,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String appName;
 
         /**
+         * <p>The ID of the basic application.</p>
+         * 
          * <strong>example:</strong>
          * <p>ee99cce6-1c8e-4bfa-96c3-3e2fa9******</p>
          */
@@ -91,6 +113,18 @@ public class GetApplicationResponseBody extends TeaModel {
         public String baseAppId;
 
         /**
+         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <ul>
+         * <li><strong>500</strong></li>
+         * <li><strong>1000</strong></li>
+         * <li><strong>2000</strong></li>
+         * <li><strong>4000</strong></li>
+         * <li><strong>8000</strong></li>
+         * <li><strong>12000</strong></li>
+         * <li><strong>16000</strong></li>
+         * <li><strong>32000</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
@@ -98,6 +132,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The number of application instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-8ps2o182102o1jv05bys</p>
          */
@@ -105,6 +141,20 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer instances;
 
         /**
+         * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <ul>
+         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
+         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>4096</p>
          */
@@ -112,6 +162,12 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer mem;
 
         /**
+         * <p>Specifies whether to enable WebAssembly Filter. Valid values:</p>
+         * <ul>
+         * <li>true: enables this parameter.</li>
+         * <li>false: disables this parameter.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -119,6 +175,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public Boolean mseEnabled;
 
         /**
+         * <p>The ID of the namespace to which the MSE instance belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -126,6 +184,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String mseNamespaceId;
 
         /**
+         * <p>The namespace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -133,6 +193,13 @@ public class GetApplicationResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
+         * <p>The programming language that is used to create the application. Valid values:</p>
+         * <ul>
+         * <li><strong>java</strong> :Java.</li>
+         * <li><strong>php</strong>: PHP.</li>
+         * <li><strong>other</strong>: other programming languages, such as Python, C++, Go, .NET, and Node.js</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>java</p>
          */
@@ -140,6 +207,8 @@ public class GetApplicationResponseBody extends TeaModel {
         public String programmingLanguage;
 
         /**
+         * <p>The number of application instances that are running.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -147,6 +216,12 @@ public class GetApplicationResponseBody extends TeaModel {
         public Integer runningInstances;
 
         /**
+         * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The auto scaling policy is enabled.</li>
+         * <li><strong>false</strong>: The auto scaling policy is disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -154,6 +229,13 @@ public class GetApplicationResponseBody extends TeaModel {
         public String scaleRuleEnabled;
 
         /**
+         * <p>The type of the auto scaling policy. Valid values:</p>
+         * <ul>
+         * <li><strong>timing</strong>: a scheduled auto scaling policy.</li>
+         * <li><strong>metric</strong>: a metric-based auto scaling policy.</li>
+         * <li><strong>mix</strong>: a hybrid auto scaling policy.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>timing</p>
          */

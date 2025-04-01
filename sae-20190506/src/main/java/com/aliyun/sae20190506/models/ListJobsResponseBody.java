@@ -175,7 +175,7 @@ public class ListJobsResponseBody extends TeaModel {
 
     public static class ListJobsResponseBodyDataApplicationsTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -184,7 +184,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value</p>
@@ -261,6 +261,21 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("CompletionTime")
         public Long completionTime;
 
+        /**
+         * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+         * <ul>
+         * <li><strong>500</strong></li>
+         * <li><strong>1000</strong></li>
+         * <li><strong>2000</strong></li>
+         * <li><strong>4000</strong></li>
+         * <li><strong>8000</strong></li>
+         * <li><strong>16000</strong></li>
+         * <li><strong>32000</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
@@ -287,7 +302,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String lastChangeorderState;
 
         /**
-         * <p>The running status of the latest job. Valid values:</p>
+         * <p>The status of the latest job. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: The job is not executed.</li>
          * <li><strong>1</strong>: The job was executed.</li>
@@ -310,14 +325,38 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("LastStartTime")
         public Long lastStartTime;
 
+        /**
+         * <p>The size of memory that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+         * <ul>
+         * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+         * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+         * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+         * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8000.</li>
+         * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+         * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+         * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+         * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+         * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The namespace ID.</p>
+         * <p>The ID of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:demo</p>
@@ -353,7 +392,7 @@ public class ListJobsResponseBody extends TeaModel {
         public Boolean suspend;
 
         /**
-         * <p>The tag of the job template.</p>
+         * <p>The tags of the job template.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListJobsResponseBodyDataApplicationsTags> tags;

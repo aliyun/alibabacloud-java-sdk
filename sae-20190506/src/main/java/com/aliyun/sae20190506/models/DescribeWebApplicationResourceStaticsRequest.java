@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeWebApplicationResourceStaticsRequest extends TeaModel {
     /**
+     * <p>The end of the time range during which data was queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>1687832980387</p>
      */
@@ -12,6 +14,7 @@ public class DescribeWebApplicationResourceStaticsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class DescribeWebApplicationResourceStaticsRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -28,6 +33,8 @@ public class DescribeWebApplicationResourceStaticsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The time when the task was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1562831689704</p>
      */

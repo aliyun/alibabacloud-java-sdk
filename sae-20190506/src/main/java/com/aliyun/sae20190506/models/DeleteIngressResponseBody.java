@@ -7,10 +7,10 @@ public class DeleteIngressResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request failed.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,16 +20,16 @@ public class DeleteIngressResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DeleteIngressResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
@@ -45,7 +45,7 @@ public class DeleteIngressResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -56,8 +56,8 @@ public class DeleteIngressResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the routing rule was deleted. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the routing rule was deleted.</li>
-     * <li><strong>false</strong>: indicates that the routing rule could not be deleted.</li>
+     * <li><strong>true</strong>: The routing rule was deleted.</li>
+     * <li><strong>false</strong>: The routing rule failed to be deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class DeleteIngressResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -138,7 +138,7 @@ public class DeleteIngressResponseBody extends TeaModel {
 
     public static class DeleteIngressResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the routing rule that you want to delete.</p>
+         * <p>The ID of the deleted routing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>87</p>

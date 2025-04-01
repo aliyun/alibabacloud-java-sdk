@@ -4,6 +4,17 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
+    /**
+     * <p>Indicates whether to enable SAE built-in registry:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <p>Default value: true. If you do not use the built-in registry, you can set this parameter to false to accelerate the creation of a namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableMicroRegistration")
     public Boolean enableMicroRegistration;
 

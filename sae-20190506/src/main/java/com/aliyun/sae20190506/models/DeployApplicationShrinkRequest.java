@@ -142,6 +142,10 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("CustomHostAlias")
     public String customHostAlias;
 
+    /**
+     * <strong>example:</strong>
+     * <p>internet</p>
+     */
     @NameInMap("CustomImageNetworkType")
     public String customImageNetworkType;
 
@@ -158,6 +162,10 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("Deploy")
     public String deploy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>.NET 3.1</p>
+     */
     @NameInMap("Dotnet")
     public String dotnet;
 
@@ -183,6 +191,10 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("EnableAhas")
     public String enableAhas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableCpuBurst")
     public Boolean enableCpuBurst;
 
@@ -199,9 +211,17 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("EnableGreyTagRoute")
     public Boolean enableGreyTagRoute;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableNewArms")
     public Boolean enableNewArms;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableSidecarResourceIsolated")
     public Boolean enableSidecarResourceIsolated;
 
@@ -355,6 +375,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("MicroRegistrationConfig")
     public String microRegistrationConfig;
 
+    @NameInMap("MicroserviceEngineConfig")
+    public String microserviceEngineConfig;
+
     /**
      * <p>The percentage of the minimum number of available instances. Take note of the following rules:</p>
      * <ul>
@@ -430,6 +453,15 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("NasId")
     public String nasId;
 
+    /**
+     * <p>The name of the RAM role used to authenticate the user identity.</p>
+     * <blockquote>
+     * <p> You need to create an OpenID Connect (OIDC) identity provider (IdP) and an identity provider (IdP) for role-based single sign-on (SSO) in advance. For more information, see <a href="https://help.aliyun.com/document_detail/2331022.html">Creates an OpenID Connect (OIDC) identity provider (IdP)</a> and <a href="https://help.aliyun.com/document_detail/2331016.html">Creates an identity provider (IdP) for role-based single sign-on (SSO)</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sae-test</p>
+     */
     @NameInMap("OidcRoleName")
     public String oidcRoleName;
 
@@ -603,6 +635,10 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("Replicas")
     public Integer replicas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{“secretId&quot;:10,”key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
+     */
     @NameInMap("SecretMountDesc")
     public String secretMountDesc;
 
@@ -620,6 +656,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("ServiceTags")
     public String serviceTags;
 
+    /**
+     * <p>The configuration of the container.</p>
+     */
     @NameInMap("SidecarContainersConfig")
     public String sidecarContainersConfigShrink;
 
@@ -647,6 +686,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("SlsConfigs")
     public String slsConfigs;
+
+    @NameInMap("SwimlanePvtzDiscoverySvc")
+    public String swimlanePvtzDiscoverySvc;
 
     /**
      * <p>The timeout period for a graceful shutdown. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
@@ -1001,6 +1043,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
         return this.microRegistrationConfig;
     }
 
+    public DeployApplicationShrinkRequest setMicroserviceEngineConfig(String microserviceEngineConfig) {
+        this.microserviceEngineConfig = microserviceEngineConfig;
+        return this;
+    }
+    public String getMicroserviceEngineConfig() {
+        return this.microserviceEngineConfig;
+    }
+
     public DeployApplicationShrinkRequest setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
         this.minReadyInstanceRatio = minReadyInstanceRatio;
         return this;
@@ -1231,6 +1281,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public DeployApplicationShrinkRequest setSwimlanePvtzDiscoverySvc(String swimlanePvtzDiscoverySvc) {
+        this.swimlanePvtzDiscoverySvc = swimlanePvtzDiscoverySvc;
+        return this;
+    }
+    public String getSwimlanePvtzDiscoverySvc() {
+        return this.swimlanePvtzDiscoverySvc;
     }
 
     public DeployApplicationShrinkRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
