@@ -4,9 +4,26 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyForwardEntryRequest extends TeaModel {
+    /**
+     * <p>The elastic IP address (EIP) that is used to access the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121.XXX.XXX.28</p>
+     */
     @NameInMap("ExternalIp")
     public String externalIp;
 
+    /**
+     * <p>The external port or port range that is used for port forwarding.</p>
+     * <ul>
+     * <li>Valid values: 1 to 65535.</li>
+     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * <li>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("ExternalPort")
     public String externalPort;
 
@@ -38,12 +55,39 @@ public class ModifyForwardEntryRequest extends TeaModel {
     @NameInMap("HealthCheckPort")
     public Integer healthCheckPort;
 
+    /**
+     * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.XXX.XXX.50</p>
+     */
     @NameInMap("InternalIp")
     public String internalIp;
 
+    /**
+     * <p>The internal port or port range that is used for port forwarding.</p>
+     * <ul>
+     * <li>Valid values: 1 to 65535.</li>
+     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("InternalPort")
     public String internalPort;
 
+    /**
+     * <p>The protocol. Valid values:</p>
+     * <ul>
+     * <li><strong>TCP</strong>: forwards TCP packets.</li>
+     * <li><strong>UDP</strong>: forwards UDP packets.</li>
+     * <li><strong>Any</strong> (default): forwards all packets.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Any</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 

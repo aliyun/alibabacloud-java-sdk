@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysResponseBody extends TeaModel {
     /**
-     * <p>Details about the NAT gateways.</p>
+     * <p>The details of the NAT gateways.</p>
      */
     @NameInMap("NatGateways")
     public java.util.List<DescribeNatGatewaysResponseBodyNatGateways> natGateways;
@@ -92,12 +92,36 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysIpLists extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-50g****</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The IP address of the EIP associated with the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.XX.XX.162</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The association between the EIP and the Internet NAT gateway. Valid values:</p>
+         * <ul>
+         * <li><strong>UsedByForwardTable</strong>: The EIP is specified in a DNAT entry.</li>
+         * <li><strong>UsedBySnatTable</strong>: The EIP is specified in an SNAT entry.</li>
+         * <li><strong>UsedByForwardSnatTable</strong>: The EIP is specified in both an SNAT entry and a DNAT entry.</li>
+         * <li><strong>Idle</strong>: The EIP is not specified in a DNAT or SNAT entry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Idle</p>
+         */
         @NameInMap("UsingStatus")
         public String usingStatus;
 
@@ -151,6 +175,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</p>
+         */
         @NameInMap("IpLists")
         public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> ipLists;
 
@@ -190,6 +217,17 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("Spec")
         public String spec;
 
+        /**
+         * <p>The status of the SNAT entry.</p>
+         * <ul>
+         * <li>Pending: The SNAT entry is being created or modified.</li>
+         * <li>Available: The SNAT entry is available.</li>
+         * <li>Deleting: The SNAT entry is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 

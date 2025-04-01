@@ -61,6 +61,9 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     @NameInMap("SnatIp")
     public String snatIp;
 
+    /**
+     * <p>The information about the EIP specified in the SNAT entry.</p>
+     */
     @NameInMap("SnatIps")
     public java.util.List<String> snatIps;
 

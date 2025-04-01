@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworksResponseBody extends TeaModel {
     /**
-     * <p>The list of networks.</p>
+     * <p>The VPCs.</p>
      */
     @NameInMap("Networks")
     public DescribeNetworksResponseBodyNetworks networks;
@@ -166,6 +166,15 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
+        /**
+         * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
+         * <blockquote>
+         * <p> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rt-5*****tbs</p>
+         */
         @NameInMap("GatewayRouteTableId")
         public String gatewayRouteTableId;
 
@@ -196,11 +205,17 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("NetworkName")
         public String networkName;
 
+        /**
+         * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rt-5*****pks</p>
+         */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
         /**
-         * <p>The ID of the route table. Valid values of <strong>N</strong> are <strong>1</strong> to <strong>20</strong>, which specifies that you can disassociate a gateway endpoint from at most 20 route tables at a time.</p>
+         * <p>The IDs of the route tables.</p>
          */
         @NameInMap("RouteTableIds")
         public DescribeNetworksResponseBodyNetworksNetworkRouteTableIds routeTableIds;

@@ -14,7 +14,7 @@ public class DescribeNetworksRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The node information.</p>
+     * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
@@ -29,7 +29,7 @@ public class DescribeNetworksRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The ID of Network.</p>
+     * <p>The IDs of VPCs You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("NetworkIds")
     public java.util.List<String> networkIds;

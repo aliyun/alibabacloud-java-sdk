@@ -92,6 +92,12 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersResponseBodyListenersListener extends TeaModel {
+        /**
+         * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
+         */
         @NameInMap("BackendServerPort")
         public Integer backendServerPort;
 

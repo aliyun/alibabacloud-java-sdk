@@ -4,9 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenersRequest extends TeaModel {
+    /**
+     * <p>The description of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The listener port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 

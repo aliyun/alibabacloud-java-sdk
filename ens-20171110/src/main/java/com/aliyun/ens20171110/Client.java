@@ -1087,6 +1087,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoUseCoupon", request.autoUseCoupon);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cidr)) {
+            query.put("Cidr", request.cidr);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
         }

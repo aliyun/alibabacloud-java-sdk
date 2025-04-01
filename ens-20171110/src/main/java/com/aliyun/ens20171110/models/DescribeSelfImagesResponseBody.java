@@ -19,9 +19,21 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     @NameInMap("Images")
     public DescribeSelfImagesResponseBodyImages images;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 50. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
@@ -34,6 +46,12 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
