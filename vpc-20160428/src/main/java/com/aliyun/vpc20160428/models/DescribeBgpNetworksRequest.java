@@ -11,7 +11,7 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeBgpNetworksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page. The maximum value is <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBgpNetworksResponseBody extends TeaModel {
     /**
-     * <p>The BGP network.</p>
+     * <p>BGP networks.</p>
      */
     @NameInMap("BgpNetworks")
     public DescribeBgpNetworksResponseBodyBgpNetworks bgpNetworks;
