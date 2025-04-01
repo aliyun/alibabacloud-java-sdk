@@ -10,9 +10,17 @@ public class RefreshAdvisorCostCheckRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<String> checkIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RefreshResource")
     public Boolean refreshResource;
 

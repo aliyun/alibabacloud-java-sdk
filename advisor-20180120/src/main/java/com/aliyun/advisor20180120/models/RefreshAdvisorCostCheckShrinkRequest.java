@@ -10,9 +10,17 @@ public class RefreshAdvisorCostCheckShrinkRequest extends TeaModel {
     @NameInMap("CheckIds")
     public String checkIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("Product")
     public String product;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("RefreshResource")
     public Boolean refreshResource;
 

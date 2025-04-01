@@ -4,18 +4,36 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public RefreshAdvisorCostCheckResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>566331F9-****-550F-B745-A730331F97A9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,31 @@ public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
     }
 
     public static class RefreshAdvisorCostCheckResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c-wl*****n0g</p>
+         */
         @NameInMap("CommandId")
         public String commandId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11***********35</p>
+         */
         @NameInMap("ManagerTaskId")
         public Long managerTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <strong>example:</strong>
+         * <p>959***135</p>
+         */
         @NameInMap("TaskId")
         public Long taskId;
 

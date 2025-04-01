@@ -4,18 +4,36 @@ package com.aliyun.advisor20180120.models;
 import com.aliyun.tea.*;
 
 public class DescribeCostCheckResultsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeCostCheckResultsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>566331F9-****-550F-B745-A730331F97A9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,39 +83,79 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeCostCheckResultsResponseBodyDataViewGroupCheckItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AdviceCount")
         public Integer adviceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AdviceResourceCount")
         public Integer adviceResourceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EbsCostIdleCheck</p>
+         */
         @NameInMap("CheckId")
         public String checkId;
 
         @NameInMap("CheckName")
         public String checkName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurrentCost")
         public Float currentCost;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ExpectedSavingCost")
         public Float expectedSavingCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OptimizedCost")
         public Float optimizedCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>slb</p>
+         */
         @NameInMap("Product")
         public String product;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Severity")
         public Integer severity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
@@ -219,15 +277,31 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         @NameInMap("CheckItems")
         public java.util.List<DescribeCostCheckResultsResponseBodyDataViewGroupCheckItems> checkItems;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("GroupExpectedSavingCost")
         public Float groupExpectedSavingCost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aut***8ainRh1</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -282,21 +356,41 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
         @NameInMap("AdviceResourceCount")
         public Integer adviceResourceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Category</p>
+         */
         @NameInMap("GroupBy")
         public String groupBy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NormalCount")
         public Integer normalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>76</p>
+         */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
         @NameInMap("ViewGroup")
         public java.util.List<DescribeCostCheckResultsResponseBodyDataViewGroup> viewGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("WarningCount")
         public Integer warningCount;
 

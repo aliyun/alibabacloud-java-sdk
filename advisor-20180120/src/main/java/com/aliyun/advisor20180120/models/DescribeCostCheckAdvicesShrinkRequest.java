@@ -7,15 +7,31 @@ public class DescribeCostCheckAdvicesShrinkRequest extends TeaModel {
     @NameInMap("AssumeAliyunIdList")
     public String assumeAliyunIdListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EcsCostLowUtilizationCheck</p>
+     */
     @NameInMap("CheckId")
     public String checkId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -25,9 +41,17 @@ public class DescribeCostCheckAdvicesShrinkRequest extends TeaModel {
     @NameInMap("ResourceIds")
     public String resourceIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Severity")
     public String severity;
 

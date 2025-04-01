@@ -7,15 +7,31 @@ public class DescribeCostCheckAdvicesRequest extends TeaModel {
     @NameInMap("AssumeAliyunIdList")
     public java.util.List<Long> assumeAliyunIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EcsCostLowUtilizationCheck</p>
+     */
     @NameInMap("CheckId")
     public String checkId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -25,9 +41,17 @@ public class DescribeCostCheckAdvicesRequest extends TeaModel {
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Severity")
     public String severity;
 
@@ -142,6 +166,10 @@ public class DescribeCostCheckAdvicesRequest extends TeaModel {
     }
 
     public static class DescribeCostCheckAdvicesRequestTagList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecs_***_shanghai</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
