@@ -44,7 +44,7 @@ public class ListSitesRequest extends TeaModel {
      * <p>Sorting field. By default, it sorts by creation time, supporting the following options:</p>
      * <ul>
      * <li>gmtCreate: website creation time</li>
-     * <li>visitTime：website visit time</li>
+     * <li>visitTime: website visit time</li>
      * </ul>
      * 
      * <strong>example:</strong>

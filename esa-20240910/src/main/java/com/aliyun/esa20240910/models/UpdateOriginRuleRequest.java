@@ -63,6 +63,9 @@ public class UpdateOriginRuleRequest extends TeaModel {
     @NameInMap("OriginMtls")
     public String originMtls;
 
+    @NameInMap("OriginReadTimeout")
+    public String originReadTimeout;
+
     /**
      * <p>Protocol used for the origin request. Valid values:</p>
      * <ul>
@@ -215,6 +218,14 @@ public class UpdateOriginRuleRequest extends TeaModel {
     }
     public String getOriginMtls() {
         return this.originMtls;
+    }
+
+    public UpdateOriginRuleRequest setOriginReadTimeout(String originReadTimeout) {
+        this.originReadTimeout = originReadTimeout;
+        return this;
+    }
+    public String getOriginReadTimeout() {
+        return this.originReadTimeout;
     }
 
     public UpdateOriginRuleRequest setOriginScheme(String originScheme) {
