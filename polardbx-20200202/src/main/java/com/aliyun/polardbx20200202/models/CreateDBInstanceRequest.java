@@ -12,7 +12,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     @NameInMap("CNNodeCount")
-    public String CNNodeCount;
+    public Integer CNNodeCount;
 
     /**
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer DBNodeCount;
 
     @NameInMap("DNNodeCount")
-    public String DNNodeCount;
+    public Integer DNNodeCount;
 
     @NameInMap("DnClass")
     public String dnClass;
@@ -191,11 +191,11 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateDBInstanceRequest setCNNodeCount(String CNNodeCount) {
+    public CreateDBInstanceRequest setCNNodeCount(Integer CNNodeCount) {
         this.CNNodeCount = CNNodeCount;
         return this;
     }
-    public String getCNNodeCount() {
+    public Integer getCNNodeCount() {
         return this.CNNodeCount;
     }
 
@@ -231,11 +231,11 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.DBNodeCount;
     }
 
-    public CreateDBInstanceRequest setDNNodeCount(String DNNodeCount) {
+    public CreateDBInstanceRequest setDNNodeCount(Integer DNNodeCount) {
         this.DNNodeCount = DNNodeCount;
         return this;
     }
-    public String getDNNodeCount() {
+    public Integer getDNNodeCount() {
         return this.DNNodeCount;
     }
 

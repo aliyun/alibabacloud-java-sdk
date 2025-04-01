@@ -623,6 +623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建实例</p>
+     * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBInstanceResponse
@@ -771,6 +774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建实例</p>
+     * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      */
@@ -1477,6 +1483,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询CDC信息</p>
+     * 
+     * @param request DescribeCdcInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCdcInfoResponse
+     */
+    public DescribeCdcInfoResponse describeCdcInfoWithOptions(DescribeCdcInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCdcInfo"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCdcInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCdcInfoResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询CDC信息</p>
+     * 
+     * @param request DescribeCdcInfoRequest
+     * @return DescribeCdcInfoResponse
+     */
+    public DescribeCdcInfoResponse describeCdcInfo(DescribeCdcInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCdcInfoWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DescribeCharacterSetRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCharacterSetResponse
@@ -1999,6 +2058,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>性能监控数据接口</p>
+     * 
      * @param request DescribeDBNodePerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBNodePerformanceResponse
@@ -2061,6 +2123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>性能监控数据接口</p>
+     * 
      * @param request DescribeDBNodePerformanceRequest
      * @return DescribeDBNodePerformanceResponse
      */
@@ -4416,6 +4481,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>扩缩容实例节点数</p>
+     * 
      * @param request UpdatePolarDBXInstanceNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePolarDBXInstanceNodeResponse
@@ -4482,6 +4550,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>扩缩容实例节点数</p>
+     * 
      * @param request UpdatePolarDBXInstanceNodeRequest
      * @return UpdatePolarDBXInstanceNodeResponse
      */

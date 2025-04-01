@@ -12,7 +12,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
      * <p>2</p>
      */
     @NameInMap("CNNodeCount")
-    public String CNNodeCount;
+    public Integer CNNodeCount;
 
     /**
      * <strong>example:</strong>
@@ -35,14 +35,14 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
      * <p>2</p>
      */
     @NameInMap("DNNodeCount")
-    public String DNNodeCount;
+    public Integer DNNodeCount;
 
     /**
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("DbInstanceNodeCount")
-    public String dbInstanceNodeCount;
+    public Integer dbInstanceNodeCount;
 
     @NameInMap("DeleteDNIds")
     public String deleteDNIds;
@@ -72,11 +72,11 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
         return this.addDNSpec;
     }
 
-    public UpdatePolarDBXInstanceNodeRequest setCNNodeCount(String CNNodeCount) {
+    public UpdatePolarDBXInstanceNodeRequest setCNNodeCount(Integer CNNodeCount) {
         this.CNNodeCount = CNNodeCount;
         return this;
     }
-    public String getCNNodeCount() {
+    public Integer getCNNodeCount() {
         return this.CNNodeCount;
     }
 
@@ -96,19 +96,19 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public UpdatePolarDBXInstanceNodeRequest setDNNodeCount(String DNNodeCount) {
+    public UpdatePolarDBXInstanceNodeRequest setDNNodeCount(Integer DNNodeCount) {
         this.DNNodeCount = DNNodeCount;
         return this;
     }
-    public String getDNNodeCount() {
+    public Integer getDNNodeCount() {
         return this.DNNodeCount;
     }
 
-    public UpdatePolarDBXInstanceNodeRequest setDbInstanceNodeCount(String dbInstanceNodeCount) {
+    public UpdatePolarDBXInstanceNodeRequest setDbInstanceNodeCount(Integer dbInstanceNodeCount) {
         this.dbInstanceNodeCount = dbInstanceNodeCount;
         return this;
     }
-    public String getDbInstanceNodeCount() {
+    public Integer getDbInstanceNodeCount() {
         return this.dbInstanceNodeCount;
     }
 

@@ -238,6 +238,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @NameInMap("SqlType")
         public String sqlType;
 
+        @NameInMap("TemplateId")
+        public String templateId;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -436,6 +439,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
         public String getSqlType() {
             return this.sqlType;
+        }
+
+        public DescribeSlowLogRecordsResponseBodyItems setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
         public DescribeSlowLogRecordsResponseBodyItems setTooLong(String tooLong) {
