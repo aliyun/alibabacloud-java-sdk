@@ -2826,6 +2826,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OriginMtls", request.originMtls);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originReadTimeout)) {
+            query.put("OriginReadTimeout", request.originReadTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.originScheme)) {
             query.put("OriginScheme", request.originScheme);
         }
@@ -8185,6 +8189,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetEdgeContainerAppResourceReserveResponse getEdgeContainerAppResourceReserve(GetEdgeContainerAppResourceReserveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEdgeContainerAppResourceReserveWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用资源分布</p>
+     * 
+     * @param request GetEdgeContainerAppResourceStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEdgeContainerAppResourceStatusResponse
+     */
+    public GetEdgeContainerAppResourceStatusResponse getEdgeContainerAppResourceStatusWithOptions(GetEdgeContainerAppResourceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEdgeContainerAppResourceStatus"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEdgeContainerAppResourceStatusResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetEdgeContainerAppResourceStatusResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取边缘容器应用资源分布</p>
+     * 
+     * @param request GetEdgeContainerAppResourceStatusRequest
+     * @return GetEdgeContainerAppResourceStatusResponse
+     */
+    public GetEdgeContainerAppResourceStatusResponse getEdgeContainerAppResourceStatus(GetEdgeContainerAppResourceStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getEdgeContainerAppResourceStatusWithOptions(request, runtime);
     }
 
     /**
@@ -16721,6 +16774,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.originMtls)) {
             query.put("OriginMtls", request.originMtls);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originReadTimeout)) {
+            query.put("OriginReadTimeout", request.originReadTimeout);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.originScheme)) {
