@@ -788,6 +788,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建模型信息</p>
+     * 
+     * @param request CreateModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateModelResponse
+     */
+    public CreateModelResponse createModelWithOptions(String instanceId, CreateModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateModel"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/models"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateModelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateModelResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建模型信息</p>
+     * 
+     * @param request CreateModelRequest
+     * @return CreateModelResponse
+     */
+    public CreateModelResponse createModel(String instanceId, CreateModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createModelWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a public endpoint.</p>
      * 
      * @param headers map
@@ -966,6 +1028,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createTableWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调试模型</p>
+     * 
+     * @param request DebugModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DebugModelResponse
+     */
+    public DebugModelResponse debugModelWithOptions(String instanceId, String modelName, DebugModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isOnline)) {
+            query.put("isOnline", request.isOnline);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DebugModel"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelName) + "/actions/debug"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DebugModelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DebugModelResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调试模型</p>
+     * 
+     * @param request DebugModelRequest
+     * @return DebugModelResponse
+     */
+    public DebugModelResponse debugModel(String instanceId, String modelName, DebugModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.debugModelWithOptions(instanceId, modelName, request, headers, runtime);
     }
 
     /**
@@ -1436,6 +1556,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteInstanceWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除模型</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteModelResponse
+     */
+    public DeleteModelResponse deleteModelWithOptions(String instanceId, String modelName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteModel"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelName) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteModelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteModelResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除模型</p>
+     * @return DeleteModelResponse
+     */
+    public DeleteModelResponse deleteModel(String instanceId, String modelName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteModelWithOptions(instanceId, modelName, headers, runtime);
     }
 
     /**
@@ -2454,6 +2616,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getInstanceWithOptions(instanceId, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</li>
+     * <li>确保提供的<code>instanceId</code>和<code>modelName</code>是有效的，否则可能返回错误或找不到资源。</li>
+     * <li>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>通过实例ID和模型名称查询特定模型的详细配置信息。</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetModelResponse
+     */
+    public GetModelResponse getModelWithOptions(String instanceId, String modelName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetModel"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetModelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetModelResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API用于获取指定实例下的特定模型的详细信息，包括模型类型、URL、状态等。</li>
+     * <li>确保提供的<code>instanceId</code>和<code>modelName</code>是有效的，否则可能返回错误或找不到资源。</li>
+     * <li>返回的数据结构中包含了模型的内容（如请求头、参数等）以及创建和更新时间，有助于了解模型的具体配置及其最新状态。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>通过实例ID和模型名称查询特定模型的详细配置信息。</p>
+     * @return GetModelResponse
+     */
+    public GetModelResponse getModel(String instanceId, String modelName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getModelWithOptions(instanceId, modelName, headers, runtime);
     }
 
     /**
@@ -3623,6 +3843,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listLogsWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过实例ID查询指定条件下的模型列表。</p>
+     * 
+     * @param request ListModelsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListModelsResponse
+     */
+    public ListModelsResponse listModelsWithOptions(String instanceId, ListModelsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListModels"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/models"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListModelsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListModelsResponse());
+        }
+
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>本API用于从指定实例中获取模型列表，支持通过模型名称、类型以及分页参数进行筛选。请求时需提供实例ID作为路径参数，其他筛选条件为可选的查询参数。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>通过实例ID查询指定条件下的模型列表。</p>
+     * 
+     * @param request ListModelsRequest
+     * @return ListModelsResponse
+     */
+    public ListModelsResponse listModels(String instanceId, ListModelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listModelsWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
@@ -5151,6 +5443,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.modifyIndexVersionWithOptions(instanceId, clusterName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改模型详情，修改模型状态</p>
+     * 
+     * @param request ModifyModelRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyModelResponse
+     */
+    public ModifyModelResponse modifyModelWithOptions(String instanceId, String modelName, ModifyModelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("dryRun", request.dryRun);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyModel"),
+            new TeaPair("version", "2021-10-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/ha3/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/models/" + com.aliyun.openapiutil.Client.getEncodeParam(modelName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyModelResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyModelResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改模型详情，修改模型状态</p>
+     * 
+     * @param request ModifyModelRequest
+     * @return ModifyModelResponse
+     */
+    public ModifyModelResponse modifyModel(String instanceId, String modelName, ModifyModelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.modifyModelWithOptions(instanceId, modelName, request, headers, runtime);
     }
 
     /**
