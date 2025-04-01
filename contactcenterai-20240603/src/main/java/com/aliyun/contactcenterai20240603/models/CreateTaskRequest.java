@@ -4,6 +4,9 @@ package com.aliyun.contactcenterai20240603.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    @NameInMap("categoryTags")
+    public java.util.List<CreateTaskRequestCategoryTags> categoryTags;
+
     @NameInMap("customPrompt")
     public String customPrompt;
 
@@ -46,9 +49,20 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("transcription")
     public CreateTaskRequestTranscription transcription;
 
+    @NameInMap("variables")
+    public java.util.List<CreateTaskRequestVariables> variables;
+
     public static CreateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskRequest self = new CreateTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTaskRequest setCategoryTags(java.util.List<CreateTaskRequestCategoryTags> categoryTags) {
+        this.categoryTags = categoryTags;
+        return this;
+    }
+    public java.util.List<CreateTaskRequestCategoryTags> getCategoryTags() {
+        return this.categoryTags;
     }
 
     public CreateTaskRequest setCustomPrompt(String customPrompt) {
@@ -129,6 +143,44 @@ public class CreateTaskRequest extends TeaModel {
     }
     public CreateTaskRequestTranscription getTranscription() {
         return this.transcription;
+    }
+
+    public CreateTaskRequest setVariables(java.util.List<CreateTaskRequestVariables> variables) {
+        this.variables = variables;
+        return this;
+    }
+    public java.util.List<CreateTaskRequestVariables> getVariables() {
+        return this.variables;
+    }
+
+    public static class CreateTaskRequestCategoryTags extends TeaModel {
+        @NameInMap("tagDesc")
+        public String tagDesc;
+
+        @NameInMap("tagName")
+        public String tagName;
+
+        public static CreateTaskRequestCategoryTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestCategoryTags self = new CreateTaskRequestCategoryTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestCategoryTags setTagDesc(String tagDesc) {
+            this.tagDesc = tagDesc;
+            return this;
+        }
+        public String getTagDesc() {
+            return this.tagDesc;
+        }
+
+        public CreateTaskRequestCategoryTags setTagName(String tagName) {
+            this.tagName = tagName;
+            return this;
+        }
+        public String getTagName() {
+            return this.tagName;
+        }
+
     }
 
     public static class CreateTaskRequestDialogueSentences extends TeaModel {
@@ -590,6 +642,36 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getVoiceFileUrl() {
             return this.voiceFileUrl;
+        }
+
+    }
+
+    public static class CreateTaskRequestVariables extends TeaModel {
+        @NameInMap("variableCode")
+        public String variableCode;
+
+        @NameInMap("variableValue")
+        public String variableValue;
+
+        public static CreateTaskRequestVariables build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestVariables self = new CreateTaskRequestVariables();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestVariables setVariableCode(String variableCode) {
+            this.variableCode = variableCode;
+            return this;
+        }
+        public String getVariableCode() {
+            return this.variableCode;
+        }
+
+        public CreateTaskRequestVariables setVariableValue(String variableValue) {
+            this.variableValue = variableValue;
+            return this;
+        }
+        public String getVariableValue() {
+            return this.variableValue;
         }
 
     }
