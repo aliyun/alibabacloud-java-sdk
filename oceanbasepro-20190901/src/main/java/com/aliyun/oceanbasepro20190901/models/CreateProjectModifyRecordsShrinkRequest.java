@@ -4,9 +4,6 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectModifyRecordsShrinkRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Databases")
     public String databasesShrink;
 
@@ -18,6 +15,9 @@ public class CreateProjectModifyRecordsShrinkRequest extends TeaModel {
      */
     @NameInMap("Id")
     public String id;
+
+    @NameInMap("TransferMapping")
+    public String transferMappingShrink;
 
     public static CreateProjectModifyRecordsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectModifyRecordsShrinkRequest self = new CreateProjectModifyRecordsShrinkRequest();
@@ -38,6 +38,14 @@ public class CreateProjectModifyRecordsShrinkRequest extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public CreateProjectModifyRecordsShrinkRequest setTransferMappingShrink(String transferMappingShrink) {
+        this.transferMappingShrink = transferMappingShrink;
+        return this;
+    }
+    public String getTransferMappingShrink() {
+        return this.transferMappingShrink;
     }
 
 }
