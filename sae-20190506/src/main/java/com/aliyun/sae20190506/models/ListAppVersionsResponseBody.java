@@ -18,12 +18,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The deployment method of the application. Valid values:</p>
-     * <ul>
-     * <li><strong>image</strong>: indicates that the application was deployed by using an image.</li>
-     * <li><strong>upload</strong>: indicates that the application was deployed by uploading a WAR or JAR package.</li>
-     * <li><strong>url</strong>: indicates that the application was deployed by specifying the URL of a WAR or JAR package.</li>
-     * </ul>
+     * <p>The information about the versions.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListAppVersionsResponseBodyData> data;
@@ -120,9 +115,10 @@ public class ListAppVersionsResponseBody extends TeaModel {
 
     public static class ListAppVersionsResponseBodyData extends TeaModel {
         /**
+         * <p>The URL of the code package. If you use the SAE console to upload the code package, take note of the following items:</p>
          * <ul>
-         * <li>The address of the image. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>image</strong>.</li>
-         * <li>The download link of the WAR or JAR package. This parameter is returned when the <strong>Type</strong> parameter is set to <strong>upload</strong>.</li>
+         * <li>You cannot download the URL. You must call the GetPackageVersionAccessableUrl operation to obtain the URL. The obtained URL is valid for 10 minutes.</li>
+         * <li>SAE can retain the package up to 90 days. After 90 days, the URL cannot be returned or downloaded.</li>
          * </ul>
          */
         @NameInMap("BuildPackageUrl")
@@ -151,7 +147,11 @@ public class ListAppVersionsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The deployment method of the application. Valid values:</p>
+         * <ul>
+         * <li><strong>image</strong>: indicates that the application is deployed by using an image.</li>
+         * <li><strong>url</strong>: indicates that the application is deployed by using a code package.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>image</p>
@@ -160,7 +160,7 @@ public class ListAppVersionsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The ID of the version.</p>
+         * <p>The URL of the image.</p>
          */
         @NameInMap("WarUrl")
         public String warUrl;

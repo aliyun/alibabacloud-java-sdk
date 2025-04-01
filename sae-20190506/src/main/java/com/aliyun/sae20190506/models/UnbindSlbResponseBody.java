@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class UnbindSlbResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the internal-facing or Internet-facing SLB instance was disassociated successfully. Valid values:</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The SLB instance was disassociated successfully.</li>
-     * <li><strong>false</strong>: The SLB instance could not be disassociated.</li>
+     * <li><strong>2xx</strong>: The call was successful.</li>
+     * <li><strong>3xx</strong>: The call was redirected.</li>
+     * <li><strong>4xx</strong>: The call failed.</li>
+     * <li><strong>5xx</strong>: A server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,25 +20,27 @@ public class UnbindSlbResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the change order. It can be used to query the task status.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public UnbindSlbResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>success: If the call is successful, <strong>success</strong> is returned.</li>
+     * <li>An error code: If the call fails, an error code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,11 +49,7 @@ public class UnbindSlbResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned message.</p>
-     * <ul>
-     * <li><strong>success</strong> is returned when the request succeeds.</li>
-     * <li>An error code is returned when the request fails.</li>
-     * </ul>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -58,6 +58,12 @@ public class UnbindSlbResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the internal-facing or Internet-facing SLB instance was disassociated. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The SLB instance was disassociated.</li>
+     * <li><strong>false</strong>: The SLB instance failed to be disassociated.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -65,7 +71,7 @@ public class UnbindSlbResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The trace ID that is used to query the details of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -136,11 +142,7 @@ public class UnbindSlbResponseBody extends TeaModel {
 
     public static class UnbindSlbResponseBodyData extends TeaModel {
         /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-         * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
-         * </ul>
+         * <p>The ID of the change order. The ID can be used to query the status of the change task.</p>
          * 
          * <strong>example:</strong>
          * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>

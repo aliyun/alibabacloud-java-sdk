@@ -20,7 +20,7 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information of the namespace.</p>
+     * <p>The information about a namespace.</p>
      */
     @NameInMap("Data")
     public UpdateNamespaceResponseBodyData data;
@@ -140,6 +140,16 @@ public class UpdateNamespaceResponseBody extends TeaModel {
     }
 
     public static class UpdateNamespaceResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether to enable SAE built-in registry:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableMicroRegistration")
         public Boolean enableMicroRegistration;
 

@@ -30,6 +30,9 @@ public class UpdateIngressRequest extends TeaModel {
     @NameInMap("CertIds")
     public String certIds;
 
+    @NameInMap("CorsConfig")
+    public String corsConfig;
+
     /**
      * <p>The default forwarding rule. You can specify a port and an application in the default forwarding rule to forward traffic based on the IP address. The following list describes the involved parameters:</p>
      * <ul>
@@ -71,8 +74,13 @@ public class UpdateIngressRequest extends TeaModel {
     public Boolean enableXForwardedForSlbPort;
 
     /**
+     * <p>The timeout period of idle connections. Unit: seconds.</p>
+     * <blockquote>
+     * <p> A value of 0 indicates that the default value is used.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
-     * <p>3</p>
+     * <p>15</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
@@ -119,6 +127,8 @@ public class UpdateIngressRequest extends TeaModel {
     public String loadBalanceType;
 
     /**
+     * <p>The request timed out. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -141,8 +151,10 @@ public class UpdateIngressRequest extends TeaModel {
     public String rules;
 
     /**
+     * <p>The ID of a security policy.</p>
+     * 
      * <strong>example:</strong>
-     * <p>tls_cipher_policy_1_0</p>
+     * <p>tls_cipher_policy_1_2_strict_with_1_3</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
@@ -166,6 +178,14 @@ public class UpdateIngressRequest extends TeaModel {
     }
     public String getCertIds() {
         return this.certIds;
+    }
+
+    public UpdateIngressRequest setCorsConfig(String corsConfig) {
+        this.corsConfig = corsConfig;
+        return this;
+    }
+    public String getCorsConfig() {
+        return this.corsConfig;
     }
 
     public UpdateIngressRequest setDefaultRule(String defaultRule) {

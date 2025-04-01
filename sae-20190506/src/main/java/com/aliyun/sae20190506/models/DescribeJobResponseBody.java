@@ -20,7 +20,7 @@ public class DescribeJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the application.</p>
+     * <p>The information of the job template.</p>
      */
     @NameInMap("Data")
     public DescribeJobResponseBodyData data;
@@ -57,10 +57,10 @@ public class DescribeJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the configurations of an application were obtained. Valid values:</p>
+     * <p>Indicates whether the configurations of the job template were obtained. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The configurations were obtained.</li>
+     * <li><strong>false</strong>: The configurations failed to be obtained.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The path on which the NAS file system is mounted.</p>
+         * <p>The path on which the ConfigMap is mounted.</p>
          * 
          * <strong>example:</strong>
          * <p>/tmp</p>
@@ -259,7 +259,7 @@ public class DescribeJobResponseBody extends TeaModel {
 
     public static class DescribeJobResponseBodyDataOssMountDescs extends TeaModel {
         /**
-         * <p>The bucket name.</p>
+         * <p>The name of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-bucket</p>
@@ -286,10 +286,10 @@ public class DescribeJobResponseBody extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
+         * <p>Indicates whether the job template can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The application has the read-only permission.</li>
-         * <li><strong>false</strong>: The application has read and write permissions.</li>
+         * <li><strong>true</strong>: The job template has the read-only permissions.</li>
+         * <li><strong>false</strong>: The job template has the read and write permissions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -399,7 +399,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The description of the job template.</p>
          * 
          * <strong>example:</strong>
          * <p>Sample application</p>
@@ -408,7 +408,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String appDescription;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the job template.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -417,7 +417,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the job template.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-app</p>
@@ -513,7 +513,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String customHostAlias;
 
         /**
-         * <p>The version of the container, such as Ali-Tomcat, in which an application developed based on High-speed Service Framework (HSF) is deployed.</p>
+         * <p>The version of the container, such as Ali-Tomcat, in which a job that is developed based on High-speed Service Framework (HSF) is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>3.5.3</p>
@@ -565,7 +565,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>start</p>
@@ -574,7 +574,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String jarStartArgs;
 
         /**
-         * <p>The option settings in the JAR package. The settings are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+         * <p>The option settings in the JAR package. The settings are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>-Dtest=true</p>
@@ -628,7 +628,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public java.util.List<DescribeJobResponseBodyDataMountDesc> mountDesc;
 
         /**
-         * <p>The mount target of the NAS file system in the VPC in which the application is deployed. If you do not need to modify this configuration during the deployment, configure <strong>MountHost</strong> only in the first request. If you need to remove this configuration, leave <strong>MountHost</strong> empty in the request.</p>
+         * <p>The mount target of the Apsara File Storage NAS (NAS) file system in the virtual private cloud (VPC) where the job template is deployed. If you do not need to modify the NAS configurations when you deploy the job template, configure the <strong>MountHost</strong> parameter only in the first request. You do not need to include this parameter in subsequent requests. If you no longer need to use NAS, leave the <strong>MountHost</strong> parameter empty in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -690,9 +690,9 @@ public class DescribeJobResponseBody extends TeaModel {
         /**
          * <p>The type of the deployment package. Valid values:</p>
          * <ul>
-         * <li><p>If you deploy the application by using a Java Archive (JAR) package, this parameter is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
+         * <li><p>If you deploy a Java job template, you can set this parameter to <strong>FatJar</strong>, <strong>War</strong>, or <strong>Image</strong>.</p>
          * </li>
-         * <li><p>If you deploy the application by using a PHP package, this parameter is set to one of the following values:</p>
+         * <li><p>If you deploy a PHP job template, the following types are available:</p>
          * <ul>
          * <li><strong>PhpZip</strong></li>
          * <li><strong>IMAGE_PHP_5_4</strong></li>
@@ -711,7 +711,7 @@ public class DescribeJobResponseBody extends TeaModel {
          * <li><strong>IMAGE_PHP_7_3_ALPINE</strong></li>
          * </ul>
          * </li>
-         * <li><p>If you deploy the application by using a Pythhon package, this parameter is set to <strong>PythonZip</strong> or <strong>Image</strong>.</p>
+         * <li><p>If you deploy a Python job template, you can set this parameter to <strong>PythonZip</strong> or <strong>Image</strong>.</p>
          * </li>
          * </ul>
          * 
@@ -746,7 +746,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String phpConfig;
 
         /**
-         * <p>The path on which the PHP configuration file for application startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
+         * <p>The path on which the PHP configuration file for job startup is mounted. Make sure that the PHP server uses this configuration file during the startup.</p>
          * 
          * <strong>example:</strong>
          * <p>/usr/local/etc/php/php.ini</p>
@@ -773,12 +773,12 @@ public class DescribeJobResponseBody extends TeaModel {
         public String preStop;
 
         /**
-         * <p>The programming language that is used to create the application. Valid values:</p>
+         * <p>The programming language in which the job template is created. Valid values:</p>
          * <ul>
          * <li><strong>java</strong>: Java</li>
          * <li><strong>php</strong>: PHP</li>
          * <li><strong>python</strong>: Python</li>
-         * <li><strong>other</strong>: other programming languages, such as C++, Go, .NET, and Node.js.</li>
+         * <li><strong>other</strong>: other programming languages, such as C++, Go, .NET, and Node.js</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -836,7 +836,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The number of application instances.</p>
+         * <p>The number of job instances.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -918,7 +918,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public Integer terminationGracePeriodSeconds;
 
         /**
-         * <p>The timeout period for the job. Unit: seconds.</p>
+         * <p>The timeout period of the job. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -979,7 +979,7 @@ public class DescribeJobResponseBody extends TeaModel {
         public java.util.List<String> vpcWebHookUrls;
 
         /**
-         * <p>The option settings in the WAR package. The settings are used to start the application container. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
+         * <p>The option settings in the WAR package. The settings are used to start the job. The default startup command is <code>java $JAVA_OPTS $CATALINA_OPTS -Options org.apache.catalina.startup.Bootstrap &quot;$@&quot; start</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>custom-option</p>

@@ -4,10 +4,18 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListWebApplicationInstancesShrinkRequest extends TeaModel {
+    /**
+     * <p>The time when the operation ended.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1715567192</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c-667d143a-17b4e0fa-46d3a2******</p>
      */
@@ -15,6 +23,8 @@ public class ListWebApplicationInstancesShrinkRequest extends TeaModel {
     public String instanceIdsShrink;
 
     /**
+     * <p>The number of application instances returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +32,7 @@ public class ListWebApplicationInstancesShrinkRequest extends TeaModel {
     public String limit;
 
     /**
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,13 +41,24 @@ public class ListWebApplicationInstancesShrinkRequest extends TeaModel {
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1562831689704</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>The status of the application instance.</p>
+     */
     @NameInMap("Statuses")
     public String statusesShrink;
 
     /**
+     * <p>The ID of the application version.</p>
+     * 
      * <strong>example:</strong>
      * <p>001</p>
      */

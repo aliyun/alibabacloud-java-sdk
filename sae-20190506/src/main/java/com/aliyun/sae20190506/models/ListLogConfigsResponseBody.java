@@ -18,7 +18,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of logging configurations.</p>
+     * <p>The logging configurations.</p>
      */
     @NameInMap("Data")
     public ListLogConfigsResponseBodyData data;
@@ -154,7 +154,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The name of the Logstore in Log Service.</p>
+         * <p>The path of the log file (log source).</p>
          * 
          * <strong>example:</strong>
          * <p>/root/logs/hsf/hsf.log</p>
@@ -289,7 +289,7 @@ public class ListLogConfigsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The name of the Log Service configuration.</p>
+         * <p>The details of the logging configuration.</p>
          */
         @NameInMap("LogConfigs")
         public java.util.List<ListLogConfigsResponseBodyDataLogConfigs> logConfigs;

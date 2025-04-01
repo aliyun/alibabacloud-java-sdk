@@ -26,17 +26,17 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
     public UpdateGreyTagRouteResponseBodyData data;
 
     /**
-     * <p>The returned error code. Valid values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
      * <li>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
-     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</li>
+     * <li>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +45,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9D29CBD0-45D3-410B-9826-52F86F90****</p>

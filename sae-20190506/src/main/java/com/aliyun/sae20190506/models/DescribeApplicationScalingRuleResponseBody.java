@@ -4,6 +4,10 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -16,6 +20,10 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -28,6 +36,10 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -134,15 +146,31 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("MetricType")
         public String metricType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lb-xxx</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SlbLogstore")
         public String slbLogstore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SlbProject")
         public String slbProject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Vport")
         public String vport;
 
@@ -682,9 +710,17 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("AtTime")
         public String atTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
@@ -853,9 +889,6 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
-        @NameInMap("EnableIdle")
-        public Boolean enableIdle;
-
         /**
          * <p>The time when the auto scaling policy was last disabled.</p>
          * 
@@ -871,9 +904,17 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("Metric")
         public DescribeApplicationScalingRuleResponseBodyDataMetric metric;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("MinReadyInstanceRatio")
         public Integer minReadyInstanceRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinReadyInstances")
         public Integer minReadyInstances;
 
@@ -947,14 +988,6 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        public DescribeApplicationScalingRuleResponseBodyData setEnableIdle(Boolean enableIdle) {
-            this.enableIdle = enableIdle;
-            return this;
-        }
-        public Boolean getEnableIdle() {
-            return this.enableIdle;
         }
 
         public DescribeApplicationScalingRuleResponseBodyData setLastDisableTime(Long lastDisableTime) {

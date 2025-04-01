@@ -202,6 +202,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AppType")
+        public String appType;
+
         @NameInMap("BaseAppId")
         public String baseAppId;
 
@@ -219,6 +222,12 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         @NameInMap("NamespaceId")
         public String namespaceId;
+
+        @NameInMap("NamespaceName")
+        public String namespaceName;
+
+        @NameInMap("NewSaeVersion")
+        public String newSaeVersion;
 
         @NameInMap("ProgrammingLanguage")
         public String programmingLanguage;
@@ -275,6 +284,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListApplicationsResponseBodyDataApplicationsChildren setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
+        }
+
         public ListApplicationsResponseBodyDataApplicationsChildren setBaseAppId(String baseAppId) {
             this.baseAppId = baseAppId;
             return this;
@@ -321,6 +338,22 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getNamespaceId() {
             return this.namespaceId;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setNamespaceName(String namespaceName) {
+            this.namespaceName = namespaceName;
+            return this;
+        }
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setNewSaeVersion(String newSaeVersion) {
+            this.newSaeVersion = newSaeVersion;
+            return this;
+        }
+        public String getNewSaeVersion() {
+            return this.newSaeVersion;
         }
 
         public ListApplicationsResponseBodyDataApplicationsChildren setProgrammingLanguage(String programmingLanguage) {
@@ -456,6 +489,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("AppType")
+        public String appType;
+
         @NameInMap("BaseAppId")
         public String baseAppId;
 
@@ -479,6 +515,9 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("Cpu")
         public Integer cpu;
+
+        @NameInMap("EnableIdle")
+        public String enableIdle;
 
         @NameInMap("ImageUrl")
         public String imageUrl;
@@ -527,6 +566,12 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("NamespaceId")
         public String namespaceId;
+
+        @NameInMap("NamespaceName")
+        public String namespaceName;
+
+        @NameInMap("NewSaeVersion")
+        public String newSaeVersion;
 
         @NameInMap("PackageUrl")
         public String packageUrl;
@@ -595,6 +640,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListApplicationsResponseBodyDataApplications setAppType(String appType) {
+            this.appType = appType;
+            return this;
+        }
+        public String getAppType() {
+            return this.appType;
+        }
+
         public ListApplicationsResponseBodyDataApplications setBaseAppId(String baseAppId) {
             this.baseAppId = baseAppId;
             return this;
@@ -617,6 +670,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setEnableIdle(String enableIdle) {
+            this.enableIdle = enableIdle;
+            return this;
+        }
+        public String getEnableIdle() {
+            return this.enableIdle;
         }
 
         public ListApplicationsResponseBodyDataApplications setImageUrl(String imageUrl) {
@@ -665,6 +726,22 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public String getNamespaceId() {
             return this.namespaceId;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setNamespaceName(String namespaceName) {
+            this.namespaceName = namespaceName;
+            return this;
+        }
+        public String getNamespaceName() {
+            return this.namespaceName;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setNewSaeVersion(String newSaeVersion) {
+            this.newSaeVersion = newSaeVersion;
+            return this;
+        }
+        public String getNewSaeVersion() {
+            return this.newSaeVersion;
         }
 
         public ListApplicationsResponseBodyDataApplications setPackageUrl(String packageUrl) {

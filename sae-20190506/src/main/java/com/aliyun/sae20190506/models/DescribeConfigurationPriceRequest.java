@@ -5,6 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeConfigurationPriceRequest extends TeaModel {
     /**
+     * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+     * <ul>
+     * <li><strong>500</strong></li>
+     * <li><strong>1000</strong></li>
+     * <li><strong>2000</strong></li>
+     * <li><strong>4000</strong></li>
+     * <li><strong>8000</strong></li>
+     * <li><strong>12000</strong></li>
+     * <li><strong>16000</strong></li>
+     * <li><strong>32000</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +25,19 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     public Integer cpu;
 
     /**
+     * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+     * <ul>
+     * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+     * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+     * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+     * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8,000.</li>
+     * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+     * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+     * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+     * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+     * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+     * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +46,16 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     /**
+     * <p>Scenarios:</p>
+     * <ul>
+     * <li>Web</li>
+     * <li>micro_service</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Web</p>
      */
@@ -48,6 +81,14 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public DescribeConfigurationPriceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DescribeConfigurationPriceRequest setWorkload(String workload) {

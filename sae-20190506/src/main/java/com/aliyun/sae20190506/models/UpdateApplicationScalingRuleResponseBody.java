@@ -176,15 +176,31 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("MetricType")
         public String metricType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>lb-xxx</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SlbLogstore")
         public String slbLogstore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("SlbProject")
         public String slbProject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Vport")
         public String vport;
 
@@ -309,9 +325,17 @@ public class UpdateApplicationScalingRuleResponseBody extends TeaModel {
         @NameInMap("AtTime")
         public String atTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 

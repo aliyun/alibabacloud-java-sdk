@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIngressRequest extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The ID of the routing rule to be queried.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

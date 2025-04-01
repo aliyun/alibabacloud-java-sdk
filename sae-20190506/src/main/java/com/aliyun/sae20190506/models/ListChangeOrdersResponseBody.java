@@ -18,7 +18,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The information about change orders.</p>
      */
     @NameInMap("Data")
     public ListChangeOrdersResponseBodyData data;
@@ -178,7 +178,29 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         public String coType;
 
         /**
-         * <p>The ID of the change order.</p>
+         * <p>The code of the change order. Valid values:</p>
+         * <ul>
+         * <li><strong>CoBindSlb</strong>: associates the Server Load Balancer (SLB) instance with the application.</li>
+         * <li><strong>CoUnbindSlb</strong>: disassociates an SLB instance from the application.</li>
+         * <li><strong>CoCreateApp</strong>: creates the application.</li>
+         * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
+         * <li><strong>CoDeploy</strong>: deploys the application.</li>
+         * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
+         * <li><strong>CoRollback</strong>: rolls back the application.</li>
+         * <li><strong>CoScaleIn</strong>: scales in the application.</li>
+         * <li><strong>CoScaleOut</strong>: scales out the application.</li>
+         * <li><strong>CoStartApplication</strong>: starts the application.</li>
+         * <li><strong>CoStopApplication</strong>: stops the application.</li>
+         * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance type.</li>
+         * <li><strong>CoDeployHistroy</strong>: rolls back the application to an earlier version.</li>
+         * <li><strong>CoBindNas</strong>: associates a network-attached storage (NAS) file system with the application.</li>
+         * <li><strong>CoUnbindNas</strong>: disassociates a NAS file system from the application.</li>
+         * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
+         * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
+         * <li><strong>CoRestartInstances</strong>: restarts the instance.</li>
+         * <li><strong>CoDeleteInstances</strong>: deletes the instance.</li>
+         * <li><strong>CoScaleInAppWithInstances</strong>: reduces the specified number of application instances.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CoCreateApp</p>
@@ -398,19 +420,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
 
     public static class ListChangeOrdersResponseBodyData extends TeaModel {
         /**
-         * <p>The status of the change order. Valid values:</p>
-         * <ul>
-         * <li><strong>0</strong>: The change order is being prepared.</li>
-         * <li><strong>1</strong>: The change order is being executed.</li>
-         * <li><strong>2</strong>: The change order was executed.</li>
-         * <li><strong>3</strong>: The change order could not be executed.</li>
-         * <li><strong>6</strong>: The change order was terminated.</li>
-         * <li><strong>8</strong>: The execution process is pending. You must manually determine the release batch.</li>
-         * <li><strong>9</strong>: The execution process is pending. SAE will automatically determine the release batch.</li>
-         * <li><strong>10</strong>: The change order could not be executed due to a system exception.</li>
-         * <li><strong>11</strong>: The change order is pending approval.</li>
-         * <li><strong>12</strong>: The change order is approved and is pending execution.</li>
-         * </ul>
+         * <p>The change orders.</p>
          */
         @NameInMap("ChangeOrderList")
         public java.util.List<ListChangeOrdersResponseBodyDataChangeOrderList> changeOrderList;

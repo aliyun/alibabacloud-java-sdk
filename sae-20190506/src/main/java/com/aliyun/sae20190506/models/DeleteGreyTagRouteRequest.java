@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGreyTagRouteRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The rule ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

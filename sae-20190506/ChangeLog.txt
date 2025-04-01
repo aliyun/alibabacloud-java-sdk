@@ -1,3 +1,39 @@
+2025-04-01 Version: 2.0.0
+- Support API ListAppServices.
+- Support API UnbindNlb.
+- Update API CreateApplication: add request parameters MicroserviceEngineConfig.
+- Update API CreateApplication: add request parameters NewSaeVersion.
+- Update API CreateIngress: add request parameters CorsConfig.
+- Update API DeployApplication: add request parameters MicroserviceEngineConfig.
+- Update API DeployApplication: add request parameters SwimlanePvtzDiscoverySvc.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.BaseAppId.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.ClusterId.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.MicroserviceEngineConfig.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.NewSaeVersion.
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SwimlanePvtzDiscovery.
+- Update API DescribeApplicationConfig: delete response parameters Body.Data.Enabledle.
+- Update API DescribeApplicationScalingRule: delete response parameters Body.Data.EnableIdle.
+- Update API DescribeApplicationScalingRules: delete response parameters Body.Data.ApplicationScalingRules.$.EnableIdle.
+- Update API DescribeApplicationSlbs: add response parameters Body.Data.Internet.$.CreateTime.
+- Update API DescribeApplicationSlbs: add response parameters Body.Data.Intranet.$.CreateTime.
+- Update API DescribeConfigurationPrice: add request parameters ResourceType.
+- Update API DescribeIngress: add response parameters Body.Data.CorsConfig.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.AppType.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.EnableIdle.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.NamespaceName.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.NewSaeVersion.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.Children.$.AppType.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.Children.$.NamespaceName.
+- Update API ListApplications: add response parameters Body.Data.Applications.$.Children.$.NewSaeVersion.
+- Update API ListIngresses: add response parameters Body.Data.IngressList.$.CorsConfig.
+- Update API ListIngresses: add response parameters Body.Data.IngressList.$.CreateTime.
+- Update API ListIngresses: add response parameters Body.Data.IngressList.$.DefaultRule.
+- Update API ListIngresses: add response parameters Body.Data.IngressList.$.IdleTimeout.
+- Update API ListIngresses: add response parameters Body.Data.IngressList.$.RequestTimeout.
+- Update API ListIngresses: add response parameters Body.Data.IngressList.$.Rules.
+- Update API UpdateIngress: add request parameters CorsConfig.
+
+
 2025-01-13 Version: 1.25.4
 - Update API CreateApplication: add param ResourceType.
 - Update API CreateIngress: add param AddressType.

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigMapRequest extends TeaModel {
     /**
-     * <p>1</p>
+     * <p>The ID of the ConfigMap that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID of a ConfigMap.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

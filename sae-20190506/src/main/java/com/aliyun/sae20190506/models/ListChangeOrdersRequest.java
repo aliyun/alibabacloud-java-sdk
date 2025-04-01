@@ -24,7 +24,29 @@ public class ListChangeOrdersRequest extends TeaModel {
     public String coStatus;
 
     /**
-     * <p>2</p>
+     * <p>The type of the change order. Valid values:</p>
+     * <ul>
+     * <li><strong>CoBindSlb</strong>: associates the Server Load Balancer (SLB) instance with the application.</li>
+     * <li><strong>CoUnbindSlb</strong>: disassociates an SLB instance from the application.</li>
+     * <li><strong>CoCreateApp</strong>: creates the application.</li>
+     * <li><strong>CoDeleteApp</strong>: deletes the application.</li>
+     * <li><strong>CoDeploy</strong>: deploys the application.</li>
+     * <li><strong>CoRestartApplication</strong>: restarts the application.</li>
+     * <li><strong>CoRollback</strong>: rolls back the application.</li>
+     * <li><strong>CoScaleIn</strong>: scales in the application.</li>
+     * <li><strong>CoScaleOut</strong>: scales out the application.</li>
+     * <li><strong>CoStartApplication</strong>: starts the application.</li>
+     * <li><strong>CoStopApplication</strong>: stops the application.</li>
+     * <li><strong>CoRescaleApplicationVertically</strong>: modifies the instance type.</li>
+     * <li><strong>CoDeployHistroy</strong>: rolls back the application to an earlier version.</li>
+     * <li><strong>CoBindNas</strong>: associates a network-attached storage (NAS) file system with the application.</li>
+     * <li><strong>CoUnbindNas</strong>: disassociates a NAS file system from the application.</li>
+     * <li><strong>CoBatchStartApplication</strong>: starts multiple applications concurrently.</li>
+     * <li><strong>CoBatchStopApplication</strong>: stops multiple applications concurrently.</li>
+     * <li><strong>CoRestartInstances</strong>: restarts the instance.</li>
+     * <li><strong>CoDeleteInstances</strong>: deletes the instance.</li>
+     * <li><strong>CoScaleInAppWithInstances</strong>: reduces the specified number of application instances.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CoCreateApp</p>

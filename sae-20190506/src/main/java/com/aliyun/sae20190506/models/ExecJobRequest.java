@@ -42,6 +42,8 @@ public class ExecJobRequest extends TeaModel {
     public String eventId;
 
     /**
+     * <p>The arguments in the JAR package. The arguments are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>custom-args</p>
      */
@@ -49,19 +51,35 @@ public class ExecJobRequest extends TeaModel {
     public String jarStartArgs;
 
     /**
+     * <p>The option settings in the JAR package. The settings are used to start the job. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArg</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>-Xms4G -Xmx4G</p>
      */
     @NameInMap("JarStartOptions")
     public String jarStartOptions;
 
+    /**
+     * <p>The number of concurrent instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Replicas")
     public String replicas;
 
+    /**
+     * <p>The time at which the job is triggered. Format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-09-14T14:25:02Z</p>
+     */
     @NameInMap("Time")
     public String time;
 
     /**
+     * <p>The startup command of the WAR package. For information about how to configure the startup command, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
      */

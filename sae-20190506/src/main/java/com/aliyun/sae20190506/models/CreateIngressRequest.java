@@ -33,6 +33,9 @@ public class CreateIngressRequest extends TeaModel {
     @NameInMap("CertIds")
     public String certIds;
 
+    @NameInMap("CorsConfig")
+    public String corsConfig;
+
     /**
      * <p>Default forwarding rule. Traffic is forwarded to the specified application through a designated port based on the IP address. Parameter descriptions are as follows:</p>
      * <ul>
@@ -74,8 +77,7 @@ public class CreateIngressRequest extends TeaModel {
     public Boolean enableXForwardedForSlbPort;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: 1 to 60.</p>
-     * <p>If no request is received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
+     * <p>The timeout period of an idle connection. Unit: seconds Valid values: 1 to 60. If no requests are received within the specified timeout period, ALB closes the current connection. When a new request is received, ALB establishes a new connection.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>
@@ -133,8 +135,7 @@ public class CreateIngressRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The timeout period of a request. Unit: seconds. Valid values: 1 to 180.
-     * If no response is received from the backend server within the specified timeout period, ALB returns an HTTP 504 error code to the client.</p>
+     * <p>The timeout period of a request. Unit: seconds. Valid values: 1 to 180. If no response is received from the backend server within the specified timeout period, ALB stops waiting for the response and returns an HTTP 504 error code to the client.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -164,7 +165,7 @@ public class CreateIngressRequest extends TeaModel {
     public String rules;
 
     /**
-     * <p>The security policy ID.</p>
+     * <p>The ID of a security policy.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-bp1bpn0kn9****</p>
@@ -214,6 +215,14 @@ public class CreateIngressRequest extends TeaModel {
     }
     public String getCertIds() {
         return this.certIds;
+    }
+
+    public CreateIngressRequest setCorsConfig(String corsConfig) {
+        this.corsConfig = corsConfig;
+        return this;
+    }
+    public String getCorsConfig() {
+        return this.corsConfig;
     }
 
     public CreateIngressRequest setDefaultRule(String defaultRule) {

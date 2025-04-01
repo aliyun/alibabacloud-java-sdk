@@ -233,6 +233,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("MicroRegistrationConfig")
     public String microRegistrationConfig;
 
+    @NameInMap("MicroserviceEngineConfig")
+    public String microserviceEngineConfig;
+
     /**
      * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
      * 
@@ -275,6 +278,9 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("NasId")
     public String nasId;
+
+    @NameInMap("NewSaeVersion")
+    public String newSaeVersion;
 
     @NameInMap("OidcRoleName")
     public String oidcRoleName;
@@ -790,6 +796,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.microRegistrationConfig;
     }
 
+    public CreateApplicationRequest setMicroserviceEngineConfig(String microserviceEngineConfig) {
+        this.microserviceEngineConfig = microserviceEngineConfig;
+        return this;
+    }
+    public String getMicroserviceEngineConfig() {
+        return this.microserviceEngineConfig;
+    }
+
     public CreateApplicationRequest setMountDesc(String mountDesc) {
         this.mountDesc = mountDesc;
         return this;
@@ -828,6 +842,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getNasId() {
         return this.nasId;
+    }
+
+    public CreateApplicationRequest setNewSaeVersion(String newSaeVersion) {
+        this.newSaeVersion = newSaeVersion;
+        return this;
+    }
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
     }
 
     public CreateApplicationRequest setOidcRoleName(String oidcRoleName) {

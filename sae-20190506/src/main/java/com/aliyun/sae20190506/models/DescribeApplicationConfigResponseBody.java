@@ -673,6 +673,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         /**
          * <p>The SAE application type.</p>
+         * <ul>
+         * <li>micro_service</li>
+         * <li>web</li>
+         * <li>job</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>micro_service</p>
@@ -693,6 +698,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("AssociateEip")
         public Boolean associateEip;
 
+        @NameInMap("BaseAppId")
+        public String baseAppId;
+
         /**
          * <p>The interval between batches in a phased release. Unit: seconds.</p>
          * 
@@ -701,6 +709,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("BatchWaitTime")
         public Integer batchWaitTime;
+
+        @NameInMap("ClusterId")
+        public String clusterId;
 
         /**
          * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
@@ -816,9 +827,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @NameInMap("EnableNewArms")
         public Boolean enableNewArms;
-
-        @NameInMap("Enabledle")
-        public Boolean enabledle;
 
         /**
          * <p>The environment variables. Variable description:</p>
@@ -973,6 +981,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("MicroRegistrationConfig")
         public String microRegistrationConfig;
 
+        @NameInMap("MicroserviceEngineConfig")
+        public String microserviceEngineConfig;
+
         /**
          * <p>The percentage of the minimum number of available instances. Valid values:</p>
          * <ul>
@@ -1060,6 +1071,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("NasId")
         public String nasId;
+
+        @NameInMap("NewSaeVersion")
+        public String newSaeVersion;
 
         @NameInMap("OidcRoleName")
         public String oidcRoleName;
@@ -1268,6 +1282,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The canary tag configured for the application.</p>
+         */
         @NameInMap("ServiceTags")
         public java.util.Map<String, String> serviceTags;
 
@@ -1295,6 +1312,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("SlsConfigs")
         public String slsConfigs;
+
+        @NameInMap("SwimlanePvtzDiscovery")
+        public String swimlanePvtzDiscovery;
 
         /**
          * <p>The details of the tags.</p>
@@ -1466,12 +1486,28 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.associateEip;
         }
 
+        public DescribeApplicationConfigResponseBodyData setBaseAppId(String baseAppId) {
+            this.baseAppId = baseAppId;
+            return this;
+        }
+        public String getBaseAppId() {
+            return this.baseAppId;
+        }
+
         public DescribeApplicationConfigResponseBodyData setBatchWaitTime(Integer batchWaitTime) {
             this.batchWaitTime = batchWaitTime;
             return this;
         }
         public Integer getBatchWaitTime() {
             return this.batchWaitTime;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public DescribeApplicationConfigResponseBodyData setCommand(String command) {
@@ -1578,14 +1614,6 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.enableNewArms;
         }
 
-        public DescribeApplicationConfigResponseBodyData setEnabledle(Boolean enabledle) {
-            this.enabledle = enabledle;
-            return this;
-        }
-        public Boolean getEnabledle() {
-            return this.enabledle;
-        }
-
         public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
             this.envs = envs;
             return this;
@@ -1674,6 +1702,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.microRegistrationConfig;
         }
 
+        public DescribeApplicationConfigResponseBodyData setMicroserviceEngineConfig(String microserviceEngineConfig) {
+            this.microserviceEngineConfig = microserviceEngineConfig;
+            return this;
+        }
+        public String getMicroserviceEngineConfig() {
+            return this.microserviceEngineConfig;
+        }
+
         public DescribeApplicationConfigResponseBodyData setMinReadyInstanceRatio(Integer minReadyInstanceRatio) {
             this.minReadyInstanceRatio = minReadyInstanceRatio;
             return this;
@@ -1744,6 +1780,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getNasId() {
             return this.nasId;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setNewSaeVersion(String newSaeVersion) {
+            this.newSaeVersion = newSaeVersion;
+            return this;
+        }
+        public String getNewSaeVersion() {
+            return this.newSaeVersion;
         }
 
         public DescribeApplicationConfigResponseBodyData setOidcRoleName(String oidcRoleName) {
@@ -1952,6 +1996,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getSlsConfigs() {
             return this.slsConfigs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setSwimlanePvtzDiscovery(String swimlanePvtzDiscovery) {
+            this.swimlanePvtzDiscovery = swimlanePvtzDiscovery;
+            return this;
+        }
+        public String getSwimlanePvtzDiscovery() {
+            return this.swimlanePvtzDiscovery;
         }
 
         public DescribeApplicationConfigResponseBodyData setTags(java.util.List<DescribeApplicationConfigResponseBodyDataTags> tags) {

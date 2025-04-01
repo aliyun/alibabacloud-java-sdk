@@ -271,6 +271,10 @@ public class ListGreyTagRouteResponseBody extends TeaModel {
         @NameInMap("items")
         public java.util.List<ListGreyTagRouteResponseBodyDataResultAlbRulesItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>s-6366-e3****-99**</p>
+         */
         @NameInMap("serviceName")
         public String serviceName;
 

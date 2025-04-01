@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWebCustomDomainsRequest extends TeaModel {
     /**
+     * <p>The application ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7e41aff0-9eca-45c9-ac48-675e09******</p>
      */
@@ -12,6 +14,8 @@ public class ListWebCustomDomainsRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The number of custom domain names returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class ListWebCustomDomainsRequest extends TeaModel {
     public Integer limit;
 
     /**
+     * <p>The namespace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +32,8 @@ public class ListWebCustomDomainsRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>A2RN</p>
      */
@@ -33,6 +41,8 @@ public class ListWebCustomDomainsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The prefix of the custom domain name that you want to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>remoteresult</p>
      */
