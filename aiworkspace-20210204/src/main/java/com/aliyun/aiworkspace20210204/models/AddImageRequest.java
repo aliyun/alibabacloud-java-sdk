@@ -41,6 +41,12 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Size")
     public Integer size;
 
+    @NameInMap("SourceId")
+    public String sourceId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
     /**
      * <strong>example:</strong>
      * <p>15******45</p>
@@ -107,6 +113,22 @@ public class AddImageRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public AddImageRequest setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    public AddImageRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public AddImageRequest setWorkspaceId(String workspaceId) {

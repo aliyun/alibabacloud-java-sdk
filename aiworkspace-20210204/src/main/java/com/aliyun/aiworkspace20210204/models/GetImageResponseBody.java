@@ -62,6 +62,12 @@ public class GetImageResponseBody extends TeaModel {
     @NameInMap("Size")
     public Integer size;
 
+    @NameInMap("SourceId")
+    public String sourceId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
     /**
      * <strong>example:</strong>
      * <p>15577******8921</p>
@@ -159,6 +165,22 @@ public class GetImageResponseBody extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public GetImageResponseBody setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    public GetImageResponseBody setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public GetImageResponseBody setUserId(String userId) {
