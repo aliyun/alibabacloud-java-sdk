@@ -147,6 +147,12 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("Size")
         public Integer size;
 
+        @NameInMap("SourceId")
+        public String sourceId;
+
+        @NameInMap("SourceType")
+        public String sourceType;
+
         /**
          * <strong>example:</strong>
          * <p>15577******82932</p>
@@ -244,6 +250,22 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public Integer getSize() {
             return this.size;
+        }
+
+        public ListImagesResponseBodyImages setSourceId(String sourceId) {
+            this.sourceId = sourceId;
+            return this;
+        }
+        public String getSourceId() {
+            return this.sourceId;
+        }
+
+        public ListImagesResponseBodyImages setSourceType(String sourceType) {
+            this.sourceType = sourceType;
+            return this;
+        }
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         public ListImagesResponseBodyImages setUserId(String userId) {

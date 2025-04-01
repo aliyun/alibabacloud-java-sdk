@@ -122,6 +122,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Size", request.size);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            body.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            body.put("SourceType", request.sourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
