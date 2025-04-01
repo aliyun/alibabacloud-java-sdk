@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SourceConfig extends TeaModel {
     @NameInMap("oss")
-    public OpenStructOssSourceConfig oss;
+    public OssSourceConfig oss;
 
     @NameInMap("repository")
     public RepositorySourceConfig repository;
@@ -18,11 +18,11 @@ public class SourceConfig extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SourceConfig setOss(OpenStructOssSourceConfig oss) {
+    public SourceConfig setOss(OssSourceConfig oss) {
         this.oss = oss;
         return this;
     }
-    public OpenStructOssSourceConfig getOss() {
+    public OssSourceConfig getOss() {
         return this.oss;
     }
 
