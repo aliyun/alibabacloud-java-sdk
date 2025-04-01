@@ -17,7 +17,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     /**
      * <p>The method that is used to modify the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>Cover</strong>: overwrites the original whitelist.</li>
+     * <li><strong>Cover</strong> (default): overwrites the original whitelist.</li>
      * <li><strong>Append</strong>: appends data to the whitelist.</li>
      * <li><strong>Delete</strong>: deletes the whitelist.</li>
      * </ul>

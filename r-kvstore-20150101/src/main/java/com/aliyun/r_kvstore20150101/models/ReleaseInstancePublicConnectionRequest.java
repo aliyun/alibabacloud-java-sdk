@@ -15,7 +15,7 @@ public class ReleaseInstancePublicConnectionRequest extends TeaModel {
     public String currentConnectionString;
 
     /**
-     * <p>The ID of the instance for which you want to release a public endpoint.</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

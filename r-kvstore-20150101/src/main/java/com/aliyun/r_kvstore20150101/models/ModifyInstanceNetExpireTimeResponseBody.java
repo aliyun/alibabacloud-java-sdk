@@ -14,7 +14,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Details of the extension period for which the classic network endpoint of the instance is retained.</p>
+     * <p>Details about the extension period for which the classic network endpoint of the instance is retained.</p>
      */
     @NameInMap("NetInfoItems")
     public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems;

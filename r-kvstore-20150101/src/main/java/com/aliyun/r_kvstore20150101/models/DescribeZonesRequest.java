@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
+     * <p>The display language of the zone names to return. Valid values:</p>
      * <ul>
-     * <li><strong>zh-C</strong>N: Chinese</li>
+     * <li><strong>zh-CN</strong> (default): Chinese</li>
      * <li><strong>en-US</strong>: English</li>
      * </ul>
      * 

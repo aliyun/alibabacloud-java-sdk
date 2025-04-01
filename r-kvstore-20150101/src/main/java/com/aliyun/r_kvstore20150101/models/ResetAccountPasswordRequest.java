@@ -49,6 +49,12 @@ public class ResetAccountPasswordRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>This parameter is used only for internal maintenance. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SDK</p>
+     */
     @NameInMap("SourceBiz")
     public String sourceBiz;
 

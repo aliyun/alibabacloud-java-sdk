@@ -13,7 +13,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
     /**
      * <p>Details of the hotkeys.</p>
      * <blockquote>
-     * <p>This parameter is not returned because ApsaraDB for Redis does not support hotkey analytics.</p>
+     * <p>This parameter is not returned because Tair (Redis OSS-compatible) does not support hotkey analytics.</p>
      * </blockquote>
      */
     @NameInMap("HotKeys")

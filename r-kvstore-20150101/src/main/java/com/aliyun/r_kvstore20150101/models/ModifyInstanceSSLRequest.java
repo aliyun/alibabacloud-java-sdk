@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSSLRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,11 +27,11 @@ public class ModifyInstanceSSLRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Modifies SSL encryption configurations. Valid values:</p>
+     * <p>Specifies whether to enable TLS (SSL) encryption. Valid values:</p>
      * <ul>
-     * <li><strong>Disable</strong>: The SSL encryption is disabled.</li>
-     * <li><strong>Enable</strong>: The SSL encryption is enabled.</li>
-     * <li><strong>Update</strong>: The SSL certificate is updated.</li>
+     * <li><strong>Disable</strong>: disables SSL encryption.</li>
+     * <li><strong>Enable</strong>: enables SSL encryption.</li>
+     * <li><strong>Update</strong>: updates the SSL certificate.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -180,7 +180,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The username that is used to connect to the instance. By default, ApsaraDB for Redis provides a username that is named after the instance ID.</p>
+     * <p>The username that is used to connect to the instance. By default, Tair (Redis OSS-compatible) provides a username that is named after the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>

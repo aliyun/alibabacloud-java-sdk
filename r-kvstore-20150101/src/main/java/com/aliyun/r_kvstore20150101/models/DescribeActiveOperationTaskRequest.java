@@ -42,7 +42,7 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the O&amp;M task. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the O&amp;M task. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <blockquote>
      * <p>A value of <strong>all</strong> indicates all region IDs.</p>
      * </blockquote>

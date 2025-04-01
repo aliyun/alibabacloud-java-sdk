@@ -15,7 +15,7 @@ public class DescribeParameterModificationHistoryRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

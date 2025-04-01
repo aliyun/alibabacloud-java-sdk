@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSpecResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20722623431****</p>
@@ -14,7 +14,7 @@ public class ModifyInstanceSpecResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0DA1D7EF-C80D-432C-8758-7D225182626B</p>

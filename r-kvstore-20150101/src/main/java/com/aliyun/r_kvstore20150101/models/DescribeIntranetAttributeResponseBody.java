@@ -33,10 +33,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public String bandwidthExpireTime;
 
     /**
-     * <p>The billing methods of unexpired bandwith plans. Valid values:</p>
+     * <p>The billing method of the bandwidth plan. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Pay-as-you-go</li>
-     * <li><strong>1</strong>: Subscription</li>
+     * <li><strong>0</strong>: pay-as-you-go</li>
+     * <li><strong>1</strong>: subscription</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public Boolean hasPrePaidBandWidthOrderRunning;
 
     /**
-     * <p>The current internal bandwidth of the instance. Unit: Mbit/s.</p>
+     * <p>The internal bandwidth of the instance. This parameter indicates the combined bandwidth of all shards in the instance. Unit: Mbit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>102</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
     /**
-     * <p>The display language of the response. Default value: zh-CN. Valid values:</p>
+     * <p>The display language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong>: English</li>
+     * <li><strong>zh-CN</strong>: Chinese. This is the default value.</li>
+     * <li><strong>en-US</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The category of the instance. Valid values:</p>
+     * <p>The database engine of the instance. Valid values:</p>
      * <ul>
      * <li><strong>Redis</strong></li>
      * <li><strong>Memcache</strong></li>
@@ -31,14 +31,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The billing method of the instance. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PrePaid</strong> (default): subscription</li>
      * <li><strong>PostPaid</strong>: pay-as-you-go</li>
      * </ul>
-     * <blockquote>
-     * <p>The default value is <strong>PrePaid</strong>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -71,7 +68,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String instanceScene;
 
     /**
-     * <p>The ID of the data node for which you want to query available resources that can be created. You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query the ID of the data node. Remove the number sign (<code>#</code>) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\<em>\</em>\<em>\</em>-db-0.</p>
+     * <p>The ID of the data node for which you want to query available resources that can be created. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query the ID of the data node. Remove the number sign (<code>#</code>) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\<em>\</em>\<em>\</em>-db-0.</p>
      * <blockquote>
      * <p>Before you specify this parameter, you must set the <strong>InstanceId</strong> parameter to the ID of an instance that uses the cluster or read/write splitting architecture.</p>
      * </blockquote>
@@ -83,9 +80,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The type of the order. Default value: BUY. Valid values:</p>
+     * <p>The order type. Valid values:</p>
      * <ul>
-     * <li><strong>BUY</strong>: orders that are newly created</li>
+     * <li><strong>BUY</strong> (default): orders that are used to create instances</li>
      * <li><strong>UPGRADE</strong>: orders that are used to upgrade instances</li>
      * <li><strong>DOWNGRADE</strong>: orders that are used to downgrade instances</li>
      * </ul>
@@ -103,14 +100,17 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The series of the instance. Valid values:</p>
+     * <p>The instance type. Default value: Local. Valid values:</p>
      * <ul>
-     * <li><strong>Local</strong>: classic ApsaraDB for Redis Community Edition instance or classic ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
-     * <li><strong>Tair_rdb</strong>: cloud-native ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance</li>
-     * <li><strong>Tair_scm</strong>: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance</li>
-     * <li><strong>Tair_essd</strong>: ESSD-based instance</li>
-     * <li><strong>OnECS</strong>: cloud-native ApsaraDB for Redis Community Edition instance</li>
+     * <li><strong>Local</strong>: classic Redis Open-Source Edition instance or classic DRAM-based instance</li>
+     * <li><strong>Tair_rdb</strong>: cloud-native DRAM-based instance</li>
+     * <li><strong>Tair_scm</strong>: persistent memory-optimized instance</li>
+     * <li><strong>Tair_essd</strong>: ESSD/SSD-based instance</li>
+     * <li><strong>OnECS</strong>: cloud-native Redis Open-Source Edition instance</li>
      * </ul>
+     * <blockquote>
+     * <p> The default value of this parameter is Local. To query disk resources, you must specify the instance type that provides the required disk resources.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Local</p>
@@ -119,7 +119,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
      * <blockquote>
-     * <p>You can also query the IDs of resource groups in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
+     * <p> You can also query the IDs of resource groups in the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information about a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/94527.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>

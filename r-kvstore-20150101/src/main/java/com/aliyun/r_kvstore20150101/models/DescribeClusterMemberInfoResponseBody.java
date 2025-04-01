@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterMemberInfoResponseBody extends TeaModel {
     /**
-     * <p>Details of nodes in the cluster instance.</p>
+     * <p>Details about data nodes in the cluster instance.</p>
      */
     @NameInMap("ClusterChildren")
     public java.util.List<DescribeClusterMemberInfoResponseBodyClusterChildren> clusterChildren;
@@ -102,10 +102,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         public Long connections;
 
         /**
-         * <p>The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.</p>
-         * <blockquote>
-         * <p>This parameter is returned only if the instance is created in a dedicated cluster.</p>
-         * </blockquote>
+         * <p>The current bandwidth of the data node, which is the sum of the default bandwidth and any extra bandwidth that is purchased. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

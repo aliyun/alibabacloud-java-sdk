@@ -14,7 +14,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public String clusterBackupId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +33,24 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to show backup set information for shards in the instance.</p>
+     * <ul>
+     * <li><strong>true</strong>: does not show backup set information for shards in the instance.</li>
+     * <li><strong>false</strong> (default): shows backup set information for shards in the instance.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>True</li>
+     * <li>False</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
+    @NameInMap("NoShardBackup")
+    public String noShardBackup;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -40,7 +58,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +67,19 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>30</li>
+     * <li>50</li>
+     * <li>100</li>
+     * <li>200</li>
+     * <li>300</li>
+     * <li>5</li>
+     * <li>10</li>
+     * <li>15</li>
+     * <li>20</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -58,7 +88,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +107,7 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,6 +143,14 @@ public class DescribeClusterBackupListRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeClusterBackupListRequest setNoShardBackup(String noShardBackup) {
+        this.noShardBackup = noShardBackup;
+        return this;
+    }
+    public String getNoShardBackup() {
+        return this.noShardBackup;
     }
 
     public DescribeClusterBackupListRequest setOwnerAccount(String ownerAccount) {

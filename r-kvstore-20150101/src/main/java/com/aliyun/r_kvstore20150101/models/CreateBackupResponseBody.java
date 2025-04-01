@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the backup task.\
-     * For cluster instances created before December 5, 2023, the return value is a comma-separated list composed of the job ID of each node within an instance. For example, if you have a cluster instance with two shards, the return value of BackupJobID is &quot;10000,10001&quot;.\
-     * For cluster instance created after December 5, 2023, all jobs for nodes in an instance are represented by a single job ID.</p>
+     * <p>The ID of the backup task.</p>
      * 
      * <strong>example:</strong>
      * <p>1162****</p>

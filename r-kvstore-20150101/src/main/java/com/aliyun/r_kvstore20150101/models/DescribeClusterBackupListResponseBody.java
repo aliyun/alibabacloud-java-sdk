@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterBackupListResponseBody extends TeaModel {
     /**
-     * <p>The backup sets of the instance. An instance backup contains the backup sets of all nodes in the instance.</p>
+     * <p>The backup sets of the instance. A backup contains the backup sets of all shards in the instance.</p>
      */
     @NameInMap("ClusterBackups")
     public java.util.List<DescribeClusterBackupListResponseBodyClusterBackups> clusterBackups;
@@ -44,11 +44,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     public Long logStorageSize;
 
     /**
-     * <p>The number of entries to return per page. Valid values: 1 to 100.
-     * Default value: 30.</p>
-     * <blockquote>
-     * <p>If you specify this parameter, PageSize and PageNumber are unavailable.</p>
-     * </blockquote>
+     * <p>The maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -57,7 +53,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,7 +71,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C009DA42-3B19-5B81-963D-1509DE2408DD</p>
@@ -208,7 +204,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         /**
          * <p>The internal download URL of the backup file.</p>
          * <blockquote>
-         * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
+         * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the Tair (Redis OSS-compatible) instance. The ECS instance must reside in the same virtual private cloud (VPC) as the Tair (Redis OSS-compatible) instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -218,7 +214,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         public String backupIntranetDownloadURL;
 
         /**
-         * <p>The backup name.</p>
+         * <p>The name of the backup.</p>
          * 
          * <strong>example:</strong>
          * <p>hins100322105_data_20240110012135.rdb</p>
@@ -273,7 +269,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         public DescribeClusterBackupListResponseBodyClusterBackupsBackupsExtraInfo extraInfo;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>hins100322105_data_20240108012127.rdb</p>
@@ -294,6 +290,12 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         @NameInMap("IsAvail")
         public String isAvail;
 
+        /**
+         * <p>This parameter does not take effect. Ignore this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RecoverConfigMode")
         public String recoverConfigMode;
 
@@ -410,7 +412,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
 
     public static class DescribeClusterBackupListResponseBodyClusterBackups extends TeaModel {
         /**
-         * <p>The backup sets of all nodes in the instance.</p>
+         * <p>The backup sets of all shards in the instance.</p>
          */
         @NameInMap("Backups")
         public java.util.List<DescribeClusterBackupListResponseBodyClusterBackupsBackups> backups;
@@ -475,7 +477,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         public String clusterBackupStatus;
 
         /**
-         * <p>Indicates whether the backup set is valid. A value of 0 indicates that node-level backups failed or have not been completed.</p>
+         * <p>Indicates whether the backup set is valid. A value of 0 indicates that shard-level backups failed or have not been completed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -493,7 +495,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The memory size of a single node during a full backup. Unit: MB.</p>
+         * <p>The memory size of a single shard during a full backup. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>

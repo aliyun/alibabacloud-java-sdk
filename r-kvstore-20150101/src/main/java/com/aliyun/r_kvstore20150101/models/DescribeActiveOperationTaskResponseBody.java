@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     /**
-     * <p>Details of O\&amp;M tasks.</p>
+     * <p>The list of O\&amp;M tasks.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTaskResponseBodyItems> items;
@@ -178,7 +178,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
          * <ul>
          * <li><strong>2</strong>: The task is waiting for users to specify a switchover time.</li>
          * <li><strong>3</strong>: The task is waiting to be performed.</li>
-         * <li><strong>4</strong>: The task is being performed. If the task is in this state, the <a href="~~ModifyActiveOperationTask~~">ModifyActiveOperationTask</a> operation cannot be called to modify the scheduled switchover time.</li>
+         * <li><strong>4</strong>: The task is being performed. If the task is in this state, the <strong>ModifyActiveOperationTask</strong> operation cannot be called to modify the scheduled switchover time.</li>
          * <li><strong>5</strong>: The task is performed.</li>
          * <li><strong>6</strong>: The task fails.</li>
          * <li><strong>7</strong>: The task is canceled.</li>

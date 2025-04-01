@@ -126,6 +126,19 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String auditLogRetention;
 
         /**
+         * <p>Indicates whether a secondary zone is automatically allocated.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AutoSecondaryZone")
+        public Boolean autoSecondaryZone;
+
+        /**
          * <p>The availability metric of the current month.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +154,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <ul>
          * <li><p>This parameter is returned only when the data flashback feature is enabled for the instance. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Restore data to a point in time by using the data flashback feature</a>.</p>
          * </li>
-         * <li><p>When you call the <a href="https://help.aliyun.com/document_detail/61083.html">RestoreInstance</a> operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the <strong>RestoreTime</strong> parameter to this point in time.</p>
+         * <li><p>When you call the <a href="https://help.aliyun.com/document_detail/473824.html">RestoreInstance</a> operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the <strong>RestoreTime</strong> parameter to this point in time.</p>
          * </li>
          * </ul>
          * 
@@ -246,7 +259,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+         * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -257,7 +270,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the distributed instance to which the instance belongs.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the ApsaraDB for Redis instance is a child instance of a distributed instance.</p>
+         * <p> This parameter is returned only when the Tair (Redis OSS-compatible) instance is a child instance of a distributed instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -391,7 +404,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the transparent data encryption (TDE) feature is supported for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: This feature is supported. This feature is available only for <a href="https://help.aliyun.com/document_detail/443827.html">DRAM-based</a> instances that use local disks.</li>
+         * <li><strong>true</strong>: This feature is supported only for DRAM-based classic instances.</li>
          * <li><strong>false</strong>: This feature is not supported.</li>
          * </ul>
          * 
@@ -500,7 +513,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>If the instance is a cluster instance that uses cloud disks, this parameter indicates the actual instance type of individual shards in the instance. The InstanceClass parameter indicates the virtual instance type.</p>
          * <blockquote>
-         * <p> To query fees for instances of the instance type, you can specify the instance type that is returned by this parameter in the <a href="https://help.aliyun.com/document_detail/95612.html">DescribePrice</a> operation.</p>
+         * <p> To query fees for instances of the instance type, you can specify the instance type that is returned by this parameter in the <a href="https://help.aliyun.com/document_detail/473807.html">DescribePrice</a> operation.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -518,6 +531,15 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of replica nodes in the primary zone.</p>
+         * <blockquote>
+         * <p> The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters are applicable only to cloud-native instances. If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes <strong>per node</strong> in the primary and secondary zones of the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReplicaCount")
         public Integer replicaCount;
 
@@ -574,7 +596,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String securityIPList;
 
         /**
-         * <p>The number of shards. This parameter is available only for ApsaraDB for Redis instances that are purchased on the China site (aliyun.com).</p>
+         * <p>The number of shards. This parameter is available only for instances that are purchased on the China site (aliyun.com).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -591,6 +613,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("SlaveReadOnlyCount")
         public Long slaveReadOnlyCount;
 
+        /**
+         * <p>The number of replica nodes in the secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SlaveReplicaCount")
         public Integer slaveReplicaCount;
 
@@ -699,6 +727,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public String getAuditLogRetention() {
             return this.auditLogRetention;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setAutoSecondaryZone(Boolean autoSecondaryZone) {
+            this.autoSecondaryZone = autoSecondaryZone;
+            return this;
+        }
+        public Boolean getAutoSecondaryZone() {
+            return this.autoSecondaryZone;
         }
 
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setAvailabilityValue(String availabilityValue) {

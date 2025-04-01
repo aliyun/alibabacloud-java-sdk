@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsRequest extends TeaModel {
     /**
-     * <p>The database type. Valid values: <strong>redis</strong> (default) and <strong>tair</strong>.</p>
+     * <p>The engine type. Valid values:</p>
+     * <ul>
+     * <li><strong>redis</strong>: Redis Open-Source Edition or Tair (In-Memory)</li>
+     * <li><strong>tair_pena</strong>: Tair (On NVM)</li>
+     * <li><strong>tair_pdb</strong>: Tair (On Disk)</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>redis</p>
@@ -20,7 +25,11 @@ public class DescribeParameterGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

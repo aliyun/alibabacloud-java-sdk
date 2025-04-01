@@ -31,9 +31,9 @@ public class ModifyIntranetAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the data node. You can call the <a href="https://help.aliyun.com/document_detail/193462.html">DescribeClusterMemberInfo</a> operation to query the node ID. Separate multiple IDs with commas (,).</p>
+     * <p>The ID of the data node. You can call the <a href="https://help.aliyun.com/document_detail/473783.html">DescribeClusterMemberInfo</a> operation to query the node ID. Separate multiple IDs with commas (,).</p>
      * <blockquote>
-     * <p>This parameter is available and required only when the instance uses the <a href="https://help.aliyun.com/document_detail/52228.html">cluster architecture</a>.</p>
+     * <p> This parameter is required if the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

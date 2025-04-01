@@ -24,13 +24,13 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p><a href="https://help.aliyun.com/document_detail/165005.html">The release protection state of the instance.</a> Valid values:</p>
+     * <p><a href="https://help.aliyun.com/document_detail/165005.html">Specifies whether to enable release protection for the instance.</a> Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled</li>
-     * <li><strong>false</strong>: disabled</li>
+     * <li><strong>true</strong>: enables release protection.</li>
+     * <li><strong>false</strong>: disables release protection.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available only for pay-as-you-go instances.</p>
+     * <p> This parameter is available only for pay-as-you-go instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -35,7 +35,7 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyRules rules;
 
     /**
-     * <p>Details about rules that match the coupon.</p>
+     * <p>The rules that match the coupon.</p>
      */
     @NameInMap("SubOrders")
     public DescribePriceResponseBodySubOrders subOrders;
@@ -200,24 +200,57 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyOrderDepreciateInfoContractActivity extends TeaModel {
+        /**
+         * <p>The activity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ActivityId")
         public Long activityId;
 
+        /**
+         * <p>The activity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>合同优惠_整单_xxx折</p>
+         */
         @NameInMap("ActivityName")
         public String activityName;
 
+        /**
+         * <p>The price after the promotion.</p>
+         */
         @NameInMap("FinalFee")
         public Double finalFee;
 
+        /**
+         * <p>The total discount amount.</p>
+         */
         @NameInMap("FinalPromFee")
         public Double finalPromFee;
 
+        /**
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The promotion IDs.</p>
+         */
         @NameInMap("OptionIds")
         public DescribePriceResponseBodyOrderDepreciateInfoContractActivityOptionIds optionIds;
 
+        /**
+         * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ProdFee")
         public Double prodFee;
 
@@ -285,33 +318,90 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyOrderDepreciateInfo extends TeaModel {
+        /**
+         * <p>The price reduction rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30%</p>
+         */
         @NameInMap("CheapRate")
         public Long cheapRate;
 
+        /**
+         * <p>The new total price displayed on the official website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9*</p>
+         */
         @NameInMap("CheapStandAmount")
         public Long cheapStandAmount;
 
+        /**
+         * <p>The activity information.</p>
+         */
         @NameInMap("ContractActivity")
         public DescribePriceResponseBodyOrderDepreciateInfoContractActivity contractActivity;
 
+        /**
+         * <p>The price difference displayed in the total order amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("Differential")
         public Long differential;
 
+        /**
+         * <p>The name of the price difference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXXX</p>
+         */
         @NameInMap("DifferentialName")
         public String differentialName;
 
+        /**
+         * <p>Indicates whether the contract promotion is hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
+        /**
+         * <p>Indicates whether the price reduction rate is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsShow")
         public Boolean isShow;
 
+        /**
+         * <p>The list price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1*</p>
+         */
         @NameInMap("ListPrice")
         public Long listPrice;
 
+        /**
+         * <p>The monthly price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("MonthPrice")
         public Long monthPrice;
 
+        /**
+         * <p>The original total price displayed on the official website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12*</p>
+         */
         @NameInMap("OriginalStandAmount")
         public Long originalStandAmount;
 
@@ -422,6 +512,12 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodyOrder extends TeaModel {
+        /**
+         * <p>The order code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Code")
         public String code;
 
@@ -440,6 +536,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The activity information.</p>
+         */
         @NameInMap("DepreciateInfo")
         public DescribePriceResponseBodyOrderDepreciateInfo depreciateInfo;
 
@@ -461,9 +560,21 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("HandlingFeeAmount")
         public String handlingFeeAmount;
 
+        /**
+         * <p>Indicates whether the contract promotion is hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
+        /**
+         * <p>The order information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Message")
         public String message;
 
@@ -477,7 +588,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String originalAmount;
 
         /**
-         * <p>Details about promotion rule IDs.</p>
+         * <p>The rule IDs.</p>
          */
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
@@ -488,9 +599,21 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("ShowDiscountInfo")
         public Boolean showDiscountInfo;
 
+        /**
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("StandDiscountPrice")
         public Long standDiscountPrice;
 
+        /**
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StandPrice")
         public Long standPrice;
 
@@ -720,24 +843,63 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity extends TeaModel {
+        /**
+         * <p>The activity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1412025702634847</p>
+         */
         @NameInMap("ActivityId")
         public Long activityId;
 
+        /**
+         * <p>The activity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ActivityName")
         public String activityName;
 
+        /**
+         * <p>The discounted price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("FinalFee")
         public Double finalFee;
 
+        /**
+         * <p>The transaction price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("FinalPromFee")
         public Double finalPromFee;
 
+        /**
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The promotion ID.</p>
+         */
         @NameInMap("OptionIds")
         public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivityOptionIds optionIds;
 
+        /**
+         * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ProdFee")
         public Double prodFee;
 
@@ -805,33 +967,90 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo extends TeaModel {
+        /**
+         * <p>The price reduction rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("CheapRate")
         public Long cheapRate;
 
+        /**
+         * <p>The new total price displayed on the official website.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("CheapStandAmount")
         public Long cheapStandAmount;
 
+        /**
+         * <p>The contract promotion.</p>
+         */
         @NameInMap("ContractActivity")
         public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfoContractActivity contractActivity;
 
+        /**
+         * <p>The promotional offer (displayed in the total order amount).</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Differential")
         public Long differential;
 
+        /**
+         * <p>The name of the promotional offer.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("DifferentialName")
         public String differentialName;
 
+        /**
+         * <p>Indicates whether eligibility for the contracted discount is met.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
+        /**
+         * <p>The list price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ListPrice")
         public Long listPrice;
 
+        /**
+         * <p>The monthly price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("MonthPrice")
         public Long monthPrice;
 
+        /**
+         * <p>The original total price displayed on the official website.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("OriginalStandAmount")
         public Long originalStandAmount;
 
+        /**
+         * <p>The start time of the activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-11-18T00:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -923,33 +1142,93 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo extends TeaModel {
+        /**
+         * <p>The price reduction rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("CheapRate")
         public Double cheapRate;
 
+        /**
+         * <p>The new total price displayed on the official website.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("CheapStandAmount")
         public Double cheapStandAmount;
 
+        /**
+         * <p>The promotional offer (displayed in the total order amount).</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Differential")
         public Double differential;
 
+        /**
+         * <p>The name of the promotional offer.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("DifferentialName")
         public String differentialName;
 
+        /**
+         * <p>Indicates whether eligibility for the contracted discount is met.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
+        /**
+         * <p>Indicates whether the price reduction rate is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsShow")
         public Boolean isShow;
 
+        /**
+         * <p>The list price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ListPrice")
         public Double listPrice;
 
+        /**
+         * <p>The monthly price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("MonthPrice")
         public Double monthPrice;
 
+        /**
+         * <p>The original total price displayed on the official website.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("OriginalStandAmount")
         public Double originalStandAmount;
 
+        /**
+         * <p>The start time of the activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-23T14:00:01Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -1041,15 +1320,39 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceModuleAttrsModuleAttr extends TeaModel {
+        /**
+         * <p>The attribute code.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The attribute name.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The attribute type.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Type")
         public Long type;
 
+        /**
+         * <p>The attribute value.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1112,39 +1415,105 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstance extends TeaModel {
+        /**
+         * <p>Indicates whether eligibility for the contracted discount is met.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ContractActivity")
         public Boolean contractActivity;
 
+        /**
+         * <p>The price reduction information.</p>
+         */
         @NameInMap("DepreciateInfo")
         public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceDepreciateInfo depreciateInfo;
 
+        /**
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("DiscountFee")
         public Double discountFee;
 
+        /**
+         * <p>The module attributes.</p>
+         */
         @NameInMap("ModuleAttrs")
         public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstanceModuleAttrs moduleAttrs;
 
+        /**
+         * <p>The module code.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
+        /**
+         * <p>The module ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ModuleId")
         public String moduleId;
 
+        /**
+         * <p>The module name.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
+        /**
+         * <p>Indicates whether the order is paid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedOrderPay")
         public Boolean needOrderPay;
 
+        /**
+         * <p>The actual amount paid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("PayFee")
         public Double payFee;
 
+        /**
+         * <p>Indicates whether the item is billed.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PricingModule")
         public Boolean pricingModule;
 
+        /**
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("StandPrice")
         public Double standPrice;
 
+        /**
+         * <p>The original price of the product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("TotalProductFee")
         public Double totalProductFee;
 
@@ -1271,33 +1640,93 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderOptionalPromotionsOptionalPromotion extends TeaModel {
+        /**
+         * <p>The additional activity information.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ActivityExtInfo")
         public java.util.Map<String, ?> activityExtInfo;
 
+        /**
+         * <p>The amount that can be deducted by using the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("CanPromFee")
         public String canPromFee;
 
+        /**
+         * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("CouponNo")
         public String couponNo;
 
+        /**
+         * <p>The description of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The coupon name.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The promotion code.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The promotion name.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
+        /**
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
+         */
         @NameInMap("PromotionOptionNo")
         public String promotionOptionNo;
 
+        /**
+         * <p>Indicates whether</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Selected")
         public Boolean selected;
 
+        /**
+         * <p>Indicates whether the discount is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("Show")
         public Boolean show;
 
@@ -1408,27 +1837,75 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrderPromDetailListPromDetail extends TeaModel {
+        /**
+         * <p>The additional activity information.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ActivityExtInfo")
         public java.util.Map<String, ?> activityExtInfo;
 
+        /**
+         * <p>The derived promotion type.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("DerivedPromType")
         public String derivedPromType;
 
+        /**
+         * <p>The transaction price.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("FinalPromFee")
         public Double finalPromFee;
 
+        /**
+         * <p>The code of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The promotion type.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PromType")
         public String promType;
 
+        /**
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PromotionCode")
         public String promotionCode;
 
+        /**
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PromotionId")
         public Long promotionId;
 
+        /**
+         * <p>The name of the promotional activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
@@ -1542,9 +2019,18 @@ public class DescribePriceResponseBody extends TeaModel {
     }
 
     public static class DescribePriceResponseBodySubOrdersSubOrder extends TeaModel {
+        /**
+         * <p>Indicates whether eligibility for the contracted discount is met.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("ContractActivity")
         public Boolean contractActivity;
 
+        /**
+         * <p>The price reduction information.</p>
+         */
         @NameInMap("DepreciateInfo")
         public DescribePriceResponseBodySubOrdersSubOrderDepreciateInfo depreciateInfo;
 
@@ -1566,12 +2052,24 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>Indicates whether eligibility for the contracted discount is met.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("IsContractActivity")
         public Boolean isContractActivity;
 
+        /**
+         * <p>The configuration details for each instance of an order line item.</p>
+         */
         @NameInMap("ModuleInstance")
         public DescribePriceResponseBodySubOrdersSubOrderModuleInstance moduleInstance;
 
+        /**
+         * <p>The optional promotions.</p>
+         */
         @NameInMap("OptionalPromotions")
         public DescribePriceResponseBodySubOrdersSubOrderOptionalPromotions optionalPromotions;
 
@@ -1584,6 +2082,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("OriginalAmount")
         public String originalAmount;
 
+        /**
+         * <p>The promotion details.</p>
+         */
         @NameInMap("PromDetailList")
         public DescribePriceResponseBodySubOrdersSubOrderPromDetailList promDetailList;
 
@@ -1593,9 +2094,21 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("RuleIds")
         public DescribePriceResponseBodySubOrdersSubOrderRuleIds ruleIds;
 
+        /**
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("StandDiscountPrice")
         public Long standDiscountPrice;
 
+        /**
+         * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("StandPrice")
         public Long standPrice;
 

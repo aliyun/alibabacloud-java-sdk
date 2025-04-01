@@ -224,6 +224,9 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
         /**
          * <p>The reason why the current task was initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UpgradeMinorVersion</p>
          */
         @NameInMap("ReasonCode")
         public String reasonCode;
@@ -271,7 +274,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * <p>Running</p>
          */
         @NameInMap("Status")
-        public Integer status;
+        public String status;
 
         /**
          * <p>The task details. The details vary based on the task type.</p>
@@ -443,11 +446,11 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeHistoryTasksResponseBodyItems setStatus(Integer status) {
+        public DescribeHistoryTasksResponseBodyItems setStatus(String status) {
             this.status = status;
             return this;
         }
-        public Integer getStatus() {
+        public String getStatus() {
             return this.status;
         }
 

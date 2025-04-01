@@ -29,7 +29,7 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     /**
      * <p>The ID of the child node in the cluster instance.</p>
      * <blockquote>
-     * <p>If this parameter is not specified, the analysis results of all child nodes in the instance are returned.</p>
+     * <p> If you do not specify this parameter, the analysis results of all child nodes in the instance are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

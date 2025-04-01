@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesOverviewResponseBody extends TeaModel {
     /**
-     * <p>An array of instances.</p>
+     * <p>The queried instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeInstancesOverviewResponseBodyInstances> instances;
@@ -122,7 +122,7 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+         * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -196,10 +196,10 @@ public class DescribeInstancesOverviewResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>The category of the instance. Valid values:</p>
+         * <p>The edition of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Tair</strong></li>
-         * <li><strong>Redis</strong></li>
+         * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
+         * <li><strong>Redis</strong>: Redis Open-Source Edition</li>
          * <li><strong>Memcache</strong></li>
          * </ul>
          * 

@@ -8,7 +8,7 @@ public class CreateInstancesRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>true</strong> (default).</li>
-     * <li><strong>false</strong>. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+     * <li><strong>false</strong>. If automatic payment is disabled, you must perform the following steps to complete the payment in the Tair (Redis OSS-compatible) console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
      * </ul>
      * <blockquote>
      * <p> This parameter is valid only if the value of the <strong>ChargeType</strong> field in the <strong>Instances</strong> parameter is set to <strong>PrePaid</strong>.</p>
@@ -73,7 +73,7 @@ public class CreateInstancesRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The JSON-formatted configurations of the instance. For more information, see the &quot;Description of the Instances parameter&quot; section of this topic.</p>
+     * <p>The JSON-formatted configurations of the instance. For more information, see the &quot;Additional description of the Instances parameter&quot; section.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

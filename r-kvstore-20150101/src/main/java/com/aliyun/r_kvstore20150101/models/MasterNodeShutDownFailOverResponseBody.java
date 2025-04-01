@@ -23,7 +23,7 @@ public class MasterNodeShutDownFailOverResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID. For information about how to obtain the ID of a task, see <a href="https://help.aliyun.com/document_detail/454662.html">ListTasks</a>.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>17566</p>

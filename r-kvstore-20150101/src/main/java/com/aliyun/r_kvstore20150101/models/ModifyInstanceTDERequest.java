@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTDERequest extends TeaModel {
     /**
-     * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/302339.html">DescribeEncryptionKeyList</a> operation to query the key ID.</p>
+     * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> operation to query the key ID.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
@@ -34,7 +34,7 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public String encryptionName;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class ModifyInstanceTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of <code>acs:ram::$accountID:role/$roleName</code>. After the role is attached, your ApsaraDB for Redis instance can use KMS.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your Tair (Redis OSS-compatible) instance. The ARN must be in the format of <code>acs:ram::$accountID:role/$roleName</code>. After the role is attached, your Tair (Redis OSS-compatible) instance can use KMS.</p>
      * <blockquote>
      * </blockquote>
      * <ul>

@@ -208,6 +208,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CloudType")
         public String cloudType;
 
+        /**
+         * <p>The type of the computing resource. Valid values:</p>
+         * <ul>
+         * <li><strong>Ecs</strong>: cloud-native computing service</li>
+         * <li><strong>Machine</strong>: physical machine</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ecs</p>
+         */
         @NameInMap("ComputingType")
         public String computingType;
 
@@ -272,8 +282,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The edition of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Community</strong>: ApsaraDB for Redis Community Edition</li>
-         * <li><strong>Enterprise</strong>: ApsaraDB for Redis Enhanced Edition (Tair)</li>
+         * <li><strong>Community</strong>: Redis Open-Source Edition</li>
+         * <li><strong>Enterprise</strong>: Tair (Enterprise Edition)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +302,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
+         * <p>The database engine version of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>4.0</p>
@@ -474,6 +484,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("QPS")
         public Long QPS;
 
+        /**
+         * <p>The number of read replicas in the primary zone.</p>
+         * <blockquote>
+         * <p> The <strong>ReadOnlyCount</strong> and <strong>SlaveReadOnlyCount</strong> parameters are applicable only to cloud-native instances for which read/write splitting is enabled. If the instance is a cluster instance, the preceding parameters indicate the number of read replicas <strong>per node</strong> in the primary and secondary zones of the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReadOnlyCount")
         public String readOnlyCount;
 
@@ -495,6 +514,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ReplacateId")
         public String replacateId;
 
+        /**
+         * <p>The number of replica nodes in the primary zone.</p>
+         * <blockquote>
+         * <p> The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters are applicable only to cloud-native instances. If the instance is a cluster instance, the preceding parameters indicate the number of replica nodes <strong>per node</strong> in the primary and secondary zones of the instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ReplicaCount")
         public Integer replicaCount;
 
@@ -543,9 +571,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ShardCount")
         public Integer shardCount;
 
+        /**
+         * <p>The number of read replicas in the secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SlaveReadOnlyCount")
         public Integer slaveReadOnlyCount;
 
+        /**
+         * <p>The number of replica nodes in the secondary zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SlaveReplicaCount")
         public Integer slaveReplicaCount;
 

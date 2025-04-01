@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of details of O\&amp;M tasks.</p>
+     * <p>The list of O\&amp;M events.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTasksResponseBodyItems> items;
@@ -38,7 +38,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The number of O\&amp;M events returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>Indicates whether the task can be canceled. The value 1 indicates that the task can be canceled. The value 0 indicates that the task cannot be canceled.</p>
+         * <p>Indicates whether the event can be canceled. The value 1 indicates that the event can be canceled. The value 0 indicates that the event cannot be canceled.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String insComment;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1lgal1sdvxrz****</p>
@@ -273,7 +273,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String resultInfo;
 
         /**
-         * <p>The time when the O\&amp;M task was preformed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the event is executed in the backend. The time must be in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T00:00:00Z</p>
@@ -282,13 +282,13 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of operation and maintenance events. Return values</p>
+         * <p>The status of the O\&amp;M event. Valid values:</p>
          * <ul>
-         * <li><strong>3</strong>: Events awaiting processing.</li>
-         * <li><strong>4</strong>: Events being processed.</li>
-         * <li><strong>5</strong>: Events that have successfully ended.</li>
-         * <li><strong>6</strong>: Events that have ended in failure.</li>
-         * <li><strong>7</strong>: Events that have been canceled.</li>
+         * <li><strong>3</strong>: filters pending events.</li>
+         * <li><strong>4</strong>: filters in-progress events.</li>
+         * <li><strong>5</strong>: filters successful events.</li>
+         * <li><strong>6</strong>: filters failed events.</li>
+         * <li><strong>7</strong>: filters canceled events.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The list of the subinstances.</p>
+         * <p>The list of sub-events.</p>
          */
         @NameInMap("SubInsNames")
         public java.util.List<String> subInsNames;
@@ -313,7 +313,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String switchTime;
 
         /**
-         * <p>The parameters of the task.</p>
+         * <p>The O\&amp;M event parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -333,7 +333,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The reason for the task in English.</p>
+         * <p>The cause of the O\&amp;M event.</p>
          * 
          * <strong>example:</strong>
          * <p>Minor version update</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceSSLResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -14,7 +14,7 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AD7E16AA-6B23-43BF-979C-07D957FB****</p>

@@ -19,7 +19,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public String architectureType;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription</li>
      * <li><strong>PostPaid</strong>: pay-as-you-go</li>
@@ -34,8 +34,8 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The edition of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Community</strong>: ApsaraDB for Redis Community Edition</li>
-     * <li><strong>Enterprise</strong>: ApsaraDB for Redis Enhanced Edition (Tair)</li>
+     * <li><strong>Community</strong>: Redis Open-Source Edition</li>
+     * <li><strong>Enterprise</strong>: Tair (Enterprise Edition)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +45,8 @@ public class DescribeInstancesRequest extends TeaModel {
     public String editionType;
 
     /**
-     * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, and <strong>5.0</strong>.</p>
-     * <p>Valid values:</p>
+     * <p>The database engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+     * <p>Enumerated values:</p>
      * <ul>
      * <li>1.0</li>
      * <li>2.8</li>
@@ -139,10 +139,10 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceStatus;
 
     /**
-     * <p>The database engine of the instance. Valid values:</p>
+     * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>Tair</strong></li>
-     * <li><strong>Redis</strong></li>
+     * <li><strong>Tair</strong>: Tair (Enterprise Edition)</li>
+     * <li><strong>Redis</strong>: Redis Open-Source Edition</li>
      * <li><strong>Memcache</strong></li>
      * </ul>
      * 
@@ -213,7 +213,7 @@ public class DescribeInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
      * <blockquote>
-     * <p>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>You can query resource group IDs by using the Tair (Redis OSS-compatible) console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

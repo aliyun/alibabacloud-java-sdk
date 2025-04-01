@@ -8,7 +8,7 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Automatic payment is enabled.</li>
-     * <li><strong>false</strong>: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane of the Billing Management console, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+     * <li><strong>false</strong>: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the Tair (Redis OSS-compatible) console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane of the Billing Management console, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,11 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
      * <ul>
      * <li><strong>true</strong>: enables auto-renewal.</li>
      * <li><strong>false</strong> (default): disables auto-renewal.</li>
+     * </ul>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
      * </ul>
      * 
      * <strong>example:</strong>

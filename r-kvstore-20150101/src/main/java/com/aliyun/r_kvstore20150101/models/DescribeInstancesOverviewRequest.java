@@ -34,8 +34,8 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The edition of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Community</strong>: Community Edition</li>
-     * <li><strong>Enterprise</strong>: Enhanced Edition (Tair)</li>
+     * <li><strong>Community</strong>: Redis Open-Source Edition</li>
+     * <li><strong>Enterprise</strong>: Tair (Enterprise Edition)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,16 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String editionType;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The engine version of the instance. Valid values: <strong>2.8</strong>, <strong>4.0</strong>, <strong>5.0</strong>, <strong>6.0</strong>, and <strong>7.0</strong>.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1.0</li>
+     * <li>2.8</li>
+     * <li>4.0</li>
+     * <li>5.0</li>
+     * <li>6.0</li>
+     * <li>7.0</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>4.0</p>
@@ -146,7 +155,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     public String privateIp;
 
     /**
-     * <p>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/61012.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region in which the instances you want to query reside. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -157,7 +166,7 @@ public class DescribeInstancesOverviewRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which the instances you want to query belong.</p>
      * <blockquote>
-     * <p>You can query resource group IDs by using the ApsaraDB for Redis console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>You can query resource group IDs by using the Tair (Redis OSS-compatible) console or by calling the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

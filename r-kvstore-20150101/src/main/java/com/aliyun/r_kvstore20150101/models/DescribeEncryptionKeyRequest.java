@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionKeyRequest extends TeaModel {
     /**
-     * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/302339.html">DescribeEncryptionKeyList</a> operation to query the ID of the key.</p>
+     * <p>The ID of the custom key. You can call the <a href="https://help.aliyun.com/document_detail/473860.html">DescribeEncryptionKeyList</a> operation to query the ID of the key.</p>
      * 
      * <strong>example:</strong>
      * <p>ad463061-992d-4195-8a94-ed63********</p>
@@ -14,7 +14,7 @@ public class DescribeEncryptionKeyRequest extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the ID of the instance.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

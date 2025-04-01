@@ -8,7 +8,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
-     * <li><strong>false</strong>: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
+     * <li><strong>false</strong>: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the Tair (Redis OSS-compatible) console: In the top navigation bar, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. In the left-side navigation pane, click <strong>Orders</strong>. On the <strong>Orders</strong> page, find the order and complete the payment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,11 +31,11 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal cycle based on which ApsaraDB for Redis automatically renews the purchased bandwidth. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>8</strong>, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
+     * <p>The auto-renewal cycle based on which Tair (Redis OSS-compatible) automatically renews the purchased bandwidth. Unit: months. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, <strong>7</strong>, <strong>8</strong>, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, <strong>36</strong>, and <strong>60</strong>.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter takes effect and must be specified only when you set the <strong>AutoRenew</strong> parameter to <strong>true</strong>.</li>
-     * <li>You cannot query the auto-renewal cycle by calling an API operation. To obtain the auto-renewal cycle, you can perform the following procedure: In the top navigation bar of the ApsaraDB for Redis console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. On the page that appears, enter the ID of the instance and the <code>-bw</code> suffix in the <strong>Instance ID</strong> field. Example: r-bp1zxszhcgatnx****-bw.</li>
+     * <li>You cannot query the auto-renewal cycle by calling an API operation. To obtain the auto-renewal cycle, you can perform the following procedure: In the top navigation bar of the Tair (Redis OSS-compatible) console, choose <strong>Expenses</strong> &gt; <strong>Renewal Management</strong>. On the page that appears, enter the ID of the instance and the <code>-bw</code> suffix in the <strong>Instance ID</strong> field. Example: r-bp1zxszhcgatnx****-bw.</li>
      * </ul>
      * </blockquote>
      * 
@@ -48,13 +48,13 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     /**
      * <p>The amount of extra bandwidth that you want to purchase. Unit: Mbit/s. The value must be an integer greater than or equal to <strong>0</strong>. The maximum value can be up to six times the default bandwidth of the instance or a single shard, but cannot exceed 192 Mbit/s. For example, if the default bandwidth of an instance is 10 Mbit/s, the value range of this parameter is <strong>0</strong> to <strong>60</strong>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/190794.html">DescribeRoleZoneInfo</a> operation to obtain the default maximum bandwidth returned by the <strong>DefaultBandWidth</strong> response parameter. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</p>
-     * </li>
-     * <li><p>If you specify multiple data shard IDs in the <strong>NodeId</strong> parameter, you must specify the amount of bandwidth that you want to purchase for each specified data shard in the Bandwidth parameter. The bandwidth values that you specify in the Bandwidth parameter must be in the same sequence as the data shard IDs that you specify in the NodeId parameter. In addition, you must separate the bandwidth values with commas (,).</p>
-     * </li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/473782.html">DescribeRoleZoneInfo</a> operation to obtain the default maximum bandwidth returned by the <strong>DefaultBandWidth</strong> response parameter. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a>.</li>
      * </ul>
+     * <ul>
+     * <li>If you specify multiple data shard IDs in the <strong>NodeId</strong> parameter, you must specify the amount of bandwidth that you want to purchase for each specified data shard in the Bandwidth parameter. The bandwidth values that you specify in the Bandwidth parameter must be in the same sequence as the data shard IDs that you specify in the NodeId parameter. In addition, you must separate the bandwidth values with commas (,).</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -85,7 +85,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String couponNo;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/60933.html">DescribeInstances</a> operation to query the IDs of instances.</p>
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473778.html">DescribeInstances</a> operation to query the IDs of instances.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,9 +95,9 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the data shard for which you want to purchase a specific amount of bandwidth. You can call the <a href="https://help.aliyun.com/document_detail/94665.html">DescribeLogicInstanceTopology</a> operation to query the IDs of the data shards in an instance. If you specify multiple data shard IDs, separate the data shard IDs with commas (,). You can also set this parameter to <strong>All</strong>, which specifies all the data shards of the instance.</p>
+     * <p>The ID of the data shard for which you want to purchase a specific amount of bandwidth. You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query the IDs of the data shards in an instance. If you specify multiple data shard IDs, separate the data shard IDs with commas (,). You can also set this parameter to <strong>All</strong>, which specifies all the data shards of the instance.</p>
      * <blockquote>
-     * <p>This parameter is available and required only if the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster master-replica</a> or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting</a> instance.</p>
+     * <p> This parameter is valid and required only if the instance is a <a href="https://help.aliyun.com/document_detail/52228.html">cluster</a> instance or <a href="https://help.aliyun.com/document_detail/62870.html">read/write splitting</a> instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     /**
      * <p>The validity period of the bandwidth that you purchase. Unit: day. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>7</strong>, <strong>14</strong>, <strong>30</strong>, <strong>60</strong>, <strong>90</strong>, <strong>180</strong>, <strong>365</strong>, <strong>730</strong>, <strong>1095</strong>, and <strong>1825</strong>.</p>
      * <blockquote>
-     * <p>If you want to continue using the purchased bandwidth after the specified period of time elapses, you must call the <a href="https://help.aliyun.com/document_detail/211199.html">RenewAdditionalBandwidth</a> operation to submit a renewal order.</p>
+     * <p>If you want to continue using the purchased bandwidth after the specified period of time elapses, you must call the <a href="https://help.aliyun.com/document_detail/473804.html">RenewAdditionalBandwidth</a> operation to submit a renewal order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

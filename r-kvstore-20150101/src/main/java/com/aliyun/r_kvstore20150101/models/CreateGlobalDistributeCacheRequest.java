@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateGlobalDistributeCacheRequest extends TeaModel {
     /**
-     * <p>The time when you want to restart the instance. Default value: Immediately. Valid values:</p>
+     * <p>The time when you want to perform the conversion. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: immediately restarts the instance.</li>
-     * <li><strong>MaintainTime</strong>: restarts the instance during the maintenance window.</li>
+     * <li><strong>Immediately</strong>: immediately performs the conversion.</li>
+     * <li><strong>MaintainTime</strong> (default): performs the conversion during the maintenance window.</li>
      * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/473775.html">ModifyInstanceMaintainTime</a> operation to modify the maintenance window of an instance.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Immediately</p>

@@ -7,8 +7,8 @@ public class ModifyParameterGroupRequest extends TeaModel {
     /**
      * <p>The service category. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Community Edition</li>
-     * <li><strong>enterprise</strong>: Enhanced Edition (Tair)</li>
+     * <li><strong>standard</strong>: Redis Open-Source Edition</li>
+     * <li><strong>enterprise</strong>: Tair (Enterprise Edition)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -70,6 +70,12 @@ public class ModifyParameterGroupRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

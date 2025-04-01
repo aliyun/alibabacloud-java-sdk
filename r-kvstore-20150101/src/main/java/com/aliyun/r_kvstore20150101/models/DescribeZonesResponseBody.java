@@ -42,10 +42,10 @@ public class DescribeZonesResponseBody extends TeaModel {
 
     public static class DescribeZonesResponseBodyZonesKVStoreZone extends TeaModel {
         /**
-         * <p>Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:</p>
+         * <p>Indicates whether Tair (Redis OSS-compatible) instances can be created in the current zone. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: ApsaraDB for Redis instances cannot be created in the current zone.</li>
-         * <li><strong>false</strong>: ApsaraDB for Redis instances can be created in the current zone.</li>
+         * <li><strong>true</strong>: Tair (Redis OSS-compatible) instances cannot be created in the current zone.</li>
+         * <li><strong>false</strong>: Tair (Redis OSS-compatible) instances can be created in the current zone.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
-         * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <strong>true</strong> in ApsaraDB for Redis.</p>
+         * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is <strong>true</strong> in Tair (Redis OSS-compatible).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

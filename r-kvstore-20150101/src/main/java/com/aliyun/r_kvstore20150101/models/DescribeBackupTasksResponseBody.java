@@ -17,7 +17,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>r-bp1zxszhcgatnx****</p>
@@ -26,15 +26,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The status of the backup task. Valid values:</p>
-     * <ul>
-     * <li><strong>NoStart</strong>: The backup task is not started.</li>
-     * <li><strong>Preparing</strong>: The backup task is being prepared.</li>
-     * <li><strong>Waiting</strong>: The backup task is pending.</li>
-     * <li><strong>Uploading:</strong> The system is uploading the backup file.</li>
-     * <li><strong>Checking:</strong> The system is checking the uploaded backup file.</li>
-     * <li><strong>Finished</strong>: The backup task is complete.</li>
-     * </ul>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BB73740C-23E2-4392-9DA4-2660C74C****</p>
@@ -265,6 +257,15 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public String process;
 
         /**
+         * <p>The backup progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
+        @NameInMap("Progress")
+        public String progress;
+
+        /**
          * <p>The start time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
@@ -329,6 +330,14 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
         public String getProcess() {
             return this.process;
+        }
+
+        public DescribeBackupTasksResponseBodyBackupJobs setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
         }
 
         public DescribeBackupTasksResponseBodyBackupJobs setStartTime(String startTime) {
