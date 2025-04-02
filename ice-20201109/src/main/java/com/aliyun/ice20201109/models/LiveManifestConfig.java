@@ -10,29 +10,23 @@ public class LiveManifestConfig extends TeaModel {
     @NameInMap("DateTimeInterval")
     public Integer dateTimeInterval;
 
-    @NameInMap("ManifestName")
-    public String manifestName;
-
     @NameInMap("MaxVideoBitrate")
     public Integer maxVideoBitrate;
 
     @NameInMap("MinBufferTime")
     public Integer minBufferTime;
 
+    @NameInMap("MinUpdatePeriod")
+    public Integer minUpdatePeriod;
+
     @NameInMap("MinVideoBitrate")
     public Integer minVideoBitrate;
 
-    @NameInMap("Protocol")
-    public String protocol;
-
-    @NameInMap("SegmentNum")
-    public Integer segmentNum;
+    @NameInMap("SegmentCount")
+    public Integer segmentCount;
 
     @NameInMap("StreamOrder")
     public String streamOrder;
-
-    @NameInMap("UseAudioRenditionGroups")
-    public Boolean useAudioRenditionGroups;
 
     public static LiveManifestConfig build(java.util.Map<String, ?> map) throws Exception {
         LiveManifestConfig self = new LiveManifestConfig();
@@ -55,14 +49,6 @@ public class LiveManifestConfig extends TeaModel {
         return this.dateTimeInterval;
     }
 
-    public LiveManifestConfig setManifestName(String manifestName) {
-        this.manifestName = manifestName;
-        return this;
-    }
-    public String getManifestName() {
-        return this.manifestName;
-    }
-
     public LiveManifestConfig setMaxVideoBitrate(Integer maxVideoBitrate) {
         this.maxVideoBitrate = maxVideoBitrate;
         return this;
@@ -79,6 +65,14 @@ public class LiveManifestConfig extends TeaModel {
         return this.minBufferTime;
     }
 
+    public LiveManifestConfig setMinUpdatePeriod(Integer minUpdatePeriod) {
+        this.minUpdatePeriod = minUpdatePeriod;
+        return this;
+    }
+    public Integer getMinUpdatePeriod() {
+        return this.minUpdatePeriod;
+    }
+
     public LiveManifestConfig setMinVideoBitrate(Integer minVideoBitrate) {
         this.minVideoBitrate = minVideoBitrate;
         return this;
@@ -87,20 +81,12 @@ public class LiveManifestConfig extends TeaModel {
         return this.minVideoBitrate;
     }
 
-    public LiveManifestConfig setProtocol(String protocol) {
-        this.protocol = protocol;
+    public LiveManifestConfig setSegmentCount(Integer segmentCount) {
+        this.segmentCount = segmentCount;
         return this;
     }
-    public String getProtocol() {
-        return this.protocol;
-    }
-
-    public LiveManifestConfig setSegmentNum(Integer segmentNum) {
-        this.segmentNum = segmentNum;
-        return this;
-    }
-    public Integer getSegmentNum() {
-        return this.segmentNum;
+    public Integer getSegmentCount() {
+        return this.segmentCount;
     }
 
     public LiveManifestConfig setStreamOrder(String streamOrder) {
@@ -109,14 +95,6 @@ public class LiveManifestConfig extends TeaModel {
     }
     public String getStreamOrder() {
         return this.streamOrder;
-    }
-
-    public LiveManifestConfig setUseAudioRenditionGroups(Boolean useAudioRenditionGroups) {
-        this.useAudioRenditionGroups = useAudioRenditionGroups;
-        return this;
-    }
-    public Boolean getUseAudioRenditionGroups() {
-        return this.useAudioRenditionGroups;
     }
 
 }

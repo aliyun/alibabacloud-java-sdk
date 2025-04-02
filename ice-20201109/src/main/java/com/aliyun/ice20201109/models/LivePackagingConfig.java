@@ -60,6 +60,9 @@ public class LivePackagingConfig extends TeaModel {
         @NameInMap("IV")
         public String IV;
 
+        @NameInMap("RotatePeriod")
+        public Integer rotatePeriod;
+
         @NameInMap("SystemIds")
         public java.util.List<String> systemIds;
 
@@ -85,6 +88,14 @@ public class LivePackagingConfig extends TeaModel {
         }
         public String getIV() {
             return this.IV;
+        }
+
+        public LivePackagingConfigDrmConfig setRotatePeriod(Integer rotatePeriod) {
+            this.rotatePeriod = rotatePeriod;
+            return this;
+        }
+        public Integer getRotatePeriod() {
+            return this.rotatePeriod;
         }
 
         public LivePackagingConfigDrmConfig setSystemIds(java.util.List<String> systemIds) {
