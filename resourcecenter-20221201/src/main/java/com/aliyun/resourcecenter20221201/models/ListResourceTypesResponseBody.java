@@ -14,7 +14,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the resource types.</p>
+     * <p>The resource types.</p>
      */
     @NameInMap("ResourceTypes")
     public java.util.List<ListResourceTypesResponseBodyResourceTypes> resourceTypes;
@@ -41,9 +41,21 @@ public class ListResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListResourceTypesResponseBodyResourceTypesCodeMapping extends TeaModel {
+        /**
+         * <p>The resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs.cluster</p>
+         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
+        /**
+         * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs.cluster</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -72,12 +84,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     public static class ListResourceTypesResponseBodyResourceTypes extends TeaModel {
         /**
-         * <strong>if can be null:</strong>
-         * <p>true</p>
+         * <p>The code mapping of the resource type.</p>
          */
-        @NameInMap("Authorized")
-        public Boolean authorized;
-
         @NameInMap("CodeMapping")
         public ListResourceTypesResponseBodyResourceTypesCodeMapping codeMapping;
 
@@ -95,6 +103,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
          */
         @NameInMap("ProductName")
         public String productName;
+
+        @NameInMap("RelatedResourceTypes")
+        public java.util.List<String> relatedResourceTypes;
 
         /**
          * <p>The resource type.</p>
@@ -119,14 +130,6 @@ public class ListResourceTypesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListResourceTypesResponseBodyResourceTypes setAuthorized(Boolean authorized) {
-            this.authorized = authorized;
-            return this;
-        }
-        public Boolean getAuthorized() {
-            return this.authorized;
-        }
-
         public ListResourceTypesResponseBodyResourceTypes setCodeMapping(ListResourceTypesResponseBodyResourceTypesCodeMapping codeMapping) {
             this.codeMapping = codeMapping;
             return this;
@@ -149,6 +152,14 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
         public String getProductName() {
             return this.productName;
+        }
+
+        public ListResourceTypesResponseBodyResourceTypes setRelatedResourceTypes(java.util.List<String> relatedResourceTypes) {
+            this.relatedResourceTypes = relatedResourceTypes;
+            return this;
+        }
+        public java.util.List<String> getRelatedResourceTypes() {
+            return this.relatedResourceTypes;
         }
 
         public ListResourceTypesResponseBodyResourceTypes setResourceType(String resourceType) {

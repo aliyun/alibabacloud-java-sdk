@@ -7,6 +7,9 @@ public class AssociateDefaultFilterRequest extends TeaModel {
     /**
      * <p>The name of the filter.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My Filters</p>
      */
     @NameInMap("FilterName")
     public String filterName;

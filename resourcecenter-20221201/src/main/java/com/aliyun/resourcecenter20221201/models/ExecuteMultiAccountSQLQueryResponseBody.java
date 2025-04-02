@@ -10,9 +10,21 @@ public class ExecuteMultiAccountSQLQueryResponseBody extends TeaModel {
     @NameInMap("Columns")
     public java.util.List<ExecuteMultiAccountSQLQueryResponseBodyColumns> columns;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

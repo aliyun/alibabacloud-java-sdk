@@ -16,9 +16,17 @@ public class ExecuteSQLQueryRequest extends TeaModel {
     @NameInMap("Expression")
     public String expression;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

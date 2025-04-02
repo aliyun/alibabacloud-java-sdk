@@ -1,3 +1,9 @@
+2025-04-02 Version: 1.3.0
+- Support API ListMultiAccountResourceRelationships.
+- Support API ListResourceRelationships.
+- Update API ListResourceTypes: add response parameters Body.ResourceTypes.$.RelatedResourceTypes.
+
+
 2024-10-10 Version: 1.2.2
 - Update API ExecuteMultiAccountSQLQuery: add param MaxResults.
 - Update API ExecuteMultiAccountSQLQuery: add param NextToken.
