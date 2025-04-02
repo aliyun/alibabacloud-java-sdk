@@ -11,7 +11,7 @@ public class UpdateWafRuleShrinkRequest extends TeaModel {
     public String configShrink;
 
     /**
-     * <p>WAF rule ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850237.html">ListWafRules</a> interface.</p>
+     * <p>WAF rule ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
