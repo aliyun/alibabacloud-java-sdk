@@ -79,6 +79,9 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     @NameInMap("OutputFiles")
     public java.util.List<String> outputFiles;
 
+    @NameInMap("OutputMediaIds")
+    public java.util.List<String> outputMediaIds;
+
     /**
      * <p>The URLs of the output files.</p>
      */
@@ -216,6 +219,14 @@ public class QueryIProductionJobResponseBody extends TeaModel {
         return this.outputFiles;
     }
 
+    public QueryIProductionJobResponseBody setOutputMediaIds(java.util.List<String> outputMediaIds) {
+        this.outputMediaIds = outputMediaIds;
+        return this;
+    }
+    public java.util.List<String> getOutputMediaIds() {
+        return this.outputMediaIds;
+    }
+
     public QueryIProductionJobResponseBody setOutputUrls(java.util.List<String> outputUrls) {
         this.outputUrls = outputUrls;
         return this;
@@ -323,6 +334,9 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     }
 
     public static class QueryIProductionJobResponseBodyOutput extends TeaModel {
+        @NameInMap("Biz")
+        public String biz;
+
         /**
          * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
          * <ol>
@@ -335,6 +349,9 @@ public class QueryIProductionJobResponseBody extends TeaModel {
          */
         @NameInMap("Media")
         public String media;
+
+        @NameInMap("OutputUrl")
+        public String outputUrl;
 
         /**
          * <p>The media type. Valid values:</p>
@@ -354,12 +371,28 @@ public class QueryIProductionJobResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public QueryIProductionJobResponseBodyOutput setBiz(String biz) {
+            this.biz = biz;
+            return this;
+        }
+        public String getBiz() {
+            return this.biz;
+        }
+
         public QueryIProductionJobResponseBodyOutput setMedia(String media) {
             this.media = media;
             return this;
         }
         public String getMedia() {
             return this.media;
+        }
+
+        public QueryIProductionJobResponseBodyOutput setOutputUrl(String outputUrl) {
+            this.outputUrl = outputUrl;
+            return this;
+        }
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         public QueryIProductionJobResponseBodyOutput setType(String type) {

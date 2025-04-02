@@ -215,6 +215,9 @@ public class SubmitIProductionJobRequest extends TeaModel {
     }
 
     public static class SubmitIProductionJobRequestOutput extends TeaModel {
+        @NameInMap("Biz")
+        public String biz;
+
         /**
          * <p>The output file. If Type is set to OSS, set this parameter to the path of an OSS object. If Type is set to Media, set this parameter to the ID of a media asset. You can specify the path of an OSS object in one of the following formats:</p>
          * <ol>
@@ -228,6 +231,9 @@ public class SubmitIProductionJobRequest extends TeaModel {
          */
         @NameInMap("Media")
         public String media;
+
+        @NameInMap("OutputUrl")
+        public String outputUrl;
 
         /**
          * <p>The media type. Valid values:</p>
@@ -248,12 +254,28 @@ public class SubmitIProductionJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public SubmitIProductionJobRequestOutput setBiz(String biz) {
+            this.biz = biz;
+            return this;
+        }
+        public String getBiz() {
+            return this.biz;
+        }
+
         public SubmitIProductionJobRequestOutput setMedia(String media) {
             this.media = media;
             return this;
         }
         public String getMedia() {
             return this.media;
+        }
+
+        public SubmitIProductionJobRequestOutput setOutputUrl(String outputUrl) {
+            this.outputUrl = outputUrl;
+            return this;
+        }
+        public String getOutputUrl() {
+            return this.outputUrl;
         }
 
         public SubmitIProductionJobRequestOutput setType(String type) {
