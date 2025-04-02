@@ -365,6 +365,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("VersionCode")
         public String versionCode;
 
+        @NameInMap("VersionLifecycle")
+        public String versionLifecycle;
+
         /**
          * <strong>example:</strong>
          * <p>vpc-bp1hcg467ekqsv0zr****</p>
@@ -535,6 +538,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getVersionCode() {
             return this.versionCode;
+        }
+
+        public ListClustersResponseBodyData setVersionLifecycle(String versionLifecycle) {
+            this.versionLifecycle = versionLifecycle;
+            return this;
+        }
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
         }
 
         public ListClustersResponseBodyData setVpcId(String vpcId) {

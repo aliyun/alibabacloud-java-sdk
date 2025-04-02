@@ -567,6 +567,9 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("VersionLifecycle")
+        public String versionLifecycle;
+
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
          * 
@@ -867,6 +870,14 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
+        }
+
+        public QueryClusterDetailResponseBodyData setVersionLifecycle(String versionLifecycle) {
+            this.versionLifecycle = versionLifecycle;
+            return this;
+        }
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
         }
 
         public QueryClusterDetailResponseBodyData setVpcId(String vpcId) {

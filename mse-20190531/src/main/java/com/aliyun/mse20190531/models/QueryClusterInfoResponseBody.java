@@ -641,6 +641,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("VersionCode")
         public String versionCode;
 
+        @NameInMap("VersionLifecycle")
+        public String versionLifecycle;
+
         /**
          * <p>The ID of the VPC where the instance resides.</p>
          * 
@@ -989,6 +992,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
         public String getVersionCode() {
             return this.versionCode;
+        }
+
+        public QueryClusterInfoResponseBodyData setVersionLifecycle(String versionLifecycle) {
+            this.versionLifecycle = versionLifecycle;
+            return this;
+        }
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
         }
 
         public QueryClusterInfoResponseBodyData setVpcId(String vpcId) {

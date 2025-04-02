@@ -299,6 +299,77 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
 
+    public static class ListGatewayResponseBodyDataResultGatewayEntry extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gw-*****5c2cd6144f4bfa1c32289f45ea8.cn-hangzhou.alicloudapi.com</p>
+         */
+        @NameInMap("EntryDomain")
+        public String entryDomain;
+
+        @NameInMap("HttpPorts")
+        public java.util.List<Integer> httpPorts;
+
+        @NameInMap("HttpsPorts")
+        public java.util.List<Integer> httpsPorts;
+
+        @NameInMap("IpList")
+        public java.util.List<String> ipList;
+
+        /**
+         * <strong>example:</strong>
+         * <p>PUB_NET</p>
+         */
+        @NameInMap("NetType")
+        public String netType;
+
+        public static ListGatewayResponseBodyDataResultGatewayEntry build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayResponseBodyDataResultGatewayEntry self = new ListGatewayResponseBodyDataResultGatewayEntry();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayResponseBodyDataResultGatewayEntry setEntryDomain(String entryDomain) {
+            this.entryDomain = entryDomain;
+            return this;
+        }
+        public String getEntryDomain() {
+            return this.entryDomain;
+        }
+
+        public ListGatewayResponseBodyDataResultGatewayEntry setHttpPorts(java.util.List<Integer> httpPorts) {
+            this.httpPorts = httpPorts;
+            return this;
+        }
+        public java.util.List<Integer> getHttpPorts() {
+            return this.httpPorts;
+        }
+
+        public ListGatewayResponseBodyDataResultGatewayEntry setHttpsPorts(java.util.List<Integer> httpsPorts) {
+            this.httpsPorts = httpsPorts;
+            return this;
+        }
+        public java.util.List<Integer> getHttpsPorts() {
+            return this.httpsPorts;
+        }
+
+        public ListGatewayResponseBodyDataResultGatewayEntry setIpList(java.util.List<String> ipList) {
+            this.ipList = ipList;
+            return this;
+        }
+        public java.util.List<String> getIpList() {
+            return this.ipList;
+        }
+
+        public ListGatewayResponseBodyDataResultGatewayEntry setNetType(String netType) {
+            this.netType = netType;
+            return this;
+        }
+        public String getNetType() {
+            return this.netType;
+        }
+
+    }
+
     public static class ListGatewayResponseBodyDataResultInitConfig extends TeaModel {
         /**
          * <p>Indicates whether Web Application Firewall (WAF) is enabled.</p>
@@ -791,6 +862,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("EndDate")
         public String endDate;
 
+        @NameInMap("GatewayEntry")
+        public java.util.List<ListGatewayResponseBodyDataResultGatewayEntry> gatewayEntry;
+
         /**
          * <p>The gateway type.</p>
          * 
@@ -1036,6 +1110,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
+        @NameInMap("VersionLifecycle")
+        public String versionLifecycle;
+
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the gateway belongs.</p>
          * 
@@ -1145,6 +1222,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public String getEndDate() {
             return this.endDate;
+        }
+
+        public ListGatewayResponseBodyDataResult setGatewayEntry(java.util.List<ListGatewayResponseBodyDataResultGatewayEntry> gatewayEntry) {
+            this.gatewayEntry = gatewayEntry;
+            return this;
+        }
+        public java.util.List<ListGatewayResponseBodyDataResultGatewayEntry> getGatewayEntry() {
+            return this.gatewayEntry;
         }
 
         public ListGatewayResponseBodyDataResult setGatewayType(String gatewayType) {
@@ -1369,6 +1454,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Boolean getUpgrade() {
             return this.upgrade;
+        }
+
+        public ListGatewayResponseBodyDataResult setVersionLifecycle(String versionLifecycle) {
+            this.versionLifecycle = versionLifecycle;
+            return this;
+        }
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
         }
 
         public ListGatewayResponseBodyDataResult setVpcId(String vpcId) {
