@@ -131,6 +131,9 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
         @NameInMap("Product")
         public String product;
 
+        @NameInMap("RiskLevel")
+        public Long riskLevel;
+
         /**
          * <strong>example:</strong>
          * <p>Advisor</p>
@@ -225,6 +228,14 @@ public class DescribeAdvisorChecksFoPagesResponseBody extends TeaModel {
         }
         public String getProduct() {
             return this.product;
+        }
+
+        public DescribeAdvisorChecksFoPagesResponseBodyDataResult setRiskLevel(Long riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public Long getRiskLevel() {
+            return this.riskLevel;
         }
 
         public DescribeAdvisorChecksFoPagesResponseBodyDataResult setSource(String source) {
