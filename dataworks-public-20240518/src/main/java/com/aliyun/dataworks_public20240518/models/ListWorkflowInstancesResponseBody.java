@@ -42,8 +42,6 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
 
     public static class ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances extends TeaModel {
         /**
-         * <p>业务日期。</p>
-         * 
          * <strong>example:</strong>
          * <p>1710239005403</p>
          */
@@ -164,15 +162,6 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>工作流实例的类型。</p>
-         * <ul>
-         * <li>Normal：周期调度</li>
-         * <li>Manual：手动任务</li>
-         * <li>SmokeTest：测试</li>
-         * <li>SupplementData：补数据</li>
-         * <li>ManualWorkflow：手动工作流</li>
-         * </ul>
-         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */

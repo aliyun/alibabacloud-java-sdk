@@ -84,7 +84,7 @@ public class ListResourceGroupsRequest extends TeaModel {
      * <li>Status (Desc/Asc): the status of the resource group</li>
      * <li>Spec (Desc/Asc): the specifications of the resource group</li>
      * <li>CreateUser (Desc/Asc): the creator of the resource group</li>
-     * <li>CreateTime (Desc/Asc): the time when the route is created</li>
+     * <li>CreateTime (Desc/Asc): the time when the resource group is created</li>
      * </ul>
      * <p>Default value: CreateTime Asc</p>
      * 

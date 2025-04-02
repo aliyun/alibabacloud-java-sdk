@@ -77,7 +77,7 @@ public class UpdateTaskRequest extends TeaModel {
     public String instanceMode;
 
     /**
-     * <p>The name of the task.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -789,7 +789,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <code>yyyy-mm-dd hh:mm:ss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
@@ -812,7 +812,7 @@ public class UpdateTaskRequest extends TeaModel {
         public String recurrence;
 
         /**
-         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <code>yyyy-mm-dd hh:mm:ss</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
@@ -823,8 +823,8 @@ public class UpdateTaskRequest extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: periodic scheduling</li>
-         * <li>Manual: manual scheduling</li>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

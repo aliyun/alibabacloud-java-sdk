@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCertificateRequest extends TeaModel {
     /**
+     * <p>The ID of the certificate file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetCertificateRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The ID of the workspace to which the certificate file belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>1065601</p>
      */

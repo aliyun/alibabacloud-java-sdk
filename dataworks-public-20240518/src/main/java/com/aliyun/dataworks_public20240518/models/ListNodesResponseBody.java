@@ -607,6 +607,9 @@ public class ListNodesResponseBody extends TeaModel {
     }
 
     public static class ListNodesResponseBodyPagingInfoNodesRuntimeResource extends TeaModel {
+        @NameInMap("ResourceGroup")
+        public String resourceGroup;
+
         /**
          * <p>The resource group ID.</p>
          * 
@@ -619,6 +622,14 @@ public class ListNodesResponseBody extends TeaModel {
         public static ListNodesResponseBodyPagingInfoNodesRuntimeResource build(java.util.Map<String, ?> map) throws Exception {
             ListNodesResponseBodyPagingInfoNodesRuntimeResource self = new ListNodesResponseBodyPagingInfoNodesRuntimeResource();
             return TeaModel.build(map, self);
+        }
+
+        public ListNodesResponseBodyPagingInfoNodesRuntimeResource setResourceGroup(String resourceGroup) {
+            this.resourceGroup = resourceGroup;
+            return this;
+        }
+        public String getResourceGroup() {
+            return this.resourceGroup;
         }
 
         public ListNodesResponseBodyPagingInfoNodesRuntimeResource setResourceGroupId(String resourceGroupId) {

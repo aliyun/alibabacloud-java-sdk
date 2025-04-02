@@ -745,8 +745,8 @@ public class ListDownstreamTaskInstancesResponseBody extends TeaModel {
         /**
          * <p>The scheduling dependency type. Valid values:</p>
          * <ul>
-         * <li>Normal: same-cycle scheduling dependency</li>
-         * <li>CrossCycle: cross-cycle scheduling dependency</li>
+         * <li>Normal</li>
+         * <li>CrossCycle</li>
          * </ul>
          * 
          * <strong>example:</strong>
