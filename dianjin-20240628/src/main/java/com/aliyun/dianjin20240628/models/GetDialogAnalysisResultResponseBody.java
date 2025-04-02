@@ -166,6 +166,12 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         @NameInMap("dialogLabels")
         public java.util.List<GetDialogAnalysisResultResponseBodyDataDialogAnalysisRespListAnalysisRespDialogLabels> dialogLabels;
 
+        @NameInMap("dialogOpenAnalysis")
+        public java.util.Map<String, ?> dialogOpenAnalysis;
+
+        @NameInMap("dialogProcessAnalysis")
+        public java.util.Map<String, ?> dialogProcessAnalysis;
+
         @NameInMap("dialogSop")
         public String dialogSop;
 
@@ -191,6 +197,22 @@ public class GetDialogAnalysisResultResponseBody extends TeaModel {
         }
         public java.util.List<GetDialogAnalysisResultResponseBodyDataDialogAnalysisRespListAnalysisRespDialogLabels> getDialogLabels() {
             return this.dialogLabels;
+        }
+
+        public GetDialogAnalysisResultResponseBodyDataDialogAnalysisRespListAnalysisResp setDialogOpenAnalysis(java.util.Map<String, ?> dialogOpenAnalysis) {
+            this.dialogOpenAnalysis = dialogOpenAnalysis;
+            return this;
+        }
+        public java.util.Map<String, ?> getDialogOpenAnalysis() {
+            return this.dialogOpenAnalysis;
+        }
+
+        public GetDialogAnalysisResultResponseBodyDataDialogAnalysisRespListAnalysisResp setDialogProcessAnalysis(java.util.Map<String, ?> dialogProcessAnalysis) {
+            this.dialogProcessAnalysis = dialogProcessAnalysis;
+            return this;
+        }
+        public java.util.Map<String, ?> getDialogProcessAnalysis() {
+            return this.dialogProcessAnalysis;
         }
 
         public GetDialogAnalysisResultResponseBodyDataDialogAnalysisRespListAnalysisResp setDialogSop(String dialogSop) {
