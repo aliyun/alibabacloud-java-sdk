@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListFiltersResponseBody extends TeaModel {
     /**
      * <p>The name of the default filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My Filters</p>
      */
     @NameInMap("DefaultFilterName")
     public String defaultFilterName;
@@ -76,6 +79,9 @@ public class ListFiltersResponseBody extends TeaModel {
 
         /**
          * <p>The name of the filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My devices</p>
          */
         @NameInMap("FilterName")
         public String filterName;
