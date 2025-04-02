@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class CreateWorkspaceDocResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>YRBcvy</p>
+     */
+    @NameInMap("dentryUuid")
+    public String dentryUuid;
+
+    /**
+     * <strong>example:</strong>
      * <p>QoJGq7xxx</p>
      */
     @NameInMap("docKey")
@@ -36,6 +43,20 @@ public class CreateWorkspaceDocResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+     */
+    @NameInMap("vendorRequestId")
+    public String vendorRequestId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>dingtalk</p>
+     */
+    @NameInMap("vendorType")
+    public String vendorType;
+
+    /**
+     * <strong>example:</strong>
      * <p>YRBGvy</p>
      */
     @NameInMap("workspaceId")
@@ -44,6 +65,14 @@ public class CreateWorkspaceDocResponseBody extends TeaModel {
     public static CreateWorkspaceDocResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateWorkspaceDocResponseBody self = new CreateWorkspaceDocResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateWorkspaceDocResponseBody setDentryUuid(String dentryUuid) {
+        this.dentryUuid = dentryUuid;
+        return this;
+    }
+    public String getDentryUuid() {
+        return this.dentryUuid;
     }
 
     public CreateWorkspaceDocResponseBody setDocKey(String docKey) {
@@ -76,6 +105,22 @@ public class CreateWorkspaceDocResponseBody extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public CreateWorkspaceDocResponseBody setVendorRequestId(String vendorRequestId) {
+        this.vendorRequestId = vendorRequestId;
+        return this;
+    }
+    public String getVendorRequestId() {
+        return this.vendorRequestId;
+    }
+
+    public CreateWorkspaceDocResponseBody setVendorType(String vendorType) {
+        this.vendorType = vendorType;
+        return this;
+    }
+    public String getVendorType() {
+        return this.vendorType;
     }
 
     public CreateWorkspaceDocResponseBody setWorkspaceId(String workspaceId) {
