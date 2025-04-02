@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateJobResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc7*******</p>
      */
@@ -12,6 +14,8 @@ public class CreateJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID used to troubleshoot issues.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxx</p>
      */

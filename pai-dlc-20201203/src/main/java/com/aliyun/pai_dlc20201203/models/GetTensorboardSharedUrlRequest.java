@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTensorboardSharedUrlRequest extends TeaModel {
     /**
+     * <p>The validity period of the shareable link. Unit: seconds. Maximum value: 604800.</p>
+     * 
      * <strong>example:</strong>
      * <p>86400</p>
      */

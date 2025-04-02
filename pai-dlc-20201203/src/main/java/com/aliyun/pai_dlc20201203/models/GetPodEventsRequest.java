@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetPodEventsRequest extends TeaModel {
     /**
+     * <p>The end time (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-09T16:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class GetPodEventsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The maximum number of events that can be returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class GetPodEventsRequest extends TeaModel {
     public Integer maxEventsNum;
 
     /**
+     * <p>The node UID. Call <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a> to get the node UID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-*****-chief-0</p>
      */
@@ -26,6 +32,8 @@ public class GetPodEventsRequest extends TeaModel {
     public String podUid;
 
     /**
+     * <p>The start time (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>
      */

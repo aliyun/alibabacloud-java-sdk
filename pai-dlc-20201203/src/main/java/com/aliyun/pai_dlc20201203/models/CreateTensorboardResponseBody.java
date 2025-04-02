@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateTensorboardResponseBody extends TeaModel {
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ds-20210126170216-xxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateTensorboardResponseBody extends TeaModel {
     public String dataSourceId;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-xxxxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class CreateTensorboardResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
@@ -26,6 +32,8 @@ public class CreateTensorboardResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>TensorBoard ID</p>
+     * 
      * <strong>example:</strong>
      * <p>tbxxxxxxxx</p>
      */

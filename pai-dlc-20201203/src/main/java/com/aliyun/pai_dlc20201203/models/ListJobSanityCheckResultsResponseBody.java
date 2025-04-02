@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListJobSanityCheckResultsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AC9xxx-3xxx-5xxx2-xxxx-FA5</p>
      */
     @NameInMap("RequestID")
     public String requestID;
 
+    /**
+     * <p>The sanity check results.</p>
+     */
     @NameInMap("SanityCheckResults")
     public java.util.List<java.util.List<SanityCheckResultItem>> sanityCheckResults;
 
     /**
+     * <p>The total number of results that meet the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

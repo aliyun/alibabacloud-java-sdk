@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobEventsRequest extends TeaModel {
     /**
+     * <p>The end time (UTC) of the time range for querying events. The default value is the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T18:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class GetJobEventsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The maximum number of events that can be returned. Default value: 2000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class GetJobEventsRequest extends TeaModel {
     public Integer maxEventsNum;
 
     /**
+     * <p>The start time (UTC) of the time range for querying events. The default value is 7 days ago.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>
      */

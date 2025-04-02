@@ -10,6 +10,9 @@ public class LogInfo extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    @NameInMap("IsTruncated")
+    public Boolean isTruncated;
+
     @NameInMap("PodId")
     public String podId;
 
@@ -45,6 +48,14 @@ public class LogInfo extends TeaModel {
     }
     public String getId() {
         return this.id;
+    }
+
+    public LogInfo setIsTruncated(Boolean isTruncated) {
+        this.isTruncated = isTruncated;
+        return this;
+    }
+    public Boolean getIsTruncated() {
+        return this.isTruncated;
     }
 
     public LogInfo setPodId(String podId) {

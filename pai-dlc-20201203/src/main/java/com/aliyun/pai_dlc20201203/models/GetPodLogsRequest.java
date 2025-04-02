@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetPodLogsRequest extends TeaModel {
     /**
+     * <p>Specifies whether to download the log file. Default value: false. Valid values:</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class GetPodLogsRequest extends TeaModel {
     public Boolean downloadToFile;
 
     /**
+     * <p>The end time of the query. Default value: current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T17:00:00Z</p>
      */
@@ -19,6 +27,8 @@ public class GetPodLogsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The maximum number of log entries. Default value: 2000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +36,8 @@ public class GetPodLogsRequest extends TeaModel {
     public Integer maxLines;
 
     /**
+     * <p>The node UID. For more information about how to obtain a node UID, see <a href="https://help.aliyun.com/document_detail/459677.html">GetJob</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>fe846462-af2c-4521-bd6f-96787a57****</p>
      */
@@ -33,6 +45,8 @@ public class GetPodLogsRequest extends TeaModel {
     public String podUid;
 
     /**
+     * <p>The start time of the query. Default value: 7 days ago.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>
      */

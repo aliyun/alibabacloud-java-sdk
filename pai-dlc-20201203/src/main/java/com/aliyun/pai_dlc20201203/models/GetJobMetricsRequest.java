@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobMetricsRequest extends TeaModel {
     /**
+     * <p>The end time of the time range to query monitoring data. The time is displayed in UTC. The default value is the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-09T16:00:00Z</p>
      */
@@ -12,6 +14,17 @@ public class GetJobMetricsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The type of the monitoring metrics. Valid values:</p>
+     * <ul>
+     * <li>GpuCoreUsage: GPU utilization</li>
+     * <li>GpuMemoryUsage: GPU memory utilization</li>
+     * <li>CpuCoreUsage: CPU utilization</li>
+     * <li>MemoryUsage: memory utilization</li>
+     * <li>NetworkInputRate: the network write in rate.</li>
+     * <li>NetworkOutputRate: the network write out rate</li>
+     * <li>DiskReadRate: the disk read rate</li>
+     * <li>DiskWriteRate: the disk write rate</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +34,8 @@ public class GetJobMetricsRequest extends TeaModel {
     public String metricType;
 
     /**
+     * <p>The beginning of the time range to query monitoring data. The time is displayed in UTC. The default value is the time 1 hour before the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>
      */
@@ -28,6 +43,8 @@ public class GetJobMetricsRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>The interval at which monitoring data is returned. Default value: 5. Unit: minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>5m</p>
      */
@@ -35,6 +52,8 @@ public class GetJobMetricsRequest extends TeaModel {
     public String timeStep;
 
     /**
+     * <p>The temporary token used for authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyXXXX-XXXX.XXXXX</p>
      */
