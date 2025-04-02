@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetPodLogsResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-******</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
     /**
+     * <p>The node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-****-chief-0</p>
      */
@@ -22,6 +29,8 @@ public class GetPodLogsResponseBody extends TeaModel {
     public String podId;
 
     /**
+     * <p>The instance UID.</p>
+     * 
      * <strong>example:</strong>
      * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
      */
@@ -29,6 +38,8 @@ public class GetPodLogsResponseBody extends TeaModel {
     public String podUid;
 
     /**
+     * <p>The request ID which is used for diagnostics and Q\&amp;A.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */

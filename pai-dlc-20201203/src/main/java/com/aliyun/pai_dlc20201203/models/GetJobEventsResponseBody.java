@@ -4,10 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobEventsResponseBody extends TeaModel {
+    /**
+     * <p>The events.</p>
+     */
     @NameInMap("Events")
     public java.util.List<String> events;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-******</p>
      */
@@ -15,6 +20,8 @@ public class GetJobEventsResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID, which can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>78F6FCE2-278F-4C4A-A6B7-DD8ECEA9C456</p>
      */

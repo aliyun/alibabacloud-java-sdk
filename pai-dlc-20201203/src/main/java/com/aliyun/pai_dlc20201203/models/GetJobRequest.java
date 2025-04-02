@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobRequest extends TeaModel {
     /**
+     * <p>Specifies whether to return the job details. Default value: true.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

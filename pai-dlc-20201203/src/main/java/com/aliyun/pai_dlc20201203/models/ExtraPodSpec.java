@@ -11,9 +11,11 @@ public class ExtraPodSpec extends TeaModel {
     public Lifecycle lifecycle;
 
     @NameInMap("PodAnnotations")
+    @Deprecated
     public java.util.Map<String, String> podAnnotations;
 
     @NameInMap("PodLabels")
+    @Deprecated
     public java.util.Map<String, String> podLabels;
 
     @NameInMap("SharedVolumeMountPaths")
@@ -43,6 +45,7 @@ public class ExtraPodSpec extends TeaModel {
         return this.lifecycle;
     }
 
+    @Deprecated
     public ExtraPodSpec setPodAnnotations(java.util.Map<String, String> podAnnotations) {
         this.podAnnotations = podAnnotations;
         return this;
@@ -51,6 +54,7 @@ public class ExtraPodSpec extends TeaModel {
         return this.podAnnotations;
     }
 
+    @Deprecated
     public ExtraPodSpec setPodLabels(java.util.Map<String, String> podLabels) {
         this.podLabels = podLabels;
         return this;

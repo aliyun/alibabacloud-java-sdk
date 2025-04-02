@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListEcsSpecsRequest extends TeaModel {
     /**
+     * <p>Filter by accelerator type. Valid values:</p>
+     * <ul>
+     * <li>CPU</li>
+     * <li>GPU</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GPU</p>
      */
@@ -12,6 +18,8 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String acceleratorType;
 
     /**
+     * <p>The instance types to query. Separate the types with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.g6.large,ecs.g6.xlarge</p>
      */
@@ -19,6 +27,12 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String instanceTypes;
 
     /**
+     * <p>The sorting order. Valid values:</p>
+     * <ul>
+     * <li>desc: descending order.</li>
+     * <li>asc: ascending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -26,6 +40,8 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of the page to query. The start value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +49,8 @@ public class ListEcsSpecsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -40,6 +58,12 @@ public class ListEcsSpecsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>ECS</li>
+     * <li>Lingjun</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -47,6 +71,14 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The field based on which the results are sorted. Valid values:</p>
+     * <ul>
+     * <li>CPU</li>
+     * <li>GPU</li>
+     * <li>Memory</li>
+     * <li>GmtCreateTime</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Gpu</p>
      */

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListJobSanityCheckResultsRequest extends TeaModel {
     /**
+     * <p>The sorting order:</p>
+     * <ul>
+     * <li>desc: descending order</li>
+     * <li>asc: ascending order</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetJobSanityCheckResultResponseBody extends TeaModel {
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-xxxxxx</p>
      */
@@ -12,12 +14,17 @@ public class GetJobSanityCheckResultResponseBody extends TeaModel {
     public String jobId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B3789344-F1xxxBE-5xx2-A04D-xxxxx</p>
      */
     @NameInMap("RequestID")
     public String requestID;
 
+    /**
+     * <p>The job sanity check result.</p>
+     */
     @NameInMap("SanityCheckResult")
     public java.util.List<SanityCheckResultItem> sanityCheckResult;
 

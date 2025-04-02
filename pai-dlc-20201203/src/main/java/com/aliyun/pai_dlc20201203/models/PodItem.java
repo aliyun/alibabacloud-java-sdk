@@ -35,6 +35,9 @@ public class PodItem extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("NodeName")
+    public String nodeName;
+
     /**
      * <strong>example:</strong>
      * <p>dlc-20210126170216-mtl37ge7gkvdz-worker-0</p>
@@ -55,6 +58,9 @@ public class PodItem extends TeaModel {
      */
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("SubStatus")
+    public String subStatus;
 
     /**
      * <strong>example:</strong>
@@ -108,6 +114,14 @@ public class PodItem extends TeaModel {
         return this.ip;
     }
 
+    public PodItem setNodeName(String nodeName) {
+        this.nodeName = nodeName;
+        return this;
+    }
+    public String getNodeName() {
+        return this.nodeName;
+    }
+
     public PodItem setPodId(String podId) {
         this.podId = podId;
         return this;
@@ -130,6 +144,14 @@ public class PodItem extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public PodItem setSubStatus(String subStatus) {
+        this.subStatus = subStatus;
+        return this;
+    }
+    public String getSubStatus() {
+        return this.subStatus;
     }
 
     public PodItem setType(String type) {

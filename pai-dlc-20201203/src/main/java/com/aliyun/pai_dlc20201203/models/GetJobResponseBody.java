@@ -4,26 +4,49 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobResponseBody extends TeaModel {
+    /**
+     * <p>The visibility of the job. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: The code is public in the workspace.</li>
+     * <li>PRIVATE: The workspace is visible only to you and the administrator of the workspace. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>a*****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The code source.</p>
+     */
     @NameInMap("CodeSource")
     public GetJobResponseBodyCodeSource codeSource;
 
+    /**
+     * <p>The access credential configurations.</p>
+     */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <p>The data sources.</p>
+     */
     @NameInMap("DataSources")
     public java.util.List<GetJobResponseBodyDataSources> dataSources;
 
     /**
+     * <p>The job name.</p>
+     * 
      * <strong>example:</strong>
      * <p>tf-mnist-test</p>
      */
@@ -31,26 +54,38 @@ public class GetJobResponseBody extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The duration of the job (seconds).</p>
+     * 
      * <strong>example:</strong>
      * <p>3602</p>
      */
     @NameInMap("Duration")
     public Long duration;
 
+    /**
+     * <p>The elastic job parameters.</p>
+     */
     @NameInMap("ElasticSpec")
     public JobElasticSpec elasticSpec;
 
     /**
+     * <p>Specifies whether to enable the debugger job.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("EnabledDebugger")
     public Boolean enabledDebugger;
 
+    /**
+     * <p>The configurations of environment variables.</p>
+     */
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
     /**
+     * <p>The time when the job was created (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:35:01Z</p>
      */
@@ -58,6 +93,8 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time of the job failed (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
      */
@@ -65,6 +102,8 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtFailedTime;
 
     /**
+     * <p>The time when the job ended (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
      */
@@ -72,6 +111,8 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtFinishTime;
 
     /**
+     * <p>The start time of the job (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:21Z</p>
      */
@@ -79,6 +120,8 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtRunningTime;
 
     /**
+     * <p>The time when the job stopped (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
      */
@@ -86,6 +129,8 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtStoppedTime;
 
     /**
+     * <p>The time when the job was submitted to the cluster (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:01Z</p>
      */
@@ -93,6 +138,8 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtSubmittedTime;
 
     /**
+     * <p>The time when the job succeeded (UTC).</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T15:36:08Z</p>
      */
@@ -100,26 +147,38 @@ public class GetJobResponseBody extends TeaModel {
     public String gmtSuccessedTime;
 
     /**
+     * <p>The job ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc*******</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The node configurations of the job, which is <strong>JobSpecs</strong> in the CreateJob operation.</p>
+     */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
     /**
+     * <p>The job type. Specified by the JobType parameter of the <a href="https://help.aliyun.com/document_detail/459672.html">CreateJob</a> operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>TFJob</p>
      */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>All running nodes of the job.</p>
+     */
     @NameInMap("Pods")
     public java.util.List<GetJobResponseBodyPods> pods;
 
     /**
+     * <p>The priority of the job. Valid values: 1 to 9.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -127,6 +186,8 @@ public class GetJobResponseBody extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>The status detail code, which is a sub-status under the current status.</p>
+     * 
      * <strong>example:</strong>
      * <p>JobStoppedByUser</p>
      */
@@ -134,6 +195,8 @@ public class GetJobResponseBody extends TeaModel {
     public String reasonCode;
 
     /**
+     * <p>The description of the status detail code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Job is stopped by user.</p>
      */
@@ -141,6 +204,8 @@ public class GetJobResponseBody extends TeaModel {
     public String reasonMessage;
 
     /**
+     * <p>The request ID, which can be used for troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-xxxxxxxx</p>
      */
@@ -148,6 +213,8 @@ public class GetJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the resource group to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>r******</p>
      */
@@ -155,6 +222,8 @@ public class GetJobResponseBody extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource level that the job uses.</p>
+     * 
      * <strong>example:</strong>
      * <p>L0</p>
      */
@@ -162,6 +231,8 @@ public class GetJobResponseBody extends TeaModel {
     public String resourceLevel;
 
     /**
+     * <p>The resource type. Valid values: ECS, Lingjun, and ACS.</p>
+     * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
@@ -169,46 +240,86 @@ public class GetJobResponseBody extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The number of retries and the maximum number of retries used by the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>0/10</p>
      */
     @NameInMap("RestartTimes")
     public String restartTimes;
 
+    /**
+     * <p>The settings of the additional parameters of the job.</p>
+     */
     @NameInMap("Settings")
     public JobSettings settings;
 
     /**
+     * <p>The status of the job. Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>Queuing</li>
+     * <li>Bidding (Only for Lingjun preemptible jobs)</li>
+     * <li>EnvPreparing</li>
+     * <li>SanityChecking</li>
+     * <li>Running</li>
+     * <li>Restarting</li>
+     * <li>Stopping</li>
+     * <li>SucceededReserving</li>
+     * <li>FailedReserving</li>
+     * <li>Succeeded</li>
+     * <li>Failed</li>
+     * <li>Stopped</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Stopped</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The status history.</p>
+     */
     @NameInMap("StatusHistory")
     public java.util.List<StatusTransitionItem> statusHistory;
 
     /**
+     * <p>The sub-status of the job, such as its preemption status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Restarting</p>
      */
     @NameInMap("SubStatus")
     public String subStatus;
 
+    /**
+     * <p>The tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GAR***W134</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
+     * <p>The directory that contains requirements.txt.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/code/</p>
      */
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
+    /**
+     * <p>The third-party Python libraries to be installed.</p>
+     */
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
 
     /**
+     * <p>The command that is run to start each node.</p>
+     * 
      * <strong>example:</strong>
      * <p>python /root/code/mnist.py</p>
      */
@@ -216,16 +327,23 @@ public class GetJobResponseBody extends TeaModel {
     public String userCommand;
 
     /**
+     * <p>The UID of the Alibaba Cloud account who submitted the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>12*********</p>
      */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The VPC of the user.</p>
+     */
     @NameInMap("UserVpc")
     public GetJobResponseBodyUserVpc userVpc;
 
     /**
+     * <p>The ID of the workspace to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>268</p>
      */
@@ -233,6 +351,8 @@ public class GetJobResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The name of the workspace to which the job belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-workspace</p>
      */
@@ -574,6 +694,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyCodeSource extends TeaModel {
         /**
+         * <p>The code branch.</p>
+         * 
          * <strong>example:</strong>
          * <p>master</p>
          */
@@ -581,6 +703,8 @@ public class GetJobResponseBody extends TeaModel {
         public String branch;
 
         /**
+         * <p>The code source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>code******</p>
          */
@@ -588,6 +712,8 @@ public class GetJobResponseBody extends TeaModel {
         public String codeSourceId;
 
         /**
+         * <p>The code commit ID</p>
+         * 
          * <strong>example:</strong>
          * <p>44da109b59f8596152987eaa8f3b2487xxxxxx</p>
          */
@@ -595,6 +721,8 @@ public class GetJobResponseBody extends TeaModel {
         public String commit;
 
         /**
+         * <p>The local mount path.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>
          */
@@ -642,6 +770,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyDataSources extends TeaModel {
         /**
+         * <p>The data source ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d*******</p>
          */
@@ -649,6 +779,8 @@ public class GetJobResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
+         * <p>The local mount path. This parameter is optional. The default value is empty, which specifies that the mount path in the data source is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data/</p>
          */
@@ -656,6 +788,8 @@ public class GetJobResponseBody extends TeaModel {
         public String mountPath;
 
         /**
+         * <p>The data source URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/</p>
          */
@@ -695,6 +829,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyPodsHistoryPods extends TeaModel {
         /**
+         * <p>The time when the node was created (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -702,6 +838,8 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The end time of the node (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -709,6 +847,8 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtFinishTime;
 
         /**
+         * <p>The start time of the node (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -716,6 +856,8 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtStartTime;
 
         /**
+         * <p>The IP address of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.1.3</p>
          */
@@ -723,6 +865,8 @@ public class GetJobResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Worker</p>
          */
@@ -730,6 +874,8 @@ public class GetJobResponseBody extends TeaModel {
         public String podId;
 
         /**
+         * <p>The UID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
          */
@@ -737,6 +883,8 @@ public class GetJobResponseBody extends TeaModel {
         public String podUid;
 
         /**
+         * <p>The resource type of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -744,6 +892,8 @@ public class GetJobResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The status of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Failed</p>
          */
@@ -751,6 +901,12 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The sub-status of the node, such as its preemption status. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Evicted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -758,6 +914,8 @@ public class GetJobResponseBody extends TeaModel {
         public String subStatus;
 
         /**
+         * <p>The type of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Worker</p>
          */
@@ -853,6 +1011,8 @@ public class GetJobResponseBody extends TeaModel {
 
     public static class GetJobResponseBodyPods extends TeaModel {
         /**
+         * <p>The time when the node was created (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -860,6 +1020,8 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The end time of the node (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T15:36:05Z</p>
          */
@@ -867,16 +1029,23 @@ public class GetJobResponseBody extends TeaModel {
         public String gmtFinishTime;
 
         /**
+         * <p>The start time of the node (UTC).</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
         @NameInMap("GmtStartTime")
         public String gmtStartTime;
 
+        /**
+         * <p>The historical nodes.</p>
+         */
         @NameInMap("HistoryPods")
         public java.util.List<GetJobResponseBodyPodsHistoryPods> historyPods;
 
         /**
+         * <p>The IP address of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>10.0.1.2</p>
          */
@@ -884,6 +1053,8 @@ public class GetJobResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <p>The node ID. It can be used in the GetPodLogs and GetPodEvents operations to obtain the detailed logs and events of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Worker</p>
          */
@@ -891,6 +1062,8 @@ public class GetJobResponseBody extends TeaModel {
         public String podId;
 
         /**
+         * <p>The UID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
          */
@@ -898,6 +1071,8 @@ public class GetJobResponseBody extends TeaModel {
         public String podUid;
 
         /**
+         * <p>The resource type of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -905,6 +1080,15 @@ public class GetJobResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The status of the node. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * <li>Unknown</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -912,6 +1096,12 @@ public class GetJobResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The sub-status of the node, such as its preemption status. Valid values:</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Evicted</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -919,6 +1109,8 @@ public class GetJobResponseBody extends TeaModel {
         public String subStatus;
 
         /**
+         * <p>The node type, which corresponds to a specific JobSpec in JobSpecs of the CreateJob operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>Worker</p>
          */
@@ -1021,13 +1213,22 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyUserVpc extends TeaModel {
+        /**
+         * <p>The default router. This parameter is valid only for general-purpose computing resources. Valid values:</p>
+         * <p>eth0: The default network interface is used to access the Internet through the public gateway. eth1: The user\&quot;s Elastic Network Interface is used to access the Internet through the private gateway.</p>
+         */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
+        /**
+         * <p>The extended CIDR block. Example: 192.168.0.1/24.</p>
+         */
         @NameInMap("ExtendedCidrs")
         public java.util.List<String> extendedCidrs;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-abcdef****</p>
          */
@@ -1035,6 +1236,8 @@ public class GetJobResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vs-abcdef****</p>
          */
@@ -1042,6 +1245,8 @@ public class GetJobResponseBody extends TeaModel {
         public String switchId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-abcdef****</p>
          */
