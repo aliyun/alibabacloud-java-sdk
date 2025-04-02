@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The details of the certificate file.</p>
+     */
     @NameInMap("Certificate")
     public GetCertificateResponseBodyCertificate certificate;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -37,6 +42,8 @@ public class GetCertificateResponseBody extends TeaModel {
 
     public static class GetCertificateResponseBodyCertificate extends TeaModel {
         /**
+         * <p>The time when the certificate file was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730217600000</p>
          */
@@ -44,6 +51,8 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the user who created the certificate file.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538</p>
          */
@@ -51,6 +60,8 @@ public class GetCertificateResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a file</p>
          */
@@ -58,6 +69,8 @@ public class GetCertificateResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The size of the certificate file, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>77549</p>
          */
@@ -65,6 +78,8 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long fileSizeInBytes;
 
         /**
+         * <p>The ID of the certificate file.</p>
+         * 
          * <strong>example:</strong>
          * <p>676303114031776</p>
          */
@@ -72,6 +87,8 @@ public class GetCertificateResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the certificate file.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca1.crt</p>
          */
@@ -79,6 +96,8 @@ public class GetCertificateResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the workspace to which the certificate file belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>177161</p>
          */

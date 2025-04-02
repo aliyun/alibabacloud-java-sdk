@@ -28,7 +28,7 @@ public class TriggerSchedulerTaskInstanceRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The time defined by the HTTP Trigger node.</p>
+     * <p>The time defined by the HTTP Trigger node. This value is a UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -3533,7 +3533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom alert monitoring rules.</p>
+     * <p>Queries a custom alert monitoring rule.</p>
      * 
      * @param request GetAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3566,7 +3566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom alert monitoring rules.</p>
+     * <p>Queries a custom alert monitoring rule.</p>
      * 
      * @param request GetAlertRuleRequest
      * @return GetAlertRuleResponse
@@ -3577,8 +3577,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查看认证文件</p>
+     * <p>Queries a certificate file.</p>
      * 
      * @param request GetCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3610,8 +3616,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Deploy, Develop, Workspace Owner, and O\&amp;M.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查看认证文件</p>
+     * <p>Queries a certificate file.</p>
      * 
      * @param request GetCertificateRequest
      * @return GetCertificateResponse
@@ -5146,7 +5158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom monitoring alert rule by page.</p>
+     * <p>Queries a list of custom monitoring alert rules.</p>
      * 
      * @param tmpReq ListAlertRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5217,7 +5229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of custom monitoring alert rule by page.</p>
+     * <p>Queries a list of custom monitoring alert rules.</p>
      * 
      * @param request ListAlertRulesRequest
      * @return ListAlertRulesResponse
@@ -5228,8 +5240,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查询认证文件列表</p>
+     * <p>Queries a list of certificate files.</p>
      * 
      * @param request ListCertificatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5261,8 +5279,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this operation only if you are assigned one of the following roles in DataWorks: Tenant Owner, Workspace Administrator, Deploy, Develop, Visitor, Workspace Owner, O\&amp;M, Model Designer, Security Administrator, Data Analyst, OpenPlatform Administrator, and Data Governance Administrator.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>查询认证文件列表</p>
+     * <p>Queries a list of certificate files.</p>
      * 
      * @param request ListCertificatesRequest
      * @return ListCertificatesResponse
@@ -8690,7 +8714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Tests the network connectivity between a resource group and a data source.</p>
+     * <p>Tests the connectivity between a data source and a resource group.</p>
      * 
      * @param request TestDataSourceConnectivityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8741,7 +8765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Tests the network connectivity between a resource group and a data source.</p>
+     * <p>Tests the connectivity between a data source and a resource group.</p>
      * 
      * @param request TestDataSourceConnectivityRequest
      * @return TestDataSourceConnectivityResponse
@@ -8899,7 +8923,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom alert monitoring rule.</p>
+     * <p>Updates the information about a custom alert monitoring rule.</p>
      * 
      * @param tmpReq UpdateAlertRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8966,7 +8990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a custom alert monitoring rule.</p>
+     * <p>Updates the information about a custom alert monitoring rule.</p>
      * 
      * @param request UpdateAlertRuleRequest
      * @return UpdateAlertRuleResponse

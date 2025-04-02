@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListCertificatesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecb967ec-c137-48****</p>
      */
@@ -37,6 +42,8 @@ public class ListCertificatesResponseBody extends TeaModel {
 
     public static class ListCertificatesResponseBodyPagingInfoCertificates extends TeaModel {
         /**
+         * <p>The time when the certificate file was created. This value is a UNIX timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1730217600000</p>
          */
@@ -44,6 +51,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the user who created the certificate file.</p>
+         * 
          * <strong>example:</strong>
          * <p>1107550004253538</p>
          */
@@ -51,6 +60,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String createUser;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>This is a file</p>
          */
@@ -58,6 +69,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The size of the certificate file, in bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1024</p>
          */
@@ -65,6 +78,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Long fileSizeInBytes;
 
         /**
+         * <p>The ID of the certificate file.</p>
+         * 
          * <strong>example:</strong>
          * <p>676303114031776</p>
          */
@@ -72,6 +87,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the certificate file.</p>
+         * 
          * <strong>example:</strong>
          * <p>ca1.crt</p>
          */
@@ -134,10 +151,15 @@ public class ListCertificatesResponseBody extends TeaModel {
     }
 
     public static class ListCertificatesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The certificate files.</p>
+         */
         @NameInMap("Certificates")
         public java.util.List<ListCertificatesResponseBodyPagingInfoCertificates> certificates;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -145,6 +167,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -152,6 +176,8 @@ public class ListCertificatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

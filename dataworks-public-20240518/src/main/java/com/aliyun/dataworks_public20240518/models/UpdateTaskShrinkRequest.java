@@ -77,7 +77,7 @@ public class UpdateTaskShrinkRequest extends TeaModel {
     public String instanceMode;
 
     /**
-     * <p>The name of the task.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

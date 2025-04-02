@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstanceOperationLogsRequest extends TeaModel {
     /**
-     * <p>The operation date, accurate to the day. The default value is the current day. You can query only the operation logs generated within the previous 31 days.</p>
+     * <p>The operation date, accurate to the day. The default value is the current day. You can query only the operation logs generated within the previous 31 days. This value is a UNIX timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1710239005403</p>

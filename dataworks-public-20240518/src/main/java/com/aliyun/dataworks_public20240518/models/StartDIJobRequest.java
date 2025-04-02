@@ -15,7 +15,11 @@ public class StartDIJobRequest extends TeaModel {
     public Long DIJobId;
 
     /**
-     * <p>Deprecated</p>
+     * <p>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not perform the forcible rerun operation.</p>
+     * <ul>
+     * <li>If the system does not perform the forcible rerun operation, only the steps that are not run start to run.</li>
+     * <li>If the system performs the forcible rerun operation, all steps start to rerun.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,6 +38,10 @@ public class StartDIJobRequest extends TeaModel {
 
     /**
      * <p>The settings for starting real-time synchronization.</p>
+     * <pre><code>{
+     *   &quot;StartTime&quot;:1663765058
+     * }
+     * </code></pre>
      */
     @NameInMap("RealtimeStartSettings")
     public StartDIJobRequestRealtimeStartSettings realtimeStartSettings;
@@ -78,7 +86,7 @@ public class StartDIJobRequest extends TeaModel {
 
     public static class StartDIJobRequestRealtimeStartSettingsFailoverSettings extends TeaModel {
         /**
-         * <p>The failover interval. Unit: minutes.</p>
+         * <p>This parameter is deprecated. Use advanced parameters for failover settings when you create a task.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -88,7 +96,7 @@ public class StartDIJobRequest extends TeaModel {
         public Long interval;
 
         /**
-         * <p>The maximum number of failovers allowed.</p>
+         * <p>This parameter is deprecated. Use advanced parameters for failover settings when you create a task.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -124,7 +132,7 @@ public class StartDIJobRequest extends TeaModel {
 
     public static class StartDIJobRequestRealtimeStartSettings extends TeaModel {
         /**
-         * <p>The failover settings.</p>
+         * <p>This parameter is deprecated. Use advanced parameters for failover settings when you create a task.</p>
          */
         @NameInMap("FailoverSettings")
         @Deprecated

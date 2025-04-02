@@ -433,7 +433,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public Double requestedCu;
 
         /**
-         * <p>The identifier of the resource group for Data Integration used for batch synchronization.</p>
+         * <p>The name of the resource group for Data Integration used for batch synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_111_222</p>
@@ -475,7 +475,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public Double requestedCu;
 
         /**
-         * <p>The identifier of the resource group for Data Integration used for real-time synchronization.</p>
+         * <p>The name of the resource group for Data Integration used for real-time synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_111_222</p>
@@ -517,7 +517,7 @@ public class UpdateDIJobRequest extends TeaModel {
         public Double requestedCu;
 
         /**
-         * <p>The identifier of the resource group for scheduling used for batch synchronization.</p>
+         * <p>The name of the resource group for scheduling used for batch synchronization.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_235454102432001_1721021993437</p>
