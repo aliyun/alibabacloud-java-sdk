@@ -3289,6 +3289,216 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     }
 
+    public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("Content")
+        public String content;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("DocId")
+        public String docId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("DocUuid")
+        public String docUuid;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2024-11-25 14:25:59</p>
+         */
+        @NameInMap("PubTime")
+        public String pubTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>QuarkCommonNews</p>
+         */
+        @NameInMap("SearchSource")
+        public String searchSource;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
+        @NameInMap("SearchSourceName")
+        public String searchSourceName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SystemSearch</p>
+         */
+        @NameInMap("SearchSourceType")
+        public String searchSourceType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("Summary")
+        public String summary;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("Title")
+        public String title;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult build(java.util.Map<String, ?> map) throws Exception {
+            RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult();
+            return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setDocId(String docId) {
+            this.docId = docId;
+            return this;
+        }
+        public String getDocId() {
+            return this.docId;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setDocUuid(String docUuid) {
+            this.docUuid = docUuid;
+            return this;
+        }
+        public String getDocUuid() {
+            return this.docUuid;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setPubTime(String pubTime) {
+            this.pubTime = pubTime;
+            return this;
+        }
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setSearchSource(String searchSource) {
+            this.searchSource = searchSource;
+            return this;
+        }
+        public String getSearchSource() {
+            return this.searchSource;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setSearchSourceName(String searchSourceName) {
+            this.searchSourceName = searchSourceName;
+            return this;
+        }
+        public String getSearchSourceName() {
+            return this.searchSourceName;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setSearchSourceType(String searchSourceType) {
+            this.searchSourceType = searchSourceType;
+            return this;
+        }
+        public String getSearchSourceType() {
+            return this.searchSourceType;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult extends TeaModel {
+        @NameInMap("Current")
+        public Integer current;
+
+        @NameInMap("SearchResult")
+        public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult> searchResult;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("Total")
+        public Integer total;
+
+        public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult build(java.util.Map<String, ?> map) throws Exception {
+            RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult();
+            return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult setCurrent(Integer current) {
+            this.current = current;
+            return this;
+        }
+        public Integer getCurrent() {
+            return this.current;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult setSearchResult(java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult> searchResult) {
+            this.searchResult = searchResult;
+            return this;
+        }
+        public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResultSearchResult> getSearchResult() {
+            return this.searchResult;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult setTotal(Integer total) {
+            this.total = total;
+            return this;
+        }
+        public Integer getTotal() {
+            return this.total;
+        }
+
+    }
+
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultGenerateTraceabilityCoordinatesGenerateCoordinate extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -4547,6 +4757,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("TextGenerateResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResult textGenerateResult;
 
+        @NameInMap("TextSearchResult")
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult textSearchResult;
+
         @NameInMap("TimelineResult")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResult timelineResult;
 
@@ -4596,6 +4809,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResult getTextGenerateResult() {
             return this.textGenerateResult;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent setTextSearchResult(RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult textSearchResult) {
+            this.textSearchResult = textSearchResult;
+            return this;
+        }
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextSearchResult getTextSearchResult() {
+            return this.textSearchResult;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent setTimelineResult(RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResult timelineResult) {

@@ -32,6 +32,15 @@ public class GetHotTopicBroadcastShrinkRequest extends TeaModel {
     @NameInMap("HotTopicVersion")
     public String hotTopicVersion;
 
+    @NameInMap("LocationQuery")
+    public String locationQuery;
+
+    @NameInMap("Locations")
+    public String locationsShrink;
+
+    @NameInMap("Query")
+    public String query;
+
     /**
      * <strong>example:</strong>
      * <p>5</p>
@@ -96,6 +105,30 @@ public class GetHotTopicBroadcastShrinkRequest extends TeaModel {
     }
     public String getHotTopicVersion() {
         return this.hotTopicVersion;
+    }
+
+    public GetHotTopicBroadcastShrinkRequest setLocationQuery(String locationQuery) {
+        this.locationQuery = locationQuery;
+        return this;
+    }
+    public String getLocationQuery() {
+        return this.locationQuery;
+    }
+
+    public GetHotTopicBroadcastShrinkRequest setLocationsShrink(String locationsShrink) {
+        this.locationsShrink = locationsShrink;
+        return this;
+    }
+    public String getLocationsShrink() {
+        return this.locationsShrink;
+    }
+
+    public GetHotTopicBroadcastShrinkRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public GetHotTopicBroadcastShrinkRequest setSize(Integer size) {

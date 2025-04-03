@@ -2277,6 +2277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetHotTopicBroadcastShrinkRequest request = new GetHotTopicBroadcastShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.locations)) {
+            request.locationsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.locations, "Locations", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.stepForCustomSummaryStyleConfig)) {
             request.stepForCustomSummaryStyleConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stepForCustomSummaryStyleConfig, "StepForCustomSummaryStyleConfig", "json");
         }
@@ -2304,6 +2308,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hotTopicVersion)) {
             body.put("HotTopicVersion", request.hotTopicVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationQuery)) {
+            body.put("LocationQuery", request.locationQuery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationsShrink)) {
+            body.put("Locations", request.locationsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("Query", request.query);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
@@ -7087,17 +7103,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         RunTitleGenerationShrinkRequest request = new RunTitleGenerationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deduplicatedTitles)) {
+            request.deduplicatedTitlesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deduplicatedTitles, "DeduplicatedTitles", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.referenceData)) {
             request.referenceDataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.referenceData, "ReferenceData", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deduplicatedTitlesShrink)) {
+            body.put("DeduplicatedTitles", request.deduplicatedTitlesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.referenceDataShrink)) {
             body.put("ReferenceData", request.referenceDataShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.titleCount)) {
+            body.put("TitleCount", request.titleCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
