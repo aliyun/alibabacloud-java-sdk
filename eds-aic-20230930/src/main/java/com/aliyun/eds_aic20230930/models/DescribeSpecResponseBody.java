@@ -23,7 +23,7 @@ public class DescribeSpecResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Specification information.</p>
+     * <p>The specifications.</p>
      */
     @NameInMap("SpecInfoModel")
     public java.util.List<DescribeSpecResponseBodySpecInfoModel> specInfoModel;
@@ -84,6 +84,12 @@ public class DescribeSpecResponseBody extends TeaModel {
         @NameInMap("Core")
         public Integer core;
 
+        /**
+         * <p>The maximum number of cloud phone instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("MaxPhoneCount")
         public String maxPhoneCount;
 
@@ -96,12 +102,26 @@ public class DescribeSpecResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <p>The minimum number of cloud phone instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MinPhoneCount")
         public String minPhoneCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PhoneCount")
         public String phoneCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920*1080</p>
+         */
         @NameInMap("Resolution")
         public String resolution;
 

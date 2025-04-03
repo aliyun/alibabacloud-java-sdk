@@ -12,7 +12,7 @@ public class RecoveryFileRequest extends TeaModel {
     public java.util.List<String> androidInstanceIdList;
 
     /**
-     * <p>Whether all data is to be backed up.</p>
+     * <p>Specifies whether to back up the whole instance.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

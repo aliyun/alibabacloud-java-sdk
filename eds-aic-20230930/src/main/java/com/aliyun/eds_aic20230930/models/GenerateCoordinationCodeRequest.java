@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateCoordinationCodeRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>acp-2zecay9ponatdc4m****</p>
      */
@@ -12,6 +14,8 @@ public class GenerateCoordinationCodeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the user to whom the current instance is assigned.</p>
+     * 
      * <strong>example:</strong>
      * <p>xiaoming</p>
      */

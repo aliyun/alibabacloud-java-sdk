@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GenerateCoordinationCodeResponseBody extends TeaModel {
     /**
+     * <p>The collaboration code.</p>
+     * 
      * <strong>example:</strong>
      * <p>CSHGDK</p>
      */
@@ -12,6 +14,8 @@ public class GenerateCoordinationCodeResponseBody extends TeaModel {
     public String coordinatorCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
      */

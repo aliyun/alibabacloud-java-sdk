@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The details of the instance group.</p>
+     * <p>The instance group.</p>
      */
     @NameInMap("InstanceGroupModel")
     public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel> instanceGroupModel;
@@ -136,7 +136,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String architectureType;
 
         /**
-         * <p>Number of instances.</p>
+         * <p>The number of available instances.</p>
+         * <blockquote>
+         * <p> Available instances are those not in the Deleting or Deleted state.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -168,11 +171,15 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> disks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIpv6")
         public Boolean enableIpv6;
 
         /**
-         * <p>The error code.</p>
+         * <p>The cause of the creation failure.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -270,6 +277,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("InstanceGroupStatus")
         public String instanceGroupStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Ipv6Bandwidth")
         public Integer ipv6Bandwidth;
 
@@ -319,7 +330,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The rendering type.</p>
+         * <p>The rendering mode of the instance group.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>GPURemote: GPU remote rendering.</li>
+         * <li>CPU: CPU rendering.</li>
+         * <li>GPUocal: GPU local rendering.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>

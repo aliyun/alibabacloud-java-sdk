@@ -3,7 +3,7 @@ package com.aliyun.eds_aic20230930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateCloudPhoneNodeRequest extends TeaModel {
+public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -42,7 +42,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     public String count;
 
     @NameInMap("DisplayConfig")
-    public CreateCloudPhoneNodeRequestDisplayConfig displayConfig;
+    public String displayConfigShrink;
 
     /**
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     public String serverType;
 
     @NameInMap("Tag")
-    public java.util.List<CreateCloudPhoneNodeRequestTag> tag;
+    public java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag;
 
     /**
      * <strong>example:</strong>
@@ -133,12 +133,12 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    public static CreateCloudPhoneNodeRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateCloudPhoneNodeRequest self = new CreateCloudPhoneNodeRequest();
+    public static CreateCloudPhoneNodeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateCloudPhoneNodeShrinkRequest self = new CreateCloudPhoneNodeShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateCloudPhoneNodeRequest setAutoPay(Boolean autoPay) {
+    public CreateCloudPhoneNodeShrinkRequest setAutoPay(Boolean autoPay) {
         this.autoPay = autoPay;
         return this;
     }
@@ -146,7 +146,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public CreateCloudPhoneNodeRequest setAutoRenew(Boolean autoRenew) {
+    public CreateCloudPhoneNodeShrinkRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
@@ -154,7 +154,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateCloudPhoneNodeRequest setBizRegionId(String bizRegionId) {
+    public CreateCloudPhoneNodeShrinkRequest setBizRegionId(String bizRegionId) {
         this.bizRegionId = bizRegionId;
         return this;
     }
@@ -162,7 +162,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.bizRegionId;
     }
 
-    public CreateCloudPhoneNodeRequest setChargeType(String chargeType) {
+    public CreateCloudPhoneNodeShrinkRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
@@ -170,7 +170,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public CreateCloudPhoneNodeRequest setCount(String count) {
+    public CreateCloudPhoneNodeShrinkRequest setCount(String count) {
         this.count = count;
         return this;
     }
@@ -178,15 +178,15 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.count;
     }
 
-    public CreateCloudPhoneNodeRequest setDisplayConfig(CreateCloudPhoneNodeRequestDisplayConfig displayConfig) {
-        this.displayConfig = displayConfig;
+    public CreateCloudPhoneNodeShrinkRequest setDisplayConfigShrink(String displayConfigShrink) {
+        this.displayConfigShrink = displayConfigShrink;
         return this;
     }
-    public CreateCloudPhoneNodeRequestDisplayConfig getDisplayConfig() {
-        return this.displayConfig;
+    public String getDisplayConfigShrink() {
+        return this.displayConfigShrink;
     }
 
-    public CreateCloudPhoneNodeRequest setImageId(String imageId) {
+    public CreateCloudPhoneNodeShrinkRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -194,7 +194,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.imageId;
     }
 
-    public CreateCloudPhoneNodeRequest setInstanceType(String instanceType) {
+    public CreateCloudPhoneNodeShrinkRequest setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -202,7 +202,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public CreateCloudPhoneNodeRequest setNetworkId(String networkId) {
+    public CreateCloudPhoneNodeShrinkRequest setNetworkId(String networkId) {
         this.networkId = networkId;
         return this;
     }
@@ -210,7 +210,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.networkId;
     }
 
-    public CreateCloudPhoneNodeRequest setNodeName(String nodeName) {
+    public CreateCloudPhoneNodeShrinkRequest setNodeName(String nodeName) {
         this.nodeName = nodeName;
         return this;
     }
@@ -218,7 +218,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.nodeName;
     }
 
-    public CreateCloudPhoneNodeRequest setPeriod(Integer period) {
+    public CreateCloudPhoneNodeShrinkRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
@@ -226,7 +226,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.period;
     }
 
-    public CreateCloudPhoneNodeRequest setPeriodUnit(String periodUnit) {
+    public CreateCloudPhoneNodeShrinkRequest setPeriodUnit(String periodUnit) {
         this.periodUnit = periodUnit;
         return this;
     }
@@ -234,7 +234,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public CreateCloudPhoneNodeRequest setPhoneCount(Integer phoneCount) {
+    public CreateCloudPhoneNodeShrinkRequest setPhoneCount(Integer phoneCount) {
         this.phoneCount = phoneCount;
         return this;
     }
@@ -242,7 +242,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.phoneCount;
     }
 
-    public CreateCloudPhoneNodeRequest setResolutionHeight(Integer resolutionHeight) {
+    public CreateCloudPhoneNodeShrinkRequest setResolutionHeight(Integer resolutionHeight) {
         this.resolutionHeight = resolutionHeight;
         return this;
     }
@@ -250,7 +250,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.resolutionHeight;
     }
 
-    public CreateCloudPhoneNodeRequest setResolutionWidth(Integer resolutionWidth) {
+    public CreateCloudPhoneNodeShrinkRequest setResolutionWidth(Integer resolutionWidth) {
         this.resolutionWidth = resolutionWidth;
         return this;
     }
@@ -258,7 +258,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.resolutionWidth;
     }
 
-    public CreateCloudPhoneNodeRequest setServerShareDataVolume(Integer serverShareDataVolume) {
+    public CreateCloudPhoneNodeShrinkRequest setServerShareDataVolume(Integer serverShareDataVolume) {
         this.serverShareDataVolume = serverShareDataVolume;
         return this;
     }
@@ -266,7 +266,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.serverShareDataVolume;
     }
 
-    public CreateCloudPhoneNodeRequest setServerType(String serverType) {
+    public CreateCloudPhoneNodeShrinkRequest setServerType(String serverType) {
         this.serverType = serverType;
         return this;
     }
@@ -274,15 +274,15 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.serverType;
     }
 
-    public CreateCloudPhoneNodeRequest setTag(java.util.List<CreateCloudPhoneNodeRequestTag> tag) {
+    public CreateCloudPhoneNodeShrinkRequest setTag(java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateCloudPhoneNodeRequestTag> getTag() {
+    public java.util.List<CreateCloudPhoneNodeShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public CreateCloudPhoneNodeRequest setVSwitchId(String vSwitchId) {
+    public CreateCloudPhoneNodeShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -290,48 +290,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public static class CreateCloudPhoneNodeRequestDisplayConfig extends TeaModel {
-        @NameInMap("Dpi")
-        public Integer dpi;
-
-        @NameInMap("Fps")
-        public Integer fps;
-
-        @NameInMap("LockResolution")
-        public String lockResolution;
-
-        public static CreateCloudPhoneNodeRequestDisplayConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateCloudPhoneNodeRequestDisplayConfig self = new CreateCloudPhoneNodeRequestDisplayConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateCloudPhoneNodeRequestDisplayConfig setDpi(Integer dpi) {
-            this.dpi = dpi;
-            return this;
-        }
-        public Integer getDpi() {
-            return this.dpi;
-        }
-
-        public CreateCloudPhoneNodeRequestDisplayConfig setFps(Integer fps) {
-            this.fps = fps;
-            return this;
-        }
-        public Integer getFps() {
-            return this.fps;
-        }
-
-        public CreateCloudPhoneNodeRequestDisplayConfig setLockResolution(String lockResolution) {
-            this.lockResolution = lockResolution;
-            return this;
-        }
-        public String getLockResolution() {
-            return this.lockResolution;
-        }
-
-    }
-
-    public static class CreateCloudPhoneNodeRequestTag extends TeaModel {
+    public static class CreateCloudPhoneNodeShrinkRequestTag extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>keyname</p>
@@ -346,12 +305,12 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateCloudPhoneNodeRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateCloudPhoneNodeRequestTag self = new CreateCloudPhoneNodeRequestTag();
+        public static CreateCloudPhoneNodeShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudPhoneNodeShrinkRequestTag self = new CreateCloudPhoneNodeShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateCloudPhoneNodeRequestTag setKey(String key) {
+        public CreateCloudPhoneNodeShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -359,7 +318,7 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateCloudPhoneNodeRequestTag setValue(String value) {
+        public CreateCloudPhoneNodeShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

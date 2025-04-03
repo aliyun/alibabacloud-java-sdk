@@ -4,9 +4,23 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpecRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <p>The matrix specification.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cpm.gn6.gx1</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cpm.gn6.gx1</p>
+     */
     @NameInMap("MatrixSpec")
     public String matrixSpec;
 
@@ -28,6 +42,17 @@ public class DescribeSpecRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The purchase mode of cloud mobile phones.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Instance (default): the instance group mode.</li>
+     * <li>Node: the matrix mode [whitelisted].</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
     @NameInMap("SaleMode")
     public String saleMode;
 

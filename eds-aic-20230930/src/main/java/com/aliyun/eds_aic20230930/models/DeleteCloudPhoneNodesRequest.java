@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DeleteCloudPhoneNodesRequest extends TeaModel {
+    /**
+     * <p>The cloud phone matrix IDs.</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 

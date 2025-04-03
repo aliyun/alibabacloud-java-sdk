@@ -47,7 +47,7 @@ public class DescribeImageListRequest extends TeaModel {
     public String imageType;
 
     /**
-     * <p>The maximum number of entries per page. Value range: 1 to 100. Default value: 20.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
