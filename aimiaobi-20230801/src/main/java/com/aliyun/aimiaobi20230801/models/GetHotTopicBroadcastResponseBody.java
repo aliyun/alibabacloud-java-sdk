@@ -558,6 +558,9 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         @NameInMap("InputToken")
         public Integer inputToken;
 
+        @NameInMap("Locations")
+        public java.util.List<String> locations;
+
         @NameInMap("News")
         public java.util.List<GetHotTopicBroadcastResponseBodyDataDataNews> news;
 
@@ -661,6 +664,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         }
         public Integer getInputToken() {
             return this.inputToken;
+        }
+
+        public GetHotTopicBroadcastResponseBodyDataData setLocations(java.util.List<String> locations) {
+            this.locations = locations;
+            return this;
+        }
+        public java.util.List<String> getLocations() {
+            return this.locations;
         }
 
         public GetHotTopicBroadcastResponseBodyDataData setNews(java.util.List<GetHotTopicBroadcastResponseBodyDataDataNews> news) {

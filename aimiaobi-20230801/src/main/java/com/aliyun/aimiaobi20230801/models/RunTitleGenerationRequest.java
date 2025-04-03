@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunTitleGenerationRequest extends TeaModel {
+    @NameInMap("DeduplicatedTitles")
+    public java.util.List<String> deduplicatedTitles;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -17,6 +20,9 @@ public class RunTitleGenerationRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("TitleCount")
+    public String titleCount;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -29,6 +35,14 @@ public class RunTitleGenerationRequest extends TeaModel {
     public static RunTitleGenerationRequest build(java.util.Map<String, ?> map) throws Exception {
         RunTitleGenerationRequest self = new RunTitleGenerationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunTitleGenerationRequest setDeduplicatedTitles(java.util.List<String> deduplicatedTitles) {
+        this.deduplicatedTitles = deduplicatedTitles;
+        return this;
+    }
+    public java.util.List<String> getDeduplicatedTitles() {
+        return this.deduplicatedTitles;
     }
 
     public RunTitleGenerationRequest setReferenceData(RunTitleGenerationRequestReferenceData referenceData) {
@@ -45,6 +59,14 @@ public class RunTitleGenerationRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public RunTitleGenerationRequest setTitleCount(String titleCount) {
+        this.titleCount = titleCount;
+        return this;
+    }
+    public String getTitleCount() {
+        return this.titleCount;
     }
 
     public RunTitleGenerationRequest setWorkspaceId(String workspaceId) {

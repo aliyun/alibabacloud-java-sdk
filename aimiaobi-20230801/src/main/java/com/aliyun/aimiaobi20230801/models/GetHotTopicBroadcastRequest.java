@@ -32,6 +32,15 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
     @NameInMap("HotTopicVersion")
     public String hotTopicVersion;
 
+    @NameInMap("LocationQuery")
+    public String locationQuery;
+
+    @NameInMap("Locations")
+    public java.util.List<String> locations;
+
+    @NameInMap("Query")
+    public String query;
+
     /**
      * <strong>example:</strong>
      * <p>5</p>
@@ -96,6 +105,30 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
     }
     public String getHotTopicVersion() {
         return this.hotTopicVersion;
+    }
+
+    public GetHotTopicBroadcastRequest setLocationQuery(String locationQuery) {
+        this.locationQuery = locationQuery;
+        return this;
+    }
+    public String getLocationQuery() {
+        return this.locationQuery;
+    }
+
+    public GetHotTopicBroadcastRequest setLocations(java.util.List<String> locations) {
+        this.locations = locations;
+        return this;
+    }
+    public java.util.List<String> getLocations() {
+        return this.locations;
+    }
+
+    public GetHotTopicBroadcastRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public GetHotTopicBroadcastRequest setSize(Integer size) {
@@ -238,6 +271,7 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
         public java.util.List<String> categories;
 
         @NameInMap("CustomHotValueWeights")
+        @Deprecated
         public java.util.List<GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfigCustomHotValueWeights> customHotValueWeights;
 
         /**
@@ -260,6 +294,7 @@ public class GetHotTopicBroadcastRequest extends TeaModel {
             return this.categories;
         }
 
+        @Deprecated
         public GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfig setCustomHotValueWeights(java.util.List<GetHotTopicBroadcastRequestStepForNewsBroadcastContentConfigCustomHotValueWeights> customHotValueWeights) {
             this.customHotValueWeights = customHotValueWeights;
             return this;
