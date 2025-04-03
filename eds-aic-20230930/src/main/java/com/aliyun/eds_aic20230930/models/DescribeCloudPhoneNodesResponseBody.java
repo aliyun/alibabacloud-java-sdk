@@ -112,6 +112,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         /**
          * <strong>example:</strong>
          * <p>32</p>
@@ -239,6 +242,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setMemory(Integer memory) {

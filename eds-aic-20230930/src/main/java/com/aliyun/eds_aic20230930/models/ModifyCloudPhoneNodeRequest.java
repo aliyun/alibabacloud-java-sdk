@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudPhoneNodeRequest extends TeaModel {
     /**
+     * <p>The name that you want to assign to the cloud phone matrix.</p>
+     * 
      * <strong>example:</strong>
      * <p>node_name_new</p>
      */
@@ -12,6 +14,8 @@ public class ModifyCloudPhoneNodeRequest extends TeaModel {
     public String newNodeName;
 
     /**
+     * <p>The ID of the cloud phone matrix.</p>
+     * 
      * <strong>example:</strong>
      * <p>cpn-0ugbptfu473fy****</p>
      */

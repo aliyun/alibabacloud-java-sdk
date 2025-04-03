@@ -246,7 +246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves connection tickets in bulk.</p>
+     * <p>Retrieves connection tickets in batch.</p>
      * 
      * @param request BatchGetAcpConnectionTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -295,7 +295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves connection tickets in bulk.</p>
+     * <p>Retrieves connection tickets in batch.</p>
      * 
      * @param request BatchGetAcpConnectionTicketRequest
      * @return BatchGetAcpConnectionTicketResponse
@@ -511,8 +511,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Preparations</h3>
-     * <p>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code>.</p>
+     * <p>When creating an app, you can provide app information to the system in one of the following ways:</p>
+     * <ul>
+     * <li>Way 1: Apps from the Application Center<ul>
+     * <li>You can use one of the following methods:<ul>
+     * <li>Method 1: Pass in the <code>FileName</code> and <code>FilePath</code> parameters at the same time.</li>
+     * <li>Method 2: Pass in the <code>OssAppUrl</code> parameter</li>
+     * </ul>
+     * </li>
+     * <li>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</li>
+     * <li>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code> parameters.</li>
+     * </ul>
+     * </li>
+     * <li>Way 2: Custom apps<ul>
+     * <li>Pass in the <code>CustomAppInfo</code> parameter.</li>
+     * <li>Rule: If you pass in the <code>CustomAppInfo</code> parameter, all six fields within it are required.<blockquote>
+     * <p> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates an Android application.</p>
@@ -590,8 +609,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Preparations</h3>
-     * <p>Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the application file to Application Center to obtain the values of request parameters <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code>.</p>
+     * <p>When creating an app, you can provide app information to the system in one of the following ways:</p>
+     * <ul>
+     * <li>Way 1: Apps from the Application Center<ul>
+     * <li>You can use one of the following methods:<ul>
+     * <li>Method 1: Pass in the <code>FileName</code> and <code>FilePath</code> parameters at the same time.</li>
+     * <li>Method 2: Pass in the <code>OssAppUrl</code> parameter</li>
+     * </ul>
+     * </li>
+     * <li>Rule: If your app is from the Alibaba Cloud Workspace Application Center, you must use either Method 1 or Method 2. If both are used, Method 1 takes priority.</li>
+     * <li>Condition: Before you proceed, log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise console</a> and follow the on-screen instructions to upload the app file to the Application Center to obtain the values of the <code>FileName</code>, <code>FilePath</code>, and <code>OssAppUrl</code> parameters.</li>
+     * </ul>
+     * </li>
+     * <li>Way 2: Custom apps<ul>
+     * <li>Pass in the <code>CustomAppInfo</code> parameter.</li>
+     * <li>Rule: If you pass in the <code>CustomAppInfo</code> parameter, all six fields within it are required.<blockquote>
+     * <p> If Way 1 and Way 2 are adopted simultaneously, the information from Way 2 takes priority.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates an Android application.</p>
@@ -608,12 +646,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>创建云机节点</p>
      * 
-     * @param request CreateCloudPhoneNodeRequest
+     * @param tmpReq CreateCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCloudPhoneNodeResponse
      */
-    public CreateCloudPhoneNodeResponse createCloudPhoneNodeWithOptions(CreateCloudPhoneNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateCloudPhoneNodeResponse createCloudPhoneNodeWithOptions(CreateCloudPhoneNodeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCloudPhoneNodeShrinkRequest request = new CreateCloudPhoneNodeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.displayConfig)) {
+            request.displayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.displayConfig, "DisplayConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
@@ -687,8 +731,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VSwitchId", request.vSwitchId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayConfigShrink)) {
+            body.put("DisplayConfig", request.displayConfigShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateCloudPhoneNode"),
@@ -723,7 +773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Custom Image</p>
+     * <p>Creates a custom image from a cloud phone instance.</p>
      * 
      * @param request CreateCustomImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -772,7 +822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Custom Image</p>
+     * <p>Creates a custom image from a cloud phone instance.</p>
      * 
      * @param request CreateCustomImageRequest
      * @return CreateCustomImageResponse
@@ -882,6 +932,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupName)) {
             body.put("PolicyGroupName", request.policyGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            body.put("PolicyType", request.policyType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resolutionHeight)) {
@@ -1096,8 +1150,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</p>
+     * 
      * <b>summary</b> : 
-     * <p>释放服务器</p>
+     * <p>Deletes a cloud phone matrix.</p>
      * 
      * @param request DeleteCloudPhoneNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1133,8 +1190,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</p>
+     * 
      * <b>summary</b> : 
-     * <p>释放服务器</p>
+     * <p>Deletes a cloud phone matrix.</p>
      * 
      * @param request DeleteCloudPhoneNodesRequest
      * @return DeleteCloudPhoneNodesResponse
@@ -2559,8 +2619,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取协同码</p>
+     * <p>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</p>
      * 
      * @param request GenerateCoordinationCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2600,8 +2663,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取协同码</p>
+     * <p>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</p>
      * 
      * @param request GenerateCoordinationCodeRequest
      * @return GenerateCoordinationCodeResponse
@@ -2672,7 +2738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</p>
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs an app on multiple cloud phone instances at the same time.</p>
@@ -2720,7 +2786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation runs asynchronously. To check the installation result, you can query the installation history for the app.</p>
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Installs an app on multiple cloud phone instances at the same time.</p>
@@ -2758,6 +2824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupName)) {
             body.put("PolicyGroupName", request.policyGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            body.put("PolicyType", request.policyType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2967,7 +3037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云机节点信息</p>
+     * <p>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</p>
      * 
      * @param request ModifyCloudPhoneNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3000,7 +3070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改云机节点信息</p>
+     * <p>Modifies a cloud phone matrix. Currently, you can only modify the name of a cloud phone matrix.</p>
      * 
      * @param request ModifyCloudPhoneNodeRequest
      * @return ModifyCloudPhoneNodeResponse
@@ -3224,6 +3294,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</p>
      * 
@@ -3269,6 +3342,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * 
      * <b>summary</b> : 
      * <p>Operates apps in a cloud phone, such as opening, closing, and reopening apps.</p>
      * 
@@ -3477,7 +3553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费服务器</p>
+     * <p>Renews a cloud mobile matrix.</p>
      * 
      * @param request RenewCloudPhoneNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3526,7 +3602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>续费服务器</p>
+     * <p>Renews a cloud mobile matrix.</p>
      * 
      * @param request RenewCloudPhoneNodesRequest
      * @return RenewCloudPhoneNodesResponse
@@ -3901,8 +3977,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</p>
+     * <p>Uninstalls an app from multiple cloud phone instances.</p>
      * 
      * @param request UninstallAppRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3946,8 +4025,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation runs asynchronously. To check the operation result, you can visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Uninstalls an app from multiple cloud phone instances. This operation runs asynchronously. You can check the result of the task by using the task ID.</p>
+     * <p>Uninstalls an app from multiple cloud phone instances.</p>
      * 
      * @param request UninstallAppRequest
      * @return UninstallAppResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecoveryFileResponseBody extends TeaModel {
     /**
-     * <p>The number of entries.</p>
+     * <p>The number of restored instances.</p>
      * 
      * <strong>example:</strong>
      * <p>97</p>
@@ -32,7 +32,7 @@ public class RecoveryFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the batch task.</p>
      * 
      * <strong>example:</strong>
      * <p>t-5prhfo7wv1gjx****</p>

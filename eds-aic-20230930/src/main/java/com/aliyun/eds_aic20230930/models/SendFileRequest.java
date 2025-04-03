@@ -21,6 +21,15 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("SourceFilePath")
     public String sourceFilePath;
 
+    /**
+     * <p>The name of the file uploaded from the Object Storage Service (OSS) to the cloud phone instance.</p>
+     * <blockquote>
+     * <p> If UploadType is set to OSS, you must specify TargetFileName. If TargetFileName is empty, the file uploaded from the OSS bucket to the cloud phone instance retains its original name. If TargetFileName is provided with a value, the uploaded file in the SourceFilePath directory uses the specified name (TargetFileName). If UploadType is set to DOWNLOAD_URL, TargetFileName does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test.txt</p>
+     */
     @NameInMap("TargetFileName")
     public String targetFileName;
 

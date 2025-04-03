@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageListResponseBody extends TeaModel {
     /**
-     * <p>The objects that are returned.</p>
+     * <p>The images.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeImageListResponseBodyData> data;

@@ -93,6 +93,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("PolicyGroupName")
     public String policyGroupName;
 
+    @NameInMap("PolicyType")
+    public String policyType;
+
     /**
      * <p>The height of the resolution. Unit: pixels.</p>
      * 
@@ -170,6 +173,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getPolicyGroupName() {
         return this.policyGroupName;
+    }
+
+    public CreatePolicyGroupRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
     }
 
     public CreatePolicyGroupRequest setResolutionHeight(Integer resolutionHeight) {

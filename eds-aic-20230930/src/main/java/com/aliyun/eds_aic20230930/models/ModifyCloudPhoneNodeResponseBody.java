@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCloudPhoneNodeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
      */

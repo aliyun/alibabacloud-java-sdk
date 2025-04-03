@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAndroidInstancesResponseBody extends TeaModel {
     /**
-     * <p>The instances.</p>
+     * <p>The cloud phone instances.</p>
      */
     @NameInMap("InstanceModel")
     public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModel> instanceModel;
@@ -76,7 +76,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModelDisks extends TeaModel {
         /**
-         * <p>The size of the disk. Unit: GB.</p>
+         * <p>The disk size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -112,6 +112,69 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getDiskType() {
             return this.diskType;
+        }
+
+    }
+
+    public static class DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig extends TeaModel {
+        @NameInMap("Dpi")
+        public Integer dpi;
+
+        @NameInMap("Fps")
+        public Integer fps;
+
+        @NameInMap("LockResolution")
+        public String lockResolution;
+
+        @NameInMap("ResolutionHeight")
+        public Integer resolutionHeight;
+
+        @NameInMap("ResolutionWidth")
+        public Integer resolutionWidth;
+
+        public static DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig self = new DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig setDpi(Integer dpi) {
+            this.dpi = dpi;
+            return this;
+        }
+        public Integer getDpi() {
+            return this.dpi;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig setFps(Integer fps) {
+            this.fps = fps;
+            return this;
+        }
+        public Integer getFps() {
+            return this.fps;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig setLockResolution(String lockResolution) {
+            this.lockResolution = lockResolution;
+            return this;
+        }
+        public String getLockResolution() {
+            return this.lockResolution;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig setResolutionHeight(Integer resolutionHeight) {
+            this.resolutionHeight = resolutionHeight;
+            return this;
+        }
+        public Integer getResolutionHeight() {
+            return this.resolutionHeight;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig setResolutionWidth(Integer resolutionWidth) {
+            this.resolutionWidth = resolutionWidth;
+            return this;
+        }
+        public Integer getResolutionWidth() {
+            return this.resolutionWidth;
         }
 
     }
@@ -264,6 +327,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelDisks> disks;
 
+        @NameInMap("DisplayConfig")
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig displayConfig;
+
         /**
          * <p>The cause of the instance data backup failure or restoration failure.</p>
          * 
@@ -348,11 +414,19 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("NetworkInterfaceIpv6Address")
         public String networkInterfaceIpv6Address;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen+dir-211620****</p>
@@ -387,6 +461,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
+        /**
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("PublicIpv6Address")
         public String publicIpv6Address;
 
@@ -418,10 +500,11 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         public String renderingType;
 
         /**
-         * <p>The status of the session connection.</p>
+         * <p>The session status.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>connect</li>
-         * <li>disConnect</li>
+         * <li>disConnect: The session is disconnected.</li>
+         * <li>connect: The session is connected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -535,6 +618,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelDisks> getDisks() {
             return this.disks;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setDisplayConfig(DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig displayConfig) {
+            this.displayConfig = displayConfig;
+            return this;
+        }
+        public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig getDisplayConfig() {
+            return this.displayConfig;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setErrorCode(String errorCode) {

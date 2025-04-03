@@ -14,7 +14,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String androidInstanceId;
 
     /**
-     * <p>The name of the instance. Instances support fuzzy search by name.</p>
+     * <p>The name of the instance. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>acp-34pqe4r0kd9kn****</p>
@@ -23,7 +23,12 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String androidInstanceName;
 
     /**
-     * <p>Is all data to be backed up.</p>
+     * <p>Specifies whether the whole instance is backed up.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +46,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String backupFileId;
 
     /**
-     * <p>The name of the backup file. Backup files support fuzzy search by name.</p>
+     * <p>The name of the backup file. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>defaulBackupFile</p>
@@ -50,7 +55,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String backupFileName;
 
     /**
-     * <p>The description of the backup file. Backup files support fuzzy search by description.</p>
+     * <p>The description of the backup file. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>default description.</p>
@@ -86,7 +91,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String instanceGroupId;
 
     /**
-     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,7 +118,7 @@ public class DescribeBackupFilesRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The list of backup file status.</p>
+     * <p>The status of the backup files.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;

@@ -89,11 +89,11 @@ public class DescribeInvocationsResponseBody extends TeaModel {
          * <p>The execution state of the command.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>SUCCESS: The command is successfully executed.</li>
-         * <li>FAILED: The command failed to be executed.</li>
-         * <li>RUNNING: The command is being executed.</li>
-         * <li>PENDING: The command is pending execution.</li>
-         * <li>TIMEOUT: The command execution timed out.</li>
+         * <li>Failed: The execution of the command failed.</li>
+         * <li>Timeout: The execution of the command timed out.</li>
+         * <li>Running: The command is being executed.</li>
+         * <li>Success: The execution of the command is successful.</li>
+         * <li>Pending: The command is waiting to be executed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -37,6 +37,9 @@ public class ListPolicyGroupsRequest extends TeaModel {
     @NameInMap("PolicyGroupName")
     public String policyGroupName;
 
+    @NameInMap("PolicyType")
+    public String policyType;
+
     public static ListPolicyGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPolicyGroupsRequest self = new ListPolicyGroupsRequest();
         return TeaModel.build(map, self);
@@ -72,6 +75,14 @@ public class ListPolicyGroupsRequest extends TeaModel {
     }
     public String getPolicyGroupName() {
         return this.policyGroupName;
+    }
+
+    public ListPolicyGroupsRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
     }
 
 }
