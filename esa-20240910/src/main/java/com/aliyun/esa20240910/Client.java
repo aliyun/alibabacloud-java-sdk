@@ -3415,6 +3415,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增边缘函数路由配置</p>
+     * 
+     * @param request CreateRoutineRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRoutineRouteResponse
+     */
+    public CreateRoutineRouteResponse createRoutineRouteWithOptions(CreateRoutineRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bypass)) {
+            query.put("Bypass", request.bypass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeEnable)) {
+            query.put("RouteEnable", request.routeEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeName)) {
+            query.put("RouteName", request.routeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRoutineRoute"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoutineRouteResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateRoutineRouteResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增边缘函数路由配置</p>
+     * 
+     * @param request CreateRoutineRouteRequest
+     * @return CreateRoutineRouteResponse
+     */
+    public CreateRoutineRouteResponse createRoutineRoute(CreateRoutineRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRoutineRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates scheduled prefetch plans.</p>
      * 
      * @param tmpReq CreateScheduledPreloadExecutionsRequest
@@ -6146,6 +6219,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRoutineRelatedRouteResponse deleteRoutineRelatedRoute(DeleteRoutineRelatedRouteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRoutineRelatedRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘函数路由配置</p>
+     * 
+     * @param request DeleteRoutineRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteRoutineRouteResponse
+     */
+    public DeleteRoutineRouteResponse deleteRoutineRouteWithOptions(DeleteRoutineRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteRoutineRoute"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRoutineRouteResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteRoutineRouteResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除边缘函数路由配置</p>
+     * 
+     * @param request DeleteRoutineRouteRequest
+     * @return DeleteRoutineRouteResponse
+     */
+    public DeleteRoutineRouteResponse deleteRoutineRoute(DeleteRoutineRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteRoutineRouteWithOptions(request, runtime);
     }
 
     /**
@@ -9851,6 +9977,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询单条边缘函数路由配置</p>
+     * 
+     * @param request GetRoutineRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRoutineRouteResponse
+     */
+    public GetRoutineRouteResponse getRoutineRouteWithOptions(GetRoutineRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRoutineRoute"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetRoutineRouteResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetRoutineRouteResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询单条边缘函数路由配置</p>
+     * 
+     * @param request GetRoutineRouteRequest
+     * @return GetRoutineRouteResponse
+     */
+    public GetRoutineRouteResponse getRoutineRoute(GetRoutineRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRoutineRouteWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</p>
      * <ul>
@@ -12758,6 +12937,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询边缘程序的函数路由列表</p>
+     * 
+     * @param request ListRoutineRoutesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRoutineRoutesResponse
+     */
+    public ListRoutineRoutesResponse listRoutineRoutesWithOptions(ListRoutineRoutesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRoutineRoutes"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoutineRoutesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRoutineRoutesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询边缘程序的函数路由列表</p>
+     * 
+     * @param request ListRoutineRoutesRequest
+     * @return ListRoutineRoutesResponse
+     */
+    public ListRoutineRoutesResponse listRoutineRoutes(ListRoutineRoutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRoutineRoutesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Lists the plans in a scheduled prefetch task by task ID.</p>
      * 
      * @param request ListScheduledPreloadExecutionsRequest
@@ -12889,6 +13125,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSiteDeliveryTasksResponse listSiteDeliveryTasks(ListSiteDeliveryTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSiteDeliveryTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点的函数路由列表</p>
+     * 
+     * @param request ListSiteRoutesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSiteRoutesResponse
+     */
+    public ListSiteRoutesResponse listSiteRoutesWithOptions(ListSiteRoutesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            query.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeName)) {
+            query.put("RouteName", request.routeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSiteRoutes"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSiteRoutesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListSiteRoutesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点的函数路由列表</p>
+     * 
+     * @param request ListSiteRoutesRequest
+     * @return ListSiteRoutesResponse
+     */
+    public ListSiteRoutesResponse listSiteRoutes(ListSiteRoutesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSiteRoutesWithOptions(request, runtime);
     }
 
     /**
@@ -17415,6 +17720,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRewriteUrlRuleResponse updateRewriteUrlRule(UpdateRewriteUrlRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRewriteUrlRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改边缘函数路由配置</p>
+     * 
+     * @param request UpdateRoutineRouteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateRoutineRouteResponse
+     */
+    public UpdateRoutineRouteResponse updateRoutineRouteWithOptions(UpdateRoutineRouteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bypass)) {
+            query.put("Bypass", request.bypass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeEnable)) {
+            query.put("RouteEnable", request.routeEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeName)) {
+            query.put("RouteName", request.routeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routineName)) {
+            query.put("RoutineName", request.routineName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateRoutineRoute"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRoutineRouteResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRoutineRouteResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改边缘函数路由配置</p>
+     * 
+     * @param request UpdateRoutineRouteRequest
+     * @return UpdateRoutineRouteResponse
+     */
+    public UpdateRoutineRouteResponse updateRoutineRoute(UpdateRoutineRouteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateRoutineRouteWithOptions(request, runtime);
     }
 
     /**

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWafRulesetRequest extends TeaModel {
     /**
-     * <p>The ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> interface.</p>
+     * <p>The ID of the WAF ruleset, which can be obtained by calling the ListWafRulesets interface.</p>
      * 
      * <strong>example:</strong>
      * <p>10000001</p>
