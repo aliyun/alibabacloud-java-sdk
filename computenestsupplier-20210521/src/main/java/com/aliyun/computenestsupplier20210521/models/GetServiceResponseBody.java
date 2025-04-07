@@ -51,6 +51,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("BuildInfo")
     public String buildInfo;
 
+    @NameInMap("BuildParameters")
+    public String buildParameters;
+
     /**
      * <p>The category of the service.</p>
      * 
@@ -582,6 +585,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getBuildInfo() {
         return this.buildInfo;
+    }
+
+    public GetServiceResponseBody setBuildParameters(String buildParameters) {
+        this.buildParameters = buildParameters;
+        return this;
+    }
+    public String getBuildParameters() {
+        return this.buildParameters;
     }
 
     public GetServiceResponseBody setCategories(String categories) {
