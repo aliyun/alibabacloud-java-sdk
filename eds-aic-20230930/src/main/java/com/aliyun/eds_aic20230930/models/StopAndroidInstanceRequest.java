@@ -19,6 +19,9 @@ public class StopAndroidInstanceRequest extends TeaModel {
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    @NameInMap("SaleMode")
+    public String saleMode;
+
     public static StopAndroidInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopAndroidInstanceRequest self = new StopAndroidInstanceRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class StopAndroidInstanceRequest extends TeaModel {
     }
     public Boolean getForceStop() {
         return this.forceStop;
+    }
+
+    public StopAndroidInstanceRequest setSaleMode(String saleMode) {
+        this.saleMode = saleMode;
+        return this;
+    }
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
 }

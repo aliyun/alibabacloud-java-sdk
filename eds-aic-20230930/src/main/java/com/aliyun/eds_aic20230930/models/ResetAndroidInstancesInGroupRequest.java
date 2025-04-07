@@ -10,6 +10,9 @@ public class ResetAndroidInstancesInGroupRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    @NameInMap("SaleMode")
+    public String saleMode;
+
     public static ResetAndroidInstancesInGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ResetAndroidInstancesInGroupRequest self = new ResetAndroidInstancesInGroupRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class ResetAndroidInstancesInGroupRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIds() {
         return this.androidInstanceIds;
+    }
+
+    public ResetAndroidInstancesInGroupRequest setSaleMode(String saleMode) {
+        this.saleMode = saleMode;
+        return this;
+    }
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
 }
