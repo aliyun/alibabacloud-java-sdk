@@ -171,6 +171,7 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public CreateChatappTemplateShrinkRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;

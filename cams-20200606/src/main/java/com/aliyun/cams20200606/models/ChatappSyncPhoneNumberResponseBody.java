@@ -115,6 +115,13 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
+        @NameInMap("IsOfficial")
+        public String isOfficial;
+
+        /**
          * <p>The number of phone numbers to which messages can be sent in a day.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +231,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         }
         public String getCodeVerificationStatus() {
             return this.codeVerificationStatus;
+        }
+
+        public ChatappSyncPhoneNumberResponseBodyPhoneNumbers setIsOfficial(String isOfficial) {
+            this.isOfficial = isOfficial;
+            return this;
+        }
+        public String getIsOfficial() {
+            return this.isOfficial;
         }
 
         public ChatappSyncPhoneNumberResponseBodyPhoneNumbers setMessagingLimitTier(String messagingLimitTier) {

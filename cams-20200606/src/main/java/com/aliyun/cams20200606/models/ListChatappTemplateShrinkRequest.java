@@ -129,6 +129,7 @@ public class ListChatappTemplateShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public ListChatappTemplateShrinkRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;

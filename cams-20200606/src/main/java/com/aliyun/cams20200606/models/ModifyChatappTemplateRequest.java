@@ -157,6 +157,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public ModifyChatappTemplateRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;
@@ -467,6 +468,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
             return this.navigateScreen;
         }
 
+        @Deprecated
         public ModifyChatappTemplateRequestComponentsButtons setPackageName(String packageName) {
             this.packageName = packageName;
             return this;
@@ -483,6 +485,7 @@ public class ModifyChatappTemplateRequest extends TeaModel {
             return this.phoneNumber;
         }
 
+        @Deprecated
         public ModifyChatappTemplateRequestComponentsButtons setSignatureHash(String signatureHash) {
             this.signatureHash = signatureHash;
             return this;

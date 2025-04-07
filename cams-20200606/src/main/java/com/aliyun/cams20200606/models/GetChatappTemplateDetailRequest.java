@@ -90,6 +90,7 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public GetChatappTemplateDetailRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;

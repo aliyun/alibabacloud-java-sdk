@@ -50,6 +50,13 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
     public static QueryChatappPhoneNumbersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryChatappPhoneNumbersResponseBody self = new QueryChatappPhoneNumbersResponseBody();
         return TeaModel.build(map, self);
@@ -95,6 +102,14 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryChatappPhoneNumbersResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbers extends TeaModel {
         /**
          * <p>The verification status of the phone number.</p>
@@ -104,6 +119,13 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
          */
         @NameInMap("CodeVerificationStatus")
         public String codeVerificationStatus;
+
+        /**
+         * <strong>example:</strong>
+         * <p>N</p>
+         */
+        @NameInMap("IsOfficial")
+        public String isOfficial;
 
         /**
          * <p>The number of phone numbers to which messages can be sent in a day.</p>
@@ -245,6 +267,14 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         }
         public String getCodeVerificationStatus() {
             return this.codeVerificationStatus;
+        }
+
+        public QueryChatappPhoneNumbersResponseBodyPhoneNumbers setIsOfficial(String isOfficial) {
+            this.isOfficial = isOfficial;
+            return this;
+        }
+        public String getIsOfficial() {
+            return this.isOfficial;
         }
 
         public QueryChatappPhoneNumbersResponseBodyPhoneNumbers setMessagingLimitTier(String messagingLimitTier) {

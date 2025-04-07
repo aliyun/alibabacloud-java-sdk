@@ -100,6 +100,7 @@ public class AddChatappPhoneNumberRequest extends TeaModel {
         return this.phoneNumber;
     }
 
+    @Deprecated
     public AddChatappPhoneNumberRequest setPreValidateId(String preValidateId) {
         this.preValidateId = preValidateId;
         return this;

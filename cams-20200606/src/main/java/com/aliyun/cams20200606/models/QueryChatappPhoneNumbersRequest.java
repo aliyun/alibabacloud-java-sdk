@@ -22,6 +22,15 @@ public class QueryChatappPhoneNumbersRequest extends TeaModel {
     @NameInMap("IsvCode")
     public String isvCode;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
      * <p>The state of the phone number.</p>
      * 
@@ -50,6 +59,30 @@ public class QueryChatappPhoneNumbersRequest extends TeaModel {
     }
     public String getIsvCode() {
         return this.isvCode;
+    }
+
+    public QueryChatappPhoneNumbersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public QueryChatappPhoneNumbersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryChatappPhoneNumbersRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public QueryChatappPhoneNumbersRequest setStatus(String status) {

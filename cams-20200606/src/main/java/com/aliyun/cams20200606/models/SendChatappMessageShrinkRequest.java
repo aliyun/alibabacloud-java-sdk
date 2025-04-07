@@ -346,6 +346,7 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public SendChatappMessageShrinkRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;
