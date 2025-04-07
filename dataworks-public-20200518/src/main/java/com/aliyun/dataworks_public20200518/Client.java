@@ -12964,6 +12964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFilesResponse listFilesWithOptions(ListFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commitStatus)) {
+            body.put("CommitStatus", request.commitStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.exactFileName)) {
             body.put("ExactFileName", request.exactFileName);
         }
