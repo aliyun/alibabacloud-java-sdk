@@ -24,6 +24,9 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     @NameInMap("Cpu")
     public String cpu;
 
+    @NameInMap("DiskSize")
+    public String diskSize;
+
     /**
      * <p>The destination memory size. Unit: MB.</p>
      * <p>This parameter is required.</p>
@@ -62,6 +65,14 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     }
     public String getCpu() {
         return this.cpu;
+    }
+
+    public RescaleApplicationVerticallyRequest setDiskSize(String diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public String getDiskSize() {
+        return this.diskSize;
     }
 
     public RescaleApplicationVerticallyRequest setMemory(String memory) {

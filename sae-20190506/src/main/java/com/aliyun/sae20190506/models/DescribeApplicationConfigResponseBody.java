@@ -781,6 +781,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("CustomImageNetworkType")
         public String customImageNetworkType;
 
+        @NameInMap("DiskSize")
+        public Integer diskSize;
+
         @NameInMap("Dotnet")
         public String dotnet;
 
@@ -1556,6 +1559,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getCustomImageNetworkType() {
             return this.customImageNetworkType;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setDiskSize(Integer diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public Integer getDiskSize() {
+            return this.diskSize;
         }
 
         public DescribeApplicationConfigResponseBodyData setDotnet(String dotnet) {

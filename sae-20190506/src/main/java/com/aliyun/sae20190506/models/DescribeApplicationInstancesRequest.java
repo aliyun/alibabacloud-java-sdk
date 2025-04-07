@@ -45,6 +45,9 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PipelineId")
+    public String pipelineId;
+
     /**
      * <p>true</p>
      * 
@@ -97,6 +100,14 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeApplicationInstancesRequest setPipelineId(String pipelineId) {
+        this.pipelineId = pipelineId;
+        return this;
+    }
+    public String getPipelineId() {
+        return this.pipelineId;
     }
 
     public DescribeApplicationInstancesRequest setReverse(Boolean reverse) {

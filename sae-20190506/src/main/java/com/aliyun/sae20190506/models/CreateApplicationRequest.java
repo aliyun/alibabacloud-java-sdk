@@ -122,6 +122,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Deploy")
     public Boolean deploy;
 
+    @NameInMap("DiskSize")
+    public Integer diskSize;
+
     @NameInMap("Dotnet")
     public String dotnet;
 
@@ -658,6 +661,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Boolean getDeploy() {
         return this.deploy;
+    }
+
+    public CreateApplicationRequest setDiskSize(Integer diskSize) {
+        this.diskSize = diskSize;
+        return this;
+    }
+    public Integer getDiskSize() {
+        return this.diskSize;
     }
 
     public CreateApplicationRequest setDotnet(String dotnet) {
