@@ -8,7 +8,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
      * <p>The response code.</p>
      * <ul>
      * <li>The value OK indicates that the request was successful.</li>
-     * <li>For more information about other response codes, see <a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">Error codes</a>.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

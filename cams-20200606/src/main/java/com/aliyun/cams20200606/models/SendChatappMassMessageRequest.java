@@ -196,6 +196,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    @Deprecated
     public SendChatappMassMessageRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;

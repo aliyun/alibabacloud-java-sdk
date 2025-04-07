@@ -151,6 +151,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
          * <p>Retail</p>
          */
         @NameInMap("Vertical")
+        @Deprecated
         public String vertical;
 
         public static QueryWabaBusinessInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
@@ -182,6 +183,7 @@ public class QueryWabaBusinessInfoResponseBody extends TeaModel {
             return this.verificationStatus;
         }
 
+        @Deprecated
         public QueryWabaBusinessInfoResponseBodyData setVertical(String vertical) {
             this.vertical = vertical;
             return this;
