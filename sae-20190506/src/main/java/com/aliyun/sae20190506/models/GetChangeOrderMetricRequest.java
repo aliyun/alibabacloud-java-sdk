@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class GetChangeOrderMetricRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     /**
      * <p>The SAE application type. Valid values:</p>
      * <ul>
@@ -17,6 +20,9 @@ public class GetChangeOrderMetricRequest extends TeaModel {
      */
     @NameInMap("AppSource")
     public String appSource;
+
+    @NameInMap("CoType")
+    public String coType;
 
     /**
      * <p>The CPU allocation policy. Valid values:</p>
@@ -75,12 +81,28 @@ public class GetChangeOrderMetricRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetChangeOrderMetricRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
     public GetChangeOrderMetricRequest setAppSource(String appSource) {
         this.appSource = appSource;
         return this;
     }
     public String getAppSource() {
         return this.appSource;
+    }
+
+    public GetChangeOrderMetricRequest setCoType(String coType) {
+        this.coType = coType;
+        return this;
+    }
+    public String getCoType() {
+        return this.coType;
     }
 
     public GetChangeOrderMetricRequest setCpuStrategy(String cpuStrategy) {

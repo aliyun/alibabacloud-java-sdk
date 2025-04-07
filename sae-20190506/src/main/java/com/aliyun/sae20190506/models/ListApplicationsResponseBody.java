@@ -516,6 +516,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
 
+        @NameInMap("DiskSize")
+        public Integer diskSize;
+
         @NameInMap("EnableIdle")
         public String enableIdle;
 
@@ -670,6 +673,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Integer getCpu() {
             return this.cpu;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setDiskSize(Integer diskSize) {
+            this.diskSize = diskSize;
+            return this;
+        }
+        public Integer getDiskSize() {
+            return this.diskSize;
         }
 
         public ListApplicationsResponseBodyDataApplications setEnableIdle(String enableIdle) {

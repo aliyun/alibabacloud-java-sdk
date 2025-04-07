@@ -312,6 +312,9 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("SidecarContainersStatus")
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> sidecarContainersStatus;
 
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
         @NameInMap("UnhealthyMessage")
         public String unhealthyMessage;
 
@@ -439,6 +442,14 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> getSidecarContainersStatus() {
             return this.sidecarContainersStatus;
+        }
+
+        public DescribeApplicationInstancesResponseBodyDataInstances setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
         public DescribeApplicationInstancesResponseBodyDataInstances setUnhealthyMessage(String unhealthyMessage) {

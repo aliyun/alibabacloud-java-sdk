@@ -72,6 +72,9 @@ public class ListChangeOrdersRequest extends TeaModel {
     @NameInMap("Key")
     public String key;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
     /**
      * <p>test</p>
      * 
@@ -80,6 +83,9 @@ public class ListChangeOrdersRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Reverse")
+    public Boolean reverse;
 
     public static ListChangeOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListChangeOrdersRequest self = new ListChangeOrdersRequest();
@@ -126,12 +132,28 @@ public class ListChangeOrdersRequest extends TeaModel {
         return this.key;
     }
 
+    public ListChangeOrdersRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
     public ListChangeOrdersRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListChangeOrdersRequest setReverse(Boolean reverse) {
+        this.reverse = reverse;
+        return this;
+    }
+    public Boolean getReverse() {
+        return this.reverse;
     }
 
 }
