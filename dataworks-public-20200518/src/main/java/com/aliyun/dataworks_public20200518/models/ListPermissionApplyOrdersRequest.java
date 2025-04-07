@@ -36,15 +36,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
      * <li>3: approved but authorization failed</li>
      * <li>4: rejected</li>
      * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0</li>
-     * <li>1</li>
-     * <li>2</li>
-     * <li>3</li>
-     * <li>4</li>
-     * <li>5</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
