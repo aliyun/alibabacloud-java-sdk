@@ -1019,6 +1019,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetConnectionTicketResponse getConnectionTicketWithOptions(GetConnectionTicketRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessType)) {
+            body.put("AccessType", request.accessType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             body.put("AppId", request.appId);
         }
