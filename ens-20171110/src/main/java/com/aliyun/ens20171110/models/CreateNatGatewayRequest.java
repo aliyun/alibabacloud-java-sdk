@@ -14,6 +14,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("InstanceBillingCycle")
+    public String instanceBillingCycle;
+
     /**
      * <p>The instance type of the NAT gateway. Set the value to <strong>enat.default</strong>.</p>
      * 
@@ -50,7 +53,6 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5savh5ngxh8sbj14bu7n****</p>
@@ -69,6 +71,14 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public CreateNatGatewayRequest setInstanceBillingCycle(String instanceBillingCycle) {
+        this.instanceBillingCycle = instanceBillingCycle;
+        return this;
+    }
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     public CreateNatGatewayRequest setInstanceType(String instanceType) {
