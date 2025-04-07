@@ -67,6 +67,9 @@ public class DescribeBackupClientsShrinkRequest extends TeaModel {
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
+    @NameInMap("Filters")
+    public java.util.List<DescribeBackupClientsShrinkRequestFilters> filters;
+
     /**
      * <p>The IDs of ECS instances.</p>
      * 
@@ -156,6 +159,14 @@ public class DescribeBackupClientsShrinkRequest extends TeaModel {
         return this.crossAccountUserId;
     }
 
+    public DescribeBackupClientsShrinkRequest setFilters(java.util.List<DescribeBackupClientsShrinkRequestFilters> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.List<DescribeBackupClientsShrinkRequestFilters> getFilters() {
+        return this.filters;
+    }
+
     public DescribeBackupClientsShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {
         this.instanceIdsShrink = instanceIdsShrink;
         return this;
@@ -186,6 +197,36 @@ public class DescribeBackupClientsShrinkRequest extends TeaModel {
     }
     public java.util.List<DescribeBackupClientsShrinkRequestTag> getTag() {
         return this.tag;
+    }
+
+    public static class DescribeBackupClientsShrinkRequestFilters extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static DescribeBackupClientsShrinkRequestFilters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupClientsShrinkRequestFilters self = new DescribeBackupClientsShrinkRequestFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupClientsShrinkRequestFilters setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeBackupClientsShrinkRequestFilters setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
     public static class DescribeBackupClientsShrinkRequestTag extends TeaModel {

@@ -2241,9 +2241,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <code>true</code>. Otherwise, an error occurs.</p>
-     * 
      * <b>summary</b> : 
      * <p>Deletes a backup snapshot.</p>
      * 
@@ -2305,9 +2302,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>If you delete the most recent backup snapshot for a data source, you must set the Force parameter to <code>true</code>. Otherwise, an error occurs.</p>
-     * 
      * <b>summary</b> : 
      * <p>Deletes a backup snapshot.</p>
      * 
@@ -2525,6 +2519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.crossAccountUserId)) {
             query.put("CrossAccountUserId", request.crossAccountUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
+            query.put("Filters", request.filters);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

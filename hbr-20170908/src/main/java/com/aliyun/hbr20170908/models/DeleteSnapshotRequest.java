@@ -14,16 +14,13 @@ public class DeleteSnapshotRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>Specifies whether to forcibly delete the most recent backup snapshot. Valid values:</p>
-     * <ul>
-     * <li>true: The system forcibly deletes the most recent backup snapshot.</li>
-     * <li>false (default): The system does not forcibly delete the most recent backup snapshot.</li>
-     * </ul>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>Deprected.</p>
      */
     @NameInMap("Force")
+    @Deprecated
     public Boolean force;
 
     /**
@@ -90,6 +87,7 @@ public class DeleteSnapshotRequest extends TeaModel {
         return this.clientId;
     }
 
+    @Deprecated
     public DeleteSnapshotRequest setForce(Boolean force) {
         this.force = force;
         return this;

@@ -792,10 +792,10 @@ public class DescribePolicyBindingsResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>策略是否对该数据源生效。</p>
+         * <p>Whether the policy is disbaled for this data source.</p>
          * <ul>
-         * <li>true：暂停</li>
-         * <li>false：未暂停</li>
+         * <li>true: disabled</li>
+         * <li>false: Not disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -235,7 +235,40 @@ public class CreateRestoreJobRequest extends TeaModel {
     public Long targetTime;
 
     /**
-     * <p>Details of the whole machine backup.</p>
+     * <p>The parameter is valid only when the SourceType is set to UDM_ECS. It represents the details of the entire machine backup and is a JSON string. Depending on the value of RestoreType, different details must be passed as follows:</p>
+     * <ul>
+     * <li><strong>UDM_ECS_DISK</strong>: ECS disk cloning.<ul>
+     * <li><strong>targetInstanceId</strong>: string (required). Specifies the target ECS instance ID to which the cloned disk will be attached.</li>
+     * <li><strong>diskCategory</strong>: string (required). Specifies the type of the target disk.</li>
+     * <li><strong>diskPerformanceLevel</strong>: string. When diskCategory is &quot;essd&quot;, this indicates the disk performance level, supporting PL0, PL1, PL2, and PL3, with PL1 as the default.</li>
+     * </ul>
+     * </li>
+     * <li><strong>UDM_ECS_DISK_ROLLBACK</strong>: ECS disk rollback.<ul>
+     * <li><strong>sourceInstanceId</strong>: string (required). Specifies the source ECS instance ID.</li>
+     * <li><strong>forceRestore</strong>: bool (default: false). Indicates whether to force restore. NOTE: If forceRestore is set to true, the disk restoration will proceed even if the backup disk has been unmounted from the original ECS instance or mounted to another instance. Exercise caution when using this option.</li>
+     * <li><strong>bootAfterRestore</strong>: bool (default: false). Indicates whether to start the ECS instance after restoration.</li>
+     * </ul>
+     * </li>
+     * <li><strong>UDM_ECS</strong>: Full ECS cloning.<ul>
+     * <li><strong>bootAfterRestore</strong>: bool (default: false). Indicates whether to start the ECS instance after restoration.</li>
+     * <li><strong>diskCategory</strong>: string (required). Specifies the type of the target disk.</li>
+     * <li><strong>diskPerformanceLevel</strong>: string. When diskCategory is &quot;essd&quot;, this indicates the disk performance level (PL0/PL1/PL2/PL3), defaulting to PL1.</li>
+     * <li><strong>instanceType</strong>: string (required). Specifies the specification of the target ECS instance.</li>
+     * <li><strong>restoredNetwork</strong>: string (required). Specifies the vSwitch ID for the target ECS instance.</li>
+     * <li><strong>securityGroup</strong>: string (required). Specifies the security group ID for the target ECS instance.</li>
+     * <li><strong>restoredName:</strong> string (required). Specifies the instance name of the target ECS instance.</li>
+     * <li><strong>restoredHostName</strong>: string (required). Specifies the host name of the target ECS instance.</li>
+     * <li><strong>allocatePublicIp</strong>: bool (default: false). Indicates whether to assign a public IP to the target ECS instance.</li>
+     * <li><strong>privateIpAddress</strong>: string. Specifies the internal IP address of the target ECS instance. If not specified, an IP will be assigned via DHCP.</li>
+     * </ul>
+     * </li>
+     * <li><strong>UDM_ECS_ROLLBACK</strong>: Full ECS rollback.<ul>
+     * <li><strong>sourceInstanceId</strong>: string (required). Specifies the source ECS instance ID.</li>
+     * <li><strong>forceRestore</strong>: bool (default: false). Indicates whether to force restore. NOTE: If forceRestore is set to true, the disk restoration will proceed even if the backup disk has been unmounted from the original ECS instance or mounted to another instance. Exercise caution when using this option.</li>
+     * <li><strong>bootAfterRestore</strong>: bool (default: false). Indicates whether to start the ECS instance after restoration.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;sourceInstanceId\&quot;:\&quot;i-uf62te6pm3iwsyxyz66q\&quot;,\&quot;bootAfterRestore\&quot;:false}</p>
