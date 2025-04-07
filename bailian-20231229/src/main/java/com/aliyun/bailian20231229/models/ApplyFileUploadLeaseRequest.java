@@ -34,6 +34,9 @@ public class ApplyFileUploadLeaseRequest extends TeaModel {
     @NameInMap("SizeInBytes")
     public String sizeInBytes;
 
+    @NameInMap("UseInternalEndpoint")
+    public Boolean useInternalEndpoint;
+
     public static ApplyFileUploadLeaseRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyFileUploadLeaseRequest self = new ApplyFileUploadLeaseRequest();
         return TeaModel.build(map, self);
@@ -69,6 +72,14 @@ public class ApplyFileUploadLeaseRequest extends TeaModel {
     }
     public String getSizeInBytes() {
         return this.sizeInBytes;
+    }
+
+    public ApplyFileUploadLeaseRequest setUseInternalEndpoint(Boolean useInternalEndpoint) {
+        this.useInternalEndpoint = useInternalEndpoint;
+        return this;
+    }
+    public Boolean getUseInternalEndpoint() {
+        return this.useInternalEndpoint;
     }
 
 }

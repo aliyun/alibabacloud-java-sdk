@@ -218,6 +218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SizeInBytes", request.sizeInBytes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useInternalEndpoint)) {
+            body.put("UseInternalEndpoint", request.useInternalEndpoint);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
