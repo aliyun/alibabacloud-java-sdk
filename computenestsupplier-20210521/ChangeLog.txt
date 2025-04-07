@@ -1,3 +1,7 @@
+2025-04-07 Version: 11.0.3
+- Update API GetService: add response parameters Body.BuildParameters.
+
+
 2025-04-01 Version: 11.0.2
 - Update API GetSupplierInformation: add response parameters Body.AcrNamespace.
 - Update API ListAcrImageRepositories: add response parameters Body.Repositories.$.Namespace.
