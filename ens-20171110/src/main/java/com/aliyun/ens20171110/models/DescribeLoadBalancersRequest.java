@@ -22,6 +22,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The IDs of the Edge Node Service (ENS) nodes.</p>
+     */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 
@@ -75,7 +78,7 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
