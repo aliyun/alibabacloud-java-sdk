@@ -3378,6 +3378,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ForceStop", request.forceStop);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            query.put("SaleMode", request.saleMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3630,6 +3634,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceIds", request.androidInstanceIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            query.put("SaleMode", request.saleMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3880,6 +3888,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceIds", request.androidInstanceIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            query.put("SaleMode", request.saleMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3937,6 +3949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.forceStop)) {
             query.put("ForceStop", request.forceStop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            query.put("SaleMode", request.saleMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

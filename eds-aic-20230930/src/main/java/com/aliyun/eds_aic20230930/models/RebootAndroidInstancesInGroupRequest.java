@@ -24,6 +24,9 @@ public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    @NameInMap("SaleMode")
+    public String saleMode;
+
     public static RebootAndroidInstancesInGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RebootAndroidInstancesInGroupRequest self = new RebootAndroidInstancesInGroupRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     }
     public Boolean getForceStop() {
         return this.forceStop;
+    }
+
+    public RebootAndroidInstancesInGroupRequest setSaleMode(String saleMode) {
+        this.saleMode = saleMode;
+        return this;
+    }
+    public String getSaleMode() {
+        return this.saleMode;
     }
 
 }
