@@ -56,12 +56,12 @@ public class CreateVaultRequest extends TeaModel {
     public String vaultRegionId;
 
     /**
-     * <p>The storage type of the backup vault. Valid value: </p>
+     * <p>The storage type of the backup vault.</p>
      * <ul>
      * <li><strong>STANDARD</strong>: standard storage.</li>
-     * <li><strong>ARCHIVE</strong>: deprected.</li>
-     * <li><strong>COLD_ARCHIVE</strong>: deprected.</li>
-     * <li><strong>IA</strong>: deprected.</li>
+     * <li><strong>ARCHIVE</strong>: This parameter is deprecated.</li>
+     * <li><strong>COLD_ARCHIVE</strong>: This parameter is deprecated.</li>
+     * <li><strong>IA</strong>: This parameter is deprecated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class CreateVaultRequest extends TeaModel {
     public String vaultType;
 
     /**
-     * <p>Whether to enable the vault worm feature. Once the worm feature is enabled, the vault and all its backup data cannot be deleted before they automatically expire. After enabling the worm feature, it is not supported to disable it. The worm feature is only effective for standard and archive backup vault.</p>
+     * <p>Specifies whether to enable the immutable backup feature.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

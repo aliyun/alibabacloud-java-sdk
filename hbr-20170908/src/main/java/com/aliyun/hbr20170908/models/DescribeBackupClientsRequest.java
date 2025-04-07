@@ -67,6 +67,9 @@ public class DescribeBackupClientsRequest extends TeaModel {
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
+    @NameInMap("Filters")
+    public java.util.List<DescribeBackupClientsRequestFilters> filters;
+
     /**
      * <p>The IDs of ECS instances.</p>
      * 
@@ -156,6 +159,14 @@ public class DescribeBackupClientsRequest extends TeaModel {
         return this.crossAccountUserId;
     }
 
+    public DescribeBackupClientsRequest setFilters(java.util.List<DescribeBackupClientsRequestFilters> filters) {
+        this.filters = filters;
+        return this;
+    }
+    public java.util.List<DescribeBackupClientsRequestFilters> getFilters() {
+        return this.filters;
+    }
+
     public DescribeBackupClientsRequest setInstanceIds(java.util.List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -186,6 +197,36 @@ public class DescribeBackupClientsRequest extends TeaModel {
     }
     public java.util.List<DescribeBackupClientsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public static class DescribeBackupClientsRequestFilters extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Values")
+        public java.util.List<String> values;
+
+        public static DescribeBackupClientsRequestFilters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupClientsRequestFilters self = new DescribeBackupClientsRequestFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupClientsRequestFilters setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeBackupClientsRequestFilters setValues(java.util.List<String> values) {
+            this.values = values;
+            return this;
+        }
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
     }
 
     public static class DescribeBackupClientsRequestTag extends TeaModel {

@@ -210,6 +210,12 @@ public class DescribeClientsResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The latest heartbeat time of the Cloud Backup client. This value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1554347313</p>
+         */
         @NameInMap("HeartBeatTime")
         public Long heartBeatTime;
 

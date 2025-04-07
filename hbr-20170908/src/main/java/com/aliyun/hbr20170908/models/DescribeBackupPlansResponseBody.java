@@ -969,6 +969,7 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
          * <li><strong>NAS</strong>: NAS file systems</li>
          * <li><strong>OTS</strong>: Tablestore instances</li>
          * <li><strong>UDM_ECS</strong>: ECS instances</li>
+         * <li><strong>SYNC</strong>: data synchronization</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -64,6 +64,12 @@ public class DescribeVaultsRequest extends TeaModel {
     @NameInMap("VaultId")
     public String vaultId;
 
+    /**
+     * <p>The name of the backup vault. The name must be 1 to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vaultname</p>
+     */
     @NameInMap("VaultName")
     public String vaultName;
 

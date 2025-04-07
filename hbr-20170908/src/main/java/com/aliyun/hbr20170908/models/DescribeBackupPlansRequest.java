@@ -33,9 +33,10 @@ public class DescribeBackupPlansRequest extends TeaModel {
      * <ul>
      * <li><strong>ECS_FILE</strong>: Elastic Compute Service (ECS) files</li>
      * <li><strong>OSS</strong>: Object Storage Service (OSS) buckets</li>
-     * <li><strong>NAS</strong>: Apsara File Storage NAS file systems</li>
+     * <li><strong>NAS</strong>: File Storage NAS (NAS) file systems</li>
      * <li><strong>OTS</strong>: Tablestore instances</li>
      * <li><strong>UDM_ECS</strong>: ECS instances</li>
+     * <li><strong>SYNC</strong>: data synchronization</li>
      * </ul>
      * 
      * <strong>example:</strong>
