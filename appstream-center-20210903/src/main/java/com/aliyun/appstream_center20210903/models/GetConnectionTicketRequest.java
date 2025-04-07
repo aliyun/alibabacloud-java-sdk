@@ -6,6 +6,16 @@ import com.aliyun.tea.*;
 public class GetConnectionTicketRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>INTERNET</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AccessType")
+    public String accessType;
+
+    /**
+     * <strong>example:</strong>
      * <p>ca-etn4zizgaezo9gis9</p>
      */
     @NameInMap("AppId")
@@ -146,6 +156,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     public static GetConnectionTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketRequest self = new GetConnectionTicketRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetConnectionTicketRequest setAccessType(String accessType) {
+        this.accessType = accessType;
+        return this;
+    }
+    public String getAccessType() {
+        return this.accessType;
     }
 
     public GetConnectionTicketRequest setAppId(String appId) {
