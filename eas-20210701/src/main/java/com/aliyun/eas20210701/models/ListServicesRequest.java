@@ -31,6 +31,9 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("IncludeNoWorkspace")
+    public Boolean includeNoWorkspace;
+
     /**
      * <p>The tag that is used to filter services.</p>
      */
@@ -364,6 +367,14 @@ public class ListServicesRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public ListServicesRequest setIncludeNoWorkspace(Boolean includeNoWorkspace) {
+        this.includeNoWorkspace = includeNoWorkspace;
+        return this;
+    }
+    public Boolean getIncludeNoWorkspace() {
+        return this.includeNoWorkspace;
     }
 
     public ListServicesRequest setLabel(java.util.Map<String, String> label) {

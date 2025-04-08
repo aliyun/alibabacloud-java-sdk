@@ -4096,6 +4096,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupName", request.groupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeNoWorkspace)) {
+            query.put("IncludeNoWorkspace", request.includeNoWorkspace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.labelShrink)) {
             query.put("Label", request.labelShrink);
         }

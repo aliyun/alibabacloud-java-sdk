@@ -31,6 +31,9 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("IncludeNoWorkspace")
+    public Boolean includeNoWorkspace;
+
     /**
      * <p>The tag that is used to filter services.</p>
      */
@@ -364,6 +367,14 @@ public class ListServicesShrinkRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public ListServicesShrinkRequest setIncludeNoWorkspace(Boolean includeNoWorkspace) {
+        this.includeNoWorkspace = includeNoWorkspace;
+        return this;
+    }
+    public Boolean getIncludeNoWorkspace() {
+        return this.includeNoWorkspace;
     }
 
     public ListServicesShrinkRequest setLabelShrink(String labelShrink) {
