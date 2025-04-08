@@ -87,6 +87,9 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         @NameInMap("AgentName")
         public String agentName;
 
+        @NameInMap("BreakCode")
+        public String breakCode;
+
         /**
          * <strong>example:</strong>
          * <p>Outbound</p>
@@ -189,6 +192,14 @@ public class ListRealtimeAgentStatesResponseBody extends TeaModel {
         }
         public String getAgentName() {
             return this.agentName;
+        }
+
+        public ListRealtimeAgentStatesResponseBodyDataList setBreakCode(String breakCode) {
+            this.breakCode = breakCode;
+            return this;
+        }
+        public String getBreakCode() {
+            return this.breakCode;
         }
 
         public ListRealtimeAgentStatesResponseBodyDataList setCallType(String callType) {
