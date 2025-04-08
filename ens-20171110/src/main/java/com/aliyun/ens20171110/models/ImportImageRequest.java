@@ -71,8 +71,6 @@ public class ImportImageRequest extends TeaModel {
     public String OSType;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>6.8</p>
      */
