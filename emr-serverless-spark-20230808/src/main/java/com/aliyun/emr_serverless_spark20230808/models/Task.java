@@ -106,6 +106,9 @@ public class Task extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("params")
+    public java.util.Map<String, String> params;
+
     @NameInMap("pyFiles")
     public java.util.List<String> pyFiles;
 
@@ -401,6 +404,14 @@ public class Task extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public Task setParams(java.util.Map<String, String> params) {
+        this.params = params;
+        return this;
+    }
+    public java.util.Map<String, String> getParams() {
+        return this.params;
     }
 
     public Task setPyFiles(java.util.List<String> pyFiles) {

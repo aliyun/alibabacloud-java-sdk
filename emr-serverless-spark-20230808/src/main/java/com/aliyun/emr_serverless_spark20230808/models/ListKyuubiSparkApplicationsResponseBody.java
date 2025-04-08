@@ -4,10 +4,15 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the applications.</p>
+     */
     @NameInMap("applications")
     public java.util.List<ListKyuubiSparkApplicationsResponseBodyApplications> applications;
 
     /**
+     * <p>The maximum number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
@@ -29,6 +38,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -82,6 +93,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
 
     public static class ListKyuubiSparkApplicationsResponseBodyApplications extends TeaModel {
         /**
+         * <p>The ID of the application that is submitted by using a Kyuubi gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark-339f844005b6404c95f9f7c7a13b****</p>
          */
@@ -89,6 +102,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
+         * <p>The name of the Spark application that is submitted by using a Kyuubi gateway.</p>
+         * 
          * <strong>example:</strong>
          * <p>kyuubi-connection-spark-sql-anonymous-fa9a5e73-b4b1-474a-b****</p>
          */
@@ -96,6 +111,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String applicationName;
 
         /**
+         * <p>The number of CUs consumed during a specified cycle of a task. The value is an estimated value. Refer to your Alibaba Cloud bill for the actual number of consumed CUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.238302</p>
          */
@@ -103,6 +120,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public Double cuHours;
 
         /**
+         * <p>The time when the task ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-02-12 20:02:02</p>
          */
@@ -110,6 +129,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The total amount of memory allocated to the job multiplied by the running duration (seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>3513900</p>
          */
@@ -117,6 +138,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public Long mbSeconds;
 
         /**
+         * <p>The name of the resource queue on which the Spark jobs run.</p>
+         * 
          * <strong>example:</strong>
          * <p>dev_queue</p>
          */
@@ -124,6 +147,8 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String resourceQueueId;
 
         /**
+         * <p>The time when the task started.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-02-12 19:59:16</p>
          */
@@ -131,6 +156,13 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The status of the Spark application.</p>
+         * <ul>
+         * <li>STARTING</li>
+         * <li>RUNNING</li>
+         * <li>TERMINATED</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>STARTING</p>
          */
@@ -138,12 +170,17 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         public String state;
 
         /**
+         * <p>The total number of CPU cores allocated to the job multiplied by the running duration (seconds).</p>
+         * 
          * <strong>example:</strong>
          * <p>780</p>
          */
         @NameInMap("vcoreSeconds")
         public Long vcoreSeconds;
 
+        /**
+         * <p>The URL of the web UI for the Spark application.</p>
+         */
         @NameInMap("webUI")
         public String webUI;
 

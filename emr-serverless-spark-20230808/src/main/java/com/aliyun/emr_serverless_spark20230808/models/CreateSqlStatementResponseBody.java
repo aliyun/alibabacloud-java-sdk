@@ -42,7 +42,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
 
     public static class CreateSqlStatementResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the SQL query.</p>
+         * <p>The interactive query ID.</p>
          * 
          * <strong>example:</strong>
          * <p>st-1231dfafadfa***</p>

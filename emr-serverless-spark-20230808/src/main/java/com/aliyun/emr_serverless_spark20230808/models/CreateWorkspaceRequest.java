@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable auto-renewal. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +14,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String autoRenew;
 
     /**
+     * <p>The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -19,6 +23,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String autoRenewPeriod;
 
     /**
+     * <p>The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * 
      * <strong>example:</strong>
      * <p>month</p>
      */
@@ -26,6 +32,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String autoRenewPeriodUnit;
 
     /**
+     * <p>Specifies whether to automatically start a session.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -33,6 +41,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public Boolean autoStartSessionCluster;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8e6aae2810c8f67229ca70bb31cd****</p>
      */
@@ -40,6 +50,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The information of the Data Lake Formation (DLF) catalog.</p>
+     * 
      * <strong>example:</strong>
      * <p>123xxxxx</p>
      */
@@ -47,6 +59,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String dlfCatalogId;
 
     /**
+     * <p>The version of DLF.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlf1.0</p>
      */
@@ -54,6 +68,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String dlfType;
 
     /**
+     * <p>The subscription period. This parameter is required only if the paymentType parameter is set to Pre.</p>
+     * 
      * <strong>example:</strong>
      * <p>12452</p>
      */
@@ -61,7 +77,7 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String duration;
 
     /**
-     * <p>OSS Bucket。</p>
+     * <p>The name of the Object Storage Service (OSS) bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://test-bucket/</p>
@@ -70,6 +86,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String ossBucket;
 
     /**
+     * <p>The unit of the subscription duration.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -77,6 +95,12 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>PayAsYouGo</li>
+     * <li>Pre</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
      */
@@ -84,6 +108,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The name of the role used to run Spark jobs.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunEMRSparkJobRunDefaultRole</p>
      */
@@ -91,16 +117,30 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String ramRoleName;
 
     /**
+     * <p>The type of the version.</p>
+     * 
      * <strong>example:</strong>
      * <p>pro</p>
      */
     @NameInMap("releaseType")
     public String releaseType;
 
+    /**
+     * <p>The resource specifications.</p>
+     */
     @NameInMap("resourceSpec")
     public CreateWorkspaceRequestResourceSpec resourceSpec;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("tag")
+    public java.util.List<CreateWorkspaceRequestTag> tag;
+
+    /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -108,6 +148,8 @@ public class CreateWorkspaceRequest extends TeaModel {
     public String workspaceName;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -231,6 +273,14 @@ public class CreateWorkspaceRequest extends TeaModel {
         return this.resourceSpec;
     }
 
+    public CreateWorkspaceRequest setTag(java.util.List<CreateWorkspaceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateWorkspaceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateWorkspaceRequest setWorkspaceName(String workspaceName) {
         this.workspaceName = workspaceName;
         return this;
@@ -249,6 +299,8 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestResourceSpec extends TeaModel {
         /**
+         * <p>The maximum resource quota for a workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -266,6 +318,36 @@ public class CreateWorkspaceRequest extends TeaModel {
         }
         public String getCu() {
             return this.cu;
+        }
+
+    }
+
+    public static class CreateWorkspaceRequestTag extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateWorkspaceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateWorkspaceRequestTag self = new CreateWorkspaceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWorkspaceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateWorkspaceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

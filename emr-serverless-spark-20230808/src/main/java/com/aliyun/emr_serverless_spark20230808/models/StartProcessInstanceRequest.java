@@ -4,6 +4,18 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class StartProcessInstanceRequest extends TeaModel {
+    @NameInMap("action")
+    public String action;
+
+    @NameInMap("comments")
+    public String comments;
+
+    @NameInMap("email")
+    public String email;
+
+    @NameInMap("interval")
+    public String interval;
+
     /**
      * <p>Specifies whether to run the workflow in the production environment.</p>
      * 
@@ -72,6 +84,38 @@ public class StartProcessInstanceRequest extends TeaModel {
     public static StartProcessInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartProcessInstanceRequest self = new StartProcessInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartProcessInstanceRequest setAction(String action) {
+        this.action = action;
+        return this;
+    }
+    public String getAction() {
+        return this.action;
+    }
+
+    public StartProcessInstanceRequest setComments(String comments) {
+        this.comments = comments;
+        return this;
+    }
+    public String getComments() {
+        return this.comments;
+    }
+
+    public StartProcessInstanceRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+
+    public StartProcessInstanceRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
     }
 
     public StartProcessInstanceRequest setIsProd(Boolean isProd) {
