@@ -4,6 +4,10 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Strong</p>
+     */
     @NameInMap("ElasticStrength")
     public String elasticStrength;
 
@@ -394,15 +398,31 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AdequacyScore")
         public Integer adequacyScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("HealthScore")
         public Integer healthScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("HotScore")
         public Integer hotScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SupplyScore")
         public Integer supplyScore;
 
@@ -476,6 +496,10 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 

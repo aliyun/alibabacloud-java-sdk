@@ -1,3 +1,7 @@
+2025-04-08 Version: 1.9.10
+- Update API ModifyInstanceAttribute: add request parameters InstanceIds.
+
+
 2025-03-26 Version: 1.9.9
 - Update API CreateScalingConfiguration: add request parameters ResourcePoolOptions.
 - Update API DescribeElasticStrength: add response parameters Body.ElasticStrength.

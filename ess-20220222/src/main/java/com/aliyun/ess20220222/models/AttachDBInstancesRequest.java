@@ -36,7 +36,7 @@ public class AttachDBInstancesRequest extends TeaModel {
     public java.util.List<String> DBInstances;
 
     /**
-     * <p>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of an ApsaraDB RDS instance when you attach the ApsaraDB RDS instance to the scaling group. Valid values:</p>
+     * <p>Specifies whether to add the private IP addresses of all ECS instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance that you want to attach to the scaling group. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
