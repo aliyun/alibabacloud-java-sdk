@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
+     * <p>The reserved cache size.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,11 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Integer cacheSize;
 
     /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>AB</p>
      */
@@ -30,6 +38,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The instance endpoint.</p>
+     * 
      * <strong>example:</strong>
      * <p>selectdb-cn-7213c8y****-public.selectdbfe.pre.rds.aliyuncs.com</p>
      */
@@ -37,6 +47,12 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String connectionString;
 
     /**
+     * <p>The specifications of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>selectdb.xlarge</strong>: 4 CPU cores and 32 GB of memory</li>
+     * <li><strong>selectdb.2xlarge</strong>: 8 CPU cores and 64 GB of memory</li>
+     * <li><strong>selectdb.4xlarge</strong>: 16 CPU cores and 128 GB of memory</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,11 +61,20 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
+    /**
+     * <p>The instance description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The instance is created for testing.</p>
+     */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    @NameInMap("DeployScheme")
+    public String deployScheme;
+
     /**
-     * <p>The type of the database. Default value: <strong>selectdb</strong>.</p>
+     * <p>The database engine of the instance. Default value: <strong>selectdb</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>
@@ -58,6 +83,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String engine;
 
     /**
+     * <p>The database engine version of the instance. Default value: <strong>2.4</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,6 +93,22 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String engineVersion;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("MultiZone")
+    public String multiZoneShrink;
+
+    /**
+     * <p>The unit of the subscription duration of the cluster. Valid values:</p>
+     * <ul>
+     * <li><strong>Year</strong>: subscription on a yearly basis.</li>
+     * <li><strong>Month</strong>: subscription on a monthly basis.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -74,6 +116,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +126,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>代表资源组的资源属性字段</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzt2zaluvuvqa_fake</p>
@@ -95,16 +138,30 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.1.1</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
+    /**
+     * <p>The instance tags.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 
     /**
+     * <p>The subscription duration of the instance.</p>
+     * <ul>
+     * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</li>
+     * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -112,6 +169,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Integer usedTime;
 
     /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,7 +179,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The virtual private cloud (VPC) ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,6 +189,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -192,6 +251,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
         return this.DBInstanceDescription;
     }
 
+    public CreateDBInstanceShrinkRequest setDeployScheme(String deployScheme) {
+        this.deployScheme = deployScheme;
+        return this;
+    }
+    public String getDeployScheme() {
+        return this.deployScheme;
+    }
+
     public CreateDBInstanceShrinkRequest setEngine(String engine) {
         this.engine = engine;
         return this;
@@ -206,6 +273,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public CreateDBInstanceShrinkRequest setMultiZoneShrink(String multiZoneShrink) {
+        this.multiZoneShrink = multiZoneShrink;
+        return this;
+    }
+    public String getMultiZoneShrink() {
+        return this.multiZoneShrink;
     }
 
     public CreateDBInstanceShrinkRequest setPeriod(String period) {

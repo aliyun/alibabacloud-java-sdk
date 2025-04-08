@@ -4,10 +4,15 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>An array of regions.</p>
+     */
     @NameInMap("RegionModelList")
     public java.util.List<DescribeRegionsResponseBodyRegionModelList> regionModelList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F8900A96-67F7-5274-A41B-7722E1ECF8C9</p>
      */
@@ -36,10 +41,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionModelListZones extends TeaModel {
+        /**
+         * <p>The zone description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Indicates whether the VPC is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -47,16 +57,23 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public Boolean disabled;
 
         /**
+         * <p>The label.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>The zone name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -64,6 +81,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The subdomain.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-h-aliyun</p>
          */
@@ -71,6 +90,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String subDomain;
 
         /**
+         * <p>Indicates whether the VPC is enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -78,6 +99,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public Boolean vpcEnabled;
 
         /**
+         * <p>Indicates whether the virtual private cloud (VPC) is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>
          */
@@ -157,12 +180,17 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegionModelList extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>An array of zones.</p>
+         */
         @NameInMap("Zones")
         public java.util.List<DescribeRegionsResponseBodyRegionModelListZones> zones;
 

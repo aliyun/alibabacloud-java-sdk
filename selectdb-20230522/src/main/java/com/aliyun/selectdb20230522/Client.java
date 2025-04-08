@@ -372,7 +372,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建SelectDB实例</p>
+     * <p>Creates an ApsaraDB for SelectDB instance.</p>
      * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -382,6 +382,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateDBInstanceShrinkRequest request = new CreateDBInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.multiZone)) {
+            request.multiZoneShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multiZone, "MultiZone", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
             request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
         }
@@ -411,12 +415,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceDescription", request.DBInstanceDescription);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deployScheme)) {
+            query.put("DeployScheme", request.deployScheme);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
             query.put("Engine", request.engine);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
             query.put("EngineVersion", request.engineVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiZoneShrink)) {
+            query.put("MultiZone", request.multiZoneShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
@@ -485,7 +497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建SelectDB实例</p>
+     * <p>Creates an ApsaraDB for SelectDB instance.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -1247,7 +1259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Region信息</p>
+     * <p>Queries available regions and zones.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1280,7 +1292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取Region信息</p>
+     * <p>Queries available regions and zones.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
