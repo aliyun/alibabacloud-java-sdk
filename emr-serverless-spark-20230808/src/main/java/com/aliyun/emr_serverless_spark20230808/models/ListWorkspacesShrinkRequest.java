@@ -3,7 +3,7 @@ package com.aliyun.emr_serverless_spark20230808.models;
 
 import com.aliyun.tea.*;
 
-public class ListWorkspacesRequest extends TeaModel {
+public class ListWorkspacesShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of entries returned.</p>
      * 
@@ -50,14 +50,14 @@ public class ListWorkspacesRequest extends TeaModel {
     public String state;
 
     @NameInMap("tag")
-    public java.util.List<ListWorkspacesRequestTag> tag;
+    public String tagShrink;
 
-    public static ListWorkspacesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListWorkspacesRequest self = new ListWorkspacesRequest();
+    public static ListWorkspacesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListWorkspacesShrinkRequest self = new ListWorkspacesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListWorkspacesRequest setMaxResults(Integer maxResults) {
+    public ListWorkspacesShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -65,7 +65,7 @@ public class ListWorkspacesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListWorkspacesRequest setName(String name) {
+    public ListWorkspacesShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -73,7 +73,7 @@ public class ListWorkspacesRequest extends TeaModel {
         return this.name;
     }
 
-    public ListWorkspacesRequest setNextToken(String nextToken) {
+    public ListWorkspacesShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListWorkspacesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListWorkspacesRequest setRegionId(String regionId) {
+    public ListWorkspacesShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListWorkspacesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListWorkspacesRequest setState(String state) {
+    public ListWorkspacesShrinkRequest setState(String state) {
         this.state = state;
         return this;
     }
@@ -97,42 +97,12 @@ public class ListWorkspacesRequest extends TeaModel {
         return this.state;
     }
 
-    public ListWorkspacesRequest setTag(java.util.List<ListWorkspacesRequestTag> tag) {
-        this.tag = tag;
+    public ListWorkspacesShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<ListWorkspacesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class ListWorkspacesRequestTag extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("value")
-        public String value;
-
-        public static ListWorkspacesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListWorkspacesRequestTag self = new ListWorkspacesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListWorkspacesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListWorkspacesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
 }

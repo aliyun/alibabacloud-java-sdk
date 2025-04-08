@@ -50,6 +50,9 @@ public class GetSqlStatementResponseBody extends TeaModel {
         @NameInMap("rows")
         public String rows;
 
+        @NameInMap("rowsFilePath")
+        public String rowsFilePath;
+
         /**
          * <p>The information about the schema, which is a string in the JSON format.</p>
          * 
@@ -70,6 +73,14 @@ public class GetSqlStatementResponseBody extends TeaModel {
         }
         public String getRows() {
             return this.rows;
+        }
+
+        public GetSqlStatementResponseBodyDataSqlOutputs setRowsFilePath(String rowsFilePath) {
+            this.rowsFilePath = rowsFilePath;
+            return this;
+        }
+        public String getRowsFilePath() {
+            return this.rowsFilePath;
         }
 
         public GetSqlStatementResponseBodyDataSqlOutputs setSchema(String schema) {

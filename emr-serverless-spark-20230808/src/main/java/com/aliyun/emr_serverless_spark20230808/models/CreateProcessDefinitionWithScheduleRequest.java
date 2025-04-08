@@ -33,6 +33,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
     @NameInMap("executionType")
     public String executionType;
 
+    @NameInMap("globalParams")
+    public java.util.List<CreateProcessDefinitionWithScheduleRequestGlobalParams> globalParams;
+
     /**
      * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
@@ -171,6 +174,14 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
         return this.executionType;
     }
 
+    public CreateProcessDefinitionWithScheduleRequest setGlobalParams(java.util.List<CreateProcessDefinitionWithScheduleRequestGlobalParams> globalParams) {
+        this.globalParams = globalParams;
+        return this;
+    }
+    public java.util.List<CreateProcessDefinitionWithScheduleRequestGlobalParams> getGlobalParams() {
+        return this.globalParams;
+    }
+
     public CreateProcessDefinitionWithScheduleRequest setName(String name) {
         this.name = name;
         return this;
@@ -275,6 +286,58 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
         return this.timeout;
     }
 
+    public static class CreateProcessDefinitionWithScheduleRequestGlobalParams extends TeaModel {
+        @NameInMap("direct")
+        public String direct;
+
+        @NameInMap("prop")
+        public String prop;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateProcessDefinitionWithScheduleRequestGlobalParams build(java.util.Map<String, ?> map) throws Exception {
+            CreateProcessDefinitionWithScheduleRequestGlobalParams self = new CreateProcessDefinitionWithScheduleRequestGlobalParams();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestGlobalParams setDirect(String direct) {
+            this.direct = direct;
+            return this;
+        }
+        public String getDirect() {
+            return this.direct;
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestGlobalParams setProp(String prop) {
+            this.prop = prop;
+            return this;
+        }
+        public String getProp() {
+            return this.prop;
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestGlobalParams setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestGlobalParams setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateProcessDefinitionWithScheduleRequestSchedule extends TeaModel {
         /**
          * <p>The CRON expression that is used for scheduling.</p>
@@ -351,6 +414,58 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
 
     }
 
+    public static class CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams extends TeaModel {
+        @NameInMap("direct")
+        public String direct;
+
+        @NameInMap("prop")
+        public String prop;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams build(java.util.Map<String, ?> map) throws Exception {
+            CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams self = new CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams setDirect(String direct) {
+            this.direct = direct;
+            return this;
+        }
+        public String getDirect() {
+            return this.direct;
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams setProp(String prop) {
+            this.prop = prop;
+            return this;
+        }
+        public String getProp() {
+            return this.prop;
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsSparkConf extends TeaModel {
         /**
          * <p>The key of the SparkConf object.</p>
@@ -420,6 +535,9 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
          */
         @NameInMap("fusion")
         public Boolean fusion;
+
+        @NameInMap("localParams")
+        public java.util.List<CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams> localParams;
 
         /**
          * <p>The name of the resource queue on which the job runs.</p>
@@ -553,6 +671,14 @@ public class CreateProcessDefinitionWithScheduleRequest extends TeaModel {
         }
         public Boolean getFusion() {
             return this.fusion;
+        }
+
+        public CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParams setLocalParams(java.util.List<CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams> localParams) {
+            this.localParams = localParams;
+            return this;
+        }
+        public java.util.List<CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParamsLocalParams> getLocalParams() {
+            return this.localParams;
         }
 
         public CreateProcessDefinitionWithScheduleRequestTaskDefinitionJsonTaskParams setResourceQueueId(String resourceQueueId) {

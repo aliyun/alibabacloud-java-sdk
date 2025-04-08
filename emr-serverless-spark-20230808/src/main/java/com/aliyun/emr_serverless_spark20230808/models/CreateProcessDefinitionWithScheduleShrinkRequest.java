@@ -33,6 +33,9 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     @NameInMap("executionType")
     public String executionType;
 
+    @NameInMap("globalParams")
+    public String globalParamsShrink;
+
     /**
      * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
@@ -169,6 +172,14 @@ public class CreateProcessDefinitionWithScheduleShrinkRequest extends TeaModel {
     }
     public String getExecutionType() {
         return this.executionType;
+    }
+
+    public CreateProcessDefinitionWithScheduleShrinkRequest setGlobalParamsShrink(String globalParamsShrink) {
+        this.globalParamsShrink = globalParamsShrink;
+        return this;
+    }
+    public String getGlobalParamsShrink() {
+        return this.globalParamsShrink;
     }
 
     public CreateProcessDefinitionWithScheduleShrinkRequest setName(String name) {

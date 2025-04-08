@@ -153,6 +153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateProcessDefinitionWithScheduleShrinkRequest request = new CreateProcessDefinitionWithScheduleShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.globalParams)) {
+            request.globalParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.globalParams, "globalParams", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedule)) {
             request.scheduleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedule, "schedule", "json");
         }
@@ -180,6 +184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.executionType)) {
             query.put("executionType", request.executionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.globalParamsShrink)) {
+            query.put("globalParams", request.globalParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -272,7 +280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建session集群</p>
+     * <p>Creates a session.</p>
      * 
      * @param request CreateSessionClusterRequest
      * @param headers map
@@ -353,7 +361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建session集群</p>
+     * <p>Creates a session.</p>
      * 
      * @param request CreateSessionClusterRequest
      * @return CreateSessionClusterResponse
@@ -440,7 +448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @param headers map
@@ -511,6 +519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("resourceSpec", request.resourceSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
             body.put("workspaceName", request.workspaceName);
         }
@@ -541,7 +553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作空间</p>
+     * <p>Creates a workspace.</p>
      * 
      * @param request CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -606,6 +618,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getCuHoursWithOptions(workspaceId, queue, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains job analysis information on E-MapReduce (EMR) Doctor.</p>
+     * 
+     * @param request GetDoctorApplicationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDoctorApplicationResponse
+     */
+    public GetDoctorApplicationResponse getDoctorApplicationWithOptions(String workspaceId, String runId, GetDoctorApplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.locale)) {
+            query.put("locale", request.locale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryTime)) {
+            query.put("queryTime", request.queryTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDoctorApplication"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/runs/" + com.aliyun.openapiutil.Client.getEncodeParam(runId) + "/action/getDoctorApplication"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDoctorApplicationResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDoctorApplicationResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains job analysis information on E-MapReduce (EMR) Doctor.</p>
+     * 
+     * @param request GetDoctorApplicationRequest
+     * @return GetDoctorApplicationResponse
+     */
+    public GetDoctorApplicationResponse getDoctorApplication(String workspaceId, String runId, GetDoctorApplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDoctorApplicationWithOptions(workspaceId, runId, request, headers, runtime);
     }
 
     /**
@@ -1002,7 +1074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListKyuubiSparkApplications</p>
+     * <p>Queries the applications that are submitted by using a Kyuubi gateway.</p>
      * 
      * @param tmpReq ListKyuubiSparkApplicationsRequest
      * @param headers map
@@ -1063,7 +1135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListKyuubiSparkApplications</p>
+     * <p>Queries the applications that are submitted by using a Kyuubi gateway.</p>
      * 
      * @param request ListKyuubiSparkApplicationsRequest
      * @return ListKyuubiSparkApplicationsResponse
@@ -1342,13 +1414,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of workspaces.</p>
      * 
-     * @param request ListWorkspacesRequest
+     * @param tmpReq ListWorkspacesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListWorkspacesResponse
      */
-    public ListWorkspacesResponse listWorkspacesWithOptions(ListWorkspacesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListWorkspacesResponse listWorkspacesWithOptions(ListWorkspacesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListWorkspacesShrinkRequest request = new ListWorkspacesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
@@ -1368,6 +1446,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.state)) {
             query.put("state", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1520,6 +1602,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartProcessInstanceResponse startProcessInstanceWithOptions(String bizId, StartProcessInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            query.put("action", request.action);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comments)) {
+            query.put("comments", request.comments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            query.put("email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
+            query.put("interval", request.interval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isProd)) {
             query.put("isProd", request.isProd);
         }
@@ -1773,6 +1871,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateProcessDefinitionWithScheduleShrinkRequest request = new UpdateProcessDefinitionWithScheduleShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.globalParams)) {
+            request.globalParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.globalParams, "globalParams", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.schedule)) {
             request.scheduleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.schedule, "schedule", "json");
         }
@@ -1800,6 +1902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.executionType)) {
             query.put("executionType", request.executionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.globalParamsShrink)) {
+            query.put("globalParams", request.globalParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

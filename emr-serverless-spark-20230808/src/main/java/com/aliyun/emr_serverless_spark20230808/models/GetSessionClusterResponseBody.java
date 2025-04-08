@@ -224,13 +224,13 @@ public class GetSessionClusterResponseBody extends TeaModel {
         public java.util.List<GetSessionClusterResponseBodySessionClusterApplicationConfigs> applicationConfigs;
 
         /**
-         * <p>The automatic startup configuration.</p>
+         * <p>Indicates whether automatic startup is enabled.</p>
          */
         @NameInMap("autoStartConfiguration")
         public GetSessionClusterResponseBodySessionClusterAutoStartConfiguration autoStartConfiguration;
 
         /**
-         * <p>The automatic termination configuration.</p>
+         * <p>Indicates whether automatic termination is enabled.</p>
          */
         @NameInMap("autoStopConfiguration")
         public GetSessionClusterResponseBodySessionClusterAutoStopConfiguration autoStopConfiguration;
@@ -280,6 +280,12 @@ public class GetSessionClusterResponseBody extends TeaModel {
         @NameInMap("envId")
         public String envId;
 
+        /**
+         * <p>The additional metadata of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;extraInfoKey&quot;:&quot;extraInfoValue&quot;}</p>
+         */
         @NameInMap("extra")
         public String extra;
 

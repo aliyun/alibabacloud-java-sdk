@@ -33,6 +33,12 @@ public class StartJobRunRequest extends TeaModel {
     @NameInMap("configurationOverrides")
     public StartJobRunRequestConfigurationOverrides configurationOverrides;
 
+    /**
+     * <p>The version of the Spark engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esr-3.3.1</p>
+     */
     @NameInMap("displayReleaseVersion")
     public String displayReleaseVersion;
 
@@ -45,6 +51,12 @@ public class StartJobRunRequest extends TeaModel {
     @NameInMap("executionTimeoutSeconds")
     public Integer executionTimeoutSeconds;
 
+    /**
+     * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("fusion")
     public Boolean fusion;
 
@@ -64,7 +76,7 @@ public class StartJobRunRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The job name.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>spark_job_name</p>
@@ -91,7 +103,7 @@ public class StartJobRunRequest extends TeaModel {
     public String resourceQueueId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the job.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;

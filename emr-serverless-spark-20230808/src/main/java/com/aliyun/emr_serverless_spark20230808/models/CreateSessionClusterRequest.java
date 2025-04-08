@@ -4,16 +4,27 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class CreateSessionClusterRequest extends TeaModel {
+    /**
+     * <p>The Spark configurations.</p>
+     */
     @NameInMap("applicationConfigs")
     public java.util.List<CreateSessionClusterRequestApplicationConfigs> applicationConfigs;
 
+    /**
+     * <p>The automatic startup configuration.</p>
+     */
     @NameInMap("autoStartConfiguration")
     public CreateSessionClusterRequestAutoStartConfiguration autoStartConfiguration;
 
+    /**
+     * <p>The automatic termination configurations.</p>
+     */
     @NameInMap("autoStopConfiguration")
     public CreateSessionClusterRequestAutoStopConfiguration autoStopConfiguration;
 
     /**
+     * <p>The version of the Spark engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>esr-3.3.1</p>
      */
@@ -21,6 +32,8 @@ public class CreateSessionClusterRequest extends TeaModel {
     public String displayReleaseVersion;
 
     /**
+     * <p>The ID of the Python environment. This parameter takes effect only for notebook sessions.</p>
+     * 
      * <strong>example:</strong>
      * <p>env-cpv569tlhtgndjl86t40</p>
      */
@@ -28,6 +41,8 @@ public class CreateSessionClusterRequest extends TeaModel {
     public String envId;
 
     /**
+     * <p>Specifies whether to enable Fusion engine for acceleration.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -35,6 +50,12 @@ public class CreateSessionClusterRequest extends TeaModel {
     public Boolean fusion;
 
     /**
+     * <p>The session type.</p>
+     * <ul>
+     * <li>SQL</li>
+     * <li>NOTEBOOK</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SQL</p>
      */
@@ -42,6 +63,8 @@ public class CreateSessionClusterRequest extends TeaModel {
     public String kind;
 
     /**
+     * <p>The name of the Spark job.</p>
+     * 
      * <strong>example:</strong>
      * <p>spark_job_name</p>
      */
@@ -49,6 +72,8 @@ public class CreateSessionClusterRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The queue name.</p>
+     * 
      * <strong>example:</strong>
      * <p>root_queue</p>
      */
@@ -56,6 +81,8 @@ public class CreateSessionClusterRequest extends TeaModel {
     public String queueName;
 
     /**
+     * <p>The version number of Spark.</p>
+     * 
      * <strong>example:</strong>
      * <p>esr-3.3.1</p>
      */
@@ -63,6 +90,8 @@ public class CreateSessionClusterRequest extends TeaModel {
     public String releaseVersion;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -164,6 +193,8 @@ public class CreateSessionClusterRequest extends TeaModel {
 
     public static class CreateSessionClusterRequestApplicationConfigs extends TeaModel {
         /**
+         * <p>The name of the configuration file.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark-defaults.conf</p>
          */
@@ -171,6 +202,8 @@ public class CreateSessionClusterRequest extends TeaModel {
         public String configFileName;
 
         /**
+         * <p>The key of SparkConf.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark.app.name</p>
          */
@@ -178,6 +211,8 @@ public class CreateSessionClusterRequest extends TeaModel {
         public String configItemKey;
 
         /**
+         * <p>The value of SparkConf.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -217,6 +252,12 @@ public class CreateSessionClusterRequest extends TeaModel {
 
     public static class CreateSessionClusterRequestAutoStartConfiguration extends TeaModel {
         /**
+         * <p>Specifies whether to enable automatic startup is enabled.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -240,6 +281,12 @@ public class CreateSessionClusterRequest extends TeaModel {
 
     public static class CreateSessionClusterRequestAutoStopConfiguration extends TeaModel {
         /**
+         * <p>Specifies whether to enable automatic termination.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -247,6 +294,8 @@ public class CreateSessionClusterRequest extends TeaModel {
         public Boolean enable;
 
         /**
+         * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
