@@ -212,6 +212,9 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
         /**
          * <p>Indicates whether HTTPS is forcefully used.</p>
          * 
@@ -354,6 +357,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListGatewayDomainResponseBodyData setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
         }
 
         public ListGatewayDomainResponseBodyData setMustHttps(Boolean mustHttps) {

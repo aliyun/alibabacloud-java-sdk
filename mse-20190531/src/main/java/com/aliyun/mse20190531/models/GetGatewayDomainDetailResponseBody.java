@@ -244,6 +244,9 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
         /**
          * <p>The issuer.</p>
          * 
@@ -422,6 +425,14 @@ public class GetGatewayDomainDetailResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetGatewayDomainDetailResponseBodyData setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
         }
 
         public GetGatewayDomainDetailResponseBodyData setIssuer(String issuer) {

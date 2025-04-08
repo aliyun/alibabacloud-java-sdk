@@ -96,7 +96,15 @@ public class AddGatewayShrinkRequest extends TeaModel {
      * <p>slb.s2.small</p>
      */
     @NameInMap("InternetSlbSpec")
+    @Deprecated
     public String internetSlbSpec;
+
+    /**
+     * <strong>example:</strong>
+     * <p>pubnet</p>
+     */
+    @NameInMap("ManagedEntryNetworkType")
+    public String managedEntryNetworkType;
 
     /**
      * <p>The MSE instance type. Valid values:</p>
@@ -198,6 +206,7 @@ public class AddGatewayShrinkRequest extends TeaModel {
      * <p>slb.s2.small</p>
      */
     @NameInMap("SlbSpec")
+    @Deprecated
     public String slbSpec;
 
     /**
@@ -325,12 +334,21 @@ public class AddGatewayShrinkRequest extends TeaModel {
         return this.enterpriseSecurityGroup;
     }
 
+    @Deprecated
     public AddGatewayShrinkRequest setInternetSlbSpec(String internetSlbSpec) {
         this.internetSlbSpec = internetSlbSpec;
         return this;
     }
     public String getInternetSlbSpec() {
         return this.internetSlbSpec;
+    }
+
+    public AddGatewayShrinkRequest setManagedEntryNetworkType(String managedEntryNetworkType) {
+        this.managedEntryNetworkType = managedEntryNetworkType;
+        return this;
+    }
+    public String getManagedEntryNetworkType() {
+        return this.managedEntryNetworkType;
     }
 
     public AddGatewayShrinkRequest setMserVersion(String mserVersion) {
@@ -389,6 +407,7 @@ public class AddGatewayShrinkRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    @Deprecated
     public AddGatewayShrinkRequest setSlbSpec(String slbSpec) {
         this.slbSpec = slbSpec;
         return this;

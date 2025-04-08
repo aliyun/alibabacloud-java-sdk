@@ -573,6 +573,9 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         @NameInMap("EnableGzip")
         public Boolean enableGzip;
 
+        @NameInMap("EnableGzipHardwareAccelerate")
+        public Boolean enableGzipHardwareAccelerate;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -777,6 +780,14 @@ public class GetGatewayConfigResponseBody extends TeaModel {
         }
         public Boolean getEnableGzip() {
             return this.enableGzip;
+        }
+
+        public GetGatewayConfigResponseBodyData setEnableGzipHardwareAccelerate(Boolean enableGzipHardwareAccelerate) {
+            this.enableGzipHardwareAccelerate = enableGzipHardwareAccelerate;
+            return this;
+        }
+        public Boolean getEnableGzipHardwareAccelerate() {
+            return this.enableGzipHardwareAccelerate;
         }
 
         public GetGatewayConfigResponseBodyData setEnableHardwareAccelerate(Boolean enableHardwareAccelerate) {
