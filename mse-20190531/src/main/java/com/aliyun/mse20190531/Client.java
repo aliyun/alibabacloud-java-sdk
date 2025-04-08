@@ -333,6 +333,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InternetSlbSpec", request.internetSlbSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.managedEntryNetworkType)) {
+            query.put("ManagedEntryNetworkType", request.managedEntryNetworkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mserVersion)) {
             query.put("MserVersion", request.mserVersion);
         }

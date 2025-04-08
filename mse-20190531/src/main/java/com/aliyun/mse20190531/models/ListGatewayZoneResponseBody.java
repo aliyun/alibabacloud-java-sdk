@@ -173,6 +173,9 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        @NameInMap("SupportQat")
+        public Boolean supportQat;
+
         /**
          * <p>The zone ID.</p>
          * 
@@ -193,6 +196,14 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
         public String getLocalName() {
             return this.localName;
+        }
+
+        public ListGatewayZoneResponseBodyData setSupportQat(Boolean supportQat) {
+            this.supportQat = supportQat;
+            return this;
+        }
+        public Boolean getSupportQat() {
+            return this.supportQat;
         }
 
         public ListGatewayZoneResponseBodyData setZoneId(String zoneId) {

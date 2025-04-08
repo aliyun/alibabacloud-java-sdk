@@ -96,7 +96,15 @@ public class AddGatewayRequest extends TeaModel {
      * <p>slb.s2.small</p>
      */
     @NameInMap("InternetSlbSpec")
+    @Deprecated
     public String internetSlbSpec;
+
+    /**
+     * <strong>example:</strong>
+     * <p>pubnet</p>
+     */
+    @NameInMap("ManagedEntryNetworkType")
+    public String managedEntryNetworkType;
 
     /**
      * <p>The MSE instance type. Valid values:</p>
@@ -198,6 +206,7 @@ public class AddGatewayRequest extends TeaModel {
      * <p>slb.s2.small</p>
      */
     @NameInMap("SlbSpec")
+    @Deprecated
     public String slbSpec;
 
     /**
@@ -325,12 +334,21 @@ public class AddGatewayRequest extends TeaModel {
         return this.enterpriseSecurityGroup;
     }
 
+    @Deprecated
     public AddGatewayRequest setInternetSlbSpec(String internetSlbSpec) {
         this.internetSlbSpec = internetSlbSpec;
         return this;
     }
     public String getInternetSlbSpec() {
         return this.internetSlbSpec;
+    }
+
+    public AddGatewayRequest setManagedEntryNetworkType(String managedEntryNetworkType) {
+        this.managedEntryNetworkType = managedEntryNetworkType;
+        return this;
+    }
+    public String getManagedEntryNetworkType() {
+        return this.managedEntryNetworkType;
     }
 
     public AddGatewayRequest setMserVersion(String mserVersion) {
@@ -389,6 +407,7 @@ public class AddGatewayRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    @Deprecated
     public AddGatewayRequest setSlbSpec(String slbSpec) {
         this.slbSpec = slbSpec;
         return this;
