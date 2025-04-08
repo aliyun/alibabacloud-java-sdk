@@ -23,15 +23,6 @@ public class CreateRoutineRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The specification of the routine.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>5ms</p>
-     */
-    @NameInMap("SpecName")
-    public String specName;
-
     public static CreateRoutineRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRoutineRequest self = new CreateRoutineRequest();
         return TeaModel.build(map, self);
@@ -51,14 +42,6 @@ public class CreateRoutineRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateRoutineRequest setSpecName(String specName) {
-        this.specName = specName;
-        return this;
-    }
-    public String getSpecName() {
-        return this.specName;
     }
 
 }

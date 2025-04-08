@@ -164,7 +164,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
          * <p>554889455535696</p>
          */
         @NameInMap("SiteId")
-        public String siteId;
+        public Long siteId;
 
         /**
          * <strong>example:</strong>
@@ -257,11 +257,11 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             return this.sequence;
         }
 
-        public ListRoutineRoutesResponseBodyConfigs setSiteId(String siteId) {
+        public ListRoutineRoutesResponseBodyConfigs setSiteId(Long siteId) {
             this.siteId = siteId;
             return this;
         }
-        public String getSiteId() {
+        public Long getSiteId() {
             return this.siteId;
         }
 

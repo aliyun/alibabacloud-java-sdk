@@ -5,21 +5,6 @@ import com.aliyun.tea.*;
 
 public class PublishRoutineCodeVersionRequest extends TeaModel {
     /**
-     * <p>The regions for canary release.</p>
-     */
-    @NameInMap("CanaryAreaList")
-    public java.util.List<String> canaryAreaList;
-
-    /**
-     * <p>The version number for canary release.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1710120201067203242</p>
-     */
-    @NameInMap("CanaryCodeVersion")
-    public String canaryCodeVersion;
-
-    /**
      * <p>The code version to be released.</p>
      * 
      * <strong>example:</strong>
@@ -51,22 +36,6 @@ public class PublishRoutineCodeVersionRequest extends TeaModel {
     public static PublishRoutineCodeVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishRoutineCodeVersionRequest self = new PublishRoutineCodeVersionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PublishRoutineCodeVersionRequest setCanaryAreaList(java.util.List<String> canaryAreaList) {
-        this.canaryAreaList = canaryAreaList;
-        return this;
-    }
-    public java.util.List<String> getCanaryAreaList() {
-        return this.canaryAreaList;
-    }
-
-    public PublishRoutineCodeVersionRequest setCanaryCodeVersion(String canaryCodeVersion) {
-        this.canaryCodeVersion = canaryCodeVersion;
-        return this;
-    }
-    public String getCanaryCodeVersion() {
-        return this.canaryCodeVersion;
     }
 
     public PublishRoutineCodeVersionRequest setCodeVersion(String codeVersion) {

@@ -3257,10 +3257,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Name", request.name);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.specName)) {
-            body.put("SpecName", request.specName);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -12891,20 +12887,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query the specifications that you can select for a routine.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</p>
+     * <p>查询函数关联域名列表</p>
      * 
-     * @param request ListRoutineOptionalSpecsRequest
+     * @param request ListRoutineRelatedRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
-     * @return ListRoutineOptionalSpecsResponse
+     * @return ListRoutineRelatedRecordsResponse
      */
-    public ListRoutineOptionalSpecsResponse listRoutineOptionalSpecsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public ListRoutineRelatedRecordsResponse listRoutineRelatedRecordsWithOptions(ListRoutineRelatedRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKeyWord)) {
+            body.put("SearchKeyWord", request.searchKeyWord);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListRoutineOptionalSpecs"),
+            new TeaPair("action", "ListRoutineRelatedRecords"),
             new TeaPair("version", "2024-09-10"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
@@ -12915,24 +12928,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "json")
         ));
         if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoutineOptionalSpecsResponse());
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoutineRelatedRecordsResponse());
         } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListRoutineOptionalSpecsResponse());
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListRoutineRelatedRecordsResponse());
         }
 
     }
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query the specifications that you can select for a routine.</p>
-     * 
      * <b>summary</b> : 
-     * <p>Queries the specifications that you can select for a routine based on the plan type. The response contains all specifications that you can select for a routine. The IsAvailable parameter indicates whether a specification is available.</p>
-     * @return ListRoutineOptionalSpecsResponse
+     * <p>查询函数关联域名列表</p>
+     * 
+     * @param request ListRoutineRelatedRecordsRequest
+     * @return ListRoutineRelatedRecordsResponse
      */
-    public ListRoutineOptionalSpecsResponse listRoutineOptionalSpecs() throws Exception {
+    public ListRoutineRelatedRecordsResponse listRoutineRelatedRecords(ListRoutineRelatedRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listRoutineOptionalSpecsWithOptions(runtime);
+        return this.listRoutineRelatedRecordsWithOptions(request, runtime);
     }
 
     /**
@@ -13457,6 +13469,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListUserRatePlanInstancesResponse listUserRatePlanInstances(ListUserRatePlanInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserRatePlanInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户的Routine列表</p>
+     * 
+     * @param request ListUserRoutinesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserRoutinesResponse
+     */
+    public ListUserRoutinesResponse listUserRoutinesWithOptions(ListUserRoutinesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKeyWord)) {
+            query.put("SearchKeyWord", request.searchKeyWord);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserRoutines"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserRoutinesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListUserRoutinesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户的Routine列表</p>
+     * 
+     * @param request ListUserRoutinesRequest
+     * @return ListUserRoutinesResponse
+     */
+    public ListUserRoutinesResponse listUserRoutines(ListUserRoutinesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listUserRoutinesWithOptions(request, runtime);
     }
 
     /**
@@ -14178,27 +14247,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Releases a code version of a routine to the staging, canary, or production environment. You can specify the regions where the canary environment is deployed to release your code.</p>
      * 
-     * @param tmpReq PublishRoutineCodeVersionRequest
+     * @param request PublishRoutineCodeVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PublishRoutineCodeVersionResponse
      */
-    public PublishRoutineCodeVersionResponse publishRoutineCodeVersionWithOptions(PublishRoutineCodeVersionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        PublishRoutineCodeVersionShrinkRequest request = new PublishRoutineCodeVersionShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.canaryAreaList)) {
-            request.canaryAreaListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.canaryAreaList, "CanaryAreaList", "json");
-        }
-
+    public PublishRoutineCodeVersionResponse publishRoutineCodeVersionWithOptions(PublishRoutineCodeVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.canaryAreaListShrink)) {
-            body.put("CanaryAreaList", request.canaryAreaListShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.canaryCodeVersion)) {
-            body.put("CanaryCodeVersion", request.canaryCodeVersion);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.codeVersion)) {
             body.put("CodeVersion", request.codeVersion);
         }
@@ -14915,6 +14970,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RollbackEdgeContainerAppVersionResponse rollbackEdgeContainerAppVersionWithOptions(RollbackEdgeContainerAppVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.percentage)) {
+            query.put("Percentage", request.percentage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedPercent)) {
+            query.put("UsedPercent", request.usedPercent);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             query.put("VersionId", request.versionId);
         }

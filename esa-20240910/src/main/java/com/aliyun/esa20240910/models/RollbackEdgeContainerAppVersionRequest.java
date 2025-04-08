@@ -14,6 +14,9 @@ public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("Percentage")
+    public Integer percentage;
+
     /**
      * <p>The remarks.</p>
      * 
@@ -22,6 +25,9 @@ public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
      */
     @NameInMap("Remarks")
     public String remarks;
+
+    @NameInMap("UsedPercent")
+    public Boolean usedPercent;
 
     /**
      * <p>The ID of version that you want to roll back.</p>
@@ -46,12 +52,28 @@ public class RollbackEdgeContainerAppVersionRequest extends TeaModel {
         return this.appId;
     }
 
+    public RollbackEdgeContainerAppVersionRequest setPercentage(Integer percentage) {
+        this.percentage = percentage;
+        return this;
+    }
+    public Integer getPercentage() {
+        return this.percentage;
+    }
+
     public RollbackEdgeContainerAppVersionRequest setRemarks(String remarks) {
         this.remarks = remarks;
         return this;
     }
     public String getRemarks() {
         return this.remarks;
+    }
+
+    public RollbackEdgeContainerAppVersionRequest setUsedPercent(Boolean usedPercent) {
+        this.usedPercent = usedPercent;
+        return this;
+    }
+    public Boolean getUsedPercent() {
+        return this.usedPercent;
     }
 
     public RollbackEdgeContainerAppVersionRequest setVersionId(String versionId) {

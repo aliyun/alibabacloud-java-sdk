@@ -125,15 +125,6 @@ public class GetRoutineResponseBody extends TeaModel {
         @NameInMap("Env")
         public String env;
 
-        /**
-         * <p>The specification.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>5ms</p>
-         */
-        @NameInMap("SpecName")
-        public String specName;
-
         public static GetRoutineResponseBodyEnvs build(java.util.Map<String, ?> map) throws Exception {
             GetRoutineResponseBodyEnvs self = new GetRoutineResponseBodyEnvs();
             return TeaModel.build(map, self);
@@ -169,14 +160,6 @@ public class GetRoutineResponseBody extends TeaModel {
         }
         public String getEnv() {
             return this.env;
-        }
-
-        public GetRoutineResponseBodyEnvs setSpecName(String specName) {
-            this.specName = specName;
-            return this;
-        }
-        public String getSpecName() {
-            return this.specName;
         }
 
     }
