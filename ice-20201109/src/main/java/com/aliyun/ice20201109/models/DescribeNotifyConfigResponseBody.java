@@ -4,12 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribeNotifyConfigResponseBody extends TeaModel {
+    @NameInMap("AudioOssPath")
+    public String audioOssPath;
+
     /**
      * <strong>example:</strong>
      * <p><a href="http://customer.com/callback">http://customer.com/callback</a></p>
      */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
+
+    @NameInMap("EnableAudioRecording")
+    public Boolean enableAudioRecording;
 
     /**
      * <strong>example:</strong>
@@ -51,12 +57,28 @@ public class DescribeNotifyConfigResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeNotifyConfigResponseBody setAudioOssPath(String audioOssPath) {
+        this.audioOssPath = audioOssPath;
+        return this;
+    }
+    public String getAudioOssPath() {
+        return this.audioOssPath;
+    }
+
     public DescribeNotifyConfigResponseBody setCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    public DescribeNotifyConfigResponseBody setEnableAudioRecording(Boolean enableAudioRecording) {
+        this.enableAudioRecording = enableAudioRecording;
+        return this;
+    }
+    public Boolean getEnableAudioRecording() {
+        return this.enableAudioRecording;
     }
 
     public DescribeNotifyConfigResponseBody setEnableNotify(Boolean enableNotify) {

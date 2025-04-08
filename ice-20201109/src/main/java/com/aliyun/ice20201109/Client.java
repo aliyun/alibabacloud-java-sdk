@@ -15338,8 +15338,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AIAgentId", request.AIAgentId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.audioOssPath)) {
+            query.put("AudioOssPath", request.audioOssPath);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
             query.put("CallbackUrl", request.callbackUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAudioRecording)) {
+            query.put("EnableAudioRecording", request.enableAudioRecording);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableNotify)) {
