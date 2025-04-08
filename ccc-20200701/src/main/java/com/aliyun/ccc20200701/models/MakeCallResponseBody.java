@@ -286,6 +286,9 @@ public class MakeCallResponseBody extends TeaModel {
         @NameInMap("CallType")
         public String callType;
 
+        @NameInMap("CallVariables")
+        public String callVariables;
+
         @NameInMap("ChannelContexts")
         public java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> channelContexts;
 
@@ -314,6 +317,14 @@ public class MakeCallResponseBody extends TeaModel {
         }
         public String getCallType() {
             return this.callType;
+        }
+
+        public MakeCallResponseBodyDataCallContext setCallVariables(String callVariables) {
+            this.callVariables = callVariables;
+            return this;
+        }
+        public String getCallVariables() {
+            return this.callVariables;
         }
 
         public MakeCallResponseBodyDataCallContext setChannelContexts(java.util.List<MakeCallResponseBodyDataCallContextChannelContexts> channelContexts) {
