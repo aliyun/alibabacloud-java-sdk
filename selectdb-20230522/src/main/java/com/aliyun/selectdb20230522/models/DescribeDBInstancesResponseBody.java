@@ -96,6 +96,36 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         return this.totalRecordCount;
     }
 
+    public static class DescribeDBInstancesResponseBodyItemsMultiZone extends TeaModel {
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static DescribeDBInstancesResponseBodyItemsMultiZone build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstancesResponseBodyItemsMultiZone self = new DescribeDBInstancesResponseBodyItemsMultiZone();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesResponseBodyItemsMultiZone setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsMultiZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
     public static class DescribeDBInstancesResponseBodyItemsTags extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -175,6 +205,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
+        @NameInMap("DeployScheme")
+        public String deployScheme;
+
         /**
          * <p>The description of the instance.</p>
          */
@@ -189,6 +222,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         @NameInMap("Engine")
         public String engine;
+
+        @NameInMap("EngineMinorVersion")
+        public String engineMinorVersion;
 
         /**
          * <p>The database engine version of the instance.</p>
@@ -292,6 +328,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         @NameInMap("MaintainStarttime")
         public String maintainStarttime;
+
+        @NameInMap("MultiZone")
+        public java.util.List<DescribeDBInstancesResponseBodyItemsMultiZone> multiZone;
 
         /**
          * <p>The storage capacity of the instance. Unit: GB.</p>
@@ -494,6 +533,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             return this.DBInstanceId;
         }
 
+        public DescribeDBInstancesResponseBodyItems setDeployScheme(String deployScheme) {
+            this.deployScheme = deployScheme;
+            return this;
+        }
+        public String getDeployScheme() {
+            return this.deployScheme;
+        }
+
         public DescribeDBInstancesResponseBodyItems setDescription(String description) {
             this.description = description;
             return this;
@@ -508,6 +555,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeDBInstancesResponseBodyItems setEngineMinorVersion(String engineMinorVersion) {
+            this.engineMinorVersion = engineMinorVersion;
+            return this;
+        }
+        public String getEngineMinorVersion() {
+            return this.engineMinorVersion;
         }
 
         public DescribeDBInstancesResponseBodyItems setEngineVersion(String engineVersion) {
@@ -604,6 +659,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getMaintainStarttime() {
             return this.maintainStarttime;
+        }
+
+        public DescribeDBInstancesResponseBodyItems setMultiZone(java.util.List<DescribeDBInstancesResponseBodyItemsMultiZone> multiZone) {
+            this.multiZone = multiZone;
+            return this;
+        }
+        public java.util.List<DescribeDBInstancesResponseBodyItemsMultiZone> getMultiZone() {
+            return this.multiZone;
         }
 
         public DescribeDBInstancesResponseBodyItems setObjectStoreSize(Long objectStoreSize) {

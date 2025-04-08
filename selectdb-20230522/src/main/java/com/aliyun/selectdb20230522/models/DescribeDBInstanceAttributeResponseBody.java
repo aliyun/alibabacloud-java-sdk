@@ -47,6 +47,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("DeployScheme")
+    public String deployScheme;
+
     /**
      * <p>The description of the instance.</p>
      * 
@@ -138,6 +141,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     public String maintainStarttime;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("MultiZone")
+    public java.util.List<DescribeDBInstanceAttributeResponseBodyMultiZone> multiZone;
+
+    /**
      * <p>The storage capacity of the instance.</p>
      * 
      * <strong>example:</strong>
@@ -223,6 +233,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<DescribeDBInstanceAttributeResponseBodyTags> tags;
 
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     /**
      * <p>The VPC ID.</p>
      * 
@@ -284,6 +297,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public DescribeDBInstanceAttributeResponseBody setDeployScheme(String deployScheme) {
+        this.deployScheme = deployScheme;
+        return this;
+    }
+    public String getDeployScheme() {
+        return this.deployScheme;
     }
 
     public DescribeDBInstanceAttributeResponseBody setDescription(String description) {
@@ -366,6 +387,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return this.maintainStarttime;
     }
 
+    public DescribeDBInstanceAttributeResponseBody setMultiZone(java.util.List<DescribeDBInstanceAttributeResponseBodyMultiZone> multiZone) {
+        this.multiZone = multiZone;
+        return this;
+    }
+    public java.util.List<DescribeDBInstanceAttributeResponseBodyMultiZone> getMultiZone() {
+        return this.multiZone;
+    }
+
     public DescribeDBInstanceAttributeResponseBody setObjectStoreSize(Long objectStoreSize) {
         this.objectStoreSize = objectStoreSize;
         return this;
@@ -438,6 +467,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return this.tags;
     }
 
+    public DescribeDBInstanceAttributeResponseBody setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public DescribeDBInstanceAttributeResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -485,6 +522,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("ChargeType")
         public String chargeType;
+
+        @NameInMap("ClusterBinding")
+        public String clusterBinding;
 
         /**
          * <p>The number of CPU cores.</p>
@@ -605,6 +645,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SubDomain")
+        public String subDomain;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeDBInstanceAttributeResponseBodyDBClusterList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDBClusterList self = new DescribeDBInstanceAttributeResponseBodyDBClusterList();
             return TeaModel.build(map, self);
@@ -632,6 +681,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setClusterBinding(String clusterBinding) {
+            this.clusterBinding = clusterBinding;
+            return this;
+        }
+        public String getClusterBinding() {
+            return this.clusterBinding;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBClusterList setCpuCores(Long cpuCores) {
@@ -728,6 +785,82 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setSubDomain(String subDomain) {
+            this.subDomain = subDomain;
+            return this;
+        }
+        public String getSubDomain() {
+            return this.subDomain;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyMultiZone extends TeaModel {
+        @NameInMap("AvailableIpCount")
+        public Long availableIpCount;
+
+        @NameInMap("Cidr")
+        public String cidr;
+
+        @NameInMap("VSwitchIds")
+        public java.util.List<String> vSwitchIds;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
+        public static DescribeDBInstanceAttributeResponseBodyMultiZone build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyMultiZone self = new DescribeDBInstanceAttributeResponseBodyMultiZone();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyMultiZone setAvailableIpCount(Long availableIpCount) {
+            this.availableIpCount = availableIpCount;
+            return this;
+        }
+        public Long getAvailableIpCount() {
+            return this.availableIpCount;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyMultiZone setCidr(String cidr) {
+            this.cidr = cidr;
+            return this;
+        }
+        public String getCidr() {
+            return this.cidr;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyMultiZone setVSwitchIds(java.util.List<String> vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public java.util.List<String> getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyMultiZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
