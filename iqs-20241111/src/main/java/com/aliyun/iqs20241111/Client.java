@@ -241,4 +241,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.genericSearchWithOptions(request, headers, runtime);
     }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通晓搜索-出海版(全球信息搜索)</p>
+     * 
+     * @param request GlobalSearchRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GlobalSearchResponse
+     */
+    public GlobalSearchResponse globalSearchWithOptions(GlobalSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeRange)) {
+            query.put("timeRange", request.timeRange);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GlobalSearch"),
+            new TeaPair("version", "2024-11-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/linked-retrieval/linked-retrieval-entry/v1/iqs/search/global"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GlobalSearchResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GlobalSearchResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通晓搜索-出海版(全球信息搜索)</p>
+     * 
+     * @param request GlobalSearchRequest
+     * @return GlobalSearchResponse
+     */
+    public GlobalSearchResponse globalSearch(GlobalSearchRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.globalSearchWithOptions(request, headers, runtime);
+    }
 }
