@@ -14,6 +14,9 @@ public class CreateAICoachTaskRequest extends TeaModel {
     @NameInMap("scriptRecordId")
     public String scriptRecordId;
 
+    @NameInMap("studentAudioUrl")
+    public String studentAudioUrl;
+
     @NameInMap("studentId")
     public String studentId;
 
@@ -36,6 +39,14 @@ public class CreateAICoachTaskRequest extends TeaModel {
     }
     public String getScriptRecordId() {
         return this.scriptRecordId;
+    }
+
+    public CreateAICoachTaskRequest setStudentAudioUrl(String studentAudioUrl) {
+        this.studentAudioUrl = studentAudioUrl;
+        return this;
+    }
+    public String getStudentAudioUrl() {
+        return this.studentAudioUrl;
     }
 
     public CreateAICoachTaskRequest setStudentId(String studentId) {

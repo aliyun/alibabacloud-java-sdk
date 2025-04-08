@@ -4,12 +4,18 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class GetAICoachScriptResponseBody extends TeaModel {
+    @NameInMap("appendQuestionFlag")
+    public Boolean appendQuestionFlag;
+
     /**
      * <strong>example:</strong>
      * <p>point</p>
      */
     @NameInMap("assessmentScope")
     public String assessmentScope;
+
+    @NameInMap("checkCheatConfig")
+    public GetAICoachScriptResponseBodyCheckCheatConfig checkCheatConfig;
 
     @NameInMap("completeStrategy")
     public GetAICoachScriptResponseBodyCompleteStrategy completeStrategy;
@@ -176,12 +182,28 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetAICoachScriptResponseBody setAppendQuestionFlag(Boolean appendQuestionFlag) {
+        this.appendQuestionFlag = appendQuestionFlag;
+        return this;
+    }
+    public Boolean getAppendQuestionFlag() {
+        return this.appendQuestionFlag;
+    }
+
     public GetAICoachScriptResponseBody setAssessmentScope(String assessmentScope) {
         this.assessmentScope = assessmentScope;
         return this;
     }
     public String getAssessmentScope() {
         return this.assessmentScope;
+    }
+
+    public GetAICoachScriptResponseBody setCheckCheatConfig(GetAICoachScriptResponseBodyCheckCheatConfig checkCheatConfig) {
+        this.checkCheatConfig = checkCheatConfig;
+        return this;
+    }
+    public GetAICoachScriptResponseBodyCheckCheatConfig getCheckCheatConfig() {
+        return this.checkCheatConfig;
     }
 
     public GetAICoachScriptResponseBody setCompleteStrategy(GetAICoachScriptResponseBodyCompleteStrategy completeStrategy) {
@@ -406,6 +428,36 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
     public GetAICoachScriptResponseBodyWeights getWeights() {
         return this.weights;
+    }
+
+    public static class GetAICoachScriptResponseBodyCheckCheatConfig extends TeaModel {
+        @NameInMap("checkImage")
+        public Boolean checkImage;
+
+        @NameInMap("checkVoice")
+        public Boolean checkVoice;
+
+        public static GetAICoachScriptResponseBodyCheckCheatConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCheckCheatConfig self = new GetAICoachScriptResponseBodyCheckCheatConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCheckCheatConfig setCheckImage(Boolean checkImage) {
+            this.checkImage = checkImage;
+            return this;
+        }
+        public Boolean getCheckImage() {
+            return this.checkImage;
+        }
+
+        public GetAICoachScriptResponseBodyCheckCheatConfig setCheckVoice(Boolean checkVoice) {
+            this.checkVoice = checkVoice;
+            return this;
+        }
+        public Boolean getCheckVoice() {
+            return this.checkVoice;
+        }
+
     }
 
     public static class GetAICoachScriptResponseBodyCompleteStrategy extends TeaModel {

@@ -21,6 +21,9 @@ public class BatchCreateAICoachTaskRequest extends TeaModel {
     @NameInMap("studentIds")
     public java.util.List<String> studentIds;
 
+    @NameInMap("studentList")
+    public java.util.List<BatchCreateAICoachTaskRequestStudentList> studentList;
+
     public static BatchCreateAICoachTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchCreateAICoachTaskRequest self = new BatchCreateAICoachTaskRequest();
         return TeaModel.build(map, self);
@@ -48,6 +51,44 @@ public class BatchCreateAICoachTaskRequest extends TeaModel {
     }
     public java.util.List<String> getStudentIds() {
         return this.studentIds;
+    }
+
+    public BatchCreateAICoachTaskRequest setStudentList(java.util.List<BatchCreateAICoachTaskRequestStudentList> studentList) {
+        this.studentList = studentList;
+        return this;
+    }
+    public java.util.List<BatchCreateAICoachTaskRequestStudentList> getStudentList() {
+        return this.studentList;
+    }
+
+    public static class BatchCreateAICoachTaskRequestStudentList extends TeaModel {
+        @NameInMap("studentAudioUrl")
+        public String studentAudioUrl;
+
+        @NameInMap("studentId")
+        public String studentId;
+
+        public static BatchCreateAICoachTaskRequestStudentList build(java.util.Map<String, ?> map) throws Exception {
+            BatchCreateAICoachTaskRequestStudentList self = new BatchCreateAICoachTaskRequestStudentList();
+            return TeaModel.build(map, self);
+        }
+
+        public BatchCreateAICoachTaskRequestStudentList setStudentAudioUrl(String studentAudioUrl) {
+            this.studentAudioUrl = studentAudioUrl;
+            return this;
+        }
+        public String getStudentAudioUrl() {
+            return this.studentAudioUrl;
+        }
+
+        public BatchCreateAICoachTaskRequestStudentList setStudentId(String studentId) {
+            this.studentId = studentId;
+            return this;
+        }
+        public String getStudentId() {
+            return this.studentId;
+        }
+
     }
 
 }
