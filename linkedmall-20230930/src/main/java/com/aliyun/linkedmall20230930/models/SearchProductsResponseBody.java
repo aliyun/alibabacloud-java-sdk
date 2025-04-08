@@ -43,12 +43,15 @@ public class SearchProductsResponseBody extends TeaModel {
         @NameInMap("categoryId")
         public Long categoryId;
 
+        @NameInMap("isLeaf")
+        public Boolean isLeaf;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("level")
-        public Boolean level;
+        public Integer level;
 
         @NameInMap("name")
         public String name;
@@ -73,11 +76,19 @@ public class SearchProductsResponseBody extends TeaModel {
             return this.categoryId;
         }
 
-        public SearchProductsResponseBodyProductsCategoryChain setLevel(Boolean level) {
+        public SearchProductsResponseBodyProductsCategoryChain setIsLeaf(Boolean isLeaf) {
+            this.isLeaf = isLeaf;
+            return this;
+        }
+        public Boolean getIsLeaf() {
+            return this.isLeaf;
+        }
+
+        public SearchProductsResponseBodyProductsCategoryChain setLevel(Integer level) {
             this.level = level;
             return this;
         }
-        public Boolean getLevel() {
+        public Integer getLevel() {
             return this.level;
         }
 
