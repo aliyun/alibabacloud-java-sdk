@@ -35,7 +35,73 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList extends TeaModel {
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList build(java.util.Map<String, ?> map) throws Exception {
+            ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList self = new ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class ListAIAgentDialoguesResponseBodyDialogues extends TeaModel {
+        @NameInMap("AttachedFileList")
+        public java.util.List<ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList> attachedFileList;
+
         /**
          * <strong>example:</strong>
          * <p>19de81b3b3d94abda22****</p>
@@ -79,6 +145,14 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         public static ListAIAgentDialoguesResponseBodyDialogues build(java.util.Map<String, ?> map) throws Exception {
             ListAIAgentDialoguesResponseBodyDialogues self = new ListAIAgentDialoguesResponseBodyDialogues();
             return TeaModel.build(map, self);
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialogues setAttachedFileList(java.util.List<ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList> attachedFileList) {
+            this.attachedFileList = attachedFileList;
+            return this;
+        }
+        public java.util.List<ListAIAgentDialoguesResponseBodyDialoguesAttachedFileList> getAttachedFileList() {
+            return this.attachedFileList;
         }
 
         public ListAIAgentDialoguesResponseBodyDialogues setDialogueId(String dialogueId) {

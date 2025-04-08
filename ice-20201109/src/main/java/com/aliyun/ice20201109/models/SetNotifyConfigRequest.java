@@ -14,6 +14,9 @@ public class SetNotifyConfigRequest extends TeaModel {
     @NameInMap("AIAgentId")
     public String AIAgentId;
 
+    @NameInMap("AudioOssPath")
+    public String audioOssPath;
+
     /**
      * <p>The URL for receiving callback notifications. By default, this parameter is left empty.</p>
      * 
@@ -22,6 +25,9 @@ public class SetNotifyConfigRequest extends TeaModel {
      */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
+
+    @NameInMap("EnableAudioRecording")
+    public Boolean enableAudioRecording;
 
     /**
      * <p>Specifies whether to enable event notifications.</p>
@@ -69,12 +75,28 @@ public class SetNotifyConfigRequest extends TeaModel {
         return this.AIAgentId;
     }
 
+    public SetNotifyConfigRequest setAudioOssPath(String audioOssPath) {
+        this.audioOssPath = audioOssPath;
+        return this;
+    }
+    public String getAudioOssPath() {
+        return this.audioOssPath;
+    }
+
     public SetNotifyConfigRequest setCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    public SetNotifyConfigRequest setEnableAudioRecording(Boolean enableAudioRecording) {
+        this.enableAudioRecording = enableAudioRecording;
+        return this;
+    }
+    public Boolean getEnableAudioRecording() {
+        return this.enableAudioRecording;
     }
 
     public SetNotifyConfigRequest setEnableNotify(Boolean enableNotify) {
