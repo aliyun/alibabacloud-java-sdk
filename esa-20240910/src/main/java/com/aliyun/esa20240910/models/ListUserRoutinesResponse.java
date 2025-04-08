@@ -3,7 +3,7 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class ListRoutineOptionalSpecsResponse extends TeaModel {
+public class ListUserRoutinesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListRoutineOptionalSpecsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListRoutineOptionalSpecsResponseBody body;
+    public ListUserRoutinesResponseBody body;
 
-    public static ListRoutineOptionalSpecsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListRoutineOptionalSpecsResponse self = new ListRoutineOptionalSpecsResponse();
+    public static ListUserRoutinesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListUserRoutinesResponse self = new ListUserRoutinesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListRoutineOptionalSpecsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListUserRoutinesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListRoutineOptionalSpecsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListRoutineOptionalSpecsResponse setStatusCode(Integer statusCode) {
+    public ListUserRoutinesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListRoutineOptionalSpecsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListRoutineOptionalSpecsResponse setBody(ListRoutineOptionalSpecsResponseBody body) {
+    public ListUserRoutinesResponse setBody(ListUserRoutinesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListRoutineOptionalSpecsResponseBody getBody() {
+    public ListUserRoutinesResponseBody getBody() {
         return this.body;
     }
 
