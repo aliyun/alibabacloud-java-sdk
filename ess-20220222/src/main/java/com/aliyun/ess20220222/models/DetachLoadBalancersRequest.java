@@ -29,7 +29,7 @@ public class DetachLoadBalancersRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to remove Elastic Compute Service (ECS) instances in the scaling group from the backend server groups of the Server Load Balancer (SLB) instance. Valid values:</p>
+     * <p>Specifies whether to remove Elastic Compute Service (ECS) instances in the scaling group from the backend server groups of the load balancer. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>

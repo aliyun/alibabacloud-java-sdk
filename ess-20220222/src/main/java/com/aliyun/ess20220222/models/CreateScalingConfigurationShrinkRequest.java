@@ -2325,6 +2325,10 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
         @NameInMap("PrivatePoolIds")
         public java.util.List<String> privatePoolIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivatePoolFirst</p>
+         */
         @NameInMap("Strategy")
         public String strategy;
 

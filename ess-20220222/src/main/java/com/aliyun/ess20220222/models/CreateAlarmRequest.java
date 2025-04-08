@@ -217,11 +217,11 @@ public class CreateAlarmRequest extends TeaModel {
     public String scalingGroupId;
 
     /**
-     * <p>The method that you want to use to aggregate the metric data. Valid values:</p>
+     * <p>The statistical method of the metric data. Valid values:</p>
      * <ul>
-     * <li>Average: the average value.</li>
-     * <li>Minimum: the minimum value.</li>
-     * <li>Maximum: the maximum value.</li>
+     * <li>Average: calculates the average value of the metric data.</li>
+     * <li>Minimum: calculates the minimum value of the metric data.</li>
+     * <li>Maximum: calculates the maximum value of the metric data.</li>
      * </ul>
      * <p>Default value: Average.</p>
      * 

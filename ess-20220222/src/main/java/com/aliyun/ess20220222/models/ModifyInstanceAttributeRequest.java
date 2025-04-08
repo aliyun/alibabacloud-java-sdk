@@ -22,13 +22,15 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the ECS instance.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp109k5j3dum1ce6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -75,6 +77,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyInstanceAttributeRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public ModifyInstanceAttributeRequest setOwnerId(Long ownerId) {
