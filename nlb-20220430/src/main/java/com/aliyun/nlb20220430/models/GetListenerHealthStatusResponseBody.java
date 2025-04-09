@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListenerHealthStatusResponseBody extends TeaModel {
     /**
-     * <p>The health check status of the server groups that are associated with the listener.</p>
+     * <p>The health check status of the server group of the listener.</p>
      */
     @NameInMap("ListenerHealthStatus")
     public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatus> listenerHealthStatus;
@@ -167,7 +167,6 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Initial</strong>: indicates that health checks are configured for the NLB instance, but no data was found.</li>
          * <li><strong>Unhealthy</strong>: indicates that the backend server consecutively fails health checks.</li>
-         * <li><strong>Unused</strong>: indicates that the weight of the backend server is 0.</li>
          * <li><strong>Unavailable</strong>: indicates that health checks are disabled.</li>
          * </ul>
          * 

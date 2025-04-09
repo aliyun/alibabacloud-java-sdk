@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerZonesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>: sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</li>
+     * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): validates the request and performs the request. If the request passes the validation, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The NLB instance ID.</p>
+     * <p>The ID of the NLB instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,8 +41,8 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The region ID of the NLB instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The ID of region where the NLB instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -51,7 +51,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The mappings between zones and vSwitches. You can specify at most 10 zones.</p>
+     * <p>The mappings between the zones and the vSwitches. You can specify up to 10 zones.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ZoneMappings")
@@ -115,11 +115,11 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         /**
          * <p>The type of the EIP. Valid values:</p>
          * <ul>
-         * <li><strong>Common</strong></li>
-         * <li><strong>Anycast</strong></li>
+         * <li><strong>Common</strong>: an EIP</li>
+         * <li><strong>Anycast</strong>: an Anycast EIP</li>
          * </ul>
          * <blockquote>
-         * <p>Anycast EIPs are supported only by NLB instances in the China (Hong Kong) region. This parameter is required when <strong>AddressType</strong> is set to <strong>Internet</strong>.</p>
+         * <p> For regions that support Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/470000.html">Limits</a>.This parameter is required if <strong>AddressType</strong> is set to <strong>Internet</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateLoadBalancerZonesRequest extends TeaModel {
         public String eipType;
 
         /**
-         * <p>The private IP addresses.</p>
+         * <p>The private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.36.16</p>

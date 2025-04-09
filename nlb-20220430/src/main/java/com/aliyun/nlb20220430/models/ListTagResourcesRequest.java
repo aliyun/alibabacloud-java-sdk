@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token used to specify a particular page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>Leave this parameter empty for the first query or the only query.</li>
+     * <li>Set this parameter to the value of NextToken obtained from the previous query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,18 +36,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The IDs of the resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of resource to query. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <ul>
-     * <li><strong>loadbalancer</strong>: a Network Load Balancer (NLB) instance</li>
-     * <li><strong>securitypolicy</strong>: a security policy</li>
-     * <li><strong>servergroup</strong>: a server group</li>
-     * <li><strong>listener</strong>: a listener</li>
+     * <li><strong>loadbalancer</strong>: the Network Load Balancer (NLB) instance</li>
+     * <li><strong>securitypolicy</strong>: the security policy</li>
+     * <li><strong>servergroup</strong>: the server group</li>
+     * <li><strong>listener</strong>: the listener</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +58,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -118,7 +118,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The tag key can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag. The tag key can be up to 128 characters in length, cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -127,7 +127,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag. The tag value can be up to 128 characters in length, cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

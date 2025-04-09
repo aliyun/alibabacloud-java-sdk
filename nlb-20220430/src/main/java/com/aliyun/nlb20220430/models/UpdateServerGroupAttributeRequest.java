@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateServerGroupAttributeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p> If you do not specify this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public Boolean connectionDrainEnabled;
 
     /**
-     * <p>The timeout period of connection draining. Unit: seconds. Valid values: <strong>10</strong> to <strong>900</strong>.</p>
+     * <p>Specify a timeout period for connection draining. Unit: seconds. Valid values: <strong>0</strong> to <strong>900</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -40,10 +40,10 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public Integer connectionDrainTimeout;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The configuration of health checks.</p>
+     * <p>Health check configurations.</p>
      */
     @NameInMap("HealthCheckConfig")
     public UpdateServerGroupAttributeRequestHealthCheckConfig healthCheckConfig;
@@ -65,7 +65,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
      * <li><strong>false</strong></li>
      * </ul>
      * <blockquote>
-     * <p> You cannot set this parameter to <strong>true</strong> if <strong>PreserveClientIpEnabled</strong> is set to <strong>false</strong> and the server group is associated with a <strong>TCP/SSL</strong> listener.</p>
+     * <p> You cannot set this parameter to <strong>true</strong> if <strong>PreserveClientIpEnabled</strong> is set to <strong>false</strong> and the server group is associated with a listener that uses <strong>SSL over TCP</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,8 +75,8 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public Boolean preserveClientIpEnabled;
 
     /**
-     * <p>The region ID of the NLB instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The ID of the region where the NLB instance is deployed.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -85,16 +85,17 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The routing algorithm. Valid values:</p>
+     * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><strong>Wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+     * <li><strong>Wrr</strong>: weighted round-robin. Backend servers with higher weights receive more requests.</li>
+     * <li><strong>Wlc</strong>: weighted least connections. Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least connections.</li>
      * <li><strong>rr</strong>: Requests are forwarded to backend servers in sequence.</li>
-     * <li><strong>sch:</strong> Source IP hashing is used. Requests from the same source IP address are forwarded to the same backend server.</li>
-     * <li><strong>tch:</strong> Four-element hashing is used. It specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are forwarded to the same backend server.</li>
-     * <li><strong>qch</strong>: QUIC ID hashing. Requests that contain the same QUIC ID are forwarded to the same backend server.</li>
+     * <li><strong>sch</strong>: source IP hash. Requests from the same source IP address are forwarded to the same backend server.</li>
+     * <li><strong>tch</strong>: consistent hashing based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same four factors are forwarded to the same backend server.</li>
+     * <li><strong>qch</strong>: QUIC ID hash. Requests that contain the same QUIC ID are forwarded to the same backend server.</li>
      * </ul>
      * <blockquote>
-     * <p>QUIC ID hashing is supported only when the backend protocol is set to UDP.</p>
+     * <p> QUIC ID hash is supported only when the backend protocol is set to UDP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The new name of the server group.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length, can contain digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</p>
      * 
      * <strong>example:</strong>
      * <p>NLB_ServerGroup1</p>
@@ -210,7 +211,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
 
     public static class UpdateServerGroupAttributeRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The backend port that is used for health checks. Valid values: <strong>0</strong> to <strong>65535</strong>. If you set the value to <strong>0</strong>, the port of a backend server is used for health checks.</p>
+         * <p>The backend port that is used for health checks. Valid values: <strong>0</strong> to <strong>65535</strong>. If you set this parameter to <strong>0</strong>, the port that the backend server uses to provide services is also used for health checks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -219,7 +220,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>The maximum timeout period of a health check. Unit: seconds Valid values: <strong>1 to 300</strong>. Default value: 5****</p>
+         * <p>The timeout period for a health check response. Unit: seconds. Valid values: <strong>1 to 300</strong>. Default value: <strong>5</strong></p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -228,13 +229,13 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public Integer healthCheckConnectTimeout;
 
         /**
-         * <p>The domain name that is used for health checks. Valid values:</p>
+         * <p>The domain name used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>$SERVER_IP</strong>: the internal IP address of a backend server.</li>
          * <li><strong>domain</strong>: the specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,7 +245,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckDomain;
 
         /**
-         * <p>Specifies whether to enable the health check feature. Valid values:</p>
+         * <p>Specifies whether to enable health checks. Valid values:</p>
          * <ul>
          * <li><strong>true</strong></li>
          * <li><strong>false</strong></li>
@@ -268,14 +269,17 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         /**
          * <p>The HTTP status codes to return for health checks. Separate multiple HTTP status codes with commas (,). Valid values: <strong>http_2xx</strong> (default), <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          */
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
+        @NameInMap("HealthCheckHttpVersion")
+        public String healthCheckHttpVersion;
+
         /**
-         * <p>The interval at which health checks are performed. Unit: seconds. Default value: 5.****</p>
+         * <p>The interval at which health checks are performed. Unit: seconds. Default value: <strong>5</strong></p>
          * <ul>
          * <li>If you set <strong>HealthCheckType</strong> to <strong>TCP</strong> or <strong>HTTP</strong>, valid values are <strong>1 to 50</strong>.</li>
          * <li>If you set <strong>HealthCheckType</strong> to <strong>UDP</strong>, valid values are <strong>1 to 300</strong>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</li>
@@ -297,7 +301,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckReq;
 
         /**
-         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <p>The protocol that you want to use for health checks. Valid values:</p>
          * <ul>
          * <li><strong>TCP</strong></li>
          * <li><strong>HTTP</strong></li>
@@ -311,10 +315,10 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckType;
 
         /**
-         * <p>The URL that is used for health checks.</p>
-         * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. The URL must start with a forward slash (/).</p>
+         * <p>The path to which health check probes are sent.</p>
+         * <p>The path must be 1 to 80 characters in length and can contain only letters, digits, and the following special characters: <code>- / . % ? # &amp; =</code>. It can also contain the following extended characters: <code>_ ; ~ ! ( ) * [ ] @ $ ^ : \\&quot; , +</code>. It must start with a forward slash (/).</p>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -333,9 +337,9 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The HTTP method that is used for health checks. Valid values: <strong>GET</strong> and <strong>HEAD</strong>.</p>
+         * <p>The HTTP method used for health checks. Valid values: <strong>GET</strong> and <strong>HEAD</strong>.</p>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -404,6 +408,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         }
         public java.util.List<String> getHealthCheckHttpCode() {
             return this.healthCheckHttpCode;
+        }
+
+        public UpdateServerGroupAttributeRequestHealthCheckConfig setHealthCheckHttpVersion(String healthCheckHttpVersion) {
+            this.healthCheckHttpVersion = healthCheckHttpVersion;
+            return this;
+        }
+        public String getHealthCheckHttpVersion() {
+            return this.healthCheckHttpVersion;
         }
 
         public UpdateServerGroupAttributeRequestHealthCheckConfig setHealthCheckInterval(Integer healthCheckInterval) {

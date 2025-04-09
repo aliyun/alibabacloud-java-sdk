@@ -19,10 +19,10 @@ public class DescribeRegionsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate this value. Ensure that the value is unique among all requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p> If you do not specify this parameter, the value of <strong>RequestId</strong> is used.**** <strong>RequestId</strong> of each request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -127,7 +127,7 @@ public class ListSecurityPolicyRequest extends TeaModel {
     public static class ListSecurityPolicyRequestTag extends TeaModel {
         /**
          * <p>The tag key. You can specify up to 10 tag keys.</p>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag key can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -137,7 +137,7 @@ public class ListSecurityPolicyRequest extends TeaModel {
 
         /**
          * <p>The tag value. You can specify up to 10 tag values.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>

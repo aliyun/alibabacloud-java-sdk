@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListListenersRequest extends TeaModel {
     /**
-     * <p>The listener IDs.</p>
+     * <p>The listener IDs. You can specify up to 20 listeners.</p>
      */
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
     /**
-     * <p>The listening protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+     * <p>The listener protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>TCPSSL</p>
@@ -20,13 +20,13 @@ public class ListListenersRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the NLB instance. You can query up to 20 NLB instances at a time.</p>
+     * <p>The IDs of the NLB instances. You can specify up to 20 instances.</p>
      */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong></p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,10 +35,10 @@ public class ListListenersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token used to specify a particular page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li>Leave this parameter empty for the first query or the only query.</li>
+     * <li>Set this parameter to the value of NextToken obtained from the previous query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,8 +60,8 @@ public class ListListenersRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,8 +147,8 @@ public class ListListenersRequest extends TeaModel {
 
     public static class ListListenersRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</p>
+         * <p>It can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -157,8 +157,8 @@ public class ListListenersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 10 tag values.</p>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</p>
+         * <p>It can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>

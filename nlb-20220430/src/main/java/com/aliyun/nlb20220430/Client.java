@@ -663,14 +663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>protocol</strong> specifies the protocol used to forward requests to the backend servers.</p>
+     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</p>
      * <ul>
-     * <li>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</li>
-     * <li><strong>CreateServerGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<ul>
      * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
      * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -776,14 +772,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  <strong>protocol</strong> specifies the protocol used to forward requests to the backend servers.</p>
+     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.</p>
      * <ul>
-     * <li>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</li>
-     * <li><strong>CreateServerGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<ul>
      * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
      * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
-     * </ul>
-     * </li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1049,7 +1041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询秒级监控存储配置</p>
+     * <p>Queries the storage configurations of fine-grained monitoring.</p>
      * 
      * @param request DescribeHdMonitorRegionConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1086,7 +1078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询秒级监控存储配置</p>
+     * <p>Queries the storage configurations of fine-grained monitoring.</p>
      * 
      * @param request DescribeHdMonitorRegionConfigRequest
      * @return DescribeHdMonitorRegionConfigResponse
@@ -1423,7 +1415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</p>
+     * <p>Changes the network type of the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from internal-facing to Internet-facing.</p>
      * 
      * @param request EnableLoadBalancerIpv6InternetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1472,7 +1464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</p>
+     * <p>Changes the network type of the IPv6 address of a dual-stack Network Load Balancer (NLB) instance from internal-facing to Internet-facing.</p>
      * 
      * @param request EnableLoadBalancerIpv6InternetRequest
      * @return EnableLoadBalancerIpv6InternetResponse
@@ -1858,7 +1850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the basic information about Network Load Balancer (NLB) instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1955,7 +1947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic information about a Network Load Balancer (NLB) instance.</p>
+     * <p>Queries the basic information about Network Load Balancer (NLB) instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -2610,8 +2602,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to configure a data warehouse for the fine-grained monitoring feature. If a listener in the current region has fine-grained monitoring enabled, you must disable fine-grained monitoring before you can configure a warehouse.</p>
+     * 
      * <b>summary</b> : 
-     * <p>配置秒级监控存储</p>
+     * <p>Configures storage for fine-grained monitoring.</p>
      * 
      * @param request SetHdMonitorRegionConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2655,8 +2650,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to configure a data warehouse for the fine-grained monitoring feature. If a listener in the current region has fine-grained monitoring enabled, you must disable fine-grained monitoring before you can configure a warehouse.</p>
+     * 
      * <b>summary</b> : 
-     * <p>配置秒级监控存储</p>
+     * <p>Configures storage for fine-grained monitoring.</p>
      * 
      * @param request SetHdMonitorRegionConfigRequest
      * @return SetHdMonitorRegionConfigResponse
@@ -2730,11 +2728,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</p>
+     * <p> If the NLB instance is deployed in only one zone, you cannot remove the EIP or VIP from the DNS record.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</p>
+     * <p>Removes the elastic IP address (EIP) or virtual IP address (VIP) used in a zone from the DNS record.</p>
      * 
      * @param request StartShiftLoadBalancerZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2788,11 +2786,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</p>
+     * <p> If the NLB instance is deployed in only one zone, you cannot remove the EIP or VIP from the DNS record.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Removes the elastic IP address (EIP) or virtual IP address (VIP) from a zone.</p>
+     * <p>Removes the elastic IP address (EIP) or virtual IP address (VIP) used in a zone from the DNS record.</p>
      * 
      * @param request StartShiftLoadBalancerZonesRequest
      * @return StartShiftLoadBalancerZonesResponse

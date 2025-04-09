@@ -17,7 +17,7 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
     /**
-     * <p>The number of entries returned per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries returned per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

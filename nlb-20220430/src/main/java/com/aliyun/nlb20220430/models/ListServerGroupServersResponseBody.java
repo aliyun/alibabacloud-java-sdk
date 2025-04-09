@@ -127,7 +127,7 @@ public class ListServerGroupServersResponseBody extends TeaModel {
          * <p>The ID of the server group.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs-bp67acfmxazb4p****</p>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("ServerId")
         public String serverId;

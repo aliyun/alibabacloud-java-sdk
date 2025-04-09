@@ -20,14 +20,13 @@ public class CreateListenerRequest extends TeaModel {
     /**
      * <p>The ALPN policy. Valid values:</p>
      * <ul>
-     * <li>HTTP1Only: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
-     * <li>HTTP2Only: uses only HTTP 2.0.</li>
-     * <li>HTTP2Preferred: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.
-     * Note</li>
-     * <li>HTTP2Optional: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</li>
+     * <li><strong>HTTP1Only</strong>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+     * <li><strong>HTTP2Only</strong>: uses only HTTP 2.0.</li>
+     * <li><strong>HTTP2Optional</strong>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</li>
+     * <li><strong>HTTP2Preferred</strong>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if AlpnEnabled is set to true.</p>
+     * <p> This parameter is required if <strong>AlpnEnabled</strong> is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,9 +36,9 @@ public class CreateListenerRequest extends TeaModel {
     public String alpnPolicy;
 
     /**
-     * <p>The certificate authority (CA) certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>The certificate authority (CA) certificate. This parameter is supported only by TCLSSL listeners.</p>
      * <blockquote>
-     * <p>You can specify only one CA certificate.</p>
+     * <p> You can specify only one CA certificate.</p>
      * </blockquote>
      */
     @NameInMap("CaCertificateIds")
@@ -59,19 +58,19 @@ public class CreateListenerRequest extends TeaModel {
     public Boolean caEnabled;
 
     /**
-     * <p>The server certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>The server certificate. This parameter is supported only by TCLSSL listeners.</p>
      * <blockquote>
-     * <p>You can specify only one server certificate.</p>
+     * <p> You can specify only one server certificate.</p>
      * </blockquote>
      */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -90,10 +89,10 @@ public class CreateListenerRequest extends TeaModel {
     public Integer cps;
 
     /**
-     * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,9 +102,9 @@ public class CreateListenerRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The last port in the listener port range. Valid values: <strong>0</strong> to <strong>65535</strong>. The number of the last port must be greater than the number of the first port.</p>
+     * <p>The last port in the listener port range. Valid values: <strong>0</strong> to <strong>65535</strong>. The port number of the last port must be greater than the port number of the first port.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
+     * <p> This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -115,10 +114,10 @@ public class CreateListenerRequest extends TeaModel {
     public Integer endPort;
 
     /**
-     * <p>The timeout period of idle connections. Unit: seconds</p>
+     * <p>The timeout period for idle connections. Unit: seconds.</p>
      * <ul>
-     * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong> or <strong>TCPSSL</strong>, the timeout period of idle connections can be set to <strong>10</strong> to <strong>900</strong> seconds. Default value: <strong>900</strong>.</li>
-     * <li>If <strong>ListenerProtocol</strong> is set to <strong>UDP</strong>, the timeout period of idle connections can be set to <strong>10</strong> to <strong>20</strong> seconds. Default value: <strong>20</strong>.</li>
+     * <li>If you set <strong>ListenerProtocol</strong> to <strong>TCP</strong> or <strong>TCPSSL</strong>, this parameter can be set to a value ranging from <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>.</li>
+     * <li>If <strong>ListenerProtocol</strong> is set to <strong>UDP</strong>, this parameter can be set to a value ranging from <strong>10</strong> to <strong>20</strong>. Default value: <strong>20</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -139,7 +138,7 @@ public class CreateListenerRequest extends TeaModel {
 
     /**
      * <p>The listener port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
-     * <p>If you set the value to <strong>0</strong>, the listener listens by port range. If you set the value to <strong>0</strong>, you must specify <strong>StartPort</strong> and <strong>EndPort</strong>.</p>
+     * <p>If you set this parameter to <strong>0</strong>, the listener listens by port range. If you set this parameter to <strong>0</strong>, you must also set the <strong>StartPort</strong> and <strong>EndPort</strong> parameters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -159,7 +158,7 @@ public class CreateListenerRequest extends TeaModel {
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the Network Load Balancer (NLB) instance.</p>
+     * <p>The ID of the NLB instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -169,9 +168,9 @@ public class CreateListenerRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The maximum size of a TCP segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> specifies that the maximum segment size remains unchanged.</p>
+     * <p>The size of the largest TCP packet segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> indicates that the maximum segment size (MSS) value of TCP packets remains unchanged.</p>
      * <blockquote>
-     * <p>This parameter is supported only by TCP listeners and listeners that use SSL over TCP.</p>
+     * <p> This parameter takes effect only for TCP and TCPSSL listeners.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -194,13 +193,13 @@ public class CreateListenerRequest extends TeaModel {
     public Boolean proxyProtocolEnabled;
 
     /**
-     * <p>Specifies that the Proxy protocol passes the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
+     * <p>Specifies whether to use the Proxy protocol to pass the VpcId, PrivateLinkEpId, and PrivateLinkEpsId parameters to backend servers.</p>
      */
     @NameInMap("ProxyProtocolV2Config")
     public CreateListenerRequestProxyProtocolV2Config proxyProtocolV2Config;
 
     /**
-     * <p>The region ID of the NLB instance.</p>
+     * <p>The ID of the region where the NLB instance is deployed.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
@@ -223,21 +222,19 @@ public class CreateListenerRequest extends TeaModel {
     public Boolean secSensorEnabled;
 
     /**
-     * <p>The security policy ID. System security policies and custom security policies are supported.</p>
+     * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
      * <ul>
-     * <li><p>Valid values: <strong>tls_cipher_policy_1_0</strong> (default), <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+     * <li><p>Valid values for system security policies: <strong>tls_cipher_policy_1_0</strong> (default), <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
      * </li>
-     * <li><p>Custom security policy: the ID of the custom security policy.</p>
+     * <li><p>For a custom security policy, enter the policy ID.</p>
      * <ul>
-     * <li><p>For more information about how to create a custom security policy, see <a href="https://help.aliyun.com/document_detail/2399231.html">CreateSecurityPolicy</a> .</p>
-     * </li>
-     * <li><p>For more information about how to query security policies, see <a href="https://help.aliyun.com/document_detail/2399234.html">ListSecurityPolicy</a> .</p>
-     * </li>
+     * <li>For information about creating a custom security policy, see <a href="https://help.aliyun.com/document_detail/445901.html">CreateSecurityPolicy</a>.</li>
+     * <li>For information about querying security policies, see <a href="https://help.aliyun.com/document_detail/445900.html">ListSecurityPolicy</a>.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p> This parameter takes effect only for TCPSSL listeners.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -266,7 +263,7 @@ public class CreateListenerRequest extends TeaModel {
     /**
      * <p>The first port in the listener port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
      * <blockquote>
-     * <p>This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
+     * <p> This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -546,8 +543,8 @@ public class CreateListenerRequest extends TeaModel {
 
     public static class CreateListenerRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The key of the tag. The tag key can be up to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. The tag value can contain letters, digits, and the following special characters: _ . : / = + - @</p>
+         * <p>You can specify up to 20 tags in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyTest</p>
@@ -556,8 +553,8 @@ public class CreateListenerRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can add up to 20 tags in each call.</p>
+         * <p>The value of the tag. The tag value can be up to 128 characters in length, cannot start with <code>acs:</code> or <code>aliyun</code>, and cannot contain <code>http://</code> or <code>https://</code>. The tag value can contain letters, digits, and the following special characters: _ . : / = + - @</p>
+         * <p>You can specify up to 20 tags in each call.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>

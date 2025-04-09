@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
     /**
-     * <p>The protocol version. Valid values:</p>
+     * <p>The IP version of the NLB instance. Valid values:</p>
      * <ul>
      * <li><strong>ipv4</strong>: IPv4</li>
-     * <li><strong>DualStack</strong>: dual stack</li>
+     * <li><strong>DualStack</strong>: dual-stack</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class ListLoadBalancersRequest extends TeaModel {
     /**
      * <p>The type of IPv4 address used by the NLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
-     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. The NLB instance can be accessed over the Internet.</li>
+     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. The NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,8 @@ public class ListLoadBalancersRequest extends TeaModel {
     /**
      * <p>The type of IPv6 address used by the NLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
-     * <li><strong>Intranet</strong>: a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. The NLB instance can be accessed over the Internet.</li>
+     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. The NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,13 +66,13 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String loadBalancerBusinessStatus;
 
     /**
-     * <p>The ID of the NLB instance. You can query up to 20 NLB instances at a time.</p>
+     * <p>The NLB instance IDs. You can specify up to 20 IDs in each call.</p>
      */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
     /**
-     * <p>The name of the NLB instance. You can specify up to 20 names at a time.</p>
+     * <p>The names of the NLB instances. You can specify up to 20 names in each call.</p>
      */
     @NameInMap("LoadBalancerNames")
     public java.util.List<String> loadBalancerNames;
@@ -80,7 +80,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     /**
      * <p>The status of the NLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>Inactive</strong>: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.</li>
+     * <li><strong>Inactive</strong>: The NLB instance is disabled. Listeners of an NLB instance in the Inactive state do not forward traffic.</li>
      * <li><strong>Active</strong>: The NLB instance is running.</li>
      * <li><strong>Provisioning</strong>: The NLB instance is being created.</li>
      * <li><strong>Configuring</strong>: The NLB instance is being modified.</li>
@@ -95,7 +95,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String loadBalancerStatus;
 
     /**
-     * <p>The type of the Server Load Balancer (SLB) instance. Set the value to <strong>network</strong>, which specifies NLB.</p>
+     * <p>The type of the Server Load Balancer (SLB) instances. Set the value to <strong>network</strong>, which specifies NLB.</p>
      * 
      * <strong>example:</strong>
      * <p>network</p>
@@ -104,7 +104,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String loadBalancerType;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -113,10 +113,10 @@ public class ListLoadBalancersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>The pagination token used to specify a particular page of results. Valid values:</p>
      * <ul>
-     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
-     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * <li>Leave this parameter empty for the first query or the only query.</li>
+     * <li>Set this parameter to the value of NextToken obtained from the previous query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class ListLoadBalancersRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-atstuj3rtop****</p>
@@ -151,13 +151,13 @@ public class ListLoadBalancersRequest extends TeaModel {
     public java.util.List<ListLoadBalancersRequestTag> tag;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) where the NLB instance is deployed. You can specify up to 10 VPC IDs at a time.</p>
+     * <p>The IDs of the virtual private clouds (VPCs) where the NLB instances are deployed. You can specify up to 10 VPC IDs in each call.</p>
      */
     @NameInMap("VpcIds")
     public java.util.List<String> vpcIds;
 
     /**
-     * <p>The name of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-a</p>
@@ -300,8 +300,8 @@ public class ListLoadBalancersRequest extends TeaModel {
 
     public static class ListLoadBalancersRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * <p>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</p>
+         * <p>It must be 1 to 64 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>KeyTest</p>
@@ -310,8 +310,8 @@ public class ListLoadBalancersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ValueTest</p>

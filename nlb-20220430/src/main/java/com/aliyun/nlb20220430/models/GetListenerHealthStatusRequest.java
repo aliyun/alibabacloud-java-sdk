@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListenerHealthStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the listener of the NLB instance.</p>
+     * <p>The ID of the listener on the NLB instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

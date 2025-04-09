@@ -108,7 +108,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>The maximum timeout period of a health check. Unit: seconds. Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+         * <p>The maximum timeout period of a health check response. Unit: seconds. Default value: <strong>5</strong>.</p>
+         * <p>Valid values: <strong>1</strong> to <strong>300</strong></p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -146,7 +147,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The response string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</p>
+         * <p>The response string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -163,9 +164,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
+        @NameInMap("HealthCheckHttpVersion")
+        public String healthCheckHttpVersion;
+
         /**
-         * <p>The interval at which health checks are performed. Unit: seconds.</p>
-         * <p>Valid values: <strong>5</strong> to <strong>50</strong>.</p>
+         * <p>The interval at which health checks are performed. Unit: seconds. Default value: <strong>5</strong>.</p>
+         * <ul>
+         * <li>If you set <strong>HealthCheckType</strong> to <strong>TCP</strong> or <strong>HTTP</strong>, valid values are <strong>1 to 50</strong>.</li>
+         * <li>If you set <strong>HealthCheckType</strong> to <strong>UDP</strong>, valid values are <strong>1 to 300</strong>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -174,7 +181,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The request string of UDP health checks. The string must be 1 to 64 characters in length, and can contain letters and digits.</p>
+         * <p>The request string of UDP health checks. The string must be 1 to 512 characters in length, and can contain letters and digits.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>
@@ -291,6 +298,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public java.util.List<String> getHealthCheckHttpCode() {
             return this.healthCheckHttpCode;
+        }
+
+        public ListServerGroupsResponseBodyServerGroupsHealthCheck setHealthCheckHttpVersion(String healthCheckHttpVersion) {
+            this.healthCheckHttpVersion = healthCheckHttpVersion;
+            return this;
+        }
+        public String getHealthCheckHttpVersion() {
+            return this.healthCheckHttpVersion;
         }
 
         public ListServerGroupsResponseBodyServerGroupsHealthCheck setHealthCheckInterval(Integer healthCheckInterval) {

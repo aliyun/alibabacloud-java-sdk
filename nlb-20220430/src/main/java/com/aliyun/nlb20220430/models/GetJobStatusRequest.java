@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetJobStatusRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+     * <p> If you do not set this parameter, the value of <strong>RequestId</strong> is used.**** The value of <strong>RequestId</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class GetJobStatusRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the asynchronous task.</p>
+     * <p>The ID of the asynchronous job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

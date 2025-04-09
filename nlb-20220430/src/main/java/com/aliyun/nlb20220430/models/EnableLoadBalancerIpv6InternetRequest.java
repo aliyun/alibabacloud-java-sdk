@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class EnableLoadBalancerIpv6InternetRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token. Ensure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p> If you do not specify this parameter, the system uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class EnableLoadBalancerIpv6InternetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request but does not change the network type of the NLB instance. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class EnableLoadBalancerIpv6InternetRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the NLB instance.</p>
+     * <p>The NLB instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class EnableLoadBalancerIpv6InternetRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The ID of the region where the NLB instance is deployed.</p>
+     * <p>The region ID of the NLB instance.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>

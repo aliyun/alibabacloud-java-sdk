@@ -7,8 +7,8 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     /**
      * <p>The new network type. Valid values:</p>
      * <ul>
-     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
-     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. In this case, the NLB instance can be accessed over the virtual private cloud (VPC) where the NLB instance is deployed.</li>
+     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. The NLB instance is accessible over the Internet.</li>
+     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. The NLB instance can be accessed over the virtual private cloud (VPC) where the NLB instance is deployed.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,10 +19,10 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate this value. Ensure that the value is unique among all requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * <p> If you do not specify this parameter, the value of <strong>RequestId</strong> is used.**** <strong>RequestId</strong> of each request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,10 +32,10 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The NLB instance ID.</p>
+     * <p>The ID of the NLB instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The mappings between zones and vSwitches. You can specify at most 10 zones in each call.</p>
+     * <p>The mappings between zones and vSwitches. You can specify up to 10 zones.</p>
      */
     @NameInMap("ZoneMappings")
     public java.util.List<UpdateLoadBalancerAddressTypeConfigRequestZoneMappings> zoneMappings;
@@ -136,11 +136,11 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         /**
          * <p>The type of the EIP. Valid values:</p>
          * <ul>
-         * <li><strong>Common</strong></li>
-         * <li><strong>Anycast</strong></li>
+         * <li><strong>Common</strong>: an EIP</li>
+         * <li><strong>Anycast</strong>: an Anycast EIP</li>
          * </ul>
          * <blockquote>
-         * <p>Anycast EIPs are supported only by NLB instances in the China (Hong Kong) region. This parameter is required when <strong>AddressType</strong> is set to <strong>Internet</strong>.</p>
+         * <p> This parameter is required only if <strong>AddressType</strong> is set to <strong>Internet</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         public String eipType;
 
         /**
-         * <p>The ID of the vSwitch in the zone. Each zone can contain only one vSwitch and one subnet.</p>
+         * <p>The ID of the vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an NLB instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp10ttov87felojcn****</p>

@@ -18,9 +18,9 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public String certType;
 
     /**
-     * <p>The server certificates. Only one server certificate is supported.</p>
+     * <p>The server certificate. Only one server certificate is supported.</p>
      * <blockquote>
-     * <p>This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p> This parameter takes effect only for TCP/SSL listeners.</p>
      * </blockquote>
      * 
      * <strong>if can be null:</strong>
@@ -40,7 +40,7 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP bandwidth plan.</p>
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaMode
     public String bandwidthPackageId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>The client token used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate this value. Ensure that the value is unique among all requests. Only ASCII characters are allowed.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> of each API request may be different.</p>
+     * <p> If you do not specify this parameter, the value of <strong>RequestId</strong> is used.**** <strong>RequestId</strong> of each request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without sending the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: prechecks the request but does not disassociate the NLB instance from the EIP bandwidth plan. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DetachCommonBandwidthPackageFromLoadBalancerRequest extends TeaMode
     public String loadBalancerId;
 
     /**
-     * <p>The ID of the region where the NLB instance is deployed.</p>
+     * <p>The region ID of the NLB instance.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>

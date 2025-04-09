@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
     /**
+     * <p>The name of the Log Service project.</p>
+     * 
      * <strong>example:</strong>
      * <p>hdmonitor-cn-hangzhou-223794579283657556</p>
      */
@@ -12,6 +14,8 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
     public String logProject;
 
     /**
+     * <p>The name of the Metricstore in Simple Log Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>hdmonitor-cn-hangzhou-metricStore-1</p>
      */
@@ -19,6 +23,9 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
     public String metricStore;
 
     /**
+     * <p>The region ID of the NLB instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -26,6 +33,8 @@ public class DescribeHdMonitorRegionConfigResponseBody extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */

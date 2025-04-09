@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetHdMonitorRegionConfigRequest extends TeaModel {
     /**
+     * <p>The name of the Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class SetHdMonitorRegionConfigRequest extends TeaModel {
     public String logProject;
 
     /**
+     * <p>The name of the MetricStore in Simple Log Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,9 @@ public class SetHdMonitorRegionConfigRequest extends TeaModel {
     public String metricStore;
 
     /**
+     * <p>The region ID of the NLB instance.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2399192.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
