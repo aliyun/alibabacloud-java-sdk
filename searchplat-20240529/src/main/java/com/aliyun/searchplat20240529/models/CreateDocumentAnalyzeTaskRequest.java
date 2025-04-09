@@ -10,6 +10,9 @@ public class CreateDocumentAnalyzeTaskRequest extends TeaModel {
     @NameInMap("output")
     public CreateDocumentAnalyzeTaskRequestOutput output;
 
+    @NameInMap("strategy")
+    public CreateDocumentAnalyzeTaskRequestStrategy strategy;
+
     public static CreateDocumentAnalyzeTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDocumentAnalyzeTaskRequest self = new CreateDocumentAnalyzeTaskRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateDocumentAnalyzeTaskRequest extends TeaModel {
     }
     public CreateDocumentAnalyzeTaskRequestOutput getOutput() {
         return this.output;
+    }
+
+    public CreateDocumentAnalyzeTaskRequest setStrategy(CreateDocumentAnalyzeTaskRequestStrategy strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    public CreateDocumentAnalyzeTaskRequestStrategy getStrategy() {
+        return this.strategy;
     }
 
     public static class CreateDocumentAnalyzeTaskRequestDocument extends TeaModel {
@@ -98,6 +109,25 @@ public class CreateDocumentAnalyzeTaskRequest extends TeaModel {
         }
         public String getImageStorage() {
             return this.imageStorage;
+        }
+
+    }
+
+    public static class CreateDocumentAnalyzeTaskRequestStrategy extends TeaModel {
+        @NameInMap("enable_semantic")
+        public Boolean enableSemantic;
+
+        public static CreateDocumentAnalyzeTaskRequestStrategy build(java.util.Map<String, ?> map) throws Exception {
+            CreateDocumentAnalyzeTaskRequestStrategy self = new CreateDocumentAnalyzeTaskRequestStrategy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDocumentAnalyzeTaskRequestStrategy setEnableSemantic(Boolean enableSemantic) {
+            this.enableSemantic = enableSemantic;
+            return this;
+        }
+        public Boolean getEnableSemantic() {
+            return this.enableSemantic;
         }
 
     }
