@@ -307,6 +307,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改云手机矩阵的配置</p>
+     * 
+     * @param request ChangeCloudPhoneNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeCloudPhoneNodeResponse
+     */
+    public ChangeCloudPhoneNodeResponse changeCloudPhoneNodeWithOptions(ChangeCloudPhoneNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneCount)) {
+            query.put("PhoneCount", request.phoneCount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeCloudPhoneNode"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeCloudPhoneNodeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ChangeCloudPhoneNodeResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云手机矩阵的配置</p>
+     * 
+     * @param request ChangeCloudPhoneNodeRequest
+     * @return ChangeCloudPhoneNodeResponse
+     */
+    public ChangeCloudPhoneNodeResponse changeCloudPhoneNode(ChangeCloudPhoneNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeCloudPhoneNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Check the resource inventory.</p>
      * 
      * @param request CheckResourceStockRequest
@@ -2545,6 +2602,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EndCoordinationResponse endCoordination(EndCoordinationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.endCoordinationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>存储扩容</p>
+     * 
+     * @param request ExpandDataVolumeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExpandDataVolumeResponse
+     */
+    public ExpandDataVolumeResponse expandDataVolumeWithOptions(ExpandDataVolumeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            query.put("NodeIds", request.nodeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareDataVolume)) {
+            query.put("ShareDataVolume", request.shareDataVolume);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExpandDataVolume"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ExpandDataVolumeResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ExpandDataVolumeResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>存储扩容</p>
+     * 
+     * @param request ExpandDataVolumeRequest
+     * @return ExpandDataVolumeResponse
+     */
+    public ExpandDataVolumeResponse expandDataVolume(ExpandDataVolumeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.expandDataVolumeWithOptions(request, runtime);
     }
 
     /**
