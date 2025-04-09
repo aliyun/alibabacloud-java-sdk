@@ -28,6 +28,20 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The type of the account whose description you can modify. Valid values:</p>
+     * <ul>
+     * <li><strong>db</strong>: shard account</li>
+     * <li><strong>cs</strong>: ConfigServer account</li>
+     * <li><strong>normal</strong> (default): replica set account (available)</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can set this parameter only to <strong>normal</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("CharacterType")
     public String characterType;
 

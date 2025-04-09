@@ -42,7 +42,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The number of the page to return. The value must be a positive integer. Default value: 1</p>
+     * <p>The number of the page to return. The value must be a positive integer. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,7 +51,7 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10</p>
+     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -67,6 +67,15 @@ public class DescribeHistoryTasksRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2inrfrnw3xby</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -214,6 +223,14 @@ public class DescribeHistoryTasksRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeHistoryTasksRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeHistoryTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {

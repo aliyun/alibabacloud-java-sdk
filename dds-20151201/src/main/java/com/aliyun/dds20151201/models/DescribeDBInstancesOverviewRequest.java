@@ -131,6 +131,12 @@ public class DescribeDBInstancesOverviewRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to display instance tags. Default value: False.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowTags")
     public Boolean showTags;
 

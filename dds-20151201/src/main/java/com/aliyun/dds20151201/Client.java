@@ -17,33 +17,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-wulanchabu", "mongodb.aliyuncs.com"),
             new TeaPair("cn-hangzhou", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shanghai", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "mongodb.cn-nanjing.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "mongodb.cn-fuzhou.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "mongodb.aliyuncs.com"),
             new TeaPair("cn-heyuan", "mongodb.aliyuncs.com"),
             new TeaPair("cn-guangzhou", "mongodb.aliyuncs.com"),
             new TeaPair("cn-chengdu", "mongodb.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-hongkong", "mongodb.cn-hongkong.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "mongodb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "mongodb.ap-northeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "mongodb.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-2", "mongodb.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "mongodb.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "mongodb.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "mongodb.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "mongodb.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "mongodb.cn-zhengzhou-jva.aliyuncs.com"),
             new TeaPair("us-east-1", "mongodb.us-east-1.aliyuncs.com"),
             new TeaPair("us-west-1", "mongodb.us-west-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "mongodb.eu-west-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "mongodb.eu-central-1.aliyuncs.com"),
             new TeaPair("ap-south-1", "mongodb.ap-south-1.aliyuncs.com"),
             new TeaPair("me-east-1", "mongodb.me-east-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "mongodb.me-central-1.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "mongodb.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "mongodb.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "mongodb.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "mongodb.aliyuncs.com"),
@@ -2136,6 +2129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Region", request.region);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -2511,6 +2508,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
             query.put("InstanceChargeType", request.instanceChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mongoType)) {
@@ -3689,6 +3690,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看规格信息详情</p>
+     * 
+     * @param request DescribeDBInstanceSpecInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBInstanceSpecInfoResponse
+     */
+    public DescribeDBInstanceSpecInfoResponse describeDBInstanceSpecInfoWithOptions(DescribeDBInstanceSpecInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceClass)) {
+            query.put("InstanceClass", request.instanceClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBInstanceSpecInfo"),
+            new TeaPair("version", "2015-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBInstanceSpecInfoResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeDBInstanceSpecInfoResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看规格信息详情</p>
+     * 
+     * @param request DescribeDBInstanceSpecInfoRequest
+     * @return DescribeDBInstanceSpecInfoResponse
+     */
+    public DescribeDBInstanceSpecInfoResponse describeDBInstanceSpecInfo(DescribeDBInstanceSpecInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBInstanceSpecInfoWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:</p>
      * <ul>
@@ -4384,6 +4454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -4471,6 +4545,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -5117,7 +5195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the pricing information of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5202,7 +5280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fees incurred when you create, upgrade, or renew an ApsaraDB for MongoDB instance.</p>
+     * <p>Queries the pricing information of an ApsaraDB for MongoDB instance.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -6783,6 +6861,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {

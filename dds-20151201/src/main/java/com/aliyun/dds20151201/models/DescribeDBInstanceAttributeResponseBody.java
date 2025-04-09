@@ -271,6 +271,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectSting")
         public String connectSting;
 
+        /**
+         * <p>The endpoint of the mongos node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp1d8c262a15****.mongodb.rds.aliyuncs.com</p>
+         */
         @NameInMap("ConnectString")
         public String connectString;
 
