@@ -36,6 +36,9 @@ public class CreateAppResponseBody extends TeaModel {
     }
 
     public static class CreateAppResponseBodyResult extends TeaModel {
+        @NameInMap("appId")
+        public String appId;
+
         /**
          * <strong>example:</strong>
          * <p>es-serverless-cn-xxx</p>
@@ -46,6 +49,14 @@ public class CreateAppResponseBody extends TeaModel {
         public static CreateAppResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             CreateAppResponseBodyResult self = new CreateAppResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAppResponseBodyResult setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
         }
 
         public CreateAppResponseBodyResult setInstaneId(String instaneId) {
