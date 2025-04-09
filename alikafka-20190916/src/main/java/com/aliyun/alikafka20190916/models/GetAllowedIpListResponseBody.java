@@ -104,6 +104,12 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
+        @NameInMap("BlackIPList")
+        public java.util.List<String> blackIPList;
+
+        @NameInMap("BlackIPMap")
+        public java.util.Map<String, String> blackIPMap;
+
         /**
          * <p>The port range. Valid value:</p>
          * <p><strong>9093/9093</strong>.</p>
@@ -113,6 +119,12 @@ public class GetAllowedIpListResponseBody extends TeaModel {
          */
         @NameInMap("PortRange")
         public String portRange;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("UserDefinedSharedSecurityGroup")
+        public Boolean userDefinedSharedSecurityGroup;
 
         public static GetAllowedIpListResponseBodyAllowedListInternetList build(java.util.Map<String, ?> map) throws Exception {
             GetAllowedIpListResponseBodyAllowedListInternetList self = new GetAllowedIpListResponseBodyAllowedListInternetList();
@@ -135,12 +147,44 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             return this.allowedIpList;
         }
 
+        public GetAllowedIpListResponseBodyAllowedListInternetList setBlackIPList(java.util.List<String> blackIPList) {
+            this.blackIPList = blackIPList;
+            return this;
+        }
+        public java.util.List<String> getBlackIPList() {
+            return this.blackIPList;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListInternetList setBlackIPMap(java.util.Map<String, String> blackIPMap) {
+            this.blackIPMap = blackIPMap;
+            return this;
+        }
+        public java.util.Map<String, String> getBlackIPMap() {
+            return this.blackIPMap;
+        }
+
         public GetAllowedIpListResponseBodyAllowedListInternetList setPortRange(String portRange) {
             this.portRange = portRange;
             return this;
         }
         public String getPortRange() {
             return this.portRange;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListInternetList setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListInternetList setUserDefinedSharedSecurityGroup(Boolean userDefinedSharedSecurityGroup) {
+            this.userDefinedSharedSecurityGroup = userDefinedSharedSecurityGroup;
+            return this;
+        }
+        public Boolean getUserDefinedSharedSecurityGroup() {
+            return this.userDefinedSharedSecurityGroup;
         }
 
     }
@@ -158,6 +202,12 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
+        @NameInMap("BlackIPList")
+        public java.util.List<String> blackIPList;
+
+        @NameInMap("BlackIPMap")
+        public java.util.Map<String, String> blackIPMap;
+
         /**
          * <p>The port range. Valid value:</p>
          * <p><strong>9092/9092</strong>.</p>
@@ -167,6 +217,12 @@ public class GetAllowedIpListResponseBody extends TeaModel {
          */
         @NameInMap("PortRange")
         public String portRange;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("UserDefinedSharedSecurityGroup")
+        public Boolean userDefinedSharedSecurityGroup;
 
         public static GetAllowedIpListResponseBodyAllowedListVpcList build(java.util.Map<String, ?> map) throws Exception {
             GetAllowedIpListResponseBodyAllowedListVpcList self = new GetAllowedIpListResponseBodyAllowedListVpcList();
@@ -189,12 +245,44 @@ public class GetAllowedIpListResponseBody extends TeaModel {
             return this.allowedIpList;
         }
 
+        public GetAllowedIpListResponseBodyAllowedListVpcList setBlackIPList(java.util.List<String> blackIPList) {
+            this.blackIPList = blackIPList;
+            return this;
+        }
+        public java.util.List<String> getBlackIPList() {
+            return this.blackIPList;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListVpcList setBlackIPMap(java.util.Map<String, String> blackIPMap) {
+            this.blackIPMap = blackIPMap;
+            return this;
+        }
+        public java.util.Map<String, String> getBlackIPMap() {
+            return this.blackIPMap;
+        }
+
         public GetAllowedIpListResponseBodyAllowedListVpcList setPortRange(String portRange) {
             this.portRange = portRange;
             return this;
         }
         public String getPortRange() {
             return this.portRange;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListVpcList setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GetAllowedIpListResponseBodyAllowedListVpcList setUserDefinedSharedSecurityGroup(Boolean userDefinedSharedSecurityGroup) {
+            this.userDefinedSharedSecurityGroup = userDefinedSharedSecurityGroup;
+            return this;
+        }
+        public Boolean getUserDefinedSharedSecurityGroup() {
+            return this.userDefinedSharedSecurityGroup;
         }
 
     }
