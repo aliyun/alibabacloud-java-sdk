@@ -88,6 +88,12 @@ public class ListDomainsResponseBody extends TeaModel {
         @NameInMap("DomainName")
         public String domainName;
 
+        @NameInMap("ResolveHttpAes")
+        public Long resolveHttpAes;
+
+        @NameInMap("ResolveHttpsAes")
+        public Long resolveHttpsAes;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -133,6 +139,22 @@ public class ListDomainsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public ListDomainsResponseBodyDomainInfosDomainInfo setResolveHttpAes(Long resolveHttpAes) {
+            this.resolveHttpAes = resolveHttpAes;
+            return this;
+        }
+        public Long getResolveHttpAes() {
+            return this.resolveHttpAes;
+        }
+
+        public ListDomainsResponseBodyDomainInfosDomainInfo setResolveHttpsAes(Long resolveHttpsAes) {
+            this.resolveHttpsAes = resolveHttpsAes;
+            return this;
+        }
+        public Long getResolveHttpsAes() {
+            return this.resolveHttpsAes;
         }
 
         public ListDomainsResponseBodyDomainInfosDomainInfo setResolved(Long resolved) {

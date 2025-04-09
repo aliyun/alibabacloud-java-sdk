@@ -59,6 +59,12 @@ public class GetAccountInfoResponseBody extends TeaModel {
         @NameInMap("MonthFreeCount")
         public Integer monthFreeCount;
 
+        @NameInMap("MonthHttpAesResolveCount")
+        public Long monthHttpAesResolveCount;
+
+        @NameInMap("MonthHttpsAesResolveCount")
+        public Long monthHttpsAesResolveCount;
+
         /**
          * <strong>example:</strong>
          * <p>3</p>
@@ -158,6 +164,22 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
         public Integer getMonthFreeCount() {
             return this.monthFreeCount;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfo setMonthHttpAesResolveCount(Long monthHttpAesResolveCount) {
+            this.monthHttpAesResolveCount = monthHttpAesResolveCount;
+            return this;
+        }
+        public Long getMonthHttpAesResolveCount() {
+            return this.monthHttpAesResolveCount;
+        }
+
+        public GetAccountInfoResponseBodyAccountInfo setMonthHttpsAesResolveCount(Long monthHttpsAesResolveCount) {
+            this.monthHttpsAesResolveCount = monthHttpsAesResolveCount;
+            return this;
+        }
+        public Long getMonthHttpsAesResolveCount() {
+            return this.monthHttpsAesResolveCount;
         }
 
         public GetAccountInfoResponseBodyAccountInfo setMonthHttpsResolveCount(Integer monthHttpsResolveCount) {

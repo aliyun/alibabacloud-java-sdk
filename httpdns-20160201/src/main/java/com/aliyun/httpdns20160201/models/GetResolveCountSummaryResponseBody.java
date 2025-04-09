@@ -53,6 +53,9 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         @NameInMap("Http6")
         public Long http6;
 
+        @NameInMap("HttpAes")
+        public String httpAes;
+
         /**
          * <strong>example:</strong>
          * <p>123</p>
@@ -66,6 +69,9 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
          */
         @NameInMap("Https6")
         public Long https6;
+
+        @NameInMap("HttpsAes")
+        public String httpsAes;
 
         public static GetResolveCountSummaryResponseBodyResolveSummary build(java.util.Map<String, ?> map) throws Exception {
             GetResolveCountSummaryResponseBodyResolveSummary self = new GetResolveCountSummaryResponseBodyResolveSummary();
@@ -96,6 +102,14 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
             return this.http6;
         }
 
+        public GetResolveCountSummaryResponseBodyResolveSummary setHttpAes(String httpAes) {
+            this.httpAes = httpAes;
+            return this;
+        }
+        public String getHttpAes() {
+            return this.httpAes;
+        }
+
         public GetResolveCountSummaryResponseBodyResolveSummary setHttps(Long https) {
             this.https = https;
             return this;
@@ -110,6 +124,14 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         }
         public Long getHttps6() {
             return this.https6;
+        }
+
+        public GetResolveCountSummaryResponseBodyResolveSummary setHttpsAes(String httpsAes) {
+            this.httpsAes = httpsAes;
+            return this;
+        }
+        public String getHttpsAes() {
+            return this.httpsAes;
         }
 
     }
