@@ -78,6 +78,9 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The maximum capacity for auto scaling.</p>
      * 
@@ -199,6 +202,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDBInstanceShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateDBInstanceShrinkRequest setScaleMax(String scaleMax) {

@@ -1,3 +1,7 @@
+2025-04-09 Version: 1.2.2
+- Update API CreateDBInstance: add request parameters ResourceGroupId.
+
+
 2025-03-17 Version: 1.2.1
 - Update API CreateDBInstance: add param BackupSetId.
 - Update API CreateDBInstance: add param SourceDBInstanceId.
