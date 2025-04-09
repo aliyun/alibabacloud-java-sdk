@@ -1206,6 +1206,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
+        @NameInMap("ReadOnlyStatus")
+        public String readOnlyStatus;
+
         /**
          * <p>The latency at which the system replicates data to read-only instances. The system replicates data from the primary instance to the read-only instances at the latency that is specified by the <strong>ReadonlyInstanceSQLDelayedTime</strong> parameter. Unit: seconds.</p>
          * 
@@ -1909,6 +1912,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds getReadOnlyDBInstanceIds() {
             return this.readOnlyDBInstanceIds;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setReadOnlyStatus(String readOnlyStatus) {
+            this.readOnlyStatus = readOnlyStatus;
+            return this;
+        }
+        public String getReadOnlyStatus() {
+            return this.readOnlyStatus;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setReadonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {

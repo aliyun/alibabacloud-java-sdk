@@ -51,7 +51,7 @@ public class CreateRCDiskRequest extends TeaModel {
      * <li><strong>cloud</strong> (default): basic disk</li>
      * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
      * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-     * <li><strong>cloud_essd</strong>: Enterprise SSD (ESSD).</li>
+     * <li><strong>cloud_essd</strong>: ESSD.</li>
      * <li><strong>cloud_auto</strong>: ESSD AutoPL disk</li>
      * <li><strong>cloud_essd_entry</strong>: ESSD Entry disk</li>
      * <li><strong>elastic_ephemeral_disk_standard</strong>: standard elastic ephemeral disk</li>
@@ -83,6 +83,10 @@ public class CreateRCDiskRequest extends TeaModel {
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rc-v28c6k3jupp61m2t****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -161,7 +165,6 @@ public class CreateRCDiskRequest extends TeaModel {
      * <li>If the size of the snapshot specified by <code>SnapshotId</code> is larger than the value of <code>Size</code>, the size of the created disk is equal to the size of the snapshot.</li>
      * <li>If the size of the snapshot specified by <code>SnapshotId</code> is smaller than the value of <code>Size</code>, the size of the created disk is equal to the value of <code>Size</code>.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2000</p>

@@ -825,11 +825,12 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID. The vSwitch must belong to the zone that is specified by <strong>ZoneId</strong>.</p>
+     * <p>The vSwitch ID.</p>
      * <ul>
-     * <li>If you set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>, you must also specify this parameter.</li>
-     * <li>If you set the <strong>ZoneSlaveId1</strong> parameter to a value that is not <strong>Auto</strong>, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,). The ZoneSlaveId1 parameter specifies the zone ID of the secondary node.</li>
-     * <li>The value cannot contain <code>spaces</code>, exclamation points <code>(!)</code>, or special characters such as number signs <code>(#)</code>, dollar signs <code>($)</code>, ampersands <code>(&amp;)</code>, and percent signs <code>(%)</code>.</li>
+     * <li><strong>Relations with zones</strong>: Specify the vSwitch ID based on the zones in which the vSwitch belongs to. If you specify two vSwitch IDs, make sure that the vSwitch IDs match the zone IDs specified by the ZoneId and ZoneIdSlave1 parameters.</li>
+     * <li><strong>Limits on the network type</strong>: Set <strong>InstanceNetworkType</strong> to <strong>VPC</strong>.</li>
+     * <li><strong>Limits on multiple vSwitch IDs</strong>: If you set <strong>ZoneSlaveId1</strong> to a value that is not <strong>Auto</strong>, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</li>
+     * <li><strong>Limits on characters</strong>: The value cannot contain <code>spaces</code> or the following characters: <code>!</code> <code>#</code> <code>￥</code> <code>&amp;</code> <code>%</code></li>
      * </ul>
      * 
      * <strong>example:</strong>

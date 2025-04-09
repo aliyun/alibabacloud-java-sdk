@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to upgrade the major engine version of the instance. Valid values:</p>
+     * <p>Specifies whether to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance. For more information, see <a href="https://help.aliyun.com/document_detail/127458.html">Upgrade the major engine version</a>. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong> (default)</li>
      * </ul>
      * <blockquote>
-     * <p>When you upgrade the major engine version of an ApsaraDB RDS for SQL Server instance, set this parameter to true. When you upgrade the major engine version, you must also specify required parameters such as DBInstanceId, EngineVersion, DBInstanceClass, and Category, and optional parameters such as ZoneId, ZoneIdSlave1, and VSwitchId.</p>
+     * <ul>
+     * <li>When you upgrade the major engine version, you must also specify the required parameters such as DBInstanceId, EngineVersion, DBInstanceClass, Category, ZoneId, and VSwitchId.</li>
+     * <li>If you want to upgrade the instance edition to RDS High-availability Edition or RDS Cluster Edition, you must specify ZoneIdSlave1.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -34,7 +37,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>An invalid parameter. You can ignore this parameter.</p>
+     * <p>An invalid parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -44,26 +47,22 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
 
     /**
      * <p>The RDS edition of the instance. Valid values:</p>
-     * <ul>
-     * <li><p>Regular instance</p>
+     * <blockquote>
+     * <p> If you set <strong>EngineVersion</strong> to an SQL Server version number, you must also specify this parameter.</p>
+     * </blockquote>
+     * <p><strong>Regular RDS instances</strong></p>
      * <ul>
      * <li><strong>Basic</strong>: RDS Basic Edition.</li>
      * <li><strong>HighAvailability</strong>: RDS High-availability Edition.</li>
      * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</li>
      * <li><strong>Cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL.</li>
      * </ul>
-     * </li>
-     * <li><p>Serverless instance</p>
+     * <p><strong>Serverless instances. ApsaraDB RDS for MariaDB does not support serverless instances.</strong></p>
      * <ul>
      * <li><strong>serverless_basic</strong>: RDS Basic Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</li>
      * <li><strong>serverless_standard</strong>: RDS High-availability Edition. This edition is available only for serverless instances that run MySQL and PostgreSQL.</li>
-     * <li><strong>serverless_ha</strong>: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</li>
+     * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
      * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>If you set the <strong>EngineVersion</strong> parameter to an SQL Server version number, you must also specify this parameter.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>HighAvailability</p>
@@ -81,10 +80,10 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public Boolean coldDataEnabled;
 
     /**
-     * <p>Whether to enable storage compression.</p>
+     * <p>Specifies whether to enable the storage compression feature for the ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/2861985.html">Use the storage compression feature</a>. Valid values:</p>
      * <ul>
-     * <li>on: Enable</li>
-     * <li>off: Disable</li>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,11 +93,11 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String compressionMode;
 
     /**
-     * <p>The new instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableClasses operation to query the instance types that are supported by an instance.</p>
+     * <p>The instance type of the new instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Specifications</a>. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the instance types.</p>
      * <blockquote>
      * <ul>
      * <li>You must specify at least one of DBInstanceClass and <strong>DBInstanceStorage</strong>.</li>
-     * <li>You can call the DescribeDBInstanceAttribute operation to query the current instance type of the instance.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the current instance type of the instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -109,7 +108,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -119,11 +118,11 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableClasses operation to query the storage capacity range that is supported by the new instance type.</p>
+     * <p>The storage capacity of the new instance. Unit: GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Storage types</a>. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the storage capacity range that is supported by the new instance type.</p>
      * <blockquote>
      * <ul>
-     * <li>You must specify at least one of the DBInstanceStorage and <strong>DBInstanceClass</strong> parameters.</li>
-     * <li>You can call the DescribeDBInstanceAttribute to query the current storage capacity of the instance.</li>
+     * <li>You must specify at least one of DBInstanceStorage and <strong>DBInstanceClass</strong>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the current storage capacity of the instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -134,16 +133,16 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The storage type of the new instance. Valid values:</p>
      * <ul>
      * <li><strong>local_ssd</strong>: local SSD.</li>
-     * <li><strong>cloud_ssd</strong>: standard SSD. This storage type is not recommended and is unavailable in some Alibaba Cloud regions.</li>
-     * <li><strong>cloud_essd</strong>: enhanced SSD (ESSD) of performance level 1 (PL1).</li>
-     * <li><strong>cloud_essd2</strong>: ESSDs of PL2.</li>
-     * <li><strong>cloud_essd3</strong>: ESSD of PL3.</li>
+     * <li><strong>cloud_ssd</strong>: SSD cloud disks. This storage medium is not recommended and is unavailable in specific Alibaba Cloud regions.</li>
+     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) Enterprise SSD (ESSD).</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
      * </ul>
      * <p>To change the storage type, take note of the following items:</p>
-     * <p>If the instance runs PostgreSQL, you can upgrade the storage type of the instance from standard SSD to ESSD. However, you cannot downgrade the storage type of the instance from ESSD to standard SSD. ESSDs provide the following PLs: PL1, PL2, and PL3. You can upgrade or downgrade the storage type between ESSD of PL1, ESSD of PL2, and ESSD of PL3. For more information, see <a href="https://help.aliyun.com/document_detail/96750.html">Configuration items</a>.</p>
+     * <p>If the instance runs PostgreSQL, you can upgrade the storage type of the instance from standard SSDs to ESSDs. However, you cannot downgrade the storage type of the instance from ESSDs to standard SSDs. ESSDs provide the following PLs: ESSDs of PL1, ESSDs of PL2, and ESSDs of PL3. You can upgrade or downgrade the storage type between ESSD of PL1, ESSD of PL2, and ESSD of PL3. For more information, see <a href="https://help.aliyun.com/document_detail/96750.html">Configuration items</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>local_ssd</p>
@@ -179,11 +178,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The effective time. Valid values:</p>
+     * <p>The time when the new specifications take effect. Valid values:</p>
+     * <blockquote>
+     * <p> <strong>Specific changes may affect the instance</strong>. Read the <a href="https://help.aliyun.com/document_detail/96061.html">Impact</a> section before you specify this parameter. We recommend that you specify this parameter during off-peak hours.</p>
+     * </blockquote>
      * <ul>
-     * <li><strong>Immediate</strong> (default): The effective time immediately takes effect.</li>
-     * <li><strong>MaintainTime</strong>: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>ScheduleTime</strong>: The effective time takes effect at the point in time that you specify. The value of ScheduleTime must be a specific point in time that is 12 hours later than the current time. In this case, The value of EffectiveTime is calculated by using the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
+     * <li><strong>Immediate</strong> (default): The changes immediately take effect.</li>
+     * <li><strong>MaintainTime</strong>: The changes take effect during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a> of the instance.</li>
+     * <li><strong>ScheduleTime</strong>: The changes take effect at the point in time that you specify. This time must be at least 12 hours later than the current time. The actual effective time is calculated based on the following formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -193,27 +195,20 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version of the instance. Valid values:</p>
+     * <p><strong>Regular RDS instances</strong></p>
      * <ul>
-     * <li><p>Regular instance</p>
+     * <li>Valid values when Engine is set to MySQL: 5.5, 5.6, 5.7, and 8.0.</li>
+     * <li>Valid values when Engine is set to SQLServer: 2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent.</li>
+     * <li>Valid values when Engine is set to PostgreSQL: 10.0, 11.0, 12.0, 13.0, 14.0, and 15.0.</li>
+     * <li>Valid value when Engine is set to MariaDB: 10.3.</li>
+     * </ul>
+     * <p><strong>Serverless instances. ApsaraDB RDS for MariaDB does not support serverless instances.</strong></p>
      * <ul>
-     * <li>Valid values if you set the Engine parameter to MySQL: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
-     * <li>Valid values if you set the Engine parameter to SQLServer: <strong>2008r2</strong>, <strong>08r2_ent_ha</strong>, <strong>2012</strong>, <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_std_ha</strong>, <strong>2017_ent</strong>, <strong>2019_std_ha</strong>, and <strong>2019_ent</strong></li>
-     * <li>Valid values if you set the Engine parameter to PostgreSQL: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
-     * <li>Valid value if you set the Engine parameter to MariaDB: <strong>10.3</strong></li>
+     * <li>Valid values when Engine is set to MySQL: 5.7 and 8.0.</li>
+     * <li>Valid values when Engine is set to SQL Server: 2016_std_sl, 2017_std_sl, and 2019_std_sl.</li>
+     * <li>Valid values when Engine is set to PostgreSQL: 14.0, 15.0, and 16.0.</li>
      * </ul>
-     * </li>
-     * <li><p>Serverless instance</p>
-     * <ul>
-     * <li>Valid values if you set the Engine parameter to MySQL: <strong>5.7</strong> and <strong>8.0</strong></li>
-     * <li>Valid values if you set the Engine parameter to SQLServer: <strong>2016_std_sl</strong>, <strong>2017_std_sl</strong>, and <strong>2019_std_sl</strong></li>
-     * <li>Valid values if you set the Engine parameter to PostgreSQL: <strong>14.0</strong>, <strong>15.0</strong>, <strong>16.0</strong></li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5.6</p>
@@ -231,14 +226,11 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String ioAccelerationEnabled;
 
     /**
-     * <p>Specifies whether to enable the write optimization feature.</p>
+     * <p>Specifies whether to enable the write optimization feature for the ApsaraDB RDS for MySQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/2858761.html">Use the write optimization feature</a>. Valid values:</p>
      * <ul>
      * <li><strong>optimized</strong>: enables the feature.</li>
      * <li><strong>none</strong>: disables the feature.</li>
      * </ul>
-     * <blockquote>
-     * <p> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>optimized</p>
@@ -257,8 +249,11 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <ul>
      * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
      * <li><strong>Prepaid</strong>: subscription.</li>
-     * <li><strong>Serverless</strong>: serverless. This value is not supported for instances that run MariaDB. If you set the value to Serverless, you must specify the scaling range of computing resources, configure the automatic start and stop feature, and configure auto scaling policies for your serverless instance. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</li>
+     * <li><strong>Serverless</strong>: serverless. This value is not supported for ApsaraDB RDS for MariaDB instances.</li>
      * </ul>
+     * <blockquote>
+     * <p> If you want to set this parameter to Serverless, **you must specify **AutoPause, MaxCapacity, MinCapacity, and SwitchForce. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of serverless ApsaraDB RDS for MySQL instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of serverless ApsaraDB RDS for SQL Server instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of serverless ApsaraDB RDS for PostgreSQL instances</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Postpaid</p>
@@ -276,7 +271,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>Target specifications for read-only instances when changing a MySQL high-availability local disk instance to a cloud disk.</p>
+     * <p>The specification of the read-only instance when you change the storage type of the ApsaraDB RDS for MySQL instance that runs RDS High-availability Edition from cloud disk to local disk.</p>
      * 
      * <strong>example:</strong>
      * <p>mysqlro.n2.large.c</p>
@@ -315,7 +310,14 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String sourceBiz;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The time at which you want to change the specifications. <strong>We recommend that you perform the specification changes during off-peak hours.</strong></p>
+     * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The time at which you want to change the specifications <strong>must be later than the current time</strong>. Otherwise, the specification change task fails. If the specification change task fails, you must wait for the order to be automatically canceled, and then call this operation again.</li>
+     * <li>If you want to increase the storage capacity or change the ESSD storage type between different PLs, the specification change immediately takes effect and does not affect your workloads. You do not need to specify this parameter.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2019-07-10T13:15:12Z</p>
@@ -324,12 +326,8 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The number of the minor version.</p>
-     * <p>This parameter is required only for instances that run PostgreSQL. If the minor engine version does not support changing the instance type, you must specify the minor engine version to update the minor engine version when you change the instance type.</p>
-     * <p>Format: <code>rds_postgres_&lt;Major engine version&gt;00_&lt;Minor engine version&gt;</code>. Example: <code>rds_postgres_1200_20200830</code>.</p>
-     * <blockquote>
-     * <p> For more information about minor engine versions, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes for AliPG</a>.</p>
-     * </blockquote>
+     * <p>The minor engine version number of the ApsaraDB RDS for PostgreSQL instance. For more information, see <a href="https://help.aliyun.com/document_detail/126002.html">Update the minor engine version</a>. If the minor engine version does not support changing the instance type, you must specify the minor engine version to <strong>update the minor engine version when you change the instance type</strong>.</p>
+     * <p>Format: <code>rds_postgres_&lt;Major engine version&gt;00_&lt;Minor engine version&gt;</code>. For example, if the instance runs PostgreSQL 12, set this parameter to <code>rds_postgres_1200_20200830</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_postgres_1200_20200830</p>
@@ -338,7 +336,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The validity period of the specification changes on an ApsaraDB RDS for SQL Server instance. At the end of the validity period, the specifications of the instance are restored to the specifications that are used before an <a href="https://help.aliyun.com/document_detail/95665.html">elastic upgrade</a> is performed. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -353,7 +351,7 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
      * <li>If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</li>
      * </ul>
      * <blockquote>
-     * <p>When you upgrade the major engine version, if you want to specify a vSwitch or change the vSwitch for the RDS instance, you must also specify this parameter.</p>
+     * <p> If you want to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance by specifying AllowMajorVersionUpgrade or change the vSwitch, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -381,9 +379,9 @@ public class ModifyDBInstanceSpecShrinkRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The zone ID of the secondary instance. If you set this parameter to the same value as the <strong>ZoneId</strong> parameter, the single-zone deployment method is used. If you set this parameter to a different value from the <strong>ZoneId</strong> parameter, the multi-zone deployment method is used.</p>
+     * <p>The zone ID of the secondary instance. If you set this parameter to the same value as <strong>ZoneId</strong>, the single-zone deployment method is used. If you set this parameter to a different value from <strong>ZoneId</strong>, the multi-zone deployment method is used.</p>
      * <blockquote>
-     * <p>If you must specify a secondary zone or change the secondary zone to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance, you must also specify this parameter.</p>
+     * <p> If you want to upgrade the major engine version of an ApsaraDB RDS for SQL Server instance by specifying AllowMajorVersionUpgrade or change the secondary zone, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

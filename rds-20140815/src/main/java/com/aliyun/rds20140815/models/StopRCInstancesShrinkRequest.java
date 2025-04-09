@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class StopRCInstancesShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AllTogether</p>
+     */
     @NameInMap("BatchOptimization")
     public String batchOptimization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

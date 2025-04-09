@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchReplicationLinkRequest extends TeaModel {
     /**
+     * <p>The ID of the source or primary instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class SwitchReplicationLinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The name of the destination DR instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,7 @@ public class SwitchReplicationLinkRequest extends TeaModel {
     public String targetInstanceName;
 
     /**
+     * <p>The ID of the region in which the destination DR instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

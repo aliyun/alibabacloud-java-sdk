@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SwitchReplicationLinkResponseBody extends TeaModel {
     /**
+     * <p>The ID of the DR instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>135****</p>
      */
@@ -12,6 +14,8 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2F2DD69B-90AF-1E72-923C-87575658A9D9</p>
      */
@@ -19,6 +23,8 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>159****</p>
      */
@@ -26,6 +32,8 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
     public Long taskId;
 
     /**
+     * <p>The task name.</p>
+     * 
      * <strong>example:</strong>
      * <p>zbtest</p>
      */

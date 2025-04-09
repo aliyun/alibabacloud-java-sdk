@@ -17,13 +17,11 @@ public class ModifyDBProxyEndpointAddressRequest extends TeaModel {
     /**
      * <p>The network type of the database proxy endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>Public</strong>: Internet</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
-     * <li><strong>Classic</strong>: classic network</li>
+     * <li><strong>Public</strong></li>
+     * <li><strong>VPC</strong> (default)</li>
      * </ul>
-     * <p>If the instance runs MySQL, the default value is <strong>Classic</strong>.</p>
      * <blockquote>
-     * <p> If the instance runs PostgreSQL, you must set this parameter to <strong>Public</strong> or <strong>VPC</strong>.</p>
+     * <p> If the RDS instance runs MySQL, this parameter is required.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

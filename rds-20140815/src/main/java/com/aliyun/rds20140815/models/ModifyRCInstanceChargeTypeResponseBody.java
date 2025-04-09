@@ -4,6 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>POSTPAY</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -16,9 +20,17 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2133400000****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6EF82B07-28D2-48D1-B5D6-7E78FED277C7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,12 +88,24 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     }
 
     public static class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("Fee")
         public String fee;
 
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 

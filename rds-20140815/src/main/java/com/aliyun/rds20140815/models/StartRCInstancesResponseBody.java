@@ -4,6 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class StartRCInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

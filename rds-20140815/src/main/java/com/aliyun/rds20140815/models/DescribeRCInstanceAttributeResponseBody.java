@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <p>The ID of the cluster to which the instance belongs.</p>
      * <blockquote>
@@ -393,6 +396,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     public static DescribeRCInstanceAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCInstanceAttributeResponseBody self = new DescribeRCInstanceAttributeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public DescribeRCInstanceAttributeResponseBody setClusterId(String clusterId) {

@@ -4,12 +4,20 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class StartRCInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AllTogether</p>
+     */
     @NameInMap("BatchOptimization")
     public String batchOptimization;
 
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

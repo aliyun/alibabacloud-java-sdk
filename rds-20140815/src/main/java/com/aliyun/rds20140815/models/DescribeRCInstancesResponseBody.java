@@ -195,6 +195,58 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeRCInstancesResponseBodyRCInstancesVpcAttributes extends TeaModel {
+        @NameInMap("NatIpAddress")
+        public String natIpAddress;
+
+        @NameInMap("PrivateIpAddress")
+        public java.util.List<String> privateIpAddress;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static DescribeRCInstancesResponseBodyRCInstancesVpcAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCInstancesResponseBodyRCInstancesVpcAttributes self = new DescribeRCInstancesResponseBodyRCInstancesVpcAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes setNatIpAddress(String natIpAddress) {
+            this.natIpAddress = natIpAddress;
+            return this;
+        }
+        public String getNatIpAddress() {
+            return this.natIpAddress;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public java.util.List<String> getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class DescribeRCInstancesResponseBodyRCInstances extends TeaModel {
         /**
          * <p>The cluster name.</p>
@@ -204,6 +256,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         @NameInMap("ClusterName")
         public String clusterName;
+
+        @NameInMap("Cpu")
+        public Integer cpu;
 
         @NameInMap("CreateMode")
         public String createMode;
@@ -217,6 +272,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("DbType")
         public String dbType;
 
+        @NameInMap("DeploymentSetId")
+        public String deploymentSetId;
+
         /**
          * <p>The instance description.</p>
          * 
@@ -225,6 +283,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
 
         /**
          * <p>The time when the task was created. The time is displayed in GMT.</p>
@@ -253,6 +314,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("HostName")
         public String hostName;
 
+        @NameInMap("ImageId")
+        public String imageId;
+
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
@@ -270,6 +334,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
+
+        @NameInMap("Memory")
+        public Integer memory;
 
         @NameInMap("PublicIp")
         public String publicIp;
@@ -315,6 +382,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTags> tags;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("VpcAttributes")
+        public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes vpcAttributes;
+
+        /**
          * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
@@ -339,6 +413,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             return this.clusterName;
         }
 
+        public DescribeRCInstancesResponseBodyRCInstances setCpu(Integer cpu) {
+            this.cpu = cpu;
+            return this;
+        }
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
         public DescribeRCInstancesResponseBodyRCInstances setCreateMode(String createMode) {
             this.createMode = createMode;
             return this;
@@ -355,12 +437,28 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             return this.dbType;
         }
 
+        public DescribeRCInstancesResponseBodyRCInstances setDeploymentSetId(String deploymentSetId) {
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
+        }
+
         public DescribeRCInstancesResponseBodyRCInstances setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setGmtCreated(String gmtCreated) {
@@ -385,6 +483,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public String getHostName() {
             return this.hostName;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setInstanceChargeType(String instanceChargeType) {
@@ -417,6 +523,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public String getInstanceTypeFamily() {
             return this.instanceTypeFamily;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setMemory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+        public Integer getMemory() {
+            return this.memory;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setPublicIp(String publicIp) {
@@ -473,6 +587,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeRCInstancesResponseBodyRCInstancesTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setVpcAttributes(DescribeRCInstancesResponseBodyRCInstancesVpcAttributes vpcAttributes) {
+            this.vpcAttributes = vpcAttributes;
+            return this;
+        }
+        public DescribeRCInstancesResponseBodyRCInstancesVpcAttributes getVpcAttributes() {
+            return this.vpcAttributes;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setVpcId(String vpcId) {

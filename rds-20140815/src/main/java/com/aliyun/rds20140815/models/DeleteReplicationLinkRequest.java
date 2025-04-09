@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteReplicationLinkRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the DR instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteReplicationLinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to promote the disaster recovery instance to the primary instance. Valid values:</p>
+     * <p>Specifies whether to delete the data synchronization link between the DR instance and the primary instance and promote the DR instance to the primary instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
