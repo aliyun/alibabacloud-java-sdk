@@ -7,10 +7,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The time when the instance is migrated to the destination zone. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: The instance is immediately migrated to the destination zone.</li>
-     * <li><strong>MaintainTime</strong>: The instance is migrated during the maintenance period of the instance.</li>
+     * <li><strong>Immediately</strong> (default): The instance is migrated immediately.</li>
+     * <li><strong>MaintainTime</strong>: The instance is migrated during its maintenance window.</li>
      * </ul>
-     * <p>Default value: <strong>Immediately</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Immediately</p>

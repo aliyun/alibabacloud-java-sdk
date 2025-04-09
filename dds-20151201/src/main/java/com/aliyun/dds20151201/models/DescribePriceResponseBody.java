@@ -1835,7 +1835,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodySubOrdersSubOrderModuleInstanceModuleInstancePromDetailList promDetailList;
 
         /**
-         * <p>The discount.</p>
+         * <p>The discounted price.</p>
          * 
          * <strong>example:</strong>
          * <p>451.00</p>
@@ -1861,9 +1861,21 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("TotalProductFee")
         public Double totalProductFee;
 
+        /**
+         * <p>The price type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>monthPrice</p>
+         */
         @NameInMap("priceType")
         public String priceType;
 
+        /**
+         * <p>The unit of the price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("priceUnit")
         public String priceUnit;
 
@@ -2125,7 +2137,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public String promotionOptionNo;
 
         /**
-         * <p>The IDs of the rules that correspond to the coupon.</p>
+         * <p>The promotion IDs.</p>
          */
         @NameInMap("PromotionRuleIdList")
         public DescribePriceResponseBodySubOrdersSubOrderOptionalPromotionsOptionalPromotionPromotionRuleIdList promotionRuleIdList;

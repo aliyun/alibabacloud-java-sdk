@@ -69,7 +69,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The number of the page to return. Specify the parameter to a positive integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -78,7 +78,7 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: <strong>30, 50, and 100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -106,6 +106,15 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
      */
     @NameInMap("Region")
     public String region;
+
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyiu4ekp****</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -228,6 +237,14 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeActiveOperationTasksRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeActiveOperationTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {

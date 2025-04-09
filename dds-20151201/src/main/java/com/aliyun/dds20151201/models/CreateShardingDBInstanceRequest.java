@@ -7,10 +7,13 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>The password of the root account. The password must meet the following requirements:</p>
      * <ul>
-     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>The special characters include ! # $ % ^ &amp; \* ( ) _ + - =</li>
-     * <li>The password of the account must be 8 to 32 characters in length.</li>
+     * <li>The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The following special characters are supported: ! @ # $ % ^ &amp; \* ( ) _ + - =.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
+     * <blockquote>
+     * <p> For more information about how to resolve failed database connections due to special characters, see <a href="https://help.aliyun.com/document_detail/471568.html">What do I do if my instance is not connected due to special characters in the password in the connection string of the instance?</a></p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456Aa</p>
@@ -53,7 +56,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <li><strong>PrePaid</strong>: subscription</li>
      * </ul>
      * <blockquote>
-     * <p> If this parameter is set to <strong>PrePaid</strong>, you must also configure the <strong>Period</strong> parameter.</p>
+     * <p> If you set this parameter to <strong>PrePaid</strong>, you must also configure the <strong>Period</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,7 +108,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String destRegion;
 
     /**
-     * <p>Indicates whether disk encryption is enabled.</p>
+     * <p>Specifies whether to enable disk encryption.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -143,11 +146,13 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
      * <li><strong>4.0</strong></li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
-     * <li>If you call this operation to clone an instance, set the value of this parameter to the database engine version of the source instance.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</p>
+     * </li>
+     * <li><p>If you call this operation to clone an instance, set the value of this parameter to the database engine version of the source instance.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -209,8 +214,8 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public java.util.List<CreateShardingDBInstanceRequestMongos> mongos;
 
     /**
-     * <p>The network type of the instance.</p>
-     * <p>Set the value to <strong>VPC</strong>.</p>
+     * <p>The network type of the instance. Set the value to VPC.</p>
+     * <hr>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -270,7 +275,7 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The information of the shard node.</p>
+     * <p>The information of the shard component.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ReplicaSet")
@@ -304,11 +309,11 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The backup restore type of the instance.</p>
+     * <p>The restoration type of the instance. Valid values:</p>
      * <ul>
-     * <li>1:  restore an instance to the specified time.</li>
-     * <li>2: restore an  released instance to the specified backup set.</li>
-     * <li>3：restore an instance to the specified cross-regional backup set.</li>
+     * <li>1: restores the instance data to the specified point in time.</li>
+     * <li>2: restores the data of the released instance to the specified backup set.</li>
+     * <li>3: restores the instance data to the specified cross-region backup set.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -400,11 +405,13 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage engine of the instance. Set the value to <strong>WiredTiger</strong>.</p>
      * <blockquote>
-     * <ul>
-     * <li>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</li>
-     * <li>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If you call this operation to clone an instance, set the value of this parameter to the storage engine of the source instance.</p>
+     * </li>
+     * <li><p>For more information about the limits on database versions and storage engines, see <a href="https://help.aliyun.com/document_detail/61906.html">MongoDB versions and storage engines</a>.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>WiredTiger</p>
@@ -860,13 +867,15 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
 
     public static class CreateShardingDBInstanceRequestReplicaSet extends TeaModel {
         /**
-         * <p>The instance type of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+         * <p>The instance type of the shard component. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
          * <blockquote>
-         * <ul>
-         * <li><strong>N</strong> specifies the serial number of the shard node for which the instance type is specified. For example, <strong>ReplicaSet.2.Class</strong> specifies the instance type of the second shard node.</li>
-         * <li>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p><strong>N</strong> specifies the serial number of the shard component for which the instance type is specified. For example, <strong>ReplicaSet.2.Class</strong> specifies the instance type of the second shard component.</p>
+         * </li>
+         * <li><p>Valid values of <strong>N</strong>: <strong>2</strong> to <strong>32</strong>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -876,10 +885,10 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         public String _class;
 
         /**
-         * <p>The number of read-only nodes in the shard node.</p>
+         * <p>The number of read-only nodes in the shard component.</p>
          * <p>Valid values: <strong>0</strong>, <strong>1, 2, 3, 4, and 5</strong>. Default value: <strong>0</strong>.</p>
          * <blockquote>
-         * <p> <strong>N</strong> specifies the serial number of the shard node for which you want to set the number of read-only nodes. <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard node.</p>
+         * <p> <strong>N</strong> specifies the serial number of the shard component for which you want to set the number of read-only nodes. <strong>ReplicaSet.2.ReadonlyReplicas</strong> specifies the number of read-only nodes in the second shard component.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -889,13 +898,15 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
         public Integer readonlyReplicas;
 
         /**
-         * <p>The storage capacity of the shard node. Unit: GB.</p>
+         * <p>The storage capacity of the shard component. Unit: GB.</p>
          * <blockquote>
-         * <ul>
-         * <li>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</li>
-         * <li><strong>N</strong> specifies the serial number of the shard node for which the storage space is specified. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage space of the second shard node.</li>
-         * </ul>
          * </blockquote>
+         * <ul>
+         * <li><p>The values that can be specified for this parameter vary based on the instance types. For more information, see <a href="https://help.aliyun.com/document_detail/311414.html">Sharded cluster instance types</a>.</p>
+         * </li>
+         * <li><p><strong>N</strong> specifies the serial number of the shard component for which the storage capacity is specified. For example, <strong>ReplicaSet.2.Storage</strong> specifies the storage capacity of the second shard component.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

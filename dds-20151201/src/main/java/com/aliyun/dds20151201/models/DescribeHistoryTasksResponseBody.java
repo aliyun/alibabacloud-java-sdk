@@ -270,7 +270,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          * <p>Succeed</p>
          */
         @NameInMap("Status")
-        public Integer status;
+        public String status;
 
         /**
          * <p>The details of the task. The task details vary based on the value of the taskType parameter.</p>
@@ -458,11 +458,11 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeHistoryTasksResponseBodyItems setStatus(Integer status) {
+        public DescribeHistoryTasksResponseBodyItems setStatus(String status) {
             this.status = status;
             return this;
         }
-        public Integer getStatus() {
+        public String getStatus() {
             return this.status;
         }
 

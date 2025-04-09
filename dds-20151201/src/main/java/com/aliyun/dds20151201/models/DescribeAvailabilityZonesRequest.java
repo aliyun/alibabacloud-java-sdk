@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailabilityZonesRequest extends TeaModel {
     /**
-     * <p>The language of the values of the returned <strong>RegionName</strong> and <strong>ZoneName</strong> parameters. Valid values:</p>
+     * <p>The language of the returned <strong>RegionName</strong> and <strong>ZoneName</strong> parameter values. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -67,10 +67,10 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String excludeZoneId;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method of the product. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong> (default): subscription</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid:</strong> pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,6 +78,19 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
+
+    /**
+     * <p>The architecture of the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>sharding</strong>: sharded cluster instance</li>
+     * <li><strong>replicate</strong>: replica set or standalone instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>replicate</p>
+     */
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     /**
      * <p>The edition of the instance. High-Available Edition and Preview Edition (dbfs) are supported.</p>
@@ -105,7 +118,17 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of nodes. This parameter is available only for replica set instances.</p>
+     * <p>The number of nodes in the instance.</p>
+     * <blockquote>
+     * <p> This parameter is available only for replica set instances.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1</li>
+     * <li>3</li>
+     * <li>5</li>
+     * <li>7</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -129,11 +152,11 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The storage type of the instance. </p>
+     * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li><strong>cloud</strong>: The system displays only zones in which cloud disk-based instances can be deployed. </li>
-     * <li><strong>local</strong>: The system displays only zones in which local disk-based instances can be deployed. </li>
-     * <li><strong>default</strong> or null: The system displays only zones in which cloud disk-based and local disk-based instances can be deployed.</li>
+     * <li><strong>cloud</strong>: displays only zones available for instances that use cloud disks.</li>
+     * <li><strong>local</strong>: only displays zones available for instances that use local disks instances.</li>
+     * <li><strong>default</strong> or unspecified: displays zones available for instances that use cloud disks and those that use local disks.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -143,19 +166,21 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String storageSupport;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The disk type. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_essd1</strong>: PL1 enhanced SSD (ESSD)</li>
+     * <li><strong>cloud_essd</strong>: PL1 Enterprise SSD (ESSD)</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
-     * <li><strong>local_ssd</strong>: Local SSD</li>
+     * <li><strong>dhg_local_ssd</strong>: local SSD</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>Instances that run MongoDB 4.4 or later support only cloud disks. <strong>cloud_essd1</strong> is selected if you leave this parameter empty.</li>
-     * <li>Instances that run MongoDB 4.2 and earlier support only local disks. <strong>local_ssd</strong> is selected if you leave this parameter empty.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <strong>cloud_essd1</strong> is used by default.</p>
+     * </li>
+     * <li><p>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <strong>local_ssd</strong> is used by default.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>local_ssd</p>
@@ -231,6 +256,14 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     }
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    public DescribeAvailabilityZonesRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeAvailabilityZonesRequest setMongoType(String mongoType) {
