@@ -4,9 +4,17 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobGroupExportTaskProgressRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>b3dbfb82-1ae6-4e73-b717-f494727d2af3</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e4e2a770-b97b-465a-80d8-06dca008c503</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

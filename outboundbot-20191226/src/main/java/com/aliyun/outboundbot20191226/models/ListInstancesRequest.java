@@ -4,6 +4,19 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfm3iugit3uw7a</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -13,6 +26,30 @@ public class ListInstancesRequest extends TeaModel {
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ListInstancesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
@@ -32,9 +69,17 @@ public class ListInstancesRequest extends TeaModel {
     }
 
     public static class ListInstancesRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Value")
         public String value;
 

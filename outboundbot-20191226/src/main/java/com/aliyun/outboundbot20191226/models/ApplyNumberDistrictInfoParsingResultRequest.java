@@ -4,6 +4,10 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ApplyNumberDistrictInfoParsingResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ffaaa8f0-2de1-438c-ba66-5ac30d83a304</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 

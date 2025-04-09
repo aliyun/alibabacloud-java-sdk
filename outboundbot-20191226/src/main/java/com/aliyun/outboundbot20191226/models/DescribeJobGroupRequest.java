@@ -7,9 +7,21 @@ public class DescribeJobGroupRequest extends TeaModel {
     @NameInMap("BriefTypes")
     public java.util.List<String> briefTypes;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46a9ad0c-3e11-44da-a9a7-2c21bf5ce185</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 

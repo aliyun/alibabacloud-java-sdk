@@ -4,18 +4,38 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyTTSConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f765d3ee-ec03-4765-b235-6877501d99d1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +96,54 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
     }
 
     public static class ModifyTTSConfigResponseBodyTTSConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>291cfc6a-8703-4bdd-a99d-9cba32d5288a</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>语调
+         * [-500,500]之间整数。默认值为0。</p>
+         * <p>大于0表示升高音高。</p>
+         * <p>小于0表示降低音高。</p>
+         */
+        @NameInMap("PitchRate")
+        public String pitchRate;
+
+        /**
+         * <strong>example:</strong>
+         * <p>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("SpeechRate")
         public String speechRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2a07b634-e15d-445f-bbcb-fc4ea2df7b87</p>
+         */
         @NameInMap("TTSConfigId")
         public String TTSConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaoyun</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Volume")
         public String volume;
 
@@ -105,6 +158,14 @@ public class ModifyTTSConfigResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ModifyTTSConfigResponseBodyTTSConfig setPitchRate(String pitchRate) {
+            this.pitchRate = pitchRate;
+            return this;
+        }
+        public String getPitchRate() {
+            return this.pitchRate;
         }
 
         public ModifyTTSConfigResponseBodyTTSConfig setScriptId(String scriptId) {

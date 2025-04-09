@@ -10,15 +10,32 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("MaxConcurrentConversation")
     public Integer maxConcurrentConversation;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Provided</p>
+     */
     @NameInMap("NluServiceType")
     public String nluServiceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmwd4qr3z773y</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

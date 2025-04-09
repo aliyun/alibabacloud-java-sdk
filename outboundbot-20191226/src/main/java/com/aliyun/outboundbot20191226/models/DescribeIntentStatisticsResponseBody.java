@@ -4,39 +4,83 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeIntentStatisticsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("GlobalIntentNum")
     public Integer globalIntentNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("GlobalIntents")
     public java.util.List<DescribeIntentStatisticsResponseBodyGlobalIntents> globalIntents;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IntentsAfterNoAnswer")
     public java.util.List<DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer> intentsAfterNoAnswer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("ProcessIntentNum")
     public Integer processIntentNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("ProcessIntents")
     public java.util.List<DescribeIntentStatisticsResponseBodyProcessIntents> processIntents;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -142,24 +186,48 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeIntentStatisticsResponseBodyGlobalIntents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HitAfterNoAnswer")
         public Integer hitAfterNoAnswer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("HitNum")
         public Integer hitNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>21343425</p>
+         */
         @NameInMap("IntentId")
         public String intentId;
 
         @NameInMap("IntentName")
         public String intentName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GlobalIntent</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -227,12 +295,44 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer extends TeaModel {
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("HitAfterNoAnswer")
+        public Integer hitAfterNoAnswer;
+
+        /**
+         * <strong>example:</strong>
+         * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("IntentId")
+        public String intentId;
+
+        @NameInMap("IntentName")
+        public String intentName;
 
         public static DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer build(java.util.Map<String, ?> map) throws Exception {
             DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer self = new DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer setHitAfterNoAnswer(Integer hitAfterNoAnswer) {
+            this.hitAfterNoAnswer = hitAfterNoAnswer;
+            return this;
+        }
+        public Integer getHitAfterNoAnswer() {
+            return this.hitAfterNoAnswer;
         }
 
         public DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer setInstanceId(String instanceId) {
@@ -243,27 +343,70 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer setIntentId(String intentId) {
+            this.intentId = intentId;
+            return this;
+        }
+        public String getIntentId() {
+            return this.intentId;
+        }
+
+        public DescribeIntentStatisticsResponseBodyIntentsAfterNoAnswer setIntentName(String intentName) {
+            this.intentName = intentName;
+            return this;
+        }
+        public String getIntentName() {
+            return this.intentName;
+        }
+
     }
 
     public static class DescribeIntentStatisticsResponseBodyProcessIntents extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0c3f352f-d045-491d-9ce7-11f2d2b7775d</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HitAfterNoAnswer")
         public Integer hitAfterNoAnswer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("HitNum")
         public Integer hitNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12343</p>
+         */
         @NameInMap("IntentId")
         public String intentId;
 
         @NameInMap("IntentName")
         public String intentName;
 
+        @NameInMap("RateDisplay")
+        public String rateDisplay;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ProcessIntent</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -318,6 +461,14 @@ public class DescribeIntentStatisticsResponseBody extends TeaModel {
         }
         public String getIntentName() {
             return this.intentName;
+        }
+
+        public DescribeIntentStatisticsResponseBodyProcessIntents setRateDisplay(String rateDisplay) {
+            this.rateDisplay = rateDisplay;
+            return this;
+        }
+        public String getRateDisplay() {
+            return this.rateDisplay;
         }
 
         public DescribeIntentStatisticsResponseBodyProcessIntents setType(String type) {

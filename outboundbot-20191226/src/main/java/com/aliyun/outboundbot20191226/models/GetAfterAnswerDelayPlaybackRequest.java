@@ -4,9 +4,19 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GetAfterAnswerDelayPlaybackRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c46001bc-3ead-4bfd-9a69-4b5b66a4a3f4</p>
+     */
     @NameInMap("EntryId")
     public String entryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("StrategyLevel")
     public Integer strategyLevel;
 

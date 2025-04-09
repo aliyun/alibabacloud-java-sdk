@@ -4,30 +4,69 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f06f7c9f-2895-4b30-a8c2-6ecccb9c9f89</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("HangUpDialogueNodes")
+    public java.util.List<DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes> hangUpDialogueNodes;
+
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("NoAnswerDialogueNodes")
     public java.util.List<DescribeDialogueNodeStatisticsResponseBodyNoAnswerDialogueNodes> noAnswerDialogueNodes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("TotalCompleted")
     public Integer totalCompleted;
 
@@ -50,6 +89,14 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeDialogueNodeStatisticsResponseBody setHangUpDialogueNodes(java.util.List<DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes> hangUpDialogueNodes) {
+        this.hangUpDialogueNodes = hangUpDialogueNodes;
+        return this;
+    }
+    public java.util.List<DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes> getHangUpDialogueNodes() {
+        return this.hangUpDialogueNodes;
     }
 
     public DescribeDialogueNodeStatisticsResponseBody setHttpStatusCode(Integer httpStatusCode) {
@@ -108,31 +155,114 @@ public class DescribeDialogueNodeStatisticsResponseBody extends TeaModel {
         return this.totalCompleted;
     }
 
-    public static class DescribeDialogueNodeStatisticsResponseBodyNoAnswerDialogueNodes extends TeaModel {
-        @NameInMap("GroupId")
-        public String groupId;
-
+    public static class DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes extends TeaModel {
         @NameInMap("HangUpNum")
         public Integer hangUpNum;
 
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("NodeName")
+        public String nodeName;
+
+        @NameInMap("RateDisplay")
+        public String rateDisplay;
+
+        public static DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes self = new DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes setHangUpNum(Integer hangUpNum) {
+            this.hangUpNum = hangUpNum;
+            return this;
+        }
+        public Integer getHangUpNum() {
+            return this.hangUpNum;
+        }
+
+        public DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public DescribeDialogueNodeStatisticsResponseBodyHangUpDialogueNodes setRateDisplay(String rateDisplay) {
+            this.rateDisplay = rateDisplay;
+            return this;
+        }
+        public String getRateDisplay() {
+            return this.rateDisplay;
+        }
+
+    }
+
+    public static class DescribeDialogueNodeStatisticsResponseBodyNoAnswerDialogueNodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>f06f7c9f-2895-4b30-a8c2-6ecccb9c9f89</p>
+         */
+        @NameInMap("GroupId")
+        public String groupId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("HangUpNum")
+        public Integer hangUpNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("HitNum")
         public Integer hitNum;
 
         /**
          * <p>id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("NoAnswerNum")
         public Integer noAnswerNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e5035654-1745-484a-8c5b-165f7c7bcd79</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 

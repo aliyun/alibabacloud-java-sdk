@@ -4,21 +4,45 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GetContactWhiteListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ContactWhitelistList")
     public GetContactWhiteListResponseBodyContactWhitelistList contactWhitelistList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,27 +100,51 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     }
 
     public static class GetContactWhiteListResponseBodyContactWhitelistListList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+         */
         @NameInMap("ContactWhiteListId")
         public String contactWhiteListId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640174411848</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13959999999</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
@@ -172,15 +220,31 @@ public class GetContactWhiteListResponseBody extends TeaModel {
     }
 
     public static class GetContactWhiteListResponseBodyContactWhitelistList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("List")
         public java.util.List<GetContactWhiteListResponseBodyContactWhitelistListList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class QueryScriptsByStatusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Scripts")
     public QueryScriptsByStatusResponseBodyScripts scripts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +96,41 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
     }
 
     public static class QueryScriptsByStatusResponseBodyScriptsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1579055782000</p>
+         */
         @NameInMap("AppliedVersion")
         public String appliedVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
+         */
         @NameInMap("DebugStatus")
         public String debugStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579055782000</p>
+         */
         @NameInMap("DebugVersion")
         public String debugVersion;
 
         @NameInMap("Industry")
         public String industry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDebugDrafted")
         public Boolean isDebugDrafted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
@@ -100,15 +140,27 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
         @NameInMap("ScriptName")
         public String scriptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579055782000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -219,12 +271,24 @@ public class QueryScriptsByStatusResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<QueryScriptsByStatusResponseBodyScriptsList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

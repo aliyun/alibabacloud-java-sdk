@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GenerateUploadUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GenerateUploadUrlResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,27 +96,59 @@ public class GenerateUploadUrlResponseBody extends TeaModel {
     }
 
     public static class GenerateUploadUrlResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LTAIvKWEr4DoFSqz</p>
+         */
         @NameInMap("AccessId")
         public String accessId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1742960933</p>
+         */
         @NameInMap("Expire")
         public Integer expire;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pload/file/874d7371-791b-4281-935c-637630a37785/874d7371-791b-4281-935c-637630a37785_9bd7916d-a340-4925-a911-92390cbe0f33.json</p>
+         */
         @NameInMap("Folder")
         public String folder;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://cloudagentbot-online.oss-cn-hangzhou.aliyuncs.com">https://cloudagentbot-online.oss-cn-hangzhou.aliyuncs.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNS0wMy0yNlQwMzo0ODo1My4wMzVaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNTI0Mjg4MF0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJ1cGxvYWQvZmlsZS84NzRkNzM3MS03OTFiLTQyODEtOTM1Yy02Mzc2MzBhMzc3ODUvIl1dfQ==&quot;,</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I6d1ONWVuTj5i0Kz4Vn+V0lC6v4=</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

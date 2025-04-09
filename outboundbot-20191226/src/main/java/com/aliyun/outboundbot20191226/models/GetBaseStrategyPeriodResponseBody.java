@@ -4,24 +4,55 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GetBaseStrategyPeriodResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OnlyWeekdays")
     public Boolean onlyWeekdays;
 
+    @NameInMap("OnlyWorkdays")
+    public Boolean onlyWorkdays;
+
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("WorkingTime")
     public java.util.List<GetBaseStrategyPeriodResponseBodyWorkingTime> workingTime;
 
@@ -62,6 +93,14 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
         return this.onlyWeekdays;
     }
 
+    public GetBaseStrategyPeriodResponseBody setOnlyWorkdays(Boolean onlyWorkdays) {
+        this.onlyWorkdays = onlyWorkdays;
+        return this;
+    }
+    public Boolean getOnlyWorkdays() {
+        return this.onlyWorkdays;
+    }
+
     public GetBaseStrategyPeriodResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -87,15 +126,31 @@ public class GetBaseStrategyPeriodResponseBody extends TeaModel {
     }
 
     public static class GetBaseStrategyPeriodResponseBodyWorkingTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BeginTimeMillis")
         public Long beginTimeMillis;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EndTimeMillis")
         public Long endTimeMillis;
 

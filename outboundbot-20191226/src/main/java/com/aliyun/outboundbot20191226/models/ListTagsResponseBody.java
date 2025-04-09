@@ -4,18 +4,38 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListTagsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,15 +107,27 @@ public class ListTagsResponseBody extends TeaModel {
     }
 
     public static class ListTagsResponseBodyTagGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
         @NameInMap("TagGroup")
         public String tagGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>38c03261-9fe8-4b9b-8c3b-983a60319012</p>
+         */
         @NameInMap("TagGroupId")
         public String tagGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TagGroupIndex")
         public Integer tagGroupIndex;
 
@@ -139,15 +171,27 @@ public class ListTagsResponseBody extends TeaModel {
     }
 
     public static class ListTagsResponseBodyTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
         @NameInMap("TagGroup")
         public String tagGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d62be647-6202-4b1f-9708-0baeec552635</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TagIndex")
         public Integer tagIndex;
 

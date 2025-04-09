@@ -4,12 +4,27 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class PublishScriptRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3677fe8b-276f-4541-babf-b9d3082a31ba</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 

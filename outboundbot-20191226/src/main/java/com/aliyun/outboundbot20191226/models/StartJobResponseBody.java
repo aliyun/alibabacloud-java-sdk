@@ -7,18 +7,38 @@ public class StartJobResponseBody extends TeaModel {
     @NameInMap("CallIds")
     public java.util.List<StartJobResponseBodyCallIds> callIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8a621aa1-d2e7-43f3-b54d-8830af73c468</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,9 +107,17 @@ public class StartJobResponseBody extends TeaModel {
     }
 
     public static class StartJobResponseBodyCallIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c93cdd1c-f9b5-4758-be43-7a237a7eaa1d</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62229628-45d8-41bd-a80f-6e4c0a39f79b</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -117,9 +145,17 @@ public class StartJobResponseBody extends TeaModel {
     }
 
     public static class StartJobResponseBodyTaskIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c93cdd1c-f9b5-4758-be43-7a237a7eaa1d</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62229628-45d8-41bd-a80f-6e4c0a39f79b</p>
+         */
         @NameInMap("Value")
         public String value;
 

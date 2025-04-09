@@ -4,9 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DeleteJobGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc1fb484-4fe8-4031-b662-5b87ea88590b</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 

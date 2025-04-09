@@ -4,15 +4,43 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyTTSConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>99****Aw</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27244bae-e446-4811-bb1d-f8a07b525af0</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Managed</p>
+     */
     @NameInMap("NlsServiceType")
     public String nlsServiceType;
 
+    /**
+     * <p>语调 [-500,500]之间整数。默认值为0。</p>
+     * <p>大于0表示升高音高。</p>
+     * <p>小于0表示降低音高。</p>
+     */
+    @NameInMap("PitchRate")
+    public String pitchRate;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1f1a2ba0-b3e7-4ff9-baf1-6dc8aeac0791</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
@@ -22,6 +50,10 @@ public class ModifyTTSConfigRequest extends TeaModel {
     @NameInMap("Voice")
     public String voice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Volume")
     public String volume;
 
@@ -52,6 +84,14 @@ public class ModifyTTSConfigRequest extends TeaModel {
     }
     public String getNlsServiceType() {
         return this.nlsServiceType;
+    }
+
+    public ModifyTTSConfigRequest setPitchRate(String pitchRate) {
+        this.pitchRate = pitchRate;
+        return this;
+    }
+    public String getPitchRate() {
+        return this.pitchRate;
     }
 
     public ModifyTTSConfigRequest setScriptId(String scriptId) {

@@ -4,39 +4,104 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class QueryJobsWithResultRequest extends TeaModel {
+    @NameInMap("EndActualTimeFilter")
+    public Long endActualTimeFilter;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasAnsweredFilter")
     public Boolean hasAnsweredFilter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HasHangUpByRejectionFilter")
     public Boolean hasHangUpByRejectionFilter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasReachedEndOfFlowFilter")
     public Boolean hasReachedEndOfFlowFilter;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9d53cd72-4050-4419-8c17-acc0bf158147</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;NoAnswer&quot;]</p>
+     */
+    @NameInMap("JobFailureReasonsFilter")
+    public String jobFailureReasonsFilter;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ad16fc35-d824-4102-a606-2be51c1aa6dd</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("JobStatusFilter")
     public String jobStatusFilter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1882020****</p>
+     */
     @NameInMap("QueryText")
     public String queryText;
 
+    @NameInMap("StartActualTimeFilter")
+    public Long startActualTimeFilter;
+
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("TaskStatusFilter")
     public String taskStatusFilter;
 
     public static QueryJobsWithResultRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryJobsWithResultRequest self = new QueryJobsWithResultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryJobsWithResultRequest setEndActualTimeFilter(Long endActualTimeFilter) {
+        this.endActualTimeFilter = endActualTimeFilter;
+        return this;
+    }
+    public Long getEndActualTimeFilter() {
+        return this.endActualTimeFilter;
     }
 
     public QueryJobsWithResultRequest setHasAnsweredFilter(Boolean hasAnsweredFilter) {
@@ -69,6 +134,14 @@ public class QueryJobsWithResultRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public QueryJobsWithResultRequest setJobFailureReasonsFilter(String jobFailureReasonsFilter) {
+        this.jobFailureReasonsFilter = jobFailureReasonsFilter;
+        return this;
+    }
+    public String getJobFailureReasonsFilter() {
+        return this.jobFailureReasonsFilter;
     }
 
     public QueryJobsWithResultRequest setJobGroupId(String jobGroupId) {
@@ -109,6 +182,14 @@ public class QueryJobsWithResultRequest extends TeaModel {
     }
     public String getQueryText() {
         return this.queryText;
+    }
+
+    public QueryJobsWithResultRequest setStartActualTimeFilter(Long startActualTimeFilter) {
+        this.startActualTimeFilter = startActualTimeFilter;
+        return this;
+    }
+    public Long getStartActualTimeFilter() {
+        return this.startActualTimeFilter;
     }
 
     public QueryJobsWithResultRequest setTaskStatusFilter(String taskStatusFilter) {

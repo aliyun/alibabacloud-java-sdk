@@ -4,9 +4,17 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceBindNumberRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1,2,4,5</p>
+     */
     @NameInMap("InstanceList")
     public String instanceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10088</p>
+     */
     @NameInMap("Number")
     public String number;
 

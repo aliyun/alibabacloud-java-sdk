@@ -4,27 +4,69 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class RecordFailureRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1579055782000</p>
+     */
     @NameInMap("ActualTime")
     public Long actualTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4f21446e-324e-46f2-bf62-7f341fb004ea</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>135815****</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10086</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OutOfService</p>
+     */
     @NameInMap("DispositionCode")
     public String dispositionCode;
 
     @NameInMap("ExceptionCodes")
     public String exceptionCodes;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9ab43460-c0b9-40e2-8447-48d82c97fc67</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d2295c0e-3bc3-48a5-9f56-b185db2be909</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -7,6 +7,10 @@ public class CreateNumberDistrictInfoParsingTaskRequest extends TeaModel {
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>190464</p>
+     */
     @NameInMap("FileSize")
     public Long fileSize;
 

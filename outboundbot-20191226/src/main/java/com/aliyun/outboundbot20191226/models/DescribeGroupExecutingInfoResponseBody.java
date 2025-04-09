@@ -4,27 +4,59 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExecutingInfo")
     public DescribeGroupExecutingInfoResponseBodyExecutingInfo executingInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b24d321a-2a74-4dd1-a0ba-4ab09cef6652</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c46001bc-3ead-4bfd-9a69-4b5b66a4a3f4</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,27 +130,59 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupExecutingInfoResponseBodyExecutingInfoJobsProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CancelledNum")
         public Integer cancelledNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ExecutingNum")
         public Integer executingNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("FailedNum")
         public Integer failedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("PausedNum")
         public Integer pausedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("SchedulingNum")
         public Integer schedulingNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalCompletedNum")
         public Integer totalCompletedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalJobs")
         public Integer totalJobs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalNotAnsweredNum")
         public Integer totalNotAnsweredNum;
 
@@ -194,33 +258,76 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupExecutingInfoResponseBodyExecutingInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CallFailedNum")
         public Integer callFailedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("CallNum")
         public Integer callNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640087774563</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("FinishedNum")
         public Integer finishedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("HangUpByClientNum")
         public Integer hangUpByClientNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("JobsProgress")
         public DescribeGroupExecutingInfoResponseBodyExecutingInfoJobsProgress jobsProgress;
 
+        @NameInMap("NoInteractionNum")
+        public Integer noInteractionNum;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1640087774563</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TransferByIntentNum")
         public Integer transferByIntentNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TransferByNoAnswer")
         public Integer transferByNoAnswer;
 
@@ -283,6 +390,14 @@ public class DescribeGroupExecutingInfoResponseBody extends TeaModel {
         }
         public DescribeGroupExecutingInfoResponseBodyExecutingInfoJobsProgress getJobsProgress() {
             return this.jobsProgress;
+        }
+
+        public DescribeGroupExecutingInfoResponseBodyExecutingInfo setNoInteractionNum(Integer noInteractionNum) {
+            this.noInteractionNum = noInteractionNum;
+            return this;
+        }
+        public Integer getNoInteractionNum() {
+            return this.noInteractionNum;
         }
 
         public DescribeGroupExecutingInfoResponseBodyExecutingInfo setStartTime(Long startTime) {

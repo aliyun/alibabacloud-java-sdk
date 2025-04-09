@@ -4,21 +4,43 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class QueryJobsWithResultResponseBody extends TeaModel {
+    /**
+     * <p>Code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Jobs")
     public QueryJobsWithResultResponseBodyJobs jobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9bdaa1d1-a036-4451-ab11-ca0373679091</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -90,30 +112,58 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         @NameInMap("Honorific")
         public String honorific;
 
+        /**
+         * <strong>example:</strong>
+         * <p>63860deb-6218-45df-b1e0-76f2b166e790</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cc231a1d-3c05-4739-8926-193ecf4097ba</p>
+         */
         @NameInMap("JobUuid")
         public String jobUuid;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1882020****</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>134123****</p>
+         */
         @NameInMap("PreferredPhoneNumber")
         public String preferredPhoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C01</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>151</p>
+         */
         @NameInMap("Round")
         public Integer round;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -205,6 +255,10 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     }
 
     public static class QueryJobsWithResultResponseBodyJobsListLatestTaskDialExceptionCodes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Code")
         public String code;
 
@@ -235,9 +289,15 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     }
 
     public static class QueryJobsWithResultResponseBodyJobsListLatestTaskExtras extends TeaModel {
+        /**
+         * <p>Key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Value</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -295,12 +355,24 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     }
 
     public static class QueryJobsWithResultResponseBodyJobsListLatestTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
         @NameInMap("CallDuration")
         public Integer callDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("CallDurationDisplay")
         public String callDurationDisplay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1615363297000</p>
+         */
         @NameInMap("CallTime")
         public Long callTime;
 
@@ -313,18 +385,38 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         @NameInMap("Extras")
         public java.util.List<QueryJobsWithResultResponseBodyJobsListLatestTaskExtras> extras;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasAnswered")
         public Boolean hasAnswered;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasHangUpByRejection")
         public Boolean hasHangUpByRejection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasLastPlaybackCompleted")
         public Boolean hasLastPlaybackCompleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasReachedEndOfFlow")
         public Boolean hasReachedEndOfFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -334,6 +426,10 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         @NameInMap("TagHits")
         public java.util.List<QueryJobsWithResultResponseBodyJobsListLatestTaskTagHits> tagHits;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("TaskEndReason")
         public String taskEndReason;
 
@@ -457,6 +553,10 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
     }
 
     public static class QueryJobsWithResultResponseBodyJobsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cc231a1d-3c05-4739-8926-193ecf4097ba</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -466,6 +566,10 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         @NameInMap("LatestTask")
         public QueryJobsWithResultResponseBodyJobsListLatestTask latestTask;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -523,15 +627,31 @@ public class QueryJobsWithResultResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<QueryJobsWithResultResponseBodyJobsList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageCount")
         public Integer pageCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RowCount")
         public Integer rowCount;
 

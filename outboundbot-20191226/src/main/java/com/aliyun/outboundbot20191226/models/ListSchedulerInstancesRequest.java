@@ -4,6 +4,10 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListSchedulerInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1092143545442862</p>
+     */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 

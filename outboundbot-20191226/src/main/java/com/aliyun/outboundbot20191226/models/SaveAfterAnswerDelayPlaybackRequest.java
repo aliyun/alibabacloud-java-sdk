@@ -4,12 +4,26 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class SaveAfterAnswerDelayPlaybackRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("AfterAnswerDelayPlayback")
     public Integer afterAnswerDelayPlayback;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>980116ec-2d3d-4747-8059-dc25e7af8501</p>
+     */
     @NameInMap("EntryId")
     public String entryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("StrategyLevel")
     public Integer strategyLevel;
 

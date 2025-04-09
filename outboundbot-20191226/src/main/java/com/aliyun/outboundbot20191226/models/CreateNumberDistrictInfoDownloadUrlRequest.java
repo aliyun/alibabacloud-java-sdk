@@ -4,6 +4,10 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateNumberDistrictInfoDownloadUrlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>KZpaNWMgXEfneopGBMGN9fH35b62NJjN</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 

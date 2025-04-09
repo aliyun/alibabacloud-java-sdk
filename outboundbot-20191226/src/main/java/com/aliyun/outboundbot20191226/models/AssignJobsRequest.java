@@ -7,21 +7,45 @@ public class AssignJobsRequest extends TeaModel {
     @NameInMap("CallingNumber")
     public java.util.List<String> callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12f3dd08-0c55-44ce-9b64-e69d35ed3a76</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsAsynchrony")
     public Boolean isAsynchrony;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
+     */
     @NameInMap("JobDataParsingTaskId")
     public String jobDataParsingTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
     @NameInMap("JobsJson")
     public java.util.List<String> jobsJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>json</p>
+     */
     @NameInMap("RosterType")
     public String rosterType;
 

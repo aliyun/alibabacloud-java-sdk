@@ -4,12 +4,24 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class SaveContactBlockListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("ContactBlockListList")
     public java.util.List<String> contactBlockListList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ContactBlockListsJson")
     public String contactBlockListsJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c3c92de8-e4bd-4db4-a962-50f8acce40bc</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

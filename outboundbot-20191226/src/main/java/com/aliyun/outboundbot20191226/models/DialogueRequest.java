@@ -4,36 +4,87 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DialogueRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>broadcast</p>
+     */
     @NameInMap("ActionKey")
     public String actionKey;
 
     @NameInMap("ActionParams")
     public String actionParams;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1528189846043</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Outbound</p>
+     */
     @NameInMap("CallType")
     public String callType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>135****4353</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1***6</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
+     */
     @NameInMap("ScenarioId")
     public String scenarioId;
 
+    /**
+     * <p>场景id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ff44709e-39a6-43ba-959b-20fcabe3e496</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Utterance")
     public String utterance;
 

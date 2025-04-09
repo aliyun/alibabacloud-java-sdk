@@ -4,9 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeDsReportsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a4274627-265f-4e14-b2d6-4ee7d4f8593e</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9eb8fe4f-b286-4834-9688-2c9b171e223e</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 

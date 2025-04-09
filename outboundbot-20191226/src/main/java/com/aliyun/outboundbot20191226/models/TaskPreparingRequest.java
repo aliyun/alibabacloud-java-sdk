@@ -4,12 +4,28 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class TaskPreparingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33040b9a-b04b-452f-b554-cd6f3a15f850</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1971226538081821</p>
+     */
     @NameInMap("InstanceOwnerId")
     public Long instanceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c9e42cd7-ba99-4872-9802-e05719ab051c</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

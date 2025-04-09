@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListScriptsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Scripts")
     public ListScriptsResponseBodyScripts scripts;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,32 +96,79 @@ public class ListScriptsResponseBody extends TeaModel {
     }
 
     public static class ListScriptsResponseBodyScriptsList extends TeaModel {
+        @NameInMap("AgentKey")
+        public String agentKey;
+
+        @NameInMap("AgentLlm")
+        public Boolean agentLlm;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>DRAFTED</p>
+         */
         @NameInMap("DebugStatus")
         public String debugStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EmotionEnable")
         public Boolean emotionEnable;
 
         @NameInMap("Industry")
         public String industry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDebugDrafted")
         public Boolean isDebugDrafted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsPreset")
         public Boolean isPreset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("LongWaitEnable")
         public Boolean longWaitEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("MiniPlaybackEnable")
         public Boolean miniPlaybackEnable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NewBargeInEnable")
         public Boolean newBargeInEnable;
+
+        @NameInMap("NluAccessType")
+        public String nluAccessType;
+
+        @NameInMap("NluEngine")
+        public String nluEngine;
 
         @NameInMap("RejectReason")
         public String rejectReason;
@@ -112,21 +179,60 @@ public class ListScriptsResponseBody extends TeaModel {
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8d6a6e41-8093-49af-a9d1-0281878758ac</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
         @NameInMap("ScriptName")
         public String scriptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DRAFTED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578965079000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
+
+        @NameInMap("agentId")
+        public Long agentId;
 
         public static ListScriptsResponseBodyScriptsList build(java.util.Map<String, ?> map) throws Exception {
             ListScriptsResponseBodyScriptsList self = new ListScriptsResponseBodyScriptsList();
             return TeaModel.build(map, self);
+        }
+
+        public ListScriptsResponseBodyScriptsList setAgentKey(String agentKey) {
+            this.agentKey = agentKey;
+            return this;
+        }
+        public String getAgentKey() {
+            return this.agentKey;
+        }
+
+        public ListScriptsResponseBodyScriptsList setAgentLlm(Boolean agentLlm) {
+            this.agentLlm = agentLlm;
+            return this;
+        }
+        public Boolean getAgentLlm() {
+            return this.agentLlm;
+        }
+
+        public ListScriptsResponseBodyScriptsList setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public ListScriptsResponseBodyScriptsList setDebugStatus(String debugStatus) {
@@ -201,6 +307,22 @@ public class ListScriptsResponseBody extends TeaModel {
             return this.newBargeInEnable;
         }
 
+        public ListScriptsResponseBodyScriptsList setNluAccessType(String nluAccessType) {
+            this.nluAccessType = nluAccessType;
+            return this;
+        }
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        public ListScriptsResponseBodyScriptsList setNluEngine(String nluEngine) {
+            this.nluEngine = nluEngine;
+            return this;
+        }
+        public String getNluEngine() {
+            return this.nluEngine;
+        }
+
         public ListScriptsResponseBodyScriptsList setRejectReason(String rejectReason) {
             this.rejectReason = rejectReason;
             return this;
@@ -257,18 +379,38 @@ public class ListScriptsResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        public ListScriptsResponseBodyScriptsList setAgentId(Long agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+        public Long getAgentId() {
+            return this.agentId;
+        }
+
     }
 
     public static class ListScriptsResponseBodyScripts extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListScriptsResponseBodyScriptsList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyJobGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("JobGroup")
     public ModifyJobGroupResponseBodyJobGroup jobGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,24 @@ public class ModifyJobGroupResponseBody extends TeaModel {
     }
 
     public static class ModifyJobGroupResponseBodyJobGroupExportProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>https://***.oss-cn-shanghai.aliyuncs.com/sample</p>
+         */
         @NameInMap("FileHttpUrl")
         public String fileHttpUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -117,12 +149,24 @@ public class ModifyJobGroupResponseBody extends TeaModel {
     }
 
     public static class ModifyJobGroupResponseBodyJobGroupRecallStrategy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EmptyNumberIgnore")
         public Boolean emptyNumberIgnore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("InArrearsIgnore")
         public Boolean inArrearsIgnore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutOfServiceIgnore")
         public Boolean outOfServiceIgnore;
 
@@ -158,9 +202,17 @@ public class ModifyJobGroupResponseBody extends TeaModel {
     }
 
     public static class ModifyJobGroupResponseBodyJobGroupStrategyWorkingTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
@@ -188,45 +240,89 @@ public class ModifyJobGroupResponseBody extends TeaModel {
     }
 
     public static class ModifyJobGroupResponseBodyJobGroupStrategy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Customized")
         public String customized;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2209702074000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONTINUE</p>
+         */
         @NameInMap("FollowUpStrategy")
         public String followUpStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsTemplate")
         public Boolean isTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxAttemptsPerDay")
         public Integer maxAttemptsPerDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MinAttemptInterval")
         public Integer minAttemptInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Once</p>
+         */
         @NameInMap("RepeatBy")
         public String repeatBy;
 
         @NameInMap("RepeatDays")
         public java.util.List<String> repeatDays;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LocalFirst</p>
+         */
         @NameInMap("RoutingStrategy")
         public String routingStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578550074000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
         @NameInMap("StrategyDescription")
         public String strategyDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f718798d-96be-40e4-bef6-317b54855708</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 
         @NameInMap("StrategyName")
         public String strategyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Repeatable</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -364,12 +460,23 @@ public class ModifyJobGroupResponseBody extends TeaModel {
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578550074361</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         @NameInMap("ExportProgress")
         public ModifyJobGroupResponseBodyJobGroupExportProgress exportProgress;
 
+        @NameInMap("FlashSmsExtras")
+        public String flashSmsExtras;
+
+        /**
+         * <strong>example:</strong>
+         * <p>e37d28cb-0413-4816-85ed-fd354d025ea3</p>
+         */
         @NameInMap("JobDataParsingTaskId")
         public String jobDataParsingTaskId;
 
@@ -379,15 +486,27 @@ public class ModifyJobGroupResponseBody extends TeaModel {
         @NameInMap("JobGroupDescription")
         public String jobGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c62e6789-28a8-41db-941e-171a01d3b3b9</p>
+         */
         @NameInMap("JobGroupId")
         public String jobGroupId;
 
         @NameInMap("JobGroupName")
         public String jobGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinConcurrency")
         public Long minConcurrency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1628425608429</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
@@ -400,15 +519,27 @@ public class ModifyJobGroupResponseBody extends TeaModel {
         @NameInMap("RingingDuration")
         public Long ringingDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
+         */
         @NameInMap("ScenarioId")
         public String scenarioId;
 
         @NameInMap("ScriptName")
         public String scriptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1628425608429</p>
+         */
         @NameInMap("ScriptVersion")
         public String scriptVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Scheduling</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -442,6 +573,14 @@ public class ModifyJobGroupResponseBody extends TeaModel {
         }
         public ModifyJobGroupResponseBodyJobGroupExportProgress getExportProgress() {
             return this.exportProgress;
+        }
+
+        public ModifyJobGroupResponseBodyJobGroup setFlashSmsExtras(String flashSmsExtras) {
+            this.flashSmsExtras = flashSmsExtras;
+            return this;
+        }
+        public String getFlashSmsExtras() {
+            return this.flashSmsExtras;
         }
 
         public ModifyJobGroupResponseBodyJobGroup setJobDataParsingTaskId(String jobDataParsingTaskId) {

@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyScriptResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Script")
     public ModifyScriptResponseBodyScript script;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,27 @@ public class ModifyScriptResponseBody extends TeaModel {
     }
 
     public static class ModifyScriptResponseBodyScript extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DRAFTED</p>
+         */
         @NameInMap("DebugStatus")
         public String debugStatus;
 
         @NameInMap("Industry")
         public String industry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDebugDrafted")
         public Boolean isDebugDrafted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
@@ -94,15 +126,27 @@ public class ModifyScriptResponseBody extends TeaModel {
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c153d0d8-ba04-41c0-8632-453944c9dd0b</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
         @NameInMap("ScriptName")
         public String scriptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLISHED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578881227000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

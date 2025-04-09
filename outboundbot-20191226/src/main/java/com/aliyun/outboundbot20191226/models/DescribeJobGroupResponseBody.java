@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("JobGroup")
     public DescribeJobGroupResponseBodyJobGroup jobGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,24 @@ public class DescribeJobGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeJobGroupResponseBodyJobGroupExportProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-shanghai.aliyuncs.com/xx.zip">https://oss-cn-shanghai.aliyuncs.com/xx.zip</a></p>
+         */
         @NameInMap("FileHttpUrl")
         public String fileHttpUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -116,10 +148,48 @@ public class DescribeJobGroupResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeJobGroupResponseBodyJobGroupFlashSmsExtras extends TeaModel {
+        @NameInMap("ConfigId")
+        public String configId;
+
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        public static DescribeJobGroupResponseBodyJobGroupFlashSmsExtras build(java.util.Map<String, ?> map) throws Exception {
+            DescribeJobGroupResponseBodyJobGroupFlashSmsExtras self = new DescribeJobGroupResponseBodyJobGroupFlashSmsExtras();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeJobGroupResponseBodyJobGroupFlashSmsExtras setConfigId(String configId) {
+            this.configId = configId;
+            return this;
+        }
+        public String getConfigId() {
+            return this.configId;
+        }
+
+        public DescribeJobGroupResponseBodyJobGroupFlashSmsExtras setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+    }
+
     public static class DescribeJobGroupResponseBodyJobGroupProgressBriefs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>score</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -147,9 +217,17 @@ public class DescribeJobGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeJobGroupResponseBodyJobGroupProgressCategories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -180,39 +258,83 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         @NameInMap("Briefs")
         public java.util.List<DescribeJobGroupResponseBodyJobGroupProgressBriefs> briefs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Cancelled")
         public Integer cancelled;
 
         @NameInMap("Categories")
         public java.util.List<DescribeJobGroupResponseBodyJobGroupProgressCategories> categories;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Executing")
         public Integer executing;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Failed")
         public Integer failed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Paused")
         public Integer paused;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Scheduling")
         public Integer scheduling;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578881227404</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Executing</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalCompleted")
         public Integer totalCompleted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalJobs")
         public Integer totalJobs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalNotAnswered")
         public Integer totalNotAnswered;
 
@@ -328,12 +450,24 @@ public class DescribeJobGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeJobGroupResponseBodyJobGroupRecallStrategy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EmptyNumberIgnore")
         public Boolean emptyNumberIgnore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("InArrearsIgnore")
         public Boolean inArrearsIgnore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OutOfServiceIgnore")
         public Boolean outOfServiceIgnore;
 
@@ -369,18 +503,38 @@ public class DescribeJobGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeJobGroupResponseBodyJobGroupResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ClientHangupNum")
         public Integer clientHangupNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FinishedNum")
         public Integer finishedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NoInteractNum")
         public Integer noInteractNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TimeoutHangupNum")
         public Integer timeoutHangupNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UnrecognizedNum")
         public Integer unrecognizedNum;
 
@@ -432,9 +586,17 @@ public class DescribeJobGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeJobGroupResponseBodyJobGroupStrategyWorkingTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
@@ -462,45 +624,92 @@ public class DescribeJobGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeJobGroupResponseBodyJobGroupStrategy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Customized")
         public String customized;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579881227404</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NONE</p>
+         */
         @NameInMap("FollowUpStrategy")
         public String followUpStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsTemplate")
         public Boolean isTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaxAttemptsPerDay")
         public Integer maxAttemptsPerDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MinAttemptInterval")
         public Integer minAttemptInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Once</p>
+         */
         @NameInMap("RepeatBy")
         public String repeatBy;
 
         @NameInMap("RepeatDays")
         public java.util.List<String> repeatDays;
 
+        @NameInMap("Repeatable")
+        public Boolean repeatable;
+
+        /**
+         * <strong>example:</strong>
+         * <p>LocalFirst</p>
+         */
         @NameInMap("RoutingStrategy")
         public String routingStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578881227404</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
         @NameInMap("StrategyDescription")
         public String strategyDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a2bff22c-2604-4df2-83d6-5952e2438c5a</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 
         @NameInMap("StrategyName")
         public String strategyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Repeatable</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -576,6 +785,14 @@ public class DescribeJobGroupResponseBody extends TeaModel {
             return this.repeatDays;
         }
 
+        public DescribeJobGroupResponseBodyJobGroupStrategy setRepeatable(Boolean repeatable) {
+            this.repeatable = repeatable;
+            return this;
+        }
+        public Boolean getRepeatable() {
+            return this.repeatable;
+        }
+
         public DescribeJobGroupResponseBodyJobGroupStrategy setRoutingStrategy(String routingStrategy) {
             this.routingStrategy = routingStrategy;
             return this;
@@ -638,38 +855,72 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578881227404</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         @NameInMap("ExportProgress")
         public DescribeJobGroupResponseBodyJobGroupExportProgress exportProgress;
 
+        @NameInMap("FlashSmsExtras")
+        public DescribeJobGroupResponseBodyJobGroupFlashSmsExtras flashSmsExtras;
+
+        /**
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401/a5a9a310-b902-4674-a6e1-29975cbaa312_100.xlsx</p>
+         */
         @NameInMap("JobDataParsingTaskId")
         public String jobDataParsingTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>da37319b-6c83-4268-9f19-814aed62e401/a5a9a310-b902-4674-a6e1-29975cbaa312_100.xlsx</p>
+         */
         @NameInMap("JobFilePath")
         public String jobFilePath;
 
         @NameInMap("JobGroupDescription")
         public String jobGroupDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46a9ad0c-3e11-44da-a9a7-2c21bf5ce185</p>
+         */
         @NameInMap("JobGroupId")
         public String jobGroupId;
 
         @NameInMap("JobGroupName")
         public String jobGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinConcurrency")
         public Long minConcurrency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578881227404</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
         @NameInMap("Progress")
         public DescribeJobGroupResponseBodyJobGroupProgress progress;
+
+        @NameInMap("RecallCallingNumbers")
+        public java.util.List<String> recallCallingNumbers;
 
         @NameInMap("RecallStrategy")
         public DescribeJobGroupResponseBodyJobGroupRecallStrategy recallStrategy;
@@ -677,21 +928,41 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         @NameInMap("Result")
         public DescribeJobGroupResponseBodyJobGroupResult result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("RingingDuration")
         public Long ringingDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
+         */
         @NameInMap("ScenarioId")
         public String scenarioId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49f00b0d-78ac-4d51-91de-a9e8e92b8470</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
         @NameInMap("ScriptName")
         public String scriptName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49f00b0d-78ac-4d51-91de-a9e8e92b8470</p>
+         */
         @NameInMap("ScriptVersion")
         public String scriptVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Completed</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -725,6 +996,14 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         }
         public DescribeJobGroupResponseBodyJobGroupExportProgress getExportProgress() {
             return this.exportProgress;
+        }
+
+        public DescribeJobGroupResponseBodyJobGroup setFlashSmsExtras(DescribeJobGroupResponseBodyJobGroupFlashSmsExtras flashSmsExtras) {
+            this.flashSmsExtras = flashSmsExtras;
+            return this;
+        }
+        public DescribeJobGroupResponseBodyJobGroupFlashSmsExtras getFlashSmsExtras() {
+            return this.flashSmsExtras;
         }
 
         public DescribeJobGroupResponseBodyJobGroup setJobDataParsingTaskId(String jobDataParsingTaskId) {
@@ -797,6 +1076,14 @@ public class DescribeJobGroupResponseBody extends TeaModel {
         }
         public DescribeJobGroupResponseBodyJobGroupProgress getProgress() {
             return this.progress;
+        }
+
+        public DescribeJobGroupResponseBodyJobGroup setRecallCallingNumbers(java.util.List<String> recallCallingNumbers) {
+            this.recallCallingNumbers = recallCallingNumbers;
+            return this;
+        }
+        public java.util.List<String> getRecallCallingNumbers() {
+            return this.recallCallingNumbers;
         }
 
         public DescribeJobGroupResponseBodyJobGroup setRecallStrategy(DescribeJobGroupResponseBodyJobGroupRecallStrategy recallStrategy) {

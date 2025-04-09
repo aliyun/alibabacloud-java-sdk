@@ -4,12 +4,30 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DeleteDialogueFlowRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40a1457a-d2f3-43cf-ac81-c9e14cf07d88</p>
+     */
     @NameInMap("DialogueFlowId")
     public String dialogueFlowId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>361c8a53-0e29-42f3-8aa7-c7752d010399</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d7c28efb-47f7-4a85-a522-5038e30a0b98</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 

@@ -4,9 +4,17 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GetAsrServerInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>024f8cf0-c842-4c01-b74b-c8667e4579c7</p>
+     */
     @NameInMap("EntryId")
     public String entryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("StrategyLevel")
     public Integer strategyLevel;
 

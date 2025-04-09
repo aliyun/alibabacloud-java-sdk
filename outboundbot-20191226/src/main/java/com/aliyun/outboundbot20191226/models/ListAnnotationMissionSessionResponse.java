@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.outboundbot20191226.models;
+
+import com.aliyun.tea.*;
+
+public class ListAnnotationMissionSessionResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public ListAnnotationMissionSessionResponseBody body;
+
+    public static ListAnnotationMissionSessionResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAnnotationMissionSessionResponse self = new ListAnnotationMissionSessionResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListAnnotationMissionSessionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListAnnotationMissionSessionResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public ListAnnotationMissionSessionResponse setBody(ListAnnotationMissionSessionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListAnnotationMissionSessionResponseBody getBody() {
+        return this.body;
+    }
+
+}

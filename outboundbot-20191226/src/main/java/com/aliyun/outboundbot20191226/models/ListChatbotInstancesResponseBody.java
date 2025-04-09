@@ -7,27 +7,59 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     @NameInMap("Bots")
     public java.util.List<ListChatbotInstancesResponseBodyBots> bots;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -109,24 +141,44 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     }
 
     public static class ListChatbotInstancesResponseBodyBots extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8">https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8</a></p>
+         */
         @NameInMap("Avatar")
         public String avatar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-18T02:36:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e874fcf0-d2f4-4e62-9377-b6f35fe55210</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("Introduction")
         public String introduction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh-cn</p>
+         */
         @NameInMap("LanguageCode")
         public String languageCode;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 

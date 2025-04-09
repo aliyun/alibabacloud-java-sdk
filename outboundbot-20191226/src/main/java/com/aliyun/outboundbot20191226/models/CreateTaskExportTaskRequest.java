@@ -4,81 +4,179 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskExportTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1646496000000</p>
+     */
     @NameInMap("ActualTimeGte")
     public Long actualTimeGte;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1646582400000</p>
+     */
     @NameInMap("ActualTimeLte")
     public Long actualTimeLte;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("CallDurationGte")
     public Long callDurationGte;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("CallDurationLte")
     public Long callDurationLte;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11111111111</p>
+     */
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasAnswered")
     public Boolean hasAnswered;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasHangUpByRejection")
     public Boolean hasHangUpByRejection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HasReachedEndOfFlow")
     public Boolean hasReachedEndOfFlow;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1dcb09c5-d5db-4397-bf65-db854463beea</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cb731aee-0a5b-4c2b-924c-d9e82eb1d8d7</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
     @NameInMap("JobGroupNameQuery")
     public String jobGroupNameQuery;
 
+    /**
+     * <strong>example:</strong>
+     * <p>82097dd5-54df-475f-beba-eec8f4b7a3e1</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("JobStatusStringList")
     public String jobStatusStringList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64ebe700-91b4-49cb-b457-0b7c0b598a86</p>
+     */
     @NameInMap("OtherId")
     public String otherId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("PageIndex")
     public Integer pageIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("RecordingDurationGte")
     public Long recordingDurationGte;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("RecordingDurationLte")
     public Long recordingDurationLte;
 
     @NameInMap("ScriptNameQuery")
     public String scriptNameQuery;
 
+    /**
+     * <strong>example:</strong>
+     * <p>actualTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1646496000000</p>
+     */
     @NameInMap("TaskCreateTimeGte")
     public Long taskCreateTimeGte;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1646582400000</p>
+     */
     @NameInMap("TaskCreateTimeLte")
     public Long taskCreateTimeLte;
 
+    /**
+     * <strong>example:</strong>
+     * <p>64ebe700-91b4-49cb-b457-0b7c0b598a86</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded,Failed</p>
+     */
     @NameInMap("TaskStatusStringList")
     public String taskStatusStringList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>82097dd5-54df-475f-beba-eec8f4b7a3e1</p>
+     */
     @NameInMap("UserIdMatch")
     public String userIdMatch;
 

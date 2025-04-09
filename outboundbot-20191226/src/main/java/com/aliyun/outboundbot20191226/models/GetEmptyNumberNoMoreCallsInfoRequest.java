@@ -4,9 +4,19 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GetEmptyNumberNoMoreCallsInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db3e679b-7d5e-4d9b-828a-345adca455f3</p>
+     */
     @NameInMap("EntryId")
     public String entryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("StrategyLevel")
     public Integer strategyLevel;
 

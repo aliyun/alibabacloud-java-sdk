@@ -4,24 +4,61 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListScriptRecordingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c209abb3-6804-4a75-b2c7-dd55c8c61b6a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RefIdsJson")
+    public String refIdsJson;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d004cfd2-6a81-491c-83c6-cbe186620c95</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
     @NameInMap("Search")
     public String search;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[
+     *      &quot;8&quot;
+     * ]</p>
+     */
     @NameInMap("StatesJson")
     public String statesJson;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;]</p>
+     */
     @NameInMap("UuidsJson")
     public String uuidsJson;
 
@@ -52,6 +89,14 @@ public class ListScriptRecordingRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListScriptRecordingRequest setRefIdsJson(String refIdsJson) {
+        this.refIdsJson = refIdsJson;
+        return this;
+    }
+    public String getRefIdsJson() {
+        return this.refIdsJson;
     }
 
     public ListScriptRecordingRequest setScriptId(String scriptId) {

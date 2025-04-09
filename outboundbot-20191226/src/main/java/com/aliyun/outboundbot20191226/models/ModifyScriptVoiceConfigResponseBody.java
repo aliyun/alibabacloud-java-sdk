@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ScriptVoiceConfig")
     public ModifyScriptVoiceConfigResponseBodyScriptVoiceConfig scriptVoiceConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +96,44 @@ public class ModifyScriptVoiceConfigResponseBody extends TeaModel {
     }
 
     public static class ModifyScriptVoiceConfigResponseBodyScriptVoiceConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bdd49242-114c-4045-b1d1-25ccc1756c75</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("ScriptContent")
         public String scriptContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1d7a26e0-628b-4c3c-9918-7f2e23273f54</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4ddea690-6534-4c88-9cbd-0b5882ec64c0</p>
+         */
         @NameInMap("ScriptVoiceConfigId")
         public String scriptVoiceConfigId;
 
         @NameInMap("ScriptWaveformRelation")
         public String scriptWaveformRelation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DIALOGUE_FLOW</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WAVEFORM</p>
+         */
         @NameInMap("Type")
         public String type;
 

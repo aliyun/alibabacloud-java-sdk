@@ -4,9 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class TerminateCallRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1528189846043</p>
+     */
     @NameInMap("CallId")
     public String callId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>174952ab-9825-4cc9-a5e2-de82d7fa4cdd</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

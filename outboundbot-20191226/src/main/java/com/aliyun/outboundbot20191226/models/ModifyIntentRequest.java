@@ -4,24 +4,52 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyIntentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IntentDescription")
     public String intentDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3b9a2b33-50d4-4576-8c68-22498f4bf731</p>
+     */
     @NameInMap("IntentId")
     public String intentId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IntentName")
     public String intentName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("Keywords")
     public String keywords;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9b70486f-b1c2-429c-8a24-62798015ab1b</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Utterances")
     public String utterances;
 

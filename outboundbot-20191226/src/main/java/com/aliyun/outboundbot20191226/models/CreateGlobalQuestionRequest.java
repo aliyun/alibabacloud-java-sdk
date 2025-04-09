@@ -4,21 +4,48 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalQuestionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Answers")
     public String answers;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GlobalQuestionName")
     public String globalQuestionName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COMMON</p>
+     */
     @NameInMap("GlobalQuestionType")
     public String globalQuestionType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>174952ab-9825-4cc9-a5e2-de82d7fa4cdd</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Questions")
     public String questions;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36fea72b-d6fa-4974-ace7-19ffe3f622fb</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 

@@ -4,12 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DeleteScriptWaveformRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ScriptWaveformId")
     public String scriptWaveformId;
 

@@ -4,21 +4,45 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Progress")
     public DescribeJobDataParsingTaskProgressResponseBodyProgress progress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +100,41 @@ public class DescribeJobDataParsingTaskProgressResponseBody extends TeaModel {
     }
 
     public static class DescribeJobDataParsingTaskProgressResponseBodyProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Permission.JobStatus</p>
+         */
         @NameInMap("FailErrorCode")
         public String failErrorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CreateCorpus</p>
+         */
         @NameInMap("FailReason")
         public String failReason;
 
         @NameInMap("FeedbackUrl")
         public String feedbackUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("HandledJobCount")
         public Integer handledJobCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pending</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalJobCount")
         public Integer totalJobCount;
 

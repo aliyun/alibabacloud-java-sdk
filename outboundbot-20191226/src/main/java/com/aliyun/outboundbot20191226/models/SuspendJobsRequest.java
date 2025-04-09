@@ -4,21 +4,49 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class SuspendJobsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6b3ea2a1-32b3-4041-842b-9bde5de9dda0</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11994321-e6bc-47bb-8b1c-8eef8f2f768b</p>
+     */
     @NameInMap("JobId")
     public java.util.List<String> jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>de3ab269-6746-477c-b13d-bd49f13202c2</p>
+     */
     @NameInMap("JobReferenceId")
     public java.util.List<String> jobReferenceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4b6dd926-3cc3-4111-a333-15d9b006fe81</p>
+     */
     @NameInMap("ScenarioId")
     public String scenarioId;
 

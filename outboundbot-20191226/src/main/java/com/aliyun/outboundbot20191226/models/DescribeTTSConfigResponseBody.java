@@ -4,18 +4,38 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeTTSConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f765d3ee-ec03-4765-b235-6877501d99d1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,18 +99,38 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Managed</p>
+         */
         @NameInMap("NlsServiceType")
         public String nlsServiceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-150</p>
+         */
         @NameInMap("SpeechRate")
         public String speechRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaoyun</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Volume")
         public String volume;
 

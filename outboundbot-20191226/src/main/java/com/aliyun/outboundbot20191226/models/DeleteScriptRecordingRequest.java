@@ -4,12 +4,30 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DeleteScriptRecordingRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1eefcb81-cd58-4143-8180-6a962d79d708</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dcc42f0d-cfd8-4866-9bbf-002042503745</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[
+     *       &quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;
+     * ]</p>
+     */
     @NameInMap("UuidsJson")
     public String uuidsJson;
 

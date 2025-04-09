@@ -4,9 +4,18 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ImportScriptRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NluEngine")
+    public String nluEngine;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SignatureUrl")
     public String signatureUrl;
 
@@ -21,6 +30,14 @@ public class ImportScriptRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ImportScriptRequest setNluEngine(String nluEngine) {
+        this.nluEngine = nluEngine;
+        return this;
+    }
+    public String getNluEngine() {
+        return this.nluEngine;
     }
 
     public ImportScriptRequest setSignatureUrl(String signatureUrl) {

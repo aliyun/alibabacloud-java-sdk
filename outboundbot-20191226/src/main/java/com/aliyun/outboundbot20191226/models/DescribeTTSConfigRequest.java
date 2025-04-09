@@ -4,9 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeTTSConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ec0c897-b92c-40e4-9ad7-e6e4f5ce13bb</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d7fbd0a0-27bc-49c4-a456-ecb75e79122b</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 

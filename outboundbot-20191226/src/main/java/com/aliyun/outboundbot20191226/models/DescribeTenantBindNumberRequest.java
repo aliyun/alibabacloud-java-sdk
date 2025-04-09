@@ -4,6 +4,10 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantBindNumberRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>95187</p>
+     */
     @NameInMap("Number")
     public String number;
 

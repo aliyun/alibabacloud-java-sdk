@@ -4,18 +4,38 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagHitsSummaryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5391EB13-A0E7-402D-A407-B99D4ABAF22A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -89,16 +109,27 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     public static class DescribeTagHitsSummaryResponseBodyTagGroups extends TeaModel {
         /**
          * <p>ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8bb6f8ca-85a3-49f8-86a5-3127902a2156</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>84fc7c41-f918-4a47-b742-a439b35a8567</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
         @NameInMap("TagGroup")
         public String tagGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TagGroupIndex")
         public Integer tagGroupIndex;
 
@@ -142,6 +173,10 @@ public class DescribeTagHitsSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeTagHitsSummaryResponseBodyTagHitsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("HitCount")
         public Integer hitCount;
 

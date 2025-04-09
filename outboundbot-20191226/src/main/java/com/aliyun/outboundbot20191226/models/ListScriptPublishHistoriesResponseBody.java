@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListScriptPublishHistoriesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ScriptPublishHistories")
     public ListScriptPublishHistoriesResponseBodyScriptPublishHistories scriptPublishHistories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,15 +99,31 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578965079000</p>
+         */
         @NameInMap("PublishTime")
         public Long publishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>29420f65-8f1f-4009-b2f8-f4f7b5d59090</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578965079000</p>
+         */
         @NameInMap("ScriptVersion")
         public String scriptVersion;
 
@@ -142,12 +178,24 @@ public class ListScriptPublishHistoriesResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListScriptPublishHistoriesResponseBodyScriptPublishHistoriesList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

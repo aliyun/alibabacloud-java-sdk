@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeIntentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Intent")
     public DescribeIntentResponseBodyIntent intent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,12 +96,20 @@ public class DescribeIntentResponseBody extends TeaModel {
     }
 
     public static class DescribeIntentResponseBodyIntent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1578469042851</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
         @NameInMap("IntentDescription")
         public String intentDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a8494b35-eefb-4c8a-887b-b60d2f0fa57a</p>
+         */
         @NameInMap("IntentId")
         public String intentId;
 
@@ -91,9 +119,17 @@ public class DescribeIntentResponseBody extends TeaModel {
         @NameInMap("Keywords")
         public String keywords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6ef95fd5-558f-4ee8-af34-b2ede087a87c</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578469042851</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

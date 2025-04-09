@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListGlobalQuestionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("GlobalQuestions")
     public ListGlobalQuestionsResponseBodyGlobalQuestions globalQuestions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,18 +99,30 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         @NameInMap("Answers")
         public String answers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>53c27755-d41e-46a6-bb3c-4f66f257d50c</p>
+         */
         @NameInMap("GlobalQuestionId")
         public String globalQuestionId;
 
         @NameInMap("GlobalQuestionName")
         public String globalQuestionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
         @NameInMap("GlobalQuestionType")
         public String globalQuestionType;
 
         @NameInMap("Questions")
         public String questions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aa279896-64a6-4182-864c-4f2b04ec8d17</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
@@ -153,12 +185,24 @@ public class ListGlobalQuestionsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListGlobalQuestionsResponseBodyGlobalQuestionsList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

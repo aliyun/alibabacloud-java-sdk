@@ -4,23 +4,52 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static ListInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesResponseBody self = new ListInstancesResponseBody();
@@ -59,6 +88,22 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ListInstancesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListInstancesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public ListInstancesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -75,10 +120,26 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static class ListInstancesResponseBodyInstancesResourceTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -106,18 +167,34 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1578469042851</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34234</p>
+         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -127,15 +204,31 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("IsPreset")
         public Boolean isPreset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxConcurrentConversation")
         public Integer maxConcurrentConversation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("ResourceTags")
         public java.util.List<ListInstancesResponseBodyInstancesResourceTags> resourceTags;
 

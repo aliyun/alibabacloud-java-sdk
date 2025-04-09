@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Instance")
     public CreateInstanceResponseBodyInstance instance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,30 +96,58 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyInstance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1578469042851</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>435986</p>
+         */
         @NameInMap("CreatorId")
         public Long creatorId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("MaxConcurrentConversation")
         public Integer maxConcurrentConversation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

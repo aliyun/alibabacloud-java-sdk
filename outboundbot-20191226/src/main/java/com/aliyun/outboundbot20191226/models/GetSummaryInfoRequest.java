@@ -4,6 +4,10 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GetSummaryInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 

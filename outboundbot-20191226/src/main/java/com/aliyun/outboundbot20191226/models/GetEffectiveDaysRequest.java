@@ -4,9 +4,19 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class GetEffectiveDaysRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e90b5b8e-c8b4-4182-b28d-a5aa81685e49</p>
+     */
     @NameInMap("EntryId")
     public String entryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("StrategyLevel")
     public Integer strategyLevel;
 

@@ -4,9 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class WithdrawScriptReviewRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>38d2e8ed-04e9-4dac-83b5-a8e57642ef13</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e4e2a770-b97b-465a-80d8-06dca008c503</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 

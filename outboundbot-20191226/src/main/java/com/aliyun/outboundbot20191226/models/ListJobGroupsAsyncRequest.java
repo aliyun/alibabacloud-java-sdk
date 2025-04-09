@@ -4,6 +4,12 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListJobGroupsAsyncRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6243d904-939d-42ce-a8e4-886a139e77a3</p>
+     */
     @NameInMap("AsyncTaskId")
     public String asyncTaskId;
 

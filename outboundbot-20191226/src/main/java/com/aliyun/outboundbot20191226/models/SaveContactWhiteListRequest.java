@@ -4,12 +4,26 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class SaveContactWhiteListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ContactWhiteListList")
     public java.util.List<String> contactWhiteListList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ContactWhiteListsJson")
     public String contactWhiteListsJson;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c415bb6c-2e6f-46aa-afd9-3b65b6dbe2bc</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

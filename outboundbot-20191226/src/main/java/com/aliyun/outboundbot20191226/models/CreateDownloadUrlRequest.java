@@ -4,9 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class CreateDownloadUrlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>137da36b41304bcd999a0a7895dc6881</p>
+     */
     @NameInMap("DownloadTaskId")
     public String downloadTaskId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6f91885fa24b4c408d8f4eb392fd8ae6</p>
+     */
     @NameInMap("FileId")
     public String fileId;
 

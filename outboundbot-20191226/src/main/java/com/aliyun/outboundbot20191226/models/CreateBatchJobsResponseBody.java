@@ -7,18 +7,38 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     @NameInMap("BatchJob")
     public CreateBatchJobsResponseBodyBatchJob batchJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +96,17 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     }
 
     public static class CreateBatchJobsResponseBodyBatchJobStrategyWorkingTime extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>09:00:00</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12:00:00</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
@@ -106,45 +134,89 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     }
 
     public static class CreateBatchJobsResponseBodyBatchJobStrategy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Customized")
         public String customized;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2209702074000</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONTINUE</p>
+         */
         @NameInMap("FollowUpStrategy")
         public String followUpStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsTemplate")
         public Boolean isTemplate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxAttemptsPerDay")
         public Integer maxAttemptsPerDay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MinAttemptInterval")
         public Integer minAttemptInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Once</p>
+         */
         @NameInMap("RepeatBy")
         public String repeatBy;
 
         @NameInMap("RepeatDays")
         public java.util.List<String> repeatDays;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LocalFirst</p>
+         */
         @NameInMap("RoutingStrategy")
         public String routingStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578550074000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
         @NameInMap("StrategyDescription")
         public String strategyDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f718798d-96be-40e4-bef6-317b54855708</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 
         @NameInMap("StrategyName")
         public String strategyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Repeatable</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -279,15 +351,27 @@ public class CreateBatchJobsResponseBody extends TeaModel {
     }
 
     public static class CreateBatchJobsResponseBodyBatchJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5a7e8b09-baf9-4cab-b540-c971f47a7146</p>
+         */
         @NameInMap("BatchJobId")
         public String batchJobId;
 
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579068424000</p>
+         */
         @NameInMap("CreationTime")
         public Long creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</p>
+         */
         @NameInMap("JobFilePath")
         public String jobFilePath;
 
@@ -297,6 +381,10 @@ public class CreateBatchJobsResponseBody extends TeaModel {
         @NameInMap("JobGroupName")
         public String jobGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6cea9bed-63e6-439e-ae4c-b3333efff53d</p>
+         */
         @NameInMap("ScenarioId")
         public String scenarioId;
 

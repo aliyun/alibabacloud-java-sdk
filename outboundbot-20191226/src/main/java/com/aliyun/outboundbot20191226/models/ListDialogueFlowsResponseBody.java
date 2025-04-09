@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListDialogueFlowsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("DialogueFlows")
     public java.util.List<ListDialogueFlowsResponseBodyDialogueFlows> dialogueFlows;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,18 +99,34 @@ public class ListDialogueFlowsResponseBody extends TeaModel {
         @NameInMap("DialogueFlowDefinition")
         public String dialogueFlowDefinition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dae01529-3c3e-458e-b07a-97643d09ebb9</p>
+         */
         @NameInMap("DialogueFlowId")
         public String dialogueFlowId;
 
         @NameInMap("DialogueFlowName")
         public String dialogueFlowName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MainFlow</p>
+         */
         @NameInMap("DialogueFlowType")
         public String dialogueFlowType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2d5aa451-661f-4f08-b0c4-28eec78decc4</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1569220563549</p>
+         */
         @NameInMap("ScriptVersion")
         public String scriptVersion;
 

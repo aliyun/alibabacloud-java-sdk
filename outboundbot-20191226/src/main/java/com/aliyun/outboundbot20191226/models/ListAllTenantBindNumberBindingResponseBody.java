@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public ListAllTenantBindNumberBindingResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A4BEAB4B-C810-5386-B72A-1A35FF1E6B15</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,15 +99,27 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
         @NameInMap("BillingType")
         public String billingType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b5bfb844-ce85-4779-bc8f-161fba46aa07</p>
+         */
         @NameInMap("BindingId")
         public String bindingId;
 
         @NameInMap("InstanceNameList")
         public java.util.List<String> instanceNameList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15005059355</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;rateLimitPeriod\&quot;:\&quot;1\&quot;,\&quot;rateLimitCount\&quot;:\&quot;1\&quot;}</p>
+         */
         @NameInMap("SerializedParams")
         public String serializedParams;
 

@@ -4,15 +4,33 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyTagGroupsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cd560e89-0459-4c8a-ad98-47d713e4abd6</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365b955d-6f4d-4ab5-a6e1-9a301307f4b1</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TagGroups")
     public String tagGroups;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

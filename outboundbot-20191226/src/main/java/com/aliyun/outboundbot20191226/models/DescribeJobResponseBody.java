@@ -4,21 +4,45 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Job")
     public DescribeJobResponseBodyJob job;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +100,10 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobContacts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
@@ -85,18 +113,40 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("Honorific")
         public String honorific;
 
+        /**
+         * <strong>example:</strong>
+         * <p>72dcd26b-f12d-4c27-b3af-18f6aed5b160</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1358****8888</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -172,9 +222,17 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobExtras extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>djrq</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-08-21 09:49:59.0</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -202,24 +260,48 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobScript extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;AppKey\&quot;:\&quot;3GHttnsvir1FeWWb\&quot;}</p>
+         */
         @NameInMap("AsrConfig")
         public String asrConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chatbot-cn-EJfqqa***</p>
+         */
         @NameInMap("ChatbotId")
         public String chatbotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DRAFTED</p>
+         */
         @NameInMap("DebugStatus")
         public String debugStatus;
 
         @NameInMap("Industry")
         public String industry;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDebugDrafted")
         public Boolean isDebugDrafted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("MiniPlaybackConfigEnabled")
         public Boolean miniPlaybackConfigEnabled;
 
@@ -232,15 +314,31 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>810b5872-57f0-4b27-80ab-7b3f4d8a6374</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DRAFTED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;voice\&quot;:\&quot;xiaobei\&quot;,\&quot;volume\&quot;:\&quot;50\&quot;,\&quot;speechRate\&quot;:\&quot;-150\&quot;,\&quot;pitchRate\&quot;:\&quot;0\&quot;}</p>
+         */
         @NameInMap("TtsConfig")
         public String ttsConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1578881227000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -364,12 +462,24 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>score</p>
+         */
         @NameInMap("SummaryName")
         public String summaryName;
 
@@ -405,6 +515,10 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobTasksContact extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>db3db762-e421-44c9-9a01-cb423470757c</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
@@ -414,18 +528,40 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("Honorific")
         public String honorific;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1351****8888</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2fa6bac3-06da-4315-82ab-72d6fd3a6f34</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -501,12 +637,24 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobTasksConversationSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>score</p>
+         */
         @NameInMap("SummaryName")
         public String summaryName;
 
@@ -542,24 +690,48 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobTasksConversation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Broadcast</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ActionParams")
         public String actionParams;
 
         @NameInMap("Script")
         public String script;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fd279983-93b9-b13b-9a34-64e5df473225</p>
+         */
         @NameInMap("SequenceId")
         public String sequenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Robot</p>
+         */
         @NameInMap("Speaker")
         public String speaker;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Summary")
         public java.util.List<DescribeJobResponseBodyJobTasksConversationSummary> summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579068424883</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -627,57 +799,142 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJobTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1579068424883</p>
+         */
         @NameInMap("ActualTime")
         public Long actualTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Brief")
         public String brief;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1528189846043</p>
+         */
         @NameInMap("CallId")
         public String callId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>135****8888</p>
+         */
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0571****3106</p>
+         */
         @NameInMap("CallingNumber")
         public String callingNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("ChatbotId")
         public String chatbotId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Contact")
         public DescribeJobResponseBodyJobTasksContact contact;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Conversation")
         public java.util.List<DescribeJobResponseBodyJobTasksConversation> conversation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
+         */
         @NameInMap("EndReason")
         public String endReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579068424883</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>client</p>
+         */
         @NameInMap("HangUpDirection")
         public String hangUpDirection;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1579068424883</p>
+         */
         @NameInMap("PlanedTime")
         public Long planedTime;
 
+        @NameInMap("RealRingingDuration")
+        public Long realRingingDuration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("RingingDuration")
         public Long ringingDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
+         */
         @NameInMap("ScenarioId")
         public String scenarioId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("SipCode")
+        public String sipCode;
+
+        @NameInMap("SipDuration")
+        public Long sipDuration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ff44709e-39a6-43ba-959b-20fcabe3e496</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -798,6 +1055,14 @@ public class DescribeJobResponseBody extends TeaModel {
             return this.planedTime;
         }
 
+        public DescribeJobResponseBodyJobTasks setRealRingingDuration(Long realRingingDuration) {
+            this.realRingingDuration = realRingingDuration;
+            return this;
+        }
+        public Long getRealRingingDuration() {
+            return this.realRingingDuration;
+        }
+
         public DescribeJobResponseBodyJobTasks setRingingDuration(Long ringingDuration) {
             this.ringingDuration = ringingDuration;
             return this;
@@ -812,6 +1077,22 @@ public class DescribeJobResponseBody extends TeaModel {
         }
         public String getScenarioId() {
             return this.scenarioId;
+        }
+
+        public DescribeJobResponseBodyJobTasks setSipCode(String sipCode) {
+            this.sipCode = sipCode;
+            return this;
+        }
+        public String getSipCode() {
+            return this.sipCode;
+        }
+
+        public DescribeJobResponseBodyJobTasks setSipDuration(Long sipDuration) {
+            this.sipDuration = sipDuration;
+            return this;
+        }
+        public Long getSipDuration() {
+            return this.sipDuration;
         }
 
         public DescribeJobResponseBodyJobTasks setStatus(String status) {
@@ -833,66 +1114,148 @@ public class DescribeJobResponseBody extends TeaModel {
     }
 
     public static class DescribeJobResponseBodyJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1640068026385</p>
+         */
         @NameInMap("ActualTime")
         public Long actualTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>137****7777</p>
+         */
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;057126883106&quot;]</p>
+         */
         @NameInMap("CallingNumbers")
         public java.util.List<String> callingNumbers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Contacts")
         public java.util.List<DescribeJobResponseBodyJobContacts> contacts;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("DsReport")
         public String dsReport;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EndReason")
         public Integer endReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Extras")
         public java.util.List<DescribeJobResponseBodyJobExtras> extras;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NoAnswer</p>
+         */
         @NameInMap("FailureReason")
         public String failureReason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fce6c599-8ede-40e3-9f78-0928eda7b4e8</p>
+         */
         @NameInMap("JobGroupId")
         public String jobGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b72425bd-7871-4050-838e-033d80d754b7</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640068026385</p>
+         */
         @NameInMap("NextExecutionTime")
         public Long nextExecutionTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d5971d98-7312-4f0e-a918-a17d67133e28</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ade80092-03d9-4f4d-ad4f-ab8a247d3150</p>
+         */
         @NameInMap("ScenarioId")
         public String scenarioId;
 
         @NameInMap("Script")
         public DescribeJobResponseBodyJobScript script;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c8a2b7f2-ad1a-4865-b872-d0080d9802d9</p>
+         */
         @NameInMap("StrategyId")
         public String strategyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Summary")
         public java.util.List<DescribeJobResponseBodyJobSummary> summary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SystemPriority")
         public Integer systemPriority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("Tasks")
         public java.util.List<DescribeJobResponseBodyJobTasks> tasks;
 

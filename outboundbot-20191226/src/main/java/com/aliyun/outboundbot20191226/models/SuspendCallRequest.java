@@ -4,12 +4,26 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class SuspendCallRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("CalledNumbers")
     public java.util.List<String> calledNumbers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f745881b-343d-43e4-9c51-31b7b063031c</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a5fc6490-ef1e-4666-870a-07a4e586c414</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

@@ -7,24 +7,48 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
     @NameInMap("AppliedVersion")
     public DescribeNumberDistrictInfoStatusResponseBodyAppliedVersion appliedVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>successful.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("ParsingVersion")
     public DescribeNumberDistrictInfoStatusResponseBodyParsingVersion parsingVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>66165274-82CC-5E7D-96D7-89143BAEA138</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Empty</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,12 +122,24 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeNumberDistrictInfoStatusResponseBodyAppliedVersion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3.mkv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>93</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>402681645884289024</p>
+         */
         @NameInMap("VersionId")
         public String versionId;
 
@@ -139,15 +175,31 @@ public class DescribeNumberDistrictInfoStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeNumberDistrictInfoStatusResponseBodyParsingVersion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>template (3).xlsx</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>659968</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ParseProgress")
         public Long parseProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64615</p>
+         */
         @NameInMap("VersionId")
         public String versionId;
 

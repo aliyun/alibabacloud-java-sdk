@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DialogueResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Feedback")
     public DialogueResponseBodyFeedback feedback;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,6 +96,10 @@ public class DialogueResponseBody extends TeaModel {
     }
 
     public static class DialogueResponseBodyFeedback extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>broadcast</p>
+         */
         @NameInMap("Action")
         public String action;
 
@@ -85,9 +109,19 @@ public class DialogueResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>已废弃</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("ContentParams")
         public String contentParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Interruptible")
         public Boolean interruptible;
 

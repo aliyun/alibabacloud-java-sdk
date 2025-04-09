@@ -4,18 +4,34 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;95187&quot;]</p>
+     */
     @NameInMap("CallingNumber")
     public java.util.List<String> callingNumber;
 
     @NameInMap("InstanceDescription")
     public String instanceDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MaxConcurrentConversation")
     public Integer maxConcurrentConversation;
 

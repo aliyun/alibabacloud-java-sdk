@@ -7,30 +7,72 @@ public class QueryJobsRequest extends TeaModel {
     @NameInMap("ContactName")
     public String contactName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1579077794665</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>994b8baf-7ef8-480c-b141-b7b6db77c4df</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>135****8888</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b0f35dd1-0337-402e-9c4f-3a6c2426950a</p>
+     */
     @NameInMap("ScenarioId")
     public String scenarioId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1579068424883</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>start</p>
+     */
     @NameInMap("TimeAlignment")
     public String timeAlignment;
 

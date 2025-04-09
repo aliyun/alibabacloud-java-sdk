@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListOutboundCallNumbersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("OutboundCallNumbers")
     public ListOutboundCallNumbersResponseBodyOutboundCallNumbers outboundCallNumbers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,31 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
     }
 
     public static class ListOutboundCallNumbersResponseBodyOutboundCallNumbersList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10088</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fa0e21e9-caab-4629-9121-1e341243d599</p>
+         */
         @NameInMap("OutboundCallNumberId")
         public String outboundCallNumberId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("RateLimitCount")
         public String rateLimitCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RateLimitPeriod")
         public String rateLimitPeriod;
 
@@ -131,12 +167,24 @@ public class ListOutboundCallNumbersResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListOutboundCallNumbersResponseBodyOutboundCallNumbersList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

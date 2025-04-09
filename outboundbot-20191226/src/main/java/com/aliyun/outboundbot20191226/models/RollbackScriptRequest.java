@@ -4,12 +4,30 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class RollbackScriptRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1579055782000</p>
+     */
     @NameInMap("RollbackVersion")
     public String rollbackVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>303523b1-0094-4ebe-b9ed-c23d11c91d61</p>
+     */
     @NameInMap("ScriptId")
     public String scriptId;
 

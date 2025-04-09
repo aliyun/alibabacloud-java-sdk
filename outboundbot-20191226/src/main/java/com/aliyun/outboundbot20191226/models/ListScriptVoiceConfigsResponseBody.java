@@ -4,21 +4,41 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class ListScriptVoiceConfigsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ScriptVoiceConfigs")
     public ListScriptVoiceConfigsResponseBodyScriptVoiceConfigs scriptVoiceConfigs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,24 +96,48 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListScriptVoiceConfigsResponseBodyScriptVoiceConfigsList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bdd49242-114c-4045-b1d1-25ccc1756c75</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("ScriptContent")
         public String scriptContent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a7441a05-43bb-4a2d-acb0-365f245d7a5b</p>
+         */
         @NameInMap("ScriptId")
         public String scriptId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2c8fa91f-9856-4145-90f2-08252f09bc18</p>
+         */
         @NameInMap("ScriptVoiceConfigId")
         public String scriptVoiceConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("ScriptWaveformRelation")
         public String scriptWaveformRelation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DIALOGUE_FLOW</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TTS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -164,12 +208,24 @@ public class ListScriptVoiceConfigsResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListScriptVoiceConfigsResponseBodyScriptVoiceConfigsList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

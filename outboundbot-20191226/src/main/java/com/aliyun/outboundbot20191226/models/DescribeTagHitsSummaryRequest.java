@@ -4,9 +4,21 @@ package com.aliyun.outboundbot20191226.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagHitsSummaryRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</p>
+     */
     @NameInMap("JobGroupId")
     public String jobGroupId;
 
