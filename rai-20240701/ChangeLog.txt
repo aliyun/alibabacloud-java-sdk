@@ -1,0 +1,9 @@
+2025-04-10 Version: 1.0.0
+- Support API GetModelInputContentDetectResult.
+- Support API GetModelOutputContentDetectResult.
+- Support API ModelInputContentAsyncDetect.
+- Support API ModelInputContentSyncDetect.
+- Support API ModelOutputContentAsyncDetect.
+- Support API ModelOutputContentSyncDetect.
+
+
