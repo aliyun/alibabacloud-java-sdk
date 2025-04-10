@@ -31,6 +31,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("Disks")
+    public java.util.List<DescribeNodeResponseBodyDisks> disks;
+
     /**
      * <p>Expiration time</p>
      * 
@@ -137,7 +140,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>资源组ID</p>
+     * <p>Resource group ID</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmywpvugkh7kq</p>
@@ -154,6 +157,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("Sn")
     public String sn;
 
+    /**
+     * <p>The script by user defined</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#!/bin/bash
+     * uptime
+     * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -193,6 +204,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribeNodeResponseBody setDisks(java.util.List<DescribeNodeResponseBodyDisks> disks) {
+        this.disks = disks;
+        return this;
+    }
+    public java.util.List<DescribeNodeResponseBodyDisks> getDisks() {
+        return this.disks;
     }
 
     public DescribeNodeResponseBody setExpiredTime(String expiredTime) {
@@ -321,6 +340,69 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribeNodeResponseBodyDisks extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DiskId")
+        public String diskId;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static DescribeNodeResponseBodyDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNodeResponseBodyDisks self = new DescribeNodeResponseBodyDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNodeResponseBodyDisks setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeNodeResponseBodyDisks setDiskId(String diskId) {
+            this.diskId = diskId;
+            return this;
+        }
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        public DescribeNodeResponseBodyDisks setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public DescribeNodeResponseBodyDisks setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public DescribeNodeResponseBodyDisks setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
     public static class DescribeNodeResponseBodyNetworks extends TeaModel {

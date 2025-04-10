@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeGroupRequest extends TeaModel {
     /**
+     * <p>Node group name</p>
+     * 
      * <strong>example:</strong>
      * <p>test-update</p>
      */
@@ -12,12 +14,22 @@ public class UpdateNodeGroupRequest extends TeaModel {
     public String newNodeGroupName;
 
     /**
+     * <p>Node group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i120021051733814190732</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>user data</p>
+     * 
+     * <strong>example:</strong>
+     * <p>#!/bin/bash
+     * uptime
+     * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

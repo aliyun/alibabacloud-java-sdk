@@ -134,9 +134,21 @@ public class ListClusterNodesResponseBody extends TeaModel {
     }
 
     public static class ListClusterNodesResponseBodyNodesTags extends TeaModel {
+        /**
+         * <p>The key of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_value</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -164,6 +176,12 @@ public class ListClusterNodesResponseBody extends TeaModel {
     }
 
     public static class ListClusterNodesResponseBodyNodes extends TeaModel {
+        /**
+         * <p>product code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bcccluster</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
@@ -212,6 +230,12 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>image name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alinux3_x86_AMD_R_Host_D3_E3_24.13.00_UEFI_N_250121</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
@@ -275,14 +299,23 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <p>tag information</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListClusterNodesResponseBodyNodesTags> tags;
 
+        /**
+         * <p>task id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i28ddkdkkdkdd</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>专有网络交换机ID</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1mxqhw8o20tgv3xk47h</p>
@@ -291,7 +324,7 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>专有网络ID</p>
+         * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jltf9vinjz3if3lltdy7</p>

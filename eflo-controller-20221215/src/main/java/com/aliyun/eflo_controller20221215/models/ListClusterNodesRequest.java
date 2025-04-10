@@ -41,9 +41,18 @@ public class ListClusterNodesRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>resource group id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-xxkxkllss</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>tag information</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListClusterNodesRequestTags> tags;
 
@@ -101,9 +110,21 @@ public class ListClusterNodesRequest extends TeaModel {
     }
 
     public static class ListClusterNodesRequestTags extends TeaModel {
+        /**
+         * <p>The key of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_value</p>
+         */
         @NameInMap("Value")
         public String value;
 

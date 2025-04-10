@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupRequest extends TeaModel {
     /**
+     * <p>Cluster ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,11 +15,15 @@ public class CreateNodeGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Node ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroup")
     public CreateNodeGroupRequestNodeGroup nodeGroup;
 
+    /**
+     * <p>Node information</p>
+     */
     @NameInMap("NodeUnit")
     public java.util.Map<String, ?> nodeUnit;
 
@@ -51,8 +56,50 @@ public class CreateNodeGroupRequest extends TeaModel {
         return this.nodeUnit;
     }
 
+    public static class CreateNodeGroupRequestNodeGroupSystemDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        public static CreateNodeGroupRequestNodeGroupSystemDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateNodeGroupRequestNodeGroupSystemDisk self = new CreateNodeGroupRequestNodeGroupSystemDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNodeGroupRequestNodeGroupSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public CreateNodeGroupRequestNodeGroupSystemDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public CreateNodeGroupRequestNodeGroupSystemDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
     public static class CreateNodeGroupRequestNodeGroup extends TeaModel {
         /**
+         * <p>Availability Zone</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -62,6 +109,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String az;
 
         /**
+         * <p>Image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -71,6 +119,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String imageId;
 
         /**
+         * <p>Machine type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -79,10 +128,17 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("MachineType")
         public String machineType;
 
+        /**
+         * <p>Node group description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>describe for node group</p>
+         */
         @NameInMap("NodeGroupDescription")
         public String nodeGroupDescription;
 
         /**
+         * <p>Node group name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -91,6 +147,17 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
+        @NameInMap("SystemDisk")
+        public CreateNodeGroupRequestNodeGroupSystemDisk systemDisk;
+
+        /**
+         * <p>user data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>#!/bin/bash
+         * uptime
+         * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -137,6 +204,14 @@ public class CreateNodeGroupRequest extends TeaModel {
         }
         public String getNodeGroupName() {
             return this.nodeGroupName;
+        }
+
+        public CreateNodeGroupRequestNodeGroup setSystemDisk(CreateNodeGroupRequestNodeGroupSystemDisk systemDisk) {
+            this.systemDisk = systemDisk;
+            return this;
+        }
+        public CreateNodeGroupRequestNodeGroupSystemDisk getSystemDisk() {
+            return this.systemDisk;
         }
 
         public CreateNodeGroupRequestNodeGroup setUserData(String userData) {

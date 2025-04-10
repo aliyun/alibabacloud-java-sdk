@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticResultResponseBody extends TeaModel {
     /**
+     * <p>Cluster ID</p>
+     * 
      * <strong>example:</strong>
      * <p>i118913031696573280136</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Device creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-15T10:17:56</p>
      */
@@ -19,16 +23,23 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String createdTime;
 
     /**
+     * <p>Diagnostic ID</p>
+     * 
      * <strong>example:</strong>
      * <p>diag-i155363241720059671316</p>
      */
     @NameInMap("DiagnosticId")
     public String diagnosticId;
 
+    /**
+     * <p>Diagnostic Information</p>
+     */
     @NameInMap("DiagnosticResults")
     public java.util.List<?> diagnosticResults;
 
     /**
+     * <p>Diagnostic State</p>
+     * 
      * <strong>example:</strong>
      * <p>Fault</p>
      */
@@ -36,6 +47,8 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String diagnosticState;
 
     /**
+     * <p>Diagnostic Type</p>
+     * 
      * <strong>example:</strong>
      * <p>CheckByAiJobLogs</p>
      */
@@ -43,16 +56,23 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
     public String diagnosticType;
 
     /**
+     * <p>End time of node anomaly issues. Represented according to the ISO8601 standard, in a timezone-aware format, formatted as yyyy-MM-ddTHH:mm:ss+0800</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-06-11T10:00:30</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>List of Node IDs</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
      */

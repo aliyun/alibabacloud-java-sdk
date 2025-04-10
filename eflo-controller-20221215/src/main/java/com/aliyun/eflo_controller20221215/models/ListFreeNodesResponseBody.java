@@ -58,9 +58,21 @@ public class ListFreeNodesResponseBody extends TeaModel {
     }
 
     public static class ListFreeNodesResponseBodyNodesTags extends TeaModel {
+        /**
+         * <p>The key of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_vakye</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -88,6 +100,12 @@ public class ListFreeNodesResponseBody extends TeaModel {
     }
 
     public static class ListFreeNodesResponseBodyNodes extends TeaModel {
+        /**
+         * <p>Product Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bccluster_eflocomputing_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
@@ -136,6 +154,12 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>Node status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unused</p>
+         */
         @NameInMap("OperatingState")
         public String operatingState;
 
@@ -157,6 +181,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("Sn")
         public String sn;
 
+        /**
+         * <p>Tags Info</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListFreeNodesResponseBodyNodesTags> tags;
 

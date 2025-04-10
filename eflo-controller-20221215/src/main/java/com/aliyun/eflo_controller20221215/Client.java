@@ -481,8 +481,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建集群下的节点分组</p>
+     * <p>Create Node Group under Cluster</p>
      * 
      * @param tmpReq CreateNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -536,8 +539,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建集群下的节点分组</p>
+     * <p>Create Node Group under Cluster</p>
      * 
      * @param request CreateNodeGroupRequest
      * @return CreateNodeGroupResponse
@@ -660,8 +666,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除节点分组</p>
+     * <p>Delete Node Group</p>
      * 
      * @param request DeleteNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -701,8 +710,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除节点分组</p>
+     * <p>Delete Node Group</p>
      * 
      * @param request DeleteNodeGroupRequest
      * @return DeleteNodeGroupResponse
@@ -762,8 +774,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>诊断任务查询接口</p>
+     * <p>Diagnostic Task Query Interface</p>
      * 
      * @param request DescribeDiagnosticResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -799,8 +814,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>诊断任务查询接口</p>
+     * <p>Diagnostic Task Query Interface</p>
      * 
      * @param request DescribeDiagnosticResultRequest
      * @return DescribeDiagnosticResultResponse
@@ -2587,8 +2605,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新节点分组</p>
+     * <p>Update Node Group</p>
      * 
      * @param request UpdateNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2632,8 +2653,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新节点分组</p>
+     * <p>Update Node Group</p>
      * 
      * @param request UpdateNodeGroupRequest
      * @return UpdateNodeGroupResponse

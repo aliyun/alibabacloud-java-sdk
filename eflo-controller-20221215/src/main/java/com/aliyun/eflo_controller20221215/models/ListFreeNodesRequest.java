@@ -49,6 +49,9 @@ public class ListFreeNodesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Tag information</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListFreeNodesRequestTags> tags;
 
@@ -106,12 +109,20 @@ public class ListFreeNodesRequest extends TeaModel {
     }
 
     public static class ListFreeNodesRequestTags extends TeaModel {
+        /**
+         * <p>The key of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key_aa</p>
+         */
         @NameInMap("Key")
         public String key;
 
         /**
+         * <p>The value of tag object</p>
+         * 
          * <strong>example:</strong>
-         * <p>129</p>
+         * <p>value_aa</p>
          */
         @NameInMap("Value")
         public String value;

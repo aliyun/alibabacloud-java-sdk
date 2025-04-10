@@ -1,3 +1,19 @@
+2025-04-10 Version: 2.3.3
+- Update API CreateCluster: add request parameters NodeGroups.$.SystemDisk.
+- Update API CreateNodeGroup: add request parameters NodeGroup.SystemDisk.
+- Update API DescribeNode: add response parameters Body.Disks.
+- Update API ExtendCluster: add request parameters IpAllocationPolicy.$.NodePolicy.$.Hostname.
+- Update API ExtendCluster: add request parameters NodeGroups.$.Amount.
+- Update API ExtendCluster: add request parameters NodeGroups.$.AutoRenew.
+- Update API ExtendCluster: add request parameters NodeGroups.$.ChargeType.
+- Update API ExtendCluster: add request parameters NodeGroups.$.Hostnames.
+- Update API ExtendCluster: add request parameters NodeGroups.$.LoginPassword.
+- Update API ExtendCluster: add request parameters NodeGroups.$.NodeTag.
+- Update API ExtendCluster: add request parameters NodeGroups.$.Period.
+- Update API ExtendCluster: add request parameters NodeGroups.$.VSwitchId.
+- Update API ExtendCluster: add request parameters NodeGroups.$.VpcId.
+
+
 2025-03-28 Version: 2.3.2
 - Generated java 2022-12-15 for eflo-controller.
 

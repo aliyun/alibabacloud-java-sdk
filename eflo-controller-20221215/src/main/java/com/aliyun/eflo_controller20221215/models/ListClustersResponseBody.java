@@ -58,9 +58,21 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static class ListClustersResponseBodyClustersTags extends TeaModel {
+        /**
+         * <p>The key of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa_value</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -196,6 +208,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>tag information</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListClustersResponseBodyClustersTags> tags;
 

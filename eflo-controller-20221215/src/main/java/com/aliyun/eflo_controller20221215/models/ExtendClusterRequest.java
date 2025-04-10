@@ -314,6 +314,15 @@ public class ExtendClusterRequest extends TeaModel {
         public java.util.List<ExtendClusterRequestIpAllocationPolicyNodePolicyBonds> bonds;
 
         /**
+         * <p>Host name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i22c11282.eu95sqa</p>
+         */
+        @NameInMap("Hostname")
+        public String hostname;
+
+        /**
          * <p>Node ID</p>
          * 
          * <strong>example:</strong>
@@ -333,6 +342,14 @@ public class ExtendClusterRequest extends TeaModel {
         }
         public java.util.List<ExtendClusterRequestIpAllocationPolicyNodePolicyBonds> getBonds() {
             return this.bonds;
+        }
+
+        public ExtendClusterRequestIpAllocationPolicyNodePolicy setHostname(String hostname) {
+            this.hostname = hostname;
+            return this;
+        }
+        public String getHostname() {
+            return this.hostname;
         }
 
         public ExtendClusterRequestIpAllocationPolicyNodePolicy setNodeId(String nodeId) {
@@ -391,6 +408,48 @@ public class ExtendClusterRequest extends TeaModel {
         }
         public java.util.List<ExtendClusterRequestIpAllocationPolicyNodePolicy> getNodePolicy() {
             return this.nodePolicy;
+        }
+
+    }
+
+    public static class ExtendClusterRequestNodeGroupsNodeTag extends TeaModel {
+        /**
+         * <p>The key of tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_key</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The value of tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my_value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ExtendClusterRequestNodeGroupsNodeTag build(java.util.Map<String, ?> map) throws Exception {
+            ExtendClusterRequestNodeGroupsNodeTag self = new ExtendClusterRequestNodeGroupsNodeTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ExtendClusterRequestNodeGroupsNodeTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ExtendClusterRequestNodeGroupsNodeTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -490,6 +549,62 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroups extends TeaModel {
         /**
+         * <p>Number of nodes to purchase. Value range: 0–500.</p>
+         * <p>If the Amount parameter is set to 0, no nodes will be purchased. Existing nodes will be used for scaling.
+         * If the Amount parameter is set to 1–500, the specified number of nodes will be purchased and used for scaling.
+         * Default value: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("Amount")
+        public Long amount;
+
+        /**
+         * <p>Whether to enable auto-renewal for purchased nodes.
+         * Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.
+         * Valid values:</p>
+         * <p>True: Enable auto-renewal.
+         * False: Disable auto-renewal.
+         * Default value: False</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
+
+        /**
+         * <p>Billing method for nodes.
+         * This parameter takes effect only when the Amount parameter is set to a value other than 0.
+         * Valid values:</p>
+         * <p>PrePaid: Subscription (prepaid).
+         * PostPaid: Pay-as-you-go (postpaid).
+         * Default value: PrePaid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
+         */
+        @NameInMap("ChargeType")
+        public String chargeType;
+
+        /**
+         * <p>The hostnames of purchased nodes.
+         * This parameter takes effect only when the Amount parameter is set to a non-zero value.</p>
+         */
+        @NameInMap("Hostnames")
+        public java.util.List<String> hostnames;
+
+        /**
+         * <p>The login password of node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Addk(*78</p>
+         */
+        @NameInMap("LoginPassword")
+        public String loginPassword;
+
+        /**
          * <p>Node Group ID</p>
          * 
          * <strong>example:</strong>
@@ -499,10 +614,27 @@ public class ExtendClusterRequest extends TeaModel {
         public String nodeGroupId;
 
         /**
+         * <p>The tag of node</p>
+         */
+        @NameInMap("NodeTag")
+        public java.util.List<ExtendClusterRequestNodeGroupsNodeTag> nodeTag;
+
+        /**
          * <p>List of Nodes</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ExtendClusterRequestNodeGroupsNodes> nodes;
+
+        /**
+         * <p>Purchase duration for nodes (unit: month).
+         * Valid values: 1, 6, 12, 24, 36, 48.
+         * Conditions: This parameter takes effect only when the Amount parameter is set to a non-zero value and the ChargeType is PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
+        @NameInMap("Period")
+        public Long period;
 
         /**
          * <p>Custom Data</p>
@@ -513,6 +645,24 @@ public class ExtendClusterRequest extends TeaModel {
          */
         @NameInMap("UserData")
         public String userData;
+
+        /**
+         * <p>VSwitch Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-0jly2d537ejphyq6h13ke</p>
+         */
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        /**
+         * <p>Vpc Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-zq1econyv63tvyci5hefw</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
 
         /**
          * <p>Zone ID</p>
@@ -528,12 +678,60 @@ public class ExtendClusterRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ExtendClusterRequestNodeGroups setAmount(Long amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Long getAmount() {
+            return this.amount;
+        }
+
+        public ExtendClusterRequestNodeGroups setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public ExtendClusterRequestNodeGroups setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public ExtendClusterRequestNodeGroups setHostnames(java.util.List<String> hostnames) {
+            this.hostnames = hostnames;
+            return this;
+        }
+        public java.util.List<String> getHostnames() {
+            return this.hostnames;
+        }
+
+        public ExtendClusterRequestNodeGroups setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
+            return this;
+        }
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
         public ExtendClusterRequestNodeGroups setNodeGroupId(String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
             return this;
         }
         public String getNodeGroupId() {
             return this.nodeGroupId;
+        }
+
+        public ExtendClusterRequestNodeGroups setNodeTag(java.util.List<ExtendClusterRequestNodeGroupsNodeTag> nodeTag) {
+            this.nodeTag = nodeTag;
+            return this;
+        }
+        public java.util.List<ExtendClusterRequestNodeGroupsNodeTag> getNodeTag() {
+            return this.nodeTag;
         }
 
         public ExtendClusterRequestNodeGroups setNodes(java.util.List<ExtendClusterRequestNodeGroupsNodes> nodes) {
@@ -544,12 +742,36 @@ public class ExtendClusterRequest extends TeaModel {
             return this.nodes;
         }
 
+        public ExtendClusterRequestNodeGroups setPeriod(Long period) {
+            this.period = period;
+            return this;
+        }
+        public Long getPeriod() {
+            return this.period;
+        }
+
         public ExtendClusterRequestNodeGroups setUserData(String userData) {
             this.userData = userData;
             return this;
         }
         public String getUserData() {
             return this.userData;
+        }
+
+        public ExtendClusterRequestNodeGroups setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public ExtendClusterRequestNodeGroups setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public ExtendClusterRequestNodeGroups setZoneId(String zoneId) {

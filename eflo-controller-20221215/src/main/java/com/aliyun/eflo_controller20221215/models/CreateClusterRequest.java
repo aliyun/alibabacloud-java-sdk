@@ -1047,6 +1047,47 @@ public class CreateClusterRequest extends TeaModel {
 
     }
 
+    public static class CreateClusterRequestNodeGroupsSystemDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        public static CreateClusterRequestNodeGroupsSystemDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNodeGroupsSystemDisk self = new CreateClusterRequestNodeGroupsSystemDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNodeGroupsSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public CreateClusterRequestNodeGroupsSystemDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public CreateClusterRequestNodeGroupsSystemDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
     public static class CreateClusterRequestNodeGroups extends TeaModel {
         /**
          * <p>System image ID</p>
@@ -1089,6 +1130,9 @@ public class CreateClusterRequest extends TeaModel {
          */
         @NameInMap("Nodes")
         public java.util.List<CreateClusterRequestNodeGroupsNodes> nodes;
+
+        @NameInMap("SystemDisk")
+        public CreateClusterRequestNodeGroupsSystemDisk systemDisk;
 
         /**
          * <p>Instance custom data. It needs to be Base64 encoded, and the original data should not exceed 16 KB.</p>
@@ -1151,6 +1195,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public java.util.List<CreateClusterRequestNodeGroupsNodes> getNodes() {
             return this.nodes;
+        }
+
+        public CreateClusterRequestNodeGroups setSystemDisk(CreateClusterRequestNodeGroupsSystemDisk systemDisk) {
+            this.systemDisk = systemDisk;
+            return this;
+        }
+        public CreateClusterRequestNodeGroupsSystemDisk getSystemDisk() {
+            return this.systemDisk;
         }
 
         public CreateClusterRequestNodeGroups setUserData(String userData) {
