@@ -243,6 +243,36 @@ public class GetAppResponseBody extends TeaModel {
 
     }
 
+    public static class GetAppResponseBodyResultTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static GetAppResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAppResponseBodyResultTags self = new GetAppResponseBodyResultTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAppResponseBodyResultTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAppResponseBodyResultTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetAppResponseBodyResult extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -260,6 +290,9 @@ public class GetAppResponseBody extends TeaModel {
 
         @NameInMap("appType")
         public String appType;
+
+        @NameInMap("chargeType")
+        public String chargeType;
 
         /**
          * <strong>example:</strong>
@@ -301,12 +334,18 @@ public class GetAppResponseBody extends TeaModel {
         @NameInMap("regionId")
         public String regionId;
 
+        @NameInMap("scenario")
+        public String scenario;
+
         /**
          * <strong>example:</strong>
          * <p>ACTIVE</p>
          */
         @NameInMap("status")
         public String status;
+
+        @NameInMap("tags")
+        public java.util.List<GetAppResponseBodyResultTags> tags;
 
         /**
          * <strong>example:</strong>
@@ -342,6 +381,14 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getAppType() {
             return this.appType;
+        }
+
+        public GetAppResponseBodyResult setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public GetAppResponseBodyResult setCreateTime(String createTime) {
@@ -408,12 +455,28 @@ public class GetAppResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public GetAppResponseBodyResult setScenario(String scenario) {
+            this.scenario = scenario;
+            return this;
+        }
+        public String getScenario() {
+            return this.scenario;
+        }
+
         public GetAppResponseBodyResult setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetAppResponseBodyResult setTags(java.util.List<GetAppResponseBodyResultTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetAppResponseBodyResultTags> getTags() {
+            return this.tags;
         }
 
         public GetAppResponseBodyResult setVersion(String version) {

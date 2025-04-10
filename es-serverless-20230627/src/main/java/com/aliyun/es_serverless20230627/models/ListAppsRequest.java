@@ -53,6 +53,9 @@ public class ListAppsRequest extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("tags")
+    public String tags;
+
     public static ListAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppsRequest self = new ListAppsRequest();
         return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class ListAppsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListAppsRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

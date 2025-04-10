@@ -44,8 +44,14 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("scenario")
     public String scenario;
 
+    @NameInMap("tags")
+    public java.util.List<CreateAppRequestTags> tags;
+
     @NameInMap("version")
     public String version;
+
+    @NameInMap("clientToken")
+    public String clientToken;
 
     @NameInMap("dryRun")
     public Boolean dryRun;
@@ -127,12 +133,28 @@ public class CreateAppRequest extends TeaModel {
         return this.scenario;
     }
 
+    public CreateAppRequest setTags(java.util.List<CreateAppRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateAppRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateAppRequest setVersion(String version) {
         this.version = version;
         return this;
     }
     public String getVersion() {
         return this.version;
+    }
+
+    public CreateAppRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateAppRequest setDryRun(Boolean dryRun) {
@@ -415,6 +437,36 @@ public class CreateAppRequest extends TeaModel {
         }
         public Integer getStorage() {
             return this.storage;
+        }
+
+    }
+
+    public static class CreateAppRequestTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateAppRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppRequestTags self = new CreateAppRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAppRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
