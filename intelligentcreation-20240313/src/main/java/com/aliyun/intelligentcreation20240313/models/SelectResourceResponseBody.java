@@ -4,6 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class SelectResourceResponseBody extends TeaModel {
+    @NameInMap("aliyunUid")
+    public String aliyunUid;
+
     /**
      * <strong>example:</strong>
      * <p>0E8B1746-AE35-5C4B-A3A8-345B274AE32C</p>
@@ -17,6 +20,14 @@ public class SelectResourceResponseBody extends TeaModel {
     public static SelectResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SelectResourceResponseBody self = new SelectResourceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SelectResourceResponseBody setAliyunUid(String aliyunUid) {
+        this.aliyunUid = aliyunUid;
+        return this;
+    }
+    public String getAliyunUid() {
+        return this.aliyunUid;
     }
 
     public SelectResourceResponseBody setRequestId(String requestId) {
