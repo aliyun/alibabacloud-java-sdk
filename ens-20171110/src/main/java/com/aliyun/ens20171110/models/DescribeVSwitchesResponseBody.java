@@ -91,6 +91,55 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return this.vSwitches;
     }
 
+    public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag self = new DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag> tag;
+
+        public static DescribeVSwitchesResponseBodyVSwitchesVSwitchTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchesResponseBodyVSwitchesVSwitchTags self = new DescribeVSwitchesResponseBodyVSwitchesVSwitchTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags setTag(java.util.List<DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitch extends TeaModel {
         /**
          * <p>The IPv4 CIDR block of the vSwitch.</p>
@@ -158,6 +207,9 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags;
 
         /**
          * <p>The ID of the vSwitch.</p>
@@ -236,6 +288,14 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setTags(DescribeVSwitchesResponseBodyVSwitchesVSwitchTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTags getTags() {
+            return this.tags;
         }
 
         public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchId(String vSwitchId) {

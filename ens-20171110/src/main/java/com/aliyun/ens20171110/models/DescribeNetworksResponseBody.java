@@ -110,6 +110,55 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNetworksResponseBodyNetworksNetworkTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeNetworksResponseBodyNetworksNetworkTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworksResponseBodyNetworksNetworkTagsTag self = new DescribeNetworksResponseBodyNetworksNetworkTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribeNetworksResponseBodyNetworksNetworkTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeNetworksResponseBodyNetworksNetworkTagsTag> tag;
+
+        public static DescribeNetworksResponseBodyNetworksNetworkTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworksResponseBodyNetworksNetworkTags self = new DescribeNetworksResponseBodyNetworksNetworkTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkTags setTag(java.util.List<DescribeNetworksResponseBodyNetworksNetworkTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeNetworksResponseBodyNetworksNetworkTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeNetworksResponseBodyNetworksNetworkVSwitchIds extends TeaModel {
         @NameInMap("VSwitchId")
         public java.util.List<String> vSwitchId;
@@ -242,6 +291,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public DescribeNetworksResponseBodyNetworksNetworkTags tags;
+
         /**
          * <p>The list of vSwitches in the network.</p>
          */
@@ -347,6 +399,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setTags(DescribeNetworksResponseBodyNetworksNetworkTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeNetworksResponseBodyNetworksNetworkTags getTags() {
+            return this.tags;
         }
 
         public DescribeNetworksResponseBodyNetworksNetwork setVSwitchIds(DescribeNetworksResponseBodyNetworksNetworkVSwitchIds vSwitchIds) {

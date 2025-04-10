@@ -156,6 +156,36 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysTags self = new DescribeNatGatewaysResponseBodyNatGatewaysTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeNatGatewaysResponseBodyNatGateways extends TeaModel {
         /**
          * <p>The time when the NAT gateway was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -230,6 +260,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysTags> tags;
 
         /**
          * <p>The ID of the vSwitch.</p>
@@ -307,6 +340,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGateways setTags(java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysTags> getTags() {
+            return this.tags;
         }
 
         public DescribeNatGatewaysResponseBodyNatGateways setVSwitchId(String vSwitchId) {
