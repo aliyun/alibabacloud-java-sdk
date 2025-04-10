@@ -212,12 +212,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request ConfigLayer4RuleRequest
+     * @param tmpReq ConfigLayer4RuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConfigLayer4RuleResponse
      */
-    public ConfigLayer4RuleResponse configLayer4RuleWithOptions(ConfigLayer4RuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ConfigLayer4RuleResponse configLayer4RuleWithOptions(ConfigLayer4RuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ConfigLayer4RuleShrinkRequest request = new ConfigLayer4RuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.usTimeout)) {
+            request.usTimeoutShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.usTimeout, "UsTimeout", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.listeners)) {
             query.put("Listeners", request.listeners);
@@ -225,6 +231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxyEnable)) {
             query.put("ProxyEnable", request.proxyEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usTimeoutShrink)) {
+            query.put("UsTimeout", request.usTimeoutShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -684,12 +694,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request CreateLayer4RuleRequest
+     * @param tmpReq CreateLayer4RuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLayer4RuleResponse
      */
-    public CreateLayer4RuleResponse createLayer4RuleWithOptions(CreateLayer4RuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateLayer4RuleResponse createLayer4RuleWithOptions(CreateLayer4RuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateLayer4RuleShrinkRequest request = new CreateLayer4RuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.usTimeout)) {
+            request.usTimeoutShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.usTimeout, "UsTimeout", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.listeners)) {
             query.put("Listeners", request.listeners);
@@ -697,6 +713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.proxyEnable)) {
             query.put("ProxyEnable", request.proxyEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usTimeoutShrink)) {
+            query.put("UsTimeout", request.usTimeoutShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

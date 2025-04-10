@@ -1,3 +1,9 @@
+2025-04-10 Version: 3.0.1
+- Update API ConfigLayer4Rule: add request parameters UsTimeout.
+- Update API CreateLayer4Rule: add request parameters UsTimeout.
+- Update API DescribeLayer4Rules: add response parameters Body.Listeners.$.UsTimeout.
+
+
 2025-03-12 Version: 3.0.0
 - Delete API DescribeDomainAttackEvents.
 - Delete API DescribeDomainQps.

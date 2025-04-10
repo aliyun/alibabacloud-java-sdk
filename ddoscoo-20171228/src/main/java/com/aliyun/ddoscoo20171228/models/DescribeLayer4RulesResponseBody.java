@@ -57,6 +57,36 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class DescribeLayer4RulesResponseBodyListenersUsTimeout extends TeaModel {
+        @NameInMap("ConnectTimeout")
+        public Long connectTimeout;
+
+        @NameInMap("RsTimeout")
+        public Long rsTimeout;
+
+        public static DescribeLayer4RulesResponseBodyListenersUsTimeout build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLayer4RulesResponseBodyListenersUsTimeout self = new DescribeLayer4RulesResponseBodyListenersUsTimeout();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLayer4RulesResponseBodyListenersUsTimeout setConnectTimeout(Long connectTimeout) {
+            this.connectTimeout = connectTimeout;
+            return this;
+        }
+        public Long getConnectTimeout() {
+            return this.connectTimeout;
+        }
+
+        public DescribeLayer4RulesResponseBodyListenersUsTimeout setRsTimeout(Long rsTimeout) {
+            this.rsTimeout = rsTimeout;
+            return this;
+        }
+        public Long getRsTimeout() {
+            return this.rsTimeout;
+        }
+
+    }
+
     public static class DescribeLayer4RulesResponseBodyListeners extends TeaModel {
         /**
          * <p>The origin server port.</p>
@@ -196,6 +226,9 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
+        @NameInMap("UsTimeout")
+        public DescribeLayer4RulesResponseBodyListenersUsTimeout usTimeout;
+
         public static DescribeLayer4RulesResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             DescribeLayer4RulesResponseBodyListeners self = new DescribeLayer4RulesResponseBodyListeners();
             return TeaModel.build(map, self);
@@ -303,6 +336,14 @@ public class DescribeLayer4RulesResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public DescribeLayer4RulesResponseBodyListeners setUsTimeout(DescribeLayer4RulesResponseBodyListenersUsTimeout usTimeout) {
+            this.usTimeout = usTimeout;
+            return this;
+        }
+        public DescribeLayer4RulesResponseBodyListenersUsTimeout getUsTimeout() {
+            return this.usTimeout;
         }
 
     }

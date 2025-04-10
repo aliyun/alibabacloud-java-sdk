@@ -16,6 +16,9 @@ public class CreateLayer4RuleRequest extends TeaModel {
     @NameInMap("ProxyEnable")
     public Integer proxyEnable;
 
+    @NameInMap("UsTimeout")
+    public CreateLayer4RuleRequestUsTimeout usTimeout;
+
     public static CreateLayer4RuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLayer4RuleRequest self = new CreateLayer4RuleRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,44 @@ public class CreateLayer4RuleRequest extends TeaModel {
     }
     public Integer getProxyEnable() {
         return this.proxyEnable;
+    }
+
+    public CreateLayer4RuleRequest setUsTimeout(CreateLayer4RuleRequestUsTimeout usTimeout) {
+        this.usTimeout = usTimeout;
+        return this;
+    }
+    public CreateLayer4RuleRequestUsTimeout getUsTimeout() {
+        return this.usTimeout;
+    }
+
+    public static class CreateLayer4RuleRequestUsTimeout extends TeaModel {
+        @NameInMap("ConnectTimeout")
+        public Long connectTimeout;
+
+        @NameInMap("RsTimeout")
+        public Long rsTimeout;
+
+        public static CreateLayer4RuleRequestUsTimeout build(java.util.Map<String, ?> map) throws Exception {
+            CreateLayer4RuleRequestUsTimeout self = new CreateLayer4RuleRequestUsTimeout();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLayer4RuleRequestUsTimeout setConnectTimeout(Long connectTimeout) {
+            this.connectTimeout = connectTimeout;
+            return this;
+        }
+        public Long getConnectTimeout() {
+            return this.connectTimeout;
+        }
+
+        public CreateLayer4RuleRequestUsTimeout setRsTimeout(Long rsTimeout) {
+            this.rsTimeout = rsTimeout;
+            return this;
+        }
+        public Long getRsTimeout() {
+            return this.rsTimeout;
+        }
+
     }
 
 }
