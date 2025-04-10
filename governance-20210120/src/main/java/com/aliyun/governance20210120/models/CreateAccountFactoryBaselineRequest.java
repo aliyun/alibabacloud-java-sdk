@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAccountFactoryBaselineRequest extends TeaModel {
     /**
-     * <p>The baseline items.</p>
+     * <p>An array that contains the baseline items.</p>
      * <p>You can call the <a href="~~ListAccountFactoryBaselineItems~~">ListAccountFactoryBaselineItems</a> operation to query a list of baseline items supported by the account factory in Cloud Governance Center.</p>
      */
     @NameInMap("BaselineItems")

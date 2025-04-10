@@ -23,7 +23,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     public String baselineId;
 
     /**
-     * <p>An array that contains baseline items.</p>
+     * <p>The array that contains baseline items.</p>
      */
     @NameInMap("BaselineItems")
     public java.util.List<GetEnrolledAccountResponseBodyBaselineItems> baselineItems;
@@ -78,7 +78,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     public Boolean initialized;
 
     /**
-     * <p>The input parameters that are used when the account was registered.</p>
+     * <p>Input parameters used to create an account.</p>
      */
     @NameInMap("Inputs")
     public GetEnrolledAccountResponseBodyInputs inputs;
@@ -134,7 +134,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the information about the account was updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-11-01T02:38:27Z</p>
@@ -269,7 +269,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     public static class GetEnrolledAccountResponseBodyBaselineItems extends TeaModel {
         /**
-         * <p>The configurations of the baseline item.</p>
+         * <p>The configuration of the baseline item.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</p>
@@ -504,9 +504,21 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     }
 
     public static class GetEnrolledAccountResponseBodyInputsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>governance</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -585,6 +597,9 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         @NameInMap("PayerAccountUid")
         public Long payerAccountUid;
 
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tag")
         public java.util.List<GetEnrolledAccountResponseBodyInputsTag> tag;
 

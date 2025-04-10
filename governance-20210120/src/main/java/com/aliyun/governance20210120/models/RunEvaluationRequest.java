@@ -13,6 +13,9 @@ public class RunEvaluationRequest extends TeaModel {
     @NameInMap("AccountId")
     public Long accountId;
 
+    /**
+     * <p>The IDs of the check items to be checked.</p>
+     */
     @NameInMap("MetricIds")
     public java.util.List<String> metricIds;
 

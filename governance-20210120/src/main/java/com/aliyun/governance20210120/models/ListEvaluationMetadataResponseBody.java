@@ -43,6 +43,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActionsGuidance extends TeaModel {
         /**
          * <p>The display name of the fixing button.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual fixing</p>
          */
         @NameInMap("ButtonName")
         public String buttonName;
@@ -58,12 +61,18 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
         /**
          * <p>The fixing procedure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You must replace the AccessKey pair of your Alibaba Cloud account. To do so, perform the following steps:</br>1. Log on to the RAM console. In the left-side navigation pane, choose Identities &gt; Users. On the Users page, click Create User.</br>2. On the Create User page, enter a logon name and select OpenAPI Access for the Access Mode parameter.</br>3. After the RAM user is created, save the AccessKey pair. Then, find the user that you created on the Users page and click Add Permissions in the Actions column. In the Grant Permission panel, find the AdministratorAccess policy and attach it to the RAM user.</br>4. In a program, replace the AccessKey pair of the Alibaba Cloud account with the AccessKey pair of the RAM user created in the previous step and check whether the program runs as expected in the test environment.</br>5. If the program runs as expected, publish the program to the production environment and disable the previous AccessKey pair of your Alibaba Cloud account. Then, check whether the program runs as expected.</br>6. If the program runs as expected, delete the disabled AccessKey pair after the specified period of time, such as 90 days.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The title of the fixing procedure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scenario 3: AccessKey pair that is used within the last 90 days</p>
          */
         @NameInMap("Title")
         public String title;
@@ -122,6 +131,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
         /**
          * <p>The fixing cost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>You are not charged for this operation.</p>
          */
         @NameInMap("CostDescription")
         public String costDescription;
@@ -131,6 +143,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
          * <blockquote>
          * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Console logon is enabled for the RAM user. The RAM user owns an AccessKey pair that is never used.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -143,6 +158,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
         /**
          * <p>The usage notes of the fixing item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The BestPracticesForIdentityAndPermissions compliance package is enabled in Cloud Config to check the settings and usage of the AccessKey pair, Alibaba Cloud account, and RAM users.</p>
          */
         @NameInMap("Notice")
         public String notice;
@@ -152,6 +170,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
          * <blockquote>
          * <p> This parameter is returned only if the value of <code>RemediationType</code> is <code>Analysis</code>.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Console logon is enabled for the RAM user and the RAM user owns an AccessKey pair, while the AccessKey pair has never been used by the RAM user. We recommend that you disable the AccessKey pair for 90 days. If no related issue occurs during this period, you can delete the AccessKey pair.</p>
          */
         @NameInMap("Suggestion")
         public String suggestion;
@@ -280,6 +301,9 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
     public static class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadataResourcePropertyMetadata extends TeaModel {
         /**
          * <p>The display name of the resource property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessKey Pair Last Used At</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -367,12 +391,18 @@ public class ListEvaluationMetadataResponseBody extends TeaModel {
 
         /**
          * <p>The description of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>If you use an AccessKey pair of an Alibaba Cloud account, you have full permissions on the resources of the account. You cannot set limits on the account, such as setting limits on source IP addresses or access duration. If the AccessKey pair is leaked, resources within the account are exposed to high security risks. If your Alibaba Cloud account has an existing AccessKey pair, the check result is Non-compliant.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>An AccessKey pair is enabled for the Alibaba Cloud account.</p>
          */
         @NameInMap("DisplayName")
         public String displayName;

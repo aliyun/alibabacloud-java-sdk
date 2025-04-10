@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAccountFactoryBaselineItemsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100. Default value: 10</p>
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

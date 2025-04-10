@@ -69,6 +69,9 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The value of the resource attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
@@ -98,12 +101,12 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
     public static class ListEvaluationMetricDetailsResponseBodyResources extends TeaModel {
         /**
-         * <p>合规状态。取值：</p>
+         * <p>The compliance status of the resource. Valid values:</p>
          * <ul>
-         * <li>NonCompliant：不合规。</li>
-         * <li>Excluded：已忽略。</li>
-         * <li>PendingExclusion：已忽略未生效。</li>
-         * <li>PendingInclusion：已取消忽略未生效。</li>
+         * <li>NonCompliant: non-compliant.</li>
+         * <li>Excluded: ignored.</li>
+         * <li>PendingExclusion: to be ignored.</li>
+         * <li>PendingInclusion: to be unignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +137,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         public String resourceClassification;
 
         /**
-         * <p>The resource ID.</p>
+         * <p>The ID of the resource.</p>
          * 
          * <strong>example:</strong>
          * <p>26435103783237****</p>
@@ -144,6 +147,9 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;

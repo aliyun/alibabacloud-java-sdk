@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEnrolledAccountsResponseBody extends TeaModel {
     /**
-     * <p>The accounts.</p>
+     * <p>The enrolled accounts.</p>
      */
     @NameInMap("EnrolledAccounts")
     public java.util.List<ListEnrolledAccountsResponseBodyEnrolledAccounts> enrolledAccounts;
@@ -68,7 +68,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         public Long accountUid;
 
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline that is implemented.</p>
          * 
          * <strong>example:</strong>
          * <p>afb-bp1durvn3lgqe28v****</p>
@@ -77,7 +77,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         public String baselineId;
 
         /**
-         * <p>The time at which the account was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-01T02:38:27Z</p>
@@ -104,7 +104,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>The ID of the billing account.</p>
+         * <p>The ID of the settlement account.</p>
          * 
          * <strong>example:</strong>
          * <p>13161210500*****</p>
@@ -113,14 +113,14 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         public Long payerAccountUid;
 
         /**
-         * <p>The creation status of the account. Valid values:</p>
+         * <p>The creation status. Valid values:</p>
          * <ul>
-         * <li>Pending: The account is waiting to be created.</li>
+         * <li>Pending: The account is pending to be created.</li>
          * <li>Running: The account is being created.</li>
          * <li>Finished: The account is created.</li>
-         * <li>Failed: The account failed to be created.</li>
+         * <li>Failed: The account fails to be created.</li>
          * <li>Scheduling: The account is being scheduled.</li>
-         * <li>ScheduleFailed: The account failed to be scheduled.</li>
+         * <li>ScheduleFailed: The account fails to be scheduled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the information about the account was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-01T02:38:27Z</p>

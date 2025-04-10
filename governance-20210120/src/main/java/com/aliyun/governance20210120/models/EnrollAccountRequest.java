@@ -41,8 +41,8 @@ public class EnrollAccountRequest extends TeaModel {
     public String baselineId;
 
     /**
-     * <p>An array that contains baseline items.</p>
-     * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline of the specified account. The configurations of the same baseline items are subject to the configuration of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configuration of the account baseline to the account.</p>
+     * <p>The array that contains baseline items.</p>
+     * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</p>
      */
     @NameInMap("BaselineItems")
     public java.util.List<EnrollAccountRequestBaselineItems> baselineItems;
@@ -222,7 +222,7 @@ public class EnrollAccountRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether to skip the baseline item. Valid values:</p>
+         * <p>Whether to skip the baseline item. Valid values:</p>
          * <ul>
          * <li>false: The baseline item is not skipped.</li>
          * <li>true: The baseline item is skipped.</li>

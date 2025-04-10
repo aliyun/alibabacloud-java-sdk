@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEvaluationMetricDetailsRequest extends TeaModel {
     /**
-     * <p>The account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+     * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>103144549568****</p>
@@ -50,6 +50,9 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SnapshotId")
+    public String snapshotId;
+
     public static ListEvaluationMetricDetailsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEvaluationMetricDetailsRequest self = new ListEvaluationMetricDetailsRequest();
         return TeaModel.build(map, self);
@@ -93,6 +96,14 @@ public class ListEvaluationMetricDetailsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListEvaluationMetricDetailsRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }
