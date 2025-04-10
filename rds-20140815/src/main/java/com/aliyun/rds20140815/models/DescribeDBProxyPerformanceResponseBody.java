@@ -179,6 +179,9 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        @NameInMap("Node")
+        public String node;
+
         /**
          * <p>The service dimension.</p>
          * 
@@ -214,6 +217,14 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setNode(String node) {
+            this.node = node;
+            return this;
+        }
+        public String getNode() {
+            return this.node;
         }
 
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceKey setService(String service) {
