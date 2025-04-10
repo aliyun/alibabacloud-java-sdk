@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunTagMiningAnalysisShrinkRequest extends TeaModel {
+    @NameInMap("apiKey")
+    public String apiKey;
+
     /**
      * <strong>example:</strong>
      * <p>clueMining</p>
@@ -54,6 +57,14 @@ public class RunTagMiningAnalysisShrinkRequest extends TeaModel {
     public static RunTagMiningAnalysisShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunTagMiningAnalysisShrinkRequest self = new RunTagMiningAnalysisShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunTagMiningAnalysisShrinkRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public RunTagMiningAnalysisShrinkRequest setBusinessType(String businessType) {
