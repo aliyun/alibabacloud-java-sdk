@@ -61,6 +61,9 @@ public class RetrieveRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    @NameInMap("QueryHistory")
+    public java.util.List<RetrieveRequestQueryHistory> queryHistory;
+
     /**
      * <p>Ranking configurations.</p>
      */
@@ -175,6 +178,14 @@ public class RetrieveRequest extends TeaModel {
         return this.query;
     }
 
+    public RetrieveRequest setQueryHistory(java.util.List<RetrieveRequestQueryHistory> queryHistory) {
+        this.queryHistory = queryHistory;
+        return this;
+    }
+    public java.util.List<RetrieveRequestQueryHistory> getQueryHistory() {
+        return this.queryHistory;
+    }
+
     public RetrieveRequest setRerank(java.util.List<RetrieveRequestRerank> rerank) {
         this.rerank = rerank;
         return this;
@@ -229,6 +240,36 @@ public class RetrieveRequest extends TeaModel {
     }
     public Integer getSparseSimilarityTopK() {
         return this.sparseSimilarityTopK;
+    }
+
+    public static class RetrieveRequestQueryHistory extends TeaModel {
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("role")
+        public String role;
+
+        public static RetrieveRequestQueryHistory build(java.util.Map<String, ?> map) throws Exception {
+            RetrieveRequestQueryHistory self = new RetrieveRequestQueryHistory();
+            return TeaModel.build(map, self);
+        }
+
+        public RetrieveRequestQueryHistory setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public RetrieveRequestQueryHistory setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
     }
 
     public static class RetrieveRequestRerank extends TeaModel {

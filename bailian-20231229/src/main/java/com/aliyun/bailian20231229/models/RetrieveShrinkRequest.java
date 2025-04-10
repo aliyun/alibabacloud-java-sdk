@@ -61,6 +61,9 @@ public class RetrieveShrinkRequest extends TeaModel {
     @NameInMap("Query")
     public String query;
 
+    @NameInMap("QueryHistory")
+    public String queryHistoryShrink;
+
     /**
      * <p>Ranking configurations.</p>
      */
@@ -173,6 +176,14 @@ public class RetrieveShrinkRequest extends TeaModel {
     }
     public String getQuery() {
         return this.query;
+    }
+
+    public RetrieveShrinkRequest setQueryHistoryShrink(String queryHistoryShrink) {
+        this.queryHistoryShrink = queryHistoryShrink;
+        return this;
+    }
+    public String getQueryHistoryShrink() {
+        return this.queryHistoryShrink;
     }
 
     public RetrieveShrinkRequest setRerankShrink(String rerankShrink) {

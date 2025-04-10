@@ -1984,6 +1984,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.imagesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.images, "Images", "simple");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryHistory)) {
+            request.queryHistoryShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryHistory, "QueryHistory", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.rerank)) {
             request.rerankShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rerank, "Rerank", "json");
         }
@@ -2019,6 +2023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryHistoryShrink)) {
+            query.put("QueryHistory", request.queryHistoryShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rerankShrink)) {
