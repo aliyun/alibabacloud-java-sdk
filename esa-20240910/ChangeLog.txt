@@ -1,3 +1,15 @@
+2025-04-10 Version: 2.28.0
+- Support API ListCertificatesByRecord.
+- Update API CreateHttpRequestHeaderModificationRule: add request parameters RequestHeaderModification.$.Type.
+- Update API CreateHttpResponseHeaderModificationRule: add request parameters ResponseHeaderModification.$.Type.
+- Update API GetHttpRequestHeaderModificationRule: add response parameters Body.RequestHeaderModification.$.Type.
+- Update API GetHttpResponseHeaderModificationRule: add response parameters Body.ResponseHeaderModification.$.Type.
+- Update API ListHttpRequestHeaderModificationRules: add response parameters Body.Configs.$.RequestHeaderModification.$.Type.
+- Update API ListHttpResponseHeaderModificationRules: add response parameters Body.Configs.$.ResponseHeaderModification.$.Type.
+- Update API UpdateHttpRequestHeaderModificationRule: add request parameters RequestHeaderModification.$.Type.
+- Update API UpdateHttpResponseHeaderModificationRule: add request parameters ResponseHeaderModification.$.Type.
+
+
 2025-04-08 Version: 2.27.0
 - Support API ListRoutineRelatedRecords.
 - Support API ListUserRoutines.

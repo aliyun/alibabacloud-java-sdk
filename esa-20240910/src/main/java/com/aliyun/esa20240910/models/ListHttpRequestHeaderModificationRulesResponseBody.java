@@ -132,6 +132,9 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         @NameInMap("Operation")
         public String operation;
 
+        @NameInMap("Type")
+        public String type;
+
         /**
          * <p>The value of the request header.</p>
          * 
@@ -160,6 +163,14 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
         public String getOperation() {
             return this.operation;
+        }
+
+        public ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListHttpRequestHeaderModificationRulesResponseBodyConfigsRequestHeaderModification setValue(String value) {

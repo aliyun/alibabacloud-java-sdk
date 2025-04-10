@@ -132,6 +132,9 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         @NameInMap("Operation")
         public String operation;
 
+        @NameInMap("Type")
+        public String type;
+
         /**
          * <p>Response header value.</p>
          * 
@@ -160,6 +163,14 @@ public class ListHttpResponseHeaderModificationRulesResponseBody extends TeaMode
         }
         public String getOperation() {
             return this.operation;
+        }
+
+        public ListHttpResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public ListHttpResponseHeaderModificationRulesResponseBodyConfigsResponseHeaderModification setValue(String value) {

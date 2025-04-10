@@ -195,6 +195,9 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         @NameInMap("Operation")
         public String operation;
 
+        @NameInMap("Type")
+        public String type;
+
         /**
          * <p>Response header value.</p>
          * 
@@ -223,6 +226,14 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
         public String getOperation() {
             return this.operation;
+        }
+
+        public GetHttpResponseHeaderModificationRuleResponseBodyResponseHeaderModification setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public GetHttpResponseHeaderModificationRuleResponseBodyResponseHeaderModification setValue(String value) {
