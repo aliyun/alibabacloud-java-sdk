@@ -111,6 +111,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("NodeName")
     public String nodeName;
 
+    @NameInMap("OfficeSiteIds")
+    public java.util.List<String> officeSiteIds;
+
     /**
      * <p>The sales mode.</p>
      * <p>Valid values:</p>
@@ -257,6 +260,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getNodeName() {
         return this.nodeName;
+    }
+
+    public DescribeAndroidInstancesRequest setOfficeSiteIds(java.util.List<String> officeSiteIds) {
+        this.officeSiteIds = officeSiteIds;
+        return this;
+    }
+    public java.util.List<String> getOfficeSiteIds() {
+        return this.officeSiteIds;
     }
 
     public DescribeAndroidInstancesRequest setSaleMode(String saleMode) {

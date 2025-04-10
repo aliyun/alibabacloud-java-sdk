@@ -1576,6 +1576,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NodeName", request.nodeName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.officeSiteIds)) {
+            query.put("OfficeSiteIds", request.officeSiteIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
             query.put("SaleMode", request.saleMode);
         }
