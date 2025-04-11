@@ -30,6 +30,9 @@ public class DeleteTrafficMarkingPolicyRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -71,6 +74,14 @@ public class DeleteTrafficMarkingPolicyRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteTrafficMarkingPolicyRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteTrafficMarkingPolicyRequest setOwnerAccount(String ownerAccount) {

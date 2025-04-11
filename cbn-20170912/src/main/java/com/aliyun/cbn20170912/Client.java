@@ -1889,7 +1889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+     * <p>After you add an aggregate route to a route table of an Enterprise Edition transit router, the transit router advertises its routes only to route tables of associated virtual private clouds (VPCs) and have route synchronization enabled.
      * Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:</p>
      * <ul>
      * <li>Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see <a href="https://help.aliyun.com/document_detail/261242.html">AssociateTransitRouterAttachmentWithRouteTable</a>.</li>
@@ -1984,7 +1984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you add an aggregate route to a route table of an Enterprise Edition transit router, the Enterprise Edition transit router advertises its routes only to route tables of virtual private clouds (VPCs) that are associated with a route table of the Enterprise Edition transit router and have route synchronization enabled.
+     * <p>After you add an aggregate route to a route table of an Enterprise Edition transit router, the transit router advertises its routes only to route tables of associated virtual private clouds (VPCs) and have route synchronization enabled.
      * Perform the following operations before you create an aggregate route. Otherwise, the Enterprise Edition transit router does not advertise routes to VPC route tables:</p>
      * <ul>
      * <li>Associated forwarding is enabled between the VPCs and the Enterprise Edition transit router. For more information, see <a href="https://help.aliyun.com/document_detail/261242.html">AssociateTransitRouterAttachmentWithRouteTable</a>.</li>
@@ -4374,6 +4374,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -7544,7 +7548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can set the <strong>TransitRouteTableId</strong> and <strong>TransitRouteTableAggregationCidr</strong> parameters to specify the aggregate routes that you want to query. If you set only the <strong>TransitRouteTableId</strong> parameter, all aggregate routes in the specified route table are queried.</p>
+     * <p>You can specify the values of the <strong>TransitRouteTableId</strong> and <strong>TransitRouteTableAggregationCidr</strong> parameters to query a specified aggregate route. If you specify only the <strong>TransitRouteTableId</strong> parameter, all aggregated routes in the route table are queried.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the aggregate routes on an Enterprise Edition transit router.</p>
@@ -7616,7 +7620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can set the <strong>TransitRouteTableId</strong> and <strong>TransitRouteTableAggregationCidr</strong> parameters to specify the aggregate routes that you want to query. If you set only the <strong>TransitRouteTableId</strong> parameter, all aggregate routes in the specified route table are queried.</p>
+     * <p>You can specify the values of the <strong>TransitRouteTableId</strong> and <strong>TransitRouteTableAggregationCidr</strong> parameters to query a specified aggregate route. If you specify only the <strong>TransitRouteTableId</strong> parameter, all aggregated routes in the route table are queried.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the aggregate routes on an Enterprise Edition transit router.</p>
@@ -11717,7 +11721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑聚合路由</p>
+     * <p>Edit an aggregate route.</p>
      * 
      * @param tmpReq ModifyTransitRouteTableAggregationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11804,7 +11808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>编辑聚合路由</p>
+     * <p>Edit an aggregate route.</p>
      * 
      * @param request ModifyTransitRouteTableAggregationRequest
      * @return ModifyTransitRouteTableAggregationResponse
@@ -13509,6 +13513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>进行云企业网预付费带宽包临时升配</p>
+     * 
      * @param request TempUpgradeCenBandwidthPackageSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TempUpgradeCenBandwidthPackageSpecResponse
@@ -13567,6 +13574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>进行云企业网预付费带宽包临时升配</p>
+     * 
      * @param request TempUpgradeCenBandwidthPackageSpecRequest
      * @return TempUpgradeCenBandwidthPackageSpecResponse
      */

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouteTableAggregationShrinkRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>Use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>02fb3da4****</p>
      */
@@ -12,6 +18,12 @@ public class ModifyTransitRouteTableAggregationShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform a dry run to check information such as the permissions and instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the check, an Enterprise Edition transit router is created.</li>
+     * <li><strong>true</strong>: checks the request but does not create the Enterprise Edition transit router. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -31,6 +43,7 @@ public class ModifyTransitRouteTableAggregationShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The destination CIDR block of the aggregate route.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +53,9 @@ public class ModifyTransitRouteTableAggregationShrinkRequest extends TeaModel {
     public String transitRouteTableAggregationCidr;
 
     /**
+     * <p>The description of the aggregate route.</p>
+     * <p>The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</p>
+     * 
      * <strong>example:</strong>
      * <p>desctest</p>
      */
@@ -47,6 +63,9 @@ public class ModifyTransitRouteTableAggregationShrinkRequest extends TeaModel {
     public String transitRouteTableAggregationDescription;
 
     /**
+     * <p>The name of the aggregate route.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * 
      * <strong>example:</strong>
      * <p>nametest</p>
      */
@@ -54,16 +73,26 @@ public class ModifyTransitRouteTableAggregationShrinkRequest extends TeaModel {
     public String transitRouteTableAggregationName;
 
     /**
+     * <p>The scope of networks that you want to advertise the aggregate route.</p>
+     * <p>The valid value is <strong>VPC</strong>, which indicates that the aggregate route is advertised to all VPCs that have associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
     @NameInMap("TransitRouteTableAggregationScope")
     public String transitRouteTableAggregationScope;
 
+    /**
+     * <p>The scope of networks to which the aggregate route is advertised.</p>
+     * <blockquote>
+     * <p> You must select at least one attribute from either the Aggregate Route Propagation Range or the Aggregate Route Propagation Range List. We recommend using the latter. The elements of the two attributes cannot duplicate.</p>
+     * </blockquote>
+     */
     @NameInMap("TransitRouteTableAggregationScopeList")
     public String transitRouteTableAggregationScopeListShrink;
 
     /**
+     * <p>The list of route table IDs of the Enterprise Edition transit router.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -134,6 +134,12 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>The list of propagation ranges of the aggregation route.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</p>
+         * </blockquote>
+         */
         @NameInMap("ScopeList")
         public java.util.List<String> scopeList;
 

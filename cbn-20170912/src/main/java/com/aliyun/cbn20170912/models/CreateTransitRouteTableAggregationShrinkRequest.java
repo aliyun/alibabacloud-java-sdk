@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTransitRouteTableAggregationShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class CreateTransitRouteTableAggregationShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the aggregate route.</p>
-     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -.</p>
+     * <p>This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -71,7 +71,7 @@ public class CreateTransitRouteTableAggregationShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the aggregate route.</p>
-     * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ _ -. You can also leave the name empty.</p>
+     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -80,8 +80,8 @@ public class CreateTransitRouteTableAggregationShrinkRequest extends TeaModel {
     public String transitRouteTableAggregationName;
 
     /**
-     * <p>The scope of networks that you want to advertise the aggregate route.</p>
-     * <p>Set the value to <strong>VPC</strong>, which specified that the aggregate route is advertised to VPCs that are in associated forwarding relationship with a route table of the Enterprise Edition transit router and have route synchronization enabled.</p>
+     * <p>The scope of networks to which the aggregate route is advertised.</p>
+     * <p>The valid value is <strong>VPC</strong>, which indicates that the aggregate route is advertised to all VPCs that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -89,6 +89,12 @@ public class CreateTransitRouteTableAggregationShrinkRequest extends TeaModel {
     @NameInMap("TransitRouteTableAggregationScope")
     public String transitRouteTableAggregationScope;
 
+    /**
+     * <p>The list of propagation ranges of the aggregation route.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the following attributes: Aggregation Scope and Aggregate Scope List. We recommend that you specify the latter. The elements in the two attributes cannot be duplicate.</p>
+     * </blockquote>
+     */
     @NameInMap("TransitRouteTableAggregationScopeList")
     public String transitRouteTableAggregationScopeListShrink;
 
