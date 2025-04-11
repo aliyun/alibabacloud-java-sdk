@@ -13,9 +13,18 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    /**
+     * <p>持久会话ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-0cc7s3mw2fg4j****</p>
+     */
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    /**
+     * <p>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+     */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
@@ -28,9 +37,15 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+     */
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("UserMeta")
     public AuthorizeInstanceGroupRequestUserMeta userMeta;
 
@@ -88,9 +103,26 @@ public class AuthorizeInstanceGroupRequest extends TeaModel {
     }
 
     public static class AuthorizeInstanceGroupRequestUserMeta extends TeaModel {
+        /**
+         * <p>The AD domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("AdDomain")
         public String adDomain;
 
+        /**
+         * <p>The user type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ad: Active Directory (AD) account</li>
+         * <li>simple: convenience account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>simple</p>
+         */
         @NameInMap("Type")
         public String type;
 

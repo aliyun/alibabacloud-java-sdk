@@ -13,9 +13,18 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    /**
+     * <p>持久会话ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>p-0cc7s3mw2fg4j****</p>
+     */
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    /**
+     * <p>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+     */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
@@ -28,9 +37,15 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+     */
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;
 
+    /**
+     * <p>The user information.</p>
+     */
     @NameInMap("UserMeta")
     public String userMetaShrink;
 
