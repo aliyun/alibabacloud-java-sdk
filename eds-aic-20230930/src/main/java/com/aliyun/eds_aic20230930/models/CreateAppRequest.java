@@ -111,6 +111,9 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("OssAppUrl")
     public String ossAppUrl;
 
+    @NameInMap("SignApk")
+    public String signApk;
+
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
         return TeaModel.build(map, self);
@@ -186,6 +189,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getOssAppUrl() {
         return this.ossAppUrl;
+    }
+
+    public CreateAppRequest setSignApk(String signApk) {
+        this.signApk = signApk;
+        return this;
+    }
+    public String getSignApk() {
+        return this.signApk;
     }
 
     public static class CreateAppRequestCustomAppInfo extends TeaModel {

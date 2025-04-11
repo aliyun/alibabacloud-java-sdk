@@ -111,6 +111,9 @@ public class CreateAppShrinkRequest extends TeaModel {
     @NameInMap("OssAppUrl")
     public String ossAppUrl;
 
+    @NameInMap("SignApk")
+    public String signApk;
+
     public static CreateAppShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppShrinkRequest self = new CreateAppShrinkRequest();
         return TeaModel.build(map, self);
@@ -186,6 +189,14 @@ public class CreateAppShrinkRequest extends TeaModel {
     }
     public String getOssAppUrl() {
         return this.ossAppUrl;
+    }
+
+    public CreateAppShrinkRequest setSignApk(String signApk) {
+        this.signApk = signApk;
+        return this;
+    }
+    public String getSignApk() {
+        return this.signApk;
     }
 
 }

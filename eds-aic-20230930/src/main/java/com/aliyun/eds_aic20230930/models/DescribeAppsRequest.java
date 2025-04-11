@@ -19,6 +19,9 @@ public class DescribeAppsRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("AppType")
+    public String appType;
+
     /**
      * <p>Region id.</p>
      * 
@@ -107,6 +110,14 @@ public class DescribeAppsRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public DescribeAppsRequest setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
     }
 
     public DescribeAppsRequest setBizRegionId(String bizRegionId) {
