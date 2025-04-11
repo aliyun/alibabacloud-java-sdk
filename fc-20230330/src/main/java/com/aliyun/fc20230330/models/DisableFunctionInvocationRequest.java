@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DisableFunctionInvocationRequest extends TeaModel {
     /**
+     * <p>Specifies whether to immediately terminate all ongoing requests.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("abortOngoingRequest")
     public Boolean abortOngoingRequest;
 
+    /**
+     * <p>The reason for disabling the function\&quot;s invocation.</p>
+     */
     @NameInMap("reason")
     public String reason;
 

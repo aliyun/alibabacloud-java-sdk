@@ -762,7 +762,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁止函数调用</p>
+     * <p>查询产品的地域信息列表</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRegions"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/regions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRegionsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询产品的地域信息列表</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeRegionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</p>
      * 
      * @param request DisableFunctionInvocationRequest
      * @param headers map
@@ -804,8 +859,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</p>
+     * 
      * <b>summary</b> : 
-     * <p>禁止函数调用</p>
+     * <p>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</p>
      * 
      * @param request DisableFunctionInvocationRequest
      * @return DisableFunctionInvocationResponse
@@ -1838,6 +1896,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>列出函数。</p>
      * 
@@ -1911,6 +1972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>列出函数。</p>
      * 

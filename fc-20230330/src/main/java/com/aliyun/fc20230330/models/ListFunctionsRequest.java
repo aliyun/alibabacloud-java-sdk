@@ -4,11 +4,22 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
+    /**
+     * <p>The description of the functions to retrieve.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_description</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The version of Function Compute to which the functions belong. Valid values: v3 and v2. v3: only lists functions of Function Compute 3.0. v2: only lists functions of Function Compute 2.0. By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</p>
+     * <p>The version of Function Compute to which the functions belong.</p>
+     * <ul>
+     * <li>v3: Only lists functions of Function Compute 3.0.</li>
+     * <li>v2: Only lists functions of Function Compute 2.0.</li>
+     * </ul>
+     * <p>By default, this parameter is left empty and functions in both Function Compute 3.0 and Function Compute 2.0 are listed.</p>
      * 
      * <strong>example:</strong>
      * <p>v3</p>
@@ -16,6 +27,12 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("fcVersion")
     public String fcVersion;
 
+    /**
+     * <p>The GPU type of the functions to retrieve.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc.gpu.tesla.1</p>
+     */
     @NameInMap("gpuType")
     public String gpuType;
 
@@ -46,9 +63,18 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("prefix")
     public String prefix;
 
+    /**
+     * <p>The runtime of the functions to retrieve.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python3.10</p>
+     */
     @NameInMap("runtime")
     public String runtime;
 
+    /**
+     * <p>The tag of the functions to retrieve.</p>
+     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
