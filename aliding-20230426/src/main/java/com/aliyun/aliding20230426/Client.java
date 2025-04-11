@@ -6376,6 +6376,95 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取助理能力</p>
+     * 
+     * @param request GetAssistantCapabilityRequest
+     * @param headers GetAssistantCapabilityHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAssistantCapabilityResponse
+     */
+    public GetAssistantCapabilityResponse getAssistantCapabilityWithOptions(GetAssistantCapabilityRequest request, GetAssistantCapabilityHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assistantId)) {
+            body.put("assistantId", request.assistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadata)) {
+            body.put("metadata", request.metadata);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalAssistantId)) {
+            body.put("originalAssistantId", request.originalAssistantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            body.put("protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threadId)) {
+            body.put("threadId", request.threadId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("timeout", request.timeout);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountId)) {
+            realHeaders.put("accountId", com.aliyun.teautil.Common.toJSONString(headers.accountId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAssistantCapability"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ai/v1/assistant/getAssistantCapability"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAssistantCapabilityResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetAssistantCapabilityResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取助理能力</p>
+     * 
+     * @param request GetAssistantCapabilityRequest
+     * @return GetAssistantCapabilityResponse
+     */
+    public GetAssistantCapabilityResponse getAssistantCapability(GetAssistantCapabilityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetAssistantCapabilityHeaders headers = new GetAssistantCapabilityHeaders();
+        return this.getAssistantCapabilityWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取群存储空间信息</p>
      * 
      * @param tmpReq GetConversaionSpaceRequest
