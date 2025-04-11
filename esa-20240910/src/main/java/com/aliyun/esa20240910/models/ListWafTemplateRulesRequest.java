@@ -61,6 +61,9 @@ public class ListWafTemplateRulesRequest extends TeaModel {
     }
 
     public static class ListWafTemplateRulesRequestQueryArgs extends TeaModel {
+        @NameInMap("Kinds")
+        public java.util.List<String> kinds;
+
         /**
          * <p>Rule type.</p>
          * 
@@ -73,6 +76,14 @@ public class ListWafTemplateRulesRequest extends TeaModel {
         public static ListWafTemplateRulesRequestQueryArgs build(java.util.Map<String, ?> map) throws Exception {
             ListWafTemplateRulesRequestQueryArgs self = new ListWafTemplateRulesRequestQueryArgs();
             return TeaModel.build(map, self);
+        }
+
+        public ListWafTemplateRulesRequestQueryArgs setKinds(java.util.List<String> kinds) {
+            this.kinds = kinds;
+            return this;
+        }
+        public java.util.List<String> getKinds() {
+            return this.kinds;
         }
 
         public ListWafTemplateRulesRequestQueryArgs setType(String type) {
