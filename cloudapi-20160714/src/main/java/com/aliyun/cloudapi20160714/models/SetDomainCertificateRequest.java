@@ -74,6 +74,15 @@ public class SetDomainCertificateRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>If enable ssl OCSP cache.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
+    @NameInMap("SslOcspCacheEnable")
+    public Boolean sslOcspCacheEnable;
+
+    /**
      * <p>If enable ssl OCSP.</p>
      * 
      * <strong>example:</strong>
@@ -158,6 +167,14 @@ public class SetDomainCertificateRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public SetDomainCertificateRequest setSslOcspCacheEnable(Boolean sslOcspCacheEnable) {
+        this.sslOcspCacheEnable = sslOcspCacheEnable;
+        return this;
+    }
+    public Boolean getSslOcspCacheEnable() {
+        return this.sslOcspCacheEnable;
     }
 
     public SetDomainCertificateRequest setSslOcspEnable(Boolean sslOcspEnable) {

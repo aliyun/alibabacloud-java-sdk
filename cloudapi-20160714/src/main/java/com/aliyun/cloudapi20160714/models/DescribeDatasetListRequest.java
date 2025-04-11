@@ -13,6 +13,12 @@ public class DescribeDatasetListRequest extends TeaModel {
     @NameInMap("DatasetIds")
     public String datasetIds;
 
+    /**
+     * <p>The name of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IPwhitelist</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 

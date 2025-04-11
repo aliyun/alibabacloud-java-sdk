@@ -14506,6 +14506,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityToken", request.securityToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sslOcspCacheEnable)) {
+            query.put("SslOcspCacheEnable", request.sslOcspCacheEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sslOcspEnable)) {
             query.put("SslOcspEnable", request.sslOcspEnable);
         }
