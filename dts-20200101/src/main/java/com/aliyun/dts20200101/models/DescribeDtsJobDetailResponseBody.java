@@ -1238,6 +1238,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobDetailResponseBodyDestinationEndpoint extends TeaModel {
+        @NameInMap("AliyunUid")
+        public String aliyunUid;
+
         /**
          * <p>Indicates whether the password can be modified. Valid values:</p>
          * <ul>
@@ -1326,6 +1329,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("RoleName")
+        public String roleName;
+
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
          * <ul>
@@ -1353,6 +1359,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         public static DescribeDtsJobDetailResponseBodyDestinationEndpoint build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobDetailResponseBodyDestinationEndpoint self = new DescribeDtsJobDetailResponseBodyDestinationEndpoint();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobDetailResponseBodyDestinationEndpoint setAliyunUid(String aliyunUid) {
+            this.aliyunUid = aliyunUid;
+            return this;
+        }
+        public String getAliyunUid() {
+            return this.aliyunUid;
         }
 
         public DescribeDtsJobDetailResponseBodyDestinationEndpoint setCanModifyPassword(Boolean canModifyPassword) {
@@ -1425,6 +1439,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public DescribeDtsJobDetailResponseBodyDestinationEndpoint setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
         public DescribeDtsJobDetailResponseBodyDestinationEndpoint setSslSolutionEnum(String sslSolutionEnum) {

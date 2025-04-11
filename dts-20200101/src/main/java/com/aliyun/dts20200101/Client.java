@@ -7256,6 +7256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Username", request.username);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.zeroEtlJob)) {
+            query.put("ZeroEtlJob", request.zeroEtlJob);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

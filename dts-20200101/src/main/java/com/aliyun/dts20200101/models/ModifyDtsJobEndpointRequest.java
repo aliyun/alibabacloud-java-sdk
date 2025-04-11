@@ -254,6 +254,9 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    @NameInMap("ZeroEtlJob")
+    public Boolean zeroEtlJob;
+
     public static ModifyDtsJobEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDtsJobEndpointRequest self = new ModifyDtsJobEndpointRequest();
         return TeaModel.build(map, self);
@@ -417,6 +420,14 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     }
     public String getUsername() {
         return this.username;
+    }
+
+    public ModifyDtsJobEndpointRequest setZeroEtlJob(Boolean zeroEtlJob) {
+        this.zeroEtlJob = zeroEtlJob;
+        return this;
+    }
+    public Boolean getZeroEtlJob() {
+        return this.zeroEtlJob;
     }
 
 }
