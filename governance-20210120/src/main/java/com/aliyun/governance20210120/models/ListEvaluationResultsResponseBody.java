@@ -57,6 +57,25 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         return this.results;
     }
 
+    public static class ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary extends TeaModel {
+        @NameInMap("NonCompliant")
+        public Integer nonCompliant;
+
+        public static ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary build(java.util.Map<String, ?> map) throws Exception {
+            ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary self = new ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary setNonCompliant(Integer nonCompliant) {
+            this.nonCompliant = nonCompliant;
+            return this;
+        }
+        public Integer getNonCompliant() {
+            return this.nonCompliant;
+        }
+
+    }
+
     public static class ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo extends TeaModel {
         /**
          * <p>The error code.</p>
@@ -125,6 +144,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class ListEvaluationResultsResponseBodyResultsMetricResults extends TeaModel {
+        @NameInMap("AccountSummary")
+        public ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary accountSummary;
+
         /**
          * <p>The error information.</p>
          * <blockquote>
@@ -198,6 +220,14 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         public static ListEvaluationResultsResponseBodyResultsMetricResults build(java.util.Map<String, ?> map) throws Exception {
             ListEvaluationResultsResponseBodyResultsMetricResults self = new ListEvaluationResultsResponseBodyResultsMetricResults();
             return TeaModel.build(map, self);
+        }
+
+        public ListEvaluationResultsResponseBodyResultsMetricResults setAccountSummary(ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary accountSummary) {
+            this.accountSummary = accountSummary;
+            return this;
+        }
+        public ListEvaluationResultsResponseBodyResultsMetricResultsAccountSummary getAccountSummary() {
+            return this.accountSummary;
         }
 
         public ListEvaluationResultsResponseBodyResultsMetricResults setErrorInfo(ListEvaluationResultsResponseBodyResultsMetricResultsErrorInfo errorInfo) {

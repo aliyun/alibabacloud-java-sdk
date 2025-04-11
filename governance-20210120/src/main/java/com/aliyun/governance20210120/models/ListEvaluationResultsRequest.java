@@ -28,6 +28,9 @@ public class ListEvaluationResultsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Scope")
+    public String scope;
+
     @NameInMap("SnapshotId")
     public String snapshotId;
 
@@ -58,6 +61,14 @@ public class ListEvaluationResultsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListEvaluationResultsRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
     public ListEvaluationResultsRequest setSnapshotId(String snapshotId) {
