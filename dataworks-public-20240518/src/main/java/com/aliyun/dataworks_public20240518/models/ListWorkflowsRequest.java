@@ -87,8 +87,8 @@ public class ListWorkflowsRequest extends TeaModel {
     /**
      * <p>The trigger type. Valid values:</p>
      * <ul>
-     * <li>Scheduler: scheduling cycle-based trigger</li>
-     * <li>Manual: manual trigger</li>
+     * <li>Scheduler</li>
+     * <li>Manual</li>
      * </ul>
      * 
      * <strong>example:</strong>

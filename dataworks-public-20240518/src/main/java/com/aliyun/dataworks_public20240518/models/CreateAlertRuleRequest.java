@@ -106,13 +106,13 @@ public class CreateAlertRuleRequest extends TeaModel {
          * <p>The type of the alert recipient. Valid valves:</p>
          * <ul>
          * <li>AliUid: Alibaba Cloud account ID.</li>
-         * <li>Shift Schedules: The personnel in a shift schedule.</li>
-         * <li>TaskOwner: The node owner. This parameter is available for custom alerts and event alerts.</li>
-         * <li>Owner: The baseline owner. This parameter is available for baseline alerts.</li>
+         * <li>Shift Schedules: the personnel in a shift schedule.</li>
+         * <li>TaskOwner: the task owner. The task owner can receive custom alerts and event alerts.</li>
+         * <li>Owner: the baseline owner. The baseline owner can receive baseline alerts.</li>
          * <li>WebhookUrl: URL of a custom webhook.</li>
-         * <li>DingdingUrl: DingTalk chatbot URL.</li>
-         * <li>FeishuUrl: Lark chatbot URL.</li>
-         * <li>WeixinUrl: WeCom chatbot URL.</li>
+         * <li>DingdingUrl: DingTalk webhook URL.</li>
+         * <li>FeishuUrl: Lark webhook URL.</li>
+         * <li>WeixinUrl: WeCom webhook URL.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public String receiverType;
 
         /**
-         * <p>The IDs of the alert recipients.</p>
+         * <p>The ID of the alert recipient.</p>
          */
         @NameInMap("ReceiverValues")
         public java.util.List<String> receiverValues;
@@ -160,14 +160,14 @@ public class CreateAlertRuleRequest extends TeaModel {
 
     public static class CreateAlertRuleRequestNotification extends TeaModel {
         /**
-         * <p>The alert channels.</p>
+         * <p>The alert notification channels.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Channels")
         public java.util.List<String> channels;
 
         /**
-         * <p>The interval at which an alert notification is sent. Unit: minutes. Valid values: 5 to 10,000.</p>
+         * <p>The interval at which an alert notification is sent. Unit: minutes. Valid values: [5,10000].</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -176,7 +176,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public Integer intervalInMinutes;
 
         /**
-         * <p>The maximum number of times an alert notification is sent within one calendar day. Valid values: 1 to 10,000.</p>
+         * <p>The maximum number of times an alert notification can be sent within a calendar day. Valid values: [1, 10000].</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -185,14 +185,14 @@ public class CreateAlertRuleRequest extends TeaModel {
         public Integer maximum;
 
         /**
-         * <p>The alert recipient.</p>
+         * <p>The alert recipients.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Receivers")
         public java.util.List<CreateAlertRuleRequestNotificationReceivers> receivers;
 
         /**
-         * <p>The end of the time range for silence. The time is in the HH:mm:ss format.</p>
+         * <p>The end time for silence. The time is in the HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>
@@ -201,7 +201,7 @@ public class CreateAlertRuleRequest extends TeaModel {
         public String silenceEndTime;
 
         /**
-         * <p>The beginning of the time range for silence. The time is in the HH:mm:ss format.</p>
+         * <p>The start time for silence. The time is in the HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00:00</p>

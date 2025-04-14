@@ -169,7 +169,7 @@ public class BatchUpdateTasksRequest extends TeaModel {
 
     public static class BatchUpdateTasksRequestTasksTrigger extends TeaModel {
         /**
-         * <p>The CRON expression of the task. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>The CRON expression. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
          * 
          * <strong>example:</strong>
          * <p>00 00 00 * * ?</p>
@@ -178,7 +178,7 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String cron;
 
         /**
-         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>The end time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <code>yyyy-mm-dd hh:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>9999-01-01 00:00:00</p>
@@ -201,7 +201,7 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public String recurrence;
 
         /**
-         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler.</p>
+         * <p>The start time of the time range during which the task is periodically scheduled. This parameter takes effect only if the Type parameter is set to Scheduler. The value of this parameter is in the <code>yyyy-mm-dd hh:mm:ss</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>1970-01-01 00:00:00</p>
@@ -212,8 +212,8 @@ public class BatchUpdateTasksRequest extends TeaModel {
         /**
          * <p>The trigger type. Valid values:</p>
          * <ul>
-         * <li>Scheduler: periodic scheduling</li>
-         * <li>Manual: manual scheduling</li>
+         * <li>Scheduler: scheduling cycle-based trigger</li>
+         * <li>Manual: manual trigger</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public BatchUpdateTasksRequestTasksDataSource dataSource;
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -309,7 +309,7 @@ public class BatchUpdateTasksRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL node</p>

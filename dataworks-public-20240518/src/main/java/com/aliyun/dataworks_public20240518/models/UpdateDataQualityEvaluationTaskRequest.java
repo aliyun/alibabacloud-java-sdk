@@ -828,8 +828,8 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
         /**
          * <p>The hook trigger condition. When this condition is met, the hook action is triggered. Only two conditional expressions are supported:</p>
          * <ul>
-         * <li>Specify only one group of rule strength type and rule check status, such as ${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
-         * <li>Specify multiple groups of rule strength types and rule check status, such as (${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;). In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
+         * <li>Specify only one group of rule strength type and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
+         * <li>Specify multiple groups of rule strength types and rule check status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -901,14 +901,6 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
          * <ul>
          * <li>atAll: specifies that all members in a group are mentioned when alerts are sent by using DingTalk. This parameter is valid only if you set ReceiverType to DingdingUrl.</li>
          * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>WebhookUrl</li>
-         * <li>FeishuUrl</li>
-         * <li>DingdingUrl</li>
-         * <li>WeixinUrl</li>
-         * <li>AliUid</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{  &quot;atAll&quot;: true }</p>
@@ -918,6 +910,14 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
 
         /**
          * <p>The type of the alert recipient.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>WebhookUrl</li>
+         * <li>FeishuUrl</li>
+         * <li>DingdingUrl</li>
+         * <li>WeixinUrl</li>
+         * <li>AliUid</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DingdingUrl</p>
@@ -1002,8 +1002,8 @@ public class UpdateDataQualityEvaluationTaskRequest extends TeaModel {
         /**
          * <p>The notification trigger condition. When this condition is met, the alert notification is triggered. Only two conditional expressions are supported:</p>
          * <ul>
-         * <li>Specify only one group of rule strength type and rule check status, such as ${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
-         * <li>Specify multiple groups of rule strength types and rule check status, such as (${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;). In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
+         * <li>Specify only one group of rule strength type and rule check status, such as <code>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</li>
+         * <li>Specify multiple groups of rule strength types and rule check status, such as <code>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</code>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</li>
          * </ul>
          * 
          * <strong>example:</strong>

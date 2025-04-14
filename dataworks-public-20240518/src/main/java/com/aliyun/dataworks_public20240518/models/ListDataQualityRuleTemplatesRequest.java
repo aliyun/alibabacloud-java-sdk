@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     /**
-     * <p>The source of the rule template. Required.</p>
+     * <p>The source of the template. This parameter is required. Valid values:</p>
      * <ul>
-     * <li>System: System Template</li>
-     * <li>UserDefined: user-defined Template</li>
+     * <li>System</li>
+     * <li>UserDefined</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public String creationSource;
 
     /**
-     * <p>The category directory where the custom template is stored, slash/divider level. Each level name can be up to 1024 characters in length and cannot contain white space characters or backslashes.</p>
+     * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
      * 
      * <strong>example:</strong>
      * <p>/ods/order_data</p>
@@ -27,7 +27,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public String directoryPath;
 
     /**
-     * <p>Fuzzy matching of template rule names. If it is a system template, the internationalized name of the system template will be fuzzy matching based on the language.</p>
+     * <p>The name of the template. If you want to query a system template, set this parameter to the name of the system template. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Table rows</p>
@@ -54,7 +54,7 @@ public class ListDataQualityRuleTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>DataWorks workspace ID.</p>
+     * <p>The DataWorks workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

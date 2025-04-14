@@ -47,14 +47,11 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String jobSettingsShrink;
 
     /**
-     * <p>任务类型，可选</p>
+     * <p>The type of the task. This parameter is optional. Valid values:</p>
      * <ul>
-     * <li><p>DatabaseRealtimeMigration(整库实时):将源端多个库的多个表进行流同步，支持仅全量，仅增量，或全量+增量。</p>
-     * </li>
-     * <li><p>DatabaseOfflineMigration(整库离线):将源端多个库的多个表进行批同步，支持仅全量，仅增量，或全量+增量。</p>
-     * </li>
-     * <li><p>SingleTableRealtimeMigration(单表实时):将源端单个表进行流同步</p>
-     * </li>
+     * <li>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
+     * <li>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
+     * <li>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize only data in single table at the source.</li>
      * </ul>
      * 
      * <strong>example:</strong>

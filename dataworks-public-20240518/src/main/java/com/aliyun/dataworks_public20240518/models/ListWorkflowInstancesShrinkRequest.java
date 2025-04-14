@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>The data timestamp. The value of this parameter is 00:00:00 of the day before the scheduling time of the instance. The value is a UNIX timestamp. Unit: milliseconds. Example: 1743350400000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -32,7 +32,6 @@ public class UpdateDataSourceRequest extends TeaModel {
      * <ul>
      * <li>InstanceMode: instance mode</li>
      * <li>UrlMode: connection string mode</li>
-     * <li>CdhMode: CDH cluster mode</li>
      * </ul>
      * 
      * <strong>example:</strong>

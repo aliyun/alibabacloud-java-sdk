@@ -1027,9 +1027,15 @@ public class GetDIJobResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>DatabaseRealtimeMigration (Full Database Real-Time): Perform stream synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</p>
-         * <p>DatabaseOfflineMigration (Full Database Offline): Perform batch synchronization of multiple tables from multiple source databases. Supports full data only, incremental only, or full + incremental.</p>
-         * <p>SingleTableRealtimeMigration (Single Table Real-Time): Perform stream synchronization of a single table from the source.</p>
+         * <p>任务类型</p>
+         * <ul>
+         * <li><p>DatabaseRealtimeMigration(整库实时):将源端多个库的多个表进行流同步，支持仅全量，仅增量，或全量+增量。</p>
+         * </li>
+         * <li><p>DatabaseOfflineMigration(整库离线):将源端多个库的多个表进行批同步，支持仅全量，仅增量，或全量+增量。</p>
+         * </li>
+         * <li><p>SingleTableRealtimeMigration(单表实时):将源端单个表进行流同步。</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DatabaseRealtimeMigration</p>
@@ -1040,11 +1046,11 @@ public class GetDIJobResponseBody extends TeaModel {
         /**
          * <p>The synchronization type. Valid values:</p>
          * <ul>
-         * <li>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</li>
-         * <li>RealtimeIncremental: real-time incremental synchronization</li>
-         * <li>Full: full synchronization</li>
-         * <li>OfflineIncremental: batch incremental synchronization</li>
-         * <li>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</li>
+         * <li>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</li>
+         * <li>RealtimeIncremental: real-time incremental synchronization of data in a single table</li>
+         * <li>Full: full batch synchronization of data in an entire database</li>
+         * <li>OfflineIncremental: batch incremental synchronization of data in an entire database</li>
+         * <li>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</li>
          * </ul>
          * 
          * <strong>example:</strong>

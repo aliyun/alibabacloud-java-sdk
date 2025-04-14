@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Quality Rule template pagination query results</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
     public ListDataQualityRuleTemplatesResponseBodyPagingInfo pagingInfo;
@@ -184,7 +184,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The category directory where the custom template is stored, separated by slashes. Each level name can be up to 1024 characters in length and cannot contain white space characters or slashes.</p>
+         * <p>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</p>
          * 
          * <strong>example:</strong>
          * <p>/ods/order_data</p>
@@ -193,7 +193,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
         public String directoryPath;
 
         /**
-         * <p>Rule template name, a combination of numbers, English letters, Chinese characters, and half-width punctuation marks, up to 512 characters in length</p>
+         * <p>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</p>
          * 
          * <strong>example:</strong>
          * <p>Table row Count Verification</p>
@@ -294,7 +294,7 @@ public class ListDataQualityRuleTemplatesResponseBody extends TeaModel {
 
     public static class ListDataQualityRuleTemplatesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>Rule template list</p>
+         * <p>The templates.</p>
          */
         @NameInMap("DataQualityRuleTemplates")
         public java.util.List<ListDataQualityRuleTemplatesResponseBodyPagingInfoDataQualityRuleTemplates> dataQualityRuleTemplates;

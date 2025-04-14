@@ -295,8 +295,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The environment of the workspace.</p>
-         * <p>Valid values:</p>
+         * <p>The environment of the workspace. Valid values:</p>
          * <ul>
          * <li>Prod: production environment</li>
          * <li>Dev: development environment</li>
@@ -319,12 +318,11 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The rerun mode.</p>
-         * <p>Valid values:</p>
+         * <p>The rerun mode. Valid values:</p>
          * <ul>
-         * <li>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to run.</li>
          * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
-         * <li>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -364,8 +362,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public Long startedTime;
 
         /**
-         * <p>The status of the instance.</p>
-         * <p>Valid values:</p>
+         * <p>The status of the instance. Valid values:</p>
          * <ul>
          * <li>NotRun: The instance is not run.</li>
          * <li>Running: The instance is running.</li>
@@ -433,8 +430,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</p>
-         * <p>Valid values:</p>
+         * <p>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</p>
          * <ul>
          * <li>Pause</li>
          * <li>Skip</li>
@@ -457,8 +453,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public Long triggerTime;
 
         /**
-         * <p>The method to trigger instance scheduling.</p>
-         * <p>Valid values:</p>
+         * <p>The trigger type. Valid values:</p>
          * <ul>
          * <li>Scheduler: scheduling cycle-based trigger</li>
          * <li>Manual: manual trigger</li>
@@ -489,8 +484,7 @@ public class ListUpstreamTaskInstancesResponseBody extends TeaModel {
         public Long workflowInstanceId;
 
         /**
-         * <p>The type of the workflow instance.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the workflow instance. Valid values:</p>
          * <ul>
          * <li>SmokeTest</li>
          * <li>SupplementData</li>

@@ -82,8 +82,10 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     /**
      * <p>The type of the workflow instance. Valid values:</p>
      * <ul>
-     * <li>SupplementData</li>
-     * <li>ManualWorkflow</li>
+     * <li>SupplementData The values of the RootTaskIds and IncludeTaskIds parameters vary based on the value of the Mode parameter. For more information, see the Mode parameter in this API operation.</li>
+     * <li>ManualWorkflow You must set the WorkflowId parameter to the ID of the manually triggered workflow. The RootTaskIds parameter is optional. If you do not specify the RootTaskIds parameter, the IDs of the default root nodes of the manually triggered workflow are used.</li>
+     * <li>Manual You need to specify only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the manually triggered tasks that need to be run.</li>
+     * <li>SmokeTest You need to specify only the RootTaskIds parameter. The RootTaskIds parameter specifies the IDs of the test tasks that need to be run.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
