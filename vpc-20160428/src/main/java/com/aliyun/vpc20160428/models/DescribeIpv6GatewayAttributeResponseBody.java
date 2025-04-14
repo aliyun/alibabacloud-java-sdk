@@ -84,6 +84,9 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("OwnerId")
+    public String ownerId;
+
     /**
      * <p>The ID of the region where the IPv6 gateway is deployed.</p>
      * 
@@ -206,6 +209,14 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DescribeIpv6GatewayAttributeResponseBody setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeIpv6GatewayAttributeResponseBody setRegionId(String regionId) {
