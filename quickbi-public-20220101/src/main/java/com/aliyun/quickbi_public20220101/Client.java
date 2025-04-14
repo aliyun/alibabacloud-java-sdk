@@ -687,10 +687,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>批量添加飞书用户。</p>
      * 
+     * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
+     * 
      * @param request BatchAddFeishuUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchAddFeishuUsersResponse
      */
+    @Deprecated
+    // Deprecated
     public BatchAddFeishuUsersResponse batchAddFeishuUsersWithOptions(BatchAddFeishuUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -740,9 +744,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>批量添加飞书用户。</p>
      * 
+     * @deprecated OpenAPI BatchAddFeishuUsers is deprecated
+     * 
      * @param request BatchAddFeishuUsersRequest
      * @return BatchAddFeishuUsersResponse
      */
+    @Deprecated
+    // Deprecated
     public BatchAddFeishuUsersResponse batchAddFeishuUsers(BatchAddFeishuUsersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchAddFeishuUsersWithOptions(request, runtime);
@@ -3679,10 +3687,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Invoke an already created API in the data service.</p>
      * 
+     * @deprecated OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
+     * 
      * @param request QueryDataServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDataServiceResponse
      */
+    @Deprecated
+    // Deprecated
     public QueryDataServiceResponse queryDataServiceWithOptions(QueryDataServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3734,9 +3746,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Invoke an already created API in the data service.</p>
      * 
+     * @deprecated OpenAPI QueryDataService is deprecated, please use quickbi-public::2022-01-01::QueryData instead.
+     * 
      * @param request QueryDataServiceRequest
      * @return QueryDataServiceResponse
      */
+    @Deprecated
+    // Deprecated
     public QueryDataServiceResponse queryDataService(QueryDataServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryDataServiceWithOptions(request, runtime);

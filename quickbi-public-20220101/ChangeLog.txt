@@ -1,3 +1,8 @@
+2025-04-14 Version: 1.8.2
+- Update API SmartqQueryAbility: add response parameters Body.Result.ConclusionText.
+- Update API SmartqQueryAbility: add response parameters Body.Result.LogicSql.
+
+
 2025-03-17 Version: 1.8.1
 - Update API AddUser: update param AccountName.
 - Update API ListWorkspaceRoleUsers: update param WorkspaceId.

@@ -18,6 +18,7 @@ public class CreateTicketRequest extends TeaModel {
      * <p>test user</p>
      */
     @NameInMap("AccountName")
+    @Deprecated
     public String accountName;
 
     /**
@@ -38,6 +39,7 @@ public class CreateTicketRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("AccountType")
+    @Deprecated
     public Integer accountType;
 
     /**
@@ -133,6 +135,7 @@ public class CreateTicketRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public CreateTicketRequest setAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -141,6 +144,7 @@ public class CreateTicketRequest extends TeaModel {
         return this.accountName;
     }
 
+    @Deprecated
     public CreateTicketRequest setAccountType(Integer accountType) {
         this.accountType = accountType;
         return this;

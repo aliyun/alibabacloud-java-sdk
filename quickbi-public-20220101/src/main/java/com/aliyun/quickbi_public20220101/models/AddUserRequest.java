@@ -25,6 +25,7 @@ public class AddUserRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("AdminUser")
+    @Deprecated
     public Boolean adminUser;
 
     /**
@@ -32,6 +33,7 @@ public class AddUserRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("AuthAdminUser")
+    @Deprecated
     public Boolean authAdminUser;
 
     /**
@@ -74,6 +76,7 @@ public class AddUserRequest extends TeaModel {
         return this.accountName;
     }
 
+    @Deprecated
     public AddUserRequest setAdminUser(Boolean adminUser) {
         this.adminUser = adminUser;
         return this;
@@ -82,6 +85,7 @@ public class AddUserRequest extends TeaModel {
         return this.adminUser;
     }
 
+    @Deprecated
     public AddUserRequest setAuthAdminUser(Boolean authAdminUser) {
         this.authAdminUser = authAdminUser;
         return this;

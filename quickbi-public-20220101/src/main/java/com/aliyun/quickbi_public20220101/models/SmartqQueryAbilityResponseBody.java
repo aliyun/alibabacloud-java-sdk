@@ -91,6 +91,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
     }
 
     public static class SmartqQueryAbilityResponseBodyResultValues extends TeaModel {
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Row")
         public java.util.List<String> row;
 
@@ -113,6 +117,16 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         @NameInMap("ChartType")
         public String chartType;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ConclusionText")
+        public String conclusionText;
+
+        @NameInMap("LogicSql")
+        public String logicSql;
+
         @NameInMap("MetaType")
         public java.util.List<SmartqQueryAbilityResponseBodyResultMetaType> metaType;
 
@@ -130,6 +144,22 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
         public String getChartType() {
             return this.chartType;
+        }
+
+        public SmartqQueryAbilityResponseBodyResult setConclusionText(String conclusionText) {
+            this.conclusionText = conclusionText;
+            return this;
+        }
+        public String getConclusionText() {
+            return this.conclusionText;
+        }
+
+        public SmartqQueryAbilityResponseBodyResult setLogicSql(String logicSql) {
+            this.logicSql = logicSql;
+            return this;
+        }
+        public String getLogicSql() {
+            return this.logicSql;
         }
 
         public SmartqQueryAbilityResponseBodyResult setMetaType(java.util.List<SmartqQueryAbilityResponseBodyResultMetaType> metaType) {
