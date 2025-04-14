@@ -14,7 +14,7 @@ public class DescribePortViewSourceProvincesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the administrative region in China from which the requests are sent.</p>
+     * <p>The details of the administrative region in China from which the requests are sent.</p>
      */
     @NameInMap("SourceProvinces")
     public java.util.List<DescribePortViewSourceProvincesResponseBodySourceProvinces> sourceProvinces;

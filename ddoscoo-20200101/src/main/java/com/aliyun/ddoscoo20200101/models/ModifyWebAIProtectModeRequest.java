@@ -32,7 +32,7 @@ public class ModifyWebAIProtectModeRequest extends TeaModel {
     /**
      * <p>The domain name of the website.</p>
      * <blockquote>
-     * <p>A forwarding rule must be configured for a domain name. You can call the <a href="https://help.aliyun.com/document_detail/91724.html">DescribeDomains</a> operation to query all domain names.</p>
+     * <p> A forwarding rule must be configured for the domain name. You can call the <a href="https://help.aliyun.com/document_detail/474212.html">DescribeDomains</a> operation to query all domain names.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

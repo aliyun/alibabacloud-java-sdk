@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDDosAllEventListResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of attack events.</p>
+     * <p>The DDoS attack events.</p>
      */
     @NameInMap("AttackEvents")
     public java.util.List<DescribeDDosAllEventListResponseBodyAttackEvents> attackEvents;

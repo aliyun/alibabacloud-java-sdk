@@ -45,7 +45,7 @@ public class DescribeWebReportTopIpRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The source of the statistics. Valid value:</p>
+     * <p>The source of the statistics. Valid values:</p>
      * <ul>
      * <li><strong>visit</strong>: indicates all IP addresses.</li>
      * <li><strong>block</strong>: indicates blocked IP addresses.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePortMaxConnsResponseBody extends TeaModel {
     /**
-     * <p>An array consisting of the details of the maximum number of connections that are established over a port of the instance.</p>
+     * <p>The details of the maximum number of connections that can be established over a port of the instance.</p>
      */
     @NameInMap("PortMaxConns")
     public java.util.List<DescribePortMaxConnsResponseBodyPortMaxConns> portMaxConns;

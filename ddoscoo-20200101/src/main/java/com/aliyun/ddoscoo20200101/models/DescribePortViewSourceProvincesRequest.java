@@ -17,7 +17,7 @@ public class DescribePortViewSourceProvincesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The IDs of instances to query.</p>
+     * <p>The IDs of the Anti-DDoS Proxy instances to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,8 @@ public class DescribePortViewSourceProvincesRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
-     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.</p>
+     * <p>For information about resource groups, see <a href="https://help.aliyun.com/document_detail/94485.html">Create a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>

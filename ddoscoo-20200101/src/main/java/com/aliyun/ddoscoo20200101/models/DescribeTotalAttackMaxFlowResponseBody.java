@@ -14,7 +14,7 @@ public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
     public Long bps;
 
     /**
-     * <p>The peak packet rate of attack traffic . Unit: packets per second (pps).</p>
+     * <p>The peak packet rate of attack traffic. Unit: packets per second (pps).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

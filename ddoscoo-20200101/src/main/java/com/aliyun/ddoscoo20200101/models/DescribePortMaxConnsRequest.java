@@ -18,9 +18,9 @@ public class DescribePortMaxConnsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The IDs of the Anti-DDoS Proxy instances.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all instances.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/157459.html">DescribeInstanceIds</a> operation to query the IDs of all Anti-DDoS Proxy instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

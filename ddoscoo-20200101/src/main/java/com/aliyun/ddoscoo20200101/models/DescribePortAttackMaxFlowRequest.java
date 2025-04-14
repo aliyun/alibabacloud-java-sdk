@@ -18,7 +18,7 @@ public class DescribePortAttackMaxFlowRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>An array that consists of the IDs of instances to query.</p>
+     * <p>The IDs of the Anti-DDoS Proxy instances to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

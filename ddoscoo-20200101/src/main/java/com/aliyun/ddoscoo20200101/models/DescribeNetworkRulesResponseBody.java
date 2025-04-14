@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkRulesResponseBody extends TeaModel {
     /**
-     * <p>The details of the port forwarding rule.</p>
+     * <p>The details of the port forwarding rules.</p>
      */
     @NameInMap("NetworkRules")
     public java.util.List<DescribeNetworkRulesResponseBodyNetworkRules> networkRules;
@@ -98,6 +98,16 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @NameInMap("IsAutoCreate")
         public Boolean isAutoCreate;
 
+        /**
+         * <p>Indicates whether the payload filtering rule is enabled. Valid values:</p>
+         * <ul>
+         * <li>1: enabled.</li>
+         * <li>0: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PayloadRuleEnable")
         public Long payloadRuleEnable;
 
@@ -114,9 +124,29 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>Indicates whether the traffic diversion switch is on. Valid values:</p>
+         * <ul>
+         * <li>0: on.</li>
+         * <li>1: off.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ProxyEnable")
         public Long proxyEnable;
 
+        /**
+         * <p>The status of traffic diversion. Valid values:</p>
+         * <ul>
+         * <li>on: Traffic diversion takes effect.</li>
+         * <li>off: Traffic diversion does not take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("ProxyStatus")
         public String proxyStatus;
 

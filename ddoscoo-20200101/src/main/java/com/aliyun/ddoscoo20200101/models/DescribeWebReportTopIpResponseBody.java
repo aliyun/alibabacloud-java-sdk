@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebReportTopIpResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The information about the IP addresses.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeWebReportTopIpResponseBodyDataList> dataList;

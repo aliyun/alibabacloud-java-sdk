@@ -29,6 +29,9 @@ public class DescribeDomainViewTopUrlRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("Inerval")
+    public Long inerval;
+
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * 
@@ -80,6 +83,14 @@ public class DescribeDomainViewTopUrlRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDomainViewTopUrlRequest setInerval(Long inerval) {
+        this.inerval = inerval;
+        return this;
+    }
+    public Long getInerval() {
+        return this.inerval;
     }
 
     public DescribeDomainViewTopUrlRequest setResourceGroupId(String resourceGroupId) {

@@ -334,6 +334,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>配置全局模板规则</p>
+     * 
+     * @param request ConfigL7GlobalRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ConfigL7GlobalRuleResponse
+     */
+    public ConfigL7GlobalRuleResponse configL7GlobalRuleWithOptions(ConfigL7GlobalRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleAttr)) {
+            query.put("RuleAttr", request.ruleAttr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ConfigL7GlobalRule"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ConfigL7GlobalRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ConfigL7GlobalRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置全局模板规则</p>
+     * 
+     * @param request ConfigL7GlobalRuleRequest
+     * @return ConfigL7GlobalRuleResponse
+     */
+    public ConfigL7GlobalRuleResponse configL7GlobalRule(ConfigL7GlobalRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.configL7GlobalRuleWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the <strong>Policy</strong> parameter in the &quot;Request parameters&quot; section of this topic.</p>
      * 
@@ -1726,7 +1779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes IP addresses from the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Removes IP addresses from the IP address whitelist of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request DeleteAutoCcWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1767,7 +1820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes IP addresses from the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Removes IP addresses from the IP address whitelist of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request DeleteAutoCcWhitelistRequest
      * @return DeleteAutoCcWhitelistResponse
@@ -2625,7 +2678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request DescribeAutoCcListCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2666,7 +2719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Queries the numbers of IP addresses in the IP address whitelist and IP address blacklist of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request DescribeAutoCcListCountRequest
      * @return DescribeAutoCcListCountResponse
@@ -2678,7 +2731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries IP addresses in the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Queries IP addresses in the IP address whitelist of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request DescribeAutoCcWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2727,7 +2780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries IP addresses in the IP address whitelist of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Queries IP addresses in the IP address whitelist of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request DescribeAutoCcWhitelistRequest
      * @return DescribeAutoCcWhitelistResponse
@@ -2913,8 +2966,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to query all applicable certificates of a domain name that you want to add to Anti-DDoS Proxy. Multiple certificates may be queried for a domain name. You can use an exact domain name to query exact-domain certificates or wildcard-domain certificates.</p>
+     * <blockquote>
+     * <p> If you want to query the certificate that is in use for the current domain name, you can call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the values of the CertName and CertRegion parameters. Then, you can call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service to query the ID and other details of the certificate by using the value of the CertName parameter.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Queries information about all certificates that can be associated with the current domain name instead of the certificate currently in use. To query the information about the certificate that is currently in use, you can call the DescribeWebRules operation and view the values of the CertName and CertRegion response parameters.</p>
+     * <p>Queries information about all certificates that can be associated with the current domain name instead of the certificate currently in use.</p>
      * 
      * @param request DescribeCertsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2954,8 +3013,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is used to query all applicable certificates of a domain name that you want to add to Anti-DDoS Proxy. Multiple certificates may be queried for a domain name. You can use an exact domain name to query exact-domain certificates or wildcard-domain certificates.</p>
+     * <blockquote>
+     * <p> If you want to query the certificate that is in use for the current domain name, you can call the <a href="https://help.aliyun.com/document_detail/473610.html">DescribeWebRules</a> operation to obtain the values of the CertName and CertRegion parameters. Then, you can call the <a href="https://help.aliyun.com/document_detail/411733.html">ListUserCertificateOrder</a> operation of Certificate Management Service to query the ID and other details of the certificate by using the value of the CertName parameter.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>Queries information about all certificates that can be associated with the current domain name instead of the certificate currently in use. To query the information about the certificate that is currently in use, you can call the DescribeWebRules operation and view the values of the CertName and CertRegion response parameters.</p>
+     * <p>Queries information about all certificates that can be associated with the current domain name instead of the certificate currently in use.</p>
      * 
      * @param request DescribeCertsRequest
      * @return DescribeCertsResponse
@@ -3088,7 +3153,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query DDoS attacks by IP address.</p>
+     * <p>Queries DDoS attack events.</p>
      * 
      * @param request DescribeDDosAllEventListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3146,7 +3211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query DDoS attacks by IP address.</p>
+     * <p>Queries DDoS attack events.</p>
      * 
      * @param request DescribeDDosAllEventListRequest
      * @return DescribeDDosAllEventListResponse
@@ -3561,7 +3626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the advanced mitigation logs of Anti-DDoS Premium.</p>
+     * <p>Queries the advanced mitigation logs of an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</p>
      * 
      * @param request DescribeDefenseRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3623,7 +3688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the advanced mitigation logs of Anti-DDoS Premium.</p>
+     * <p>Queries the advanced mitigation logs of an Anti-DDoS Proxy (Outside Chinese Mainland) instance.</p>
      * 
      * @param request DescribeDefenseRecordsRequest
      * @return DescribeDefenseRecordsResponse
@@ -4802,6 +4867,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.inerval)) {
+            query.put("Inerval", request.inerval);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
@@ -5571,6 +5640,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.</p>
      * 
+     * <b>summary</b> : 
+     * <p>查询实例列表</p>
+     * 
      * @param request DescribeInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstancesResponse
@@ -5652,12 +5724,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.</p>
      * 
+     * <b>summary</b> : 
+     * <p>查询实例列表</p>
+     * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse
      */
     public DescribeInstancesResponse describeInstances(DescribeInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>展示全局模板规则</p>
+     * 
+     * @param request DescribeL7GlobalRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeL7GlobalRuleResponse
+     */
+    public DescribeL7GlobalRuleResponse describeL7GlobalRuleWithOptions(DescribeL7GlobalRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeL7GlobalRule"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeL7GlobalRuleResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeL7GlobalRuleResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>展示全局模板规则</p>
+     * 
+     * @param request DescribeL7GlobalRuleRequest
+     * @return DescribeL7GlobalRuleResponse
+     */
+    public DescribeL7GlobalRuleResponse describeL7GlobalRule(DescribeL7GlobalRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeL7GlobalRuleWithOptions(request, runtime);
     }
 
     /**
@@ -5817,7 +5945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <p>Checks whether a Logstore is created for Anti-DDoS Proxy.</p>
      * 
      * @param request DescribeLogStoreExistStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5854,7 +5982,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether a Logstore is created for Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     * <p>Checks whether a Logstore is created for Anti-DDoS Proxy.</p>
      * 
      * @param request DescribeLogStoreExistStatusRequest
      * @return DescribeLogStoreExistStatusResponse
@@ -6565,7 +6693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * <p>Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Proxy instances.</p>
      * 
      * @param request DescribePortMaxConnsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6614,7 +6742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Pro or Anti-DDoS Premium instances.</p>
+     * <p>Queries the maximum number of connections that can be established over the ports of one or more Anti-DDoS Proxy instances.</p>
      * 
      * @param request DescribePortMaxConnsRequest
      * @return DescribePortMaxConnsResponse
@@ -7081,7 +7209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service.</p>
+     * <p>Queries whether Anti-DDoS Proxy is authorized to access Simple Log Service.</p>
      * 
      * @param request DescribeSlsAuthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7118,7 +7246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether Anti-DDoS Pro or Anti-DDoS Premium is authorized to access Log Service.</p>
+     * <p>Queries whether Anti-DDoS Proxy is authorized to access Simple Log Service.</p>
      * 
      * @param request DescribeSlsAuthStatusRequest
      * @return DescribeSlsAuthStatusResponse
@@ -7130,7 +7258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance, such as the log storage capacity and log storage duration.</p>
+     * <p>Queries information about the Logstore of the Anti-DDoS Proxy instance, such as the log storage capacity and log storage duration.</p>
      * 
      * @param request DescribeSlsLogstoreInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7167,7 +7295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the Logstore of the Anti-DDoS Pro or Anti-DDoS Premium instance, such as the log storage capacity and log storage duration.</p>
+     * <p>Queries information about the Logstore of the Anti-DDoS Proxy instance, such as the log storage capacity and log storage duration.</p>
      * 
      * @param request DescribeSlsLogstoreInfoRequest
      * @return DescribeSlsLogstoreInfoResponse
@@ -7179,7 +7307,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether Log Service is activated.</p>
+     * <p>Checks whether Simple Log Service is activated.</p>
      * 
      * @param request DescribeSlsOpenStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7216,7 +7344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether Log Service is activated.</p>
+     * <p>Checks whether Simple Log Service is activated.</p>
      * 
      * @param request DescribeSlsOpenStatusRequest
      * @return DescribeSlsOpenStatusResponse
@@ -7652,7 +7780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the total quota and remaining quota that allow you to deactivate blackhole filtering.</p>
+     * <p>Queries the total quota and remaining quota for blackhole filtering deactivation.</p>
      * 
      * @param request DescribeUnBlackholeCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7689,7 +7817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the total quota and remaining quota that allow you to deactivate blackhole filtering.</p>
+     * <p>Queries the total quota and remaining quota for blackhole filtering deactivation.</p>
      * 
      * @param request DescribeUnBlackholeCountRequest
      * @return DescribeUnBlackholeCountResponse
@@ -7876,7 +8004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the Log Analysis feature for a website, such as the feature status and the Log Service project and Logstore that are used.</p>
+     * <p>Queries the information about the log analysis feature for a website, such as the feature status and the Simple Log Service project and Logstore that are used.</p>
      * 
      * @param request DescribeWebAccessLogStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7917,7 +8045,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about the Log Analysis feature for a website, such as the feature status and the Log Service project and Logstore that are used.</p>
+     * <p>Queries the information about the log analysis feature for a website, such as the feature status and the Simple Log Service project and Logstore that are used.</p>
      * 
      * @param request DescribeWebAccessLogStatusRequest
      * @return DescribeWebAccessLogStatusResponse
@@ -9956,7 +10084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例变配  类似bss的变配 </p>
+     * <p>Instance adjustment, similar to BSS adjustment</p>
      * 
      * @param request ModifyInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10049,7 +10177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>实例变配  类似bss的变配 </p>
+     * <p>Instance adjustment, similar to BSS adjustment</p>
      * 
      * @param request ModifyInstanceRequest
      * @return ModifyInstanceResponse
@@ -10061,7 +10189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Modifies the description of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request ModifyInstanceRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10102,7 +10230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of an Anti-DDoS Pro or Anti-DDoS Premium instance.</p>
+     * <p>Modifies the description of an Anti-DDoS Proxy instance.</p>
      * 
      * @param request ModifyInstanceRemarkRequest
      * @return ModifyInstanceRemarkResponse
@@ -11394,6 +11522,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=ddoscoo%5C&api=ModifyWebRule%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the forwarding rule of a website.</p>
+     * 
      * @param request ModifyWebRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyWebRuleResponse
@@ -11452,6 +11587,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Debugging</h2>
+     * <p><a href="https://api.aliyun.com/#product=ddoscoo%5C&api=ModifyWebRule%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the forwarding rule of a website.</p>
+     * 
      * @param request ModifyWebRuleRequest
      * @return ModifyWebRuleResponse
      */

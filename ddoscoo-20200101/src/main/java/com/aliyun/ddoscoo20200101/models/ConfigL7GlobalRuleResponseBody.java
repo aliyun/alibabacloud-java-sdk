@@ -3,22 +3,20 @@ package com.aliyun.ddoscoo20200101.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyWebRuleResponseBody extends TeaModel {
+public class ConfigL7GlobalRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
-     * <p>CB3261D2-7D1B-4ADA-9E98-A200B2CDA2DC</p>
+     * <p>CF33B4C3-196E-4015-AADD-5CAD00057B80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyWebRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyWebRuleResponseBody self = new ModifyWebRuleResponseBody();
+    public static ConfigL7GlobalRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ConfigL7GlobalRuleResponseBody self = new ConfigL7GlobalRuleResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyWebRuleResponseBody setRequestId(String requestId) {
+    public ConfigL7GlobalRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -24,7 +24,7 @@ public class DeletePortRequest extends TeaModel {
     public String frontendPort;
 
     /**
-     * <p>The type of the protocol. Valid values:</p>
+     * <p>The type of the forwarding protocol. Valid values:</p>
      * <ul>
      * <li><strong>tcp</strong></li>
      * <li><strong>udp</strong></li>

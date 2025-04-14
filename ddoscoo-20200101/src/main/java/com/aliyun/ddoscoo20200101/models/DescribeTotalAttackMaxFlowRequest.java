@@ -18,7 +18,7 @@ public class DescribeTotalAttackMaxFlowRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The IDs of the instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.</p>
+     * <p>The IDs of the Anti-DDoS Proxy instances. Separate multiple instance IDs with commas (,). Example: InstanceIds.1, InstanceIds.2, InstanceIds.3.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
