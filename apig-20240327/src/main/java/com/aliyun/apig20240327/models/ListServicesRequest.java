@@ -73,6 +73,9 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("sourceType")
     public String sourceType;
 
+    @NameInMap("sourceTypes")
+    public String sourceTypes;
+
     public static ListServicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServicesRequest self = new ListServicesRequest();
         return TeaModel.build(map, self);
@@ -124,6 +127,14 @@ public class ListServicesRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public ListServicesRequest setSourceTypes(String sourceTypes) {
+        this.sourceTypes = sourceTypes;
+        return this;
+    }
+    public String getSourceTypes() {
+        return this.sourceTypes;
     }
 
 }
