@@ -88,6 +88,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加优惠券抵扣标签</p>
+     * 
+     * @param tmpReq AddCouponDeductTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddCouponDeductTagResponse
+     */
+    public AddCouponDeductTagResponse addCouponDeductTagWithOptions(AddCouponDeductTagRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddCouponDeductTagShrinkRequest request = new AddCouponDeductTagShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.couponId)) {
+            query.put("CouponId", request.couponId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCouponDeductTag"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new AddCouponDeductTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new AddCouponDeductTagResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加优惠券抵扣标签</p>
+     * 
+     * @param request AddCouponDeductTagRequest
+     * @return AddCouponDeductTagResponse
+     */
+    public AddCouponDeductTagResponse addCouponDeductTag(AddCouponDeductTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addCouponDeductTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>取消资金账户低额预警</p>
      * 
      * @param request CancelFundAccountLowAvailableAmountAlarmRequest
@@ -206,6 +277,179 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFundAccountTransferResponse createFundAccountTransfer(CreateFundAccountTransferRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFundAccountTransferWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除优惠券的抵扣标签</p>
+     * 
+     * @param tmpReq DeleteCouponDeductTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCouponDeductTagResponse
+     */
+    public DeleteCouponDeductTagResponse deleteCouponDeductTagWithOptions(DeleteCouponDeductTagRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteCouponDeductTagShrinkRequest request = new DeleteCouponDeductTagShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagKeys)) {
+            request.tagKeysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagKeys, "TagKeys", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.couponId)) {
+            query.put("CouponId", request.couponId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeysShrink)) {
+            query.put("TagKeys", request.tagKeysShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCouponDeductTag"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCouponDeductTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCouponDeductTagResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除优惠券的抵扣标签</p>
+     * 
+     * @param request DeleteCouponDeductTagRequest
+     * @return DeleteCouponDeductTagResponse
+     */
+    public DeleteCouponDeductTagResponse deleteCouponDeductTag(DeleteCouponDeductTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCouponDeductTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优惠券列表</p>
+     * 
+     * @param tmpReq DescribeCouponRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCouponResponse
+     */
+    public DescribeCouponResponse describeCouponWithOptions(DescribeCouponRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeCouponShrinkRequest request = new DescribeCouponShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCoupon"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCouponResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCouponResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优惠券列表</p>
+     * 
+     * @param request DescribeCouponRequest
+     * @return DescribeCouponResponse
+     */
+    public DescribeCouponResponse describeCoupon(DescribeCouponRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCouponWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优惠券可用商品列表</p>
+     * 
+     * @param tmpReq DescribeCouponItemListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCouponItemListResponse
+     */
+    public DescribeCouponItemListResponse describeCouponItemListWithOptions(DescribeCouponItemListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeCouponItemListShrinkRequest request = new DescribeCouponItemListShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCouponItemList"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCouponItemListResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCouponItemListResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优惠券可用商品列表</p>
+     * 
+     * @param request DescribeCouponItemListRequest
+     * @return DescribeCouponItemListResponse
+     */
+    public DescribeCouponItemListResponse describeCouponItemList(DescribeCouponItemListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCouponItemListWithOptions(request, runtime);
     }
 
     /**
@@ -617,6 +861,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询优惠券设置的抵扣标签</p>
+     * 
+     * @param tmpReq ListCouponDeductTagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCouponDeductTagResponse
+     */
+    public ListCouponDeductTagResponse listCouponDeductTagWithOptions(ListCouponDeductTagRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListCouponDeductTagShrinkRequest request = new ListCouponDeductTagShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.couponId)) {
+            query.put("CouponId", request.couponId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCouponDeductTag"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListCouponDeductTagResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListCouponDeductTagResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询优惠券设置的抵扣标签</p>
+     * 
+     * @param request ListCouponDeductTagRequest
+     * @return ListCouponDeductTagResponse
+     */
+    public ListCouponDeductTagResponse listCouponDeductTag(ListCouponDeductTagRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCouponDeductTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询资金账户列表</p>
      * 
      * @param request ListFundAccountRequest
@@ -796,6 +1103,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetFundAccountCreditAmountResponse setFundAccountCreditAmount(SetFundAccountCreditAmountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setFundAccountCreditAmountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置资金账户低额预警</p>
+     * 
+     * @param request SetFundAccountLowAvailableAmountAlarmRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetFundAccountLowAvailableAmountAlarmResponse
+     */
+    public SetFundAccountLowAvailableAmountAlarmResponse setFundAccountLowAvailableAmountAlarmWithOptions(SetFundAccountLowAvailableAmountAlarmRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thresholdAmount)) {
+            body.put("ThresholdAmount", request.thresholdAmount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetFundAccountLowAvailableAmountAlarm"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SetFundAccountLowAvailableAmountAlarmResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SetFundAccountLowAvailableAmountAlarmResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>设置资金账户低额预警</p>
+     * 
+     * @param request SetFundAccountLowAvailableAmountAlarmRequest
+     * @return SetFundAccountLowAvailableAmountAlarmResponse
+     */
+    public SetFundAccountLowAvailableAmountAlarmResponse setFundAccountLowAvailableAmountAlarm(SetFundAccountLowAvailableAmountAlarmRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setFundAccountLowAvailableAmountAlarmWithOptions(request, runtime);
     }
 
     /**
