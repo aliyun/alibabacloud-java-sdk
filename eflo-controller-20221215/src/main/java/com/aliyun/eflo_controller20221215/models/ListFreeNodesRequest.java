@@ -40,6 +40,9 @@ public class ListFreeNodesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OperatingStates")
+    public java.util.List<String> operatingStates;
+
     /**
      * <p>Resource group ID</p>
      * 
@@ -90,6 +93,14 @@ public class ListFreeNodesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListFreeNodesRequest setOperatingStates(java.util.List<String> operatingStates) {
+        this.operatingStates = operatingStates;
+        return this;
+    }
+    public java.util.List<String> getOperatingStates() {
+        return this.operatingStates;
     }
 
     public ListFreeNodesRequest setResourceGroupId(String resourceGroupId) {
