@@ -34,6 +34,9 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
+    @NameInMap("ScanType")
+    public String scanType;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,6 +79,14 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     }
     public String getScanTaskId() {
         return this.scanTaskId;
+    }
+
+    public GetRepoTagScanStatusRequest setScanType(String scanType) {
+        this.scanType = scanType;
+        return this;
+    }
+    public String getScanType() {
+        return this.scanType;
     }
 
     public GetRepoTagScanStatusRequest setTag(String tag) {

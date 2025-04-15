@@ -46,6 +46,9 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     @NameInMap("ScanService")
     public String scanService;
 
+    @NameInMap("ScanType")
+    public String scanType;
+
     /**
      * <p>The version of the image.</p>
      * <p>This parameter is required.</p>
@@ -91,6 +94,14 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     }
     public String getScanService() {
         return this.scanService;
+    }
+
+    public CreateRepoTagScanTaskRequest setScanType(String scanType) {
+        this.scanType = scanType;
+        return this;
+    }
+    public String getScanType() {
+        return this.scanType;
     }
 
     public CreateRepoTagScanTaskRequest setTag(String tag) {

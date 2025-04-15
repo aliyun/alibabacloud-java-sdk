@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRepositoryRequest extends TeaModel {
     /**
+     * <p>The ID of the Container Registry instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListRepositoryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -30,6 +33,8 @@ public class ListRepositoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>repo-test</p>
      */
@@ -37,6 +42,8 @@ public class ListRepositoryRequest extends TeaModel {
     public String repoName;
 
     /**
+     * <p>The name of the namespace to which the repository belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>repo-namespace-test</p>
      */

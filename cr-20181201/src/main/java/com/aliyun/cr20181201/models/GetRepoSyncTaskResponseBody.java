@@ -116,6 +116,24 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     @NameInMap("SyncedSize")
     public Long syncedSize;
 
+    /**
+     * <p>The error message that is returned if the synchronization task fails.</p>
+     * <blockquote>
+     * <p> The system uses this parameter to return an error message if the synchronization task fails.</p>
+     * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to use Object Storage Service (OSS).</li>
+     * <li>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</li>
+     * <li>UNSUPPORTED_FORMAT: The manifest and config formats of the image to be synchronized are not supported.</li>
+     * <li>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</li>
+     * <li>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</li>
+     * <li>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NETWORK_ERROR</p>
+     */
     @NameInMap("TaskIssue")
     public String taskIssue;
 
