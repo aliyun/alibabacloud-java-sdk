@@ -46,6 +46,9 @@ public class ListEventStreamingsRequest extends TeaModel {
     @NameInMap("SourceArn")
     public String sourceArn;
 
+    @NameInMap("Tags")
+    public java.util.List<ListEventStreamingsRequestTags> tags;
+
     public static ListEventStreamingsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEventStreamingsRequest self = new ListEventStreamingsRequest();
         return TeaModel.build(map, self);
@@ -89,6 +92,44 @@ public class ListEventStreamingsRequest extends TeaModel {
     }
     public String getSourceArn() {
         return this.sourceArn;
+    }
+
+    public ListEventStreamingsRequest setTags(java.util.List<ListEventStreamingsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListEventStreamingsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class ListEventStreamingsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsRequestTags self = new ListEventStreamingsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListEventStreamingsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

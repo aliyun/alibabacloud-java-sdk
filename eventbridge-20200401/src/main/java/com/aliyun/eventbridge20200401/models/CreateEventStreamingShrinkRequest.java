@@ -50,6 +50,9 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     @NameInMap("Source")
     public String sourceShrink;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateEventStreamingShrinkRequestTags> tags;
+
     @NameInMap("Transforms")
     public String transformsShrink;
 
@@ -106,12 +109,50 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
         return this.sourceShrink;
     }
 
+    public CreateEventStreamingShrinkRequest setTags(java.util.List<CreateEventStreamingShrinkRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateEventStreamingShrinkRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateEventStreamingShrinkRequest setTransformsShrink(String transformsShrink) {
         this.transformsShrink = transformsShrink;
         return this;
     }
     public String getTransformsShrink() {
         return this.transformsShrink;
+    }
+
+    public static class CreateEventStreamingShrinkRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingShrinkRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingShrinkRequestTags self = new CreateEventStreamingShrinkRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingShrinkRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateEventStreamingShrinkRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
