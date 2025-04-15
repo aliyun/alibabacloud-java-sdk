@@ -4,6 +4,9 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class AddDisasterRecoveryItemRequest extends TeaModel {
+    /**
+     * <p>Topics included in the backup mapping. Required.</p>
+     */
     @NameInMap("topics")
     public java.util.List<AddDisasterRecoveryItemRequestTopics> topics;
 
@@ -21,16 +24,44 @@ public class AddDisasterRecoveryItemRequest extends TeaModel {
     }
 
     public static class AddDisasterRecoveryItemRequestTopics extends TeaModel {
+        /**
+         * <p>Consumer group ID, required for ACTIVE_ACTIVE bidirectional backup</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_xxx</p>
+         */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <p>The order in which messages are delivered to the target instance. The parameter values ​​are as follows:</p>
+         * <ul>
+         * <li>Concurrently: concurrent delivery</li>
+         * <li>Orderly: sequential delivery</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Concurrently</p>
+         */
         @NameInMap("deliveryOrderType")
         public String deliveryOrderType;
 
+        /**
+         * <p>Instance ID, an instance ID will be automatically generated when <code>instanceType</code> is <code>EXTERNAL_ROCKETMQ</code>, and it can be obtained by querying the backup plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-em93y94xxx</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
+         * <p>Instance type</p>
+         * <ul>
+         * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
+         * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ALIYUN_ROCKETMQ</p>
          */
@@ -38,7 +69,7 @@ public class AddDisasterRecoveryItemRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>regionId</p>
+         * <p>Region ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -46,6 +77,12 @@ public class AddDisasterRecoveryItemRequest extends TeaModel {
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>Disaster recovery topic name, required</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Topic_xxx</p>
+         */
         @NameInMap("topicName")
         public String topicName;
 

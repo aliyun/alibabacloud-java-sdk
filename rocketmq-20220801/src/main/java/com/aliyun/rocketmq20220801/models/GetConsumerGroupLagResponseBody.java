@@ -161,6 +161,12 @@ public class GetConsumerGroupLagResponseBody extends TeaModel {
         @NameInMap("inflightCount")
         public Long inflightCount;
 
+        /**
+         * <p>Last consumption time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735629607846</p>
+         */
         @NameInMap("lastConsumeTimestamp")
         public Long lastConsumeTimestamp;
 

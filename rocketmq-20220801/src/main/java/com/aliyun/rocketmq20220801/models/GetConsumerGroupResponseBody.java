@@ -14,7 +14,7 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result data that is returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetConsumerGroupResponseBodyData data;
@@ -290,6 +290,12 @@ public class GetConsumerGroupResponseBody extends TeaModel {
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>Maximum received message tps</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("maxReceiveTps")
         public Long maxReceiveTps;
 

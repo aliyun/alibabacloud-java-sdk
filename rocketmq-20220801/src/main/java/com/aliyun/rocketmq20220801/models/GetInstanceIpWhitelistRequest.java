@@ -4,6 +4,9 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceIpWhitelistRequest extends TeaModel {
+    /**
+     * <p>The  filter IP address whitelists.</p>
+     */
     @NameInMap("ipWhitelists")
     public java.util.List<String> ipWhitelists;
 

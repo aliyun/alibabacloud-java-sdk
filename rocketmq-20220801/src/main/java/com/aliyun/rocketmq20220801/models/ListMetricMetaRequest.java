@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMetricMetaRequest extends TeaModel {
     /**
+     * <p>Page number, indicating which page of the results to return.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListMetricMetaRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, indicating the maximum number of results per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

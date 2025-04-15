@@ -5,19 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
     /**
-     * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
+     * <p>consume retry policy</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("consumeRetryPolicy")
     public CreateConsumerGroupRequestConsumeRetryPolicy consumeRetryPolicy;
 
     /**
-     * <p>The message delivery order of the consumer group.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Concurrently: concurrent delivery</li>
-     * <li>Orderly: ordered delivery</li>
-     * </ul>
+     * <p>The dynamic error message.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,11 +21,17 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("deliveryOrderType")
     public String deliveryOrderType;
 
+    /**
+     * <p>Maximum received message tps</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("maxReceiveTps")
     public Long maxReceiveTps;
 
     /**
-     * <p>The remarks on the consumer group.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>This is the remark for test.</p>

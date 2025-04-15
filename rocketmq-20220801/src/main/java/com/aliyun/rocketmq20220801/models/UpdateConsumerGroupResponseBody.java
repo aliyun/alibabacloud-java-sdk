@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateConsumerGroupResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidDeliveryOrderType</p>
@@ -14,7 +14,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result data that is returned.</p>
+     * <p>The result returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,25 +23,25 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The dynamic error code.</p>
+     * <p>Dynamic error code.</p>
      * 
      * <strong>example:</strong>
-     * <p>DeliveryOrderType</p>
+     * <p>xxx</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>Dynamic error message.</p>
      * 
      * <strong>example:</strong>
-     * <p>deliveryOrderType</p>
+     * <p>xxx</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -50,7 +50,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>Error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Parameter deliveryOrderType is invalid.</p>
@@ -59,7 +59,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * <p>The request ID, which is unique for each request and can be used for troubleshooting and problem localization.</p>
      * 
      * <strong>example:</strong>
      * <p>C7F94090-3358-506A-97DC-34BC803C****</p>
@@ -68,7 +68,7 @@ public class UpdateConsumerGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the execution was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加容灾计划条目</p>
+     * <p>Add Disaster Recovery Plan Entry</p>
      * 
      * @param request AddDisasterRecoveryItemRequest
      * @param headers map
@@ -67,7 +67,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加容灾计划条目</p>
+     * <p>Add Disaster Recovery Plan Entry</p>
      * 
      * @param request AddDisasterRecoveryItemRequest
      * @return AddDisasterRecoveryItemResponse
@@ -144,9 +144,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
-     * </blockquote>
+     * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
+     * The following limits are imposed on the ID:</p>
+     * <ul>
+     * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
+     * <li>Length limit: The ID must be 1 to 60 characters in length.
+     * For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates a consumer group.</p>
@@ -200,9 +204,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
-     * </blockquote>
+     * <p>The ID of the consumer group. The ID is globally unique and is used to identify a consumer group.
+     * The following limits are imposed on the ID:</p>
+     * <ul>
+     * <li>Character limit: The ID can contain letters, digits, underscores (_), hyphens (-), and percent signs (%).</li>
+     * <li>Length limit: The ID must be 1 to 60 characters in length.
+     * For more information about strings that are reserved for the system, see <a href="https://help.aliyun.com/document_detail/440347.html">Limits on parameters</a>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Creates a consumer group.</p>
@@ -214,6 +222,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Create Disaster Recovery Plan</p>
+     * 
+     * @param request CreateDisasterRecoveryPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDisasterRecoveryPlanResponse
+     */
+    public CreateDisasterRecoveryPlanResponse createDisasterRecoveryPlanWithOptions(CreateDisasterRecoveryPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoSyncCheckpoint)) {
+            body.put("autoSyncCheckpoint", request.autoSyncCheckpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            body.put("instances", request.instances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planDesc)) {
+            body.put("planDesc", request.planDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
+            body.put("planName", request.planName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planType)) {
+            body.put("planType", request.planType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncCheckpointEnabled)) {
+            body.put("syncCheckpointEnabled", request.syncCheckpointEnabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDisasterRecoveryPlan"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDisasterRecoveryPlanResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new CreateDisasterRecoveryPlanResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Create Disaster Recovery Plan</p>
+     * 
+     * @param request CreateDisasterRecoveryPlanRequest
+     * @return CreateDisasterRecoveryPlanResponse
+     */
+    public CreateDisasterRecoveryPlanResponse createDisasterRecoveryPlan(CreateDisasterRecoveryPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createDisasterRecoveryPlanWithOptions(request, headers, runtime);
     }
 
     /**
@@ -518,7 +598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a topic.</p>
+     * <p>Create Topic</p>
      * 
      * @param request CreateTopicRequest
      * @param headers map
@@ -565,7 +645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a topic.</p>
+     * <p>Create Topic</p>
      * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
@@ -692,7 +772,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除容灾计划</p>
+     * <p>删除容灾计划条目</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDisasterRecoveryItemResponse
+     */
+    public DeleteDisasterRecoveryItemResponse deleteDisasterRecoveryItemWithOptions(String planId, String itemId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDisasterRecoveryItem"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(itemId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDisasterRecoveryItemResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteDisasterRecoveryItemResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除容灾计划条目</p>
+     * @return DeleteDisasterRecoveryItemResponse
+     */
+    public DeleteDisasterRecoveryItemResponse deleteDisasterRecoveryItem(String planId, String itemId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a global message backup plan.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -723,7 +845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除容灾计划</p>
+     * <p>Deletes a global message backup plan.</p>
      * @return DeleteDisasterRecoveryPlanResponse
      */
     public DeleteDisasterRecoveryPlanResponse deleteDisasterRecoveryPlan(String planId) throws Exception {
@@ -1199,6 +1321,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询容灾计划条目详情</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDisasterRecoveryItemResponse
+     */
+    public GetDisasterRecoveryItemResponse getDisasterRecoveryItemWithOptions(String planId, String itemId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDisasterRecoveryItem"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(itemId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDisasterRecoveryItemResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDisasterRecoveryItemResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询容灾计划条目详情</p>
+     * @return GetDisasterRecoveryItemResponse
+     */
+    public GetDisasterRecoveryItemResponse getDisasterRecoveryItem(String planId, String itemId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询容灾计划详情</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDisasterRecoveryPlanResponse
+     */
+    public GetDisasterRecoveryPlanResponse getDisasterRecoveryPlanWithOptions(String planId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDisasterRecoveryPlan"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDisasterRecoveryPlanResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new GetDisasterRecoveryPlanResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询容灾计划详情</p>
+     * @return GetDisasterRecoveryPlanResponse
+     */
+    public GetDisasterRecoveryPlanResponse getDisasterRecoveryPlan(String planId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDisasterRecoveryPlanWithOptions(planId, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
@@ -1304,7 +1510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取访问控制acl数据</p>
+     * <p>Queries information about the access control list (ACL) of an instance.</p>
      * 
      * @param request GetInstanceAclRequest
      * @param headers map
@@ -1347,7 +1553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取访问控制acl数据</p>
+     * <p>Queries information about the access control list (ACL) of an instance.</p>
      * 
      * @param request GetInstanceAclRequest
      * @return GetInstanceAclResponse
@@ -1360,7 +1566,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例ip白名单</p>
+     * <p>Queries the information about the IP address whitelist of an instance.</p>
      * 
      * @param tmpReq GetInstanceIpWhitelistRequest
      * @param headers map
@@ -1405,7 +1611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例ip白名单</p>
+     * <p>Queries the information about the IP address whitelist of an instance.</p>
      * 
      * @param request GetInstanceIpWhitelistRequest
      * @return GetInstanceIpWhitelistResponse
@@ -1460,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified topic.</p>
+     * <p>Query Topic Details</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1491,7 +1697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a specified topic.</p>
+     * <p>Query Topic Details</p>
      * @return GetTopicResponse
      */
     public GetTopicResponse getTopic(String instanceId, String topicName) throws Exception {
@@ -1630,13 +1836,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the subscriptions of a specific consumer group.</p>
      * 
+     * @param request ListConsumerGroupSubscriptionsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConsumerGroupSubscriptionsResponse
      */
-    public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptionsWithOptions(String instanceId, String consumerGroupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptionsWithOptions(String instanceId, String consumerGroupId, ListConsumerGroupSubscriptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
+            query.put("topicName", request.topicName);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListConsumerGroupSubscriptions"),
@@ -1660,22 +1874,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>Queries the subscriptions of a specific consumer group.</p>
+     * 
+     * @param request ListConsumerGroupSubscriptionsRequest
      * @return ListConsumerGroupSubscriptionsResponse
      */
-    public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptions(String instanceId, String consumerGroupId) throws Exception {
+    public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptions(String instanceId, String consumerGroupId, ListConsumerGroupSubscriptionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listConsumerGroupSubscriptionsWithOptions(instanceId, consumerGroupId, headers, runtime);
+        return this.listConsumerGroupSubscriptionsWithOptions(instanceId, consumerGroupId, request, headers, runtime);
     }
 
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the consumer groups in a specified instance.</p>
+     * <p>List Consumer Groups</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @param headers map
@@ -1723,11 +1939,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. Do not rely on OpenAPI implementation in the core data chain for message sending and receiving, as this may lead to risks in the chain.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the consumer groups in a specified instance.</p>
+     * <p>List Consumer Groups</p>
      * 
      * @param request ListConsumerGroupsRequest
      * @return ListConsumerGroupsResponse
@@ -1736,6 +1952,198 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listConsumerGroupsWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query disaster recovery plan consumption progress information</p>
+     * 
+     * @param request ListDisasterRecoveryCheckpointsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDisasterRecoveryCheckpointsResponse
+     */
+    public ListDisasterRecoveryCheckpointsResponse listDisasterRecoveryCheckpointsWithOptions(String planId, String itemId, ListDisasterRecoveryCheckpointsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDisasterRecoveryCheckpoints"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(itemId) + "/checkpoints"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDisasterRecoveryCheckpointsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDisasterRecoveryCheckpointsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query disaster recovery plan consumption progress information</p>
+     * 
+     * @param request ListDisasterRecoveryCheckpointsRequest
+     * @return ListDisasterRecoveryCheckpointsResponse
+     */
+    public ListDisasterRecoveryCheckpointsResponse listDisasterRecoveryCheckpoints(String planId, String itemId, ListDisasterRecoveryCheckpointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDisasterRecoveryCheckpointsWithOptions(planId, itemId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Disaster Recovery Plan Entry List</p>
+     * 
+     * @param request ListDisasterRecoveryItemsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDisasterRecoveryItemsResponse
+     */
+    public ListDisasterRecoveryItemsResponse listDisasterRecoveryItemsWithOptions(String planId, ListDisasterRecoveryItemsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
+            query.put("topicName", request.topicName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDisasterRecoveryItems"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDisasterRecoveryItemsResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDisasterRecoveryItemsResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Disaster Recovery Plan Entry List</p>
+     * 
+     * @param request ListDisasterRecoveryItemsRequest
+     * @return ListDisasterRecoveryItemsResponse
+     */
+    public ListDisasterRecoveryItemsResponse listDisasterRecoveryItems(String planId, ListDisasterRecoveryItemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDisasterRecoveryItemsWithOptions(planId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Disaster Recovery Plan List</p>
+     * 
+     * @param request ListDisasterRecoveryPlansRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDisasterRecoveryPlansResponse
+     */
+    public ListDisasterRecoveryPlansResponse listDisasterRecoveryPlansWithOptions(ListDisasterRecoveryPlansRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("instanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDisasterRecoveryPlans"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new ListDisasterRecoveryPlansResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new ListDisasterRecoveryPlansResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Query Disaster Recovery Plan List</p>
+     * 
+     * @param request ListDisasterRecoveryPlansRequest
+     * @return ListDisasterRecoveryPlansResponse
+     */
+    public ListDisasterRecoveryPlansResponse listDisasterRecoveryPlans(ListDisasterRecoveryPlansRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listDisasterRecoveryPlansWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2096,7 +2504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监控项列表</p>
+     * <p>Query Monitoring Items List</p>
      * 
      * @param request ListMetricMetaRequest
      * @param headers map
@@ -2139,7 +2547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监控项列表</p>
+     * <p>Query Monitoring Items List</p>
      * 
      * @param request ListMetricMetaRequest
      * @return ListMetricMetaResponse
@@ -2308,7 +2716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the topics in a specified instance.</p>
+     * <p>Query Topic List</p>
      * 
      * @param tmpReq ListTopicsRequest
      * @param headers map
@@ -2365,7 +2773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the topics in a specified instance.</p>
+     * <p>Query Topic List</p>
      * 
      * @param request ListTopicsRequest
      * @return ListTopicsResponse
@@ -2510,7 +2918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用容灾计划条目</p>
+     * <p>Enable Disaster Recovery Plan Entry</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2541,7 +2949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启用容灾计划条目</p>
+     * <p>Enable Disaster Recovery Plan Entry</p>
      * @return StartDisasterRecoveryItemResponse
      */
     public StartDisasterRecoveryItemResponse startDisasterRecoveryItem(String planId, String itemId) throws Exception {
@@ -2552,7 +2960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停用容灾计划条目</p>
+     * <p>Deactivate Disaster Recovery Plan Entry</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2583,13 +2991,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停用容灾计划条目</p>
+     * <p>Deactivate Disaster Recovery Plan Entry</p>
      * @return StopDisasterRecoveryItemResponse
      */
     public StopDisasterRecoveryItemResponse stopDisasterRecoveryItem(String planId, String itemId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopDisasterRecoveryItemWithOptions(planId, itemId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Synchronize Disaster Recovery Plan Consumption Progress</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SyncDisasterRecoveryCheckpointResponse
+     */
+    public SyncDisasterRecoveryCheckpointResponse syncDisasterRecoveryCheckpointWithOptions(String planId, String itemId, String checkpointId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SyncDisasterRecoveryCheckpoint"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(itemId) + "/checkpoints/" + com.aliyun.openapiutil.Client.getEncodeParam(checkpointId) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new SyncDisasterRecoveryCheckpointResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new SyncDisasterRecoveryCheckpointResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Synchronize Disaster Recovery Plan Consumption Progress</p>
+     * @return SyncDisasterRecoveryCheckpointResponse
+     */
+    public SyncDisasterRecoveryCheckpointResponse syncDisasterRecoveryCheckpoint(String planId, String itemId, String checkpointId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.syncDisasterRecoveryCheckpointWithOptions(planId, itemId, checkpointId, headers, runtime);
     }
 
     /**
@@ -2727,11 +3177,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the basic information about and the consumption retry policy of a consumer group.</p>
+     * <p>Update ConsumerGroup</p>
      * 
      * @param request UpdateConsumerGroupRequest
      * @param headers map
@@ -2783,11 +3233,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * <p>Notice: The OpenAPI provided by Alibaba Cloud is a management API used for managing and querying related resources of Alibaba Cloud services. It is recommended to integrate it only in the management chain. It is strictly prohibited to rely on OpenAPI implementation in the core data chain of message sending and receiving, otherwise it may lead to risks in the chain.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates the basic information about and the consumption retry policy of a consumer group.</p>
+     * <p>Update ConsumerGroup</p>
      * 
      * @param request UpdateConsumerGroupRequest
      * @return UpdateConsumerGroupResponse
@@ -2796,6 +3246,130 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a topic mapping in a global message backup plan.</p>
+     * 
+     * @param request UpdateDisasterRecoveryItemRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDisasterRecoveryItemResponse
+     */
+    public UpdateDisasterRecoveryItemResponse updateDisasterRecoveryItemWithOptions(String planId, String itemId, UpdateDisasterRecoveryItemRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.topics)) {
+            body.put("topics", request.topics);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDisasterRecoveryItem"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + "/items/" + com.aliyun.openapiutil.Client.getEncodeParam(itemId) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDisasterRecoveryItemResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateDisasterRecoveryItemResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a topic mapping in a global message backup plan.</p>
+     * 
+     * @param request UpdateDisasterRecoveryItemRequest
+     * @return UpdateDisasterRecoveryItemResponse
+     */
+    public UpdateDisasterRecoveryItemResponse updateDisasterRecoveryItem(String planId, String itemId, UpdateDisasterRecoveryItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDisasterRecoveryItemWithOptions(planId, itemId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a global message backup plan.</p>
+     * 
+     * @param request UpdateDisasterRecoveryPlanRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDisasterRecoveryPlanResponse
+     */
+    public UpdateDisasterRecoveryPlanResponse updateDisasterRecoveryPlanWithOptions(String planId, UpdateDisasterRecoveryPlanRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoSyncCheckpoint)) {
+            body.put("autoSyncCheckpoint", request.autoSyncCheckpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instances)) {
+            body.put("instances", request.instances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planDesc)) {
+            body.put("planDesc", request.planDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planName)) {
+            body.put("planName", request.planName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.planType)) {
+            body.put("planType", request.planType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.syncCheckpointEnabled)) {
+            body.put("syncCheckpointEnabled", request.syncCheckpointEnabled);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDisasterRecoveryPlan"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/disaster_recovery/" + com.aliyun.openapiutil.Client.getEncodeParam(planId) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDisasterRecoveryPlanResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateDisasterRecoveryPlanResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies a global message backup plan.</p>
+     * 
+     * @param request UpdateDisasterRecoveryPlanRequest
+     * @return UpdateDisasterRecoveryPlanResponse
+     */
+    public UpdateDisasterRecoveryPlanResponse updateDisasterRecoveryPlan(String planId, UpdateDisasterRecoveryPlanRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateDisasterRecoveryPlanWithOptions(planId, request, headers, runtime);
     }
 
     /**
@@ -3002,7 +3576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the basic information about a topic.</p>
+     * <p>Update Topic</p>
      * 
      * @param request UpdateTopicRequest
      * @param headers map
@@ -3045,7 +3619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the basic information about a topic.</p>
+     * <p>Update Topic</p>
      * 
      * @param request UpdateTopicRequest
      * @return UpdateTopicResponse

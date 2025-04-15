@@ -14,7 +14,7 @@ public class GetTraceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetTraceResponseBodyData data;
@@ -209,6 +209,12 @@ public class GetTraceResponseBody extends TeaModel {
         @NameInMap("presetDelayTime")
         public String presetDelayTime;
 
+        /**
+         * <p>Withdraw scheduled message request result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RECALL_OK</p>
+         */
         @NameInMap("recallResult")
         public String recallResult;
 
@@ -910,6 +916,12 @@ public class GetTraceResponseBody extends TeaModel {
         @NameInMap("produceTime")
         public String produceTime;
 
+        /**
+         * <p>The time when the scheduled message withdrawal request was initiated</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-22 12:17:08</p>
+         */
         @NameInMap("recallTime")
         public String recallTime;
 
@@ -1011,7 +1023,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyDataProducerInfo extends TeaModel {
         /**
-         * <p>Producer record list.</p>
+         * <p>The production records.</p>
          */
         @NameInMap("records")
         public java.util.List<GetTraceResponseBodyDataProducerInfoRecords> records;
@@ -1033,7 +1045,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     public static class GetTraceResponseBodyData extends TeaModel {
         /**
-         * <p>Broker trace info.</p>
+         * <p>The broker trace.</p>
          */
         @NameInMap("brokerInfo")
         public GetTraceResponseBodyDataBrokerInfo brokerInfo;
@@ -1060,7 +1072,7 @@ public class GetTraceResponseBody extends TeaModel {
         public GetTraceResponseBodyDataMessageInfo messageInfo;
 
         /**
-         * <p>Producer trace info.</p>
+         * <p>The producer trace.</p>
          */
         @NameInMap("producerInfo")
         public GetTraceResponseBodyDataProducerInfo producerInfo;

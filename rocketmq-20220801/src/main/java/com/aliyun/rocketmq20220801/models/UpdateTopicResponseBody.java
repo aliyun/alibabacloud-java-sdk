@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTopicResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>Error code.</p>
      * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
@@ -14,7 +14,7 @@ public class UpdateTopicResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result data that is returned.</p>
+     * <p>Return result.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class UpdateTopicResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The dynamic error code.</p>
+     * <p>Dynamic error code</p>
      * 
      * <strong>example:</strong>
      * <p>TopicName</p>
@@ -32,7 +32,7 @@ public class UpdateTopicResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>动态错误信息</p>
      * 
      * <strong>example:</strong>
      * <p>topicName</p>
@@ -41,7 +41,7 @@ public class UpdateTopicResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -50,7 +50,7 @@ public class UpdateTopicResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>Error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The topic cannot be found.</p>
@@ -59,7 +59,7 @@ public class UpdateTopicResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * <p>Request ID, each request has a unique ID that can be used for troubleshooting and problem localization.</p>
      * 
      * <strong>example:</strong>
      * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
@@ -68,7 +68,7 @@ public class UpdateTopicResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Whether the execution result is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

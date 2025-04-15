@@ -35,6 +35,8 @@ public class CreateInstanceRequest extends TeaModel {
      * <ul>
      * <li>ons_rmqpost_public_intl: pay-as-you-go</li>
      * <li>ons_rmqsub_public_intl: subscription</li>
+     * <li>ons_rmqsrvlesspost_public_intl: serverless instance
+     * serverless instance requires this parameter</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -105,7 +107,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The information about the instance specifications.</p>
+     * <p>The information about instance specifications.</p>
      */
     @NameInMap("productInfo")
     public CreateInstanceRequestProductInfo productInfo;
@@ -120,7 +122,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzy6pist7uuna</p>
@@ -183,6 +185,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("subSeriesCode")
     public String subSeriesCode;
 
+    /**
+     * <p>The tags that you want to add to the instance.</p>
+     */
     @NameInMap("tags")
     public java.util.List<CreateInstanceRequestTags> tags;
 
@@ -341,12 +346,12 @@ public class CreateInstanceRequest extends TeaModel {
         public Integer flowOutBandwidth;
 
         /**
-         * <p>The billing method of Internet usage.</p>
+         * <p>The metering method of Internet usage.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>payByBandwidth: pay-by-bandwidth. This value is valid only if you enable Internet access.</li>
          * <li>payByTraffic: pay-by-traffic. This value is valid only if you enable Internet access.</li>
-         * <li>uninvolved: No billing method is involved. This value is valid only if you disable Internet access.</li>
+         * <li>uninvolved: No metering method is involved. This value is valid only if you disable Internet access.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -373,10 +378,10 @@ public class CreateInstanceRequest extends TeaModel {
         public String internetSpec;
 
         /**
-         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</p>
+         * <p>The whitelist that includes the CIDR blocks that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.</p>
          * <ul>
          * <li>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
-         * <li>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+         * <li>If you configure an IP address whitelist, only the CIDR blocks in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
          * </ul>
          */
         @NameInMap("ipWhitelist")
@@ -629,7 +634,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Float sendReceiveRatio;
 
         /**
-         * <p>Indicates whether storage encryption is enabled.</p>
+         * <p>Specifies whether to enable the encryption at rest feature.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -638,7 +643,7 @@ public class CreateInstanceRequest extends TeaModel {
         public Boolean storageEncryption;
 
         /**
-         * <p>The storage encryption key.</p>
+         * <p>The key for encryption at rest.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -702,9 +707,21 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestTags extends TeaModel {
+        /**
+         * <p>The <code>key</code> of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The <code>value</code> of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbb</p>
+         */
         @NameInMap("value")
         public String value;
 

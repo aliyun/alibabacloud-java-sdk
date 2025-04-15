@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceAclRequest extends TeaModel {
     /**
+     * <p>The name of the resource on which you want to grant permissions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class GetInstanceAclRequest extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The type of the resource on which you want to grant permissions.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Group</li>
+     * <li>Topic</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

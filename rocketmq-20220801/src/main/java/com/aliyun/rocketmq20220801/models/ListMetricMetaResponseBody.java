@@ -5,30 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListMetricMetaResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("data")
     public ListMetricMetaResponseBodyData data;
 
     /**
+     * <p>Dynamic error code</p>
+     * 
      * <strong>example:</strong>
-     * <p>InstanceId</p>
+     * <p>xxx</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
+     * <p>The dynamic error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>instanceId</p>
+     * <p>xxx</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>The topic already exists.</p>
      */
@@ -43,6 +56,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8B459455-4A35-5796-BA9D-98EF1AB9A931</p>
      */
@@ -50,6 +65,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether the operation was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
 
     public static class ListMetricMetaResponseBodyDataList extends TeaModel {
         /**
+         * <p>Monitoring item tag</p>
+         * 
          * <strong>example:</strong>
          * <p>Bug</p>
          */
@@ -134,6 +153,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
         public String category;
 
         /**
+         * <p>Monitoring item description</p>
+         * 
          * <strong>example:</strong>
          * <p>Using Serverless Devs to deploy the infrastructure of project:get-userinfo-v1-infrastructure-as-template-project</p>
          */
@@ -141,6 +162,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>Monitoring item name</p>
+         * 
          * <strong>example:</strong>
          * <p>SendMessageCountPerInstance</p>
          */
@@ -179,10 +202,15 @@ public class ListMetricMetaResponseBody extends TeaModel {
     }
 
     public static class ListMetricMetaResponseBodyData extends TeaModel {
+        /**
+         * <p>Paged data</p>
+         */
         @NameInMap("list")
         public java.util.List<ListMetricMetaResponseBodyDataList> list;
 
         /**
+         * <p>Current page number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,6 +218,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>Page size</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -197,6 +227,8 @@ public class ListMetricMetaResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
+         * <p>Total record count</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

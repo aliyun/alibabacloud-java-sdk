@@ -4,30 +4,84 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class StopDisasterRecoveryItemResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial. This parameter is returned only if the access is denied because the Resource Access Management (RAM) user does not have the required permissions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("accessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Error code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DisasterRecoveryItemStatus.Error</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Return result</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("data")
     public Boolean data;
 
+    /**
+     * <p>Dynamic error code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>Dynamic error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceId</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The current status of the disaster recovery item does not support this operation.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A07B41BD-6DD3-5349-9E76-00303xxxx</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Whether the operation was successful</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

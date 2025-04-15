@@ -31,6 +31,12 @@ public class DataTopicLagMapValue extends TeaModel {
     @NameInMap("deliveryDuration")
     public Long deliveryDuration;
 
+    /**
+     * <p>lastConsumeTimestamp</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1735629607846</p>
+     */
     @NameInMap("lastConsumeTimestamp")
     public Long lastConsumeTimestamp;
 

@@ -14,6 +14,9 @@ public class DeleteInstanceIpWhitelistRequest extends TeaModel {
     @Deprecated
     public String ipWhitelist;
 
+    /**
+     * <p>The IP address whitelist.</p>
+     */
     @NameInMap("ipWhitelists")
     public java.util.List<String> ipWhitelists;
 

@@ -4,6 +4,12 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
+    /**
+     * <p>The maximum TPS for message sending.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1500</p>
+     */
     @NameInMap("maxSendTps")
     public Long maxSendTps;
 
@@ -13,11 +19,11 @@ public class CreateTopicRequest extends TeaModel {
      * <ul>
      * <li>TRANSACTION: transactional messages</li>
      * <li>FIFO: ordered messages</li>
-     * <li>DELAY: scheduled messages or delayed Message</li>
+     * <li>DELAY: scheduled or delayed messages</li>
      * <li>NORMAL: normal messages</li>
      * </ul>
      * <blockquote>
-     * <p>The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, the topic can be used to send and receive only ordered messages.</p>
+     * <p> The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, you can use the topic to send and receive only ordered messages.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

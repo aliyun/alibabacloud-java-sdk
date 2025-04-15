@@ -14,7 +14,7 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetInstanceAccountResponseBodyData data;
@@ -143,6 +143,17 @@ public class GetInstanceAccountResponseBody extends TeaModel {
     }
 
     public static class GetInstanceAccountResponseBodyData extends TeaModel {
+        /**
+         * <p>The status of the account.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>DISABLE</li>
+         * <li>ENABLE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("accountStatus")
         public String accountStatus;
 

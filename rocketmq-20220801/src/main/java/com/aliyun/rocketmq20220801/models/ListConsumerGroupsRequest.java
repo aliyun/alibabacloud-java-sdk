@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListConsumerGroupsRequest extends TeaModel {
     /**
-     * <p>The condition that you want to use to filter consumer groups in the instance. If you leave this parameter empty, all consumer groups in the instance are queried.</p>
+     * <p>The filter condition for the query. If not provided, all consumer groups under the specified instance will be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>CID-TEST</p>
@@ -14,7 +14,7 @@ public class ListConsumerGroupsRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>Page number, indicating which page of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,8 @@ public class ListConsumerGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>Page size, the maximum number of results to display per page.</p>
+     * <p>Value range: [10, 100].</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

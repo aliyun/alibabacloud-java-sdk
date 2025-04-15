@@ -4,6 +4,12 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerGroupLagRequest extends TeaModel {
+    /**
+     * <p>The topic name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal-topic-1</p>
+     */
     @NameInMap("topicName")
     public String topicName;
 
