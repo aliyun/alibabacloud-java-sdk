@@ -34,6 +34,9 @@ public class StartCloudNoteRequest extends TeaModel {
     @NameInMap("MeetingAssistance")
     public StartCloudNoteRequestMeetingAssistance meetingAssistance;
 
+    @NameInMap("RealtimeSubtitle")
+    public StartCloudNoteRequestRealtimeSubtitle realtimeSubtitle;
+
     @NameInMap("ServiceInspection")
     public StartCloudNoteRequestServiceInspection serviceInspection;
 
@@ -64,6 +67,9 @@ public class StartCloudNoteRequest extends TeaModel {
 
     @NameInMap("TextPolish")
     public StartCloudNoteRequestTextPolish textPolish;
+
+    @NameInMap("Transcription")
+    public StartCloudNoteRequestTranscription transcription;
 
     public static StartCloudNoteRequest build(java.util.Map<String, ?> map) throws Exception {
         StartCloudNoteRequest self = new StartCloudNoteRequest();
@@ -118,6 +124,14 @@ public class StartCloudNoteRequest extends TeaModel {
         return this.meetingAssistance;
     }
 
+    public StartCloudNoteRequest setRealtimeSubtitle(StartCloudNoteRequestRealtimeSubtitle realtimeSubtitle) {
+        this.realtimeSubtitle = realtimeSubtitle;
+        return this;
+    }
+    public StartCloudNoteRequestRealtimeSubtitle getRealtimeSubtitle() {
+        return this.realtimeSubtitle;
+    }
+
     public StartCloudNoteRequest setServiceInspection(StartCloudNoteRequestServiceInspection serviceInspection) {
         this.serviceInspection = serviceInspection;
         return this;
@@ -164,6 +178,14 @@ public class StartCloudNoteRequest extends TeaModel {
     }
     public StartCloudNoteRequestTextPolish getTextPolish() {
         return this.textPolish;
+    }
+
+    public StartCloudNoteRequest setTranscription(StartCloudNoteRequestTranscription transcription) {
+        this.transcription = transcription;
+        return this;
+    }
+    public StartCloudNoteRequestTranscription getTranscription() {
+        return this.transcription;
     }
 
     public static class StartCloudNoteRequestAutoChapters extends TeaModel {
@@ -319,6 +341,59 @@ public class StartCloudNoteRequest extends TeaModel {
         }
         public java.util.List<String> getMeetingAssistanceType() {
             return this.meetingAssistanceType;
+        }
+
+    }
+
+    public static class StartCloudNoteRequestRealtimeSubtitleTranslation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TranslateLevel")
+        public Integer translateLevel;
+
+        public static StartCloudNoteRequestRealtimeSubtitleTranslation build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudNoteRequestRealtimeSubtitleTranslation self = new StartCloudNoteRequestRealtimeSubtitleTranslation();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudNoteRequestRealtimeSubtitleTranslation setTranslateLevel(Integer translateLevel) {
+            this.translateLevel = translateLevel;
+            return this;
+        }
+        public Integer getTranslateLevel() {
+            return this.translateLevel;
+        }
+
+    }
+
+    public static class StartCloudNoteRequestRealtimeSubtitle extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("Translation")
+        public StartCloudNoteRequestRealtimeSubtitleTranslation translation;
+
+        public static StartCloudNoteRequestRealtimeSubtitle build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudNoteRequestRealtimeSubtitle self = new StartCloudNoteRequestRealtimeSubtitle();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudNoteRequestRealtimeSubtitle setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public StartCloudNoteRequestRealtimeSubtitle setTranslation(StartCloudNoteRequestRealtimeSubtitleTranslation translation) {
+            this.translation = translation;
+            return this;
+        }
+        public StartCloudNoteRequestRealtimeSubtitleTranslation getTranslation() {
+            return this.translation;
         }
 
     }
@@ -575,6 +650,51 @@ public class StartCloudNoteRequest extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+    }
+
+    public static class StartCloudNoteRequestTranscription extends TeaModel {
+        @NameInMap("DiarizationEnabled")
+        public Boolean diarizationEnabled;
+
+        @NameInMap("SpeakerCount")
+        public Integer speakerCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TranscriptionLevel")
+        public Integer transcriptionLevel;
+
+        public static StartCloudNoteRequestTranscription build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudNoteRequestTranscription self = new StartCloudNoteRequestTranscription();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudNoteRequestTranscription setDiarizationEnabled(Boolean diarizationEnabled) {
+            this.diarizationEnabled = diarizationEnabled;
+            return this;
+        }
+        public Boolean getDiarizationEnabled() {
+            return this.diarizationEnabled;
+        }
+
+        public StartCloudNoteRequestTranscription setSpeakerCount(Integer speakerCount) {
+            this.speakerCount = speakerCount;
+            return this;
+        }
+        public Integer getSpeakerCount() {
+            return this.speakerCount;
+        }
+
+        public StartCloudNoteRequestTranscription setTranscriptionLevel(Integer transcriptionLevel) {
+            this.transcriptionLevel = transcriptionLevel;
+            return this;
+        }
+        public Integer getTranscriptionLevel() {
+            return this.transcriptionLevel;
         }
 
     }

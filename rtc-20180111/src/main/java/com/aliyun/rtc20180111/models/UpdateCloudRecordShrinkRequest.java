@@ -705,6 +705,159 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
     }
 
+    public static class UpdateCloudRecordShrinkRequestPanesBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
+        @NameInMap("Alpha")
+        public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Height")
+        public Double height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Layer")
+        public Integer layer;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("PaneBackgroundCropMode")
+        public Integer paneBackgroundCropMode;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Width")
+        public Double width;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("X")
+        public Double x;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Y")
+        public Double y;
+
+        public static UpdateCloudRecordShrinkRequestPanesBackgrounds build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCloudRecordShrinkRequestPanesBackgrounds self = new UpdateCloudRecordShrinkRequestPanesBackgrounds();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setAlpha(Double alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setHeight(Double height) {
+            this.height = height;
+            return this;
+        }
+        public Double getHeight() {
+            return this.height;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setLayer(Integer layer) {
+            this.layer = layer;
+            return this;
+        }
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setPaneBackgroundCropMode(Integer paneBackgroundCropMode) {
+            this.paneBackgroundCropMode = paneBackgroundCropMode;
+            return this;
+        }
+        public Integer getPaneBackgroundCropMode() {
+            return this.paneBackgroundCropMode;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setWidth(Double width) {
+            this.width = width;
+            return this;
+        }
+        public Double getWidth() {
+            return this.width;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setX(Double x) {
+            this.x = x;
+            return this;
+        }
+        public Double getX() {
+            return this.x;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesBackgrounds setY(Double y) {
+            this.y = y;
+            return this;
+        }
+        public Double getY() {
+            return this.y;
+        }
+
+    }
+
     public static class UpdateCloudRecordShrinkRequestPanesImages extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -712,6 +865,13 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
          */
         @NameInMap("Alpha")
         public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
 
         /**
          * <p>This parameter is required.</p>
@@ -783,6 +943,14 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         }
         public Double getAlpha() {
             return this.alpha;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesImages setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public UpdateCloudRecordShrinkRequestPanesImages setHeight(Double height) {
@@ -976,6 +1144,13 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
@@ -1063,6 +1238,14 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         }
         public UpdateCloudRecordShrinkRequestPanesTextsBoxColor getBoxColor() {
             return this.boxColor;
+        }
+
+        public UpdateCloudRecordShrinkRequestPanesTexts setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public UpdateCloudRecordShrinkRequestPanesTexts setFont(Integer font) {
@@ -1155,6 +1338,9 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
     }
 
     public static class UpdateCloudRecordShrinkRequestPanes extends TeaModel {
+        @NameInMap("Backgrounds")
+        public java.util.List<UpdateCloudRecordShrinkRequestPanesBackgrounds> backgrounds;
+
         @NameInMap("Images")
         public java.util.List<UpdateCloudRecordShrinkRequestPanesImages> images;
 
@@ -1207,6 +1393,14 @@ public class UpdateCloudRecordShrinkRequest extends TeaModel {
         public static UpdateCloudRecordShrinkRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             UpdateCloudRecordShrinkRequestPanes self = new UpdateCloudRecordShrinkRequestPanes();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudRecordShrinkRequestPanes setBackgrounds(java.util.List<UpdateCloudRecordShrinkRequestPanesBackgrounds> backgrounds) {
+            this.backgrounds = backgrounds;
+            return this;
+        }
+        public java.util.List<UpdateCloudRecordShrinkRequestPanesBackgrounds> getBackgrounds() {
+            return this.backgrounds;
         }
 
         public UpdateCloudRecordShrinkRequestPanes setImages(java.util.List<UpdateCloudRecordShrinkRequestPanesImages> images) {

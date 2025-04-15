@@ -741,6 +741,159 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
     }
 
+    public static class UpdateCloudRecordRequestPanesBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
+        @NameInMap("Alpha")
+        public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Height")
+        public Double height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Layer")
+        public Integer layer;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("PaneBackgroundCropMode")
+        public Integer paneBackgroundCropMode;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Width")
+        public Double width;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("X")
+        public Double x;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Y")
+        public Double y;
+
+        public static UpdateCloudRecordRequestPanesBackgrounds build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCloudRecordRequestPanesBackgrounds self = new UpdateCloudRecordRequestPanesBackgrounds();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setAlpha(Double alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setHeight(Double height) {
+            this.height = height;
+            return this;
+        }
+        public Double getHeight() {
+            return this.height;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setLayer(Integer layer) {
+            this.layer = layer;
+            return this;
+        }
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setPaneBackgroundCropMode(Integer paneBackgroundCropMode) {
+            this.paneBackgroundCropMode = paneBackgroundCropMode;
+            return this;
+        }
+        public Integer getPaneBackgroundCropMode() {
+            return this.paneBackgroundCropMode;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setWidth(Double width) {
+            this.width = width;
+            return this;
+        }
+        public Double getWidth() {
+            return this.width;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setX(Double x) {
+            this.x = x;
+            return this;
+        }
+        public Double getX() {
+            return this.x;
+        }
+
+        public UpdateCloudRecordRequestPanesBackgrounds setY(Double y) {
+            this.y = y;
+            return this;
+        }
+        public Double getY() {
+            return this.y;
+        }
+
+    }
+
     public static class UpdateCloudRecordRequestPanesImages extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -748,6 +901,13 @@ public class UpdateCloudRecordRequest extends TeaModel {
          */
         @NameInMap("Alpha")
         public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
 
         /**
          * <p>This parameter is required.</p>
@@ -819,6 +979,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
         }
         public Double getAlpha() {
             return this.alpha;
+        }
+
+        public UpdateCloudRecordRequestPanesImages setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public UpdateCloudRecordRequestPanesImages setHeight(Double height) {
@@ -1012,6 +1180,13 @@ public class UpdateCloudRecordRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
@@ -1099,6 +1274,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
         }
         public UpdateCloudRecordRequestPanesTextsBoxColor getBoxColor() {
             return this.boxColor;
+        }
+
+        public UpdateCloudRecordRequestPanesTexts setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public UpdateCloudRecordRequestPanesTexts setFont(Integer font) {
@@ -1191,6 +1374,9 @@ public class UpdateCloudRecordRequest extends TeaModel {
     }
 
     public static class UpdateCloudRecordRequestPanes extends TeaModel {
+        @NameInMap("Backgrounds")
+        public java.util.List<UpdateCloudRecordRequestPanesBackgrounds> backgrounds;
+
         @NameInMap("Images")
         public java.util.List<UpdateCloudRecordRequestPanesImages> images;
 
@@ -1243,6 +1429,14 @@ public class UpdateCloudRecordRequest extends TeaModel {
         public static UpdateCloudRecordRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             UpdateCloudRecordRequestPanes self = new UpdateCloudRecordRequestPanes();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudRecordRequestPanes setBackgrounds(java.util.List<UpdateCloudRecordRequestPanesBackgrounds> backgrounds) {
+            this.backgrounds = backgrounds;
+            return this;
+        }
+        public java.util.List<UpdateCloudRecordRequestPanesBackgrounds> getBackgrounds() {
+            return this.backgrounds;
         }
 
         public UpdateCloudRecordRequestPanes setImages(java.util.List<UpdateCloudRecordRequestPanesImages> images) {

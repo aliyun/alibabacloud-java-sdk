@@ -705,6 +705,159 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     }
 
+    public static class UpdateStreamingOutShrinkRequestPanesBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
+        @NameInMap("Alpha")
+        public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Height")
+        public Double height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Layer")
+        public Integer layer;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("PaneBackgroundCropMode")
+        public Integer paneBackgroundCropMode;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Width")
+        public Double width;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("X")
+        public Double x;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Y")
+        public Double y;
+
+        public static UpdateStreamingOutShrinkRequestPanesBackgrounds build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestPanesBackgrounds self = new UpdateStreamingOutShrinkRequestPanesBackgrounds();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setAlpha(Double alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setHeight(Double height) {
+            this.height = height;
+            return this;
+        }
+        public Double getHeight() {
+            return this.height;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setLayer(Integer layer) {
+            this.layer = layer;
+            return this;
+        }
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setPaneBackgroundCropMode(Integer paneBackgroundCropMode) {
+            this.paneBackgroundCropMode = paneBackgroundCropMode;
+            return this;
+        }
+        public Integer getPaneBackgroundCropMode() {
+            return this.paneBackgroundCropMode;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setWidth(Double width) {
+            this.width = width;
+            return this;
+        }
+        public Double getWidth() {
+            return this.width;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setX(Double x) {
+            this.x = x;
+            return this;
+        }
+        public Double getX() {
+            return this.x;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesBackgrounds setY(Double y) {
+            this.y = y;
+            return this;
+        }
+        public Double getY() {
+            return this.y;
+        }
+
+    }
+
     public static class UpdateStreamingOutShrinkRequestPanesImages extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -712,6 +865,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
          */
         @NameInMap("Alpha")
         public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
 
         /**
          * <p>This parameter is required.</p>
@@ -783,6 +943,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         }
         public Double getAlpha() {
             return this.alpha;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesImages setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public UpdateStreamingOutShrinkRequestPanesImages setHeight(Double height) {
@@ -976,6 +1144,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
@@ -1063,6 +1238,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         }
         public UpdateStreamingOutShrinkRequestPanesTextsBoxColor getBoxColor() {
             return this.boxColor;
+        }
+
+        public UpdateStreamingOutShrinkRequestPanesTexts setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public UpdateStreamingOutShrinkRequestPanesTexts setFont(Integer font) {
@@ -1155,6 +1338,9 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     }
 
     public static class UpdateStreamingOutShrinkRequestPanes extends TeaModel {
+        @NameInMap("Backgrounds")
+        public java.util.List<UpdateStreamingOutShrinkRequestPanesBackgrounds> backgrounds;
+
         @NameInMap("Images")
         public java.util.List<UpdateStreamingOutShrinkRequestPanesImages> images;
 
@@ -1205,6 +1391,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         public static UpdateStreamingOutShrinkRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             UpdateStreamingOutShrinkRequestPanes self = new UpdateStreamingOutShrinkRequestPanes();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutShrinkRequestPanes setBackgrounds(java.util.List<UpdateStreamingOutShrinkRequestPanesBackgrounds> backgrounds) {
+            this.backgrounds = backgrounds;
+            return this;
+        }
+        public java.util.List<UpdateStreamingOutShrinkRequestPanesBackgrounds> getBackgrounds() {
+            return this.backgrounds;
         }
 
         public UpdateStreamingOutShrinkRequestPanes setImages(java.util.List<UpdateStreamingOutShrinkRequestPanesImages> images) {

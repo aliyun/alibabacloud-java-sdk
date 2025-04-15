@@ -50,6 +50,9 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("ReservePaneForNoCameraUser")
     public Boolean reservePaneForNoCameraUser;
 
+    @NameInMap("ShowDefaultBackgroundOnMute")
+    public Boolean showDefaultBackgroundOnMute;
+
     @NameInMap("StartWithoutChannel")
     public Boolean startWithoutChannel;
 
@@ -171,6 +174,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     }
     public Boolean getReservePaneForNoCameraUser() {
         return this.reservePaneForNoCameraUser;
+    }
+
+    public StartStreamingOutShrinkRequest setShowDefaultBackgroundOnMute(Boolean showDefaultBackgroundOnMute) {
+        this.showDefaultBackgroundOnMute = showDefaultBackgroundOnMute;
+        return this;
+    }
+    public Boolean getShowDefaultBackgroundOnMute() {
+        return this.showDefaultBackgroundOnMute;
     }
 
     public StartStreamingOutShrinkRequest setStartWithoutChannel(Boolean startWithoutChannel) {
@@ -783,6 +794,159 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
 
     }
 
+    public static class StartStreamingOutShrinkRequestPanesBackgrounds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
+        @NameInMap("Alpha")
+        public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Height")
+        public Double height;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("Layer")
+        public Integer layer;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("PaneBackgroundCropMode")
+        public Integer paneBackgroundCropMode;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun.com/123xx.jpg">https://aliyun.com/123xx.jpg</a></p>
+         */
+        @NameInMap("Url")
+        public String url;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Width")
+        public Double width;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("X")
+        public Double x;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
+        @NameInMap("Y")
+        public Double y;
+
+        public static StartStreamingOutShrinkRequestPanesBackgrounds build(java.util.Map<String, ?> map) throws Exception {
+            StartStreamingOutShrinkRequestPanesBackgrounds self = new StartStreamingOutShrinkRequestPanesBackgrounds();
+            return TeaModel.build(map, self);
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setAlpha(Double alpha) {
+            this.alpha = alpha;
+            return this;
+        }
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setHeight(Double height) {
+            this.height = height;
+            return this;
+        }
+        public Double getHeight() {
+            return this.height;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setLayer(Integer layer) {
+            this.layer = layer;
+            return this;
+        }
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setPaneBackgroundCropMode(Integer paneBackgroundCropMode) {
+            this.paneBackgroundCropMode = paneBackgroundCropMode;
+            return this;
+        }
+        public Integer getPaneBackgroundCropMode() {
+            return this.paneBackgroundCropMode;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setWidth(Double width) {
+            this.width = width;
+            return this;
+        }
+        public Double getWidth() {
+            return this.width;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setX(Double x) {
+            this.x = x;
+            return this;
+        }
+        public Double getX() {
+            return this.x;
+        }
+
+        public StartStreamingOutShrinkRequestPanesBackgrounds setY(Double y) {
+            this.y = y;
+            return this;
+        }
+        public Double getY() {
+            return this.y;
+        }
+
+    }
+
     public static class StartStreamingOutShrinkRequestPanesImages extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -790,6 +954,13 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
          */
         @NameInMap("Alpha")
         public Double alpha;
+
+        /**
+         * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
 
         /**
          * <p>This parameter is required.</p>
@@ -861,6 +1032,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
         }
         public Double getAlpha() {
             return this.alpha;
+        }
+
+        public StartStreamingOutShrinkRequestPanesImages setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public StartStreamingOutShrinkRequestPanesImages setHeight(Double height) {
@@ -1054,6 +1233,13 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>backup</p>
+         */
+        @NameInMap("Display")
+        public String display;
+
+        /**
+         * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Font")
@@ -1141,6 +1327,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
         }
         public StartStreamingOutShrinkRequestPanesTextsBoxColor getBoxColor() {
             return this.boxColor;
+        }
+
+        public StartStreamingOutShrinkRequestPanesTexts setDisplay(String display) {
+            this.display = display;
+            return this;
+        }
+        public String getDisplay() {
+            return this.display;
         }
 
         public StartStreamingOutShrinkRequestPanesTexts setFont(Integer font) {
@@ -1233,6 +1427,9 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     }
 
     public static class StartStreamingOutShrinkRequestPanes extends TeaModel {
+        @NameInMap("Backgrounds")
+        public java.util.List<StartStreamingOutShrinkRequestPanesBackgrounds> backgrounds;
+
         @NameInMap("Images")
         public java.util.List<StartStreamingOutShrinkRequestPanesImages> images;
 
@@ -1285,6 +1482,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
         public static StartStreamingOutShrinkRequestPanes build(java.util.Map<String, ?> map) throws Exception {
             StartStreamingOutShrinkRequestPanes self = new StartStreamingOutShrinkRequestPanes();
             return TeaModel.build(map, self);
+        }
+
+        public StartStreamingOutShrinkRequestPanes setBackgrounds(java.util.List<StartStreamingOutShrinkRequestPanesBackgrounds> backgrounds) {
+            this.backgrounds = backgrounds;
+            return this;
+        }
+        public java.util.List<StartStreamingOutShrinkRequestPanesBackgrounds> getBackgrounds() {
+            return this.backgrounds;
         }
 
         public StartStreamingOutShrinkRequestPanes setImages(java.util.List<StartStreamingOutShrinkRequestPanesImages> images) {

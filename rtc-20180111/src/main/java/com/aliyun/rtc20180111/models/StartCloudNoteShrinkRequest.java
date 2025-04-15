@@ -34,6 +34,9 @@ public class StartCloudNoteShrinkRequest extends TeaModel {
     @NameInMap("MeetingAssistance")
     public String meetingAssistanceShrink;
 
+    @NameInMap("RealtimeSubtitle")
+    public String realtimeSubtitleShrink;
+
     @NameInMap("ServiceInspection")
     public String serviceInspectionShrink;
 
@@ -64,6 +67,9 @@ public class StartCloudNoteShrinkRequest extends TeaModel {
 
     @NameInMap("TextPolish")
     public String textPolishShrink;
+
+    @NameInMap("Transcription")
+    public String transcriptionShrink;
 
     public static StartCloudNoteShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         StartCloudNoteShrinkRequest self = new StartCloudNoteShrinkRequest();
@@ -118,6 +124,14 @@ public class StartCloudNoteShrinkRequest extends TeaModel {
         return this.meetingAssistanceShrink;
     }
 
+    public StartCloudNoteShrinkRequest setRealtimeSubtitleShrink(String realtimeSubtitleShrink) {
+        this.realtimeSubtitleShrink = realtimeSubtitleShrink;
+        return this;
+    }
+    public String getRealtimeSubtitleShrink() {
+        return this.realtimeSubtitleShrink;
+    }
+
     public StartCloudNoteShrinkRequest setServiceInspectionShrink(String serviceInspectionShrink) {
         this.serviceInspectionShrink = serviceInspectionShrink;
         return this;
@@ -164,6 +178,14 @@ public class StartCloudNoteShrinkRequest extends TeaModel {
     }
     public String getTextPolishShrink() {
         return this.textPolishShrink;
+    }
+
+    public StartCloudNoteShrinkRequest setTranscriptionShrink(String transcriptionShrink) {
+        this.transcriptionShrink = transcriptionShrink;
+        return this;
+    }
+    public String getTranscriptionShrink() {
+        return this.transcriptionShrink;
     }
 
     public static class StartCloudNoteShrinkRequestStorageConfig extends TeaModel {
