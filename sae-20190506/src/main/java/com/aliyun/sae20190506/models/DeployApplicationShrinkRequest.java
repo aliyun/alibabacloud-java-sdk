@@ -453,6 +453,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("NasId")
     public String nasId;
 
+    @NameInMap("NewSaeVersion")
+    public String newSaeVersion;
+
     /**
      * <p>The name of the RAM role used to authenticate the user identity.</p>
      * <blockquote>
@@ -1097,6 +1100,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getNasId() {
         return this.nasId;
+    }
+
+    public DeployApplicationShrinkRequest setNewSaeVersion(String newSaeVersion) {
+        this.newSaeVersion = newSaeVersion;
+        return this;
+    }
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
     }
 
     public DeployApplicationShrinkRequest setOidcRoleName(String oidcRoleName) {
