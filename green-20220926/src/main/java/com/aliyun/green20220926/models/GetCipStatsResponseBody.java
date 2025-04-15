@@ -136,6 +136,47 @@ public class GetCipStatsResponseBody extends TeaModel {
 
     }
 
+    public static class GetCipStatsResponseBodyDataLabelStatChartTextTreeChart extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetCipStatsResponseBodyDataLabelStatChartTextTreeChart build(java.util.Map<String, ?> map) throws Exception {
+            GetCipStatsResponseBodyDataLabelStatChartTextTreeChart self = new GetCipStatsResponseBodyDataLabelStatChartTextTreeChart();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartTextTreeChart setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartTextTreeChart setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChartTextTreeChart setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetCipStatsResponseBodyDataLabelStatChartTreeChart extends TeaModel {
         @NameInMap("Description")
         public String description;
@@ -279,6 +320,9 @@ public class GetCipStatsResponseBody extends TeaModel {
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        @NameInMap("TextTreeChart")
+        public java.util.List<GetCipStatsResponseBodyDataLabelStatChartTextTreeChart> textTreeChart;
+
         /**
          * <strong>example:</strong>
          * <p>117</p>
@@ -317,6 +361,14 @@ public class GetCipStatsResponseBody extends TeaModel {
         }
         public String getServiceCode() {
             return this.serviceCode;
+        }
+
+        public GetCipStatsResponseBodyDataLabelStatChart setTextTreeChart(java.util.List<GetCipStatsResponseBodyDataLabelStatChartTextTreeChart> textTreeChart) {
+            this.textTreeChart = textTreeChart;
+            return this;
+        }
+        public java.util.List<GetCipStatsResponseBodyDataLabelStatChartTextTreeChart> getTextTreeChart() {
+            return this.textTreeChart;
         }
 
         public GetCipStatsResponseBodyDataLabelStatChart setTotalCount(Long totalCount) {
