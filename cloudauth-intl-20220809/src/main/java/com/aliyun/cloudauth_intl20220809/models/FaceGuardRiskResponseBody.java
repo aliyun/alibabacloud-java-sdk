@@ -68,6 +68,9 @@ public class FaceGuardRiskResponseBody extends TeaModel {
     }
 
     public static class FaceGuardRiskResponseBodyResult extends TeaModel {
+        @NameInMap("GuardRiskScore")
+        public Double guardRiskScore;
+
         @NameInMap("RiskExtends")
         public String riskExtends;
 
@@ -88,6 +91,14 @@ public class FaceGuardRiskResponseBody extends TeaModel {
         public static FaceGuardRiskResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             FaceGuardRiskResponseBodyResult self = new FaceGuardRiskResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public FaceGuardRiskResponseBodyResult setGuardRiskScore(Double guardRiskScore) {
+            this.guardRiskScore = guardRiskScore;
+            return this;
+        }
+        public Double getGuardRiskScore() {
+            return this.guardRiskScore;
         }
 
         public FaceGuardRiskResponseBodyResult setRiskExtends(String riskExtends) {
