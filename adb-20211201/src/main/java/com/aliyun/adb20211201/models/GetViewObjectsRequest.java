@@ -104,6 +104,9 @@ public class GetViewObjectsRequest extends TeaModel {
     @NameInMap("SchemaName")
     public String schemaName;
 
+    @NameInMap("ShowMvBaseTable")
+    public Boolean showMvBaseTable;
+
     public static GetViewObjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetViewObjectsRequest self = new GetViewObjectsRequest();
         return TeaModel.build(map, self);
@@ -179,6 +182,14 @@ public class GetViewObjectsRequest extends TeaModel {
     }
     public String getSchemaName() {
         return this.schemaName;
+    }
+
+    public GetViewObjectsRequest setShowMvBaseTable(Boolean showMvBaseTable) {
+        this.showMvBaseTable = showMvBaseTable;
+        return this;
+    }
+    public Boolean getShowMvBaseTable() {
+        return this.showMvBaseTable;
     }
 
 }

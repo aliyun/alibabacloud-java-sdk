@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSparkWarehouseBatchSQLRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +33,7 @@ public class ListSparkWarehouseBatchSQLRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The name of the interactive resource group for which the Spark engine is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -130,12 +130,18 @@ public class DescribeOversizeNonPartitionTableInfosResponseBody extends TeaModel
     public static class DescribeOversizeNonPartitionTableInfosResponseBodyDetectionItems extends TeaModel {
         /**
          * <p>The information about the detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multiple oversized non-partitioned tables are detected.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oversized non-partitioned tables</p>
          */
         @NameInMap("Name")
         public String name;

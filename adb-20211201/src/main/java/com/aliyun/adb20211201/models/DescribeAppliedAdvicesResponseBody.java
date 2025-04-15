@@ -122,6 +122,9 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
 
         /**
          * <p>The benefit of the suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4 GB of storage saved</p>
          */
         @NameInMap("Benefit")
         public String benefit;

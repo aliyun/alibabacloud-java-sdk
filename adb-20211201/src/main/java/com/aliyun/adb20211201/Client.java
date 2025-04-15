@@ -259,7 +259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The request ID.</p>
+     * <p>Applies optimization suggestions.</p>
      * 
      * @param request BatchApplyAdviceByIdListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -308,7 +308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The request ID.</p>
+     * <p>Applies optimization suggestions.</p>
      * 
      * @param request BatchApplyAdviceByIdListRequest
      * @return BatchApplyAdviceByIdListResponse
@@ -503,7 +503,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消一段Spark Batch SQL的状态</p>
+     * <p>Cancels the execution of a Spark SQL statement.</p>
      * 
      * @param request CancelSparkWarehouseBatchSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -548,7 +548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消一段Spark Batch SQL的状态</p>
+     * <p>Cancels the execution of a Spark SQL statement.</p>
      * 
      * @param request CancelSparkWarehouseBatchSQLRequest
      * @return CancelSparkWarehouseBatchSQLResponse
@@ -2646,79 +2646,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePerformanceViewResponse deletePerformanceView(DeletePerformanceViewRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePerformanceViewWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes a worflow instance from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
-     * 
-     * @param request DeleteProcessInstanceRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteProcessInstanceResponse
-     */
-    public DeleteProcessInstanceResponse deleteProcessInstanceWithOptions(DeleteProcessInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
-            query.put("DBClusterId", request.DBClusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.processInstanceId)) {
-            query.put("ProcessInstanceId", request.processInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.projectCode)) {
-            query.put("ProjectCode", request.projectCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteProcessInstance"),
-            new TeaPair("version", "2021-12-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteProcessInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteProcessInstanceResponse());
-        }
-
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
-     * <ul>
-     * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes a worflow instance from an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
-     * 
-     * @param request DeleteProcessInstanceRequest
-     * @return DeleteProcessInstanceResponse
-     */
-    public DeleteProcessInstanceResponse deleteProcessInstance(DeleteProcessInstanceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteProcessInstanceWithOptions(request, runtime);
     }
 
     /**
@@ -6429,7 +6356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询EssdCache配置</p>
+     * <p>Queries the disk cache size in the query acceleration configuration of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeEssdCacheConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6466,7 +6393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询EssdCache配置</p>
+     * <p>Queries the disk cache size in the query acceleration configuration of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeEssdCacheConfigRequest
      * @return DescribeEssdCacheConfigResponse
@@ -6727,6 +6654,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInclinedNodesResponse describeInclinedNodes(DescribeInclinedNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInclinedNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表倾斜诊断结果</p>
+     * 
+     * @param request DescribeInclinedTablesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeInclinedTablesResponse
+     */
+    public DescribeInclinedTablesResponse describeInclinedTablesWithOptions(DescribeInclinedTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableType)) {
+            query.put("TableType", request.tableType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInclinedTables"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInclinedTablesResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeInclinedTablesResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表倾斜诊断结果</p>
+     * 
+     * @param request DescribeInclinedTablesRequest
+     * @return DescribeInclinedTablesResponse
+     */
+    public DescribeInclinedTablesResponse describeInclinedTables(DescribeInclinedTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInclinedTablesWithOptions(request, runtime);
     }
 
     /**
@@ -7362,6 +7362,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资源组规格相关信息</p>
+     * 
+     * @param request DescribeResourceGroupSpecRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeResourceGroupSpecResponse
+     */
+    public DescribeResourceGroupSpecResponse describeResourceGroupSpecWithOptions(DescribeResourceGroupSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupType)) {
+            query.put("ResourceGroupType", request.resourceGroupType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeResourceGroupSpec"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
+            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourceGroupSpecResponse());
+        } else {
+            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeResourceGroupSpecResponse());
+        }
+
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询资源组规格相关信息</p>
+     * 
+     * @param request DescribeResourceGroupSpecRequest
+     * @return DescribeResourceGroupSpecResponse
+     */
+    public DescribeResourceGroupSpecResponse describeResourceGroupSpec(DescribeResourceGroupSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeResourceGroupSpecWithOptions(request, runtime);
     }
 
     /**
@@ -9061,7 +9118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行一段Spark Batch SQL</p>
+     * <p>Executes Spark SQL statements in batches.</p>
      * 
      * @param request ExecuteSparkWarehouseBatchSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9126,7 +9183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>执行一段Spark Batch SQL</p>
+     * <p>Executes Spark SQL statements in batches.</p>
      * 
      * @param request ExecuteSparkWarehouseBatchSQLRequest
      * @return ExecuteSparkWarehouseBatchSQLResponse
@@ -10457,7 +10514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一段Spark Batch SQL的状态</p>
+     * <p>Queries the execution result of a Spark SQL statement.</p>
      * 
      * @param request GetSparkWarehouseBatchSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10502,7 +10559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一段Spark Batch SQL的状态</p>
+     * <p>Queries the execution result of a Spark SQL statement.</p>
      * 
      * @param request GetSparkWarehouseBatchSQLRequest
      * @return GetSparkWarehouseBatchSQLResponse
@@ -10940,6 +10997,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
             query.put("SchemaName", request.schemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showMvBaseTable)) {
+            query.put("ShowMvBaseTable", request.showMvBaseTable);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -11940,7 +12001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出提交的的SparkBatchSQL</p>
+     * <p>Queries a list of Spark SQL statements.</p>
      * 
      * @param request ListSparkWarehouseBatchSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11989,7 +12050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出提交的的SparkBatchSQL</p>
+     * <p>Queries a list of Spark SQL statements.</p>
      * 
      * @param request ListSparkWarehouseBatchSQLRequest
      * @return ListSparkWarehouseBatchSQLResponse
@@ -12809,7 +12870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启宽表引擎</p>
+     * <p>Enables the wide table engine feature for an AnalyticDB for MySQL cluster or modifies the disk cache size of the wide table engine of an AnalyticDB for MySQL cluster for which you enabled the wide table engine feature.</p>
      * 
      * @param request ModifyClickhouseEngineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12858,7 +12919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开启宽表引擎</p>
+     * <p>Enables the wide table engine feature for an AnalyticDB for MySQL cluster or modifies the disk cache size of the wide table engine of an AnalyticDB for MySQL cluster for which you enabled the wide table engine feature.</p>
      * 
      * @param request ModifyClickhouseEngineRequest
      * @return ModifyClickhouseEngineResponse
@@ -13093,14 +13154,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableDefaultResourcePool", request.enableDefaultResourcePool);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.productForm)) {
             query.put("ProductForm", request.productForm);
         }
@@ -13115,10 +13168,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reservedNodeSize)) {
             query.put("ReservedNodeSize", request.reservedNodeSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageResource)) {

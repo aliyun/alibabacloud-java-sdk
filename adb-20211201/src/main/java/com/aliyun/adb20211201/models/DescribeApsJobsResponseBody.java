@@ -229,6 +229,9 @@ public class DescribeApsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30: The progress is 30%.</p>
          */
         @NameInMap("Projress")
         public String projress;

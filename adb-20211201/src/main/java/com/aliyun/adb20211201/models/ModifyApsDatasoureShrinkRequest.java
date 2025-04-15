@@ -43,9 +43,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String datasourceName;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The information about the Kafka instance.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -65,7 +63,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String lakehouseIdShrink;
 
     /**
-     * <p>The retired data source.</p>
+     * <p>The parameter is no longer supported.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -76,7 +74,7 @@ public class ModifyApsDatasoureShrinkRequest extends TeaModel {
     public String polarDBMysqlInfoShrink;
 
     /**
-     * <p>The retired data source.</p>
+     * <p>The parameter is no longer supported.</p>
      * 
      * <strong>example:</strong>
      * <ul>

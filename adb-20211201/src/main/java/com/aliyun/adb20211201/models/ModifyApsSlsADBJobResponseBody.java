@@ -15,6 +15,11 @@ public class ModifyApsSlsADBJobResponseBody extends TeaModel {
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;

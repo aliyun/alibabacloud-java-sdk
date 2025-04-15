@@ -14,6 +14,8 @@ public class GetSparkWarehouseBatchSQLRequest extends TeaModel {
     public String agency;
 
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>amv-uf6485635f***</p>
      */
@@ -21,6 +23,7 @@ public class GetSparkWarehouseBatchSQLRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The query ID of the Spark SQL statement.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

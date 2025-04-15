@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourceResponseBody extends TeaModel {
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The queried APS data source.</p>
      */
     @NameInMap("ApsDatasource")
     public DescribeApsDatasourceResponseBodyApsDatasource apsDatasource;
@@ -212,9 +210,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourcePolarDBMysqlInfo extends TeaModel {
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -225,9 +221,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public Boolean across;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -238,9 +232,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String acrossRole;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -251,9 +243,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String acrossUid;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -264,9 +254,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String connectUrl;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -277,9 +265,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -290,9 +276,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -303,9 +287,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String securityGroup;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -388,9 +370,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
 
     public static class DescribeApsDatasourceResponseBodyApsDatasourceRdsMysqlInfo extends TeaModel {
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -401,9 +381,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String connectUrl;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -414,9 +392,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -427,9 +403,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -440,9 +414,7 @@ public class DescribeApsDatasourceResponseBody extends TeaModel {
         public String securityGroup;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>

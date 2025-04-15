@@ -42,12 +42,6 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("EnableDefaultResourcePool")
     public Boolean enableDefaultResourcePool;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <strong>example:</strong>
      * <p>LegacyForm</p>
@@ -76,9 +70,6 @@ public class ModifyDBClusterRequest extends TeaModel {
      */
     @NameInMap("ReservedNodeSize")
     public String reservedNodeSize;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
 
     /**
      * <p>The reserved storage resources. Valid values: 0ACU to 2064ACU. The value must be in increments of 24ACU. Each ACU is approximately equal to 1 core and 4 GB memory.</p>
@@ -121,22 +112,6 @@ public class ModifyDBClusterRequest extends TeaModel {
         return this.enableDefaultResourcePool;
     }
 
-    public ModifyDBClusterRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyDBClusterRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public ModifyDBClusterRequest setProductForm(String productForm) {
         this.productForm = productForm;
         return this;
@@ -167,14 +142,6 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getReservedNodeSize() {
         return this.reservedNodeSize;
-    }
-
-    public ModifyDBClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
     }
 
     public ModifyDBClusterRequest setStorageResource(String storageResource) {

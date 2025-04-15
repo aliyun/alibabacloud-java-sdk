@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchApplyAdviceByIdListResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>86F92D26-B774-5FA1-8E53-82CBEEEBB012</p>
      */

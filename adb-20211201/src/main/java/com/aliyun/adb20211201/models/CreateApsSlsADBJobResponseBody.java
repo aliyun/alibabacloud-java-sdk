@@ -36,7 +36,7 @@ public class CreateApsSlsADBJobResponseBody extends TeaModel {
     /**
      * <p>The returned message. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request was successful, a success message is returned.</li>
      * <li>If the request failed, an error message is returned.</li>
      * </ul>
      * 

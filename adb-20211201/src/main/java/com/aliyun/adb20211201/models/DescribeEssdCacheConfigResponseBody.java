@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeEssdCacheConfigResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeEssdCacheConfigResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C7EDB8E4-9769-4233-88C7-DCA4C9******</p>
      */
@@ -37,6 +42,13 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
 
     public static class DescribeEssdCacheConfigResponseBodyData extends TeaModel {
         /**
+         * <p>Specifies whether to enable the disk cache feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +56,8 @@ public class DescribeEssdCacheConfigResponseBody extends TeaModel {
         public Boolean enableEssdCache;
 
         /**
+         * <p>The disk cache size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */

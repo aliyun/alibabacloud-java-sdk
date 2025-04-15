@@ -10,6 +10,9 @@ public class TableSummaryModel extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("MvDetailModel")
+    public OpenStructMvDetailModel mvDetailModel;
+
     @NameInMap("Owner")
     public String owner;
 
@@ -50,6 +53,14 @@ public class TableSummaryModel extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public TableSummaryModel setMvDetailModel(OpenStructMvDetailModel mvDetailModel) {
+        this.mvDetailModel = mvDetailModel;
+        return this;
+    }
+    public OpenStructMvDetailModel getMvDetailModel() {
+        return this.mvDetailModel;
     }
 
     public TableSummaryModel setOwner(String owner) {

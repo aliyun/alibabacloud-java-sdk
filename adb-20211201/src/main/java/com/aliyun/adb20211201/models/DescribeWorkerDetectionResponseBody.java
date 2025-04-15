@@ -170,6 +170,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsOperatorAgg extends TeaModel {
         /**
          * <p>The detection result items of operator metric aggregation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Peak memory</p>
          */
         @NameInMap("MetricName")
         public String metricName;
@@ -233,6 +236,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
 
         /**
          * <p>The property information about the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GROUP BY field: id</p>
          */
         @NameInMap("OperatorInfo")
         public String operatorInfo;
@@ -818,6 +824,9 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
     public static class DescribeWorkerDetectionResponseBodyDetectionItemsResultsTopAccessTables extends TeaModel {
         /**
          * <p>The name of the detection metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Peak memory detection</p>
          */
         @NameInMap("MetricName")
         public String metricName;
@@ -932,12 +941,18 @@ public class DescribeWorkerDetectionResponseBody extends TeaModel {
     public static class DescribeWorkerDetectionResponseBodyDetectionItems extends TeaModel {
         /**
          * <p>The information about the detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>There are a total of 10 tables with an excessive number of primary keys.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Metric detection</p>
          */
         @NameInMap("Name")
         public String name;

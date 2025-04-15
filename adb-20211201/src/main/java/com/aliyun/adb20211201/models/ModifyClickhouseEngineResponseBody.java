@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyClickhouseEngineResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D761DA51-12F8-5457-AAA9-F52B9F436D2D</p>
      */

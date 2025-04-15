@@ -11,6 +11,8 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
     public ListSparkWarehouseBatchSQLResponseBodyData data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -40,6 +42,8 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
 
     public static class ListSparkWarehouseBatchSQLResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -47,6 +51,8 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -60,6 +66,8 @@ public class ListSparkWarehouseBatchSQLResponseBody extends TeaModel {
         public java.util.List<SparkBatchSQL> queries;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

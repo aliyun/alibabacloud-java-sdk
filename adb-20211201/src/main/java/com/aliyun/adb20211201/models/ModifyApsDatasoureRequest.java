@@ -43,9 +43,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public String datasourceName;
 
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The information about the Kafka instance.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -65,7 +63,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public ModifyApsDatasoureRequestLakehouseId lakehouseId;
 
     /**
-     * <p>The retired data source.</p>
+     * <p>The parameter is no longer supported.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -76,7 +74,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
     public ModifyApsDatasoureRequestPolarDBMysqlInfo polarDBMysqlInfo;
 
     /**
-     * <p>The retired data source.</p>
+     * <p>The parameter is no longer supported.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -297,9 +295,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestPolarDBMysqlInfo extends TeaModel {
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -310,9 +306,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String connectUrl;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -323,9 +317,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String password;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -336,9 +328,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -389,9 +379,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
 
     public static class ModifyApsDatasoureRequestRdsMysqlInfo extends TeaModel {
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -402,9 +390,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String connectUrl;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -415,9 +401,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String password;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -428,9 +412,7 @@ public class ModifyApsDatasoureRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The parameter is no longer supported.</p>
          * 
          * <strong>example:</strong>
          * <ul>

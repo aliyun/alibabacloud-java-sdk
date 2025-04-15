@@ -14,6 +14,8 @@ public class ExecuteSparkWarehouseBatchSQLResponseBody extends TeaModel {
     public SparkBatchSQL data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBE843D8-964D-5EA3-9D31-822125611B6E</p>
      */

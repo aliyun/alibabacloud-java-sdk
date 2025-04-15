@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsDatasourcesResponseBody extends TeaModel {
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The queried APS data sources.</p>
      * 
      * <strong>example:</strong>
      * <ul>

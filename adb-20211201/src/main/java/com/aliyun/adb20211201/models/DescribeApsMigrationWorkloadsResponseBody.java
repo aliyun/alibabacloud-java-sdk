@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApsMigrationWorkloadsResponseBody extends TeaModel {
     /**
-     * <ul>
-     * <li></li>
-     * </ul>
+     * <p>The queried migration workloads.</p>
      */
     @NameInMap("MigrationWorkloads")
     public java.util.List<DescribeApsMigrationWorkloadsResponseBodyMigrationWorkloads> migrationWorkloads;

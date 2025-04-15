@@ -3,7 +3,7 @@ package com.aliyun.adb20211201.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteProcessInstanceResponse extends TeaModel {
+public class DescribeInclinedTablesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DeleteProcessInstanceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DeleteProcessInstanceResponseBody body;
+    public DescribeInclinedTablesResponseBody body;
 
-    public static DeleteProcessInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteProcessInstanceResponse self = new DeleteProcessInstanceResponse();
+    public static DescribeInclinedTablesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInclinedTablesResponse self = new DescribeInclinedTablesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProcessInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeInclinedTablesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DeleteProcessInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteProcessInstanceResponse setStatusCode(Integer statusCode) {
+    public DescribeInclinedTablesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DeleteProcessInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteProcessInstanceResponse setBody(DeleteProcessInstanceResponseBody body) {
+    public DescribeInclinedTablesResponse setBody(DescribeInclinedTablesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteProcessInstanceResponseBody getBody() {
+    public DescribeInclinedTablesResponseBody getBody() {
         return this.body;
     }
 

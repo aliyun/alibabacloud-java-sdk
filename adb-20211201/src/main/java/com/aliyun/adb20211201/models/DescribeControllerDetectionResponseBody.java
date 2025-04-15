@@ -77,12 +77,18 @@ public class DescribeControllerDetectionResponseBody extends TeaModel {
     public static class DescribeControllerDetectionResponseBodyDetectionItems extends TeaModel {
         /**
          * <p>The information about the detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A CPU increase is detected on the access node.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU increase detection</p>
          */
         @NameInMap("Name")
         public String name;

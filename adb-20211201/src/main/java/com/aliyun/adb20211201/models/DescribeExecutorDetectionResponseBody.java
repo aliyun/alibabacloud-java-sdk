@@ -236,6 +236,9 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
 
         /**
          * <p>The property information about the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GROUP BY field: uid</p>
          */
         @NameInMap("OperatorInfo")
         public String operatorInfo;
@@ -459,12 +462,18 @@ public class DescribeExecutorDetectionResponseBody extends TeaModel {
     public static class DescribeExecutorDetectionResponseBodyDetectionItems extends TeaModel {
         /**
          * <p>The information about the detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large amounts of memory resources are used by the Aggregation operator.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Metric detection</p>
          */
         @NameInMap("Name")
         public String name;

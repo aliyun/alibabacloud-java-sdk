@@ -282,7 +282,7 @@ public class ListResultExportJobHistoryResponseBody extends TeaModel {
         /**
          * <p>The query ID that can be used for diagnostics.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612495.html">DescribeDiagnosisSQLInfo</a> operation to query the execution information about a query.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612337.html">DescribeDiagnosisSQLInfo</a> operation to query the execution information about a query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

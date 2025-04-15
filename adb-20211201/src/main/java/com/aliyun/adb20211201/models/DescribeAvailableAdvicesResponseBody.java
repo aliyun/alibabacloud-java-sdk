@@ -144,6 +144,9 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
 
         /**
          * <p>The benefit of the suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4 GB of storage saved</p>
          */
         @NameInMap("Benefit")
         public String benefit;
@@ -173,6 +176,9 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
 
         /**
          * <p>The reason why the suggestion was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unused for 15 days, historical usage less than 1%</p>
          */
         @NameInMap("Reason")
         public String reason;

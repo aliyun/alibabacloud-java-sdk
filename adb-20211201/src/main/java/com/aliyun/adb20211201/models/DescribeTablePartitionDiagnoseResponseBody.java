@@ -184,12 +184,18 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     public static class DescribeTablePartitionDiagnoseResponseBodyDetectionItems extends TeaModel {
         /**
          * <p>The detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Multiple oversized non-partitioned tables are detected.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Improper partition field diagnostics</p>
          */
         @NameInMap("Name")
         public String name;

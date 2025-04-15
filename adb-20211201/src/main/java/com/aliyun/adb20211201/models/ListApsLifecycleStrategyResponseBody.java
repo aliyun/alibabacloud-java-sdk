@@ -261,9 +261,7 @@ public class ListApsLifecycleStrategyResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <ul>
-         * <li></li>
-         * </ul>
+         * <p>The operation tables.</p>
          */
         @NameInMap("OperationTables")
         public java.util.List<ListApsLifecycleStrategyResponseBodyItemsOperationTables> operationTables;

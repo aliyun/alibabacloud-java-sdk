@@ -8,12 +8,13 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends TeaModel {
      * <p>The name of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>Dataworks。</p>
+     * <p>DataWorks</p>
      */
     @NameInMap("Agency")
     public String agency;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +42,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends TeaModel {
     public Long executeTimeLimitInSeconds;
 
     /**
+     * <p>The SQL statements that you want to execute in batches. Separate multiple SQL statements with semicolons (;). The execution engine executes the SQL statements in sequence in the same session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +54,7 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends TeaModel {
     public String query;
 
     /**
+     * <p>The name of the resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +64,8 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends TeaModel {
     public String resourceGroupName;
 
     /**
+     * <p>The additional runtime parameter. Specify the parameter in the JSON format.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *  &quot;OSSURL&quot;: &quot;oss://testBucketname/&quot;
@@ -70,6 +75,8 @@ public class ExecuteSparkWarehouseBatchSQLRequest extends TeaModel {
     public String runtimeConfig;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
      */

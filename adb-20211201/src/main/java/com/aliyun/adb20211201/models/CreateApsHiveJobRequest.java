@@ -17,6 +17,11 @@ public class CreateApsHiveJobRequest extends TeaModel {
 
     /**
      * <p>The policy to handle tables with the same name in the destination cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Intercept: reports error and aborts.
+     * Ignore: ignores and continues migrating the relevant tables.
+     * Skip: skips related tables and only migrates other tables.</p>
      */
     @NameInMap("ConflictStrategy")
     public String conflictStrategy;

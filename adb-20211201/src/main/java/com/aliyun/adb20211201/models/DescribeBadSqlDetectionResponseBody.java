@@ -102,12 +102,18 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
     public static class DescribeBadSqlDetectionResponseBodyDetectionItemsResultsDiagnosisResults extends TeaModel {
         /**
          * <p>The diagnostic code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large amounts of data are returned to the client.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The information about the diagnostic result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large amounts of data are returned to the client. Import the data to OSS.</p>
          */
         @NameInMap("Detail")
         public String detail;
@@ -370,6 +376,9 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
     public static class DescribeBadSqlDetectionResponseBodyDetectionItems extends TeaModel {
         /**
          * <p>The information about the detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL statements that result in high peak memory are detected.</p>
          */
         @NameInMap("Message")
         public String message;
