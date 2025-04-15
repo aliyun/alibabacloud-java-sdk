@@ -111,17 +111,34 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetworkTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
         @NameInMap("TagKey")
+        @Deprecated
         public String tagKey;
 
         @NameInMap("TagValue")
+        @Deprecated
         public String tagValue;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeNetworksResponseBodyNetworksNetworkTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworksResponseBodyNetworksNetworkTagsTag self = new DescribeNetworksResponseBodyNetworksNetworkTagsTag();
             return TeaModel.build(map, self);
         }
 
+        public DescribeNetworksResponseBodyNetworksNetworkTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        @Deprecated
         public DescribeNetworksResponseBodyNetworksNetworkTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
@@ -130,12 +147,21 @@ public class DescribeNetworksResponseBody extends TeaModel {
             return this.tagKey;
         }
 
+        @Deprecated
         public DescribeNetworksResponseBodyNetworksNetworkTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

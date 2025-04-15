@@ -92,17 +92,34 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
         @NameInMap("TagKey")
+        @Deprecated
         public String tagKey;
 
         @NameInMap("TagValue")
+        @Deprecated
         public String tagValue;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag self = new DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag();
             return TeaModel.build(map, self);
         }
 
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        @Deprecated
         public DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
@@ -111,12 +128,21 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.tagKey;
         }
 
+        @Deprecated
         public DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

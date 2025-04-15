@@ -92,17 +92,34 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
         @NameInMap("TagKey")
+        @Deprecated
         public String tagKey;
 
         @NameInMap("TagValue")
+        @Deprecated
         public String tagValue;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag self = new DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag();
             return TeaModel.build(map, self);
         }
 
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        @Deprecated
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
@@ -111,12 +128,21 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             return this.tagKey;
         }
 
+        @Deprecated
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

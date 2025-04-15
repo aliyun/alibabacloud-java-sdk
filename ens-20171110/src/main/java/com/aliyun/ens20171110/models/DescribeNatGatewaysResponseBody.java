@@ -157,17 +157,34 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
         @NameInMap("TagKey")
+        @Deprecated
         public String tagKey;
 
         @NameInMap("TagValue")
+        @Deprecated
         public String tagValue;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeNatGatewaysResponseBodyNatGatewaysTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatGatewaysResponseBodyNatGatewaysTags self = new DescribeNatGatewaysResponseBodyNatGatewaysTags();
             return TeaModel.build(map, self);
         }
 
+        public DescribeNatGatewaysResponseBodyNatGatewaysTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        @Deprecated
         public DescribeNatGatewaysResponseBodyNatGatewaysTags setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
@@ -176,12 +193,21 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.tagKey;
         }
 
+        @Deprecated
         public DescribeNatGatewaysResponseBodyNatGatewaysTags setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
