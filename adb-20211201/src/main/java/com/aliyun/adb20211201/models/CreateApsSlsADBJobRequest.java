@@ -673,7 +673,7 @@ public class CreateApsSlsADBJobRequest extends TeaModel {
          * <p>The format of the timestamp.</p>
          * 
          * <strong>example:</strong>
-         * <p> APSyyyyMMdd</p>
+         * <p>yyyyMMdd</p>
          */
         @NameInMap("Format")
         public String format;
