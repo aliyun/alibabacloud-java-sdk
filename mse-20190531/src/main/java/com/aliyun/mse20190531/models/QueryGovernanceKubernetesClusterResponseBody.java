@@ -120,6 +120,9 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        @NameInMap("PilotVersion")
+        public String pilotVersion;
+
         /**
          * <p>The region where the cluster resides.</p>
          * 
@@ -128,6 +131,9 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
          */
         @NameInMap("Region")
         public String region;
+
+        @NameInMap("VersionLifeCycle")
+        public String versionLifeCycle;
 
         public static QueryGovernanceKubernetesClusterResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             QueryGovernanceKubernetesClusterResponseBodyDataResult self = new QueryGovernanceKubernetesClusterResponseBodyDataResult();
@@ -174,12 +180,28 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             return this.pilotStartTime;
         }
 
+        public QueryGovernanceKubernetesClusterResponseBodyDataResult setPilotVersion(String pilotVersion) {
+            this.pilotVersion = pilotVersion;
+            return this;
+        }
+        public String getPilotVersion() {
+            return this.pilotVersion;
+        }
+
         public QueryGovernanceKubernetesClusterResponseBodyDataResult setRegion(String region) {
             this.region = region;
             return this;
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public QueryGovernanceKubernetesClusterResponseBodyDataResult setVersionLifeCycle(String versionLifeCycle) {
+            this.versionLifeCycle = versionLifeCycle;
+            return this;
+        }
+        public String getVersionLifeCycle() {
+            return this.versionLifeCycle;
         }
 
     }

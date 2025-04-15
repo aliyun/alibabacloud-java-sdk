@@ -172,6 +172,9 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
 
+        @NameInMap("PilotVersion")
+        public String pilotVersion;
+
         /**
          * <p>The ID of the region in which the instance resides. The region is supported by MSE.</p>
          * 
@@ -189,6 +192,9 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
          */
         @NameInMap("UpdateTime")
         public String updateTime;
+
+        @NameInMap("VersionLifeCycle")
+        public String versionLifeCycle;
 
         public static GetGovernanceKubernetesClusterResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetGovernanceKubernetesClusterResponseBodyData self = new GetGovernanceKubernetesClusterResponseBodyData();
@@ -243,6 +249,14 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             return this.pilotStartTime;
         }
 
+        public GetGovernanceKubernetesClusterResponseBodyData setPilotVersion(String pilotVersion) {
+            this.pilotVersion = pilotVersion;
+            return this;
+        }
+        public String getPilotVersion() {
+            return this.pilotVersion;
+        }
+
         public GetGovernanceKubernetesClusterResponseBodyData setRegion(String region) {
             this.region = region;
             return this;
@@ -257,6 +271,14 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public GetGovernanceKubernetesClusterResponseBodyData setVersionLifeCycle(String versionLifeCycle) {
+            this.versionLifeCycle = versionLifeCycle;
+            return this;
+        }
+        public String getVersionLifeCycle() {
+            return this.versionLifeCycle;
         }
 
     }
