@@ -1,3 +1,7 @@
+2025-04-15 Version: 2.2.0
+- Support API LlmSmartCallEncrypt.
+
+
 2025-02-11 Version: 2.1.0
 - Support API HangupOperate.
 
