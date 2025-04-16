@@ -56,6 +56,21 @@
       <version>0.0.7</version>
     </dependency>
     <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-util</artifactId>
+      <version>[0.1.9, 1.0.0)</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-openapi</artifactId>
+      <version>0.2.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.2.0</version>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
@@ -79,11 +94,6 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>tea-util</artifactId>
-      <version>[0.1.9, 1.0.0)</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>oss-util</artifactId>
       <version>1.0.2</version>
     </dependency>
@@ -91,16 +101,6 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea-fileform</artifactId>
       <version>0.0.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>openapiutil</artifactId>
-      <version>0.2.0</version>
     </dependency>
   </dependencies>
   <build>

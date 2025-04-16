@@ -52,6 +52,31 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
+      <artifactId>endpoint-util</artifactId>
+      <version>0.0.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-openapi</artifactId>
+      <version>0.2.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>darabonba-array</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>darabonba-number</artifactId>
+      <version>0.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
       <artifactId>openplatform20191219</artifactId>
       <version>5.0.0</version>
     </dependency>
@@ -79,31 +104,6 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-fileform</artifactId>
-      <version>0.0.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>endpoint-util</artifactId>
-      <version>0.0.7</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>tea-openapi</artifactId>
-      <version>0.2.8</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>openapiutil</artifactId>
-      <version>0.2.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>darabonba-array</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>darabonba-number</artifactId>
       <version>0.0.3</version>
     </dependency>
   </dependencies>
