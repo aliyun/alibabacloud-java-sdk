@@ -24,6 +24,9 @@ public class RunCompletionMessageRequest extends TeaModel {
     @NameInMap("Stream")
     public Boolean stream;
 
+    @NameInMap("responseFormatType")
+    public String responseFormatType;
+
     public static RunCompletionMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCompletionMessageRequest self = new RunCompletionMessageRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class RunCompletionMessageRequest extends TeaModel {
     }
     public Boolean getStream() {
         return this.stream;
+    }
+
+    public RunCompletionMessageRequest setResponseFormatType(String responseFormatType) {
+        this.responseFormatType = responseFormatType;
+        return this;
+    }
+    public String getResponseFormatType() {
+        return this.responseFormatType;
     }
 
     public static class RunCompletionMessageRequestMessages extends TeaModel {

@@ -36,6 +36,9 @@ public class RunCompletionRequest extends TeaModel {
     @NameInMap("TemplateIds")
     public java.util.List<Long> templateIds;
 
+    @NameInMap("responseFormatType")
+    public String responseFormatType;
+
     @NameInMap("variables")
     public java.util.List<RunCompletionRequestVariables> variables;
 
@@ -90,6 +93,14 @@ public class RunCompletionRequest extends TeaModel {
     }
     public java.util.List<Long> getTemplateIds() {
         return this.templateIds;
+    }
+
+    public RunCompletionRequest setResponseFormatType(String responseFormatType) {
+        this.responseFormatType = responseFormatType;
+        return this;
+    }
+    public String getResponseFormatType() {
+        return this.responseFormatType;
     }
 
     public RunCompletionRequest setVariables(java.util.List<RunCompletionRequestVariables> variables) {

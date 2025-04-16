@@ -26,6 +26,9 @@ public class AnalyzeConversationRequest extends TeaModel {
     @NameInMap("modelCode")
     public String modelCode;
 
+    @NameInMap("responseFormatType")
+    public String responseFormatType;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -107,6 +110,14 @@ public class AnalyzeConversationRequest extends TeaModel {
     }
     public String getModelCode() {
         return this.modelCode;
+    }
+
+    public AnalyzeConversationRequest setResponseFormatType(String responseFormatType) {
+        this.responseFormatType = responseFormatType;
+        return this;
+    }
+    public String getResponseFormatType() {
+        return this.responseFormatType;
     }
 
     public AnalyzeConversationRequest setResultTypes(java.util.List<String> resultTypes) {

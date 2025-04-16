@@ -7,6 +7,9 @@ public class AnalyzeImageRequest extends TeaModel {
     @NameInMap("imageUrls")
     public java.util.List<String> imageUrls;
 
+    @NameInMap("responseFormatType")
+    public String responseFormatType;
+
     @NameInMap("resultTypes")
     public java.util.List<String> resultTypes;
 
@@ -30,6 +33,14 @@ public class AnalyzeImageRequest extends TeaModel {
     }
     public java.util.List<String> getImageUrls() {
         return this.imageUrls;
+    }
+
+    public AnalyzeImageRequest setResponseFormatType(String responseFormatType) {
+        this.responseFormatType = responseFormatType;
+        return this;
+    }
+    public String getResponseFormatType() {
+        return this.responseFormatType;
     }
 
     public AnalyzeImageRequest setResultTypes(java.util.List<String> resultTypes) {

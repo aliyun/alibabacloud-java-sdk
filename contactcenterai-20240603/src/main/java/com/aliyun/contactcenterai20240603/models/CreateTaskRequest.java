@@ -28,6 +28,9 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("modelCode")
     public String modelCode;
 
+    @NameInMap("responseFormatType")
+    public String responseFormatType;
+
     @NameInMap("resultTypes")
     public java.util.List<String> resultTypes;
 
@@ -103,6 +106,14 @@ public class CreateTaskRequest extends TeaModel {
     }
     public String getModelCode() {
         return this.modelCode;
+    }
+
+    public CreateTaskRequest setResponseFormatType(String responseFormatType) {
+        this.responseFormatType = responseFormatType;
+        return this;
+    }
+    public String getResponseFormatType() {
+        return this.responseFormatType;
     }
 
     public CreateTaskRequest setResultTypes(java.util.List<String> resultTypes) {
