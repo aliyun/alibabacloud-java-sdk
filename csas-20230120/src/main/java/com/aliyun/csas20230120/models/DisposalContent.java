@@ -11,12 +11,24 @@ public class DisposalContent extends TeaModel {
     @NameInMap("AlertContent")
     public String alertContent;
 
+    @NameInMap("AlertContentEn")
+    public String alertContentEn;
+
     /**
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("AlertTitle")
     public String alertTitle;
+
+    @NameInMap("AlertTitleEn")
+    public String alertTitleEn;
+
+    @NameInMap("NoticeContent")
+    public String noticeContent;
+
+    @NameInMap("NoticeContentEn")
+    public String noticeContentEn;
 
     /**
      * <p>This parameter is required.</p>
@@ -43,12 +55,44 @@ public class DisposalContent extends TeaModel {
         return this.alertContent;
     }
 
+    public DisposalContent setAlertContentEn(String alertContentEn) {
+        this.alertContentEn = alertContentEn;
+        return this;
+    }
+    public String getAlertContentEn() {
+        return this.alertContentEn;
+    }
+
     public DisposalContent setAlertTitle(String alertTitle) {
         this.alertTitle = alertTitle;
         return this;
     }
     public String getAlertTitle() {
         return this.alertTitle;
+    }
+
+    public DisposalContent setAlertTitleEn(String alertTitleEn) {
+        this.alertTitleEn = alertTitleEn;
+        return this;
+    }
+    public String getAlertTitleEn() {
+        return this.alertTitleEn;
+    }
+
+    public DisposalContent setNoticeContent(String noticeContent) {
+        this.noticeContent = noticeContent;
+        return this;
+    }
+    public String getNoticeContent() {
+        return this.noticeContent;
+    }
+
+    public DisposalContent setNoticeContentEn(String noticeContentEn) {
+        this.noticeContentEn = noticeContentEn;
+        return this;
+    }
+    public String getNoticeContentEn() {
+        return this.noticeContentEn;
     }
 
     public DisposalContent setNotifyActions(java.util.List<String> notifyActions) {

@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListPrivateAccessPolicesResponseBody extends TeaModel {
+    /**
+     * <p>The private access policies.</p>
+     */
     @NameInMap("Polices")
     public java.util.List<ListPrivateAccessPolicesResponseBodyPolices> polices;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>748CFDC7-1EB6-5B8B-9405-DA76ED5BB60D</p>
      */
@@ -15,6 +20,8 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of private access policies.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,8 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
 
     public static class ListPrivateAccessPolicesResponseBodyPolicesCustomUserAttributes extends TeaModel {
         /**
+         * <p>The ID of the identity provider (IdP) for the user group. If the value of UserGroupType is <strong>department</strong>, this parameter is returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -59,6 +68,12 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         public Integer idpId;
 
         /**
+         * <p>The logical operator for the user group. Valid values:</p>
+         * <ul>
+         * <li><strong>Equal</strong></li>
+         * <li><strong>Unequal</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Equal</p>
          */
@@ -66,12 +81,32 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         public String relation;
 
         /**
+         * <p>The type of the user group, which is the key of the attribute. Valid values:</p>
+         * <ul>
+         * <li><strong>username</strong></li>
+         * <li><strong>department</strong></li>
+         * <li><strong>email</strong></li>
+         * <li><strong>telephone</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>The value of the attribute.</p>
+         * <ul>
+         * <li>If the value of UserGroupType is <strong>username</strong>, the value of this parameter is a username. The value must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), underscores (_), and periods (.).</li>
+         * <li>If the value of UserGroupType is <strong>department</strong>, the value of this parameter is a department. Examples: OU=Department 1, OU=SASE DingTalk.</li>
+         * <li>If the value of UserGroupType is <strong>email</strong>, the value of this parameter is an email address. Example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+         * <li>If the value of UserGroupType is <strong>telephone</strong>, the value of this parameter is a mobile phone number. Example: 13900001234.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OU=Department 1, OU=SASE DingTalk</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -115,10 +150,19 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
     }
 
     public static class ListPrivateAccessPolicesResponseBodyPolices extends TeaModel {
+        /**
+         * <p>The IDs of the applications that are specified in the private access policy. If the value of ApplicationType is <strong>Application</strong>, this parameter is returned.</p>
+         */
         @NameInMap("ApplicationIds")
         public java.util.List<String> applicationIds;
 
         /**
+         * <p>The application type of the private access policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Application</strong></li>
+         * <li><strong>Tag</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Application</p>
          */
@@ -126,25 +170,54 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         public String applicationType;
 
         /**
+         * <p>The creation time of the private access policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-10 15:50:23</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The attributes of the custom user group. The attributes of the custom user group are evaluated by using a logical OR. If an attribute is matched, the policy takes effect.</p>
+         */
         @NameInMap("CustomUserAttributes")
         public java.util.List<ListPrivateAccessPolicesResponseBodyPolicesCustomUserAttributes> customUserAttributes;
 
+        /**
+         * <p>The description of the private access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a private access policy</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The action that is performed when the security baseline is not met. Valid values:</p>
+         * <ul>
+         * <li><strong>Block</strong></li>
+         * <li><strong>Observe</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Block</p>
+         */
         @NameInMap("DeviceAttributeAction")
         public String deviceAttributeAction;
 
+        /**
+         * <p>The ID of the security baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dag-d3f64e8bdd4a****</p>
+         */
         @NameInMap("DeviceAttributeId")
         public String deviceAttributeId;
 
         /**
+         * <p>The name of the private access policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_policy_name</p>
          */
@@ -152,6 +225,12 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The action in the private access policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Block</strong></li>
+         * <li><strong>Allow</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Allow</p>
          */
@@ -159,6 +238,8 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         public String policyAction;
 
         /**
+         * <p>The ID of the private access policy.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-policy-63b2f1844b86****</p>
          */
@@ -166,6 +247,8 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>The priority of the private access policy. The value 1 indicates the highest priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -173,22 +256,46 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         public Integer priority;
 
         /**
+         * <p>The status of the private access policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The IDs of the tags that are specified in the private access policy. If the value of ApplicationType is <strong>Tag</strong>, this parameter is returned.</p>
+         */
         @NameInMap("TagIds")
         public java.util.List<String> tagIds;
 
+        /**
+         * <p>The ID of the trigger template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dag-d3f64e8bdd4a****</p>
+         */
         @NameInMap("TriggerTemplateId")
         public String triggerTemplateId;
 
+        /**
+         * <p>The IDs of user groups in the private access policy. If the value of UserGroupMode is <strong>Normal</strong>, this parameter is returned.</p>
+         */
         @NameInMap("UserGroupIds")
         public java.util.List<String> userGroupIds;
 
         /**
+         * <p>The type of the user group in the private access policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: regular user group.</li>
+         * <li><strong>Custom</strong>: custom user group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */

@@ -1,3 +1,10 @@
+2025-04-16 Version: 1.12.0
+- Support API ListDynamicDisposalProcesses.
+- Update API CreatePrivateAccessApplication: add request parameters L7Config.
+- Update API GetPrivateAccessApplication: add response parameters Body.Application.L7Config.
+- Update API UpdatePrivateAccessApplication: add request parameters L7Config.
+
+
 2025-01-22 Version: 1.11.1
 - Update API CreatePrivateAccessPolicy: add param TriggerTemplateId.
 - Update API CreateWmEmbedTask: update param CsvControl.

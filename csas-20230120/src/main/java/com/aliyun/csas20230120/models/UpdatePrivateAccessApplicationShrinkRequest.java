@@ -3,7 +3,7 @@ package com.aliyun.csas20230120.models;
 
 import com.aliyun.tea.*;
 
-public class UpdatePrivateAccessApplicationRequest extends TeaModel {
+public class UpdatePrivateAccessApplicationShrinkRequest extends TeaModel {
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
@@ -24,7 +24,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String description;
 
     @NameInMap("L7Config")
-    public PAL7Config l7Config;
+    public String l7ConfigShrink;
 
     @NameInMap("L7ProxyDomainAutomaticPrefix")
     public String l7ProxyDomainAutomaticPrefix;
@@ -44,7 +44,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     public String modifyType;
 
     @NameInMap("PortRanges")
-    public java.util.List<UpdatePrivateAccessApplicationRequestPortRanges> portRanges;
+    public java.util.List<UpdatePrivateAccessApplicationShrinkRequestPortRanges> portRanges;
 
     /**
      * <strong>example:</strong>
@@ -67,12 +67,12 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
-    public static UpdatePrivateAccessApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdatePrivateAccessApplicationRequest self = new UpdatePrivateAccessApplicationRequest();
+    public static UpdatePrivateAccessApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdatePrivateAccessApplicationShrinkRequest self = new UpdatePrivateAccessApplicationShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePrivateAccessApplicationRequest setAddresses(java.util.List<String> addresses) {
+    public UpdatePrivateAccessApplicationShrinkRequest setAddresses(java.util.List<String> addresses) {
         this.addresses = addresses;
         return this;
     }
@@ -80,7 +80,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.addresses;
     }
 
-    public UpdatePrivateAccessApplicationRequest setApplicationId(String applicationId) {
+    public UpdatePrivateAccessApplicationShrinkRequest setApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
@@ -88,7 +88,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.applicationId;
     }
 
-    public UpdatePrivateAccessApplicationRequest setDescription(String description) {
+    public UpdatePrivateAccessApplicationShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -96,15 +96,15 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdatePrivateAccessApplicationRequest setL7Config(PAL7Config l7Config) {
-        this.l7Config = l7Config;
+    public UpdatePrivateAccessApplicationShrinkRequest setL7ConfigShrink(String l7ConfigShrink) {
+        this.l7ConfigShrink = l7ConfigShrink;
         return this;
     }
-    public PAL7Config getL7Config() {
-        return this.l7Config;
+    public String getL7ConfigShrink() {
+        return this.l7ConfigShrink;
     }
 
-    public UpdatePrivateAccessApplicationRequest setL7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {
+    public UpdatePrivateAccessApplicationShrinkRequest setL7ProxyDomainAutomaticPrefix(String l7ProxyDomainAutomaticPrefix) {
         this.l7ProxyDomainAutomaticPrefix = l7ProxyDomainAutomaticPrefix;
         return this;
     }
@@ -112,7 +112,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.l7ProxyDomainAutomaticPrefix;
     }
 
-    public UpdatePrivateAccessApplicationRequest setL7ProxyDomainCustom(String l7ProxyDomainCustom) {
+    public UpdatePrivateAccessApplicationShrinkRequest setL7ProxyDomainCustom(String l7ProxyDomainCustom) {
         this.l7ProxyDomainCustom = l7ProxyDomainCustom;
         return this;
     }
@@ -121,7 +121,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
     }
 
     @Deprecated
-    public UpdatePrivateAccessApplicationRequest setL7ProxyDomainPrivate(String l7ProxyDomainPrivate) {
+    public UpdatePrivateAccessApplicationShrinkRequest setL7ProxyDomainPrivate(String l7ProxyDomainPrivate) {
         this.l7ProxyDomainPrivate = l7ProxyDomainPrivate;
         return this;
     }
@@ -129,7 +129,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.l7ProxyDomainPrivate;
     }
 
-    public UpdatePrivateAccessApplicationRequest setModifyType(String modifyType) {
+    public UpdatePrivateAccessApplicationShrinkRequest setModifyType(String modifyType) {
         this.modifyType = modifyType;
         return this;
     }
@@ -137,15 +137,15 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.modifyType;
     }
 
-    public UpdatePrivateAccessApplicationRequest setPortRanges(java.util.List<UpdatePrivateAccessApplicationRequestPortRanges> portRanges) {
+    public UpdatePrivateAccessApplicationShrinkRequest setPortRanges(java.util.List<UpdatePrivateAccessApplicationShrinkRequestPortRanges> portRanges) {
         this.portRanges = portRanges;
         return this;
     }
-    public java.util.List<UpdatePrivateAccessApplicationRequestPortRanges> getPortRanges() {
+    public java.util.List<UpdatePrivateAccessApplicationShrinkRequestPortRanges> getPortRanges() {
         return this.portRanges;
     }
 
-    public UpdatePrivateAccessApplicationRequest setProtocol(String protocol) {
+    public UpdatePrivateAccessApplicationShrinkRequest setProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
@@ -153,7 +153,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.protocol;
     }
 
-    public UpdatePrivateAccessApplicationRequest setStatus(String status) {
+    public UpdatePrivateAccessApplicationShrinkRequest setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -161,7 +161,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.status;
     }
 
-    public UpdatePrivateAccessApplicationRequest setTagIds(java.util.List<String> tagIds) {
+    public UpdatePrivateAccessApplicationShrinkRequest setTagIds(java.util.List<String> tagIds) {
         this.tagIds = tagIds;
         return this;
     }
@@ -169,7 +169,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         return this.tagIds;
     }
 
-    public static class UpdatePrivateAccessApplicationRequestPortRanges extends TeaModel {
+    public static class UpdatePrivateAccessApplicationShrinkRequestPortRanges extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>80</p>
@@ -184,12 +184,12 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
         @NameInMap("End")
         public Integer end;
 
-        public static UpdatePrivateAccessApplicationRequestPortRanges build(java.util.Map<String, ?> map) throws Exception {
-            UpdatePrivateAccessApplicationRequestPortRanges self = new UpdatePrivateAccessApplicationRequestPortRanges();
+        public static UpdatePrivateAccessApplicationShrinkRequestPortRanges build(java.util.Map<String, ?> map) throws Exception {
+            UpdatePrivateAccessApplicationShrinkRequestPortRanges self = new UpdatePrivateAccessApplicationShrinkRequestPortRanges();
             return TeaModel.build(map, self);
         }
 
-        public UpdatePrivateAccessApplicationRequestPortRanges setBegin(Integer begin) {
+        public UpdatePrivateAccessApplicationShrinkRequestPortRanges setBegin(Integer begin) {
             this.begin = begin;
             return this;
         }
@@ -197,7 +197,7 @@ public class UpdatePrivateAccessApplicationRequest extends TeaModel {
             return this.begin;
         }
 
-        public UpdatePrivateAccessApplicationRequestPortRanges setEnd(Integer end) {
+        public UpdatePrivateAccessApplicationShrinkRequestPortRanges setEnd(Integer end) {
             this.end = end;
             return this;
         }

@@ -100,6 +100,9 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("L7Config")
+        public PAL7Config l7Config;
+
         @NameInMap("L7ProxyDomainAutomatic")
         public String l7ProxyDomainAutomatic;
 
@@ -187,6 +190,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetPrivateAccessApplicationResponseBodyApplication setL7Config(PAL7Config l7Config) {
+            this.l7Config = l7Config;
+            return this;
+        }
+        public PAL7Config getL7Config() {
+            return this.l7Config;
         }
 
         public GetPrivateAccessApplicationResponseBodyApplication setL7ProxyDomainAutomatic(String l7ProxyDomainAutomatic) {
