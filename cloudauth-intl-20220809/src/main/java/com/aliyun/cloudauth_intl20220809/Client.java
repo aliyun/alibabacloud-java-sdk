@@ -222,6 +222,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>人脸凭证核验</p>
+     * 
+     * @param request DeepfakeDetectIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeepfakeDetectIntlResponse
+     */
+    public DeepfakeDetectIntlResponse deepfakeDetectIntlWithOptions(DeepfakeDetectIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceInputType)) {
+            query.put("FaceInputType", request.faceInputType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faceUrl)) {
+            query.put("FaceUrl", request.faceUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.faceBase64)) {
+            body.put("FaceBase64", request.faceBase64);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeepfakeDetectIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeepfakeDetectIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>人脸凭证核验</p>
+     * 
+     * @param request DeepfakeDetectIntlRequest
+     * @return DeepfakeDetectIntlResponse
+     */
+    public DeepfakeDetectIntlResponse deepfakeDetectIntl(DeepfakeDetectIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deepfakeDetectIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除用户认证记录结果</p>
      * 
      * @param request DeleteVerifyResultRequest
