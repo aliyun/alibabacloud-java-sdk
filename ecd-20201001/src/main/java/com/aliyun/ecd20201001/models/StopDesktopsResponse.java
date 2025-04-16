@@ -3,7 +3,7 @@ package com.aliyun.ecd20201001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDesktopsResponse extends TeaModel {
+public class StopDesktopsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeDesktopsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeDesktopsResponseBody body;
+    public StopDesktopsResponseBody body;
 
-    public static DescribeDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDesktopsResponse self = new DescribeDesktopsResponse();
+    public static StopDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
+        StopDesktopsResponse self = new StopDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
+    public StopDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeDesktopsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDesktopsResponse setStatusCode(Integer statusCode) {
+    public StopDesktopsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeDesktopsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDesktopsResponse setBody(DescribeDesktopsResponseBody body) {
+    public StopDesktopsResponse setBody(StopDesktopsResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDesktopsResponseBody getBody() {
+    public StopDesktopsResponseBody getBody() {
         return this.body;
     }
 

@@ -4,12 +4,14 @@ package com.aliyun.ecd20201001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesRequest extends TeaModel {
-    @NameInMap("DirectoryType")
-    @Validation(required = true)
-    public String directoryType;
-
     @NameInMap("DirectoryId")
     public java.util.List<String> directoryId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("DirectoryType")
+    public String directoryType;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -22,20 +24,20 @@ public class DescribeDirectoriesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDirectoriesRequest setDirectoryType(String directoryType) {
-        this.directoryType = directoryType;
-        return this;
-    }
-    public String getDirectoryType() {
-        return this.directoryType;
-    }
-
     public DescribeDirectoriesRequest setDirectoryId(java.util.List<String> directoryId) {
         this.directoryId = directoryId;
         return this;
     }
     public java.util.List<String> getDirectoryId() {
         return this.directoryId;
+    }
+
+    public DescribeDirectoriesRequest setDirectoryType(String directoryType) {
+        this.directoryType = directoryType;
+        return this;
+    }
+    public String getDirectoryType() {
+        return this.directoryType;
     }
 
     public DescribeDirectoriesRequest setMaxResults(Integer maxResults) {

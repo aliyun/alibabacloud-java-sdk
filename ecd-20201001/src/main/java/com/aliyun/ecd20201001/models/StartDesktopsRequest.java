@@ -3,7 +3,7 @@ package com.aliyun.ecd20201001.models;
 
 import com.aliyun.tea.*;
 
-public class RebootDesktopsRequest extends TeaModel {
+public class StartDesktopsRequest extends TeaModel {
     @NameInMap("ClientOS")
     public String clientOS;
 
@@ -22,12 +22,12 @@ public class RebootDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static RebootDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
-        RebootDesktopsRequest self = new RebootDesktopsRequest();
+    public static StartDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartDesktopsRequest self = new StartDesktopsRequest();
         return TeaModel.build(map, self);
     }
 
-    public RebootDesktopsRequest setClientOS(String clientOS) {
+    public StartDesktopsRequest setClientOS(String clientOS) {
         this.clientOS = clientOS;
         return this;
     }
@@ -35,7 +35,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.clientOS;
     }
 
-    public RebootDesktopsRequest setClientVersion(String clientVersion) {
+    public StartDesktopsRequest setClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
     }
@@ -43,7 +43,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.clientVersion;
     }
 
-    public RebootDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
+    public StartDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
         this.desktopId = desktopId;
         return this;
     }
@@ -51,7 +51,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.desktopId;
     }
 
-    public RebootDesktopsRequest setRegionId(String regionId) {
+    public StartDesktopsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
