@@ -83,6 +83,9 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     @NameInMap("UserIds")
     public String userIds;
 
+    @NameInMap("WithHistoricalData")
+    public Boolean withHistoricalData;
+
     @NameInMap("WorkloadCreatedTimeRange")
     public TimeRangeFilter workloadCreatedTimeRange;
 
@@ -221,6 +224,14 @@ public class ListQuotaWorkloadsRequest extends TeaModel {
     }
     public String getUserIds() {
         return this.userIds;
+    }
+
+    public ListQuotaWorkloadsRequest setWithHistoricalData(Boolean withHistoricalData) {
+        this.withHistoricalData = withHistoricalData;
+        return this;
+    }
+    public Boolean getWithHistoricalData() {
+        return this.withHistoricalData;
     }
 
     public ListQuotaWorkloadsRequest setWorkloadCreatedTimeRange(TimeRangeFilter workloadCreatedTimeRange) {

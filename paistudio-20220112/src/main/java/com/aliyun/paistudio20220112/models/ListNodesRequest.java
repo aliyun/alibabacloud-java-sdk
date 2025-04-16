@@ -32,6 +32,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("GPUType")
     public String GPUType;
 
+    @NameInMap("MachineGroupIds")
+    public String machineGroupIds;
+
     /**
      * <strong>example:</strong>
      * <p>lingjxxxx</p>
@@ -87,6 +90,9 @@ public class ListNodesRequest extends TeaModel {
      */
     @NameInMap("QuotaId")
     public String quotaId;
+
+    @NameInMap("ReasonCodes")
+    public String reasonCodes;
 
     /**
      * <strong>example:</strong>
@@ -144,6 +150,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public String getGPUType() {
         return this.GPUType;
+    }
+
+    public ListNodesRequest setMachineGroupIds(String machineGroupIds) {
+        this.machineGroupIds = machineGroupIds;
+        return this;
+    }
+    public String getMachineGroupIds() {
+        return this.machineGroupIds;
     }
 
     public ListNodesRequest setNodeNames(String nodeNames) {
@@ -208,6 +222,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public String getQuotaId() {
         return this.quotaId;
+    }
+
+    public ListNodesRequest setReasonCodes(String reasonCodes) {
+        this.reasonCodes = reasonCodes;
+        return this;
+    }
+    public String getReasonCodes() {
+        return this.reasonCodes;
     }
 
     public ListNodesRequest setResourceGroupIds(String resourceGroupIds) {

@@ -1760,6 +1760,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GPUType", request.GPUType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.machineGroupIds)) {
+            query.put("MachineGroupIds", request.machineGroupIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeNames)) {
             query.put("NodeNames", request.nodeNames);
         }
@@ -1790,6 +1794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.quotaId)) {
             query.put("QuotaId", request.quotaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reasonCodes)) {
+            query.put("ReasonCodes", request.reasonCodes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupIds)) {
@@ -1897,6 +1905,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userIds)) {
             query.put("UserIds", request.userIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withHistoricalData)) {
+            query.put("WithHistoricalData", request.withHistoricalData);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workloadCreatedTimeRange)) {
@@ -2067,6 +2079,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
             query.put("EcsSpec", request.ecsSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.machineGroupIDs)) {
+            query.put("MachineGroupIDs", request.machineGroupIDs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

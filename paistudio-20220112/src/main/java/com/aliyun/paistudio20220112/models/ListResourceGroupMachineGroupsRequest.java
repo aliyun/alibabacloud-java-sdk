@@ -18,6 +18,9 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    @NameInMap("MachineGroupIDs")
+    public String machineGroupIDs;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -107,6 +110,14 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     }
     public String getEcsSpec() {
         return this.ecsSpec;
+    }
+
+    public ListResourceGroupMachineGroupsRequest setMachineGroupIDs(String machineGroupIDs) {
+        this.machineGroupIDs = machineGroupIDs;
+        return this;
+    }
+    public String getMachineGroupIDs() {
+        return this.machineGroupIDs;
     }
 
     public ListResourceGroupMachineGroupsRequest setName(String name) {

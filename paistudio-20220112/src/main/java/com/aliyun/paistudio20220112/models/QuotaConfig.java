@@ -24,8 +24,14 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("EnablePreemptSubquotaWorkloads")
     public Boolean enablePreemptSubquotaWorkloads;
 
+    @NameInMap("EnableSubQuotaPreemption")
+    public Boolean enableSubQuotaPreemption;
+
     @NameInMap("ResourceSpecs")
     public java.util.List<WorkspaceSpecs> resourceSpecs;
+
+    @NameInMap("SubQuotaPreemptionConfig")
+    public SubQuotaPreemptionConfig subQuotaPreemptionConfig;
 
     @NameInMap("SupportGPUDrivers")
     public java.util.List<String> supportGPUDrivers;
@@ -77,12 +83,28 @@ public class QuotaConfig extends TeaModel {
         return this.enablePreemptSubquotaWorkloads;
     }
 
+    public QuotaConfig setEnableSubQuotaPreemption(Boolean enableSubQuotaPreemption) {
+        this.enableSubQuotaPreemption = enableSubQuotaPreemption;
+        return this;
+    }
+    public Boolean getEnableSubQuotaPreemption() {
+        return this.enableSubQuotaPreemption;
+    }
+
     public QuotaConfig setResourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
         this.resourceSpecs = resourceSpecs;
         return this;
     }
     public java.util.List<WorkspaceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
+    }
+
+    public QuotaConfig setSubQuotaPreemptionConfig(SubQuotaPreemptionConfig subQuotaPreemptionConfig) {
+        this.subQuotaPreemptionConfig = subQuotaPreemptionConfig;
+        return this;
+    }
+    public SubQuotaPreemptionConfig getSubQuotaPreemptionConfig() {
+        return this.subQuotaPreemptionConfig;
     }
 
     public QuotaConfig setSupportGPUDrivers(java.util.List<String> supportGPUDrivers) {
