@@ -57,6 +57,28 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         return this.vpcFirewalls;
     }
 
+    public static class DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("StrictMode")
+        public Integer strictMode;
+
+        public static DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig self = new DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig setStrictMode(Integer strictMode) {
+            this.strictMode = strictMode;
+            return this;
+        }
+        public Integer getStrictMode() {
+            return this.strictMode;
+        }
+
+    }
+
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsIpsConfig extends TeaModel {
         /**
          * <p>Indicates whether basic protection is enabled. Valid values:</p>
@@ -527,6 +549,9 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewalls extends TeaModel {
+        @NameInMap("AclConfig")
+        public DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig aclConfig;
+
         /**
          * <p>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</p>
          * 
@@ -647,6 +672,14 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public static DescribeVpcFirewallListResponseBodyVpcFirewalls build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcFirewallListResponseBodyVpcFirewalls self = new DescribeVpcFirewallListResponseBodyVpcFirewalls();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcFirewallListResponseBodyVpcFirewalls setAclConfig(DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig aclConfig) {
+            this.aclConfig = aclConfig;
+            return this;
+        }
+        public DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig getAclConfig() {
+            return this.aclConfig;
         }
 
         public DescribeVpcFirewallListResponseBodyVpcFirewalls setBandwidth(Integer bandwidth) {

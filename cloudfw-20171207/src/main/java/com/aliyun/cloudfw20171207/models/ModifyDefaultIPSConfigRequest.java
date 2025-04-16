@@ -10,13 +10,12 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
      * <li><strong>1</strong>: yes</li>
      * <li><strong>0</strong>: no</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("BasicRules")
-    public String basicRules;
+    public Integer basicRules;
 
     /**
      * <p>Specifies whether to enable threat intelligence. Valid values:</p>
@@ -24,13 +23,12 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
      * <li><strong>1</strong>: yes</li>
      * <li><strong>0</strong>: no</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("CtiRules")
-    public String ctiRules;
+    public Integer ctiRules;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
@@ -45,6 +43,12 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxSdl")
     public Long maxSdl;
 
@@ -59,7 +63,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("PatchRules")
-    public String patchRules;
+    public Integer patchRules;
 
     /**
      * <p>The level of the rule group for the IPS. Valid values:</p>
@@ -73,7 +77,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("RuleClass")
-    public String ruleClass;
+    public Integer ruleClass;
 
     /**
      * <p>The mode of the IPS. Valid values:</p>
@@ -87,26 +91,26 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
      * <p>0</p>
      */
     @NameInMap("RunMode")
-    public String runMode;
+    public Integer runMode;
 
     public static ModifyDefaultIPSConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDefaultIPSConfigRequest self = new ModifyDefaultIPSConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDefaultIPSConfigRequest setBasicRules(String basicRules) {
+    public ModifyDefaultIPSConfigRequest setBasicRules(Integer basicRules) {
         this.basicRules = basicRules;
         return this;
     }
-    public String getBasicRules() {
+    public Integer getBasicRules() {
         return this.basicRules;
     }
 
-    public ModifyDefaultIPSConfigRequest setCtiRules(String ctiRules) {
+    public ModifyDefaultIPSConfigRequest setCtiRules(Integer ctiRules) {
         this.ctiRules = ctiRules;
         return this;
     }
-    public String getCtiRules() {
+    public Integer getCtiRules() {
         return this.ctiRules;
     }
 
@@ -126,27 +130,27 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
         return this.maxSdl;
     }
 
-    public ModifyDefaultIPSConfigRequest setPatchRules(String patchRules) {
+    public ModifyDefaultIPSConfigRequest setPatchRules(Integer patchRules) {
         this.patchRules = patchRules;
         return this;
     }
-    public String getPatchRules() {
+    public Integer getPatchRules() {
         return this.patchRules;
     }
 
-    public ModifyDefaultIPSConfigRequest setRuleClass(String ruleClass) {
+    public ModifyDefaultIPSConfigRequest setRuleClass(Integer ruleClass) {
         this.ruleClass = ruleClass;
         return this;
     }
-    public String getRuleClass() {
+    public Integer getRuleClass() {
         return this.ruleClass;
     }
 
-    public ModifyDefaultIPSConfigRequest setRunMode(String runMode) {
+    public ModifyDefaultIPSConfigRequest setRunMode(Integer runMode) {
         this.runMode = runMode;
         return this;
     }
-    public String getRunMode() {
+    public Integer getRunMode() {
         return this.runMode;
     }
 

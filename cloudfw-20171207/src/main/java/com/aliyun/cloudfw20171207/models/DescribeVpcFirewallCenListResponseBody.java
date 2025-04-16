@@ -57,6 +57,25 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         return this.vpcFirewalls;
     }
 
+    public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig extends TeaModel {
+        @NameInMap("StrictMode")
+        public Integer strictMode;
+
+        public static DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig self = new DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig setStrictMode(Integer strictMode) {
+            this.strictMode = strictMode;
+            return this;
+        }
+        public Integer getStrictMode() {
+            return this.strictMode;
+        }
+
+    }
+
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsIpsConfig extends TeaModel {
         /**
          * <p>Indicates whether basic protection is enabled. Valid values:</p>
@@ -489,6 +508,9 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewalls extends TeaModel {
+        @NameInMap("AclConfig")
+        public DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig aclConfig;
+
         /**
          * <p>The ID of the CEN instance.</p>
          * 
@@ -615,6 +637,14 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
         public static DescribeVpcFirewallCenListResponseBodyVpcFirewalls build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcFirewallCenListResponseBodyVpcFirewalls self = new DescribeVpcFirewallCenListResponseBodyVpcFirewalls();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcFirewallCenListResponseBodyVpcFirewalls setAclConfig(DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig aclConfig) {
+            this.aclConfig = aclConfig;
+            return this;
+        }
+        public DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig getAclConfig() {
+            return this.aclConfig;
         }
 
         public DescribeVpcFirewallCenListResponseBodyVpcFirewalls setCenId(String cenId) {

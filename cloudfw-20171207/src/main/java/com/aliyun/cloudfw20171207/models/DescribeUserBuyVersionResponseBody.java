@@ -56,6 +56,12 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @NameInMap("InstanceStatus")
     public String instanceStatus;
 
+    /**
+     * <p>The peak Internet traffic that can be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("InternetBandwidth")
     public Long internetBandwidth;
 
@@ -112,6 +118,12 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @NameInMap("MaxOverflow")
     public Long maxOverflow;
 
+    /**
+     * <p>The peak traffic of NAT private network that can be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("NatBandwidth")
     public Long natBandwidth;
 
@@ -164,6 +176,12 @@ public class DescribeUserBuyVersionResponseBody extends TeaModel {
     @NameInMap("Version")
     public Integer version;
 
+    /**
+     * <p>The peak cross-VPC traffic that can be protected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("VpcBandwidth")
     public Long vpcBandwidth;
 

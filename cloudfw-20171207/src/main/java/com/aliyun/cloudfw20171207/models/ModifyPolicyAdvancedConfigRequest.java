@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
+    @NameInMap("Eips")
+    public java.util.List<String> eips;
+
     /**
      * <p>Specifies whether to enable the strict mode for the access control policy. Valid values:</p>
      * <ul>
@@ -44,6 +47,14 @@ public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
     public static ModifyPolicyAdvancedConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyAdvancedConfigRequest self = new ModifyPolicyAdvancedConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPolicyAdvancedConfigRequest setEips(java.util.List<String> eips) {
+        this.eips = eips;
+        return this;
+    }
+    public java.util.List<String> getEips() {
+        return this.eips;
     }
 
     public ModifyPolicyAdvancedConfigRequest setInternetSwitch(String internetSwitch) {

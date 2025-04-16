@@ -27,6 +27,9 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     @NameInMap("FirewallConfigureStatus")
     public String firewallConfigureStatus;
 
+    @NameInMap("FirewallId")
+    public String firewallId;
+
     /**
      * <p>The language of the content within the response. Valid values:</p>
      * <ul>
@@ -68,6 +71,14 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     }
     public String getFirewallConfigureStatus() {
         return this.firewallConfigureStatus;
+    }
+
+    public DescribeVpcFirewallAclGroupListRequest setFirewallId(String firewallId) {
+        this.firewallId = firewallId;
+        return this;
+    }
+    public String getFirewallId() {
+        return this.firewallId;
     }
 
     public DescribeVpcFirewallAclGroupListRequest setLang(String lang) {

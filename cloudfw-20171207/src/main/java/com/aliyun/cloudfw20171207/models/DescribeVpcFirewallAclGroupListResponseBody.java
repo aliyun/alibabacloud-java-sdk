@@ -57,7 +57,29 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig extends TeaModel {
+        @NameInMap("StrictMode")
+        public Integer strictMode;
+
+        public static DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig self = new DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig setStrictMode(Integer strictMode) {
+            this.strictMode = strictMode;
+            return this;
+        }
+        public Integer getStrictMode() {
+            return this.strictMode;
+        }
+
+    }
+
     public static class DescribeVpcFirewallAclGroupListResponseBodyAclGroupList extends TeaModel {
+        @NameInMap("AclConfig")
+        public DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig aclConfig;
+
         /**
          * <p>The ID of the policy group.</p>
          * <p>Valid values:</p>
@@ -123,6 +145,14 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         public static DescribeVpcFirewallAclGroupListResponseBodyAclGroupList build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcFirewallAclGroupListResponseBodyAclGroupList self = new DescribeVpcFirewallAclGroupListResponseBodyAclGroupList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcFirewallAclGroupListResponseBodyAclGroupList setAclConfig(DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig aclConfig) {
+            this.aclConfig = aclConfig;
+            return this;
+        }
+        public DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig getAclConfig() {
+            return this.aclConfig;
         }
 
         public DescribeVpcFirewallAclGroupListResponseBodyAclGroupList setAclGroupId(String aclGroupId) {

@@ -67,9 +67,21 @@ public class DescribePostpayTrafficTotalResponseBody extends TeaModel {
     @NameInMap("TotalNatTraffic")
     public Long totalNatTraffic;
 
+    /**
+     * <p>Data Leak Detection Total Fee Flow.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22879916142</p>
+     */
     @NameInMap("TotalSdlBillTraffic")
     public Long totalSdlBillTraffic;
 
+    /**
+     * <p>Data Leak Detection Total free usage traffic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("TotalSdlFreeTraffic")
     public Long totalSdlFreeTraffic;
 

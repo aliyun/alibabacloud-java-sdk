@@ -28,7 +28,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     public String firewallSwitchStatus;
 
     /**
-     * <p>The VPC that is automatically created for the firewall.</p>
+     * <p>The firewall VPC.</p>
      */
     @NameInMap("FirewallVpc")
     public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc firewallVpc;
@@ -142,6 +142,15 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public Integer allowConfiguration;
 
         /**
+         * <p>Firewall backup availability zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
+         */
+        @NameInMap("StandbyZoneId")
+        public String standbyZoneId;
+
+        /**
          * <p>The CIDR block of the VPC.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +187,15 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
+         * <p>The availability zone ID of the virtual switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
+        @NameInMap("VswitchZoneId")
+        public String vswitchZoneId;
+
+        /**
          * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
@@ -197,6 +215,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
         public Integer getAllowConfiguration() {
             return this.allowConfiguration;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setStandbyZoneId(String standbyZoneId) {
+            this.standbyZoneId = standbyZoneId;
+            return this;
+        }
+        public String getStandbyZoneId() {
+            return this.standbyZoneId;
         }
 
         public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setVpcCidr(String vpcCidr) {
@@ -229,6 +255,14 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         }
         public String getVswitchId() {
             return this.vswitchId;
+        }
+
+        public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setVswitchZoneId(String vswitchZoneId) {
+            this.vswitchZoneId = vswitchZoneId;
+            return this;
+        }
+        public String getVswitchZoneId() {
+            return this.vswitchZoneId;
         }
 
         public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc setZoneId(String zoneId) {

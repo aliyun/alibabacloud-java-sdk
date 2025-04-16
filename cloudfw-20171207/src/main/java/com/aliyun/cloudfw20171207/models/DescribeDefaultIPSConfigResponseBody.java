@@ -30,9 +30,12 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     @NameInMap("CtiRules")
     public Integer ctiRules;
 
-    @NameInMap("FreeTrailStatus")
-    public String freeTrailStatus;
-
+    /**
+     * <p>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxSdl")
     public Long maxSdl;
 
@@ -104,14 +107,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     }
     public Integer getCtiRules() {
         return this.ctiRules;
-    }
-
-    public DescribeDefaultIPSConfigResponseBody setFreeTrailStatus(String freeTrailStatus) {
-        this.freeTrailStatus = freeTrailStatus;
-        return this;
-    }
-    public String getFreeTrailStatus() {
-        return this.freeTrailStatus;
     }
 
     public DescribeDefaultIPSConfigResponseBody setMaxSdl(Long maxSdl) {

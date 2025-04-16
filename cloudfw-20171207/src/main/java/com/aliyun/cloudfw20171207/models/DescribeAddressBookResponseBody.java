@@ -92,9 +92,21 @@ public class DescribeAddressBookResponseBody extends TeaModel {
     }
 
     public static class DescribeAddressBookResponseBodyAclsAddresses extends TeaModel {
+        /**
+         * <p>Address information in the address book.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1/32</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>Single address description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("Note")
         public String note;
 
@@ -179,6 +191,9 @@ public class DescribeAddressBookResponseBody extends TeaModel {
         @NameInMap("AddressListCount")
         public Integer addressListCount;
 
+        /**
+         * <p>A list of addresses in the address book, each with a single address description.</p>
+         */
         @NameInMap("Addresses")
         public java.util.List<DescribeAddressBookResponseBodyAclsAddresses> addresses;
 

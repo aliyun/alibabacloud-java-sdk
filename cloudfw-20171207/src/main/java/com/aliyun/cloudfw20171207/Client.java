@@ -974,6 +974,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FirewallVpcCidrBlock", request.firewallVpcCidrBlock);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallVpcStandbyZoneId)) {
+            query.put("FirewallVpcStandbyZoneId", request.firewallVpcStandbyZoneId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.firewallVpcZoneId)) {
             query.put("FirewallVpcZoneId", request.firewallVpcZoneId);
         }
@@ -2532,7 +2536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the default configurations of the intrusion prevention system (IPS).</p>
+     * <p>Queries the default intrusion prevention system (IPS) configurations.</p>
      * 
      * @param request DescribeDefaultIPSConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2564,7 +2568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the default configurations of the intrusion prevention system (IPS).</p>
+     * <p>Queries the default intrusion prevention system (IPS) configurations.</p>
      * 
      * @param request DescribeDefaultIPSConfigRequest
      * @return DescribeDefaultIPSConfigResponse
@@ -4666,6 +4670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FirewallConfigureStatus", request.firewallConfigureStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.firewallId)) {
+            query.put("FirewallId", request.firewallId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -6312,6 +6320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPolicyAdvancedConfigResponse modifyPolicyAdvancedConfigWithOptions(ModifyPolicyAdvancedConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eips)) {
+            query.put("Eips", request.eips);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.internetSwitch)) {
             query.put("InternetSwitch", request.internetSwitch);
         }

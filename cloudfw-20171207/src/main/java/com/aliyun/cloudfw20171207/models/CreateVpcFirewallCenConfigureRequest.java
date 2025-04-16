@@ -52,6 +52,19 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     public String firewallVpcCidrBlock;
 
     /**
+     * <p>The ID of the backup availability zone to which the firewall belongs. The firewall will automatically switch to the backup availability zone to continue running only if the primary availability zone service is unavailable.
+     * If this parameter is not filled, the backup availability zone for the firewall will be automatically assigned.</p>
+     * <blockquote>
+     * <p>This parameter is only effective when creating a VPC firewall for the first time in this CEN region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
+     */
+    @NameInMap("FirewallVpcStandbyZoneId")
+    public String firewallVpcStandbyZoneId;
+
+    /**
      * <p>The ID of the zone to which the vSwitch belongs. If your service is latency-sensitive, you can specify the same zone for the vSwitch of the firewall and the vSwitch of your business VPC to minimize latency.</p>
      * <p>If you do not specify a value, a zone is automatically assigned for the vSwitch.</p>
      * <blockquote>
@@ -163,6 +176,14 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     }
     public String getFirewallVpcCidrBlock() {
         return this.firewallVpcCidrBlock;
+    }
+
+    public CreateVpcFirewallCenConfigureRequest setFirewallVpcStandbyZoneId(String firewallVpcStandbyZoneId) {
+        this.firewallVpcStandbyZoneId = firewallVpcStandbyZoneId;
+        return this;
+    }
+    public String getFirewallVpcStandbyZoneId() {
+        return this.firewallVpcStandbyZoneId;
     }
 
     public CreateVpcFirewallCenConfigureRequest setFirewallVpcZoneId(String firewallVpcZoneId) {

@@ -89,6 +89,9 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("UpdateTime")
+        public Long updateTime;
+
         /**
          * <p>The version number.</p>
          * 
@@ -109,6 +112,14 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public DescribeSignatureLibVersionResponseBodyVersion setUpdateTime(Long updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public Long getUpdateTime() {
+            return this.updateTime;
         }
 
         public DescribeSignatureLibVersionResponseBodyVersion setVersion(String version) {
