@@ -137,7 +137,7 @@ public class ListImagesResponseBody extends TeaModel {
          * <p>5.8G</p>
          */
         @NameInMap("ReleaseFileSize")
-        public Long releaseFileSize;
+        public String releaseFileSize;
 
         /**
          * <p>image type</p>
@@ -217,11 +217,11 @@ public class ListImagesResponseBody extends TeaModel {
             return this.releaseFileMd5;
         }
 
-        public ListImagesResponseBodyImages setReleaseFileSize(Long releaseFileSize) {
+        public ListImagesResponseBodyImages setReleaseFileSize(String releaseFileSize) {
             this.releaseFileSize = releaseFileSize;
             return this;
         }
-        public Long getReleaseFileSize() {
+        public String getReleaseFileSize() {
             return this.releaseFileSize;
         }
 

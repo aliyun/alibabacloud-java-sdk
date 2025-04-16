@@ -77,7 +77,7 @@ public class DescribeClusterResponseBody extends TeaModel {
      * <p>Network Information</p>
      */
     @NameInMap("Networks")
-    public java.util.List<DescribeClusterResponseBodyNetworks> networks;
+    public DescribeClusterResponseBodyNetworks networks;
 
     /**
      * <p>Number of Nodes</p>
@@ -229,11 +229,11 @@ public class DescribeClusterResponseBody extends TeaModel {
         return this.hpnZone;
     }
 
-    public DescribeClusterResponseBody setNetworks(java.util.List<DescribeClusterResponseBodyNetworks> networks) {
+    public DescribeClusterResponseBody setNetworks(DescribeClusterResponseBodyNetworks networks) {
         this.networks = networks;
         return this;
     }
-    public java.util.List<DescribeClusterResponseBodyNetworks> getNetworks() {
+    public DescribeClusterResponseBodyNetworks getNetworks() {
         return this.networks;
     }
 
@@ -352,12 +352,6 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterResponseBodyNetworks extends TeaModel {
-        /**
-         * <p>VPC Segment ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpd-iqd7xunc</p>
-         */
         @NameInMap("VpdId")
         public String vpdId;
 
