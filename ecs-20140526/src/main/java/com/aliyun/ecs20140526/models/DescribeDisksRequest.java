@@ -145,13 +145,13 @@ public class DescribeDisksRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to enable the automatic snapshot policy feature for the cloud disk.</p>
+     * <p>Specifies whether the automatic snapshot policy feature is enabled for the cloud disk. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
      * </ul>
      * <blockquote>
-     * <p>By default, the automatic snapshot policy feature is enabled for cloud disks that are already created. Additionally, only the automatic snapshot policy needs to be applied to a cloud disk before you can use the automatic snapshot policy.</p>
+     * <p> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

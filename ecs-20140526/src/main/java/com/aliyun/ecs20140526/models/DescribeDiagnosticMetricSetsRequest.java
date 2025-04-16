@@ -45,6 +45,10 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
 
     /**
      * <p>The resource type supported by the diagnostic metric set.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>instance</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>instance</p>

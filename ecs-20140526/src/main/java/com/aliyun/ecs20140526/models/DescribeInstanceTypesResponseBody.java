@@ -57,6 +57,55 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes extends TeaModel {
+        @NameInMap("Attribute")
+        public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute> attribute;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes setAttribute(java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute> attribute) {
+            this.attribute = attribute;
+            return this;
+        }
+        public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute> getAttribute() {
+            return this.attribute;
+        }
+
+    }
+
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes extends TeaModel {
         @NameInMap("SupportedTopologyType")
         public java.util.List<String> supportedTopologyType;
@@ -78,7 +127,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptions extends TeaModel {
         /**
-         * <p>CPU core.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -87,7 +136,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer core;
 
         /**
-         * <p>CPU core factor.</p>
+         * <p>The CPU option step size.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -96,7 +145,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer coreFactor;
 
         /**
-         * <p>Indicates whether Hyper-Threading is adjustable.</p>
+         * <p>Indicates whether HT can be enabled or disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -111,9 +160,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes supportedTopologyTypes;
 
         /**
-         * <p>CPU threads per core.</p>
+         * <p>The number of threads per CPU core.</p>
          * <blockquote>
-         * <p><code>CpuOptions.ThreadsPerCore=1</code> indicates the shutdown of CPU Hyper-Threading.</p>
+         * <p> <code>If the value of CpuOptions.ThreadPerCore is 1, Hyper-Threading (HT) is disabled.</code></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -298,6 +347,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
+        @NameInMap("Attributes")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes attributes;
+
         /**
          * <p>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</p>
          * 
@@ -682,7 +734,11 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public Integer primaryEniQueueNumber;
 
         /**
-         * <p>The maximum number of QPs per ERI.</p>
+         * <p>The maximum number of QPs per instance, which varies based on the instance type.</p>
+         * <ul>
+         * <li>For enterprise-level CPU-based instance types, the value of <code>QueuePairNumber</code> is the maximum number of QPs per instance.</li>
+         * <li>For GPU-accelerated instance types, the maximum number of QPs per instance is calculated by using the following formula: Value of <code>QueuePairNumber</code> × Value of NetworkCardQuantity.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -717,6 +773,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceType build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceTypesResponseBodyInstanceTypesInstanceType self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceType();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setAttributes(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes getAttributes() {
+            return this.attributes;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setBaselineCredit(Integer baselineCredit) {

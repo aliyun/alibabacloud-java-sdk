@@ -155,6 +155,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The regular expression of the custom parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^[a-zA-Z0-9_-]{4,32}$</p>
+         */
         @NameInMap("PatternRegex")
         public String patternRegex;
 
@@ -428,7 +434,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The custom parameters.</p>
+         * <p>The custom parameters of the command.</p>
          */
         @NameInMap("ParameterDefinitions")
         public DescribeCommandsResponseBodyCommandsCommandParameterDefinitions parameterDefinitions;

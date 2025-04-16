@@ -31,8 +31,8 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries per page.</p>
+     * <p>Maximum value: 100</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>

@@ -3,22 +3,20 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteDemandResponseBody extends TeaModel {
+public class DeletePortRangeListResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteDemandResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteDemandResponseBody self = new DeleteDemandResponseBody();
+    public static DeletePortRangeListResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeletePortRangeListResponseBody self = new DeletePortRangeListResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDemandResponseBody setRequestId(String requestId) {
+    public DeletePortRangeListResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

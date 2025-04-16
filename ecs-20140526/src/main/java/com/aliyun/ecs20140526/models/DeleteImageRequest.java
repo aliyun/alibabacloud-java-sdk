@@ -7,8 +7,8 @@ public class DeleteImageRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully delete the custom image. Valid values:</p>
      * <ul>
-     * <li>true: forcefully deletes the custom image, regardless of whether the image is being used by other instances.</li>
-     * <li>false: verifies that the custom image is not being used by other instances and then deletes the image.</li>
+     * <li>true: forcefully deletes the custom image, regardless of whether the image is being used by instances.</li>
+     * <li>false: verifies that the custom image is not being used by instances and then deletes the image.</li>
      * </ul>
      * <p>Default value: false.</p>
      * 

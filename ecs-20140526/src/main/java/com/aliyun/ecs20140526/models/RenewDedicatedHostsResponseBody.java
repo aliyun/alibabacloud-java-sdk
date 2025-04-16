@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewDedicatedHostsResponseBody extends TeaModel {
     /**
+     * <p>The ID of the order.</p>
+     * 
      * <strong>example:</strong>
      * <p>23841229****</p>
      */

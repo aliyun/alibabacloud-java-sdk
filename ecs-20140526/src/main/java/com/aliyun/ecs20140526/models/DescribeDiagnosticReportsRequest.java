@@ -52,11 +52,24 @@ public class DescribeDiagnosticReportsRequest extends TeaModel {
     /**
      * <p>The severity level of the diagnostic report. Valid values:</p>
      * <ul>
-     * <li>Unknown: The diagnostic does not start, fails to run, or unexpectedly exits without a diagnosis.</li>
-     * <li>Normal: No exceptions are detected.</li>
-     * <li>Info: Diagnostic information is recorded and may be related to exceptions.</li>
-     * <li>Warn: Diagnostic information is recorded and may indicate exceptions.</li>
-     * <li>Critical: Critical exceptions are detected.</li>
+     * <li>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</li>
+     * <li>Normal: No exceptions were detected.</li>
+     * <li>Info: Diagnostic information was recorded and may be related to exceptions.</li>
+     * <li>Warn: Diagnostic information was recorded and may indicate exceptions.</li>
+     * <li>Critical: Critical exceptions were detected.</li>
+     * </ul>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>normal</li>
+     * <li>info</li>
+     * <li>warn</li>
+     * <li>critical</li>
+     * <li>Normal</li>
+     * <li>Info</li>
+     * <li>Warn</li>
+     * <li>Critical</li>
+     * <li>unknown</li>
+     * <li>Unknown</li>
      * </ul>
      * 
      * <strong>example:</strong>

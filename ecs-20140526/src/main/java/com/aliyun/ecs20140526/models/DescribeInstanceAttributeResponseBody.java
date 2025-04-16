@@ -82,6 +82,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
+    @NameInMap("EnableNetworkEncryption")
+    public Boolean enableNetworkEncryption;
+
     /**
      * <p>The time when the instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
      * 
@@ -400,6 +403,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
     public Boolean getEnableJumboFrame() {
         return this.enableJumboFrame;
+    }
+
+    public DescribeInstanceAttributeResponseBody setEnableNetworkEncryption(Boolean enableNetworkEncryption) {
+        this.enableNetworkEncryption = enableNetworkEncryption;
+        return this;
+    }
+    public Boolean getEnableNetworkEncryption() {
+        return this.enableNetworkEncryption;
     }
 
     public DescribeInstanceAttributeResponseBody setExpiredTime(String expiredTime) {

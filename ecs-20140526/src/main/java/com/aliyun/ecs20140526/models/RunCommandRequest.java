@@ -220,18 +220,18 @@ public class RunCommandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key-value pairs of the custom parameters that are passed in when the command that can include custom parameters is run. For example, assume that the command content is <code>echo {{name}}</code>. The <code>Parameter</code> parameter can be used to pass in the <code>{&quot;name&quot;:&quot;Jack&quot;}</code> key-value pair. The <code>name</code> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <code>echo Jack</code> command is run.</p>
-     * <p>You can specify up to 10 custom parameters. Take note of the following items:</p>
+     * <p>The key-value pairs of custom parameters to pass in when the command can include custom parameters. For example, the command content is <code>echo {{name}}</code>. You can use <code>Parameters</code> to pass in the <code>{&quot;name&quot;:&quot;Jack&quot;}</code> key-value pair. The <code>name</code> key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. As a result, the <code>echo Jack</code> command is run.</p>
+     * <p>You can specify 0 to 10 custom parameters. Take note of the following items:</p>
      * <ul>
-     * <li>The key cannot be an empty string. It can be up to 64 characters in length.</li>
-     * <li>The value can be an empty string.</li>
-     * <li>If you want to retain the command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64-encoding does not exceed 24 KB in size. You can set <code>KeepCommand</code> to specify whether to retain the command.</li>
+     * <li>The key of a custom parameter can be up to 64 characters in length and cannot be an empty string.</li>
+     * <li>The value of a custom parameter can be an empty string.</li>
+     * <li>If you want to retain a command, make sure that the command after Base64 encoding, including custom parameters and original command content, does not exceed 18 KB in size. If you do not want to retain the command, make sure that the command after Base64 encoding does not exceed 24 KB in size. You can set <code>KeepCommand</code> to specify whether to retain the command.</li>
      * <li>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</li>
      * </ul>
-     * <p>This parameter is empty by default. You can leave this parameter empty to disable the custom parameter feature.</p>
+     * <p>This parameter is left empty by default, which indicates that the custom parameter feature is disabled.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
+     * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;

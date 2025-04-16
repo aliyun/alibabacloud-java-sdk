@@ -299,6 +299,12 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
+        @NameInMap("PortRangeListId")
+        public String portRangeListId;
+
+        @NameInMap("PortRangeListName")
+        public String portRangeListName;
+
         /**
          * <p>The priority of the rule.</p>
          * 
@@ -503,6 +509,22 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
         public String getPortRange() {
             return this.portRange;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setPortRangeListId(String portRangeListId) {
+            this.portRangeListId = portRangeListId;
+            return this;
+        }
+        public String getPortRangeListId() {
+            return this.portRangeListId;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setPortRangeListName(String portRangeListName) {
+            this.portRangeListName = portRangeListName;
+            return this;
+        }
+        public String getPortRangeListName() {
+            return this.portRangeListName;
         }
 
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setPriority(String priority) {

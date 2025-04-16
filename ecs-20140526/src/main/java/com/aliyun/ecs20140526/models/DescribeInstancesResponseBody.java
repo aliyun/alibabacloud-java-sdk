@@ -148,6 +148,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CoreCount")
         public Integer coreCount;
 
+        @NameInMap("EnableVISST")
+        public Boolean enableVISST;
+
+        @NameInMap("EnableVRDT")
+        public Boolean enableVRDT;
+
         /**
          * <blockquote>
          * <p> This parameter is deprecated.</p>
@@ -181,6 +187,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("TopologyType")
         public String topologyType;
 
+        @NameInMap("TurboMode")
+        public String turboMode;
+
         public static DescribeInstancesResponseBodyInstancesInstanceCpuOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesInstanceCpuOptions self = new DescribeInstancesResponseBodyInstancesInstanceCpuOptions();
             return TeaModel.build(map, self);
@@ -192,6 +201,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Integer getCoreCount() {
             return this.coreCount;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setEnableVISST(Boolean enableVISST) {
+            this.enableVISST = enableVISST;
+            return this;
+        }
+        public Boolean getEnableVISST() {
+            return this.enableVISST;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setEnableVRDT(Boolean enableVRDT) {
+            this.enableVRDT = enableVRDT;
+            return this;
+        }
+        public Boolean getEnableVRDT() {
+            return this.enableVRDT;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setNuma(String numa) {
@@ -216,6 +241,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getTopologyType() {
             return this.topologyType;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setTurboMode(String turboMode) {
+            this.turboMode = turboMode;
+            return this;
+        }
+        public String getTurboMode() {
+            return this.turboMode;
         }
 
     }
@@ -1552,6 +1585,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("EipAddress")
         public DescribeInstancesResponseBodyInstancesInstanceEipAddress eipAddress;
 
+        @NameInMap("EnableNVS")
+        public Boolean enableNVS;
+
         /**
          * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</p>
          * 
@@ -2152,6 +2188,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceEipAddress getEipAddress() {
             return this.eipAddress;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setEnableNVS(Boolean enableNVS) {
+            this.enableNVS = enableNVS;
+            return this;
+        }
+        public Boolean getEnableNVS() {
+            return this.enableNVS;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setExpiredTime(String expiredTime) {

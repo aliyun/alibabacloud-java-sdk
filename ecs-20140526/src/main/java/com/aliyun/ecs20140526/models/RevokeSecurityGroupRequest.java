@@ -460,7 +460,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
          * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
-         * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p> This parameter is valid only for ECS instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -525,6 +525,9 @@ public class RevokeSecurityGroupRequest extends TeaModel {
          */
         @NameInMap("PortRange")
         public String portRange;
+
+        @NameInMap("PortRangeListId")
+        public String portRangeListId;
 
         /**
          * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
@@ -593,12 +596,12 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         /**
          * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
          * <ul>
-         * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
+         * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
          * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
          * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
          * <li>If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.</li>
          * </ul>
-         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>
@@ -610,7 +613,7 @@ public class RevokeSecurityGroupRequest extends TeaModel {
          * <p>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+         * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the &quot;Security group limits&quot; section of the <a href="~~25412#SecurityGroupQuota1~~">Limits</a> topic.</li>
          * <li>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</li>
          * </ul>
          * 
@@ -687,6 +690,14 @@ public class RevokeSecurityGroupRequest extends TeaModel {
         }
         public String getPortRange() {
             return this.portRange;
+        }
+
+        public RevokeSecurityGroupRequestPermissions setPortRangeListId(String portRangeListId) {
+            this.portRangeListId = portRangeListId;
+            return this;
+        }
+        public String getPortRangeListId() {
+            return this.portRangeListId;
         }
 
         public RevokeSecurityGroupRequestPermissions setPriority(String priority) {

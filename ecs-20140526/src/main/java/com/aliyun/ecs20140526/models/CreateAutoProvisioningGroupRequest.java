@@ -49,8 +49,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     /**
      * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is smaller than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</p>
      * <ul>
-     * <li>PayAsYouGo: pay-as-you-go instances</li>
-     * <li>Spot: preemptible instances.</li>
+     * <li>PayAsYouGo: pay-as-you-go</li>
+     * <li>Spot: preemptible instance</li>
      * </ul>
      * <p>Default value: Spot.</p>
      * 
@@ -174,6 +174,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("PayAsYouGoTargetCapacity")
     public String payAsYouGoTargetCapacity;
 
+    /**
+     * <p>The capacity details of the subscription instance.</p>
+     */
     @NameInMap("PrePaidOptions")
     public CreateAutoProvisioningGroupRequestPrePaidOptions prePaidOptions;
 
@@ -684,11 +687,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
         /**
-         * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+         * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: force attaches the disk to the instance.</li>
+         * <li>false: disables the performance burst feature for the system disk.</li>
          * </ul>
          * <blockquote>
          * <p> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -703,9 +709,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The category of data disk N. Valid values of N: 1 to 16. Valid values:</p>
          * <ul>
-         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_efficiency: utra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: ESSD.</li>
+         * <li>cloud_essd: enterprise SSD (ESSD).</li>
          * <li>cloud: basic disk.</li>
          * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
@@ -720,8 +726,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to release data disk N when the instance to which the data disk is attached is released. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: releases data disk N when the associated instance is released.</li>
+         * <li>false: does not release data disk N when the associated instance is released.</li>
          * </ul>
          * <p>Default value: true.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -751,7 +757,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
          * <p>This parameter is left empty by default.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
@@ -775,8 +781,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt data disk N. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: encrypts system disk N.</li>
+         * <li>false: does not encrypt system disk N.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -799,12 +805,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The performance level of the Enterprise SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in <code>LaunchConfiguration.DataDisk.N.Category</code>. Valid values:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
+         * <li>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</li>
          * </ul>
-         * <p>For more information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -869,6 +875,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public static CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setBurstingEnabled(Boolean burstingEnabled) {
@@ -978,11 +992,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk extends TeaModel {
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
         /**
          * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: force attaches the disk to the instance.</li>
+         * <li>false: disables the performance burst feature for the system disk.</li>
          * </ul>
          * <blockquote>
          * <p> This parameter is available only if you set <code>LaunchConfiguration.SystemDisk.Category</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -1015,8 +1032,8 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to encrypt the system disk. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: encrypts system disk N.</li>
+         * <li>false: does not encrypt system disk N.</li>
          * </ul>
          * <p>Default value: false.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
@@ -1038,7 +1055,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <blockquote>
          * <p> This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -1053,6 +1070,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public static CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfigurationSystemDisk setBurstingEnabled(Boolean burstingEnabled) {
@@ -1135,6 +1160,25 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions extends TeaModel {
+        @NameInMap("LoginAsNonRoot")
+        public Boolean loginAsNonRoot;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions self = new CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
     }
@@ -1494,17 +1538,58 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <p>Specifies whether to enable auto-renewal for the reserved instance. This parameter is required only when the instance uses the subscription billing method. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        /**
+         * <p>The auto-renewal period of the instance. Valid values:</p>
+         * <p>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AutoRenewPeriod")
         public Integer autoRenewPeriod;
 
+        @NameInMap("ImageOptions")
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions imageOptions;
+
+        /**
+         * <p>The subscription period of the instance. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only if the subscription billing method is selected. Valid values:</p>
+         * <p>Valid values if PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Period")
         public Integer period;
 
+        /**
+         * <p>The unit of the subscription period. Default value: Month. Valid values:</p>
+         * <p>Month</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
+
+        @NameInMap("SpotDuration")
+        public Integer spotDuration;
+
+        @NameInMap("SpotInterruptionBehavior")
+        public String spotInterruptionBehavior;
 
         public static CreateAutoProvisioningGroupRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfiguration self = new CreateAutoProvisioningGroupRequestLaunchConfiguration();
@@ -1775,6 +1860,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.autoRenewPeriod;
         }
 
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setImageOptions(CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions imageOptions) {
+            this.imageOptions = imageOptions;
+            return this;
+        }
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationImageOptions getImageOptions() {
+            return this.imageOptions;
+        }
+
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setPeriod(Integer period) {
             this.period = period;
             return this;
@@ -1789,6 +1882,22 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getPeriodUnit() {
             return this.periodUnit;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSpotDuration(Integer spotDuration) {
+            this.spotDuration = spotDuration;
+            return this;
+        }
+        public Integer getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSpotInterruptionBehavior(String spotInterruptionBehavior) {
+            this.spotInterruptionBehavior = spotInterruptionBehavior;
+            return this;
+        }
+        public String getSpotInterruptionBehavior() {
+            return this.spotInterruptionBehavior;
         }
 
     }
@@ -1834,7 +1943,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to include burstable instance types. Valid values:</p>
          * <ul>
-         * <li>Exclude: does not include burstable instance types.</li>
+         * <li>Exclude: excludes burstable instance types.</li>
          * <li>Include: includes burstable instance types.</li>
          * <li>Required: includes only burstable instance types.</li>
          * </ul>
@@ -1847,7 +1956,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String burstablePerformance;
 
         /**
-         * <p>The number of vCPU cores of the instance type.</p>
+         * <p>The numbers of vCPUs of instance types.</p>
          */
         @NameInMap("Cores")
         public java.util.List<Integer> cores;
@@ -1858,15 +1967,21 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("ExcludedInstanceTypes")
         public java.util.List<String> excludedInstanceTypes;
 
+        /**
+         * <p>The ID of the image. You can use this parameter to specify the image that is used by the current resource pool. If you do not specify this parameter, the image that is configured in <code>LaunchConfiguration.ImageId</code> or the launch template is used by default. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query the available images. Note: This parameter is supported only when <code>AutoProvisioningGroupType</code> is set to instant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_3_x64_20G_alibase_20210425.vhd</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values:</p>
+         * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values of Nextended configuration N， Valid values:</p>
          * <ul>
-         * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
-         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see the <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> topic.</li>
-         * <li>CreditEntryLevel: credit entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For information about burstable instances, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>.</li>
          * </ul>
          * <p>Valid values of N: 1 to 10.</p>
          * 
@@ -1877,7 +1992,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String instanceFamilyLevel;
 
         /**
-         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For more information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * <p>The instance type in extended configuration N. Valid values of N: 1 to 20. For information about the valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.large</p>
@@ -1888,7 +2003,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The maximum price of preemptible instances in extended configuration N.</p>
          * <blockquote>
-         * <p> If you specify one or more other <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.MaxPrice</code>.</p>
+         * <p> If you specify one or more <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.MaxPrice</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1909,7 +2024,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public Integer maxQuantity;
 
         /**
-         * <p>The memory sizes of the instance type.</p>
+         * <p>The memory sizes of instance types.</p>
          */
         @NameInMap("Memories")
         public java.util.List<Float> memories;
@@ -1926,7 +2041,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         /**
          * <p>The ID of the vSwitch in extended configuration N. The zone of the ECS instances created from the extended configuration is determined by the vSwitch.</p>
          * <blockquote>
-         * <p> If you specify one or more other <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.VSwitchId</code>.</p>
+         * <p> If you specify one or more <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.VSwitchId</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2061,9 +2176,21 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution extends TeaModel {
+        /**
+         * <p>Details about the instance types. Duplicate instance types are not allowed and the instance types are within the LaunchTemplateConfig.InstanceType range.</p>
+         */
         @NameInMap("InstanceTypes")
         public java.util.List<String> instanceTypes;
 
+        /**
+         * <p>The minimum number of instances to be delivered within the <code>InstanceTypes</code> range.</p>
+         * <blockquote>
+         * <p> <code>sum(MinTargetCapacity)&lt;= TotalTargetCapacity</code> indicates that the sum of MinTargetCapacity values of all instance types cannot exceed the TotalTargetCapacity value. If any instance type set cannot meet the MinTargetCapacity requirement due to insufficient inventory or other reasons, the entire request fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("MinTargetCapacity")
         public Integer minTargetCapacity;
 
@@ -2091,6 +2218,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupRequestPrePaidOptions extends TeaModel {
+        /**
+         * <p>The minimum capacity set for different instance types. This parameter is valid only when <code>AutoProvisioningGroupType</code> is set to request.</p>
+         */
         @NameInMap("SpecifyCapacityDistribution")
         public java.util.List<CreateAutoProvisioningGroupRequestPrePaidOptionsSpecifyCapacityDistribution> specifyCapacityDistribution;
 

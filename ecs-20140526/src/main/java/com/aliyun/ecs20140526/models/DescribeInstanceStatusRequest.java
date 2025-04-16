@@ -34,7 +34,7 @@ public class DescribeInstanceStatusRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Page starts from page 1.</p>
+     * <p>Pages start from page 1.</p>
      * <p>Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -44,8 +44,8 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50</p>
-     * <p>Default value: 10</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -80,7 +80,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The security group rules. You can create 1 to 100 security group rules in a request.</p>
+     * <p>An array of security group rules. You can specify 1 to 100 security group rules in a request.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<AuthorizeSecurityGroupRequestPermissions> permissions;
@@ -447,7 +447,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * <blockquote>
-         * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and <code>DestCidrIp</code> in the same request.</p>
+         * <p> This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify this parameter and <code>DestCidrIp</code> in the same request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -515,6 +515,13 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String portRange;
 
         /**
+         * <strong>example:</strong>
+         * <p>prl-2ze9743****</p>
+         */
+        @NameInMap("PortRangeListId")
+        public String portRangeListId;
+
+        /**
          * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
          * <p>Default value: 1.</p>
          * 
@@ -534,7 +541,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The ID of the source security group that is specified in the security group rule.</p>
+         * <p>The ID of the source security group of the security group rule.</p>
          * <ul>
          * <li>You must specify at least one of the following parameters: <code>SourceGroupId</code>, <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, and <code>SourcePrefixListId</code>.</li>
          * <li>If you specify <code>SourceGroupId</code> but do not specify <code>SourceCidrIp</code> or <code>Ipv6SourceCidrIp</code>, you must set <code>NicType</code> to <code>intranet</code>.</li>
@@ -593,7 +600,7 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
          * <p>The ID of the source prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
-         * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+         * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas&quot; topic.</li>
          * <li>If you specify <code>SourceCidrIp</code>, <code>Ipv6SourceCidrIp</code>, or <code>SourceGroupId</code>, this parameter is ignored.</li>
          * </ul>
          * 
@@ -670,6 +677,14 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
         }
         public String getPortRange() {
             return this.portRange;
+        }
+
+        public AuthorizeSecurityGroupRequestPermissions setPortRangeListId(String portRangeListId) {
+            this.portRangeListId = portRangeListId;
+            return this;
+        }
+        public String getPortRangeListId() {
+            return this.portRangeListId;
         }
 
         public AuthorizeSecurityGroupRequestPermissions setPriority(String priority) {

@@ -163,6 +163,9 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     @NameInMap("PortRange")
     public String portRange;
 
+    @NameInMap("PortRangeListId")
+    public String portRangeListId;
+
     /**
      * <p>The priority of the security group rule. Valid values: 1 to 100.</p>
      * <p>Default value: 1.</p>
@@ -356,6 +359,14 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     }
     public String getPortRange() {
         return this.portRange;
+    }
+
+    public ModifySecurityGroupEgressRuleRequest setPortRangeListId(String portRangeListId) {
+        this.portRangeListId = portRangeListId;
+        return this;
+    }
+    public String getPortRangeListId() {
+        return this.portRangeListId;
     }
 
     public ModifySecurityGroupEgressRuleRequest setPriority(String priority) {

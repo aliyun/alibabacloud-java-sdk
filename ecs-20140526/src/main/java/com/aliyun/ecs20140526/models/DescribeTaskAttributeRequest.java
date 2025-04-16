@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskAttributeRequest extends TeaModel {
     /**
+     * <p>RAM用户的虚拟账号ID。</p>
+     * 
      * <strong>example:</strong>
      * <p>155780923770</p>
      */
@@ -22,6 +24,8 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>资源主账号的账号名称。</p>
+     * 
      * <strong>example:</strong>
      * <p>ECSforCloud</p>
      */
@@ -29,6 +33,8 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
+     * <p>资源主账号的ID，亦即UID。</p>
+     * 
      * <strong>example:</strong>
      * <p>155780923770</p>
      */

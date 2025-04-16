@@ -23,7 +23,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public Integer failedCount;
 
     /**
-     * <p>The time when the task was complete.</p>
+     * <p>The time when the task was completed.</p>
      * 
      * <strong>example:</strong>
      * <p>2015-11-23T02:19Z</p>
@@ -32,7 +32,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String finishedTime;
 
     /**
-     * <p>An array consisting of OperationProgress data of each subtask.</p>
+     * <p>The return data of the task.</p>
      */
     @NameInMap("OperationProgressSet")
     public DescribeTaskAttributeResponseBodyOperationProgressSet operationProgressSet;
@@ -47,7 +47,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -65,10 +65,10 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public Integer successCount;
 
     /**
-     * <p>Indicates whether the task can be canceled (<a href="https://www.alibabacloud.com/help/en/elastic-compute-service/latest/canceltask">CancelTask</a>). Valid values: </p>
+     * <p>Indicates whether the task can be canceled by calling the <a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a> operation. Valid values:</p>
      * <ul>
-     * <li>true: The task can be canceled.</li>
-     * <li>false: The task cannot be canceled.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String supportCancel;
 
     /**
-     * <p>The operation name of the task.</p>
+     * <p>The name of the operation that generated the task.</p>
      * 
      * <strong>example:</strong>
      * <p>ExportImage</p>
@@ -321,7 +321,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         public String operationStatus;
 
         /**
-         * <p>An array consisting of RelatedItem data.</p>
+         * <p>The type of resource information.</p>
          */
         @NameInMap("RelatedItemSet")
         public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;

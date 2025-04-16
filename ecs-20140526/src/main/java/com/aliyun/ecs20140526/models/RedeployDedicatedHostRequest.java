@@ -15,10 +15,10 @@ public class RedeployDedicatedHostRequest extends TeaModel {
     public String dedicatedHostId;
 
     /**
-     * <p>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
+     * <p>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Valid values:</p>
      * <ul>
      * <li>reboot: stops the instance before migration.</li>
-     * <li>LiveMigrationFirst: migrates the instance without stopping it. If the MigrationType parameter is set to live, you must specify the DedicatedHostId parameter. In this case, you cannot change the instance type of the ECS instance when the instance is migrated. If the migration in LiveMigrationFirst mode fails, the system switches to the Reboot mode.</li>
+     * <li>LiveMigrationFirst: migrates the instance without stopping it. If you set MigrationType to LiveMigrationFirst, you must specify DedicatedHostId. In this case, you cannot change the instance type of the ECS instance when the instance is migrated. If the migration in LiveMigrationFirst mode fails, the system switches to the Reboot mode.</li>
      * </ul>
      * <p>Default value: reboot.</p>
      * 

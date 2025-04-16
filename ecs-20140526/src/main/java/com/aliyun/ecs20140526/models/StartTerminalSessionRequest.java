@@ -16,6 +16,9 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("CommandLine")
     public String commandLine;
 
+    @NameInMap("ConnectionType")
+    public String connectionType;
+
     /**
      * <p>The instance IDs.</p>
      * <p>This parameter is required.</p>
@@ -87,6 +90,14 @@ public class StartTerminalSessionRequest extends TeaModel {
     }
     public String getCommandLine() {
         return this.commandLine;
+    }
+
+    public StartTerminalSessionRequest setConnectionType(String connectionType) {
+        this.connectionType = connectionType;
+        return this;
+    }
+    public String getConnectionType() {
+        return this.connectionType;
     }
 
     public StartTerminalSessionRequest setInstanceId(java.util.List<String> instanceId) {

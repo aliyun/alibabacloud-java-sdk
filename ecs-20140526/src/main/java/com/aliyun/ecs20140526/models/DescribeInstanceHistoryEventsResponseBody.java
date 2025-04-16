@@ -10,11 +10,25 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     @NameInMap("InstanceSystemEventSet")
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f1c9fa9de5752***</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The page number.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
+     * </li>
+     * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,6 +38,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If MaxResults and NextToken are used to query results by page, ignore this parameter.</p>
+     * </li>
+     * <li><p>This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +63,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances returned.</p>
+     * <p>The total number of instances.</p>
+     * <blockquote>
+     * <p> If you specify the MaxResults and NextToken request parameters to perform a paged query, the value of the TotalCount response parameter is invalid.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2</p>

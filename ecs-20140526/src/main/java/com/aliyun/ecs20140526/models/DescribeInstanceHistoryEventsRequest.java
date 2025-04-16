@@ -123,9 +123,26 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 10 to 100.</p>
+     * <p>Default values:</p>
+     * <ul>
+     * <li>If you set a value greater than 0 and less than 10, the default value is 10.</li>
+     * <li>If you set this parameter to a value that is greater than 100, the default value is 100.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f1c9fa9de5752***</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -136,8 +153,9 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
-     * <p>Default value: 1.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -146,8 +164,9 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <blockquote>
+     * <p> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>

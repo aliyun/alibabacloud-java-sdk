@@ -102,11 +102,6 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
      * <blockquote>
      * <p> This parameter is not publicly available.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Online</li>
-     * <li>Offline</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>null</p>

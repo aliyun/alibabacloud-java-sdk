@@ -89,10 +89,11 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk.</p>
+     * <p>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
      * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
      * <blockquote>
-     * <p> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
+     * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -203,7 +204,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public static class ModifyDiskSpecRequestPerformanceControlOptions extends TeaModel {
         /**
          * <p>The new IOPS rate of the cloud disk. You can modify the IOPS rate of only cloud disks in dedicated block storage clusters.</p>
-         * <p>Valid values: 900 to maximum IOPS per cloud disk (with an increment of 100).</p>
+         * <p>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</p>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/25382.html">Block storage performance</a>.</p>
          * 
          * <strong>example:</strong>

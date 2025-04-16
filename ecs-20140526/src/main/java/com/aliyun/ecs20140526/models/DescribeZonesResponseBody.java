@@ -14,7 +14,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the zones and their supported resources.</p>
+     * <p>Details about the zones and their supported resources.</p>
      */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
@@ -265,13 +265,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public Boolean ioOptimized;
 
         /**
-         * <p>The supported network types</p>
+         * <p>The supported network types.</p>
          */
         @NameInMap("NetworkTypes")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoNetworkTypes networkTypes;
 
         /**
-         * <p>The supported categories of system disks that can be created.</p>
+         * <p>The categories of system disks that can be created.</p>
          */
         @NameInMap("SystemDiskCategories")
         public DescribeZonesResponseBodyZonesZoneAvailableResourcesResourcesInfoSystemDiskCategories systemDiskCategories;
@@ -404,7 +404,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         public DescribeZonesResponseBodyZonesZoneAvailableDedicatedHostTypes availableDedicatedHostTypes;
 
         /**
-         * <p>The supported disk categories. Valid values:</p>
+         * <p>The categories of cloud disks that can be created. Valid values:</p>
          * <ul>
          * <li>cloud: basic disk</li>
          * <li>cloud_ssd: standard SSD</li>
@@ -428,7 +428,7 @@ public class DescribeZonesResponseBody extends TeaModel {
          * <li>IoOptimized: I/O optimized instance</li>
          * <li>Instance: instance</li>
          * <li>DedicatedHost: dedicated host</li>
-         * <li>disk: disk</li>
+         * <li>disk: cloud disk</li>
          * </ul>
          */
         @NameInMap("AvailableResourceCreation")

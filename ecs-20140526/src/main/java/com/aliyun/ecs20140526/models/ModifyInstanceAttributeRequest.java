@@ -61,6 +61,9 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("EnableJumboFrame")
     public Boolean enableJumboFrame;
 
+    @NameInMap("EnableNetworkEncryption")
+    public Boolean enableNetworkEncryption;
+
     /**
      * <p>The hostname of the instance. Take note of the following items:</p>
      * <ul>
@@ -244,6 +247,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     }
     public Boolean getEnableJumboFrame() {
         return this.enableJumboFrame;
+    }
+
+    public ModifyInstanceAttributeRequest setEnableNetworkEncryption(Boolean enableNetworkEncryption) {
+        this.enableNetworkEncryption = enableNetworkEncryption;
+        return this;
+    }
+    public Boolean getEnableNetworkEncryption() {
+        return this.enableNetworkEncryption;
     }
 
     public ModifyInstanceAttributeRequest setHostName(String hostName) {

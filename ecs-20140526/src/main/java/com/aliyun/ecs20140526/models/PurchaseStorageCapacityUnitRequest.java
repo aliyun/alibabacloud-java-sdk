@@ -104,6 +104,12 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which to add the SCU. You can specify only the IDs of the resource groups that you have permissions to access.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -114,7 +120,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The time at which the SCU takes effect. The time can be up to six months from the creation time of the SCU. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</p>
+     * <p>The time at which the SCU takes effect. The time can be up to 180 days from the creation time of the SCU. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.</p>
      * <p>This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +130,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags to add to the SCU. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<PurchaseStorageCapacityUnitRequestTag> tag;
@@ -264,7 +270,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
 
     public static class PurchaseStorageCapacityUnitRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the SCU. N is the identifier of the tag key that you specify. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of tag N to add to the SCU. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -273,7 +279,7 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. N is the identifier of the tag value that you specify and corresponds to the N in <code>Tag.N.Key</code>. Valid values: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with <code>acs:</code> or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N to add to the SCU. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -572,7 +572,10 @@ public class DescribeDisksResponseBody extends TeaModel {
         public String diskName;
 
         /**
-         * <p>Indicates whether the automatic snapshot policy feature is enabled for the disk.</p>
+         * <p>Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.</p>
+         * <blockquote>
+         * <p> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>

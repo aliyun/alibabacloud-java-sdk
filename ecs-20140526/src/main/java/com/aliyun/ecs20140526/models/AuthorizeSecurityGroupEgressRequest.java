@@ -120,7 +120,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>An array of security group rules. You can specify 1 to 100 security group rules.</p>
+     * <p>The security group rules. You can specify 1 to 100 security group rules.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<AuthorizeSecurityGroupEgressRequestPermissions> permissions;
@@ -479,7 +479,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String destPrefixListId;
 
         /**
-         * <p>The protocol. The values of this parameter are case-insensitive. Valid values:</p>
+         * <p>The protocol. The values of this parameter are case-insensitive. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
          * <ul>
          * <li>TCP.</li>
          * <li>UDP.</li>
@@ -521,7 +521,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String ipv6SourceCidrIp;
 
         /**
-         * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:</p>
+         * <p>The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
          * <ul>
          * <li><p>internet: public NIC.</p>
          * </li>
@@ -541,7 +541,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String nicType;
 
         /**
-         * <p>The action of the security group rule. Valid values:</p>
+         * <p>The action of the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
          * <ul>
          * <li>accept: allows outbound access.</li>
          * <li>drop: denies outbound access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
@@ -555,7 +555,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String policy;
 
         /**
-         * <p>The range of destination port numbers for the protocols specified in the security group rule. Valid values:</p>
+         * <p>The range of destination port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
          * <ul>
          * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
          * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
@@ -569,6 +569,9 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
+        @NameInMap("PortRangeListId")
+        public String portRangeListId;
+
         /**
          * <p>The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.</p>
          * <p>Default value: 1.</p>
@@ -580,7 +583,7 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String priority;
 
         /**
-         * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.</p>
+         * <p>The source IPv4 CIDR blocks and IPv4 addresses are supported.</p>
          * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
@@ -590,14 +593,14 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         public String sourceCidrIp;
 
         /**
-         * <p>The range of source port numbers for the protocols specified in the security group rule. Valid values:</p>
+         * <p>The range of source port numbers for the protocols specified in the security group rule. Specifies whether to check that the CPU tag set of the source host is the subset of the CPU tag set of the destination host. Valid values:</p>
          * <ul>
          * <li>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.</li>
          * <li>If you set IpProtocol to ICMP, the port number range is -1/-1.</li>
          * <li>If you set IpProtocol to GRE, the port number range is -1/-1.</li>
          * <li>If you set IpProtocol to ALL, the port number range is -1/-1.</li>
          * </ul>
-         * <p>This parameter is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
+         * <p>This property is used to support quintuple rules. For more information, see <a href="https://help.aliyun.com/document_detail/97439.html">Security group quintuple rules</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>80/80</p>
@@ -704,6 +707,14 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         }
         public String getPortRange() {
             return this.portRange;
+        }
+
+        public AuthorizeSecurityGroupEgressRequestPermissions setPortRangeListId(String portRangeListId) {
+            this.portRangeListId = portRangeListId;
+            return this;
+        }
+        public String getPortRangeListId() {
+            return this.portRangeListId;
         }
 
         public AuthorizeSecurityGroupEgressRequestPermissions setPriority(String priority) {

@@ -93,6 +93,8 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
 
     public static class DescribeHpcClustersResponseBodyHpcClustersHpcCluster extends TeaModel {
         /**
+         * <p>The description of the HPC cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>testDescription</p>
          */
@@ -109,6 +111,8 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         public String hpcClusterId;
 
         /**
+         * <p>The name of the HPC cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */

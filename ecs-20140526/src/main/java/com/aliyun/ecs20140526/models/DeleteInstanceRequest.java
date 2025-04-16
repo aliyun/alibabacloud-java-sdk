@@ -18,20 +18,24 @@ public class DeleteInstanceRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcefully release the instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
+     * <p>Specifies whether to forcefully release the ECS instance in the <strong>Running</strong> (<code>Running</code>) state. Valid values:</p>
      * <ul>
-     * <li>true: forcefully releases the instance in the <strong>Running</strong> (<code>Running</code>) state.</li>
-     * <li>false: normally releases the instance. This value take effects only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
+     * <li>true: forcefully releases the ECS instance in the <strong>Running</strong> (<code>Running</code>) state.</li>
+     * <li>false: normally releases the ECS instance. This value is valid only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <p>**</p>
-     * <p><strong>Warning</strong> When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <blockquote>
+     * <p>Warning: When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
+
+    @NameInMap("ForceStop")
+    public Boolean forceStop;
 
     /**
      * <p>The ID of the instance.</p>
@@ -88,6 +92,14 @@ public class DeleteInstanceRequest extends TeaModel {
     }
     public Boolean getForce() {
         return this.force;
+    }
+
+    public DeleteInstanceRequest setForceStop(Boolean forceStop) {
+        this.forceStop = forceStop;
+        return this;
+    }
+    public Boolean getForceStop() {
+        return this.forceStop;
     }
 
     public DeleteInstanceRequest setInstanceId(String instanceId) {

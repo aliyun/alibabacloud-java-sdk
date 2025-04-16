@@ -65,7 +65,12 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageFamily;
 
     /**
-     * <p>The image IDs.</p>
+     * <p>The ID of the image.</p>
+     * <p><strong>Naming rules for image IDs</strong></p>
+     * <ul>
+     * <li>IDs of public images are named after the operating system version numbers, architectures, languages, and release dates of the images. For example, the ID of a Windows Server 2008 R2 Enterprise 64-bit (English) public image is win2008r2_64_ent_sp1_en-us_40G_alibase_20190318.vhd.</li>
+     * <li>IDs of custom images, shared images, Alibaba Cloud Marketplace images, and community images start with m.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>m-bp1g7004ksh0oeuc****</p>
@@ -74,7 +79,7 @@ public class DescribeImagesRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The image name.</p>
+     * <p>The image name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>testImageName</p>
@@ -191,7 +196,7 @@ public class DescribeImagesRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100</p>
+     * <p>Valid values: 1 to 100.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>

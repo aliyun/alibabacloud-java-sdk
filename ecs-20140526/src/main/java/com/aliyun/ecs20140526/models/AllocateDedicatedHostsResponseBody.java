@@ -5,11 +5,20 @@ import com.aliyun.tea.*;
 
 public class AllocateDedicatedHostsResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the dedicated hosts.</p>
+     * <p>A list of dedicated host IDs.</p>
      */
     @NameInMap("DedicatedHostIdSets")
     public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets;
 
+    /**
+     * <p>The ID of the order.</p>
+     * <blockquote>
+     * <p> This parameter has a return value only when the dedicated host is a subscription one (request parameter <strong>ChargeType set to PrePaid</strong>).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>23841229****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 

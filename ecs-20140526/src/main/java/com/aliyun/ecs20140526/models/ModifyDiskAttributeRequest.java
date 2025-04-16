@@ -93,14 +93,14 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     public String diskName;
 
     /**
-     * <p>Specifies whether to enable the automatic snapshot policy feature for the disk. Valid values:</p>
+     * <p>Specifies whether to enable the automatic snapshot policy feature. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: enables the automatic snapshot policy feature for the cloud disk.</li>
+     * <li>false: disables the automatic snapshot policy feature for the cloud disk.</li>
      * </ul>
      * <p>This parameter is empty by default, which indicates that the current value remains unchanged.</p>
      * <blockquote>
-     * <p> By default, the automatic snapshot policy feature is enabled for cloud disks. You need to only apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
+     * <p> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

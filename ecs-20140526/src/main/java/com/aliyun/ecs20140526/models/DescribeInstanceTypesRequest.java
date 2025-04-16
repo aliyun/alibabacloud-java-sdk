@@ -18,14 +18,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String cpuArchitecture;
 
     /**
-     * <p>The CPU architectures of instance types. Valid values:</p>
-     * <blockquote>
-     * <p> Valid values of N: 1 and 2.</p>
-     * </blockquote>
-     * <ul>
-     * <li>X86</li>
-     * <li>ARM</li>
-     * </ul>
+     * <p>The CPU architectures of instance types. You can specify 1 or 2 CPU architectures.</p>
      */
     @NameInMap("CpuArchitectures")
     public java.util.List<String> cpuArchitectures;
@@ -43,34 +36,13 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String GPUSpec;
 
     /**
-     * <p>The GPU models of instance types. Valid values of N: 1 to 10.</p>
+     * <p>The GPU models of instance types. You can specify 1 to 10 GPU models.</p>
      */
     @NameInMap("GpuSpecs")
     public java.util.List<String> gpuSpecs;
 
     /**
-     * <p>The categories of instance types. Valid values:</p>
-     * <blockquote>
-     * <p> Valid values of N: 1 to 10.</p>
-     * </blockquote>
-     * <ul>
-     * <li>General-purpose: general-purpose instance type</li>
-     * <li>Compute-optimized: compute-optimized instance type</li>
-     * <li>Memory-optimized: memory-optimized instance type</li>
-     * <li>Big data: big data instance type</li>
-     * <li>Local SSDs: instance type with local SSDs</li>
-     * <li>High Clock Speed: instance type with high clock speeds</li>
-     * <li>Enhanced: enhanced instance type</li>
-     * <li>Shared: shared instance type</li>
-     * <li>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type</li>
-     * <li>Visual Compute-optimized: visual compute-optimized instance type</li>
-     * <li>Heterogeneous Service: heterogeneous service instance type</li>
-     * <li>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type</li>
-     * <li>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type</li>
-     * <li>ECS Bare Metal: ECS Bare Metal Instance type</li>
-     * <li>Super Computing Cluster: SCC instance type</li>
-     * <li>High Performance Compute: high-performance computing instance type</li>
-     * </ul>
+     * <p>The categories of instance types. You can specify 1 to 10 categories of instance types.</p>
      */
     @NameInMap("InstanceCategories")
     public java.util.List<String> instanceCategories;
@@ -117,7 +89,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String instanceFamilyLevel;
 
     /**
-     * <p>The instance families of instance types that you want to query. Valid values of N: 1 to 10.</p>
+     * <p>The instance families. You can specify 1 to 10 instance families.</p>
      */
     @NameInMap("InstanceTypeFamilies")
     public java.util.List<String> instanceTypeFamilies;
@@ -133,7 +105,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>Instance type N. Valid values of N: 1 to 10. If this parameter is left empty, information about all instance types is queried.</p>
+     * <p>The instance types. You can specify 1 to 10 instance types. If this parameter is empty, information about all instance types is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.large</p>
@@ -142,11 +114,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public java.util.List<String> instanceTypes;
 
     /**
-     * <p>The categories of local disks. Valid values of N: 1 and 2. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</p>
-     * <ul>
-     * <li>local_hdd_pro: local SATA HDDs, which are attached to d1ne or d1 instances</li>
-     * <li>local_ssd_pro: local NVMe SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances</li>
-     * </ul>
+     * <p>The categories of local disks used by instance types. You can specify 1 or 2 categories of local disks.</p>
      */
     @NameInMap("LocalStorageCategories")
     public java.util.List<String> localStorageCategories;
@@ -535,7 +503,7 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public String physicalProcessorModel;
 
     /**
-     * <p>The CPU models of instance types. Valid values of N: 1 to 10.</p>
+     * <p>The CPU models of instance types. You can specify 1 to 10 CPU models.</p>
      */
     @NameInMap("PhysicalProcessorModels")
     public java.util.List<String> physicalProcessorModels;

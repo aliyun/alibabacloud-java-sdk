@@ -8,9 +8,11 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     public DescribeCapacityReservationInstancesRequestPrivatePoolOptions privatePoolOptions;
 
     /**
-     * <p>The maximum number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Valid values: 1 to 100.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -19,7 +21,7 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of the NextToken parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>

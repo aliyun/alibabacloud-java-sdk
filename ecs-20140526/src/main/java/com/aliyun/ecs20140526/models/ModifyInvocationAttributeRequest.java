@@ -152,7 +152,7 @@ public class ModifyInvocationAttributeRequest extends TeaModel {
      * <p>This parameter is empty by default, which indicates not to modify the key-value pairs of the custom parameters.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAIdyvdIqaRY****&quot;}</p>
+     * <p>{&quot;name&quot;:&quot;Jack&quot;, &quot;accessKey&quot;:&quot;LTAI*************&quot;}</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;

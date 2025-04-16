@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array consisting of Instance data.</p>
+     * <p>The information about the instances in the auto provisioning group.</p>
      */
     @NameInMap("Instances")
     public DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B48A12CD-1295-4A38-A8F0-0E92C937****</p>
@@ -93,7 +93,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
 
     public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance extends TeaModel {
         /**
-         * <p>The number of vCPUs.</p>
+         * <p>The number of vCPU cores of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -111,7 +111,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         public String creationTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
@@ -120,7 +120,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         public String instanceId;
 
         /**
-         * <p>The instance type of the ECS instance.</p>
+         * <p>The ECS instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.large</p>
@@ -129,7 +129,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         public String instanceType;
 
         /**
-         * <p>Indicates whether the instance is I/O optimized.</p>
+         * <p>Indicates whether the instance is an I/O optimized instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -147,7 +147,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         public Boolean isSpot;
 
         /**
-         * <p>The memory size of the instance. Unit: MiB.</p>
+         * <p>The memory capacity of the instance. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -158,8 +158,8 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li>vpc</li>
-         * <li>classic</li>
+         * <li>vpc: Virtual Private Cloud (VPC)</li>
+         * <li>classic: classic network</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         public String osType;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID of the container group.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -200,7 +200,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         public String status;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The ID of the zone to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>

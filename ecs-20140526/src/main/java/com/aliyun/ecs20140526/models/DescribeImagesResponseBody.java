@@ -471,6 +471,7 @@ public class DescribeImagesResponseBody extends TeaModel {
          * <li>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</li>
          * <li>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</li>
          * </ul>
+         * <p><a href="https://help.aliyun.com/document_detail/108460.html">Overview of instance metadata</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>v2</p>
@@ -682,7 +683,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public DescribeImagesResponseBodyImagesImageDiskDeviceMappings diskDeviceMappings;
 
         /**
-         * <p>The attributes of the image.</p>
+         * <p>The feature attributes of the image.</p>
          */
         @NameInMap("Features")
         public DescribeImagesResponseBodyImagesImageFeatures features;

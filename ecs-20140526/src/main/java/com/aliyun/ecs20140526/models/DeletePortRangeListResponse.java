@@ -3,7 +3,7 @@ package com.aliyun.ecs20140526.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDemandsResponse extends TeaModel {
+public class DeletePortRangeListResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeDemandsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeDemandsResponseBody body;
+    public DeletePortRangeListResponseBody body;
 
-    public static DescribeDemandsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDemandsResponse self = new DescribeDemandsResponse();
+    public static DeletePortRangeListResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeletePortRangeListResponse self = new DeletePortRangeListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDemandsResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeletePortRangeListResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeDemandsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDemandsResponse setStatusCode(Integer statusCode) {
+    public DeletePortRangeListResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeDemandsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDemandsResponse setBody(DescribeDemandsResponseBody body) {
+    public DeletePortRangeListResponse setBody(DeletePortRangeListResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDemandsResponseBody getBody() {
+    public DeletePortRangeListResponseBody getBody() {
         return this.body;
     }
 
