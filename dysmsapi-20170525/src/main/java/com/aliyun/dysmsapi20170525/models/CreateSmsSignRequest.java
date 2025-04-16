@@ -23,6 +23,9 @@ public class CreateSmsSignRequest extends TeaModel {
     @NameInMap("ApplySceneContent")
     public String applySceneContent;
 
+    @NameInMap("AuthorizationLetterId")
+    public String authorizationLetterId;
+
     /**
      * <p>Additional information to supplement uploaded business proof documents or screenshots, which helps reviewers understand your business details.</p>
      * <p>This parameter is optional; please fill it out based on your actual needs.</p>
@@ -152,6 +155,14 @@ public class CreateSmsSignRequest extends TeaModel {
     }
     public String getApplySceneContent() {
         return this.applySceneContent;
+    }
+
+    public CreateSmsSignRequest setAuthorizationLetterId(String authorizationLetterId) {
+        this.authorizationLetterId = authorizationLetterId;
+        return this;
+    }
+    public String getAuthorizationLetterId() {
+        return this.authorizationLetterId;
     }
 
     public CreateSmsSignRequest setMoreData(java.util.List<String> moreData) {

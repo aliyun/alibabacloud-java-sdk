@@ -19,6 +19,9 @@ public class UpdateSmsSignShrinkRequest extends TeaModel {
     @NameInMap("ApplySceneContent")
     public String applySceneContent;
 
+    @NameInMap("AuthorizationLetterId")
+    public String authorizationLetterId;
+
     /**
      * <p>Additional materials, such as uploading business proof documents or screenshots of business operations, to help reviewers understand your business details.</p>
      */
@@ -130,6 +133,14 @@ public class UpdateSmsSignShrinkRequest extends TeaModel {
     }
     public String getApplySceneContent() {
         return this.applySceneContent;
+    }
+
+    public UpdateSmsSignShrinkRequest setAuthorizationLetterId(String authorizationLetterId) {
+        this.authorizationLetterId = authorizationLetterId;
+        return this;
+    }
+    public String getAuthorizationLetterId() {
+        return this.authorizationLetterId;
     }
 
     public UpdateSmsSignShrinkRequest setMoreDataShrink(String moreDataShrink) {

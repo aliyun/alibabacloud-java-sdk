@@ -19,6 +19,12 @@ public class GetSmsSignResponseBody extends TeaModel {
     @NameInMap("AuditInfo")
     public GetSmsSignResponseBodyAuditInfo auditInfo;
 
+    @NameInMap("AuthorizationLetterAuditPass")
+    public Boolean authorizationLetterAuditPass;
+
+    @NameInMap("AuthorizationLetterId")
+    public String authorizationLetterId;
+
     /**
      * <p>Request status code.</p>
      * <ul>
@@ -187,6 +193,22 @@ public class GetSmsSignResponseBody extends TeaModel {
     }
     public GetSmsSignResponseBodyAuditInfo getAuditInfo() {
         return this.auditInfo;
+    }
+
+    public GetSmsSignResponseBody setAuthorizationLetterAuditPass(Boolean authorizationLetterAuditPass) {
+        this.authorizationLetterAuditPass = authorizationLetterAuditPass;
+        return this;
+    }
+    public Boolean getAuthorizationLetterAuditPass() {
+        return this.authorizationLetterAuditPass;
+    }
+
+    public GetSmsSignResponseBody setAuthorizationLetterId(String authorizationLetterId) {
+        this.authorizationLetterId = authorizationLetterId;
+        return this;
+    }
+    public String getAuthorizationLetterId() {
+        return this.authorizationLetterId;
     }
 
     public GetSmsSignResponseBody setCode(String code) {

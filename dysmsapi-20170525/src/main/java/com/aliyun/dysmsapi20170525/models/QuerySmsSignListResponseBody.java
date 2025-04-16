@@ -204,6 +204,9 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        @NameInMap("AuthorizationLetterId")
+        public String authorizationLetterId;
+
         /**
          * <p>The type of the signature scenario. The return value ends with &quot;type&quot;. Valid values:</p>
          * <ul>
@@ -254,6 +257,9 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         @NameInMap("SignName")
         public String signName;
 
+        @NameInMap("authorizationLetterAuditPass")
+        public Boolean authorizationLetterAuditPass;
+
         public static QuerySmsSignListResponseBodySmsSignList build(java.util.Map<String, ?> map) throws Exception {
             QuerySmsSignListResponseBodySmsSignList self = new QuerySmsSignListResponseBodySmsSignList();
             return TeaModel.build(map, self);
@@ -265,6 +271,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
         public String getAuditStatus() {
             return this.auditStatus;
+        }
+
+        public QuerySmsSignListResponseBodySmsSignList setAuthorizationLetterId(String authorizationLetterId) {
+            this.authorizationLetterId = authorizationLetterId;
+            return this;
+        }
+        public String getAuthorizationLetterId() {
+            return this.authorizationLetterId;
         }
 
         public QuerySmsSignListResponseBodySmsSignList setBusinessType(String businessType) {
@@ -305,6 +319,14 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         }
         public String getSignName() {
             return this.signName;
+        }
+
+        public QuerySmsSignListResponseBodySmsSignList setAuthorizationLetterAuditPass(Boolean authorizationLetterAuditPass) {
+            this.authorizationLetterAuditPass = authorizationLetterAuditPass;
+            return this;
+        }
+        public Boolean getAuthorizationLetterAuditPass() {
+            return this.authorizationLetterAuditPass;
         }
 
     }
