@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodesRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The billing method. Only the subscription billing method is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
      */
@@ -19,6 +23,8 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -26,16 +32,23 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If a query doesn\&quot;t return all results, the response includes a NextToken value for pagination. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The matrix IDs.</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
+     * <p>The matrix name.</p>
+     * 
      * <strong>example:</strong>
      * <p>node_name</p>
      */
@@ -43,6 +56,12 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String nodeName;
 
     /**
+     * <p>The matrix specification.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cpm.gn6.gx1</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cpm.gn6.gx1</p>
      */
@@ -50,6 +69,17 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public String serverType;
 
     /**
+     * <p>The matrix status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>FAILED: The matrix failed to be created.</li>
+     * <li>RUNNING: The matrix is available.</li>
+     * <li>DELETING: The matrix is being deleted.</li>
+     * <li>NODE_READY: The matrix is ready, and cloud phone instances are being created.</li>
+     * <li>DELETED: The matrix is deleted.</li>
+     * <li>CREATING: The matrix is being created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CREATING</p>
      */

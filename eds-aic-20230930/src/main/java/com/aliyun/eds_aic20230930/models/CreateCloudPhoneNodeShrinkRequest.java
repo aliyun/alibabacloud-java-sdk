@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the auto-payment feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>False (default): You must manually complete the payment in the Alibaba Cloud Expenses and Costs console.</li>
+     * <li>true: enables the auto-payment feature.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +19,13 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
+     * <p>Specifies whether to enable the auto-renewal feature.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true: enables the auto-renewal feature. In this case, the system automatically renews instances upon expiration.</li>
+     * <li>false (default): disables the auto-renewal feature. In this case, you need to manually renew instances upon expiration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +33,7 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +43,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The billing method. Only the subscription billing method is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
      */
@@ -35,6 +52,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The number of cloud phone matrixes you want to purchase.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -45,6 +64,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String displayConfigShrink;
 
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>imgc-075cllfeuazh0****</p>
      */
@@ -52,6 +73,13 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The instance specification.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ac.max: By default, this specification allows up to 25 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
+     * <li>ac.plus: By default, this specification allows up to 40 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ac.max</p>
      */
@@ -59,6 +87,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The office network ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-5mwr9azebliva****</p>
      */
@@ -66,6 +96,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String networkId;
 
     /**
+     * <p>The name of the cloud phone matrix.</p>
+     * 
      * <strong>example:</strong>
      * <p>node_name</p>
      */
@@ -73,6 +105,12 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String nodeName;
 
     /**
+     * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
+     * <ul>
+     * <li>When <code>PeriodUnit</code> is set to <strong>year</strong>: 1.</li>
+     * <li>When <code>PeriodUnit</code> is set to <strong>month</strong>: 1, 2, 3, and 6.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -80,6 +118,13 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription duration.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Month (default)</li>
+     * <li>Year</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -87,6 +132,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The number of instances per cloud phone matrix.</p>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
@@ -94,6 +141,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer phoneCount;
 
     /**
+     * <p>The resolution height. Unit: pixel.</p>
+     * 
      * <strong>example:</strong>
      * <p>1280</p>
      */
@@ -101,6 +150,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer resolutionHeight;
 
     /**
+     * <p>The resolution width. Unit: pixel.</p>
+     * 
      * <strong>example:</strong>
      * <p>720</p>
      */
@@ -108,6 +159,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer resolutionWidth;
 
     /**
+     * <p>The shared storage size Unit: GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -115,6 +168,11 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     public Integer serverShareDataVolume;
 
     /**
+     * <p>The matrix specification.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cpm.gn6.gx1</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,10 +181,15 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("ServerType")
     public String serverType;
 
+    /**
+     * <p>The resource tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag;
 
     /**
+     * <p>The vSwitch ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-2zeekryyc1q3sm72l****</p>
      */
@@ -292,6 +355,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
 
     public static class CreateCloudPhoneNodeShrinkRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>keyname</p>
          */
@@ -299,6 +364,8 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>valuename</p>
          */

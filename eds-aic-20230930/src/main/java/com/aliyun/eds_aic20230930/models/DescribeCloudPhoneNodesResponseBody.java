@@ -4,20 +4,37 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * </ul>
+     * <hr>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The matrixes.</p>
+     */
     @NameInMap("NodeModel")
     public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModel> nodeModel;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
      */
@@ -25,6 +42,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of cloud phone instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>31</p>
      */
@@ -78,6 +97,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodesResponseBodyNodeModel extends TeaModel {
         /**
+         * <p>The billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
          */
@@ -85,6 +106,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -92,6 +115,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String cpu;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-13 02:03:14</p>
          */
@@ -99,6 +124,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The expiration time of the subscription matrix.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-09 02:00:34</p>
          */
@@ -106,6 +133,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String gmtExpired;
 
         /**
+         * <p>The last modification time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-02-13 02:03:14</p>
          */
@@ -116,6 +145,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -123,6 +154,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public Integer memory;
 
         /**
+         * <p>The network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-5mwr9azebliva****</p>
          */
@@ -130,6 +163,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String networkId;
 
         /**
+         * <p>The matrix ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpn-ehs0yoedq8ntm****</p>
          */
@@ -137,6 +172,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The matrix name.</p>
+         * 
          * <strong>example:</strong>
          * <p>node_name</p>
          */
@@ -144,6 +181,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>The number of cloud phone instances per matrix.</p>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
@@ -151,6 +190,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public Integer phoneCount;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -158,6 +199,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The height of the resolution. Unit: pixel.</p>
+         * 
          * <strong>example:</strong>
          * <p>1280</p>
          */
@@ -165,6 +208,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public Integer resolutionHeight;
 
         /**
+         * <p>The width of the resolution. Unit: pixel.</p>
+         * 
          * <strong>example:</strong>
          * <p>720</p>
          */
@@ -172,6 +217,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public Integer resolutionWidth;
 
         /**
+         * <p>The matrix specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpm.gn6.gx1</p>
          */
@@ -179,6 +226,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String serverType;
 
         /**
+         * <p>The size of the shared storage. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -186,6 +235,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public Integer shareDataVolume;
 
         /**
+         * <p>The matrix status.</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
@@ -193,6 +244,8 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-2zeekryyc1q3sm72l****</p>
          */

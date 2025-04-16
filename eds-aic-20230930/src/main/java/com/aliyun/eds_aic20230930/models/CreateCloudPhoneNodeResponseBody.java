@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudPhoneNodeResponseBody extends TeaModel {
+    /**
+     * <p>The cloud phone matrixes.</p>
+     */
     @NameInMap("NodeInfos")
     public java.util.List<CreateCloudPhoneNodeResponseBodyNodeInfos> nodeInfos;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>223684716098****</p>
      */
@@ -15,6 +20,8 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
      */
@@ -51,10 +58,15 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
     }
 
     public static class CreateCloudPhoneNodeResponseBodyNodeInfos extends TeaModel {
+        /**
+         * <p>The IDs of the cloud phone instances.</p>
+         */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
+         * <p>The ID of the cloud phone matrix.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpn-e5kxgjyt8s1mb****</p>
          */

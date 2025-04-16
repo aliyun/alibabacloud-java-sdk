@@ -205,6 +205,36 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         return this.resolutionWidth;
     }
 
+    public static class ModifyPolicyGroupRequestNetRedirectPolicyRules extends TeaModel {
+        @NameInMap("RuleType")
+        public String ruleType;
+
+        @NameInMap("Target")
+        public String target;
+
+        public static ModifyPolicyGroupRequestNetRedirectPolicyRules build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestNetRedirectPolicyRules self = new ModifyPolicyGroupRequestNetRedirectPolicyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicyRules setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicyRules setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
+        }
+
+    }
+
     public static class ModifyPolicyGroupRequestNetRedirectPolicy extends TeaModel {
         /**
          * <p>Specifies whether to manually configure a custom proxy.</p>
@@ -283,6 +313,9 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         @NameInMap("ProxyUserName")
         public String proxyUserName;
 
+        @NameInMap("Rules")
+        public java.util.List<ModifyPolicyGroupRequestNetRedirectPolicyRules> rules;
+
         public static ModifyPolicyGroupRequestNetRedirectPolicy build(java.util.Map<String, ?> map) throws Exception {
             ModifyPolicyGroupRequestNetRedirectPolicy self = new ModifyPolicyGroupRequestNetRedirectPolicy();
             return TeaModel.build(map, self);
@@ -342,6 +375,14 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         }
         public String getProxyUserName() {
             return this.proxyUserName;
+        }
+
+        public ModifyPolicyGroupRequestNetRedirectPolicy setRules(java.util.List<ModifyPolicyGroupRequestNetRedirectPolicyRules> rules) {
+            this.rules = rules;
+            return this;
+        }
+        public java.util.List<ModifyPolicyGroupRequestNetRedirectPolicyRules> getRules() {
+            return this.rules;
         }
 
     }
