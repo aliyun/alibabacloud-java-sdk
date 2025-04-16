@@ -101,6 +101,8 @@ public class CreateDataSourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_test_dev</p>
          */
@@ -108,6 +110,8 @@ public class CreateDataSourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
@@ -262,6 +266,8 @@ public class CreateDataSourceRequest extends TeaModel {
         public String description;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp_test</p>
          */
@@ -269,6 +275,8 @@ public class CreateDataSourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
          */
