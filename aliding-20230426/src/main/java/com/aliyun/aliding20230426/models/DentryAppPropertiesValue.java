@@ -6,14 +6,14 @@ import com.aliyun.tea.*;
 public class DentryAppPropertiesValue extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>dentry_name</p>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <strong>example:</strong>
-     * <p>dentry_value</p>
+     * <p>value</p>
      */
     @NameInMap("Value")
     public String value;
