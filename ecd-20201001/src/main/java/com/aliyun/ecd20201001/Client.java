@@ -28,6 +28,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>调用mcp工具</p>
+     * 
+     * @param request CalMcpToolRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CalMcpToolResponse
+     */
+    public CalMcpToolResponse calMcpToolWithOptions(CalMcpToolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.args)) {
+            body.put("Args", request.args);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorization)) {
+            body.put("Authorization", request.authorization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.server)) {
+            body.put("Server", request.server);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tool)) {
+            body.put("Tool", request.tool);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CalMcpTool"),
+            new TeaPair("version", "2020-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CalMcpToolResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用mcp工具</p>
+     * 
+     * @param request CalMcpToolRequest
+     * @return CalMcpToolResponse
+     */
+    public CalMcpToolResponse calMcpTool(CalMcpToolRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.calMcpToolWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 mcp session</p>
+     * 
+     * @param request CreateMcpSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMcpSessionResponse
+     */
+    public CreateMcpSessionResponse createMcpSessionWithOptions(CreateMcpSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorization)) {
+            body.put("Authorization", request.authorization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("ExternalUserId", request.externalUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMcpSession"),
+            new TeaPair("version", "2020-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcpSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 mcp session</p>
+     * 
+     * @param request CreateMcpSessionRequest
+     * @return CreateMcpSessionResponse
+     */
+    public CreateMcpSessionResponse createMcpSession(CreateMcpSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMcpSessionWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DescribeDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDesktopsResponse
@@ -230,6 +350,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMcpResource</p>
+     * 
+     * @param request GetMcpResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMcpResourceResponse
+     */
+    public GetMcpResourceResponse getMcpResourceWithOptions(GetMcpResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorization)) {
+            body.put("Authorization", request.authorization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMcpResource"),
+            new TeaPair("version", "2020-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMcpResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetMcpResource</p>
+     * 
+     * @param request GetMcpResourceRequest
+     * @return GetMcpResourceResponse
+     */
+    public GetMcpResourceResponse getMcpResource(GetMcpResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMcpResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取工具列表</p>
+     * 
+     * @param request ListMcpToolsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMcpToolsResponse
+     */
+    public ListMcpToolsResponse listMcpToolsWithOptions(ListMcpToolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorization)) {
+            body.put("Authorization", request.authorization);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMcpTools"),
+            new TeaPair("version", "2020-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMcpToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取工具列表</p>
+     * 
+     * @param request ListMcpToolsRequest
+     * @return ListMcpToolsResponse
+     */
+    public ListMcpToolsResponse listMcpTools(ListMcpToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMcpToolsWithOptions(request, runtime);
+    }
+
+    /**
      * @param request RebootDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RebootDesktopsResponse
@@ -277,6 +489,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RebootDesktopsResponse rebootDesktops(RebootDesktopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebootDesktopsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 mcp session</p>
+     * 
+     * @param request ReleaseMcpSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleaseMcpSessionResponse
+     */
+    public ReleaseMcpSessionResponse releaseMcpSessionWithOptions(ReleaseMcpSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorization)) {
+            body.put("Authorization", request.authorization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReleaseMcpSession"),
+            new TeaPair("version", "2020-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "Anonymous"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseMcpSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建 mcp session</p>
+     * 
+     * @param request ReleaseMcpSessionRequest
+     * @return ReleaseMcpSessionResponse
+     */
+    public ReleaseMcpSessionResponse releaseMcpSession(ReleaseMcpSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.releaseMcpSessionWithOptions(request, runtime);
     }
 
     /**
