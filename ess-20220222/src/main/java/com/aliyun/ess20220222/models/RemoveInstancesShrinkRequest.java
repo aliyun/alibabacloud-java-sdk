@@ -3,7 +3,7 @@ package com.aliyun.ess20220222.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveInstancesRequest extends TeaModel {
+public class RemoveInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
      * 
@@ -49,7 +49,7 @@ public class RemoveInstancesRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     @NameInMap("LifecycleHookContext")
-    public RemoveInstancesRequestLifecycleHookContext lifecycleHookContext;
+    public String lifecycleHookContextShrink;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -128,12 +128,12 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("StopInstanceTimeout")
     public Integer stopInstanceTimeout;
 
-    public static RemoveInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        RemoveInstancesRequest self = new RemoveInstancesRequest();
+    public static RemoveInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RemoveInstancesShrinkRequest self = new RemoveInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RemoveInstancesRequest setClientToken(String clientToken) {
+    public RemoveInstancesShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -141,7 +141,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public RemoveInstancesRequest setDecreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
+    public RemoveInstancesShrinkRequest setDecreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
         this.decreaseDesiredCapacity = decreaseDesiredCapacity;
         return this;
     }
@@ -149,7 +149,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.decreaseDesiredCapacity;
     }
 
-    public RemoveInstancesRequest setIgnoreInvalidInstance(Boolean ignoreInvalidInstance) {
+    public RemoveInstancesShrinkRequest setIgnoreInvalidInstance(Boolean ignoreInvalidInstance) {
         this.ignoreInvalidInstance = ignoreInvalidInstance;
         return this;
     }
@@ -157,7 +157,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.ignoreInvalidInstance;
     }
 
-    public RemoveInstancesRequest setInstanceIds(java.util.List<String> instanceIds) {
+    public RemoveInstancesShrinkRequest setInstanceIds(java.util.List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
@@ -165,15 +165,15 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.instanceIds;
     }
 
-    public RemoveInstancesRequest setLifecycleHookContext(RemoveInstancesRequestLifecycleHookContext lifecycleHookContext) {
-        this.lifecycleHookContext = lifecycleHookContext;
+    public RemoveInstancesShrinkRequest setLifecycleHookContextShrink(String lifecycleHookContextShrink) {
+        this.lifecycleHookContextShrink = lifecycleHookContextShrink;
         return this;
     }
-    public RemoveInstancesRequestLifecycleHookContext getLifecycleHookContext() {
-        return this.lifecycleHookContext;
+    public String getLifecycleHookContextShrink() {
+        return this.lifecycleHookContextShrink;
     }
 
-    public RemoveInstancesRequest setOwnerAccount(String ownerAccount) {
+    public RemoveInstancesShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -181,7 +181,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public RemoveInstancesRequest setOwnerId(Long ownerId) {
+    public RemoveInstancesShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -189,7 +189,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public RemoveInstancesRequest setRegionId(String regionId) {
+    public RemoveInstancesShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -197,7 +197,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public RemoveInstancesRequest setRemovePolicy(String removePolicy) {
+    public RemoveInstancesShrinkRequest setRemovePolicy(String removePolicy) {
         this.removePolicy = removePolicy;
         return this;
     }
@@ -205,7 +205,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.removePolicy;
     }
 
-    public RemoveInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public RemoveInstancesShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -213,7 +213,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public RemoveInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+    public RemoveInstancesShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -221,7 +221,7 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RemoveInstancesRequest setScalingGroupId(String scalingGroupId) {
+    public RemoveInstancesShrinkRequest setScalingGroupId(String scalingGroupId) {
         this.scalingGroupId = scalingGroupId;
         return this;
     }
@@ -229,42 +229,12 @@ public class RemoveInstancesRequest extends TeaModel {
         return this.scalingGroupId;
     }
 
-    public RemoveInstancesRequest setStopInstanceTimeout(Integer stopInstanceTimeout) {
+    public RemoveInstancesShrinkRequest setStopInstanceTimeout(Integer stopInstanceTimeout) {
         this.stopInstanceTimeout = stopInstanceTimeout;
         return this;
     }
     public Integer getStopInstanceTimeout() {
         return this.stopInstanceTimeout;
-    }
-
-    public static class RemoveInstancesRequestLifecycleHookContext extends TeaModel {
-        @NameInMap("DisableLifecycleHook")
-        public Boolean disableLifecycleHook;
-
-        @NameInMap("IgnoredLifecycleHookIds")
-        public java.util.List<String> ignoredLifecycleHookIds;
-
-        public static RemoveInstancesRequestLifecycleHookContext build(java.util.Map<String, ?> map) throws Exception {
-            RemoveInstancesRequestLifecycleHookContext self = new RemoveInstancesRequestLifecycleHookContext();
-            return TeaModel.build(map, self);
-        }
-
-        public RemoveInstancesRequestLifecycleHookContext setDisableLifecycleHook(Boolean disableLifecycleHook) {
-            this.disableLifecycleHook = disableLifecycleHook;
-            return this;
-        }
-        public Boolean getDisableLifecycleHook() {
-            return this.disableLifecycleHook;
-        }
-
-        public RemoveInstancesRequestLifecycleHookContext setIgnoredLifecycleHookIds(java.util.List<String> ignoredLifecycleHookIds) {
-            this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
-            return this;
-        }
-        public java.util.List<String> getIgnoredLifecycleHookIds() {
-            return this.ignoredLifecycleHookIds;
-        }
-
     }
 
 }
