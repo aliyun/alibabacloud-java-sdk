@@ -107,6 +107,9 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        @NameInMap("Status")
+        public String status;
+
         @NameInMap("Type")
         public String type;
 
@@ -137,6 +140,14 @@ public class GetBillDetailFileListResponseBody extends TeaModel {
         }
         public String getFileUrl() {
             return this.fileUrl;
+        }
+
+        public GetBillDetailFileListResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetBillDetailFileListResponseBodyData setType(String type) {
