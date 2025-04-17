@@ -4,10 +4,15 @@ package com.aliyun.gwlb20240415.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersResponseBody extends TeaModel {
+    /**
+     * <p>The GWLB instances.</p>
+     */
     @NameInMap("LoadBalancers")
     public java.util.List<ListLoadBalancersResponseBodyLoadBalancers> loadBalancers;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 1000. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,12 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If NextToken is empty, no next page exists.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAIldD2UAAAAACjMDLgAAADFTNzMyZDMwMzAzMDY5NzQzNDM0NmI3NzM2NjUzNzc4NzM2YTc0NjYzOTYz****</p>
      */
@@ -22,6 +33,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>378A80E9-4262-5D8E-8D62-0969E52D7358</p>
      */
@@ -29,6 +42,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -82,6 +97,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     public static class ListLoadBalancersResponseBodyLoadBalancersTags extends TeaModel {
         /**
+         * <p>The tag key. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>testTagKey</p>
          */
@@ -89,6 +107,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>testTagValue</p>
          */
@@ -120,6 +141,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     public static class ListLoadBalancersResponseBodyLoadBalancersZoneMappingsLoadBalancerAddresses extends TeaModel {
         /**
+         * <p>The ID of the elastic network interface (ENI) used by the GWLB instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>eni-bp17qv9zbzyqy629****</p>
          */
@@ -127,6 +150,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String eniId;
 
         /**
+         * <p>The private IPv4 address.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.XX.XX</p>
          */
@@ -157,10 +182,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersZoneMappings extends TeaModel {
+        /**
+         * <p>The GWLB instance addresses.</p>
+         */
         @NameInMap("LoadBalancerAddresses")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
         /**
+         * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-2zemule5dz7okwqfv****</p>
          */
@@ -168,6 +198,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The zone ID. You can call the DescribeZones operation to query the most recent zone list.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
          */
@@ -207,6 +239,11 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     public static class ListLoadBalancersResponseBodyLoadBalancers extends TeaModel {
         /**
+         * <p>The IP version. Valid values:</p>
+         * <ul>
+         * <li><strong>IPv4</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IPv4</p>
          */
@@ -214,6 +251,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String addressIpVersion;
 
         /**
+         * <p>The time when the resource was created. The time follows the ISO 8601 standard in the <strong>yyyy-MM-ddTHH:mm:ssZ</strong> format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-05 18:24:07</p>
          */
@@ -221,6 +260,12 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The business status of the GWLB instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: running as expected</li>
+         * <li><strong>FinancialLocked</strong>: locked due to overdue payments</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Normal</p>
          */
@@ -228,6 +273,8 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerBusinessStatus;
 
         /**
+         * <p>The GWLB instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gwlb-9njtjmqt7zfcqm****</p>
          */
@@ -235,6 +282,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
+         * <p>The GWLB instance name.</p>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * 
          * <strong>example:</strong>
          * <p>testGwlbName</p>
          */
@@ -242,6 +292,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerName;
 
         /**
+         * <p>The GWLB instance status. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: The GWLB instance is running.</li>
+         * <li><strong>Inactive</strong>: The GWLB instance is disabled. Listeners of GWLB instances in the Inactive state do not forward traffic.</li>
+         * <li><strong>Provisioning</strong>: The GWLB instance is being created.</li>
+         * <li><strong>Configuring</strong>: The GWLB instance is being modified.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
@@ -249,22 +307,32 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerStatus;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aek26jasguy****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersTags> tags;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf6eg0vndlsa84n7r****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The mappings between zones and vSwitches. You must specify at least one zone. You can specify at most 20 zones. If the region supports two or more zones, specify at least two zones.</p>
+         */
         @NameInMap("ZoneMappings")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersZoneMappings> zoneMappings;
 

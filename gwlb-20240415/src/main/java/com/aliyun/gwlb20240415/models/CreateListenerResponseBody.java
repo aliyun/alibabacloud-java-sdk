@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateListenerResponseBody extends TeaModel {
     /**
+     * <p>The listener ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>lsn-wi3c0v30ivysrg****</p>
      */
@@ -12,6 +14,8 @@ public class CreateListenerResponseBody extends TeaModel {
     public String listenerId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A045E652-D298-5E70-A978-7247135336FB</p>
      */

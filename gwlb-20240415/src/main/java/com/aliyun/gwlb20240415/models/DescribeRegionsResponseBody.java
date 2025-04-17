@@ -4,10 +4,15 @@ package com.aliyun.gwlb20240415.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>A list of regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>162FCE8D-CEEC-5083-90BF-B45D8C4F81FB</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
+         * <p>The region name.</p>
+         * 
          * <strong>example:</strong>
          * <p>China (Hangzhou)</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String localName;
 
         /**
+         * <p>The region endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>gwlb.cn-hangzhou.aliyuncs.com</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionEndpoint;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLoadBalancerResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>37907828-01AB-5AC3-9DDE-25D419091D54</p>
      */

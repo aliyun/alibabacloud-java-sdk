@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
     /**
+     * <p>The GWLB instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>gwlb-9njtjmqt7zfcqm****</p>
      */
@@ -12,6 +14,8 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     public String loadBalancerId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>00B19438-66BB-58C3-8C2F-DA5B6F95CBDA</p>
      */

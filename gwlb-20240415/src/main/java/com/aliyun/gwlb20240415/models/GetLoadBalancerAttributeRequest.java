@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLoadBalancerAttributeRequest extends TeaModel {
     /**
+     * <p>The GWLB instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

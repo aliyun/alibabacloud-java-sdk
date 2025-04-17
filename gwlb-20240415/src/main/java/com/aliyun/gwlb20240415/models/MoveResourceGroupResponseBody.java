@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>78828B5C-521E-50F3-84D4-7019691D1382</p>
      */

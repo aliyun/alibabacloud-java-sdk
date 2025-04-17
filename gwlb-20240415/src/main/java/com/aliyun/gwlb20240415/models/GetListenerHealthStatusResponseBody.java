@@ -4,10 +4,15 @@ package com.aliyun.gwlb20240415.models;
 import com.aliyun.tea.*;
 
 public class GetListenerHealthStatusResponseBody extends TeaModel {
+    /**
+     * <p>The health check status of the server groups that are associated with the listener.</p>
+     */
     @NameInMap("ListenerHealthStatus")
     public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatus> listenerHealthStatus;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 1000. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,12 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>U12WEI6Ro2ol3wA54rBNSwdC5+lYy6q5SjIQEvc1wz5mjZxV+YjsHRdXV8XauY1BpOQIvwX63E0en54H3D****</p>
      */
@@ -22,6 +33,8 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ED4F222-36A0-5470-8A9A-AAB4E96BAC1A</p>
      */
@@ -29,6 +42,8 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>31</p>
      */
@@ -82,6 +97,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosServersReason extends TeaModel {
         /**
+         * <p>The reason why <strong>Status</strong> indicates an unhealthy status. Valid values:</p>
+         * <ul>
+         * <li><strong>CONNECT_TIMEOUT</strong>: The GWLB instance failed to connect to the backend server within the specified period of time.</li>
+         * <li><strong>CONNECT_FAILED</strong>: The GWLB instance failed to connect to the backend server.</li>
+         * <li><strong>RECV_RESPONSE_TIMEOUT</strong>: The GWLB instance failed to receive a response from the backend server within the specified period of time.</li>
+         * <li><strong>CONNECT_INTERRUPT</strong>: The connection between the health check and the backend server was interrupted.</li>
+         * <li><strong>HTTP_CODE_NOT_MATCH</strong>: The HTTP status code from the backend server is not the expected one.</li>
+         * <li><strong>HTTP_INVALID_HEADER</strong>: The format of the response from the backend servers is invalid.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CONNECT_TIMEOUT</p>
          */
@@ -105,16 +130,23 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosServers extends TeaModel {
         /**
+         * <p>The backend port.</p>
+         * 
          * <strong>example:</strong>
          * <p>6081</p>
          */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The reason why <strong>Status</strong> indicates an unhealthy status.</p>
+         */
         @NameInMap("Reason")
         public GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosServersReason reason;
 
         /**
+         * <p>The backend server ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-2ze4rnh8yj9kif3z****</p>
          */
@@ -122,6 +154,8 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public String serverId;
 
         /**
+         * <p>The IP address of the server.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.XXX</p>
          */
@@ -129,6 +163,15 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public String serverIp;
 
         /**
+         * <p>The health status of the backend server. Valid values:</p>
+         * <ul>
+         * <li><strong>Initial</strong>: Health checks are configured for the GWLB instance, but no data is found.</li>
+         * <li><strong>Unhealthy</strong>: The backend server consecutively fails health checks.</li>
+         * <li><strong>Unused</strong>: The backend server is not in use.</li>
+         * <li><strong>Unavailable</strong>: Health checks are disabled.</li>
+         * <li><strong>Healthy</strong>: The backend server is healthy.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Healthy</p>
          */
@@ -184,6 +227,12 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos extends TeaModel {
         /**
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -191,12 +240,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public Boolean healthCheckEnabled;
 
         /**
+         * <p>The server group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sgp-0vdsbyszro3nr6****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        /**
+         * <p>The backend servers.</p>
+         */
         @NameInMap("Servers")
         public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosServers> servers;
 
@@ -233,12 +287,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatus extends TeaModel {
         /**
+         * <p>The listener ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>lsn-sg8aha6pzjavvo****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The information about the server groups.</p>
+         */
         @NameInMap("ServerGroupInfos")
         public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos> serverGroupInfos;
 

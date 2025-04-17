@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateServerGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
@@ -12,6 +14,8 @@ public class CreateServerGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The server group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sgp-atstuj3rtoptyui****</p>
      */

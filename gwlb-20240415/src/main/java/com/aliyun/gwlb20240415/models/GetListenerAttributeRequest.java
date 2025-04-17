@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListenerAttributeRequest extends TeaModel {
     /**
+     * <p>The listener ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

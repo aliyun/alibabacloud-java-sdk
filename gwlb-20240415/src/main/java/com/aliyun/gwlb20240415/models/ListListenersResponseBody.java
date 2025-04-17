@@ -4,10 +4,15 @@ package com.aliyun.gwlb20240415.models;
 import com.aliyun.tea.*;
 
 public class ListListenersResponseBody extends TeaModel {
+    /**
+     * <p>The GWLB listeners.</p>
+     */
     @NameInMap("Listeners")
     public java.util.List<ListListenersResponseBodyListeners> listeners;
 
     /**
+     * <p>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query. Valid values: 1 to 1000. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,12 @@ public class ListListenersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>5c281c0a0d6bfb6355ed088c2108aca8e0b5e8707e68****</p>
      */
@@ -22,12 +33,20 @@ public class ListListenersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7DBFC67C-A272-5952-8287-6C3EBE4E04D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -78,6 +97,8 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListenersTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testKey</p>
          */
@@ -85,6 +106,8 @@ public class ListListenersResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testValue</p>
          */
@@ -116,6 +139,8 @@ public class ListListenersResponseBody extends TeaModel {
 
     public static class ListListenersResponseBodyListeners extends TeaModel {
         /**
+         * <p>The description of the listener.</p>
+         * 
          * <strong>example:</strong>
          * <p>listener-description</p>
          */
@@ -123,6 +148,8 @@ public class ListListenersResponseBody extends TeaModel {
         public String listenerDescription;
 
         /**
+         * <p>The listener ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>lsn-vu7folhh5ntm8u****</p>
          */
@@ -130,6 +157,14 @@ public class ListListenersResponseBody extends TeaModel {
         public String listenerId;
 
         /**
+         * <p>The status of the listener. Valid values:</p>
+         * <ul>
+         * <li><strong>Provisioning</strong>: The listener is being created.</li>
+         * <li><strong>Running</strong>: The listener is running.</li>
+         * <li><strong>Configuring</strong>: The listener is being configured.</li>
+         * <li><strong>Deleting</strong>: The listener is being deleted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -137,6 +172,8 @@ public class ListListenersResponseBody extends TeaModel {
         public String listenerStatus;
 
         /**
+         * <p>The GWLB instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>gwlb-uf6hbeh795xlqln7g****</p>
          */
@@ -144,12 +181,17 @@ public class ListListenersResponseBody extends TeaModel {
         public String loadBalancerId;
 
         /**
+         * <p>The server group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sgp-5yapcb422i51ru****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListListenersResponseBodyListenersTags> tags;
 

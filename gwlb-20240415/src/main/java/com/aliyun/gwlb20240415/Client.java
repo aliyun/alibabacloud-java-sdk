@@ -8,7 +8,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("gwlb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -27,8 +27,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the ListServerGroups operation to query the status of the server group.</li>
+     * </ol>
+     * <ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * <ol start="2">
+     * <li>You can call the ListServerGroupServers operation to query the status of the backend server.</li>
+     * </ol>
+     * <ul>
+     * <li>If the backend server is in the <strong>Adding</strong> state, the backend server is being added to the server group.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the server is running.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>服务器组中添加后端服务器</p>
+     * <p>Adds backend servers to the server group of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request AddServersToServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -76,8 +93,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>AddServersToServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the ListServerGroups operation to query the status of the server group.</li>
+     * </ol>
+     * <ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * <ol start="2">
+     * <li>You can call the ListServerGroupServers operation to query the status of the backend server.</li>
+     * </ol>
+     * <ul>
+     * <li>If the backend server is in the <strong>Adding</strong> state, the backend server is being added to the server group.</li>
+     * <li>If the backend server is in the <strong>Available</strong> state, the server is running.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>服务器组中添加后端服务器</p>
+     * <p>Adds backend servers to the server group of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request AddServersToServerGroupRequest
      * @return AddServersToServerGroupResponse
@@ -88,8 +122,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>CreateListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Provisioning</strong> state, the listener is being created.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener is running.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建监听</p>
+     * <p>Creates a listener for a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request CreateListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -145,8 +186,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>CreateListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Provisioning</strong> state, the listener is being created.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener is running.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建监听</p>
+     * <p>Creates a listener for a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request CreateListenerRequest
      * @return CreateListenerResponse
@@ -157,8 +205,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.</p>
+     * <ul>
+     * <li>When you create a GWLB instance, the service-linked role AliyunServiceRoleForGwlb is automatically created.</li>
+     * <li>CreateLoadBalancer is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of a GWLB instance.<ul>
+     * <li>If the GWLB instance is in the Provisioning state, the GWLB instance is being created.</li>
+     * <li>If the GWLB instance is in the Active state, the GWLB instance is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建负载均衡实例</p>
+     * <p>Creates a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -222,8 +281,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.</p>
+     * <ul>
+     * <li>When you create a GWLB instance, the service-linked role AliyunServiceRoleForGwlb is automatically created.</li>
+     * <li>CreateLoadBalancer is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of a GWLB instance.<ul>
+     * <li>If the GWLB instance is in the Provisioning state, the GWLB instance is being created.</li>
+     * <li>If the GWLB instance is in the Active state, the GWLB instance is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建负载均衡实例</p>
+     * <p>Creates a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -234,8 +304,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the server group is in the <strong>Creating</strong> state, it indicates that the server group is being created.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, it indicates that the server group is created.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建服务器组</p>
+     * <p>Creates a server group for a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request CreateServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -271,6 +348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduler)) {
             body.put("Scheduler", request.scheduler);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverFailoverMode)) {
+            body.put("ServerFailoverMode", request.serverFailoverMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serverGroupName)) {
@@ -311,8 +392,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>CreateServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the server group is in the <strong>Creating</strong> state, it indicates that the server group is being created.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, it indicates that the server group is created.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建服务器组</p>
+     * <p>Creates a server group for a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request CreateServerGroupRequest
      * @return CreateServerGroupResponse
@@ -323,8 +411,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>DeleteListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Deleting</strong> state, the listener is being deleted.</li>
+     * <li>If the listener cannot be found, the listener is deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除监听</p>
+     * <p>Deletes a listener from a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request DeleteListenerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -363,8 +458,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>DeleteListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Deleting</strong> state, the listener is being deleted.</li>
+     * <li>If the listener cannot be found, the listener is deleted.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>删除监听</p>
+     * <p>Deletes a listener from a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request DeleteListenerRequest
      * @return DeleteListenerResponse
@@ -376,7 +478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除负载均衡实例</p>
+     * <p>Deletes a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -416,7 +518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除负载均衡实例</p>
+     * <p>Deletes a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request DeleteLoadBalancerRequest
      * @return DeleteLoadBalancerResponse
@@ -427,8 +529,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete server groups that are not associated with listeners.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除服务器组</p>
+     * <p>Deletes a server group from a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request DeleteServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -467,8 +572,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can delete server groups that are not associated with listeners.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除服务器组</p>
+     * <p>Deletes a server group from a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request DeleteServerGroupRequest
      * @return DeleteServerGroupResponse
@@ -480,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询地域</p>
+     * <p>Queries the most recent region list of Gateway Load Balancer (GWLB).</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -512,7 +620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询地域</p>
+     * <p>Queries the most recent region list of Gateway Load Balancer (GWLB).</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -524,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用区</p>
+     * <p>Queries the most recent zone list of Gateway Load Balancer (GWLB).</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -556,7 +664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用区</p>
+     * <p>Queries the most recent zone list of Gateway Load Balancer (GWLB).</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -568,7 +676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监听详细信息</p>
+     * <p>Queries the details of a Gateway Load Balancer (GWLB) listener.</p>
      * 
      * @param request GetListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -600,7 +708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监听详细信息</p>
+     * <p>Queries the details of a Gateway Load Balancer (GWLB) listener.</p>
      * 
      * @param request GetListenerAttributeRequest
      * @return GetListenerAttributeResponse
@@ -612,7 +720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监听健康检查状态</p>
+     * <p>Queries the health check status of a Gateway Load Balancer (GWLB) listener.</p>
      * 
      * @param request GetListenerHealthStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -665,7 +773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监听健康检查状态</p>
+     * <p>Queries the health check status of a Gateway Load Balancer (GWLB) listener.</p>
      * 
      * @param request GetListenerHealthStatusRequest
      * @return GetListenerHealthStatusResponse
@@ -677,7 +785,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询负载均衡实例详细信息</p>
+     * <p>Queries the details of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request GetLoadBalancerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -709,7 +817,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询负载均衡实例详细信息</p>
+     * <p>Queries the details of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request GetLoadBalancerAttributeRequest
      * @return GetLoadBalancerAttributeResponse
@@ -721,7 +829,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监听列表</p>
+     * <p>Queries Gateway Load Balancer (GWLB) listeners.</p>
      * 
      * @param request ListListenersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -778,7 +886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询监听列表</p>
+     * <p>Queries Gateway Load Balancer (GWLB) listeners.</p>
      * 
      * @param request ListListenersRequest
      * @return ListListenersResponse
@@ -790,7 +898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询负载均衡实例列表</p>
+     * <p>Queries Gateway Load Balancer (GWLB) instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -840,6 +948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             bodyFlat.put("Tag", request.tag);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficMode)) {
+            body.put("TrafficMode", request.trafficMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vpcIds)) {
             bodyFlat.put("VpcIds", request.vpcIds);
         }
@@ -871,7 +983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询负载均衡实例列表</p>
+     * <p>Queries Gateway Load Balancer (GWLB) instances.</p>
      * 
      * @param request ListLoadBalancersRequest
      * @return ListLoadBalancersResponse
@@ -883,7 +995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询服务器组中的服务器列表</p>
+     * <p>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request ListServerGroupServersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -940,7 +1052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询服务器组中的服务器列表</p>
+     * <p>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request ListServerGroupServersRequest
      * @return ListServerGroupServersResponse
@@ -952,7 +1064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询服务器组列表</p>
+     * <p>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request ListServerGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1021,7 +1133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询服务器组列表</p>
+     * <p>Queries the server groups of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request ListServerGroupsRequest
      * @return ListServerGroupsResponse
@@ -1033,7 +1145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源标签</p>
+     * <p>Queries the tags of resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1086,7 +1198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询资源标签</p>
+     * <p>Queries the tags of resources.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -1098,7 +1210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>迁移资源组</p>
+     * <p>Changes the resource group to which a specified cloud resource belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1146,7 +1258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>迁移资源组</p>
+     * <p>Changes the resource group to which a specified cloud resource belongs.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @return MoveResourceGroupResponse
@@ -1157,8 +1269,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the ListServerGroups operation to query the status of a server group.<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * </li>
+     * <li>You can call the ListServerGroupServers operation to query the status of a backend server.<ul>
+     * <li>If the backend server is in the <strong>Removing</strong> state, the backend server is being removed from the server group.</li>
+     * <li>If the backend server cannot be found, the backend server is no longer in the server group.<blockquote>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>If connection draining id enabled (<strong>ConnectionDrainEnabled</strong> set to true) for the server group of the backend server, the backend server that you remove enters the <strong>Removing</strong> state before entering the <strong>Draining</strong> state. When the connection draining timeout period (<strong>ConnectionDrainTimeout</strong>) ends, the backend server is removed from the server group.</li>
+     * <li>You can add the backend server to the server group again before the connection draining timeout period ends. In this case, the status of the backend server changes from <strong>Draining</strong> to <strong>Adding</strong>. After the backend server is added to the server group, the backend server enters the <strong>Available</strong> state.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>服务器组中删除后端服务器</p>
+     * <p>Removes backend servers from the server group of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request RemoveServersFromServerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1206,8 +1339,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the ListServerGroups operation to query the status of a server group.<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * </li>
+     * <li>You can call the ListServerGroupServers operation to query the status of a backend server.<ul>
+     * <li>If the backend server is in the <strong>Removing</strong> state, the backend server is being removed from the server group.</li>
+     * <li>If the backend server cannot be found, the backend server is no longer in the server group.<blockquote>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ol>
+     * <ul>
+     * <li>If connection draining id enabled (<strong>ConnectionDrainEnabled</strong> set to true) for the server group of the backend server, the backend server that you remove enters the <strong>Removing</strong> state before entering the <strong>Draining</strong> state. When the connection draining timeout period (<strong>ConnectionDrainTimeout</strong>) ends, the backend server is removed from the server group.</li>
+     * <li>You can add the backend server to the server group again before the connection draining timeout period ends. In this case, the status of the backend server changes from <strong>Draining</strong> to <strong>Adding</strong>. After the backend server is added to the server group, the backend server enters the <strong>Available</strong> state.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>服务器组中删除后端服务器</p>
+     * <p>Removes backend servers from the server group of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request RemoveServersFromServerGroupRequest
      * @return RemoveServersFromServerGroupResponse
@@ -1219,7 +1373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加资源标签</p>
+     * <p>Creates and adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1272,7 +1426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>添加资源标签</p>
+     * <p>Creates and adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -1284,7 +1438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源标签</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1341,7 +1495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源标签</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -1352,8 +1506,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of a listener.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Configuring</strong> state, the listener is being modified.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener is modified.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新监听属性</p>
+     * <p>Updates the configurations of a Gateway Load Balancer (GWLB) listener.</p>
      * 
      * @param request UpdateListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1400,8 +1561,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>UpdateListenerAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <strong>GetListenerAttribute</strong> operation to query the status of a listener.</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Configuring</strong> state, the listener is being modified.</li>
+     * <li>If the listener is in the <strong>Running</strong> state, the listener is modified.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新监听属性</p>
+     * <p>Updates the configurations of a Gateway Load Balancer (GWLB) listener.</p>
      * 
      * @param request UpdateListenerAttributeRequest
      * @return UpdateListenerAttributeResponse
@@ -1412,8 +1580,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  UpdateLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.
+     *     *   If the GWLB instance is in the Configuring state, the GWLB instance is being modified.
+     *     *   If the GWLB instance is in the Active state, the GWLB instance is modified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新负载均衡实例属性</p>
+     * <p>Updates the attributes of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request UpdateLoadBalancerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1438,6 +1611,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LoadBalancerName", request.loadBalancerName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficMode)) {
+            body.put("TrafficMode", request.trafficMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -1456,8 +1633,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  UpdateLoadBalancerAttribute is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.
+     *     *   If the GWLB instance is in the Configuring state, the GWLB instance is being modified.
+     *     *   If the GWLB instance is in the Active state, the GWLB instance is modified.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新负载均衡实例属性</p>
+     * <p>Updates the attributes of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request UpdateLoadBalancerAttributeRequest
      * @return UpdateLoadBalancerAttributeResponse
@@ -1468,8 +1650,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.
+     * UpdateLoadBalancerZones is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.</p>
+     * <ul>
+     * <li>If the GWLB instance is in the Configuring state, the GWLB instance is being modified.</li>
+     * <li>If the GWLB instance is in the Active state, the GWLB instance is modified.<blockquote>
+     * <p> Before you call this operation, make sure that all zone parameters, including the current zones and the zones that you want to add, are specified. If you do not specify the current zones, the current zones are deleted. You can call the GetLoadBalancerAttribute operation to query the current zones of a GWLB instance.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新负载均衡实例可用区</p>
+     * <p>Updates the zones of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request UpdateLoadBalancerZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1517,8 +1710,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>Make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/2806160.html">pricing</a> of GWLB before calling this operation</em>*.
+     * UpdateLoadBalancerZones is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the GetLoadBalancerAttribute operation to query the status of the GWLB instance.</p>
+     * <ul>
+     * <li>If the GWLB instance is in the Configuring state, the GWLB instance is being modified.</li>
+     * <li>If the GWLB instance is in the Active state, the GWLB instance is modified.<blockquote>
+     * <p> Before you call this operation, make sure that all zone parameters, including the current zones and the zones that you want to add, are specified. If you do not specify the current zones, the current zones are deleted. You can call the GetLoadBalancerAttribute operation to query the current zones of a GWLB instance.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新负载均衡实例可用区</p>
+     * <p>Updates the zones of a Gateway Load Balancer (GWLB) instance.</p>
      * 
      * @param request UpdateLoadBalancerZonesRequest
      * @return UpdateLoadBalancerZonesResponse
@@ -1529,8 +1733,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>UpdateServerGroupAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the configuration of the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the configuration of the server group is modified.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新服务器组属性</p>
+     * <p>Updates the attributes of a server group.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1558,6 +1769,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduler)) {
             body.put("Scheduler", request.scheduler);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverFailoverMode)) {
+            body.put("ServerFailoverMode", request.serverFailoverMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.serverGroupId)) {
@@ -1590,8 +1805,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>UpdateServerGroupAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the ListServerGroups operation to query the status of the task.</p>
+     * <ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the configuration of the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the configuration of the server group is modified.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新服务器组属性</p>
+     * <p>Updates the attributes of a server group.</p>
      * 
      * @param request UpdateServerGroupAttributeRequest
      * @return UpdateServerGroupAttributeResponse

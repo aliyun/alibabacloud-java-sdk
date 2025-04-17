@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupServersResponseBody extends TeaModel {
     /**
+     * <p>The number of entries per page.</p>
+     * <p>Valid values: 1 to 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +15,12 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If NextToken is empty, no next page exists.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -19,16 +28,23 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The backend servers.</p>
+     */
     @NameInMap("Servers")
     public java.util.List<ListServerGroupServersResponseBodyServers> servers;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +98,11 @@ public class ListServerGroupServersResponseBody extends TeaModel {
 
     public static class ListServerGroupServersResponseBodyServers extends TeaModel {
         /**
+         * <p>The backend server port. Valid values:</p>
+         * <ul>
+         * <li><strong>6081</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>6081</p>
          */
@@ -89,6 +110,8 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The server group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sgp-atstuj3rtoptyui****</p>
          */
@@ -96,6 +119,8 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverGroupId;
 
         /**
+         * <p>The backend server ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i-bp67acfmxazb4p****</p>
          */
@@ -103,6 +128,8 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverId;
 
         /**
+         * <p>The IP address of the backend server.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.xxx.xxx</p>
          */
@@ -110,6 +137,14 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverIp;
 
         /**
+         * <p>The type of the backend server. Valid values:</p>
+         * <ul>
+         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Eni</strong>: elastic network interface (ENI)</li>
+         * <li><strong>Eci</strong>: elastic container instance</li>
+         * <li><strong>Ip</strong>: IP address</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Ecs</p>
          */
@@ -117,6 +152,15 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         public String serverType;
 
         /**
+         * <p>Indicates the status of the backend server. Valid values:</p>
+         * <ul>
+         * <li><strong>Adding</strong>: The backend server is being added.</li>
+         * <li><strong>Available</strong>: The backend server is available.</li>
+         * <li><strong>Draining</strong>: The backend server is in connection draining.</li>
+         * <li><strong>Removing</strong>: The backend server is being removed.</li>
+         * <li><strong>Replacing</strong>: The backend server is being replaced.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
