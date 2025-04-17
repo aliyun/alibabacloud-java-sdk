@@ -1440,6 +1440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceName", request.androidInstanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizedUserId)) {
+            query.put("AuthorizedUserId", request.authorizedUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
             query.put("BizRegionId", request.bizRegionId);
         }

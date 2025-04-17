@@ -19,6 +19,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    @NameInMap("AuthorizedUserId")
+    public String authorizedUserId;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the regions where Cloud Phone is supported.</p>
      * 
@@ -180,6 +183,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    public DescribeAndroidInstancesRequest setAuthorizedUserId(String authorizedUserId) {
+        this.authorizedUserId = authorizedUserId;
+        return this;
+    }
+    public String getAuthorizedUserId() {
+        return this.authorizedUserId;
     }
 
     public DescribeAndroidInstancesRequest setBizRegionId(String bizRegionId) {

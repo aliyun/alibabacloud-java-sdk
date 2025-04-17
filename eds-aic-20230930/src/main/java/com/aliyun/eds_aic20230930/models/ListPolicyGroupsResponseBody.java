@@ -276,6 +276,36 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources extends TeaModel {
+        @NameInMap("AndroidInstanceGroupIds")
+        public java.util.List<String> androidInstanceGroupIds;
+
+        @NameInMap("CloudPhoneMatrixIds")
+        public java.util.List<String> cloudPhoneMatrixIds;
+
+        public static ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources self = new ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources setAndroidInstanceGroupIds(java.util.List<String> androidInstanceGroupIds) {
+            this.androidInstanceGroupIds = androidInstanceGroupIds;
+            return this;
+        }
+        public java.util.List<String> getAndroidInstanceGroupIds() {
+            return this.androidInstanceGroupIds;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources setCloudPhoneMatrixIds(java.util.List<String> cloudPhoneMatrixIds) {
+            this.cloudPhoneMatrixIds = cloudPhoneMatrixIds;
+            return this;
+        }
+        public java.util.List<String> getCloudPhoneMatrixIds() {
+            return this.cloudPhoneMatrixIds;
+        }
+
+    }
+
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
         /**
          * <p>Specifies whether to enable the webcam redirection feature.</p>
@@ -384,6 +414,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        @NameInMap("PolicyRelatedResources")
+        public ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources policyRelatedResources;
+
         /**
          * <p>The height of the resolution.</p>
          * 
@@ -477,6 +510,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModel setPolicyRelatedResources(ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources policyRelatedResources) {
+            this.policyRelatedResources = policyRelatedResources;
+            return this;
+        }
+        public ListPolicyGroupsResponseBodyPolicyGroupModelPolicyRelatedResources getPolicyRelatedResources() {
+            return this.policyRelatedResources;
         }
 
         public ListPolicyGroupsResponseBodyPolicyGroupModel setSessionResolutionHeight(Integer sessionResolutionHeight) {
