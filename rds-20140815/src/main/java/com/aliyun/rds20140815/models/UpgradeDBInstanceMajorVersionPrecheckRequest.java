@@ -27,6 +27,9 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
 
+    @NameInMap("UpgradeMode")
+    public String upgradeMode;
+
     public static UpgradeDBInstanceMajorVersionPrecheckRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceMajorVersionPrecheckRequest self = new UpgradeDBInstanceMajorVersionPrecheckRequest();
         return TeaModel.build(map, self);
@@ -54,6 +57,14 @@ public class UpgradeDBInstanceMajorVersionPrecheckRequest extends TeaModel {
     }
     public String getTargetMajorVersion() {
         return this.targetMajorVersion;
+    }
+
+    public UpgradeDBInstanceMajorVersionPrecheckRequest setUpgradeMode(String upgradeMode) {
+        this.upgradeMode = upgradeMode;
+        return this;
+    }
+    public String getUpgradeMode() {
+        return this.upgradeMode;
     }
 
 }

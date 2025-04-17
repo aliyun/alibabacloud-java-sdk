@@ -236,6 +236,21 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         @NameInMap("UpgradeMode")
         public String upgradeMode;
 
+        @NameInMap("cutOver")
+        public Boolean cutOver;
+
+        @NameInMap("totalLogicRepDelayTime")
+        public Integer totalLogicRepDelayTime;
+
+        @NameInMap("totalLogicRepLatencyMB")
+        public Integer totalLogicRepLatencyMB;
+
+        @NameInMap("zeroDownTimeConnectionString")
+        public String zeroDownTimeConnectionString;
+
+        @NameInMap("zeroDownTimePort")
+        public Integer zeroDownTimePort;
+
         public static DescribeUpgradeMajorVersionTasksResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeUpgradeMajorVersionTasksResponseBodyItems self = new DescribeUpgradeMajorVersionTasksResponseBodyItems();
             return TeaModel.build(map, self);
@@ -343,6 +358,46 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
         public String getUpgradeMode() {
             return this.upgradeMode;
+        }
+
+        public DescribeUpgradeMajorVersionTasksResponseBodyItems setCutOver(Boolean cutOver) {
+            this.cutOver = cutOver;
+            return this;
+        }
+        public Boolean getCutOver() {
+            return this.cutOver;
+        }
+
+        public DescribeUpgradeMajorVersionTasksResponseBodyItems setTotalLogicRepDelayTime(Integer totalLogicRepDelayTime) {
+            this.totalLogicRepDelayTime = totalLogicRepDelayTime;
+            return this;
+        }
+        public Integer getTotalLogicRepDelayTime() {
+            return this.totalLogicRepDelayTime;
+        }
+
+        public DescribeUpgradeMajorVersionTasksResponseBodyItems setTotalLogicRepLatencyMB(Integer totalLogicRepLatencyMB) {
+            this.totalLogicRepLatencyMB = totalLogicRepLatencyMB;
+            return this;
+        }
+        public Integer getTotalLogicRepLatencyMB() {
+            return this.totalLogicRepLatencyMB;
+        }
+
+        public DescribeUpgradeMajorVersionTasksResponseBodyItems setZeroDownTimeConnectionString(String zeroDownTimeConnectionString) {
+            this.zeroDownTimeConnectionString = zeroDownTimeConnectionString;
+            return this;
+        }
+        public String getZeroDownTimeConnectionString() {
+            return this.zeroDownTimeConnectionString;
+        }
+
+        public DescribeUpgradeMajorVersionTasksResponseBodyItems setZeroDownTimePort(Integer zeroDownTimePort) {
+            this.zeroDownTimePort = zeroDownTimePort;
+            return this;
+        }
+        public Integer getZeroDownTimePort() {
+            return this.zeroDownTimePort;
         }
 
     }

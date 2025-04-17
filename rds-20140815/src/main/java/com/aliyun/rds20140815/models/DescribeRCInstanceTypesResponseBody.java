@@ -4,10 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstanceTypesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the instance types.</p>
+     */
     @NameInMap("InstanceTypes")
     public DescribeRCInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
 
     public static class DescribeRCInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         /**
+         * <p>The maximum number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -44,6 +51,8 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         public Integer cpuCoreCount;
 
         /**
+         * <p>The ID of the instance family.</p>
+         * 
          * <strong>example:</strong>
          * <p>gn8.cm</p>
          */
@@ -51,6 +60,8 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         public String instanceTypeFamily;
 
         /**
+         * <p>The instance type of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds.gna8.2xlarge.8cm</p>
          */
@@ -58,6 +69,8 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
         public String instanceTypeId;
 
         /**
+         * <p>The memory size of the instance type. Unit: GiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>256</p>
          */
@@ -104,6 +117,9 @@ public class DescribeRCInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeRCInstanceTypesResponseBodyInstanceTypes extends TeaModel {
+        /**
+         * <p>The instance types.</p>
+         */
         @NameInMap("InstanceType")
         public java.util.List<DescribeRCInstanceTypesResponseBodyInstanceTypesInstanceType> instanceType;
 

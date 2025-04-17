@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopRCInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>The batch operation mode. Set the value to <strong>AllTogether</strong>. In this mode, if all instances are stopped, a success message is returned. If an instance fails the verification, none of the instances can be stopped and an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>AllTogether</p>
      */
@@ -12,16 +14,27 @@ public class StopRCInstancesShrinkRequest extends TeaModel {
     public String batchOptimization;
 
     /**
+     * <p>Specifies whether to forcefully stop the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: forcefully stops the instance. If an instance fails to stop due to system or network issues, a forced stop can be triggered, <strong>though it may result in data loss.</strong></li>
+     * <li><strong>false</strong>: does not forcefully stop the instance. This is the default value.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    /**
+     * <p>The node IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

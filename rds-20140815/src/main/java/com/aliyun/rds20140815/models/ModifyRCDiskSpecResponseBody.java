@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyRCDiskSpecResponseBody extends TeaModel {
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>245053924720608</p>
      */
@@ -12,6 +14,8 @@ public class ModifyRCDiskSpecResponseBody extends TeaModel {
     public Long orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */

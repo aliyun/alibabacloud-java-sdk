@@ -5,22 +5,42 @@ import com.aliyun.tea.*;
 
 public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     /**
+     * <p>The billing method.</p>
+     * <ul>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+     * <li><strong>PREPAY</strong>: subscription</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The time when the instance expires.</p>
+     * <blockquote>
+     * <p> If you change the billing method from subscription to pay-as-you-go, this parameter is not returned.</p>
+     * </blockquote>
+     */
     @NameInMap("ExpiredTime")
     public java.util.List<String> expiredTime;
 
+    /**
+     * <p>The reserved parameter. This parameter is not supported.</p>
+     */
     @NameInMap("FeeOfInstances")
     public java.util.List<ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances> feeOfInstances;
 
+    /**
+     * <p>The instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
+     * <p>The order ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2133400000****</p>
      */
@@ -28,6 +48,8 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF82B07-28D2-48D1-B5D6-7E78FED277C7</p>
      */
@@ -89,6 +111,8 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
 
     public static class ModifyRCInstanceChargeTypeResponseBodyFeeOfInstances extends TeaModel {
         /**
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */
@@ -96,6 +120,8 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */
@@ -103,6 +129,8 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         public String fee;
 
         /**
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>None</p>
          */

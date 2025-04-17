@@ -51,7 +51,7 @@ public class CreateRCDiskRequest extends TeaModel {
      * <li><strong>cloud</strong> (default): basic disk</li>
      * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
      * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-     * <li><strong>cloud_essd</strong>: ESSD.</li>
+     * <li><strong>cloud_essd</strong>: Enterprise ESSD (ESSD).</li>
      * <li><strong>cloud_auto</strong>: ESSD AutoPL disk</li>
      * <li><strong>cloud_essd_entry</strong>: ESSD Entry disk</li>
      * <li><strong>elastic_ephemeral_disk_standard</strong>: standard elastic ephemeral disk</li>
@@ -84,6 +84,8 @@ public class CreateRCDiskRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
+     * <p>The ID of the instance to which you want to attach the disk.</p>
+     * 
      * <strong>example:</strong>
      * <p>rc-v28c6k3jupp61m2t****</p>
      */
@@ -135,7 +137,7 @@ public class CreateRCDiskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The disk size. Unit: GiB. This parameter is required. Valid values:</p>
+     * <p>The disk size. Unit: GiB. This parameter is required.</p>
      * <ul>
      * <li><p>Valid values if you set DiskCategory to <strong>cloud</strong>: 5 to 2000.</p>
      * </li>

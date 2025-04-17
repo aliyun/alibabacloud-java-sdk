@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRCInstanceTypesRequest extends TeaModel {
     /**
+     * <p>The commodity code of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rds_customprepaid_public_cn</p>
      */
@@ -12,16 +14,23 @@ public class DescribeRCInstanceTypesRequest extends TeaModel {
     public String commodityCode;
 
     /**
+     * <p>The database engine. Set the value to MySQL.</p>
+     * 
      * <strong>example:</strong>
      * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The instance types.</p>
+     */
     @NameInMap("InstanceType")
     public java.util.List<String> instanceType;
 
     /**
+     * <p>The instance family. You can call the <strong>DescribeRCInstanceTypeFamilies</strong> operation to query the instance families of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>gn8.cm</p>
      */
@@ -29,6 +38,8 @@ public class DescribeRCInstanceTypesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

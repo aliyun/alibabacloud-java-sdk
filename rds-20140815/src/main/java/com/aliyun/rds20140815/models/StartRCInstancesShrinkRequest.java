@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class StartRCInstancesShrinkRequest extends TeaModel {
     /**
+     * <p>The batch operation mode. Set the value to <strong>AllTogether</strong>. In this mode, a success message is returned if all specified instances are started. If an instance fails the verification, none of the specified instances can be started and an error message is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>AllTogether</p>
      */
     @NameInMap("BatchOptimization")
     public String batchOptimization;
 
+    /**
+     * <p>The node IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

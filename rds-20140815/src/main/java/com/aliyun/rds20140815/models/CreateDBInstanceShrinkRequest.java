@@ -70,11 +70,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>Specifies whether to use a coupon. Valid values:</p>
+     * <p>Specifies whether to use a coupon. Default value: false. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: uses a coupon.</li>
-     * <li><strong>false</strong> (default): does not use a coupon.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
+     * <blockquote>
+     * <p> If you downgrade the specifications of an instance after you use coupons, the used coupons cannot be refunded.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -148,17 +151,16 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      * <li><strong>Finance</strong>: RDS Basic Edition for serverless instances</li>
      * </ul>
      * </li>
-     * <li><p>Serverless instance</p>
+     * <li><p>Serverless RDS instance</p>
      * <ul>
      * <li><strong>serverless_basic</strong>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
      * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
      * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
      * </ul>
+     * <p>**</p>
+     * <p><strong>Note</strong> This parameter is required if PayType is set to Serverless.</p>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is required when you create a serverless instance.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>HighAvailability</p>
@@ -437,30 +439,34 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The database engine version of the instance. Valid values:</p>
      * <ul>
-     * <li><p>Regular instance</p>
+     * <li><p>Regular RDS instance</p>
      * <ul>
      * <li>Valid values when you set Engine to MySQL: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
      * <li>Valid values when you set Engine to SQLServer: <strong>08r2_ent_ha</strong> (cloud disks, discontinued), <strong>2008r2</strong> (local disks, discontinued), <strong>2012</strong> (SQL Server EE Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
-     * <li>Valid values when you set Engine to PostgreSQL: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, <strong>15.0</strong>, and <strong>16.0</strong></li>
-     * <li>Valid value if you set Engine to MariaDB: <strong>10.3</strong></li>
+     * <li>Valid values when you set Engine to PostgreSQL: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, <strong>15.0</strong>, <strong>16.0</strong>, and <strong>17.0</strong></li>
+     * <li>Valid values when you set Engine to MariaDB: <strong>10.3</strong> and <strong>10.6</strong></li>
      * </ul>
      * </li>
-     * <li><p>Serverless instance</p>
+     * <li><p>Serverless RDS instance</p>
      * <ul>
      * <li>Valid values when you set Engine to MySQL: <strong>5.7</strong> and <strong>8.0</strong></li>
      * <li>Valid values when you set Engine to SQLServer: <strong>2016_std_sl</strong>, <strong>2017_std_sl</strong>, and <strong>2019_std_sl</strong></li>
-     * <li>Valid values when you set Engine to PostgreSQL: <strong>14.0</strong>, <strong>15.0</strong>, and <strong>16.0</strong></li>
+     * <li>Valid values when you set Engine to PostgreSQL: <strong>14.0</strong>, <strong>15.0</strong>, <strong>16.0</strong>, and <strong>17.0</strong></li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>ApsaraDB RDS for MariaDB does not support serverless instances.</li>
-     * <li>RDS instances that run SQL Server: <code>_ent</code> specifies SQL Server EE (Always On), <code>_ent_ha</code> specifies SQL Server EE, <code>_std_ha</code> specifies SQL Server SE, and <code>_web</code> specifies SQL Server Web.</li>
-     * <li>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</li>
-     * <li>Babelfish is supported only for RDS instances that run PostgreSQL 15.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
+     * </li>
+     * <li><p>RDS instances that run SQL Server: <code>_ent</code> specifies SQL Server EE (Always On), <code>_ent_ha</code> specifies SQL Server EE, <code>_std_ha</code> specifies SQL Server SE, and <code>_web</code> specifies SQL Server Web.</p>
+     * </li>
+     * <li><p>RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).</p>
+     * </li>
+     * <li><p>Babelfish is supported only for RDS instances that run PostgreSQL 15.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -511,8 +517,8 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the write optimization feature. Valid values:</p>
      * <ul>
-     * <li><strong>optimized</strong>: enables the feature.</li>
-     * <li><strong>none</strong>: disables the feature.</li>
+     * <li><strong>optimized</strong></li>
+     * <li><strong>none</strong> (default)</li>
      * </ul>
      * <blockquote>
      * <p> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</p>
@@ -590,7 +596,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -612,7 +618,10 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for RAM users. RAM users can use the ARN to connect ApsaraDB RDS to KMS. You can call the CheckCloudResourceAuthorized operation to query the ARN.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for Resource Access Management (RAM) users. RAM users can use the ARN to connect to ApsaraDB RDS to Key Management Service (KMS). You can call the CheckCloudResourceAuthorized operation to query the ARN.</p>
+     * <blockquote>
+     * <p> When you enable the encryption, you must specify the RoleARN.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1406xxxxxx:role/aliyunrdsinstanceencryptiondefaultrole</p>
@@ -621,7 +630,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>The IP address whitelist of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance</a>. If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. The IP address whitelist can contain up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The IP address whitelist of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure an IP address whitelist</a>. Separate multiple IP addresses or CIDR blocks with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to the whitelist. The entries in the IP address whitelist must be in one of the following formats:</p>
      * <ul>
      * <li>IP addresses, such as 10.10.XX.XX.</li>
      * <li>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>

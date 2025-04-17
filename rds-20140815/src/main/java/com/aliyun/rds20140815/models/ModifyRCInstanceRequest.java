@@ -67,6 +67,12 @@ public class ModifyRCInstanceRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("RebootTime")
+    public String rebootTime;
+
+    @NameInMap("RebootWhenFinished")
+    public Boolean rebootWhenFinished;
+
     /**
      * <p>The region ID of the instance.</p>
      * 
@@ -119,6 +125,22 @@ public class ModifyRCInstanceRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public ModifyRCInstanceRequest setRebootTime(String rebootTime) {
+        this.rebootTime = rebootTime;
+        return this;
+    }
+    public String getRebootTime() {
+        return this.rebootTime;
+    }
+
+    public ModifyRCInstanceRequest setRebootWhenFinished(Boolean rebootWhenFinished) {
+        this.rebootWhenFinished = rebootWhenFinished;
+        return this;
+    }
+    public Boolean getRebootWhenFinished() {
+        return this.rebootWhenFinished;
     }
 
     public ModifyRCInstanceRequest setRegionId(String regionId) {

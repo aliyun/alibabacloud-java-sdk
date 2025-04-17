@@ -202,6 +202,9 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         @NameInMap("TaskId")
         public Integer taskId;
 
+        @NameInMap("UpgradeMode")
+        public String upgradeMode;
+
         public static DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems self = new DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems();
             return TeaModel.build(map, self);
@@ -285,6 +288,14 @@ public class DescribeUpgradeMajorVersionPrecheckTaskResponseBody extends TeaMode
         }
         public Integer getTaskId() {
             return this.taskId;
+        }
+
+        public DescribeUpgradeMajorVersionPrecheckTaskResponseBodyItems setUpgradeMode(String upgradeMode) {
+            this.upgradeMode = upgradeMode;
+            return this;
+        }
+        public String getUpgradeMode() {
+            return this.upgradeMode;
         }
 
     }
