@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
+    @NameInMap("ApiKey")
+    public String apiKey;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -68,6 +71,14 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
     public static SubmitEnterpriseVocAnalysisTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitEnterpriseVocAnalysisTaskShrinkRequest self = new SubmitEnterpriseVocAnalysisTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskShrinkRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public SubmitEnterpriseVocAnalysisTaskShrinkRequest setContentTagsShrink(String contentTagsShrink) {

@@ -7485,6 +7485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            body.put("ApiKey", request.apiKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contentTagsShrink)) {
             body.put("ContentTags", request.contentTagsShrink);
         }

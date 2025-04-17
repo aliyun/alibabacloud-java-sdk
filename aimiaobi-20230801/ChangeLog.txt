@@ -1,3 +1,7 @@
+2025-04-17 Version: 1.22.4
+- Update API SubmitEnterpriseVocAnalysisTask: add request parameters ApiKey.
+
+
 2025-04-17 Version: 1.22.3
 - Update API RunDocBrainmap: add request parameters referenceContent.
 - Update API RunDocIntroduction: add request parameters referenceContent.
