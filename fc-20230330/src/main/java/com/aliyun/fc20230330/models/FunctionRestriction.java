@@ -3,7 +3,7 @@ package com.aliyun.fc20230330.models;
 
 import com.aliyun.tea.*;
 
-public class OpenStructFunctionRestriction extends TeaModel {
+public class FunctionRestriction extends TeaModel {
     @NameInMap("disable")
     public Boolean disable;
 
@@ -13,12 +13,12 @@ public class OpenStructFunctionRestriction extends TeaModel {
     @NameInMap("reason")
     public String reason;
 
-    public static OpenStructFunctionRestriction build(java.util.Map<String, ?> map) throws Exception {
-        OpenStructFunctionRestriction self = new OpenStructFunctionRestriction();
+    public static FunctionRestriction build(java.util.Map<String, ?> map) throws Exception {
+        FunctionRestriction self = new FunctionRestriction();
         return TeaModel.build(map, self);
     }
 
-    public OpenStructFunctionRestriction setDisable(Boolean disable) {
+    public FunctionRestriction setDisable(Boolean disable) {
         this.disable = disable;
         return this;
     }
@@ -26,7 +26,7 @@ public class OpenStructFunctionRestriction extends TeaModel {
         return this.disable;
     }
 
-    public OpenStructFunctionRestriction setLastModifiedTime(String lastModifiedTime) {
+    public FunctionRestriction setLastModifiedTime(String lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
@@ -34,7 +34,7 @@ public class OpenStructFunctionRestriction extends TeaModel {
         return this.lastModifiedTime;
     }
 
-    public OpenStructFunctionRestriction setReason(String reason) {
+    public FunctionRestriction setReason(String reason) {
         this.reason = reason;
         return this;
     }

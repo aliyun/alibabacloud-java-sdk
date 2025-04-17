@@ -11,7 +11,7 @@ public class DescribeRegionsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public OpenStructDescribeRegionsOutput body;
+    public DescribeRegionsOutput body;
 
     public static DescribeRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponse self = new DescribeRegionsResponse();
@@ -34,11 +34,11 @@ public class DescribeRegionsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeRegionsResponse setBody(OpenStructDescribeRegionsOutput body) {
+    public DescribeRegionsResponse setBody(DescribeRegionsOutput body) {
         this.body = body;
         return this;
     }
-    public OpenStructDescribeRegionsOutput getBody() {
+    public DescribeRegionsOutput getBody() {
         return this.body;
     }
 

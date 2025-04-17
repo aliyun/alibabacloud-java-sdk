@@ -110,7 +110,7 @@ public class Function extends TeaModel {
     public Boolean internetAccess;
 
     @NameInMap("invocationRestriction")
-    public OpenStructFunctionRestriction invocationRestriction;
+    public FunctionRestriction invocationRestriction;
 
     /**
      * <strong>example:</strong>
@@ -367,11 +367,11 @@ public class Function extends TeaModel {
         return this.internetAccess;
     }
 
-    public Function setInvocationRestriction(OpenStructFunctionRestriction invocationRestriction) {
+    public Function setInvocationRestriction(FunctionRestriction invocationRestriction) {
         this.invocationRestriction = invocationRestriction;
         return this;
     }
-    public OpenStructFunctionRestriction getInvocationRestriction() {
+    public FunctionRestriction getInvocationRestriction() {
         return this.invocationRestriction;
     }
 
