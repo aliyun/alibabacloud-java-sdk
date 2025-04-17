@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetectImageCroppingResponseBody extends TeaModel {
     /**
-     * <p>The image croppings.</p>
+     * <p>The image cropping suggestions.</p>
      */
     @NameInMap("Croppings")
     public java.util.List<CroppingSuggestion> croppings;

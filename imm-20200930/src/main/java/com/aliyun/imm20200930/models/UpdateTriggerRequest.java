@@ -21,7 +21,7 @@ public class UpdateTriggerRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The input data source.</p>
+     * <p>The data source configurations.</p>
      */
     @NameInMap("Input")
     public Input input;

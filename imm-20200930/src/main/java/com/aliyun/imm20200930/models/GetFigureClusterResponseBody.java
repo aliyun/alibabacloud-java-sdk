@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFigureClusterResponseBody extends TeaModel {
     /**
-     * <p>The information about the face clustering task.</p>
+     * <p>The information about the face cluster.</p>
      */
     @NameInMap("FigureCluster")
     public FigureCluster figureCluster;

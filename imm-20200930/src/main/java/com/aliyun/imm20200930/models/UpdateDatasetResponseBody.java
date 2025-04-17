@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetResponseBody extends TeaModel {
+    /**
+     * <p>The dataset.</p>
+     */
     @NameInMap("Dataset")
     public Dataset dataset;
 

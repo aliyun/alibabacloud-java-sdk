@@ -7,6 +7,12 @@ public class ContextualAnswerResponseBody extends TeaModel {
     @NameInMap("Answer")
     public Answer answer;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <strong>example:</strong>
      * <p>22F081FB-90D7-525A-BFE4-D28DC906A28F</p>
@@ -25,6 +31,22 @@ public class ContextualAnswerResponseBody extends TeaModel {
     }
     public Answer getAnswer() {
         return this.answer;
+    }
+
+    public ContextualAnswerResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ContextualAnswerResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ContextualAnswerResponseBody setRequestId(String requestId) {

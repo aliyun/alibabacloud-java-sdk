@@ -194,6 +194,18 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
 
     public static class CreateMediaConvertTaskRequestSources extends TeaModel {
+        @NameInMap("AlignMode")
+        public String alignMode;
+
+        @NameInMap("Attached")
+        public Boolean attached;
+
+        @NameInMap("DisableAudio")
+        public Boolean disableAudio;
+
+        @NameInMap("DisableVideo")
+        public Boolean disableVideo;
+
         /**
          * <p>The transcoding duration of the media. Unit: seconds. Default value: 0. A value of 0 specifies that the transcoding duration lasts until the end of the video.</p>
          * 
@@ -234,6 +246,38 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         public static CreateMediaConvertTaskRequestSources build(java.util.Map<String, ?> map) throws Exception {
             CreateMediaConvertTaskRequestSources self = new CreateMediaConvertTaskRequestSources();
             return TeaModel.build(map, self);
+        }
+
+        public CreateMediaConvertTaskRequestSources setAlignMode(String alignMode) {
+            this.alignMode = alignMode;
+            return this;
+        }
+        public String getAlignMode() {
+            return this.alignMode;
+        }
+
+        public CreateMediaConvertTaskRequestSources setAttached(Boolean attached) {
+            this.attached = attached;
+            return this;
+        }
+        public Boolean getAttached() {
+            return this.attached;
+        }
+
+        public CreateMediaConvertTaskRequestSources setDisableAudio(Boolean disableAudio) {
+            this.disableAudio = disableAudio;
+            return this;
+        }
+        public Boolean getDisableAudio() {
+            return this.disableAudio;
+        }
+
+        public CreateMediaConvertTaskRequestSources setDisableVideo(Boolean disableVideo) {
+            this.disableVideo = disableVideo;
+            return this;
+        }
+        public Boolean getDisableVideo() {
+            return this.disableVideo;
         }
 
         public CreateMediaConvertTaskRequestSources setDuration(Double duration) {

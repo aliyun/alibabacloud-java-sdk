@@ -22,7 +22,7 @@ public class BatchIndexFileMetaRequest extends TeaModel {
     public java.util.List<InputFile> files;
 
     /**
-     * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
+     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
      */
     @NameInMap("Notification")
     public Notification notification;

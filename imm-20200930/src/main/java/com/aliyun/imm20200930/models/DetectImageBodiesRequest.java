@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DetectImageBodiesRequest extends TeaModel {
     /**
-     * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
-     * <p>The authorization chain. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
+     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;

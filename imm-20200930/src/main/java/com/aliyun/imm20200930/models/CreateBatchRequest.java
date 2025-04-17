@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBatchRequest extends TeaModel {
     /**
-     * <p>The processing templates.</p>
+     * <p>The templates.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Actions")
@@ -20,7 +20,7 @@ public class CreateBatchRequest extends TeaModel {
 
     /**
      * <p>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</p>
-     * <p>Activate and connect to EventBridge in the same region as the IMM project. For more information, see IMM events. Activate Simple Message Queue in the same region as the IMM project and configure a subscription.</p>
+     * <p>In the region in which the IMM project is located, use EventBridge to receive task notifications. For more information, see IMM events. In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task notifications.</p>
      */
     @NameInMap("Notification")
     public CreateBatchRequestNotification notification;
@@ -164,7 +164,7 @@ public class CreateBatchRequest extends TeaModel {
 
     public static class CreateBatchRequestNotification extends TeaModel {
         /**
-         * <p>The Simple Message Queue notification message configurations.</p>
+         * <p>The SMQ notification settings.</p>
          */
         @NameInMap("MNS")
         public MNS MNS;

@@ -11,7 +11,7 @@ public class QueryLocationDateClustersShrinkRequest extends TeaModel {
     public String addressShrink;
 
     /**
-     * <p>The time range during which the spatiotemporal clustering groups are generated.</p>
+     * <p>The time range during which the spatiotemporal clusters were generated.</p>
      */
     @NameInMap("CreateTimeRange")
     public String createTimeRangeShrink;
@@ -36,7 +36,7 @@ public class QueryLocationDateClustersShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The time range when the clustering groups are ended.</p>
+     * <p>The time range during which the latest photo in a cluster was taken.</p>
      */
     @NameInMap("LocationDateClusterEndTimeRange")
     public String locationDateClusterEndTimeRangeShrink;
@@ -48,7 +48,7 @@ public class QueryLocationDateClustersShrinkRequest extends TeaModel {
     public String locationDateClusterLevelsShrink;
 
     /**
-     * <p>The time range when the clustering groups are started.</p>
+     * <p>The time range during which the earliest photo in a cluster was taken.</p>
      */
     @NameInMap("LocationDateClusterStartTimeRange")
     public String locationDateClusterStartTimeRangeShrink;
@@ -127,7 +127,7 @@ public class QueryLocationDateClustersShrinkRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The time range during which the spatiotemporal clustering groups are updated.</p>
+     * <p>The time range during which the spatiotemporal clusters were updated.</p>
      */
     @NameInMap("UpdateTimeRange")
     public String updateTimeRangeShrink;

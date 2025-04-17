@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class AddImageMosaicRequest extends TeaModel {
     /**
      * <p><strong>If you do not have special requirements, leave this parameter empty.</strong></p>
-     * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+     * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
      */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;

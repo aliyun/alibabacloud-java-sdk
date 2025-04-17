@@ -30,7 +30,7 @@ public class CreateFigureClustersMergingTaskShrinkRequest extends TeaModel {
     public String fromsShrink;
 
     /**
-     * <p>The notification message configurations. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
+     * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;

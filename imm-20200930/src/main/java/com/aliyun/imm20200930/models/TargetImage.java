@@ -168,6 +168,9 @@ public class TargetImage extends TeaModel {
         @NameInMap("Interval")
         public Double interval;
 
+        @NameInMap("Mode")
+        public String mode;
+
         @NameInMap("Number")
         public Integer number;
 
@@ -176,6 +179,9 @@ public class TargetImage extends TeaModel {
 
         @NameInMap("StartTime")
         public Double startTime;
+
+        @NameInMap("Threshold")
+        public Integer threshold;
 
         /**
          * <p>This parameter is required.</p>
@@ -215,6 +221,14 @@ public class TargetImage extends TeaModel {
             return this.interval;
         }
 
+        public TargetImageSnapshots setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
         public TargetImageSnapshots setNumber(Integer number) {
             this.number = number;
             return this;
@@ -237,6 +251,14 @@ public class TargetImage extends TeaModel {
         }
         public Double getStartTime() {
             return this.startTime;
+        }
+
+        public TargetImageSnapshots setThreshold(Integer threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Integer getThreshold() {
+            return this.threshold;
         }
 
         public TargetImageSnapshots setURI(String URI) {
@@ -270,6 +292,9 @@ public class TargetImage extends TeaModel {
         @NameInMap("Margin")
         public Integer margin;
 
+        @NameInMap("Mode")
+        public String mode;
+
         @NameInMap("Number")
         public Integer number;
 
@@ -287,6 +312,9 @@ public class TargetImage extends TeaModel {
 
         @NameInMap("StartTime")
         public Double startTime;
+
+        @NameInMap("Threshold")
+        public Integer threshold;
 
         @NameInMap("TileHeight")
         public Integer tileHeight;
@@ -327,6 +355,14 @@ public class TargetImage extends TeaModel {
         }
         public Integer getMargin() {
             return this.margin;
+        }
+
+        public TargetImageSprites setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
         }
 
         public TargetImageSprites setNumber(Integer number) {
@@ -375,6 +411,14 @@ public class TargetImage extends TeaModel {
         }
         public Double getStartTime() {
             return this.startTime;
+        }
+
+        public TargetImageSprites setThreshold(Integer threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public Integer getThreshold() {
+            return this.threshold;
         }
 
         public TargetImageSprites setTileHeight(Integer tileHeight) {

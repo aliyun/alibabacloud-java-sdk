@@ -15,7 +15,7 @@ public class UpdateFileMetaShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The file whose metadata you want to update. The value must be in the JSON format.</p>
+     * <p>The file and its metadata items to be updated. The value must be in the JSON format.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("File")

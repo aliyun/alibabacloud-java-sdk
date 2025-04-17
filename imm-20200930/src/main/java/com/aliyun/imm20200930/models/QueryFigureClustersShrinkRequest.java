@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryFigureClustersShrinkRequest extends TeaModel {
     /**
-     * <p>The time period during which the faces are grouped together.</p>
+     * <p>The time range within which the face group was created.</p>
      */
     @NameInMap("CreateTimeRange")
     public String createTimeRangeShrink;
@@ -93,7 +93,7 @@ public class QueryFigureClustersShrinkRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The time period during which the faces in the group are updated.</p>
+     * <p>The time range within which the face group was last updated.</p>
      */
     @NameInMap("UpdateTimeRange")
     public String updateTimeRangeShrink;

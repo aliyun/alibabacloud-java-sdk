@@ -15,14 +15,14 @@ public class IndexFileMetaShrinkRequest extends TeaModel {
     public String datasetName;
 
     /**
-     * <p>The file for which you want to create an index. The value must be in the JSON format.</p>
+     * <p>The file for which you want to create a metadata index. The value must be in the JSON format.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("File")
     public String fileShrink;
 
     /**
-     * <p>The notification settings. For more information, click Notification. For information about the formats of asynchronous notifications, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
+     * <p>The notification settings. For more information, see the &quot;Metadata indexing&quot; section of the <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a> topic.</p>
      */
     @NameInMap("Notification")
     public String notificationShrink;

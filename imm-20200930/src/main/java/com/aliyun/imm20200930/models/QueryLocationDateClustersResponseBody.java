@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryLocationDateClustersResponseBody extends TeaModel {
     /**
-     * <p>The list of spatiotemporal groups.</p>
+     * <p>The list of spatiotemporal clusters.</p>
      */
     @NameInMap("LocationDateClusters")
     public java.util.List<LocationDateCluster> locationDateClusters;

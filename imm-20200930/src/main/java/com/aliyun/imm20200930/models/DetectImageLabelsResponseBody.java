@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetectImageLabelsResponseBody extends TeaModel {
     /**
-     * <p>The labels that are detected.</p>
+     * <p>The list of labels detected.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
