@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>adb20211201</artifactId>
-  <version>4.0.1</version>
+  <version>4.0.2</version>
   <packaging>jar</packaging>
   <name>adb20211201</name>
   <description>Alibaba Cloud adb (20211201) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.7</version>
+      <version>0.3.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
