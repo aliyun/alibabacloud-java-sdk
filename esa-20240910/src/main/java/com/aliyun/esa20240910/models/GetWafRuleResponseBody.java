@@ -57,6 +57,9 @@ public class GetWafRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("RulesetId")
+    public Long rulesetId;
+
     /**
      * <p>Rule status.</p>
      * 
@@ -126,6 +129,14 @@ public class GetWafRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetWafRuleResponseBody setRulesetId(Long rulesetId) {
+        this.rulesetId = rulesetId;
+        return this;
+    }
+    public Long getRulesetId() {
+        return this.rulesetId;
     }
 
     public GetWafRuleResponseBody setStatus(String status) {

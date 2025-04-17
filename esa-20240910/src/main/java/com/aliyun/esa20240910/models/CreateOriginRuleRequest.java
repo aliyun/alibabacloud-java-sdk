@@ -13,6 +13,21 @@ public class CreateOriginRuleRequest extends TeaModel {
     @NameInMap("DnsRecord")
     public String dnsRecord;
 
+    @NameInMap("Follow302Enable")
+    public String follow302Enable;
+
+    @NameInMap("Follow302MaxTries")
+    public String follow302MaxTries;
+
+    @NameInMap("Follow302RetainArgs")
+    public String follow302RetainArgs;
+
+    @NameInMap("Follow302RetainHeader")
+    public String follow302RetainHeader;
+
+    @NameInMap("Follow302TargetHost")
+    public String follow302TargetHost;
+
     /**
      * <p>The HOST carried in the origin request.</p>
      * 
@@ -177,6 +192,46 @@ public class CreateOriginRuleRequest extends TeaModel {
     }
     public String getDnsRecord() {
         return this.dnsRecord;
+    }
+
+    public CreateOriginRuleRequest setFollow302Enable(String follow302Enable) {
+        this.follow302Enable = follow302Enable;
+        return this;
+    }
+    public String getFollow302Enable() {
+        return this.follow302Enable;
+    }
+
+    public CreateOriginRuleRequest setFollow302MaxTries(String follow302MaxTries) {
+        this.follow302MaxTries = follow302MaxTries;
+        return this;
+    }
+    public String getFollow302MaxTries() {
+        return this.follow302MaxTries;
+    }
+
+    public CreateOriginRuleRequest setFollow302RetainArgs(String follow302RetainArgs) {
+        this.follow302RetainArgs = follow302RetainArgs;
+        return this;
+    }
+    public String getFollow302RetainArgs() {
+        return this.follow302RetainArgs;
+    }
+
+    public CreateOriginRuleRequest setFollow302RetainHeader(String follow302RetainHeader) {
+        this.follow302RetainHeader = follow302RetainHeader;
+        return this;
+    }
+    public String getFollow302RetainHeader() {
+        return this.follow302RetainHeader;
+    }
+
+    public CreateOriginRuleRequest setFollow302TargetHost(String follow302TargetHost) {
+        this.follow302TargetHost = follow302TargetHost;
+        return this;
+    }
+    public String getFollow302TargetHost() {
+        return this.follow302TargetHost;
     }
 
     public CreateOriginRuleRequest setOriginHost(String originHost) {
