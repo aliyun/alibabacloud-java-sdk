@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelVersionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21645FCD-BAB9-5742-89AE-AEB27****B2E</p>
      */
@@ -12,6 +14,8 @@ public class CreateModelVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The version of the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.1.0</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListImageLabelsResponseBody extends TeaModel {
+    /**
+     * <p>The image tags.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<ListImageLabelsResponseBodyLabels> labels;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -15,6 +20,8 @@ public class ListImageLabelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of the images that meet the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -52,6 +59,8 @@ public class ListImageLabelsResponseBody extends TeaModel {
 
     public static class ListImageLabelsResponseBodyLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>system.chipType</p>
          */
@@ -59,6 +68,8 @@ public class ListImageLabelsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>GPU</p>
          */

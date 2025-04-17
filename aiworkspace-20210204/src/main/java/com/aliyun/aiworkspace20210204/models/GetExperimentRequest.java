@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetExperimentRequest extends TeaModel {
     /**
+     * <p>Specifies whether to obtain the latest run information associated with the experiment</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

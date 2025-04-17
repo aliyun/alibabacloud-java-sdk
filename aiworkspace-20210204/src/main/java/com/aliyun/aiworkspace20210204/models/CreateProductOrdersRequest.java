@@ -5,12 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateProductOrdersRequest extends TeaModel {
     /**
+     * <p>Specifies whether to automatically pay for the provided products.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The list of products to be purchased. Separate them with commas (,).</p>
+     */
     @NameInMap("Products")
     public java.util.List<CreateProductOrdersRequestProducts> products;
 
@@ -37,16 +46,23 @@ public class CreateProductOrdersRequest extends TeaModel {
 
     public static class CreateProductOrdersRequestProductsInstanceProperties extends TeaModel {
         /**
+         * <p>The property code.</p>
+         * 
          * <strong>example:</strong>
          * <p>commodity_type。</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The property name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The property value.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss。</p>
          */
@@ -86,6 +102,12 @@ public class CreateProductOrdersRequest extends TeaModel {
 
     public static class CreateProductOrdersRequestProducts extends TeaModel {
         /**
+         * <p>Specifies whether to automatically renew the product.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -93,6 +115,8 @@ public class CreateProductOrdersRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
+         * <p>The billing method. Only POSTPAY is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>POSTPAY</p>
          */
@@ -100,16 +124,30 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String chargeType;
 
         /**
+         * <p>The purchase duration. You can use this parameter together with pricingCycle. Only 1 is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>The properties of the instance.</p>
+         * <ul>
+         * <li>DataWorks_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-shanghai&quot; } ]</li>
+         * <li>OSS_share: [ { &quot;Code&quot;: &quot;commodity_type&quot;, &quot;Value&quot;: &quot;oss&quot;, &quot;Name&quot;: &quot;Object Storage Service&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot;, &quot;Name&quot;: &quot;1 Hour&quot; } ]</li>
+         * <li>PAI_share: None</li>
+         * <li>China bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;odps_specification_type&quot;, &quot;Value&quot;: &quot;OdpsStandard&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
+         * <li>International bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</li>
+         * </ul>
+         */
         @NameInMap("InstanceProperties")
         public java.util.List<CreateProductOrdersRequestProductsInstanceProperties> instanceProperties;
 
         /**
+         * <p>The type of the order. Only BUY is supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>BUY</p>
          */
@@ -117,6 +155,12 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String orderType;
 
         /**
+         * <p>The billing cycle. Valid values:</p>
+         * <ul>
+         * <li>Month: The price is calculated every month. DataWorks_share only supports Month.</li>
+         * <li>Hour: The price is calculated every hour. OSS_share and MaxCompute_share only support Hour.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Month</p>
          */
@@ -124,6 +168,14 @@ public class CreateProductOrdersRequest extends TeaModel {
         public String pricingCycle;
 
         /**
+         * <p>The product code. Valid values:</p>
+         * <ul>
+         * <li>DataWorks_share: pay-as-you-go DataWorks</li>
+         * <li>MaxCompute_share: pay-as-you-go MaxCompute</li>
+         * <li>PAI_share: pay-as-you-go PAI.</li>
+         * <li>OSS_share: pay-as-you-go OSS</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>DataWorks_share</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1e195c5116124202371861018d5bde</p>
      */
@@ -12,6 +14,8 @@ public class CreateWorkspaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

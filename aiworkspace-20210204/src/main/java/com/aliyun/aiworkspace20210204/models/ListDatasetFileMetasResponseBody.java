@@ -13,6 +13,9 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     @NameInMap("DatasetVersion")
     public String datasetVersion;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     /**
      * <strong>example:</strong>
      * <p>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</p>
@@ -25,6 +28,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
      * <p>30</p>
      */
     @NameInMap("PageSize")
+    @Deprecated
     public Integer pageSize;
 
     /**
@@ -66,6 +70,14 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         return this.datasetVersion;
     }
 
+    public ListDatasetFileMetasResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
     public ListDatasetFileMetasResponseBody setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -74,6 +86,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
         return this.nextToken;
     }
 
+    @Deprecated
     public ListDatasetFileMetasResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;

@@ -3,7 +3,7 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class ListDatasetFileMetasRequest extends TeaModel {
+public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -60,19 +60,19 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String queryFileName;
 
     @NameInMap("QueryFileTypeIncludeAny")
-    public java.util.List<String> queryFileTypeIncludeAny;
+    public String queryFileTypeIncludeAnyShrink;
 
     @NameInMap("QueryImage")
     public String queryImage;
 
     @NameInMap("QueryTagsExclude")
-    public java.util.List<String> queryTagsExclude;
+    public String queryTagsExcludeShrink;
 
     @NameInMap("QueryTagsIncludeAll")
-    public java.util.List<String> queryTagsIncludeAll;
+    public String queryTagsIncludeAllShrink;
 
     @NameInMap("QueryTagsIncludeAny")
-    public java.util.List<String> queryTagsIncludeAny;
+    public String queryTagsIncludeAnyShrink;
 
     @NameInMap("QueryText")
     public String queryText;
@@ -132,12 +132,12 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static ListDatasetFileMetasRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDatasetFileMetasRequest self = new ListDatasetFileMetasRequest();
+    public static ListDatasetFileMetasShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDatasetFileMetasShrinkRequest self = new ListDatasetFileMetasShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDatasetFileMetasRequest setDatasetVersion(String datasetVersion) {
+    public ListDatasetFileMetasShrinkRequest setDatasetVersion(String datasetVersion) {
         this.datasetVersion = datasetVersion;
         return this;
     }
@@ -145,7 +145,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.datasetVersion;
     }
 
-    public ListDatasetFileMetasRequest setEndFileUpdateTime(String endFileUpdateTime) {
+    public ListDatasetFileMetasShrinkRequest setEndFileUpdateTime(String endFileUpdateTime) {
         this.endFileUpdateTime = endFileUpdateTime;
         return this;
     }
@@ -153,7 +153,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.endFileUpdateTime;
     }
 
-    public ListDatasetFileMetasRequest setEndTagUpdateTime(String endTagUpdateTime) {
+    public ListDatasetFileMetasShrinkRequest setEndTagUpdateTime(String endTagUpdateTime) {
         this.endTagUpdateTime = endTagUpdateTime;
         return this;
     }
@@ -161,7 +161,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.endTagUpdateTime;
     }
 
-    public ListDatasetFileMetasRequest setMaxResults(Integer maxResults) {
+    public ListDatasetFileMetasShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -169,7 +169,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListDatasetFileMetasRequest setNextToken(String nextToken) {
+    public ListDatasetFileMetasShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -177,7 +177,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListDatasetFileMetasRequest setOrder(String order) {
+    public ListDatasetFileMetasShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -186,7 +186,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     }
 
     @Deprecated
-    public ListDatasetFileMetasRequest setPageSize(Integer pageSize) {
+    public ListDatasetFileMetasShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -194,7 +194,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDatasetFileMetasRequest setQueryFileDir(String queryFileDir) {
+    public ListDatasetFileMetasShrinkRequest setQueryFileDir(String queryFileDir) {
         this.queryFileDir = queryFileDir;
         return this;
     }
@@ -202,7 +202,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.queryFileDir;
     }
 
-    public ListDatasetFileMetasRequest setQueryFileName(String queryFileName) {
+    public ListDatasetFileMetasShrinkRequest setQueryFileName(String queryFileName) {
         this.queryFileName = queryFileName;
         return this;
     }
@@ -210,15 +210,15 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.queryFileName;
     }
 
-    public ListDatasetFileMetasRequest setQueryFileTypeIncludeAny(java.util.List<String> queryFileTypeIncludeAny) {
-        this.queryFileTypeIncludeAny = queryFileTypeIncludeAny;
+    public ListDatasetFileMetasShrinkRequest setQueryFileTypeIncludeAnyShrink(String queryFileTypeIncludeAnyShrink) {
+        this.queryFileTypeIncludeAnyShrink = queryFileTypeIncludeAnyShrink;
         return this;
     }
-    public java.util.List<String> getQueryFileTypeIncludeAny() {
-        return this.queryFileTypeIncludeAny;
+    public String getQueryFileTypeIncludeAnyShrink() {
+        return this.queryFileTypeIncludeAnyShrink;
     }
 
-    public ListDatasetFileMetasRequest setQueryImage(String queryImage) {
+    public ListDatasetFileMetasShrinkRequest setQueryImage(String queryImage) {
         this.queryImage = queryImage;
         return this;
     }
@@ -226,31 +226,31 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.queryImage;
     }
 
-    public ListDatasetFileMetasRequest setQueryTagsExclude(java.util.List<String> queryTagsExclude) {
-        this.queryTagsExclude = queryTagsExclude;
+    public ListDatasetFileMetasShrinkRequest setQueryTagsExcludeShrink(String queryTagsExcludeShrink) {
+        this.queryTagsExcludeShrink = queryTagsExcludeShrink;
         return this;
     }
-    public java.util.List<String> getQueryTagsExclude() {
-        return this.queryTagsExclude;
+    public String getQueryTagsExcludeShrink() {
+        return this.queryTagsExcludeShrink;
     }
 
-    public ListDatasetFileMetasRequest setQueryTagsIncludeAll(java.util.List<String> queryTagsIncludeAll) {
-        this.queryTagsIncludeAll = queryTagsIncludeAll;
+    public ListDatasetFileMetasShrinkRequest setQueryTagsIncludeAllShrink(String queryTagsIncludeAllShrink) {
+        this.queryTagsIncludeAllShrink = queryTagsIncludeAllShrink;
         return this;
     }
-    public java.util.List<String> getQueryTagsIncludeAll() {
-        return this.queryTagsIncludeAll;
+    public String getQueryTagsIncludeAllShrink() {
+        return this.queryTagsIncludeAllShrink;
     }
 
-    public ListDatasetFileMetasRequest setQueryTagsIncludeAny(java.util.List<String> queryTagsIncludeAny) {
-        this.queryTagsIncludeAny = queryTagsIncludeAny;
+    public ListDatasetFileMetasShrinkRequest setQueryTagsIncludeAnyShrink(String queryTagsIncludeAnyShrink) {
+        this.queryTagsIncludeAnyShrink = queryTagsIncludeAnyShrink;
         return this;
     }
-    public java.util.List<String> getQueryTagsIncludeAny() {
-        return this.queryTagsIncludeAny;
+    public String getQueryTagsIncludeAnyShrink() {
+        return this.queryTagsIncludeAnyShrink;
     }
 
-    public ListDatasetFileMetasRequest setQueryText(String queryText) {
+    public ListDatasetFileMetasShrinkRequest setQueryText(String queryText) {
         this.queryText = queryText;
         return this;
     }
@@ -258,7 +258,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.queryText;
     }
 
-    public ListDatasetFileMetasRequest setQueryType(String queryType) {
+    public ListDatasetFileMetasShrinkRequest setQueryType(String queryType) {
         this.queryType = queryType;
         return this;
     }
@@ -266,7 +266,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.queryType;
     }
 
-    public ListDatasetFileMetasRequest setScoreThreshold(Float scoreThreshold) {
+    public ListDatasetFileMetasShrinkRequest setScoreThreshold(Float scoreThreshold) {
         this.scoreThreshold = scoreThreshold;
         return this;
     }
@@ -274,7 +274,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.scoreThreshold;
     }
 
-    public ListDatasetFileMetasRequest setSortBy(String sortBy) {
+    public ListDatasetFileMetasShrinkRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
@@ -282,7 +282,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListDatasetFileMetasRequest setStartFileUpdateTime(String startFileUpdateTime) {
+    public ListDatasetFileMetasShrinkRequest setStartFileUpdateTime(String startFileUpdateTime) {
         this.startFileUpdateTime = startFileUpdateTime;
         return this;
     }
@@ -290,7 +290,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.startFileUpdateTime;
     }
 
-    public ListDatasetFileMetasRequest setStartTagUpdateTime(String startTagUpdateTime) {
+    public ListDatasetFileMetasShrinkRequest setStartTagUpdateTime(String startTagUpdateTime) {
         this.startTagUpdateTime = startTagUpdateTime;
         return this;
     }
@@ -298,7 +298,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.startTagUpdateTime;
     }
 
-    public ListDatasetFileMetasRequest setThumbnailMode(String thumbnailMode) {
+    public ListDatasetFileMetasShrinkRequest setThumbnailMode(String thumbnailMode) {
         this.thumbnailMode = thumbnailMode;
         return this;
     }
@@ -306,7 +306,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.thumbnailMode;
     }
 
-    public ListDatasetFileMetasRequest setTopK(Integer topK) {
+    public ListDatasetFileMetasShrinkRequest setTopK(Integer topK) {
         this.topK = topK;
         return this;
     }
@@ -314,7 +314,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
         return this.topK;
     }
 
-    public ListDatasetFileMetasRequest setWorkspaceId(String workspaceId) {
+    public ListDatasetFileMetasShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

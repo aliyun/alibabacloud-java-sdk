@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateModelResponseBody extends TeaModel {
     /**
+     * <p>The model ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>model-rbvg5wzljz****ks92</p>
      */
@@ -12,6 +14,8 @@ public class CreateModelResponseBody extends TeaModel {
     public String modelId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DAD3112-AE22-5563-9A02-5C7E8****E35</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListImageLabelsRequest extends TeaModel {
     /**
+     * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>image-4c62******53uor</p>
      */
@@ -12,6 +14,8 @@ public class ListImageLabelsRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The tag filter conditions, separated with commas (,). The format of a single condition filter is <code>key=value</code>. Takes effect independently from LabelKeys.</p>
+     * 
      * <strong>example:</strong>
      * <p>system.framework=XGBoost 1.6.0,system.official=true</p>
      */
@@ -19,6 +23,8 @@ public class ListImageLabelsRequest extends TeaModel {
     public String labelFilter;
 
     /**
+     * <p>The tag keys, separated with commas (,). System tags start with system and take effect independently from LabelFilter.</p>
+     * 
      * <strong>example:</strong>
      * <p>system.framework,system.official</p>
      */
@@ -26,6 +32,8 @@ public class ListImageLabelsRequest extends TeaModel {
     public String labelKeys;
 
     /**
+     * <p>The region where the image resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
      */
@@ -33,6 +41,8 @@ public class ListImageLabelsRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12345</p>
      */

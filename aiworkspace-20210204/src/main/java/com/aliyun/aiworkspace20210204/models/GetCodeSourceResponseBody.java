@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetCodeSourceResponseBody extends TeaModel {
     /**
+     * <p>The visibility of the code source. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE: Visible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: Visible to all members in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
@@ -12,6 +18,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String accessibility;
 
     /**
+     * <p>The code repository branch.</p>
+     * 
      * <strong>example:</strong>
      * <p>master</p>
      */
@@ -19,6 +27,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeBranch;
 
     /**
+     * <p>The code commit ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>44da10***********</p>
      */
@@ -26,6 +36,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeCommit;
 
     /**
+     * <p>The address of the code repository.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
      */
@@ -33,6 +45,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeRepo;
 
     /**
+     * <p>The token used to access the code repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxx</p>
      */
@@ -40,6 +54,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeRepoAccessToken;
 
     /**
+     * <p>The username of the code repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1</p>
      */
@@ -47,6 +63,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeRepoUserName;
 
     /**
+     * <p>The ID of the code source.</p>
+     * 
      * <strong>example:</strong>
      * <p>code-202**********</p>
      */
@@ -54,6 +72,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String codeSourceId;
 
     /**
+     * <p>The description of the code source.</p>
+     * 
      * <strong>example:</strong>
      * <p>This is my data source 1.</p>
      */
@@ -61,6 +81,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The name of the code source.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyCodeSource1</p>
      */
@@ -68,6 +90,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The time when the code source was created, in the ISO8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T23:36:01.123Z</p>
      */
@@ -75,6 +99,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the code source was modified, in the ISO8601 format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T23:36:01.123Z</p>
      */
@@ -82,6 +108,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>The local mount path of the code.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/code</p>
      */
@@ -89,6 +117,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String mountPath;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -96,6 +126,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>1722********</p>
      */
@@ -103,6 +135,8 @@ public class GetCodeSourceResponseBody extends TeaModel {
     public String userId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

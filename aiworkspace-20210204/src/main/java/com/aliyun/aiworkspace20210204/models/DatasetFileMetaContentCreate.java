@@ -20,7 +20,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-01-12T14:36:01Z</p>
+     * <p>2021-01-12T14:36:01.000Z</p>
      */
     @NameInMap("FileCreateTime")
     public String fileCreateTime;
@@ -45,7 +45,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-01-12T14:36:01Z</p>
+     * <p>2021-01-12T14:36:01.000Z</p>
      */
     @NameInMap("FileUpdateTime")
     public String fileUpdateTime;
@@ -55,7 +55,7 @@ public class DatasetFileMetaContentCreate extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{&quot;user&quot;:[&quot;cat&quot;]}</p>
+     * <p>{&quot;user&quot;:{&quot;add&quot;:[&quot;cat&quot;]}}</p>
      */
     @NameInMap("Tags")
     public String tags;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</p>
      */
@@ -12,6 +14,17 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The type and quantity of resources that can be activated in a workspace. This list is returned when the Option is set to GetResourceLimits. Valid values:</p>
+     * <ul>
+     * <li>MaxCompute_share: pay-as-you-go MaxCompute</li>
+     * <li>MaxCompute_isolate: subscription MaxCompute</li>
+     * <li>DLC_share: pay-as-you-go DLC</li>
+     * <li>PAI_Isolate: subscription PAI</li>
+     * <li>PAI_share: pay-as-you-go PAI</li>
+     * <li>DataWorks_isolate: subscription DataWorks</li>
+     * <li>DataWorks_share: pay-as-you-go DataWorks</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{
      *    &quot;MaxCompute_share&quot;: 1,
@@ -23,12 +36,17 @@ public class ListWorkspacesResponseBody extends TeaModel {
     public java.util.Map<String, ?> resourceLimits;
 
     /**
+     * <p>The number of workspaces that meet the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The list of workspace details. This list is returned when Option is set to GetWorkspaces.</p>
+     */
     @NameInMap("Workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
 
@@ -70,10 +88,15 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
+        /**
+         * <p>The names of the administrator accounts.</p>
+         */
         @NameInMap("AdminNames")
         public java.util.List<String> adminNames;
 
         /**
+         * <p>The user ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>122424353535</p>
          */
@@ -81,16 +104,23 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The description of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace description example</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The environment types of the workspace.</p>
+         */
         @NameInMap("EnvTypes")
         public java.util.List<String> envTypes;
 
         /**
+         * <p>the additional information. Only contains TenantId.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
          */
@@ -98,6 +128,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public java.util.Map<String, ?> extraInfos;
 
         /**
+         * <p>The time when the workspace was created. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
          */
@@ -105,6 +137,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the workspace was modified. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
          */
@@ -112,6 +146,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>Indicates whether the workspace is the default workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -119,6 +155,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The status of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>ENABLED</p>
          */
@@ -126,6 +164,8 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -133,12 +173,20 @@ public class ListWorkspacesResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>workspace-example</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwp7rky****</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 

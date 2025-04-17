@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetVersionResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The dataset version name.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

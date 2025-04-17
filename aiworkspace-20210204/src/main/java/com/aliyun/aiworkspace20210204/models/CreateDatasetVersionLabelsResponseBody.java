@@ -4,6 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateDatasetVersionLabelsResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

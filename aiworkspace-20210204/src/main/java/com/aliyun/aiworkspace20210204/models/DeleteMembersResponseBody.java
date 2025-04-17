@@ -4,13 +4,27 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class DeleteMembersResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100600017</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Owner not allowed to delete</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D5BFFEE3-6025-443F-8A03-02D619B5C4B9</p>
      */

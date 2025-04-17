@@ -20,10 +20,13 @@ public class DatasetFileMetaContentGet extends TeaModel {
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-01-12T14:36:01Z</p>
+     * <p>2021-01-12T14:36:01.000Z</p>
      */
     @NameInMap("FileCreateTime")
     public String fileCreateTime;
+
+    @NameInMap("FileDir")
+    public String fileDir;
 
     @NameInMap("FileFingerPrint")
     public String fileFingerPrint;
@@ -38,13 +41,34 @@ public class DatasetFileMetaContentGet extends TeaModel {
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-01-12T14:36:01Z</p>
+     * <p>2021-01-12T14:36:01.000Z</p>
      */
     @NameInMap("FileUpdateTime")
     public String fileUpdateTime;
 
     @NameInMap("MetaAttributes")
     public String metaAttributes;
+
+    @NameInMap("SemanticIndexJobId")
+    public String semanticIndexJobId;
+
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01.000Z</p>
+     */
+    @NameInMap("SemanticIndexUpdateTime")
+    public String semanticIndexUpdateTime;
+
+    /**
+     * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01.000Z</p>
+     */
+    @NameInMap("TagUpdateTime")
+    public String tagUpdateTime;
 
     @NameInMap("Tags")
     public String tags;
@@ -97,6 +121,14 @@ public class DatasetFileMetaContentGet extends TeaModel {
         return this.fileCreateTime;
     }
 
+    public DatasetFileMetaContentGet setFileDir(String fileDir) {
+        this.fileDir = fileDir;
+        return this;
+    }
+    public String getFileDir() {
+        return this.fileDir;
+    }
+
     public DatasetFileMetaContentGet setFileFingerPrint(String fileFingerPrint) {
         this.fileFingerPrint = fileFingerPrint;
         return this;
@@ -135,6 +167,30 @@ public class DatasetFileMetaContentGet extends TeaModel {
     }
     public String getMetaAttributes() {
         return this.metaAttributes;
+    }
+
+    public DatasetFileMetaContentGet setSemanticIndexJobId(String semanticIndexJobId) {
+        this.semanticIndexJobId = semanticIndexJobId;
+        return this;
+    }
+    public String getSemanticIndexJobId() {
+        return this.semanticIndexJobId;
+    }
+
+    public DatasetFileMetaContentGet setSemanticIndexUpdateTime(String semanticIndexUpdateTime) {
+        this.semanticIndexUpdateTime = semanticIndexUpdateTime;
+        return this;
+    }
+    public String getSemanticIndexUpdateTime() {
+        return this.semanticIndexUpdateTime;
+    }
+
+    public DatasetFileMetaContentGet setTagUpdateTime(String tagUpdateTime) {
+        this.tagUpdateTime = tagUpdateTime;
+        return this;
+    }
+    public String getTagUpdateTime() {
+        return this.tagUpdateTime;
     }
 
     public DatasetFileMetaContentGet setTags(String tags) {

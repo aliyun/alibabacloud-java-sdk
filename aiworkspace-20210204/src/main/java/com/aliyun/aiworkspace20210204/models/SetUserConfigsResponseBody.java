@@ -3,22 +3,22 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateRunResponseBody extends TeaModel {
+public class SetUserConfigsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>ADF6D849-*****-7E7030F0CE53</p>
+     * <p>dsjk****dfjksdf</p>
      */
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
-    public static UpdateRunResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateRunResponseBody self = new UpdateRunResponseBody();
+    public static SetUserConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SetUserConfigsResponseBody self = new SetUserConfigsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateRunResponseBody setRequestId(String requestId) {
+    public SetUserConfigsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
