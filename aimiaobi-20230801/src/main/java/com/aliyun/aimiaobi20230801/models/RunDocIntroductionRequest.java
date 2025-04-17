@@ -43,6 +43,9 @@ public class RunDocIntroductionRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    @NameInMap("referenceContent")
+    public String referenceContent;
+
     public static RunDocIntroductionRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDocIntroductionRequest self = new RunDocIntroductionRequest();
         return TeaModel.build(map, self);
@@ -102,6 +105,14 @@ public class RunDocIntroductionRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public RunDocIntroductionRequest setReferenceContent(String referenceContent) {
+        this.referenceContent = referenceContent;
+        return this;
+    }
+    public String getReferenceContent() {
+        return this.referenceContent;
     }
 
 }

@@ -43,6 +43,9 @@ public class RunDocBrainmapRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    @NameInMap("referenceContent")
+    public String referenceContent;
+
     public static RunDocBrainmapRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDocBrainmapRequest self = new RunDocBrainmapRequest();
         return TeaModel.build(map, self);
@@ -102,6 +105,14 @@ public class RunDocBrainmapRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public RunDocBrainmapRequest setReferenceContent(String referenceContent) {
+        this.referenceContent = referenceContent;
+        return this;
+    }
+    public String getReferenceContent() {
+        return this.referenceContent;
     }
 
 }
