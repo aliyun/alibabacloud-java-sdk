@@ -1,3 +1,6 @@
+2025-04-17 Version: 1.5.2
+- Generated java 2022-09-26 for Green.
+
 2025-04-15 Version: 1.5.1
 - Update API GetCipStats: add response parameters Body.Data.LabelStatChart.$.TextTreeChart.
 

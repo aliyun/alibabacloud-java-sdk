@@ -486,7 +486,7 @@ public class GetCipStatsResponseBody extends TeaModel {
         public java.util.List<GetCipStatsResponseBodyDataLabelStatChart> labelStatChart;
 
         @NameInMap("TotalStat")
-        public java.util.Map<String, ?> totalStat;
+        public java.util.Map<String, java.util.Map<String, ?>> totalStat;
 
         @NameInMap("Uids")
         public java.util.List<String> uids;
@@ -513,11 +513,11 @@ public class GetCipStatsResponseBody extends TeaModel {
             return this.labelStatChart;
         }
 
-        public GetCipStatsResponseBodyData setTotalStat(java.util.Map<String, ?> totalStat) {
+        public GetCipStatsResponseBodyData setTotalStat(java.util.Map<String, java.util.Map<String, ?>> totalStat) {
             this.totalStat = totalStat;
             return this;
         }
-        public java.util.Map<String, ?> getTotalStat() {
+        public java.util.Map<String, java.util.Map<String, ?>> getTotalStat() {
             return this.totalStat;
         }
 
