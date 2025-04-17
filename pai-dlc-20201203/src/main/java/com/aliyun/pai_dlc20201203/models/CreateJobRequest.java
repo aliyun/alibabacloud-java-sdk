@@ -88,7 +88,7 @@ public class CreateJobRequest extends TeaModel {
     public java.util.List<JobSpec> jobSpecs;
 
     /**
-     * <p>The job type. The value is case-sensitive. Valid values:</p>
+     * <p>The job type. The value is case-sensitive. The following job types are supported:</p>
      * <ul>
      * <li>TFJob</li>
      * <li>PyTorchJob</li>
@@ -144,7 +144,7 @@ public class CreateJobRequest extends TeaModel {
      * <p>The ID of the resource group. This parameter is optional.</p>
      * <ul>
      * <li>If you leave this parameter empty, the job is submitted to a public resource group.</li>
-     * <li>If a resource quota is associated with the current workspace, you can specify the resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
+     * <li>If a resource quota is bound to the current workspace, you can specify the resource quota ID. For more information about how to query the resource quota ID, see <a href="https://help.aliyun.com/document_detail/2651299.html">Manage resource quotas</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartTensorboardRequest extends TeaModel {
     /**
-     * <p>The workspace ID. 
-     * &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>380</p>
