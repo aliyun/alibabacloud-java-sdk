@@ -4,6 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class ListAICoachTaskPageRequest extends TeaModel {
+    @NameInMap("endTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,6 +20,9 @@ public class ListAICoachTaskPageRequest extends TeaModel {
      */
     @NameInMap("pageSize")
     public Integer pageSize;
+
+    @NameInMap("startTime")
+    public String startTime;
 
     /**
      * <strong>example:</strong>
@@ -44,6 +50,14 @@ public class ListAICoachTaskPageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListAICoachTaskPageRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public ListAICoachTaskPageRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -58,6 +72,14 @@ public class ListAICoachTaskPageRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAICoachTaskPageRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public ListAICoachTaskPageRequest setStatus(String status) {

@@ -17,6 +17,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("checkCheatConfig")
     public GetAICoachScriptResponseBodyCheckCheatConfig checkCheatConfig;
 
+    @NameInMap("closingRemarks")
+    public String closingRemarks;
+
     @NameInMap("completeStrategy")
     public GetAICoachScriptResponseBodyCompleteStrategy completeStrategy;
 
@@ -65,6 +68,15 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("expressiveness")
     public java.util.Map<String, Integer> expressiveness;
 
+    @NameInMap("expressivenessList")
+    public java.util.List<GetAICoachScriptResponseBodyExpressivenessList> expressivenessList;
+
+    @NameInMap("gifDynamicUrl")
+    public String gifDynamicUrl;
+
+    @NameInMap("gifStaticUrl")
+    public String gifStaticUrl;
+
     /**
      * <strong>example:</strong>
      * <p>2025-02-24 12:00:00</p>
@@ -109,6 +121,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
      */
     @NameInMap("name")
     public String name;
+
+    @NameInMap("openingRemarks")
+    public String openingRemarks;
 
     /**
      * <strong>example:</strong>
@@ -206,6 +221,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         return this.checkCheatConfig;
     }
 
+    public GetAICoachScriptResponseBody setClosingRemarks(String closingRemarks) {
+        this.closingRemarks = closingRemarks;
+        return this;
+    }
+    public String getClosingRemarks() {
+        return this.closingRemarks;
+    }
+
     public GetAICoachScriptResponseBody setCompleteStrategy(GetAICoachScriptResponseBodyCompleteStrategy completeStrategy) {
         this.completeStrategy = completeStrategy;
         return this;
@@ -270,6 +293,30 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         return this.expressiveness;
     }
 
+    public GetAICoachScriptResponseBody setExpressivenessList(java.util.List<GetAICoachScriptResponseBodyExpressivenessList> expressivenessList) {
+        this.expressivenessList = expressivenessList;
+        return this;
+    }
+    public java.util.List<GetAICoachScriptResponseBodyExpressivenessList> getExpressivenessList() {
+        return this.expressivenessList;
+    }
+
+    public GetAICoachScriptResponseBody setGifDynamicUrl(String gifDynamicUrl) {
+        this.gifDynamicUrl = gifDynamicUrl;
+        return this;
+    }
+    public String getGifDynamicUrl() {
+        return this.gifDynamicUrl;
+    }
+
+    public GetAICoachScriptResponseBody setGifStaticUrl(String gifStaticUrl) {
+        this.gifStaticUrl = gifStaticUrl;
+        return this;
+    }
+    public String getGifStaticUrl() {
+        return this.gifStaticUrl;
+    }
+
     public GetAICoachScriptResponseBody setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -324,6 +371,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public GetAICoachScriptResponseBody setOpeningRemarks(String openingRemarks) {
+        this.openingRemarks = openingRemarks;
+        return this;
+    }
+    public String getOpeningRemarks() {
+        return this.openingRemarks;
     }
 
     public GetAICoachScriptResponseBody setOrderAckFlag(Boolean orderAckFlag) {
@@ -554,6 +609,91 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public Boolean getFullCoverageAutoEnd() {
             return this.fullCoverageAutoEnd;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyExpressivenessList extends TeaModel {
+        @NameInMap("desc")
+        public String desc;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("expressivenessId")
+        public String expressivenessId;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("rule")
+        public String rule;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("weight")
+        public Integer weight;
+
+        public static GetAICoachScriptResponseBodyExpressivenessList build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyExpressivenessList self = new GetAICoachScriptResponseBodyExpressivenessList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyExpressivenessList setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
+        public GetAICoachScriptResponseBodyExpressivenessList setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetAICoachScriptResponseBodyExpressivenessList setExpressivenessId(String expressivenessId) {
+            this.expressivenessId = expressivenessId;
+            return this;
+        }
+        public String getExpressivenessId() {
+            return this.expressivenessId;
+        }
+
+        public GetAICoachScriptResponseBodyExpressivenessList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetAICoachScriptResponseBodyExpressivenessList setRule(String rule) {
+            this.rule = rule;
+            return this;
+        }
+        public String getRule() {
+            return this.rule;
+        }
+
+        public GetAICoachScriptResponseBodyExpressivenessList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetAICoachScriptResponseBodyExpressivenessList setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }
@@ -1029,6 +1169,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("assessmentPoint")
         public Integer assessmentPoint;
 
+        @NameInMap("assessmentPointEnabled")
+        public Boolean assessmentPointEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -1098,6 +1241,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public Integer getAssessmentPoint() {
             return this.assessmentPoint;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setAssessmentPointEnabled(Boolean assessmentPointEnabled) {
+            this.assessmentPointEnabled = assessmentPointEnabled;
+            return this;
+        }
+        public Boolean getAssessmentPointEnabled() {
+            return this.assessmentPointEnabled;
         }
 
         public GetAICoachScriptResponseBodyWeights setExpressiveness(Integer expressiveness) {

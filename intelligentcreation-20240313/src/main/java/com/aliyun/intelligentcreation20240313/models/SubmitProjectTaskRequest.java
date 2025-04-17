@@ -64,6 +64,25 @@ public class SubmitProjectTaskRequest extends TeaModel {
         return this.transparentBackground;
     }
 
+    public static class SubmitProjectTaskRequestFramesLayersMaterialMask extends TeaModel {
+        @NameInMap("url")
+        public String url;
+
+        public static SubmitProjectTaskRequestFramesLayersMaterialMask build(java.util.Map<String, ?> map) throws Exception {
+            SubmitProjectTaskRequestFramesLayersMaterialMask self = new SubmitProjectTaskRequestFramesLayersMaterialMask();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitProjectTaskRequestFramesLayersMaterialMask setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class SubmitProjectTaskRequestFramesLayersMaterial extends TeaModel {
         @NameInMap("anchorStyleLevel")
         public String anchorStyleLevel;
@@ -81,6 +100,9 @@ public class SubmitProjectTaskRequest extends TeaModel {
          */
         @NameInMap("id")
         public String id;
+
+        @NameInMap("mask")
+        public SubmitProjectTaskRequestFramesLayersMaterialMask mask;
 
         @NameInMap("speed")
         public String speed;
@@ -122,6 +144,14 @@ public class SubmitProjectTaskRequest extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public SubmitProjectTaskRequestFramesLayersMaterial setMask(SubmitProjectTaskRequestFramesLayersMaterialMask mask) {
+            this.mask = mask;
+            return this;
+        }
+        public SubmitProjectTaskRequestFramesLayersMaterialMask getMask() {
+            return this.mask;
         }
 
         public SubmitProjectTaskRequestFramesLayersMaterial setSpeed(String speed) {

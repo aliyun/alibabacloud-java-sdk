@@ -222,6 +222,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("assessmentPoint")
         public Integer assessmentPoint;
 
+        @NameInMap("assessmentPointEnabled")
+        public Boolean assessmentPointEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>30</p>
@@ -263,6 +266,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
         public Integer getAssessmentPoint() {
             return this.assessmentPoint;
+        }
+
+        public ListAICoachScriptPageResponseBodyListWeights setAssessmentPointEnabled(Boolean assessmentPointEnabled) {
+            this.assessmentPointEnabled = assessmentPointEnabled;
+            return this;
+        }
+        public Boolean getAssessmentPointEnabled() {
+            return this.assessmentPointEnabled;
         }
 
         public ListAICoachScriptPageResponseBodyListWeights setExpressiveness(Integer expressiveness) {
@@ -322,6 +333,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         @NameInMap("assessmentScope")
         public String assessmentScope;
 
+        @NameInMap("closingRemarks")
+        public String closingRemarks;
+
         @NameInMap("completeStrategy")
         public ListAICoachScriptPageResponseBodyListCompleteStrategy completeStrategy;
 
@@ -343,6 +357,12 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         @NameInMap("expressiveness")
         public java.util.Map<String, String> expressiveness;
+
+        @NameInMap("gifDynamicUrl")
+        public String gifDynamicUrl;
+
+        @NameInMap("gifStaticUrl")
+        public String gifStaticUrl;
 
         /**
          * <strong>example:</strong>
@@ -381,6 +401,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
          */
         @NameInMap("name")
         public String name;
+
+        @NameInMap("openingRemarks")
+        public String openingRemarks;
 
         @NameInMap("orderAckFlag")
         public Boolean orderAckFlag;
@@ -441,6 +464,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             return this.assessmentScope;
         }
 
+        public ListAICoachScriptPageResponseBodyList setClosingRemarks(String closingRemarks) {
+            this.closingRemarks = closingRemarks;
+            return this;
+        }
+        public String getClosingRemarks() {
+            return this.closingRemarks;
+        }
+
         public ListAICoachScriptPageResponseBodyList setCompleteStrategy(ListAICoachScriptPageResponseBodyListCompleteStrategy completeStrategy) {
             this.completeStrategy = completeStrategy;
             return this;
@@ -489,6 +520,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
             return this.expressiveness;
         }
 
+        public ListAICoachScriptPageResponseBodyList setGifDynamicUrl(String gifDynamicUrl) {
+            this.gifDynamicUrl = gifDynamicUrl;
+            return this;
+        }
+        public String getGifDynamicUrl() {
+            return this.gifDynamicUrl;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setGifStaticUrl(String gifStaticUrl) {
+            this.gifStaticUrl = gifStaticUrl;
+            return this;
+        }
+        public String getGifStaticUrl() {
+            return this.gifStaticUrl;
+        }
+
         public ListAICoachScriptPageResponseBodyList setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -535,6 +582,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListAICoachScriptPageResponseBodyList setOpeningRemarks(String openingRemarks) {
+            this.openingRemarks = openingRemarks;
+            return this;
+        }
+        public String getOpeningRemarks() {
+            return this.openingRemarks;
         }
 
         public ListAICoachScriptPageResponseBodyList setOrderAckFlag(Boolean orderAckFlag) {

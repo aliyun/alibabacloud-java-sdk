@@ -58,6 +58,9 @@ public class SaveAvatarProjectRequest extends TeaModel {
     @NameInMap("scaleType")
     public String scaleType;
 
+    @NameInMap("scriptModelTag")
+    public String scriptModelTag;
+
     @NameInMap("synchronizedDisplay")
     public String synchronizedDisplay;
 
@@ -146,6 +149,14 @@ public class SaveAvatarProjectRequest extends TeaModel {
         return this.scaleType;
     }
 
+    public SaveAvatarProjectRequest setScriptModelTag(String scriptModelTag) {
+        this.scriptModelTag = scriptModelTag;
+        return this;
+    }
+    public String getScriptModelTag() {
+        return this.scriptModelTag;
+    }
+
     public SaveAvatarProjectRequest setSynchronizedDisplay(String synchronizedDisplay) {
         this.synchronizedDisplay = synchronizedDisplay;
         return this;
@@ -215,6 +226,9 @@ public class SaveAvatarProjectRequest extends TeaModel {
         @NameInMap("height")
         public Integer height;
 
+        @NameInMap("index")
+        public Integer index;
+
         @NameInMap("material")
         public SaveAvatarProjectRequestFramesLayersMaterial material;
 
@@ -257,6 +271,14 @@ public class SaveAvatarProjectRequest extends TeaModel {
         }
         public Integer getHeight() {
             return this.height;
+        }
+
+        public SaveAvatarProjectRequestFramesLayers setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
         }
 
         public SaveAvatarProjectRequestFramesLayers setMaterial(SaveAvatarProjectRequestFramesLayersMaterial material) {
@@ -302,12 +324,21 @@ public class SaveAvatarProjectRequest extends TeaModel {
     }
 
     public static class SaveAvatarProjectRequestFramesVideoScript extends TeaModel {
+        @NameInMap("emotion")
+        public String emotion;
+
+        @NameInMap("pitchRate")
+        public String pitchRate;
+
         /**
          * <strong>example:</strong>
          * <p>1.0</p>
          */
         @NameInMap("speedRate")
         public String speedRate;
+
+        @NameInMap("textContent")
+        public String textContent;
 
         @NameInMap("voiceLanguage")
         public String voiceLanguage;
@@ -331,12 +362,36 @@ public class SaveAvatarProjectRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public SaveAvatarProjectRequestFramesVideoScript setEmotion(String emotion) {
+            this.emotion = emotion;
+            return this;
+        }
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        public SaveAvatarProjectRequestFramesVideoScript setPitchRate(String pitchRate) {
+            this.pitchRate = pitchRate;
+            return this;
+        }
+        public String getPitchRate() {
+            return this.pitchRate;
+        }
+
         public SaveAvatarProjectRequestFramesVideoScript setSpeedRate(String speedRate) {
             this.speedRate = speedRate;
             return this;
         }
         public String getSpeedRate() {
             return this.speedRate;
+        }
+
+        public SaveAvatarProjectRequestFramesVideoScript setTextContent(String textContent) {
+            this.textContent = textContent;
+            return this;
+        }
+        public String getTextContent() {
+            return this.textContent;
         }
 
         public SaveAvatarProjectRequestFramesVideoScript setVoiceLanguage(String voiceLanguage) {
@@ -366,6 +421,9 @@ public class SaveAvatarProjectRequest extends TeaModel {
     }
 
     public static class SaveAvatarProjectRequestFrames extends TeaModel {
+        @NameInMap("index")
+        public Integer index;
+
         @NameInMap("layers")
         public java.util.List<SaveAvatarProjectRequestFramesLayers> layers;
 
@@ -375,6 +433,14 @@ public class SaveAvatarProjectRequest extends TeaModel {
         public static SaveAvatarProjectRequestFrames build(java.util.Map<String, ?> map) throws Exception {
             SaveAvatarProjectRequestFrames self = new SaveAvatarProjectRequestFrames();
             return TeaModel.build(map, self);
+        }
+
+        public SaveAvatarProjectRequestFrames setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
         }
 
         public SaveAvatarProjectRequestFrames setLayers(java.util.List<SaveAvatarProjectRequestFramesLayers> layers) {

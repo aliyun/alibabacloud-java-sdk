@@ -45,6 +45,9 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         @NameInMap("finishTime")
         public String finishTime;
 
+        @NameInMap("gmtCreate")
+        public String gmtCreate;
+
         /**
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -77,6 +80,14 @@ public class ListAICoachTaskPageResponseBody extends TeaModel {
         }
         public String getFinishTime() {
             return this.finishTime;
+        }
+
+        public ListAICoachTaskPageResponseBodyTaskList setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public ListAICoachTaskPageResponseBodyTaskList setStatus(String status) {

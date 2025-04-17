@@ -41,6 +41,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     @NameInMap("scaleType")
     public String scaleType;
 
+    @NameInMap("scriptModelTag")
+    public String scriptModelTag;
+
     /**
      * <strong>example:</strong>
      * <p>DEPLOYING</p>
@@ -109,6 +112,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         return this.scaleType;
     }
 
+    public QueryAvatarProjectResponseBody setScriptModelTag(String scriptModelTag) {
+        this.scriptModelTag = scriptModelTag;
+        return this;
+    }
+    public String getScriptModelTag() {
+        return this.scriptModelTag;
+    }
+
     public QueryAvatarProjectResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -162,6 +173,9 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         @NameInMap("height")
         public Integer height;
 
+        @NameInMap("index")
+        public Integer index;
+
         @NameInMap("material")
         public QueryAvatarProjectResponseBodyFramesLayersMaterial material;
 
@@ -188,6 +202,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         }
         public Integer getHeight() {
             return this.height;
+        }
+
+        public QueryAvatarProjectResponseBodyFramesLayers setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
         }
 
         public QueryAvatarProjectResponseBodyFramesLayers setMaterial(QueryAvatarProjectResponseBodyFramesLayersMaterial material) {
@@ -233,15 +255,46 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
     }
 
     public static class QueryAvatarProjectResponseBodyFramesVideoScript extends TeaModel {
+        @NameInMap("emotion")
+        public String emotion;
+
+        @NameInMap("pitchRate")
+        public String pitchRate;
+
         @NameInMap("speedRate")
         public String speedRate;
+
+        @NameInMap("textContent")
+        public String textContent;
+
+        @NameInMap("voiceLanguage")
+        public String voiceLanguage;
 
         @NameInMap("voiceTemplateId")
         public String voiceTemplateId;
 
+        @NameInMap("volume")
+        public Integer volume;
+
         public static QueryAvatarProjectResponseBodyFramesVideoScript build(java.util.Map<String, ?> map) throws Exception {
             QueryAvatarProjectResponseBodyFramesVideoScript self = new QueryAvatarProjectResponseBodyFramesVideoScript();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAvatarProjectResponseBodyFramesVideoScript setEmotion(String emotion) {
+            this.emotion = emotion;
+            return this;
+        }
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        public QueryAvatarProjectResponseBodyFramesVideoScript setPitchRate(String pitchRate) {
+            this.pitchRate = pitchRate;
+            return this;
+        }
+        public String getPitchRate() {
+            return this.pitchRate;
         }
 
         public QueryAvatarProjectResponseBodyFramesVideoScript setSpeedRate(String speedRate) {
@@ -252,6 +305,22 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             return this.speedRate;
         }
 
+        public QueryAvatarProjectResponseBodyFramesVideoScript setTextContent(String textContent) {
+            this.textContent = textContent;
+            return this;
+        }
+        public String getTextContent() {
+            return this.textContent;
+        }
+
+        public QueryAvatarProjectResponseBodyFramesVideoScript setVoiceLanguage(String voiceLanguage) {
+            this.voiceLanguage = voiceLanguage;
+            return this;
+        }
+        public String getVoiceLanguage() {
+            return this.voiceLanguage;
+        }
+
         public QueryAvatarProjectResponseBodyFramesVideoScript setVoiceTemplateId(String voiceTemplateId) {
             this.voiceTemplateId = voiceTemplateId;
             return this;
@@ -260,9 +329,20 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
             return this.voiceTemplateId;
         }
 
+        public QueryAvatarProjectResponseBodyFramesVideoScript setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
     }
 
     public static class QueryAvatarProjectResponseBodyFrames extends TeaModel {
+        @NameInMap("index")
+        public Integer index;
+
         @NameInMap("layers")
         public java.util.List<QueryAvatarProjectResponseBodyFramesLayers> layers;
 
@@ -272,6 +352,14 @@ public class QueryAvatarProjectResponseBody extends TeaModel {
         public static QueryAvatarProjectResponseBodyFrames build(java.util.Map<String, ?> map) throws Exception {
             QueryAvatarProjectResponseBodyFrames self = new QueryAvatarProjectResponseBodyFrames();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAvatarProjectResponseBodyFrames setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
         }
 
         public QueryAvatarProjectResponseBodyFrames setLayers(java.util.List<QueryAvatarProjectResponseBodyFramesLayers> layers) {

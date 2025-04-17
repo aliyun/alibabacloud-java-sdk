@@ -4,6 +4,9 @@ package com.aliyun.intelligentcreation20240313.models;
 import com.aliyun.tea.*;
 
 public class CreateAnchorRequest extends TeaModel {
+    @NameInMap("anchorCategory")
+    public String anchorCategory;
+
     @NameInMap("anchorMaterialName")
     public String anchorMaterialName;
 
@@ -31,9 +34,20 @@ public class CreateAnchorRequest extends TeaModel {
     @NameInMap("useScene")
     public String useScene;
 
+    @NameInMap("videoOssKey")
+    public String videoOssKey;
+
     public static CreateAnchorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAnchorRequest self = new CreateAnchorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAnchorRequest setAnchorCategory(String anchorCategory) {
+        this.anchorCategory = anchorCategory;
+        return this;
+    }
+    public String getAnchorCategory() {
+        return this.anchorCategory;
     }
 
     public CreateAnchorRequest setAnchorMaterialName(String anchorMaterialName) {
@@ -74,6 +88,14 @@ public class CreateAnchorRequest extends TeaModel {
     }
     public String getUseScene() {
         return this.useScene;
+    }
+
+    public CreateAnchorRequest setVideoOssKey(String videoOssKey) {
+        this.videoOssKey = videoOssKey;
+        return this;
+    }
+    public String getVideoOssKey() {
+        return this.videoOssKey;
     }
 
 }

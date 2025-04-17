@@ -7,6 +7,9 @@ public class ListAnchorRequest extends TeaModel {
     @NameInMap("anchorCategory")
     public String anchorCategory;
 
+    @NameInMap("anchorId")
+    public String anchorId;
+
     /**
      * <strong>example:</strong>
      * <p>PUBLIC_MODEL</p>
@@ -63,6 +66,14 @@ public class ListAnchorRequest extends TeaModel {
     }
     public String getAnchorCategory() {
         return this.anchorCategory;
+    }
+
+    public ListAnchorRequest setAnchorId(String anchorId) {
+        this.anchorId = anchorId;
+        return this;
+    }
+    public String getAnchorId() {
+        return this.anchorId;
     }
 
     public ListAnchorRequest setAnchorType(String anchorType) {
