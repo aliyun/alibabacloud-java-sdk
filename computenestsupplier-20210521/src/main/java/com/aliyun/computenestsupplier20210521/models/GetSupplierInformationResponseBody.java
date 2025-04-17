@@ -91,6 +91,9 @@ public class GetSupplierInformationResponseBody extends TeaModel {
     @NameInMap("SupplierUrl")
     public String supplierUrl;
 
+    @NameInMap("SupportContacts")
+    public java.util.List<GetSupplierInformationResponseBodySupportContacts> supportContacts;
+
     public static GetSupplierInformationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSupplierInformationResponseBody self = new GetSupplierInformationResponseBody();
         return TeaModel.build(map, self);
@@ -176,6 +179,14 @@ public class GetSupplierInformationResponseBody extends TeaModel {
         return this.supplierUrl;
     }
 
+    public GetSupplierInformationResponseBody setSupportContacts(java.util.List<GetSupplierInformationResponseBodySupportContacts> supportContacts) {
+        this.supportContacts = supportContacts;
+        return this;
+    }
+    public java.util.List<GetSupplierInformationResponseBodySupportContacts> getSupportContacts() {
+        return this.supportContacts;
+    }
+
     public static class GetSupplierInformationResponseBodyDeliverySettings extends TeaModel {
         /**
          * <p>The name of the OSS bucket.</p>
@@ -252,6 +263,36 @@ public class GetSupplierInformationResponseBody extends TeaModel {
         }
         public String getOssPath() {
             return this.ossPath;
+        }
+
+    }
+
+    public static class GetSupplierInformationResponseBodySupportContacts extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetSupplierInformationResponseBodySupportContacts build(java.util.Map<String, ?> map) throws Exception {
+            GetSupplierInformationResponseBodySupportContacts self = new GetSupplierInformationResponseBodySupportContacts();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSupplierInformationResponseBodySupportContacts setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetSupplierInformationResponseBodySupportContacts setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

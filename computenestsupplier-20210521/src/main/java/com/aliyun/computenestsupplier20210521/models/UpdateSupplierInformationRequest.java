@@ -65,6 +65,9 @@ public class UpdateSupplierInformationRequest extends TeaModel {
     @NameInMap("SupplierUrl")
     public String supplierUrl;
 
+    @NameInMap("SupportContacts")
+    public java.util.List<UpdateSupplierInformationRequestSupportContacts> supportContacts;
+
     public static UpdateSupplierInformationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSupplierInformationRequest self = new UpdateSupplierInformationRequest();
         return TeaModel.build(map, self);
@@ -124,6 +127,14 @@ public class UpdateSupplierInformationRequest extends TeaModel {
     }
     public String getSupplierUrl() {
         return this.supplierUrl;
+    }
+
+    public UpdateSupplierInformationRequest setSupportContacts(java.util.List<UpdateSupplierInformationRequestSupportContacts> supportContacts) {
+        this.supportContacts = supportContacts;
+        return this;
+    }
+    public java.util.List<UpdateSupplierInformationRequestSupportContacts> getSupportContacts() {
+        return this.supportContacts;
     }
 
     public static class UpdateSupplierInformationRequestDeliverySettings extends TeaModel {
@@ -202,6 +213,36 @@ public class UpdateSupplierInformationRequest extends TeaModel {
         }
         public String getOssPath() {
             return this.ossPath;
+        }
+
+    }
+
+    public static class UpdateSupplierInformationRequestSupportContacts extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateSupplierInformationRequestSupportContacts build(java.util.Map<String, ?> map) throws Exception {
+            UpdateSupplierInformationRequestSupportContacts self = new UpdateSupplierInformationRequestSupportContacts();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateSupplierInformationRequestSupportContacts setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public UpdateSupplierInformationRequestSupportContacts setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
