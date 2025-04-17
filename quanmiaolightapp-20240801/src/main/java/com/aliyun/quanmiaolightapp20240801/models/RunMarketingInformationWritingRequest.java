@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunMarketingInformationWritingRequest extends TeaModel {
+    @NameInMap("apiKey")
+    public String apiKey;
+
     @NameInMap("customLimitation")
     public String customLimitation;
 
@@ -33,6 +36,14 @@ public class RunMarketingInformationWritingRequest extends TeaModel {
     public static RunMarketingInformationWritingRequest build(java.util.Map<String, ?> map) throws Exception {
         RunMarketingInformationWritingRequest self = new RunMarketingInformationWritingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunMarketingInformationWritingRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public RunMarketingInformationWritingRequest setCustomLimitation(String customLimitation) {

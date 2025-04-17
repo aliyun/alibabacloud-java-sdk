@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunNetworkContentAuditShrinkRequest extends TeaModel {
+    @NameInMap("apiKey")
+    public String apiKey;
+
     /**
      * <strong>example:</strong>
      * <p>clueMining</p>
@@ -54,6 +57,14 @@ public class RunNetworkContentAuditShrinkRequest extends TeaModel {
     public static RunNetworkContentAuditShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunNetworkContentAuditShrinkRequest self = new RunNetworkContentAuditShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunNetworkContentAuditShrinkRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public RunNetworkContentAuditShrinkRequest setBusinessType(String businessType) {

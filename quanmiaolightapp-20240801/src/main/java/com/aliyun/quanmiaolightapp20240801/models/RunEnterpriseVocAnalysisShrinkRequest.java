@@ -4,6 +4,12 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunEnterpriseVocAnalysisShrinkRequest extends TeaModel {
+    @NameInMap("akProxy")
+    public String akProxy;
+
+    @NameInMap("apiKey")
+    public String apiKey;
+
     /**
      * <p>需要进行VOC分析的文本内容（content、contents、url、fileKey 四选一。优先级从小到大）</p>
      * 
@@ -60,6 +66,22 @@ public class RunEnterpriseVocAnalysisShrinkRequest extends TeaModel {
     public static RunEnterpriseVocAnalysisShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunEnterpriseVocAnalysisShrinkRequest self = new RunEnterpriseVocAnalysisShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunEnterpriseVocAnalysisShrinkRequest setAkProxy(String akProxy) {
+        this.akProxy = akProxy;
+        return this;
+    }
+    public String getAkProxy() {
+        return this.akProxy;
+    }
+
+    public RunEnterpriseVocAnalysisShrinkRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public RunEnterpriseVocAnalysisShrinkRequest setContent(String content) {

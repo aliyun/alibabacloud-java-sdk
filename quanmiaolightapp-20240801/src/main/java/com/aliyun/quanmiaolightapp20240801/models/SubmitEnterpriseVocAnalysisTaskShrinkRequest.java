@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
+    @NameInMap("apiKey")
+    public String apiKey;
+
     @NameInMap("contents")
     public String contentsShrink;
 
@@ -46,6 +49,14 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
     public static SubmitEnterpriseVocAnalysisTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitEnterpriseVocAnalysisTaskShrinkRequest self = new SubmitEnterpriseVocAnalysisTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskShrinkRequest setApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    public String getApiKey() {
+        return this.apiKey;
     }
 
     public SubmitEnterpriseVocAnalysisTaskShrinkRequest setContentsShrink(String contentsShrink) {

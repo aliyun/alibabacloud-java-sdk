@@ -513,6 +513,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.akProxy)) {
+            body.put("akProxy", request.akProxy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            body.put("apiKey", request.apiKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             body.put("content", request.content);
         }
@@ -823,6 +831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunMarketingInformationWritingResponse runMarketingInformationWritingWithOptions(String workspaceId, RunMarketingInformationWritingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            body.put("apiKey", request.apiKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.customLimitation)) {
             body.put("customLimitation", request.customLimitation);
         }
@@ -900,6 +912,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            body.put("apiKey", request.apiKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
             body.put("businessType", request.businessType);
         }
@@ -1508,6 +1524,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiKey)) {
+            body.put("apiKey", request.apiKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.contentsShrink)) {
             body.put("contents", request.contentsShrink);
         }

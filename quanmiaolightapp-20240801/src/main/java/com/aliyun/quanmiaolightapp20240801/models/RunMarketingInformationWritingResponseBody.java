@@ -47,6 +47,9 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
     }
 
     public static class RunMarketingInformationWritingResponseBodyHeader extends TeaModel {
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
         /**
          * <strong>example:</strong>
          * <p>result-generated</p>
@@ -88,6 +91,14 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         public static RunMarketingInformationWritingResponseBodyHeader build(java.util.Map<String, ?> map) throws Exception {
             RunMarketingInformationWritingResponseBodyHeader self = new RunMarketingInformationWritingResponseBodyHeader();
             return TeaModel.build(map, self);
+        }
+
+        public RunMarketingInformationWritingResponseBodyHeader setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public RunMarketingInformationWritingResponseBodyHeader setEvent(String event) {
