@@ -139,6 +139,9 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         @NameInMap("Reason")
         public String reason;
 
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
         /**
          * <strong>example:</strong>
          * <p>nat_snat_cross_az_warn</p>
@@ -151,6 +154,9 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
 
         @NameInMap("Suggestion")
         public String suggestion;
+
+        @NameInMap("SuggestionCode")
+        public String suggestionCode;
 
         public static DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList build(java.util.Map<String, ?> map) throws Exception {
             DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList self = new DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList();
@@ -181,6 +187,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
             return this.reason;
         }
 
+        public DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
         public DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList setRecommendationCode(String recommendationCode) {
             this.recommendationCode = recommendationCode;
             return this;
@@ -203,6 +217,14 @@ public class DescribeNisInspectionReportCheckItemsResponseBody extends TeaModel 
         }
         public String getSuggestion() {
             return this.suggestion;
+        }
+
+        public DescribeNisInspectionReportCheckItemsResponseBodyCheckItemListRecommendationList setSuggestionCode(String suggestionCode) {
+            this.suggestionCode = suggestionCode;
+            return this;
+        }
+        public String getSuggestionCode() {
+            return this.suggestionCode;
         }
 
     }
