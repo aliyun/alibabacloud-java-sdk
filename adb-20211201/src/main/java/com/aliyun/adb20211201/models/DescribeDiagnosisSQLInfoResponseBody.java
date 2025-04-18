@@ -55,6 +55,9 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisSQLInfoResponseBodyStageInfos extends TeaModel {
+        @NameInMap("ExecutionType")
+        public String executionType;
+
         /**
          * <p>The total amount of input data in the stage. Unit: bytes.</p>
          * 
@@ -139,6 +142,14 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
         public static DescribeDiagnosisSQLInfoResponseBodyStageInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiagnosisSQLInfoResponseBodyStageInfos self = new DescribeDiagnosisSQLInfoResponseBodyStageInfos();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDiagnosisSQLInfoResponseBodyStageInfos setExecutionType(String executionType) {
+            this.executionType = executionType;
+            return this;
+        }
+        public String getExecutionType() {
+            return this.executionType;
         }
 
         public DescribeDiagnosisSQLInfoResponseBodyStageInfos setInputDataSize(Long inputDataSize) {
