@@ -25,8 +25,7 @@ public class CreateFixedNoAReportRequest extends TeaModel {
     public String custName;
 
     /**
-     * <p>法人/经办人手机号</p>
-     * <p>This parameter is required.</p>
+     * <p>经办人/法人电话</p>
      * 
      * <strong>example:</strong>
      * <p>130*****8888</p>
