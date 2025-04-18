@@ -13,6 +13,9 @@ public class LlmSmartCallShrinkRequest extends TeaModel {
     @NameInMap("ApplicationCode")
     public String applicationCode;
 
+    @NameInMap("BizParam")
+    public String bizParamShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -53,6 +56,14 @@ public class LlmSmartCallShrinkRequest extends TeaModel {
     }
     public String getApplicationCode() {
         return this.applicationCode;
+    }
+
+    public LlmSmartCallShrinkRequest setBizParamShrink(String bizParamShrink) {
+        this.bizParamShrink = bizParamShrink;
+        return this;
+    }
+    public String getBizParamShrink() {
+        return this.bizParamShrink;
     }
 
     public LlmSmartCallShrinkRequest setCalledNumber(String calledNumber) {

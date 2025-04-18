@@ -13,6 +13,9 @@ public class LlmSmartCallRequest extends TeaModel {
     @NameInMap("ApplicationCode")
     public String applicationCode;
 
+    @NameInMap("BizParam")
+    public java.util.Map<String, ?> bizParam;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -53,6 +56,14 @@ public class LlmSmartCallRequest extends TeaModel {
     }
     public String getApplicationCode() {
         return this.applicationCode;
+    }
+
+    public LlmSmartCallRequest setBizParam(java.util.Map<String, ?> bizParam) {
+        this.bizParam = bizParam;
+        return this;
+    }
+    public java.util.Map<String, ?> getBizParam() {
+        return this.bizParam;
     }
 
     public LlmSmartCallRequest setCalledNumber(String calledNumber) {

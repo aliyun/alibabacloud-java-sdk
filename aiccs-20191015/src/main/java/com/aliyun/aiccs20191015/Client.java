@@ -6028,6 +6028,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         LlmSmartCallShrinkRequest request = new LlmSmartCallShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.bizParam)) {
+            request.bizParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.bizParam, "BizParam", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.promptParam)) {
             request.promptParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.promptParam, "PromptParam", "json");
         }
@@ -6039,6 +6043,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.applicationCode)) {
             query.put("ApplicationCode", request.applicationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizParamShrink)) {
+            query.put("BizParam", request.bizParamShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
