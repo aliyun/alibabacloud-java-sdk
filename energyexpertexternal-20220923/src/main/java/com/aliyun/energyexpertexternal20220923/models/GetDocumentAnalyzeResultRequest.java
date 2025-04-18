@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentAnalyzeResultRequest extends TeaModel {
     /**
+     * <p>Job ID, specifying which document\&quot;s parsing result to query. This is a return parameter from the \&quot;Submit Document Parsing Job\&quot; interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

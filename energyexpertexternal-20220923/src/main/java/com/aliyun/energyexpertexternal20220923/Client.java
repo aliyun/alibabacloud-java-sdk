@@ -68,12 +68,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AnalyzeVlRealtimeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AnalyzeVlRealtimeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AnalyzeVlRealtimeResponse());
     }
 
     /**
@@ -206,12 +201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSaveInstructionStatusResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new BatchSaveInstructionStatusResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchSaveInstructionStatusResponse());
     }
 
     /**
@@ -310,12 +300,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUpdateSystemRunningPlanResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new BatchUpdateSystemRunningPlanResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchUpdateSystemRunningPlanResponse());
     }
 
     /**
@@ -370,12 +355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EditProhibitedDevicesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EditProhibitedDevicesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EditProhibitedDevicesResponse());
     }
 
     /**
@@ -430,12 +410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EditUnfavorableAreaDevicesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EditUnfavorableAreaDevicesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EditUnfavorableAreaDevicesResponse());
     }
 
     /**
@@ -493,12 +468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateResultResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GenerateResultResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateResultResponse());
     }
 
     /**
@@ -552,12 +522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetAreaElecConstituteResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetAreaElecConstituteResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAreaElecConstituteResponse());
     }
 
     /**
@@ -620,12 +585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetCarbonEmissionTrendResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetCarbonEmissionTrendResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCarbonEmissionTrendResponse());
     }
 
     /**
@@ -677,12 +637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataItemListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetDataItemListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataItemListResponse());
     }
 
     /**
@@ -749,12 +704,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataQualityAnalysisResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetDataQualityAnalysisResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDataQualityAnalysisResponse());
     }
 
     /**
@@ -823,12 +773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceInfoResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetDeviceInfoResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceInfoResponse());
     }
 
     /**
@@ -897,12 +842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetDeviceListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeviceListResponse());
     }
 
     /**
@@ -931,7 +871,113 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文档结果</p>
+     * <p>For Querying Information Extraction Result.
+     * The input parameter taskId is obtained from the taskId returned by the interfaces SubmitDocExtractionTaskAdvance or SubmitDocExtractionTask.
+     * The query results can reflect one of three statuses: processing, successfully completed, or failed.</p>
+     * 
+     * @param request GetDocExtractionResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocExtractionResultResponse
+     */
+    public GetDocExtractionResultResponse getDocExtractionResultWithOptions(GetDocExtractionResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDocExtractionResult"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/getDocExtractionResult"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocExtractionResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>For Querying Information Extraction Result.
+     * The input parameter taskId is obtained from the taskId returned by the interfaces SubmitDocExtractionTaskAdvance or SubmitDocExtractionTask.
+     * The query results can reflect one of three statuses: processing, successfully completed, or failed.</p>
+     * 
+     * @param request GetDocExtractionResultRequest
+     * @return GetDocExtractionResultResponse
+     */
+    public GetDocExtractionResultResponse getDocExtractionResult(GetDocExtractionResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDocExtractionResultWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>For Querying Document Parsing Results.
+     * The input parameter taskId is obtained from the taskId returned by the interfaces SubmitDocParsingTaskAdvance or SubmitDocParsingTask.
+     * The query results can be one of three statuses: processing, successful, or failed.</p>
+     * 
+     * @param request GetDocParsingResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocParsingResultResponse
+     */
+    public GetDocParsingResultResponse getDocParsingResultWithOptions(GetDocParsingResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.returnFormat)) {
+            body.put("returnFormat", request.returnFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDocParsingResult"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/getDocParsingResult"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocParsingResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>For Querying Document Parsing Results.
+     * The input parameter taskId is obtained from the taskId returned by the interfaces SubmitDocParsingTaskAdvance or SubmitDocParsingTask.
+     * The query results can be one of three statuses: processing, successful, or failed.</p>
+     * 
+     * @param request GetDocParsingResultRequest
+     * @return GetDocParsingResultResponse
+     */
+    public GetDocParsingResultResponse getDocParsingResult(GetDocParsingResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDocParsingResultWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get document parsing/extraction result</p>
      * 
      * @param request GetDocumentAnalyzeResultRequest
      * @param headers map
@@ -960,17 +1006,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocumentAnalyzeResultResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetDocumentAnalyzeResultResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocumentAnalyzeResultResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取文档结果</p>
+     * <p>Get document parsing/extraction result</p>
      * 
      * @param request GetDocumentAnalyzeResultRequest
      * @return GetDocumentAnalyzeResultResponse
@@ -1016,12 +1057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetElecConstituteResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetElecConstituteResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetElecConstituteResponse());
     }
 
     /**
@@ -1072,12 +1108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetElecTrendResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetElecTrendResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetElecTrendResponse());
     }
 
     /**
@@ -1136,12 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEmissionSourceConstituteResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetEmissionSourceConstituteResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEmissionSourceConstituteResponse());
     }
 
     /**
@@ -1200,12 +1226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEmissionSummaryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetEmissionSummaryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEmissionSummaryResponse());
     }
 
     /**
@@ -1263,12 +1284,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEpdInventoryConstituteResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetEpdInventoryConstituteResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEpdInventoryConstituteResponse());
     }
 
     /**
@@ -1329,12 +1345,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEpdSummaryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetEpdSummaryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEpdSummaryResponse());
     }
 
     /**
@@ -1399,12 +1410,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFootprintListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFootprintListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFootprintListResponse());
     }
 
     /**
@@ -1466,12 +1472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetGasConstituteResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetGasConstituteResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGasConstituteResponse());
     }
 
     /**
@@ -1529,12 +1530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpBenchmarkListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetGwpBenchmarkListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpBenchmarkListResponse());
     }
 
     /**
@@ -1595,12 +1591,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpBenchmarkSummaryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetGwpBenchmarkSummaryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpBenchmarkSummaryResponse());
     }
 
     /**
@@ -1661,12 +1652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpInventoryConstituteResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetGwpInventoryConstituteResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpInventoryConstituteResponse());
     }
 
     /**
@@ -1727,12 +1713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpInventorySummaryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetGwpInventorySummaryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGwpInventorySummaryResponse());
     }
 
     /**
@@ -1805,12 +1786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInventoryListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetInventoryListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInventoryListResponse());
     }
 
     /**
@@ -1860,12 +1836,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrgAndFactoryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetOrgAndFactoryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrgAndFactoryResponse());
     }
 
     /**
@@ -1930,12 +1901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrgConstituteResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetOrgConstituteResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetOrgConstituteResponse());
     }
 
     /**
@@ -1993,12 +1959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPcrInfoResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetPcrInfoResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPcrInfoResponse());
     }
 
     /**
@@ -2063,12 +2024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetReductionProposalResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetReductionProposalResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetReductionProposalResponse());
     }
 
     /**
@@ -2085,6 +2041,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getReductionProposalWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>For Querying Qwen-VL Model Information Extraction Results.
+     * The input parameter taskId is obtained from the taskId returned by the interfaces SubmitVLExtractionTask or SubmitVLExtractionTaskAdvance.
+     * The query results can be in one of three statuses: processing, successfully completed, or failed.</p>
+     * 
+     * @param request GetVLExtractionResultRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVLExtractionResultResponse
+     */
+    public GetVLExtractionResultResponse getVLExtractionResultWithOptions(GetVLExtractionResultRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVLExtractionResult"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/getVLExtractionResult"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVLExtractionResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>For Querying Qwen-VL Model Information Extraction Results.
+     * The input parameter taskId is obtained from the taskId returned by the interfaces SubmitVLExtractionTask or SubmitVLExtractionTaskAdvance.
+     * The query results can be in one of three statuses: processing, successfully completed, or failed.</p>
+     * 
+     * @param request GetVLExtractionResultRequest
+     * @return GetVLExtractionResultResponse
+     */
+    public GetVLExtractionResultResponse getVLExtractionResult(GetVLExtractionResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVLExtractionResultWithOptions(request, headers, runtime);
     }
 
     /**
@@ -2129,12 +2136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new IsCompletedResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new IsCompletedResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new IsCompletedResponse());
     }
 
     /**
@@ -2188,12 +2190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new PushDeviceDataResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new PushDeviceDataResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushDeviceDataResponse());
     }
 
     /**
@@ -2255,12 +2252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new PushItemDataResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new PushItemDataResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushItemDataResponse());
     }
 
     /**
@@ -2323,12 +2315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new RecalculateCarbonEmissionResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new RecalculateCarbonEmissionResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecalculateCarbonEmissionResponse());
     }
 
     /**
@@ -2351,7 +2338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>在线文档问答</p>
+     * <p>Online Document Q\&amp;A</p>
      * 
      * @param request SendDocumentAskQuestionRequest
      * @param headers map
@@ -2388,17 +2375,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SendDocumentAskQuestionResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SendDocumentAskQuestionResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendDocumentAskQuestionResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>在线文档问答</p>
+     * <p>Online Document Q\&amp;A</p>
      * 
      * @param request SendDocumentAskQuestionRequest
      * @return SendDocumentAskQuestionResponse
@@ -2500,12 +2482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SetRunningPlanResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SetRunningPlanResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetRunningPlanResponse());
     }
 
     /**
@@ -2523,7 +2500,291 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取文档结果</p>
+     * <p>Extracts key information from documents using user-defined Key-Value or prompt templates. A taskId is returned upon successful execution for retrieving extraction results via GetDocExtractionResult.
+     * Supports:
+     * URL Upload: SubmitDocExtractionTask
+     * Local File Upload: SubmitDocExtractionTask</p>
+     * 
+     * @param request SubmitDocExtractionTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDocExtractionTaskResponse
+     */
+    public SubmitDocExtractionTaskResponse submitDocExtractionTaskWithOptions(SubmitDocExtractionTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.extractType)) {
+            query.put("extractType", request.extractType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            query.put("fileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            query.put("folderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("templateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitDocExtractionTask"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/submitDocExtractionTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocExtractionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Extracts key information from documents using user-defined Key-Value or prompt templates. A taskId is returned upon successful execution for retrieving extraction results via GetDocExtractionResult.
+     * Supports:
+     * URL Upload: SubmitDocExtractionTask
+     * Local File Upload: SubmitDocExtractionTask</p>
+     * 
+     * @param request SubmitDocExtractionTaskRequest
+     * @return SubmitDocExtractionTaskResponse
+     */
+    public SubmitDocExtractionTaskResponse submitDocExtractionTask(SubmitDocExtractionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitDocExtractionTaskWithOptions(request, headers, runtime);
+    }
+
+    public SubmitDocExtractionTaskResponse submitDocExtractionTaskAdvance(SubmitDocExtractionTaskAdvanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "energyExpertExternal"),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        SubmitDocExtractionTaskRequest submitDocExtractionTaskReq = new SubmitDocExtractionTaskRequest();
+        com.aliyun.openapiutil.Client.convert(request, submitDocExtractionTaskReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.body.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.body.objectKey),
+                new TeaPair("content", request.fileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
+                new TeaPair("policy", authResponse.body.encodedPolicy),
+                new TeaPair("signature", authResponse.body.signature),
+                new TeaPair("key", authResponse.body.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.body.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            submitDocExtractionTaskReq.fileUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
+        }
+
+        SubmitDocExtractionTaskResponse submitDocExtractionTaskResp = this.submitDocExtractionTaskWithOptions(submitDocExtractionTaskReq, headers, runtime);
+        return submitDocExtractionTaskResp;
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Parses text, tables, images, and more from documents. After execution, a taskId is returned for retrieving document parsing results via GetDocParsingResult.
+     * Supports:
+     * URL Upload: SubmitDocParsingTask
+     * Local File Upload: SubmitDocParsingTaskAdvance</p>
+     * 
+     * @param request SubmitDocParsingTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDocParsingTaskResponse
+     */
+    public SubmitDocParsingTaskResponse submitDocParsingTaskWithOptions(SubmitDocParsingTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            query.put("fileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            query.put("folderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needAnalyzeImg)) {
+            query.put("needAnalyzeImg", request.needAnalyzeImg);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitDocParsingTask"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/submitDocParsingTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocParsingTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Parses text, tables, images, and more from documents. After execution, a taskId is returned for retrieving document parsing results via GetDocParsingResult.
+     * Supports:
+     * URL Upload: SubmitDocParsingTask
+     * Local File Upload: SubmitDocParsingTaskAdvance</p>
+     * 
+     * @param request SubmitDocParsingTaskRequest
+     * @return SubmitDocParsingTaskResponse
+     */
+    public SubmitDocParsingTaskResponse submitDocParsingTask(SubmitDocParsingTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitDocParsingTaskWithOptions(request, headers, runtime);
+    }
+
+    public SubmitDocParsingTaskResponse submitDocParsingTaskAdvance(SubmitDocParsingTaskAdvanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "energyExpertExternal"),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        SubmitDocParsingTaskRequest submitDocParsingTaskReq = new SubmitDocParsingTaskRequest();
+        com.aliyun.openapiutil.Client.convert(request, submitDocParsingTaskReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.body.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.body.objectKey),
+                new TeaPair("content", request.fileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
+                new TeaPair("policy", authResponse.body.encodedPolicy),
+                new TeaPair("signature", authResponse.body.signature),
+                new TeaPair("key", authResponse.body.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.body.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            submitDocParsingTaskReq.fileUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
+        }
+
+        SubmitDocParsingTaskResponse submitDocParsingTaskResp = this.submitDocParsingTaskWithOptions(submitDocParsingTaskReq, headers, runtime);
+        return submitDocParsingTaskResp;
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get document extraction result</p>
      * 
      * @param request SubmitDocumentAnalyzeJobRequest
      * @param headers map
@@ -2568,17 +2829,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocumentAnalyzeJobResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SubmitDocumentAnalyzeJobResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocumentAnalyzeJobResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取文档结果</p>
+     * <p>Get document extraction result</p>
      * 
      * @param request SubmitDocumentAnalyzeJobRequest
      * @return SubmitDocumentAnalyzeJobResponse
@@ -2662,5 +2918,145 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         SubmitDocumentAnalyzeJobResponse submitDocumentAnalyzeJobResp = this.submitDocumentAnalyzeJobWithOptions(submitDocumentAnalyzeJobReq, headers, runtime);
         return submitDocumentAnalyzeJobResp;
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Extracts key information from documents using KV templates or prompts with the Qwen-VL model, ideal for image extraction. 
+     * Supports:
+     * URL Upload: SubmitVLExtractionTask.
+     * Local File Upload: SubmitVLExtractionTaskAdvance</p>
+     * 
+     * @param request SubmitVLExtractionTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVLExtractionTaskResponse
+     */
+    public SubmitVLExtractionTaskResponse submitVLExtractionTaskWithOptions(SubmitVLExtractionTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            query.put("fileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            query.put("folderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("templateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVLExtractionTask"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/submitVLExtractionTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVLExtractionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Extracts key information from documents using KV templates or prompts with the Qwen-VL model, ideal for image extraction. 
+     * Supports:
+     * URL Upload: SubmitVLExtractionTask.
+     * Local File Upload: SubmitVLExtractionTaskAdvance</p>
+     * 
+     * @param request SubmitVLExtractionTaskRequest
+     * @return SubmitVLExtractionTaskResponse
+     */
+    public SubmitVLExtractionTaskResponse submitVLExtractionTask(SubmitVLExtractionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitVLExtractionTaskWithOptions(request, headers, runtime);
+    }
+
+    public SubmitVLExtractionTaskResponse submitVLExtractionTaskAdvance(SubmitVLExtractionTaskAdvanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "energyExpertExternal"),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        SubmitVLExtractionTaskRequest submitVLExtractionTaskReq = new SubmitVLExtractionTaskRequest();
+        com.aliyun.openapiutil.Client.convert(request, submitVLExtractionTaskReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.body.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.body.objectKey),
+                new TeaPair("content", request.fileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
+                new TeaPair("policy", authResponse.body.encodedPolicy),
+                new TeaPair("signature", authResponse.body.signature),
+                new TeaPair("key", authResponse.body.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.body.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            submitVLExtractionTaskReq.fileUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
+        }
+
+        SubmitVLExtractionTaskResponse submitVLExtractionTaskResp = this.submitVLExtractionTaskWithOptions(submitVLExtractionTaskReq, headers, runtime);
+        return submitVLExtractionTaskResp;
     }
 }

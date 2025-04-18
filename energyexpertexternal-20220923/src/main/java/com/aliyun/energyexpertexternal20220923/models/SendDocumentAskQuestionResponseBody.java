@@ -4,10 +4,15 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class SendDocumentAskQuestionResponseBody extends TeaModel {
+    /**
+     * <p>Returned data</p>
+     */
     @NameInMap("data")
     public SendDocumentAskQuestionResponseBodyData data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
@@ -36,9 +41,18 @@ public class SendDocumentAskQuestionResponseBody extends TeaModel {
     }
 
     public static class SendDocumentAskQuestionResponseBodyData extends TeaModel {
+        /**
+         * <p>Q&amp;A result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Carbon emissions in 2023 totaled 4.681 million tons</p>
+         */
         @NameInMap("answer")
         public String answer;
 
+        /**
+         * <p>Documents associated with the answer returned by the query</p>
+         */
         @NameInMap("document")
         public java.util.List<String> document;
 

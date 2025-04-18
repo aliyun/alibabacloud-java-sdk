@@ -4,10 +4,15 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
+    /**
+     * <p>Returned Data</p>
+     */
     @NameInMap("data")
     public GetDocumentAnalyzeResultResponseBodyData data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>83A5A7DD-8974-5769-952E-590A97BEA34E</p>
      */
@@ -37,6 +42,8 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
 
     public static class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence extends TeaModel {
         /**
+         * <p>Confidence of Key</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9994202852249146</p>
          */
@@ -44,6 +51,8 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
         public Double keyConfidence;
 
         /**
+         * <p>Confidence of Value</p>
+         * 
          * <strong>example:</strong>
          * <p>0.9794202852249146</p>
          */
@@ -74,12 +83,21 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
     }
 
     public static class GetDocumentAnalyzeResultResponseBodyDataKvListInfoContext extends TeaModel {
+        /**
+         * <p>Confidence</p>
+         */
         @NameInMap("confidence")
         public GetDocumentAnalyzeResultResponseBodyDataKvListInfoContextConfidence confidence;
 
+        /**
+         * <p>Key Recall Information</p>
+         */
         @NameInMap("key")
         public java.util.List<ContentItem> key;
 
+        /**
+         * <p>Value Recall Information</p>
+         */
         @NameInMap("value")
         public java.util.List<ContentItem> value;
 
@@ -115,12 +133,27 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
     }
 
     public static class GetDocumentAnalyzeResultResponseBodyDataKvListInfo extends TeaModel {
+        /**
+         * <p>Recalled Content</p>
+         */
         @NameInMap("context")
         public GetDocumentAnalyzeResultResponseBodyDataKvListInfoContext context;
 
+        /**
+         * <p>Field Key Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tenant</p>
+         */
         @NameInMap("keyName")
         public String keyName;
 
+        /**
+         * <p>Field Key Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun XXX Co., Ltd.</p>
+         */
         @NameInMap("keyValue")
         public String keyValue;
 
@@ -156,6 +189,9 @@ public class GetDocumentAnalyzeResultResponseBody extends TeaModel {
     }
 
     public static class GetDocumentAnalyzeResultResponseBodyData extends TeaModel {
+        /**
+         * <p>Document Parsing Result</p>
+         */
         @NameInMap("kvListInfo")
         public java.util.List<GetDocumentAnalyzeResultResponseBodyDataKvListInfo> kvListInfo;
 

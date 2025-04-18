@@ -4,6 +4,9 @@ package com.aliyun.energyexpertexternal20220923.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocumentAnalyzeJobResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public SubmitDocumentAnalyzeJobResponseBodyData data;
 
@@ -39,6 +42,8 @@ public class SubmitDocumentAnalyzeJobResponseBody extends TeaModel {
 
     public static class SubmitDocumentAnalyzeJobResponseBodyData extends TeaModel {
         /**
+         * <p>The job ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>adkc-kk2k41-kk2ol-222424</p>
          */
