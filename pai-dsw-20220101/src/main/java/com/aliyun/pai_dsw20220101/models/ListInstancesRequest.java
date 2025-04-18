@@ -5,29 +5,61 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
+     * <p>The accelerator type.</p>
+     * <ul>
+     * <li>CPU: Only CPU computing is used.</li>
+     * <li>GPU: GPUs are used to accelerate computing.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>AcceleratorType</p>
+     * <p>CPU</p>
      */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
     /**
+     * <p>The accessibility. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE (default): The instances are accessible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: The instances are accessible only to all members in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The UID of the creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345*****67890</p>
+     */
     @NameInMap("CreateUserId")
     public String createUserId;
 
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NVIDIA A10</p>
+     */
     @NameInMap("GpuType")
     public String gpuType;
 
+    /**
+     * <p>The image name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>modelscope:1.9.4-pytorch2.0.1tensorflow2.13.0-cpu-py38-ubuntu20.04</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
+     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/470439.html">ListInstances</a> to obtain the instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
      */
@@ -35,47 +67,122 @@ public class ListInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>training_data</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The labels. A maximum of four labels are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;key1&quot;: &quot;value1&quot;,
+     *   &quot;key2&quot;: &quot;value2&quot;,
+     *   &quot;key3&quot;: &quot;value3&quot;
+     * }</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, ?> labels;
 
+    /**
+     * <p>The maximum number of CPUs. Unit: 0.001 CPU. The value 1000 indicates one CPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000</p>
+     */
     @NameInMap("MaxCpu")
     public String maxCpu;
 
+    /**
+     * <p>The maximum number of GPUs. Unit: 0.001 GPU. The value 1000 indicates one GPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8000</p>
+     */
     @NameInMap("MaxGpu")
     public String maxGpu;
 
+    /**
+     * <p>The maximum memory size per GPU card. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("MaxGpuMemory")
     public String maxGpuMemory;
 
+    /**
+     * <p>The maximum memory size. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>48</p>
+     */
     @NameInMap("MaxMemory")
     public String maxMemory;
 
+    /**
+     * <p>The minimum number of CPUs. Unit: 0.001 CPU. The value 1000 indicates one CPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("MinCpu")
     public String minCpu;
 
+    /**
+     * <p>The minimum number of GPUs. Unit: 0.001 GPU. The value 1000 indicates one GPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MinGpu")
     public String minGpu;
 
+    /**
+     * <p>The minimum memory size per GPU card. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("MinGpuMemory")
     public String minGpuMemory;
 
+    /**
+     * <p>The minimum memory size. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("MinMemory")
     public String minMemory;
 
     /**
+     * <p>The order that you use to sort the query results.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ASC</li>
+     * <li>DESC</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
     @NameInMap("Order")
     public String order;
 
+    @NameInMap("OversoldInfo")
+    public String oversoldInfo;
+
+    @NameInMap("OversoldType")
+    public String oversoldType;
+
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -83,6 +190,8 @@ public class ListInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -90,6 +199,13 @@ public class ListInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The billing method.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PayAsYouGo</li>
+     * <li>Subscription</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
      */
@@ -97,6 +213,8 @@ public class ListInstancesRequest extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The resource group ID. If you leave this parameter empty, the instances in the pay-as-you-go resource group are queried. If you set this parameter to ALL, all instances are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-123456789</p>
      */
@@ -104,6 +222,14 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The field that you use to sort the query results.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Priority</li>
+     * <li>GmtCreateTime</li>
+     * <li>GmtModifiedTime</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreate</p>
      */
@@ -111,16 +237,41 @@ public class ListInstancesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The instance status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>SaveFailed</li>
+     * <li>Stopped</li>
+     * <li>Failed</li>
+     * <li>ResourceAllocating</li>
+     * <li>Stopping</li>
+     * <li>Updating</li>
+     * <li>Saving</li>
+     * <li>Queuing</li>
+     * <li>Recovering</li>
+     * <li>Starting</li>
+     * <li>Running</li>
+     * <li>Saved</li>
+     * <li>Deleting</li>
+     * <li>EnvPreparing</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListInstancesRequestTag> tag;
 
     /**
+     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40823</p>
      */
@@ -268,6 +419,22 @@ public class ListInstancesRequest extends TeaModel {
         return this.order;
     }
 
+    public ListInstancesRequest setOversoldInfo(String oversoldInfo) {
+        this.oversoldInfo = oversoldInfo;
+        return this;
+    }
+    public String getOversoldInfo() {
+        return this.oversoldInfo;
+    }
+
+    public ListInstancesRequest setOversoldType(String oversoldType) {
+        this.oversoldType = oversoldType;
+        return this;
+    }
+    public String getOversoldType() {
+        return this.oversoldType;
+    }
+
     public ListInstancesRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -333,9 +500,21 @@ public class ListInstancesRequest extends TeaModel {
     }
 
     public static class ListInstancesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

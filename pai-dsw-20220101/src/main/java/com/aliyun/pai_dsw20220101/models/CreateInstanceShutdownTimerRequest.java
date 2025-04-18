@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceShutdownTimerRequest extends TeaModel {
     /**
+     * <p>The scheduled stop time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:01Z</p>
      */
@@ -12,6 +14,8 @@ public class CreateInstanceShutdownTimerRequest extends TeaModel {
     public String dueTime;
 
     /**
+     * <p>The time duration before the instance is stopped. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600000</p>
      */

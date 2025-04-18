@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLifecycleRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T15:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class GetLifecycleRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The number of sessions to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,12 @@ public class GetLifecycleRequest extends TeaModel {
     public Integer limit;
 
     /**
+     * <p>The sorting order of the results. Valid values:</p>
+     * <ul>
+     * <li>ASC: sorted by time in ascending order.</li>
+     * <li>DESC: sorted by time in descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -26,6 +36,8 @@ public class GetLifecycleRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>A session refers to the process of an instance from startup to failure or shutdown. The sessionNumber indicates the offset value for the instance\&quot;s session sequence.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,12 +45,17 @@ public class GetLifecycleRequest extends TeaModel {
     public Integer sessionNumber;
 
     /**
+     * <p>The beginning of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The token used to share the URL.</p>
+     */
     @NameInMap("Token")
     public String token;
 

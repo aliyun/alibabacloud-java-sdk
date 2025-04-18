@@ -27,6 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an automatic stop policy for a specific Data Science Workshop (DSW) instance. When the conditions are met, the instance is automatically stopped. You can create only one automatic stop policy for an idle DSW instance. If the specific instance has an automatic stop policy, call DeleteIdleInstanceCuller to delete it first.</p>
+     * 
      * @param request CreateIdleInstanceCullerRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -62,15 +65,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIdleInstanceCullerResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateIdleInstanceCullerResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIdleInstanceCullerResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an automatic stop policy for a specific Data Science Workshop (DSW) instance. When the conditions are met, the instance is automatically stopped. You can create only one automatic stop policy for an idle DSW instance. If the specific instance has an automatic stop policy, call DeleteIdleInstanceCuller to delete it first.</p>
+     * 
      * @param request CreateIdleInstanceCullerRequest
      * @return CreateIdleInstanceCullerResponse
      */
@@ -82,7 +83,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a Data Science Workshop (DSW) instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @param headers map
@@ -114,6 +115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.driver)) {
             body.put("Driver", request.driver);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicMount)) {
+            body.put("DynamicMount", request.dynamicMount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
@@ -191,17 +196,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateInstanceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>创建实例</p>
+     * <p>Creates a Data Science Workshop (DSW) instance.</p>
      * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -214,7 +214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建定时关机任务</p>
+     * <p>Creates a scheduled stop task for an instance.</p>
      * 
      * @param request CreateInstanceShutdownTimerRequest
      * @param headers map
@@ -247,17 +247,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceShutdownTimerResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateInstanceShutdownTimerResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceShutdownTimerResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>创建定时关机任务</p>
+     * <p>Creates a scheduled stop task for an instance.</p>
      * 
      * @param request CreateInstanceShutdownTimerRequest
      * @return CreateInstanceShutdownTimerResponse
@@ -319,12 +314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceSnapshotResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateInstanceSnapshotResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceSnapshotResponse());
     }
 
     /**
@@ -341,6 +331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes the automatic stop policy of an instance.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIdleInstanceCullerResponse
@@ -360,15 +353,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIdleInstanceCullerResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIdleInstanceCullerResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIdleInstanceCullerResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes the automatic stop policy of an instance.</p>
      * @return DeleteIdleInstanceCullerResponse
      */
     public DeleteIdleInstanceCullerResponse deleteIdleInstanceCuller(String InstanceId) throws Exception {
@@ -379,7 +369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes a specific instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -400,17 +390,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteInstanceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>删除实例</p>
+     * <p>Deletes a specific instance.</p>
      * @return DeleteInstanceResponse
      */
     public DeleteInstanceResponse deleteInstance(String InstanceId) throws Exception {
@@ -421,7 +406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除DSW实例的标签</p>
+     * <p>Delete tags from a Data Science Workshop (DSW) instance.</p>
      * 
      * @param request DeleteInstanceLabelsRequest
      * @param headers map
@@ -450,17 +435,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceLabelsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteInstanceLabelsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceLabelsResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>删除DSW实例的标签</p>
+     * <p>Delete tags from a Data Science Workshop (DSW) instance.</p>
      * 
      * @param request DeleteInstanceLabelsRequest
      * @return DeleteInstanceLabelsResponse
@@ -473,7 +453,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除定时关机任务</p>
+     * <p>Deletes a scheduled stop task of an instance.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -494,17 +474,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceShutdownTimerResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteInstanceShutdownTimerResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceShutdownTimerResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>删除定时关机任务</p>
+     * <p>Deletes a scheduled stop task of an instance.</p>
      * @return DeleteInstanceShutdownTimerResponse
      */
     public DeleteInstanceShutdownTimerResponse deleteInstanceShutdownTimer(String InstanceId) throws Exception {
@@ -536,12 +511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceSnapshotResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteInstanceSnapshotResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceSnapshotResponse());
     }
 
     /**
@@ -556,6 +526,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about an auto stop policy for a specific idle instance.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIdleInstanceCullerResponse
@@ -575,15 +548,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetIdleInstanceCullerResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetIdleInstanceCullerResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIdleInstanceCullerResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about an auto stop policy for a specific idle instance.</p>
      * @return GetIdleInstanceCullerResponse
      */
     public GetIdleInstanceCullerResponse getIdleInstanceCuller(String InstanceId) throws Exception {
@@ -594,7 +564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Queries the details of a DSW instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param headers map
@@ -623,17 +593,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取实例详情</p>
+     * <p>Queries the details of a DSW instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -645,6 +610,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of system events for a Data Science Workshop (DSW) instance.</p>
+     * 
      * @param request GetInstanceEventsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -684,15 +652,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceEventsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceEventsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceEventsResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of system events for a Data Science Workshop (DSW) instance.</p>
+     * 
      * @param request GetInstanceEventsRequest
      * @return GetInstanceEventsResponse
      */
@@ -703,6 +669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the resource metrics of an instance.</p>
+     * 
      * @param request GetInstanceMetricsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -742,15 +711,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceMetricsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceMetricsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceMetricsResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the resource metrics of an instance.</p>
+     * 
      * @param request GetInstanceMetricsRequest
      * @return GetInstanceMetricsResponse
      */
@@ -783,12 +750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceShutdownTimerResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceShutdownTimerResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceShutdownTimerResponse());
     }
 
     /**
@@ -825,12 +787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceSnapshotResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetInstanceSnapshotResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceSnapshotResponse());
     }
 
     /**
@@ -845,6 +802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtains the lifecycle transition information for an instance, including details on the status an instance transitions to at a specific point in time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the lifecycle of an instance</p>
+     * 
      * @param request GetLifecycleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -892,15 +855,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetLifecycleResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetLifecycleResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLifecycleResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtains the lifecycle transition information for an instance, including details on the status an instance transitions to at a specific point in time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the lifecycle of an instance</p>
+     * 
      * @param request GetLifecycleRequest
      * @return GetLifecycleResponse
      */
@@ -969,12 +933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetricsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetMetricsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMetricsResponse());
     }
 
     /**
@@ -1030,12 +989,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceGroupStatisticsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceGroupStatisticsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceGroupStatisticsResponse());
     }
 
     /**
@@ -1049,6 +1003,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the temporary authentication information of a DSW instance.</p>
+     * 
      * @param request GetTokenRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1080,15 +1037,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetTokenResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetTokenResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTokenResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Obtains the temporary authentication information of a DSW instance.</p>
+     * 
      * @param request GetTokenRequest
      * @return GetTokenResponse
      */
@@ -1121,12 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserConfigResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetUserConfigResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserConfigResponse());
     }
 
     /**
@@ -1187,12 +1137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListEcsSpecsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListEcsSpecsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEcsSpecsResponse());
     }
 
     /**
@@ -1251,12 +1196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceSnapshotResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstanceSnapshotResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceSnapshotResponse());
     }
 
     /**
@@ -1303,12 +1243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceStatisticsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstanceStatisticsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstanceStatisticsResponse());
     }
 
     /**
@@ -1325,6 +1260,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of Data Science Workshop (DSW) instances.</p>
+     * 
      * @param tmpReq ListInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1411,6 +1349,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Order", request.order);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldInfo)) {
+            query.put("OversoldInfo", request.oversoldInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.oversoldType)) {
+            query.put("OversoldType", request.oversoldType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
@@ -1458,15 +1404,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListInstancesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of Data Science Workshop (DSW) instances.</p>
+     * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -1499,12 +1443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new StartInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new StartInstanceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartInstanceResponse());
     }
 
     /**
@@ -1549,12 +1488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new StopInstanceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopInstanceResponse());
     }
 
     /**
@@ -1572,7 +1506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates the properties of a DSW instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param headers map
@@ -1624,6 +1558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.driver)) {
             body.put("Driver", request.driver);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicMount)) {
+            body.put("DynamicMount", request.dynamicMount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
@@ -1681,17 +1619,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateInstanceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>更新实例</p>
+     * <p>Updates the properties of a DSW instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -1704,7 +1637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改DSW实例的标签</p>
+     * <p>Updates the tags of a Data Science Workshop (DSW) instance. If the tags do not exist, the system adds tags.</p>
      * 
      * @param request UpdateInstanceLabelsRequest
      * @param headers map
@@ -1733,17 +1666,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceLabelsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateInstanceLabelsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceLabelsResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>修改DSW实例的标签</p>
+     * <p>Updates the tags of a Data Science Workshop (DSW) instance. If the tags do not exist, the system adds tags.</p>
      * 
      * @param request UpdateInstanceLabelsRequest
      * @return UpdateInstanceLabelsResponse

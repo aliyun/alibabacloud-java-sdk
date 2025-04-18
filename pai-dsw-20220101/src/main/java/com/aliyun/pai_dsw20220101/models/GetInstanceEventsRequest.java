@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetInstanceEventsRequest extends TeaModel {
     /**
+     * <p>The end of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T15:00:00Z</p>
      */
@@ -12,6 +14,8 @@ public class GetInstanceEventsRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>The maximum number of events. Default value: 2000.</p>
+     * 
      * <strong>example:</strong>
      * <p>2000</p>
      */
@@ -19,12 +23,17 @@ public class GetInstanceEventsRequest extends TeaModel {
     public Integer maxEventsNum;
 
     /**
+     * <p>The beginning of the time range to query.</p>
+     * 
      * <strong>example:</strong>
      * <p>2020-11-08T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The token used to share the URL.</p>
+     */
     @NameInMap("Token")
     public String token;
 

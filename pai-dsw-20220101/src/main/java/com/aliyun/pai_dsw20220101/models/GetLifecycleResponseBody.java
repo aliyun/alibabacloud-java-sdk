@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetLifecycleResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: All errors, except for parameter validation errors, are internal errors.</li>
+     * <li>ValidationError: A parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +18,8 @@ public class GetLifecycleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The lifecycle details.</p>
+     * 
      * <strong>example:</strong>
      * <p>[[{&quot;Status&quot;:&quot;Creating&quot;,&quot;GmtCreateTime&quot;:&quot;2022-09-19T22:38:00Z&quot;,&quot;Reason&quot;:&quot;&quot;,&quot;ReasonCode&quot;:&quot;&quot;}]]</p>
      */
@@ -19,6 +27,8 @@ public class GetLifecycleResponseBody extends TeaModel {
     public java.util.List<java.util.List<GetLifecycleResponseBodyLifecycle>> lifecycle;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
@@ -26,6 +36,8 @@ public class GetLifecycleResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -33,6 +45,12 @@ public class GetLifecycleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +58,8 @@ public class GetLifecycleResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of queried sessions.</p>
+     * 
      * <strong>example:</strong>
      * <p>35</p>
      */
@@ -101,6 +121,26 @@ public class GetLifecycleResponseBody extends TeaModel {
 
     public static class GetLifecycleResponseBodyLifecycle extends TeaModel {
         /**
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>SaveFailed: The instance image failed to be saved.</li>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>ResourceAllocating</li>
+         * <li>Stopping</li>
+         * <li>Updating</li>
+         * <li>Saving</li>
+         * <li>Starting</li>
+         * <li>Running</li>
+         * <li>Saved</li>
+         * <li>EnvPreparing: Preparing environment.</li>
+         * <li>ArrearStopping: The service is being stopped due to overdue payments.</li>
+         * <li>Arrearge: The service is stopped due to overdue payments.</li>
+         * <li>Queuing</li>
+         * <li>Recovering</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Starting</p>
          */
@@ -108,6 +148,8 @@ public class GetLifecycleResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The reason code that corresponds to an event.</p>
+         * 
          * <strong>example:</strong>
          * <p>“”</p>
          */
@@ -115,6 +157,8 @@ public class GetLifecycleResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
+         * <p>The reason message that corresponds to an event.</p>
+         * 
          * <strong>example:</strong>
          * <p>“”</p>
          */
@@ -122,6 +166,8 @@ public class GetLifecycleResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
+         * <p>The time the status was created, specifically the time the instance transitioned to this status (in GMT).</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-10-21T07:27:44Z</p>
          */

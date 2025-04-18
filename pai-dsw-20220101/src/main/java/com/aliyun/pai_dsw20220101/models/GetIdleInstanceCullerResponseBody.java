@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetIdleInstanceCullerResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+     * <li>ValidationError: a parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ValidationError</p>
      */
@@ -12,6 +18,8 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The CPU utilization threshold. Unit: percentage. Valid values: 1 to 100. If the CPU utilization of the instance is lower than this threshold, the instance is considered idle.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +27,8 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public Integer cpuPercentThreshold;
 
     /**
+     * <p>The GPU utilization threshold. Unit: percentage. Valid values: 1 to 100. This parameter takes effect only if the instance is of the GPU instance type. If both CPU and GPU utilization is lower than the thresholds, the instance is considered idle.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +36,8 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public Integer gpuPercentThreshold;
 
     /**
+     * <p>The time duration for which the instance is idle. Unit: minutes.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -33,6 +45,8 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public Integer idleTimeInMinutes;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
      */
@@ -40,6 +54,8 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The maximum time duration for which the instance is idle. Unit: minutes. If the time duration for which the instance is idle exceeds this value, the system automatically stops the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -47,6 +63,8 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public Integer maxIdleTimeInMinutes;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
@@ -54,6 +72,8 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -61,6 +81,12 @@ public class GetIdleInstanceCullerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
     /**
+     * <p>The validity period. Unit: seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -12,6 +14,7 @@ public class GetTokenRequest extends TeaModel {
     public Integer expireTime;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

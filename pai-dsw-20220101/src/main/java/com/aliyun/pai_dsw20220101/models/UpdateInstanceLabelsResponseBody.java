@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceLabelsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */

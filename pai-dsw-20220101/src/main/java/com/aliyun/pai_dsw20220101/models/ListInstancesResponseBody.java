@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+     * <li>ValidationError: a parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,16 +18,27 @@ public class ListInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li>400</li>
+     * <li>404</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The instances returned on this page.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
@@ -29,6 +46,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -36,6 +55,12 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +68,8 @@ public class ListInstancesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>35</p>
      */
@@ -111,6 +138,13 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesAffinityCPU extends TeaModel {
+        /**
+         * <p>Indicates whether the CPU affinity feature was enabled.</p>
+         * <p>true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -130,6 +164,9 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesAffinity extends TeaModel {
+        /**
+         * <p>The CPU affinity configuration. Only subscription instances that use general-purpose computing resources support CPU affinity configuration.</p>
+         */
         @NameInMap("CPU")
         public ListInstancesResponseBodyInstancesAffinityCPU CPU;
 
@@ -150,6 +187,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesCloudDisks extends TeaModel {
         /**
+         * <p>The cloud disk capacity.</p>
+         * 
          * <strong>example:</strong>
          * <p>30Gi</p>
          */
@@ -157,6 +196,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String capacity;
 
         /**
+         * <p>The mount path of the cloud disk in the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mmt/workspace</p>
          */
@@ -164,6 +205,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String mountPath;
 
         /**
+         * <p>The directory on the cloud disk that is mounted to the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>/workspace</p>
          */
@@ -171,6 +214,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The cloud disk type. The value rootfs indicates that the cloud disk is used as the root file system (rootfs).</p>
+         * 
          * <strong>example:</strong>
          * <p>rootfs</p>
          */
@@ -218,31 +263,78 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesDatasets extends TeaModel {
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-vsqjvsjp4orp5l206u</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("DatasetVersion")
         public String datasetVersion;
 
+        /**
+         * <p>Indicates whether dynamic mounting was enabled. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Dynamic")
+        public Boolean dynamic;
+
+        /**
+         * <p>The read and write permissions. Valid values: RW and RO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RW</p>
+         */
         @NameInMap("MountAccess")
         public String mountAccess;
 
         /**
+         * <p>The mount path in the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <p>The type of the mount option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FastReadWrite</p>
+         */
         @NameInMap("OptionType")
         public String optionType;
 
+        /**
+         * <p>The mount type of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;fs.oss.download.thread.concurrency&quot;: &quot;10&quot;,
+         *   &quot;fs.oss.upload.thread.concurrency&quot;: &quot;10&quot;,
+         *   &quot;fs.jindo.args&quot;: &quot;-oattr_timeout=3 -oentry_timeout=0 -onegative_timeout=0 -oauto_cache -ono_symlink&quot;
+         * }</p>
+         */
         @NameInMap("Options")
         public String options;
 
+        /**
+         * <p>The dataset URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -265,6 +357,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getDatasetVersion() {
             return this.datasetVersion;
+        }
+
+        public ListInstancesResponseBodyInstancesDatasets setDynamic(Boolean dynamic) {
+            this.dynamic = dynamic;
+            return this;
+        }
+        public Boolean getDynamic() {
+            return this.dynamic;
         }
 
         public ListInstancesResponseBodyInstancesDatasets setMountAccess(String mountAccess) {
@@ -311,6 +411,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesIdleInstanceCuller extends TeaModel {
         /**
+         * <p>The CPU utilization threshold. Unit: percentage. Valid values: 1 to 100. If the CPU utilization of the instance is lower than this threshold, the instance is considered idle.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -318,6 +420,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer cpuPercentThreshold;
 
         /**
+         * <p>The GPU utilization threshold. Unit: percentage. Valid values: 1 to 100. This parameter takes effect only if the instance is of the GPU instance type. If both CPU and GPU utilization is lower than the thresholds, the instance is considered idle.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -325,6 +429,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer gpuPercentThreshold;
 
         /**
+         * <p>The time duration for which the instance is idle. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -332,6 +438,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Integer idleTimeInMinutes;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-730xxxxxxxxxx</p>
          */
@@ -339,6 +447,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The maximum time duration for which the instance is idle. Unit: minutes. If the time duration for which the instance is idle exceeds this value, the system automatically stops the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -394,6 +504,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesInstanceShutdownTimer extends TeaModel {
         /**
+         * <p>The scheduled stop time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -401,6 +513,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String dueTime;
 
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -408,6 +522,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the instance was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -415,6 +531,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-730xxxxxxxxxx</p>
          */
@@ -422,6 +540,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The remaining time before the instance is stopped.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600000</p>
          */
@@ -477,6 +597,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesInstanceSnapshotList extends TeaModel {
         /**
+         * <p>The time when the snapshot was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -484,6 +606,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the snapshot was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -491,6 +615,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>image-05cefd0be2exxxx</p>
          */
@@ -498,6 +624,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>py36_cpu_tf1.12_ubuntu</p>
          */
@@ -505,6 +633,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageName;
 
         /**
+         * <p>The image URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
@@ -512,6 +642,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>The error code of the instance snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internal Error</p>
          */
@@ -519,6 +651,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
+         * <p>The error message of the instance snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImagePullBackOff</p>
          */
@@ -526,6 +660,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
+         * <p>The URL of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
          */
@@ -533,6 +669,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String repositoryUrl;
 
         /**
+         * <p>The status of the instance snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pushing</p>
          */
@@ -620,6 +758,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesLabels extends TeaModel {
         /**
+         * <p>The custom label key.</p>
+         * 
          * <strong>example:</strong>
          * <p>stsTokenOwner</p>
          */
@@ -627,6 +767,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The custom label value.</p>
+         * 
          * <strong>example:</strong>
          * <p>123xxxxxxxx</p>
          */
@@ -658,6 +800,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesLatestSnapshot extends TeaModel {
         /**
+         * <p>The time when the snapshot was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -665,6 +809,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the snapshot was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -672,6 +818,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>image-05cefd0be2exxxx</p>
          */
@@ -679,6 +827,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>py36_cpu_tf1.12_ubuntu</p>
          */
@@ -686,6 +836,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageName;
 
         /**
+         * <p>The image URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
@@ -693,6 +845,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>The error code of the instance snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internal Error</p>
          */
@@ -700,6 +854,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
+         * <p>The error message of the instance snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImagePullBackOff</p>
          */
@@ -707,6 +863,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
+         * <p>The URL of the image repository.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
          */
@@ -714,6 +872,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String repositoryUrl;
 
         /**
+         * <p>The status of the instance snapshot.</p>
+         * 
          * <strong>example:</strong>
          * <p>Pushing</p>
          */
@@ -801,6 +961,8 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesRequestedResource extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -808,6 +970,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String CPU;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -815,6 +979,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String GPU;
 
         /**
+         * <p>The GPU memory type.</p>
+         * 
          * <strong>example:</strong>
          * <p>v100</p>
          */
@@ -822,6 +988,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String GPUType;
 
         /**
+         * <p>The memory size.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -829,6 +997,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The size of the shared memory.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -883,9 +1053,21 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -913,7 +1095,12 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesUserVpc extends TeaModel {
+        @NameInMap("BandwidthLimit")
+        public BandwidthLimit bandwidthLimit;
+
         /**
+         * <p>The default route.</p>
+         * 
          * <strong>example:</strong>
          * <p>eth0 | eth1</p>
          */
@@ -921,16 +1108,23 @@ public class ListInstancesResponseBody extends TeaModel {
         public String defaultRoute;
 
         /**
+         * <p>The extended CIDR blocks.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
          */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        /**
+         * <p>The forward information.</p>
+         */
         @NameInMap("ForwardInfos")
         public java.util.List<ForwardInfoResponse> forwardInfos;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxxxxx</p>
          */
@@ -938,6 +1132,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxxxx</p>
          */
@@ -945,6 +1141,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxxxx</p>
          */
@@ -954,6 +1152,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static ListInstancesResponseBodyInstancesUserVpc build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstancesUserVpc self = new ListInstancesResponseBodyInstancesUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesUserVpc setBandwidthLimit(BandwidthLimit bandwidthLimit) {
+            this.bandwidthLimit = bandwidthLimit;
+            return this;
+        }
+        public BandwidthLimit getBandwidthLimit() {
+            return this.bandwidthLimit;
         }
 
         public ListInstancesResponseBodyInstancesUserVpc setDefaultRoute(String defaultRoute) {
@@ -1008,6 +1214,12 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
+         * <p>The accelerator type of the instance. Valid values:</p>
+         * <ul>
+         * <li>CPU</li>
+         * <li>GPU</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */
@@ -1015,6 +1227,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String acceleratorType;
 
         /**
+         * <p>The accessibility. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE (default): The instances are accessible only to you and the administrator of the workspace.</li>
+         * <li>PUBLIC: The instances are accessible only to all members in the workspace.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
          */
@@ -1022,29 +1240,44 @@ public class ListInstancesResponseBody extends TeaModel {
         public String accessibility;
 
         /**
+         * <p>The accumulated running duration. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600000</p>
          */
         @NameInMap("AccumulatedRunningTimeInMs")
         public Long accumulatedRunningTimeInMs;
 
+        /**
+         * <p>The affinity configuration.</p>
+         */
         @NameInMap("Affinity")
         public ListInstancesResponseBodyInstancesAffinity affinity;
 
         /**
+         * <p>The cloud disks of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
         @NameInMap("CloudDisks")
         public java.util.List<ListInstancesResponseBodyInstancesCloudDisks> cloudDisks;
 
+        /**
+         * <p>The credential configuration.</p>
+         */
         @NameInMap("CredentialConfig")
         public CredentialConfig credentialConfig;
 
+        /**
+         * <p>The datasets.</p>
+         */
         @NameInMap("Datasets")
         public java.util.List<ListInstancesResponseBodyInstancesDatasets> datasets;
 
         /**
+         * <p>The NVIDIA driver configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>535.54.03</p>
          */
@@ -1052,6 +1285,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public String driver;
 
         /**
+         * <p>The dynamic mount configurations.</p>
+         */
+        @NameInMap("DynamicMount")
+        public DynamicMount dynamicMount;
+
+        /**
+         * <p>The ECS instance type of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
          */
@@ -1059,6 +1300,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String ecsSpec;
 
         /**
+         * <p>The environment variables.</p>
+         * 
          * <strong>example:</strong>
          * <p>{userName: &quot;Chris&quot;}</p>
          */
@@ -1066,6 +1309,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public java.util.Map<String, String> environmentVariables;
 
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -1073,6 +1318,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the instance was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -1080,16 +1327,26 @@ public class ListInstancesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The rule for stopping idle instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;InstanceId&quot;:&quot;dsw-05cefd0be2e5a278&quot;,&quot;CpuPercentThreshold&quot;:20,&quot;GpuPercentThreshold&quot;:10,&quot;MaxIdleTimeInMinutes&quot;:120,&quot;IdleTimeInMinutes&quot;:30}</p>
          */
         @NameInMap("IdleInstanceCuller")
         public ListInstancesResponseBodyInstancesIdleInstanceCuller idleInstanceCuller;
 
+        /**
+         * <p>The Base64-encoded account and password for the user\&quot;s private image. The password will be hidden.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aGFyYm9yYWlAeGltYWxheWE6KioqKioq</p>
+         */
         @NameInMap("ImageAuth")
         public String imageAuth;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>image-05cefd0be2exxxx</p>
          */
@@ -1097,6 +1354,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>py36_cpu_tf1.12_ubuntu</p>
          */
@@ -1104,6 +1363,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageName;
 
         /**
+         * <p>The image address.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
@@ -1111,6 +1372,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-730xxxxxxxxxx</p>
          */
@@ -1118,16 +1381,23 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The instance name.</p>
+         * 
          * <strong>example:</strong>
          * <p>training_data</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The scheduled stop task.</p>
+         */
         @NameInMap("InstanceShutdownTimer")
         public ListInstancesResponseBodyInstancesInstanceShutdownTimer instanceShutdownTimer;
 
         /**
+         * <p>The instance snapshots.</p>
+         * 
          * <strong>example:</strong>
          * <p>[]</p>
          */
@@ -1135,6 +1405,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public java.util.List<ListInstancesResponseBodyInstancesInstanceSnapshotList> instanceSnapshotList;
 
         /**
+         * <p>The instance URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/">https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/</a></p>
          */
@@ -1142,7 +1414,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceUrl;
 
         /**
-         * <p>Jupyterlab Url。</p>
+         * <p>The JupyterLab URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
@@ -1151,16 +1423,33 @@ public class ListInstancesResponseBody extends TeaModel {
         public String jupyterlabUrl;
 
         /**
+         * <p>The custom labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
          */
         @NameInMap("Labels")
         public java.util.List<ListInstancesResponseBodyInstancesLabels> labels;
 
+        /**
+         * <p>The user image that was latest saved.</p>
+         */
         @NameInMap("LatestSnapshot")
         public ListInstancesResponseBodyInstancesLatestSnapshot latestSnapshot;
 
+        @NameInMap("OversoldInfo")
+        public String oversoldInfo;
+
+        @NameInMap("OversoldType")
+        public String oversoldType;
+
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo</li>
+         * <li>Subscription</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PayAsYouGo</p>
          */
@@ -1168,6 +1457,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String paymentType;
 
         /**
+         * <p>The priority based on which resources are allocated to instances. Resources are preferentially allocated to instances with higher priorities.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1175,6 +1466,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public Long priority;
 
         /**
+         * <p>The error code of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>Internal Error</p>
          */
@@ -1182,6 +1475,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
+         * <p>The cause of the instance error.</p>
+         * 
          * <strong>example:</strong>
          * <p>ImagePullBackOff</p>
          */
@@ -1189,6 +1484,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
+         * <p>The resource configurations.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
          */
@@ -1196,6 +1493,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public ListInstancesResponseBodyInstancesRequestedResource requestedResource;
 
         /**
+         * <p>The resource ID. This parameter is valid only if you set PaymentType to Subscription.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-123456789</p>
          */
@@ -1203,6 +1502,12 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The specifications.</p>
+         * <ul>
+         * <li>In pay-as-you-go scenarios, the value is the specifications of the purchased ECS instance type.</li>
+         * <li>In subscription scenarios, the value is the requested number of CPU cores and memory size.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>resource_group</p>
          */
@@ -1210,16 +1515,23 @@ public class ListInstancesResponseBody extends TeaModel {
         public String resourceName;
 
         /**
+         * <p>The instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyInstancesTags> tags;
 
         /**
+         * <p>The terminal URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/</a></p>
          */
@@ -1227,6 +1539,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String terminalUrl;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1612285282502324</p>
          */
@@ -1234,17 +1548,22 @@ public class ListInstancesResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>测试用户</p>
          */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The virtual private cloud (VPC) configurations.</p>
+         */
         @NameInMap("UserVpc")
         public ListInstancesResponseBodyInstancesUserVpc userVpc;
 
         /**
-         * <p>Web IDE url。</p>
+         * <p>The Web IDE URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
@@ -1253,6 +1572,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String webIDEUrl;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>40823</p>
          */
@@ -1260,6 +1581,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String workspaceId;
 
         /**
+         * <p>The workspace name.</p>
+         * 
          * <strong>example:</strong>
          * <p>training_data</p>
          */
@@ -1267,6 +1590,8 @@ public class ListInstancesResponseBody extends TeaModel {
         public String workspaceName;
 
         /**
+         * <p>The storage for the workspace. If you leave this parameter empty, the workspace uses File Storage NAS (NAS) storage, cloud disks, or local disks in sequence.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-123456789</p>
          */
@@ -1340,6 +1665,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getDriver() {
             return this.driver;
+        }
+
+        public ListInstancesResponseBodyInstances setDynamicMount(DynamicMount dynamicMount) {
+            this.dynamicMount = dynamicMount;
+            return this;
+        }
+        public DynamicMount getDynamicMount() {
+            return this.dynamicMount;
         }
 
         public ListInstancesResponseBodyInstances setEcsSpec(String ecsSpec) {
@@ -1476,6 +1809,22 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public ListInstancesResponseBodyInstancesLatestSnapshot getLatestSnapshot() {
             return this.latestSnapshot;
+        }
+
+        public ListInstancesResponseBodyInstances setOversoldInfo(String oversoldInfo) {
+            this.oversoldInfo = oversoldInfo;
+            return this;
+        }
+        public String getOversoldInfo() {
+            return this.oversoldInfo;
+        }
+
+        public ListInstancesResponseBodyInstances setOversoldType(String oversoldType) {
+            this.oversoldType = oversoldType;
+            return this;
+        }
+        public String getOversoldType() {
+            return this.oversoldType;
         }
 
         public ListInstancesResponseBodyInstances setPaymentType(String paymentType) {

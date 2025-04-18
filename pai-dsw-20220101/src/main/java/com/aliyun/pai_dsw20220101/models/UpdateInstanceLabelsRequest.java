@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceLabelsRequest extends TeaModel {
     /**
+     * <p>The tags that you want to update.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Labels")
@@ -25,6 +26,7 @@ public class UpdateInstanceLabelsRequest extends TeaModel {
 
     public static class UpdateInstanceLabelsRequestLabels extends TeaModel {
         /**
+         * <p>The key of the custom tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -34,6 +36,7 @@ public class UpdateInstanceLabelsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the custom tag.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

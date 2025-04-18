@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetInstanceMetricsResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+     * <li>ValidationError: a parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +18,12 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li>400</li>
+     * <li>404</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +31,8 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
      */
@@ -26,16 +40,23 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The information about the metrics of the pod that corresponds to the instance.</p>
+     */
     @NameInMap("PodMetrics")
     public java.util.List<GetInstanceMetricsResponseBodyPodMetrics> podMetrics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -43,6 +64,12 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -112,6 +139,8 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
 
     public static class GetInstanceMetricsResponseBodyPodMetricsMetrics extends TeaModel {
         /**
+         * <p>The timestamp corresponding to the metric.</p>
+         * 
          * <strong>example:</strong>
          * <p>1670890560</p>
          */
@@ -119,6 +148,8 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         public Long time;
 
         /**
+         * <p>The metric value.</p>
+         * 
          * <strong>example:</strong>
          * <p>25.901031</p>
          */
@@ -149,10 +180,15 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceMetricsResponseBodyPodMetrics extends TeaModel {
+        /**
+         * <p>The metrics of the pod that corresponds to the instance.</p>
+         */
         @NameInMap("Metrics")
         public java.util.List<GetInstanceMetricsResponseBodyPodMetricsMetrics> metrics;
 
         /**
+         * <p>The ID of the pod that corresponds to the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-15870-695f44c5bc-hd6xm</p>
          */

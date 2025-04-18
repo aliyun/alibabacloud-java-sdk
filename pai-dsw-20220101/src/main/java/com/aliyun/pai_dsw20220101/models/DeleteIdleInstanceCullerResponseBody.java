@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteIdleInstanceCullerResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+     * <li>ValidationError: a parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ValidationError</p>
      */
@@ -12,6 +18,8 @@ public class DeleteIdleInstanceCullerResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
      */
@@ -19,6 +27,12 @@ public class DeleteIdleInstanceCullerResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The response message.</p>
+     * <ul>
+     * <li>If the request is successful, null is returned.</li>
+     * <li>If the request fails, the failure cause is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
@@ -26,6 +40,8 @@ public class DeleteIdleInstanceCullerResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -33,6 +49,12 @@ public class DeleteIdleInstanceCullerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceShutdownTimerResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+     * <li>ValidationError: a parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +18,12 @@ public class DeleteInstanceShutdownTimerResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li>400</li>
+     * <li>404</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -19,6 +31,8 @@ public class DeleteInstanceShutdownTimerResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
      */
@@ -26,6 +40,8 @@ public class DeleteInstanceShutdownTimerResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
@@ -33,6 +49,8 @@ public class DeleteInstanceShutdownTimerResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -40,6 +58,12 @@ public class DeleteInstanceShutdownTimerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
+     * <p>The accelerator type of the instance.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CPU</li>
+     * <li>GPU</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CPU</p>
      */
@@ -12,6 +19,12 @@ public class GetInstanceResponseBody extends TeaModel {
     public String acceleratorType;
 
     /**
+     * <p>The accessibility. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE: Accessible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: Accessible to all members in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
@@ -19,16 +32,23 @@ public class GetInstanceResponseBody extends TeaModel {
     public String accessibility;
 
     /**
+     * <p>The accumulated running duration. Unit: milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600000</p>
      */
     @NameInMap("AccumulatedRunningTimeInMs")
     public Long accumulatedRunningTimeInMs;
 
+    /**
+     * <p>The affinity configuration.</p>
+     */
     @NameInMap("Affinity")
     public GetInstanceResponseBodyAffinity affinity;
 
     /**
+     * <p>The cloud disks of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -36,19 +56,33 @@ public class GetInstanceResponseBody extends TeaModel {
     public java.util.List<GetInstanceResponseBodyCloudDisks> cloudDisks;
 
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: All errors, except for parameter validation errors, are internal errors.</li>
+     * <li>ValidationError: A parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The credential injection configuration.</p>
+     */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <p>The datasets.</p>
+     */
     @NameInMap("Datasets")
     public java.util.List<GetInstanceResponseBodyDatasets> datasets;
 
     /**
+     * <p>The NVIDIA driver configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>535.54.03</p>
      */
@@ -56,6 +90,14 @@ public class GetInstanceResponseBody extends TeaModel {
     public String driver;
 
     /**
+     * <p>The dynamic mount configuration.</p>
+     */
+    @NameInMap("DynamicMount")
+    public DynamicMount dynamicMount;
+
+    /**
+     * <p>The ECS instance type of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
      */
@@ -63,6 +105,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String ecsSpec;
 
     /**
+     * <p>The environment variables.</p>
+     * 
      * <strong>example:</strong>
      * <p>{userName: &quot;Chris&quot;}</p>
      */
@@ -70,6 +114,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public java.util.Map<String, String> environmentVariables;
 
     /**
+     * <p>The creation time of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:01Z</p>
      */
@@ -77,6 +123,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The last modified time of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:01Z</p>
      */
@@ -84,6 +132,12 @@ public class GetInstanceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li>400</li>
+     * <li>404</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -91,16 +145,26 @@ public class GetInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The automatic shutdown settings.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;InstanceId&quot;:&quot;dsw-05cefd0be2e5a278&quot;,&quot;CpuPercentThreshold&quot;:20,&quot;GpuPercentThreshold&quot;:10,&quot;MaxIdleTimeInMinutes&quot;:120,&quot;IdleTimeInMinutes&quot;:30}</p>
      */
     @NameInMap("IdleInstanceCuller")
     public GetInstanceResponseBodyIdleInstanceCuller idleInstanceCuller;
 
+    /**
+     * <p>The Base64-encoded account and password for the user‘s private image. The password will be hidden.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YWxpeXVuNjUzMzM5MjIwMzoqKioqKio=</p>
+     */
     @NameInMap("ImageAuth")
     public String imageAuth;
 
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>image-05cefd0be2exxxx</p>
      */
@@ -108,6 +172,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The image name.</p>
+     * 
      * <strong>example:</strong>
      * <p>py36_cpu_tf1.12_ubuntu</p>
      */
@@ -115,6 +181,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String imageName;
 
     /**
+     * <p>The image address.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
      */
@@ -122,6 +190,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String imageUrl;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsw-730xxxxxxxxxx</p>
      */
@@ -129,16 +199,23 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>training_data</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The scheduled stop tasks.</p>
+     */
     @NameInMap("InstanceShutdownTimer")
     public GetInstanceResponseBodyInstanceShutdownTimer instanceShutdownTimer;
 
     /**
+     * <p>The instance snapshots.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -146,6 +223,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public java.util.List<GetInstanceResponseBodyInstanceSnapshotList> instanceSnapshotList;
 
     /**
+     * <p>The instance URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/">https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/</a></p>
      */
@@ -153,7 +232,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceUrl;
 
     /**
-     * <p>Jupyterlab Url。</p>
+     * <p>The JupyterLab URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
@@ -162,26 +241,46 @@ public class GetInstanceResponseBody extends TeaModel {
     public String jupyterlabUrl;
 
     /**
+     * <p>The custom tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
      */
     @NameInMap("Labels")
     public java.util.List<GetInstanceResponseBodyLabels> labels;
 
+    /**
+     * <p>The latest user image saved.</p>
+     */
     @NameInMap("LatestSnapshot")
     public GetInstanceResponseBodyLatestSnapshot latestSnapshot;
 
     /**
+     * <p>The error message. Valid values:</p>
+     * <ul>
+     * <li>If the request is successful, null is returned.</li>
+     * <li>If the request fails, the cause for the failure is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The error recovery configuration of the node.</p>
+     */
     @NameInMap("NodeErrorRecovery")
     public GetInstanceResponseBodyNodeErrorRecovery nodeErrorRecovery;
 
     /**
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li>PayAsYouGo</li>
+     * <li>Subscription</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PayAsYouGo</p>
      */
@@ -189,16 +288,26 @@ public class GetInstanceResponseBody extends TeaModel {
     public String paymentType;
 
     /**
+     * <p>The priority based on which resources are allocated to instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("Priority")
     public Long priority;
 
+    /**
+     * <p>The proxy path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dsw-170197/proxy/</p>
+     */
     @NameInMap("ProxyPath")
     public String proxyPath;
 
     /**
+     * <p>The error code of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>Internal Error</p>
      */
@@ -206,6 +315,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String reasonCode;
 
     /**
+     * <p>The cause of the instance error.</p>
+     * 
      * <strong>example:</strong>
      * <p>ImagePullBackOff</p>
      */
@@ -213,6 +324,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String reasonMessage;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -220,6 +333,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The resource configurations in subscription scenarios.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
      */
@@ -227,6 +342,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public GetInstanceResponseBodyRequestedResource requestedResource;
 
     /**
+     * <p>The resource ID. This parameter is available if the billing method is subscription.</p>
+     * 
      * <strong>example:</strong>
      * <p>dsw-123456789</p>
      */
@@ -234,6 +351,12 @@ public class GetInstanceResponseBody extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The specification type.</p>
+     * <ul>
+     * <li>For subscription, this is the requested CPU and memory size.</li>
+     * <li>For pay-as-you-go, this is the selected ECS instance type.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ecs.g7.xlarge</p>
      */
@@ -241,6 +364,26 @@ public class GetInstanceResponseBody extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The instance status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Creating</li>
+     * <li>SaveFailed</li>
+     * <li>Stopped</li>
+     * <li>Failed</li>
+     * <li>ResourceAllocating</li>
+     * <li>Stopping</li>
+     * <li>Updating</li>
+     * <li>Saving</li>
+     * <li>Queuing</li>
+     * <li>Recovering</li>
+     * <li>Starting</li>
+     * <li>Running</li>
+     * <li>Saved</li>
+     * <li>Deleting</li>
+     * <li>EnvPreparing</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -248,16 +391,27 @@ public class GetInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetInstanceResponseBodyTags> tags;
 
     /**
+     * <p>The terminal URL.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/</a></p>
      */
@@ -265,6 +419,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String terminalUrl;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1612285282502324</p>
      */
@@ -272,17 +428,22 @@ public class GetInstanceResponseBody extends TeaModel {
     public String userId;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>测试用户</p>
      */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>The virtual private cloud (VPC) configurations.</p>
+     */
     @NameInMap("UserVpc")
     public GetInstanceResponseBodyUserVpc userVpc;
 
     /**
-     * <p>Web IDE url。</p>
+     * <p>The Web IDE URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
@@ -291,6 +452,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String webIDEUrl;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>40823</p>
      */
@@ -298,6 +461,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>training_data</p>
      */
@@ -305,6 +470,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String workspaceName;
 
     /**
+     * <p>The storage for the workspace. If you leave this parameter empty, the workspace uses File Storage NAS (NAS) storage, cloud disks, or local disks in sequence.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-123456789</p>
      */
@@ -386,6 +553,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getDriver() {
         return this.driver;
+    }
+
+    public GetInstanceResponseBody setDynamicMount(DynamicMount dynamicMount) {
+        this.dynamicMount = dynamicMount;
+        return this;
+    }
+    public DynamicMount getDynamicMount() {
+        return this.dynamicMount;
     }
 
     public GetInstanceResponseBody setEcsSpec(String ecsSpec) {
@@ -709,6 +884,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyAffinityCPU extends TeaModel {
+        /**
+         * <p>Indicates whether CPU affinity is enabled.</p>
+         * <p>true false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -728,6 +910,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyAffinity extends TeaModel {
+        /**
+         * <p>The CPU affinity configuration. Only subscription instances that use general-purpose computing resources support CPU affinity configuration.</p>
+         */
         @NameInMap("CPU")
         public GetInstanceResponseBodyAffinityCPU CPU;
 
@@ -748,6 +933,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyCloudDisks extends TeaModel {
         /**
+         * <p>Disk Capacity</p>
+         * 
          * <strong>example:</strong>
          * <p>30Gi</p>
          */
@@ -755,6 +942,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String capacity;
 
         /**
+         * <p>The mount path of the cloud disk in the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mmt/workspace</p>
          */
@@ -762,6 +951,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String mountPath;
 
         /**
+         * <p>The directory on the cloud disk that is mounted to the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>/workspace</p>
          */
@@ -769,6 +960,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String path;
 
         /**
+         * <p>The usage mode of the cloud disk. The value rootfs indicates that the cloud disk is used as the root file system.</p>
+         * 
          * <strong>example:</strong>
          * <p>rootfs</p>
          */
@@ -816,34 +1009,77 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDatasets extends TeaModel {
         /**
+         * <p>The dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-vsqjvsjp4orp5l206u</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <p>The dataset version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("DatasetVersion")
         public String datasetVersion;
 
+        /**
+         * <p>Indicates whether dynamic mounting is enabled. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Dynamic")
+        public Boolean dynamic;
+
+        /**
+         * <p>The read and write permissions. Valid values: RW and RO.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RW</p>
+         */
         @NameInMap("MountAccess")
         public String mountAccess;
 
         /**
+         * <p>The mount path in the container.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <p>The mount type of the dataset (deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FastReadWrite</p>
+         */
         @NameInMap("OptionType")
         public String optionType;
 
+        /**
+         * <p>The mount type of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;fs.oss.download.thread.concurrency&quot;: &quot;10&quot;,
+         *   &quot;fs.oss.upload.thread.concurrency&quot;: &quot;10&quot;,
+         *   &quot;fs.jindo.args&quot;: &quot;-oattr_timeout=3 -oentry_timeout=0 -onegative_timeout=0 -oauto_cache -ono_symlink&quot;
+         * }</p>
+         */
         @NameInMap("Options")
         public String options;
 
         /**
+         * <p>The dataset URI.</p>
+         * 
          * <strong>example:</strong>
-         * <p>oss://bucket.oss-cn-shanghai.aliyuncs.com/data/path/</p>
+         * <p>oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</p>
          */
         @NameInMap("Uri")
         public String uri;
@@ -867,6 +1103,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getDatasetVersion() {
             return this.datasetVersion;
+        }
+
+        public GetInstanceResponseBodyDatasets setDynamic(Boolean dynamic) {
+            this.dynamic = dynamic;
+            return this;
+        }
+        public Boolean getDynamic() {
+            return this.dynamic;
         }
 
         public GetInstanceResponseBodyDatasets setMountAccess(String mountAccess) {
@@ -913,6 +1157,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyIdleInstanceCuller extends TeaModel {
         /**
+         * <p>The CPU utilization threshold. Unit: percentage. Valid values: 1 to 100. If the CPU utilization of the instance is lower than this threshold, the instance is considered idle.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -920,6 +1166,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer cpuPercentThreshold;
 
         /**
+         * <p>The GPU utilization threshold. Unit: percentage. Valid values: 1 to 100. This parameter takes effect only if the instance is of the GPU instance type. If both CPU and GPU utilization is lower than the thresholds, the instance is considered idle.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -927,6 +1175,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer gpuPercentThreshold;
 
         /**
+         * <p>The current time duration for which the instance is idle. Unit: minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */
@@ -934,6 +1184,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public Integer idleTimeInMinutes;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-730xxxxxxxxxx</p>
          */
@@ -941,6 +1193,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The maximum time duration for which the instance is idle. Unit: minutes. If the time duration for which the instance is idle exceeds this value, the system automatically stops the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -996,6 +1250,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceShutdownTimer extends TeaModel {
         /**
+         * <p>The scheduled stop time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -1003,6 +1259,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String dueTime;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -1010,6 +1268,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The modified time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -1017,6 +1277,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dsw-730xxxxxxxxxx</p>
          */
@@ -1024,6 +1286,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The remaining time before the instance is stopped. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>3600000</p>
          */
@@ -1079,7 +1343,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyInstanceSnapshotList extends TeaModel {
         /**
-         * <p>快照创建时间</p>
+         * <p>The time when the snapshot was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
@@ -1088,7 +1352,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>快照修改时间</p>
+         * <p>The time when the snapshot was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
@@ -1097,7 +1361,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>镜像Id</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>image-05cefd0be2exxxx</p>
@@ -1106,7 +1370,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>镜像名称</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>py36_cpu_tf1.12_ubuntu</p>
@@ -1115,7 +1379,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>镜像Url</p>
+         * <p>The image URL.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
@@ -1124,7 +1388,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>实例快照错误代码</p>
+         * <p>The error code of the instance snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal Error</p>
@@ -1133,7 +1397,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
-         * <p>实例快照错误消息</p>
+         * <p>The error message of the instance snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>ImagePullBackOff</p>
@@ -1142,7 +1406,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
-         * <p>镜像仓库Url</p>
+         * <p>The image repository URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
@@ -1151,7 +1415,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String repositoryUrl;
 
         /**
-         * <p>实例快照状态</p>
+         * <p>The instance snapshot status.</p>
          * 
          * <strong>example:</strong>
          * <p>Pushing</p>
@@ -1240,6 +1504,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>stsTokenOwner</p>
          */
@@ -1247,6 +1513,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>123xxxxxxxx</p>
          */
@@ -1278,6 +1546,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyLatestSnapshot extends TeaModel {
         /**
+         * <p>The time when the snapshot was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -1285,6 +1555,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the snapshot was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-12T14:36:01Z</p>
          */
@@ -1292,6 +1564,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>image-05cefd0be2exxxx</p>
          */
@@ -1299,6 +1573,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>py36_cpu_tf1.12_ubuntu</p>
          */
@@ -1306,6 +1582,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String imageName;
 
         /**
+         * <p>The image URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
          */
@@ -1313,7 +1591,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String imageUrl;
 
         /**
-         * <p>实例快照错误代码</p>
+         * <p>The error code of the instance snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>Internal Error</p>
@@ -1322,7 +1600,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
-         * <p>实例快照错误消息</p>
+         * <p>The error message of the instance snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>ImagePullBackOff</p>
@@ -1331,6 +1609,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
+         * <p>The image repository URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
          */
@@ -1338,7 +1618,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public String repositoryUrl;
 
         /**
-         * <p>实例快照状态</p>
+         * <p>The instance snapshot status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Committing</li>
+         * <li>Pushing</li>
+         * <li>Failed</li>
+         * <li>Saved</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Pushing</p>
@@ -1426,12 +1713,30 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyNodeErrorRecovery extends TeaModel {
+        /**
+         * <p>The number of seconds to wait before automatic switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("autoSwitchCountdownSeconds")
         public Long autoSwitchCountdownSeconds;
 
+        /**
+         * <p>Indicates whether to enable automatic switchover when a node error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enableAutoSwitchOnNodeError")
         public Boolean enableAutoSwitchOnNodeError;
 
+        /**
+         * <p>Indicates whether the node has an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("hasNodeError")
         public Boolean hasNodeError;
 
@@ -1468,6 +1773,8 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyRequestedResource extends TeaModel {
         /**
+         * <p>The number of CPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -1475,6 +1782,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String CPU;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -1482,6 +1791,15 @@ public class GetInstanceResponseBody extends TeaModel {
         public String GPU;
 
         /**
+         * <p>The GPU type. Valid values:</p>
+         * <ul>
+         * <li>V100</li>
+         * <li>A100</li>
+         * <li>T4</li>
+         * <li>A10</li>
+         * <li>P100</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>v100</p>
          */
@@ -1489,6 +1807,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String GPUType;
 
         /**
+         * <p>The memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -1496,6 +1816,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String memory;
 
         /**
+         * <p>The shared memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -1550,9 +1872,21 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -1580,7 +1914,12 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyUserVpc extends TeaModel {
+        @NameInMap("BandwidthLimit")
+        public BandwidthLimit bandwidthLimit;
+
         /**
+         * <p>Default Route</p>
+         * 
          * <strong>example:</strong>
          * <p>eth0 | eth1</p>
          */
@@ -1588,16 +1927,27 @@ public class GetInstanceResponseBody extends TeaModel {
         public String defaultRoute;
 
         /**
+         * <p>The extended CIDR block.</p>
+         * <ul>
+         * <li>If you leave VSwitchId empty, this parameter is not required and the system automatically obtains all CIDR blocks in the VPC.</li>
+         * <li>If VSwitchId is not empty, this parameter is required. Specify all CIDR blocks in the VPC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
          */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        /**
+         * <p>The forward information.</p>
+         */
         @NameInMap("ForwardInfos")
         public java.util.List<ForwardInfoResponse> forwardInfos;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxxxxx</p>
          */
@@ -1605,6 +1955,8 @@ public class GetInstanceResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxxxx</p>
          */
@@ -1612,7 +1964,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>Vpc Id。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxxxx</p>
@@ -1623,6 +1975,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static GetInstanceResponseBodyUserVpc build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyUserVpc self = new GetInstanceResponseBodyUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyUserVpc setBandwidthLimit(BandwidthLimit bandwidthLimit) {
+            this.bandwidthLimit = bandwidthLimit;
+            return this;
+        }
+        public BandwidthLimit getBandwidthLimit() {
+            return this.bandwidthLimit;
         }
 
         public GetInstanceResponseBodyUserVpc setDefaultRoute(String defaultRoute) {

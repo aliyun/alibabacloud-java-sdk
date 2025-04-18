@@ -5,32 +5,62 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
+     * <p>The visibility of the instance.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: Accessible to all members in the workspace.</li>
+     * <li>PRIVATE: Accessible only to you and the administrator of the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The affinity configuration.</p>
+     */
     @NameInMap("Affinity")
     public UpdateInstanceRequestAffinity affinity;
 
     /**
+     * <p>The cloud disks.</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
     @NameInMap("CloudDisks")
     public java.util.List<UpdateInstanceRequestCloudDisks> cloudDisks;
 
+    /**
+     * <p>The credential configuration.</p>
+     */
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <p>The datasets.</p>
+     */
     @NameInMap("Datasets")
     public java.util.List<UpdateInstanceRequestDatasets> datasets;
 
+    /**
+     * <p>Specifies whether to delete the credential injection information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DisassociateCredential")
     public Boolean disassociateCredential;
 
     /**
+     * <p>Specifies whether to delete the associated datasets.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -38,6 +68,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Boolean disassociateDatasets;
 
     /**
+     * <p>Specifies whether to delete the NVIDIA driver configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -45,6 +77,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Boolean disassociateDriver;
 
     /**
+     * <p>Specifies whether to delete the associated forward information.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -52,6 +86,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Boolean disassociateForwardInfos;
 
     /**
+     * <p>Specifies whether to delete the associated user VPC.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -59,6 +95,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Boolean disassociateVpc;
 
     /**
+     * <p>The NVIDIA driver configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>535.54.03</p>
      */
@@ -66,16 +104,32 @@ public class UpdateInstanceRequest extends TeaModel {
     public String driver;
 
     /**
+     * <p>The dynamic mount configuration.</p>
+     */
+    @NameInMap("DynamicMount")
+    public DynamicMount dynamicMount;
+
+    /**
+     * <p>The ECS instance type of the instance. You can call <a href="https://help.aliyun.com/document_detail/470423.html">ListEcsSpecs</a> to obtain the ECS instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
      */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    /**
+     * <p>The Base64-encoded account and password for the user‘s private image. The password will be hidden.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("ImageAuth")
     public String imageAuth;
 
     /**
+     * <p>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>image-05cefd0be2exxxx</p>
      */
@@ -83,6 +137,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The image address. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image address.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
      */
@@ -90,6 +146,12 @@ public class UpdateInstanceRequest extends TeaModel {
     public String imageUrl;
 
     /**
+     * <p>The instance name. Format requirements:</p>
+     * <ul>
+     * <li>The name can contain only letters, digits, and underscores (_).</li>
+     * <li>The name can be up to 27 characters in length.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>training_data</p>
      */
@@ -97,6 +159,12 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
+     * <p>The priority based on which resources are allocated to instances. Valid values: 1 to 9.</p>
+     * <ul>
+     * <li>1: the lowest priority.</li>
+     * <li>9 is the highest priority.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -104,6 +172,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Long priority;
 
     /**
+     * <p>The resource configurations.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
      */
@@ -111,18 +181,37 @@ public class UpdateInstanceRequest extends TeaModel {
     public UpdateInstanceRequestRequestedResource requestedResource;
 
     /**
+     * <p>the User ID of the instance.</p>
+     * 
      * <strong>example:</strong>
-     * <p>1612285282502324</p>
+     * <p>16122**********</p>
      */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The virtual private cloud (VPC) configurations.</p>
+     */
     @NameInMap("UserVpc")
     public UpdateInstanceRequestUserVpc userVpc;
 
     /**
+     * <p>Specifies the storage corresponding to the working directory. You can mount disks or datasets to /mnt/workspace at the same time. OSS datasets and dynamically mounted datasets are not supported.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>rootfsCloudDisk: Mount disk to the working directory.</li>
+     * <li>Mount path of the dataset, such as /mnt/data: Datasets in URI format only support this method.</li>
+     * <li>Dataset ID, such as d-vsqjvs\<em>\</em>\*\*rp5l206u: If a single dataset is mounted to multiple paths, the first path is selected. We recommend that you do not use this method, use the mount path instead.</li>
+     * </ul>
+     * <p>If you leave this parameter empty:</p>
+     * <ul>
+     * <li>If the instance uses cloud disks, cloud disks are selected by default.</li>
+     * <li>if no disks are available, the first NAS or CPFS dataset is selected as the working directory.</li>
+     * <li>If no disk, NAS, or CPFS datasets is available, the host space is used.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>d-123456789</p>
+     * <p>/mnt/data</p>
      */
     @NameInMap("WorkspaceSource")
     public String workspaceSource;
@@ -220,6 +309,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.driver;
     }
 
+    public UpdateInstanceRequest setDynamicMount(DynamicMount dynamicMount) {
+        this.dynamicMount = dynamicMount;
+        return this;
+    }
+    public DynamicMount getDynamicMount() {
+        return this.dynamicMount;
+    }
+
     public UpdateInstanceRequest setEcsSpec(String ecsSpec) {
         this.ecsSpec = ecsSpec;
         return this;
@@ -301,6 +398,16 @@ public class UpdateInstanceRequest extends TeaModel {
     }
 
     public static class UpdateInstanceRequestAffinityCPU extends TeaModel {
+        /**
+         * <p>Specifies whether CPU affinity is enabled.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
@@ -320,6 +427,9 @@ public class UpdateInstanceRequest extends TeaModel {
     }
 
     public static class UpdateInstanceRequestAffinity extends TeaModel {
+        /**
+         * <p>The CPU affinity configuration. Only subscription instances that use general-purpose computing resources support CPU affinity configuration.</p>
+         */
         @NameInMap("CPU")
         public UpdateInstanceRequestAffinityCPU CPU;
 
@@ -340,13 +450,32 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestCloudDisks extends TeaModel {
         /**
+         * <p>If <strong>Resource Type</strong> is <strong>Public Resource</strong> or if <strong>Resource Quota</strong> is subscription-based general-purpose computing resources (CPU cores ≥ 2 and memory ≥ 4 GB, or configured with GPU):</p>
+         * <p>Each instance has a free system disk quota of 100 GiB for persistent storage. <strong>If the DSW instance is stopped and not launched for more than 15 days, the disk is cleared</strong>. The disk can be expanded. For specific pricing, refer to the console.</p>
+         * <p>**</p>
+         * <p><strong>Warning</strong></p>
+         * <ul>
+         * <li><p>After the expansion, you cannot reduce the storage space. Proceed with caution.</p>
+         * </li>
+         * <li><p>After the expansion, the disk is not cleared if the instance is stopped for more than 15 days. However, it will continue to incur fees.</p>
+         * </li>
+         * <li><p>If you delete the instance, the system disk is also released and the data stored in the disk is deleted. Make sure that you have backed up your data before you delete the instance.</p>
+         * </li>
+         * </ul>
+         * <p>If you need persistent storage, you can <strong>mount a dataset</strong> or add the OSS, NAS, or CPFS path to the <strong>storage path</strong>.</p>
+         * 
          * <strong>example:</strong>
-         * <p>30Gi</p>
+         * <p>100Gi</p>
          */
         @NameInMap("Capacity")
         public String capacity;
 
         /**
+         * <p>Disk type:</p>
+         * <ul>
+         * <li>rootfs: Mounts the disk as a system disk. The system environment is stored on the disk.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>rootfs</p>
          */
@@ -378,35 +507,93 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestDatasets extends TeaModel {
         /**
+         * <p>The dataset ID. If the dataset is read-only, you cannot change the dataset pemission from read-only to read and write by using MountAccess.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to obtain the dataset ID. If you configure the dataset ID, you cannot configure the dataset URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>d-vsqjvsjp4orp5l206u</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <p>The dataset version. You must also configure DatasetId. If you leave this parameter empty, the value v1 is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("DatasetVersion")
         public String datasetVersion;
 
+        /**
+         * <p>Specifies whether dynamic mounting is enabled. Default value: false.</p>
+         * <ul>
+         * <li>Currently, only instances using general-purpose computing resources are supported.</li>
+         * <li>Currently, only OSS datasets are supported. The mounted datasets are read-only.</li>
+         * <li>The MountPath of the dynamically mounted dataset must be a subpath of the root path. Example: /mnt/dynamic/data1/</li>
+         * <li>A dynamically mounted dataset must be after non-dynamic datasets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Dynamic")
+        public Boolean dynamic;
+
+        /**
+         * <p>The read and write permissions of the dataset. If the dataset is read-only, it cannot be changed to read and write.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RW</p>
+         */
         @NameInMap("MountAccess")
         public String mountAccess;
 
         /**
+         * <p>The mount path of the dataset.</p>
+         * 
          * <strong>example:</strong>
          * <p>/mnt/data</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <p>The mount type. You cannot specify Options at the same time. This is deprecated, you can use Options instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
+         */
         @NameInMap("OptionType")
         @Deprecated
         public String optionType;
 
+        /**
+         * <p>The custom dataset mount options. Only OSS is supported. You cannot specify OptionType at the same time. For more information, see <a href="https://help.aliyun.com/zh/pai/user-guide/read-and-write-dataset-data">DSW mount configurations</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;fs.oss.download.thread.concurrency&quot;: &quot;10&quot;,
+         *   &quot;fs.oss.upload.thread.concurrency&quot;: &quot;10&quot;,
+         *   &quot;fs.jindo.args&quot;: &quot;-oattr_timeout=3 -oentry_timeout=0 -onegative_timeout=0 -oauto_cache -ono_symlink&quot;
+         * }</p>
+         */
         @NameInMap("Options")
         public String options;
 
         /**
+         * <p>The URI of the storage service directory, which can be directly mounted. This parameter is mutually exclusive with DatasetId.</p>
+         * <p>URI formats of different types of storage:</p>
+         * <ul>
+         * <li>OSS: oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</li>
+         * <li>NAS: nas://29\<em>\<em>d-b12\</em>\</em>\*\*446.cn-hangzhou.nas.aliyuncs.com/data/path/</li>
+         * <li>Extreme NAS: nas://29\<em>\</em>\*\<em>123-y\</em>\*r.cn-hangzhou.extreme.nas.aliyuncs.com/data/path/</li>
+         * <li>CPFS: cpfs://cpfs-213\<em>\</em>\<em>\<em>87.cn-wulanchabu/ptc-292\</em>\</em>\<em>\</em>\<em>cbb/exp-290\</em>\<em>\</em>\<em>\</em>\<em>\</em>\*03e/data/path/</li>
+         * <li>Lingjun CPFS: bmcpfs://cpfs-290\<em>\</em>\<em>\</em>\<em>\<em>foflh-vpc-x\</em>\</em>\*\*8r.cn-wulanchabu.cpfs.aliyuncs.com/data/path/</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>oss://bucket.oss-cn-shanghai.aliyuncs.com/data/path/</p>
+         * <p>oss://bucket-name.oss-cn-shanghai-internal.aliyuncs.com/data/path/</p>
          */
         @NameInMap("Uri")
         public String uri;
@@ -430,6 +617,14 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public String getDatasetVersion() {
             return this.datasetVersion;
+        }
+
+        public UpdateInstanceRequestDatasets setDynamic(Boolean dynamic) {
+            this.dynamic = dynamic;
+            return this;
+        }
+        public Boolean getDynamic() {
+            return this.dynamic;
         }
 
         public UpdateInstanceRequestDatasets setMountAccess(String mountAccess) {
@@ -477,6 +672,8 @@ public class UpdateInstanceRequest extends TeaModel {
 
     public static class UpdateInstanceRequestRequestedResource extends TeaModel {
         /**
+         * <p>The number of vCPU cores.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -484,6 +681,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String CPU;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -491,6 +690,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String GPU;
 
         /**
+         * <p>The GPU type.</p>
+         * 
          * <strong>example:</strong>
          * <p>v100</p>
          */
@@ -498,6 +699,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String GPUType;
 
         /**
+         * <p>The memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -505,6 +708,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String memory;
 
         /**
+         * <p>The shared memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -559,24 +764,44 @@ public class UpdateInstanceRequest extends TeaModel {
     }
 
     public static class UpdateInstanceRequestUserVpc extends TeaModel {
+        @NameInMap("BandwidthLimit")
+        public BandwidthLimit bandwidthLimit;
+
         /**
+         * <p>The default route. Valid values:</p>
+         * <ul>
+         * <li>eth0: The default network interface is used to access the Internet through the public gateway.</li>
+         * <li>eth1: The user\&quot;s Elastic Network Interface is used to access the Internet through the private gateway.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>eth0 | eth1</p>
+         * <p>eth0</p>
          */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
         /**
+         * <p>The extended CIDR blocks.</p>
+         * <ul>
+         * <li>If you leave VSwitchId empty, this parameter is not required and the system automatically obtains all CIDR blocks in the VPC.</li>
+         * <li>If VSwitchId is not empty, this parameter is required. Specify all CIDR blocks in the VPC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
          */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        /**
+         * <p>The forward configuration of the instance.</p>
+         */
         @NameInMap("ForwardInfos")
         public java.util.List<ForwardInfo> forwardInfos;
 
         /**
+         * <p>The security group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxxxxx</p>
          */
@@ -584,6 +809,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-xxxxx</p>
          */
@@ -591,6 +818,8 @@ public class UpdateInstanceRequest extends TeaModel {
         public String vSwitchId;
 
         /**
+         * <p>The VPC ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-xxxxx</p>
          */
@@ -600,6 +829,14 @@ public class UpdateInstanceRequest extends TeaModel {
         public static UpdateInstanceRequestUserVpc build(java.util.Map<String, ?> map) throws Exception {
             UpdateInstanceRequestUserVpc self = new UpdateInstanceRequestUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestUserVpc setBandwidthLimit(BandwidthLimit bandwidthLimit) {
+            this.bandwidthLimit = bandwidthLimit;
+            return this;
+        }
+        public BandwidthLimit getBandwidthLimit() {
+            return this.bandwidthLimit;
         }
 
         public UpdateInstanceRequestUserVpc setDefaultRoute(String defaultRoute) {
