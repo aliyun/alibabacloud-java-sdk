@@ -27,6 +27,9 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("fcVersion")
     public String fcVersion;
 
+    @NameInMap("functionName")
+    public String functionName;
+
     /**
      * <p>The GPU type of the functions to retrieve.</p>
      * 
@@ -97,6 +100,14 @@ public class ListFunctionsRequest extends TeaModel {
     }
     public String getFcVersion() {
         return this.fcVersion;
+    }
+
+    public ListFunctionsRequest setFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
+    public String getFunctionName() {
+        return this.functionName;
     }
 
     public ListFunctionsRequest setGpuType(String gpuType) {

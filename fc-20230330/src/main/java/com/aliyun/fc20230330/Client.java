@@ -1744,6 +1744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("fcVersion", request.fcVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.functionName)) {
+            query.put("functionName", request.functionName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gpuType)) {
             query.put("gpuType", request.gpuType);
         }
