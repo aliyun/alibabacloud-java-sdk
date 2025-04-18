@@ -107,6 +107,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @NameInMap("BehaviorReason")
         public String behaviorReason;
 
+        @NameInMap("PropertiesData")
+        public String propertiesData;
+
         /**
          * <p>The name of the resource property.</p>
          * 
@@ -115,6 +118,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
          */
         @NameInMap("PropertyName")
         public String propertyName;
+
+        @NameInMap("RequestInfo")
+        public String requestInfo;
 
         /**
          * <p>The name of the resource that is defined in the template.</p>
@@ -163,12 +169,28 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             return this.behaviorReason;
         }
 
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setPropertiesData(String propertiesData) {
+            this.propertiesData = propertiesData;
+            return this;
+        }
+        public String getPropertiesData() {
+            return this.propertiesData;
+        }
+
         public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setPropertyName(String propertyName) {
             this.propertyName = propertyName;
             return this;
         }
         public String getPropertyName() {
             return this.propertyName;
+        }
+
+        public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setRequestInfo(String requestInfo) {
+            this.requestInfo = requestInfo;
+            return this;
+        }
+        public String getRequestInfo() {
+            return this.requestInfo;
         }
 
         public GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints setResourceName(String resourceName) {
