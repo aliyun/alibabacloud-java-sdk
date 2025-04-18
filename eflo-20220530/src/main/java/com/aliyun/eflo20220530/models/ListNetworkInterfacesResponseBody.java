@@ -466,6 +466,9 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The address of the service network interface controller.</p>
          * 
@@ -605,6 +608,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListNetworkInterfacesResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListNetworkInterfacesResponseBodyContentData setServiceMac(String serviceMac) {

@@ -164,6 +164,9 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The state of the rule.</p>
          * 
@@ -249,6 +252,14 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetLniPrivateIpAddressResponseBodyContent setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetLniPrivateIpAddressResponseBodyContent setStatus(String status) {

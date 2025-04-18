@@ -73,6 +73,9 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The status of the enterprise-level snapshot policy.</p>
      * <p>Valid value:</p>
@@ -190,6 +193,14 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListElasticNetworkInterfacesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListElasticNetworkInterfacesRequest setStatus(String status) {

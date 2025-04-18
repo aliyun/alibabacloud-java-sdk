@@ -77,6 +77,9 @@ public class ListLniPrivateIpAddressRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListLniPrivateIpAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLniPrivateIpAddressRequest self = new ListLniPrivateIpAddressRequest();
         return TeaModel.build(map, self);
@@ -144,6 +147,14 @@ public class ListLniPrivateIpAddressRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListLniPrivateIpAddressRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

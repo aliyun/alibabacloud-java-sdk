@@ -68,6 +68,9 @@ public class ListNetworkInterfacesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the instance to which the Lingjun subnet belongs.</p>
      * 
@@ -145,6 +148,14 @@ public class ListNetworkInterfacesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListNetworkInterfacesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListNetworkInterfacesRequest setSubnetId(String subnetId) {

@@ -59,6 +59,9 @@ public class ListLeniPrivateIpAddressesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The status of the image build command risk.</p>
      * 
@@ -119,6 +122,14 @@ public class ListLeniPrivateIpAddressesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListLeniPrivateIpAddressesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListLeniPrivateIpAddressesRequest setStatus(String status) {

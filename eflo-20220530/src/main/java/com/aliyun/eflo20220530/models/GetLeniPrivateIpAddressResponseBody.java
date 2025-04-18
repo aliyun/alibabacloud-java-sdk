@@ -164,6 +164,9 @@ public class GetLeniPrivateIpAddressResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The task status.</p>
          * 
@@ -240,6 +243,14 @@ public class GetLeniPrivateIpAddressResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public GetLeniPrivateIpAddressResponseBodyContent setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public GetLeniPrivateIpAddressResponseBodyContent setStatus(String status) {

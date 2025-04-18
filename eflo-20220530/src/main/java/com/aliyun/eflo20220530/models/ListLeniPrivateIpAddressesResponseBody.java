@@ -259,6 +259,9 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.List<ListLeniPrivateIpAddressesResponseBodyContentData> data;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The total number of entries.</p>
          * 
@@ -279,6 +282,14 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
         }
         public java.util.List<ListLeniPrivateIpAddressesResponseBodyContentData> getData() {
             return this.data;
+        }
+
+        public ListLeniPrivateIpAddressesResponseBodyContent setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListLeniPrivateIpAddressesResponseBodyContent setTotal(Long total) {

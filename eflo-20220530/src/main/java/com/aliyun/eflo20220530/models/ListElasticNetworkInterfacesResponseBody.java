@@ -191,6 +191,9 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The ID of the security group.</p>
          * 
@@ -341,6 +344,14 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListElasticNetworkInterfacesResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListElasticNetworkInterfacesResponseBodyContentData setSecurityGroupId(String securityGroupId) {

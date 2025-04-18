@@ -50,6 +50,9 @@ public class CreateElasticNetworkInterfaceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the security group.</p>
      * 
@@ -133,6 +136,14 @@ public class CreateElasticNetworkInterfaceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateElasticNetworkInterfaceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateElasticNetworkInterfaceRequest setSecurityGroupId(String securityGroupId) {
