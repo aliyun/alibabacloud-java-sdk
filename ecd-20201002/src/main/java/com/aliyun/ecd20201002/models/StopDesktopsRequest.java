@@ -60,6 +60,9 @@ public class StopDesktopsRequest extends TeaModel {
     @NameInMap("LoginToken")
     public String loginToken;
 
+    @NameInMap("OsUpdate")
+    public Boolean osUpdate;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
@@ -87,6 +90,9 @@ public class StopDesktopsRequest extends TeaModel {
      */
     @NameInMap("SessionToken")
     public String sessionToken;
+
+    @NameInMap("Uuid")
+    public String uuid;
 
     public static StopDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         StopDesktopsRequest self = new StopDesktopsRequest();
@@ -141,6 +147,14 @@ public class StopDesktopsRequest extends TeaModel {
         return this.loginToken;
     }
 
+    public StopDesktopsRequest setOsUpdate(Boolean osUpdate) {
+        this.osUpdate = osUpdate;
+        return this;
+    }
+    public Boolean getOsUpdate() {
+        return this.osUpdate;
+    }
+
     public StopDesktopsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -163,6 +177,14 @@ public class StopDesktopsRequest extends TeaModel {
     }
     public String getSessionToken() {
         return this.sessionToken;
+    }
+
+    public StopDesktopsRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

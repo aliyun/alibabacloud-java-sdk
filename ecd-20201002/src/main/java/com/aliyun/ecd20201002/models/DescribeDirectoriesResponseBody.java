@@ -4,10 +4,15 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoriesResponseBody extends TeaModel {
+    /**
+     * <p>The directories.</p>
+     */
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F369A091-002F-49C8-AD55-02A77629****</p>
      */
@@ -37,6 +42,14 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
         /**
+         * <p>The connection method.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>VPC: End users connect to cloud computers over an enterprise virtual private cloud (VPC).</li>
+         * <li>INTERNET: End users connect to cloud computers over the Internet.</li>
+         * <li>ANY: End users connect to cloud computers over the Internet or an enterprise VPC.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>INTERNET</p>
          */
@@ -44,6 +57,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String desktopAccessType;
 
         /**
+         * <p>The directory ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
          */
@@ -51,6 +66,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
+         * <p>The directory type.</p>
+         * 
          * <strong>example:</strong>
          * <p>AD_CONNECTOR</p>
          */
@@ -58,6 +75,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String directoryType;
 
         /**
+         * <p>The provider ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
@@ -65,6 +84,8 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         public String providerId;
 
         /**
+         * <p>The URL of the SSO service.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://eds-cn-shanghai-67726">https://eds-cn-shanghai-67726</a>****</p>
          */

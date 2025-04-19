@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDirectoriesRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class DescribeDirectoriesRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The directory IDs.</p>
+     */
     @NameInMap("DirectoryId")
     public java.util.List<String> directoryId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

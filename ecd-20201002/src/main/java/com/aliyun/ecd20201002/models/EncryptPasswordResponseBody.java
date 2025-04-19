@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EncryptPasswordResponseBody extends TeaModel {
     /**
+     * <p>The encrypted password.</p>
+     * 
      * <strong>example:</strong>
      * <p>d34601bc-e6b1-4433-b0cc-8f6c5e52;n4apvGub3OBoj4Grwg==;thhO4UEomJfdvwnwlA==</p>
      */
@@ -12,6 +14,8 @@ public class EncryptPasswordResponseBody extends TeaModel {
     public String encryptedPassword;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>AF538DA8-FFC6-52DA-8FF8-7B92579F****</p>
      */

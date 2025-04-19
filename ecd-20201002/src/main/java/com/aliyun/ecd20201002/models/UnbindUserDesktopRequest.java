@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnbindUserDesktopRequest extends TeaModel {
     /**
+     * <p>The client ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class UnbindUserDesktopRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The client type.</p>
+     * 
      * <strong>example:</strong>
      * <p>windows</p>
      */
@@ -21,6 +24,13 @@ public class UnbindUserDesktopRequest extends TeaModel {
     public String clientType;
 
     /**
+     * <p>Specifies whether to enable forced unbinding.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true: Even when end users connect to cloud computers, the forced unbinding is still enforced.</li>
+     * <li>false: Forced unbinding is only enforced when end users are disconnected from cloud computers.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -28,6 +38,7 @@ public class UnbindUserDesktopRequest extends TeaModel {
     public Boolean force;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,7 @@ public class UnbindUserDesktopRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +58,7 @@ public class UnbindUserDesktopRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +68,7 @@ public class UnbindUserDesktopRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The cloud computer ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

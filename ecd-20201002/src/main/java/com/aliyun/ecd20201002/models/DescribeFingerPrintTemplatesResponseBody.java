@@ -4,10 +4,15 @@ package com.aliyun.ecd20201002.models;
 import com.aliyun.tea.*;
 
 public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The fingerprint templates.</p>
+     */
     @NameInMap("FingerPrintTemplates")
     public java.util.List<DescribeFingerPrintTemplatesResponseBodyFingerPrintTemplates> fingerPrintTemplates;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9C1D3FBE-84E1-5ABB-AD98-2003AC71****</p>
      */
@@ -37,6 +42,8 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
 
     public static class DescribeFingerPrintTemplatesResponseBodyFingerPrintTemplates extends TeaModel {
         /**
+         * <p>The client ID. The system generates a unique ID for each client.</p>
+         * 
          * <strong>example:</strong>
          * <p>2258a3d5-b8f8-4d79-a221-eaecf211****</p>
          */
@@ -44,6 +51,8 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The time when the template was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-13T13:26:29Z</p>
          */
@@ -51,6 +60,8 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The description of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>Finger 1</p>
          */
@@ -58,6 +69,8 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>liming</p>
          */
@@ -65,6 +78,8 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         public String endUserId;
 
         /**
+         * <p>The index.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +87,8 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         public Long index;
 
         /**
+         * <p>The logon time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-03-13T13:26:29Z</p>
          */
@@ -79,6 +96,8 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
         public String loginTime;
 
         /**
+         * <p>The office network ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-074949****</p>
          */

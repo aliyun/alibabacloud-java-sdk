@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFingerPrintTemplatesRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeFingerPrintTemplatesRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeFingerPrintTemplatesRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The region ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class DescribeFingerPrintTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

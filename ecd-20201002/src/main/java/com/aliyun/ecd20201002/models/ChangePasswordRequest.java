@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangePasswordRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ChangePasswordRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ChangePasswordRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +35,7 @@ public class ChangePasswordRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The new password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +45,7 @@ public class ChangePasswordRequest extends TeaModel {
     public String newPassword;
 
     /**
+     * <p>The office network ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +55,7 @@ public class ChangePasswordRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The current password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +65,7 @@ public class ChangePasswordRequest extends TeaModel {
     public String oldPassword;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,8 @@ public class ChangePasswordRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

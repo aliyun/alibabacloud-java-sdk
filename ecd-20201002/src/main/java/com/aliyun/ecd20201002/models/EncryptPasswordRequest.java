@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EncryptPasswordRequest extends TeaModel {
     /**
+     * <p>The ID of the client. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class EncryptPasswordRequest extends TeaModel {
     public String clientId;
 
     /**
+     * <p>The directory ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing+dir-131196****</p>
      */
@@ -21,6 +24,7 @@ public class EncryptPasswordRequest extends TeaModel {
     public String directoryId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,8 @@ public class EncryptPasswordRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The office network ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing+dir-131196****</p>
      */
@@ -37,6 +43,7 @@ public class EncryptPasswordRequest extends TeaModel {
     public String officeSiteId;
 
     /**
+     * <p>The password that you want to encrypt.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +53,7 @@ public class EncryptPasswordRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +63,7 @@ public class EncryptPasswordRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetSnapshotRequest extends TeaModel {
     /**
+     * <p>The client ID. The system generates a unique ID for each client.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,17 @@ public class ResetSnapshotRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <p>The cloud computer ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-e964cr92klwqb****</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
+     * <p>The logon token.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +34,7 @@ public class ResetSnapshotRequest extends TeaModel {
     public String loginToken;
 
     /**
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +44,8 @@ public class ResetSnapshotRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>05182b8c-bb0d-49d3-963c-ee63a507****</p>
      */
@@ -42,6 +53,7 @@ public class ResetSnapshotRequest extends TeaModel {
     public String sessionId;
 
     /**
+     * <p>The snapshot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +62,12 @@ public class ResetSnapshotRequest extends TeaModel {
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <p>Specifies whether to stop the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("StopDesktop")
     public Boolean stopDesktop;
 
