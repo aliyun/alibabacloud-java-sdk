@@ -200,6 +200,9 @@ public class CreateIndexRequest extends TeaModel {
     @NameInMap("StructureType")
     public String structureType;
 
+    @NameInMap("chunkMode")
+    public String chunkMode;
+
     @NameInMap("enableHeaders")
     public Boolean enableHeaders;
 
@@ -345,6 +348,14 @@ public class CreateIndexRequest extends TeaModel {
     }
     public String getStructureType() {
         return this.structureType;
+    }
+
+    public CreateIndexRequest setChunkMode(String chunkMode) {
+        this.chunkMode = chunkMode;
+        return this;
+    }
+    public String getChunkMode() {
+        return this.chunkMode;
     }
 
     public CreateIndexRequest setEnableHeaders(Boolean enableHeaders) {
