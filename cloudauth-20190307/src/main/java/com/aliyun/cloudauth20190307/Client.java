@@ -709,6 +709,185 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>凭证核验</p>
+     * 
+     * @param tmpReq CredentialVerifyV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CredentialVerifyV2Response
+     */
+    public CredentialVerifyV2Response credentialVerifyV2WithOptions(CredentialVerifyV2Request tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CredentialVerifyV2ShrinkRequest request = new CredentialVerifyV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.merchantDetail)) {
+            request.merchantDetailShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.merchantDetail, "MerchantDetail", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certNum)) {
+            query.put("CertNum", request.certNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credName)) {
+            query.put("CredName", request.credName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credType)) {
+            query.put("CredType", request.credType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            query.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
+            query.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isCheck)) {
+            query.put("IsCheck", request.isCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isOcr)) {
+            query.put("IsOcr", request.isOcr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantDetailShrink)) {
+            query.put("MerchantDetail", request.merchantDetailShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantId)) {
+            query.put("MerchantId", request.merchantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            query.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promptModel)) {
+            query.put("PromptModel", request.promptModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageFile)) {
+            body.put("ImageFile", request.imageFile);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CredentialVerifyV2"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CredentialVerifyV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>凭证核验</p>
+     * 
+     * @param request CredentialVerifyV2Request
+     * @return CredentialVerifyV2Response
+     */
+    public CredentialVerifyV2Response credentialVerifyV2(CredentialVerifyV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.credentialVerifyV2WithOptions(request, runtime);
+    }
+
+    public CredentialVerifyV2Response credentialVerifyV2Advance(CredentialVerifyV2AdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        String securityToken = _credential.getSecurityToken();
+        String credentialType = _credential.getType();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
+            credentialType = "access_key";
+        }
+
+        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("securityToken", securityToken),
+            new TeaPair("type", credentialType),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "Cloudauth"),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        CredentialVerifyV2Request credentialVerifyV2Req = new CredentialVerifyV2Request();
+        com.aliyun.openapiutil.Client.convert(request, credentialVerifyV2Req);
+        if (!com.aliyun.teautil.Common.isUnset(request.imageFileObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.body.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.body.objectKey),
+                new TeaPair("content", request.imageFileObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
+                new TeaPair("policy", authResponse.body.encodedPolicy),
+                new TeaPair("signature", authResponse.body.signature),
+                new TeaPair("key", authResponse.body.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.body.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            credentialVerifyV2Req.imageFile = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
+        }
+
+        CredentialVerifyV2Response credentialVerifyV2Resp = this.credentialVerifyV2WithOptions(credentialVerifyV2Req, runtime);
+        return credentialVerifyV2Resp;
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>人脸凭证核验服务</p>
      * 
      * @param request DeepfakeDetectRequest
