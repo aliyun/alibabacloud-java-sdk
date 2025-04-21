@@ -99,6 +99,9 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
+    @NameInMap("sessionAffinity")
+    public String sessionAffinity;
+
     /**
      * <strong>example:</strong>
      * <p>60</p>
@@ -283,6 +286,14 @@ public class UpdateFunctionInput extends TeaModel {
     }
     public String getRuntime() {
         return this.runtime;
+    }
+
+    public UpdateFunctionInput setSessionAffinity(String sessionAffinity) {
+        this.sessionAffinity = sessionAffinity;
+        return this;
+    }
+    public String getSessionAffinity() {
+        return this.sessionAffinity;
     }
 
     public UpdateFunctionInput setTimeout(Integer timeout) {

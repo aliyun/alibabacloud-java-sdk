@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class LifecycleHook extends TeaModel {
+    @NameInMap("command")
+    public java.util.List<String> command;
+
     /**
      * <strong>example:</strong>
      * <p>index.initializer</p>
@@ -21,6 +24,14 @@ public class LifecycleHook extends TeaModel {
     public static LifecycleHook build(java.util.Map<String, ?> map) throws Exception {
         LifecycleHook self = new LifecycleHook();
         return TeaModel.build(map, self);
+    }
+
+    public LifecycleHook setCommand(java.util.List<String> command) {
+        this.command = command;
+        return this;
+    }
+    public java.util.List<String> getCommand() {
+        return this.command;
     }
 
     public LifecycleHook setHandler(String handler) {

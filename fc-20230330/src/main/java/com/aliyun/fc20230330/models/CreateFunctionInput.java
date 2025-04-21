@@ -116,6 +116,9 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
+    @NameInMap("sessionAffinity")
+    public String sessionAffinity;
+
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
@@ -311,6 +314,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public String getRuntime() {
         return this.runtime;
+    }
+
+    public CreateFunctionInput setSessionAffinity(String sessionAffinity) {
+        this.sessionAffinity = sessionAffinity;
+        return this;
+    }
+    public String getSessionAffinity() {
+        return this.sessionAffinity;
     }
 
     public CreateFunctionInput setTags(java.util.List<Tag> tags) {

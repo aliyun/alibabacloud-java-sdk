@@ -173,6 +173,9 @@ public class Function extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
+    @NameInMap("sessionAffinity")
+    public String sessionAffinity;
+
     /**
      * <strong>example:</strong>
      * <p>Pending</p>
@@ -461,6 +464,14 @@ public class Function extends TeaModel {
     }
     public String getRuntime() {
         return this.runtime;
+    }
+
+    public Function setSessionAffinity(String sessionAffinity) {
+        this.sessionAffinity = sessionAffinity;
+        return this;
+    }
+    public String getSessionAffinity() {
+        return this.sessionAffinity;
     }
 
     public Function setState(String state) {
