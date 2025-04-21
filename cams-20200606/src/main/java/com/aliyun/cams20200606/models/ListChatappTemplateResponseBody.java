@@ -51,6 +51,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("Success")
+    public Boolean success;
+
+    /**
      * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
@@ -102,6 +109,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListChatappTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public ListChatappTemplateResponseBody setTotal(Integer total) {

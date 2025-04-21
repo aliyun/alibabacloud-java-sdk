@@ -322,7 +322,7 @@ public class SendChatappMassMessageRequest extends TeaModel {
          * <p>The default parameter of the Flow.</p>
          */
         @NameInMap("FlowActionData")
-        public java.util.Map<String, String> flowActionData;
+        public java.util.Map<String, ?> flowActionData;
 
         /**
          * <p>The information about the Flow token.</p>
@@ -338,11 +338,11 @@ public class SendChatappMassMessageRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SendChatappMassMessageRequestSenderListFlowAction setFlowActionData(java.util.Map<String, String> flowActionData) {
+        public SendChatappMassMessageRequestSenderListFlowAction setFlowActionData(java.util.Map<String, ?> flowActionData) {
             this.flowActionData = flowActionData;
             return this;
         }
-        public java.util.Map<String, String> getFlowActionData() {
+        public java.util.Map<String, ?> getFlowActionData() {
             return this.flowActionData;
         }
 

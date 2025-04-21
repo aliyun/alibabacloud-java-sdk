@@ -20,6 +20,13 @@ public class ListChatappTemplateRequest extends TeaModel {
     public String auditStatus;
 
     /**
+     * <strong>example:</strong>
+     * <p>AUTHENTICATION</p>
+     */
+    @NameInMap("Category")
+    public String category;
+
+    /**
      * <p>Template encoding.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +84,9 @@ public class ListChatappTemplateRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>The pagination settings.</p>
      * 
@@ -85,6 +95,12 @@ public class ListChatappTemplateRequest extends TeaModel {
      */
     @NameInMap("Page")
     public ListChatappTemplateRequestPage page;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <p>The type of the message template.</p>
@@ -111,6 +127,14 @@ public class ListChatappTemplateRequest extends TeaModel {
     }
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    public ListChatappTemplateRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public ListChatappTemplateRequest setCode(String code) {
@@ -162,12 +186,36 @@ public class ListChatappTemplateRequest extends TeaModel {
         return this.name;
     }
 
+    public ListChatappTemplateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ListChatappTemplateRequest setPage(ListChatappTemplateRequestPage page) {
         this.page = page;
         return this;
     }
     public ListChatappTemplateRequestPage getPage() {
         return this.page;
+    }
+
+    public ListChatappTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ListChatappTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ListChatappTemplateRequest setTemplateType(String templateType) {
