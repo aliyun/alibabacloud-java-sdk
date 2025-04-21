@@ -54,6 +54,9 @@ public class LivePackagingConfig extends TeaModel {
     }
 
     public static class LivePackagingConfigDrmConfig extends TeaModel {
+        @NameInMap("ContentId")
+        public String contentId;
+
         @NameInMap("EncryptionMethod")
         public String encryptionMethod;
 
@@ -72,6 +75,14 @@ public class LivePackagingConfig extends TeaModel {
         public static LivePackagingConfigDrmConfig build(java.util.Map<String, ?> map) throws Exception {
             LivePackagingConfigDrmConfig self = new LivePackagingConfigDrmConfig();
             return TeaModel.build(map, self);
+        }
+
+        public LivePackagingConfigDrmConfig setContentId(String contentId) {
+            this.contentId = contentId;
+            return this;
+        }
+        public String getContentId() {
+            return this.contentId;
         }
 
         public LivePackagingConfigDrmConfig setEncryptionMethod(String encryptionMethod) {

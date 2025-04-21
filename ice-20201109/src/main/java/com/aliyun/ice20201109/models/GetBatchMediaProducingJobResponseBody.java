@@ -41,6 +41,9 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     }
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList extends TeaModel {
+        @NameInMap("Duration")
+        public Float duration;
+
         /**
          * <p>The error code that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</p>
          * 
@@ -111,6 +114,14 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public static GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList build(java.util.Map<String, ?> map) throws Exception {
             GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList self = new GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList();
             return TeaModel.build(map, self);
+        }
+
+        public GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList setDuration(Float duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Float getDuration() {
+            return this.duration;
         }
 
         public GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList setErrorCode(String errorCode) {

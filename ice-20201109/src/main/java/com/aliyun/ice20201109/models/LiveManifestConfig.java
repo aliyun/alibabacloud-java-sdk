@@ -10,6 +10,9 @@ public class LiveManifestConfig extends TeaModel {
     @NameInMap("DateTimeInterval")
     public Integer dateTimeInterval;
 
+    @NameInMap("ManifestDuration")
+    public Integer manifestDuration;
+
     @NameInMap("MaxVideoBitrate")
     public Integer maxVideoBitrate;
 
@@ -22,8 +25,14 @@ public class LiveManifestConfig extends TeaModel {
     @NameInMap("MinVideoBitrate")
     public Integer minVideoBitrate;
 
+    @NameInMap("PresentationDelay")
+    public Integer presentationDelay;
+
     @NameInMap("SegmentCount")
     public Integer segmentCount;
+
+    @NameInMap("SegmentTemplateFormat")
+    public String segmentTemplateFormat;
 
     @NameInMap("StreamOrder")
     public String streamOrder;
@@ -47,6 +56,14 @@ public class LiveManifestConfig extends TeaModel {
     }
     public Integer getDateTimeInterval() {
         return this.dateTimeInterval;
+    }
+
+    public LiveManifestConfig setManifestDuration(Integer manifestDuration) {
+        this.manifestDuration = manifestDuration;
+        return this;
+    }
+    public Integer getManifestDuration() {
+        return this.manifestDuration;
     }
 
     public LiveManifestConfig setMaxVideoBitrate(Integer maxVideoBitrate) {
@@ -81,12 +98,28 @@ public class LiveManifestConfig extends TeaModel {
         return this.minVideoBitrate;
     }
 
+    public LiveManifestConfig setPresentationDelay(Integer presentationDelay) {
+        this.presentationDelay = presentationDelay;
+        return this;
+    }
+    public Integer getPresentationDelay() {
+        return this.presentationDelay;
+    }
+
     public LiveManifestConfig setSegmentCount(Integer segmentCount) {
         this.segmentCount = segmentCount;
         return this;
     }
     public Integer getSegmentCount() {
         return this.segmentCount;
+    }
+
+    public LiveManifestConfig setSegmentTemplateFormat(String segmentTemplateFormat) {
+        this.segmentTemplateFormat = segmentTemplateFormat;
+        return this;
+    }
+    public String getSegmentTemplateFormat() {
+        return this.segmentTemplateFormat;
     }
 
     public LiveManifestConfig setStreamOrder(String streamOrder) {
