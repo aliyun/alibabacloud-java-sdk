@@ -10,6 +10,10 @@ public class DetectVideoShotResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0033B795-09C7-4EB9-A33C-EBA325192B0D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

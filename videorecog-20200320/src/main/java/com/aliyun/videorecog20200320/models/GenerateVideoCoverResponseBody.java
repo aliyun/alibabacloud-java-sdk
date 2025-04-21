@@ -10,6 +10,10 @@ public class GenerateVideoCoverResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5B95B724-C5B9-4F77-A743-0CA4EA95CC82</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +47,17 @@ public class GenerateVideoCoverResponseBody extends TeaModel {
     }
 
     public static class GenerateVideoCoverResponseBodyDataOutputs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6.1819260887924425</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-cover/2020-05-11-07/pic_lOyxGGAqQYSANGxP.mp4_202_544_960_c9f88b2a5f75e17c093d1a65f5edff4d_beautified.png?Expires=1589185385&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=PAalKsfeZC4UQzYDTU%2F3D1G7Xt">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-cover/2020-05-11-07/pic_lOyxGGAqQYSANGxP.mp4_202_544_960_c9f88b2a5f75e17c093d1a65f5edff4d_beautified.png?Expires=1589185385&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=PAalKsfeZC4UQzYDTU%2F3D1G7Xt</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

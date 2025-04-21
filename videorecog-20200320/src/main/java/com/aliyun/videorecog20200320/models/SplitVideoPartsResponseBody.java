@@ -10,6 +10,10 @@ public class SplitVideoPartsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A00A3C17-61D5-1489-860D-B709F83A7C40</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +47,24 @@ public class SplitVideoPartsResponseBody extends TeaModel {
     }
 
     public static class SplitVideoPartsResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10.06</p>
+         */
         @NameInMap("BeginTime")
         public Float beginTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17.3</p>
+         */
         @NameInMap("EndTime")
         public Float endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Long index;
 

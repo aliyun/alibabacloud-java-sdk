@@ -4,6 +4,12 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectVideoShotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videorecog/DetectVideoShot/DetectVideoShot2.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videorecog/DetectVideoShot/DetectVideoShot2.mp4</a></p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 

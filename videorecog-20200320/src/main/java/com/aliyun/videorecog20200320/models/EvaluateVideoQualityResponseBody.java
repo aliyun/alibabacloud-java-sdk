@@ -10,6 +10,10 @@ public class EvaluateVideoQualityResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1d33e538-c949-4fcd-83f6-4d57e4b31527</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,27 +47,59 @@ public class EvaluateVideoQualityResponseBody extends TeaModel {
     }
 
     public static class EvaluateVideoQualityResponseBodyDataVideoQualityInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.15</p>
+         */
         @NameInMap("Blurriness")
         public Float blurriness;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.55</p>
+         */
         @NameInMap("ColorContrast")
         public Float colorContrast;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.17</p>
+         */
         @NameInMap("ColorSaturation")
         public Float colorSaturation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.48</p>
+         */
         @NameInMap("Colorfulness")
         public Float colorfulness;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.25</p>
+         */
         @NameInMap("CompressiveStrength")
         public Float compressiveStrength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.51</p>
+         */
         @NameInMap("Luminance")
         public Float luminance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7048</p>
+         */
         @NameInMap("MosScore")
         public Float mosScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.01</p>
+         */
         @NameInMap("NoiseIntensity")
         public Float noiseIntensity;
 
@@ -139,9 +175,17 @@ public class EvaluateVideoQualityResponseBody extends TeaModel {
     }
 
     public static class EvaluateVideoQualityResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-damo-eas-cn-shanghai.oss-cn-shanghai.aliyuncs.com/eas-video-quality-assessment/2023-01-13-10/31%3A08-cVeN9ZQlzIPfGqsa.json?Expires=1673578869&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=AiSsOsZ7rYfhf9w3Mxn%2Fq4GKKy">http://vibktprfx-prod-prod-damo-eas-cn-shanghai.oss-cn-shanghai.aliyuncs.com/eas-video-quality-assessment/2023-01-13-10/31%3A08-cVeN9ZQlzIPfGqsa.json?Expires=1673578869&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=AiSsOsZ7rYfhf9w3Mxn%2Fq4GKKy</a>****</p>
+         */
         @NameInMap("JsonUrl")
         public String jsonUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-damo-eas-cn-shanghai.oss-cn-shanghai.aliyuncs.com/eas-video-quality-assessment/2023-01-13-10/31%3A08-cVeN9ZQlzIPfGqsa.pdf?Expires=1673578869&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=xULlZzVuhoYWAXRbp9A4EzzZcS">http://vibktprfx-prod-prod-damo-eas-cn-shanghai.oss-cn-shanghai.aliyuncs.com/eas-video-quality-assessment/2023-01-13-10/31%3A08-cVeN9ZQlzIPfGqsa.pdf?Expires=1673578869&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=xULlZzVuhoYWAXRbp9A4EzzZcS</a>****</p>
+         */
         @NameInMap("PdfUrl")
         public String pdfUrl;
 

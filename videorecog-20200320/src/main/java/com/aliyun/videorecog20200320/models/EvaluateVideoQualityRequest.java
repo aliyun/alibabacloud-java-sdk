@@ -4,9 +4,19 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class EvaluateVideoQualityRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>vqa_plus</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://public-vigen-video.oss-cn-shanghai.aliyuncs.com/Common/xxx/dont_delete/decaption/123.mp4">http://public-vigen-video.oss-cn-shanghai.aliyuncs.com/Common/xxx/dont_delete/decaption/123.mp4</a></p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 

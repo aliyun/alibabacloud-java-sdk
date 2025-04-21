@@ -7,6 +7,12 @@ public class RecognizeVideoCastCrewListRequest extends TeaModel {
     @NameInMap("Params")
     public java.util.List<RecognizeVideoCastCrewListRequestParams> params;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://shanghai.oss-cn-shanghai.aliyuncs.com/download/xxxx.mp4">https://shanghai.oss-cn-shanghai.aliyuncs.com/download/xxxx.mp4</a></p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 
@@ -32,6 +38,10 @@ public class RecognizeVideoCastCrewListRequest extends TeaModel {
     }
 
     public static class RecognizeVideoCastCrewListRequestParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cast</p>
+         */
         @NameInMap("Type")
         public String type;
 

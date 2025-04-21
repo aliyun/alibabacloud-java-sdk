@@ -7,6 +7,12 @@ public class RecognizeVideoCastCrewListShrinkRequest extends TeaModel {
     @NameInMap("Params")
     public String paramsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://shanghai.oss-cn-shanghai.aliyuncs.com/download/xxxx.mp4">https://shanghai.oss-cn-shanghai.aliyuncs.com/download/xxxx.mp4</a></p>
+     */
     @NameInMap("VideoUrl")
     public String videoUrl;
 

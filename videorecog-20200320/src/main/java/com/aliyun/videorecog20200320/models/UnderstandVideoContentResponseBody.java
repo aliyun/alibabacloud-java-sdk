@@ -10,6 +10,10 @@ public class UnderstandVideoContentResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>71EC3F13-F0CA-4558-AC7F-A351106F59F2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +47,31 @@ public class UnderstandVideoContentResponseBody extends TeaModel {
     }
 
     public static class UnderstandVideoContentResponseBodyDataVideoInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>43380</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25.0</p>
+         */
         @NameInMap("Fps")
         public Float fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Width")
         public Long width;
 

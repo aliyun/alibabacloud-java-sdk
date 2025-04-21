@@ -10,6 +10,10 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE5B1A95-064F-1C5E-A6FE-FEE0D734A632</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,9 +50,17 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("DetailInfo")
         public java.util.Map<String, String> detailInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("EndTime")
         public Float endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("StartTime")
         public Float startTime;
 
@@ -84,9 +96,17 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>266</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>440</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -120,24 +140,44 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("CharProbs")
         public java.util.List<java.util.List<Float>> charProbs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17</p>
+         */
         @NameInMap("FrameIndex")
         public Long frameIndex;
 
         @NameInMap("Position")
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfoPosition> position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>92.07685702563117</p>
+         */
         @NameInMap("Score")
         public Float score;
 
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9207685702563116</p>
+         */
         @NameInMap("TextProb")
         public Float textProb;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.28</p>
+         */
         @NameInMap("TimeStamp")
         public Float timeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TrackId")
         public Long trackId;
 
@@ -224,9 +264,17 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("DetailInfo")
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResultsDetailInfo> detailInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.28</p>
+         */
         @NameInMap("EndTime")
         public Float endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.28</p>
+         */
         @NameInMap("StartTime")
         public Float startTime;
 
@@ -265,18 +313,34 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("SubtitlesAllResults")
         public java.util.Map<String, String> subtitlesAllResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>url</p>
+         */
         @NameInMap("SubtitlesAllResultsUrl")
         public String subtitlesAllResultsUrl;
 
         @NameInMap("SubtitlesChineseResults")
         public java.util.Map<String, String> subtitlesChineseResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>url1</p>
+         */
         @NameInMap("SubtitlesChineseResultsUrl")
         public String subtitlesChineseResultsUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hello</p>
+         */
         @NameInMap("SubtitlesEnglishResults")
         public java.util.Map<String, ?> subtitlesEnglishResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>url2</p>
+         */
         @NameInMap("SubtitlesEnglishResultsUrl")
         public String subtitlesEnglishResultsUrl;
 
@@ -336,9 +400,17 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>269</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>423</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -372,12 +444,20 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("Position")
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfoPosition> position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>92.07685702563117</p>
+         */
         @NameInMap("Score")
         public Float score;
 
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TextType")
         public Long textType;
 
@@ -432,9 +512,17 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("DetailInfo")
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataVideoOcrResultsDetailInfo> detailInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.92</p>
+         */
         @NameInMap("EndTime")
         public Float endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.92</p>
+         */
         @NameInMap("StartTime")
         public Float startTime;
 
@@ -476,9 +564,17 @@ public class RecognizeVideoCastCrewListResponseBody extends TeaModel {
         @NameInMap("OcrResults")
         public java.util.List<RecognizeVideoCastCrewListResponseBodyDataOcrResults> ocrResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-media-ai-cn-shanghai.oss-cn-shanghai.aliyuncs.com/video-ocr/1665475907_bGHMygKsFw.json?Expires=1665477707&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=6KQb9OXQldsg30w%2FNurHwAbjiJs%3D">http://vibktprfx-prod-prod-media-ai-cn-shanghai.oss-cn-shanghai.aliyuncs.com/video-ocr/1665475907_bGHMygKsFw.json?Expires=1665477707&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=6KQb9OXQldsg30w%2FNurHwAbjiJs%3D</a></p>
+         */
         @NameInMap("OcrResultsUrl")
         public String ocrResultsUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-media-ai-cn-shanghai.oss-cn-shanghai.aliyuncs.com/video-ocr/1665475907_VSRvetTHon.json?Expires=1665477707&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=wfQviVVSyVRLPVlHDKXi6cTefHY%3D">http://vibktprfx-prod-prod-media-ai-cn-shanghai.oss-cn-shanghai.aliyuncs.com/video-ocr/1665475907_VSRvetTHon.json?Expires=1665477707&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=wfQviVVSyVRLPVlHDKXi6cTefHY%3D</a></p>
+         */
         @NameInMap("OcrVideoResultsUrl")
         public String ocrVideoResultsUrl;
 
