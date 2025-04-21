@@ -78,11 +78,17 @@ public class CreatePrefixListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreatePrefixListRequestTag> tag;
 
     public static CreatePrefixListRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePrefixListRequest self = new CreatePrefixListRequest();
@@ -161,6 +167,14 @@ public class CreatePrefixListRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreatePrefixListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreatePrefixListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -175,6 +189,14 @@ public class CreatePrefixListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreatePrefixListRequest setTag(java.util.List<CreatePrefixListRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreatePrefixListRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class CreatePrefixListRequestEntry extends TeaModel {
@@ -225,6 +247,36 @@ public class CreatePrefixListRequest extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+    }
+
+    public static class CreatePrefixListRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreatePrefixListRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreatePrefixListRequestTag self = new CreatePrefixListRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePrefixListRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreatePrefixListRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

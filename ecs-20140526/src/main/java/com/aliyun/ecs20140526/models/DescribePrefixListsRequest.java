@@ -72,11 +72,17 @@ public class DescribePrefixListsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribePrefixListsRequestTag> tag;
 
     public static DescribePrefixListsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePrefixListsRequest self = new DescribePrefixListsRequest();
@@ -147,6 +153,14 @@ public class DescribePrefixListsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribePrefixListsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribePrefixListsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -161,6 +175,44 @@ public class DescribePrefixListsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribePrefixListsRequest setTag(java.util.List<DescribePrefixListsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribePrefixListsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribePrefixListsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribePrefixListsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribePrefixListsRequestTag self = new DescribePrefixListsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePrefixListsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribePrefixListsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

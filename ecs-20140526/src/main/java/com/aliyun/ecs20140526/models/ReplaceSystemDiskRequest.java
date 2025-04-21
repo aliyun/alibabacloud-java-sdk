@@ -58,10 +58,13 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether to encrypt the disk. Valid values:</p>
      * <ul>
-     * <li>true: encrypts the disk.</li>
-     * <li>false: does not encrypt the disk.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
+     * <blockquote>
+     * <p> When you use a shared encrypted image to create the disk based on an encrypted snapshot, you must set Encrypted to true to ensure that the disk uses an encryption key of your own.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -70,8 +73,7 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The ID of the image to be used to replace the system disk.</p>
-     * <p>If the <code>DiskId</code> parameter is not specified, this parameter is required.</p>
+     * <p>The ID of the image used to replace the system disk. This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>m-bp67acfmxazb4ph****</p>

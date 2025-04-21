@@ -6637,12 +6637,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -18381,12 +18389,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -24647,7 +24663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an automatic snapshot policy.</p>
+     * <p>Modifies an automatic snapshot policy. For example, you can change the points in time of the day at which to create automatic snapshots, days of the week on which to create automatic snapshots, and retention period of automatic snapshots for the automatic snapshot policy.</p>
      * 
      * @param request ModifyAutoSnapshotPolicyExRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24735,7 +24751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an automatic snapshot policy.</p>
+     * <p>Modifies an automatic snapshot policy. For example, you can change the points in time of the day at which to create automatic snapshots, days of the week on which to create automatic snapshots, and retention period of automatic snapshots for the automatic snapshot policy.</p>
      * 
      * @param request ModifyAutoSnapshotPolicyExRequest
      * @return ModifyAutoSnapshotPolicyExResponse
@@ -26824,16 +26840,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
      * When you call this operation, take note of the following sharing rules:</p>
      * <ul>
-     * <li>You can share only the custom images that are created in your Alibaba Cloud to other Alibaba Cloud accounts.</li>
-     * <li>You can share a custom image to up to 10 Alibaba Cloud accounts at a time. You can specify up to 10 Alibaba Cloud account IDs by using the AddAccount.N or RemoveAccount.N parameter. If you specify more than 10 account IDs, the system processes only the previous 10 account IDs. The excess account IDs are ignored.</li>
-     * <li>You can share a custom image to up to 50 Alibaba Cloud accounts.</li>
-     * <li>If an Elastic Compute Service (ECS) instance was created (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>) from a shared image, you cannot re-initialize the instance (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>) after the image owner unshares or deletes the image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>).
-     * When you publish or unpublish a community image, take note of the following items:</li>
-     * <li>Alibaba Cloud provides only the platform on which community images can be published and managed. The owner of a community image is responsible for the quality and updates of the image. Make sure that you acknowledge and agree to the Community Image Agreement. Otherwise, you cannot publish community images. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</li>
-     * <li>You cannot publish encrypted images as community images.</li>
-     * <li>Community images are publicly available. A community image is available to all Alibaba Cloud accounts in the region where the image resides.</li>
-     * <li>You cannot share, export, or copy community images.</li>
-     * <li>After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared to other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
+     * <li><strong>Sharing limits</strong>: You can share only the custom images created in your Alibaba Cloud account to other Alibaba Cloud accounts. A custom image can be shared to up to 50 Alibaba Cloud accounts. You can share a custom image to up to 10 Alibaba Cloud accounts at a time.</li>
+     * <li><strong>Impacts on an instance</strong>: If an instance was created (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>) from a shared image, you cannot re-initialize the system disk of the instance (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>) after the image owner unshares or deletes the image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>).<blockquote>
+     * <p> You can share images encrypted by using customer master keys (CMKs) but cannot share images encrypted by using service keys. When you share an image encrypted by using a service key, an error is reported. If you want to share an image encrypted by using a service key, call the CopyImage operation to copy the image and change the encryption key of the image copy to a CMK.
+     * When you publish or unpublish a community image, take note of the following items:</p>
+     * </blockquote>
+     * </li>
+     * <li><strong>Responsibilities and agreement</strong>: Alibaba Cloud provides only the platform on which community images can be published and managed. The owner of a community image is responsible for the quality and updates of the image. Make sure that you acknowledge and agree to the Community Image Agreement. Otherwise, you cannot publish community images. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</li>
+     * <li><strong>Encryption limits</strong>: You cannot publish encrypted images as community images.</li>
+     * <li><strong>Openness</strong>: Community images are publicly available. A community image is available to all Alibaba Cloud accounts in the region where the image resides.</li>
+     * <li><strong>Feature limits</strong>: You cannot share, export, or copy community images.</li>
+     * <li><strong>Unpublication impacts</strong>: After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared to other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -26908,16 +26925,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you call this operation, read <a href="https://help.aliyun.com/document_detail/25463.html">Share a custom image</a>.
      * When you call this operation, take note of the following sharing rules:</p>
      * <ul>
-     * <li>You can share only the custom images that are created in your Alibaba Cloud to other Alibaba Cloud accounts.</li>
-     * <li>You can share a custom image to up to 10 Alibaba Cloud accounts at a time. You can specify up to 10 Alibaba Cloud account IDs by using the AddAccount.N or RemoveAccount.N parameter. If you specify more than 10 account IDs, the system processes only the previous 10 account IDs. The excess account IDs are ignored.</li>
-     * <li>You can share a custom image to up to 50 Alibaba Cloud accounts.</li>
-     * <li>If an Elastic Compute Service (ECS) instance was created (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>) from a shared image, you cannot re-initialize the instance (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>) after the image owner unshares or deletes the image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>).
-     * When you publish or unpublish a community image, take note of the following items:</li>
-     * <li>Alibaba Cloud provides only the platform on which community images can be published and managed. The owner of a community image is responsible for the quality and updates of the image. Make sure that you acknowledge and agree to the Community Image Agreement. Otherwise, you cannot publish community images. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</li>
-     * <li>You cannot publish encrypted images as community images.</li>
-     * <li>Community images are publicly available. A community image is available to all Alibaba Cloud accounts in the region where the image resides.</li>
-     * <li>You cannot share, export, or copy community images.</li>
-     * <li>After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared to other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
+     * <li><strong>Sharing limits</strong>: You can share only the custom images created in your Alibaba Cloud account to other Alibaba Cloud accounts. A custom image can be shared to up to 50 Alibaba Cloud accounts. You can share a custom image to up to 10 Alibaba Cloud accounts at a time.</li>
+     * <li><strong>Impacts on an instance</strong>: If an instance was created (<a href="https://help.aliyun.com/document_detail/63440.html">RunInstances</a>) from a shared image, you cannot re-initialize the system disk of the instance (<a href="https://help.aliyun.com/document_detail/25519.html">ReInitDisk</a>) after the image owner unshares or deletes the image (<a href="https://help.aliyun.com/document_detail/25537.html">DeleteImage</a>).<blockquote>
+     * <p> You can share images encrypted by using customer master keys (CMKs) but cannot share images encrypted by using service keys. When you share an image encrypted by using a service key, an error is reported. If you want to share an image encrypted by using a service key, call the CopyImage operation to copy the image and change the encryption key of the image copy to a CMK.
+     * When you publish or unpublish a community image, take note of the following items:</p>
+     * </blockquote>
+     * </li>
+     * <li><strong>Responsibilities and agreement</strong>: Alibaba Cloud provides only the platform on which community images can be published and managed. The owner of a community image is responsible for the quality and updates of the image. Make sure that you acknowledge and agree to the Community Image Agreement. Otherwise, you cannot publish community images. For more information, see <a href="https://help.aliyun.com/document_detail/208370.html">Publish a community image</a>.</li>
+     * <li><strong>Encryption limits</strong>: You cannot publish encrypted images as community images.</li>
+     * <li><strong>Openness</strong>: Community images are publicly available. A community image is available to all Alibaba Cloud accounts in the region where the image resides.</li>
+     * <li><strong>Feature limits</strong>: You cannot share, export, or copy community images.</li>
+     * <li><strong>Unpublication impacts</strong>: After you unpublish a community image, the image is no longer available to other Alibaba Cloud accounts. If an image is shared to other Alibaba Cloud accounts before it is unpublished, the image remains available to the accounts.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -31715,19 +31733,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the <code>Running</code> state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before redeployment.
-     * Take note of the following items:</p>
+     * <h2>Usage notes</h2>
+     * <p>RedeployInstance is an asynchronous operation. The operation migrates the instance to a healthy physical server and then restarts the instance. After the instance is redeployed, it enters the Running (<code>Running</code>) state. If the instance fails to be redeployed, it returns to the original physical server and the state before the redeployment.
+     * When you call this operation, take note of the following item:</p>
      * <ul>
-     * <li>The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:<ul>
-     * <li>If the instance is in the <code>Running</code> state before redeployment, the instance enters the <code>Stopping</code> state.</li>
-     * <li>If the instance is in the <code>Stopped</code> state before redeployment, the instance enters the <code>Starting</code> state.</li>
+     * <li>The instance must be in the Running (Running) or Stopped (Stopped) state. After the instance is redeployed, the following changes occur to the status of the instance:<ul>
+     * <li>If the instance is in the Running (<code>Running</code>) state, the instance enters the Stopping (<code>Stopping</code>) state.</li>
+     * <li>If the instance is in the Stopped (<code>Stopped</code>) state, the instance enters the Starting (<code>Starting</code>) state.</li>
      * </ul>
      * </li>
      * <li>If an instance is deployed on a dedicated host, you cannot redeploy the instance.</li>
-     * <li>If the <code>OperationLocks</code> parameter in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is locked for security reasons and cannot be redeployed.</li>
-     * <li>If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.</li>
-     * <li>If the damaged local disk is isolated but the <strong>SystemMaintenance.RebootAndReInitErrorDisk</strong> event is not sent when you handle a local disk-related system event for an instance, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see <a href="https://help.aliyun.com/document_detail/107693.html">System events for ECS instances equipped with local disks</a>.
-     * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides possible event status.<table>
+     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons and cannot be redeployed.</li>
+     * <li>If an instance receives notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for the instance, you cannot call this operation to redeploy the instance.</li>
+     * <li>When you handle a local disk-related system event for an instance, if the damaged local disk is isolated but the SystemMaintenance.RebootAndReInitErrorDisk (<strong>instance restart and re-initialization of damaged disks due to system maintenance</strong>) event is not sent, you can still call the RedeployInstance operation to redeploy the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107693.html">O&#x26;M scenarios and system events for instances equipped with local disks</a>.
+     * The following table describes the types and states of events that you can handle by calling the RedeployInstance operation.<table>
      * <thead>
      * <tr>
      * <th>System event</th>
@@ -31752,10 +31771,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Instance redeployment due to system errors (SystemFailure.Redeploy)</td>
-     * <td>Inquiring and Scheduled</td>
+     * <td>Inquiring</td>
      * </tr>
      * <tr>
-     * <td>For ECS instances that use only local disks: instance restart due to a system error (SystemFailure.Reboot)</td>
+     * <td>For ECS instances that use only local disks: instance restart due to system errors (SystemFailure.Reboot)</td>
      * <td>Executing</td>
      * </tr>
      * <tr>
@@ -31767,7 +31786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Inquiring</td>
      * </tr>
      * <tr>
-     * <td><strong>Note</strong>When instances that use local disks are redeployed, the local disks are re-initialized and data on the local disks is cleared.</td>
+     * <td><strong>Note</strong> When the system redeploys instances equipped with local disks, the local disks are re-initialized and data on the local disks is cleared.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
@@ -31827,19 +31846,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the <code>Running</code> state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before redeployment.
-     * Take note of the following items:</p>
+     * <h2>Usage notes</h2>
+     * <p>RedeployInstance is an asynchronous operation. The operation migrates the instance to a healthy physical server and then restarts the instance. After the instance is redeployed, it enters the Running (<code>Running</code>) state. If the instance fails to be redeployed, it returns to the original physical server and the state before the redeployment.
+     * When you call this operation, take note of the following item:</p>
      * <ul>
-     * <li>The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:<ul>
-     * <li>If the instance is in the <code>Running</code> state before redeployment, the instance enters the <code>Stopping</code> state.</li>
-     * <li>If the instance is in the <code>Stopped</code> state before redeployment, the instance enters the <code>Starting</code> state.</li>
+     * <li>The instance must be in the Running (Running) or Stopped (Stopped) state. After the instance is redeployed, the following changes occur to the status of the instance:<ul>
+     * <li>If the instance is in the Running (<code>Running</code>) state, the instance enters the Stopping (<code>Stopping</code>) state.</li>
+     * <li>If the instance is in the Stopped (<code>Stopped</code>) state, the instance enters the Starting (<code>Starting</code>) state.</li>
      * </ul>
      * </li>
      * <li>If an instance is deployed on a dedicated host, you cannot redeploy the instance.</li>
-     * <li>If the <code>OperationLocks</code> parameter in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot; : &quot;security&quot;</code> for an instance, the instance is locked for security reasons and cannot be redeployed.</li>
-     * <li>If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.</li>
-     * <li>If the damaged local disk is isolated but the <strong>SystemMaintenance.RebootAndReInitErrorDisk</strong> event is not sent when you handle a local disk-related system event for an instance, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see <a href="https://help.aliyun.com/document_detail/107693.html">System events for ECS instances equipped with local disks</a>.
-     * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides possible event status.<table>
+     * <li>If <code>OperationLocks</code> in the response of the DescribeInstances operation contains <code>&quot;LockReason&quot;: &quot;security&quot;</code> for an instance, the instance is locked for security reasons and cannot be redeployed.</li>
+     * <li>If an instance receives notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for the instance, you cannot call this operation to redeploy the instance.</li>
+     * <li>When you handle a local disk-related system event for an instance, if the damaged local disk is isolated but the SystemMaintenance.RebootAndReInitErrorDisk (<strong>instance restart and re-initialization of damaged disks due to system maintenance</strong>) event is not sent, you can still call the RedeployInstance operation to redeploy the instance. For more information, see <a href="https://help.aliyun.com/document_detail/107693.html">O&#x26;M scenarios and system events for instances equipped with local disks</a>.
+     * The following table describes the types and states of events that you can handle by calling the RedeployInstance operation.<table>
      * <thead>
      * <tr>
      * <th>System event</th>
@@ -31864,10 +31884,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </tr>
      * <tr>
      * <td>Instance redeployment due to system errors (SystemFailure.Redeploy)</td>
-     * <td>Inquiring and Scheduled</td>
+     * <td>Inquiring</td>
      * </tr>
      * <tr>
-     * <td>For ECS instances that use only local disks: instance restart due to a system error (SystemFailure.Reboot)</td>
+     * <td>For ECS instances that use only local disks: instance restart due to system errors (SystemFailure.Reboot)</td>
      * <td>Executing</td>
      * </tr>
      * <tr>
@@ -31879,7 +31899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <td>Inquiring</td>
      * </tr>
      * <tr>
-     * <td><strong>Note</strong>When instances that use local disks are redeployed, the local disks are re-initialized and data on the local disks is cleared.</td>
+     * <td><strong>Note</strong> When the system redeploys instances equipped with local disks, the local disks are re-initialized and data on the local disks is cleared.</td>
      * <td></td>
      * </tr>
      * </tbody></table>
@@ -34035,19 +34055,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
+     * <p>\<em>\</em> When you create an ECS instance, you are charged for ECS resources, including the <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, familiarize yourself with the billing rules and
+     * <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources. \<em>\</em>
      * This operation is an asynchronous operation. After a request to create ECS instances is sent, ECS instance IDs are returned but the creation and startup of the instances may be incomplete. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of an instance is <code>Running</code> in the DescribeInstanceStatus response, the instance is created and started.</p>
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li>Make sure that the number of ECS instances you created or the number of vCPUs on ECS instances of all instance types you created does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
-     * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
+     * <li>If the resource inventory is insufficient to complete instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call the <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> operation to check whether an instance creation failure event exists. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">System events related to instance creation failures</a>.</li>
+     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the region.</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
-     * <li>You can call the RunInstances operation to create up to 100 ECS instances at a time. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
+     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are automatically used.</li>
+     * <li>You can call the RunInstances operation to create up to 100 ECS instances in a single request. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
      * <li>If you set <code>InternetMaxBandwidthOut</code> to a value greater than 0, public IP addresses are automatically assigned to the ECS instances to be created.<blockquote>
-     * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
+     * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth</a> section of the &quot;Limits and quotas on ECS&quot; topic.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -34058,7 +34080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><strong>Management and search of ECS instances</strong>: Add tags to the ECS instances by specifying <code>Tag.N.Key</code> and <code>Tag.N.Value</code> and append incremental suffixes by specifying <code>UniqueSuffix</code> to the hostname specified by <code>HostName</code> and the instance name specified by <code>InstanceName</code>. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</li>
      * <li><strong>Launch template</strong>: A launch template contains the parameters required to create an ECS instance so that you do not have to specify the parameters every time you create ECS instances. You can call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, in the request to <code>RunInstances</code>, you can specify <code>LaunchTemplateId</code> and <code>LaunchTemplateVersion</code> to use the launch template.</li>
      * <li><strong>Disabling of Hyper-Threading (HT)</strong>: In memory-intensive scenarios, set <code>CpuOptions.ThreadsPerCore</code> to 1 to disable HT and increase the memory-to-vCPU ratio.</li>
-     * <li><strong>Enabling of Jumbo Frames</strong>: Set <code>NetworkOptions.EnableJumboFrame</code> to true to enable the <code>Jumbo Frames</code> feature when you create ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</li>
+     * <li><strong>Enabling of Jumbo Frames</strong>: Set <code>NetworkOptions.EnableJumboFrame</code> to true to enable the <code>Jumbo Frames</code> feature when you create ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">Jumbo Frames</a>.</li>
      * </ul>
      * <h2><a href="#"></a>Sample requests</h2>
      * <p>Use a specific image to create ECS instances of a specific instance type in the China (Hangzhou) region. The instances use disks with a specific capacity as the system disk and data disks and are automatically assigned public IP addresses. The instances have user-defined names and logon passwords. The instances are assigned to a specific security group and connected to a specific vSwitch. Request parameters:
@@ -34092,7 +34114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *     Amount:10, //Set the number of ECS instances that you want to create to 10.
      *     InstanceChargeType:&quot;PostPaid&quot;, //Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
      *     SpotStrategy:&quot;NoSpot&quot; //Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
-     * <strong>Example: Create 20 preemptible instances that use a specified bidding policy and a protection period</strong>
+     * <strong>Example: Create 20 preemptible instances that use a specific bidding policy and a protection period</strong>
      *     Amount:20, //Set the number of ECS instances that you want to create to 20.
      *     InstanceChargeType:&quot;PostPaid&quot;,
      *     SpotStrategy:&quot;SpotAsPriceGo&quot;, //Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
@@ -34447,19 +34469,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Before you call this operation, familiarize yourself with the billing and <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources.</em>*
+     * <p>\<em>\</em> When you create an ECS instance, you are charged for ECS resources, including the <a href="https://help.aliyun.com/document_detail/25398.html">instance type</a>, <a href="https://help.aliyun.com/document_detail/179021.html">image</a>, <a href="https://help.aliyun.com/document_detail/179022.html">block storage</a>, and <a href="https://help.aliyun.com/document_detail/25411.html">public bandwidth</a>. Before you call this operation, familiarize yourself with the billing rules and
+     * <a href="https://www.alibabacloud.com/zh/pricing-calculator#/commodity/vm_intl">pricing</a> of ECS resources. \<em>\</em>
      * This operation is an asynchronous operation. After a request to create ECS instances is sent, ECS instance IDs are returned but the creation and startup of the instances may be incomplete. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the instances. When the status of an instance is <code>Running</code> in the DescribeInstanceStatus response, the instance is created and started.</p>
      * <h3><a href="#"></a>Considerations</h3>
      * <ul>
-     * <li>Make sure that the number of ECS instances you created or the number of vCPUs on ECS instances of all instance types you created does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
-     * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, create a VPC in the region. For more information, see <a href="https://help.aliyun.com/document_detail/65430.html">Create a VPC</a>.</li>
+     * <li>If the resource inventory is insufficient to complete instance creation, Alibaba Cloud immediately sends an instance creation failure event (SystemFailure.Delete). You can call the <a href="https://help.aliyun.com/document_detail/2679897.html">DescribeInstanceHistoryEvents</a> operation to check whether an instance creation failure event exists. For more information, see <a href="https://help.aliyun.com/document_detail/2545990.html">System events related to instance creation failures</a>.</li>
+     * <li>Make sure that the number of ECS instances you create or the number of vCPUs on ECS instances of all instance types you create does not exceed the corresponding quota. Go to the <a href="https://quotas.console.aliyun.com/products/ecs/quotas">Quota Center</a> to view the quotas.</li>
+     * <li>Before you create ECS instances of the Virtual Private Cloud (VPC) type in a region, <a href="https://help.aliyun.com/document_detail/65430.html">create a VPC</a> in the region.</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
-     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are used by default.</li>
-     * <li>You can call the RunInstances operation to create up to 100 ECS instances at a time. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
+     * <li>If you create a subscription instance (<code>PrePaid</code>), available coupons in your account are automatically used.</li>
+     * <li>You can call the RunInstances operation to create up to 100 ECS instances in a single request. To create more than 100 ECS instances, we recommend that you initiate multiple requests in batches or concurrently.</li>
      * <li>If you set <code>InternetMaxBandwidthOut</code> to a value greater than 0, public IP addresses are automatically assigned to the ECS instances to be created.<blockquote>
-     * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth limits</a> section of the &quot;Limits&quot; topic.</p>
+     * <p> For the limits on the sum of maximum public bandwidths of ECS instances that use the pay-by-bandwidth billing method for network usage per region per Alibaba Cloud account, see the <a href="~~25412#BandwidthQuota~~">Public bandwidth</a> section of the &quot;Limits and quotas on ECS&quot; topic.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -34470,7 +34494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><strong>Management and search of ECS instances</strong>: Add tags to the ECS instances by specifying <code>Tag.N.Key</code> and <code>Tag.N.Value</code> and append incremental suffixes by specifying <code>UniqueSuffix</code> to the hostname specified by <code>HostName</code> and the instance name specified by <code>InstanceName</code>. For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential names or hostnames for multiple instances</a>.</li>
      * <li><strong>Launch template</strong>: A launch template contains the parameters required to create an ECS instance so that you do not have to specify the parameters every time you create ECS instances. You can call the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create a launch template. Then, in the request to <code>RunInstances</code>, you can specify <code>LaunchTemplateId</code> and <code>LaunchTemplateVersion</code> to use the launch template.</li>
      * <li><strong>Disabling of Hyper-Threading (HT)</strong>: In memory-intensive scenarios, set <code>CpuOptions.ThreadsPerCore</code> to 1 to disable HT and increase the memory-to-vCPU ratio.</li>
-     * <li><strong>Enabling of Jumbo Frames</strong>: Set <code>NetworkOptions.EnableJumboFrame</code> to true to enable the <code>Jumbo Frames</code> feature when you create ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</li>
+     * <li><strong>Enabling of Jumbo Frames</strong>: Set <code>NetworkOptions.EnableJumboFrame</code> to true to enable the <code>Jumbo Frames</code> feature when you create ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">Jumbo Frames</a>.</li>
      * </ul>
      * <h2><a href="#"></a>Sample requests</h2>
      * <p>Use a specific image to create ECS instances of a specific instance type in the China (Hangzhou) region. The instances use disks with a specific capacity as the system disk and data disks and are automatically assigned public IP addresses. The instances have user-defined names and logon passwords. The instances are assigned to a specific security group and connected to a specific vSwitch. Request parameters:
@@ -34504,7 +34528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *     Amount:10, //Set the number of ECS instances that you want to create to 10.
      *     InstanceChargeType:&quot;PostPaid&quot;, //Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
      *     SpotStrategy:&quot;NoSpot&quot; //Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
-     * <strong>Example: Create 20 preemptible instances that use a specified bidding policy and a protection period</strong>
+     * <strong>Example: Create 20 preemptible instances that use a specific bidding policy and a protection period</strong>
      *     Amount:20, //Set the number of ECS instances that you want to create to 20.
      *     InstanceChargeType:&quot;PostPaid&quot;,
      *     SpotStrategy:&quot;SpotAsPriceGo&quot;, //Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.

@@ -8,7 +8,7 @@ public class RedeployInstanceRequest extends TeaModel {
      * <p>Specifies whether to forcefully stop the instance that is in the Running state.</p>
      * <p>Default value: false.</p>
      * <blockquote>
-     * <p>A forced stop is equivalent to a power outage, and unsaved data may be lost. We recommend that you redeploy instances that are in the Stopped state.</p>
+     * <p> A forced stop is equivalent to a power outage and can result in loss of data that is not written to storage devices. We recommend that you redeploy instances when they are in the Stopped state.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

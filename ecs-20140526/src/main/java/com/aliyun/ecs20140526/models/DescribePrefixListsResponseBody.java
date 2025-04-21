@@ -57,6 +57,55 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag self = new DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class DescribePrefixListsResponseBodyPrefixListsPrefixListTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag> tag;
+
+        public static DescribePrefixListsResponseBodyPrefixListsPrefixListTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribePrefixListsResponseBodyPrefixListsPrefixListTags self = new DescribePrefixListsResponseBodyPrefixListsPrefixListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixListTags setTag(java.util.List<DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribePrefixListsResponseBodyPrefixListsPrefixListTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribePrefixListsResponseBodyPrefixListsPrefixList extends TeaModel {
         /**
          * <p>The IP address family of the prefix list. Valid values:</p>
@@ -125,6 +174,12 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         @NameInMap("PrefixListName")
         public String prefixListName;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tags")
+        public DescribePrefixListsResponseBodyPrefixListsPrefixListTags tags;
+
         public static DescribePrefixListsResponseBodyPrefixListsPrefixList build(java.util.Map<String, ?> map) throws Exception {
             DescribePrefixListsResponseBodyPrefixListsPrefixList self = new DescribePrefixListsResponseBodyPrefixListsPrefixList();
             return TeaModel.build(map, self);
@@ -184,6 +239,22 @@ public class DescribePrefixListsResponseBody extends TeaModel {
         }
         public String getPrefixListName() {
             return this.prefixListName;
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribePrefixListsResponseBodyPrefixListsPrefixList setTags(DescribePrefixListsResponseBodyPrefixListsPrefixListTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribePrefixListsResponseBodyPrefixListsPrefixListTags getTags() {
+            return this.tags;
         }
 
     }

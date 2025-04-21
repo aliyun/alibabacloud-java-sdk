@@ -16,6 +16,10 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("CommandLine")
     public String commandLine;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Intranet</p>
+     */
     @NameInMap("ConnectionType")
     public String connectionType;
 

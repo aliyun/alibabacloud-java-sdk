@@ -687,6 +687,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sp-bp67acfmxazb4p****</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
@@ -992,6 +996,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sp-bp67acfmxazb4p****</p>
+         */
         @NameInMap("AutoSnapshotPolicyId")
         public String autoSnapshotPolicyId;
 
@@ -1165,6 +1173,10 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
     }
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("LoginAsNonRoot")
         public Boolean loginAsNonRoot;
 
@@ -1585,9 +1597,17 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Terminate</p>
+         */
         @NameInMap("SpotInterruptionBehavior")
         public String spotInterruptionBehavior;
 
@@ -1977,7 +1997,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values of Nextended configuration N， Valid values:</p>
+         * <p>The instance family level of the instance type in extended configuration N. This parameter is used to filter instance types. Valid values of Nextended configuration N, Valid values:</p>
          * <ul>
          * <li>EntryLevel: entry level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
          * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
