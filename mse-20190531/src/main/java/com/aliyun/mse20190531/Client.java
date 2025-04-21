@@ -3278,10 +3278,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
-            query.put("Config", request.config);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.configLevel)) {
             query.put("ConfigLevel", request.configLevel);
         }
@@ -3302,8 +3298,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceIdList", request.resourceIdListShrink);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreatePluginConfig"),
@@ -15792,10 +15794,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceptLanguage", request.acceptLanguage);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
-            query.put("Config", request.config);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.configLevel)) {
             query.put("ConfigLevel", request.configLevel);
         }
@@ -15832,8 +15830,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceIdList", request.resourceIdListShrink);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("Config", request.config);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdatePluginConfig"),

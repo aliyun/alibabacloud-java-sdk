@@ -14,12 +14,6 @@ public class UpdatePluginConfigShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The plug-in configuration. Configurations of WebAssembly plug-ins are in the YAML format, and configurations of Lua plug-ins are in the Lua code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>\# Configure a check for the required fields of the plug-in, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
-     */
     @NameInMap("Config")
     public String config;
 

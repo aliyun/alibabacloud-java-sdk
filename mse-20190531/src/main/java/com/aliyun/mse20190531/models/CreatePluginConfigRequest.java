@@ -13,17 +13,6 @@ public class CreatePluginConfigRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
-    /**
-     * <p>The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>status_code: 200
-     * headers:</p>
-     * <ul>
-     * <li>Content-Type=application/json
-     * body: &quot;{\&quot;rule\&quot;: \&quot;global\&quot;}&quot;</li>
-     * </ul>
-     */
     @NameInMap("Config")
     public String config;
 
