@@ -1748,6 +1748,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>A号码报备数据删除</p>
+     * 
+     * @param request DeleteSecretAPhoneNoToCustRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSecretAPhoneNoToCustResponse
+     */
+    public DeleteSecretAPhoneNoToCustResponse deleteSecretAPhoneNoToCustWithOptions(DeleteSecretAPhoneNoToCustRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ANoWhiteGroupId)) {
+            query.put("ANoWhiteGroupId", request.ANoWhiteGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNoA)) {
+            query.put("PhoneNoA", request.phoneNoA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSecretAPhoneNoToCust"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSecretAPhoneNoToCustResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>A号码报备数据删除</p>
+     * 
+     * @param request DeleteSecretAPhoneNoToCustRequest
+     * @return DeleteSecretAPhoneNoToCustResponse
+     */
+    public DeleteSecretAPhoneNoToCustResponse deleteSecretAPhoneNoToCust(DeleteSecretAPhoneNoToCustRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSecretAPhoneNoToCustWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#qps"></a>QPS limits</h3>
      * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -2617,6 +2677,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryRecordFileDownloadUrlResponse queryRecordFileDownloadUrl(QueryRecordFileDownloadUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryRecordFileDownloadUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>A号码报备状态查询</p>
+     * 
+     * @param request QuerySecretAPhoneNoToCustRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySecretAPhoneNoToCustResponse
+     */
+    public QuerySecretAPhoneNoToCustResponse querySecretAPhoneNoToCustWithOptions(QuerySecretAPhoneNoToCustRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ANoWhiteGroupId)) {
+            query.put("ANoWhiteGroupId", request.ANoWhiteGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNoA)) {
+            query.put("PhoneNoA", request.phoneNoA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySecretAPhoneNoToCust"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySecretAPhoneNoToCustResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>A号码报备状态查询</p>
+     * 
+     * @param request QuerySecretAPhoneNoToCustRequest
+     * @return QuerySecretAPhoneNoToCustResponse
+     */
+    public QuerySecretAPhoneNoToCustResponse querySecretAPhoneNoToCust(QuerySecretAPhoneNoToCustRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySecretAPhoneNoToCustWithOptions(request, runtime);
     }
 
     /**
