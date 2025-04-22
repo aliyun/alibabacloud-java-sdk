@@ -385,6 +385,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更换签名的资质和授权书</p>
+     * 
+     * @param request ChangeSignatureQualificationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChangeSignatureQualificationResponse
+     */
+    public ChangeSignatureQualificationResponse changeSignatureQualificationWithOptions(ChangeSignatureQualificationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationLetterId)) {
+            query.put("AuthorizationLetterId", request.authorizationLetterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qualificationId)) {
+            query.put("QualificationId", request.qualificationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signatureName)) {
+            query.put("SignatureName", request.signatureName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeSignatureQualification"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeSignatureQualificationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更换签名的资质和授权书</p>
+     * 
+     * @param request ChangeSignatureQualificationRequest
+     * @return ChangeSignatureQualificationResponse
+     */
+    public ChangeSignatureQualificationResponse changeSignatureQualification(ChangeSignatureQualificationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeSignatureQualificationWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to 2,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -642,6 +706,92 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSmartShortUrlResponse createSmartShortUrl(CreateSmartShortUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSmartShortUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建委托授权书</p>
+     * 
+     * @param tmpReq CreateSmsAuthorizationLetterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSmsAuthorizationLetterResponse
+     */
+    public CreateSmsAuthorizationLetterResponse createSmsAuthorizationLetterWithOptions(CreateSmsAuthorizationLetterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSmsAuthorizationLetterShrinkRequest request = new CreateSmsAuthorizationLetterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.signList)) {
+            request.signListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.signList, "SignList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorization)) {
+            query.put("Authorization", request.authorization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationLetterExpDate)) {
+            query.put("AuthorizationLetterExpDate", request.authorizationLetterExpDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationLetterName)) {
+            query.put("AuthorizationLetterName", request.authorizationLetterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationLetterPic)) {
+            query.put("AuthorizationLetterPic", request.authorizationLetterPic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationCode)) {
+            query.put("OrganizationCode", request.organizationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyAuthorization)) {
+            query.put("ProxyAuthorization", request.proxyAuthorization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signListShrink)) {
+            query.put("SignList", request.signListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSmsAuthorizationLetter"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSmsAuthorizationLetterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建委托授权书</p>
+     * 
+     * @param request CreateSmsAuthorizationLetterRequest
+     * @return CreateSmsAuthorizationLetterResponse
+     */
+    public CreateSmsAuthorizationLetterResponse createSmsAuthorizationLetter(CreateSmsAuthorizationLetterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSmsAuthorizationLetterWithOptions(request, runtime);
     }
 
     /**
@@ -1482,6 +1632,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetOSSInfoForUploadFileResponse getOSSInfoForUploadFile(GetOSSInfoForUploadFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getOSSInfoForUploadFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传文件获取oss配置</p>
+     * 
+     * @param request GetQualificationOssInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQualificationOssInfoResponse
+     */
+    public GetQualificationOssInfoResponse getQualificationOssInfoWithOptions(GetQualificationOssInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetQualificationOssInfo"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetQualificationOssInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传文件获取oss配置</p>
+     * 
+     * @param request GetQualificationOssInfoRequest
+     * @return GetQualificationOssInfoResponse
+     */
+    public GetQualificationOssInfoResponse getQualificationOssInfo(GetQualificationOssInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getQualificationOssInfoWithOptions(request, runtime);
     }
 
     /**
@@ -2444,6 +2650,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryShortUrlResponse queryShortUrl(QueryShortUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryShortUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询委托授权书</p>
+     * 
+     * @param tmpReq QuerySmsAuthorizationLetterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuerySmsAuthorizationLetterResponse
+     */
+    public QuerySmsAuthorizationLetterResponse querySmsAuthorizationLetterWithOptions(QuerySmsAuthorizationLetterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QuerySmsAuthorizationLetterShrinkRequest request = new QuerySmsAuthorizationLetterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.authorizationLetterIdList)) {
+            request.authorizationLetterIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.authorizationLetterIdList, "AuthorizationLetterIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorizationLetterIdListShrink)) {
+            query.put("AuthorizationLetterIdList", request.authorizationLetterIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.organizationCode)) {
+            query.put("OrganizationCode", request.organizationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuerySmsAuthorizationLetter"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuerySmsAuthorizationLetterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询委托授权书</p>
+     * 
+     * @param request QuerySmsAuthorizationLetterRequest
+     * @return QuerySmsAuthorizationLetterResponse
+     */
+    public QuerySmsAuthorizationLetterResponse querySmsAuthorizationLetter(QuerySmsAuthorizationLetterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySmsAuthorizationLetterWithOptions(request, runtime);
     }
 
     /**

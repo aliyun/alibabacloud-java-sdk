@@ -23,7 +23,7 @@ public class GetSmsSignResponseBody extends TeaModel {
     public Boolean authorizationLetterAuditPass;
 
     @NameInMap("AuthorizationLetterId")
-    public String authorizationLetterId;
+    public Long authorizationLetterId;
 
     /**
      * <p>Request status code.</p>
@@ -203,11 +203,11 @@ public class GetSmsSignResponseBody extends TeaModel {
         return this.authorizationLetterAuditPass;
     }
 
-    public GetSmsSignResponseBody setAuthorizationLetterId(String authorizationLetterId) {
+    public GetSmsSignResponseBody setAuthorizationLetterId(Long authorizationLetterId) {
         this.authorizationLetterId = authorizationLetterId;
         return this;
     }
-    public String getAuthorizationLetterId() {
+    public Long getAuthorizationLetterId() {
         return this.authorizationLetterId;
     }
 

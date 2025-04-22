@@ -205,7 +205,7 @@ public class QuerySmsSignListResponseBody extends TeaModel {
         public String auditStatus;
 
         @NameInMap("AuthorizationLetterId")
-        public String authorizationLetterId;
+        public Long authorizationLetterId;
 
         /**
          * <p>The type of the signature scenario. The return value ends with &quot;type&quot;. Valid values:</p>
@@ -273,11 +273,11 @@ public class QuerySmsSignListResponseBody extends TeaModel {
             return this.auditStatus;
         }
 
-        public QuerySmsSignListResponseBodySmsSignList setAuthorizationLetterId(String authorizationLetterId) {
+        public QuerySmsSignListResponseBodySmsSignList setAuthorizationLetterId(Long authorizationLetterId) {
             this.authorizationLetterId = authorizationLetterId;
             return this;
         }
-        public String getAuthorizationLetterId() {
+        public Long getAuthorizationLetterId() {
             return this.authorizationLetterId;
         }
 
