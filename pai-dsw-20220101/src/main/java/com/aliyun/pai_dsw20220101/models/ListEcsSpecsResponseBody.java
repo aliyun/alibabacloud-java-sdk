@@ -173,6 +173,9 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         @NameInMap("GPU")
         public Long GPU;
 
+        @NameInMap("GPUMemorySize")
+        public Float GPUMemorySize;
+
         /**
          * <strong>example:</strong>
          * <p>v100</p>
@@ -222,6 +225,9 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         @NameInMap("Price")
         public Double price;
 
+        @NameInMap("SpotStockStatus")
+        public String spotStockStatus;
+
         /**
          * <strong>example:</strong>
          * <p>500</p>
@@ -264,6 +270,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
         public Long getGPU() {
             return this.GPU;
+        }
+
+        public ListEcsSpecsResponseBodyEcsSpecs setGPUMemorySize(Float GPUMemorySize) {
+            this.GPUMemorySize = GPUMemorySize;
+            return this;
+        }
+        public Float getGPUMemorySize() {
+            return this.GPUMemorySize;
         }
 
         public ListEcsSpecsResponseBodyEcsSpecs setGPUType(String GPUType) {
@@ -320,6 +334,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
         public Double getPrice() {
             return this.price;
+        }
+
+        public ListEcsSpecsResponseBodyEcsSpecs setSpotStockStatus(String spotStockStatus) {
+            this.spotStockStatus = spotStockStatus;
+            return this;
+        }
+        public String getSpotStockStatus() {
+            return this.spotStockStatus;
         }
 
         public ListEcsSpecsResponseBodyEcsSpecs setSystemDiskCapacity(Long systemDiskCapacity) {
