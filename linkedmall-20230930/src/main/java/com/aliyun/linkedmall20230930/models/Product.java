@@ -116,6 +116,9 @@ public class Product extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("servicePromises")
+    public java.util.List<String> servicePromises;
+
     /**
      * <strong>example:</strong>
      * <p>21000017</p>
@@ -317,6 +320,14 @@ public class Product extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public Product setServicePromises(java.util.List<String> servicePromises) {
+        this.servicePromises = servicePromises;
+        return this;
+    }
+    public java.util.List<String> getServicePromises() {
+        return this.servicePromises;
     }
 
     public Product setShopId(String shopId) {
