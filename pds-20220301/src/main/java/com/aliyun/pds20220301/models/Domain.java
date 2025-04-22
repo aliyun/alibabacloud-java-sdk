@@ -43,6 +43,13 @@ public class Domain extends TeaModel {
     @NameInMap("status")
     public Long status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LRS</p>
+     */
+    @NameInMap("store_redundancy_type")
+    public String storeRedundancyType;
+
     @NameInMap("updated_at")
     public String updatedAt;
 
@@ -159,6 +166,14 @@ public class Domain extends TeaModel {
     }
     public Long getStatus() {
         return this.status;
+    }
+
+    public Domain setStoreRedundancyType(String storeRedundancyType) {
+        this.storeRedundancyType = storeRedundancyType;
+        return this;
+    }
+    public String getStoreRedundancyType() {
+        return this.storeRedundancyType;
     }
 
     public Domain setUpdatedAt(String updatedAt) {

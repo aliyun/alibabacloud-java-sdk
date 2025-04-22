@@ -18,12 +18,11 @@ public class SearchFileRequest extends TeaModel {
      * <p>url,thumbnail</p>
      */
     @NameInMap("fields")
-    @Deprecated
     public String fields;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
-     * <p>The number of returned results must be less than or equal to the specified number.</p>
+     * <p>The maximum number of entries to return. Valid values: 1 to 100.</p>
+     * <p>The number of returned entries must be less than or equal to the value of this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,8 +31,8 @@ public class SearchFileRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of marker.\
-     * By default, this parameter is left empty.</p>
+     * <p>The name of the entry after which the list begins. Entries whose names are alphabetically after the value of this parameter are returned. If you do not specify this parameter, all entries are returned.\
+     * This parameter is left empty by default.</p>
      * 
      * <strong>example:</strong>
      * <p>NWQ1Yjk4YmI1ZDRlYmU1Y2E0YWE0NmJhYWJmODBhNDQ2NzhlMTRhMg</p>
@@ -42,23 +41,23 @@ public class SearchFileRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The field by which to sort the returned results. Default value: created_at. Valid values:</p>
+     * <p>The field by which to sort the returned entries. Default value: created_at. Valid values:</p>
      * <ul>
-     * <li>created_at: sorts the results by the time when the file was created.</li>
-     * <li>updated_at: sorts the results by the time when the file was modified.</li>
-     * <li>size: sorts the results by the size of the file.</li>
-     * <li>name: sorts the results by the name of the file.</li>
+     * <li>created_at: sorts the entries by creation time.</li>
+     * <li>updated_at: sorts the entries by update time.</li>
+     * <li>size: sorts the entries by file size.</li>
+     * <li>name: sorts the entries by file name.</li>
      * </ul>
-     * <p>The order in which you want to sort the returned results. Valid values:</p>
+     * <p>The order in which you want to sort the returned entries. Valid values:</p>
      * <ul>
-     * <li>ASC: sorts the results in ascending order.</li>
-     * <li>DESC: sorts the results in descending order.</li>
+     * <li>ASC: ascending order</li>
+     * <li>DESC: descending order</li>
      * </ul>
-     * <p>You must specify this parameter in the \<field name> \<ASC or DESC> format. Separate multiple field names with commas (,). A preceding field has a higher priority than a following field. Examples:</p>
+     * <p>You must specify this parameter in the \<field> \<ASC or DESC> format. Separate multiple fields with commas (,). A preceding field has a higher priority than a following field. Examples:</p>
      * <ul>
-     * <li>If you want to sort the results based on the file name in ascending order, set this parameter to &quot;name ASC&quot;.</li>
-     * <li>If you want to sort the results based on the creation time in descending order, set this parameter to &quot;created_at DESC&quot;.</li>
-     * <li>If you want to sort the results based on the creation time in descending order first, and then sort the results based on the file name in ascending order if the creation time is the same, set this parameter to &quot;created_at DESC,name ASC&quot;.</li>
+     * <li>If you want to sort the entries by file name in ascending order, set this parameter to &quot;name ASC&quot;.</li>
+     * <li>If you want to sort the entries by creation time in descending order, set this parameter to &quot;created_at DESC&quot;.</li>
+     * <li>If you want to sort the entries by creation time in descending order and sort the entries by file name in ascending order in case of the same creation time, set this parameter to &quot;created_at DESC,name ASC&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +67,7 @@ public class SearchFileRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The search condition. Fuzzy searches based on the file name or directory name are supported. The search condition can be up to 4,096 characters in length.</p>
+     * <p>The search conditions. Fuzzy searches based on the file name or directory name are supported. The value of this parameter can be up to 4,096 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,6 +76,12 @@ public class SearchFileRequest extends TeaModel {
     @NameInMap("query")
     public String query;
 
+    /**
+     * <p>Specifies whether to perform recursive search on a folder that is specified by setting parent_file_id in the query parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("recursive")
     public Boolean recursive;
 
@@ -89,6 +94,9 @@ public class SearchFileRequest extends TeaModel {
     @NameInMap("return_total_count")
     public Boolean returnTotalCount;
 
+    /**
+     * <p>The thumbnail configurations. Up to five thumbnails can be returned at a time. The value contains key-value pairs. You can customize the keys. The URL of a thumbnail is returned based on the key.</p>
+     */
     @NameInMap("thumbnail_processes")
     public java.util.Map<String, ImageProcess> thumbnailProcesses;
 
@@ -105,7 +113,6 @@ public class SearchFileRequest extends TeaModel {
         return this.driveId;
     }
 
-    @Deprecated
     public SearchFileRequest setFields(String fields) {
         this.fields = fields;
         return this;

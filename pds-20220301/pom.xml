@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pds20220301</artifactId>
-  <version>4.2.0</version>
+  <version>4.2.1</version>
   <packaging>jar</packaging>
   <name>pds20220301</name>
   <description>Alibaba Cloud pds (20220301) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>alibabacloud-gateway-pds</artifactId>
-      <version>0.0.9</version>
+      <version>0.1.1</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.7</version>
+      <version>0.3.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

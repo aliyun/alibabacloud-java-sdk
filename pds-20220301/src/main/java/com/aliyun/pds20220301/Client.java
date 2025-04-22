@@ -192,8 +192,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Log audit is a value-added feature that is provided by Drive and Photo Service (PDS) Developer Edition. Before you call this operation, make sure that you learn about the <a href="https://www.alibabacloud.com/help/document_detail/425220.html">value-added billable items</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>导出审计日志</p>
+     * <p>Exports audit logs.</p>
      * 
      * @param request AuditLogExportRequest
      * @param headers map
@@ -238,8 +241,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Log audit is a value-added feature that is provided by Drive and Photo Service (PDS) Developer Edition. Before you call this operation, make sure that you learn about the <a href="https://www.alibabacloud.com/help/document_detail/425220.html">value-added billable items</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>导出审计日志</p>
+     * <p>Exports audit logs.</p>
      * 
      * @param request AuditLogExportRequest
      * @return AuditLogExportResponse
@@ -5655,7 +5661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</p>
+     * <p>Searches for files.</p>
      * 
      * @param request SearchFileRequest
      * @param headers map
@@ -5721,7 +5727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries files. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175890.html">https://help.aliyun.com/document_detail/175890.html</a>.</p>
+     * <p>Searches for files.</p>
      * 
      * @param request SearchFileRequest
      * @return SearchFileResponse

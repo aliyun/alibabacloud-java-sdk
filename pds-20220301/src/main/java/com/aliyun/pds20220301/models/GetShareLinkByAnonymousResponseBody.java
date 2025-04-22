@@ -103,6 +103,9 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     @NameInMap("expiration")
     public String expiration;
 
+    @NameInMap("has_pwd")
+    public Boolean hasPwd;
+
     /**
      * <p>The number of times that the shared files are previewed.</p>
      * 
@@ -272,6 +275,14 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     }
     public String getExpiration() {
         return this.expiration;
+    }
+
+    public GetShareLinkByAnonymousResponseBody setHasPwd(Boolean hasPwd) {
+        this.hasPwd = hasPwd;
+        return this;
+    }
+    public Boolean getHasPwd() {
+        return this.hasPwd;
     }
 
     public GetShareLinkByAnonymousResponseBody setPreviewCount(Long previewCount) {
