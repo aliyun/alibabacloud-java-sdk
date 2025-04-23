@@ -4,18 +4,34 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("InstanceList")
     public GetInstanceListResponseBodyInstanceList instanceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ABA4A7FD-E10F-45C7-9774-A5236015****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfoUpgradeServiceDetailInfoVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.10</p>
+         */
         @NameInMap("Current2OpenSourceVersion")
         public String current2OpenSourceVersion;
 
@@ -103,30 +123,66 @@ public class GetInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetInstanceListResponseBodyInstanceListInstanceVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1566215995000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("DeployType")
         public Integer deployType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.212:9092,192.168.0.210:9092,192.168.0.211:****</p>
+         */
         @NameInMap("EndPoint")
         public String endPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1568908800000</p>
+         */
         @NameInMap("ExpiredTime")
         public Long expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-mp919o4v****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-mp919o4v****</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47.111.110.11:9093,121.40.96.141:9093,47.111.118.133:****</p>
+         */
         @NameInMap("SslEndPoint")
         public String sslEndPoint;
 
@@ -135,12 +191,18 @@ public class GetInstanceListResponseBody extends TeaModel {
 
         /**
          * <p>VSwitch ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp13rg6bcpkxofr78****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1l6hrlykj3405r7****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

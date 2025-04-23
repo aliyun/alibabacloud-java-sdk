@@ -4,9 +4,21 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-v0h18sav****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

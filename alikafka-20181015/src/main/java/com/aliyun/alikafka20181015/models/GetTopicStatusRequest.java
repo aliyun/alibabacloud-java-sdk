@@ -4,12 +4,24 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class GetTopicStatusRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-v0h15tjmo003</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal_topic_9d034262835916103455551be06cc2dc_6</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

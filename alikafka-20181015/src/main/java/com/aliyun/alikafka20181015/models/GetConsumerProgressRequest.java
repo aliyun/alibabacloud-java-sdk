@@ -6,13 +6,29 @@ import com.aliyun.tea.*;
 public class GetConsumerProgressRequest extends TeaModel {
     /**
      * <p>Consumer Group ID。</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kafka-test</p>
      */
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-mp919o4v****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

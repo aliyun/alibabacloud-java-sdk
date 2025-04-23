@@ -4,18 +4,34 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerProgressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("ConsumerProgress")
     public GetConsumerProgressResponseBodyConsumerProgress consumerProgress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>252820E1-A2E6-45F2-B4C9-1056B8CE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,31 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetListOffsetList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("BrokerOffset")
         public Long brokerOffset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("ConsumerOffset")
         public Long consumerOffset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1566874931649</p>
+         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Partition")
         public Integer partition;
 
@@ -136,15 +168,27 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1566874931649</p>
+         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         @NameInMap("OffsetList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList offsetList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kafka-test</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
@@ -207,14 +251,25 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     }
 
     public static class GetConsumerProgressResponseBodyConsumerProgress extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1566874931671</p>
+         */
         @NameInMap("LastTimestamp")
         public Long lastTimestamp;
 
         @NameInMap("TopicList")
         public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TotalDiff")
         public Long totalDiff;
+
+        @NameInMap("state")
+        public String state;
 
         public static GetConsumerProgressResponseBodyConsumerProgress build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgress self = new GetConsumerProgressResponseBodyConsumerProgress();
@@ -243,6 +298,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
         public Long getTotalDiff() {
             return this.totalDiff;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgress setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }

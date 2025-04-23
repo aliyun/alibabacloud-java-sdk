@@ -4,27 +4,55 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class GetTopicListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>82BD585C-17A1-486E-B3E8-AABCE8EE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
     @NameInMap("TopicList")
     public GetTopicListResponseBodyTopicList topicList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -98,24 +126,48 @@ public class GetTopicListResponseBody extends TeaModel {
     }
 
     public static class GetTopicListResponseBodyTopicListTopicVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1566804394000</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_pre-cn-0pp1954n****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kafka_test_topic</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("StatusName")
         public String statusName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>poptest</p>
+         */
         @NameInMap("Topic")
         public String topic;
 

@@ -4,15 +4,31 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class DeleteTopicResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9B618B3F-9506-4661-A211-D00C4556****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

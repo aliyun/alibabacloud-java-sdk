@@ -4,15 +4,31 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1AA2A2AD-2727-4573-B1C7-A0388BCD****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

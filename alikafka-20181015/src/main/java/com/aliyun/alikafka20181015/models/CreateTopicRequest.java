@@ -4,15 +4,39 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-mp919o4v****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_topic_test</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_topic_test</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

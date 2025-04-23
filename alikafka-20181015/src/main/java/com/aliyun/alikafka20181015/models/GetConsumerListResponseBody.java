@@ -4,18 +4,34 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("ConsumerList")
     public GetConsumerListResponseBodyConsumerList consumerList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>operation success.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>808F042B-CB9A-4FBC-9009-00E7DDB6****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +81,24 @@ public class GetConsumerListResponseBody extends TeaModel {
     }
 
     public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CID_c34a6f44915f80d70cb42c4b14ee40c3_4</p>
+         */
         @NameInMap("ConsumerId")
         public String consumerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alikafka_post-cn-v0h18sav0001</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

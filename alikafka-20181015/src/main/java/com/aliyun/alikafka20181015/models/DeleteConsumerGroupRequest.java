@@ -4,12 +4,30 @@ package com.aliyun.alikafka20181015.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testconsumer</p>
+     */
     @NameInMap("ConsumerId")
     public String consumerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_post-cn-mp91a44k****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -7,12 +7,22 @@ public class GetTopicListRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alikafka_pre-cn-0pp1954n2003</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
