@@ -122,6 +122,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("emptyProtect")
         public Boolean emptyProtect;
 
+        @NameInMap("grayAuth")
+        public String grayAuth;
+
         public static QueryConfigResponseBodyDataNacosRunningEnv build(java.util.Map<String, ?> map) throws Exception {
             QueryConfigResponseBodyDataNacosRunningEnv self = new QueryConfigResponseBodyDataNacosRunningEnv();
             return TeaModel.build(map, self);
@@ -133,6 +136,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getEmptyProtect() {
             return this.emptyProtect;
+        }
+
+        public QueryConfigResponseBodyDataNacosRunningEnv setGrayAuth(String grayAuth) {
+            this.grayAuth = grayAuth;
+            return this;
+        }
+        public String getGrayAuth() {
+            return this.grayAuth;
         }
 
     }
