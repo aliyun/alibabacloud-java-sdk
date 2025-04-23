@@ -96,6 +96,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    @NameInMap("Workshop")
+    public String workshop;
+
     public static ListUserDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUserDevicesRequest self = new ListUserDevicesRequest();
         return TeaModel.build(map, self);
@@ -259,6 +262,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public String getUsername() {
         return this.username;
+    }
+
+    public ListUserDevicesRequest setWorkshop(String workshop) {
+        this.workshop = workshop;
+        return this;
+    }
+    public String getWorkshop() {
+        return this.workshop;
     }
 
 }

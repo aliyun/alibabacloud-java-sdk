@@ -276,6 +276,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @NameInMap("Username")
         public String username;
 
+        @NameInMap("Workshop")
+        public String workshop;
+
         public static GetUserDeviceResponseBodyDevice build(java.util.Map<String, ?> map) throws Exception {
             GetUserDeviceResponseBodyDevice self = new GetUserDeviceResponseBodyDevice();
             return TeaModel.build(map, self);
@@ -503,6 +506,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
         public String getUsername() {
             return this.username;
+        }
+
+        public GetUserDeviceResponseBodyDevice setWorkshop(String workshop) {
+            this.workshop = workshop;
+            return this;
+        }
+        public String getWorkshop() {
+            return this.workshop;
         }
 
     }
