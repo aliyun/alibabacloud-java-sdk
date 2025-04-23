@@ -5,31 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListCloudMetricProfilingsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The page number of the page to return.</p>
-     * <br>
+     * <p>The page number.</p>
      * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50</p>
-     * <br>
-     * <p>Default value: 10</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

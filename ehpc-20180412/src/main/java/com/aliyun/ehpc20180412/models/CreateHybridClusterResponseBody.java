@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateHybridClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6757FA4-8FED-4602-B7F5-3550C0842122</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6757FA4-8FED-4602-B7F5-3550C0842122</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
     /**
-     * <p>The list of file systems.</p>
+     * <p>The queried file systems.</p>
      */
     @NameInMap("FileSystemList")
     public ListFileSystemWithMountTargetsResponseBodyFileSystemList fileSystemList;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page. Valid values: 1 to 50. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25638B77-2F19-5DC5-B578-7790CE92052B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,50 +93,70 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
 
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets extends TeaModel {
         /**
-         * <p>Specifies whether to use the user default permission group.</p>
-         * <br>
+         * <p>Indicates whether the permission group is the default permission group of the user.</p>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: uses the default permission group. If the permission group is the default one, all IP addresses are allowed to access the permission group, and users cannot delete the group and its rules.</p>
-         * <p>*   false: does not use the default permission group.</p>
+         * <ul>
+         * <li>true: The permission group is the default permission group. In this case, all IP addresses are allowed to access the permission group, and the user cannot delete the permission group and permission rules in the permission group.</li>
+         * <li>false: The permission group is not the default permission group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT_VPC_GROUP_NAME</p>
          */
         @NameInMap("AccessGroup")
         public String accessGroup;
 
         /**
          * <p>The domain in which the mount target resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>088b****-lj2.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
         /**
          * <p>The network type. Valid values:</p>
-         * <br>
-         * <p>*   vpc</p>
-         * <p>*   classic</p>
+         * <ul>
+         * <li>vpc</li>
+         * <li>classic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>The state of the mount target. Valid values:</p>
-         * <br>
-         * <p>*   Active: The mount target is available.</p>
-         * <p>*   Inactive: The mount target is unavailable.</p>
-         * <p>*   Pending: The mount target is pending to be used.</p>
-         * <p>*   Deleting: The mount target is being deleted.</p>
+         * <p>The status of the mount target. Valid values:</p>
+         * <ul>
+         * <li>Active: The mount target is available.</li>
+         * <li>Inactive: The mount target is unavailable.</li>
+         * <li>Pending: The mount target is being created or modified.</li>
+         * <li>Deleting: The mount target is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbvb34rtyh6xb3zrehs1****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vb34rtyh6xb3zrehs1****</p>
          */
         @NameInMap("VswId")
         public String vswId;
@@ -206,6 +238,9 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsPackageListPackages extends TeaModel {
         /**
          * <p>The ID of the storage plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>naspackage-0be9c4b624-37****</p>
          */
         @NameInMap("PackageId")
         public String packageId;
@@ -246,59 +281,84 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
 
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystems extends TeaModel {
         /**
-         * <p>The bandwidth of the file system. Unit: MB/s.</p>
+         * <p>The bandwidth of the file system. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("BandWidth")
         public Integer bandWidth;
 
         /**
-         * <p>The capacity of the file system. Unit: GiB</p>
+         * <p>The capacity of the file system. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5120</p>
          */
         @NameInMap("Capacity")
         public Integer capacity;
 
         /**
          * <p>The time when the file system was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-26 16:36:27</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FilesDescription</p>
          */
         @NameInMap("Destription")
         public String destription;
 
         /**
          * <p>Indicates whether data in the file system is encrypted.</p>
-         * <br>
-         * <p>You can use keys that are hosted by Key Management Service (KMS) to encrypt the data in a file system. When you read and write the encrypted data, the data is automatically decrypted.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   0 (default): does not encrypt the data in the file system.</p>
-         * <p>*   1: encrypts data in the file system by using a NAS-managed key. This parameter is valid only if the FileSystemType parameter is set to standard or extreme.</p>
-         * <p>*   2: A KMS-managed key is used to encrypt the data in the file system. This parameter is valid only if the FileSystemType parameter is set to extreme.</p>
+         * <p>You can use keys that are managed by Key Management Service (KMS) to encrypt the data in a file system. When you read and write the encrypted data, the data is automatically decrypted.</p>
+         * <p>Default value: 0. Valid values:</p>
+         * <ul>
+         * <li>0: The data in the file system is not encrypted.</li>
+         * <li>1: The data in the file system is encrypted by using a NAS-managed key. This parameter is valid if FileSystemType is set to standard or extreme.</li>
+         * <li>2: The data in the file system is encrypted by using a KMS-managed key. This parameter is valid only if FileSystemType is set to extreme.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EncryptType")
         public Integer encryptType;
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>088b****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
-         * <p>The type of the file system.</p>
-         * <br>
-         * <p>*   Valid values: standard (General-purpose NAS file systems) and extreme (Extreme NAS file systems).</p>
+         * <p>The type of the file system. Valid value:</p>
+         * <ul>
+         * <li>standard: general-purpose network-attached storage (NAS) file systems.</li>
+         * <li>extreme: extreme NAS file systems.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
          * <p>The used capacity of the NAS file system. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1216816455</p>
          */
         @NameInMap("MeteredSize")
         public Integer meteredSize;
@@ -317,42 +377,60 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
 
         /**
          * <p>The protocol type of the file system. Valid values:</p>
-         * <br>
-         * <p>*   NFS-SMB</p>
+         * <ul>
+         * <li>NFS- SMB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the file system. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The file system is processing a task.</p>
-         * <p>*   Running: The file system is available.</p>
-         * <p>*   Stopped: The file system is unavailable.</p>
-         * <p>*   Extending: The file system is being scaled out.</p>
-         * <p>*   Stopping: The file system is being stopped.</p>
-         * <p>*   Deleting: The file system is being deleted.</p>
+         * <ul>
+         * <li>Pending: The file system is being created or modified.</li>
+         * <li>Running: The file system is available.</li>
+         * <li>Stopped: The file system is unavailable.</li>
+         * <li>Extending: The file system is being scaled up.</li>
+         * <li>Stopping: The file system is being disabled.</li>
+         * <li>Deleting: The file system is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage type of the file system.</p>
-         * <br>
-         * <p>*   Valid values if FileSystemType is set to standard: Capacity and Performance.</p>
-         * <p>*   Valid values if FileSystemType is set to extreme: standard and advance.</p>
+         * <ul>
+         * <li>Valid values if FileSystemType is set to standard: Capacity and Performance.</li>
+         * <li>Valid values if FileSystemType is set to extreme: standard and advance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Performance</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp132kgui8n0targbn1cm</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

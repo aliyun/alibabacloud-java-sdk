@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ListJobTemplatesRequest extends TeaModel {
     /**
      * <p>The name of the job template.</p>
-     * <br>
-     * <p>You can call the [ListJobTemplates](~~87248~~) operation to obtain the job template name.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87248.html">ListJobTemplates</a> operation to obtain the job template name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jobtemplateName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The page number to return. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return per page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

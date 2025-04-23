@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetIfEcsTypeSupportHtConfigRequest extends TeaModel {
     /**
-     * <p>The instance type of the ECS instance.</p>
+     * <p>The Elastic Compute Service (ECS) instance type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

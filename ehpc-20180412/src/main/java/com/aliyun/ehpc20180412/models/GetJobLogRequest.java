@@ -6,41 +6,55 @@ import com.aliyun.tea.*;
 public class GetJobLogRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-jeJki6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The node on which the job runs.</p>
-     * <br>
-     * <p>*   If the job is completed, you do not need to specify the parameter.</p>
-     * <p>*   If the job is running, you must specify the parameter.</p>
+     * <ul>
+     * <li>If the job is completed, you do not need to specify the parameter.</li>
+     * <li>If the job is running, you must specify the parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>compute000</p>
      */
     @NameInMap("ExecHost")
     public String execHost;
 
     /**
      * <p>The ID of the job.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.scheduler****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The position where logs start to be read.</p>
-     * <br>
      * <p>Unit: bits</p>
-     * <br>
      * <p>Default value: 0</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Offset")
     public Long offset;
 
     /**
      * <p>The maximum size of logs that you can read in a single request.</p>
-     * <br>
      * <p>Unit: bits</p>
-     * <br>
      * <p>Default value: 1024</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("Size")
     public Integer size;

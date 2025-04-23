@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListImagesRequest extends TeaModel {
     /**
      * <p>The image tag of the operating system. The tag is used only for management nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS_7.2_64</p>
      */
     @NameInMap("BaseOsTag")
     public String baseOsTag;
 
     /**
      * <p>The instance type.</p>
-     * <br>
-     * <p>*   If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.</p>
-     * <p>*   If no value is passed to the parameter, the list of images that are supported by all instance types is queried.</p>
+     * <ul>
+     * <li>If a value is passed to the parameter, the list of images that are supported by the specified instance type is queried.</li>
+     * <li>If no value is passed to the parameter, the list of images that are supported by all instance types is queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.n1.medium</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

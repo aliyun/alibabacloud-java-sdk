@@ -9,11 +9,14 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The type of the domain account service. Valid values:</p>
-     * <br>
-     * <p>*   nis</p>
-     * <p>*   ldap</p>
-     * <br>
+     * <ul>
+     * <li>nis</li>
+     * <li>ldap</li>
+     * </ul>
      * <p>Default value: nis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nis</p>
      */
     @NameInMap("AccountType")
     public String accountType;
@@ -38,150 +41,198 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
      * <p>The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The version of the E-HPC client. By default, the parameter is set to the latest version number.</p>
-     * <br>
-     * <p>You can call the [ListCurrentClientVersion](~~87223~~) operation to query the latest version of the E-HPC client.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87223.html">ListCurrentClientVersion</a> operation to query the latest version of the E-HPC client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.64</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
     /**
      * <p>The version of the E-HPC cluster.</p>
-     * <br>
      * <p>Default value: 1.0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("ClusterVersion")
     public String clusterVersion;
 
     /**
      * <p>Specifies whether to enable hyper-threading for the compute node. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ComputeEnableHt")
     public Boolean computeEnableHt;
 
     /**
      * <p>The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.034</p>
      */
     @NameInMap("ComputeSpotPriceLimit")
     public String computeSpotPriceLimit;
 
     /**
      * <p>The bidding method of the compute nodes. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The compute nodes are pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</p>
-     * <br>
+     * <ul>
+     * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("ComputeSpotStrategy")
     public String computeSpotStrategy;
 
     /**
      * <p>The mode in which the E-HPC cluster is deployed. Valid values:</p>
-     * <br>
-     * <p>*   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</p>
-     * <p>*   Simple: A management node, which consists of an account node and a scheduling node, is deployed, while a logon node and multiple compute nodes are separately deployed.</p>
-     * <p>*   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</p>
-     * <br>
+     * <ul>
+     * <li>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</li>
+     * <li>Simple: A management node, which consists of an account node and a scheduling node, is deployed, while a logon node and multiple compute nodes are separately deployed.</li>
+     * <li>Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</li>
+     * </ul>
      * <p>Default value: Standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Simple</p>
      */
     @NameInMap("DeployMode")
     public String deployMode;
 
     /**
-     * <p>The ID of the deployment set in which to deploy the instance. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.</p>
+     * <p>The ID of the deployment set in which to deploy the instance. You can obtain the deployment set ID by calling the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation. Only the deployment sets that use low latency policy are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-bp1frxuzdg87zh4pzq****</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
     /**
-     * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
+     * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The domain name of the on-premises E-HPC cluster.</p>
-     * <br>
      * <p>This parameter takes effect only when the AccountType parameter is set to Idap.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ldap</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The billing method of the nodes. Valid values:</p>
-     * <br>
-     * <p>*   PostPaid: pay-as-you-go.</p>
-     * <p>*   PrePaid: subscription.</p>
-     * <br>
+     * <ul>
+     * <li>PostPaid: pay-as-you-go.</li>
+     * <li>PrePaid: subscription.</li>
+     * </ul>
      * <p>If you set the parameter to PrePaid, auto-renewal is enabled by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("EcsChargeType")
     public String ecsChargeType;
 
     /**
      * <p>The version of E-HPC. By default, the parameter is set to the latest version number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("EhpcVersion")
     public String ehpcVersion;
 
     /**
      * <p>Specifies whether to enable the high availability feature. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
-     * <p>> If high availability is enabled, a primary management node and a secondary management node are used.</p>
+     * <blockquote>
+     * <p>If high availability is enabled, a primary management node and a secondary management node are used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HaEnable")
     public Boolean haEnable;
 
     /**
      * <p>The image IDs.</p>
-     * <br>
-     * <p>You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the images that are supported by E-HPC.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the images that are supported by E-HPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>centos_7_02_64_20G_alibase_20170818****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The type of the image. Valid values:</p>
-     * <br>
-     * <p>*   system: public image</p>
-     * <p>*   self: custom image</p>
-     * <p>*   others: shared image</p>
-     * <br>
+     * <ul>
+     * <li>system: public image</li>
+     * <li>self: custom image</li>
+     * <li>others: shared image</li>
+     * </ul>
      * <p>Default value: system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>self</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
@@ -194,99 +245,133 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable auto scaling. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsComputeEss")
     public Boolean isComputeEss;
 
     /**
      * <p>The queue to which the compute nodes are added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workq</p>
      */
     @NameInMap("JobQueue")
     public String jobQueue;
 
     /**
      * <p>The name of the key pair.</p>
-     * <br>
-     * <p>> For more information, see [Create an SSH key pair](~~51793~~).</p>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/51793.html">Create an SSH key pair</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     /**
      * <p>The name of the E-HPC cluster. The name must be 2 to 64 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The communication model of the ENI. Valid values:</p>
-     * <br>
-     * <p>*   Standard: The TCP communication mode is used.</p>
-     * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.</p>
+     * <ul>
+     * <li>Standard: The TCP communication mode is used.</li>
+     * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("NetworkInterfaceTrafficMode")
     public String networkInterfaceTrafficMode;
 
     /**
      * <p>The operating system tag of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS_7.2_64</p>
      */
     @NameInMap("OsTag")
     public String osTag;
 
     /**
      * <p>The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
-     * <br>
-     * <p>`( ) ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ‘ < > , . ? /`</p>
-     * <br>
+     * <p><code>( ) ~ ! @ # $ % ^ &amp; * - + = | { } [ ] : ; ‘ &lt; &gt; , . ? /</code></p>
      * <p>You must specify either Password or KeyPairName. If both are specified, the Password parameter prevails.</p>
-     * <br>
-     * <p>> We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+     * <blockquote>
+     * <p>We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123****</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.</p>
-     * <br>
-     * <p>*   Valid values if PriceUnit is set to Year: 1, 2, and 3.</p>
-     * <p>*   Valid values if PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-     * <p>*   Valid value if PriceUnit is set to Hour: 1.</p>
-     * <br>
+     * <p>The duration of the subscription. The unit of the duration is specified by the <code>PeriodUnit</code> parameter.</p>
+     * <ul>
+     * <li>Valid values if PriceUnit is set to Year: 1, 2, and 3.</li>
+     * <li>Valid values if PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+     * <li>Valid value if PriceUnit is set to Hour: 1.</li>
+     * </ul>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The unit of the subscription duration. Valid values:</p>
-     * <br>
-     * <p>*   Year</p>
-     * <p>*   Month</p>
-     * <p>*   Hour</p>
-     * <br>
+     * <ul>
+     * <li>Year</li>
+     * <li>Month</li>
+     * <li>Hour</li>
+     * </ul>
      * <p>Default value: Month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.</p>
-     * <br>
      * <p>The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.</p>
-     * <br>
-     * <p>*   pluginMod: the plug-in mode. The following modes are supported:</p>
-     * <br>
-     * <p>    *   oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.</p>
-     * <p>    *   image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.</p>
-     * <br>
-     * <p>*   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.</p>
-     * <br>
-     * <p>*   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.</p>
+     * <ul>
+     * <li><p>pluginMod: the plug-in mode. The following modes are supported:</p>
+     * <ul>
+     * <li>oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.</li>
+     * <li>image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.</li>
+     * </ul>
+     * </li>
+     * <li><p>pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.</p>
+     * </li>
+     * <li><p>pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;pluginMod&quot;: &quot;oss&quot;,&quot;pluginLocalPath&quot;: &quot;/opt/plugin&quot;,&quot;pluginOssPath&quot;: &quot;<a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz%22%7D">https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz&quot;}</a></p>
      */
     @NameInMap("Plugin")
     public String plugin;
@@ -299,217 +384,278 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The node of the RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("RamNodeTypes")
     public java.util.List<String> ramNodeTypes;
 
     /**
      * <p>The name of the Resource Access Management (RAM) role.</p>
-     * <br>
-     * <p>You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation provided by RAM to query the instance RAM roles that you created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRamRoleName</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     /**
      * <p>The remote directory to which the NAS file system is mounted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NasMountpoint:/RemoteDirectory</p>
      */
     @NameInMap("RemoteDirectory")
     public String remoteDirectory;
 
     /**
      * <p>Specifies whether to enable Virtual Network Computing (VNC). Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RemoteVisEnable")
     public String remoteVisEnable;
 
     /**
      * <p>The resource group ID.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](~~158855~~) operation to obtain the ID of the resource group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The Super Computing Cluster (SCC) instance ID.</p>
-     * <br>
      * <p>If you specify the parameter, the SCC instance is moved to a new SCC cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>00b648b****</p>
      */
     @NameInMap("SccClusterId")
     public String sccClusterId;
 
     /**
      * <p>The type of the scheduler. Valid values:</p>
-     * <br>
-     * <p>*   pbs</p>
-     * <p>*   slurm</p>
-     * <p>*   opengridscheduler</p>
-     * <p>*   deadline</p>
-     * <br>
+     * <ul>
+     * <li>pbs</li>
+     * <li>slurm</li>
+     * <li>opengridscheduler</li>
+     * <li>deadline</li>
+     * </ul>
      * <p>Default value: pbs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pbs</p>
      */
     @NameInMap("SchedulerType")
     public String schedulerType;
 
     /**
      * <p>The ID of the security group to which the E-HPC cluster belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups in the current region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query available security groups in the current region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp13n61xsydodfyg****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-SecurityGroup</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
     /**
      * <p>The performance level of the ESSD to be used as the system disk. Default value: PL1. Valid values:</p>
-     * <br>
-     * <p>*   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
-     * <p>*   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
-     * <p>*   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
-     * <p>*   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</p>
-     * <br>
+     * <ul>
+     * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+     * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+     * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+     * <li>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</li>
+     * </ul>
      * <p>Default value: PL1.</p>
-     * <br>
-     * <p>For more information, see [ESSDs](~~122389~~).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL0</p>
      */
     @NameInMap("SystemDiskLevel")
     public String systemDiskLevel;
 
     /**
      * <p>The system disk size. Unit: GB.</p>
-     * <br>
      * <p>Valid values: 40 to 500.</p>
-     * <br>
      * <p>Default value: 40.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
     /**
      * <p>The type of the system disk. Valid values:</p>
-     * <br>
-     * <p>*   cloud_efficiency: ultra disk</p>
-     * <p>*   cloud_ssd: standard SSD</p>
-     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-     * <p>*   cloud: basic disk. Disks of this type are retired.</p>
-     * <br>
+     * <ul>
+     * <li>cloud_efficiency: ultra disk</li>
+     * <li>cloud_ssd: standard SSD</li>
+     * <li>cloud_essd: enhanced SSD (ESSD)</li>
+     * <li>cloud: basic disk. Disks of this type are retired.</li>
+     * </ul>
      * <p>Default value: cloud_ssd.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
      */
     @NameInMap("SystemDiskType")
     public String systemDiskType;
 
     /**
      * <p>The array of the tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateClusterRequestTag> tag;
 
     /**
      * <p>The vSwitch ID. E-HPC supports only VPC networks.</p>
-     * <br>
-     * <p>You can call the [DescribeVSwitches](~~35748~~) operation to query available vSwitches.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query available vSwitches.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1lfcjbfb099rrjn****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the NAS file system. If you leave the parameter empty, a Performance NAS file system is created by default.</p>
-     * <br>
-     * <p>You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204364.html">ListFileSystemWithMountTargets</a> operation to query available mount targets.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>008b64****</p>
      */
     @NameInMap("VolumeId")
     public String volumeId;
 
     /**
      * <p>The mount options of the NFS file system that you want to mount by running the mount command.</p>
-     * <br>
-     * <p>For more information, see [Mount an NFS file system on a Linux ECS instance](https://www.alibabacloud.com/help/en/nas/latest/mount-an-nfs-file-system-on-a-linux-ecs-instance#section-jyi-hyd-hbr).</p>
+     * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/nas/latest/mount-an-nfs-file-system-on-a-linux-ecs-instance#section-jyi-hyd-hbr">Mount an NFS file system on a Linux ECS instance</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-t nfs -o vers=4</p>
      */
     @NameInMap("VolumeMountOption")
     public String volumeMountOption;
 
     /**
      * <p>The mount target of the NAS file system. The mount target is of the VPC type. Take note of the following information:</p>
-     * <br>
-     * <p>*   If the VolumeId parameter is not specified, you can leave the VolumeMountpoint parameter empty. In this case, a mount target is created by default.</p>
-     * <p>*   When the VolumeId parameter is specified, the VolumeMountpoint parameter is required. You can call the [ListFileSystemWithMountTargets](~~204364~~) operation to query available mount targets.</p>
+     * <ul>
+     * <li>If the VolumeId parameter is not specified, you can leave the VolumeMountpoint parameter empty. In this case, a mount target is created by default.</li>
+     * <li>When the VolumeId parameter is specified, the VolumeMountpoint parameter is required. You can call the <a href="https://help.aliyun.com/document_detail/204364.html">ListFileSystemWithMountTargets</a> operation to query available mount targets.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>008b648bcb-s****.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("VolumeMountpoint")
     public String volumeMountpoint;
 
     /**
      * <p>The type of the protocol that is used by the NAS file system. Valid values:</p>
-     * <br>
-     * <p>*   NFS</p>
-     * <p>*   SMB</p>
-     * <br>
+     * <ul>
+     * <li>NFS</li>
+     * <li>SMB</li>
+     * </ul>
      * <p>Default value: NFS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NFS</p>
      */
     @NameInMap("VolumeProtocol")
     public String volumeProtocol;
 
     /**
-     * <p>The type of the shared storage. Set the value to `nas`, which indicates NAS file system.</p>
+     * <p>The type of the shared storage. Set the value to <code>nas</code>, which indicates NAS file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nas</p>
      */
     @NameInMap("VolumeType")
     public String volumeType;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeVpcs](~~35739~~) operation to query available VPCs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query available VPCs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-b3f3edefefeep0760yju****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>Specifies whether not to install the agent.</p>
-     * <br>
-     * <p>*   true: does not install the agent.</p>
-     * <p>*   false: installs the agent.</p>
-     * <br>
+     * <ul>
+     * <li>true: does not install the agent.</li>
+     * <li>false: installs the agent.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("WithoutAgent")
     public Boolean withoutAgent;
 
     /**
      * <p>Specifies whether the logon node uses an elastic IP address (EIP). Default value: false.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("WithoutElasticIp")
     public Boolean withoutElasticIp;
 
     /**
      * <p>Indicates whether to use NAS as a shared storage. Valid values:</p>
-     * <br>
-     * <p>*   true: does not use NAS.</p>
-     * <p>*   false: use NAS.</p>
-     * <br>
+     * <ul>
+     * <li>true: does not use NAS.</li>
+     * <li>false: use NAS.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("WithoutNas")
     public Boolean withoutNas;
 
     /**
      * <p>The ID of the zone in which the resource resides.</p>
-     * <br>
-     * <p>You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query the IDs of the zones where E-HPC is supported.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> and <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operations to query the IDs of the zones where E-HPC is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -986,14 +1132,19 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestEcsOrderCompute extends TeaModel {
         /**
          * <p>The number of compute nodes in the cluster. Valid values: 0 to 99.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The instance type of the compute nodes.</p>
-         * <br>
-         * <p>You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -1024,14 +1175,19 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestEcsOrderLogin extends TeaModel {
         /**
          * <p>The number of the logon nodes. Valid value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The instance type of the logon nodes.</p>
-         * <br>
-         * <p>You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -1062,14 +1218,19 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestEcsOrderManager extends TeaModel {
         /**
          * <p>The number of the management nodes. Valid values: 1 and 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The instance type of the management nodes.</p>
-         * <br>
-         * <p>You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -1141,42 +1302,63 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestAddOns extends TeaModel {
         /**
          * <p>The path to the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/addon/cromwell/cromwell.conf</p>
          */
         @NameInMap("ConfigFile")
         public String configFile;
 
         /**
          * <p>The type of the database engine. Valid values: Mysql, and null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mysql</p>
          */
         @NameInMap("DBType")
         public String DBType;
 
         /**
          * <p>Indicates whether to auto-start the custom component. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DefaultStart")
         public Boolean defaultStart;
 
         /**
          * <p>The deployment mode. Valid values: local and ecs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
          * <p>The component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cromwell</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The access port of the custom component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Port")
         public Float port;
 
         /**
          * <p>The version number of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         @NameInMap("Version")
         public String version;
@@ -1247,10 +1429,11 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestAdditionalVolumesRoles extends TeaModel {
         /**
          * <p>The type of the nodes to which the NAS file system is attached.</p>
-         * <br>
          * <p>Valid values of N in AdditionalVolumes.N.Roles: 1 to 10</p>
-         * <br>
          * <p>Valid values of N in Roles.N.Name: 0 to 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Compute&quot;]</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1273,32 +1456,40 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestAdditionalVolumes extends TeaModel {
         /**
          * <p>The queue of the nodes to which the NAS file system is attached.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("JobQueue")
         public String jobQueue;
 
         /**
          * <p>The local directory on which the NAS file system is mounted.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/ff</p>
          */
         @NameInMap("LocalDirectory")
         public String localDirectory;
 
         /**
          * <p>The type of the E-HPC cluster. Set the value to PublicCloud.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicCloud</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The remote directory to which the NAS file system is mounted.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
@@ -1311,45 +1502,55 @@ public class CreateClusterRequest extends TeaModel {
 
         /**
          * <p>The ID of the NAS file system.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>extreme-00b88****</p>
          */
         @NameInMap("VolumeId")
         public String volumeId;
 
         /**
          * <p>The mount options of the NAS file system.</p>
-         * <br>
          * <p>You can specify 1 to 10 vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-t nfs -o vers=4.0</p>
          */
         @NameInMap("VolumeMountOption")
         public String volumeMountOption;
 
         /**
          * <p>The mount target of the NAS file system.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0088****-sihc.cn-hangzhou.extreme.nas.aliyuncs.com</p>
          */
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
         /**
          * <p>The type of the protocol that is used by the NAS file system. Valid value:</p>
-         * <br>
-         * <p>*   NFS</p>
-         * <p>*   SMB</p>
-         * <br>
+         * <ul>
+         * <li>NFS</li>
+         * <li>SMB</li>
+         * </ul>
          * <p>Valid values of N: 1 to 10.</p>
-         * <br>
          * <p>Default value: NFS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
         /**
          * <p>The type of the additional shared storage. Only NAS file systems are supported.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nas</p>
          */
         @NameInMap("VolumeType")
         public String volumeType;
@@ -1444,10 +1645,11 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestApplication extends TeaModel {
         /**
          * <p>The tag of the software.</p>
-         * <br>
          * <p>Valid values of N: 0 to 100.</p>
-         * <br>
-         * <p>You can call the [ListSoftwares](~~87216~~) operation to query the tag of the software.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87216.html">ListSoftwares</a> operation to query the tag of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenMPI_11.1</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -1470,16 +1672,20 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestPostInstallScript extends TeaModel {
         /**
          * <p>The parameter that is used to run the script after the cluster is created.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bashfile.sh</p>
          */
         @NameInMap("Args")
         public String args;
 
         /**
          * <p>The URL that is used to download the script after the E-HPC cluster is created.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/opt/job.sh</p>
          */
         @NameInMap("Url")
         public String url;
@@ -1510,12 +1716,18 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

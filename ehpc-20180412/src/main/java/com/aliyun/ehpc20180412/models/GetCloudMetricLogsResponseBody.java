@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetCloudMetricLogsResponseBody extends TeaModel {
     /**
-     * <p>The list of the performance data.</p>
+     * <p>The queried performance metric data.</p>
      */
     @NameInMap("MetricLogs")
     public GetCloudMetricLogsResponseBodyMetricLogs metricLogs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>015C2C4D-1884-4EB7-BCD3-C5BB8D7E56DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetCloudMetricLogsResponseBody extends TeaModel {
     public static class GetCloudMetricLogsResponseBodyMetricLogsMetricLog extends TeaModel {
         /**
          * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vda1</p>
          */
         @NameInMap("DiskDevice")
         public String diskDevice;
 
         /**
          * <p>The hostname of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute000</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp132g97g7zwnvta****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>A JSON-serialized string that contains values for multiple performance metrics.</p>
+         * <p>A JSON-formatted serialized string that contains performance metric data of multiple categories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;process|cpusage\&quot;:0,\&quot;process|cpuser\&quot;:0,\&quot;process|cpusys\&quot;:0,******}</p>
          */
         @NameInMap("MetricData")
         public String metricData;
 
         /**
          * <p>The name of the network interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eth1</p>
          */
         @NameInMap("NetworkInterface")
         public String networkInterface;
 
         /**
-         * <p>The timestamp of the log. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp of the log. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583907780</p>
          */
         @NameInMap("Time")
         public Integer time;

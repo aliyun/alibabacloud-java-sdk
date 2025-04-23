@@ -12,24 +12,36 @@ public class ListServerlessJobsResponseBody extends TeaModel {
 
     /**
      * <p>The page number returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,70 +94,102 @@ public class ListServerlessJobsResponseBody extends TeaModel {
     public static class ListServerlessJobsResponseBodyJobs extends TeaModel {
         /**
          * <p>The time at which the serverless job ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682128871</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>Indicates whether the job is an array job. Valid values:</p>
-         * <br>
-         * <p>*   True: yes</p>
-         * <p>*   False: no</p>
+         * <ul>
+         * <li>True: yes</li>
+         * <li>False: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("IsArrayJob")
         public Boolean isArrayJob;
 
         /**
          * <p>The ID of the serverless job or the subtask (array job).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The name of the serverless job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testjob</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
         /**
          * <p>The scheduling priority of the serverless job. Valid values are 0 to 999. A greater value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The name of the queue in which the serverless job is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comp</p>
          */
         @NameInMap("Queue")
         public String queue;
 
         /**
          * <p>The time at which the serverless job started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647427667</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the serverless job. Valid values:</p>
-         * <br>
-         * <p>*   Pending</p>
-         * <p>*   Initing</p>
-         * <p>*   Running</p>
-         * <p>*   Succeeded</p>
-         * <p>*   Canceled</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Initing</li>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Canceled</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The time at which the serverless job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647423718</p>
          */
         @NameInMap("SubmitTime")
         public String submitTime;
 
         /**
          * <p>The username that is used to run the serverless job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         @NameInMap("User")
         public String user;

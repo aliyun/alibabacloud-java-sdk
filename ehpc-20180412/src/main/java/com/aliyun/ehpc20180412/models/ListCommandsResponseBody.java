@@ -12,24 +12,36 @@ public class ListCommandsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListCommandsResponseBody extends TeaModel {
     public static class ListCommandsResponseBodyCommandsCommand extends TeaModel {
         /**
          * <p>The content of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>echo &quot;hello world&quot;</p>
          */
         @NameInMap("CommandContent")
         public String commandContent;
 
         /**
          * <p>The ID of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz01v8vudql****</p>
          */
         @NameInMap("CommandId")
         public String commandId;
 
         /**
          * <p>The timeout period. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Timeout")
         public String timeout;
 
         /**
          * <p>The working directory of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;

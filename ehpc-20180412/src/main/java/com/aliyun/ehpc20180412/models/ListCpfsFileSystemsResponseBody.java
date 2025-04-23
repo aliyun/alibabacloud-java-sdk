@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListCpfsFileSystemsResponseBody extends TeaModel {
     /**
-     * <p>The list of file systems.</p>
+     * <p>The queried file systems.</p>
      */
     @NameInMap("FileSystemList")
     public ListCpfsFileSystemsResponseBodyFileSystemList fileSystemList;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2B900AFE-C938-4551-86E9-97E231BBC876</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,36 +93,52 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
 
     public static class ListCpfsFileSystemsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets extends TeaModel {
         /**
-         * <p>The domain where the mount target resides.</p>
+         * <p>The domain in which the mount target resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0967****.cn-hangzhou.cpfs.nas.aliyuncs.com</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
         /**
          * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The status of the mount target. Valid values:</p>
-         * <br>
-         * <p>*   Active: The mount target is available.</p>
-         * <p>*   Inactive: The mount target is unavailable.</p>
-         * <p>*   Pending: The mount target is being mounted.</p>
-         * <p>*   Deleting: The mount target is being deleted.</p>
+         * <ul>
+         * <li>Active: The mount target is available.</li>
+         * <li>Inactive: The mount target is unavailable.</li>
+         * <li>Pending: The mount target is being mounted.</li>
+         * <li>Deleting: The mount target is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbvb34rtyh6xb3zrehs1****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vb34rtyh6xb3zrehs1****</p>
          */
         @NameInMap("VswId")
         public String vswId;
@@ -183,52 +211,74 @@ public class ListCpfsFileSystemsResponseBody extends TeaModel {
 
     public static class ListCpfsFileSystemsResponseBodyFileSystemListFileSystems extends TeaModel {
         /**
-         * <p>The capacity of the file system. Unit: GiB.</p>
+         * <p>The capacity of the file system. Unit: GiB</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5120</p>
          */
         @NameInMap("Capacity")
         public String capacity;
 
         /**
          * <p>The time when the file system was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-26 16:36:27</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FilsDestription</p>
          */
         @NameInMap("Destription")
         public String destription;
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>096751****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
-         * <p>The mount targets.</p>
+         * <p>The mount targets of the file systems.</p>
          */
         @NameInMap("MountTargetList")
         public ListCpfsFileSystemsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList;
 
         /**
          * <p>The protocol type that is applied to the mounted file system. Valid values:</p>
-         * <br>
-         * <p>*   NFS</p>
-         * <p>*   SMB</p>
+         * <ul>
+         * <li>NFS</li>
+         * <li>SMB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

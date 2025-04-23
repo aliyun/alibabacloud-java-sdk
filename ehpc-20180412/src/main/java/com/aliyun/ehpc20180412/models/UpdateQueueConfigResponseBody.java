@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateQueueConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5198C3E8-85F5-4280-8547-687C1710****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

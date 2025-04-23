@@ -6,53 +6,75 @@ import com.aliyun.tea.*;
 public class ListJobsWithFiltersRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable asynchronous query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The latest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1647428667</p>
      */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
     /**
      * <p>The earliest time when a job is submitted. The value is a UNIX timestamp, which represents the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1647427667</p>
      */
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
     /**
      * <p>The order in which jobs are sorted based on the execution time. Valid values:</p>
-     * <br>
-     * <p>*   asc: ascending order</p>
-     * <p>*   desc: descending order</p>
+     * <ul>
+     * <li>asc: ascending order</li>
+     * <li>desc: descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
      */
     @NameInMap("ExecuteOrder")
     public String executeOrder;
 
     /**
      * <p>The name of the job. Fuzzy search is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job1</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
      * <p>The status of the job. Valid values:</p>
-     * <br>
-     * <p>*   all</p>
-     * <p>*   finished</p>
-     * <p>*   notfinish</p>
-     * <br>
+     * <ul>
+     * <li>all</li>
+     * <li>finished</li>
+     * <li>notfinish</li>
+     * </ul>
      * <p>Default value: all.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>finished</p>
      */
     @NameInMap("JobStatus")
     public String jobStatus;
@@ -65,27 +87,34 @@ public class ListJobsWithFiltersRequest extends TeaModel {
 
     /**
      * <p>The page number to return.</p>
-     * <br>
      * <p>Pages start from 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The order in which jobs are sorted based on the time when they queue. Valid values:</p>
-     * <br>
-     * <p>*   asc: ascending order</p>
-     * <p>*   desc: descending order</p>
+     * <ul>
+     * <li>asc: ascending order</li>
+     * <li>desc: descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("PendOrder")
     public String pendOrder;
@@ -97,16 +126,23 @@ public class ListJobsWithFiltersRequest extends TeaModel {
     public java.util.List<String> queues;
 
     /**
-     * <p>The ID of the region. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to query the list of regions where E-HPC is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The order in which jobs are sorted based on the time when they are submitted. Valid values:</p>
-     * <br>
-     * <p>*   asc: ascending order</p>
-     * <p>*   desc: descending order</p>
+     * <ul>
+     * <li>asc: ascending order</li>
+     * <li>desc: descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
      */
     @NameInMap("SubmitOrder")
     public String submitOrder;

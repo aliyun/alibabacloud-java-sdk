@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ListQueuesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable asynchronous query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

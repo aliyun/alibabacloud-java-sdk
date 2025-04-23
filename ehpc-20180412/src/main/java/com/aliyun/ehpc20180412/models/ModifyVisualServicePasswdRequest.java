@@ -5,29 +5,45 @@ import com.aliyun.tea.*;
 
 public class ModifyVisualServicePasswdRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-jeJki6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The connection password of the VNC remote visualization service. The password must be 8 to 30 characters in length and include at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</p>
-     * <br>
-     * <p>`()~! @#$%^&*-_+=|{}[]:;\"/<>,.? /`</p>
-     * <br>
-     * <p>>  You must use HTTPS to call the API to ensure that the password remains confidential.</p>
+     * <p>The password that you can use to remotely connect to the visualization service over the VNC. The password must be 6 characters in length and must contain letters and digits.</p>
+     * <blockquote>
+     * <p> You must call the API operation over HTTPS to ensure that the password remains confidential.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1254****</p>
      */
     @NameInMap("Passwd")
     public String passwd;
 
     /**
-     * <p>The username of the cluster. Default value: root user. You can call the [ListUsers](~~188572~~) operation to query all users in a cluster.</p>
+     * <p>The username of the cluster. Set the value to root.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
      */
     @NameInMap("RunasUser")
     public String runasUser;
 
     /**
-     * <p>The user password of the cluster.</p>
+     * <p>The password that corresponds to the username specified by RunasUser.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2145****</p>
      */
     @NameInMap("RunasUserPassword")
     public String runasUserPassword;

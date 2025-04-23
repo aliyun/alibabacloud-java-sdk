@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class StartVisualServiceRequest extends TeaModel {
     /**
      * <p>A public IP address of logon nodes in the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><code>190.100.**.**</code></p>
      */
     @NameInMap("CidrIp")
     public String cidrIp;
 
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-jeJki6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The fixed port. Set the value to 12016</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12016</p>
      */
     @NameInMap("Port")
     public Integer port;

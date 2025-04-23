@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetPostScriptsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

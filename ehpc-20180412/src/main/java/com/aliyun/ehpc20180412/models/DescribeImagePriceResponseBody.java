@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeImagePriceResponseBody extends TeaModel {
     /**
      * <p>The number of instances that are purchased.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
      * <p>The discount.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DiscountPrice")
     public Float discountPrice;
 
     /**
      * <p>The ID of the custom image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp198jigq7l1ga11****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The original price of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.8</p>
      */
     @NameInMap("OriginalPrice")
     public Float originalPrice;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47ca3ac4-2a03-48f1-8bf2-ba6de0f3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The final price of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.8</p>
      */
     @NameInMap("TradePrice")
     public Float tradePrice;

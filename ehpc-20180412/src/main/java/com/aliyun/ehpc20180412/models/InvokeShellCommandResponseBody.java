@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InvokeShellCommandResponseBody extends TeaModel {
     /**
      * <p>The ID of the command. It is used to query the execution status of the command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-hz01v8vudql****</p>
      */
     @NameInMap("CommandId")
     public String commandId;
@@ -18,6 +21,9 @@ public class InvokeShellCommandResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

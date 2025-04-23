@@ -12,6 +12,9 @@ public class ListCommunityImagesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,40 +43,54 @@ public class ListCommunityImagesResponseBody extends TeaModel {
     public static class ListCommunityImagesResponseBodyImagesImageInfoBaseOsTag extends TeaModel {
         /**
          * <p>The architecture of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   i386</p>
-         * <p>*   x86\_64</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         @NameInMap("Architecture")
         public String architecture;
 
         /**
          * <p>The operating system tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
          * <p>The distribution of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   CentOS</p>
-         * <p>*   Ubuntu</p>
-         * <p>*   SUSE</p>
-         * <p>*   OpenSUSE</p>
-         * <p>*   Debian</p>
-         * <p>*   CoreOS</p>
-         * <p>*   Aliyun</p>
-         * <p>*   Windows Server 2003</p>
-         * <p>*   Windows Server 2008</p>
-         * <p>*   Windows Server 2012</p>
-         * <p>*   Others Linux</p>
-         * <p>*   Customized Linux</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>Ubuntu</li>
+         * <li>SUSE</li>
+         * <li>OpenSUSE</li>
+         * <li>Debian</li>
+         * <li>CoreOS</li>
+         * <li>Aliyun</li>
+         * <li>Windows Server 2003</li>
+         * <li>Windows Server 2008</li>
+         * <li>Windows Server 2012</li>
+         * <li>Others Linux</li>
+         * <li>Customized Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.2</p>
          */
         @NameInMap("Version")
         public String version;
@@ -120,33 +137,49 @@ public class ListCommunityImagesResponseBody extends TeaModel {
     public static class ListCommunityImagesResponseBodyImagesImageInfoOsTag extends TeaModel {
         /**
          * <p>The architecture of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   i386</p>
-         * <p>*   x86\_64</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         @NameInMap("Architecture")
         public String architecture;
 
         /**
          * <p>The tag of the BOS image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
         /**
          * <p>The operating system tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
          * <p>The OS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.2</p>
          */
         @NameInMap("Version")
         public String version;
@@ -207,27 +240,40 @@ public class ListCommunityImagesResponseBody extends TeaModel {
 
         /**
          * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp181x855551ww5yq****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux_CentOS7.2_OceanBase_OBD_1ECS-3OB_3.0</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The image type. Valid values:</p>
-         * <br>
-         * <p>*   self: custom image</p>
-         * <p>*   others: shared image</p>
+         * <ul>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
@@ -240,54 +286,78 @@ public class ListCommunityImagesResponseBody extends TeaModel {
 
         /**
          * <p>The script that is run after the image is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.sh</p>
          */
         @NameInMap("PostInstallScript")
         public String postInstallScript;
 
         /**
          * <p>The billing unit of the image. Valid values:</p>
-         * <br>
-         * <p>*   Hour</p>
-         * <p>*   Month</p>
-         * <p>*   Year</p>
+         * <ul>
+         * <li>Hour</li>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
         /**
          * <p>The product code in Alibaba Cloud Marketplace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmjj028279</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The size of the image. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The stock keeping unit (SKU) of the image. Valid values:</p>
-         * <br>
-         * <p>*   ECS: pay-as-you-go</p>
-         * <p>*   package: subscription</p>
+         * <ul>
+         * <li>ECS: pay-as-you-go</li>
+         * <li>package: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("SkuCode")
         public String skuCode;
 
         /**
          * <p>The state of the image. Valid values:</p>
-         * <br>
-         * <p>*   UnAvailable</p>
-         * <p>*   Available</p>
-         * <p>*   Creating</p>
-         * <p>*   CreateFailed</p>
+         * <ul>
+         * <li>UnAvailable</li>
+         * <li>Available</li>
+         * <li>Creating</li>
+         * <li>CreateFailed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The owner of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127****</p>
          */
         @NameInMap("Uid")
         public String uid;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ListSoftwaresRequest extends TeaModel {
     /**
      * <p>The version of the E-HPC client.</p>
-     * <br>
-     * <p>You can call the [ListCurrentClientVersion](~~87223~~) operation to query the E-HPC client version.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87223.html">ListCurrentClientVersion</a> operation to query the E-HPC client version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("EhpcVersion")
     public String ehpcVersion;
 
     /**
      * <p>The image tag of the cluster.</p>
-     * <br>
-     * <p>You can use the [ListImages](~~87213~~) to query the image tag of the cluster.</p>
+     * <p>You can use the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> to query the image tag of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS_7.2_64</p>
      */
     @NameInMap("OsTag")
     public String osTag;

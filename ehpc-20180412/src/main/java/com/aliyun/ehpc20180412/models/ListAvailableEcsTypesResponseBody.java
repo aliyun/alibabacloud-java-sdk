@@ -12,15 +12,22 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D9DD3AF8-1F91-4075-8669-55D10E45****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Specifies whether preemptible instances are supported. Valid values:</p>
-     * <br>
-     * <p>*   false: not supported</p>
-     * <p>*   true: supported</p>
+     * <ul>
+     * <li>false: not supported</li>
+     * <li>true: supported</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SupportSpotInstance")
     public Boolean supportSpotInstance;
@@ -76,69 +83,103 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
     public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfoTypesTypesInfo extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
 
         /**
          * <p>The maximum number of elastic network interfaces (ENIs) that can be bound to an ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EniQuantity")
         public Integer eniQuantity;
 
         /**
          * <p>The number of GPUs of an ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("GPUAmount")
         public Integer GPUAmount;
 
         /**
          * <p>The GPU type of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NVIDIA V100</p>
          */
         @NameInMap("GPUSpec")
         public String GPUSpec;
 
         /**
          * <p>The maximum inbound internal bandwidth. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240000</p>
          */
         @NameInMap("InstanceBandwidthRx")
         public Integer instanceBandwidthRx;
 
         /**
          * <p>The maximum outbound internal bandwidth. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240000</p>
          */
         @NameInMap("InstanceBandwidthTx")
         public Integer instanceBandwidthTx;
 
         /**
          * <p>The inbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9000000</p>
          */
         @NameInMap("InstancePpsRx")
         public Integer instancePpsRx;
 
         /**
          * <p>The outbound packet forwarding rate over the internal network. Unit: pps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9000000</p>
          */
         @NameInMap("InstancePpsTx")
         public Integer instancePpsTx;
 
         /**
          * <p>The ID of the ECS instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n4.xlarge</p>
          */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
         /**
          * <p>The memory size of the ECS instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("MemorySize")
         public Integer memorySize;
 
         /**
          * <p>The status of the ECS instance. Valid values:</p>
-         * <br>
-         * <p>*   SoldOut</p>
-         * <p>*   Available</p>
+         * <ul>
+         * <li>SoldOut</li>
+         * <li>Available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -274,12 +315,18 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
     public static class ListAvailableEcsTypesResponseBodyInstanceTypeFamiliesInstanceTypeFamilyInfo extends TeaModel {
         /**
          * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs-3</p>
          */
         @NameInMap("Generation")
         public String generation;
 
         /**
-         * <p>The ID of the instance family. For more information, see [Instance families](~~25378~~).</p>
+         * <p>The ID of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n4</p>
          */
         @NameInMap("InstanceTypeFamilyId")
         public String instanceTypeFamilyId;

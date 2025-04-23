@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddQueueResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ABFF29F-BD9C-4663-AD5D-E620FA48****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

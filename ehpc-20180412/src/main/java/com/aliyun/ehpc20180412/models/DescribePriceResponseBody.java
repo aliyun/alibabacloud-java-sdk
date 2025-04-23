@@ -5,21 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The array of cluster prices. If you query the prices of multiple nodes in the cluster, the sequence of the prices in the returned value of PriceInfo is the same as that of the nodes in the request parameters. For example, the first price in the value of PriceInfo is the price of the first node specified in the request parameters.</p>
+     * <p>The array of cluster prices. If you query the prices of multiple nodes in the cluster, the sequence of the prices in the returned value of PriceInfo is the same as the sequence of the nodes in the request parameters. For example, the first price in the value of PriceInfo is the price of the first node specified in the request parameters.</p>
      */
     @NameInMap("Prices")
     public DescribePriceResponseBodyPrices prices;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54FF9025-2C2F-42EB-870D-0DF5B0ACF24E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total price.</p>
-     * <br>
      * <p>Unit: USD.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1258</p>
      */
     @NameInMap("TotalTradePrice")
     public Float totalTradePrice;
@@ -56,34 +61,44 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPricesPriceInfo extends TeaModel {
         /**
          * <p>The currency that is used to measure the price. Valid values:</p>
-         * <br>
+         * <p>USD</p>
+         * 
+         * <strong>example:</strong>
          * <p>USD</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   Manager: management node</p>
-         * <p>*   Login: logon node</p>
-         * <p>*   Compute: compute node</p>
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>Manager: management node</li>
+         * <li>Login: logon node</li>
+         * <li>Compute: compute node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
-         * <p>The original price of the image.</p>
-         * <br>
+         * <p>The original price.</p>
          * <p>Unit: USD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1258</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         /**
          * <p>The final price.</p>
-         * <br>
          * <p>Unit: USD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1258</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;

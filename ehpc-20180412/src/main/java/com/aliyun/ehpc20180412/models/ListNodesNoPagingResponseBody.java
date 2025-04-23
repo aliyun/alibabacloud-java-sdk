@@ -12,6 +12,9 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,38 +43,54 @@ public class ListNodesNoPagingResponseBody extends TeaModel {
     public static class ListNodesNoPagingResponseBodyNodesNodeInfo extends TeaModel {
         /**
          * <p>The node name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute0</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp13p7vlcb1uihfv****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_02_64_20G_alibase_20170818****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The node type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   uninit: The node is being installed.</p>
-         * <p>*   exception: An exception occurred on the node.</p>
-         * <p>*   running: The node is running.</p>
-         * <p>*   initing: The node is being initialized.</p>
-         * <p>*   releasing: The node is being released.</p>
-         * <p>*   untracking: The node is not added to the cluster.</p>
-         * <p>*   stopped: The node is stopped.</p>
+         * <ul>
+         * <li>uninit: The node is being installed.</li>
+         * <li>exception: An exception occurred on the node.</li>
+         * <li>running: The node is running.</li>
+         * <li>initing: The node is being initialized.</li>
+         * <li>releasing: The node is being released.</li>
+         * <li>untracking: The node is not added to the cluster.</li>
+         * <li>stopped: The node is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>untracking</p>
          */
         @NameInMap("Status")
         public String status;

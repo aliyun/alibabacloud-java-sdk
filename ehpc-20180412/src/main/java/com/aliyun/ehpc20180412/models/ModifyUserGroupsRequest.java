@@ -5,23 +5,29 @@ import com.aliyun.tea.*;
 
 public class ModifyUserGroupsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the asynchronous mode for this request.</p>
-     * <br>
+     * <p>Specifies whether to use asynchronous message links to change the user group.</p>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The information about the user.</p>
+     * <p>The users. You can specify 1 to 100 users.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("User")
     public java.util.List<ModifyUserGroupsRequestUser> user;
@@ -57,18 +63,24 @@ public class ModifyUserGroupsRequest extends TeaModel {
 
     public static class ModifyUserGroupsRequestUser extends TeaModel {
         /**
-         * <p>The new permission group of the user N. Valid values:</p>
-         * <br>
-         * <p>*   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</p>
-         * <p>*   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</p>
+         * <p>The user group to be changed. Valid values:</p>
+         * <ul>
+         * <li>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs.</li>
+         * <li>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>users</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
-         * <p>The name of the user N whose permissions you want to modify. Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
+         * <p>The username.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the usernames in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user11</p>
          */
         @NameInMap("Name")
         public String name;

@@ -6,35 +6,46 @@ import com.aliyun.tea.*;
 public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The billing method of the ECS instances. Valid values:</p>
-     * <br>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <p>*   PrePaid: subscription</p>
-     * <br>
+     * <ul>
+     * <li>PostPaid: pay-as-you-go</li>
+     * <li>PrePaid: subscription</li>
+     * </ul>
      * <p>Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The information about the service.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Commodities")
     public java.util.List<DescribePriceRequestCommodities> commodities;
 
     /**
      * <p>The type of the order. The order can be set only as a purchase order. Valid value: INSTANCE-BUY.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INSTANCE-BUY</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>The billing cycle of the Elastic Compute Service (ECS) instances. This parameter takes effect only when the ChargeType parameter is set to PrePaid. Valid values:</p>
-     * <br>
-     * <p>*   Month: pay-by-month</p>
-     * <p>*   Year: pay-by-year</p>
-     * <p>*   Hour: pay-by-hour</p>
-     * <br>
+     * <ul>
+     * <li>Month: pay-by-month</li>
+     * <li>Year: pay-by-year</li>
+     * <li>Hour: pay-by-hour</li>
+     * </ul>
      * <p>Default value: Hour.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
      */
     @NameInMap("PriceUnit")
     public String priceUnit;
@@ -79,68 +90,76 @@ public class DescribePriceRequest extends TeaModel {
     public static class DescribePriceRequestCommoditiesDataDisks extends TeaModel {
         /**
          * <p>The type of the data disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: ESSD</p>
-         * <p>*   cloud: basic disk</p>
-         * <br>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud: basic disk</li>
+         * </ul>
          * <p>Default value: cloud_efficiency.</p>
-         * <br>
          * <p>Valid values of N: 0 to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("category")
         public String category;
 
         /**
          * <p>Specifies whether the data disk is released when the node is released. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: true.</p>
-         * <br>
          * <p>Valid values of N: 0 to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("deleteWithInstance")
         public Boolean deleteWithInstance;
 
         /**
          * <p>Specifies whether to encrypt the data disk. Valid values:</p>
-         * <br>
-         * <p>*   true: encrypts the data disk.</p>
-         * <p>*   false: does not encrypt the data disk.</p>
-         * <br>
+         * <ul>
+         * <li>true: encrypts the data disk.</li>
+         * <li>false: does not encrypt the data disk.</li>
+         * </ul>
          * <p>Default value: false.</p>
-         * <br>
          * <p>Valid values of N: 0 to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("encrypted")
         public Boolean encrypted;
 
         /**
          * <p>The performance level of the ESSD used as the data disk. This parameter takes effect only when the Commodities.N.DataDisks.N.category parameter is set to cloud_essd. Valid values:</p>
-         * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-         * <br>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</li>
+         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
          * <p>Default value: PL1.</p>
-         * <br>
          * <p>Valid values of N: 0 to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("performanceLevel")
         public String performanceLevel;
 
         /**
          * <p>The size of the data disk. Unit: GB.</p>
-         * <br>
          * <p>Valid values: 40 to 500.</p>
-         * <br>
          * <p>Default value: 40.</p>
-         * <br>
          * <p>Valid values of N: 0 to 4.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("size")
         public Integer size;
@@ -195,10 +214,12 @@ public class DescribePriceRequest extends TeaModel {
     public static class DescribePriceRequestCommodities extends TeaModel {
         /**
          * <p>The node quantity of the type. Valid values: 1 to 1000.</p>
-         * <br>
          * <p>Default value: 1.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Amount")
         public Integer amount;
@@ -211,107 +232,126 @@ public class DescribePriceRequest extends TeaModel {
 
         /**
          * <p>The instance type of the node.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The EIP billing method of the node. Valid values:</p>
-         * <br>
-         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-         * <p>*   PayByTraffic: pay-by-traffic</p>
-         * <br>
+         * <ul>
+         * <li>PayByBandwidth: pay-by-bandwidth</li>
+         * <li>PayByTraffic: pay-by-traffic</li>
+         * </ul>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The maximum outbound public bandwidth of the node. Unit: Mbit/s.</p>
-         * <br>
          * <p>Valid values: 0 to 100.</p>
-         * <br>
          * <p>Default value: 0.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InternetMaxBandWidthOut")
         public Integer internetMaxBandWidthOut;
 
         /**
          * <p>The network type of the node. Valid value: VPC.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   Compute: compute node</p>
-         * <p>*   Manager: management node</p>
-         * <p>*   Login: logon node</p>
-         * <br>
+         * <ul>
+         * <li>Compute: compute node</li>
+         * <li>Manager: management node</li>
+         * <li>Login: logon node</li>
+         * </ul>
          * <p>Valid values of N: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
 
         /**
          * <p>The subscription duration of the node. Valid values:</p>
-         * <br>
-         * <p>*   If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.</p>
-         * <p>*   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-         * <p>*   If PriceUnit is set to Hour, the valid value of the Period parameter is 1.</p>
-         * <br>
+         * <ul>
+         * <li>If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.</li>
+         * <li>If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>If PriceUnit is set to Hour, the valid value of the Period parameter is 1.</li>
+         * </ul>
          * <p>Default value: 1.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
          * <p>The system disk type of the node. Valid values:</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: ESSD</p>
-         * <p>*   cloud: basic disk</p>
-         * <br>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud: basic disk</li>
+         * </ul>
          * <p>Default value: cloud_efficiency</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
         /**
          * <p>The performance level of the ESSD used as the system disk. This parameter takes effect only when the Commodities.N.SystemDiskCategory parameter is set to cloud_essd. Valid values:</p>
-         * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-         * <br>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</li>
+         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
          * <p>Default value: PL1.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("SystemDiskPerformanceLevel")
         public String systemDiskPerformanceLevel;
 
         /**
          * <p>The system disk size of the node. Unit: GB.</p>
-         * <br>
          * <p>Valid values: 40 to 500.</p>
-         * <br>
          * <p>Default value: 40.</p>
-         * <br>
          * <p>Valid values of N: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;

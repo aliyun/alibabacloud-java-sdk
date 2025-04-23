@@ -6,55 +6,70 @@ import com.aliyun.tea.*;
 public class ListJobsRequest extends TeaModel {
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the user that runs the job.</p>
-     * <br>
-     * <p>You can call the [ListUsers](~~188572~~) operation to query the users in the cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the users in the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user1</p>
      */
     @NameInMap("Owner")
     public String owner;
 
     /**
      * <p>The page number of the page to return.</p>
-     * <br>
      * <p>Pages start from 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return per page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Specifies whether the job can be rerun. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Rerunable")
     public String rerunable;
 
     /**
      * <p>The status of the job. Valid values:</p>
-     * <br>
-     * <p>*   all</p>
-     * <p>*   finished</p>
-     * <p>*   notfinish</p>
+     * <ul>
+     * <li>all</li>
+     * <li>finished</li>
+     * <li>notfinish</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>finished</p>
      */
     @NameInMap("State")
     public String state;

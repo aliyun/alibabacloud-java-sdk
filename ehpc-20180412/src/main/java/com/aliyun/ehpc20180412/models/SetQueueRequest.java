@@ -6,19 +6,28 @@ import com.aliyun.tea.*;
 public class SetQueueRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Node")
     public java.util.List<SetQueueRequestNode> node;
 
     /**
      * <p>The name of the destination queue.</p>
-     * <br>
-     * <p>You can call the [ListQueues](~~92176~~) operation to query the queue name.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/92176.html">ListQueues</a> operation to query the queue name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>work</p>
      */
     @NameInMap("QueueName")
     public String queueName;
@@ -55,8 +64,10 @@ public class SetQueueRequest extends TeaModel {
     public static class SetQueueRequestNode extends TeaModel {
         /**
          * <p>The name of the compute node that you want to move. Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>You can call the [ListNodes](~~87161~~) operation to query the names of the compute nodes.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the names of the compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute1</p>
          */
         @NameInMap("Name")
         public String name;

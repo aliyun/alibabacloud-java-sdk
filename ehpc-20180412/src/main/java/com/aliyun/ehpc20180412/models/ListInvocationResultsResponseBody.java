@@ -12,24 +12,36 @@ public class ListInvocationResultsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,47 +94,69 @@ public class ListInvocationResultsResponseBody extends TeaModel {
     public static class ListInvocationResultsResponseBodyInvocationResultsInvocationResult extends TeaModel {
         /**
          * <p>The ID of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-hz01v8x80o3****</p>
          */
         @NameInMap("CommandId")
         public String commandId;
 
         /**
          * <p>The exit code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Integer exitCode;
 
         /**
          * <p>The time at which the command entered the Finished state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-06T09:14:56Z</p>
          */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
         /**
          * <p>The ID of the node on which the command was run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf65bh2113hlqvyr****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The status of the command. Valid values:</p>
-         * <br>
-         * <p>*   Finished</p>
-         * <p>*   Running</p>
-         * <p>*   Failed</p>
-         * <p>*   Stopped</p>
+         * <ul>
+         * <li>Finished</li>
+         * <li>Running</li>
+         * <li>Failed</li>
+         * <li>Stopped</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
         /**
          * <p>The output result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello world</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Indicates whether the command was run and its result was obtained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

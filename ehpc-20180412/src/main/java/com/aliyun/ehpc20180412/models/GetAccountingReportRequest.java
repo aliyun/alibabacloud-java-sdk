@@ -6,72 +6,101 @@ import com.aliyun.tea.*;
 public class GetAccountingReportRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The layers at which you want to query the bandwidth and traffic data. Valid values:</p>
-     * <br>
-     * <p>*   user: Query by user.</p>
-     * <p>*   queue: Query by queue.</p>
-     * <p>*   instance: Query by instance.</p>
+     * <ul>
+     * <li>user: Query by user.</li>
+     * <li>queue: Query by queue.</li>
+     * <li>instance: Query by instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("Dim")
     public String dim;
 
     /**
      * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1577441873</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
 
     /**
      * <p>The actual name of the dimension to be queried. Valid values:</p>
-     * <br>
-     * <p>*   If you set the value of the parameter Dim to user, the value of FilterValue is the name of the specified user.</p>
-     * <p>*   If you set the value of the parameter Dim to queue, the value of FilterValue is the name of the specified queue.</p>
-     * <p>*   If you set the value of the parameter Dim to instance, the value of FilterValue is the instance name.</p>
+     * <ul>
+     * <li>If you set the value of the parameter Dim to user, the value of FilterValue is the name of the specified user.</li>
+     * <li>If you set the value of the parameter Dim to queue, the value of FilterValue is the name of the specified queue.</li>
+     * <li>If you set the value of the parameter Dim to instance, the value of FilterValue is the instance name.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>userNo1</p>
      */
     @NameInMap("FilterValue")
     public String filterValue;
 
     /**
      * <p>The ID of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{Id: 1.scheduler}]</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The page number of the returned page.</p>
-     * <br>
      * <p>Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The query type. Valid values:</p>
-     * <br>
-     * <p>*   total_report: Queries the number of CPU cores in different dimensions.</p>
-     * <p>*   job_report: Collects the historical node data of a node.</p>
-     * <p>*   number_report: Queries job information in different dimensions.</p>
+     * <ul>
+     * <li>total_report: Queries the number of CPU cores in different dimensions.</li>
+     * <li>job_report: Collects the historical node data of a node.</li>
+     * <li>number_report: Queries job information in different dimensions.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>job_report</p>
      */
     @NameInMap("ReportType")
     public String reportType;
 
     /**
      * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1576922873</p>
      */
     @NameInMap("StartTime")
     public Integer startTime;

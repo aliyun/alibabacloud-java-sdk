@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SetSchedulerInfoResponseBody extends TeaModel {
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pbs: scheduler setting successfully.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBC2F93D-003A-49C4-850C-B826EECF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

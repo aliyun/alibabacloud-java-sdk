@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class SetSchedulerInfoRequest extends TeaModel {
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -20,14 +23,18 @@ public class SetSchedulerInfoRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>You can call the [ListRegions](~~188593~~) operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to obtain the IDs of regions supported by Elastic High Performance Computing (E-HPC).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The scheduler information.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Scheduler")
     public java.util.List<SetSchedulerInfoRequestScheduler> scheduler;
@@ -85,17 +92,21 @@ public class SetSchedulerInfoRequest extends TeaModel {
 
     public static class SetSchedulerInfoRequestPbsInfoAclLimit extends TeaModel {
         /**
-         * <p>The user that can use the queue. Separate multiple users with commas (`,`).</p>
-         * <br>
+         * <p>The user that can use the queue. Separate multiple users with commas (<code>,</code>).</p>
          * <p>If you specify users, you must specify the PbsInfo.N.AclLimit.N.Queue parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1,user2</p>
          */
         @NameInMap("AclUsers")
         public String aclUsers;
 
         /**
          * <p>AclLimit specifies the queue that has limits when it is used. Valid values of N: 0 to 100.</p>
-         * <br>
-         * <p>If you set `PbsInfo.N.AclLimit.N.Queue` to `workq` and `PbsInfo.N.AclLimit.N.AclUsers` to `user1,user2`, workq can be used only by user1 and user2.</p>
+         * <p>If you set <code>PbsInfo.N.AclLimit.N.Queue</code> to <code>workq</code> and <code>PbsInfo.N.AclLimit.N.AclUsers</code> to <code>user1,user2</code>, workq can be used only by user1 and user2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         @NameInMap("Queue")
         public String queue;
@@ -126,46 +137,62 @@ public class SetSchedulerInfoRequest extends TeaModel {
     public static class SetSchedulerInfoRequestPbsInfoResourceLimit extends TeaModel {
         /**
          * <p>The maximum number of vCPUs that can be used for nodes in a queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpus")
         public Integer cpus;
 
         /**
          * <p>The maximum number of jobs that can be submitted to the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxJobs")
         public Integer maxJobs;
 
         /**
          * <p>The maximum memory resources that can be used in a queue. Units:</p>
-         * <br>
-         * <p>*   gb</p>
-         * <p>*   mb</p>
-         * <p>*   kb</p>
+         * <ul>
+         * <li>gb</li>
+         * <li>mb</li>
+         * <li>kb</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2gb</p>
          */
         @NameInMap("Mem")
         public String mem;
 
         /**
          * <p>The maximum number of nodes that can be used in a queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Nodes")
         public Integer nodes;
 
         /**
          * <p>PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.</p>
-         * <br>
          * <p>ResourceLimit specifies the maximum number of queue resources that can be used. Valid values of N: 0 to 100.</p>
-         * <br>
          * <p>Queue specifies the name of the queue that is used to run jobs.</p>
-         * <br>
          * <p>If one of the User, Cpus, Nodes, and Mem parameters is set in ResourceLimit, you must specify the Queue parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         @NameInMap("Queue")
         public String queue;
 
         /**
          * <p>The name of the user that runs jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         @NameInMap("User")
         public String user;
@@ -233,9 +260,12 @@ public class SetSchedulerInfoRequest extends TeaModel {
         public java.util.List<SetSchedulerInfoRequestPbsInfoAclLimit> aclLimit;
 
         /**
-         * <p>The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.\</p>
-         * <p>Valid values: 1 to 30.\</p>
-         * <p>Default value: 14.</p>
+         * <p>The retention period of jobs. After the retention period is exceeded, job data is deleted. Unit: days.\
+         * Valid values: 1 to 30.\
+         * Default value: 14.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("JobHistoryDuration")
         public Integer jobHistoryDuration;
@@ -248,24 +278,30 @@ public class SetSchedulerInfoRequest extends TeaModel {
 
         /**
          * <p>PbsInfo specifies the number of PBS schedulers that can be configured in the cluster. Valid values of N: 0 to 100.</p>
-         * <br>
          * <p>SchedInterval specifies the scheduling period. Unit: seconds.</p>
-         * <br>
          * <p>A scheduling period is the interval between two consecutive running jobs. If you set SchedInterval to 60, another job can be run 60 seconds after a job starts running.</p>
-         * <br>
          * <p>Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("SchedInterval")
         public Integer schedInterval;
 
         /**
          * <p>The maximum number of jobs that can be scheduled in the cluster. If the total number of running jobs and queuing jobs exceeds the value, no more jobs can be submitted. Default value: 20000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000</p>
          */
         @NameInMap("SchedMaxJobs")
         public Integer schedMaxJobs;
 
         /**
          * <p>The maximum number of queuing jobs that can be scheduled in the cluster. If the number of queuing jobs exceeds the value, no more jobs can be submitted. Default value: 10000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("SchedMaxQueuedJobs")
         public Integer schedMaxQueuedJobs;
@@ -328,14 +364,20 @@ public class SetSchedulerInfoRequest extends TeaModel {
     public static class SetSchedulerInfoRequestScheduler extends TeaModel {
         /**
          * <p>The name of the scheduler. Valid values:</p>
-         * <br>
-         * <p>*   pbs</p>
-         * <p>*   pbs19</p>
-         * <p>*   slurm</p>
-         * <p>*   slurm19</p>
-         * <p>*   slurm20</p>
-         * <br>
-         * <p>>  If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, PbsInfo.N.ResourceLimit, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>pbs19</li>
+         * <li>slurm</li>
+         * <li>slurm19</li>
+         * <li>slurm20</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set Scheduler.N.SchedName to pbs or pbs19, you must specify at least one of the PbsInfo.N.SchedInterval, PbsInfo.N.JobHistoryDuration, PbsInfo.N.ResourceLimit, and PbsInfo.N.AclLimit parameters. If you set Scheduler.N.SchedName to slurm, slurm19, or slurm20, you must specify at least one of the SlurmInfo.N.SchedInterval and SlurmInfo.N.BackfillInterval parameters.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedName")
         public String schedName;
@@ -358,18 +400,21 @@ public class SetSchedulerInfoRequest extends TeaModel {
     public static class SetSchedulerInfoRequestSlurmInfo extends TeaModel {
         /**
          * <p>The backfill scheduling period. Unit: seconds.</p>
-         * <br>
          * <p>Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("BackfillInterval")
         public Integer backfillInterval;
 
         /**
          * <p>SlurmInfo specifies the number of Slurm schedulers that can be configured in the cluster. Valid values of N: 0 to 100.</p>
-         * <br>
          * <p>SchedInterval specifies the scheduling period. Unit: seconds.</p>
-         * <br>
          * <p>Default value: 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("SchedInterval")
         public Integer schedInterval;

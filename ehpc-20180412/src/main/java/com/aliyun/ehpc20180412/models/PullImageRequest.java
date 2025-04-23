@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class PullImageRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-nkKsP3****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The type of the image. Default value: shifter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>shifter</p>
      */
     @NameInMap("ContainerType")
     public String containerType;
 
     /**
      * <p>The tag of the image. Default value: latest.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>latest</p>
      */
     @NameInMap("ImageTag")
     public String imageTag;
 
     /**
      * <p>The name of the repository.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>centos</p>
      */
     @NameInMap("Repository")
     public String repository;

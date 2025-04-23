@@ -6,33 +6,47 @@ import com.aliyun.tea.*;
 public class GetIfEcsTypeSupportHtConfigResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Hyper-Threading is enabled by default. Valid values:</p>
-     * <br>
-     * <p>*   true: Hyper-Threading is enabled by default.</p>
-     * <br>
-     * <p>*   false: Hyper-Threading is disabled by default</p>
-     * <br>
-     * <p>> By default, Hyper-Threading is not enabled for the SCC specification family, while Hyper-Threading is enabled for other specification families by default.</p>
+     * <ul>
+     * <li>true: Hyper-Threading is enabled by default.</li>
+     * <li>false: Hyper-Threading is disabled by default.</li>
+     * </ul>
+     * <blockquote>
+     * <p> By default, Hyper-Threading is not enabled for Super Computing Cluster (SCC) instance families but is enabled for other instance families.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DefaultHtEnabled")
     public Boolean defaultHtEnabled;
 
     /**
-     * <p>The instance type of the ECS instance.</p>
+     * <p>The ECS instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6.large</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80CA7A93-7291-4402-B63D-86DF334E0A1F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether hyper-threading is supported. Valid values:</p>
-     * <br>
-     * <p>*   true: Hyper-Threading is supported.</p>
-     * <p>*   false: Hyper-Threading is not supported.</p>
+     * <ul>
+     * <li>true: Hyper-threading is supported.</li>
+     * <li>false: Hyper-threading is not supported.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SupportHtConfig")
     public Boolean supportHtConfig;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RunCloudMetricProfilingResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8442AF35-875B-4FC0-8B7AAFDC339335D5</p>
      */
     @NameInMap("RequestId")
     public String requestId;

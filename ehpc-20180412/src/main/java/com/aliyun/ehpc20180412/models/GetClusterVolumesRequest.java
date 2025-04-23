@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class GetClusterVolumesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-gh5WKb****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

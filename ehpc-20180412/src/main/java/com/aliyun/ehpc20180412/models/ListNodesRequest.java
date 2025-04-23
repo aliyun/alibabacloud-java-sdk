@@ -6,94 +6,129 @@ import com.aliyun.tea.*;
 public class ListNodesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The filter options of the node list.</p>
-     * <br>
-     * <p>Format: {"status":"node_status"}. Replace node_status with the node status. Valid values of node_status:</p>
-     * <br>
-     * <p>*   uninit: The node is being installed.</p>
-     * <p>*   exception: An exception occurred on the node.</p>
-     * <p>*   running: The node is running.</p>
-     * <p>*   initing: The node is being initialized.</p>
-     * <p>*   releasing: The node is being released.</p>
-     * <p>*   untracking: The node is not added to the cluster.</p>
-     * <p>*   stopped: The node is stopped.</p>
+     * <p>Format: {&quot;status&quot;:&quot;node_status&quot;}. Replace node_status with the node status. Valid values of node_status:</p>
+     * <ul>
+     * <li>uninit: The node is being installed.</li>
+     * <li>exception: An exception occurred on the node.</li>
+     * <li>running: The node is running.</li>
+     * <li>initing: The node is being initialized.</li>
+     * <li>releasing: The node is being released.</li>
+     * <li>untracking: The node is not added to the cluster.</li>
+     * <li>stopped: The node is stopped.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;status&quot;:&quot;running&quot;}</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
      * <p>The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-HostName</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>The prefix of the hostname. You can query nodes that have a specified prefix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>compute</p>
      */
     @NameInMap("HostNamePrefix")
     public String hostNamePrefix;
 
     /**
      * <p>The suffix of the hostname. You can query nodes that have a specified suffix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01</p>
      */
     @NameInMap("HostNameSuffix")
     public String hostNameSuffix;
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The private IP address of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><code>172.16.**.**</code></p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
      * <p>The type of the node. Valid values:</p>
-     * <br>
-     * <p>*   Manager: management node</p>
-     * <p>*   Login: logon node</p>
-     * <p>*   Compute: compute node</p>
+     * <ul>
+     * <li>Manager: management node</li>
+     * <li>Login: logon node</li>
+     * <li>Compute: compute node</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Manager</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
      * <p>The sorting method of the node list. Valid values:</p>
-     * <br>
-     * <p>*   Forward: sorts the nodes in chronological order.</p>
-     * <p>*   Backward: sorts the nodes in reverse chronological order.</p>
-     * <br>
+     * <ul>
+     * <li>Forward: sorts the nodes in chronological order.</li>
+     * <li>Backward: sorts the nodes in reverse chronological order.</li>
+     * </ul>
      * <p>Default value: Forward.</p>
-     * <br>
-     * <p>>  This parameter is used together with the SortBy parameter. If you set SortBy to AddedTime and set Sequence to Forward, nodes are queried in ascending order of time that they are added.</p>
+     * <blockquote>
+     * <p> This parameter is used together with the SortBy parameter. If you set SortBy to AddedTime and set Sequence to Forward, nodes are queried in ascending order of time that they are added.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("Sequence")
     public String sequence;
 
     /**
      * <p>The sorting method of the node list. Valid values:</p>
-     * <br>
-     * <p>*   AddedTime: sorts the nodes by the time that they are added.</p>
-     * <p>*   HostName: sorts the nodes by their host names.</p>
+     * <ul>
+     * <li>AddedTime: sorts the nodes by the time that they are added.</li>
+     * <li>HostName: sorts the nodes by their host names.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AddedTime</p>
      */
     @NameInMap("SortBy")
     public String sortBy;

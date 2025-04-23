@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class StopNodesRequest extends TeaModel {
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Instance")
     public java.util.List<StopNodesRequestInstance> instance;
 
     /**
      * <p>The role of the node. Valid values:</p>
-     * <br>
-     * <p>*   Manager: management node</p>
-     * <p>*   Login: logon node</p>
-     * <p>*   Compute: compute node</p>
-     * <br>
+     * <ul>
+     * <li>Manager: management node</li>
+     * <li>Login: logon node</li>
+     * <li>Compute: compute node</li>
+     * </ul>
      * <p>Default value: Compute</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Compute</p>
      */
     @NameInMap("Role")
     public String role;
@@ -59,8 +68,10 @@ public class StopNodesRequest extends TeaModel {
     public static class StopNodesRequestInstance extends TeaModel {
         /**
          * <p>The ID of the Nth node that you want to stop. Valid values of N: 1 to 100</p>
-         * <br>
-         * <p>You can call the [ListNodes](~~87161~~) operation to query the IDs of the compute nodes.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the IDs of the compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp13p7vlcb1uihf****</p>
          */
         @NameInMap("Id")
         public String id;

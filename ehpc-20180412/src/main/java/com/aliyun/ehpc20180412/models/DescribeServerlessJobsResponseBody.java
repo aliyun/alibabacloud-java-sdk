@@ -12,12 +12,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,18 +60,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosArrayProperties extends TeaModel {
         /**
          * <p>The end value of the array job index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("IndexEnd")
         public Long indexEnd;
 
         /**
          * <p>The starting value of the array job index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IndexStart")
         public Long indexStart;
 
         /**
          * <p>The interval of the array job index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("IndexStep")
         public Long indexStep;
@@ -104,52 +119,77 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersCurrentState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>working</p>
          */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
         /**
          * <p>The exit code of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Long exitCode;
 
         /**
          * <p>The time when the container stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The information about the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Back-off 5m0s restarting failed container=test pod=test_eci-xxx(xxx)</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The reason why the container is in this state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The code of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Signal")
         public Long signal;
 
         /**
          * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-19T12:05:02Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   Waiting</p>
-         * <p>*   Running</p>
-         * <p>*   Terminated</p>
+         * <ul>
+         * <li>Waiting</li>
+         * <li>Running</li>
+         * <li>Terminated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminated</p>
          */
         @NameInMap("State")
         public String state;
@@ -228,6 +268,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVarsValueFromFieldRef extends TeaModel {
         /**
          * <p>The path of the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status.podIP</p>
          */
         @NameInMap("FieldPath")
         public String fieldPath;
@@ -272,12 +315,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVars extends TeaModel {
         /**
          * <p>The name of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PATH</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/bin/</p>
          */
         @NameInMap("Value")
         public String value;
@@ -322,18 +371,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeHttpGet extends TeaModel {
         /**
          * <p>The path to which HTTP GET requests are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/nginx/</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The port to which HTTP GET requests are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
          * <p>The protocol type of the HTTP GET requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Scheme")
         public String scheme;
@@ -372,12 +430,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeTcpSocket extends TeaModel {
         /**
          * <p>The name of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.4</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Long port;
@@ -414,6 +478,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The minimum number of consecutive failures that must occur for the probe to be considered as failed. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("FailureThreshold")
         public Long failureThreshold;
@@ -426,18 +493,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of seconds after the container is started and before a liveness probe is initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InitialDelaySeconds")
         public Long initialDelaySeconds;
 
         /**
          * <p>The interval at which the probe is run. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("PeriodSeconds")
         public Long periodSeconds;
 
         /**
          * <p>The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SuccessThreshold")
         public Long successThreshold;
@@ -450,6 +526,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period of the check. Default value: 1. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TimeoutSeconds")
         public Long timeoutSeconds;
@@ -528,12 +607,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersPorts extends TeaModel {
         /**
          * <p>The port number. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
          * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -564,52 +649,77 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersPreviousState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>working</p>
          */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
         /**
          * <p>The exit code of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Long exitCode;
 
         /**
          * <p>The time when the container stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The message about the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Back-off 5m0s restarting failed container=test pod=test_eci-xxx(xxx)</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The reason why the container is in this state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The code of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Signal")
         public Long signal;
 
         /**
          * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the container. Valid values:</p>
-         * <br>
-         * <p>*   Waiting: The container is being started.</p>
-         * <p>*   Running: The container is running.</p>
-         * <p>*   Terminated: The container terminates running.</p>
+         * <ul>
+         * <li>Waiting: The container is being started.</li>
+         * <li>Running: The container is running.</li>
+         * <li>Terminated: The container terminates running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminated</p>
          */
         @NameInMap("State")
         public String state;
@@ -688,18 +798,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbeHttpGet extends TeaModel {
         /**
          * <p>The path to which HTTP GET requests are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The port to which the system sends an HTTP GET request for a health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
          * <p>The protocol type of the HTTP GET requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("Scheme")
         public String scheme;
@@ -738,12 +857,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbeTcpSocket extends TeaModel {
         /**
          * <p>The IP address of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.4</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         @NameInMap("Port")
         public Long port;
@@ -780,6 +905,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The minimum number of consecutive failures that must occur for the check to be considered as failed. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("FailureThreshold")
         public Long failureThreshold;
@@ -792,18 +920,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of seconds after the container is started and before a liveness probe is initiated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InitialDelaySeconds")
         public Long initialDelaySeconds;
 
         /**
          * <p>The interval at which the container is checked. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("PeriodSeconds")
         public Long periodSeconds;
 
         /**
          * <p>The minimum number of consecutive successes for a failed liveness probe to be considered successful. Default value: 1. Set the value to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SuccessThreshold")
         public Long successThreshold;
@@ -816,6 +953,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The timeout period of the check. Default value: 1. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TimeoutSeconds")
         public Long timeoutSeconds;
@@ -922,12 +1062,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
 
         /**
          * <p>The user ID (UID) that is used to run the entry point of the container process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1558</p>
          */
         @NameInMap("RunAsUser")
         public Long runAsUser;
@@ -966,34 +1112,50 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersVolumeMounts extends TeaModel {
         /**
          * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/share/</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
 
         /**
          * <p>The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:</p>
-         * <br>
-         * <p>*   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
-         * <p>*   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
-         * <p>*   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</p>
+         * <ul>
+         * <li>None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+         * <li>HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+         * <li>Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("MountPropagation")
         public String mountPropagation;
 
         /**
          * <p>The name of the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-empty</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the volumes are read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
         /**
          * <p>The subdirectory of the volume. This parameter specifies different subdirectories of the same volume that the instance can mount to different subdirectories of containers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/sub</p>
          */
         @NameInMap("SubPath")
         public String subPath;
@@ -1060,6 +1222,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
@@ -1078,22 +1243,32 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Gpu")
         public Integer gpu;
 
         /**
          * <p>The image of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HPL</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The policy to pull images. Valid values:</p>
-         * <br>
-         * <p>*   Always: Each time instances are created, image pulling is performed.</p>
-         * <p>*   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
-         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
+         * <ul>
+         * <li>Always: Each time instances are created, image pulling is performed.</li>
+         * <li>IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
+         * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Always</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
@@ -1106,12 +1281,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The memory size of the instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         @NameInMap("Memory")
         public Float memory;
 
         /**
          * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HPL</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1136,12 +1317,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the container passed the readiness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Ready")
         public Boolean ready;
 
         /**
          * <p>The number of times that the instance worker restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("RestartCount")
         public Integer restartCount;
@@ -1154,18 +1341,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Stdin")
         public Boolean stdin;
 
         /**
          * <p>Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("StdinOnce")
         public Boolean stdinOnce;
 
         /**
          * <p>Indicates whether interaction is enabled. Default value: false. If the value of the Command parameter is /bin/bash, the value of this parameter must be set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Tty")
         public Boolean tty;
@@ -1178,6 +1374,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/nginx</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;
@@ -1368,12 +1567,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsDnsConfigOptions extends TeaModel {
         /**
          * <p>The variable name of the option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The variable value of the option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1454,12 +1659,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEciSecurityContextSysctls extends TeaModel {
         /**
          * <p>The name of the Sysctl parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kernel.msgmax</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the Sysctl parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65536</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1512,45 +1723,67 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEvents extends TeaModel {
         /**
          * <p>The number of the events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The time when the event started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
         /**
          * <p>The time when the event ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started container</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the category to which the event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-xxx</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The type of the event. Valid values:</p>
-         * <br>
-         * <p>*   Normal</p>
-         * <p>*   Warning</p>
+         * <ul>
+         * <li>Normal</li>
+         * <li>Warning</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Type")
         public String type;
@@ -1627,6 +1860,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -1657,52 +1893,77 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersCurrentState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>working</p>
          */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
         /**
          * <p>The exit code of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Long exitCode;
 
         /**
          * <p>The time when the container stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created container</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The reason why the container is in this state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The code of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Signal")
         public Long signal;
 
         /**
          * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the container. Valid values:</p>
-         * <br>
-         * <p>*   Waiting</p>
-         * <p>*   Running</p>
-         * <p>*   Terminated</p>
+         * <ul>
+         * <li>Waiting</li>
+         * <li>Running</li>
+         * <li>Terminated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("State")
         public String state;
@@ -1780,7 +2041,10 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef extends TeaModel {
         /**
-         * <p>The path of the field in the specified version. Set the value to `status.podIP`.</p>
+         * <p>The path of the field in the specified version. Set the value to <code>status.podIP</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status.podIP</p>
          */
         @NameInMap("FieldPath")
         public String fieldPath;
@@ -1825,12 +2089,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVars extends TeaModel {
         /**
          * <p>The name of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PATH</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the environment variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/bin</p>
          */
         @NameInMap("Value")
         public String value;
@@ -1875,12 +2145,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersPorts extends TeaModel {
         /**
          * <p>The port number. Valid values: 1 to 65535.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8888</p>
          */
         @NameInMap("Port")
         public Long port;
 
         /**
          * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -1911,48 +2187,72 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersPreviousState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>working</p>
          */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
         /**
          * <p>The exit code of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExitCode")
         public Long exitCode;
 
         /**
          * <p>The time when the container stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-24T05:35:44Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The message about the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started container</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The reason why the container is in this state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The code of the container status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Signal")
         public Long signal;
 
         /**
          * <p>The time when the container started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-24T05:35:44Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the container. Valid values: Waiting, Running, and Terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminated</p>
          */
         @NameInMap("State")
         public String state;
@@ -2059,12 +2359,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
 
         /**
          * <p>The UID that is used to run the entry point of the container process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1557</p>
          */
         @NameInMap("RunAsUser")
         public Long runAsUser;
@@ -2103,30 +2409,42 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersVolumeMounts extends TeaModel {
         /**
          * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/share/</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
 
         /**
          * <p>The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:</p>
-         * <br>
-         * <p>*   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
-         * <p>*   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
-         * <p>*   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</p>
-         * <br>
+         * <ul>
+         * <li>None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+         * <li>HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</li>
+         * <li>Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</li>
+         * </ul>
          * <p>Default value: None.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("MountPropagation")
         public String mountPropagation;
 
         /**
          * <p>The name of the volume. The name is the same as the volume you selected when you purchased the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-empty</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Default value: False.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
@@ -2185,6 +2503,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Cpu")
         public Long cpu;
@@ -2203,30 +2524,45 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Gpu")
         public Long gpu;
 
         /**
          * <p>The image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
          * <p>The policy to pull images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Always</p>
          */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
         /**
          * <p>The size of memory that is allocated to the init container. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         @NameInMap("Memory")
         public Long memory;
 
         /**
          * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Init-xxx</p>
          */
         @NameInMap("Name")
         public String name;
@@ -2245,12 +2581,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the container passed the readiness probe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Ready")
         public Boolean ready;
 
         /**
          * <p>The number of times that the instance worker restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("RestartCount")
         public Long restartCount;
@@ -2269,6 +2611,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The working directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/test</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;
@@ -2419,12 +2764,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-xh</p>
          */
         @NameInMap("Value")
         public String value;
@@ -2455,12 +2806,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsVolumesConfigFileVolumeConfigFileToPaths extends TeaModel {
         /**
          * <p>The content of the configuration file. Maximum size: 32 KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello world</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The relative path to the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/bin/</p>
          */
         @NameInMap("Path")
         public String path;
@@ -2497,80 +2854,118 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the disk volume if you set Type to DiskVolume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-xxxx</p>
          */
         @NameInMap("DiskVolumeDiskId")
         public String diskVolumeDiskId;
 
         /**
          * <p>The type of the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xfs</p>
          */
         @NameInMap("DiskVolumeFsType")
         public String diskVolumeFsType;
 
         /**
          * <p>The storage media for the emptyDir volume. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:</p>
-         * <br>
-         * <p>*   Memory: uses memory as the storage media.</p>
-         * <p>*   LocalRaid0: forms local disks into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).</p>
+         * <ul>
+         * <li>Memory: uses memory as the storage media.</li>
+         * <li>LocalRaid0: forms local disks into RAID 0. This value is valid only if an elastic container instance that has local disks mounted is created. For more information, see <a href="https://help.aliyun.com/document_detail/114664.html">Create an elastic container instance that has local disks mounted</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Memory</p>
          */
         @NameInMap("EmptyDirVolumeMedium")
         public String emptyDirVolumeMedium;
 
         /**
          * <p>The storage size of the emptyDir volume. If you specify this parameter, include the unit in the value. We recommend that you use Gi or Mi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256Mi</p>
          */
         @NameInMap("EmptyDirVolumeSizeLimit")
         public String emptyDirVolumeSizeLimit;
 
         /**
          * <p>The name of the driver when you set the Type parameter to FlexVolume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flexvolume</p>
          */
         @NameInMap("FlexVolumeDriver")
         public String flexVolumeDriver;
 
         /**
          * <p>The file system type when you set the Type parameter to FlexVolume. The default value is determined by the script of the FlexVolume plug-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ntfs</p>
          */
         @NameInMap("FlexVolumeFsType")
         public String flexVolumeFsType;
 
         /**
          * <p>The FlexVolume options.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[nolock,tcp,noresvport]</p>
          */
         @NameInMap("FlexVolumeOptions")
         public String flexVolumeOptions;
 
         /**
          * <p>The path of the Network File System (NFS) volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/eci</p>
          */
         @NameInMap("NFSVolumePath")
         public String NFSVolumePath;
 
         /**
          * <p>Indicates whether the NFS volume is read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("NFSVolumeReadOnly")
         public Boolean NFSVolumeReadOnly;
 
         /**
          * <p>The endpoint of the server if you set Type to NFSVolume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0eafxxxxx-xxxxx.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("NFSVolumeServer")
         public String NFSVolumeServer;
 
         /**
          * <p>The name of the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-empty</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the volume. Valid values:</p>
-         * <br>
-         * <p>*   EmptyDirVolume</p>
-         * <p>*   NFSVolume</p>
-         * <p>*   ConfigFileVolume</p>
-         * <p>*   FlexVolume</p>
+         * <ul>
+         * <li>EmptyDirVolume</li>
+         * <li>NFSVolume</li>
+         * <li>ConfigFileVolume</li>
+         * <li>FlexVolume</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EmptyDirVolume</p>
          */
         @NameInMap("Type")
         public String type;
@@ -2689,12 +3084,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroups extends TeaModel {
         /**
          * <p>The ID of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp1jrgfqqy54kg5hc****</p>
          */
         @NameInMap("ContainerGroupId")
         public String containerGroupId;
 
         /**
          * <p>The name of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ContainerGroupName")
         public String containerGroupName;
@@ -2707,18 +3108,27 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The number of vCPUs that are allocated to the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
          * <p>The time when the instance is created. The time follows the RFC 3339 standard and must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Discount")
         public Long discount;
@@ -2737,12 +3147,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the elastic network interface (ENI).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp14rzqi6fd8satm****</p>
          */
         @NameInMap("EniInstanceId")
         public String eniInstanceId;
 
         /**
          * <p>The size of the temporary storage space. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("EphemeralStorage")
         public Long ephemeralStorage;
@@ -2755,12 +3171,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance failed to run due to overdue payments. The time follows the RFC 3339 standard and must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The time when the instance failed to run. The time follows the RFC 3339 standard and must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         @NameInMap("FailedTime")
         public String failedTime;
@@ -2779,105 +3201,149 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The instance type of the Elastic Compute Service (ECS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
          * <p>The IPv6 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2001:XXXX:4:4:4:4:4:4</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
         /**
          * <p>The memory size of the elastic container instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         @NameInMap("Memory")
         public Float memory;
 
         /**
-         * <p>The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and ECS instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).</p>
+         * <p>The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/61178.html">Use the instance RAM role by calling APIs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram:PassRole</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the cluster belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzh43v*****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The instance restart policy. Valid values:</p>
-         * <br>
-         * <p>*   Always: Always restarts the instance if a container in the instance exits upon termination.</p>
-         * <p>*   Never: Never restarts the instance if a container in the instance exits upon termination.</p>
-         * <p>*   OnFailure: Restarts the instance when the last start failed.</p>
+         * <ul>
+         * <li>Always: Always restarts the instance if a container in the instance exits upon termination.</li>
+         * <li>Never: Never restarts the instance if a container in the instance exits upon termination.</li>
+         * <li>OnFailure: Restarts the instance when the last start failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Never</p>
          */
         @NameInMap("RestartPolicy")
         public String restartPolicy;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp12ujq5zpxuyjfo3o8r</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The maximum hourly price for the preemptible instance.</p>
-         * <br>
          * <p>This parameter is returned only if you set the SpotStrategy parameter to SpotWithPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.025</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
         /**
          * <p>The bidding policy of the instance. Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+         * <ul>
+         * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The instance is being started.</p>
-         * <p>*   Running: The instance is running.</p>
-         * <p>*   Succeeded: The instance runs successfully.</p>
-         * <p>*   Failed: The instance fails to run.</p>
-         * <p>*   Scheduling: The instance is being created.</p>
-         * <p>*   ScheduleFailed: The instance fails to be created.</p>
-         * <p>*   Restarting: The instance is being restarted.</p>
-         * <p>*   Updating: The instance is being updated.</p>
-         * <p>*   Terminating: The instance is being terminated.</p>
-         * <p>*   Expired: The instance expires.</p>
+         * <ul>
+         * <li>Pending: The instance is being started.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>Succeeded: The instance runs successfully.</li>
+         * <li>Failed: The instance fails to run.</li>
+         * <li>Scheduling: The instance is being created.</li>
+         * <li>ScheduleFailed: The instance fails to be created.</li>
+         * <li>Restarting: The instance is being restarted.</li>
+         * <li>Updating: The instance is being updated.</li>
+         * <li>Terminating: The instance is being terminated.</li>
+         * <li>Expired: The instance expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when all containers exited on success. The time follows the RFC 3339 standard and must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-11T04:33:42Z</p>
          */
         @NameInMap("SucceededTime")
         public String succeededTime;
@@ -2890,30 +3356,45 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
          */
         @NameInMap("TenantEniInstanceId")
         public String tenantEniInstanceId;
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.XX.XX</p>
          */
         @NameInMap("TenantEniIp")
         public String tenantEniIp;
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxx</p>
          */
         @NameInMap("TenantSecurityGroupId")
         public String tenantSecurityGroupId;
 
         /**
          * <p>This parameter is unavailable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
          */
         @NameInMap("TenantVSwitchId")
         public String tenantVSwitchId;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1vzjjflab6wvjox****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -2926,12 +3407,18 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the elastic container instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-1vzjjflab6wvjox****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the zone in which the elastic container instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -3262,73 +3749,107 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the serverless job ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1662016121</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>Indicates whether the job is an array job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsArrayJob")
         public Boolean isArrayJob;
 
         /**
          * <p>The ID of the serverless job or the subtask (array job).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The name of the serverless job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testjob</p>
          */
         @NameInMap("JobName")
         public String jobName;
 
         /**
          * <p>The time when the serverless job is last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1663831441000</p>
          */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
         /**
          * <p>The scheduling priority of the serverless job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("Priority")
         public Long priority;
 
         /**
          * <p>The name of the queue in which the serverless job is run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comp</p>
          */
         @NameInMap("Queue")
         public String queue;
 
         /**
          * <p>The time when the serverless job started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647427667</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the serverless job. Valid values:</p>
-         * <br>
-         * <p>*   Pending</p>
-         * <p>*   Initing</p>
-         * <p>*   Running</p>
-         * <p>*   Succeeded</p>
-         * <p>*   Canceled</p>
-         * <p>*   Failed</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Initing</li>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Canceled</li>
+         * <li>Failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The time when the serverless job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1647423718</p>
          */
         @NameInMap("SubmitTime")
         public Long submitTime;
 
         /**
          * <p>The username that is used to run the serverless job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         @NameInMap("User")
         public String user;

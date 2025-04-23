@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UninstallSoftwareResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C84FB8EF-5580-4B82-9BDE-6657814C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSchedulerInfoResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBC2F93D-003A-49C4-850C-B826EECF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetSchedulerInfoResponseBody extends TeaModel {
     public static class GetSchedulerInfoResponseBodySchedInfo extends TeaModel {
         /**
          * <p>The detailed settings of the scheduler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;AclInfo&quot;:[{&quot;AclEnable&quot;: false,&quot;UntrackUser&quot;: [],&quot;User&quot;: [],&quot;QueueName&quot;: &quot;workq&quot;}],&quot;JobHistory&quot;: &quot;&quot;,&quot;SchedIteration&quot;: &quot;60&quot;,&quot;QueueResource&quot;: [{&quot;UntrackUser&quot;: [],&quot;User&quot;: [],&quot;QueueName&quot;: &quot;workq&quot;}]}</p>
          */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
          * <p>The type of the scheduler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedName")
         public String schedName;

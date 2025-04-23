@@ -12,6 +12,9 @@ public class GetPostScriptsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetPostScriptsResponseBody extends TeaModel {
     public static class GetPostScriptsResponseBodyPostInstallScripts extends TeaModel {
         /**
          * <p>The parameter that is used to run the post-installation script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-h</p>
          */
         @NameInMap("Args")
         public String args;
 
         /**
          * <p>The URL that is used to download the post-installation script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-shanghai.aliyuncs.com/postscript_examples.sh">https://bucket.oss-cn-shanghai.aliyuncs.com/postscript_examples.sh</a></p>
          */
         @NameInMap("Url")
         public String url;

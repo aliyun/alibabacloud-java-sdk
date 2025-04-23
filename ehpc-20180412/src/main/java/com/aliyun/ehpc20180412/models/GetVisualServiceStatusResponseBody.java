@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetVisualServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>inactive (dead) , ws service is not running.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>896D338C-E4F4-41EC-A154-D605E5DE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

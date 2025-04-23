@@ -12,6 +12,9 @@ public class DescribeJobResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9697AD8D-56FA-4C8E-B46C-00AC9***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeJobResponseBody extends TeaModel {
     public static class DescribeJobResponseBodyMessage extends TeaModel {
         /**
          * <p>The details of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;2.scheduler&quot;: {&quot;egroup&quot;: &quot;users&quot;,&quot;Stageout_status&quot;: 1,&quot;Keep_Files&quot;: &quot;n&quot;,&quot;server&quot;: &quot;scheduler&quot;,&quot;queue&quot;: &quot;workq&quot;}}</p>
          */
         @NameInMap("JobInfo")
         public String jobInfo;

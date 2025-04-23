@@ -6,80 +6,109 @@ import com.aliyun.tea.*;
 public class GetCloudMetricLogsRequest extends TeaModel {
     /**
      * <p>The data aggregation interval. Unit: seconds.</p>
-     * <br>
      * <p>Valid values: 1, 10, 60, 600, and 3600.</p>
-     * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("AggregationInterval")
     public Integer aggregationInterval;
 
     /**
      * <p>The data aggregation type. Valid values:</p>
-     * <br>
-     * <p>*   sum: the sum of the data</p>
-     * <p>*   avg: the average value</p>
-     * <p>*   max: the maximum value</p>
-     * <p>*   min: the minimum value</p>
-     * <br>
+     * <ul>
+     * <li>sum: the sum of the data</li>
+     * <li>avg: the average value</li>
+     * <li>max: the maximum value</li>
+     * <li>min: the minimum value</li>
+     * </ul>
      * <p>Aggregation is disabled by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>avg</p>
      */
     @NameInMap("AggregationType")
     public String aggregationType;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-jeJki6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The filter conditions. A JSON string consisting of one or more key:value pairs. Value range of key:</p>
-     * <br>
-     * <p>*   InstanceId: the ID of the node</p>
-     * <p>*   Hostname: the hostname of the node</p>
-     * <p>*   NetworkInterface: the name of the network interface</p>
-     * <p>*   DiskDevice: the name of the disk</p>
+     * <p>The filter conditions. A JSON-formatted string that contains several key-value pairs. Valid values of the key:</p>
+     * <ul>
+     * <li>InstanceId: the ID of the node</li>
+     * <li>Hostname: the hostname of the node</li>
+     * <li>NetworkInterface: the name of the network interface</li>
+     * <li>DiskDevice: the name of the disk</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Hostname&quot;:&quot;compute000&quot;}</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
-     * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The beginning of the time range to query. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1583907780</p>
      */
     @NameInMap("From")
     public Integer from;
 
     /**
      * <p>The category of the output performance metrics. Separate multiple metrics with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   cpu</p>
-     * <p>*   memory</p>
+     * <ul>
+     * <li>cpu</li>
+     * <li>memory</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu</p>
      */
     @NameInMap("MetricCategories")
     public String metricCategories;
 
     /**
      * <p>The dimensions of the performance metric. Valid values:</p>
-     * <br>
-     * <p>*   machine</p>
-     * <p>*   process</p>
-     * <p>*   network</p>
-     * <p>*   disk</p>
+     * <ul>
+     * <li>machine</li>
+     * <li>process</li>
+     * <li>network</li>
+     * <li>disk</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>network</p>
      */
     @NameInMap("MetricScope")
     public String metricScope;
 
     /**
-     * <p>Logs are returned in reverse order of timestamps.</p>
-     * <br>
-     * <p>Default value: false</p>
+     * <p>Specifies whether to return logs in reverse order of timestamps. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
-     * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end of the time range to query. The time is a timestamp. This value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1583907790</p>
      */
     @NameInMap("To")
     public Integer to;

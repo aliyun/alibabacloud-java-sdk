@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpgradeClientResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4994fbcd-2a09-4045-b2b2-2c3bee8e9296</p>
      */
     @NameInMap("RequestId")
     public String requestId;

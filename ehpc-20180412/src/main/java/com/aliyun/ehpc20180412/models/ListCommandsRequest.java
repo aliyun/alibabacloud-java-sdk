@@ -6,32 +6,42 @@ import com.aliyun.tea.*;
 public class ListCommandsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the command.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-hz01v8vudql****</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
      * <p>The page number of the page to return.</p>
-     * <br>
      * <p>Page number starts from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.\</p>
-     * <p>Valid values: 1 to 50.\</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries to return on each page.\
+     * Valid values: 1 to 50.\
+     * Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

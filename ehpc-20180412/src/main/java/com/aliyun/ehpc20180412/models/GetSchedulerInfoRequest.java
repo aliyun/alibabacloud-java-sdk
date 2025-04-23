@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetSchedulerInfoRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The region ID of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The detailed settings of the scheduler.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Scheduler")
     public java.util.List<GetSchedulerInfoRequestScheduler> scheduler;
@@ -54,14 +63,17 @@ public class GetSchedulerInfoRequest extends TeaModel {
     public static class GetSchedulerInfoRequestScheduler extends TeaModel {
         /**
          * <p>The scheduler name. Valid values:</p>
-         * <br>
-         * <p>*   pbs</p>
-         * <p>*   pbs19</p>
-         * <p>*   slurm</p>
-         * <p>*   slurm19</p>
-         * <p>*   slurm20</p>
-         * <br>
+         * <ul>
+         * <li>pbs</li>
+         * <li>pbs19</li>
+         * <li>slurm</li>
+         * <li>slurm19</li>
+         * <li>slurm20</li>
+         * </ul>
          * <p>Valid values of N: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedName")
         public String schedName;

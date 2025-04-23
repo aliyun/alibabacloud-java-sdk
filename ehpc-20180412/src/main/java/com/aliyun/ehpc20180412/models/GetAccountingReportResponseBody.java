@@ -12,36 +12,54 @@ public class GetAccountingReportResponseBody extends TeaModel {
 
     /**
      * <p>The list serialized in the JSON format. The list contains the column names of each record in the Data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;user\&quot;,\&quot;coreTime\&quot;,\&quot;usedMem\&quot;]</p>
      */
     @NameInMap("Metrics")
     public String metrics;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B1DCB399-9333-4B38-A35A-0BDFABC71881</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of CPU cores in the queried cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>261300</p>
      */
     @NameInMap("TotalCoreTime")
     public Integer totalCoreTime;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

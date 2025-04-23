@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListClustersRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
-     * <br>
      * <p>Default value: 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SubmitJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.manager</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

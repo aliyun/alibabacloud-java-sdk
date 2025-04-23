@@ -6,42 +6,60 @@ import com.aliyun.tea.*;
 public class RunCloudMetricProfilingRequest extends TeaModel {
     /**
      * <p>The ID of the E-HPC cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-jeJki6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The duration of the profiling process. Unit: seconds.</p>
-     * <br>
      * <p>Value values: 10 to 300.</p>
-     * <br>
      * <p>Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
      * <p>The sampling frequency. Unit: Hz. Valid values: 1 to 2000.</p>
-     * <br>
      * <p>Default value: 2000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("Freq")
     public Integer freq;
 
     /**
      * <p>The hostname.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>compute0</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>The ID of the profiling process.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29075</p>
      */
     @NameInMap("ProcessId")
     public Integer processId;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

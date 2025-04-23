@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCloudMetricProfilingResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DD6F715-85EE-4EA6-BDC4-48A75B719068</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetCloudMetricProfilingResponseBody extends TeaModel {
     public static class GetCloudMetricProfilingResponseBodySvgUrlsSvgInfo extends TeaModel {
         /**
          * <p>The name of the SVG file that contains the profiling results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-faRavbPf6b_i-bdrftgyh890654****_21687_2019-09-09-02-37-40.bottomup.svg</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The size of the SVG file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>648</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The type of the SVG file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         @NameInMap("Type")
         public String type;

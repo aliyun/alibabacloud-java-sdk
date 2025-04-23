@@ -6,51 +6,67 @@ import com.aliyun.tea.*;
 public class ListTasksRequest extends TeaModel {
     /**
      * <p>Specifies whether to display the response history of the asynchronous API operation. Valid values:</p>
-     * <br>
-     * <p>*   true: displays the current response and response history of the asynchronous API operation.</p>
-     * <p>*   false: displays only the current response of the asynchronous API operation. If no tasks are running, `[]` is returned.</p>
-     * <br>
-     * <p>Default value: false</p>
-     * <br>
-     * <p>>  If you specify the TaskId parameter, the Archived parameter is invalid.</p>
+     * <ul>
+     * <li>true: displays the current response and response history of the asynchronous API operation.</li>
+     * <li>false: displays only the current response of the asynchronous API operation. If no tasks are running, <code>[]</code> is returned.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * <blockquote>
+     * <p> If you specify the TaskId parameter, the Archived parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Archived")
     public Boolean archived;
 
     /**
-     * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Valid values: 1 to 999.</p>
+     * <p>The page number. Pages start from page 1. Valid values: 1 to 999.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
-     * <br>
-     * <p>Default value: 10</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the task. You can call the following asynchronous API operations to obtain the task ID.</p>
-     * <br>
-     * <p>*   [CreateCluster](~~87100~~)</p>
-     * <p>*   [StartCluster](~~200345~~)</p>
-     * <p>*   [StopCluster](~~200346~~)</p>
-     * <p>*   [DeleteCluster](~~87110~~)</p>
-     * <p>*   [AddNodes](~~87147~~)</p>
-     * <p>*   [StartNodes](~~87159~~)</p>
-     * <p>*   [ResetNodes](~~87158~~)</p>
-     * <p>*   [StopNodes](~~87160~~)</p>
-     * <p>*   [DeleteNodes](~~87155~~)</p>
+     * <p>The task ID. You can call the following asynchronous API operations to obtain the task ID.</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/87100.html">CreateCluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/200345.html">StartCluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/200346.html">StopCluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/87110.html">DeleteCluster</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/87147.html">AddNodes</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/87159.html">StartNodes</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/87158.html">ResetNodes</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/87160.html">StopNodes</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/87155.html">DeleteNodes</a></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

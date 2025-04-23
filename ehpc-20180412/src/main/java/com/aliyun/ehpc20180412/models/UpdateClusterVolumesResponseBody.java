@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateClusterVolumesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6757FA4-8FED-4602-B7F5-3550C0842122</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListInstalledSoftwareResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DDCA0E7B-03E7-430D-810C-0D508539****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of installed software.</p>
+     * <p>The installed software.</p>
      */
     @NameInMap("SoftwareList")
     public ListInstalledSoftwareResponseBodySoftwareList softwareList;
@@ -39,28 +42,41 @@ public class ListInstalledSoftwareResponseBody extends TeaModel {
 
     public static class ListInstalledSoftwareResponseBodySoftwareListSoftwareList extends TeaModel {
         /**
-         * <p>The ID of the software.</p>
+         * <p>The software ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MPICH_3.2</p>
          */
         @NameInMap("SoftwareId")
         public String softwareId;
 
         /**
          * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mpich</p>
          */
         @NameInMap("SoftwareName")
         public String softwareName;
 
         /**
          * <p>The status of the software. Valid values:</p>
-         * <br>
-         * <p>*   Installing: The software is being installed.</p>
-         * <p>*   Installed: The software is installed.</p>
+         * <ul>
+         * <li>Installing: The software is being installed.</li>
+         * <li>Installed: The software is installed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Installing</p>
          */
         @NameInMap("SoftwareStatus")
         public String softwareStatus;
 
         /**
          * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.2</p>
          */
         @NameInMap("SoftwareVersion")
         public String softwareVersion;

@@ -14,119 +14,167 @@ public class CreateHybridClusterRequest extends TeaModel {
     public java.util.List<CreateHybridClusterRequestApplication> application;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence of a request?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The version of the client. By default, the latest version is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.64</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
     /**
      * <p>The maximum hourly price for the ECS instance under the compute node. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.034</p>
      */
     @NameInMap("ComputeSpotPriceLimit")
     public Float computeSpotPriceLimit;
 
     /**
      * <p>The preemption policy of the compute nodes. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The compute nodes are pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
-     * <br>
+     * <ul>
+     * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("ComputeSpotStrategy")
     public String computeSpotStrategy;
 
     /**
-     * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with `http://` or` https://`.</p>
-     * <br>
+     * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or<code> https://</code>.</p>
      * <p>This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The type of the domain account service. Valid values:</p>
-     * <br>
-     * <p>*   nis</p>
-     * <p>*   ldap</p>
-     * <br>
+     * <ul>
+     * <li>nis</li>
+     * <li>ldap</li>
+     * </ul>
      * <p>Default value: nis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nis</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The version of E-HPC. By default, the latest version is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("EhpcVersion")
     public String ehpcVersion;
 
     /**
      * <p>The mode in which the proxy node manages the offline nodes. Valid values:</p>
-     * <br>
-     * <p>*   SSH: indicates management via SSH logon.</p>
-     * <p>*   CA: indicates management through Cloud Assistant.</p>
+     * <ul>
+     * <li>SSH: indicates management via SSH logon.</li>
+     * <li>CA: indicates management through Cloud Assistant.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SSH</p>
      */
     @NameInMap("HybridClusterOpMode")
     public String hybridClusterOpMode;
 
     /**
      * <p>The IDs of the images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wi_1607_x64_dtc_zh_40G_alibase****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The type of the image. Valid values:</p>
-     * <br>
-     * <p>*   system: public image</p>
-     * <p>*   self: custom image</p>
-     * <p>*   others: shared image</p>
-     * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
+     * <ul>
+     * <li>system: public image</li>
+     * <li>self: custom image</li>
+     * <li>others: shared image</li>
+     * <li>marketplace: Alibaba Cloud Marketplace image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
     /**
      * <p>The default queue of the scale-out nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workq</p>
      */
     @NameInMap("JobQueue")
     public String jobQueue;
 
     /**
-     * <p>The name of the key pair. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.[](http://https://。、（:）、（\_）（-）。)</p>
-     * <br>
-     * <p>> To use an SSH key pair, see [Create an SSH key pair](~~51793~~).</p>
+     * <p>The name of the key pair. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"></a></p>
+     * <blockquote>
+     * <p>To use an SSH key pair, see <a href="https://help.aliyun.com/document_detail/51793.html">Create an SSH key pair</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     /**
      * <p>The location where the cluster resides. Set the value to OnPremise.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OnPremise</p>
      */
     @NameInMap("Location")
     public String location;
 
     /**
      * <p>Specifies whether the cluster supports multiple operating systems. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("MultiOs")
     public Boolean multiOs;
 
     /**
-     * <p>The name of the cluster. The name must be 2 to 64 characters in length, and can contain only letters, digits, hyphens (-), and underscores (\_). It must start with a letter.</p>
+     * <p>The name of the cluster. The name must be 2 to 64 characters in length, and can contain only letters, digits, hyphens (-), and underscores (_). It must start with a letter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hybridcluster</p>
      */
     @NameInMap("Name")
     public String name;
@@ -139,24 +187,36 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     /**
      * <p>The path in which the on-premises file system is mounted on the nodes on the cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/OnCloudDirectory</p>
      */
     @NameInMap("OnPremiseVolumeLocalPath")
     public String onPremiseVolumeLocalPath;
 
     /**
      * <p>The mount target of the on-premises file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RemoteNasDomain.com</p>
      */
     @NameInMap("OnPremiseVolumeMountPoint")
     public String onPremiseVolumeMountPoint;
 
     /**
      * <p>The type of the protocol that is used by the on-premises file system. Only NFS is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NFS</p>
      */
     @NameInMap("OnPremiseVolumeProtocol")
     public String onPremiseVolumeProtocol;
 
     /**
      * <p>The mount path of the on-premises file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/RemoteDirectory</p>
      */
     @NameInMap("OnPremiseVolumeRemotePath")
     public String onPremiseVolumeRemotePath;
@@ -168,32 +228,45 @@ public class CreateHybridClusterRequest extends TeaModel {
     public CreateHybridClusterRequestOpenldapPar openldapPar;
 
     /**
-     * <p>The image tag of the operating system. You can call the [ListImages](~~87213~~) operation to query the image tag.</p>
+     * <p>The image tag of the operating system. You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> operation to query the image tag.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS_7.2_64</p>
      */
     @NameInMap("OsTag")
     public String osTag;
 
     /**
-     * <p>The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: `() ~ ! @ # $ % ^ & * - = + | { } [ ] : ; ‘ < > , . ? /`</p>
-     * <br>
-     * <p>> We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+     * <p>The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: <code>() ~ ! @ # $ % ^ &amp; * - = + | { } [ ] : ; ‘ &lt; &gt; , . ? /</code></p>
+     * <blockquote>
+     * <p>We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123****</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.</p>
-     * <br>
      * <p>The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.</p>
-     * <br>
-     * <p>*   pluginMod: the mode of the plug-in. The following modes are supported:</p>
-     * <br>
-     * <p>    *   oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.</p>
-     * <p>    *   image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.</p>
-     * <br>
-     * <p>*   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.</p>
-     * <br>
-     * <p>*   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.</p>
+     * <ul>
+     * <li><p>pluginMod: the mode of the plug-in. The following modes are supported:</p>
+     * <ul>
+     * <li>oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.</li>
+     * <li>image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.</li>
+     * </ul>
+     * </li>
+     * <li><p>pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.</p>
+     * </li>
+     * <li><p>pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;pluginMod&quot;: &quot;oss&quot;,&quot;pluginLocalPath&quot;: &quot;/opt/plugin&quot;,&quot;pluginOssPath&quot;: &quot;<a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz%22%7D">https://bucket.oss-cn-hangzhou.aliyuncs.com/plugin/plugin.tgz&quot;}</a></p>
      */
     @NameInMap("Plugin")
     public String plugin;
@@ -206,73 +279,111 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     /**
      * <p>The remote directory to which the file system is mounted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/RemoteDirectory</p>
      */
     @NameInMap("RemoteDirectory")
     public String remoteDirectory;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Specifies whether the scheduler is preinstalled for the image. Valid values:</p>
-     * <br>
-     * <p>*   true: The scheduler is preinstalled. When you create or add a node, you do not need to install the scheduler.</p>
-     * <p>*   false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.</p>
+     * <ul>
+     * <li>true: The scheduler is preinstalled. When you create or add a node, you do not need to install the scheduler.</li>
+     * <li>false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SchedulerPreInstall")
     public Boolean schedulerPreInstall;
 
     /**
      * <p>You can select an existing security group by its ID.</p>
-     * <br>
-     * <p>> If you specify this parameter, you cannot specify the `SecurityGroupName`  parameter.</p>
+     * <blockquote>
+     * <p>If you specify this parameter, you cannot specify the <code>SecurityGroupName</code>  parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp13n61xsydodfyg****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.</p>
-     * <br>
-     * <p>> If you specify this parameter, you cannot specify the `SecurityGroupId` parameter.</p>
+     * <blockquote>
+     * <p>If you specify this parameter, you cannot specify the <code>SecurityGroupId</code> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-SecurityGroup</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
     /**
      * <p>The ID of the vSwitch to which the instance connects to.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1lfcjbfb099rrjn****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the file system. NAS file systems cannot be automatically created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>008b64****</p>
      */
     @NameInMap("VolumeId")
     public String volumeId;
 
     /**
      * <p>The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>008b648bcb-s****.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("VolumeMountpoint")
     public String volumeMountpoint;
 
     /**
      * <p>The type of the protocol that is used by the NAS file system. Only NFS is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NFS</p>
      */
     @NameInMap("VolumeProtocol")
     public String volumeProtocol;
 
     /**
      * <p>The type of the file system. Only NAS file systems are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NAS</p>
      */
     @NameInMap("VolumeType")
     public String volumeType;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-b3f3edefefeep0760yju****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -285,6 +396,9 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -617,6 +731,10 @@ public class CreateHybridClusterRequest extends TeaModel {
     public static class CreateHybridClusterRequestEcsOrderCompute extends TeaModel {
         /**
          * <p>The instance type of the compute nodes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -639,6 +757,9 @@ public class CreateHybridClusterRequest extends TeaModel {
     public static class CreateHybridClusterRequestEcsOrderManager extends TeaModel {
         /**
          * <p>The instance type of the management node. Only Proxy Mode is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -691,6 +812,9 @@ public class CreateHybridClusterRequest extends TeaModel {
     public static class CreateHybridClusterRequestApplication extends TeaModel {
         /**
          * <p>The tag of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenMPI_11.1</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -713,52 +837,71 @@ public class CreateHybridClusterRequest extends TeaModel {
     public static class CreateHybridClusterRequestNodes extends TeaModel {
         /**
          * <p>The service type of the domain account to which the on-premises node in the cluster belongs. Valid values:</p>
-         * <br>
-         * <p>*   nis</p>
-         * <p>*   ldap</p>
-         * <br>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
          * <p>Default value: nis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>The directory of the on-premises node in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/opt/sge/default/</p>
          */
         @NameInMap("Dir")
         public String dir;
 
         /**
          * <p>The hostname of the on-premises node in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The IP address of the on-premises node in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00b648b****</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The role of the on-premises node in the cluster. Valid values:</p>
-         * <br>
-         * <p>*   Manager: management node</p>
-         * <p>*   Login: logon node</p>
-         * <p>*   Compute: compute node</p>
+         * <ul>
+         * <li>Manager: management node</li>
+         * <li>Login: logon node</li>
+         * <li>Compute: compute node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The scheduler type of the on-premises node in the cluster. Valid values:</p>
-         * <br>
-         * <p>*   pbs</p>
-         * <p>*   slurm</p>
-         * <p>*   opengridscheduler</p>
-         * <p>*   deadline</p>
-         * <br>
+         * <ul>
+         * <li>pbs</li>
+         * <li>slurm</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * </ul>
          * <p>Default value: pbs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -821,18 +964,27 @@ public class CreateHybridClusterRequest extends TeaModel {
     public static class CreateHybridClusterRequestOpenldapPar extends TeaModel {
         /**
          * <p>The BaseDN of the LDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpctest</p>
          */
         @NameInMap("BaseDn")
         public String baseDn;
 
         /**
          * <p>The home directory of the Linux server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         @NameInMap("FallbackHomeDir")
         public String fallbackHomeDir;
 
         /**
          * <p>The IP address of the LDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.2</p>
          */
         @NameInMap("LdapServerIp")
         public String ldapServerIp;
@@ -871,12 +1023,18 @@ public class CreateHybridClusterRequest extends TeaModel {
     public static class CreateHybridClusterRequestPostInstallScript extends TeaModel {
         /**
          * <p>The parameter that is used to run the script after the cluster is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bash file.sh</p>
          */
         @NameInMap("Args")
         public String args;
 
         /**
          * <p>The full path of the post-installation script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/opt/job.sh</p>
          */
         @NameInMap("Url")
         public String url;
@@ -907,24 +1065,36 @@ public class CreateHybridClusterRequest extends TeaModel {
     public static class CreateHybridClusterRequestWinAdPar extends TeaModel {
         /**
          * <p>The name of the AD domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad-hybrid001.ehpcad.com</p>
          */
         @NameInMap("AdDc")
         public String adDc;
 
         /**
          * <p>The IP address of the AD domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.2</p>
          */
         @NameInMap("AdIp")
         public String adIp;
 
         /**
          * <p>The AD user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Administrator</p>
          */
         @NameInMap("AdUser")
         public String adUser;
 
         /**
          * <p>The password of the AD user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         @NameInMap("AdUserPasswd")
         public String adUserPasswd;

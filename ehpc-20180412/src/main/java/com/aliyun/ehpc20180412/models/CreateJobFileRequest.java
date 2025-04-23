@@ -6,42 +6,61 @@ import com.aliyun.tea.*;
 public class CreateJobFileRequest extends TeaModel {
     /**
      * <p>Indicates whether to use an asynchronous link to submit job files.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-jeJki6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The content of the job file. The content is encoded in Base64.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c2xlZXAgMzA=</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The user to which the job file belongs.</p>
-     * <br>
-     * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the users of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testuser1</p>
      */
     @NameInMap("RunasUser")
     public String runasUser;
 
     /**
      * <p>The user password.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>!QAZ****</p>
      */
     @NameInMap("RunasUserPassword")
     public String runasUserPassword;
 
     /**
      * <p>The name of the job file.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lammps.pbs</p>
      */
     @NameInMap("TargetFile")
     public String targetFile;

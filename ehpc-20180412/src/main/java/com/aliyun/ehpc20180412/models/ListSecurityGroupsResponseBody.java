@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D9A3378-61CA-4415-BEB0-1168C2A15975</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -17,7 +20,10 @@ public class ListSecurityGroupsResponseBody extends TeaModel {
     public ListSecurityGroupsResponseBodySecurityGroups securityGroups;
 
     /**
-     * <p>The number of security groups.</p>
+     * <p>The total number of security groups that are assigned to the E-HPC cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

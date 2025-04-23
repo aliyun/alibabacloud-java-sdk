@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to use an asynchronous link to stop the job.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-jeJki6****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The job ID.</p>
-     * <br>
-     * <p>You can call the [ListJobs](~~87251~~) operation to obtain the job ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87251.html">ListJobs</a> operation to obtain the job ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.scheduler****</p>
      */
     @NameInMap("JobId")
     public String jobId;

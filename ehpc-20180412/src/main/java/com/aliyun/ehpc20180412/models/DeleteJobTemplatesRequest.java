@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteJobTemplatesRequest extends TeaModel {
     /**
-     * <p>The list of job templates. A maximum of 20 job templates can be deleted.</p>
-     * <br>
-     * <p>Format: `[{"Id": "0.sched****"},{"Id": "1.sched****"}]`. Separate multiple job templates with commas (,).</p>
-     * <br>
-     * <p>You can call the [ListJobTemplates](~~87248~~) operation to obtain the job template ID.</p>
+     * <p>The IDs of the job templates that you want to delete. You can specify a maximum of 20 job template IDs.</p>
+     * <p>Format of job template IDs: <code>[{&quot;Id&quot;: &quot;0.sched****&quot;},{&quot;Id&quot;: &quot;1.sched****&quot;}]</code>. Separate multiple job template IDs with commas (,).</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87248.html">ListJobTemplates</a> operation to query job template IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Id&quot;:&quot;ehpc-job-tmpl-6RVcMK****&quot;},{&quot;Id&quot;: &quot;ehpc-job-tmpl-6RxO5y****&quot;}]</p>
      */
     @NameInMap("Templates")
     public String templates;

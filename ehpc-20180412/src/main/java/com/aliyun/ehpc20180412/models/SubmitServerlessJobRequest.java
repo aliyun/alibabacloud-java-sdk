@@ -6,101 +6,140 @@ import com.aliyun.tea.*;
 public class SubmitServerlessJobRequest extends TeaModel {
     /**
      * <p>The configuration of the array job.</p>
-     * <br>
-     * <p>>  The value of an array job index is passed to a serverless job container through the environment variable `EHPC_ARRAY_TASK_ID`. Users can access the container from business programs.</p>
+     * <blockquote>
+     * <p> The value of an array job index is passed to a serverless job container through the environment variable <code>EHPC_ARRAY_TASK_ID</code>. Users can access the container from business programs.</p>
+     * </blockquote>
      */
     @NameInMap("ArrayProperties")
     public SubmitServerlessJobRequestArrayProperties arrayProperties;
 
     /**
-     * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The properties of the serverless job container.</p>
+     * <p>The properties of the Serverless job container.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Container")
     public SubmitServerlessJobRequestContainer container;
 
     /**
      * <p>The vCPU size of the serverless job container. Unit: cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Cpu")
     public Float cpu;
 
     /**
-     * <p>The serverless job dependencies.</p>
+     * <p>The dependencies of the serverless job.</p>
      */
     @NameInMap("DependsOn")
     public java.util.List<SubmitServerlessJobRequestDependsOn> dependsOn;
 
     /**
-     * <p>The size of the temporary storage that is added to the serverless job container. Unit: GiB.</p>
-     * <br>
-     * <p>>  By default, the serverless job container provides 30 GiB of free storage quota. If you require storage of more than 30 GiB, you can use this parameter to specify the temporary storage to add to the job container.</p>
+     * <p>The size of the temporary storage space added to the serverless job container. Unit: GiB.</p>
+     * <blockquote>
+     * <p> By default, a space of 30 GiB is provided free of charge. If you require a larger space, you can pass this parameter to specify your required space size.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("EphemeralStorage")
     public Integer ephemeralStorage;
 
     /**
-     * <p>The ECS instance types used by the serverless job container.</p>
+     * <p>The Elastic Compute Service (ECS) instance types used by the serverless job container.</p>
      */
     @NameInMap("InstanceType")
     public java.util.List<String> instanceType;
 
     /**
      * <p>The name of the serverless job.</p>
+     * <blockquote>
+     * <p> The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testjob</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
      * <p>The scheduling priority of the serverless job. Valid values: 0 to 999. A greater value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("JobPriority")
     public Long jobPriority;
 
     /**
      * <p>The memory size of the serverless job container. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("Memory")
     public Float memory;
 
     /**
-     * <p>The name of the RAM role that is associated with the serverless job container.</p>
+     * <p>The Resource Access Manamement (RAM) role that is associated with the Serverless job container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRamRoleName</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    /**
+     * <p>The retry policy of the serverless job.</p>
+     */
     @NameInMap("RetryStrategy")
     public SubmitServerlessJobRequestRetryStrategy retryStrategy;
 
     /**
-     * <p>The maximum hourly price of the preemptible instance. The value can contain up to three decimal places.</p>
-     * <br>
+     * <p>The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.</p>
      * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.062</p>
      */
     @NameInMap("SpotPriceLimit")
     public Float spotPriceLimit;
 
     /**
-     * <p>The bidding policy for the instance. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
-     * <br>
+     * <p>The bidding policy of the ECS instances. Valid values:</p>
+     * <ul>
+     * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SpotWithPriceLimit</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
      * <p>The validity period of the serverless job. After the validity period expires, the job is forcibly terminated. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("Timeout")
     public Long timeout;
@@ -247,20 +286,30 @@ public class SubmitServerlessJobRequest extends TeaModel {
     public static class SubmitServerlessJobRequestArrayProperties extends TeaModel {
         /**
          * <p>The end value of the array job index. Valid values: 0 to 4999. The value must be greater than or equal to the value of IndexStart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("IndexEnd")
         public Long indexEnd;
 
         /**
-         * <p>The start value of the array job index. Valid values: 0 to 4999.</p>
+         * <p>The starting value of the array job index. Valid values: 0 to 4999.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IndexStart")
         public Long indexStart;
 
         /**
          * <p>The interval of the array job index.</p>
-         * <br>
-         * <p>>  If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.</p>
+         * <blockquote>
+         * <p> If the array job property is IndexStart=1,IndexEnd=5, and IndexStep=2, the array job contains three subtasks. The values of the subtask indexes are 1,3, and 5.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("IndexStep")
         public Long indexStep;
@@ -297,11 +346,20 @@ public class SubmitServerlessJobRequest extends TeaModel {
     }
 
     public static class SubmitServerlessJobRequestContainerEnvironmentVar extends TeaModel {
+        /**
+         * <p>The name of the environment variable for the container. The name can be 1 to 128 characters in length and can contain letters, digits, and underscores (_). The name cannot start with a digit. Specify the name in the [0-9a-zA-Z] format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PATH</p>
+         */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the environment variable for the container. The value must be 0 to 256 characters in length.</p>
+         * <p>The value of the environment variable for the container. The value must be 0 to 256 bits in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/bin</p>
          */
         @NameInMap("Value")
         public String value;
@@ -330,16 +388,37 @@ public class SubmitServerlessJobRequest extends TeaModel {
     }
 
     public static class SubmitServerlessJobRequestContainerVolumeMount extends TeaModel {
+        /**
+         * <p>The driver type when you use the FlexVolume plug-in to mount a volume. Valid values:</p>
+         * <ul>
+         * <li>alicloud/nas: a NAS driver.</li>
+         * <li>alicloud/oss: an OSS driver.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud/oss</p>
+         */
         @NameInMap("FlexVolumeDriver")
         public String flexVolumeDriver;
 
+        /**
+         * <p>The options of the FlexVolume object. Each option is a key-value pair in a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;bucket&quot;:&quot;hpctest&quot;,&quot;url&quot;: &quot;oss-cn-hangzhou-internal.aliyuncs.com
+         * &quot;,&quot;path&quot;:&quot;/data&quot;,&quot;ramRole&quot;:&quot;AliyunECSInstanceForEHPCRole&quot;}</p>
+         */
         @NameInMap("FlexVolumeOptions")
         public String flexVolumeOptions;
 
         /**
          * <p>The directory to which the volume is mounted.</p>
-         * <br>
-         * <p>> The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
+         * <blockquote>
+         * <p> The data stored in this directory is overwritten by the data on the volume. Exercise caution when you specify this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/data</p>
          */
         @NameInMap("MountPath")
         public String mountPath;
@@ -389,31 +468,41 @@ public class SubmitServerlessJobRequest extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The environment variable of the container.</p>
+         * <p>The value of the environment variable for the container.</p>
          */
         @NameInMap("EnvironmentVar")
         public java.util.List<SubmitServerlessJobRequestContainerEnvironmentVar> environmentVar;
 
         /**
-         * <p>The number of GPUs of the container.</p>
+         * <p>The number of GPUs used by the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Gpu")
         public Integer gpu;
 
         /**
-         * <p>The image of the container.</p>
+         * <p>The container image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/ehpc/hpl:latest</p>
          */
         @NameInMap("Image")
         public String image;
 
         /**
-         * <p>The data volumes mounted to the container.</p>
+         * <p>The data volumes that are mounted to the container.</p>
          */
         @NameInMap("VolumeMount")
         public java.util.List<SubmitServerlessJobRequestContainerVolumeMount> volumeMount;
 
         /**
          * <p>The working directory of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/</p>
          */
         @NameInMap("WorkingDir")
         public String workingDir;
@@ -484,19 +573,25 @@ public class SubmitServerlessJobRequest extends TeaModel {
     public static class SubmitServerlessJobRequestDependsOn extends TeaModel {
         /**
          * <p>The ID of the dependent job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The type of the dependency. Valid values:</p>
-         * <br>
-         * <p>*   AfterSucceeded: **All subtasks** of the array job or the dependent job are successfully run. The exit code is 0.</p>
-         * <p>*   AfterFailed: **Any subtask** of the array job or the dependent job fails. The exit code is not 0.</p>
-         * <p>*   AfterAny: The dependent job completes.</p>
-         * <p>*   AfterCorresponding: The subtasks of the array job is successfully run. The exit code is 0.</p>
-         * <br>
+         * <p>The dependency type. Valid values:</p>
+         * <ul>
+         * <li>AfterSucceeded: <strong>All subtasks</strong> of the dependent job or array job succeed. The exit code is 0.</li>
+         * <li>AfterFailed: <strong>All subtasks</strong> of the dependent job or array job fail. The exit code is not 0.</li>
+         * <li>AfterAny: The dependent job completes (succeeds or fails).</li>
+         * <li>AfterCorresponding: The subtask corresponding to the dependent array job succeeds. The exit code is 0.</li>
+         * </ul>
          * <p>Default value: AfterSucceeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AfterAny</p>
          */
         @NameInMap("Type")
         public String type;
@@ -525,9 +620,25 @@ public class SubmitServerlessJobRequest extends TeaModel {
     }
 
     public static class SubmitServerlessJobRequestRetryStrategyEvaluateOnExit extends TeaModel {
+        /**
+         * <p>The job action. Valid values:</p>
+         * <ul>
+         * <li>Retry: The job starts a retry when a specific exit code is hit.</li>
+         * <li>Exit: The job exits when a specific exit code is hit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Retry</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The job exit code, which is used together with Action to form a job retry rule. Valid values: 0 to 255.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("OnExitCode")
         public String onExitCode;
 
@@ -555,9 +666,18 @@ public class SubmitServerlessJobRequest extends TeaModel {
     }
 
     public static class SubmitServerlessJobRequestRetryStrategy extends TeaModel {
+        /**
+         * <p>The number of retries for the serverless job. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Attempts")
         public Integer attempts;
 
+        /**
+         * <p>The retry rules for the serverless job. You can specify up to 10 rules.</p>
+         */
         @NameInMap("EvaluateOnExit")
         public java.util.List<SubmitServerlessJobRequestRetryStrategyEvaluateOnExit> evaluateOnExit;
 

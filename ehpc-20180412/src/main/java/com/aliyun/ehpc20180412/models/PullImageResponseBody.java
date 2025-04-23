@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PullImageResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29d3d9Ee-8eCB-5013-A1c2-1CeD19C6CfFe</p>
      */
     @NameInMap("RequestId")
     public String requestId;

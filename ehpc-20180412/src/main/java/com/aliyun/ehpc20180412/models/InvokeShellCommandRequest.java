@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class InvokeShellCommandRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The content of the command. The content must be 2 to 2,048 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo &quot;hello world&quot;</p>
      */
     @NameInMap("Command")
     public String command;
@@ -26,14 +33,19 @@ public class InvokeShellCommandRequest extends TeaModel {
 
     /**
      * <p>The timeout period. If a command times out, the command process will be terminated. Unit: seconds.</p>
-     * <br>
      * <p>Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
 
     /**
-     * <p>The working directory of the command. Default value: `/root`.</p>
+     * <p>The working directory of the command. Default value: <code>/root</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/home</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;
@@ -86,8 +98,12 @@ public class InvokeShellCommandRequest extends TeaModel {
     public static class InvokeShellCommandRequestInstance extends TeaModel {
         /**
          * <p>The ID of the Nth node instance on which the command is run.</p>
-         * <br>
-         * <p>> This parameter specifies the node on which the command is run. If it is not specified, the command will be run on all nodes of the cluster.</p>
+         * <blockquote>
+         * <p>This parameter specifies the node on which the command is run. If it is not specified, the command will be run on all nodes of the cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1in9hmw3ur52x0****</p>
          */
         @NameInMap("Id")
         public String id;

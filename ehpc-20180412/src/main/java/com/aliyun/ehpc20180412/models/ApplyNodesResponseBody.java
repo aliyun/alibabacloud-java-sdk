@@ -6,27 +6,45 @@ import com.aliyun.tea.*;
 public class ApplyNodesResponseBody extends TeaModel {
     /**
      * <p>The detailed result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Resources Application is satisfied. Creating...</p>
      */
     @NameInMap("Detail")
     public String detail;
 
+    /**
+     * <p>The instance IDs.</p>
+     * <blockquote>
+     * <p> AddNodes is an asynchronous API operation. If a request succeeds, a response is immediately generated before ECS instances are created. Therefore, the value of this parameter is null. You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the IDs of the ECS instances.</p>
+     * </blockquote>
+     */
     @NameInMap("InstanceIds")
     public ApplyNodesResponseBodyInstanceIds instanceIds;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of the compute nodes that are created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("SatisfiedAmount")
     public Integer satisfiedAmount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B745C159-3155-4B94-95D0-4B73D4D2****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

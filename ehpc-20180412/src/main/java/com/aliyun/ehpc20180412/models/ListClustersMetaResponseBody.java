@@ -12,24 +12,36 @@ public class ListClustersMetaResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page. Valid values: 1 to 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD517102-B314-4665-BDAC-A32DE7834D02</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,115 +94,163 @@ public class ListClustersMetaResponseBody extends TeaModel {
     public static class ListClustersMetaResponseBodyClustersClusterInfoSimple extends TeaModel {
         /**
          * <p>The server type of the account. Valid values:</p>
-         * <br>
-         * <p>*   nis</p>
-         * <p>*   ldap</p>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>The version of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.64</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
          * <p>The mode in which the cluster is deployed. Valid values:</p>
-         * <br>
-         * <p>*   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</p>
-         * <p>*   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</p>
-         * <p>*   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</p>
-         * <p>*   Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</p>
+         * <ul>
+         * <li>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</li>
+         * <li>Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</li>
+         * <li>Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</li>
+         * <li>Tiny: A management node and multiple compute nodes are deployed. The management node consists of an account node, a scheduling node, and a logon node. The compute nodes are separately deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clusterdescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The version of E-HPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("EhpcVersion")
         public String ehpcVersion;
 
         /**
          * <p>Indicates whether the cluster uses a plug-in. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasPlugin")
         public Boolean hasPlugin;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-jeJki6****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>Indicates whether a scaling group is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: A scaling group is enabled.</p>
-         * <p>*   false: No scaling group is enabled.</p>
+         * <ul>
+         * <li>true: A scaling group is enabled.</li>
+         * <li>false: No scaling group is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsComputeEss")
         public Boolean isComputeEss;
 
         /**
          * <p>The location where the cluster is deployed. Valid values:</p>
-         * <br>
-         * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
-         * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
+         * <ul>
+         * <li>OnPremise: The cluster is deployed on a hybrid cloud.</li>
+         * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicCloud</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The image tag of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
          * <p>The type of the scheduler. Valid values:</p>
-         * <br>
-         * <p>*   pbs</p>
-         * <p>*   slurm</p>
-         * <p>*   opengridscheduler</p>
-         * <p>*   deadline</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>slurm</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   uninit: The cluster is not initialized.</p>
-         * <p>*   creating: The cluster is being created.</p>
-         * <p>*   init: The cluster is being initialized.</p>
-         * <p>*   running: The cluster is running.</p>
-         * <p>*   exception: The cluster encounters an exception.</p>
-         * <p>*   releasing: The cluster is being released.</p>
+         * <ul>
+         * <li>uninit: The cluster is not initialized.</li>
+         * <li>creating: The cluster is being created.</li>
+         * <li>init: The cluster is being initialized.</li>
+         * <li>running: The cluster is running.</li>
+         * <li>exception: The cluster encounters an exception.</li>
+         * <li>releasing: The cluster is being released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-b3f3edefefeep0760yju****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

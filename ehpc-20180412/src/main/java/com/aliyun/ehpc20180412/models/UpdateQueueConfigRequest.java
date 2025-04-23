@@ -6,45 +6,63 @@ import com.aliyun.tea.*;
 public class UpdateQueueConfigRequest extends TeaModel {
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The instance type of the node.</p>
-     * <br>
-     * <p>You can call the [ListPreferredEcsTypes](~~188592~~) operation to query the recommended instance types.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/188592.html">ListPreferredEcsTypes</a> operation to query the recommended instance types.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.n1.tiny</p>
      */
     @NameInMap("ComputeInstanceType")
     public String computeInstanceType;
 
     /**
-     * <p>The ID of the deployment set. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.</p>
+     * <p>The ID of the deployment set. You can obtain the deployment set ID by calling the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation. Only the deployment sets that use low latency policy are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-bp1frxuzdg87zh4pzq****</p>
      */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
     /**
-     * <p>The communication model of the ENI. Valid values:</p>
-     * <br>
-     * <p>*   Standard: uses the TCP communication mode.</p>
-     * <p>*   HighPerformance: uses the remote direct memory access (RDMA) communication mode with the Elastic RDMA Interface (ERI) enabled.</p>
+     * <p>The communication mode of the elastic network interface (ENI). Valid values:</p>
+     * <ul>
+     * <li>Standard: uses the TCP communication mode.</li>
+     * <li>HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("NetworkInterfaceTrafficMode")
     public String networkInterfaceTrafficMode;
 
     /**
      * <p>The name of the queue.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workq</p>
      */
     @NameInMap("QueueName")
     public String queueName;
 
     /**
      * <p>The resource group ID.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the IDs of resource groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

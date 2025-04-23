@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class ListServerlessJobsRequest extends TeaModel {
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -26,67 +29,95 @@ public class ListServerlessJobsRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Maximum value: 100. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The region ID. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to query the list of regions where E-HPC is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to sort the serverless jobs by the job start time. Valid values:</p>
-     * <br>
-     * <p>*   Asc: ascending order.</p>
-     * <p>*   Desc: descending order.</p>
+     * <ul>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Asc</p>
      */
     @NameInMap("StartOrder")
     public String startOrder;
 
     /**
      * <p>The status of the serverless job. Valid values:</p>
-     * <br>
-     * <p>*   All</p>
-     * <p>*   Pending</p>
-     * <p>*   Running</p>
-     * <p>*   Succeeded</p>
-     * <p>*   Canceled</p>
-     * <p>*   Failed</p>
-     * <br>
+     * <ul>
+     * <li>All</li>
+     * <li>Pending</li>
+     * <li>Running</li>
+     * <li>Succeeded</li>
+     * <li>Canceled</li>
+     * <li>Failed</li>
+     * </ul>
      * <p>Default value: All.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>Specifies whether to sort the serverless jobs by the job submission time. Valid values:</p>
-     * <br>
-     * <p>*   Asc: ascending order.</p>
-     * <p>*   Desc: descending order.</p>
+     * <ul>
+     * <li>Asc: ascending order.</li>
+     * <li>Desc: descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
      */
     @NameInMap("SubmitOrder")
     public String submitOrder;
 
     /**
      * <p>The latest time at which the job is submitted.</p>
-     * <br>
-     * <p>>  You can use this parameter to query the job list based on the job submission time.</p>
+     * <blockquote>
+     * <p> You can use this parameter to query the job list based on the job submission time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1659521430</p>
      */
     @NameInMap("SubmitTimeEnd")
     public String submitTimeEnd;
 
     /**
      * <p>The earliest time at which the job is submitted.</p>
-     * <br>
-     * <p>>  You can use this parameter to query the job list based on the job submission time.</p>
+     * <blockquote>
+     * <p> You can use this parameter to query the job list based on the job submission time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1647427667</p>
      */
     @NameInMap("SubmitTimeStart")
     public String submitTimeStart;

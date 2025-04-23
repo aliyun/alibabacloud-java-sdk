@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class ListClusterLogsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The details about operations logs.</p>
+     * <p>The queried operations logs.</p>
      */
     @NameInMap("Logs")
     public ListClusterLogsResponseBodyLogs logs;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries that are returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBC2F93D-003A-49C4-850C-B826EECF6667</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,24 +111,52 @@ public class ListClusterLogsResponseBody extends TeaModel {
     public static class ListClusterLogsResponseBodyLogsLogInfo extends TeaModel {
         /**
          * <p>The time when the log was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-18T13:24:13.000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The severity level of the log entry.</p>
+         * <p>The level of the log entry. Valid values:</p>
+         * <ul>
+         * <li>warn</li>
+         * <li>error</li>
+         * <li>info</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The content of the log entry.</p>
+         * <p>The content of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Begin to create cluster</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The name of the operation.</p>
+         * <p>The type of the operation. Valid values:</p>
+         * <ul>
+         * <li>CreateCluster</li>
+         * <li>StartCluster</li>
+         * <li>StopCluster</li>
+         * <li>DeleteCluster</li>
+         * <li>AddNodes</li>
+         * <li>StartNodes</li>
+         * <li>ResetNodes</li>
+         * <li>StopNodes</li>
+         * <li>DeleteNodes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateCluster</p>
          */
         @NameInMap("Operation")
         public String operation;

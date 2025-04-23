@@ -12,24 +12,36 @@ public class DescribeEstackImageResponseBody extends TeaModel {
 
     /**
      * <p>The page number returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D69A58F-345C-4FDE-88E4-BF518948xxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of images.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,30 +94,45 @@ public class DescribeEstackImageResponseBody extends TeaModel {
     public static class DescribeEstackImageResponseBodyImageListImageListInfo extends TeaModel {
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tensorflow-21.09-tf1-py3.sif</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The size of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65535 GiB</p>
          */
         @NameInMap("ImageSize")
         public Integer imageSize;
 
         /**
          * <p>The type of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>singularity</p>
          */
         @NameInMap("ImageType")
         public String imageType;
 
         /**
          * <p>The download URL of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.oss-cn-hangzhou.aliyuncs.com/eStackPackage/singularity/tensorflow-21.09-tf1-py3.sif">http://xxxx.oss-cn-hangzhou.aliyuncs.com/eStackPackage/singularity/tensorflow-21.09-tf1-py3.sif</a></p>
          */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
         /**
          * <p>The time when the image was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-05T07:10:55.000Z</p>
          */
         @NameInMap("RecentUpdateTime")
         public String recentUpdateTime;

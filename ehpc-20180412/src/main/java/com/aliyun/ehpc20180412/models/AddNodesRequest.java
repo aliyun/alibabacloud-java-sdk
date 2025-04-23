@@ -6,109 +6,147 @@ import com.aliyun.tea.*;
 public class AddNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to allocate a public IP address to the compute nodes. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AllocatePublicAddress")
     public Boolean allocatePublicAddress;
 
     /**
      * <p>Specifies whether to enable auto-renewal. The parameter takes effect only when EcsChargeType is set to PrePaid. Valid values:</p>
-     * <br>
-     * <p>*   true: enables auto-renewal</p>
-     * <p>*   false: disables auto-renewal</p>
-     * <br>
+     * <ul>
+     * <li>true: enables auto-renewal</li>
+     * <li>false: disables auto-renewal</li>
+     * </ul>
      * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
 
     /**
      * <p>The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.</p>
-     * <br>
-     * <p>*   Valid values when PeriodUnit is set to Week: 1, 2, and 3.</p>
-     * <p>*   Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values when PeriodUnit is set to Week: 1, 2, and 3.</li>
+     * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</li>
+     * </ul>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence of a request?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to enable hyper-threading for the compute node. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ComputeEnableHt")
     public Boolean computeEnableHt;
 
     /**
      * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0 and 1. A value of 0 indicates that the preemptible instance has no protection period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ComputeSpotDuration")
     public Integer computeSpotDuration;
 
     /**
      * <p>The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which indicates that the instance is released.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Terminate</p>
      */
     @NameInMap("ComputeSpotInterruptionBehavior")
     public String computeSpotInterruptionBehavior;
 
     /**
      * <p>The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter only takes effect when SpotStrategy is set to SpotWithPriceLimit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.68</p>
      */
     @NameInMap("ComputeSpotPriceLimit")
     public String computeSpotPriceLimit;
 
     /**
      * <p>The preemption policy of the compute nodes. The parameter only takes effect when EcsChargeType is set to PostPaid. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The policy applies to preemptible instances for which a maximum hourly price is specified.</p>
-     * <p>*   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</p>
-     * <br>
+     * <ul>
+     * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The policy applies to preemptible instances for which a maximum hourly price is specified.</li>
+     * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("ComputeSpotStrategy")
     public String computeSpotStrategy;
 
     /**
      * <p>The number of compute nodes that you want to add. Valid values: 1 to 99. The value of this parameter is greater than that of the MinCount parameter.</p>
-     * <br>
-     * <p>*   If the number of available ECS instances is less than the value of the MinCount parameter, the compute nodes cannot be added.</p>
-     * <p>*   If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.</p>
-     * <p>*   If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.</p>
+     * <ul>
+     * <li>If the number of available ECS instances is less than the value of the MinCount parameter, the compute nodes cannot be added.</li>
+     * <li>If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.</li>
+     * <li>If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>The mode in which the compute nodes are added. Valid values:</p>
-     * <br>
-     * <p>*   manual: The compute nodes are manually added.</p>
-     * <p>*   autoscale: The compute nodes are automatically added.</p>
-     * <br>
+     * <ul>
+     * <li>manual: The compute nodes are manually added.</li>
+     * <li>autoscale: The compute nodes are automatically added.</li>
+     * </ul>
      * <p>Default value: manual.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>manual</p>
      */
     @NameInMap("CreateMode")
     public String createMode;
@@ -121,200 +159,263 @@ public class AddNodesRequest extends TeaModel {
 
     /**
      * <p>The information about Domain Name System (DNS) settings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;DnsType\&quot;:\&quot;PrivateZone\&quot;,\&quot;DnsName\&quot;:\&quot;xxxxx\&quot;}&quot;</p>
      */
     @NameInMap("DnsConfig")
     public String dnsConfig;
 
     /**
      * <p>The billing method of the compute nodes. Valid values:</p>
-     * <br>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <p>*   PrePaid: subscription</p>
-     * <br>
+     * <ul>
+     * <li>PostPaid: pay-as-you-go</li>
+     * <li>PrePaid: subscription</li>
+     * </ul>
      * <p>Default value: PostPaid.</p>
-     * <br>
      * <p>If the parameter is set to PrePaid, auto-renewal is enabled by default. After the E-HPC cluster is released, auto-renewal is disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("EcsChargeType")
     public String ecsChargeType;
 
     /**
      * <p>The prefix of the hostname. You can specify the parameter to manage the compute nodes in an efficient manner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>compute</p>
      */
     @NameInMap("HostNamePrefix")
     public String hostNamePrefix;
 
     /**
      * <p>The suffix of the hostname. You can specify the parameter to manage the compute nodes in an efficient manner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01</p>
      */
     @NameInMap("HostNameSuffix")
     public String hostNameSuffix;
 
     /**
      * <p>The ID of the image that is specified for the compute nodes. The image must meet the following requirements:</p>
-     * <br>
-     * <p>*   The operating system that is specified by the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.</p>
-     * <br>
-     * <p>> If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of nodes is Windows.</p>
-     * <br>
-     * <p>*   The major version of the image specified for the compute nodes that you want to add is the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.</p>
-     * <br>
-     * <p>You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the image ID.</p>
+     * <ul>
+     * <li>The operating system that is specified by the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of nodes is Windows.</p>
+     * </blockquote>
+     * <ul>
+     * <li>The major version of the image specified for the compute nodes that you want to add is the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.</li>
+     * </ul>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>centos_7_06_64_20G_alibase_20190711.vhd</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The type of the image. Valid values:</p>
-     * <br>
-     * <p>*   system: public image</p>
-     * <p>*   self: custom image</p>
-     * <p>*   others: shared image</p>
-     * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
-     * <br>
+     * <ul>
+     * <li>system: public image</li>
+     * <li>self: custom image</li>
+     * <li>others: shared image</li>
+     * <li>marketplace: Alibaba Cloud Marketplace image</li>
+     * </ul>
      * <p>Default value: system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
     /**
      * <p>The instance type of the compute nodes. The default value is the instance type that was specified when you created the E-HPC cluster or the last time when you added compute nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.n1.tiny</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The billing method of the elastic IP address (EIP). Valid values:</p>
-     * <br>
-     * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-     * <p>*   PayByTraffic: pay-by-traffic</p>
+     * <ul>
+     * <li>PayByBandwidth: pay-by-bandwidth</li>
+     * <li>PayByTraffic: pay-by-traffic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</p>
-     * <br>
-     * <p>*   If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of the parameter are 1 to 10 and the default value is 10.</p>
-     * <p>*   If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the amount of the outbound bandwidth that is purchased.</p>
+     * <ul>
+     * <li>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of the parameter are 1 to 10 and the default value is 10.</li>
+     * <li>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the amount of the outbound bandwidth that is purchased.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("InternetMaxBandWidthIn")
     public Integer internetMaxBandWidthIn;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
-     * <br>
      * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("InternetMaxBandWidthOut")
     public Integer internetMaxBandWidthOut;
 
     /**
      * <p>The queue to which the compute nodes are added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workq</p>
      */
     @NameInMap("JobQueue")
     public String jobQueue;
 
     /**
      * <p>The minimum number of the compute nodes that you want to add. Valid values: 1 to 99. The value of the parameter is less than that of the Count parameter.</p>
-     * <br>
-     * <p>*   If the number of available ECS instances is less than the value of the MinCount parameter, the compute nodes cannot be added.</p>
-     * <p>*   If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.</p>
-     * <p>*   If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.</p>
-     * <br>
+     * <ul>
+     * <li>If the number of available ECS instances is less than the value of the MinCount parameter, the compute nodes cannot be added.</li>
+     * <li>If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.</li>
+     * <li>If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.</li>
+     * </ul>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinCount")
     public Integer minCount;
 
     /**
      * <p>The communication mode of the ENI. Valid values:</p>
-     * <br>
-     * <p>*   Standard: uses the TCP communication mode.</p>
-     * <p>*   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.</p>
+     * <ul>
+     * <li>Standard: uses the TCP communication mode.</li>
+     * <li>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("NetworkInterfaceTrafficMode")
     public String networkInterfaceTrafficMode;
 
     /**
      * <p>The duration of the subscription. The unit of the duration is specified by the PeriodUnit parameter. The parameter only takes effect when InstanceChargeType is set to PrePaid. Valid values:</p>
-     * <br>
-     * <p>*   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.</p>
-     * <p>*   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.</li>
+     * <li>Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</li>
+     * </ul>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The unit of the subscription period of the resource. Valid values:</p>
-     * <br>
-     * <p>*   Week</p>
-     * <p>*   Month</p>
-     * <br>
+     * <ul>
+     * <li>Week</li>
+     * <li>Month</li>
+     * </ul>
      * <p>Default value: Month.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>Specifies whether to set this operation as a synchronous operation. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Sync")
     public Boolean sync;
 
     /**
      * <p>The performance level of the ESSD to be used as the system disk. Default value: PL1. Valid values:</p>
-     * <br>
-     * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-     * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
-     * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-     * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-     * <br>
+     * <ul>
+     * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+     * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+     * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+     * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+     * </ul>
      * <p>Default value: PL1.</p>
-     * <br>
-     * <p>For more information about ESSD performance parameters, see [ESSD](~~122389~~).</p>
+     * <p>For more information about ESSD performance parameters, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL0</p>
      */
     @NameInMap("SystemDiskLevel")
     public String systemDiskLevel;
 
     /**
      * <p>The size of the system disk. Unit: GiB.</p>
-     * <br>
      * <p>Valid values: 40 to 500.</p>
-     * <br>
      * <p>Default value: 40.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
     /**
      * <p>The type of the system disk. Valid values:</p>
-     * <br>
-     * <p>*   cloud_efficiency: ultra disk</p>
-     * <p>*   cloud_ssd: SSD</p>
-     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-     * <p>*   cloud: basic disk. Disks of this type are retired.</p>
-     * <br>
+     * <ul>
+     * <li>cloud_efficiency: ultra disk</li>
+     * <li>cloud_ssd: SSD</li>
+     * <li>cloud_essd: enhanced SSD (ESSD)</li>
+     * <li>cloud: basic disk. Disks of this type are retired.</li>
+     * </ul>
      * <p>Default value: cloud_efficiency.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
      */
     @NameInMap("SystemDiskType")
     public String systemDiskType;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1lfcjbfb099rrjn****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -599,76 +700,86 @@ public class AddNodesRequest extends TeaModel {
     public static class AddNodesRequestDataDisks extends TeaModel {
         /**
          * <p>The type of the data disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: SSD</p>
-         * <p>*   cloud_essd: ESSD</p>
-         * <p>*   cloud: basic disk</p>
-         * <br>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: SSD</li>
+         * <li>cloud_essd: ESSD</li>
+         * <li>cloud: basic disk</li>
+         * </ul>
          * <p>Default value: cloud_efficiency.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
         /**
          * <p>Specifies whether the data disk is released when the node is released. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: true.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataDiskDeleteWithInstance")
         public Boolean dataDiskDeleteWithInstance;
 
         /**
          * <p>Specifies whether to encrypt the data disk. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: false.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DataDiskEncrypted")
         public Boolean dataDiskEncrypted;
 
         /**
          * <p>The KMS key ID of the data disk.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
          */
         @NameInMap("DataDiskKMSKeyId")
         public String dataDiskKMSKeyId;
 
         /**
          * <p>The performance level of the ESSD used as the data disk. The parameter only takes effect only when the DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:</p>
-         * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-         * <br>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
          * <p>Default value: PL1.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("DataDiskPerformanceLevel")
         public String dataDiskPerformanceLevel;
 
         /**
          * <p>The size of the data disk. Unit: GB.</p>
-         * <br>
          * <p>Valid values: 40 to 500.</p>
-         * <br>
          * <p>Default value: 40.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("DataDiskSize")
         public Integer dataDiskSize;

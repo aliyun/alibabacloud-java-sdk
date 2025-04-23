@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class RecoverClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18FB21E3-F423-4B84-BB63-D8887A29****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18FB21E3-F423-4B84-BB63-D8887A29****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

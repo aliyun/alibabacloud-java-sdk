@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListQueuesResponseBody extends TeaModel {
     /**
-     * <p>The details of the queue.</p>
+     * <p>The queried cluster queues.</p>
      */
     @NameInMap("Queues")
     public ListQueuesResponseBodyQueues queues;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C6E5005C-00B0-4F27-98BB-95AB88016C22</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,12 +62,18 @@ public class ListQueuesResponseBody extends TeaModel {
     public static class ListQueuesResponseBodyQueuesQueueInfoSpotInstanceTypesInstance extends TeaModel {
         /**
          * <p>The instance type of the preemptible instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter only takes effect when SpotStrategy is set to SpotWithPriceLimit.</p>
+         * <p>The maximum hourly price of the instance. The price can be accurate to three decimal places. This parameter is valid only when the SpotStrategy parameter is set to SpotWithPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.062</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
@@ -113,52 +122,87 @@ public class ListQueuesResponseBody extends TeaModel {
 
     public static class ListQueuesResponseBodyQueuesQueueInfo extends TeaModel {
         /**
-         * <p>The instance type of compute node.</p>
+         * <p>The instance type of the compute nodes.</p>
          */
         @NameInMap("ComputeInstanceType")
         public ListQueuesResponseBodyQueuesQueueInfoComputeInstanceType computeInstanceType;
 
+        /**
+         * <p>The ID of the deployment set to which to deploy the instance. You can call the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation to query the deployment set ID. Only the deployment sets that use low latency policies are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1frxuzdg87zh4pzq****</p>
+         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
         /**
-         * <p>Indicates whether the queue enabled the auto scale-out. Valid values:</p>
-         * <br>
-         * <p>*   true: The queue enabled auto scale-out.</p>
-         * <p>*   false: The queue disabled auto scale-out.</p>
+         * <p>Indicates whether auto scale-out is enabled for the queue. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
         /**
          * <p>The prefix of the hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
          */
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
 
         /**
-         * <p>The suffix of the host name.</p>
+         * <p>The suffix of the hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         @NameInMap("HostNameSuffix")
         public String hostNameSuffix;
 
         /**
-         * <p>The ID of the custom image.</p>
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_06_64_20G_alibase_20****.vhd</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The communication mode of the elastic network interface (ENI). Valid values:</p>
+         * <ul>
+         * <li>Standard: The TCP communication mode is used.</li>
+         * <li>HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
 
         /**
          * <p>The name of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         @NameInMap("QueueName")
         public String queueName;
 
         /**
          * <p>The ID of the resource group to which the queue belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxp7uc24****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -171,23 +215,37 @@ public class ListQueuesResponseBody extends TeaModel {
 
         /**
          * <p>The preemption policy of the compute nodes. Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: The instances of the compute node are pay-as-you-go instances.</p>
-         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+         * <ul>
+         * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
          * <p>The type of queue. Valid values:</p>
-         * <br>
-         * <p>*   Execution: Queues in which jobs can be executed.</p>
-         * <p>*   Router: Queues in which jobs cannot be executed but are forwarded to the bounded Execution queue for processing.</p>
+         * <ul>
+         * <li>Execution: Queues in which jobs can be executed.</li>
+         * <li>Router: Queues in which jobs cannot be executed. The received jobs in the queues must be forwarded to the bound Execution queues for execution.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Execution</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Specifies whether to use scaling groups of Auto Scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("UseESS")
         public Boolean useESS;
 

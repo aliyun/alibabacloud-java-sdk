@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetClusterVolumesResponseBody extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8BCFD52E-0336-4490-AE7D-F560F106****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,10 +60,14 @@ public class GetClusterVolumesResponseBody extends TeaModel {
     public static class GetClusterVolumesResponseBodyVolumesVolumeInfoRolesRoleInfo extends TeaModel {
         /**
          * <p>The type of the node on which the file system is mounted. Valid values:</p>
-         * <br>
-         * <p>*   Compute: compute node</p>
-         * <p>*   Manager: management node</p>
-         * <p>*   Login: logon node</p>
+         * <ul>
+         * <li>Compute: compute node</li>
+         * <li>Manager: management node</li>
+         * <li>Login: logon node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute</p>
          */
         @NameInMap("Name")
         public String name;
@@ -99,33 +109,49 @@ public class GetClusterVolumesResponseBody extends TeaModel {
     public static class GetClusterVolumesResponseBodyVolumesVolumeInfo extends TeaModel {
         /**
          * <p>The queue of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workq</p>
          */
         @NameInMap("JobQueue")
         public String jobQueue;
 
         /**
          * <p>The local mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/ehpcdata</p>
          */
         @NameInMap("LocalDirectory")
         public String localDirectory;
 
         /**
          * <p>The type of cluster. Valid values:</p>
-         * <br>
-         * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
-         * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
+         * <ul>
+         * <li>OnPremise: The cluster is deployed on a hybrid cloud.</li>
+         * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicCloud</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>Indicates whether the resource can be unmounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MustKeep")
         public Boolean mustKeep;
 
         /**
          * <p>The remote mount directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
@@ -138,29 +164,43 @@ public class GetClusterVolumesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e754****</p>
          */
         @NameInMap("VolumeId")
         public String volumeId;
 
         /**
          * <p>The address of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e754****-kal90.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
         /**
          * <p>The storage protocol type of the file system. Valid values:</p>
-         * <br>
-         * <p>*   NFS</p>
-         * <p>*   SMB</p>
+         * <ul>
+         * <li>NFS</li>
+         * <li>SMB</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NFS</p>
          */
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
         /**
          * <p>The type of the file system. Valid values:</p>
-         * <br>
-         * <p>*   NAS</p>
+         * <ul>
+         * <li>NAS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         @NameInMap("VolumeType")
         public String volumeType;

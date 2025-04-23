@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteNodesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
-     * <br>
-     * <p>*   If you set the Sync parameter to true, the DeleteNodes operation is synchronous. Valid value: Not Available.</p>
-     * <p>*   If you set the Sync parameter to false, the DeleteNodes operation is asynchronous. You can call the [ListTasks](~~268225~~) operation to query the result of the task.</p>
+     * <ul>
+     * <li>If you set the Sync parameter to true, the DeleteNodes operation is synchronous. Valid value: Not Available.</li>
+     * <li>If you set the Sync parameter to false, the DeleteNodes operation is asynchronous. You can call the <a href="https://help.aliyun.com/document_detail/268225.html">ListTasks</a> operation to query the result of the task.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

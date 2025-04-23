@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListCustomImagesResponseBody extends TeaModel {
     /**
-     * <p>The list of custom images and shared images that are supported by the E-HPC.</p>
+     * <p>The list of community images, including custom images and shared images.</p>
      */
     @NameInMap("Images")
     public ListCustomImagesResponseBodyImages images;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,40 +43,44 @@ public class ListCustomImagesResponseBody extends TeaModel {
     public static class ListCustomImagesResponseBodyImagesImageInfoBaseOsTag extends TeaModel {
         /**
          * <p>The architecture of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   i386</p>
-         * <p>*   x86\_64</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>i386</p>
          */
         @NameInMap("Architecture")
         public String architecture;
 
         /**
-         * <p>The image tag of the operating system.</p>
+         * <p>The tags of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
-         * <p>The release version of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   CentOS</p>
-         * <p>*   Ubuntu</p>
-         * <p>*   SUSE</p>
-         * <p>*   OpenSUSE</p>
-         * <p>*   Debian</p>
-         * <p>*   CoreOS</p>
-         * <p>*   Aliyun</p>
-         * <p>*   Windows Server 2003</p>
-         * <p>*   Windows Server 2008</p>
-         * <p>*   Windows Server 2012</p>
-         * <p>*   Others Linux</p>
-         * <p>*   Customized Linux</p>
+         * <p>The OS. Valid values:</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
-         * <p>The version number of the operating system.</p>
+         * <p>The version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.2</p>
          */
         @NameInMap("Version")
         public String version;
@@ -120,33 +127,49 @@ public class ListCustomImagesResponseBody extends TeaModel {
     public static class ListCustomImagesResponseBodyImagesImageInfoOsTag extends TeaModel {
         /**
          * <p>The architecture of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   i386</p>
-         * <p>*   x86\_64</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         @NameInMap("Architecture")
         public String architecture;
 
         /**
-         * <p>The image tag of the base operating system.</p>
+         * <p>The image tag of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
         /**
-         * <p>The image tag of the operating system.</p>
+         * <p>The tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
-         * <p>The platform of the operating system.</p>
+         * <p>The OS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.2</p>
          */
         @NameInMap("Version")
         public String version;
@@ -200,34 +223,47 @@ public class ListCustomImagesResponseBody extends TeaModel {
 
     public static class ListCustomImagesResponseBodyImagesImageInfo extends TeaModel {
         /**
-         * <p>The image tag of the base operating system.</p>
+         * <p>The image tag of the operating system.</p>
          */
         @NameInMap("BaseOsTag")
         public ListCustomImagesResponseBodyImagesImageInfoBaseOsTag baseOsTag;
 
         /**
          * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ExampleDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp181x855551ww5yq****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHESS5V5.0.27</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
-         * <p>The type of image. Valid values:</p>
-         * <br>
-         * <p>*   self: custom image</p>
-         * <p>*   others: shared image</p>
+         * <p>The type of the image. Valid values:</p>
+         * <ul>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
@@ -239,56 +275,76 @@ public class ListCustomImagesResponseBody extends TeaModel {
         public ListCustomImagesResponseBodyImagesImageInfoOsTag osTag;
 
         /**
-         * <p>The script that is run after the image is installed.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example.sh</p>
          */
         @NameInMap("PostInstallScript")
         public String postInstallScript;
 
         /**
-         * <p>The billing unit of the image. Valid values:</p>
-         * <br>
-         * <p>*   Hour</p>
-         * <p>*   Month</p>
-         * <p>*   Year</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
         /**
-         * <p>The product code on Alibaba Cloud Marketplace.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cmjj028279</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The size of the image. Unit: GiB</p>
+         * <p>The size of the image. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
-         * <p>The stock keeping unit (SKU) of the image. Valid values:</p>
-         * <br>
-         * <p>\-ECS: pay-as-you-go</p>
-         * <br>
-         * <p>\-package: subscription</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("SkuCode")
         public String skuCode;
 
         /**
-         * <p>The status of the image. Valid values:</p>
-         * <br>
-         * <p>*   UnAvailable: The image is unavailable.</p>
-         * <p>*   Available: The image is available.</p>
-         * <p>*   Creating: The image is being created.</p>
-         * <p>*   CreateFailed: The image has failed to be created.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The owner of the image.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127****</p>
          */
         @NameInMap("Uid")
         public String uid;

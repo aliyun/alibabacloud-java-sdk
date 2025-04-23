@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListCloudMetricProfilingsResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries that are returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The profiling information of a specified cluster.</p>
+     * <p>The profiling information of the cluster.</p>
      */
     @NameInMap("Profilings")
     public ListCloudMetricProfilingsResponseBodyProfilings profilings;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A05F620-ED46-4A57-95F1-C67D6D3C5DD2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,47 +93,66 @@ public class ListCloudMetricProfilingsResponseBody extends TeaModel {
 
     public static class ListCloudMetricProfilingsResponseBodyProfilingsProfilingInfo extends TeaModel {
         /**
-         * <p>The duration of the profiling process. Unit: seconds</p>
-         * <br>
-         * <p>Valid values: 10 to 300</p>
+         * <p>The duration of the profiling process. Unit: seconds.</p>
+         * <p>Valid values: 10 to 300.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
-         * <p>The frequency of the profiling process. Unit: Hz</p>
-         * <br>
+         * <p>The frequency of the profiling process. Unit: Hz.</p>
          * <p>Valid values: 1 to 2000</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("Freq")
         public Integer freq;
 
         /**
          * <p>The name of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute5</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1j76z8dlukzqgl0****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the profiling process.</p>
+         * <p>The progress ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21687</p>
          */
         @NameInMap("Pid")
         public Integer pid;
 
         /**
          * <p>The ID of the profiling process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ehpc-hz-i-bplukzqgl****_21687_2019-09-09-02-37-40</p>
          */
         @NameInMap("ProfilingId")
         public String profilingId;
 
         /**
-         * <p>The time when the profiling process is triggered.</p>
+         * <p>The time when the profiling was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-09 02:37:40</p>
          */
         @NameInMap("TriggerTime")
         public String triggerTime;

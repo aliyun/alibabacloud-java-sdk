@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListCurrentClientVersionResponseBody extends TeaModel {
     /**
-     * <p>The latest version number of the E-HPC client.</p>
+     * <p>The latest version number of ehpcutil.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

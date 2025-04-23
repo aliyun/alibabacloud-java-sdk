@@ -12,24 +12,36 @@ public class ListNodesResponseBody extends TeaModel {
 
     /**
      * <p>The page number returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89A1AC0F-4A6C-4F3D-98F9-BEF9A823****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,18 +113,27 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyNodesNodeInfoTotalResources extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Gpu")
         public Integer gpu;
 
         /**
          * <p>The memory capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Memory")
         public Integer memory;
@@ -151,18 +172,27 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyNodesNodeInfoUsedResources extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Gpu")
         public Integer gpu;
 
         /**
          * <p>The memory capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Memory")
         public Integer memory;
@@ -201,131 +231,183 @@ public class ListNodesResponseBody extends TeaModel {
     public static class ListNodesResponseBodyNodesNodeInfo extends TeaModel {
         /**
          * <p>The time when the node is added to the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-09T06:22:02.000Z</p>
          */
         @NameInMap("AddTime")
         public String addTime;
 
         /**
          * <p>The mode in which the compute nodes are added. Valid values:</p>
-         * <br>
-         * <p>*   manual: The node is manually added.</p>
-         * <p>*   autoscale: The node is automatically added.</p>
+         * <ul>
+         * <li>manual: The node is manually added.</li>
+         * <li>autoscale: The node is automatically added.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>manual</p>
          */
         @NameInMap("CreateMode")
         public String createMode;
 
         /**
          * <p>Indicates whether the node is created by using E-HPC.</p>
-         * <br>
-         * <p>*   true: The node is created by using E-HPC.</p>
-         * <p>*   false: The node is not created by using E-HPC.</p>
+         * <ul>
+         * <li>true: The node is created by using E-HPC.</li>
+         * <li>false: The node is not created by using E-HPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CreatedByEhpc")
         public Boolean createdByEhpc;
 
         /**
          * <p>Indicates whether the subscription node expired. For a pay-as-you-go node, false is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expired")
         public Boolean expired;
 
         /**
          * <p>The time when the subscription node expires. For a pay-as-you-go node, a null value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-09T06:22:02.000Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The name of the task node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-HostName</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>Indicates whether hyper-threading is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HtEnabled")
         public Boolean htEnabled;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp15707mys2rsy0j****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the custom image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_06_64_20G_alibase_20190711.vhd</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The type of the image. Valid values:</p>
-         * <br>
-         * <p>*   system: public image</p>
-         * <p>*   self: custom image</p>
-         * <p>*   others: shared image</p>
-         * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
+         * <ul>
+         * <li>system: public image</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * <li>marketplace: Alibaba Cloud Marketplace image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
         /**
          * <p>The instance types of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.large</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>172.16.**.**</code></p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The location where the node is deployed. Valid values:</p>
-         * <br>
-         * <p>*   OnPremise: The node is deployed on your data center.</p>
-         * <p>*   PublicCloud: The node is deployed on the public cloud.</p>
+         * <ul>
+         * <li>OnPremise: The node is deployed on your data center.</li>
+         * <li>PublicCloud: The node is deployed on the public cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicCloud</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The reason why the node is locked. Valid values:</p>
-         * <br>
-         * <p>*   financial: The instance is locked due to overdue payments.</p>
-         * <p>*   security: The node is locked for security reasons.</p>
-         * <p>*   recycling: The preemptible instance is locked and pending release.</p>
-         * <p>*   dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.</p>
-         * <br>
+         * <ul>
+         * <li>financial: The instance is locked due to overdue payments.</li>
+         * <li>security: The node is locked for security reasons.</li>
+         * <li>recycling: The preemptible instance is locked and pending release.</li>
+         * <li>dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.</li>
+         * </ul>
          * <p>By default, an empty string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
 
         /**
          * <p>The public IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><code>172.16.**.**</code></p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   Scheduler: primary scheduling node</p>
-         * <p>*   SchedulerBackup: secondary scheduling node</p>
-         * <p>*   Account: primary domain server node</p>
-         * <p>*   AccountBackup: secondary domain server node</p>
-         * <p>*   Login: logon node</p>
-         * <p>*   Compute: compute node</p>
-         * <br>
+         * <ul>
+         * <li>Scheduler: primary scheduling node</li>
+         * <li>SchedulerBackup: secondary scheduling node</li>
+         * <li>Account: primary domain server node</li>
+         * <li>AccountBackup: secondary domain server node</li>
+         * <li>Login: logon node</li>
+         * <li>Compute: compute node</li>
+         * </ul>
          * <p>Scheduling nodes and domain server nodes are management nodes.</p>
          */
         @NameInMap("Roles")
@@ -333,26 +415,36 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The bidding method of the compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
          * <p>The status of the node displayed on the scheduler. The status varies with the scheduler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("StateInSched")
         public String stateInSched;
 
         /**
          * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   uninit: The node is being installed.</p>
-         * <p>*   exception: An exception occurred on the node.</p>
-         * <p>*   running: The node is running.</p>
-         * <p>*   initing: The node is being initialized.</p>
-         * <p>*   releasing: The node is being released.</p>
-         * <p>*   untracking: The node is not added to the cluster.</p>
-         * <p>*   stopped: The node is stopped.</p>
+         * <ul>
+         * <li>uninit: The node is being installed.</li>
+         * <li>exception: An exception occurred on the node.</li>
+         * <li>running: The node is running.</li>
+         * <li>initing: The node is being initialized.</li>
+         * <li>releasing: The node is being released.</li>
+         * <li>untracking: The node is not added to the cluster.</li>
+         * <li>stopped: The node is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -371,24 +463,36 @@ public class ListNodesResponseBody extends TeaModel {
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e47optm9g58zcu****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The version of the client that is used for the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.78</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
          * <p>The VPC ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1gnu8br4ay7beb2w****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

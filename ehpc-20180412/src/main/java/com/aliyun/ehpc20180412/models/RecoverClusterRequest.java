@@ -6,68 +6,86 @@ import com.aliyun.tea.*;
 public class RecoverClusterRequest extends TeaModel {
     /**
      * <p>The service type of the domain account. Valid values:</p>
-     * <br>
-     * <p>*   nis</p>
-     * <p>*   ldap</p>
-     * <br>
-     * <p>Default value: nis</p>
+     * <ul>
+     * <li>nis</li>
+     * <li>ldap</li>
+     * </ul>
+     * <p>Default value: nis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nis</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
      * <p>The version of the E-HPC client. The default value is the latest version of the client.</p>
-     * <br>
-     * <p>You can call the [ListCurrentClientVersion](~~87223~~) operation to query the current version of the E-HPC client.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87223.html">ListCurrentClientVersion</a> operation to query the latest version of the E-HPC client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.76</p>
      */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
     /**
-     * <p>The ID of the cluster. The cluster must be in the Exception state.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID and status.</p>
+     * <p>The cluster ID. The cluster must be in the Exception state.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the ID and status of a cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the image.</p>
-     * <br>
-     * <p>You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the images that are supported by E-HPC.</p>
+     * <p>The image ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the images that are supported by E-HPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp18133n0335yq****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The type of the image. Valid values:</p>
-     * <br>
-     * <p>*   system: public image</p>
-     * <p>*   self: custom image</p>
-     * <p>*   others: shared image</p>
-     * <br>
-     * <p>Default value: system</p>
+     * <ul>
+     * <li>system: public image</li>
+     * <li>self: custom image</li>
+     * <li>others: shared image</li>
+     * </ul>
+     * <p>Default value: system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
     /**
-     * <p>The image tag of the operating system.</p>
-     * <br>
-     * <p>You can call the [ListImages](~~87213~~) and [ListCustomImages](~~87215~~) operations to query the image tags supported by Elastic High Performance Computing (E-HPC).</p>
+     * <p>The tag of the system image.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87213.html">ListImages</a> and <a href="https://help.aliyun.com/document_detail/87215.html">ListCustomImages</a> operations to query the image tags supported by Elastic High Performance Computing (E-HPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS_7.2_64</p>
      */
     @NameInMap("OsTag")
     public String osTag;
 
     /**
      * <p>The type of the scheduler. Valid values:</p>
-     * <br>
-     * <p>*   pbs</p>
-     * <p>*   slurm</p>
-     * <p>*   opengridscheduler</p>
-     * <p>*   deadline</p>
-     * <br>
-     * <p>Default value: pbs</p>
+     * <ul>
+     * <li>pbs</li>
+     * <li>slurm</li>
+     * <li>opengridscheduler</li>
+     * <li>deadline</li>
+     * </ul>
+     * <p>Default value: pbs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pbs</p>
      */
     @NameInMap("SchedulerType")
     public String schedulerType;

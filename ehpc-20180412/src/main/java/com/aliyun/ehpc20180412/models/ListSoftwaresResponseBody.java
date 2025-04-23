@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSoftwaresResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class ListSoftwaresResponseBody extends TeaModel {
     public static class ListSoftwaresResponseBodySoftwaresSoftwareInfoApplicationsApplicationInfo extends TeaModel {
         /**
          * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cudnnt</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the software is required. Valid values:</p>
-         * <br>
-         * <p>*   false: optional</p>
-         * <p>*   true: required</p>
+         * <ul>
+         * <li>false: optional</li>
+         * <li>true: required</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Required")
         public Boolean required;
 
         /**
          * <p>The tag of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CUDNN_9.0</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9.0</p>
          */
         @NameInMap("Version")
         public String version;
@@ -126,15 +142,22 @@ public class ListSoftwaresResponseBody extends TeaModel {
     public static class ListSoftwaresResponseBodySoftwaresSoftwareInfo extends TeaModel {
         /**
          * <p>The service type of the domain account. Valid values:</p>
-         * <br>
-         * <p>*   nis</p>
-         * <p>*   ldap</p>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>The version of the domain account service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.31</p>
          */
         @NameInMap("AccountVersion")
         public String accountVersion;
@@ -147,35 +170,48 @@ public class ListSoftwaresResponseBody extends TeaModel {
 
         /**
          * <p>The version of the E-HPC client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("EhpcVersion")
         public String ehpcVersion;
 
         /**
          * <p>The image tag of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
          * <p>The type of the scheduler. Valid values:</p>
-         * <br>
-         * <p>*   pbs</p>
-         * <p>*   pbs19</p>
-         * <p>*   slurm</p>
-         * <p>*   slurm19</p>
-         * <p>*   slurm20</p>
-         * <p>*   opengridscheduler</p>
-         * <p>*   deadline</p>
-         * <p>*   gridengine</p>
-         * <p>*   cube</p>
-         * <p>*   custom</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>pbs19</li>
+         * <li>slurm</li>
+         * <li>slurm19</li>
+         * <li>slurm20</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * <li>gridengine</li>
+         * <li>cube</li>
+         * <li>custom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
         /**
          * <p>The version of the scheduler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18.1.1</p>
          */
         @NameInMap("SchedulerVersion")
         public String schedulerVersion;

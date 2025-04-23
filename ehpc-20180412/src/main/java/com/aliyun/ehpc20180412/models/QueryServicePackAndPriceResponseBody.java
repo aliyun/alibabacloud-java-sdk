@@ -4,30 +4,62 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class QueryServicePackAndPriceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>167</p>
+     */
     @NameInMap("ChargeAmount")
     public Integer chargeAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CNY</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.418</p>
+     */
     @NameInMap("DiscountPrice")
     public Float discountPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3191</p>
+     */
     @NameInMap("OriginalAmount")
     public Integer originalAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3.34</p>
+     */
     @NameInMap("OriginalPrice")
     public Float originalPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3B2E8108-7068-413E-BCA7-CAAB25D46408</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ServicePack")
     public QueryServicePackAndPriceResponseBodyServicePack servicePack;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.922</p>
+     */
     @NameInMap("TradePrice")
     public Float tradePrice;
 
@@ -109,15 +141,31 @@ public class QueryServicePackAndPriceResponseBody extends TeaModel {
     }
 
     public static class QueryServicePackAndPriceResponseBodyServicePackServicePackInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("Capacity")
         public Integer capacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1612705988</p>
+         */
         @NameInMap("EndTime")
         public Integer endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EHPCBAG-cn-78v12vbme0****</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1610027588</p>
+         */
         @NameInMap("StartTime")
         public Integer startTime;
 

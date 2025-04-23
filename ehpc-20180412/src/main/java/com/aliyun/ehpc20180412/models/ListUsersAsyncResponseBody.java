@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class ListUsersAsyncResponseBody extends TeaModel {
     /**
      * <p>The ID of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-sh03egi3mls****</p>
      */
     @NameInMap("AsyncId")
     public String asyncId;
 
     /**
      * <p>The status of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("AsyncStatus")
     public String asyncStatus;
 
     /**
      * <p>The number of the page returned. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A05F620-ED46-4A57-95F1-C67D6D3C5DD2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -110,30 +128,45 @@ public class ListUsersAsyncResponseBody extends TeaModel {
     public static class ListUsersAsyncResponseBodyUsersUserInfo extends TeaModel {
         /**
          * <p>The time when the user was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-28T09:05:26.000Z</p>
          */
         @NameInMap("AddTime")
         public String addTime;
 
         /**
          * <p>The user groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wheel</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The user group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("UserId")
         public String userId;

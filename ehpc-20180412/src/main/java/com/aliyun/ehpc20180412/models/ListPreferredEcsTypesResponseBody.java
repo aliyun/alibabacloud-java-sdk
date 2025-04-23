@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPreferredEcsTypesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether preemptible instances are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SupportSpotInstance")
     public Boolean supportSpotInstance;
@@ -167,22 +173,30 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the ECS instance series. Valid values:</p>
-         * <br>
-         * <p>*   HighCompute: compute-optimized instance families</p>
-         * <p>*   HighMem: memory-optimized instance families</p>
-         * <p>*   GPU: GPU-accelerated instance families</p>
-         * <p>*   All: all instance families</p>
+         * <ul>
+         * <li>HighCompute: compute-optimized instance families</li>
+         * <li>HighMem: memory-optimized instance families</li>
+         * <li>GPU: GPU-accelerated instance families</li>
+         * <li>All: all instance families</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         @NameInMap("SeriesId")
         public String seriesId;
 
         /**
          * <p>The name of the instance series. Valid values:</p>
-         * <br>
-         * <p>*   SeriesHighCompute</p>
-         * <p>*   SeriesHighMem</p>
-         * <p>*   SeriesGPU</p>
-         * <p>*   SeriesAll</p>
+         * <ul>
+         * <li>SeriesHighCompute</li>
+         * <li>SeriesHighMem</li>
+         * <li>SeriesGPU</li>
+         * <li>SeriesAll</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SeriesAll</p>
          */
         @NameInMap("SeriesName")
         public String seriesName;

@@ -6,101 +6,140 @@ import com.aliyun.tea.*;
 public class SubmitServerlessJobShrinkRequest extends TeaModel {
     /**
      * <p>The configuration of the array job.</p>
-     * <br>
-     * <p>>  The value of an array job index is passed to a serverless job container through the environment variable `EHPC_ARRAY_TASK_ID`. Users can access the container from business programs.</p>
+     * <blockquote>
+     * <p> The value of an array job index is passed to a serverless job container through the environment variable <code>EHPC_ARRAY_TASK_ID</code>. Users can access the container from business programs.</p>
+     * </blockquote>
      */
     @NameInMap("ArrayProperties")
     public String arrayPropertiesShrink;
 
     /**
-     * <p>The ID of the E-HPC cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The properties of the serverless job container.</p>
+     * <p>The properties of the Serverless job container.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Container")
     public String containerShrink;
 
     /**
      * <p>The vCPU size of the serverless job container. Unit: cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Cpu")
     public Float cpu;
 
     /**
-     * <p>The serverless job dependencies.</p>
+     * <p>The dependencies of the serverless job.</p>
      */
     @NameInMap("DependsOn")
     public String dependsOnShrink;
 
     /**
-     * <p>The size of the temporary storage that is added to the serverless job container. Unit: GiB.</p>
-     * <br>
-     * <p>>  By default, the serverless job container provides 30 GiB of free storage quota. If you require storage of more than 30 GiB, you can use this parameter to specify the temporary storage to add to the job container.</p>
+     * <p>The size of the temporary storage space added to the serverless job container. Unit: GiB.</p>
+     * <blockquote>
+     * <p> By default, a space of 30 GiB is provided free of charge. If you require a larger space, you can pass this parameter to specify your required space size.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("EphemeralStorage")
     public Integer ephemeralStorage;
 
     /**
-     * <p>The ECS instance types used by the serverless job container.</p>
+     * <p>The Elastic Compute Service (ECS) instance types used by the serverless job container.</p>
      */
     @NameInMap("InstanceType")
     public String instanceTypeShrink;
 
     /**
      * <p>The name of the serverless job.</p>
+     * <blockquote>
+     * <p> The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testjob</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
      * <p>The scheduling priority of the serverless job. Valid values: 0 to 999. A greater value indicates a higher priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("JobPriority")
     public Long jobPriority;
 
     /**
      * <p>The memory size of the serverless job container. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("Memory")
     public Float memory;
 
     /**
-     * <p>The name of the RAM role that is associated with the serverless job container.</p>
+     * <p>The Resource Access Manamement (RAM) role that is associated with the Serverless job container.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testRamRoleName</p>
      */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    /**
+     * <p>The retry policy of the serverless job.</p>
+     */
     @NameInMap("RetryStrategy")
     public String retryStrategyShrink;
 
     /**
-     * <p>The maximum hourly price of the preemptible instance. The value can contain up to three decimal places.</p>
-     * <br>
+     * <p>The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.</p>
      * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.062</p>
      */
     @NameInMap("SpotPriceLimit")
     public Float spotPriceLimit;
 
     /**
-     * <p>The bidding policy for the instance. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
-     * <br>
+     * <p>The bidding policy of the ECS instances. Valid values:</p>
+     * <ul>
+     * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+     * <li>SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SpotWithPriceLimit</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
      * <p>The validity period of the serverless job. After the validity period expires, the job is forcibly terminated. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("Timeout")
     public Long timeout;

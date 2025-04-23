@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ResetNodesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Instance")
     public java.util.List<ResetNodesRequestInstance> instance;
 
@@ -39,8 +45,10 @@ public class ResetNodesRequest extends TeaModel {
     public static class ResetNodesRequestInstance extends TeaModel {
         /**
          * <p>The ID of the compute node that you want to reset. Valid values of N: 1 to 100</p>
-         * <br>
-         * <p>You can call the [ListNodes](~~87161~~) operation to query the IDs of the compute nodes.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/87161.html">ListNodes</a> operation to query the IDs of the compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp13p7vlcb1uihfv****</p>
          */
         @NameInMap("Id")
         public String id;

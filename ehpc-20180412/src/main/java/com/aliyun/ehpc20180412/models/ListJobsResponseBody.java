@@ -12,24 +12,36 @@ public class ListJobsResponseBody extends TeaModel {
 
     /**
      * <p>The page number returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListJobsResponseBody extends TeaModel {
     public static class ListJobsResponseBodyJobsJobInfoResources extends TeaModel {
         /**
          * <p>The number of CPUs that were used to run the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cores")
         public Integer cores;
 
         /**
          * <p>The number of nodes that were used to run the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Nodes")
         public Integer nodes;
@@ -118,50 +136,73 @@ public class ListJobsResponseBody extends TeaModel {
     public static class ListJobsResponseBodyJobsJobInfo extends TeaModel {
         /**
          * <p>The job array. If the job is not in a queue, the output is empty.</p>
-         * <br>
          * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1-10:2</p>
          */
         @NameInMap("ArrayRequest")
         public String arrayRequest;
 
         /**
          * <p>The description of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobDescription</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.manager</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The time when the job was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T17:46:48</p>
          */
         @NameInMap("LastModifyTime")
         public String lastModifyTime;
 
         /**
          * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The list of compute nodes that were used to run the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;compute2\&quot;, \&quot;compute3\&quot;]</p>
          */
         @NameInMap("NodeList")
         public String nodeList;
 
         /**
          * <p>The name of the user that ran the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Priority")
         public String priority;
@@ -174,40 +215,59 @@ public class ListJobsResponseBody extends TeaModel {
 
         /**
          * <p>The path that was used to run the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./Temp</p>
          */
         @NameInMap("ShellPath")
         public String shellPath;
 
         /**
          * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T17:46:48</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   FINISHED: The job is completed</p>
-         * <p>*   RUNNING: The job connector is running.</p>
-         * <p>*   QUEUED: The job is pending in a queue.</p>
+         * <ul>
+         * <li>FINISHED: The job is completed</li>
+         * <li>RUNNING: The job connector is running.</li>
+         * <li>QUEUED: The job is pending in a queue.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The output file path of stderr.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./Temp</p>
          */
         @NameInMap("Stderr")
         public String stderr;
 
         /**
          * <p>The output file path of stdout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>./Temp</p>
          */
         @NameInMap("Stdout")
         public String stdout;
 
         /**
          * <p>The time when the job was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T17:46:47</p>
          */
         @NameInMap("SubmitTime")
         public String submitTime;

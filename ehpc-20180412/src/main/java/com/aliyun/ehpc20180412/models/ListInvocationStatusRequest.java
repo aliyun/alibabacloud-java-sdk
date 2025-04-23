@@ -5,17 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInvocationStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>The cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the command.</p>
-     * <br>
-     * <p>You can call the [ListCommands](~~87388~~) operation to query the command ID.</p>
+     * <p>The command ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87388.html">ListCommands</a> operation to query the command ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-hz01v8x80o3****</p>
      */
     @NameInMap("CommandId")
     public String commandId;

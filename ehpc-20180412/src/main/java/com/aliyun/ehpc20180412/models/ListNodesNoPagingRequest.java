@@ -6,37 +6,49 @@ import com.aliyun.tea.*;
 public class ListNodesNoPagingRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the node. You can perform a fuzzy search. MySQL regular expressions are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Compute0</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>The type of the node. Valid values:</p>
-     * <br>
-     * <p>*   Manager: management node</p>
-     * <p>*   Login: logon node</p>
-     * <p>*   Compute: compute node</p>
-     * <br>
+     * <ul>
+     * <li>Manager: management node</li>
+     * <li>Login: logon node</li>
+     * <li>Compute: compute node</li>
+     * </ul>
      * <p>Default value: Compute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Compute</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
      * <p>The sorting method of the node list. Valid values:</p>
-     * <br>
-     * <p>*   Forward: sorts the nodes in chronological order.</p>
-     * <p>*   Backward: sorts the nodes in reverse chronological order.</p>
-     * <br>
+     * <ul>
+     * <li>Forward: sorts the nodes in chronological order.</li>
+     * <li>Backward: sorts the nodes in reverse chronological order.</li>
+     * </ul>
      * <p>Default value: Forward.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("Sequence")
     public String sequence;

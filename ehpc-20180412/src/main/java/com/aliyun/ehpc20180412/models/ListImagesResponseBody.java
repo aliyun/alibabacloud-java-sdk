@@ -12,6 +12,9 @@ public class ListImagesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,80 @@ public class ListImagesResponseBody extends TeaModel {
     public static class ListImagesResponseBodyOsTagsOsInfo extends TeaModel {
         /**
          * <p>The architecture of the operating system. Valid values:</p>
-         * <br>
-         * <p>*   i386</p>
-         * <p>*   x86\_64</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>i386</p>
          */
         @NameInMap("Architecture")
         public String architecture;
 
         /**
          * <p>The image tag of the operating system. The tag is used only for management nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-bp1h8aoe73p71iow****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OSName")
         public String OSName;
 
         /**
          * <p>The name of the image in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OSNameEn")
         public String OSNameEn;
 
         /**
          * <p>The tag that is added to the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
          * <p>The operating system. Valid values:</p>
-         * <br>
-         * <p>*   CentOS</p>
-         * <p>*   windows</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The version of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.2</p>
          */
         @NameInMap("Version")
         public String version;

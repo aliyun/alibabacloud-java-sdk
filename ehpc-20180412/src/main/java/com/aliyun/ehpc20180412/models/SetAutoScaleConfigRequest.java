@@ -6,161 +6,203 @@ import com.aliyun.tea.*;
 public class SetAutoScaleConfigRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specifies whether to enable hyper-threading for the ECS instance that is used as the compute node.</p>
-     * <br>
-     * <p>>  You can only disable hyper-threading for some instance types. The hyper-threading is enabled for ECS instances by default. For more information, see [Specify and view CPU options](~~145895~~).</p>
+     * <blockquote>
+     * <p> You can only disable hyper-threading for some instance types. The hyper-threading is enabled for ECS instances by default. For more information, see <a href="https://help.aliyun.com/document_detail/145895.html">Specify and view CPU options</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ComputeEnableHt")
     public Boolean computeEnableHt;
 
     /**
-     * <p>The Domain Name System (DNS) settings.</p>
+     * <p>The configurations of DNS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;{\&quot;DnsType\&quot;:\&quot;PrivateZone\&quot;,\&quot;DnsName\&quot;:\&quot;xxxxx\&quot;}&quot;</p>
      */
     @NameInMap("DnsConfig")
     public String dnsConfig;
 
     /**
      * <p>Specifies whether to enable auto scale-out. Valid values:</p>
-     * <br>
-     * <p>*   true: enables auto scale-out.</p>
-     * <p>*   false: disables auto scale-out.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables auto scale-out.</li>
+     * <li>false: disables auto scale-out.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableAutoGrow")
     public Boolean enableAutoGrow;
 
     /**
      * <p>Specifies whether to enable auto scale-in. Valid values:</p>
-     * <br>
-     * <p>*   true: enables auto scale-in.</p>
-     * <p>*   false: disables auto scale-in.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables auto scale-in.</li>
+     * <li>false: disables auto scale-in.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableAutoShrink")
     public Boolean enableAutoShrink;
 
     /**
      * <p>The compute nodes that are excluded from auto scaling tasks. Separate multiple compute nodes with commas (,).</p>
-     * <br>
      * <p>If you want to retain a compute node, you can specify the node as an additional node to retain the node when it is idle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp19lgqwxb4206t5****,i-bp1g4hvzs9pywrhb****</p>
      */
     @NameInMap("ExcludeNodes")
     public String excludeNodes;
 
     /**
      * <p>The percentage of extra compute nodes. Valid values: 0 to 100.</p>
-     * <br>
      * <p>Default value: 0.</p>
-     * <br>
      * <p>If you need to add 100 compute nodes and the value of the ExtraNodesGrowRatio parameter is 2, 102 compute nodes are added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ExtraNodesGrowRatio")
     public Integer extraNodesGrowRatio;
 
     /**
      * <p>The interval between two consecutive rounds of scale-out. Unit: minutes.</p>
-     * <br>
      * <p>Valid values: 2 to 10.</p>
-     * <br>
      * <p>Default value: 2.</p>
-     * <br>
-     * <p>> An interval may exist during multiple rounds of a scale-out task or between two consecutive scale-out tasks.</p>
+     * <blockquote>
+     * <p>An interval may exist during multiple rounds of a scale-out task or between two consecutive scale-out tasks.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("GrowIntervalInMinutes")
     public Integer growIntervalInMinutes;
 
     /**
      * <p>The percentage of each round of a scale-out task. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 100.</p>
-     * <br>
      * <p>If you set GrowRatio to 50, the scale-out has two rounds. Each round completes half of the scale-out.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("GrowRatio")
     public Integer growRatio;
 
     /**
      * <p>The scale-out timeout period. Unit: minutes.</p>
-     * <br>
      * <p>Valid values: 10 to 60.</p>
-     * <br>
      * <p>Default value: 20.</p>
-     * <br>
      * <p>If the scale-out timeout period has been reached but the scale-out nodes still do not reach the Running state, the system releases them.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("GrowTimeoutInMinutes")
     public Integer growTimeoutInMinutes;
 
     /**
      * <p>The IDs of the images.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If both `Queues.N.QueueImageId` and `ImageId` are specified, `Queues.N.QueueImageId` prevails.</p>
-     * <br>
-     * <p>*   If you set `Queues.N.QueueImageId` or `ImageId`, the parameter that you set takes effect.</p>
-     * <p>*   If you leave both `Queues.N.QueueImageId` and `ImageId` empty, the image that was specified when you created the cluster or the last time you scaled out the cluster is used by default.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If both <code>Queues.N.QueueImageId</code> and <code>ImageId</code> are specified, <code>Queues.N.QueueImageId</code> prevails.</p>
+     * </li>
+     * <li><p>If you set <code>Queues.N.QueueImageId</code> or <code>ImageId</code>, the parameter that you set takes effect.</p>
+     * </li>
+     * <li><p>If you leave both <code>Queues.N.QueueImageId</code> and <code>ImageId</code> empty, the image that was specified when you created the cluster or the last time you scaled out the cluster is used by default.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>centos_7_03_64_20G_alibase_201708****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The maximum number of compute nodes that can be added to the cluster. Valid values: 0 to 500.</p>
-     * <br>
      * <p>Default value: 100.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxNodesInCluster")
     public Integer maxNodesInCluster;
 
     /**
      * <p>The information about the queue.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("Queues")
     public java.util.List<SetAutoScaleConfigRequestQueues> queues;
 
     /**
      * <p>The number of consecutive times that a compute node is idle during the resource scale-in check.</p>
-     * <br>
      * <p>Valid values: 2 to 5.</p>
-     * <br>
      * <p>Default value: 3.</p>
-     * <br>
      * <p>If the parameter is set to 3, a compute node is idle more than three consecutive times. In this case, the node is released. If a compute node is idle for longer than 6 minutes continuously, it is released by default. This is because the default value of the ShrinkIntervalInMinutes parameter is 2.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ShrinkIdleTimes")
     public Integer shrinkIdleTimes;
 
     /**
      * <p>The interval between two consecutive rounds of scale-in. Unit: minutes.</p>
-     * <br>
      * <p>Valid values: 2 to 10.</p>
-     * <br>
      * <p>Default value: 2.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ShrinkIntervalInMinutes")
     public Integer shrinkIntervalInMinutes;
 
     /**
-     * <p>The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when `SpotStrategy` is set to `SpotWithPriceLimit`.</p>
+     * <p>The maximum hourly price of the compute nodes. The value can be accurate to three decimal places. The parameter takes effect only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.062</p>
      */
     @NameInMap("SpotPriceLimit")
     public Float spotPriceLimit;
 
     /**
      * <p>The preemption policy of the compute nodes. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The compute nodes are pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</p>
-     * <br>
+     * <ul>
+     * <li>NoSpot: The compute nodes are pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The compute nodes are preemptible instances that have a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SpotWithPriceLimit</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
@@ -308,77 +350,87 @@ public class SetAutoScaleConfigRequest extends TeaModel {
 
     public static class SetAutoScaleConfigRequestQueuesDataDisks extends TeaModel {
         /**
-         * <p>The type of the data disk. Valid values:</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: ESSD</p>
-         * <p>*   cloud: basic disk</p>
-         * <br>
+         * <p>The category of the data disk. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_essd: ESSD.</li>
+         * <li>cloud: basic disk.</li>
+         * </ul>
          * <p>Default value: cloud_efficiency.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
         /**
-         * <p>Specifies whether the data disk is released when the node is released. Valid value:</p>
-         * <br>
-         * <p>*   true: yes</p>
-         * <p>*   false: no</p>
-         * <br>
+         * <p>Specifies whether the data disk is released when the node is released. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: true.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataDiskDeleteWithInstance")
         public Boolean dataDiskDeleteWithInstance;
 
         /**
          * <p>Specifies whether to encrypt the data disk. Valid values:</p>
-         * <br>
-         * <p>*   true: encrypts the data disk.</p>
-         * <p>*   false: does not encrypt the data disk.</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: false.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DataDiskEncrypted")
         public Boolean dataDiskEncrypted;
 
         /**
          * <p>The Key Management Service (KMS) key ID of the data disk.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40826X</p>
          */
         @NameInMap("DataDiskKMSKeyId")
         public String dataDiskKMSKeyId;
 
         /**
          * <p>The performance level of the ESSD used as the data disk. The parameter takes effect only when the Queues.N.DataDisks.N.DataDiskCategory parameter is set to cloud_essd. Valid values:</p>
-         * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-         * <br>
+         * <ul>
+         * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
          * <p>Default value: PL1.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("DataDiskPerformanceLevel")
         public String dataDiskPerformanceLevel;
 
         /**
          * <p>The size of the data disk. Unit: GB.</p>
-         * <br>
          * <p>Valid values: 40 to 500.</p>
-         * <br>
          * <p>Default value: 40.</p>
-         * <br>
          * <p>Valid values of N: 0 to 16.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("DataDiskSize")
         public Integer dataDiskSize;
@@ -441,68 +493,79 @@ public class SetAutoScaleConfigRequest extends TeaModel {
     public static class SetAutoScaleConfigRequestQueuesInstanceTypes extends TeaModel {
         /**
          * <p>The instance type of the compute nodes that are automatically added to the queue.</p>
-         * <br>
-         * <p>The maximum hourly prices of the compute nodes that are automatically added to N queues can be set the same time. Valid values of N: 1 to 8.</p>
-         * <br>
+         * <p>You can specify the specification for 1 to 8 nodes.</p>
          * <p>The instance types of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The protection period of the preemptible instance. Unit: hours. Valid values: 0 to 1. A value of 0 means that no protection period is specified. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
         /**
-         * <p>The interruption mode of the preemptible instance. Default value: Terminate. Set the value to Terminate, which indicates that the instance is released.</p>
+         * <p>The interruption mode of the preemptible instance. The value can only be Terminate, which indicates that the instance is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Terminate</p>
          */
         @NameInMap("SpotInterruptionBehavior")
         public String spotInterruptionBehavior;
 
         /**
-         * <p>The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when `Queues.N.InstanceTypes.N.SpotStrategy` is set to `SpotWithPriceLimit`.</p>
-         * <br>
-         * <p>The maximum hourly prices of the compute nodes that are automatically added to N queues can be set the same time. Valid values of N: 1 to 8.</p>
-         * <br>
+         * <p>The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when <code>Queues.N.InstanceTypes.N.SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
+         * <p>You can specify the maximum hourly price for 1 to 8 compute nodes.</p>
          * <p>The maximum hourly prices of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.660</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
         /**
-         * <p>The preemption policy for the compute node that is automatically added to the queues. Valid value:</p>
-         * <br>
-         * <p>*   NoSpot: The compute node is created as a pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
-         * <br>
+         * <p>The preemption policy for the compute node that is automatically added to the queue. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The compute node is created as a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
          * <p>Default value: NoSpot.</p>
-         * <br>
-         * <p>The maximum hourly prices of the compute nodes that are automatically added to N queues can be set at the same time. Valid values of N: 1 to 8.</p>
-         * <br>
-         * <p>The bidding methods of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
+         * <p>You can specify the preemption policy for 1 to 8 compute nodes.</p>
+         * <p>The preemption policies of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
          * <p>The vSwitch ID of the compute nodes that are automatically added to the queue.</p>
-         * <br>
-         * <p>The names of N queues can be set at the same time. Valid values of N: 1 to 8.</p>
-         * <br>
+         * <p>You can specify 1 to 8 IDs.</p>
          * <p>The vSwitch IDs of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1lfcjbfb099rrjn****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The zone ID of the compute nodes that are automatically added to the queue belongs.</p>
-         * <br>
-         * <p>The maximum hourly prices of the compute nodes that are automatically added to N queues can be set the same time. Valid values of N: 1 to 8.</p>
-         * <br>
+         * <p>The ID of the zone that compute nodes automatically added to the queue belong.</p>
+         * <p>You can specify 1 to 8 IDs.</p>
          * <p>The zone IDs of N compute nodes in the queue can be set at the same time when auto scaling is performed in the queue. Valid values of N: 0 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -572,8 +635,10 @@ public class SetAutoScaleConfigRequest extends TeaModel {
 
     public static class SetAutoScaleConfigRequestQueues extends TeaModel {
         /**
-         * <p>Automatic Configuration of the Minimum Node Number for Each Scale-out.</p>
-         * <p>If you set this parameter to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.</p>
+         * <p>Specifies whether to automatically specify the minimum number of compute nodes that can be added in each round of scale-out. If you set this parameter to true, the minimum number of nodes for each scale-out is equal to the number of nodes required by the job. The maximum number is 99.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoMinNodesPerCycle")
         public Boolean autoMinNodesPerCycle;
@@ -585,49 +650,60 @@ public class SetAutoScaleConfigRequest extends TeaModel {
         public java.util.List<SetAutoScaleConfigRequestQueuesDataDisks> dataDisks;
 
         /**
-         * <p>Specifies whether the queue enables auto scale-out. Valid value:</p>
-         * <br>
-         * <p>*   true: enables auto scale-out.</p>
-         * <p>*   false: disables auto scale-out.</p>
-         * <br>
+         * <p>Specifies whether the queue enables auto scale-out. Valid values:</p>
+         * <ul>
+         * <li>true: enables auto scale-out.</li>
+         * <li>false: disables auto scale-out.</li>
+         * </ul>
          * <p>Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
         /**
-         * <p>Specifies whether the queue enables auto scale-in. Valid value:</p>
-         * <br>
-         * <p>*   true: enables auto scale-in.</p>
-         * <p>*   false: disables auto scale-in.</p>
-         * <br>
+         * <p>Specifies whether the queue enables auto scale-in. Valid values:</p>
+         * <ul>
+         * <li>true: enables auto scale-in.</li>
+         * <li>false: disables auto scale-in.</li>
+         * </ul>
          * <p>Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableAutoShrink")
         public Boolean enableAutoShrink;
 
         /**
          * <p>The hostname prefix of the host that is used to perform scale-out for the queue. You can manage compute nodes that have a specified hostname prefix.</p>
-         * <br>
          * <p>Valid values of N: 1 to 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
          */
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
 
         /**
          * <p>The hostname suffix of the host that is used to perform scale-out for the queue. You can manage nodes that have a specified hostname suffix.</p>
-         * <br>
          * <p>Valid values of N: 1 to 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000</p>
          */
         @NameInMap("HostNameSuffix")
         public String hostNameSuffix;
 
         /**
-         * <p>The instance type of the compute nodes that are automatically added in the queues. Valid values of N: 1 to 8.</p>
+         * <p>The instance type of the compute nodes that are automatically added to the queue. Valid values of N: 1 to 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.medium</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -640,134 +716,162 @@ public class SetAutoScaleConfigRequest extends TeaModel {
 
         /**
          * <p>The maximum number of compute nodes that can be added to the queue. Valid values: 0 to 500.</p>
-         * <br>
          * <p>Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("MaxNodesInQueue")
         public Integer maxNodesInQueue;
 
         /**
          * <p>The maximum number of compute nodes that can be added in each round of scale-out. Valid values: 0 to 99.</p>
-         * <br>
          * <p>Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxNodesPerCycle")
         public Long maxNodesPerCycle;
 
         /**
-         * <p>The minimum number of compute nodes that can be removed in the queue. Valid values: 0 to 50.</p>
-         * <br>
+         * <p>The minimum number of compute nodes that can be removed from the queue. Valid values: 0 to 50.</p>
          * <p>Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MinNodesInQueue")
         public Integer minNodesInQueue;
 
         /**
-         * <p>The minimum number of compute nodes that can be added in each round of scale-out. Valid values: 1 to 99.</p>
-         * <br>
+         * <p>The minimum number of compute nodes that can be added in each round of scale-out. Valid values: 1 to 99</p>
          * <p>Default value: 1.</p>
-         * <br>
          * <p>If the number of compute nodes that you want to add in a round is less than the value of this property, the system automatically changes the value of this property to the number of compute nodes that you want to add in a round. This helps ensure that compute nodes can be added as expected.</p>
-         * <br>
-         * <p>> The configuration takes effect only for the minimum compute nodes that can be added in the current round.</p>
+         * <blockquote>
+         * <p> The configuration takes effect only for the minimum compute nodes that can be added in the current round.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MinNodesPerCycle")
         public Long minNodesPerCycle;
 
         /**
          * <p>The image ID of the queue where the scale-out is performed. Valid values of N: 1 to 8.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If you set both `Queues.N.QueueImageId` and `ImageId`, `Queues.N.QueueImageId` prevails.</p>
-         * <br>
-         * <p>*   If you set `Queues.N.QueueImageId` or `ImageId`, the parameter that you set takes effect.</p>
-         * <p>*   If you leave both `Queues.N.QueueImageId` and `ImageId` empty, the image that was specified when you created the cluster or the last time when you scaled out the cluster is used by default.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you set both <code>Queues.N.QueueImageId</code> and <code>ImageId</code>, <code>Queues.N.QueueImageId</code> prevails.</p>
+         * </li>
+         * <li><p>If you set <code>Queues.N.QueueImageId</code> or <code>ImageId</code>, the parameter that you set takes effect.</p>
+         * </li>
+         * <li><p>If you leave both <code>Queues.N.QueueImageId</code> and <code>ImageId</code> empty, the image that was specified when you created the cluster or the last time when you scaled out the cluster is used by default.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_03_64_20G_alibase_201708****</p>
          */
         @NameInMap("QueueImageId")
         public String queueImageId;
 
         /**
-         * <p>The name of the queue. The names of N queues can be set at the same time. Valid values of N: 1 to 8.</p>
+         * <p>The name of the queue. You can specify 1 to 8 names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster1</p>
          */
         @NameInMap("QueueName")
         public String queueName;
 
         /**
-         * <p>Whether the instances are unordered. Valid values:</p>
-         * <br>
-         * <p>*   true: yes</p>
-         * <p>*   false: no</p>
-         * <br>
-         * <p>>  If you set this parameter to true, the system selects instance types in descending order of the number of instances in stock during auto scaling.</p>
+         * <p>Specifies whether the instances are unordered. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you set this parameter to true, the system selects instance types in descending order of the number of instances in stock during auto scaling.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SortedByInventory")
         public Boolean sortedByInventory;
 
         /**
-         * <p>The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when `Queues.N.SpotStrategy` is set to `SpotWithPriceLimit`.</p>
-         * <br>
+         * <p>The maximum hourly price of the compute nodes that are automatically added to the queue. The value can be accurate to three decimal places. The parameter takes effect only when <code>Queues.N.SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
          * <p>Valid values of N: 1 to 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.662</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
         /**
          * <p>The preemption policy of the compute node that is automatically added to the queue. Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: The compute nodes is created as a pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
-         * <br>
+         * <ul>
+         * <li>NoSpot: The compute node is created as a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The compute node is created as a preemptible instance that has a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The compute node is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+         * </ul>
          * <p>Default value: NoSpot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
-         * <p>The type of the system disk specified for the compute nodes that are added in the queue. Valid values:</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: standard SSD</p>
-         * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-         * <p>*   cloud: basic disk. Disks of this type are retired.</p>
-         * <br>
+         * <p>The category of the system disk specified for the compute nodes that are added to the queue. Valid values:</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: standard SSD.</li>
+         * <li>cloud_essd: enhanced SSD (ESSD).</li>
+         * <li>cloud: basic disk. Disks of this type are retired.</li>
+         * </ul>
          * <p>Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Default value: cloud_efficiency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
         /**
          * <p>The performance level of the system disk specified for the compute nodes that are added to the queue. Valid values:</p>
-         * <br>
-         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: A single ESSD can deliver up to 50,000 IOPS of random read/write.</p>
-         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
-         * <br>
+         * <ul>
+         * <li>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+         * </ul>
          * <p>Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Default value: PL1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("SystemDiskLevel")
         public String systemDiskLevel;
 
         /**
-         * <p>The size of the system disk specified for the compute nodes that are added in the queue. Unit: GB.</p>
-         * <br>
+         * <p>The size of the system disk specified for the compute nodes that are added to the queue. Unit: GB.</p>
          * <p>Valid values: 40 to 500.</p>
-         * <br>
          * <p>Valid values of N: 1 to 8.</p>
-         * <br>
          * <p>Default value: 40.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;

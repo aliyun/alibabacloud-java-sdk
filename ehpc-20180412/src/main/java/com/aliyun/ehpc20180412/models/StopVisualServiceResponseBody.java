@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class StopVisualServiceResponseBody extends TeaModel {
     /**
-     * <p>The status of the VNC Remote Service. Valid values:</p>
-     * <br>
-     * <p>*   Service started</p>
-     * <p>*   Service stopped</p>
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Service stopped</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>896D338C-E4F4-41EC-A154-D605E5DE6880</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class StartClusterRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that you want to start.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

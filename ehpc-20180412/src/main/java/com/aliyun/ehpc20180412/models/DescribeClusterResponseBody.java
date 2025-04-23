@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterResponseBody extends TeaModel {
     /**
-     * <p>The cluster information.</p>
+     * <p>The information about the cluster.</p>
      */
     @NameInMap("ClusterInfo")
     public DescribeClusterResponseBodyClusterInfo clusterInfo;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,37 +43,54 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfoAddOnsInfoAddOnsInfo extends TeaModel {
         /**
          * <p>The deployment mode of the custom component. Valid values:</p>
-         * <br>
-         * <p>*   local</p>
-         * <p>*   ecs</p>
+         * <ul>
+         * <li>local</li>
+         * <li>ecs</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
          * <p>The TCP port number of the custom component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The software ID of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CROMWELL_85</p>
          */
         @NameInMap("SoftwareId")
         public String softwareId;
 
         /**
          * <p>The running status of the custom component. Valid values:</p>
-         * <br>
-         * <p>*   running</p>
-         * <p>*   stopped</p>
-         * <p>*   exception</p>
+         * <ul>
+         * <li>running</li>
+         * <li>stopped</li>
+         * <li>exception</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The endpoint of the custom component service.</p>
+         * <p>The URL of the custom component service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://172.16.10.12:10000/">http://172.16.10.12:10000/</a></p>
          */
         @NameInMap("URL")
         public String URL;
@@ -144,18 +164,27 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfoApplicationsApplicationInfo extends TeaModel {
         /**
          * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openmpi</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The tag of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenMPI_1.8.7</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.10</p>
          */
         @NameInMap("Version")
         public String version;
@@ -213,12 +242,18 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfoEcsInfoCompute extends TeaModel {
         /**
          * <p>The number of compute nodes in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The instance type of the compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -249,12 +284,18 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfoEcsInfoLogin extends TeaModel {
         /**
          * <p>The number of logon nodes in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The instance type of the logon nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -285,12 +326,18 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfoEcsInfoManager extends TeaModel {
         /**
          * <p>The number of management nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The instance type of the management nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -321,12 +368,18 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfoEcsInfoProxyMgr extends TeaModel {
         /**
          * <p>The number of proxy nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The instance type of the proxy node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.tiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -375,7 +428,6 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         /**
          * <p>The list of proxy nodes on the cloud.</p>
-         * <br>
          * <p>This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.</p>
          */
         @NameInMap("ProxyMgr")
@@ -423,23 +475,33 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfoInitialImage extends TeaModel {
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_6_x64_20G_alibase_20211130.vhd</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The type of the image. Valid values:</p>
-         * <br>
-         * <p>*   system: public image</p>
-         * <p>*   self: custom image</p>
-         * <p>*   others: shared image</p>
-         * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
+         * <ul>
+         * <li>system: public image</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * <li>marketplace: Alibaba Cloud Marketplace image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
         /**
          * <p>An array of OS images that are supported by E-HPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.6_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
@@ -477,53 +539,72 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyClusterInfoNodesNodesInfo extends TeaModel {
         /**
-         * <p>The service type of the domain account to which the on-premises node in the cluster belongs. Valid values:</p>
-         * <br>
-         * <p>*   nis</p>
-         * <p>*   ldap</p>
-         * <br>
+         * <p>The service type of the domain account to which the node in the on-premises cluster belongs. Valid values:</p>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
          * <p>Default value: nis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
-         * <p>The directory of the on-premises node in the cluster.</p>
+         * <p>The directory of the node in the on-premises cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/opt/sge/default/</p>
          */
         @NameInMap("Dir")
         public String dir;
 
         /**
-         * <p>The hostname of the on-premises node in the cluster.</p>
+         * <p>The hostname of the node in the on-premises cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute000</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The IP address of the on-premises node in the cluster.</p>
+         * <p>The IP address of the node in the on-premises cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
-         * <p>The role of the on-premises node in the cluster. Valid values:</p>
-         * <br>
-         * <p>*   Manager: management node</p>
-         * <p>*   Login: logon node</p>
-         * <p>*   Compute: compute node</p>
+         * <p>The role of the node in the on-premises cluster. Valid values:</p>
+         * <ul>
+         * <li>Manager: management node</li>
+         * <li>Login: logon node</li>
+         * <li>Compute: compute node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Compute</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
-         * <p>The scheduler type of the on-premises node in the cluster. Valid values:</p>
-         * <br>
-         * <p>*   pbs</p>
-         * <p>*   slurm</p>
-         * <p>*   opengridscheduler</p>
-         * <p>*   deadline</p>
-         * <br>
+         * <p>The scheduler type of the node in the on-premises cluster. Valid values:</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>slurm</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * </ul>
          * <p>Default value: pbs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -604,23 +685,33 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyClusterInfoOnPremiseInfoOnPremiseInfo extends TeaModel {
         /**
-         * <p>The hostname of the on-premises management nodes.</p>
+         * <p>The hostname of the management node in the on-premises cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testecs</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The IP address of the on-premises management nodes.</p>
+         * <p>The IP address of the management node in the on-premises cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.<em>.</em></p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
-         * <p>The type of on-premises management nodes. Valid values:</p>
-         * <br>
-         * <p>*   scheduler</p>
-         * <p>*   account</p>
-         * <p>*   account, scheduler</p>
+         * <p>The type of the management node in the on-premises cluster. Valid values:</p>
+         * <ul>
+         * <li>scheduler</li>
+         * <li>account</li>
+         * <li>account, scheduler</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduler</p>
          */
         @NameInMap("Type")
         public String type;
@@ -677,13 +768,19 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     public static class DescribeClusterResponseBodyClusterInfoPostInstallScriptsPostInstallScriptInfo extends TeaModel {
         /**
-         * <p>The runtime parameter of the script.</p>
+         * <p>The parameter used to run the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bash file.sh</p>
          */
         @NameInMap("Args")
         public String args;
 
         /**
          * <p>The URL used to download the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Url")
         public String url;
@@ -733,9 +830,13 @@ public class DescribeClusterResponseBody extends TeaModel {
     public static class DescribeClusterResponseBodyClusterInfo extends TeaModel {
         /**
          * <p>The server type of the account. Valid values:</p>
-         * <br>
-         * <p>*   nis</p>
-         * <p>*   ldap</p>
+         * <ul>
+         * <li>nis</li>
+         * <li>ldap</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nis</p>
          */
         @NameInMap("AccountType")
         public String accountType;
@@ -754,96 +855,134 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable auto-renewal. The parameter takes effect only when EcsChargeType is set to PrePaid. Valid values:</p>
-         * <br>
-         * <p>*   true: enables auto-renewal.</p>
-         * <p>*   false: disables auto-renewal.</p>
-         * <br>
+         * <ul>
+         * <li>true: enables auto-renewal.</li>
+         * <li>false: disables auto-renewal.</li>
+         * </ul>
          * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AutoRenew")
         public String autoRenew;
 
         /**
          * <p>The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.</p>
-         * <br>
-         * <p>*   If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.</p>
-         * <p>*   If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.</p>
-         * <br>
+         * <ul>
+         * <li>If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.</li>
+         * <li>If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.</li>
+         * </ul>
          * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AutoRenewPeriod")
         public String autoRenewPeriod;
 
         /**
          * <p>The image of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("BaseOsTag")
         public String baseOsTag;
 
         /**
          * <p>The version of the E-HPC client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.1</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
          * <p>The version of the E-HPC cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("ClusterVersion")
         public String clusterVersion;
 
         /**
          * <p>The maximum hourly price of the compute nodes. A maximum of three decimal places can be used in the value of the parameter. The parameter is valid only when the ComputeSpotStrategy parameter is set to SpotWithPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.56</p>
          */
         @NameInMap("ComputeSpotPriceLimit")
         public String computeSpotPriceLimit;
 
         /**
          * <p>The bidding method of the compute node. Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+         * <ul>
+         * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("ComputeSpotStrategy")
         public String computeSpotStrategy;
 
         /**
          * <p>The time at which the instance is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-24T03:18:23.000Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The mode in which the cluster is deployed. Valid values:</p>
-         * <br>
-         * <p>*   Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</p>
-         * <p>*   Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</p>
-         * <p>*   Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</p>
-         * <p>*   Tiny: The account node, scheduling node, and logon node are deployed on one node. The compute node is separately deployed.</p>
+         * <ul>
+         * <li>Standard: An account node, a scheduling node, a logon node, and multiple compute nodes are separately deployed.</li>
+         * <li>Advanced: Two high availability (HA) account nodes, two HA scheduler nodes, one logon node, and multiple compute nodes are separately deployed.</li>
+         * <li>Simple: A management node, a logon node, and multiple compute nodes are deployed. The management node consists of an account node and a scheduling node. The logon node and compute nodes are separately deployed.</li>
+         * <li>Tiny: The account node, scheduling node, and logon node are deployed on one node. The compute node is separately deployed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Simple</p>
          */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The domain name of the on-premises E-HPC cluster.</p>
-         * <br>
          * <p>This parameter takes effect only when the AccoutType parameter is set to Idap.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ldap</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The billing method of the nodes in the cluster. Valid values:</p>
-         * <br>
-         * <p>*   PostPaid: pay-as-you-go</p>
-         * <p>*   PrePaid: subscription</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("EcsChargeType")
         public String ecsChargeType;
@@ -856,37 +995,54 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable the high availability feature.</p>
-         * <br>
-         * <p>>  If high availability is enabled, each management role in the cluster uses both primary and secondary instances.</p>
+         * <blockquote>
+         * <p> If high availability is enabled, each management role in the cluster uses both primary and secondary instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HaEnable")
         public Boolean haEnable;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp15de54eet1c43f****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_02_64_20G_alibase_20170818****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_for_Image</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The image type. Valid values:</p>
-         * <br>
-         * <p>*   system: public image</p>
-         * <p>*   self: custom image</p>
-         * <p>*   others: shared image</p>
-         * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
+         * <ul>
+         * <li>system: public image</li>
+         * <li>self: custom image</li>
+         * <li>others: shared image</li>
+         * <li>marketplace: Alibaba Cloud Marketplace image</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
@@ -899,21 +1055,31 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         /**
          * <p>The name of the AccessKey pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
         /**
          * <p>The location where the cluster is deployed. Valid values:</p>
-         * <br>
-         * <p>*   OnPremise: The node is deployed on a hybrid cloud.</p>
-         * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
+         * <ul>
+         * <li>OnPremise: The node is deployed on a hybrid cloud.</li>
+         * <li>PublicCloud: The cluster is deployed on a public cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicCloud</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("Name")
         public String name;
@@ -926,7 +1092,6 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         /**
          * <p>The list of on-premises management nodes.</p>
-         * <br>
          * <p>This parameter is returned only when the cluster is deployed across hybrid environments and the hybrid-cloud proxy mode is enabled for the cluster.</p>
          */
         @NameInMap("OnPremiseInfo")
@@ -934,53 +1099,74 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         /**
          * <p>The parameter that is used to connect to the OpenLDAP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;LdapServerIp&quot;: &quot;192.168.XX.XX&quot;,
+         *     &quot;BaseDn&quot;: &quot;ehpctest&quot;,
+         *     &quot;FallbackHomeDir&quot;: &quot;/home&quot;
+         * }</p>
          */
         @NameInMap("OpenldapPar")
         public String openldapPar;
 
         /**
          * <p>The operating system tag of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS_7.2_64</p>
          */
         @NameInMap("OsTag")
         public String osTag;
 
         /**
-         * <p>The duration of the subscription. The unit of the duration is specified by the `PeriodUnit` parameter.</p>
-         * <br>
-         * <p>*   If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.</p>
-         * <p>*   If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
-         * <p>*   If you set PriceUnit to Hour, the valid value of the Period parameter is 1.</p>
-         * <br>
+         * <p>The duration of the subscription. The unit of the duration is specified by the <code>PeriodUnit</code> parameter.</p>
+         * <ul>
+         * <li>If you set PriceUnit to Year, the valid values of the Period parameter are 1, 2, and 3.</li>
+         * <li>If you set PriceUnit to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</li>
+         * <li>If you set PriceUnit to Hour, the valid value of the Period parameter is 1.</li>
+         * </ul>
          * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
          * <p>The unit of the subscription duration. Valid value:</p>
-         * <br>
-         * <p>*   Year</p>
-         * <p>*   Month</p>
-         * <p>*   Hour</p>
-         * <br>
+         * <ul>
+         * <li>Year</li>
+         * <li>Month</li>
+         * <li>Hour</li>
+         * </ul>
          * <p>Default value: Month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
          * <p>The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.</p>
-         * <br>
          * <p>The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.</p>
-         * <br>
-         * <p>*   pluginMod: the mode of the plug-in. The following modes are supported:</p>
-         * <br>
-         * <p>    *   oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.</p>
-         * <p>    *   image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.</p>
-         * <br>
-         * <p>*   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in the oss mode and a non-shared directory in the image mode.</p>
-         * <br>
-         * <p>*   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only if you set the pluginMod parameter to oss.</p>
+         * <ul>
+         * <li><p>pluginMod: the mode of the plug-in. The following modes are supported:</p>
+         * <ul>
+         * <li>oss: The plug-in is downloaded and decompressed from OSS to a local path that is specified by the pluginLocalPath parameter.</li>
+         * <li>image: By default, the plug-in is stored in a pre-defined local path that is specified by the pluginLocalPath parameter.</li>
+         * </ul>
+         * </li>
+         * <li><p>pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in the oss mode and a non-shared directory in the image mode.</p>
+         * </li>
+         * <li><p>pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only if you set the pluginMod parameter to oss.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;pluginMod\&quot;:\&quot;image\&quot;,\&quot;pluginLocalPath\&quot;:\&quot;/opt/plugin\&quot;}</p>
          */
         @NameInMap("Plugin")
         public String plugin;
@@ -993,138 +1179,202 @@ public class DescribeClusterResponseBody extends TeaModel {
 
         /**
          * <p>The node type details of the instance RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;manager&quot;, &quot;compute&quot;]</p>
          */
         @NameInMap("RamNodeTypes")
         public String ramNodeTypes;
 
         /**
          * <p>The name of the instance Resource Access Management (RAM) role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunEHPCFullAccess</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The remote directory on which the file system is mounted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NasMountpoint:/RemoteDirectory</p>
          */
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek23szz5i2****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the Super Computing Cluster (SCC) instance. If the cluster is not an SCC instance, a null string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00b648b****</p>
          */
         @NameInMap("SccClusterId")
         public String sccClusterId;
 
         /**
          * <p>Specifies whether the scheduler is preinstalled for the image. Valid values:</p>
-         * <br>
-         * <p>*   true: The scheduler is preinstalled. When you create a node or scale out a cluster, you do not need to install the scheduler.</p>
-         * <p>*   false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.</p>
+         * <ul>
+         * <li>true: The scheduler is preinstalled. When you create a node or scale out a cluster, you do not need to install the scheduler.</li>
+         * <li>false: The scheduler is not preinstalled. When you create or add a cluster, you must install the scheduler.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SchedulerPreInstall")
         public Integer schedulerPreInstall;
 
         /**
          * <p>The type of the scheduler. Valid values:</p>
-         * <br>
-         * <p>*   pbs</p>
-         * <p>*   slurm</p>
-         * <p>*   opengridscheduler</p>
-         * <p>*   deadline</p>
+         * <ul>
+         * <li>pbs</li>
+         * <li>slurm</li>
+         * <li>opengridscheduler</li>
+         * <li>deadline</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pbs</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
 
         /**
          * <p>The version of the scheduler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18.1.1</p>
          */
         @NameInMap("SchedulerVersion")
         public String schedulerVersion;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1asugr34gzn****</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   uninit: The cluster is not initialized.</p>
-         * <p>*   creating: The cluster is being created.</p>
-         * <p>*   init: The cluster is being initialized.</p>
-         * <p>*   running: The cluster is running.</p>
-         * <p>*   exception: The cluster encounters an exception.</p>
-         * <p>*   releasing: The cluster is being released.</p>
+         * <ul>
+         * <li>uninit: The cluster is not initialized.</li>
+         * <li>creating: The cluster is being created.</li>
+         * <li>init: The cluster is being initialized.</li>
+         * <li>running: The cluster is running.</li>
+         * <li>exception: The cluster encounters an exception.</li>
+         * <li>releasing: The cluster is being released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>creating</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The vSwitch ID. E-HPC can be deployed only in VPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1e47optm9g58zcu****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the Apsara File Storage NAS file system. NAS file systems cannot be automatically created.</p>
+         * <p>The ID of the File Storage NAS file system. NAS file systems cannot be automatically created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>008b64****</p>
          */
         @NameInMap("VolumeId")
         public String volumeId;
 
         /**
          * <p>The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>008b648bcb-s****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("VolumeMountpoint")
         public String volumeMountpoint;
 
         /**
          * <p>The type of the protocol that is used by the file system. Valid values:</p>
-         * <br>
-         * <p>*   nfs</p>
-         * <p>*   smb</p>
+         * <ul>
+         * <li>nfs</li>
+         * <li>smb</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nfs</p>
          */
         @NameInMap("VolumeProtocol")
         public String volumeProtocol;
 
         /**
          * <p>The type of the network shared storage. Valid value: NAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAS</p>
          */
         @NameInMap("VolumeType")
         public String volumeType;
 
         /**
          * <p>The VPC ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1pxkcvmmz53ki89****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The parameter that is used to connect to the Windows AD server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{	&quot;AdUser&quot;: &quot;Administrator&quot;,	&quot;AdUserPasswd&quot;: &quot;xxxxxx&quot;,	&quot;AdDc&quot;: &quot;ad-hybrid001.ehpcad.com&quot;,	&quot;AdIp&quot;: &quot;192.168.XX.XX&quot;}</p>
          */
         @NameInMap("WinAdPar")
         public String winAdPar;
 
         /**
          * <p>Specifies whether to not install the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("WithoutAgent")
         public Integer withoutAgent;
 
         /**
          * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

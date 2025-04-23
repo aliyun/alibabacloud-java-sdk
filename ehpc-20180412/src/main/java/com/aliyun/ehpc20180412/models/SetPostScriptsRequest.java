@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class SetPostScriptsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-sh-EnjshUxn</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -19,7 +22,11 @@ public class SetPostScriptsRequest extends TeaModel {
     public java.util.List<SetPostScriptsRequestPostInstallScripts> postInstallScripts;
 
     /**
-     * <p>The ID of the region where the cluster resides. You can call the [ListRegions](~~188593~~) operation to query the latest region list.</p>
+     * <p>The ID of the region where the cluster resides. You can call the <a href="https://help.aliyun.com/document_detail/188593.html">ListRegions</a> operation to query the latest region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -56,12 +63,18 @@ public class SetPostScriptsRequest extends TeaModel {
     public static class SetPostScriptsRequestPostInstallScripts extends TeaModel {
         /**
          * <p>The parameter that is used to run the post-processing script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-h</p>
          */
         @NameInMap("Args")
         public String args;
 
         /**
          * <p>The URL that is used to download the post-processing script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-cn-shanghai.aliyuncs.com/postscript_examples.sh">https://bucket.oss-cn-shanghai.aliyuncs.com/postscript_examples.sh</a></p>
          */
         @NameInMap("Url")
         public String url;

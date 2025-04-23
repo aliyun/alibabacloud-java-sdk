@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class EditJobTemplateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the job template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-job-tmpl-6RxO5y****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

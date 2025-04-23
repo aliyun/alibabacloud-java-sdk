@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListUpgradeClientsResponseBody extends TeaModel {
     /**
-     * <p>The upgrade records of the cluster client.</p>
+     * <p>The update records of ehpcutil in the cluster.</p>
      */
     @NameInMap("ClientRecords")
     public java.util.List<ListUpgradeClientsResponseBodyClientRecords> clientRecords;
 
     /**
-     * <p>The current version of the E-HPC client.</p>
+     * <p>The current version of ehpcutil in the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.21</p>
      */
     @NameInMap("CurrentVersion")
     public String currentVersion;
 
     /**
-     * <p>The latest version of the E-HPC client.</p>
+     * <p>The latest version of ehpcutil that is released.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.22</p>
      */
     @NameInMap("LatestVersion")
     public String latestVersion;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89A1AC0F-4A6C-4F3D-98F9-BEF9A823****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,25 +76,37 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
 
     public static class ListUpgradeClientsResponseBodyClientRecords extends TeaModel {
         /**
-         * <p>The version of the E-HPC client after the upgrade.</p>
+         * <p>The version of ehpcutil after the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.21</p>
          */
         @NameInMap("NewVersion")
         public String newVersion;
 
         /**
-         * <p>The version of the E-HPC client before the upgrade.</p>
+         * <p>The version of ehpcutil before the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.16</p>
          */
         @NameInMap("OldVersion")
         public String oldVersion;
 
         /**
-         * <p>The ID of the user that upgraded the E-HPC client.</p>
+         * <p>The user ID (UID) whose ehpcutil is updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129******84</p>
          */
         @NameInMap("SubUid")
         public String subUid;
 
         /**
-         * <p>The time when the operation was performed.</p>
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-26T06:26:57.000Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

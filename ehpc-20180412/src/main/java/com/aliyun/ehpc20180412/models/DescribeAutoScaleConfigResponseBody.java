@@ -6,105 +6,155 @@ import com.aliyun.tea.*;
 public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the associated cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The type of the scheduler. Valid values:</p>
-     * <br>
-     * <p>*   pbs</p>
-     * <p>*   slurm</p>
-     * <p>*   opengridscheduler</p>
-     * <p>*   deadline</p>
+     * <ul>
+     * <li>pbs</li>
+     * <li>slurm</li>
+     * <li>opengridscheduler</li>
+     * <li>deadline</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>slurm</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>Specifies whether to enable auto scale-out.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAutoGrow")
     public Boolean enableAutoGrow;
 
     /**
      * <p>Specifies whether to enable auto scale-in.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAutoShrink")
     public Boolean enableAutoShrink;
 
     /**
      * <p>The list of nodes on which auto scaling is not enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp19lgqwxb4206t5****,i-bp1g4hvzs9pywrhb****</p>
      */
     @NameInMap("ExcludeNodes")
     public String excludeNodes;
 
     /**
      * <p>The percentage of extra compute nodes. Valid values: 0 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ExtraNodesGrowRatio")
     public Integer extraNodesGrowRatio;
 
     /**
      * <p>The interval between two consecutive rounds of scale-in. Valid values: 2 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("GrowIntervalInMinutes")
     public Integer growIntervalInMinutes;
 
     /**
      * <p>The percentage of each round of scale-out. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("GrowRatio")
     public Integer growRatio;
 
     /**
      * <p>The timeout period before the scale-out nodes were started. Valid values: 10 to 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("GrowTimeoutInMinutes")
     public Integer growTimeoutInMinutes;
 
     /**
      * <p>The maximum number of compute nodes in the cluster. This parameter indicates the largest number of nodes that can be added to the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxNodesInCluster")
     public Integer maxNodesInCluster;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of consecutive idle times of a node during the resource shrink check. Valid values: 2 to 5.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ShrinkIdleTimes")
     public Integer shrinkIdleTimes;
 
     /**
      * <p>The interval between two consecutive rounds of scale-out. Valid values: 2 to 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ShrinkIntervalInMinutes")
     public Integer shrinkIntervalInMinutes;
 
     /**
      * <p>The maximum hourly price of the new ECS instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.062</p>
      */
     @NameInMap("SpotPriceLimit")
     public String spotPriceLimit;
 
     /**
      * <p>The bidding method of the compute nodes. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instances of the compute node are pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+     * <ul>
+     * <li>NoSpot: The instances of the compute node are pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testu****</p>
      */
     @NameInMap("Uid")
     public String uid;

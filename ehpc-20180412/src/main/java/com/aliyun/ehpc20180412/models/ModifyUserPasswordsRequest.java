@@ -6,22 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyUserPasswordsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the asynchronous mode for this request.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to obtain the cluster ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The information about the user.</p>
+     * <p>The users. You can specify 1 to 100 users.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("User")
     public java.util.List<ModifyUserPasswordsRequestUser> user;
@@ -57,24 +63,29 @@ public class ModifyUserPasswordsRequest extends TeaModel {
 
     public static class ModifyUserPasswordsRequestUser extends TeaModel {
         /**
-         * <p>The name of the user N whose password you want to modify. Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
+         * <p>The username of the user whose password you want to change.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/188572.html">ListUsers</a> operation to query the usernames in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The password of the Nth user. The password must be 8 to 30 characters in length and contain three of the following items:</p>
-         * <br>
-         * <p>*   Uppercase letter</p>
-         * <p>*   Lowercase letter</p>
-         * <p>*   Digit</p>
-         * <p>*   Special character: `()~!@#$%^&*-_+=|{}[]:;\"/<>,.?/`</p>
-         * <br>
-         * <p>Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>>  We recommend that you use HTTPS to call API operations to avoid password leaks.</p>
+         * <p>The new password for the user. The password must be 8 to 30 characters in length and contain at least three of the following character types:</p>
+         * <ul>
+         * <li>Uppercase letter</li>
+         * <li>Lowercase letter</li>
+         * <li>Digit</li>
+         * <li>Special character: <code>()~!@#$%^&amp;*-_+=|{}[]:;\\&quot;/&lt;&gt;,.?/</code></li>
+         * </ul>
+         * <blockquote>
+         * <p> We recommend that you use HTTPS to call this operation to avoid password leaks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1@a****</p>
          */
         @NameInMap("Password")
         public String password;

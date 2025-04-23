@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListUsersResponseBody extends TeaModel {
     /**
      * <p>The page number returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,21 +94,31 @@ public class ListUsersResponseBody extends TeaModel {
     public static class ListUsersResponseBodyUsersUserInfo extends TeaModel {
         /**
          * <p>The time when the user was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T17:46:47</p>
          */
         @NameInMap("AddTime")
         public String addTime;
 
         /**
          * <p>The name of the permission group. Valid values:</p>
-         * <br>
-         * <p>*   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</p>
-         * <p>*   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</p>
+         * <ul>
+         * <li>users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</li>
+         * <li>wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>wheel</p>
          */
         @NameInMap("Group")
         public String group;
 
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         @NameInMap("Name")
         public String name;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SubmitServerlessJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the serverless job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

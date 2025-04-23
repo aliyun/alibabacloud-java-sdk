@@ -5,30 +5,45 @@ import com.aliyun.tea.*;
 
 public class ListCustomImagesRequest extends TeaModel {
     /**
-     * <p>The image tag of the base operating system. The tag is used only by the management node.</p>
+     * <p>The image tag of the operating system. The tag is used only for management nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS_7.2_64</p>
      */
     @NameInMap("BaseOsTag")
     public String baseOsTag;
 
     /**
-     * <p>The ID of the cluster where the application resides. If the cluster supports multiple operating systems, all the images in the region where the cluster resides are queried.</p>
-     * <br>
-     * <p>By default, if you do not specify the cluster ID, the images that are supported by all the clusters is queried.</p>
+     * <p>The cluster ID.</p>
+     * <ul>
+     * <li>If you specify a value for this parameter, all community images in the region where the cluster resides are queried.</li>
+     * <li>If you do not specify a value for this parameter, the community images that are supported by all clusters are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ehpc-hz-FYUr32****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The source of the image. Valid values:</p>
-     * <br>
-     * <p>*   self: custom image</p>
-     * <p>*   others: shared image</p>
+     * <p>The image source. Valid values:</p>
+     * <ul>
+     * <li>self: custom image</li>
+     * <li>others: shared image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>self</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
     /**
-     * <p>Specify the type of the instance. By default, if you do not specify the type of the instance, the list of images that are supported by all the instance types are queried.</p>
+     * <p>The instance type of the Elastic Compute Service (ECS) instance. If you do not specify the instance type, the community images that are supported by all instance types are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.n1.tiny</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

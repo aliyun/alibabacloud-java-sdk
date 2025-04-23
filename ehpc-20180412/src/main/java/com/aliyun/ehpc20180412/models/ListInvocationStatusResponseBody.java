@@ -5,30 +5,40 @@ import com.aliyun.tea.*;
 
 public class ListInvocationStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the command.</p>
+     * <p>The command ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-hz01v8x80o3****</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
-     * <p>The list of statuses. A list is returned for each node.</p>
+     * <p>An array of execution statuses. An entry is returned for each node.</p>
      */
     @NameInMap("InvokeInstances")
     public ListInvocationStatusResponseBodyInvokeInstances invokeInstances;
 
     /**
-     * <p>The overall status of all nodes in the cluster. Valid values:</p>
-     * <br>
-     * <p>- Finished</p>
-     * <p>- Running</p>
-     * <p>- Failed</p>
-     * <p>- Stopped</p>
+     * <p>The status of the command. Valid values:</p>
+     * <ul>
+     * <li>Finished: The execution of the command finished.</li>
+     * <li>Running: The command is being executed.</li>
+     * <li>Failed: The command failed to be executed.</li>
+     * <li>Stopped: The execution of the command stopped.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -73,17 +83,24 @@ public class ListInvocationStatusResponseBody extends TeaModel {
     public static class ListInvocationStatusResponseBodyInvokeInstancesInvokeInstance extends TeaModel {
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-uf6abz34m2714bp4****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   Finished</p>
-         * <p>*   Running</p>
-         * <p>*   Failed</p>
-         * <p>*   Stopped</p>
+         * <ul>
+         * <li>Finished: The running of the node finished.</li>
+         * <li>Running: The node is running.</li>
+         * <li>Failed: The node failed to run.</li>
+         * <li>Stopped: The running of the node stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("InstanceInvokeStatus")
         public String instanceInvokeStatus;

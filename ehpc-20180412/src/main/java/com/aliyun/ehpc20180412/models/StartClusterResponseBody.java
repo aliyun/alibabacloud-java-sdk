@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76E1ADE7-D15A-457F-AAFD-06C5A5F052D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>76E1ADE7-D15A-457F-AAFD-06C5A5F052D0</p>
      */
     @NameInMap("TaskId")
     public String taskId;
