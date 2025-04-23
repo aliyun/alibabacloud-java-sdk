@@ -4,6 +4,12 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateAuthorizationAttributeResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>712C87FE-7C24-5298-B3E3-2BCB7AB9ED01</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

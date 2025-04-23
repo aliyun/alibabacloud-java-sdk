@@ -4,9 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CD478792-6952-5A1C-9F57-78932BF0FAC6</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>task-433aead756057fffeaba4828f5195</p>
+     */
     @NameInMap("taskId")
     public String taskId;
 

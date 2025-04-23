@@ -4,8 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class OperateJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dasd</p>
+     */
     @NameInMap("comment")
     public String comment;
+
+    @NameInMap("taskType")
+    public String taskType;
 
     public static OperateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateJobRequest self = new OperateJobRequest();
@@ -18,6 +27,14 @@ public class OperateJobRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public OperateJobRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
     }
 
 }

@@ -4,6 +4,10 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateModuleAttributeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CA05185E-6B90-5941-98D4-7212688AECC8</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

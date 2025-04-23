@@ -4,9 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateRabbitmqPublisherResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>mqp-3b6cb9fa4751afffb0af06b9ba504</p>
+     */
     @NameInMap("publisherId")
     public String publisherId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C3DA172D-DDCF-5268-BB0F-060C3A9D2623</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

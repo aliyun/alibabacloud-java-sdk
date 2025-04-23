@@ -4,12 +4,24 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CancelResourceExportTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ex-3b6cb9fa4751a6e5cdc6460282</p>
+     */
     @NameInMap("exportTaskId")
     public String exportTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("exportVersion")
     public String exportVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

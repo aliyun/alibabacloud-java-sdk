@@ -7,11 +7,19 @@ public class JobStatusDetailValue extends TeaModel {
     @NameInMap("comment")
     public String comment;
 
-    @NameInMap("timeStamps")
-    public String timeStamps;
-
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("jobResult")
     public String jobResult;
+
+    /**
+     * <strong>example:</strong>
+     * <p>2022-06-13 17:11:34</p>
+     */
+    @NameInMap("timeStamps")
+    public String timeStamps;
 
     public static JobStatusDetailValue build(java.util.Map<String, ?> map) throws Exception {
         JobStatusDetailValue self = new JobStatusDetailValue();
@@ -26,20 +34,20 @@ public class JobStatusDetailValue extends TeaModel {
         return this.comment;
     }
 
-    public JobStatusDetailValue setTimeStamps(String timeStamps) {
-        this.timeStamps = timeStamps;
-        return this;
-    }
-    public String getTimeStamps() {
-        return this.timeStamps;
-    }
-
     public JobStatusDetailValue setJobResult(String jobResult) {
         this.jobResult = jobResult;
         return this;
     }
     public String getJobResult() {
         return this.jobResult;
+    }
+
+    public JobStatusDetailValue setTimeStamps(String timeStamps) {
+        this.timeStamps = timeStamps;
+        return this;
+    }
+    public String getTimeStamps() {
+        return this.timeStamps;
     }
 
 }

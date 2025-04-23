@@ -204,11 +204,17 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
     }
 
     public static class GetResourceExportTaskResponseBodyTask extends TeaModel {
+        @NameInMap("configPath")
+        public String configPath;
+
         @NameInMap("createTime")
         public String createTime;
 
         @NameInMap("description")
         public String description;
+
+        @NameInMap("elapsedTime")
+        public Long elapsedTime;
 
         @NameInMap("excludeRules")
         public java.util.List<GetResourceExportTaskResponseBodyTaskExcludeRules> excludeRules;
@@ -243,6 +249,12 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         @NameInMap("taskOutputPath")
         public String taskOutputPath;
 
+        @NameInMap("terraformContext")
+        public java.util.Map<String, ?> terraformContext;
+
+        @NameInMap("terraformProviderVersion")
+        public String terraformProviderVersion;
+
         @NameInMap("terraformVersion")
         public String terraformVersion;
 
@@ -255,6 +267,14 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public static GetResourceExportTaskResponseBodyTask build(java.util.Map<String, ?> map) throws Exception {
             GetResourceExportTaskResponseBodyTask self = new GetResourceExportTaskResponseBodyTask();
             return TeaModel.build(map, self);
+        }
+
+        public GetResourceExportTaskResponseBodyTask setConfigPath(String configPath) {
+            this.configPath = configPath;
+            return this;
+        }
+        public String getConfigPath() {
+            return this.configPath;
         }
 
         public GetResourceExportTaskResponseBodyTask setCreateTime(String createTime) {
@@ -271,6 +291,14 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetResourceExportTaskResponseBodyTask setElapsedTime(Long elapsedTime) {
+            this.elapsedTime = elapsedTime;
+            return this;
+        }
+        public Long getElapsedTime() {
+            return this.elapsedTime;
         }
 
         public GetResourceExportTaskResponseBodyTask setExcludeRules(java.util.List<GetResourceExportTaskResponseBodyTaskExcludeRules> excludeRules) {
@@ -359,6 +387,22 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         }
         public String getTaskOutputPath() {
             return this.taskOutputPath;
+        }
+
+        public GetResourceExportTaskResponseBodyTask setTerraformContext(java.util.Map<String, ?> terraformContext) {
+            this.terraformContext = terraformContext;
+            return this;
+        }
+        public java.util.Map<String, ?> getTerraformContext() {
+            return this.terraformContext;
+        }
+
+        public GetResourceExportTaskResponseBodyTask setTerraformProviderVersion(String terraformProviderVersion) {
+            this.terraformProviderVersion = terraformProviderVersion;
+            return this;
+        }
+        public String getTerraformProviderVersion() {
+            return this.terraformProviderVersion;
         }
 
         public GetResourceExportTaskResponseBodyTask setTerraformVersion(String terraformVersion) {

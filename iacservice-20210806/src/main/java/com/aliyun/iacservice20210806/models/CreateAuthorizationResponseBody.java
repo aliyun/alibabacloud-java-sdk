@@ -4,9 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthorizationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>auth-14e80de4866bf7171264a9b40661</p>
+     */
     @NameInMap("authorizationId")
     public String authorizationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5FE84246-BB17-54BF-9F7A-F496270AC6DA</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

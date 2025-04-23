@@ -4,9 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CloneModuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>mod-71012916a5a376f265ebc3774</p>
+     */
     @NameInMap("moduleId")
     public String moduleId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>78EC2EFB-AED9-5C23-AE98-6DDC6F2F96D6</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

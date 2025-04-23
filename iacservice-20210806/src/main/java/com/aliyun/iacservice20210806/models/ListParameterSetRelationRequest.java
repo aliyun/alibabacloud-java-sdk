@@ -4,9 +4,15 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListParameterSetRelationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resourceId")
     public String resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

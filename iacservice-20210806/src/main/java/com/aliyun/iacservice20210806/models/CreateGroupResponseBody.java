@@ -4,9 +4,17 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
-    @NameInMap("id")
-    public String id;
+    /**
+     * <strong>example:</strong>
+     * <p>g-4267dcfbf1b6d128c87adf0e95f</p>
+     */
+    @NameInMap("groupId")
+    public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E2D0E863-1651-5E58-823F-B451C8C24615</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -15,12 +23,12 @@ public class CreateGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateGroupResponseBody setId(String id) {
-        this.id = id;
+    public CreateGroupResponseBody setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public String getId() {
-        return this.id;
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public CreateGroupResponseBody setRequestId(String requestId) {

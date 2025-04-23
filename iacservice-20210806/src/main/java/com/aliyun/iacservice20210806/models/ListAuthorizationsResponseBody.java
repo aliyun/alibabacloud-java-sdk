@@ -7,15 +7,33 @@ public class ListAuthorizationsResponseBody extends TeaModel {
     @NameInMap("authorizations")
     public java.util.List<ListAuthorizationsResponseBodyAuthorizations> authorizations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C67A913A-2A0F-53F6-A041-56CC4CA1E593</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -65,27 +83,55 @@ public class ListAuthorizationsResponseBody extends TeaModel {
     }
 
     public static class ListAuthorizationsResponseBodyAuthorizations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>auth-433aead756057ffee37b763564fdd</p>
+         */
         @NameInMap("authorizationId")
         public String authorizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-06-16T03:41:34Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
         @NameInMap("dueTime")
         public String dueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mod-395f8626622affff71ccbf5b25885</p>
+         */
         @NameInMap("moduleId")
         public String moduleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("moduleVersion")
         public String moduleVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aadfaf</p>
+         */
         @NameInMap("ownerUid")
         public Long ownerUid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>asdf123</p>
+         */
         @NameInMap("uid")
         public Long uid;
 

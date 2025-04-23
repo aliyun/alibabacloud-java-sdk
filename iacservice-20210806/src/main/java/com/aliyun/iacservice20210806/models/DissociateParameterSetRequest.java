@@ -4,12 +4,27 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class DissociateParameterSetRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("parameterSetIds")
     public java.util.List<String> parameterSetIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mod-39cd1e5e58c50e79dd8cd901cd</p>
+     */
     @NameInMap("resourceId")
     public String resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Module</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

@@ -4,6 +4,10 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetModuleVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0D298375-F92F-5B65-82E4-EA68F02521F1</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,33 +36,65 @@ public class GetModuleVersionResponseBody extends TeaModel {
     }
 
     public static class GetModuleVersionResponseBodyVersion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-08T18:07:40Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mod-4267dcfbf1b6dfffbc27e218d1b66</p>
+         */
         @NameInMap("moduleId")
         public String moduleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("moduleVersion")
         public String moduleVersion;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
+         */
         @NameInMap("statePath")
         public String statePath;
 
         @NameInMap("terraformContext")
         public java.util.Map<String, ?> terraformContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("versionStrategy")
         public String versionStrategy;
 

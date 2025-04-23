@@ -4,8 +4,14 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
+
+    @NameInMap("configPath")
+    public String configPath;
 
     @NameInMap("description")
     public String description;
@@ -19,11 +25,17 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
     @NameInMap("includeRules")
     public java.util.List<UpdateResourceExportTaskAttributeRequestIncludeRules> includeRules;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 
     @NameInMap("ramRole")
     public String ramRole;
+
+    @NameInMap("terraformProviderVersion")
+    public String terraformProviderVersion;
 
     @NameInMap("terraformVersion")
     public String terraformVersion;
@@ -45,6 +57,14 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateResourceExportTaskAttributeRequest setConfigPath(String configPath) {
+        this.configPath = configPath;
+        return this;
+    }
+    public String getConfigPath() {
+        return this.configPath;
     }
 
     public UpdateResourceExportTaskAttributeRequest setDescription(String description) {
@@ -93,6 +113,14 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
     }
     public String getRamRole() {
         return this.ramRole;
+    }
+
+    public UpdateResourceExportTaskAttributeRequest setTerraformProviderVersion(String terraformProviderVersion) {
+        this.terraformProviderVersion = terraformProviderVersion;
+        return this;
+    }
+    public String getTerraformProviderVersion() {
+        return this.terraformProviderVersion;
     }
 
     public UpdateResourceExportTaskAttributeRequest setTerraformVersion(String terraformVersion) {

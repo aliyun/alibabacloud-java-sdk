@@ -4,33 +4,86 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateRabbitmqPublisherRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a65451293e64979ba7a4b573950217fe</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ok</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExchangeTest</p>
+     */
     @NameInMap("exchangeName")
     public String exchangeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TOPIC</p>
+     */
     @NameInMap("exchangeType")
     public String exchangeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("hostName")
     public String hostName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MQ</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NDAxREVDQzI2MjA0OT****</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5672</p>
+     */
     @NameInMap("port")
     public Long port;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MjoxODgwNzcwODY5MD****</p>
+     */
     @NameInMap("userName")
     public String userName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
+     */
     @NameInMap("virtualHost")
     public String virtualHost;
 

@@ -243,8 +243,14 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        @NameInMap("elapsedTime")
+        public Long elapsedTime;
+
         @NameInMap("excludeRules")
         public java.util.List<ListResourceExportTasksResponseBodyExportTasksExcludeRules> excludeRules;
+
+        @NameInMap("exportStatus")
+        public String exportStatus;
 
         @NameInMap("exportTaskId")
         public String exportTaskId;
@@ -294,12 +300,28 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListResourceExportTasksResponseBodyExportTasks setElapsedTime(Long elapsedTime) {
+            this.elapsedTime = elapsedTime;
+            return this;
+        }
+        public Long getElapsedTime() {
+            return this.elapsedTime;
+        }
+
         public ListResourceExportTasksResponseBodyExportTasks setExcludeRules(java.util.List<ListResourceExportTasksResponseBodyExportTasksExcludeRules> excludeRules) {
             this.excludeRules = excludeRules;
             return this;
         }
         public java.util.List<ListResourceExportTasksResponseBodyExportTasksExcludeRules> getExcludeRules() {
             return this.excludeRules;
+        }
+
+        public ListResourceExportTasksResponseBodyExportTasks setExportStatus(String exportStatus) {
+            this.exportStatus = exportStatus;
+            return this;
+        }
+        public String getExportStatus() {
+            return this.exportStatus;
         }
 
         public ListResourceExportTasksResponseBodyExportTasks setExportTaskId(String exportTaskId) {

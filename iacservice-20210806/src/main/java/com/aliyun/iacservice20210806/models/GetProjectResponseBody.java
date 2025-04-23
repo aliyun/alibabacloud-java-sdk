@@ -7,6 +7,10 @@ public class GetProjectResponseBody extends TeaModel {
     @NameInMap("project")
     public GetProjectResponseBodyProject project;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7FA0FF4A-ABD4-54F6-BEAC-B4273EBA10A2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyProject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-06T06:11:27Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("description")
         public String description;
 
-        @NameInMap("id")
-        public String id;
-
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-433aead7560572f8d95b25775c</p>
+         */
+        @NameInMap("projectId")
+        public String projectId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("taskCnt")
         public Long taskCnt;
 
@@ -68,20 +92,20 @@ public class GetProjectResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetProjectResponseBodyProject setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public GetProjectResponseBodyProject setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetProjectResponseBodyProject setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
         }
 
         public GetProjectResponseBodyProject setTaskCnt(Long taskCnt) {

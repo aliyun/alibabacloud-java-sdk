@@ -4,6 +4,10 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateRabbitmqPublisherAttributeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E2D0E863-1651-5E58-823F-B451C8C24615</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

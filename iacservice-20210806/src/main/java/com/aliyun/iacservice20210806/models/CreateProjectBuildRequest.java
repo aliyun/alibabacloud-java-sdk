@@ -4,9 +4,24 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectBuildRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a65451293e64979ba7a4b573950217fe</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("groupId")
+    public String groupId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>refresh</p>
+     */
     @NameInMap("projectBuildAction")
     public String projectBuildAction;
 
@@ -27,6 +42,14 @@ public class CreateProjectBuildRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateProjectBuildRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public CreateProjectBuildRequest setProjectBuildAction(String projectBuildAction) {
@@ -54,12 +77,24 @@ public class CreateProjectBuildRequest extends TeaModel {
     }
 
     public static class CreateProjectBuildRequestTaskPolicies extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>destroyAfterExecution</p>
+         */
         @NameInMap("destroyAfterExecution")
         public Boolean destroyAfterExecution;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("priority")
         public Long priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task-60f24b4eb47f1135b7b14ddbdfd</p>
+         */
         @NameInMap("taskId")
         public String taskId;
 

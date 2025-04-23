@@ -7,6 +7,12 @@ public class GetModuleResponseBody extends TeaModel {
     @NameInMap("module")
     public GetModuleResponseBodyModule module;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E7BA3EB-B0EF-53F5-9999-07CAD6D9F8A3</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,36 +38,83 @@ public class GetModuleResponseBody extends TeaModel {
     }
 
     public static class GetModuleResponseBodyModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-06T06:11:27Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("latestVersion")
         public String latestVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mod-4267dcfbf1b6d14625614ddbe15</p>
+         */
         @NameInMap("moduleId")
         public String moduleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("outputPath")
         public String outputPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS：
+         * &quot;oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>&quot;
+         * Registry：
+         * &quot;alibaba/security-group/alicloud:2.1.0&quot;</p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
+         */
         @NameInMap("statePath")
         public String statePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Created</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("versionStrategy")
         public String versionStrategy;
 

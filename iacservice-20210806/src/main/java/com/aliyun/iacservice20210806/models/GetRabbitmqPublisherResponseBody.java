@@ -7,6 +7,10 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
     @NameInMap("publisher")
     public GetRabbitmqPublisherResponseBodyPublisher publisher;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1E7BA3EB-B0EF-53F5-9999-07CAD6D9F8A3</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,36 +36,76 @@ public class GetRabbitmqPublisherResponseBody extends TeaModel {
     }
 
     public static class GetRabbitmqPublisherResponseBodyPublisher extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-05T06:07:48Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ExchangeTest</p>
+         */
         @NameInMap("exchangeName")
         public String exchangeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TOPIC</p>
+         */
         @NameInMap("exchangeType")
         public String exchangeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1880770****.mq-amqp.cn-hangzhou-a.aliyuncs.com</p>
+         */
         @NameInMap("hostName")
         public String hostName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test123</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5671</p>
+         */
         @NameInMap("port")
         public Long port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mqp-3b6cb9fa4751a6fa1b69b8dca1</p>
+         */
         @NameInMap("publisherId")
         public String publisherId;
 
         @NameInMap("taskIds")
         public java.util.List<String> taskIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MjoxODgwNzcwODY5MD****</p>
+         */
         @NameInMap("userName")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MjoxODgwNzcwODY5MD****</p>
+         */
         @NameInMap("virtualHost")
         public String virtualHost;
 

@@ -4,9 +4,22 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceExportTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a65451293e64979ba7a4b573950217fe</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("configPath")
+    public String configPath;
+
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("description")
     public String description;
 
@@ -19,15 +32,36 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     @NameInMap("includeRules")
     public java.util.List<CreateResourceExportTaskRequestIncludeRules> includeRules;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ramRole")
     public String ramRole;
 
+    @NameInMap("terraformProviderVersion")
+    public String terraformProviderVersion;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1.2.6</p>
+     */
     @NameInMap("terraformVersion")
     public String terraformVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Auto</p>
+     */
     @NameInMap("triggerStrategy")
     public String triggerStrategy;
 
@@ -45,6 +79,14 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateResourceExportTaskRequest setConfigPath(String configPath) {
+        this.configPath = configPath;
+        return this;
+    }
+    public String getConfigPath() {
+        return this.configPath;
     }
 
     public CreateResourceExportTaskRequest setDescription(String description) {
@@ -95,6 +137,14 @@ public class CreateResourceExportTaskRequest extends TeaModel {
         return this.ramRole;
     }
 
+    public CreateResourceExportTaskRequest setTerraformProviderVersion(String terraformProviderVersion) {
+        this.terraformProviderVersion = terraformProviderVersion;
+        return this;
+    }
+    public String getTerraformProviderVersion() {
+        return this.terraformProviderVersion;
+    }
+
     public CreateResourceExportTaskRequest setTerraformVersion(String terraformVersion) {
         this.terraformVersion = terraformVersion;
         return this;
@@ -120,6 +170,10 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     }
 
     public static class CreateResourceExportTaskRequestExcludeRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -150,12 +204,24 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     }
 
     public static class CreateResourceExportTaskRequestExportToModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Registry</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alibaba/security-group/alicloud</p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("statePath")
         public String statePath;
 
@@ -191,6 +257,10 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     }
 
     public static class CreateResourceExportTaskRequestIncludeRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ZoneId</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -224,6 +294,10 @@ public class CreateResourceExportTaskRequest extends TeaModel {
         @NameInMap("properties")
         public java.util.List<String> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliCloud::VPC::VPC</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 

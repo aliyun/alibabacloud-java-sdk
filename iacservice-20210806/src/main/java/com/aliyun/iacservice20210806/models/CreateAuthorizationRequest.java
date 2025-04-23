@@ -4,21 +4,49 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthorizationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a65451293e64979ba7a4b573950217fe</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
     @NameInMap("dueTime")
     public String dueTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mod-148e7853433574fff6b316f4eb737e</p>
+     */
     @NameInMap("moduleId")
     public String moduleId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("moduleVersion")
     public String moduleVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5a220da4-f594-4776-87ed-f37888ec0473</p>
+     */
     @NameInMap("uid")
     public Long uid;
 

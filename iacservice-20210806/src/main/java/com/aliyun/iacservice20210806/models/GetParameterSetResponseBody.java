@@ -7,6 +7,10 @@ public class GetParameterSetResponseBody extends TeaModel {
     @NameInMap("parameterSet")
     public GetParameterSetResponseBodyParameterSet parameterSet;
 
+    /**
+     * <strong>example:</strong>
+     * <p>99905C7C-1320-5E7F-A798-3071482EB08E</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetParameterSetResponseBody extends TeaModel {
     }
 
     public static class GetParameterSetResponseBodyParameterSetParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test1121</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>string</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2ze83xrka9ktxy0pnaxn5</p>
+         */
         @NameInMap("value")
         public Object value;
 
@@ -73,12 +89,24 @@ public class GetParameterSetResponseBody extends TeaModel {
     }
 
     public static class GetParameterSetResponseBodyParameterSetRelationList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-24T22:58:50Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mod-433aead756057101546eb5d50c1</p>
+         */
         @NameInMap("resourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Module</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -114,15 +142,31 @@ public class GetParameterSetResponseBody extends TeaModel {
     }
 
     public static class GetParameterSetResponseBodyParameterSet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-30T02:14:16Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pts-3b6cb9fa4751afff9c5e4e01624b9</p>
+         */
         @NameInMap("parameterSetId")
         public String parameterSetId;
 

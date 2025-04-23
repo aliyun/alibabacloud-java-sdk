@@ -4,15 +4,31 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListModuleVersionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>792171BB-1A68-5148-8B9B-C7C728E1E98B</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -65,21 +81,45 @@ public class ListModuleVersionResponseBody extends TeaModel {
     }
 
     public static class ListModuleVersionResponseBodyVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-13T02:21:49Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mod-55f1739d9050fffed3ec3a2c4a5e5</p>
+         */
         @NameInMap("moduleId")
         public String moduleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v3</p>
+         */
         @NameInMap("moduleVersion")
         public String moduleVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 

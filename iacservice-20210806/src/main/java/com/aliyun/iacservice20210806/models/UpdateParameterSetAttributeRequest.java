@@ -4,9 +4,19 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateParameterSetAttributeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("name")
     public String name;
 
@@ -43,12 +53,24 @@ public class UpdateParameterSetAttributeRequest extends TeaModel {
     }
 
     public static class UpdateParameterSetAttributeRequestParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>t</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>string</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1mjm9exduos1bipw9x6</p>
+         */
         @NameInMap("value")
         public String value;
 

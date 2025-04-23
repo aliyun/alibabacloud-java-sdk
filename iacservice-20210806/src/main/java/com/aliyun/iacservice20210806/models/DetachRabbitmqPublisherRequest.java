@@ -4,6 +4,12 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class DetachRabbitmqPublisherRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task-518855d9a058cf1127d082bec5</p>
+     */
     @NameInMap("taskId")
     public String taskId;
 

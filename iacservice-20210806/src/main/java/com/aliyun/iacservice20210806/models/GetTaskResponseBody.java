@@ -4,6 +4,12 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C24C498A-09CF-54D3-8972-8DC074CF8614</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,15 +38,31 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTaskGroupInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
+         */
         @NameInMap("groupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-433aead756057fff47ecbfd94d76</p>
+         */
         @NameInMap("projectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("projectName")
         public String projectName;
 
@@ -84,24 +106,58 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTask extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("autoApply")
         public Boolean autoApply;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("autoDestroy")
+        public Boolean autoDestroy;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2022-06-15T02:44:37Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-absdf</p>
+         */
         @NameInMap("currentJobId")
         public String currentJobId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
+        @NameInMap("description")
+        public String description;
 
         @NameInMap("groupInfo")
         public GetTaskResponseBodyTaskGroupInfo groupInfo;
 
-        @NameInMap("meta")
-        public java.util.Map<String, String> meta;
+        @NameInMap("initModuleState")
+        public Boolean initModuleState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mod-4267dcfbf1b6d14625614ddbe15</p>
+         */
         @NameInMap("moduleId")
         public String moduleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("moduleVersion")
         public String moduleVersion;
 
@@ -114,23 +170,57 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("protectionStrategy")
         public java.util.List<String> protectionStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ramRole")
         public String ramRole;
 
+        @NameInMap("skipPropertyValidation")
+        public Boolean skipPropertyValidation;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task-433aead756057154bda7f1c2e98</p>
+         */
         @NameInMap("taskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("taskOutputPath")
         public String taskOutputPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.2.6</p>
+         */
         @NameInMap("terraformVersion")
         public String terraformVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("triggerStrategy")
         public String triggerStrategy;
+
+        /**
+         * <strong>example:</strong>
+         * <p>**<em>10</em></p>
+         */
+        @NameInMap("triggerValue")
+        public String triggerValue;
 
         public static GetTaskResponseBodyTask build(java.util.Map<String, ?> map) throws Exception {
             GetTaskResponseBodyTask self = new GetTaskResponseBodyTask();
@@ -143,6 +233,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public Boolean getAutoApply() {
             return this.autoApply;
+        }
+
+        public GetTaskResponseBodyTask setAutoDestroy(Boolean autoDestroy) {
+            this.autoDestroy = autoDestroy;
+            return this;
+        }
+        public Boolean getAutoDestroy() {
+            return this.autoDestroy;
         }
 
         public GetTaskResponseBodyTask setCreateTime(String createTime) {
@@ -161,6 +259,14 @@ public class GetTaskResponseBody extends TeaModel {
             return this.currentJobId;
         }
 
+        public GetTaskResponseBodyTask setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public GetTaskResponseBodyTask setGroupInfo(GetTaskResponseBodyTaskGroupInfo groupInfo) {
             this.groupInfo = groupInfo;
             return this;
@@ -169,12 +275,12 @@ public class GetTaskResponseBody extends TeaModel {
             return this.groupInfo;
         }
 
-        public GetTaskResponseBodyTask setMeta(java.util.Map<String, String> meta) {
-            this.meta = meta;
+        public GetTaskResponseBodyTask setInitModuleState(Boolean initModuleState) {
+            this.initModuleState = initModuleState;
             return this;
         }
-        public java.util.Map<String, String> getMeta() {
-            return this.meta;
+        public Boolean getInitModuleState() {
+            return this.initModuleState;
         }
 
         public GetTaskResponseBodyTask setModuleId(String moduleId) {
@@ -225,6 +331,14 @@ public class GetTaskResponseBody extends TeaModel {
             return this.ramRole;
         }
 
+        public GetTaskResponseBodyTask setSkipPropertyValidation(Boolean skipPropertyValidation) {
+            this.skipPropertyValidation = skipPropertyValidation;
+            return this;
+        }
+        public Boolean getSkipPropertyValidation() {
+            return this.skipPropertyValidation;
+        }
+
         public GetTaskResponseBodyTask setStatus(String status) {
             this.status = status;
             return this;
@@ -263,6 +377,14 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getTriggerStrategy() {
             return this.triggerStrategy;
+        }
+
+        public GetTaskResponseBodyTask setTriggerValue(String triggerValue) {
+            this.triggerValue = triggerValue;
+            return this;
+        }
+        public String getTriggerValue() {
+            return this.triggerValue;
         }
 
     }

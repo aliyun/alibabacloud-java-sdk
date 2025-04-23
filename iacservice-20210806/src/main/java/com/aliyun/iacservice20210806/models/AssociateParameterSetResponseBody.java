@@ -4,6 +4,10 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class AssociateParameterSetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BF75EF50-955D-5E1F-AB23-A657C2C6D3C7</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,18 +4,34 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListProjectResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("count")
     public Long count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
     @NameInMap("projects")
     public java.util.List<ListProjectResponseBodyProjects> projects;
 
+    /**
+     * <strong>example:</strong>
+     * <p>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -64,19 +80,72 @@ public class ListProjectResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListProjectResponseBodyProjectsTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListProjectResponseBodyProjectsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListProjectResponseBodyProjectsTags self = new ListProjectResponseBodyProjectsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListProjectResponseBodyProjectsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListProjectResponseBodyProjectsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListProjectResponseBodyProjects extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-10T10:08:34Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("description")
         public String description;
 
-        @NameInMap("id")
-        public String id;
-
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-148e7853433574fffe9fec72ed9b72</p>
+         */
+        @NameInMap("projectId")
+        public String projectId;
+
+        @NameInMap("tags")
+        public java.util.List<ListProjectResponseBodyProjectsTags> tags;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("taskCnt")
         public Long taskCnt;
 
@@ -101,20 +170,28 @@ public class ListProjectResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListProjectResponseBodyProjects setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public ListProjectResponseBodyProjects setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListProjectResponseBodyProjects setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public ListProjectResponseBodyProjects setTags(java.util.List<ListProjectResponseBodyProjectsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListProjectResponseBodyProjectsTags> getTags() {
+            return this.tags;
         }
 
         public ListProjectResponseBodyProjects setTaskCnt(Long taskCnt) {

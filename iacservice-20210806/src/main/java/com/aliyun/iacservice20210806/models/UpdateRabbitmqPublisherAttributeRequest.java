@@ -4,15 +4,30 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateRabbitmqPublisherAttributeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ExchangeTest</p>
+     */
     @NameInMap("exchangeName")
     public String exchangeName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TOPIC</p>
+     */
     @NameInMap("exchangeType")
     public String exchangeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("name")
     public String name;
 

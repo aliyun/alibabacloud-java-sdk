@@ -4,12 +4,27 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class AssociateParameterSetRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("parameterSetIds")
     public java.util.List<String> parameterSetIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task-433aead756057ffdf5326bf1e12ed</p>
+     */
     @NameInMap("resourceId")
     public String resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Task</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

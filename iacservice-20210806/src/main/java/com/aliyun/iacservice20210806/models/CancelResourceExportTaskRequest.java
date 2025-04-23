@@ -4,9 +4,19 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class CancelResourceExportTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a65451293e64979ba7a4b573950217fe</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ramRole")
     public String ramRole;
 

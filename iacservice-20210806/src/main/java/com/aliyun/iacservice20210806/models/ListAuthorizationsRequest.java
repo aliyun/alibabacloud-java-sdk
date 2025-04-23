@@ -4,18 +4,40 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorizationsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>auth-433aead756057ffec22d5b1ef27ac</p>
+     */
     @NameInMap("authorizationId")
     public String authorizationId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>others</p>
+     */
     @NameInMap("authorizationType")
     public String authorizationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

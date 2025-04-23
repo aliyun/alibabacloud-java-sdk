@@ -10,12 +10,21 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("sourceValue")
     public String sourceValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("specType")
     public String specType;
 
