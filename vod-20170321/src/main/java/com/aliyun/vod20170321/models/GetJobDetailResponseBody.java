@@ -40,6 +40,9 @@ public class GetJobDetailResponseBody extends TeaModel {
     @NameInMap("TranscodeJobDetail")
     public GetJobDetailResponseBodyTranscodeJobDetail transcodeJobDetail;
 
+    @NameInMap("WorkflowTaskDetail")
+    public GetJobDetailResponseBodyWorkflowTaskDetail workflowTaskDetail;
+
     public static GetJobDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetJobDetailResponseBody self = new GetJobDetailResponseBody();
         return TeaModel.build(map, self);
@@ -83,6 +86,14 @@ public class GetJobDetailResponseBody extends TeaModel {
     }
     public GetJobDetailResponseBodyTranscodeJobDetail getTranscodeJobDetail() {
         return this.transcodeJobDetail;
+    }
+
+    public GetJobDetailResponseBody setWorkflowTaskDetail(GetJobDetailResponseBodyWorkflowTaskDetail workflowTaskDetail) {
+        this.workflowTaskDetail = workflowTaskDetail;
+        return this;
+    }
+    public GetJobDetailResponseBodyWorkflowTaskDetail getWorkflowTaskDetail() {
+        return this.workflowTaskDetail;
     }
 
     public static class GetJobDetailResponseBodyAIJobDetail extends TeaModel {
@@ -575,6 +586,187 @@ public class GetJobDetailResponseBody extends TeaModel {
         }
         public String getVideoId() {
             return this.videoId;
+        }
+
+    }
+
+    public static class GetJobDetailResponseBodyWorkflowTaskDetailWorkflow extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("WorkflowId")
+        public String workflowId;
+
+        public static GetJobDetailResponseBodyWorkflowTaskDetailWorkflow build(java.util.Map<String, ?> map) throws Exception {
+            GetJobDetailResponseBodyWorkflowTaskDetailWorkflow self = new GetJobDetailResponseBodyWorkflowTaskDetailWorkflow();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow setWorkflowId(String workflowId) {
+            this.workflowId = workflowId;
+            return this;
+        }
+        public String getWorkflowId() {
+            return this.workflowId;
+        }
+
+    }
+
+    public static class GetJobDetailResponseBodyWorkflowTaskDetail extends TeaModel {
+        @NameInMap("ActivityResults")
+        public String activityResults;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("FinishTime")
+        public String finishTime;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("TaskInput")
+        public String taskInput;
+
+        @NameInMap("UserData")
+        public String userData;
+
+        @NameInMap("Workflow")
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow workflow;
+
+        public static GetJobDetailResponseBodyWorkflowTaskDetail build(java.util.Map<String, ?> map) throws Exception {
+            GetJobDetailResponseBodyWorkflowTaskDetail self = new GetJobDetailResponseBodyWorkflowTaskDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setActivityResults(String activityResults) {
+            this.activityResults = activityResults;
+            return this;
+        }
+        public String getActivityResults() {
+            return this.activityResults;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setTaskInput(String taskInput) {
+            this.taskInput = taskInput;
+            return this;
+        }
+        public String getTaskInput() {
+            return this.taskInput;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public GetJobDetailResponseBodyWorkflowTaskDetail setWorkflow(GetJobDetailResponseBodyWorkflowTaskDetailWorkflow workflow) {
+            this.workflow = workflow;
+            return this;
+        }
+        public GetJobDetailResponseBodyWorkflowTaskDetailWorkflow getWorkflow() {
+            return this.workflow;
         }
 
     }
