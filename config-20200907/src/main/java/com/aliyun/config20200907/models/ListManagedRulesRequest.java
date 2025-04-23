@@ -5,6 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListManagedRulesRequest extends TeaModel {
     /**
+     * <p>The scope for filtering managed rules allows you to filter out managed rules without resource coverage. The possible values are:</p>
+     * <ul>
+     * <li><p>ALL: All rules.</p>
+     * </li>
+     * <li><p>UNCOVERED_RESOURCE: Filters managed rules where some resources are not covered.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
+    @NameInMap("FilterType")
+    public String filterType;
+
+    /**
      * <p>The keyword of the managed rule.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +74,14 @@ public class ListManagedRulesRequest extends TeaModel {
     public static ListManagedRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListManagedRulesRequest self = new ListManagedRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListManagedRulesRequest setFilterType(String filterType) {
+        this.filterType = filterType;
+        return this;
+    }
+    public String getFilterType() {
+        return this.filterType;
     }
 
     public ListManagedRulesRequest setKeyword(String keyword) {

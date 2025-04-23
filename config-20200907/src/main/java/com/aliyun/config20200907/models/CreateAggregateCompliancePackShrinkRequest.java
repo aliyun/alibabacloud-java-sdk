@@ -149,6 +149,10 @@ public class CreateAggregateCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

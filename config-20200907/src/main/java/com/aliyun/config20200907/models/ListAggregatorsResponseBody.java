@@ -41,9 +41,21 @@ public class ListAggregatorsResponseBody extends TeaModel {
     }
 
     public static class ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags extends TeaModel {
+        /**
+         * <p>The tag keys of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag values of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -161,6 +173,9 @@ public class ListAggregatorsResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAggregatorsResponseBodyAggregatorsResultAggregatorsTags> tags;
 

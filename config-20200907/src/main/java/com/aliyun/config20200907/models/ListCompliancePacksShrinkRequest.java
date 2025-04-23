@@ -37,6 +37,10 @@ public class ListCompliancePacksShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

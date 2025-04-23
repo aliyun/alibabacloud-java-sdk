@@ -70,14 +70,18 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the folder to which the account group is attached. You must specify this parameter if <code>AggregatorType</code> is set to <code>FOLDER</code>.</p>
+     * <p>The ID of the folder to which the account group is attached. You must specify this parameter if <code>AggregatorType</code> is set to <code>FOLDER</code>. Multiple resource folder IDs should be separated by commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>fd-brHdgv****</p>
+     * <p>fd-brHdgv****,fd-brHdgk****</p>
      */
     @NameInMap("FolderId")
     public String folderId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

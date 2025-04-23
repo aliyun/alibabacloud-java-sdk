@@ -4,9 +4,26 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesRequest extends TeaModel {
+    /**
+     * <p>The end time of the time range for querying resources. The value is a timestamp in the UTC format. When you specify this parameter, take note of the following limits:</p>
+     * <ul>
+     * <li>The value must be a timestamp in milliseconds.</li>
+     * <li>The value cannot be less than the value of the StartUpdateTimestamp parameter. The interval between the value and the value of the StartUpdateTimestamp parameter must be less than or equal to 30 days.</li>
+     * <li>The StartUpdateTimestamp and EndUpdateTimestamp parameters must be specified at the same time or left empty at the same time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1724947200000</p>
+     */
     @NameInMap("EndUpdateTimestamp")
     public Long endUpdateTimestamp;
 
+    /**
+     * <p>The types of resources that are excluded. Separate multiple values with commas (,). If this parameter conflicts with the ResourceTypes parameter, this parameter prevails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACS::ECS::Instance,ACS::ECS::NetworkInterface</p>
+     */
     @NameInMap("ExcludeResourceTypes")
     public String excludeResourceTypes;
 
@@ -72,6 +89,17 @@ public class ListDiscoveredResourcesRequest extends TeaModel {
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 
+    /**
+     * <p>The start time of the time range for querying resources. The value is a timestamp in the UTC format. When you specify this parameter, take note of the following limits:</p>
+     * <ul>
+     * <li>The value must be a timestamp in milliseconds.</li>
+     * <li>The value cannot be greater than the value of the EndUpdateTimestamp parameter. The interval between the value and the value of the EndUpdateTimestamp parameter must be less than or equal to 30 days.</li>
+     * <li>The StartUpdateTimestamp and EndUpdateTimestamp parameters must be specified at the same time or left blank at the same time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1722441600000</p>
+     */
     @NameInMap("StartUpdateTimestamp")
     public Long startUpdateTimestamp;
 

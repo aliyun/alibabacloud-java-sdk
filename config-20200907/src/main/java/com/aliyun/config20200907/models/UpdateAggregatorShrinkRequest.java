@@ -56,6 +56,19 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The folder ID. Separate multiple folder IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fd-brHdgv****,fd-brHdgk****</p>
+     */
+    @NameInMap("FolderId")
+    public String folderId;
+
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 
@@ -102,6 +115,14 @@ public class UpdateAggregatorShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateAggregatorShrinkRequest setFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    public String getFolderId() {
+        return this.folderId;
     }
 
     public UpdateAggregatorShrinkRequest setTagShrink(String tagShrink) {

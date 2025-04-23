@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
     /**
-     * <p>The information about the compliance evaluation report.</p>
+     * <p>The compliance evaluation report.</p>
      */
     @NameInMap("ConfigRulesReport")
     public GetAggregateConfigRulesReportResponseBodyConfigRulesReport configRulesReport;
@@ -80,8 +80,8 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
         /**
          * <p>The status of the compliance evaluation report. Valid values:</p>
          * <ul>
-         * <li>NONE: The compliance evaluation report was not generated.</li>
-         * <li>CREATING: The compliance evaluation report was being generated.</li>
+         * <li>NONE: The compliance evaluation report is not generated.</li>
+         * <li>CREATING: The compliance evaluation report is being generated.</li>
          * <li>COMPLETE: The compliance evaluation report was generated.</li>
          * </ul>
          * 
@@ -92,7 +92,7 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
         public String reportStatus;
 
         /**
-         * <p>The URL that is used to download the compliance evaluation report.</p>
+         * <p>The URL used to download the compliance evaluation report.</p>
          */
         @NameInMap("ReportUrl")
         public String reportUrl;

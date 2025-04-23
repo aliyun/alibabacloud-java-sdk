@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateCompliancePacksResponseBody extends TeaModel {
     /**
-     * <p>The information about the compliance packages.</p>
+     * <p>The compliance packages returned.</p>
      */
     @NameInMap("CompliancePacksResult")
     public ListAggregateCompliancePacksResponseBodyCompliancePacksResult compliancePacksResult;
@@ -41,9 +41,21 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
     }
 
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -161,6 +173,9 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags;
 
@@ -253,7 +268,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
 
     public static class ListAggregateCompliancePacksResponseBodyCompliancePacksResult extends TeaModel {
         /**
-         * <p>The details of the compliance package.</p>
+         * <p>The compliance packages.</p>
          */
         @NameInMap("CompliancePacks")
         public java.util.List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> compliancePacks;

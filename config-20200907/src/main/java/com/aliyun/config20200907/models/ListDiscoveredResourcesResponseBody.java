@@ -139,6 +139,12 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The time when the resource was last updated. The value must be a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1722441600000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

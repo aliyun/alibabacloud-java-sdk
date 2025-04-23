@@ -14,6 +14,10 @@ public class GetAggregatorShrinkRequest extends TeaModel {
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

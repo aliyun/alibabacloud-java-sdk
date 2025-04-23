@@ -48,6 +48,9 @@ public class ListAggregateCompliancePacksShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

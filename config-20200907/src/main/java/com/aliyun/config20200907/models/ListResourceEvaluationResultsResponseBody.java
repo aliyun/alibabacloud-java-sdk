@@ -269,6 +269,13 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
         public Long configRuleInvokedTimestamp;
 
         /**
+         * <strong>example:</strong>
+         * <p>00000089-4e0d-58b5-a96a-8e54112110f3</p>
+         */
+        @NameInMap("EvaluationId")
+        public String evaluationId;
+
+        /**
          * <p>The identifying information about the compliance evaluation result.</p>
          */
         @NameInMap("EvaluationResultIdentifier")
@@ -279,6 +286,7 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
          * <ul>
          * <li>ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.</li>
          * <li>ScheduledNotification: The managed rule is periodically triggered.</li>
+         * <li>Manual: The rule is manually triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -286,6 +294,13 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
          */
         @NameInMap("InvokingEventMessageType")
         public String invokingEventMessageType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1744696393000</p>
+         */
+        @NameInMap("LastNonCompliantRecordTimestamp")
+        public Long lastNonCompliantRecordTimestamp;
 
         /**
          * <p>Indicates whether the remediation template is enabled. Valid values:</p>
@@ -352,6 +367,14 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
             return this.configRuleInvokedTimestamp;
         }
 
+        public ListResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setEvaluationId(String evaluationId) {
+            this.evaluationId = evaluationId;
+            return this;
+        }
+        public String getEvaluationId() {
+            return this.evaluationId;
+        }
+
         public ListResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setEvaluationResultIdentifier(ListResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier) {
             this.evaluationResultIdentifier = evaluationResultIdentifier;
             return this;
@@ -366,6 +389,14 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
         }
         public String getInvokingEventMessageType() {
             return this.invokingEventMessageType;
+        }
+
+        public ListResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setLastNonCompliantRecordTimestamp(Long lastNonCompliantRecordTimestamp) {
+            this.lastNonCompliantRecordTimestamp = lastNonCompliantRecordTimestamp;
+            return this;
+        }
+        public Long getLastNonCompliantRecordTimestamp() {
+            return this.lastNonCompliantRecordTimestamp;
         }
 
         public ListResourceEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setRemediationEnabled(Boolean remediationEnabled) {

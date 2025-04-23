@@ -126,9 +126,21 @@ public class GetAggregatorResponseBody extends TeaModel {
     }
 
     public static class GetAggregatorResponseBodyAggregatorTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -253,6 +265,9 @@ public class GetAggregatorResponseBody extends TeaModel {
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetAggregatorResponseBodyAggregatorTags> tags;
 

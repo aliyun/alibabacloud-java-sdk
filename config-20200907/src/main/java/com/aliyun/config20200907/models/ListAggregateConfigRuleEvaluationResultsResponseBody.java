@@ -306,6 +306,13 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
         public Long configRuleInvokedTimestamp;
 
         /**
+         * <strong>example:</strong>
+         * <p>00000089-4e0d-58b5-a96a-8e54112110f3</p>
+         */
+        @NameInMap("EvaluationId")
+        public String evaluationId;
+
+        /**
          * <p>The identifying information about the compliance evaluation result.</p>
          */
         @NameInMap("EvaluationResultIdentifier")
@@ -323,6 +330,13 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
          */
         @NameInMap("InvokingEventMessageType")
         public String invokingEventMessageType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1744696393000</p>
+         */
+        @NameInMap("LastNonCompliantRecordTimestamp")
+        public Long lastNonCompliantRecordTimestamp;
 
         /**
          * <p>Indicates whether the remediation template is enabled. Valid values:</p>
@@ -389,6 +403,14 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             return this.configRuleInvokedTimestamp;
         }
 
+        public ListAggregateConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setEvaluationId(String evaluationId) {
+            this.evaluationId = evaluationId;
+            return this;
+        }
+        public String getEvaluationId() {
+            return this.evaluationId;
+        }
+
         public ListAggregateConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setEvaluationResultIdentifier(ListAggregateConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier) {
             this.evaluationResultIdentifier = evaluationResultIdentifier;
             return this;
@@ -403,6 +425,14 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
         }
         public String getInvokingEventMessageType() {
             return this.invokingEventMessageType;
+        }
+
+        public ListAggregateConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setLastNonCompliantRecordTimestamp(Long lastNonCompliantRecordTimestamp) {
+            this.lastNonCompliantRecordTimestamp = lastNonCompliantRecordTimestamp;
+            return this;
+        }
+        public Long getLastNonCompliantRecordTimestamp() {
+            return this.lastNonCompliantRecordTimestamp;
         }
 
         public ListAggregateConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList setRemediationEnabled(Boolean remediationEnabled) {

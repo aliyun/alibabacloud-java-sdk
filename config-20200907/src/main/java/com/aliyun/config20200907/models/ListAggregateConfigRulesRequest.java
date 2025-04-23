@@ -116,6 +116,10 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListAggregateConfigRulesRequestTag> tag;
 
@@ -213,9 +217,24 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     }
 
     public static class ListAggregateConfigRulesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("Value")
         public String value;
 

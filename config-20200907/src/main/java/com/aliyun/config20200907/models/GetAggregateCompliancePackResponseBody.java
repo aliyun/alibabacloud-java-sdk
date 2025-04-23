@@ -489,9 +489,21 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackTags extends TeaModel {
+        /**
+         * <p>The tag keys of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag values of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -621,6 +633,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackTags> tags;
 

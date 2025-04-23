@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     /**
-     * <p>The queried resources.</p>
+     * <p>The information about the resources.</p>
      */
     @NameInMap("DiscoveredResourceProfiles")
     public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
@@ -148,6 +148,12 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The time when the resource was last updated. The value must be a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1722441600000</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -273,7 +279,7 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
 
     public static class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfiles extends TeaModel {
         /**
-         * <p>The queried resource.</p>
+         * <p>The details of the resources.</p>
          */
         @NameInMap("DiscoveredResourceProfileList")
         public java.util.List<ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;

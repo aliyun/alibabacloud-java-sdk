@@ -15,6 +15,10 @@ public class GetCompliancePackRequest extends TeaModel {
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<GetCompliancePackRequestTag> tag;
 
@@ -40,9 +44,23 @@ public class GetCompliancePackRequest extends TeaModel {
     }
 
     public static class GetCompliancePackRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 256 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("Value")
         public String value;
 

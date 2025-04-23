@@ -171,13 +171,13 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String inputParametersShrink;
 
     /**
-     * <p>The intervals at which the rule is triggered. Valid values:</p>
+     * <p>The interval at which the rule is triggered. Valid values:</p>
      * <ul>
-     * <li>One_Hour: 1 hour</li>
-     * <li>Three_Hours: 3 hours</li>
-     * <li>Six_Hours: 6 hours</li>
-     * <li>Twelve_Hours: 12 hours</li>
-     * <li>TwentyFour_Hours: 24 hours</li>
+     * <li>One_Hour</li>
+     * <li>Three_Hours</li>
+     * <li>Six_Hours</li>
+     * <li>Twelve_Hours</li>
+     * <li>TwentyFour_Hours</li>
      * </ul>
      * <blockquote>
      * <p> This parameter is required if the <code>ConfigRuleTriggerTypes</code> parameter is set to <code>ScheduledNotification</code>.</p>
@@ -223,6 +223,18 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
+     * <p>The names of the resource to which the rule applies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ResourceNameScope")
+    public String resourceNameScope;
+
+    /**
      * <p>The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).</p>
      * 
      * <strong>example:</strong>
@@ -232,11 +244,11 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String resourceTypesScopeShrink;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
      * <ul>
-     * <li>1: high risk level</li>
-     * <li>2: medium risk level</li>
-     * <li>3: low risk level</li>
+     * <li>1: high</li>
+     * <li>2: medium</li>
+     * <li>3: low</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -253,10 +265,14 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String tagShrink;
 
     /**
-     * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
+     * <p>The logical relationship when parameter <code>TagsScope</code> takes multiple values, for example: When the parameter <code>TagsScope</code> is <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code>, if this parameter is set to<code> AND</code>, it means that the rule only applies to resources bound with both tags <code>a:a</code> and <code>b:b</code>. If not specified, the default logic is <code>OR</code>.</p>
+     * <p>It can also be used for the deprecated field <code>TagKeyScope</code> (not recommended), for example: When the parameter <code>TagKeyScope</code> has a value of <code>ECS</code>,<code>OSS</code>, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels <code>ECS</code> and <code>OSS</code>.</p>
+     * <p>Values:</p>
      * <ul>
-     * <li>AND</li>
-     * <li>OR</li>
+     * <li><p>AND: And.</p>
+     * </li>
+     * <li><p>OR: Or.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -266,6 +282,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public String tagKeyLogicScope;
 
     /**
+     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
      * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
      * <blockquote>
      * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
@@ -275,9 +292,11 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
      * <p>ECS</p>
      */
     @NameInMap("TagKeyScope")
+    @Deprecated
     public String tagKeyScope;
 
     /**
+     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
      * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
      * <blockquote>
      * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
@@ -287,6 +306,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
      * <p>test</p>
      */
     @NameInMap("TagValueScope")
+    @Deprecated
     public String tagValueScope;
 
     /**
@@ -452,6 +472,14 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.resourceIdsScope;
     }
 
+    public UpdateAggregateConfigRuleShrinkRequest setResourceNameScope(String resourceNameScope) {
+        this.resourceNameScope = resourceNameScope;
+        return this;
+    }
+    public String getResourceNameScope() {
+        return this.resourceNameScope;
+    }
+
     public UpdateAggregateConfigRuleShrinkRequest setResourceTypesScopeShrink(String resourceTypesScopeShrink) {
         this.resourceTypesScopeShrink = resourceTypesScopeShrink;
         return this;
@@ -484,6 +512,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.tagKeyLogicScope;
     }
 
+    @Deprecated
     public UpdateAggregateConfigRuleShrinkRequest setTagKeyScope(String tagKeyScope) {
         this.tagKeyScope = tagKeyScope;
         return this;
@@ -492,6 +521,7 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
         return this.tagKeyScope;
     }
 
+    @Deprecated
     public UpdateAggregateConfigRuleShrinkRequest setTagValueScope(String tagValueScope) {
         this.tagValueScope = tagValueScope;
         return this;

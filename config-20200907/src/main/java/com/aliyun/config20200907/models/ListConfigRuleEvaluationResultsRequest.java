@@ -44,7 +44,7 @@ public class ListConfigRuleEvaluationResultsRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

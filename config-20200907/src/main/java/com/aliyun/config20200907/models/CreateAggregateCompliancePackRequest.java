@@ -149,6 +149,10 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateAggregateCompliancePackRequestTag> tag;
 
@@ -557,9 +561,23 @@ public class CreateAggregateCompliancePackRequest extends TeaModel {
     }
 
     public static class CreateAggregateCompliancePackRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag that is added to the resource.</p>
+         * <p>You can add up to 20 tag keys to a resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag that is added to the resource.</p>
+         * <p>You can add up to 20 tag values to a resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("Value")
         public String value;
 

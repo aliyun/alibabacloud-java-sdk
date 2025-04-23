@@ -219,6 +219,18 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String resourceIdsScope;
 
     /**
+     * <p>The names of the resource to which the rule applies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-xxx</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ResourceNameScope")
+    public String resourceNameScope;
+
+    /**
      * <p>The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
@@ -272,14 +284,21 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     @NameInMap("SourceOwner")
     public String sourceOwner;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateAggregateConfigRuleRequestTag> tag;
 
     /**
-     * <p>The logical relationship among the tag keys if you specify multiple tag keys for the <code>TagKeyScope</code> parameter. For example, if you set the <code>TagKeyScope</code> parameter to <code>ECS,OSS</code> and the TagKeyLogicScope parameter to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
+     * <p>The logical relationship when parameter <code>TagsScope</code> takes multiple values, for example: When the parameter <code>TagsScope</code> is <code>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</code>, if this parameter is set to<code> AND</code>, it means that the rule only applies to resources bound with both tags <code>a:a</code> and <code>b:b</code>. If not specified, the default logic is <code>OR</code>.</p>
+     * <p>It can also be used for the deprecated field <code>TagKeyScope</code> (not recommended), for example: When the parameter <code>TagKeyScope</code> has a value of <code>ECS</code>,<code>OSS</code>, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels <code>ECS</code> and <code>OSS</code>.</p>
+     * <p>Values:</p>
      * <ul>
-     * <li>AND</li>
-     * <li>OR</li>
+     * <li><p>AND: And.</p>
+     * </li>
+     * <li><p>OR: Or.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -289,27 +308,31 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     public String tagKeyLogicScope;
 
     /**
+     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
      * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).</p>
      * <blockquote>
-     * <p>This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+     * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
      */
     @NameInMap("TagKeyScope")
+    @Deprecated
     public String tagKeyScope;
 
     /**
-     * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
+     * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
+     * <p>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</p>
      * <blockquote>
-     * <p>This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
+     * <p> This parameter applies only to a managed rule. You must configure the <code>TagKeyScope</code> and <code>TagValueScope</code> parameters at the same time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("TagValueScope")
+    @Deprecated
     public String tagValueScope;
 
     /**
@@ -475,6 +498,14 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         return this.resourceIdsScope;
     }
 
+    public CreateAggregateConfigRuleRequest setResourceNameScope(String resourceNameScope) {
+        this.resourceNameScope = resourceNameScope;
+        return this;
+    }
+    public String getResourceNameScope() {
+        return this.resourceNameScope;
+    }
+
     public CreateAggregateConfigRuleRequest setResourceTypesScope(java.util.List<String> resourceTypesScope) {
         this.resourceTypesScope = resourceTypesScope;
         return this;
@@ -523,6 +554,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         return this.tagKeyLogicScope;
     }
 
+    @Deprecated
     public CreateAggregateConfigRuleRequest setTagKeyScope(String tagKeyScope) {
         this.tagKeyScope = tagKeyScope;
         return this;
@@ -531,6 +563,7 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
         return this.tagKeyScope;
     }
 
+    @Deprecated
     public CreateAggregateConfigRuleRequest setTagValueScope(String tagValueScope) {
         this.tagValueScope = tagValueScope;
         return this;
@@ -590,9 +623,25 @@ public class CreateAggregateConfigRuleRequest extends TeaModel {
     }
 
     public static class CreateAggregateConfigRuleRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>You can specify at most 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values.</p>
+         * <p>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each key-value must be unique. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("Value")
         public String value;
 

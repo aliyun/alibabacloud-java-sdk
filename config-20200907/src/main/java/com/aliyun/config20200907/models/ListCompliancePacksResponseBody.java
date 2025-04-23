@@ -41,9 +41,21 @@ public class ListCompliancePacksResponseBody extends TeaModel {
     }
 
     public static class ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags extends TeaModel {
+        /**
+         * <p>tag key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>tag value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -152,6 +164,9 @@ public class ListCompliancePacksResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListCompliancePacksResponseBodyCompliancePacksResultCompliancePacksTags> tags;
 

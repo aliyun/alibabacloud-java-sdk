@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAggregateConfigRuleResponseBody extends TeaModel {
     /**
-     * <p>The rules.</p>
+     * <p>The information about the rules.</p>
      */
     @NameInMap("ConfigRule")
     public GetAggregateConfigRuleResponseBodyConfigRule configRule;
@@ -1082,6 +1082,18 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String resourceIdsScope;
 
         /**
+         * <p>The names of the resource to which the rule applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ResourceNameScope")
+        public String resourceNameScope;
+
+        /**
          * <p>The type of the resource evaluated by the rule.</p>
          * 
          * <strong>example:</strong>
@@ -1111,10 +1123,14 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public GetAggregateConfigRuleResponseBodyConfigRuleSource source;
 
         /**
-         * <p>The logical relationship among the tag keys if you specify multiple tag keys by using the <code>TagKeyScope</code> parameter. For example, if the <code>TagKeyScope</code> parameter is set to <code>ECS,OSS</code> and the TagKeyLogicScope parameter is set to <code>AND</code>, the rule applies to resources with both the <code>ECS</code> and <code>OSS</code> tag keys. Valid values:</p>
+         * <p>When retrieving details of rules created using the parameter <code>TagsScope</code>, this field will not be returned.</p>
+         * <p>To retrieve rules created using the deprecated field <code>TagKeyScope</code> (not recommended): for example, when the parameter <code>TagKeyScope</code> has a value of ECS,OSS, if this parameter is set to <code>AND</code>, it means that the rule only applies to resources bound with both labels ECS and OSS.</p>
+         * <p>Values:</p>
          * <ul>
-         * <li>AND: the logical relationship of AND</li>
-         * <li>OR: the logical relationship of OR</li>
+         * <li><p>AND: And.</p>
+         * </li>
+         * <li><p>OR: Or.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1124,21 +1140,25 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
         public String tagKeyLogicScope;
 
         /**
+         * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
          * <p>The tag key used to filter resources. The rule applies only to the resources with the specified tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>RAM</p>
          */
         @NameInMap("TagKeyScope")
+        @Deprecated
         public String tagKeyScope;
 
         /**
+         * <p>This parameter is deprecated. We recommend that you use the <code>TagsScope</code> parameter.</p>
          * <p>The tag value used to filter resources. The rule applies only to the resources with the specified tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>MFA</p>
          */
         @NameInMap("TagValueScope")
+        @Deprecated
         public String tagValueScope;
 
         /**
@@ -1374,6 +1394,14 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             return this.resourceIdsScope;
         }
 
+        public GetAggregateConfigRuleResponseBodyConfigRule setResourceNameScope(String resourceNameScope) {
+            this.resourceNameScope = resourceNameScope;
+            return this;
+        }
+        public String getResourceNameScope() {
+            return this.resourceNameScope;
+        }
+
         public GetAggregateConfigRuleResponseBodyConfigRule setResourceTypesScope(String resourceTypesScope) {
             this.resourceTypesScope = resourceTypesScope;
             return this;
@@ -1406,6 +1434,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             return this.tagKeyLogicScope;
         }
 
+        @Deprecated
         public GetAggregateConfigRuleResponseBodyConfigRule setTagKeyScope(String tagKeyScope) {
             this.tagKeyScope = tagKeyScope;
             return this;
@@ -1414,6 +1443,7 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
             return this.tagKeyScope;
         }
 
+        @Deprecated
         public GetAggregateConfigRuleResponseBodyConfigRule setTagValueScope(String tagValueScope) {
             this.tagValueScope = tagValueScope;
             return this;

@@ -234,7 +234,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackScopeExcludeTagsScope extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key-2</p>
@@ -243,7 +243,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value-2</p>
@@ -276,7 +276,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackScopeTagsScope extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key-1</p>
@@ -285,7 +285,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value-1</p>
@@ -318,7 +318,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackScope extends TeaModel {
         /**
-         * <p>Excluded region scope, multiple regions should be separated by commas.</p>
+         * <p>The IDs of regions that are excluded. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -327,7 +327,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String excludeRegionIdsScope;
 
         /**
-         * <p>Excluded resourceGroup scope, multiple resourceGroup should be separated by commas.</p>
+         * <p>The IDs of the resource groups whose resources you do not want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzc7r7rhx****</p>
@@ -345,7 +345,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String excludeResourceIdsScope;
 
         /**
-         * <p>Exclude tag scope.</p>
+         * <p>The scope of the tag that is excluded.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ExcludeTagsScope")
@@ -370,7 +370,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String resourceGroupIdsScope;
 
         /**
-         * <p>Include ResourceId scope, multiple resourceIds should be separated by commas.</p>
+         * <p>The IDs of the resources to which the rule applies. Separate multiple resource IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>eip-8vbf3x310fn56ijfd****</p>
@@ -397,7 +397,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String tagValueScope;
 
         /**
-         * <p>Include tag scope.</p>
+         * <p>The tag scope.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("TagsScope")
@@ -491,9 +491,21 @@ public class GetCompliancePackResponseBody extends TeaModel {
     }
 
     public static class GetCompliancePackResponseBodyCompliancePackTags extends TeaModel {
+        /**
+         * <p>The tag keys of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag values of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -614,6 +626,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackTags> tags;
 
@@ -622,35 +637,55 @@ public class GetCompliancePackResponseBody extends TeaModel {
          * 
          * <strong>example:</strong>
          * <p>{
-         *       &quot;configRuleTemplates&quot;: [
+         *     &quot;configRuleTemplates&quot;: [
          *         {
-         *           &quot;configRuleName&quot;: &quot;弹性IP实例带宽满足最低要求&quot;,
-         *           &quot;scope&quot;: {
-         *             &quot;complianceResourceTypes&quot;: [
-         *               &quot;ACS::EIP::EipAddress&quot;
-         *             ]
-         *           },
-         *           &quot;description&quot;: &quot;弹性IP实例可用带宽大于等于指定参数值，视为“合规”。默认值：10MB&quot;,
-         *           &quot;source&quot;: {
-         *             &quot;owner&quot;: &quot;ALIYUN&quot;,
-         *             &quot;identifier&quot;: &quot;eip-bandwidth-limit&quot;,
-         *             &quot;sourceDetails&quot;: [
-         *               {
-         *                 &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
-         *               }
-         *             ]
-         *           },
-         *           &quot;inputParameters&quot;: {
-         *             &quot;bandwidth&quot;: &quot;10&quot;
-         *           }
+         *             &quot;configRuleName&quot;: &quot;rule-example&quot;,
+         *             &quot;scope&quot;: {
+         *                 &quot;complianceResourceTypes&quot;: [
+         *                     &quot;ACS::ECS::Instance&quot;
+         *                 ]
+         *             },
+         *             &quot;description&quot;: &quot;&quot;,
+         *             &quot;source&quot;: {
+         *                 &quot;owner&quot;: &quot;CUSTOM_CONFIGURATION&quot;,
+         *                 &quot;identifier&quot;: &quot;acs-config-configuration&quot;,
+         *                 &quot;sourceDetails&quot;: [
+         *                     {
+         *                         &quot;messageType&quot;: &quot;ScheduledNotification&quot;,
+         *                         &quot;maximumExecutionFrequency&quot;: &quot;Twelve_Hours&quot;
+         *                     },
+         *                     {
+         *                         &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+         *                     }
+         *                 ],
+         *                 &quot;conditions&quot;: &quot;{\&quot;ComplianceConditions\&quot;:\&quot;{\\\&quot;operator\\\&quot;:\\\&quot;and\\\&quot;,\\\&quot;children\\\&quot;:[{\\\&quot;operator\\\&quot;:\\\&quot;GreaterOrEquals\\\&quot;,\\\&quot;featurePath\\\&quot;:\\\&quot;$.Cpu\\\&quot;,\\\&quot;featureSource\\\&quot;:\\\&quot;CONFIGURATION\\\&quot;,\\\&quot;desired\\\&quot;:\\\&quot;2\\\&quot;}]}\&quot;}&quot;
+         *             },
+         *             &quot;inputParameters&quot;: {}
+         *         },
+         *         {
+         *             &quot;configRuleName&quot;: &quot;name&quot;,
+         *             &quot;scope&quot;: {
+         *                 &quot;complianceResourceTypes&quot;: [
+         *                     &quot;ACS::OSS::Bucket&quot;
+         *                 ]
+         *             },
+         *             &quot;description&quot;: &quot;description-1&quot;,
+         *             &quot;source&quot;: {
+         *                 &quot;owner&quot;: &quot;ALIYUN&quot;,
+         *                 &quot;identifier&quot;: &quot;oss-bucket-referer-limit&quot;,
+         *                 &quot;sourceDetails&quot;: [
+         *                     {
+         *                         &quot;messageType&quot;: &quot;ConfigurationItemChangeNotification&quot;
+         *                     }
+         *                 ]
+         *             },
+         *             &quot;inputParameters&quot;: {
+         *                 &quot;allowEmptyReferer&quot;: &quot;true&quot;,
+         *                 &quot;allowReferers&quot;: &quot;<a href="http://www.aliyun.com">http://www.aliyun.com</a>&quot;
+         *             }
          *         }
-         *       ],
-         *       &quot;compliancePackTemplate&quot;: {
-         *         &quot;riskLevel&quot;: 2,
-         *         &quot;compliancePackName&quot;: &quot;gy-test&quot;,
-         *         &quot;description&quot;: &quot;&quot;
-         *       }
-         *     }</p>
+         *     ]
+         * }</p>
          */
         @NameInMap("TemplateContent")
         public String templateContent;

@@ -15,6 +15,10 @@ public class GetCompliancePackShrinkRequest extends TeaModel {
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
+    /**
+     * <p>The tags of the resource.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 
