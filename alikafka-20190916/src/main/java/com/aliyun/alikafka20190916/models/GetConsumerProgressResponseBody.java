@@ -489,6 +489,9 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         @NameInMap("TotalDiff")
         public Long totalDiff;
 
+        @NameInMap("state")
+        public String state;
+
         public static GetConsumerProgressResponseBodyConsumerProgress build(java.util.Map<String, ?> map) throws Exception {
             GetConsumerProgressResponseBodyConsumerProgress self = new GetConsumerProgressResponseBodyConsumerProgress();
             return TeaModel.build(map, self);
@@ -524,6 +527,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         }
         public Long getTotalDiff() {
             return this.totalDiff;
+        }
+
+        public GetConsumerProgressResponseBodyConsumerProgress setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
     }
