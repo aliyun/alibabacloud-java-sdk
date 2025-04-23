@@ -569,6 +569,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("version")
         public String version;
 
+        @NameInMap("zoneCount")
+        public Integer zoneCount;
+
         public static GetInstanceResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyResult self = new GetInstanceResponseBodyResult();
             return TeaModel.build(map, self);
@@ -732,6 +735,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public GetInstanceResponseBodyResult setZoneCount(Integer zoneCount) {
+            this.zoneCount = zoneCount;
+            return this;
+        }
+        public Integer getZoneCount() {
+            return this.zoneCount;
         }
 
     }
