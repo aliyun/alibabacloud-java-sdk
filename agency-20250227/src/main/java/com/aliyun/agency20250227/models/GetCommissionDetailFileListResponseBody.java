@@ -81,8 +81,14 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
     }
 
     public static class GetCommissionDetailFileListResponseBodyDataFileList extends TeaModel {
+        @NameInMap("BucketSyncStatus")
+        public String bucketSyncStatus;
+
         @NameInMap("CommissionPolicyName")
         public String commissionPolicyName;
+
+        @NameInMap("FileName")
+        public String fileName;
 
         @NameInMap("FileType")
         public String fileType;
@@ -99,12 +105,28 @@ public class GetCommissionDetailFileListResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetCommissionDetailFileListResponseBodyDataFileList setBucketSyncStatus(String bucketSyncStatus) {
+            this.bucketSyncStatus = bucketSyncStatus;
+            return this;
+        }
+        public String getBucketSyncStatus() {
+            return this.bucketSyncStatus;
+        }
+
         public GetCommissionDetailFileListResponseBodyDataFileList setCommissionPolicyName(String commissionPolicyName) {
             this.commissionPolicyName = commissionPolicyName;
             return this;
         }
         public String getCommissionPolicyName() {
             return this.commissionPolicyName;
+        }
+
+        public GetCommissionDetailFileListResponseBodyDataFileList setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
         }
 
         public GetCommissionDetailFileListResponseBodyDataFileList setFileType(String fileType) {

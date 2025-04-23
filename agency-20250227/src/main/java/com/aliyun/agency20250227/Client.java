@@ -167,6 +167,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BillMonth", request.billMonth);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ossAccessKeyId)) {
+            query.put("OssAccessKeyId", request.ossAccessKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossAccessKeySecret)) {
+            query.put("OssAccessKeySecret", request.ossAccessKeySecret);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
+            query.put("OssBucketName", request.ossBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossEndpoint)) {
+            query.put("OssEndpoint", request.ossEndpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossRegion)) {
+            query.put("OssRegion", request.ossRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossSecurityToken)) {
+            query.put("OssSecurityToken", request.ossSecurityToken);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
