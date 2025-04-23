@@ -54,7 +54,7 @@ public class ListStoragePartitionsInfoRequest extends TeaModel {
      * <p>The name of the partition that you want to use for fuzzy match.</p>
      * 
      * <strong>example:</strong>
-     * <p>20241201</p>
+     * <p>ds=20241201</p>
      */
     @NameInMap("partitionPrefix")
     public String partitionPrefix;

@@ -456,6 +456,97 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
 
+    public static class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter extends TeaModel {
+        @NameInMap("elasticReservedCU")
+        public Long elasticReservedCU;
+
+        @NameInMap("enablePriority")
+        public Boolean enablePriority;
+
+        @NameInMap("forceReservedMin")
+        public Boolean forceReservedMin;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("maxCU")
+        public Long maxCU;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("minCU")
+        public Long minCU;
+
+        @NameInMap("schedulerType")
+        public String schedulerType;
+
+        @NameInMap("singleJobCULimit")
+        public Long singleJobCULimit;
+
+        public static ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter build(java.util.Map<String, ?> map) throws Exception {
+            ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter self = new ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter();
+            return TeaModel.build(map, self);
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setElasticReservedCU(Long elasticReservedCU) {
+            this.elasticReservedCU = elasticReservedCU;
+            return this;
+        }
+        public Long getElasticReservedCU() {
+            return this.elasticReservedCU;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setEnablePriority(Boolean enablePriority) {
+            this.enablePriority = enablePriority;
+            return this;
+        }
+        public Boolean getEnablePriority() {
+            return this.enablePriority;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setForceReservedMin(Boolean forceReservedMin) {
+            this.forceReservedMin = forceReservedMin;
+            return this;
+        }
+        public Boolean getForceReservedMin() {
+            return this.forceReservedMin;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setMaxCU(Long maxCU) {
+            this.maxCU = maxCU;
+            return this;
+        }
+        public Long getMaxCU() {
+            return this.maxCU;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setMinCU(Long minCU) {
+            this.minCU = minCU;
+            return this;
+        }
+        public Long getMinCU() {
+            return this.minCU;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setSchedulerType(String schedulerType) {
+            this.schedulerType = schedulerType;
+            return this;
+        }
+        public String getSchedulerType() {
+            return this.schedulerType;
+        }
+
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter setSingleJobCULimit(Long singleJobCULimit) {
+            this.singleJobCULimit = singleJobCULimit;
+            return this;
+        }
+        public Long getSingleJobCULimit() {
+            return this.singleJobCULimit;
+        }
+
+    }
+
     public static class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListSaleTag extends TeaModel {
         /**
          * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
@@ -711,7 +802,7 @@ public class ListQuotasResponseBody extends TeaModel {
          * }</p>
          */
         @NameInMap("parameter")
-        public java.util.Map<String, ?> parameter;
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter parameter;
 
         /**
          * <p>The ID of the parent resource.</p>
@@ -849,11 +940,11 @@ public class ListQuotasResponseBody extends TeaModel {
             return this.nickName;
         }
 
-        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoList setParameter(java.util.Map<String, ?> parameter) {
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoList setParameter(ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter parameter) {
             this.parameter = parameter;
             return this;
         }
-        public java.util.Map<String, ?> getParameter() {
+        public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListParameter getParameter() {
             return this.parameter;
         }
 
@@ -1675,6 +1766,97 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
 
+    public static class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter extends TeaModel {
+        @NameInMap("elasticReservedCU")
+        public Long elasticReservedCU;
+
+        @NameInMap("enablePriority")
+        public Boolean enablePriority;
+
+        @NameInMap("forceReservedMin")
+        public Boolean forceReservedMin;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("maxCU")
+        public Long maxCU;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("minCU")
+        public Long minCU;
+
+        @NameInMap("schedulerType")
+        public String schedulerType;
+
+        @NameInMap("singleJobCULimit")
+        public Long singleJobCULimit;
+
+        public static ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter build(java.util.Map<String, ?> map) throws Exception {
+            ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter self = new ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter();
+            return TeaModel.build(map, self);
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setElasticReservedCU(Long elasticReservedCU) {
+            this.elasticReservedCU = elasticReservedCU;
+            return this;
+        }
+        public Long getElasticReservedCU() {
+            return this.elasticReservedCU;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setEnablePriority(Boolean enablePriority) {
+            this.enablePriority = enablePriority;
+            return this;
+        }
+        public Boolean getEnablePriority() {
+            return this.enablePriority;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setForceReservedMin(Boolean forceReservedMin) {
+            this.forceReservedMin = forceReservedMin;
+            return this;
+        }
+        public Boolean getForceReservedMin() {
+            return this.forceReservedMin;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setMaxCU(Long maxCU) {
+            this.maxCU = maxCU;
+            return this;
+        }
+        public Long getMaxCU() {
+            return this.maxCU;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setMinCU(Long minCU) {
+            this.minCU = minCU;
+            return this;
+        }
+        public Long getMinCU() {
+            return this.minCU;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setSchedulerType(String schedulerType) {
+            this.schedulerType = schedulerType;
+            return this;
+        }
+        public String getSchedulerType() {
+            return this.schedulerType;
+        }
+
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter setSingleJobCULimit(Long singleJobCULimit) {
+            this.singleJobCULimit = singleJobCULimit;
+            return this;
+        }
+        public Long getSingleJobCULimit() {
+            return this.singleJobCULimit;
+        }
+
+    }
+
     public static class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListSaleTag extends TeaModel {
         /**
          * <p>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</p>
@@ -1930,7 +2112,7 @@ public class ListQuotasResponseBody extends TeaModel {
          * }</p>
          */
         @NameInMap("parameter")
-        public java.util.Map<String, ?> parameter;
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter parameter;
 
         /**
          * <p>The ID of the parent resource.</p>
@@ -2068,11 +2250,11 @@ public class ListQuotasResponseBody extends TeaModel {
             return this.nickName;
         }
 
-        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoList setParameter(java.util.Map<String, ?> parameter) {
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoList setParameter(ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter parameter) {
             this.parameter = parameter;
             return this;
         }
-        public java.util.Map<String, ?> getParameter() {
+        public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListParameter getParameter() {
             return this.parameter;
         }
 

@@ -11,6 +11,7 @@ public class GetQuotaRequest extends TeaModel {
      * <p>null</p>
      */
     @NameInMap("AkProven")
+    @Deprecated
     public String akProven;
 
     /**
@@ -29,6 +30,7 @@ public class GetQuotaRequest extends TeaModel {
      * <p>cn-chengdu</p>
      */
     @NameInMap("region")
+    @Deprecated
     public String region;
 
     /**
@@ -38,6 +40,7 @@ public class GetQuotaRequest extends TeaModel {
      * <p>520539530998273</p>
      */
     @NameInMap("tenantId")
+    @Deprecated
     public String tenantId;
 
     public static GetQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -45,6 +48,7 @@ public class GetQuotaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public GetQuotaRequest setAkProven(String akProven) {
         this.akProven = akProven;
         return this;
@@ -61,6 +65,7 @@ public class GetQuotaRequest extends TeaModel {
         return this.mock;
     }
 
+    @Deprecated
     public GetQuotaRequest setRegion(String region) {
         this.region = region;
         return this;
@@ -69,6 +74,7 @@ public class GetQuotaRequest extends TeaModel {
         return this.region;
     }
 
+    @Deprecated
     public GetQuotaRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;

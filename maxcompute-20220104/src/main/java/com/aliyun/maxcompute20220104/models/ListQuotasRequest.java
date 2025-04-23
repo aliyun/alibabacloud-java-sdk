@@ -38,6 +38,7 @@ public class ListQuotasRequest extends TeaModel {
      * <p>ODPS</p>
      */
     @NameInMap("productId")
+    @Deprecated
     public String productId;
 
     /**
@@ -47,6 +48,7 @@ public class ListQuotasRequest extends TeaModel {
      * <p>cn-beijing</p>
      */
     @NameInMap("region")
+    @Deprecated
     public String region;
 
     /**
@@ -65,6 +67,7 @@ public class ListQuotasRequest extends TeaModel {
      * <p>280747109771520</p>
      */
     @NameInMap("tenantId")
+    @Deprecated
     public String tenantId;
 
     public static ListQuotasRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -96,6 +99,7 @@ public class ListQuotasRequest extends TeaModel {
         return this.maxItem;
     }
 
+    @Deprecated
     public ListQuotasRequest setProductId(String productId) {
         this.productId = productId;
         return this;
@@ -104,6 +108,7 @@ public class ListQuotasRequest extends TeaModel {
         return this.productId;
     }
 
+    @Deprecated
     public ListQuotasRequest setRegion(String region) {
         this.region = region;
         return this;
@@ -120,6 +125,7 @@ public class ListQuotasRequest extends TeaModel {
         return this.saleTags;
     }
 
+    @Deprecated
     public ListQuotasRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryQuotaRequest extends TeaModel {
     /**
+     * <p>The trusted AccessKey pairs.</p>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -12,6 +14,8 @@ public class QueryQuotaRequest extends TeaModel {
     public String akProven;
 
     /**
+     * <p>Specifies whether to include submodules. Valid values: true and false. -true: The request includes submodules. -false (default): The request does not include submodules.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +23,8 @@ public class QueryQuotaRequest extends TeaModel {
     public Boolean mock;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-chengdu</p>
      */
@@ -26,6 +32,8 @@ public class QueryQuotaRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The tenant ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>483212237127906</p>
      */
