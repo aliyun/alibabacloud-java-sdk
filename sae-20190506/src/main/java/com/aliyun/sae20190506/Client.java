@@ -3125,6 +3125,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Memory", request.memory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.newSaeVersion)) {
+            query.put("NewSaeVersion", request.newSaeVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             query.put("ResourceType", request.resourceType);
         }

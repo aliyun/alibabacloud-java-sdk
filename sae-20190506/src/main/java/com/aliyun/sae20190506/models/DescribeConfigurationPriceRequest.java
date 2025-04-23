@@ -46,6 +46,9 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("NewSaeVersion")
+    public String newSaeVersion;
+
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -81,6 +84,14 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     }
     public Integer getMemory() {
         return this.memory;
+    }
+
+    public DescribeConfigurationPriceRequest setNewSaeVersion(String newSaeVersion) {
+        this.newSaeVersion = newSaeVersion;
+        return this;
+    }
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
     }
 
     public DescribeConfigurationPriceRequest setResourceType(String resourceType) {

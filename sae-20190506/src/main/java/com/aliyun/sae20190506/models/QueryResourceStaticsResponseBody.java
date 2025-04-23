@@ -150,6 +150,9 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Float cpu;
 
+        @NameInMap("EphemeralStorage")
+        public Float ephemeralStorage;
+
         /**
          * <p>The memory usage. Unit: GiB per minute.</p>
          * 
@@ -170,6 +173,14 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
         public Float getCpu() {
             return this.cpu;
+        }
+
+        public QueryResourceStaticsResponseBodyDataRealTimeRes setEphemeralStorage(Float ephemeralStorage) {
+            this.ephemeralStorage = ephemeralStorage;
+            return this;
+        }
+        public Float getEphemeralStorage() {
+            return this.ephemeralStorage;
         }
 
         public QueryResourceStaticsResponseBodyDataRealTimeRes setMemory(Float memory) {
@@ -194,6 +205,12 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
          */
         @NameInMap("Cpu")
         public Float cpu;
+
+        @NameInMap("Cu")
+        public Float cu;
+
+        @NameInMap("EphemeralStorage")
+        public Float ephemeralStorage;
 
         @NameInMap("IdleCpu")
         public Float idleCpu;
@@ -226,6 +243,22 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
         public Float getCpu() {
             return this.cpu;
+        }
+
+        public QueryResourceStaticsResponseBodyDataSummary setCu(Float cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Float getCu() {
+            return this.cu;
+        }
+
+        public QueryResourceStaticsResponseBodyDataSummary setEphemeralStorage(Float ephemeralStorage) {
+            this.ephemeralStorage = ephemeralStorage;
+            return this;
+        }
+        public Float getEphemeralStorage() {
+            return this.ephemeralStorage;
         }
 
         public QueryResourceStaticsResponseBodyDataSummary setIdleCpu(Float idleCpu) {
