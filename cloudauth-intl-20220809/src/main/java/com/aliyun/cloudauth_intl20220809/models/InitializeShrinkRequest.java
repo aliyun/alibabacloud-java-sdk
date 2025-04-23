@@ -3,7 +3,7 @@ package com.aliyun.cloudauth_intl20220809.models;
 
 import com.aliyun.tea.*;
 
-public class InitializeRequest extends TeaModel {
+public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("AppQualityCheck")
     public String appQualityCheck;
 
@@ -32,7 +32,7 @@ public class InitializeRequest extends TeaModel {
     public String dateOfExpiry;
 
     @NameInMap("DocPageConfig")
-    public java.util.List<String> docPageConfig;
+    public String docPageConfigShrink;
 
     @NameInMap("DocScanMode")
     public String docScanMode;
@@ -168,12 +168,12 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("UseNFC")
     public String useNFC;
 
-    public static InitializeRequest build(java.util.Map<String, ?> map) throws Exception {
-        InitializeRequest self = new InitializeRequest();
+    public static InitializeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        InitializeShrinkRequest self = new InitializeShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public InitializeRequest setAppQualityCheck(String appQualityCheck) {
+    public InitializeShrinkRequest setAppQualityCheck(String appQualityCheck) {
         this.appQualityCheck = appQualityCheck;
         return this;
     }
@@ -181,7 +181,7 @@ public class InitializeRequest extends TeaModel {
         return this.appQualityCheck;
     }
 
-    public InitializeRequest setAuthorize(String authorize) {
+    public InitializeShrinkRequest setAuthorize(String authorize) {
         this.authorize = authorize;
         return this;
     }
@@ -189,7 +189,7 @@ public class InitializeRequest extends TeaModel {
         return this.authorize;
     }
 
-    public InitializeRequest setCallbackToken(String callbackToken) {
+    public InitializeShrinkRequest setCallbackToken(String callbackToken) {
         this.callbackToken = callbackToken;
         return this;
     }
@@ -197,7 +197,7 @@ public class InitializeRequest extends TeaModel {
         return this.callbackToken;
     }
 
-    public InitializeRequest setCallbackUrl(String callbackUrl) {
+    public InitializeShrinkRequest setCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
@@ -205,7 +205,7 @@ public class InitializeRequest extends TeaModel {
         return this.callbackUrl;
     }
 
-    public InitializeRequest setCrop(String crop) {
+    public InitializeShrinkRequest setCrop(String crop) {
         this.crop = crop;
         return this;
     }
@@ -213,7 +213,7 @@ public class InitializeRequest extends TeaModel {
         return this.crop;
     }
 
-    public InitializeRequest setDateOfBirth(String dateOfBirth) {
+    public InitializeShrinkRequest setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
@@ -221,7 +221,7 @@ public class InitializeRequest extends TeaModel {
         return this.dateOfBirth;
     }
 
-    public InitializeRequest setDateOfExpiry(String dateOfExpiry) {
+    public InitializeShrinkRequest setDateOfExpiry(String dateOfExpiry) {
         this.dateOfExpiry = dateOfExpiry;
         return this;
     }
@@ -229,15 +229,15 @@ public class InitializeRequest extends TeaModel {
         return this.dateOfExpiry;
     }
 
-    public InitializeRequest setDocPageConfig(java.util.List<String> docPageConfig) {
-        this.docPageConfig = docPageConfig;
+    public InitializeShrinkRequest setDocPageConfigShrink(String docPageConfigShrink) {
+        this.docPageConfigShrink = docPageConfigShrink;
         return this;
     }
-    public java.util.List<String> getDocPageConfig() {
-        return this.docPageConfig;
+    public String getDocPageConfigShrink() {
+        return this.docPageConfigShrink;
     }
 
-    public InitializeRequest setDocScanMode(String docScanMode) {
+    public InitializeShrinkRequest setDocScanMode(String docScanMode) {
         this.docScanMode = docScanMode;
         return this;
     }
@@ -245,7 +245,7 @@ public class InitializeRequest extends TeaModel {
         return this.docScanMode;
     }
 
-    public InitializeRequest setDocType(String docType) {
+    public InitializeShrinkRequest setDocType(String docType) {
         this.docType = docType;
         return this;
     }
@@ -253,7 +253,7 @@ public class InitializeRequest extends TeaModel {
         return this.docType;
     }
 
-    public InitializeRequest setDocVideo(String docVideo) {
+    public InitializeShrinkRequest setDocVideo(String docVideo) {
         this.docVideo = docVideo;
         return this;
     }
@@ -261,7 +261,7 @@ public class InitializeRequest extends TeaModel {
         return this.docVideo;
     }
 
-    public InitializeRequest setDocumentNumber(String documentNumber) {
+    public InitializeShrinkRequest setDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
         return this;
     }
@@ -269,7 +269,7 @@ public class InitializeRequest extends TeaModel {
         return this.documentNumber;
     }
 
-    public InitializeRequest setExperienceCode(String experienceCode) {
+    public InitializeShrinkRequest setExperienceCode(String experienceCode) {
         this.experienceCode = experienceCode;
         return this;
     }
@@ -277,7 +277,7 @@ public class InitializeRequest extends TeaModel {
         return this.experienceCode;
     }
 
-    public InitializeRequest setFacePictureBase64(String facePictureBase64) {
+    public InitializeShrinkRequest setFacePictureBase64(String facePictureBase64) {
         this.facePictureBase64 = facePictureBase64;
         return this;
     }
@@ -285,7 +285,7 @@ public class InitializeRequest extends TeaModel {
         return this.facePictureBase64;
     }
 
-    public InitializeRequest setFacePictureUrl(String facePictureUrl) {
+    public InitializeShrinkRequest setFacePictureUrl(String facePictureUrl) {
         this.facePictureUrl = facePictureUrl;
         return this;
     }
@@ -293,7 +293,7 @@ public class InitializeRequest extends TeaModel {
         return this.facePictureUrl;
     }
 
-    public InitializeRequest setIdFaceQuality(String idFaceQuality) {
+    public InitializeShrinkRequest setIdFaceQuality(String idFaceQuality) {
         this.idFaceQuality = idFaceQuality;
         return this;
     }
@@ -301,7 +301,7 @@ public class InitializeRequest extends TeaModel {
         return this.idFaceQuality;
     }
 
-    public InitializeRequest setIdSpoof(String idSpoof) {
+    public InitializeShrinkRequest setIdSpoof(String idSpoof) {
         this.idSpoof = idSpoof;
         return this;
     }
@@ -309,7 +309,7 @@ public class InitializeRequest extends TeaModel {
         return this.idSpoof;
     }
 
-    public InitializeRequest setIdThreshold(String idThreshold) {
+    public InitializeShrinkRequest setIdThreshold(String idThreshold) {
         this.idThreshold = idThreshold;
         return this;
     }
@@ -317,7 +317,7 @@ public class InitializeRequest extends TeaModel {
         return this.idThreshold;
     }
 
-    public InitializeRequest setLanguageConfig(String languageConfig) {
+    public InitializeShrinkRequest setLanguageConfig(String languageConfig) {
         this.languageConfig = languageConfig;
         return this;
     }
@@ -325,7 +325,7 @@ public class InitializeRequest extends TeaModel {
         return this.languageConfig;
     }
 
-    public InitializeRequest setMRTDInput(String MRTDInput) {
+    public InitializeShrinkRequest setMRTDInput(String MRTDInput) {
         this.MRTDInput = MRTDInput;
         return this;
     }
@@ -333,7 +333,7 @@ public class InitializeRequest extends TeaModel {
         return this.MRTDInput;
     }
 
-    public InitializeRequest setMerchantBizId(String merchantBizId) {
+    public InitializeShrinkRequest setMerchantBizId(String merchantBizId) {
         this.merchantBizId = merchantBizId;
         return this;
     }
@@ -341,7 +341,7 @@ public class InitializeRequest extends TeaModel {
         return this.merchantBizId;
     }
 
-    public InitializeRequest setMerchantUserId(String merchantUserId) {
+    public InitializeShrinkRequest setMerchantUserId(String merchantUserId) {
         this.merchantUserId = merchantUserId;
         return this;
     }
@@ -349,7 +349,7 @@ public class InitializeRequest extends TeaModel {
         return this.merchantUserId;
     }
 
-    public InitializeRequest setMetaInfo(String metaInfo) {
+    public InitializeShrinkRequest setMetaInfo(String metaInfo) {
         this.metaInfo = metaInfo;
         return this;
     }
@@ -357,7 +357,7 @@ public class InitializeRequest extends TeaModel {
         return this.metaInfo;
     }
 
-    public InitializeRequest setModel(String model) {
+    public InitializeShrinkRequest setModel(String model) {
         this.model = model;
         return this;
     }
@@ -365,7 +365,7 @@ public class InitializeRequest extends TeaModel {
         return this.model;
     }
 
-    public InitializeRequest setOcr(String ocr) {
+    public InitializeShrinkRequest setOcr(String ocr) {
         this.ocr = ocr;
         return this;
     }
@@ -373,7 +373,7 @@ public class InitializeRequest extends TeaModel {
         return this.ocr;
     }
 
-    public InitializeRequest setProcedurePriority(String procedurePriority) {
+    public InitializeShrinkRequest setProcedurePriority(String procedurePriority) {
         this.procedurePriority = procedurePriority;
         return this;
     }
@@ -381,7 +381,7 @@ public class InitializeRequest extends TeaModel {
         return this.procedurePriority;
     }
 
-    public InitializeRequest setProductCode(String productCode) {
+    public InitializeShrinkRequest setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
@@ -389,7 +389,7 @@ public class InitializeRequest extends TeaModel {
         return this.productCode;
     }
 
-    public InitializeRequest setProductFlow(String productFlow) {
+    public InitializeShrinkRequest setProductFlow(String productFlow) {
         this.productFlow = productFlow;
         return this;
     }
@@ -397,7 +397,7 @@ public class InitializeRequest extends TeaModel {
         return this.productFlow;
     }
 
-    public InitializeRequest setReturnUrl(String returnUrl) {
+    public InitializeShrinkRequest setReturnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
         return this;
     }
@@ -405,7 +405,7 @@ public class InitializeRequest extends TeaModel {
         return this.returnUrl;
     }
 
-    public InitializeRequest setSceneCode(String sceneCode) {
+    public InitializeShrinkRequest setSceneCode(String sceneCode) {
         this.sceneCode = sceneCode;
         return this;
     }
@@ -413,7 +413,7 @@ public class InitializeRequest extends TeaModel {
         return this.sceneCode;
     }
 
-    public InitializeRequest setSecurityLevel(String securityLevel) {
+    public InitializeShrinkRequest setSecurityLevel(String securityLevel) {
         this.securityLevel = securityLevel;
         return this;
     }
@@ -421,7 +421,7 @@ public class InitializeRequest extends TeaModel {
         return this.securityLevel;
     }
 
-    public InitializeRequest setShowAlbumIcon(String showAlbumIcon) {
+    public InitializeShrinkRequest setShowAlbumIcon(String showAlbumIcon) {
         this.showAlbumIcon = showAlbumIcon;
         return this;
     }
@@ -429,7 +429,7 @@ public class InitializeRequest extends TeaModel {
         return this.showAlbumIcon;
     }
 
-    public InitializeRequest setShowGuidePage(String showGuidePage) {
+    public InitializeShrinkRequest setShowGuidePage(String showGuidePage) {
         this.showGuidePage = showGuidePage;
         return this;
     }
@@ -437,7 +437,7 @@ public class InitializeRequest extends TeaModel {
         return this.showGuidePage;
     }
 
-    public InitializeRequest setShowOcrResult(String showOcrResult) {
+    public InitializeShrinkRequest setShowOcrResult(String showOcrResult) {
         this.showOcrResult = showOcrResult;
         return this;
     }
@@ -445,7 +445,7 @@ public class InitializeRequest extends TeaModel {
         return this.showOcrResult;
     }
 
-    public InitializeRequest setStyleConfig(String styleConfig) {
+    public InitializeShrinkRequest setStyleConfig(String styleConfig) {
         this.styleConfig = styleConfig;
         return this;
     }
@@ -453,7 +453,7 @@ public class InitializeRequest extends TeaModel {
         return this.styleConfig;
     }
 
-    public InitializeRequest setUseNFC(String useNFC) {
+    public InitializeShrinkRequest setUseNFC(String useNFC) {
         this.useNFC = useNFC;
         return this;
     }

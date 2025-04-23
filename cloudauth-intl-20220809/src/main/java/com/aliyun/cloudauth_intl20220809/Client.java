@@ -902,12 +902,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>认证初始化</p>
      * 
-     * @param request InitializeRequest
+     * @param tmpReq InitializeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InitializeResponse
      */
-    public InitializeResponse initializeWithOptions(InitializeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public InitializeResponse initializeWithOptions(InitializeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        InitializeShrinkRequest request = new InitializeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.docPageConfig)) {
+            request.docPageConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.docPageConfig, "DocPageConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appQualityCheck)) {
             query.put("AppQualityCheck", request.appQualityCheck);
@@ -929,6 +935,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Crop", request.crop);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dateOfBirth)) {
+            query.put("DateOfBirth", request.dateOfBirth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dateOfExpiry)) {
+            query.put("DateOfExpiry", request.dateOfExpiry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docPageConfigShrink)) {
+            query.put("DocPageConfig", request.docPageConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.docScanMode)) {
             query.put("DocScanMode", request.docScanMode);
         }
@@ -939,6 +957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.docVideo)) {
             query.put("DocVideo", request.docVideo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentNumber)) {
+            query.put("DocumentNumber", request.documentNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.experienceCode)) {
@@ -963,6 +985,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.languageConfig)) {
             query.put("LanguageConfig", request.languageConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.MRTDInput)) {
+            query.put("MRTDInput", request.MRTDInput);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
@@ -1023,6 +1049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.styleConfig)) {
             query.put("StyleConfig", request.styleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useNFC)) {
+            query.put("UseNFC", request.useNFC);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
