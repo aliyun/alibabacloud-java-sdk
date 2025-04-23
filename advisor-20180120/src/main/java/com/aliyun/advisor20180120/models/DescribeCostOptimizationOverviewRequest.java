@@ -14,6 +14,9 @@ public class DescribeCostOptimizationOverviewRequest extends TeaModel {
     @NameInMap("AssumeAliyunIdList")
     public java.util.List<Long> assumeAliyunIdList;
 
+    @NameInMap("CheckPlanId")
+    public Long checkPlanId;
+
     /**
      * <strong>example:</strong>
      * <hr>
@@ -40,6 +43,14 @@ public class DescribeCostOptimizationOverviewRequest extends TeaModel {
     }
     public java.util.List<Long> getAssumeAliyunIdList() {
         return this.assumeAliyunIdList;
+    }
+
+    public DescribeCostOptimizationOverviewRequest setCheckPlanId(Long checkPlanId) {
+        this.checkPlanId = checkPlanId;
+        return this;
+    }
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
     }
 
     public DescribeCostOptimizationOverviewRequest setToken(String token) {

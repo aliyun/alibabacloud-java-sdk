@@ -10,6 +10,9 @@ public class DescribeCostCheckResultsRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<String> checkIds;
 
+    @NameInMap("CheckPlanId")
+    public Long checkPlanId;
+
     /**
      * <strong>example:</strong>
      * <p>Category</p>
@@ -29,6 +32,9 @@ public class DescribeCostCheckResultsRequest extends TeaModel {
 
     @NameInMap("ResourceGroupIdList")
     public java.util.List<String> resourceGroupIdList;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
@@ -77,6 +83,14 @@ public class DescribeCostCheckResultsRequest extends TeaModel {
         return this.checkIds;
     }
 
+    public DescribeCostCheckResultsRequest setCheckPlanId(Long checkPlanId) {
+        this.checkPlanId = checkPlanId;
+        return this;
+    }
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
+    }
+
     public DescribeCostCheckResultsRequest setGroupBy(String groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -107,6 +121,14 @@ public class DescribeCostCheckResultsRequest extends TeaModel {
     }
     public java.util.List<String> getResourceGroupIdList() {
         return this.resourceGroupIdList;
+    }
+
+    public DescribeCostCheckResultsRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public DescribeCostCheckResultsRequest setResourceIds(java.util.List<String> resourceIds) {

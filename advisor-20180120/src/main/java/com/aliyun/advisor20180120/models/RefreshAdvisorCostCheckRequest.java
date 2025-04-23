@@ -10,6 +10,9 @@ public class RefreshAdvisorCostCheckRequest extends TeaModel {
     @NameInMap("CheckIds")
     public java.util.List<String> checkIds;
 
+    @NameInMap("CheckPlanId")
+    public Long checkPlanId;
+
     /**
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -46,6 +49,14 @@ public class RefreshAdvisorCostCheckRequest extends TeaModel {
     }
     public java.util.List<String> getCheckIds() {
         return this.checkIds;
+    }
+
+    public RefreshAdvisorCostCheckRequest setCheckPlanId(Long checkPlanId) {
+        this.checkPlanId = checkPlanId;
+        return this;
+    }
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
     }
 
     public RefreshAdvisorCostCheckRequest setProduct(String product) {

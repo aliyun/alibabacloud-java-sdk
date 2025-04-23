@@ -14,6 +14,9 @@ public class DescribeCostOptimizationOverviewShrinkRequest extends TeaModel {
     @NameInMap("AssumeAliyunIdList")
     public String assumeAliyunIdListShrink;
 
+    @NameInMap("CheckPlanId")
+    public Long checkPlanId;
+
     /**
      * <strong>example:</strong>
      * <hr>
@@ -40,6 +43,14 @@ public class DescribeCostOptimizationOverviewShrinkRequest extends TeaModel {
     }
     public String getAssumeAliyunIdListShrink() {
         return this.assumeAliyunIdListShrink;
+    }
+
+    public DescribeCostOptimizationOverviewShrinkRequest setCheckPlanId(Long checkPlanId) {
+        this.checkPlanId = checkPlanId;
+        return this;
+    }
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
     }
 
     public DescribeCostOptimizationOverviewShrinkRequest setToken(String token) {

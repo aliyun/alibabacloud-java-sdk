@@ -10,6 +10,9 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
     @NameInMap("CheckIds")
     public String checkIdsShrink;
 
+    @NameInMap("CheckPlanId")
+    public Long checkPlanId;
+
     /**
      * <strong>example:</strong>
      * <p>Category</p>
@@ -29,6 +32,9 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
 
     @NameInMap("ResourceGroupIdList")
     public String resourceGroupIdListShrink;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
 
     @NameInMap("ResourceIds")
     public String resourceIdsShrink;
@@ -77,6 +83,14 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
         return this.checkIdsShrink;
     }
 
+    public DescribeCostCheckResultsShrinkRequest setCheckPlanId(Long checkPlanId) {
+        this.checkPlanId = checkPlanId;
+        return this;
+    }
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
+    }
+
     public DescribeCostCheckResultsShrinkRequest setGroupBy(String groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -107,6 +121,14 @@ public class DescribeCostCheckResultsShrinkRequest extends TeaModel {
     }
     public String getResourceGroupIdListShrink() {
         return this.resourceGroupIdListShrink;
+    }
+
+    public DescribeCostCheckResultsShrinkRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
     }
 
     public DescribeCostCheckResultsShrinkRequest setResourceIdsShrink(String resourceIdsShrink) {

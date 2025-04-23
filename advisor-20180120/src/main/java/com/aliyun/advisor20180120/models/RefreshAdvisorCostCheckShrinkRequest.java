@@ -10,6 +10,9 @@ public class RefreshAdvisorCostCheckShrinkRequest extends TeaModel {
     @NameInMap("CheckIds")
     public String checkIdsShrink;
 
+    @NameInMap("CheckPlanId")
+    public Long checkPlanId;
+
     /**
      * <strong>example:</strong>
      * <p>ecs</p>
@@ -46,6 +49,14 @@ public class RefreshAdvisorCostCheckShrinkRequest extends TeaModel {
     }
     public String getCheckIdsShrink() {
         return this.checkIdsShrink;
+    }
+
+    public RefreshAdvisorCostCheckShrinkRequest setCheckPlanId(Long checkPlanId) {
+        this.checkPlanId = checkPlanId;
+        return this;
+    }
+    public Long getCheckPlanId() {
+        return this.checkPlanId;
     }
 
     public RefreshAdvisorCostCheckShrinkRequest setProduct(String product) {

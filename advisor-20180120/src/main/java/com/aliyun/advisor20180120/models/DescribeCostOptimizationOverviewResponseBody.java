@@ -251,12 +251,21 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
         @NameInMap("OptResourceNum")
         public String optResourceNum;
 
+        @NameInMap("ProcessedResourceCount")
+        public String processedResourceCount;
+
+        @NameInMap("ProcessedSaveAmount")
+        public String processedSaveAmount;
+
         /**
          * <strong>example:</strong>
          * <p>95***135</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
+
+        @NameInMap("WaitProcessResourceCount")
+        public String waitProcessResourceCount;
 
         public static DescribeCostOptimizationOverviewResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeCostOptimizationOverviewResponseBodyData self = new DescribeCostOptimizationOverviewResponseBodyData();
@@ -311,12 +320,36 @@ public class DescribeCostOptimizationOverviewResponseBody extends TeaModel {
             return this.optResourceNum;
         }
 
+        public DescribeCostOptimizationOverviewResponseBodyData setProcessedResourceCount(String processedResourceCount) {
+            this.processedResourceCount = processedResourceCount;
+            return this;
+        }
+        public String getProcessedResourceCount() {
+            return this.processedResourceCount;
+        }
+
+        public DescribeCostOptimizationOverviewResponseBodyData setProcessedSaveAmount(String processedSaveAmount) {
+            this.processedSaveAmount = processedSaveAmount;
+            return this;
+        }
+        public String getProcessedSaveAmount() {
+            return this.processedSaveAmount;
+        }
+
         public DescribeCostOptimizationOverviewResponseBodyData setTaskId(Long taskId) {
             this.taskId = taskId;
             return this;
         }
         public Long getTaskId() {
             return this.taskId;
+        }
+
+        public DescribeCostOptimizationOverviewResponseBodyData setWaitProcessResourceCount(String waitProcessResourceCount) {
+            this.waitProcessResourceCount = waitProcessResourceCount;
+            return this;
+        }
+        public String getWaitProcessResourceCount() {
+            return this.waitProcessResourceCount;
         }
 
     }
