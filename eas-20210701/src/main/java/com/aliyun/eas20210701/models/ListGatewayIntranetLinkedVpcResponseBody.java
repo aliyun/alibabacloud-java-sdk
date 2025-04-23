@@ -58,6 +58,9 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     }
 
     public static class ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList extends TeaModel {
+        @NameInMap("AccountId")
+        public String accountId;
+
         @NameInMap("AuthoritativeDnsEnabled")
         public Boolean authoritativeDnsEnabled;
 
@@ -129,6 +132,14 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
         public static ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList self = new ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList setAccountId(String accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public String getAccountId() {
+            return this.accountId;
         }
 
         public ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList setAuthoritativeDnsEnabled(Boolean authoritativeDnsEnabled) {

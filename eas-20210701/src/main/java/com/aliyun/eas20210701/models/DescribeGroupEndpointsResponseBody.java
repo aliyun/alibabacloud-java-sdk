@@ -14,7 +14,7 @@ public class DescribeGroupEndpointsResponseBody extends TeaModel {
     public String accessToken;
 
     /**
-     * <p>The endpoints of service groups.</p>
+     * <p>The endpoints of the service group.</p>
      */
     @NameInMap("Endpoints")
     public java.util.List<DescribeGroupEndpointsResponseBodyEndpoints> endpoints;
