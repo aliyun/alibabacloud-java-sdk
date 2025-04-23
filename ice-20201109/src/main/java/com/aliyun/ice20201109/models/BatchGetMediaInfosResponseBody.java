@@ -258,6 +258,9 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
+        @NameInMap("Biz")
+        public String biz;
+
         /**
          * <p>The business type of the media asset.</p>
          * 
@@ -417,6 +420,14 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         public static BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo self = new BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo();
             return TeaModel.build(map, self);
+        }
+
+        public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo setBiz(String biz) {
+            this.biz = biz;
+            return this;
+        }
+        public String getBiz() {
+            return this.biz;
         }
 
         public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo setBusinessType(String businessType) {
