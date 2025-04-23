@@ -97,7 +97,7 @@ public class FilterUsersShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The parameters that are used to sort query results.</p>
+     * <p>The parameter that might affect the sorting logic.</p>
      */
     @NameInMap("OrderParam")
     public String orderParamShrink;
@@ -112,7 +112,12 @@ public class FilterUsersShrinkRequest extends TeaModel {
     public String orgId;
 
     /**
-     * <p>The type of the account ownership.</p>
+     * <p>The activation type of the convenience account.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CreateFromManager: administrator-activated.</li>
+     * <li>Normal: user-activated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

@@ -8,13 +8,13 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The list of usernames that must be exactly matched.</p>
+     * <p>The usernames that must be exactly matched.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The list of usernames to be exactly excluded.</p>
+     * <p>The usernames that must be exactly excluded.</p>
      */
     @NameInMap("ExcludeEndUserIds")
     public java.util.List<String> excludeEndUserIds;
@@ -47,10 +47,10 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     public Boolean isQueryAllSubOrgs;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <ul>
-     * <li>Valid values: 1 to 500</li>
-     * <li>Default value: 500</li>
+     * <li>Valid values: 1 to 500.</li>
+     * <li>Default value: 500.</li>
      * </ul>
      * 
      * <strong>example:</strong>

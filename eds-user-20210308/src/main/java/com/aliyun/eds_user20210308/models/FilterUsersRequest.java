@@ -97,7 +97,7 @@ public class FilterUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The parameters that are used to sort query results.</p>
+     * <p>The parameter that might affect the sorting logic.</p>
      */
     @NameInMap("OrderParam")
     public FilterUsersRequestOrderParam orderParam;
@@ -112,7 +112,12 @@ public class FilterUsersRequest extends TeaModel {
     public String orgId;
 
     /**
-     * <p>The type of the account ownership.</p>
+     * <p>The activation type of the convenience account.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>CreateFromManager: administrator-activated.</li>
+     * <li>Normal: user-activated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>
@@ -262,12 +267,12 @@ public class FilterUsersRequest extends TeaModel {
 
     public static class FilterUsersRequestOrderParam extends TeaModel {
         /**
-         * <p>The parameter based on which to sort query results.</p>
+         * <p>The field that you want to sort by.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>EndUserId: the username.</li>
-         * <li>id: the ID of the user primary key.</li>
-         * <li>gmt_created: the time when the convenience user was created.</li>
+         * <li>id: the ID of the primary key.</li>
+         * <li>gmt_created: the creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,22 +282,11 @@ public class FilterUsersRequest extends TeaModel {
         public String orderField;
 
         /**
-         * <p>Specifies whether to sort query results in ascending or descending order.</p>
+         * <p>The direction of the sort.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>ASC: ascending</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>DESC (default): descending</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>ASC: the ascending order.</li>
+         * <li>DESC (default): the descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>

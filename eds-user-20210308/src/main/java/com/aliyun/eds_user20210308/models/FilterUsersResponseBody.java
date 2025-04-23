@@ -23,7 +23,7 @@ public class FilterUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the convenience user.</p>
+     * <p>The convenience accounts.</p>
      */
     @NameInMap("Users")
     public java.util.List<FilterUsersResponseBodyUsers> users;
@@ -309,6 +309,12 @@ public class FilterUsersResponseBody extends TeaModel {
     }
 
     public static class FilterUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The date when a convenience account is automatically locked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-03</p>
+         */
         @NameInMap("AutoLockTime")
         public String autoLockTime;
 
@@ -430,9 +436,24 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("OwnerType")
         public String ownerType;
 
+        /**
+         * <p>By default, user account passwords do not expire. However, you can set a validity period between 30 and 365 days. Once the period expires, end users must change their password before they can log on to terminals.</p>
+         * <blockquote>
+         * <p> The feature is in invitational preview. If you want to use this feature, submit a ticket.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PasswordExpireDays")
         public Integer passwordExpireDays;
 
+        /**
+         * <p>The number of days remaining until the account password expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PasswordExpireRestDays")
         public Integer passwordExpireRestDays;
 
@@ -464,22 +485,11 @@ public class FilterUsersResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The status of the convenience user.</p>
+         * <p>The remarks on the convenience account.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p>0: The convenience user is normal.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- -->
-         * </li>
-         * <li><p>9: The convenience user is locked.</p>
-         * <!-- -->
-         * 
-         * <!-- -->
-         * 
-         * <!-- --></li>
+         * <li>0: The convenience account is normal.</li>
+         * <li>9: The convenience account is locked.</li>
          * </ul>
          * 
          * <strong>example:</strong>

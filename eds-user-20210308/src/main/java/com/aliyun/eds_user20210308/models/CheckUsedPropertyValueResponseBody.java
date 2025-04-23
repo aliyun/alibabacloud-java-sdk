@@ -14,7 +14,7 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of convenience users that are associated with the property value.</p>
+     * <p>The number of convenience accounts that are associated with the specified custom property value.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

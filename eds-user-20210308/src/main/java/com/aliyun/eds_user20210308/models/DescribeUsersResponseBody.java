@@ -23,7 +23,7 @@ public class DescribeUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the convenience users.</p>
+     * <p>The convenience accounts.</p>
      */
     @NameInMap("Users")
     public java.util.List<DescribeUsersResponseBodyUsers> users;
