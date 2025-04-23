@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetMemberResponseBody extends TeaModel {
     /**
+     * <p>The display name of the member.</p>
+     * 
      * <strong>example:</strong>
      * <p>myDisplayName</p>
      */
@@ -12,6 +14,8 @@ public class GetMemberResponseBody extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
      */
@@ -19,6 +23,8 @@ public class GetMemberResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The member ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>145883-21513926******88039</p>
      */
@@ -26,6 +32,8 @@ public class GetMemberResponseBody extends TeaModel {
     public String memberId;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1</p>
      */
@@ -33,16 +41,23 @@ public class GetMemberResponseBody extends TeaModel {
     public String memberName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of roles.</p>
+     */
     @NameInMap("Roles")
     public java.util.List<String> roles;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>21513926******88039</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListCodeSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The code sources.</p>
+     */
     @NameInMap("CodeSources")
     public java.util.List<CodeSourceItem> codeSources;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -15,6 +20,8 @@ public class ListCodeSourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of code sources that meet the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */

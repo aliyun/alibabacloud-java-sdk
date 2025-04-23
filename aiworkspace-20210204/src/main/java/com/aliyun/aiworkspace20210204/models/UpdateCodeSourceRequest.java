@@ -5,31 +5,68 @@ import com.aliyun.tea.*;
 
 public class UpdateCodeSourceRequest extends TeaModel {
     /**
+     * <p>The name of the code branch.</p>
+     * 
      * <strong>example:</strong>
      * <p>dev</p>
      */
     @NameInMap("CodeBranch")
     public String codeBranch;
 
+    /**
+     * <p>The code commit ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3a6*****</p>
+     */
     @NameInMap("CodeCommit")
     public String codeCommit;
 
+    /**
+     * <p>The address of the code repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>******</p>
+     */
     @NameInMap("CodeRepo")
     public String codeRepo;
 
+    /**
+     * <p>The access token corresponding to the username.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
+    /**
+     * <p>The username used to access the code repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-user</p>
+     */
     @NameInMap("CodeRepoUserName")
     public String codeRepoUserName;
 
+    /**
+     * <p>The description of the code build.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the code build.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyCodeSource1</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The default mount path.</p>
+     * 
      * <strong>example:</strong>
      * <p>/root/code/code-source-1</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetLabelsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A083731B-4973-54D1-B324-E53****4DD44</p>
      */

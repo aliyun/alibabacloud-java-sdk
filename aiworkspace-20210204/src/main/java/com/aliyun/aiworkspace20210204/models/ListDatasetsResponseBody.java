@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsResponseBody extends TeaModel {
+    /**
+     * <p>The datasets.</p>
+     */
     @NameInMap("Datasets")
     public java.util.List<Dataset> datasets;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -15,6 +20,8 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */

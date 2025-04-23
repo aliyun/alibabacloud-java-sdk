@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDatasetJobConfigRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>513663</p>
      */

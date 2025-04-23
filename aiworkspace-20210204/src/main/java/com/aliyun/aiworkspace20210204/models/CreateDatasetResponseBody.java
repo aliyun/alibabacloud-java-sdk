@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetResponseBody extends TeaModel {
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-rbvg5*****jhc9ks92</p>
      */
@@ -12,6 +14,8 @@ public class CreateDatasetResponseBody extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B2C51F93-1C07-5477-9705-5FDB****F19F</p>
      */

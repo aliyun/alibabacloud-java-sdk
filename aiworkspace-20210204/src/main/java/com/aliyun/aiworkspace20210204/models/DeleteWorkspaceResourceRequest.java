@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceResourceRequest extends TeaModel {
     /**
+     * <p>The name of the resource group. You can call <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a> to obtain the name of the resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>group</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The tags. Multiple tags are separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system.supported.eas=true</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
     /**
+     * <p>The operation to perform. Valid values:</p>
+     * <ul>
+     * <li>DetachAndDelete: disassociates a resource from a workspace and deletes the resource in the workspace. This is the default value.</li>
+     * <li>Detach: disassociates a resource group from a workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DetachAndDelete</p>
      */
@@ -22,15 +36,36 @@ public class DeleteWorkspaceResourceRequest extends TeaModel {
     public String option;
 
     /**
+     * <p>**This field is no longer used and will be removed. Use the ResourceType field instead.</p>
+     * 
      * <strong>example:</strong>
      * <p>DLC</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The resource IDs. Multiple resource IDs are separated by commas (,). The GroupName values for the specified resources must be the same. You cannot leave both GroupName and ResourceIds empty. You can specify both parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Resource-dks<strong><strong><strong>jkf,Resource-adf</strong></strong></strong>dss</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
+    /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>ECS</li>
+     * <li>Lingjun</li>
+     * <li>ACS</li>
+     * <li>FLINK</li>
+     * <li>MaxCompute (This resource type is valid only if Option is set to Detach.)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DLC</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

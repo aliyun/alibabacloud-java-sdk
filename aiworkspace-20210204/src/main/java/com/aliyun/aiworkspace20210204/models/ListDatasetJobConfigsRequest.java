@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListDatasetJobConfigsRequest extends TeaModel {
     /**
+     * <p>The configuration type.</p>
+     * <ul>
+     * <li>MultimodalIntelligentTag</li>
+     * <li>MultimodalSemanticIndex</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MultimodalIntelligentTag</p>
      */
@@ -12,6 +18,8 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +27,8 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +36,8 @@ public class ListDatasetJobConfigsRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>431514</p>
      */

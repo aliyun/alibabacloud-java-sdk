@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionsResponseBody extends TeaModel {
+    /**
+     * <p>The permissions.</p>
+     */
     @NameInMap("Permissions")
     public java.util.List<ListPermissionsResponseBodyPermissions> permissions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2AE63638-5420-56DC-B******8174039A0</p>
      */
@@ -15,6 +20,8 @@ public class ListPermissionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of permissions that meet the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,13 @@ public class ListPermissionsResponseBody extends TeaModel {
 
     public static class ListPermissionsResponseBodyPermissionsPermissionRules extends TeaModel {
         /**
+         * <p>The accessibility of the permission rule. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: All members in the workspace can access the permission rule.</li>
+         * <li>PRIVATE: Only the creator can access the permission rule.</li>
+         * <li>ANY: All users can access the permission rule.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
          */
@@ -59,6 +73,12 @@ public class ListPermissionsResponseBody extends TeaModel {
         public String accessibility;
 
         /**
+         * <p>The type of access. If you set Accessibility to PUBLIC, all users can access the workspace. This parameter is invalid. If you set Accessibility to PRIVATE, the permissions are determined based on the value of EntityAccessType. The value of EntityAccessType can be:</p>
+         * <ul>
+         * <li>CREATOR: Only the creator can access the workspace.</li>
+         * <li>ANY: All users can access the workspace.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CREATOR</p>
          */
@@ -90,12 +110,17 @@ public class ListPermissionsResponseBody extends TeaModel {
 
     public static class ListPermissionsResponseBodyPermissions extends TeaModel {
         /**
+         * <p>The permission name, which is unique in a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>. The example value PaiDLC:GetTensorboard indicates the permission to view details about a TensorBoard job on the Deep Learning Containers (DLC) page.</p>
+         * 
          * <strong>example:</strong>
          * <p>PaiDLC:GetTensorboard</p>
          */
         @NameInMap("PermissionCode")
         public String permissionCode;
 
+        /**
+         * <p>The permission rules.</p>
+         */
         @NameInMap("PermissionRules")
         public java.util.List<ListPermissionsResponseBodyPermissionsPermissionRules> permissionRules;
 

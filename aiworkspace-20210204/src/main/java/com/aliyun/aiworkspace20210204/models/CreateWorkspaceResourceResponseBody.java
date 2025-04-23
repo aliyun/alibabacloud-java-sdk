@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1e195c5116124202371861018d5bde</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resources.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<CreateWorkspaceResourceResponseBodyResources> resources;
 
     /**
+     * <p>The total number of resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -52,6 +59,8 @@ public class CreateWorkspaceResourceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResourceResponseBodyResources extends TeaModel {
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234</p>
          */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCodeSourcesRequest extends TeaModel {
     /**
+     * <p>The display name of the code source. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyDataSource</p>
      */
@@ -12,6 +14,13 @@ public class ListCodeSourcesRequest extends TeaModel {
     public String displayName;
 
     /**
+     * <p>The order in which the entries are sorted by the specific field on the returned page.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>asc: ascending order. This is the default value.</li>
+     * <li>desc: descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>desc</p>
      */
@@ -19,6 +28,8 @@ public class ListCodeSourcesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +37,8 @@ public class ListCodeSourcesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +46,14 @@ public class ListCodeSourcesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field used for sorting. Valid values:</p>
+     * <ul>
+     * <li>GmtModifyTime: the time when the source code is modified.</li>
+     * <li>DisplayName: the display name.</li>
+     * <li>CodeSourceId: the ID of the code source.</li>
+     * <li>GmtCreateTime: the time when the code source is created. This is the default value.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtModifyTime</p>
      */
@@ -40,6 +61,8 @@ public class ListCodeSourcesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

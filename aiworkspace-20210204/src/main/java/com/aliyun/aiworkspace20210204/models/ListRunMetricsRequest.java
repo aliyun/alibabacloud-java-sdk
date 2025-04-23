@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRunMetricsRequest extends TeaModel {
     /**
+     * <p>The metric key of the run.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListRunMetricsRequest extends TeaModel {
     public String key;
 
     /**
+     * <p>The maximum number of entries in the request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -21,6 +24,8 @@ public class ListRunMetricsRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token, which starts from 0. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

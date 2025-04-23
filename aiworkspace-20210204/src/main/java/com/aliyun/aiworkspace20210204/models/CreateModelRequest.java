@@ -101,6 +101,9 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    @NameInMap("Tag")
+    public java.util.List<Label> tag;
+
     /**
      * <p>The task of the model. Describes the specific problem that the model solves. Example: text-classification.</p>
      * 
@@ -202,6 +205,14 @@ public class CreateModelRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
+    }
+
+    public CreateModelRequest setTag(java.util.List<Label> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<Label> getTag() {
+        return this.tag;
     }
 
     public CreateModelRequest setTask(String task) {

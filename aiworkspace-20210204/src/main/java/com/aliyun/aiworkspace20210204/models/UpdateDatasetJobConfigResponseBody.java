@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateDatasetJobConfigResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D5BFFEE3-6025-443F-8A03-02D619B5C4B9</p>
      */

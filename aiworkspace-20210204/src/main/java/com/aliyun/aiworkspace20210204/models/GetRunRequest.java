@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRunRequest extends TeaModel {
     /**
+     * <p>Specifies whether to obtain the Metrics, Params, and Labels information. Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

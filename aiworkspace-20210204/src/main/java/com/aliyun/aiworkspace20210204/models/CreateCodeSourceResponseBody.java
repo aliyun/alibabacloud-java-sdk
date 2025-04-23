@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateCodeSourceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the created code build.</p>
+     * 
      * <strong>example:</strong>
      * <p>code-20********</p>
      */
@@ -12,6 +14,8 @@ public class CreateCodeSourceResponseBody extends TeaModel {
     public String codeSourceId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3**********</p>
      */

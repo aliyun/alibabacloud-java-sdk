@@ -96,6 +96,9 @@ public class Model extends TeaModel {
     @NameInMap("Provider")
     public String provider;
 
+    @NameInMap("Tags")
+    public java.util.List<Label> tags;
+
     /**
      * <strong>example:</strong>
      * <p>text-classifiaction</p>
@@ -248,6 +251,14 @@ public class Model extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public Model setTags(java.util.List<Label> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Label> getTags() {
+        return this.tags;
     }
 
     public Model setTask(String task) {

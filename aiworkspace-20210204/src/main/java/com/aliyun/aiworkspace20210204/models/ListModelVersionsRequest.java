@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListModelVersionsRequest extends TeaModel {
     /**
+     * <p>The approval status based on which the model versions are queried. Valid values:</p>
+     * <ul>
+     * <li>Pending</li>
+     * <li>Approved</li>
+     * <li>Rejected</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Approved</p>
      */
@@ -12,6 +19,20 @@ public class ListModelVersionsRequest extends TeaModel {
     public String approvalStatus;
 
     /**
+     * <p>The model format used to filter model versions. Valid values:</p>
+     * <ul>
+     * <li>OfflineModel</li>
+     * <li>SavedModel</li>
+     * <li>Keras H5</li>
+     * <li>Frozen Pb</li>
+     * <li>Caffe Prototxt</li>
+     * <li>TorchScript</li>
+     * <li>XGBoost</li>
+     * <li>PMML</li>
+     * <li>AlinkModel</li>
+     * <li>ONNX</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SavedModel</p>
      */
@@ -19,6 +40,16 @@ public class ListModelVersionsRequest extends TeaModel {
     public String formatType;
 
     /**
+     * <p>The framework used to filter model versions.</p>
+     * <ul>
+     * <li>Pytorch -XGBoost</li>
+     * <li>Keras</li>
+     * <li>Caffe</li>
+     * <li>Alink</li>
+     * <li>Xflow</li>
+     * <li>TensorFlow</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>TensorFlow</p>
      */
@@ -26,6 +57,8 @@ public class ListModelVersionsRequest extends TeaModel {
     public String frameworkType;
 
     /**
+     * <p>The label. Model versions whose label key or label value contains a specific label are filtered.</p>
+     * 
      * <strong>example:</strong>
      * <p>key1</p>
      */
@@ -33,6 +66,12 @@ public class ListModelVersionsRequest extends TeaModel {
     public String label;
 
     /**
+     * <p>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</p>
+     * <ul>
+     * <li>ASC</li>
+     * <li>DESC</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -40,6 +79,8 @@ public class ListModelVersionsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +88,8 @@ public class ListModelVersionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -54,6 +97,8 @@ public class ListModelVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The field used to sort the results. The GmtCreateTime field is used for sorting.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -61,6 +106,23 @@ public class ListModelVersionsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The source ID.</p>
+     * <ul>
+     * <li>If the source type is Custom, this field is not limited.</li>
+     * <li>If the source type is PAIFlow or TrainingService, the format is:</li>
+     * </ul>
+     * <!---->
+     * 
+     * <pre><code>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
+     * </code></pre>
+     * <p>Take note of the following parameters:</p>
+     * <ul>
+     * <li>region is the region ID.</li>
+     * <li>workspaceId is the ID of the workspace.</li>
+     * <li>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</li>
+     * <li>id is a unique identifier.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>region=cn-shanghai,workspaceId=13**,kind=PipelineRun,id=run-sakdb****jdf</p>
      */
@@ -68,6 +130,13 @@ public class ListModelVersionsRequest extends TeaModel {
     public String sourceId;
 
     /**
+     * <p>The source type used to filter model versions. Valid values:</p>
+     * <ul>
+     * <li>Custom (default)</li>
+     * <li>PAIFlow</li>
+     * <li>TrainingService</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PAIFlow</p>
      */
@@ -75,6 +144,8 @@ public class ListModelVersionsRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The model version used to filter model versions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.0.1</p>
      */

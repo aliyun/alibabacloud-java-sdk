@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListExperimentShrinkRequest extends TeaModel {
     /**
+     * <p>The tag filter conditions. Multiple conditions are separated by commas (,). The format of a single condition filter is <code>key=value</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>is_evaluation:true</p>
      */
@@ -12,6 +14,8 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public String labels;
 
     /**
+     * <p>The maximum number of entries in the request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,16 +23,27 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The experiment name.</p>
+     * 
      * <strong>example:</strong>
      * <p>exp-test</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The optional parameters.</p>
+     */
     @NameInMap("Options")
     public String optionsShrink;
 
     /**
+     * <p>The order of specific fields of results in a paged query (ascending or descending).</p>
+     * <ul>
+     * <li>ASC: ascending order</li>
+     * <li>DESC: descending order. This is the default value.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -36,6 +51,8 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The strings used for sorting. The following fields can be used for sorting: GmtCreateTime, Name, GmtModifiedTime, and ExperimentId. The sorting order can be ASC (default) and DESC.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime DESC,Name ASC</p>
      */
@@ -43,6 +60,8 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number. The value starts from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -50,6 +69,8 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -57,6 +78,8 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The pagination token, which starts from 0. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -64,6 +87,8 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public Long pageToken;
 
     /**
+     * <p>The field used for sorting. The GmtCreateTime field is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -71,6 +96,8 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Specifies whether to obtain the LatestRun value that is related to the experiment.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -78,6 +105,11 @@ public class ListExperimentShrinkRequest extends TeaModel {
     public Boolean verbose;
 
     /**
+     * <p>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <blockquote>
+     * <p> If you do not specify a workspace ID, the system returns the experiments in the default workspace.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>151739</p>
      */

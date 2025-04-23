@@ -5,16 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetJobRequest extends TeaModel {
     /**
+     * <p>The dataset version.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */
     @NameInMap("DatasetVersion")
     public String datasetVersion;
 
+    /**
+     * <p>The job description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The job action.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SemanticIndex</li>
+     * <li>IntelligentTag</li>
+     * <li>FileMetaExport</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +36,12 @@ public class CreateDatasetJobRequest extends TeaModel {
     public String jobAction;
 
     /**
+     * <p>The job mode.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Full: full mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Full</p>
      */
@@ -31,6 +49,7 @@ public class CreateDatasetJobRequest extends TeaModel {
     public String jobMode;
 
     /**
+     * <p>The job configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +59,7 @@ public class CreateDatasetJobRequest extends TeaModel {
     public String jobSpec;
 
     /**
+     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

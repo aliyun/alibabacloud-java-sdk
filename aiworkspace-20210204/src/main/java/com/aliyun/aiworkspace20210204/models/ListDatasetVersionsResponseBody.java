@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The dataset versions.</p>
+     */
     @NameInMap("DatasetVersions")
     public java.util.List<DatasetVersion> datasetVersions;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,16 +20,26 @@ public class ListDatasetVersionsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0648C5BB-68D0-54D2-92A5-607135B8806B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>The number of dataset versions that meet the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */

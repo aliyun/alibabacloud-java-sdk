@@ -4,6 +4,16 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
+    /**
+     * <p>The visibility of the image. This parameter is valid only for custom images.</p>
+     * <ul>
+     * <li>PUBLIC: The image is visible to all users.</li>
+     * <li>PRIVATE: The image is visible only to you and the administrator of the workspace.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PUBLIC</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
@@ -11,6 +21,28 @@ public class ListImagesRequest extends TeaModel {
     public String imageUri;
 
     /**
+     * <p>The tag filter conditions. Multiple conditions are separated by commas (,). The format of a single condition filter is <code>key=value</code>. The following keys are supported:</p>
+     * <ul>
+     * <li>system.chipType</li>
+     * <li>system.dsw.cudaVersion</li>
+     * <li>system.dsw.fromImageId</li>
+     * <li>system.dsw.fromInstanceId</li>
+     * <li>system.dsw.id</li>
+     * <li>system.dsw.os</li>
+     * <li>system.dsw.osVersion</li>
+     * <li>system.dsw.resourceType</li>
+     * <li>system.dsw.rootImageId</li>
+     * <li>system.dsw.stage</li>
+     * <li>system.dsw.tag</li>
+     * <li>system.dsw.type</li>
+     * <li>system.framework</li>
+     * <li>system.origin</li>
+     * <li>system.pythonVersion</li>
+     * <li>system.source</li>
+     * <li>system.supported.dlc</li>
+     * <li>system.supported.dsw</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>system.framework=XGBoost 1.6.0,system.official=true</p>
      */
@@ -18,6 +50,8 @@ public class ListImagesRequest extends TeaModel {
     public String labels;
 
     /**
+     * <p>The image name. Fuzzy match is supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>tensorflow_2.9</p>
      */
@@ -25,6 +59,12 @@ public class ListImagesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC. Valid values:</p>
+     * <ul>
+     * <li>ASC: ascending order</li>
+     * <li>DESC: descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -32,6 +72,8 @@ public class ListImagesRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -39,16 +81,26 @@ public class ListImagesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The image name and description that are used for fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The field used for sorting. The GmtCreateTime field is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -56,6 +108,12 @@ public class ListImagesRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>Specifies whether to display non-essential information, which contains tags. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -63,6 +121,8 @@ public class ListImagesRequest extends TeaModel {
     public Boolean verbose;
 
     /**
+     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>20******55</p>
      */

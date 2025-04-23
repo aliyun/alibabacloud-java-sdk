@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMemberRequest extends TeaModel {
     /**
+     * <p>The members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Members")
@@ -25,12 +26,14 @@ public class CreateMemberRequest extends TeaModel {
 
     public static class CreateMemberRequestMembers extends TeaModel {
         /**
+         * <p>The list of roles.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
+         * <p>The member IDs. Multiple member IDs are separated by commas (,). You can call <a href="https://help.aliyun.com/document_detail/449135.html">ListMembers</a> to obtain the member IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

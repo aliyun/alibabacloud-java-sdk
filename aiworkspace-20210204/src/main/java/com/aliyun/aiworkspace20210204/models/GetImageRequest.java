@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetImageRequest extends TeaModel {
     /**
+     * <p>Specifies whether to display non-essential information, which contains tags. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

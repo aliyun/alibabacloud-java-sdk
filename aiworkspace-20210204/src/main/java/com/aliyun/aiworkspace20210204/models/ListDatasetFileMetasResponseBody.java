@@ -4,12 +4,27 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetFileMetasResponseBody extends TeaModel {
+    /**
+     * <p>The metadata records of the dataset files.</p>
+     */
     @NameInMap("DatasetFileMetas")
     public java.util.List<DatasetFileMeta> datasetFileMetas;
 
+    /**
+     * <p>The dataset ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-rbvg5*****jhc9ks92</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <p>The dataset version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("DatasetVersion")
     public String datasetVersion;
 
@@ -17,6 +32,8 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token. If the number of results exceeds the maximum number of entries allowed per page, a pagination token is returned. This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>90******-f5c5-4cd4-927e-1f45e1cb8b62_1729644433000</p>
      */
@@ -24,6 +41,8 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The number of entries returned per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -32,12 +51,20 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>105173</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

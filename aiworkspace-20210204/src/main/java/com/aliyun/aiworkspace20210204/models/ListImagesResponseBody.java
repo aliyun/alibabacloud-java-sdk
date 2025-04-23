@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
+    /**
+     * <p>The images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -15,6 +20,8 @@ public class ListImagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of returned images.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -52,6 +59,8 @@ public class ListImagesResponseBody extends TeaModel {
 
     public static class ListImagesResponseBodyImagesLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>system.chipType</p>
          */
@@ -59,6 +68,8 @@ public class ListImagesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>GPU</p>
          */
@@ -90,6 +101,12 @@ public class ListImagesResponseBody extends TeaModel {
 
     public static class ListImagesResponseBodyImages extends TeaModel {
         /**
+         * <p>The accessibility of the image. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: All members can access the image.</li>
+         * <li>PRIVATE: Only the creator can access the image.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PUBLIC</p>
          */
@@ -97,6 +114,8 @@ public class ListImagesResponseBody extends TeaModel {
         public String accessibility;
 
         /**
+         * <p>The image description.</p>
+         * 
          * <strong>example:</strong>
          * <p>desc</p>
          */
@@ -104,6 +123,8 @@ public class ListImagesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The time when the image is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
          */
@@ -111,6 +132,8 @@ public class ListImagesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
+         * <p>The time when the image is modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-01-21T17:12:35.232Z</p>
          */
@@ -118,19 +141,29 @@ public class ListImagesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
+         * <p>The image ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>image-tzi7f9******s45t</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The image address, which includes the version number.</p>
+         */
         @NameInMap("ImageUri")
         public String imageUri;
 
+        /**
+         * <p>The image tags.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<ListImagesResponseBodyImagesLabels> labels;
 
         /**
+         * <p>The image name.</p>
+         * 
          * <strong>example:</strong>
          * <p>tensorflow_2.9</p>
          */
@@ -138,22 +171,38 @@ public class ListImagesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>15577******82932</p>
          */
         @NameInMap("ParentUserId")
         public String parentUserId;
 
+        /**
+         * <p>The image size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>镜像来源 ID</p>
+         */
         @NameInMap("SourceId")
         public String sourceId;
 
+        /**
+         * <p>镜像来源类型</p>
+         */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>15577******82932</p>
          */
@@ -161,6 +210,8 @@ public class ListImagesResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20******55</p>
          */

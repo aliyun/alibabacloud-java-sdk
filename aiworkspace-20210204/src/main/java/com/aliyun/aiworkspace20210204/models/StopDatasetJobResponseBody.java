@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopDatasetJobResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F620FFD3-FFDC-5873-A70C-6971CC45F467</p>
      */

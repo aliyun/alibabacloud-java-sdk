@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListExperimentResponseBody extends TeaModel {
+    /**
+     * <p>The list of experiments.</p>
+     */
     @NameInMap("Experiments")
     public java.util.List<Experiment> experiments;
 
     /**
+     * <p>The pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class ListExperimentResponseBody extends TeaModel {
     public Long nextPageToken;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -22,6 +29,8 @@ public class ListExperimentResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0C6835C5-A424-5AFB-ACC2-F1E3CA1ABF7C</p>
      */

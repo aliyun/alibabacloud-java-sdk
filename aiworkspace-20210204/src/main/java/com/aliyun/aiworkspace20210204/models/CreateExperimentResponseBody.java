@@ -4,11 +4,14 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateExperimentResponseBody extends TeaModel {
+    /**
+     * <p>The returned data. If the operation is asynchronously implemented, the job ID is returned.</p>
+     */
     @NameInMap("ExperimentId")
     public String experimentId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

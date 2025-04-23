@@ -5,116 +5,165 @@ import com.aliyun.tea.*;
 
 public class GetDatasetVersionResponseBody extends TeaModel {
     /**
-     * <p>数据集的数据量</p>
+     * <p>The number of data records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("DataCount")
     public Long dataCount;
 
     /**
-     * <p>数据集版本的数据大小。</p>
+     * <p>The size of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("DataSize")
     public Long dataSize;
 
     /**
-     * <p>数据源类型。支持以下取值：</p>
-     * <ul>
-     * <li>OSS：阿里云对象存储（OSS）。</li>
-     * <li>NAS：阿里云文件存储（NAS）。</li>
-     * </ul>
+     * <p>The type of the data source.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
     /**
-     * <p>代表资源一级ID的资源属性字段</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-dkdbnnap0g7b6su4yg</p>
      */
     @NameInMap("DatasetId")
     public String datasetId;
 
     /**
-     * <p>数据集版本的描述信息。</p>
+     * <p>The version description.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-12-13T10:22:05.694Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
-     * <p>创建时间。</p>
+     * <p>The last modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-12-13T10:22:05.694Z</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The dataset configurations to be imported to a storage, such as Object Storage Service (OSS), File Storage NAS (NAS), or Cloud Parallel File Storage (CPFS).</p>
+     * <p><strong>OSS</strong></p>
+     * <p>{ &quot;region&quot;: &quot;${region}&quot;,// The region ID. $bucket = $options[&quot;bucket&quot;]; // The bucket name. &quot;path&quot;: &quot;${path}&quot; // The file path. }</p>
+     * <p><strong>NAS</strong></p>
+     * <p><strong>CPFS</strong></p>
+     * <p><strong>CPFS for Lingjun</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;region&quot;: &quot;cn-wulanchabu&quot;,
+     *     &quot;fileSystemId&quot;: &quot;bmcpfs-xxxxxxxxxxx&quot;,
+     *     &quot;path&quot;: &quot;/mnt&quot;,
+     *     &quot;mountTarget&quot;: &quot;cpfs-xxxxxxxxxxxx-vpc-gacs9f.cn-wulanchabu.cpfs.aliyuncs.com&quot;,
+     *     &quot;isVpcMount&quot;: true
+     * }</p>
+     */
     @NameInMap("ImportInfo")
     public String importInfo;
 
     /**
-     * <p>代表资源标签的资源属性字段</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <p>The access permission on the dataset when the dataset is mounted. Valid values:</p>
+     * <ul>
+     * <li>RO: read-only permissions</li>
+     * <li>RW: read and write permissions</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RO</p>
+     */
     @NameInMap("MountAccess")
     public String mountAccess;
 
     /**
-     * <p>扩展字段，JsonString类型。
-     * 当DLC使用数据集时，可通过配置mountPath字段指定数据集默认挂载路径。</p>
+     * <p>The extended fields.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
+     * }</p>
      */
     @NameInMap("Options")
     public String options;
 
     /**
-     * <p>数据集的属性。支持以下取值：</p>
-     * <ul>
-     * <li>FILE：文件。</li>
-     * <li>DIRECTORY：文件夹。</li>
-     * </ul>
+     * <p>The property of the dataset.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DIRECTORY</p>
      */
     @NameInMap("Property")
     public String property;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C55DF3DA-F120-5E37-A374-F49365531701</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>数据来源ID。</p>
+     * <p>The ID of the source dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-rbvg5wzljzjhc9ks92</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
-     * <p>数据来源类型，默认为USER。支持以下取值：</p>
-     * <ul>
-     * <li>PAI-PUBLIC-DATASET：PAI公共数据集。</li>
-     * <li>ITAG：iTAG模块标注结果生成的数据集。</li>
-     * <li>USER：用户注册的数据集。</li>
-     * </ul>
+     * <p>The type of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>USER</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>Uri配置样例如下：</p>
-     * <ul>
-     * <li>数据源类型为OSS：<code>oss://bucket.endpoint/object</code></li>
-     * <li>数据源类型为NAS：
-     * 通用型NAS格式为：<code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>；
-     * CPFS1.0：<code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>；
-     * CPFS2.0：<code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>。
-     * CPFS1.0和CPFS2.0根据fsid的格式来区分：CPFS1.0 格式为cpfs-&lt;8位ascii字符&gt;；CPFS2.0 格式为cpfs-&lt;16为ascii字符&gt;。</li>
-     * </ul>
+     * <p>The sample URI of the dataset.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://ai4d-br7hx9ngzelo2o6uip.oss-cn-shanghai.aliyuncs.com/365349/data-1157703270994901/datasets/aka108o/</p>
      */
     @NameInMap("Uri")
     public String uri;
 
     /**
-     * <p>代表资源名称的资源属性字段</p>
+     * <p>The version name of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
      */
     @NameInMap("VersionName")
     public String versionName;

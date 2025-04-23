@@ -3,7 +3,7 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class ListModelsRequest extends TeaModel {
+public class ListModelsShrinkRequest extends TeaModel {
     /**
      * <p>The collection where the model is located. You can specify multiple collections and separate them with commas (,).</p>
      * 
@@ -114,7 +114,7 @@ public class ListModelsRequest extends TeaModel {
     public String sortBy;
 
     @NameInMap("Tag")
-    public java.util.List<ListModelsRequestTag> tag;
+    public String tagShrink;
 
     /**
      * <p>The task used to filter the models that belong to the task type. Example: text-classification.</p>
@@ -134,12 +134,12 @@ public class ListModelsRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static ListModelsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListModelsRequest self = new ListModelsRequest();
+    public static ListModelsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListModelsShrinkRequest self = new ListModelsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListModelsRequest setCollections(String collections) {
+    public ListModelsShrinkRequest setCollections(String collections) {
         this.collections = collections;
         return this;
     }
@@ -147,7 +147,7 @@ public class ListModelsRequest extends TeaModel {
         return this.collections;
     }
 
-    public ListModelsRequest setDomain(String domain) {
+    public ListModelsShrinkRequest setDomain(String domain) {
         this.domain = domain;
         return this;
     }
@@ -155,7 +155,7 @@ public class ListModelsRequest extends TeaModel {
         return this.domain;
     }
 
-    public ListModelsRequest setLabel(String label) {
+    public ListModelsShrinkRequest setLabel(String label) {
         this.label = label;
         return this;
     }
@@ -163,7 +163,7 @@ public class ListModelsRequest extends TeaModel {
         return this.label;
     }
 
-    public ListModelsRequest setModelName(String modelName) {
+    public ListModelsShrinkRequest setModelName(String modelName) {
         this.modelName = modelName;
         return this;
     }
@@ -171,7 +171,7 @@ public class ListModelsRequest extends TeaModel {
         return this.modelName;
     }
 
-    public ListModelsRequest setModelType(String modelType) {
+    public ListModelsShrinkRequest setModelType(String modelType) {
         this.modelType = modelType;
         return this;
     }
@@ -179,7 +179,7 @@ public class ListModelsRequest extends TeaModel {
         return this.modelType;
     }
 
-    public ListModelsRequest setOrder(String order) {
+    public ListModelsShrinkRequest setOrder(String order) {
         this.order = order;
         return this;
     }
@@ -187,7 +187,7 @@ public class ListModelsRequest extends TeaModel {
         return this.order;
     }
 
-    public ListModelsRequest setOrigin(String origin) {
+    public ListModelsShrinkRequest setOrigin(String origin) {
         this.origin = origin;
         return this;
     }
@@ -195,7 +195,7 @@ public class ListModelsRequest extends TeaModel {
         return this.origin;
     }
 
-    public ListModelsRequest setPageNumber(Integer pageNumber) {
+    public ListModelsShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -203,7 +203,7 @@ public class ListModelsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListModelsRequest setPageSize(Integer pageSize) {
+    public ListModelsShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -211,7 +211,7 @@ public class ListModelsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListModelsRequest setProvider(String provider) {
+    public ListModelsShrinkRequest setProvider(String provider) {
         this.provider = provider;
         return this;
     }
@@ -219,7 +219,7 @@ public class ListModelsRequest extends TeaModel {
         return this.provider;
     }
 
-    public ListModelsRequest setQuery(String query) {
+    public ListModelsShrinkRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -227,7 +227,7 @@ public class ListModelsRequest extends TeaModel {
         return this.query;
     }
 
-    public ListModelsRequest setSortBy(String sortBy) {
+    public ListModelsShrinkRequest setSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
@@ -235,15 +235,15 @@ public class ListModelsRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListModelsRequest setTag(java.util.List<ListModelsRequestTag> tag) {
-        this.tag = tag;
+    public ListModelsShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<ListModelsRequestTag> getTag() {
-        return this.tag;
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
-    public ListModelsRequest setTask(String task) {
+    public ListModelsShrinkRequest setTask(String task) {
         this.task = task;
         return this;
     }
@@ -251,42 +251,12 @@ public class ListModelsRequest extends TeaModel {
         return this.task;
     }
 
-    public ListModelsRequest setWorkspaceId(String workspaceId) {
+    public ListModelsShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
-    }
-
-    public static class ListModelsRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListModelsRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListModelsRequestTag self = new ListModelsRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListModelsRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListModelsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDatasetJobConfigRequest extends TeaModel {
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>114243</p>
      */

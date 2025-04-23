@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceResourceRequest extends TeaModel {
     /**
+     * <p>The group name.</p>
+     * 
      * <strong>example:</strong>
      * <p>group-kjds******sd</p>
      */
@@ -12,28 +14,60 @@ public class UpdateWorkspaceResourceRequest extends TeaModel {
     public String groupName;
 
     /**
+     * <p>Specifies whether the resource is the default resource. This parameter can only be set to true and cannot be set to false.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
+    /**
+     * <p>The resource tags. If you specify multiple tags, only resources that meet all the specified tag-based filter conditions are returned.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<UpdateWorkspaceResourceRequestLabels> labels;
 
     /**
+     * <p>**This field is no longer used and will be removed. Use the ResourceType field.</p>
+     * 
      * <strong>example:</strong>
      * <p>MaxCompute</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>The resource IDs.</p>
+     * <p>You cannot leave both GroupName and ResourceIds empty. If you specify both the parameters, the value of GroupName of each resource ID in the dataset must be the same.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>MaxCompute</li>
+     * <li>ECS</li>
+     * <li>Lingjun</li>
+     * <li>ACS</li>
+     * <li>FLINK</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxCompute</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The specification of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;clusterType&quot;: &quot;share&quot;
+     * }</p>
+     */
     @NameInMap("Spec")
     public java.util.Map<String, ?> spec;
 
@@ -99,9 +133,21 @@ public class UpdateWorkspaceResourceRequest extends TeaModel {
     }
 
     public static class UpdateWorkspaceResourceRequestLabels extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system.******</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Value")
         public String value;
 

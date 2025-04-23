@@ -4,6 +4,12 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspaceUsersRequest extends TeaModel {
+    /**
+     * <p>The display names of users who can be added to the workspace as members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest****</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

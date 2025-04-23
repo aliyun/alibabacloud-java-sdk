@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelVersionsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC***3C83E</p>
      */
@@ -12,12 +14,17 @@ public class ListModelVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of model versions.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The model versions.</p>
+     */
     @NameInMap("Versions")
     public java.util.List<ModelVersion> versions;
 

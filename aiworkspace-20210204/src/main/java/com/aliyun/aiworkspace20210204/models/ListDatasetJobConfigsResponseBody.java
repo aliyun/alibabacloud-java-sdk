@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetJobConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The dataset job configurations.</p>
+     */
     @NameInMap("DatasetJobConfigs")
     public java.util.List<DatasetJobConfig> datasetJobConfigs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -15,6 +20,8 @@ public class ListDatasetJobConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteWorkspaceResourceResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 

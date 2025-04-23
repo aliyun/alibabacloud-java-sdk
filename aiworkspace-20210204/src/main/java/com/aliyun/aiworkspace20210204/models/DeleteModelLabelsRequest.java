@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteModelLabelsRequest extends TeaModel {
     /**
+     * <p>The label key to be deleted. To delete multiple label keys, separate them with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>key1,key2</p>
      */

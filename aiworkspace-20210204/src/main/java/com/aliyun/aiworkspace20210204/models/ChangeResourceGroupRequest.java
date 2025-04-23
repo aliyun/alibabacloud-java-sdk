@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
+     * <p>The ID of the target resource group. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-df********534dy</p>
      */
@@ -12,6 +14,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
+     * <p>The resource ID, which is the workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12**56</p>
      */
@@ -19,6 +23,8 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource group type, which must be set to workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace</p>
      */

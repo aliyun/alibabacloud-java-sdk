@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceResourceRequest extends TeaModel {
     /**
+     * <p>The operation to perform. Valid values:</p>
+     * <ul>
+     * <li>CreateAndAttach: creates resources and associates the resources with a workspace.</li>
+     * <li>Attach: associates resources with a workspace.</li>
+     * </ul>
+     * <blockquote>
+     * <p> MaxCompute supports only the Attach operation.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>CreateAndAttach</p>
      */
@@ -12,6 +21,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
     public String option;
 
     /**
+     * <p>The resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
@@ -39,9 +49,21 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
     }
 
     public static class CreateWorkspaceResourceRequestResourcesLabels extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system.support.eas</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -70,6 +92,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
 
     public static class CreateWorkspaceResourceRequestResourcesQuotas extends TeaModel {
         /**
+         * <p>The quota ID. You can call <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a> to obtain the quota ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,6 +118,11 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
 
     public static class CreateWorkspaceResourceRequestResources extends TeaModel {
         /**
+         * <p>The environment type. Valid values:</p>
+         * <ul>
+         * <li>dev: development environment</li>
+         * <li>prod: production environment</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -104,6 +132,8 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String envType;
 
         /**
+         * <p>The name of the resource group, which is unique within your Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>groupName</p>
          */
@@ -111,16 +141,30 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String groupName;
 
         /**
+         * <p>Specifies whether the resource is the default resource. Each type of resources has a default resource. Valid values:</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The tags added to the resource.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<CreateWorkspaceResourceRequestResourcesLabels> labels;
 
         /**
+         * <p>The resource name. Format:</p>
+         * <ul>
+         * <li>The name must be 3 to 28 characters in length, and can contain only letters, digits, and underscores (_). The name must start with a letter.</li>
+         * <li>The name is unique in the region.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,22 +174,44 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>**This field is no longer used and will be removed. Use the ResourceType field instead.</p>
+         * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
          */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The list of quotas. Only MaxCompute quotas are available.</p>
+         */
         @NameInMap("Quotas")
         public java.util.List<CreateWorkspaceResourceRequestResourcesQuotas> quotas;
 
+        /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>MaxCompute</li>
+         * <li>ECS</li>
+         * <li>Lingjun</li>
+         * <li>ACS</li>
+         * <li>FLINK</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The resource specifications in the JSON format.</p>
+         */
         @NameInMap("Spec")
         public java.util.Map<String, ?> spec;
 
         /**
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

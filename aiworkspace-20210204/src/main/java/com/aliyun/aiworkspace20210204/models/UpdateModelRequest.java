@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateModelRequest extends TeaModel {
     /**
+     * <p>The visibility of the model in the workspace. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE: The model is visible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: The model is visible to all users in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
      */
@@ -12,29 +18,55 @@ public class UpdateModelRequest extends TeaModel {
     public String accessibility;
 
     /**
+     * <p>The domain. This parameter describes the domain in which the model is applied. Valid values: nlp (natural language processing) and cv (computer vision).</p>
+     * 
      * <strong>example:</strong>
      * <p>nlp</p>
      */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>Other information about the model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;RatingCount&quot;: 2866,
+     *     &quot;Rating&quot;: 4.94,
+     *     &quot;FavoriteCount&quot;: 34992,
+     *     &quot;CommentCount&quot;: 754,
+     *     &quot;CoverUris&quot;: [&quot;<a href="https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png%22%5D">https://e***u.oss-cn-hangzhou.aliyuncs.com/drea***w.png&quot;]</a>,
+     *     &quot;TippedAmountCount&quot;: 32,
+     *     &quot;DownloadCount&quot;: 606056
+     * }</p>
+     */
     @NameInMap("ExtraInfo")
     public java.util.Map<String, ?> extraInfo;
 
+    /**
+     * <p>The model description.</p>
+     */
     @NameInMap("ModelDescription")
     public String modelDescription;
 
     /**
+     * <p>The documentation of the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>https://*.md</p>
      */
     @NameInMap("ModelDoc")
     public String modelDoc;
 
+    /**
+     * <p>The model name, which must be 1 to 127 characters in length.</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
     /**
+     * <p>The model type. Valid values: Checkpoint and LoRA.</p>
+     * 
      * <strong>example:</strong>
      * <p>Checkpoint</p>
      */
@@ -42,13 +74,17 @@ public class UpdateModelRequest extends TeaModel {
     public String modelType;
 
     /**
+     * <p>The sequence number of the model. This parameter can be used for custom sorting.</p>
+     * 
      * <strong>example:</strong>
-     * <p>101</p>
+     * <p>0</p>
      */
     @NameInMap("OrderNumber")
     public Long orderNumber;
 
     /**
+     * <p>The source of the model. This parameter describes the community or organization to which the source model belongs. Valid values: ModelScope and HuggingFace.</p>
+     * 
      * <strong>example:</strong>
      * <p>ModelScope</p>
      */
@@ -56,6 +92,8 @@ public class UpdateModelRequest extends TeaModel {
     public String origin;
 
     /**
+     * <p>The task. This parameter specifies the specific issue that the model resolves. Example: text-classification.</p>
+     * 
      * <strong>example:</strong>
      * <p>text-classification</p>
      */

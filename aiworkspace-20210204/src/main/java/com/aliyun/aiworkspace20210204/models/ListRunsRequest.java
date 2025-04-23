@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRunsRequest extends TeaModel {
     /**
+     * <p>The ID of the experiment that the run belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>exp-1zpfthdx******</p>
      */
@@ -12,6 +14,8 @@ public class ListRunsRequest extends TeaModel {
     public String experimentId;
 
     /**
+     * <p>The time when the instance was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
      */
@@ -19,6 +23,12 @@ public class ListRunsRequest extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The label. Exact match is supported. Valid values:</p>
+     * <ul>
+     * <li>Single-label query: Set the value to is_evaluation.</li>
+     * <li>Multi-label query (not recommended in non-special scenarios and may have performance issues): Set the value to is_evaluation:true,LLM_evaluation:true. Multiple labels are separated with commas (,), indicating that the key-value pairs of multiple labels must be matched at the same time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>is_evaluation:true</p>
      */
@@ -26,6 +36,8 @@ public class ListRunsRequest extends TeaModel {
     public String labels;
 
     /**
+     * <p>The maximum number of entries in the request. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +45,8 @@ public class ListRunsRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The run name.</p>
+     * 
      * <strong>example:</strong>
      * <p>myName</p>
      */
@@ -40,6 +54,12 @@ public class ListRunsRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy.</p>
+     * <ul>
+     * <li>ASC</li>
+     * <li>DESC (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -47,6 +67,8 @@ public class ListRunsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The strings by which the results are sorted. The following parameters can be used to sort the results: GmtCreateTime and Name. The sorting order can be ASC (default) and DESC. Separate multiple strings with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime DESC,Name ASC</p>
      */
@@ -54,6 +76,8 @@ public class ListRunsRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The page number. The value must be greater than 0. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +85,8 @@ public class ListRunsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -68,6 +94,8 @@ public class ListRunsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The pagination token, which starts from 0. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -75,6 +103,12 @@ public class ListRunsRequest extends TeaModel {
     public Long pageToken;
 
     /**
+     * <p>The field used for sorting. Valid values:</p>
+     * <ul>
+     * <li>Name: the name of the run.</li>
+     * <li>GmtCreateTime: the time when the run is created.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
      */
@@ -82,6 +116,8 @@ public class ListRunsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The ID of the workload associated with the run.</p>
+     * 
      * <strong>example:</strong>
      * <p>job-rbvg5wzlj****</p>
      */
@@ -89,6 +125,8 @@ public class ListRunsRequest extends TeaModel {
     public String sourceId;
 
     /**
+     * <p>The type of the workload associated with the run.</p>
+     * 
      * <strong>example:</strong>
      * <p>TrainingService</p>
      */
@@ -96,6 +134,12 @@ public class ListRunsRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>Specifies whether to show detailed information, including Metrics, Params, and Labels. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -103,6 +147,11 @@ public class ListRunsRequest extends TeaModel {
     public Boolean verbose;
 
     /**
+     * <p>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <blockquote>
+     * <p> If you do not specify a workspace ID, the system returns the runs of the default workspace.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>22840</p>
      */

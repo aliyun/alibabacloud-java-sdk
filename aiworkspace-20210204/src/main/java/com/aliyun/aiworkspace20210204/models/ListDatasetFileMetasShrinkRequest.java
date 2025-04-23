@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     /**
+     * <p>The dataset version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String datasetVersion;
 
     /**
+     * <p>The end time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +34,11 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * <blockquote>
+     * <p> If you do not configure this parameter, the data on the first page is returned. A return value other than Null of this parameter indicates that not all entries have been returned. You can use this value as an input parameter to obtain entries on the next page. The value Null indicates that all query results have been returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>90a6ee35-****-4cd4-927e-1f45e1cb8b62_1729644433000</p>
      */
@@ -39,6 +46,12 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy. Default value: ASC.</p>
+     * <ul>
+     * <li>ASC</li>
+     * <li>DESC</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -46,6 +59,8 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -74,10 +89,19 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     @NameInMap("QueryTagsIncludeAny")
     public String queryTagsIncludeAnyShrink;
 
+    /**
+     * <p>The text content to be queried.</p>
+     */
     @NameInMap("QueryText")
     public String queryText;
 
     /**
+     * <p>The retrieval type.</p>
+     * <ul>
+     * <li>TAG (default)</li>
+     * <li>VECTOR</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>TAG</p>
      */
@@ -85,6 +109,8 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The similarity score. Only dataset files whose similarity score is greater than the value of ScoreThreshold are returned. This parameter is valid only when QueryType is set to VECTOR.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.6</p>
      */
@@ -92,6 +118,12 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public Float scoreThreshold;
 
     /**
+     * <p>The field used to sort the results. Default value: GmtCreateTime. Valid values:</p>
+     * <ul>
+     * <li>FileCreateTime (default): The results are sorted by the time when the file is created.</li>
+     * <li>FileUpdateTime: The results are sorted by the time when the file is last modified.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FileCreateTime</p>
      */
@@ -99,6 +131,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The start time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -117,6 +150,8 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public String thumbnailMode;
 
     /**
+     * <p>The number of search results to return. A maximum of Top K search results can be returned. This parameter is valid only when QueryType is set to VECTOR.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -124,6 +159,7 @@ public class ListDatasetFileMetasShrinkRequest extends TeaModel {
     public Integer topK;
 
     /**
+     * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

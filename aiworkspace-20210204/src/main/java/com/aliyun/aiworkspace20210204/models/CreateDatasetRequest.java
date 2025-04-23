@@ -5,19 +5,42 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
     /**
+     * <p>The visibility of the workspace. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE (default): The workspace is visible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: The workspace is visible to all users.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The number of dataset files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("DataCount")
     public Long dataCount;
 
+    /**
+     * <p>The size of the dataset file. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("DataSize")
     public Long dataSize;
 
     /**
+     * <p>The type of the data source. Valid values:</p>
+     * <ul>
+     * <li>OSS: Object Storage Service (OSS).</li>
+     * <li>NAS: File Storage NAS (NAS).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,25 +50,95 @@ public class CreateDatasetRequest extends TeaModel {
     public String dataSourceType;
 
     /**
+     * <p>The type of the dataset. Default value: COMMON. Valid values:</p>
+     * <ul>
+     * <li>COMMON: common</li>
+     * <li>PIC: picture</li>
+     * <li>TEXT: text</li>
+     * <li>Video: video</li>
+     * <li>AUDIO: audio</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>COMMON</p>
      */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <p>The description of the dataset. Descriptions are used to differentiate datasets.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The dataset configurations to be imported to a storage, such as OSS, NAS, or Cloud Parallel File Storage (CPFS).</p>
+     * <p><strong>OSS</strong></p>
+     * <p>{\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
+     * &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name\
+     * &quot;path&quot;: &quot;${path}&quot; // The file path\
+     * }\</p>
+     * <p><strong>NAS</strong></p>
+     * <p>{\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system\
+     * }\</p>
+     * <p><strong>CPFS</strong></p>
+     * <p>{\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
+     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service\
+     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory\
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
+     * }\</p>
+     * <p><strong>CPFS for Lingjun</strong></p>
+     * <p>{\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only\
+     * &quot;isVpcMount&quot;: boolean, // Whether the mount point is a virtual private cloud (VPC) mount point, CPFS for Lingjun only\
+     * }\</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;region&quot;: &quot;cn-wulanchabu&quot;,
+     *     &quot;fileSystemId&quot;: &quot;bmcpfs-xxxxxxxxxxx&quot;,
+     *     &quot;path&quot;: &quot;/mnt&quot;,
+     *     &quot;mountTarget&quot;: &quot;cpfs-xxxxxxxxxxxx-vpc-gacs9f.cn-wulanchabu.cpfs.aliyuncs.com&quot;,
+     *     &quot;isVpcMount&quot;: true
+     * }</p>
+     */
     @NameInMap("ImportInfo")
     public String importInfo;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (\*), all roles have read and write permissions.</p>
+     * <ul>
+     * <li>If you set the value to [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;], the account of the specified role is granted the read and write permissions.</li>
+     * <li>If you set the value to [&quot;\*&quot;], all accounts are granted the read and write permissions.</li>
+     * <li>If you set the value to [], only the creator of the dataset has the read and write permissions.</li>
+     * </ul>
+     */
     @NameInMap("MountAccessReadWriteRoleIdList")
     public java.util.List<String> mountAccessReadWriteRoleIdList;
 
     /**
+     * <p>The dataset name. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must start with a letter, digit, or Chinese character.</li>
+     * <li>The name can contain underscores (_) and hyphens (-).</li>
+     * <li>The name must be 1 to 127 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +148,8 @@ public class CreateDatasetRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can configure the mountPath field to specify the default mount path of the dataset.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;mountPath&quot;: &quot;/mnt/data/&quot;
@@ -64,6 +159,11 @@ public class CreateDatasetRequest extends TeaModel {
     public String options;
 
     /**
+     * <p>The property of the dataset. Valid values:</p>
+     * <ul>
+     * <li>FILE</li>
+     * <li>DIRECTORY</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,23 +172,54 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Property")
     public String property;
 
+    /**
+     * <p>The dataset provider. The value cannot be set to pai.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Github</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
     /**
+     * <p>The source type of the dataset. Valid values:</p>
+     * <ul>
+     * <li>Ecs (default)</li>
+     * <li>Lingjun</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Ecs</p>
      */
     @NameInMap("ProviderType")
     public String providerType;
 
+    /**
+     * <p>The ID of the source dataset of the labeled dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bvfasdfxxxxj8o411</p>
+     */
     @NameInMap("SourceDatasetId")
     public String sourceDatasetId;
 
+    /**
+     * <p>The version of the source dataset of the labeled dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("SourceDatasetVersion")
     public String sourceDatasetVersion;
 
     /**
+     * <p>The ID of the data source.</p>
+     * <ul>
+     * <li>If SourceType is set to USER, the value of SourceId can be a custom string.</li>
+     * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
+     * <li>If SourceType is set to PAI_PUBLIC_DATASET, the value of SourceId is empty by default.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>jdnhf***fnrimv</p>
      */
@@ -96,6 +227,13 @@ public class CreateDatasetRequest extends TeaModel {
     public String sourceId;
 
     /**
+     * <p>The type of the data source. Default value: USER. Valid values:</p>
+     * <ul>
+     * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
+     * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
+     * <li>USER: a dataset registered by a user.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>USER</p>
      */
@@ -103,6 +241,11 @@ public class CreateDatasetRequest extends TeaModel {
     public String sourceType;
 
     /**
+     * <p>The URI of the data source.</p>
+     * <ul>
+     * <li>Value format when DataSourceType is set to OSS: <code>oss://bucket.endpoint/object</code>.</li>
+     * <li>Value formats when DataSourceType is set to NAS: General-purpose NAS: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>. CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>. CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,19 +255,32 @@ public class CreateDatasetRequest extends TeaModel {
     public String uri;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the dataset belongs. The workspace owner and administrator have permissions to create datasets for specified members in the workspace.</p>
+     * 
      * <strong>example:</strong>
-     * <p>29884000000186970</p>
+     * <p>2485765****023475</p>
      */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The description of the dataset of the initial version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The initial version</p>
+     */
     @NameInMap("VersionDescription")
     public String versionDescription;
 
+    /**
+     * <p>The list of tags to be added to the dataset of the initial version.</p>
+     */
     @NameInMap("VersionLabels")
     public java.util.List<Label> versionLabels;
 
     /**
+     * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID. If you do not specify this parameter, the default workspace is used. If the default workspace does not exist, an error is reported.</p>
+     * 
      * <strong>example:</strong>
      * <p>478**</p>
      */

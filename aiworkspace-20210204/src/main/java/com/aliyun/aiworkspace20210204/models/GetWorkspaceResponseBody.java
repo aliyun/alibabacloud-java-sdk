@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetWorkspaceResponseBody extends TeaModel {
+    /**
+     * <p>The names of the administrator accounts.</p>
+     */
     @NameInMap("AdminNames")
     public java.util.List<String> adminNames;
 
     /**
+     * <p>The ID of the user who creates the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>1157******94123</p>
      */
@@ -15,6 +20,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String creator;
 
     /**
+     * <p>The description of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace description example</p>
      */
@@ -22,16 +29,27 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-example</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The environment information of the workspace.</p>
+     * <ul>
+     * <li>Workspaces in basic mode can run only in the production environment.</li>
+     * <li>Workspaces in standard mode can run in both the development and production environments.</li>
+     * </ul>
+     */
     @NameInMap("EnvTypes")
     public java.util.List<String> envTypes;
 
     /**
+     * <p>The additional information, which only contains the TenantId field.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;TenantId&quot;: &quot;4286******98&quot;}</p>
      */
@@ -39,6 +57,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public java.util.Map<String, ?> extraInfos;
 
     /**
+     * <p>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
      */
@@ -46,6 +66,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the workspace is modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
      */
@@ -53,26 +75,53 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>Indicates whether the workspace is the default workspace. Valid values:</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
+    /**
+     * <p>The information about the workspace owner. This parameter is valid only when Verbose is set to true.</p>
+     */
     @NameInMap("Owner")
     public GetWorkspaceResponseBodyOwner owner;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A0F049F0-8D69-5BAC-8F10-B4DED1B5A34C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmwp7rkyq****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
+     * <p>The workspace state. Valid values:</p>
+     * <ul>
+     * <li>ENABLED</li>
+     * <li>INITIALIZING</li>
+     * <li>FAILURE:</li>
+     * <li>DISABLED</li>
+     * <li>FROZEN</li>
+     * <li>UPDATING</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ENABLED</p>
      */
@@ -80,6 +129,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */
@@ -87,6 +138,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-example</p>
      */
@@ -220,6 +273,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
 
     public static class GetWorkspaceResponseBodyOwner extends TeaModel {
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>mings****t</p>
          */
@@ -227,6 +282,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1157******94123</p>
          */
@@ -234,6 +291,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1157******94123</p>
          */
@@ -241,6 +300,8 @@ public class GetWorkspaceResponseBody extends TeaModel {
         public String userKp;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>mings****t</p>
          */

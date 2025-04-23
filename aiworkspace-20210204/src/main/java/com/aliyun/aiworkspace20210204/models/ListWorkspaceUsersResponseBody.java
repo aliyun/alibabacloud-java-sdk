@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceUsersResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1e195c5116124202371861018d5bde</p>
      */
@@ -12,12 +14,17 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of users who meet the filter conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The users.</p>
+     */
     @NameInMap("Users")
     public java.util.List<ListWorkspaceUsersResponseBodyUsers> users;
 
@@ -52,6 +59,8 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
 
     public static class ListWorkspaceUsersResponseBodyUsers extends TeaModel {
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1611******3000</p>
          */
@@ -59,6 +68,8 @@ public class ListWorkspaceUsersResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>she******mo</p>
          */

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetDefaultWorkspaceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to show the details of the default workspace. The details include the conditions of the workspace in different phases. Valid values:</p>
+     * <ul>
+     * <li>false (default)</li>
+     * <li>true</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */

@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class CreateMemberResponseBody extends TeaModel {
+    /**
+     * <p>The returned members.</p>
+     */
     @NameInMap("Members")
     public java.util.List<CreateMemberResponseBodyMembers> members;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DA869D1B-035A-43B2-ACC1-C56681BD9FAA</p>
      */
@@ -37,6 +42,8 @@ public class CreateMemberResponseBody extends TeaModel {
 
     public static class CreateMemberResponseBodyMembers extends TeaModel {
         /**
+         * <p>The display name.</p>
+         * 
          * <strong>example:</strong>
          * <p>myDisplayName</p>
          */
@@ -44,16 +51,23 @@ public class CreateMemberResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The member ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>145883-21513926******88039</p>
          */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <p>The list of roles.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
+         * <p>The user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>21513926******88039</p>
          */

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetJobConfigRequest extends TeaModel {
     /**
+     * <p>The configuration content. Format:</p>
+     * <ul>
+     * <li>MultimodalIntelligentTag</li>
+     * </ul>
+     * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
+     * <ul>
+     * <li>MultimodalSemanticIndex</li>
+     * </ul>
+     * <p>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +23,12 @@ public class CreateDatasetJobConfigRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The configuration type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>MultimodalIntelligentTag</li>
+     * <li>MultimodalSemanticIndex</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +38,7 @@ public class CreateDatasetJobConfigRequest extends TeaModel {
     public String configType;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

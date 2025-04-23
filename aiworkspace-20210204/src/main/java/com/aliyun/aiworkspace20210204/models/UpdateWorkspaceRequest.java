@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceRequest extends TeaModel {
     /**
+     * <p>The workspace description.</p>
+     * 
      * <strong>example:</strong>
      * <p>Description</p>
      */
@@ -12,6 +14,13 @@ public class UpdateWorkspaceRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The display name of the workspace.</p>
+     * <ul>
+     * <li>The name must be 3 to 23 characters in length, and can contain letters, underscores (_), and digits.</li>
+     * <li>The name must start with a letter.</li>
+     * <li>The name must be unique in the current region.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>workspace-example</p>
      */

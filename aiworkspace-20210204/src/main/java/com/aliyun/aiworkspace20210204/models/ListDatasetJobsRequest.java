@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDatasetJobsRequest extends TeaModel {
     /**
+     * <p>The dataset version name.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */
@@ -12,6 +14,8 @@ public class ListDatasetJobsRequest extends TeaModel {
     public String datasetVersion;
 
     /**
+     * <p>The action to be performed on the job.</p>
+     * 
      * <strong>example:</strong>
      * <p>SemanticIndex</p>
      */
@@ -19,6 +23,8 @@ public class ListDatasetJobsRequest extends TeaModel {
     public String jobAction;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class ListDatasetJobsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -33,6 +41,8 @@ public class ListDatasetJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1234</p>
      */

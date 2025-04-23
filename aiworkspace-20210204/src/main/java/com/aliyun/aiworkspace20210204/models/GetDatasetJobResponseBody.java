@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDatasetJobResponseBody extends TeaModel {
     /**
+     * <p>The total number of completed files.</p>
+     * 
      * <strong>example:</strong>
      * <p>990</p>
      */
@@ -12,16 +14,23 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public Long completedFileCount;
 
     /**
+     * <p>The time when the job is started.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-11-15T07:06:42Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The job description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The total number of failed files.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public Long failedFileCount;
 
     /**
+     * <p>The time when the job ends.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-16T02:03:23Z</p>
      */
@@ -36,6 +47,14 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String finishTime;
 
     /**
+     * <p>The action that is performed on the job.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SemanticIndex: semantic indexing</li>
+     * <li>IntelligentTag: smart labeling</li>
+     * <li>FileMetaExport: metadata export</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SemanticIndex</p>
      */
@@ -43,6 +62,12 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String jobAction;
 
     /**
+     * <p>The job mode.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>Full: full data mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Full</p>
      */
@@ -50,16 +75,23 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String jobMode;
 
     /**
+     * <p>The job details.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</p>
      */
     @NameInMap("JobSpec")
     public String jobSpec;
 
+    /**
+     * <p>The job logs.</p>
+     */
     @NameInMap("Logs")
     public java.util.List<String> logs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64B50C1D-D4C2-560C-86A3-A6ED****16D</p>
      */
@@ -67,6 +99,18 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The job state.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Succeeded</li>
+     * <li>Failed</li>
+     * <li>Running</li>
+     * <li>Pending</li>
+     * <li>PartialFailed</li>
+     * <li>Deleting</li>
+     * <li>ManuallyStop</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Running</p>
      */
@@ -74,6 +118,8 @@ public class GetDatasetJobResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The total number of job files.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */

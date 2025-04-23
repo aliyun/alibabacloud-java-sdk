@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateDatasetFileMetasResponseBody extends TeaModel {
+    /**
+     * <p>The metadata records that fail to be updated for the dataset files.</p>
+     */
     @NameInMap("FailedDetails")
     public java.util.List<DatasetFileMetaResponse> failedDetails;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
@@ -15,6 +20,8 @@ public class UpdateDatasetFileMetasResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the metadata records of all dataset files were updated. Valid values: true and false. If the value is false, view the failure details specified by FailedDetails.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

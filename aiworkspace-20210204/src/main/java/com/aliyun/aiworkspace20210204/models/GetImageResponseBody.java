@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetImageResponseBody extends TeaModel {
     /**
+     * <p>The accessibility of the image. Valid values:</p>
+     * <ul>
+     * <li>PUBLIC: All members can access the workspace.</li>
+     * <li>PRIVATE: Only the creator can access the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
      */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The image description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The time when the image is created, in UTC. The time follows the ISO 8601 standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
      */
@@ -22,6 +33,8 @@ public class GetImageResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The time when the image is modified, in UTC. The time follows the ISO 8601 standard.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-21T17:12:35.232Z</p>
      */
@@ -29,16 +42,23 @@ public class GetImageResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
+     * <p>The image address, which contains the version number.</p>
+     * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.******ession/nlp:gpu</p>
      */
     @NameInMap("ImageUri")
     public String imageUri;
 
+    /**
+     * <p>The image tags, which are of the array data type. Each element in the array contains a key-value pair. The key of official tags is system.official and the tag value is true.</p>
+     */
     @NameInMap("Labels")
     public java.util.List<GetImageResponseBodyLabels> labels;
 
     /**
+     * <p>The image name.</p>
+     * 
      * <strong>example:</strong>
      * <p>nlp-compression</p>
      */
@@ -46,6 +66,8 @@ public class GetImageResponseBody extends TeaModel {
     public String name;
 
     /**
+     * <p>The Alibaba Cloud account of the creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>15577******8921</p>
      */
@@ -53,22 +75,38 @@ public class GetImageResponseBody extends TeaModel {
     public String parentUserId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The size of the image. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
+    /**
+     * <p>镜像来源 ID</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <p>镜像来源类型</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
+     * <p>The user ID of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p>15577******8921</p>
      */
@@ -76,6 +114,8 @@ public class GetImageResponseBody extends TeaModel {
     public String userId;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>15945</p>
      */
@@ -201,6 +241,8 @@ public class GetImageResponseBody extends TeaModel {
 
     public static class GetImageResponseBodyLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>system.chipType</p>
          */
@@ -208,6 +250,8 @@ public class GetImageResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>GPU</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListRunsResponseBody extends TeaModel {
     /**
+     * <p>The pagination token that is used to retrieve the next page. You do not need to specify this parameter for the first request. You must specify the pagination token in the result of the previous query. If the pagination token is 0, no next page exists. You can obtain the pagination token that is used to retrieve the next page in the value of the <strong>NextPageToken</strong> field.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("NextPageToken")
     public Long nextPageToken;
 
+    /**
+     * <p>The runs.</p>
+     */
     @NameInMap("Runs")
     public java.util.List<Run> runs;
 
     /**
+     * <p>The total number of entries returned. By default, this parameter is not returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,7 +29,7 @@ public class ListRunsResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ADF6D849-*****-7E7030F0CE53</p>

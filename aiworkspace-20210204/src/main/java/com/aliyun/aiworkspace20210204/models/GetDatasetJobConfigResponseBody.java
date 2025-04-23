@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetDatasetJobConfigResponseBody extends TeaModel {
     /**
+     * <p>The configuration content. Configuration format for MultimodalIntelligentTag:</p>
+     * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
+     * <p>MultimodalSemanticIndex</p>
+     * <p>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</p>
+     * 
      * <strong>example:</strong>
      * <p>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</p>
      */
@@ -12,6 +17,12 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String config;
 
     /**
+     * <p>The configuration type. Valid values:</p>
+     * <ul>
+     * <li>MultimodalIntelligentTag</li>
+     * <li>MultimodalSemanticIndex</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>MultimodalIntelligentTag</p>
      */
@@ -19,6 +30,8 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String configType;
 
     /**
+     * <p>The time when the configuration is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-16T01:44:10Z</p>
      */
@@ -26,6 +39,8 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d-lfd60v0p****ujtsdx</p>
      */
@@ -33,6 +48,8 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String datasetId;
 
     /**
+     * <p>The time when the configuration is modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-12-26T02:17:18Z</p>
      */
@@ -40,7 +57,7 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     public String modifyTime;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D5BFFEE3-6025-443F-8A03-02D619B5C4B9</p>
@@ -48,6 +65,12 @@ public class GetDatasetJobConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>114243</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
