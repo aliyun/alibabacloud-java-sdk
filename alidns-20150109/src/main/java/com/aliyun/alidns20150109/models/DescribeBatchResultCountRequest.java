@@ -12,6 +12,9 @@ public class DescribeBatchResultCountRequest extends TeaModel {
      * <li><strong>RR_ADD</strong>: adds Domain Name System (DNS) records in batches.</li>
      * <li><strong>RR_DEL</strong>: deletes DNS records in batches.</li>
      * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, filtering is not required.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>DOMAIN_ADD</p>
@@ -20,7 +23,11 @@ public class DescribeBatchResultCountRequest extends TeaModel {
     public String batchType;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -30,7 +37,9 @@ public class DescribeBatchResultCountRequest extends TeaModel {
 
     /**
      * <p>The task ID.</p>
-     * <p>If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.</p>
+     * <blockquote>
+     * <p> If you specify TaskId, the execution result of the specified task is returned. If you do not specify TaskId, the execution result of the last task is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

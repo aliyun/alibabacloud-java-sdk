@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token used to start the next query. If no value is returned for NextToken, no next queries are sent.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      * 
      * <strong>example:</strong>
      * <p>4698691</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>61092C8D-6AEB-4310-B74D-C632F89BF4FB</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the resource and tags, including the resource ID, the resource type, tag keys, and tag values.</p>
+     * <p>An array that consists of the resource and the tags that are added to the resource, including information such as the resource ID, resource type, tag keys, and tag values.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -77,7 +77,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>

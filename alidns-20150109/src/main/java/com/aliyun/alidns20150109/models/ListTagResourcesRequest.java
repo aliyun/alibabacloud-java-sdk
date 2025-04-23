@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The language in which you want some response parameters to be returned.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,7 +18,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The token that determines the start point of the query.</p>
+     * <p>The pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>4698691</p>
@@ -29,7 +33,10 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li><strong>DOMAIN</strong>: domain name</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +46,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>An array of tag key-value pairs.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -91,7 +98,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -100,7 +107,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The key value.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>

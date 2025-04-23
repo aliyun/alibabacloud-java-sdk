@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceDomainsResponseBody extends TeaModel {
     /**
-     * <p>The domain names that are bound to the Alibaba Cloud DNS instance.</p>
+     * <p>The domain names that are bound to the DNS instance.</p>
      */
     @NameInMap("InstanceDomains")
     public java.util.List<DescribeInstanceDomainsResponseBodyInstanceDomains> instanceDomains;

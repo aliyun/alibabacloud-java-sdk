@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDnsCacheDomainRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class DeleteDnsCacheDomainRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English Default: <strong>zh</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>

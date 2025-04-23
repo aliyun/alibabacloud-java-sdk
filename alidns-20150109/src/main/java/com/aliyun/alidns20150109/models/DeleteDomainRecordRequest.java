@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainRecordRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,8 +18,7 @@ public class DeleteDomainRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the DNS record.</p>
-     * <p>This parameter is returned when you add a DNS record or when you query a list of DNS records.</p>
+     * <p>The ID of the DNS record. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomainrecords?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainRecords</a> to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

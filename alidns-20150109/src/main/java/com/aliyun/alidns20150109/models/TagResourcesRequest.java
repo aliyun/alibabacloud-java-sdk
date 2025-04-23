@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,7 +18,7 @@ public class TagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +28,10 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li><strong>DOMAIN</strong>: domain name</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +41,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag to add to the resource.</p>
+     * <p>The tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -79,7 +86,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. The tag key can be up to 20 characters in length and cannot start with acs: or aliyun.</p>
+         * <p>The tag key. The tag key can be up to 20 characters in length and cannot start with <code>acs:</code> or<code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>
@@ -88,7 +95,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. The tag value can be up to 20 characters in length.</p>
+         * <p>The tag value. The tag value can be up to 20 bytes in length.</p>
          * 
          * <strong>example:</strong>
          * <p>abcd</p>

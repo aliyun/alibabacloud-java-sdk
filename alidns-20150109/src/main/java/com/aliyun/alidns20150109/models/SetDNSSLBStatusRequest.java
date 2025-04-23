@@ -14,7 +14,11 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Default: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>

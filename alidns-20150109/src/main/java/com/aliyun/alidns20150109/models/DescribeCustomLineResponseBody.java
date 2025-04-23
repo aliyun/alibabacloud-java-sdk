@@ -23,7 +23,7 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the custom line.</p>
+     * <p>The ID/Name of the custom line.</p>
      * 
      * <strong>example:</strong>
      * <p>597</p>

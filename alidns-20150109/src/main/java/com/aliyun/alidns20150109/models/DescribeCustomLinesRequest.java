@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLinesRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name that already exists in Alibaba Cloud Domain Name System (DNS). You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains </a>operation to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,12 @@ public class DescribeCustomLinesRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

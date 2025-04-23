@@ -23,6 +23,8 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The end time of the query (timestamp, unit: milliseconds). &gt;Warning: If the query time span is too large and the amount of resolution logs for the queried domain is excessive, it may lead to a query timeout or inaccurate query results.</p>
+     * 
      * <strong>example:</strong>
      * <p>1709196299999</p>
      */
@@ -30,6 +32,13 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
+     * <p>Return value language, options: </p>
+     * <ul>
+     * <li>zh: Chinese </li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default: en</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -37,6 +46,12 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Module type </p>
+     * <ul>
+     * <li>AUTHORITY (default): Public Authoritative DNS </li>
+     * <li>RECURSION: Public Recursive DNS</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AUTHORITY</p>
      */
@@ -44,6 +59,8 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public String module;
 
     /**
+     * <p>Page number, default value is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,6 +68,8 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size for query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -58,6 +77,16 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query parameters </p>
+     * <ul>
+     * <li>sourceIp: Source IP address </li>
+     * <li>queryNameFuzzy: Domain name (fuzzy value) </li>
+     * <li>queryType: Record type </li>
+     * <li>value: Resolution result </li>
+     * <li>status: Status </li>
+     * <li>serverIp: Resolution server IP</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;sourceIp&quot;:&quot;59.82.XX.XX&quot;,&quot;queryType&quot;:&quot;A&quot;}</p>
      */
@@ -65,6 +94,8 @@ public class DescribeInternetDnsLogsRequest extends TeaModel {
     public String queryCondition;
 
     /**
+     * <p>The start time of the query (timestamp, unit: milliseconds).</p>
+     * 
      * <strong>example:</strong>
      * <p>1709192640000</p>
      */

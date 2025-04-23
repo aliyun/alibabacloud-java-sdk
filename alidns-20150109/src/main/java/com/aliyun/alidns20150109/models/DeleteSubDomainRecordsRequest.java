@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSubDomainRecordsRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language type.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -24,8 +28,8 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The host record.</p>
-     * <p>For example, to resolve @.example.com, you must set RR to an at sign (@) instead of leaving it blank.</p>
+     * <p>The hostname field in the DNS record.</p>
+     * <p>For example, if you want to resolve @.example.com, you must set this parameter to an at sign (@) instead of leaving it empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,8 +39,8 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
     public String RR;
 
     /**
-     * <p>The type of the DNS record. If you do not specify this parameter, all DNS record types corresponding to the subdomain name are returned.</p>
-     * <p>DNS record types include <strong>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</strong>. The value is not case-sensitive.</p>
+     * <p>The type of DNS records. If you do not specify this parameter, all types of DNS records corresponding to the subdomain are returned.</p>
+     * <p>Valid values: <strong>A, MX, CNAME, TXT, REDIRECT_URL, FORWORD_URL, NS, AAAA, and SRV</strong>. The value is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>A</p>

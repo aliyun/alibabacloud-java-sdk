@@ -5,14 +5,19 @@ import com.aliyun.tea.*;
 
 public class OperateBatchDomainRequest extends TeaModel {
     /**
-     * <p>The Domain Name System (DNS) records. You can submit up to 1,000 DNS records.</p>
+     * <p>The DNS records. You can submit up to 1,000 DNS records.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DomainRecordInfo")
     public java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: zh</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -89,6 +94,8 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String line;
 
         /**
+         * <p>The new hostname (used only for modification operations, not for external users).</p>
+         * 
          * <strong>example:</strong>
          * <p>mail</p>
          */
@@ -96,6 +103,8 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String newRr;
 
         /**
+         * <p>The new type of the DNS record (used only for modification operations, not for external users).</p>
+         * 
          * <strong>example:</strong>
          * <p>AAAA</p>
          */
@@ -103,6 +112,8 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String newType;
 
         /**
+         * <p>The new value of the DNS record (used only for modification operations, not for external users).</p>
+         * 
          * <strong>example:</strong>
          * <p>114.92.XX.XX</p>
          */
@@ -153,7 +164,7 @@ public class OperateBatchDomainRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The record value.</p>
+         * <p>The value of the DNS record.</p>
          * <blockquote>
          * <p> This parameter is required if you set Type to <strong>RR_ADD</strong> or <strong>RR_DEL</strong>.</p>
          * </blockquote>

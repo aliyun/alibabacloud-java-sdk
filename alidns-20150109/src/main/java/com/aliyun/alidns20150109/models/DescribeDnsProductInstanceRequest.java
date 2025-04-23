@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the <strong>DescribeDomainInfo</strong> operation to obtain the instance ID.</p>
+     * <p>The ID of the DNS instance. . You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

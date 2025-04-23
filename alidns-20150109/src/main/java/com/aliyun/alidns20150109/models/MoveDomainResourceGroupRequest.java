@@ -15,7 +15,7 @@ public class MoveDomainResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the new resource group.</p>
-     * <p>You can view the ID of the resource group in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> or call the ListResourceGroups operation.</p>
+     * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class MoveDomainResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The resource ID. If Tag is left empty, ResourceId is required.</p>
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -182,7 +182,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         public Long recordCount;
 
         /**
-         * <p>The subdomain name.</p>
+         * <p>The name of the subdomain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>

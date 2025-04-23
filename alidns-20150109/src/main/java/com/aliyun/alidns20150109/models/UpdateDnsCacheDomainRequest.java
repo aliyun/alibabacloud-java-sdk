@@ -23,7 +23,7 @@ public class UpdateDnsCacheDomainRequest extends TeaModel {
     public Integer cacheTtlMin;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtian the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class UpdateDnsCacheDomainRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The instance ID of the cache-accelerated domain name.</p>
+     * <p>The instance ID of the cache-accelerated domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dns-sg-l9u2ux1fw01</p>
@@ -42,7 +42,11 @@ public class UpdateDnsCacheDomainRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English Default: <strong>zh</strong></li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>

@@ -228,7 +228,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The record value.</p>
+         * <p>The value of the DNS record.</p>
          * 
          * <strong>example:</strong>
          * <p>192.0.2.0</p>

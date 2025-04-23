@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDomainRemarkRequest extends TeaModel {
     /**
-     * <p>The domain name that already exists in Alibaba Cloud DNS.</p>
+     * <p>The domain name that already exists in Alibaba Cloud Domain Name System (DNS). You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains </a>operation to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class UpdateDomainRemarkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The description of your domain name.</p>
+     * <p>The description of the domain name.</p>
      * <p>It can be up to 50 characters in length and can contain digits, letters, and the following special characters: _ - , .</p>
      */
     @NameInMap("Remark")

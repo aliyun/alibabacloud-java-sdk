@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the log query is precise.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public Boolean complete;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,12 +23,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public Integer curPage;
 
     /**
-     * <p>The logs.</p>
+     * <p>The queried logs.</p>
      */
     @NameInMap("Logs")
     public DescribeInternetDnsLogsResponseBodyLogs logs;
 
     /**
+     * <p>Page size for query.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -32,6 +38,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Unique request identifier.</p>
+     * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
      */
@@ -39,6 +47,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -46,6 +56,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     public Integer totalPage;
 
     /**
+     * <p>Total quantity.</p>
+     * 
      * <strong>example:</strong>
      * <p>48</p>
      */
@@ -134,6 +146,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
     public static class DescribeInternetDnsLogsResponseBodyLogsLog extends TeaModel {
         /**
+         * <p>Parse log ID (can be duplicated).</p>
+         * 
          * <strong>example:</strong>
          * <p>3583</p>
          */
@@ -141,12 +155,27 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public String dnsMsgId;
 
         /**
+         * <p>Parse timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1709196249000</p>
          */
         @NameInMap("LogTime")
         public Long logTime;
 
+        /**
+         * <p>The protocol type of the domain name resolution query request:</p>
+         * <ul>
+         * <li>UDP</li>
+         * <li>TCP</li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * <li>DOH</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UDP</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -160,6 +189,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public String queryName;
 
         /**
+         * <p>Record type.</p>
+         * 
          * <strong>example:</strong>
          * <p>A</p>
          */
@@ -167,6 +198,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public String queryType;
 
         /**
+         * <p>Parse response time.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -174,6 +207,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public Integer rt;
 
         /**
+         * <p>Parse server IP.</p>
+         * 
          * <strong>example:</strong>
          * <p>140.205.XX.XX</p>
          */
@@ -181,6 +216,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public String serverIp;
 
         /**
+         * <p>Source IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>59.82.XX.XX</p>
          */
@@ -188,6 +225,8 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public String sourceIp;
 
         /**
+         * <p>Response status.</p>
+         * 
          * <strong>example:</strong>
          * <p>NOERROR</p>
          */
@@ -195,12 +234,17 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The value set for the edns-client-subnet option.</p>
+         * 
          * <strong>example:</strong>
          * <p>170.33.XX.XX</p>
          */
         @NameInMap("SubnetIp")
         public String subnetIp;
 
+        /**
+         * <p>Array of parsing results.</p>
+         */
         @NameInMap("Value")
         public DescribeInternetDnsLogsResponseBodyLogsLogValue value;
 

@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class ChangeDomainOfDnsProductRequest extends TeaModel {
     /**
-     * <p>Specifies whether to force bind a domain name to the instance.</p>
+     * <p>Specifies whether to forcibly bind a domain name to the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong><strong>: no</strong></li>
+     * <li><strong>true</strong>: <strong>yes</strong></li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +19,8 @@ public class ChangeDomainOfDnsProductRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The ID of the Alibaba Cloud DNS instance.</p>
+     * <p>The ID of the Alibaba Cloud Domain Name System (DNS) instance.</p>
+     * <p>You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-listcloudgtminstances?spm=a2c63.p38356.help-menu-search-29697.d_0">ListCloudGtmInstances </a>operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +30,12 @@ public class ChangeDomainOfDnsProductRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language in which you want the values of some response parameters to be returned. These response parameters support multiple languages.</p>
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>zh</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

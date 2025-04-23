@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSubDomainRecordsResponseBody extends TeaModel {
     /**
-     * <p>The returned DNS records.</p>
+     * <p>The returned Domain Name System (DNS) records.</p>
      */
     @NameInMap("DomainRecords")
     public DescribeSubDomainRecordsResponseBodyDomainRecords domainRecords;

@@ -32,7 +32,10 @@ public class DescribeTagsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The type of the resources from which you want to query tags. Set the value to DOMAIN.</p>
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li><strong>DOMAIN</strong>: domain name</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

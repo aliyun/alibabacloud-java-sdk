@@ -99,7 +99,7 @@ public class UpdateCloudGtmMonitorTemplateShrinkRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The health check nodes. You can call the <a href="~~ListCloudGtmMonitorNodes~~">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</p>
+     * <p>The health check nodes. You can call the <a href="https://help.aliyun.com/document_detail/2797327.html">ListCloudGtmMonitorNodes</a> operation to obtain the health check nodes.</p>
      */
     @NameInMap("IspCityNodes")
     public String ispCityNodesShrink;

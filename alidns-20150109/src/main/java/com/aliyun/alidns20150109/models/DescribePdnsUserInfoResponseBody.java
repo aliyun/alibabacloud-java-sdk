@@ -4,6 +4,10 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribePdnsUserInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FD552816-FCC8-4832-B4A2-2DA0C2BA1688</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,52 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
     }
 
     public static class DescribePdnsUserInfoResponseBodyUserInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SECURE</p>
+         */
         @NameInMap("AvailableAccessSecurityType")
         public String availableAccessSecurityType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HTTP,HTTPS</p>
+         */
         @NameInMap("AvailableService")
         public String availableService;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10001</p>
+         */
         @NameInMap("PdnsId")
         public Long pdnsId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1c092d715b7a48de</p>
+         */
         @NameInMap("SecretKey")
         public String secretKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CLOSED</p>
+         */
         @NameInMap("StatisticSwitchStatus")
         public String statisticSwitchStatus;
 

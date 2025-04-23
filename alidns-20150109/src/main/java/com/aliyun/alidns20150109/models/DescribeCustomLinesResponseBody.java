@@ -47,7 +47,7 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of returned pages.</p>
+     * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,6 +108,36 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         return this.totalPages;
     }
 
+    public static class DescribeCustomLinesResponseBodyCustomLinesIpSegmentList extends TeaModel {
+        @NameInMap("EndIp")
+        public String endIp;
+
+        @NameInMap("StartIp")
+        public String startIp;
+
+        public static DescribeCustomLinesResponseBodyCustomLinesIpSegmentList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomLinesResponseBodyCustomLinesIpSegmentList self = new DescribeCustomLinesResponseBodyCustomLinesIpSegmentList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomLinesResponseBodyCustomLinesIpSegmentList setEndIp(String endIp) {
+            this.endIp = endIp;
+            return this;
+        }
+        public String getEndIp() {
+            return this.endIp;
+        }
+
+        public DescribeCustomLinesResponseBodyCustomLinesIpSegmentList setStartIp(String startIp) {
+            this.startIp = startIp;
+            return this;
+        }
+        public String getStartIp() {
+            return this.startIp;
+        }
+
+    }
+
     public static class DescribeCustomLinesResponseBodyCustomLines extends TeaModel {
         /**
          * <p>The code of the custom line.</p>
@@ -126,6 +156,9 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("IpSegmentList")
+        public java.util.List<DescribeCustomLinesResponseBodyCustomLinesIpSegmentList> ipSegmentList;
 
         /**
          * <p>The name of the custom line.</p>
@@ -155,6 +188,14 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public DescribeCustomLinesResponseBodyCustomLines setIpSegmentList(java.util.List<DescribeCustomLinesResponseBodyCustomLinesIpSegmentList> ipSegmentList) {
+            this.ipSegmentList = ipSegmentList;
+            return this;
+        }
+        public java.util.List<DescribeCustomLinesResponseBodyCustomLinesIpSegmentList> getIpSegmentList() {
+            return this.ipSegmentList;
         }
 
         public DescribeCustomLinesResponseBodyCustomLines setName(String name) {

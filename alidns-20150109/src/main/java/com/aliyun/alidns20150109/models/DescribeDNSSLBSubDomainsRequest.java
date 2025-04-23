@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     /**
-     * <p>The domain name.</p>
+     * <p>The domain name. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomains?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomains</a> operation to obtain the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -51,7 +55,7 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public String rr;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The IP address of the user account.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.1.1</p>

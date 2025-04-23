@@ -113,7 +113,9 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the DNS records. Valid values: <strong>Enable and Disable</strong>.</p>
+     * <p>The status of the DNS record. Valid values:</p>
+     * <p>Enable: enabled</p>
+     * <p>Disable: disabled</p>
      * 
      * <strong>example:</strong>
      * <p>Enable</p>
@@ -122,7 +124,7 @@ public class DescribeDomainRecordInfoResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time-to-live (TTL) of the DNS record.</p>
+     * <p>The time for which the DNS record is cached in a local DNS system.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>

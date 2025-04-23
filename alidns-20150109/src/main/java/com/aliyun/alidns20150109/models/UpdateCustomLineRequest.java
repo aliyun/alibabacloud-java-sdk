@@ -11,7 +11,11 @@ public class UpdateCustomLineRequest extends TeaModel {
     public java.util.List<UpdateCustomLineRequestIpSegment> ipSegment;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -20,7 +24,7 @@ public class UpdateCustomLineRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The unique ID of the custom line.</p>
+     * <p>The unique ID of the custom line. You can call the <a href="https://www.alibabacloud.com/help/en/dns/api-alidns-2015-01-09-describecustomlines?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeCustomLines</a> operation to obtain the unique ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

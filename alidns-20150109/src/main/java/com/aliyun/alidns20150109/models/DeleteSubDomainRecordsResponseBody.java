@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSubDomainRecordsResponseBody extends TeaModel {
     /**
-     * <p>The host record.</p>
+     * <p>The hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>www</p>
@@ -14,7 +14,7 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
     public String RR;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>536E9CAD-DB30-4647-AC87-AA5CC38C5382</p>
@@ -23,7 +23,7 @@ public class DeleteSubDomainRecordsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of deleted DNS records.</p>
+     * <p>The total number of the DNS records to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
