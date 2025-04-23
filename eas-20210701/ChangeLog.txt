@@ -1,3 +1,7 @@
+2025-04-23 Version: 7.0.3
+- Update API CreateResource: add request parameters body.ResourceName.
+
+
 2025-04-23 Version: 7.0.2
 - Update API CreateGatewayIntranetLinkedVpc: add request parameters AccountId.
 - Update API ListGatewayIntranetLinkedVpc: add response parameters Body.IntranetLinkedVpcList.$.AccountId.

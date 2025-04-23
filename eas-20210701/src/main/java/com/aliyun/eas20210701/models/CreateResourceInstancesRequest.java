@@ -73,6 +73,7 @@ public class CreateResourceInstancesRequest extends TeaModel {
      * <p>x112223333</p>
      */
     @NameInMap("UserData")
+    @Deprecated
     public String userData;
 
     /**
@@ -137,6 +138,7 @@ public class CreateResourceInstancesRequest extends TeaModel {
         return this.systemDiskSize;
     }
 
+    @Deprecated
     public CreateResourceInstancesRequest setUserData(String userData) {
         this.userData = userData;
         return this;

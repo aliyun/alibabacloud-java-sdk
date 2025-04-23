@@ -63,6 +63,9 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
+    @NameInMap("ResourceName")
+    public String resourceName;
+
     /**
      * <p>The type of the resource group. Valid values:</p>
      * <ul>
@@ -146,6 +149,14 @@ public class CreateResourceRequest extends TeaModel {
     }
     public java.util.Map<String, String> getLabels() {
         return this.labels;
+    }
+
+    public CreateResourceRequest setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
     public CreateResourceRequest setResourceType(String resourceType) {

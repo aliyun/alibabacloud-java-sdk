@@ -591,6 +591,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Labels", request.labels);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
+            body.put("ResourceName", request.resourceName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             body.put("ResourceType", request.resourceType);
         }
