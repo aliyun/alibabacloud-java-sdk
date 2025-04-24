@@ -75,7 +75,73 @@ public class GetMcpResourceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetMcpResourceResponseBodyDataDesktopInfo extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
+        @NameInMap("AuthCode")
+        public String authCode;
+
+        @NameInMap("ConnectionProperties")
+        public String connectionProperties;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        public static GetMcpResourceResponseBodyDataDesktopInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetMcpResourceResponseBodyDataDesktopInfo self = new GetMcpResourceResponseBodyDataDesktopInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMcpResourceResponseBodyDataDesktopInfo setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public GetMcpResourceResponseBodyDataDesktopInfo setAuthCode(String authCode) {
+            this.authCode = authCode;
+            return this;
+        }
+        public String getAuthCode() {
+            return this.authCode;
+        }
+
+        public GetMcpResourceResponseBodyDataDesktopInfo setConnectionProperties(String connectionProperties) {
+            this.connectionProperties = connectionProperties;
+            return this;
+        }
+        public String getConnectionProperties() {
+            return this.connectionProperties;
+        }
+
+        public GetMcpResourceResponseBodyDataDesktopInfo setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public GetMcpResourceResponseBodyDataDesktopInfo setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+    }
+
     public static class GetMcpResourceResponseBodyData extends TeaModel {
+        @NameInMap("DesktopInfo")
+        public GetMcpResourceResponseBodyDataDesktopInfo desktopInfo;
+
         @NameInMap("ResourceUrl")
         public String resourceUrl;
 
@@ -85,6 +151,14 @@ public class GetMcpResourceResponseBody extends TeaModel {
         public static GetMcpResourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetMcpResourceResponseBodyData self = new GetMcpResourceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMcpResourceResponseBodyData setDesktopInfo(GetMcpResourceResponseBodyDataDesktopInfo desktopInfo) {
+            this.desktopInfo = desktopInfo;
+            return this;
+        }
+        public GetMcpResourceResponseBodyDataDesktopInfo getDesktopInfo() {
+            return this.desktopInfo;
         }
 
         public GetMcpResourceResponseBodyData setResourceUrl(String resourceUrl) {
