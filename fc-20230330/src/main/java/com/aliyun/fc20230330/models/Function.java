@@ -58,6 +58,9 @@ public class Function extends TeaModel {
     @NameInMap("diskSize")
     public Integer diskSize;
 
+    @NameInMap("enableLongLiving")
+    public Boolean enableLongLiving;
+
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
@@ -296,6 +299,14 @@ public class Function extends TeaModel {
     }
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    public Function setEnableLongLiving(Boolean enableLongLiving) {
+        this.enableLongLiving = enableLongLiving;
+        return this;
+    }
+    public Boolean getEnableLongLiving() {
+        return this.enableLongLiving;
     }
 
     public Function setEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
