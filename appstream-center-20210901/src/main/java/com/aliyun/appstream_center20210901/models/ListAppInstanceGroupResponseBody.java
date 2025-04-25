@@ -753,6 +753,47 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     }
 
+    public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Scope")
+        public String scope;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags self = new ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModels extends TeaModel {
         /**
          * <p>The number of subscription resources. Minimum value: 1.</p>
@@ -1073,6 +1114,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> tags;
+
         public static ListAppInstanceGroupResponseBodyAppInstanceGroupModels build(java.util.Map<String, ?> map) throws Exception {
             ListAppInstanceGroupResponseBodyAppInstanceGroupModels self = new ListAppInstanceGroupResponseBodyAppInstanceGroupModels();
             return TeaModel.build(map, self);
@@ -1340,6 +1384,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setTags(java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> getTags() {
+            return this.tags;
         }
 
     }

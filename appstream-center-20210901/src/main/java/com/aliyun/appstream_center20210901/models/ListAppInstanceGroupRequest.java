@@ -106,6 +106,13 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<ListAppInstanceGroupRequestTag> tag;
+
     public static ListAppInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppInstanceGroupRequest self = new ListAppInstanceGroupRequest();
         return TeaModel.build(map, self);
@@ -198,6 +205,44 @@ public class ListAppInstanceGroupRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
+    }
+
+    public ListAppInstanceGroupRequest setTag(java.util.List<ListAppInstanceGroupRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListAppInstanceGroupRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListAppInstanceGroupRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListAppInstanceGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListAppInstanceGroupRequestTag self = new ListAppInstanceGroupRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppInstanceGroupRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAppInstanceGroupRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
