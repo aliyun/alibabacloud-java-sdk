@@ -4,6 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateUsersResponseBody extends TeaModel {
+    @NameInMap("AllSucceed")
+    public Boolean allSucceed;
+
     /**
      * <p>The result of user creation.</p>
      */
@@ -22,6 +25,14 @@ public class CreateUsersResponseBody extends TeaModel {
     public static CreateUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateUsersResponseBody self = new CreateUsersResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUsersResponseBody setAllSucceed(Boolean allSucceed) {
+        this.allSucceed = allSucceed;
+        return this;
+    }
+    public Boolean getAllSucceed() {
+        return this.allSucceed;
     }
 
     public CreateUsersResponseBody setCreateResult(CreateUsersResponseBodyCreateResult createResult) {
