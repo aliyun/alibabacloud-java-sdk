@@ -25,7 +25,7 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether the ACL rule controls inbound or outbound access requests. Valid values:</p>
+     * <p>The direction in which the rule is applied. Valid values:</p>
      * <ul>
      * <li><strong>ingress</strong></li>
      * <li><strong>egress</strong></li>
@@ -97,7 +97,7 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The type of the protocol. Valid values:</p>
      * <ul>
      * <li><strong>icmp</strong>: ICMP</li>
      * <li><strong>tcp</strong>: TCP</li>

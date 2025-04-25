@@ -67,7 +67,7 @@ public class ListApplicationsRequest extends TeaModel {
     public String outAppInfoParams;
 
     /**
-     * <p>The page number. Pages start from page 1. This parameter is optional if you want to return all information about the applications.</p>
+     * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -14,7 +14,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The node information.</p>
+     * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
@@ -56,7 +56,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The list of vSwitches in the network.</p>
+     * <p>The IDs of vSwitches. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;

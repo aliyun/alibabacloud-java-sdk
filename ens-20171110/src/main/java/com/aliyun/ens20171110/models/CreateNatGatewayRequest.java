@@ -52,7 +52,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public java.util.List<CreateNatGatewayRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the new vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-5savh5ngxh8sbj14bu7n****</p>

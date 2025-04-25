@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class RebootInstanceRequest extends TeaModel {
     /**
-     * <p>Indicates whether to stop the instance forcibly before you reboot it. Default value: false. Valid values:</p>
+     * <p>Specifies whether to forcefully stop the instance before you restart it.</p>
      * <ul>
      * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

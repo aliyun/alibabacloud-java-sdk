@@ -142,9 +142,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
+     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second.</li>
      * <li>You can call this operation up to 5 times per second per user.</li>
      * <li>Internal networks and IPv4 addresses are not supported.</li>
      * </ul>
@@ -190,9 +189,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h1><a href="#"></a>Usage notes</h1>
+     * <p>  You can call this operation up to 100 times per second per account.</p>
      * <ul>
-     * <li>You can call this operation up to 100 times per second.</li>
      * <li>You can call this operation up to 5 times per second per user.</li>
      * <li>Internal networks and IPv4 addresses are not supported.</li>
      * </ul>
@@ -7777,8 +7775,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改启动配置，只支持异构实例(PCFarm裸金属)。</p>
+     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
      * 
      * @param request DescribeInstanceBootConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7821,8 +7822,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * 
      * <b>summary</b> : 
-     * <p>修改启动配置，只支持异构实例(PCFarm裸金属)。</p>
+     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
      * 
      * @param request DescribeInstanceBootConfigurationRequest
      * @return DescribeInstanceBootConfigurationResponse
@@ -9212,7 +9216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The specifications of resources that can be purchased in subscription billing mode are queried.</p>
+     * <p>Queries the specifications of resources that can be purchased in subscription billing mode.</p>
      * 
      * @param request DescribePrePaidInstanceStockRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9256,7 +9260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>The specifications of resources that can be purchased in subscription billing mode are queried.</p>
+     * <p>Queries the specifications of resources that can be purchased in subscription billing mode.</p>
      * 
      * @param request DescribePrePaidInstanceStockRequest
      * @return DescribePrePaidInstanceStockResponse
@@ -11403,8 +11407,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>For internal connections, instances that are associated with a vSwitch automatically take effect. For public connections such as intelligent acceleration, you need to manually add the instances.</p>
+     * <p>Performs networking.</p>
      * 
      * @param request JoinVSwitchesToEpnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11439,8 +11446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>For the Internal Connection mode and the Intelligent Acceleration and Internal Connection mode, instances of the vSwitch take effect automatically. You do not need to manually add instances. For public connections such as intelligent acceleration, you need to call an operation to manually add the instances to Internet-facing instances.</p>
+     * 
      * <b>summary</b> : 
-     * <p>For internal connections, instances that are associated with a vSwitch automatically take effect. For public connections such as intelligent acceleration, you need to manually add the instances.</p>
+     * <p>Performs networking.</p>
      * 
      * @param request JoinVSwitchesToEpnInstanceRequest
      * @return JoinVSwitchesToEpnInstanceResponse
@@ -12427,6 +12437,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billingCycle)) {
+            query.put("BillingCycle", request.billingCycle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.includeDataDisks)) {
@@ -14154,7 +14168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes shared data groups (SDGs) that are deployed on instances.</p>
+     * <p>Removes a deployed shared data group (SDG) and restore local storage.</p>
      * 
      * @param tmpReq RemoveSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14188,7 +14202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes shared data groups (SDGs) that are deployed on instances.</p>
+     * <p>Removes a deployed shared data group (SDG) and restore local storage.</p>
      * 
      * @param request RemoveSDGRequest
      * @return RemoveSDGResponse
@@ -14860,7 +14874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Purchases instances.</p>
+     * <p>Creates a pay-as-you-go or subscription ENS instance.</p>
      * 
      * @param tmpReq RunInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15046,7 +15060,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Purchases instances.</p>
+     * <p>Creates a pay-as-you-go or subscription ENS instance.</p>
      * 
      * @param request RunInstancesRequest
      * @return RunInstancesResponse
@@ -15486,7 +15500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the status of the listener for an Edge Load Balancer (ELB) instance.</p>
+     * <p>Modifies the status of an Edge Load Balancer (ELB) instance.</p>
      * 
      * @param request SetLoadBalancerStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15528,7 +15542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the status of the listener for an Edge Load Balancer (ELB) instance.</p>
+     * <p>Modifies the status of an Edge Load Balancer (ELB) instance.</p>
      * 
      * @param request SetLoadBalancerStatusRequest
      * @return SetLoadBalancerStatusResponse

@@ -13,6 +13,9 @@ public class DescribeHaVipsRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
+     */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
 

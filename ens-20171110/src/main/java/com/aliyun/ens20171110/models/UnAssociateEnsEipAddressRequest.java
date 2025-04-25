@@ -15,10 +15,10 @@ public class UnAssociateEnsEipAddressRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>Specifies whether to forcefully release the instance if it is in the Running status. Valid values:</p>
+     * <p>Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:</p>
      * <ul>
-     * <li>true. If you set the Force parameter to true, temporary data in the memory and storage of the instance is erased and cannot be restored after you call the operation, which is similar to the effect of a power-off action.</li>
-     * <li>false (default)</li>
+     * <li><strong>false</strong> (default): does not disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</li>
+     * <li><strong>true</strong>: disassociates the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsRouteTablesRequest extends TeaModel {
     /**
-     * <p>The type of the route table. Valid values:</p>
+     * <p>The type of the resource with which the route table is associated. Valid values:</p>
      * <ul>
-     * <li><strong>VSwitch</strong> (default): vSwitch route table</li>
-     * <li><strong>Gateway</strong>: gateway route table</li>
+     * <li><strong>VSwitch</strong></li>
+     * <li><strong>Gateway</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,8 +69,7 @@ public class DescribeEnsRouteTablesRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The name of the route table that you want to query.</p>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name of the route table.</p>
      * 
      * <strong>example:</strong>
      * <p>tftest-nat04</p>
@@ -79,9 +78,8 @@ public class DescribeEnsRouteTablesRequest extends TeaModel {
     public String routeTableName;
 
     /**
-     * <p>The type of the NAT.</p>
+     * <p>The SNAT type.</p>
      * <ul>
-     * <li>Empty: symmetric NAT.</li>
      * <li>FullCone: full cone NAT.</li>
      * </ul>
      * 

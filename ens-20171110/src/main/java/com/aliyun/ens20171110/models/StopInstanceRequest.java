@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcibly stop the servers.</p>
+     * <p>Specifies whether to forcibly stop the instance.</p>
      * <ul>
-     * <li><strong>true</strong>: forcibly stops the instance.</li>
-     * <li><strong>false</strong>: normally stops the servers. This is the default value.</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

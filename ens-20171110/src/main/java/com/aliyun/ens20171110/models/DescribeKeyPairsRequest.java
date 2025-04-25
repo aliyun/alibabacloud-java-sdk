@@ -14,15 +14,12 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The name of the key pair. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain the following characters:</p>
+     * <p>The name of the key pair that you want to bind to the simple application server. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain the following characters:</p>
      * <ul>
-     * <li>Digits</li>
+     * <li>Numbers.</li>
      * <li>:</li>
      * <li>_</li>
-     * <li><ul>
-     * <li></li>
-     * </ul>
-     * </li>
+     * <li>.</li>
      * </ul>
      * <p>You can specify only one name. By default, all key pairs are queried.</p>
      * 

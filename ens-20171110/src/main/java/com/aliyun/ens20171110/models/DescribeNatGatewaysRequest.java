@@ -14,7 +14,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The node information.</p>
+     * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
@@ -38,7 +38,7 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The IDs of NAT Gateways.</p>
+     * <p>The IDs of the NAT gateways. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("NatGatewayIds")
     public java.util.List<String> natGatewayIds;

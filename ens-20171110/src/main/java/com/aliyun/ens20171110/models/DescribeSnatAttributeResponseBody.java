@@ -23,13 +23,14 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     public String destCIDR;
 
     /**
-     * <p>Specifies whether to enable EIP affinity. Valid values:</p>
+     * <p>Specifies whether to enable IP affinity. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
      * </ul>
-     * <p>**</p>
-     * <p><strong>Description</strong> After you enable EIP affinity, if multiple EIPs are associated with an SNAT entry, each client uses one EIP to access the Internet. If EIP affinity is disabled, each client uses a random EIP to access the Internet.</p>
+     * <blockquote>
+     * <p> After you enable IP affinity, if multiple EIPs are associated with an SNAT entry, one client uses the same EIP to for communication. If IP affinity is disabled, the client uses a random EIP for communication.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>

@@ -29,7 +29,7 @@ public class RunInstancesRequest extends TeaModel {
     public String autoReleaseTime;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan. Examples:</p>
+     * <p>Specifies whether to enable auto-renewal for the premium bandwidth plan. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>.</li>
      * <li><strong>false</strong> (default).</li>
@@ -69,7 +69,9 @@ public class RunInstancesRequest extends TeaModel {
     /**
      * <p>The Internet service provider (ISP).</p>
      * <blockquote>
-     * <p> This parameter is not available if ScheduleAreaLevel is set to Region and is required if ScheduleAreaLevel is set to other values.</p>
+     * <p> This parameter required if ScheduleAreaLevel is set to Region.\
+     * If you set ScheduleAreaLevel to Region, a node has multiple ISPs, and you do not specify an ISP, then the create instance uses the ISP of the node. If the node has two ISPs, such as China Mobile and China Unicom, the created instance has two ISPs.\
+     * You can call the DescribeRegionIsps operation to query ISPs of the edge node.<a href="~~2637461~~"></a></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,10 +130,10 @@ public class RunInstancesRequest extends TeaModel {
     public String instanceChargeStrategy;
 
     /**
-     * <p>The billing method of the instance. Examples:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription.</li>
-     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * <li><strong>PostPaid:</strong> pay-as-you-go.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -330,7 +332,7 @@ public class RunInstancesRequest extends TeaModel {
     public String scheduleAreaLevel;
 
     /**
-     * <p>The scheduling price policy. Examples:</p>
+     * <p>The scheduling price policy. Valid values:</p>
      * <ul>
      * <li><strong>PriceHighPriority</strong>: The high price prevails.</li>
      * <li><strong>PriceLowPriority</strong>: The low price prevails.</li>
@@ -740,7 +742,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestDataDisk extends TeaModel {
         /**
-         * <p>The category of the disk. Examples:</p>
+         * <p>The category of the disk. Valid values:</p>
          * <ul>
          * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
          * <li><strong>cloud_ssd</strong>: all-flash disk.</li>

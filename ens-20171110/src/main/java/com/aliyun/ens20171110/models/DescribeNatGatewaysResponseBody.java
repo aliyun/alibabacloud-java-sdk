@@ -93,7 +93,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysIpLists extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>eip-50g****</p>
@@ -102,7 +102,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The IP address of the EIP associated with the NAT gateway.</p>
+         * <p>The EIP.</p>
          * 
          * <strong>example:</strong>
          * <p>8.XX.XX.162</p>
@@ -115,8 +115,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
          * <ul>
          * <li><strong>UsedByForwardTable</strong>: The EIP is specified in a DNAT entry.</li>
          * <li><strong>UsedBySnatTable</strong>: The EIP is specified in an SNAT entry.</li>
-         * <li><strong>UsedByForwardSnatTable</strong>: The EIP is specified in both an SNAT entry and a DNAT entry.</li>
-         * <li><strong>Idle</strong>: The EIP is not specified in a DNAT or SNAT entry.</li>
+         * <li><strong>Idle</strong>: The EIP is not specified in an SNAT entry or a DNAT entry.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -157,17 +156,33 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     }
 
     public static class DescribeNatGatewaysResponseBodyNatGatewaysTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         @Deprecated
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("TagValue")
         @Deprecated
         public String tagValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -232,7 +247,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The list of elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</p>
+         * <p>The EIPs that are associated with the NAT gateway.</p>
          */
         @NameInMap("IpLists")
         public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysIpLists> ipLists;
@@ -274,11 +289,11 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The status of the SNAT entry.</p>
+         * <p>The status of the NAT gateway. Valid values:</p>
          * <ul>
-         * <li>Pending: The SNAT entry is being created or modified.</li>
-         * <li>Available: The SNAT entry is available.</li>
-         * <li>Deleting: The SNAT entry is being deleted.</li>
+         * <li><strong>Creating</strong>: After you send a request to create a NAT gateway, the system creates the NAT gateway in the background. The NAT gateway remains in the Creating state until the operation is completed.</li>
+         * <li><strong>Available</strong>: The NAT gateway is in the Available state after the creation is complete.</li>
+         * <li><strong>Deleting</strong>: After you send a request to delete a NAT gateway, the system deletes the NAT gateway in the background. The NAT gateway remains in the Deleting state until the operation is completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

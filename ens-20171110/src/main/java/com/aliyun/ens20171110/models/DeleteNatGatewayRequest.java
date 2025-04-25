@@ -5,16 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNatGatewayRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcefully delete the VPC. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong> (default): no</li>
-     * </ul>
-     * <p>You can forcefully delete a VPC in the following scenarios:</p>
-     * <ul>
-     * <li>Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</li>
-     * <li>Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</li>
-     * </ul>
+     * <p>Specifies whether to forcefully delete the NAT instance.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -111,17 +111,33 @@ public class DescribeNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeNetworksResponseBodyNetworksNetworkTagsTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("TagKey")
         @Deprecated
         public String tagKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("TagValue")
         @Deprecated
         public String tagValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -242,10 +258,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
-         * <blockquote>
-         * <p> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
-         * </blockquote>
+         * <p>The ID of the gateway route table.</p>
          * 
          * <strong>example:</strong>
          * <p>rt-5*****tbs</p>

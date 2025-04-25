@@ -158,13 +158,13 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
         public Integer instanceCount;
 
         /**
-         * <p>The list of instance IDs.</p>
+         * <p>The IDs of the instances that are associated with the security group.</p>
          */
         @NameInMap("InstanceIds")
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds instanceIds;
 
         /**
-         * <p>The IDs of ENIs.</p>
+         * <p>The IDs of the ENIs that are associated with the security group.</p>
          */
         @NameInMap("NetworkInterfaceIds")
         public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds networkInterfaceIds;

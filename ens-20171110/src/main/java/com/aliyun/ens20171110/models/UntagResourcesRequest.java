@@ -26,15 +26,6 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The type of the resource.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>instance</li>
-     * <li>eip</li>
-     * <li>disk</li>
-     * <li>network</li>
-     * <li>natgateway</li>
-     * <li>vswitch</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

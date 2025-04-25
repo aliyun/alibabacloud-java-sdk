@@ -35,6 +35,8 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +44,8 @@ public class DescribeInstanceBandwidthDetailRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

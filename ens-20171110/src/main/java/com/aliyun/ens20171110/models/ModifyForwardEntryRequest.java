@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyForwardEntryRequest extends TeaModel {
     /**
-     * <p>The elastic IP address (EIP) that is used to access the Internet.</p>
+     * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
      * 
      * <strong>example:</strong>
      * <p>121.XXX.XXX.28</p>
@@ -17,8 +17,9 @@ public class ModifyForwardEntryRequest extends TeaModel {
      * <p>The external port or port range that is used for port forwarding.</p>
      * <ul>
      * <li>Valid values: 1 to 65535.</li>
-     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</li>
      * <li>If you set ExternalPort to a port range, you must also set InternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
+     * <li>The maximum port range is 1000.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,10 +66,12 @@ public class ModifyForwardEntryRequest extends TeaModel {
     public String internalIp;
 
     /**
-     * <p>The internal port or port range that is used for port forwarding.</p>
+     * <p>The private port or port range that is used in port forwarding.</p>
      * <ul>
      * <li>Valid values: 1 to 65535.</li>
-     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20. The first port and the last port are included.</li>
+     * <li>If you set InternalPort to a port range, you must also set ExternalPort to a port range. The number of ports in the port ranges must be the same. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
+     * <li>The maximum port range is 1000.</li>
      * </ul>
      * 
      * <strong>example:</strong>

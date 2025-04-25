@@ -47,7 +47,7 @@ public class CreateImageRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The region of the target OSS where the image is to be stored.</p>
+     * <p>The region of the destination OSS bucket where the image is to be stored.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -55,6 +55,14 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("TargetOSSRegionId")
     public String targetOSSRegionId;
 
+    /**
+     * <p>创建镜像是否包含数据盘。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>取值
+     * true：附带数据盘
+     * false：默认值，不附带数据盘</p>
+     */
     @NameInMap("WithDataDisks")
     public Boolean withDataDisks;
 

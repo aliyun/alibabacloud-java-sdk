@@ -93,7 +93,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>Details about failed tasks.</p>
+         * <p>Details about the failed tasks.</p>
          */
         @NameInMap("FailedItems")
         public java.util.List<UnloadRegionSDGResponseBodyDataResultFailedItems> failedItems;

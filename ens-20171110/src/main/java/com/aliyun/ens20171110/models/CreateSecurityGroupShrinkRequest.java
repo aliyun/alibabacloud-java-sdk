@@ -14,7 +14,7 @@ public class CreateSecurityGroupShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Schema of Response</p>
+     * <p>An array of security group rules. You can specify up to 200 IDs of security group rules.</p>
      */
     @NameInMap("Permissions")
     public String permissionsShrink;

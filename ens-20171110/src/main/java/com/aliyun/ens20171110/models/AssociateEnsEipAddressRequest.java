@@ -30,11 +30,11 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
     /**
      * <p>The type of instance with which you want to associate the EIP. Valid values:</p>
      * <ul>
-     * <li><strong>Nat</strong>: a NAT gateway.</li>
-     * <li><strong>SlbInstance</strong>: an ELB instance.</li>
-     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
-     * <li><strong>NatSlbInstance</strong>: If you want to associate multiple EIPs to an ELB instance, you need to set the parameter to this value.</li>
-     * <li><strong>EnsInstance</strong> (default): an ENS instance.</li>
+     * <li><strong>Nat</strong>: NAT gateway.</li>
+     * <li><strong>SlbInstance</strong>: Edge Load Balancer (ELB) instance.</li>
+     * <li><strong>NetworkInterface</strong>: secondary elastic network interface (ENI).</li>
+     * <li><strong>NatSlbInstance</strong>: If you want to associate multiple EIPs with an ELB instance, you need to set the parameter to this value.</li>
+     * <li><strong>EnsInstance</strong> (default): ENS instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>

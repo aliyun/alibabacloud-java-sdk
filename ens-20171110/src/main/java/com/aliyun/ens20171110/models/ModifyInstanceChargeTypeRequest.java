@@ -26,6 +26,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("BillingCycle")
+    public String billingCycle;
+
     /**
      * <p>Specifies whether to change the billing method of all data disks that are created with the instance to subscription when you change the billing method of the instance from pay-as-you-go to subscription. Valid values:</p>
      * <p>true</p>
@@ -97,6 +100,14 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public ModifyInstanceChargeTypeRequest setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
+        return this;
+    }
+    public String getBillingCycle() {
+        return this.billingCycle;
     }
 
     public ModifyInstanceChargeTypeRequest setIncludeDataDisks(Boolean includeDataDisks) {

@@ -12,7 +12,7 @@ public class PreloadRegionSDGRequest extends TeaModel {
     public java.util.List<String> destinationRegionIds;
 
     /**
-     * <p>The namespaces.</p>
+     * <p>An array that consists of queried namespaces.</p>
      */
     @NameInMap("Namespaces")
     public java.util.List<String> namespaces;

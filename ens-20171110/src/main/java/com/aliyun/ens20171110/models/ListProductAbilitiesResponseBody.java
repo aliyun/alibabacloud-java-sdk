@@ -4,10 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ListProductAbilitiesResponseBody extends TeaModel {
+    /**
+     * <p>Products supported by the edge node.</p>
+     */
     @NameInMap("ProductAbilities")
     public java.util.List<String> productAbilities;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxx-75ED-422E-A022-7121FA18C968</p>
      */

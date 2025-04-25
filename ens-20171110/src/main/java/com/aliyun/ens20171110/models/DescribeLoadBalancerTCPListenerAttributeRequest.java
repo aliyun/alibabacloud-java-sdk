@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The listening port that you want to query. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

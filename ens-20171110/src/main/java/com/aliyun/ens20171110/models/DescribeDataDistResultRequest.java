@@ -66,7 +66,7 @@ public class DescribeDataDistResultRequest extends TeaModel {
     public String minDate;
 
     /**
-     * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the distribution status of all data files.</p>
+     * <p>The page number. Pages start from page 1. This parameter is optional if you want to return the push status of all data files.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -72,7 +72,7 @@ public class CreateEnsRouteEntryRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The new source CIDR block of the inbound or outbound traffic.</p>
+     * <p>The source CIDR block is available when you configure a route entry in the gateway route table, but is not unavailable when you configure a route entry in the vSwitch route table.</p>
      * 
      * <strong>example:</strong>
      * <p>172.XXX.XXX.0/24</p>

@@ -14,7 +14,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * <p>The ID of the ENS node. You can query the node ID by calling the <a href="https://help.aliyun.com/document_detail/2637662.html">DescribeEnsRegions</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

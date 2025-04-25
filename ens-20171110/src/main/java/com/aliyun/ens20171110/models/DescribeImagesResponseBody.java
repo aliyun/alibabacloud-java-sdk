@@ -14,7 +14,7 @@ public class DescribeImagesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about images.</p>
+     * <p>The information about the images.</p>
      */
     @NameInMap("Images")
     public DescribeImagesResponseBodyImages images;
@@ -289,7 +289,7 @@ public class DescribeImagesResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-qingdao</p>

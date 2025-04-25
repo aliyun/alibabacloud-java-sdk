@@ -19,13 +19,6 @@ public class DeleteLoadBalancerListenerRequest extends TeaModel {
      * <blockquote>
      * <p> This parameter is required if the same port is used by listeners that use different protocols.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>tcp</li>
-     * <li>udp</li>
-     * <li>http</li>
-     * <li>https</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>tcp</p>

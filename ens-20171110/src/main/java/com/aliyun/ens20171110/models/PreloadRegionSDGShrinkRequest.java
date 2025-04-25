@@ -12,7 +12,7 @@ public class PreloadRegionSDGShrinkRequest extends TeaModel {
     public String destinationRegionIdsShrink;
 
     /**
-     * <p>The namespaces.</p>
+     * <p>An array that consists of queried namespaces.</p>
      */
     @NameInMap("Namespaces")
     public String namespacesShrink;

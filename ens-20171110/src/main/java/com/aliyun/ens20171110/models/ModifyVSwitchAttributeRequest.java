@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyVSwitchAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the vSwitch.</p>
+     * <p>The description of the listener.</p>
      * <ul>
      * <li>The description must be 2 to 256 characters in length.</li>
-     * <li>The description cannot start with http:// or https://.</li>
+     * <li>It must start with a letter but cannot start with http:// or https://.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,8 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     /**
      * <p>The name of the vSwitch.</p>
      * <ul>
-     * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name must start with a letter and cannot start with http:// or https://.</li>
+     * <li>The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li>It must start with a letter but cannot start with http:// or https://.</li>
      * </ul>
      * 
      * <strong>example:</strong>

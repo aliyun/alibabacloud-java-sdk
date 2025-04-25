@@ -20,7 +20,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A44EE357-6174-5E37-A801-48F5790F9ACE</p>

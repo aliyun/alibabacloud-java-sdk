@@ -93,10 +93,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
 
     public static class DescribeEnsRouteTablesResponseBodyRouteTables extends TeaModel {
         /**
-         * <p>The type of the route table. Valid values:</p>
+         * <p>The type of the resource with which the route table is associated. Valid values:</p>
          * <ul>
-         * <li><strong>VSwitch</strong> (default): vSwitch route table</li>
-         * <li><strong>Gateway</strong>: gateway route table</li>
+         * <li><strong>VSwitch</strong></li>
+         * <li><strong>Gateway</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,8 +115,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the network.</p>
-         * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -134,7 +133,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>Is the gateway routing table the default.</p>
+         * <p>Specifies whether it is the default gateway route table.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

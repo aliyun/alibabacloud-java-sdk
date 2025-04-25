@@ -14,7 +14,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The node information.</p>
+     * <p>The IDs of edge nodes. N indicates the number of edge node IDs that you can specify at the same time. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
@@ -53,7 +53,7 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>A list of multicast source IDs.</p>
+     * <p>The IDs of the elastic network interfaces (ENIs). N indicates the number of ENI IDs that you can specify at the same time. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;

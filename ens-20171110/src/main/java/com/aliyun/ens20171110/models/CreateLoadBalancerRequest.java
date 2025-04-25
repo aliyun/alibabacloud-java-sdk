@@ -4,6 +4,18 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</p>
+     * <ul>
+     * <li>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</li>
+     * <li>If you retry an API request with the same client token and request parameters after it has completed successfully, the result of the original request is returned. The server status does not change.</li>
+     * <li>You can initiate a retry when the operation times out or the error code is PROCESSING. The idempotence is valid. If HTTP status code 200 is returned, the client receives the same result as the last request. However, your server status is not affected. If HTTP status code 4xx is returned and error code is not PROCESSING, the idempotence is invalid.</li>
+     * <li>A client token is valid for 10 minutes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>26C28756-2586-17AF-B802-0DC50D8FDEBB</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 

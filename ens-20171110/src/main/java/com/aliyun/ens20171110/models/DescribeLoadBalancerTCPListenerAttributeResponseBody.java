@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The port used by the backend server of the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -14,7 +14,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer backendServerPort;
 
     /**
-     * <p>The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
+     * <p>The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -23,7 +23,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer bandwidth;
 
     /**
-     * <p>The description of the listener.</p>
+     * <p>The name of the listener.</p>
      * 
      * <strong>example:</strong>
      * <p>example</p>
@@ -79,7 +79,7 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
+     * <p>The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.</p>
      * <ul>
      * <li>Default value: 5.</li>
      * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
@@ -88,9 +88,9 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter is returned only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
-     * <li><p>If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <li><p>If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.</p>
      * </li>
      * </ul>
      * 
@@ -153,13 +153,13 @@ public class DescribeLoadBalancerTCPListenerAttributeResponseBody extends TeaMod
     public String healthCheckType;
 
     /**
-     * <p>The Uniform Resource Identifier (URI) that is used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <p>The URI used for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>The URL must start with a forward slash (<code>/</code>) and contain characters other than forward slashes (<code>/</code>).</p>
+     * <li><p>A URL must start with a forward slash (<code>/</code>) but cannot contain only forward slashes (<code>/</code>).</p>
      * </li>
-     * <li><p>This parameter is returned only if you set HealthCheck to on.</p>
+     * <li><p>This parameter takes effect only if the HealthCheck parameter is set to on.</p>
      * </li>
      * </ul>
      * 

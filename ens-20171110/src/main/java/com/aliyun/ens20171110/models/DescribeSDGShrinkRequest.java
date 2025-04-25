@@ -14,8 +14,8 @@ public class DescribeSDGShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Default value: 10</p>
+     * <p>The number of entries to return on each page.</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

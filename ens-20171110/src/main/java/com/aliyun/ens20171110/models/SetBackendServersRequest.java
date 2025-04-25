@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can modify at most 20 backend servers.</p>
+     * <p>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
@@ -44,7 +44,7 @@ public class SetBackendServersRequest extends TeaModel {
 
     public static class SetBackendServersRequestBackendServers extends TeaModel {
         /**
-         * <p>The ID of the instance that you want to use as the backend server.</p>
+         * <p>The ID of the instance that you use as the backend server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -56,8 +56,8 @@ public class SetBackendServersRequest extends TeaModel {
         /**
          * <p>The type of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>ens</strong>: ENS instance.</li>
-         * <li><strong>eni</strong>: Elastic Network Interface (ENI) instance.</li>
+         * <li><strong>ens</strong>: ENS instance</li>
+         * <li><strong>eni</strong>: elastic network interface (ENI)</li>
          * </ul>
          * 
          * <strong>example:</strong>

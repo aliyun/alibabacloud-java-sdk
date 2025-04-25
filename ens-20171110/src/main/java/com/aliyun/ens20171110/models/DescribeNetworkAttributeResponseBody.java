@@ -47,10 +47,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
-     * <blockquote>
-     * <p> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
-     * </blockquote>
+     * <p>The ID of the gateway route table.</p>
      * 
      * <strong>example:</strong>
      * <p>rt-539***tbs</p>
@@ -125,7 +122,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the route table that you want to query.</p>
+     * <p>The ID of the route table.</p>
      * 
      * <strong>example:</strong>
      * <p>rt-539***fpu</p>

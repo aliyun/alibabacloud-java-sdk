@@ -15,12 +15,13 @@ public class RescaleApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The level of resource scaling. The value must be of the enumerated data type. Valid values:</p>
+     * <p>The level of resource scaling. The value is of the enumeration type. Valid values:</p>
      * <ul>
      * <li>AreaIspCode (default): scales resources based on the Internet service provider (ISP).</li>
      * <li>RegionId: scales resources based on the edge node.</li>
      * <li>InstanceId: scales resources based on the instance ID. Resource scale-out specifies resource hosting and scale-in specifies resource release.</li>
      * </ul>
+     * <p>Default value: AreaIspCode.</p>
      * 
      * <strong>example:</strong>
      * <p>RegionId</p>

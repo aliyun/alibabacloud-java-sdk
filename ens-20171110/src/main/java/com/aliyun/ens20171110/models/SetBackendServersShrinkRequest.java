@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetBackendServersShrinkRequest extends TeaModel {
     /**
-     * <p>The list of backend servers that you want to add. You can modify at most 20 backend servers.</p>
+     * <p>The list of backend servers that you added. You can modify the weights of up to 20 backend servers in each request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")

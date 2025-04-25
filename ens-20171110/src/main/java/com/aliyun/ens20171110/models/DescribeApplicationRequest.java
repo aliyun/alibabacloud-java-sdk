@@ -50,7 +50,7 @@ public class DescribeApplicationRequest extends TeaModel {
     public String outDetailStatParams;
 
     /**
-     * <p>The resource filter.</p>
+     * <p>The resource filtering condition.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;regionCode\&quot;: \&quot;cn-wuxi-telecom_unicom_cmcc-3\&quot;,    \&quot;ispCode\&quot;: \&quot;telecom\&quot;,    \&quot;count\&quot;: 2	},{    \&quot;regionCode\&quot;: \&quot;cn-shanghai-cmcc\&quot;,    \&quot;count\&quot;: 4	}]</p>
