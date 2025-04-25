@@ -5284,6 +5284,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SinkApacheRocketMQCheckpointParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
+        @NameInMap("SinkBaiLianParameters")
+        public SinkBaiLianParameters sinkBaiLianParameters;
+
         @NameInMap("SinkCustomizedKafkaConnectorParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters;
 
@@ -5355,6 +5358,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheRocketMQCheckpointParameters getSinkApacheRocketMQCheckpointParameters() {
             return this.sinkApacheRocketMQCheckpointParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkBaiLianParameters(SinkBaiLianParameters sinkBaiLianParameters) {
+            this.sinkBaiLianParameters = sinkBaiLianParameters;
+            return this;
+        }
+        public SinkBaiLianParameters getSinkBaiLianParameters() {
+            return this.sinkBaiLianParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkCustomizedKafkaConnectorParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters) {
@@ -7011,6 +7022,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SourceMQTTParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceMQTTParameters sourceMQTTParameters;
 
+        @NameInMap("SourceMySQLParameters")
+        public SourceMySQLParameters sourceMySQLParameters;
+
         @NameInMap("SourceOSSParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceOSSParameters sourceOSSParameters;
 
@@ -7108,6 +7122,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceMQTTParameters getSourceMQTTParameters() {
             return this.sourceMQTTParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceMySQLParameters(SourceMySQLParameters sourceMySQLParameters) {
+            this.sourceMySQLParameters = sourceMySQLParameters;
+            return this;
+        }
+        public SourceMySQLParameters getSourceMySQLParameters() {
+            return this.sourceMySQLParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceOSSParameters(ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceOSSParameters sourceOSSParameters) {

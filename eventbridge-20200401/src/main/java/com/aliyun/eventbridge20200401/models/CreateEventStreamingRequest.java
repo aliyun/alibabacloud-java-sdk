@@ -6372,6 +6372,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkApacheRocketMQCheckpointParameters")
         public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
+        @NameInMap("SinkBaiLianParameters")
+        public SinkBaiLianParameters sinkBaiLianParameters;
+
         @NameInMap("SinkCustomizedKafkaConnectorParameters")
         public CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters;
 
@@ -6452,6 +6455,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkApacheRocketMQCheckpointParameters getSinkApacheRocketMQCheckpointParameters() {
             return this.sinkApacheRocketMQCheckpointParameters;
+        }
+
+        public CreateEventStreamingRequestSink setSinkBaiLianParameters(SinkBaiLianParameters sinkBaiLianParameters) {
+            this.sinkBaiLianParameters = sinkBaiLianParameters;
+            return this;
+        }
+        public SinkBaiLianParameters getSinkBaiLianParameters() {
+            return this.sinkBaiLianParameters;
         }
 
         public CreateEventStreamingRequestSink setSinkCustomizedKafkaConnectorParameters(CreateEventStreamingRequestSinkSinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters) {
@@ -8159,6 +8170,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("SourceMQTTParameters")
         public CreateEventStreamingRequestSourceSourceMQTTParameters sourceMQTTParameters;
 
+        @NameInMap("SourceMySQLParameters")
+        public SourceMySQLParameters sourceMySQLParameters;
+
         @NameInMap("SourceOSSParameters")
         public CreateEventStreamingRequestSourceSourceOSSParameters sourceOSSParameters;
 
@@ -8259,6 +8273,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSourceSourceMQTTParameters getSourceMQTTParameters() {
             return this.sourceMQTTParameters;
+        }
+
+        public CreateEventStreamingRequestSource setSourceMySQLParameters(SourceMySQLParameters sourceMySQLParameters) {
+            this.sourceMySQLParameters = sourceMySQLParameters;
+            return this;
+        }
+        public SourceMySQLParameters getSourceMySQLParameters() {
+            return this.sourceMySQLParameters;
         }
 
         public CreateEventStreamingRequestSource setSourceOSSParameters(CreateEventStreamingRequestSourceSourceOSSParameters sourceOSSParameters) {
