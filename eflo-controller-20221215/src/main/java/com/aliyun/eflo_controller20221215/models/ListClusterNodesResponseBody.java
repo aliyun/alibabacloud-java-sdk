@@ -204,6 +204,12 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
+         * <p>whether or not support file system mount</p>
+         */
+        @NameInMap("FileSystemMountEnabled")
+        public Boolean fileSystemMountEnabled;
+
+        /**
          * <p>Hostname</p>
          * 
          * <strong>example:</strong>
@@ -368,6 +374,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public ListClusterNodesResponseBodyNodes setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+            this.fileSystemMountEnabled = fileSystemMountEnabled;
+            return this;
+        }
+        public Boolean getFileSystemMountEnabled() {
+            return this.fileSystemMountEnabled;
         }
 
         public ListClusterNodesResponseBodyNodes setHostname(String hostname) {

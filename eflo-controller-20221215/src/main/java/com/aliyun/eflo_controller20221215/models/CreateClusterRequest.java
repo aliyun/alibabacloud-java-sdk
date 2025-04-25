@@ -1048,12 +1048,38 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNodeGroupsSystemDisk extends TeaModel {
+        /**
+         * <p>The disk type. Valid values:</p>
+         * <ul>
+         * <li>cloud_ssd: standard SSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can provide up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can provide up to 50,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>Default value: PL1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -1089,6 +1115,9 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNodeGroups extends TeaModel {
+        @NameInMap("FileSystemMountEnabled")
+        public Boolean fileSystemMountEnabled;
+
         /**
          * <p>System image ID</p>
          * 
@@ -1097,6 +1126,15 @@ public class CreateClusterRequest extends TeaModel {
          */
         @NameInMap("ImageId")
         public String imageId;
+
+        /**
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-key</p>
+         */
+        @NameInMap("KeyPairName")
+        public String keyPairName;
 
         /**
          * <p>Machine type</p>
@@ -1131,6 +1169,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("Nodes")
         public java.util.List<CreateClusterRequestNodeGroupsNodes> nodes;
 
+        /**
+         * <p>SystemDisk</p>
+         */
         @NameInMap("SystemDisk")
         public CreateClusterRequestNodeGroupsSystemDisk systemDisk;
 
@@ -1157,12 +1198,28 @@ public class CreateClusterRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateClusterRequestNodeGroups setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+            this.fileSystemMountEnabled = fileSystemMountEnabled;
+            return this;
+        }
+        public Boolean getFileSystemMountEnabled() {
+            return this.fileSystemMountEnabled;
+        }
+
         public CreateClusterRequestNodeGroups setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public CreateClusterRequestNodeGroups setKeyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+        public String getKeyPairName() {
+            return this.keyPairName;
         }
 
         public CreateClusterRequestNodeGroups setMachineType(String machineType) {

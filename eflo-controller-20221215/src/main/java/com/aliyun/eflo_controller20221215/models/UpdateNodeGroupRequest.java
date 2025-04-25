@@ -4,6 +4,18 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class UpdateNodeGroupRequest extends TeaModel {
+    @NameInMap("FileSystemMountEnabled")
+    public Boolean fileSystemMountEnabled;
+
+    /**
+     * <p>The name of the key pair.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sc-key</p>
+     */
+    @NameInMap("KeyPairName")
+    public String keyPairName;
+
     /**
      * <p>Node group name</p>
      * 
@@ -36,6 +48,22 @@ public class UpdateNodeGroupRequest extends TeaModel {
     public static UpdateNodeGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateNodeGroupRequest self = new UpdateNodeGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateNodeGroupRequest setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+        this.fileSystemMountEnabled = fileSystemMountEnabled;
+        return this;
+    }
+    public Boolean getFileSystemMountEnabled() {
+        return this.fileSystemMountEnabled;
+    }
+
+    public UpdateNodeGroupRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
     }
 
     public UpdateNodeGroupRequest setNewNodeGroupName(String newNodeGroupName) {

@@ -13,6 +13,15 @@ public class UpdateNodeGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Task ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i15374011238111706</p>
+     */
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static UpdateNodeGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateNodeGroupResponseBody self = new UpdateNodeGroupResponseBody();
         return TeaModel.build(map, self);
@@ -24,6 +33,14 @@ public class UpdateNodeGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateNodeGroupResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

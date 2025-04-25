@@ -94,6 +94,9 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("FileSystemMountEnabled")
+        public Boolean fileSystemMountEnabled;
+
         /**
          * <p>Group ID.</p>
          * 
@@ -201,6 +204,14 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListNodeGroupsResponseBodyGroups setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+            this.fileSystemMountEnabled = fileSystemMountEnabled;
+            return this;
+        }
+        public Boolean getFileSystemMountEnabled() {
+            return this.fileSystemMountEnabled;
         }
 
         public ListNodeGroupsResponseBodyGroups setGroupId(String groupId) {

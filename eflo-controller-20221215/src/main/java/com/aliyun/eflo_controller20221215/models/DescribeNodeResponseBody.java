@@ -31,6 +31,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>Disk infos</p>
+     */
     @NameInMap("Disks")
     public java.util.List<DescribeNodeResponseBodyDisks> disks;
 
@@ -42,6 +45,12 @@ public class DescribeNodeResponseBody extends TeaModel {
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
+
+    /**
+     * <p>是否支持文件存储挂载</p>
+     */
+    @NameInMap("FileSystemMountEnabled")
+    public Boolean fileSystemMountEnabled;
 
     /**
      * <p>Hostname</p>
@@ -222,6 +231,14 @@ public class DescribeNodeResponseBody extends TeaModel {
         return this.expiredTime;
     }
 
+    public DescribeNodeResponseBody setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+        this.fileSystemMountEnabled = fileSystemMountEnabled;
+        return this;
+    }
+    public Boolean getFileSystemMountEnabled() {
+        return this.fileSystemMountEnabled;
+    }
+
     public DescribeNodeResponseBody setHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -343,18 +360,58 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
 
     public static class DescribeNodeResponseBodyDisks extends TeaModel {
+        /**
+         * <p>The category of the disk.</p>
+         * <ul>
+         * <li>cloud_ssd: all-flash disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1fi88ryk4yah8a6yos</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The performance level of the ESSD. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The type of the disk. Valid values:</p>
+         * <ul>
+         * <li>system: system disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("Type")
         public String type;
 

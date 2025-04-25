@@ -578,6 +578,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建Vsc</p>
+     * 
+     * @param request CreateVscRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVscResponse
+     */
+    public CreateVscResponse createVscWithOptions(CreateVscRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            body.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vscName)) {
+            body.put("VscName", request.vscName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vscType)) {
+            body.put("VscType", request.vscType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVsc"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVscResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Vsc</p>
+     * 
+     * @param request CreateVscRequest
+     * @return CreateVscResponse
+     */
+    public CreateVscResponse createVsc(CreateVscRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVscWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Delete cluster instance</p>
      * 
      * @param request DeleteClusterRequest
@@ -672,6 +738,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteNodeGroupResponse deleteNodeGroup(DeleteNodeGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNodeGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Vsc</p>
+     * 
+     * @param request DeleteVscRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVscResponse
+     */
+    public DeleteVscResponse deleteVscWithOptions(DeleteVscRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.vscId)) {
+            body.put("VscId", request.vscId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVsc"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVscResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Vsc</p>
+     * 
+     * @param request DeleteVscRequest
+     * @return DeleteVscResponse
+     */
+    public DeleteVscResponse deleteVsc(DeleteVscRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVscWithOptions(request, runtime);
     }
 
     /**
@@ -1052,6 +1168,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeTaskResponse describeTask(DescribeTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取单个Vsc详情</p>
+     * 
+     * @param request DescribeVscRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVscResponse
+     */
+    public DescribeVscResponse describeVscWithOptions(DescribeVscRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.vscId)) {
+            body.put("VscId", request.vscId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVsc"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVscResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取单个Vsc详情</p>
+     * 
+     * @param request DescribeVscRequest
+     * @return DescribeVscResponse
+     */
+    public DescribeVscResponse describeVsc(DescribeVscRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVscWithOptions(request, runtime);
     }
 
     /**
@@ -1804,6 +1964,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询Vsc列表</p>
+     * 
+     * @param tmpReq ListVscsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVscsResponse
+     */
+    public ListVscsResponse listVscsWithOptions(ListVscsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListVscsShrinkRequest request = new ListVscsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeIds)) {
+            request.nodeIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeIds, "NodeIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIdsShrink)) {
+            body.put("NodeIds", request.nodeIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vscName)) {
+            body.put("VscName", request.vscName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVscs"),
+            new TeaPair("version", "2022-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVscsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Vsc列表</p>
+     * 
+     * @param request ListVscsRequest
+     * @return ListVscsResponse
+     */
+    public ListVscsResponse listVscs(ListVscsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVscsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Reboot Machine</p>
      * 
      * @param tmpReq RebootNodesRequest
@@ -2422,6 +2654,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateNodeGroupResponse updateNodeGroupWithOptions(UpdateNodeGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemMountEnabled)) {
+            body.put("FileSystemMountEnabled", request.fileSystemMountEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
+            body.put("KeyPairName", request.keyPairName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newNodeGroupName)) {
             body.put("NewNodeGroupName", request.newNodeGroupName);
         }

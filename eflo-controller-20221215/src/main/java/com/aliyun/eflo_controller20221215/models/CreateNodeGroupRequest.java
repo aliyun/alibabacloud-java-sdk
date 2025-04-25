@@ -57,12 +57,36 @@ public class CreateNodeGroupRequest extends TeaModel {
     }
 
     public static class CreateNodeGroupRequestNodeGroupSystemDisk extends TeaModel {
+        /**
+         * <p>Disk performance level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The performance level of the disk if the disk is an ESSD. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * </ul>
+         * <p>Default value: PL1.</p>
+         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL!</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>System disk size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>250</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -108,6 +132,9 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("Az")
         public String az;
 
+        @NameInMap("FileSystemMountEnabled")
+        public Boolean fileSystemMountEnabled;
+
         /**
          * <p>Image ID.</p>
          * <p>This parameter is required.</p>
@@ -117,6 +144,15 @@ public class CreateNodeGroupRequest extends TeaModel {
          */
         @NameInMap("ImageId")
         public String imageId;
+
+        /**
+         * <p>The name of the key pair.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-keypair</p>
+         */
+        @NameInMap("KeyPairName")
+        public String keyPairName;
 
         /**
          * <p>Machine type</p>
@@ -147,6 +183,9 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
+        /**
+         * <p>SystemDisk</p>
+         */
         @NameInMap("SystemDisk")
         public CreateNodeGroupRequestNodeGroupSystemDisk systemDisk;
 
@@ -174,12 +213,28 @@ public class CreateNodeGroupRequest extends TeaModel {
             return this.az;
         }
 
+        public CreateNodeGroupRequestNodeGroup setFileSystemMountEnabled(Boolean fileSystemMountEnabled) {
+            this.fileSystemMountEnabled = fileSystemMountEnabled;
+            return this;
+        }
+        public Boolean getFileSystemMountEnabled() {
+            return this.fileSystemMountEnabled;
+        }
+
         public CreateNodeGroupRequestNodeGroup setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public CreateNodeGroupRequestNodeGroup setKeyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+        public String getKeyPairName() {
+            return this.keyPairName;
         }
 
         public CreateNodeGroupRequestNodeGroup setMachineType(String machineType) {
