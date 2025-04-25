@@ -14,6 +14,9 @@ public class DeleteMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("FlowId")
     public String flowId;
 
+    @NameInMap("InputName")
+    public String inputName;
+
     public static DeleteMediaConnectFlowInputRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMediaConnectFlowInputRequest self = new DeleteMediaConnectFlowInputRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class DeleteMediaConnectFlowInputRequest extends TeaModel {
     }
     public String getFlowId() {
         return this.flowId;
+    }
+
+    public DeleteMediaConnectFlowInputRequest setInputName(String inputName) {
+        this.inputName = inputName;
+        return this;
+    }
+    public String getInputName() {
+        return this.inputName;
     }
 
 }

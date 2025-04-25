@@ -75,6 +75,33 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
     }
 
     public static class GetMediaConnectFlowInputResponseBodyContent extends TeaModel {
+        @NameInMap("BackupCidrs")
+        public String backupCidrs;
+
+        @NameInMap("BackupCreateTime")
+        public String backupCreateTime;
+
+        @NameInMap("BackupInputName")
+        public String backupInputName;
+
+        @NameInMap("BackupInputStatus")
+        public String backupInputStatus;
+
+        @NameInMap("BackupInputUrl")
+        public String backupInputUrl;
+
+        @NameInMap("BackupMaxBitrate")
+        public Integer backupMaxBitrate;
+
+        @NameInMap("BackupSrtLatency")
+        public Integer backupSrtLatency;
+
+        @NameInMap("BackupSrtPassphrase")
+        public String backupSrtPassphrase;
+
+        @NameInMap("BackupSrtPbkeyLen")
+        public Integer backupSrtPbkeyLen;
+
         /**
          * <p>The IP address whitelist in CIDR format. CIDR blocks are separated with commas (,).</p>
          * 
@@ -118,6 +145,9 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
          */
         @NameInMap("InputProtocol")
         public String inputProtocol;
+
+        @NameInMap("InputStatus")
+        public String inputStatus;
 
         /**
          * <p>The source URL.</p>
@@ -194,6 +224,78 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetMediaConnectFlowInputResponseBodyContent setBackupCidrs(String backupCidrs) {
+            this.backupCidrs = backupCidrs;
+            return this;
+        }
+        public String getBackupCidrs() {
+            return this.backupCidrs;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupCreateTime(String backupCreateTime) {
+            this.backupCreateTime = backupCreateTime;
+            return this;
+        }
+        public String getBackupCreateTime() {
+            return this.backupCreateTime;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupInputName(String backupInputName) {
+            this.backupInputName = backupInputName;
+            return this;
+        }
+        public String getBackupInputName() {
+            return this.backupInputName;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupInputStatus(String backupInputStatus) {
+            this.backupInputStatus = backupInputStatus;
+            return this;
+        }
+        public String getBackupInputStatus() {
+            return this.backupInputStatus;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupInputUrl(String backupInputUrl) {
+            this.backupInputUrl = backupInputUrl;
+            return this;
+        }
+        public String getBackupInputUrl() {
+            return this.backupInputUrl;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupMaxBitrate(Integer backupMaxBitrate) {
+            this.backupMaxBitrate = backupMaxBitrate;
+            return this;
+        }
+        public Integer getBackupMaxBitrate() {
+            return this.backupMaxBitrate;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupSrtLatency(Integer backupSrtLatency) {
+            this.backupSrtLatency = backupSrtLatency;
+            return this;
+        }
+        public Integer getBackupSrtLatency() {
+            return this.backupSrtLatency;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupSrtPassphrase(String backupSrtPassphrase) {
+            this.backupSrtPassphrase = backupSrtPassphrase;
+            return this;
+        }
+        public String getBackupSrtPassphrase() {
+            return this.backupSrtPassphrase;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setBackupSrtPbkeyLen(Integer backupSrtPbkeyLen) {
+            this.backupSrtPbkeyLen = backupSrtPbkeyLen;
+            return this;
+        }
+        public Integer getBackupSrtPbkeyLen() {
+            return this.backupSrtPbkeyLen;
+        }
+
         public GetMediaConnectFlowInputResponseBodyContent setCidrs(String cidrs) {
             this.cidrs = cidrs;
             return this;
@@ -224,6 +326,14 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         }
         public String getInputProtocol() {
             return this.inputProtocol;
+        }
+
+        public GetMediaConnectFlowInputResponseBodyContent setInputStatus(String inputStatus) {
+            this.inputStatus = inputStatus;
+            return this;
+        }
+        public String getInputStatus() {
+            return this.inputStatus;
         }
 
         public GetMediaConnectFlowInputResponseBodyContent setInputUrl(String inputUrl) {

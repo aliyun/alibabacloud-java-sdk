@@ -32,6 +32,9 @@ public class UpdateMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("InputFromUrl")
     public String inputFromUrl;
 
+    @NameInMap("InputName")
+    public String inputName;
+
     /**
      * <p>The maximum bitrate. Unit: bit/s.</p>
      * 
@@ -95,6 +98,14 @@ public class UpdateMediaConnectFlowInputRequest extends TeaModel {
     }
     public String getInputFromUrl() {
         return this.inputFromUrl;
+    }
+
+    public UpdateMediaConnectFlowInputRequest setInputName(String inputName) {
+        this.inputName = inputName;
+        return this;
+    }
+    public String getInputName() {
+        return this.inputName;
     }
 
     public UpdateMediaConnectFlowInputRequest setMaxBitrate(Integer maxBitrate) {

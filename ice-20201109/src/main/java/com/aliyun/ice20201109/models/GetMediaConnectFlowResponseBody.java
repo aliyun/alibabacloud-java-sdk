@@ -84,6 +84,9 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("FlowFailover")
+        public String flowFailover;
+
         /**
          * <p>The flow ID.</p>
          * 
@@ -131,6 +134,14 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetMediaConnectFlowResponseBodyContent setFlowFailover(String flowFailover) {
+            this.flowFailover = flowFailover;
+            return this;
+        }
+        public String getFlowFailover() {
+            return this.flowFailover;
         }
 
         public GetMediaConnectFlowResponseBodyContent setFlowId(String flowId) {

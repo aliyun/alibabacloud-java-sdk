@@ -93,6 +93,9 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("Forbid")
+        public String forbid;
+
         /**
          * <p>The output name.</p>
          * 
@@ -208,6 +211,14 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetMediaConnectFlowOutputResponseBodyContent setForbid(String forbid) {
+            this.forbid = forbid;
+            return this;
+        }
+        public String getForbid() {
+            return this.forbid;
         }
 
         public GetMediaConnectFlowOutputResponseBodyContent setOutputName(String outputName) {
