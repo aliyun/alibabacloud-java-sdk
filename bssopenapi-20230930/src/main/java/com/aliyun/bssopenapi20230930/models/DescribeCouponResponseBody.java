@@ -122,6 +122,9 @@ public class DescribeCouponResponseBody extends TeaModel {
         @NameInMap("Amount")
         public String amount;
 
+        @NameInMap("CertainAmount")
+        public String certainAmount;
+
         /**
          * <strong>example:</strong>
          * <p>59243658</p>
@@ -255,6 +258,14 @@ public class DescribeCouponResponseBody extends TeaModel {
         }
         public String getAmount() {
             return this.amount;
+        }
+
+        public DescribeCouponResponseBodyData setCertainAmount(String certainAmount) {
+            this.certainAmount = certainAmount;
+            return this;
+        }
+        public String getCertainAmount() {
+            return this.certainAmount;
         }
 
         public DescribeCouponResponseBodyData setCouponId(Long couponId) {

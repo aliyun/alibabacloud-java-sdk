@@ -137,12 +137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AddCouponDeductTagResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AddCouponDeductTagResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCouponDeductTagResponse());
     }
 
     /**
@@ -186,12 +181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CancelFundAccountLowAvailableAmountAlarmResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CancelFundAccountLowAvailableAmountAlarmResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelFundAccountLowAvailableAmountAlarmResponse());
     }
 
     /**
@@ -259,12 +249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFundAccountTransferResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateFundAccountTransferResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFundAccountTransferResponse());
     }
 
     /**
@@ -330,12 +315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCouponDeductTagResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteCouponDeductTagResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCouponDeductTagResponse());
     }
 
     /**
@@ -381,12 +361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCouponResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCouponResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCouponResponse());
     }
 
     /**
@@ -432,12 +407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCouponItemListResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeCouponItemListResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCouponItemListResponse());
     }
 
     /**
@@ -450,6 +420,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCouponItemListResponse describeCouponItemList(DescribeCouponItemListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCouponItemListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户使用SPN的概述信息</p>
+     * 
+     * @param tmpReq DescribeUserSpnSummaryInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserSpnSummaryInfoResponse
+     */
+    public DescribeUserSpnSummaryInfoResponse describeUserSpnSummaryInfoWithOptions(DescribeUserSpnSummaryInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeUserSpnSummaryInfoShrinkRequest request = new DescribeUserSpnSummaryInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserSpnSummaryInfo"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserSpnSummaryInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取客户使用SPN的概述信息</p>
+     * 
+     * @param request DescribeUserSpnSummaryInfoRequest
+     * @return DescribeUserSpnSummaryInfoResponse
+     */
+    public DescribeUserSpnSummaryInfoResponse describeUserSpnSummaryInfo(DescribeUserSpnSummaryInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserSpnSummaryInfoWithOptions(request, runtime);
     }
 
     /**
@@ -481,12 +505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountAvailableAmountResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountAvailableAmountResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountAvailableAmountResponse());
     }
 
     /**
@@ -530,12 +549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanAllocateCreditAmountResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanAllocateCreditAmountResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanAllocateCreditAmountResponse());
     }
 
     /**
@@ -583,12 +597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanRecycleAmountResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanRecycleAmountResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanRecycleAmountResponse());
     }
 
     /**
@@ -636,12 +645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanTransferAmountResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanTransferAmountResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanTransferAmountResponse());
     }
 
     /**
@@ -685,12 +689,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanWithdrawAmountResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountCanWithdrawAmountResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountCanWithdrawAmountResponse());
     }
 
     /**
@@ -734,12 +733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountLowAvailableAmountAlarmResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountLowAvailableAmountAlarmResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountLowAvailableAmountAlarmResponse());
     }
 
     /**
@@ -839,12 +833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountTransactionDetailsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetFundAccountTransactionDetailsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFundAccountTransactionDetailsResponse());
     }
 
     /**
@@ -857,6 +846,192 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetFundAccountTransactionDetailsResponse getFundAccountTransactionDetails(GetFundAccountTransactionDetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getFundAccountTransactionDetailsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取节省计划及可抵扣商品信息</p>
+     * 
+     * @param tmpReq GetSavingPlanDeductableCommodityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSavingPlanDeductableCommodityResponse
+     */
+    public GetSavingPlanDeductableCommodityResponse getSavingPlanDeductableCommodityWithOptions(GetSavingPlanDeductableCommodityRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetSavingPlanDeductableCommodityShrinkRequest request = new GetSavingPlanDeductableCommodityShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSavingPlanDeductableCommodity"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSavingPlanDeductableCommodityResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取节省计划及可抵扣商品信息</p>
+     * 
+     * @param request GetSavingPlanDeductableCommodityRequest
+     * @return GetSavingPlanDeductableCommodityResponse
+     */
+    public GetSavingPlanDeductableCommodityResponse getSavingPlanDeductableCommodity(GetSavingPlanDeductableCommodityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSavingPlanDeductableCommodityWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取节省计划实例共享账号信息</p>
+     * 
+     * @param tmpReq GetSavingPlanShareAccountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSavingPlanShareAccountsResponse
+     */
+    public GetSavingPlanShareAccountsResponse getSavingPlanShareAccountsWithOptions(GetSavingPlanShareAccountsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetSavingPlanShareAccountsShrinkRequest request = new GetSavingPlanShareAccountsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spnInstanceCode)) {
+            query.put("SpnInstanceCode", request.spnInstanceCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSavingPlanShareAccounts"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSavingPlanShareAccountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取节省计划实例共享账号信息</p>
+     * 
+     * @param request GetSavingPlanShareAccountsRequest
+     * @return GetSavingPlanShareAccountsResponse
+     */
+    public GetSavingPlanShareAccountsResponse getSavingPlanShareAccounts(GetSavingPlanShareAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSavingPlanShareAccountsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取节省计划实例客户自定义规则</p>
+     * 
+     * @param tmpReq GetSavingPlanUserDeductRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSavingPlanUserDeductRuleResponse
+     */
+    public GetSavingPlanUserDeductRuleResponse getSavingPlanUserDeductRuleWithOptions(GetSavingPlanUserDeductRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetSavingPlanUserDeductRuleShrinkRequest request = new GetSavingPlanUserDeductRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spnInstanceCode)) {
+            query.put("SpnInstanceCode", request.spnInstanceCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSavingPlanUserDeductRule"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSavingPlanUserDeductRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取节省计划实例客户自定义规则</p>
+     * 
+     * @param request GetSavingPlanUserDeductRuleRequest
+     * @return GetSavingPlanUserDeductRuleResponse
+     */
+    public GetSavingPlanUserDeductRuleResponse getSavingPlanUserDeductRule(GetSavingPlanUserDeductRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSavingPlanUserDeductRuleWithOptions(request, runtime);
     }
 
     /**
@@ -902,12 +1077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListCouponDeductTagResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListCouponDeductTagResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCouponDeductTagResponse());
     }
 
     /**
@@ -961,12 +1131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListFundAccountResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListFundAccountResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFundAccountResponse());
     }
 
     /**
@@ -1028,12 +1193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListFundAccountPayRelationResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListFundAccountPayRelationResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFundAccountPayRelationResponse());
     }
 
     /**
@@ -1085,12 +1245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SetFundAccountCreditAmountResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SetFundAccountCreditAmountResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetFundAccountCreditAmountResponse());
     }
 
     /**
@@ -1138,12 +1293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SetFundAccountLowAvailableAmountAlarmResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SetFundAccountLowAvailableAmountAlarmResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetFundAccountLowAvailableAmountAlarmResponse());
     }
 
     /**
@@ -1211,12 +1361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SetSavingPlanUserDeductRuleResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SetSavingPlanUserDeductRuleResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetSavingPlanUserDeductRuleResponse());
     }
 
     /**
