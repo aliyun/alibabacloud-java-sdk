@@ -45,6 +45,9 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     @NameInMap("dryRun")
     public Boolean dryRun;
 
+    @NameInMap("updateStrategy")
+    public String updateStrategy;
+
     public static UpgradeEngineVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeEngineVersionRequest self = new UpgradeEngineVersionRequest();
         return TeaModel.build(map, self);
@@ -88,6 +91,14 @@ public class UpgradeEngineVersionRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpgradeEngineVersionRequest setUpdateStrategy(String updateStrategy) {
+        this.updateStrategy = updateStrategy;
+        return this;
+    }
+    public String getUpdateStrategy() {
+        return this.updateStrategy;
     }
 
     public static class UpgradeEngineVersionRequestPlugins extends TeaModel {

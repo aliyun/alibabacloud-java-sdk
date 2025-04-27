@@ -257,58 +257,58 @@ public class ListActionRecordsResponseBody extends TeaModel {
     }
 
     public static class ListActionRecordsResponseBodyResult extends TeaModel {
-        @NameInMap("ActionName")
+        @NameInMap("actionName")
         public String actionName;
 
-        @NameInMap("ActionParams")
+        @NameInMap("actionParams")
         public java.util.Map<String, ?> actionParams;
 
-        @NameInMap("ActionResultAccessList")
+        @NameInMap("actionResultAccessList")
         public java.util.List<String> actionResultAccessList;
 
-        @NameInMap("EndTime")
+        @NameInMap("endTime")
         public Long endTime;
 
-        @NameInMap("InstanceId")
+        @NameInMap("instanceId")
         public String instanceId;
 
-        @NameInMap("MetaNow")
+        @NameInMap("metaNow")
         public String metaNow;
 
-        @NameInMap("MetaOld")
+        @NameInMap("metaOld")
         public String metaOld;
 
-        @NameInMap("OwnerId")
+        @NameInMap("ownerId")
         public String ownerId;
 
-        @NameInMap("Process")
+        @NameInMap("process")
         public String process;
 
-        @NameInMap("RecordDiff")
+        @NameInMap("recordDiff")
         public java.util.Map<String, ?> recordDiff;
 
-        @NameInMap("RecordIds")
+        @NameInMap("recordIds")
         public java.util.List<String> recordIds;
 
-        @NameInMap("RequestId")
+        @NameInMap("requestId")
         public String requestId;
 
-        @NameInMap("StartTime")
+        @NameInMap("startTime")
         public Long startTime;
 
-        @NameInMap("StateType")
+        @NameInMap("stateType")
         public String stateType;
 
-        @NameInMap("StatusInfo")
+        @NameInMap("statusInfo")
         public java.util.List<ListActionRecordsResponseBodyResultStatusInfo> statusInfo;
 
-        @NameInMap("UserId")
+        @NameInMap("userId")
         public String userId;
 
-        @NameInMap("UserInfo")
+        @NameInMap("userInfo")
         public String userInfo;
 
-        @NameInMap("UserType")
+        @NameInMap("userType")
         public String userType;
 
         public static ListActionRecordsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {

@@ -891,6 +891,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("paymentType")
         public String paymentType;
 
+        @NameInMap("port")
+        public String port;
+
         /**
          * <p>The tags of the instance. Each tag is a key-value pair.</p>
          * 
@@ -902,6 +905,9 @@ public class ListInstanceResponseBody extends TeaModel {
 
         @NameInMap("privateNetworkIpWhiteList")
         public java.util.List<String> privateNetworkIpWhiteList;
+
+        @NameInMap("protocol")
+        public String protocol;
 
         @NameInMap("publicIpWhitelist")
         public java.util.List<String> publicIpWhitelist;
@@ -1128,6 +1134,14 @@ public class ListInstanceResponseBody extends TeaModel {
             return this.paymentType;
         }
 
+        public ListInstanceResponseBodyResult setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
         public ListInstanceResponseBodyResult setPostpaidServiceStatus(String postpaidServiceStatus) {
             this.postpaidServiceStatus = postpaidServiceStatus;
             return this;
@@ -1142,6 +1156,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public java.util.List<String> getPrivateNetworkIpWhiteList() {
             return this.privateNetworkIpWhiteList;
+        }
+
+        public ListInstanceResponseBodyResult setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
         public ListInstanceResponseBodyResult setPublicIpWhitelist(java.util.List<String> publicIpWhitelist) {

@@ -77,6 +77,7 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
+    @Deprecated
     public ListTagResourcesRequest setPage(Integer page) {
         this.page = page;
         return this;
@@ -101,6 +102,7 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
+    @Deprecated
     public ListTagResourcesRequest setSize(Integer size) {
         this.size = size;
         return this;

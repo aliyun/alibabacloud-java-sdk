@@ -10,6 +10,9 @@ public class NodeSpec extends TeaModel {
     @NameInMap("diskEncryption")
     public Boolean diskEncryption;
 
+    @NameInMap("diskPreference")
+    public String diskPreference;
+
     @NameInMap("diskType")
     public String diskType;
 
@@ -41,6 +44,14 @@ public class NodeSpec extends TeaModel {
     }
     public Boolean getDiskEncryption() {
         return this.diskEncryption;
+    }
+
+    public NodeSpec setDiskPreference(String diskPreference) {
+        this.diskPreference = diskPreference;
+        return this;
+    }
+    public String getDiskPreference() {
+        return this.diskPreference;
     }
 
     public NodeSpec setDiskType(String diskType) {

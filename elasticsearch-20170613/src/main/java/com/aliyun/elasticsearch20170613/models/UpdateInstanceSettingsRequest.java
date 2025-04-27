@@ -16,6 +16,9 @@ public class UpdateInstanceSettingsRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("updateStrategy")
+    public String updateStrategy;
+
     public static UpdateInstanceSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceSettingsRequest self = new UpdateInstanceSettingsRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class UpdateInstanceSettingsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateInstanceSettingsRequest setUpdateStrategy(String updateStrategy) {
+        this.updateStrategy = updateStrategy;
+        return this;
+    }
+    public String getUpdateStrategy() {
+        return this.updateStrategy;
     }
 
 }
