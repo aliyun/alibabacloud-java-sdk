@@ -174,6 +174,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    @NameInMap("InitContainersConfig")
+    public java.util.List<InitContainerConfig> initContainersConfig;
+
     /**
      * <p>custom-args</p>
      * 
@@ -741,6 +744,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public CreateApplicationRequest setInitContainersConfig(java.util.List<InitContainerConfig> initContainersConfig) {
+        this.initContainersConfig = initContainersConfig;
+        return this;
+    }
+    public java.util.List<InitContainerConfig> getInitContainersConfig() {
+        return this.initContainersConfig;
     }
 
     public CreateApplicationRequest setJarStartArgs(String jarStartArgs) {

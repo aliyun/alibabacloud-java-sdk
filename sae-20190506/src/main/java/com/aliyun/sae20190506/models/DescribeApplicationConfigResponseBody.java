@@ -212,6 +212,132 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc extends TeaModel {
+        @NameInMap("ConfigMapId")
+        public Long configMapId;
+
+        @NameInMap("ConfigMapName")
+        public String configMapName;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        public static DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc self = new DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc setConfigMapId(Long configMapId) {
+            this.configMapId = configMapId;
+            return this;
+        }
+        public Long getConfigMapId() {
+            return this.configMapId;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc setConfigMapName(String configMapName) {
+            this.configMapName = configMapName;
+            return this;
+        }
+        public String getConfigMapName() {
+            return this.configMapName;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+    }
+
+    public static class DescribeApplicationConfigResponseBodyDataInitContainersConfig extends TeaModel {
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("CommandArgs")
+        public String commandArgs;
+
+        @NameInMap("ConfigMapMountDesc")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc> configMapMountDesc;
+
+        @NameInMap("Envs")
+        public String envs;
+
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeApplicationConfigResponseBodyDataInitContainersConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationConfigResponseBodyDataInitContainersConfig self = new DescribeApplicationConfigResponseBodyDataInitContainersConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setCommandArgs(String commandArgs) {
+            this.commandArgs = commandArgs;
+            return this;
+        }
+        public String getCommandArgs() {
+            return this.commandArgs;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setConfigMapMountDesc(java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc> configMapMountDesc) {
+            this.configMapMountDesc = configMapMountDesc;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfigConfigMapMountDesc> getConfigMapMountDesc() {
+            return this.configMapMountDesc;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setEnvs(String envs) {
+            this.envs = envs;
+            return this;
+        }
+        public String getEnvs() {
+            return this.envs;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public DescribeApplicationConfigResponseBodyDataInitContainersConfig setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeApplicationConfigResponseBodyDataMountDesc extends TeaModel {
         /**
          * <p>The path on which the NAS file system is mounted.</p>
@@ -859,6 +985,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         @NameInMap("ImageUrl")
         public String imageUrl;
+
+        @NameInMap("InitContainersConfig")
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfig> initContainersConfig;
 
         /**
          * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
@@ -1647,6 +1776,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getImageUrl() {
             return this.imageUrl;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setInitContainersConfig(java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfig> initContainersConfig) {
+            this.initContainersConfig = initContainersConfig;
+            return this;
+        }
+        public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfig> getInitContainersConfig() {
+            return this.initContainersConfig;
         }
 
         public DescribeApplicationConfigResponseBodyData setJarStartArgs(String jarStartArgs) {

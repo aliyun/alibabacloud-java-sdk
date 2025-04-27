@@ -268,6 +268,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    @NameInMap("InitContainersConfig")
+    public String initContainersConfigShrink;
+
     /**
      * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
      * 
@@ -980,6 +983,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public DeployApplicationShrinkRequest setInitContainersConfigShrink(String initContainersConfigShrink) {
+        this.initContainersConfigShrink = initContainersConfigShrink;
+        return this;
+    }
+    public String getInitContainersConfigShrink() {
+        return this.initContainersConfigShrink;
     }
 
     public DeployApplicationShrinkRequest setJarStartArgs(String jarStartArgs) {

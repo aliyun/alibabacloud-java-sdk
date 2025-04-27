@@ -174,6 +174,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    @NameInMap("InitContainersConfig")
+    public String initContainersConfigShrink;
+
     /**
      * <p>custom-args</p>
      * 
@@ -741,6 +744,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public CreateApplicationShrinkRequest setInitContainersConfigShrink(String initContainersConfigShrink) {
+        this.initContainersConfigShrink = initContainersConfigShrink;
+        return this;
+    }
+    public String getInitContainersConfigShrink() {
+        return this.initContainersConfigShrink;
     }
 
     public CreateApplicationShrinkRequest setJarStartArgs(String jarStartArgs) {

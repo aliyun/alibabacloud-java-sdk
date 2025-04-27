@@ -350,6 +350,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.initContainersConfig)) {
+            request.initContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.initContainersConfig, "InitContainersConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
             request.sidecarContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sidecarContainersConfig, "SidecarContainersConfig", "json");
         }
@@ -614,6 +618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarResourceIsolated)) {
             body.put("EnableSidecarResourceIsolated", request.enableSidecarResourceIsolated);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initContainersConfigShrink)) {
+            body.put("InitContainersConfig", request.initContainersConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.microRegistrationConfig)) {
@@ -2153,6 +2161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeployApplicationShrinkRequest request = new DeployApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.initContainersConfig)) {
+            request.initContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.initContainersConfig, "InitContainersConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sidecarContainersConfig)) {
             request.sidecarContainersConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sidecarContainersConfig, "SidecarContainersConfig", "json");
         }
@@ -2405,6 +2417,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarResourceIsolated)) {
             body.put("EnableSidecarResourceIsolated", request.enableSidecarResourceIsolated);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.initContainersConfigShrink)) {
+            body.put("InitContainersConfig", request.initContainersConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.microRegistrationConfig)) {

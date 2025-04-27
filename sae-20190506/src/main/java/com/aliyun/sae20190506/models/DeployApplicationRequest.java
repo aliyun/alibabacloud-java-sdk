@@ -268,6 +268,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    @NameInMap("InitContainersConfig")
+    public java.util.List<InitContainerConfig> initContainersConfig;
+
     /**
      * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
      * 
@@ -980,6 +983,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public DeployApplicationRequest setInitContainersConfig(java.util.List<InitContainerConfig> initContainersConfig) {
+        this.initContainersConfig = initContainersConfig;
+        return this;
+    }
+    public java.util.List<InitContainerConfig> getInitContainersConfig() {
+        return this.initContainersConfig;
     }
 
     public DeployApplicationRequest setJarStartArgs(String jarStartArgs) {
