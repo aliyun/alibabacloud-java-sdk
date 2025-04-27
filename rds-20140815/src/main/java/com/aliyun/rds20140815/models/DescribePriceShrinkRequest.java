@@ -17,13 +17,13 @@ public class DescribePriceShrinkRequest extends TeaModel {
      * <p>The commodity code of the instance. Valid values:</p>
      * <ul>
      * <li><strong>bards</strong>: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</li>
-     * <li><strong>rds</strong> (default): The instance is a subscription primary instance. This value is available on the China site (aliyun.com).</li>
+     * <li><strong>rds</strong> (default): The instance is a subscription primary instance. This value is available at the China site (aliyun.com).</li>
      * <li><strong>rords</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</li>
      * <li><strong>rds_rordspre_public_cn</strong>: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</li>
      * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).</li>
      * <li><strong>rds_intl</strong>: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).</li>
      * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance. This value is available on the international site (alibabacloud.com).</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance. This value is available at the international site (alibabacloud.com).</li>
      * </ul>
      * <blockquote>
      * <p> If you want to query the price of a read-only instance, you must specify this parameter.</p>

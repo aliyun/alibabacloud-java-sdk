@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SwitchOverMajorVersionUpgradeResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,18 +4,34 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pgm-m5e4gegx63fh92bn</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public byte[] regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("SwitchoverTimeout")
     public Integer switchoverTimeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>switch</p>
+     */
     @NameInMap("Type")
     public String type;
 

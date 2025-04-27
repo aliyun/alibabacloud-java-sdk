@@ -74,6 +74,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>接受并授权执行系统事件操作</p>
+     * 
+     * @param request AcceptRCInquiredSystemEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AcceptRCInquiredSystemEventResponse
+     */
+    public AcceptRCInquiredSystemEventResponse acceptRCInquiredSystemEventWithOptions(AcceptRCInquiredSystemEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AcceptRCInquiredSystemEvent"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AcceptRCInquiredSystemEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>接受并授权执行系统事件操作</p>
+     * 
+     * @param request AcceptRCInquiredSystemEventRequest
+     * @return AcceptRCInquiredSystemEventResponse
+     */
+    public AcceptRCInquiredSystemEventResponse acceptRCInquiredSystemEvent(AcceptRCInquiredSystemEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.acceptRCInquiredSystemEventWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
@@ -3883,16 +3931,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>MySQL
-     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>MySQL</li>
      * </ul>
-     * <h3><a href="#"></a>References</h3>
-     * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release an ApsaraDB RDS global active database cluster</a></p>
-     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Creates an ApsaraDB RDS global active database cluster.</p>
@@ -3959,16 +4001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engine</h3>
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>MySQL
-     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>MySQL</li>
      * </ul>
-     * <h3><a href="#"></a>References</h3>
-     * <blockquote>
-     * <p>: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release an ApsaraDB RDS global active database cluster</a></p>
-     * </blockquote>
      * 
      * <b>summary</b> : 
      * <p>Creates an ApsaraDB RDS global active database cluster.</p>
@@ -16935,6 +16971,242 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRCInstanceAttributeResponse describeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRCInstanceAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询RDS Custom实例被DDos攻击的数量</p>
+     * 
+     * @param request DescribeRCInstanceDdosCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCInstanceDdosCountResponse
+     */
+    public DescribeRCInstanceDdosCountResponse describeRCInstanceDdosCountWithOptions(DescribeRCInstanceDdosCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ddosRegionId)) {
+            query.put("DdosRegionId", request.ddosRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCInstanceDdosCount"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCInstanceDdosCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询RDS Custom实例被DDos攻击的数量</p>
+     * 
+     * @param request DescribeRCInstanceDdosCountRequest
+     * @return DescribeRCInstanceDdosCountResponse
+     */
+    public DescribeRCInstanceDdosCountResponse describeRCInstanceDdosCount(DescribeRCInstanceDdosCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCInstanceDdosCountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定实例系统事件信息</p>
+     * 
+     * @param request DescribeRCInstanceHistoryEventsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCInstanceHistoryEventsResponse
+     */
+    public DescribeRCInstanceHistoryEventsResponse describeRCInstanceHistoryEventsWithOptions(DescribeRCInstanceHistoryEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventCycleStatus)) {
+            query.put("EventCycleStatus", request.eventCycleStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventId)) {
+            query.put("EventId", request.eventId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
+            query.put("EventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.impactLevel)) {
+            query.put("ImpactLevel", request.impactLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceEventCycleStatus)) {
+            query.put("InstanceEventCycleStatus", request.instanceEventCycleStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceEventType)) {
+            query.put("InstanceEventType", request.instanceEventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventPublishTime)) {
+            query.put("EventPublishTime", request.eventPublishTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notBefore)) {
+            query.put("NotBefore", request.notBefore);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCInstanceHistoryEvents"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCInstanceHistoryEventsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定实例系统事件信息</p>
+     * 
+     * @param request DescribeRCInstanceHistoryEventsRequest
+     * @return DescribeRCInstanceHistoryEventsResponse
+     */
+    public DescribeRCInstanceHistoryEventsResponse describeRCInstanceHistoryEvents(DescribeRCInstanceHistoryEventsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCInstanceHistoryEventsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询RDS Custom实例的公网IP</p>
+     * 
+     * @param request DescribeRCInstanceIpAddressRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRCInstanceIpAddressResponse
+     */
+    public DescribeRCInstanceIpAddressResponse describeRCInstanceIpAddressWithOptions(DescribeRCInstanceIpAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ddosRegionId)) {
+            query.put("DdosRegionId", request.ddosRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ddosStatus)) {
+            query.put("DdosStatus", request.ddosStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIp)) {
+            query.put("InstanceIp", request.instanceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
+            query.put("InstanceName", request.instanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRCInstanceIpAddress"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRCInstanceIpAddressResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询RDS Custom实例的公网IP</p>
+     * 
+     * @param request DescribeRCInstanceIpAddressRequest
+     * @return DescribeRCInstanceIpAddressResponse
+     */
+    public DescribeRCInstanceIpAddressResponse describeRCInstanceIpAddress(DescribeRCInstanceIpAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRCInstanceIpAddressWithOptions(request, runtime);
     }
 
     /**
@@ -31308,8 +31580,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supported database engine</p>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>流量切换</p>
+     * <p>Performs a zero-downtime workload switchover after the major engine version upgrade of an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request SwitchOverMajorVersionUpgradeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31356,8 +31634,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Supported database engine</p>
+     * <ul>
+     * <li>PostgreSQL</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>流量切换</p>
+     * <p>Performs a zero-downtime workload switchover after the major engine version upgrade of an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request SwitchOverMajorVersionUpgradeRequest
      * @return SwitchOverMajorVersionUpgradeResponse
