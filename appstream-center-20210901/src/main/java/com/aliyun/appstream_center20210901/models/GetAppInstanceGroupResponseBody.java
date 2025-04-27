@@ -537,6 +537,47 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
     }
 
+    public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Scope")
+        public String scope;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags build(java.util.Map<String, ?> map) throws Exception {
+            GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags self = new GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModels extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
@@ -740,6 +781,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> tags;
 
         public static GetAppInstanceGroupResponseBodyAppInstanceGroupModels build(java.util.Map<String, ?> map) throws Exception {
             GetAppInstanceGroupResponseBodyAppInstanceGroupModels self = new GetAppInstanceGroupResponseBodyAppInstanceGroupModels();
@@ -1008,6 +1052,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setTags(java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> getTags() {
+            return this.tags;
         }
 
     }
