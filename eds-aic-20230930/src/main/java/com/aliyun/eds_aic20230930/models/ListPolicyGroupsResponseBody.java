@@ -306,6 +306,80 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class ListPolicyGroupsResponseBodyPolicyGroupModelWatermark extends TeaModel {
+        @NameInMap("WatermarkColor")
+        public Integer watermarkColor;
+
+        @NameInMap("WatermarkCustomText")
+        public String watermarkCustomText;
+
+        @NameInMap("WatermarkFontSize")
+        public Integer watermarkFontSize;
+
+        @NameInMap("WatermarkSwitch")
+        public String watermarkSwitch;
+
+        @NameInMap("WatermarkTransparencyValue")
+        public Integer watermarkTransparencyValue;
+
+        @NameInMap("WatermarkTypes")
+        public java.util.List<String> watermarkTypes;
+
+        public static ListPolicyGroupsResponseBodyPolicyGroupModelWatermark build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyGroupsResponseBodyPolicyGroupModelWatermark self = new ListPolicyGroupsResponseBodyPolicyGroupModelWatermark();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark setWatermarkColor(Integer watermarkColor) {
+            this.watermarkColor = watermarkColor;
+            return this;
+        }
+        public Integer getWatermarkColor() {
+            return this.watermarkColor;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark setWatermarkCustomText(String watermarkCustomText) {
+            this.watermarkCustomText = watermarkCustomText;
+            return this;
+        }
+        public String getWatermarkCustomText() {
+            return this.watermarkCustomText;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark setWatermarkFontSize(Integer watermarkFontSize) {
+            this.watermarkFontSize = watermarkFontSize;
+            return this;
+        }
+        public Integer getWatermarkFontSize() {
+            return this.watermarkFontSize;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark setWatermarkSwitch(String watermarkSwitch) {
+            this.watermarkSwitch = watermarkSwitch;
+            return this;
+        }
+        public String getWatermarkSwitch() {
+            return this.watermarkSwitch;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark setWatermarkTransparencyValue(Integer watermarkTransparencyValue) {
+            this.watermarkTransparencyValue = watermarkTransparencyValue;
+            return this;
+        }
+        public Integer getWatermarkTransparencyValue() {
+            return this.watermarkTransparencyValue;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark setWatermarkTypes(java.util.List<String> watermarkTypes) {
+            this.watermarkTypes = watermarkTypes;
+            return this;
+        }
+        public java.util.List<String> getWatermarkTypes() {
+            return this.watermarkTypes;
+        }
+
+    }
+
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
         /**
          * <p>Specifies whether to enable the webcam redirection feature.</p>
@@ -435,6 +509,9 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         @NameInMap("SessionResolutionWidth")
         public Integer sessionResolutionWidth;
 
+        @NameInMap("Watermark")
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark watermark;
+
         public static ListPolicyGroupsResponseBodyPolicyGroupModel build(java.util.Map<String, ?> map) throws Exception {
             ListPolicyGroupsResponseBodyPolicyGroupModel self = new ListPolicyGroupsResponseBodyPolicyGroupModel();
             return TeaModel.build(map, self);
@@ -534,6 +611,14 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
         public Integer getSessionResolutionWidth() {
             return this.sessionResolutionWidth;
+        }
+
+        public ListPolicyGroupsResponseBodyPolicyGroupModel setWatermark(ListPolicyGroupsResponseBodyPolicyGroupModelWatermark watermark) {
+            this.watermark = watermark;
+            return this;
+        }
+        public ListPolicyGroupsResponseBodyPolicyGroupModelWatermark getWatermark() {
+            return this.watermark;
         }
 
     }

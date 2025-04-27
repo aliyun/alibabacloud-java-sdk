@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RenewCloudPhoneNodesRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     /**
      * <p>Specifies whether to enable the auto-renewal feature.</p>
      * <p>Valid values:</p>
@@ -54,6 +57,14 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     public static RenewCloudPhoneNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewCloudPhoneNodesRequest self = new RenewCloudPhoneNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RenewCloudPhoneNodesRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     public RenewCloudPhoneNodesRequest setAutoRenew(Boolean autoRenew) {

@@ -911,6 +911,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.netRedirectPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.netRedirectPolicy, "NetRedirectPolicy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.watermark)) {
+            request.watermarkShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.watermark, "Watermark", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cameraRedirect)) {
             body.put("CameraRedirect", request.cameraRedirect);
@@ -950,6 +954,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resolutionWidth)) {
             body.put("ResolutionWidth", request.resolutionWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkShrink)) {
+            body.put("Watermark", request.watermarkShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2569,7 +2577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</p>
+     * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</p>
      * 
      * <b>summary</b> : 
      * <p>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</p>
@@ -2608,7 +2616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client. They can then call the <a href="https://help.aliyun.com/zh/wuying-workspace/developer-reference/api-metaspace-2022-03-07-applycoordinationwithcode?spm=a2c4g.11174283.help-menu-68242.d_5_3_2_1.70e5e380fUFgOH%5C&scm=20140722.H_2863194._.OR_help-T_cn~zh-V_1">ApplyCoordinationWithCode</a> operation to initiate a coordination request, which will provide them with a connection token.</p>
+     * <p>You can call this operation to generate a collaboration code for a cloud phone accessed by your current account and share this code with other convenience users to allow them to access the same cloud phone over the desktop, mobile, or web client.</p>
      * 
      * <b>summary</b> : 
      * <p>Generates a collaboration code for the cloud phone being accessed by using the current convenience account, and shares this code with other convenience accounts to allow them to access the same cloud phone.</p>
@@ -3117,6 +3125,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.netRedirectPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.netRedirectPolicy, "NetRedirectPolicy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.watermark)) {
+            request.watermarkShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.watermark, "Watermark", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.cameraRedirect)) {
             body.put("CameraRedirect", request.cameraRedirect);
@@ -3156,6 +3168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resolutionWidth)) {
             body.put("ResolutionWidth", request.resolutionWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkShrink)) {
+            body.put("Watermark", request.watermarkShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3439,6 +3455,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public RenewCloudPhoneNodesResponse renewCloudPhoneNodesWithOptions(RenewCloudPhoneNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             body.put("AutoRenew", request.autoRenew);
@@ -3457,6 +3478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3989,6 +4011,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateInstanceGroupImageResponse updateInstanceGroupImage(UpdateInstanceGroupImageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceGroupImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例镜像</p>
+     * 
+     * @param request UpdateInstanceImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateInstanceImageResponse
+     */
+    public UpdateInstanceImageResponse updateInstanceImageWithOptions(UpdateInstanceImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
+            query.put("InstanceIdList", request.instanceIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateInstanceImage"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新实例镜像</p>
+     * 
+     * @param request UpdateInstanceImageRequest
+     * @return UpdateInstanceImageResponse
+     */
+    public UpdateInstanceImageResponse updateInstanceImage(UpdateInstanceImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateInstanceImageWithOptions(request, runtime);
     }
 
     /**

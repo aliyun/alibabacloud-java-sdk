@@ -114,6 +114,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("ResolutionWidth")
     public Integer resolutionWidth;
 
+    @NameInMap("Watermark")
+    public CreatePolicyGroupRequestWatermark watermark;
+
     public static CreatePolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyGroupRequest self = new CreatePolicyGroupRequest();
         return TeaModel.build(map, self);
@@ -197,6 +200,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public Integer getResolutionWidth() {
         return this.resolutionWidth;
+    }
+
+    public CreatePolicyGroupRequest setWatermark(CreatePolicyGroupRequestWatermark watermark) {
+        this.watermark = watermark;
+        return this;
+    }
+    public CreatePolicyGroupRequestWatermark getWatermark() {
+        return this.watermark;
     }
 
     public static class CreatePolicyGroupRequestNetRedirectPolicyRules extends TeaModel {
@@ -397,6 +408,80 @@ public class CreatePolicyGroupRequest extends TeaModel {
         }
         public java.util.List<CreatePolicyGroupRequestNetRedirectPolicyRules> getRules() {
             return this.rules;
+        }
+
+    }
+
+    public static class CreatePolicyGroupRequestWatermark extends TeaModel {
+        @NameInMap("WatermarkColor")
+        public Integer watermarkColor;
+
+        @NameInMap("WatermarkCustomText")
+        public String watermarkCustomText;
+
+        @NameInMap("WatermarkFontSize")
+        public Integer watermarkFontSize;
+
+        @NameInMap("WatermarkSwitch")
+        public String watermarkSwitch;
+
+        @NameInMap("WatermarkTransparencyValue")
+        public Integer watermarkTransparencyValue;
+
+        @NameInMap("WatermarkTypes")
+        public java.util.List<String> watermarkTypes;
+
+        public static CreatePolicyGroupRequestWatermark build(java.util.Map<String, ?> map) throws Exception {
+            CreatePolicyGroupRequestWatermark self = new CreatePolicyGroupRequestWatermark();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePolicyGroupRequestWatermark setWatermarkColor(Integer watermarkColor) {
+            this.watermarkColor = watermarkColor;
+            return this;
+        }
+        public Integer getWatermarkColor() {
+            return this.watermarkColor;
+        }
+
+        public CreatePolicyGroupRequestWatermark setWatermarkCustomText(String watermarkCustomText) {
+            this.watermarkCustomText = watermarkCustomText;
+            return this;
+        }
+        public String getWatermarkCustomText() {
+            return this.watermarkCustomText;
+        }
+
+        public CreatePolicyGroupRequestWatermark setWatermarkFontSize(Integer watermarkFontSize) {
+            this.watermarkFontSize = watermarkFontSize;
+            return this;
+        }
+        public Integer getWatermarkFontSize() {
+            return this.watermarkFontSize;
+        }
+
+        public CreatePolicyGroupRequestWatermark setWatermarkSwitch(String watermarkSwitch) {
+            this.watermarkSwitch = watermarkSwitch;
+            return this;
+        }
+        public String getWatermarkSwitch() {
+            return this.watermarkSwitch;
+        }
+
+        public CreatePolicyGroupRequestWatermark setWatermarkTransparencyValue(Integer watermarkTransparencyValue) {
+            this.watermarkTransparencyValue = watermarkTransparencyValue;
+            return this;
+        }
+        public Integer getWatermarkTransparencyValue() {
+            return this.watermarkTransparencyValue;
+        }
+
+        public CreatePolicyGroupRequestWatermark setWatermarkTypes(java.util.List<String> watermarkTypes) {
+            this.watermarkTypes = watermarkTypes;
+            return this;
+        }
+        public java.util.List<String> getWatermarkTypes() {
+            return this.watermarkTypes;
         }
 
     }

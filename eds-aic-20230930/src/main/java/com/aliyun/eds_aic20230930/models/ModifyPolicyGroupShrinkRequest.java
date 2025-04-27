@@ -120,6 +120,9 @@ public class ModifyPolicyGroupShrinkRequest extends TeaModel {
     @NameInMap("ResolutionWidth")
     public Integer resolutionWidth;
 
+    @NameInMap("Watermark")
+    public String watermarkShrink;
+
     public static ModifyPolicyGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyGroupShrinkRequest self = new ModifyPolicyGroupShrinkRequest();
         return TeaModel.build(map, self);
@@ -203,6 +206,14 @@ public class ModifyPolicyGroupShrinkRequest extends TeaModel {
     }
     public Integer getResolutionWidth() {
         return this.resolutionWidth;
+    }
+
+    public ModifyPolicyGroupShrinkRequest setWatermarkShrink(String watermarkShrink) {
+        this.watermarkShrink = watermarkShrink;
+        return this;
+    }
+    public String getWatermarkShrink() {
+        return this.watermarkShrink;
     }
 
 }
