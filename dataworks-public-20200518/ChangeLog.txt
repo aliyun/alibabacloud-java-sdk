@@ -1,3 +1,7 @@
+2025-04-27 Version: 8.0.0
+- Update API ListFiles: delete request parameters CommitStatus.
+
+
 2025-04-07 Version: 7.0.1
 - Update API ListFiles: add request parameters CommitStatus.
 

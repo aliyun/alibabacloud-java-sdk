@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListFilesRequest extends TeaModel {
-    @NameInMap("CommitStatus")
-    public Integer commitStatus;
-
     /**
      * <p>The exact matching file name. The file name of the query result is exactly the same as this parameter.</p>
      * 
@@ -156,14 +153,6 @@ public class ListFilesRequest extends TeaModel {
     public static ListFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFilesRequest self = new ListFilesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListFilesRequest setCommitStatus(Integer commitStatus) {
-        this.commitStatus = commitStatus;
-        return this;
-    }
-    public Integer getCommitStatus() {
-        return this.commitStatus;
     }
 
     public ListFilesRequest setExactFileName(String exactFileName) {
