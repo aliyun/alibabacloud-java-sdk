@@ -1,3 +1,6 @@
+2025-04-27 Version: 2.5.5
+- Generated java 2019-09-10 for ROS.
+
 2025-04-18 Version: 2.5.4
 - Update API GetTemplateParameterConstraints: add response parameters Body.ParameterConstraints.$.OriginalConstraints.$.PropertiesData.
 - Update API GetTemplateParameterConstraints: add response parameters Body.ParameterConstraints.$.OriginalConstraints.$.RequestInfo.

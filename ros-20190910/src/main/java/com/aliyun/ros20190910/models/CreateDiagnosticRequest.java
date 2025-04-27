@@ -7,6 +7,7 @@ public class CreateDiagnosticRequest extends TeaModel {
     /**
      * <p>The keyword in the diagnosis.</p>
      * <p>You can specify the ID of the stack that you want to diagnose.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>37A5679B-8488-5A5D-8D5C-90E66A577A5D</p>
