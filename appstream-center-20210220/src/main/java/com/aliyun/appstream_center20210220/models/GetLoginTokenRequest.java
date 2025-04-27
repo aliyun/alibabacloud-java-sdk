@@ -23,6 +23,9 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("ClientName")
+    public String clientName;
+
     /**
      * <strong>example:</strong>
      * <p>windows_\&quot;Windows 10 Pro\&quot; 10.0 (Build 22631)</p>
@@ -187,6 +190,9 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("PhoneVerifyCode")
     public String phoneVerifyCode;
 
+    @NameInMap("ProfileRegion")
+    public String profileRegion;
+
     /**
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -263,6 +269,14 @@ public class GetLoginTokenRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public GetLoginTokenRequest setClientName(String clientName) {
+        this.clientName = clientName;
+        return this;
+    }
+    public String getClientName() {
+        return this.clientName;
     }
 
     public GetLoginTokenRequest setClientOS(String clientOS) {
@@ -455,6 +469,14 @@ public class GetLoginTokenRequest extends TeaModel {
     }
     public String getPhoneVerifyCode() {
         return this.phoneVerifyCode;
+    }
+
+    public GetLoginTokenRequest setProfileRegion(String profileRegion) {
+        this.profileRegion = profileRegion;
+        return this;
+    }
+    public String getProfileRegion() {
+        return this.profileRegion;
     }
 
     public GetLoginTokenRequest setRegionId(String regionId) {

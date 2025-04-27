@@ -48,6 +48,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AvailableFeatures", request.availableFeaturesShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientIp)) {
+            query.put("ClientIp", request.clientIp);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientChannel)) {
             body.put("ClientChannel", request.clientChannel);
@@ -55,10 +59,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             body.put("ClientId", request.clientId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.clientIp)) {
-            body.put("ClientIp", request.clientIp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientOS)) {
@@ -138,6 +138,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
             query.put("ClientId", request.clientId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientName)) {
+            query.put("ClientName", request.clientName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientOS)) {
@@ -234,6 +238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.phoneVerifyCode)) {
             query.put("PhoneVerifyCode", request.phoneVerifyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.profileRegion)) {
+            query.put("ProfileRegion", request.profileRegion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

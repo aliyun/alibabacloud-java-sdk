@@ -84,6 +84,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("NextStage")
     public String nextStage;
 
+    @NameInMap("NickName")
+    public String nickName;
+
     @NameInMap("OfficeSites")
     public java.util.List<String> officeSites;
 
@@ -275,6 +278,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getNextStage() {
         return this.nextStage;
+    }
+
+    public GetLoginTokenResponseBody setNickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+    public String getNickName() {
+        return this.nickName;
     }
 
     public GetLoginTokenResponseBody setOfficeSites(java.util.List<String> officeSites) {

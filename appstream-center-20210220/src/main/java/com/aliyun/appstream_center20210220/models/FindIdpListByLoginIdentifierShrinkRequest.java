@@ -21,10 +21,6 @@ public class FindIdpListByLoginIdentifierShrinkRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>22.21.XX.XX</p>
-     */
     @NameInMap("ClientIp")
     public String clientIp;
 
