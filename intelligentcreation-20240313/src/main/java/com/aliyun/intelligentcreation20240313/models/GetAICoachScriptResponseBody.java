@@ -148,6 +148,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("sampleDialogueList")
     public java.util.List<GetAICoachScriptResponseBodySampleDialogueList> sampleDialogueList;
 
+    @NameInMap("scoreConfig")
+    public GetAICoachScriptResponseBodyScoreConfig scoreConfig;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -419,6 +422,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
     public java.util.List<GetAICoachScriptResponseBodySampleDialogueList> getSampleDialogueList() {
         return this.sampleDialogueList;
+    }
+
+    public GetAICoachScriptResponseBody setScoreConfig(GetAICoachScriptResponseBodyScoreConfig scoreConfig) {
+        this.scoreConfig = scoreConfig;
+        return this;
+    }
+    public GetAICoachScriptResponseBodyScoreConfig getScoreConfig() {
+        return this.scoreConfig;
     }
 
     public GetAICoachScriptResponseBody setScriptRecordId(String scriptRecordId) {
@@ -1143,6 +1154,36 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyScoreConfig extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("passScore")
+        public String passScore;
+
+        public static GetAICoachScriptResponseBodyScoreConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyScoreConfig self = new GetAICoachScriptResponseBodyScoreConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyScoreConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetAICoachScriptResponseBodyScoreConfig setPassScore(String passScore) {
+            this.passScore = passScore;
+            return this;
+        }
+        public String getPassScore() {
+            return this.passScore;
         }
 
     }
