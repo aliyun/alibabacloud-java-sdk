@@ -23,6 +23,12 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the resource group to which the instances belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzu74zjgdu4mq</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

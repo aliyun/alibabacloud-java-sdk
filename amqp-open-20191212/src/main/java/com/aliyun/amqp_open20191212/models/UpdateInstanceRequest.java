@@ -5,16 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceRequest extends TeaModel {
     /**
+     * <p>The client token.</p>
+     * 
      * <strong>example:</strong>
      * <p>c2c5d1274axxxxxxxx</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>实例是否开通数据存储加密功能</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EncryptedInstance")
     public Boolean encryptedInstance;
 
     /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +33,14 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance edition. Valid values for subscription instances:</p>
+     * <ul>
+     * <li>professional: Professional Edition</li>
+     * <li>enterprise: Enterprise Edition</li>
+     * <li>vip: Enterprise Platinum Edition.</li>
+     * </ul>
+     * <p>If your instance is a pay-as-you-go instance, you do not need to configure this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>professional</p>
      */
@@ -31,13 +48,17 @@ public class UpdateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>使用同地域下KMS密钥ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>key-xxx</p>
+     * <p>key-bjj66c2a893vmhawtq5fd</p>
      */
     @NameInMap("KmsKeyId")
     public String kmsKeyId;
 
     /**
+     * <p>The maximum number of connections that can be created on the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -45,6 +66,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Integer maxConnections;
 
     /**
+     * <p>The peak TPS for accessing the instance over the Internet.</p>
+     * 
      * <strong>example:</strong>
      * <p>128</p>
      */
@@ -52,6 +75,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Long maxEipTps;
 
     /**
+     * <p>The peak transactions per second (TPS) for accessing the instance in a virtual private cloud (VPC).</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -59,6 +84,11 @@ public class UpdateInstanceRequest extends TeaModel {
     public Long maxPrivateTps;
 
     /**
+     * <p>The type of the configuration change. Valid values:</p>
+     * <ul>
+     * <li>UPGRADE</li>
+     * <li>DOWNGRADE</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +98,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String modifyType;
 
     /**
+     * <p>The maximum number of queues that can be created on the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -75,6 +107,11 @@ public class UpdateInstanceRequest extends TeaModel {
     public Integer queueCapacity;
 
     /**
+     * <p>The billing method of the serverless instance. Valid values:</p>
+     * <ul>
+     * <li>onDemand: You are charged based on your actual usage.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>onDemand</p>
      */
@@ -82,6 +119,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public String serverlessChargeType;
 
     /**
+     * <p>The size of the storage space that can be used to store messages.</p>
+     * 
      * <strong>example:</strong>
      * <p>7</p>
      */
@@ -89,6 +128,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Integer storageSize;
 
     /**
+     * <p>Specifies whether elastic IP addresses (EIPs) are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -96,6 +137,8 @@ public class UpdateInstanceRequest extends TeaModel {
     public Boolean supportEip;
 
     /**
+     * <p>Specifies whether to enable the message trace feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -103,6 +146,14 @@ public class UpdateInstanceRequest extends TeaModel {
     public Boolean supportTracing;
 
     /**
+     * <p>The retention period of message traces.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>3</li>
+     * <li>7</li>
+     * <li>15</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */

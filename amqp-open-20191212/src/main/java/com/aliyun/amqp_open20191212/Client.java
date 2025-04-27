@@ -256,6 +256,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.encryptedInstance)) {
             query.put("EncryptedInstance", request.encryptedInstance);
         }
@@ -294,6 +298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodCycle)) {
             query.put("PeriodCycle", request.periodCycle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedCapacity)) {
+            query.put("ProvisionedCapacity", request.provisionedCapacity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueCapacity)) {
@@ -1272,7 +1280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变更实例，升降配</p>
+     * <p>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1360,7 +1368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变更实例，升降配</p>
+     * <p>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</p>
      * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse

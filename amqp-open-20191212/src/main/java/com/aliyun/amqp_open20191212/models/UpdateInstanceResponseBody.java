@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The returned data, which includes orderId and instanceId. Sample returned data:</p>
+     * <pre><code class="language-json">&quot;Data&quot;: {
+     *     &quot;instanceId&quot;: &quot;amqp-cn-xxxxx&quot;,
+     *     &quot;orderId&quot;: 22222
+     *   }
+     * </code></pre>
+     * 
      * <strong>example:</strong>
      * <p>{“instanceId”: “amqp-cn-jtexxxxx”, “orderId”: 2222222}</p>
      */
@@ -19,6 +28,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public Object data;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>InstanceNotExist</p>
      */
@@ -26,6 +37,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>628705FD-03EE-4ABE-BB21-E1672960***</p>
      */
@@ -33,6 +46,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -40,6 +55,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public String statusCode;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

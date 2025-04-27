@@ -12,7 +12,7 @@ public class CreateAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5t8be*******tEJ6vfo</p>
+     * <p>yourAccessKeyID</p>
      */
     @NameInMap("accountAccessKey")
     public String accountAccessKey;
@@ -46,7 +46,7 @@ public class CreateAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>4c1a6367ce4c4255e9617326f9133ac6359533f6</p>
+     * <p>4c1a6367ce4c4255e9617326f9133ac635******</p>
      */
     @NameInMap("secretSign")
     public String secretSign;
@@ -57,7 +57,7 @@ public class CreateAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>22c2d7d1769cb53c5a6d9213248e2de524c4f799</p>
+     * <p>22c2d7d1769cb53c5a6d9213248e2de524******</p>
      */
     @NameInMap("signature")
     public String signature;
@@ -68,7 +68,7 @@ public class CreateAccountRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>MjphbXFwLWNuLXp***********************Q4YmVNbVZNMWVSWnRFSjZ2Zm8=</p>
+     * <p>Mjo****************</p>
      */
     @NameInMap("userName")
     public String userName;

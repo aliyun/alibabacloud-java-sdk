@@ -18,7 +18,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The auto-renewal duration. Unit: months.</p>
+     * <p>The auto-renewal period. The unit of the auto-renewal period is specified by RenewalDurationUnit. Default value: Month.</p>
      * <blockquote>
      * <p> This parameter takes effect only if you set AutoRenew to true. Default value: 1.</p>
      * </blockquote>
@@ -38,11 +38,20 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
+     * <p>Specifies whether to enable storage encryption for the instance. This parameter is available only for exclusive instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EncryptedInstance")
     public Boolean encryptedInstance;
 
     /**
-     * <p>The instance name. We recommend that you specify a name that does not exceed 64 characters in length.</p>
+     * <p>The name of the instance. We recommend that you specify a name that does not exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>amqp-xxxxx</p>
@@ -51,12 +60,13 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The instance edition. Valid values:</p>
+     * <p>The instance edition. Valid values if you create a subscription instance:</p>
      * <ul>
-     * <li>professional: Professional Edition</li>
+     * <li>professional: Professional Edition.</li>
      * <li>enterprise: Enterprise Edition</li>
      * <li>vip: Enterprise Platinum Edition</li>
      * </ul>
+     * <p>If you create a serverless instance, you do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>professional</p>
@@ -65,6 +75,15 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The ID of the Key Management Service (KMS)-managed key used for storage encryption. This parameter is available only for exclusive instances and required only if you set EncryptedInstance to true. The key must meet the following conditions:</p>
+     * <ul>
+     * <li>The key cannot be a service key.</li>
+     * <li>The key must be in the Enabled state.</li>
+     * <li>The key must be a symmetric key.</li>
+     * <li>The key must be used for encryption and decryption.</li>
+     * <li>After the key is expired or deleted, you cannot read or write data and exceptions can occur in the ApsaraMQ for RabbitMQ instance.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>key-xxx</p>
      */
@@ -72,7 +91,8 @@ public class CreateInstanceRequest extends TeaModel {
     public String kmsKeyId;
 
     /**
-     * <p>The maximum number of connections that can be established to the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * <p>The maximum number of connections that can be established to the instance.</p>
+     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>50000</p>
@@ -81,7 +101,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer maxConnections;
 
     /**
-     * <p>The maximum number of EIP-based TPS on the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * <p>The maximum number of Internet-based TPS on the instance.</p>
+     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -90,7 +111,8 @@ public class CreateInstanceRequest extends TeaModel {
     public Long maxEipTps;
 
     /**
-     * <p>The maximum number of virtual private cloud (VPC)-based transactions per second (TPS) on the instance. Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
+     * <p>The maximum number of virtual private cloud (VPC)-based transactions per second (TPS) on the instance.</p>
+     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -99,13 +121,11 @@ public class CreateInstanceRequest extends TeaModel {
     public Long maxPrivateTps;
 
     /**
-     * <p>The billing method. Valid value:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li>Subscription</li>
+     * <li>Subscription: subscription instance</li>
+     * <li>PayAsYouGo: serverless instance</li>
      * </ul>
-     * <blockquote>
-     * <p> API operations provided by ApsaraMQ for RabbitMQ are supported only by subscription instances. You can set this parameter only to Subscription.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,9 +152,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <li>Month</li>
      * <li>Year</li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter takes effect only if you set PaymentType to Subscription. Default value: Month.</p>
-     * </blockquote>
+     * <p>This parameter is valid only if you set PaymentType to Subscription. Default value: Month.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -142,13 +160,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("PeriodCycle")
     public String periodCycle;
 
+    @NameInMap("ProvisionedCapacity")
+    public Integer provisionedCapacity;
+
     /**
-     * <p>The number of queues. Valid values:</p>
-     * <ul>
-     * <li>Professional Edition: 50 to 1000. The number of queues must increase in increments of 5.</li>
-     * <li>Enterprise Edition: 200 to 6000. The number of queues must increase in increments of 100.</li>
-     * <li>Enterprise Platinum Edition: 10000 to 80000. The number of queues must increase in increments of 100.</li>
-     * </ul>
+     * <p>The number of queues on the instance.</p>
+     * <p>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -162,7 +179,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <li>AutoRenewal</li>
      * </ul>
      * <blockquote>
-     * <p>If you configure both this parameter and AutoRenew, the value of this parameter is used.</p>
+     * <p> If you configure both this parameter and AutoRenew, the value of this parameter is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -184,13 +201,19 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("RenewalDurationUnit")
     public String renewalDurationUnit;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmvvajg5qkxhi</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The billing method of the pay-as-you-go instance. Valid values:</p>
+     * <p>The billing method of the serverless instance. Valid value:</p>
      * <ul>
-     * <li>onDemand: You are charged based on your actual usage</li>
+     * <li>onDemand: You are charged based on your actual usage.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -202,13 +225,13 @@ public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>The storage capacity. Unit: GB. Valid values:</p>
      * <ul>
-     * <li>Professional Edition and Enterprise Edition instances: Set this parameter to 0.</li>
+     * <li>Professional Edition and Enterprise Edition instances: Set the value to 0.</li>
      * </ul>
      * <blockquote>
      * <p> The value 0 specifies that storage space is available for Professional Edition and Enterprise Edition instances, but no storage fees are generated.</p>
      * </blockquote>
      * <ul>
-     * <li>Platinum Edition instances: Set the value to m × 100, where m ranges from 7 to 28.</li>
+     * <li>Enterprise Platinum Edition instances: Set the value to m × 100, where m is an integer that ranges from 7 to 28.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -239,7 +262,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <blockquote>
      * </blockquote>
      * <ul>
-     * <li><p>Enterprise Platinum Edition instances allow you to retain message traces for 15 days free of charge. If you use an Enterprise Platinum Edition instance, you can set this parameter only to true and TracingStorageTime only to 15.</p>
+     * <li><p>Enterprise Platinum Edition instances allow you to retain message traces for 15 days free of charge. If you create an Enterprise Platinum Edition instance, you can set this parameter only to true and TracingStorageTime only to 15.</p>
      * </li>
      * <li><p>For instances of other editions, you can set this parameter to true or false.</p>
      * </li>
@@ -258,9 +281,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <li>7</li>
      * <li>15</li>
      * </ul>
-     * <blockquote>
-     * <p> This parameter takes effect only if you set SupportTracing to true.</p>
-     * </blockquote>
+     * <p>This parameter is valid only if you set SupportTracing to true.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -295,6 +316,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateInstanceRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public CreateInstanceRequest setEncryptedInstance(Boolean encryptedInstance) {
@@ -375,6 +404,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPeriodCycle() {
         return this.periodCycle;
+    }
+
+    public CreateInstanceRequest setProvisionedCapacity(Integer provisionedCapacity) {
+        this.provisionedCapacity = provisionedCapacity;
+        return this;
+    }
+    public Integer getProvisionedCapacity() {
+        return this.provisionedCapacity;
     }
 
     public CreateInstanceRequest setQueueCapacity(Integer queueCapacity) {

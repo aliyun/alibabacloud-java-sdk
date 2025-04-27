@@ -96,7 +96,7 @@ public class CreateAccountResponseBody extends TeaModel {
          * <p>The AccessKey ID that is used to create the password.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI5***********eRZtEJ6vfo</p>
+         * <p>LTAI****************</p>
          */
         @NameInMap("AccessKey")
         public String accessKey;

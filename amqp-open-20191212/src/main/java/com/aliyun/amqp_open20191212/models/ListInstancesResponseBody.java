@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListInstancesResponseBodyData data;
@@ -42,7 +42,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataInstancesTags extends TeaModel {
         /**
-         * <p>标签键。</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>region</p>
@@ -51,7 +51,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>标签值。</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>hangzhou</p>
@@ -101,6 +101,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
+        /**
+         * <p>Indicates whether the encryption at rest feature is enabled for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EncryptedInstance")
         public Boolean encryptedInstance;
 
@@ -145,6 +151,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key used for the data disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-bjj66c2a893vmhawtq5fd</p>
+         */
         @NameInMap("KmsKeyId")
         public String kmsKeyId;
 
@@ -224,6 +236,12 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("PublicEndpoint")
         public String publicEndpoint;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek3axfj2w4czrq</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -264,7 +282,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public Boolean supportEIP;
 
         /**
-         * <p>标签列表。</p>
+         * <p>The tags that are added to the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListInstancesResponseBodyDataInstancesTags> tags;

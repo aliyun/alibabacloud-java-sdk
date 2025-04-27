@@ -8,7 +8,7 @@ public class DataValue extends TeaModel {
      * <p>The Alibaba Cloud account ID or Resource Access Management (RAM) user to which the AccessKey pair that is used to create the static username and password belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>1565*******973901</p>
+     * <p>1565************1</p>
      */
     @NameInMap("masterUid")
     public Long masterUid;
@@ -26,7 +26,7 @@ public class DataValue extends TeaModel {
      * <p>The AccessKey ID that is used to create the static username and password.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI5***********eRZtEJ6vfo</p>
+     * <p>LTAI****************</p>
      */
     @NameInMap("accessKey")
     public String accessKey;
