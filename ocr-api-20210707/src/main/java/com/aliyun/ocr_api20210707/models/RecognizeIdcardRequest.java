@@ -4,6 +4,9 @@ package com.aliyun.ocr_api20210707.models;
 import com.aliyun.tea.*;
 
 public class RecognizeIdcardRequest extends TeaModel {
+    @NameInMap("Llm_rec")
+    public Boolean llmRec;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -31,6 +34,14 @@ public class RecognizeIdcardRequest extends TeaModel {
     public static RecognizeIdcardRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeIdcardRequest self = new RecognizeIdcardRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeIdcardRequest setLlmRec(Boolean llmRec) {
+        this.llmRec = llmRec;
+        return this;
+    }
+    public Boolean getLlmRec() {
+        return this.llmRec;
     }
 
     public RecognizeIdcardRequest setOutputFigure(Boolean outputFigure) {

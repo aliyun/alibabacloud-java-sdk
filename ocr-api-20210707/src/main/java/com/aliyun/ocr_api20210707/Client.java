@@ -2091,6 +2091,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RecognizeIdcardResponse recognizeIdcardWithOptions(RecognizeIdcardRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.llmRec)) {
+            query.put("Llm_rec", request.llmRec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outputFigure)) {
             query.put("OutputFigure", request.outputFigure);
         }

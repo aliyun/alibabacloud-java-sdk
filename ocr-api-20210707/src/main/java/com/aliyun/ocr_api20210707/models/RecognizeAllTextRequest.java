@@ -376,6 +376,9 @@ public class RecognizeAllTextRequest extends TeaModel {
     }
 
     public static class RecognizeAllTextRequestIdCardConfig extends TeaModel {
+        @NameInMap("Llm_rec")
+        public Boolean llmRec;
+
         /**
          * <strong>example:</strong>
          * <p>false</p>
@@ -386,6 +389,14 @@ public class RecognizeAllTextRequest extends TeaModel {
         public static RecognizeAllTextRequestIdCardConfig build(java.util.Map<String, ?> map) throws Exception {
             RecognizeAllTextRequestIdCardConfig self = new RecognizeAllTextRequestIdCardConfig();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeAllTextRequestIdCardConfig setLlmRec(Boolean llmRec) {
+            this.llmRec = llmRec;
+            return this;
+        }
+        public Boolean getLlmRec() {
+            return this.llmRec;
         }
 
         public RecognizeAllTextRequestIdCardConfig setOutputIdCardQuality(Boolean outputIdCardQuality) {
