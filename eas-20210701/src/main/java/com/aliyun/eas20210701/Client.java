@@ -3767,6 +3767,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("QuotaId", request.quotaId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceAliasName)) {
+            query.put("ResourceAliasName", request.resourceAliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
             query.put("ResourceName", request.resourceName);
         }

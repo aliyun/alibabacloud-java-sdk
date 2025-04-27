@@ -89,6 +89,12 @@ public class ListServicesRequest extends TeaModel {
     @NameInMap("QuotaId")
     public String quotaId;
 
+    @NameInMap("ResourceAliasName")
+    public String resourceAliasName;
+
+    @NameInMap("ResourceId")
+    public String resourceId;
+
     /**
      * <p>The name or ID of the resource group to which the service belongs.</p>
      * 
@@ -96,6 +102,7 @@ public class ListServicesRequest extends TeaModel {
      * <p>eas-r-hd0qwy8cxxxx</p>
      */
     @NameInMap("ResourceName")
+    @Deprecated
     public String resourceName;
 
     @NameInMap("ResourceType")
@@ -425,6 +432,23 @@ public class ListServicesRequest extends TeaModel {
         return this.quotaId;
     }
 
+    public ListServicesRequest setResourceAliasName(String resourceAliasName) {
+        this.resourceAliasName = resourceAliasName;
+        return this;
+    }
+    public String getResourceAliasName() {
+        return this.resourceAliasName;
+    }
+
+    public ListServicesRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    @Deprecated
     public ListServicesRequest setResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
