@@ -1978,12 +1978,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CategoryIds", request.categoryIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkMode)) {
+            query.put("ChunkMode", request.chunkMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkSize)) {
+            query.put("ChunkSize", request.chunkSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.documentIdsShrink)) {
             query.put("DocumentIds", request.documentIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.indexId)) {
             query.put("IndexId", request.indexId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.overlapSize)) {
+            query.put("OverlapSize", request.overlapSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.separator)) {
+            query.put("Separator", request.separator);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {

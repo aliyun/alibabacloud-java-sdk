@@ -10,6 +10,12 @@ public class SubmitIndexAddDocumentsJobShrinkRequest extends TeaModel {
     @NameInMap("CategoryIds")
     public String categoryIdsShrink;
 
+    @NameInMap("ChunkMode")
+    public String chunkMode;
+
+    @NameInMap("ChunkSize")
+    public Integer chunkSize;
+
     /**
      * <p>The list of the primary key IDs of the documents.</p>
      */
@@ -25,6 +31,12 @@ public class SubmitIndexAddDocumentsJobShrinkRequest extends TeaModel {
      */
     @NameInMap("IndexId")
     public String indexId;
+
+    @NameInMap("OverlapSize")
+    public Integer overlapSize;
+
+    @NameInMap("Separator")
+    public String separator;
 
     /**
      * <p>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</p>
@@ -56,6 +68,22 @@ public class SubmitIndexAddDocumentsJobShrinkRequest extends TeaModel {
         return this.categoryIdsShrink;
     }
 
+    public SubmitIndexAddDocumentsJobShrinkRequest setChunkMode(String chunkMode) {
+        this.chunkMode = chunkMode;
+        return this;
+    }
+    public String getChunkMode() {
+        return this.chunkMode;
+    }
+
+    public SubmitIndexAddDocumentsJobShrinkRequest setChunkSize(Integer chunkSize) {
+        this.chunkSize = chunkSize;
+        return this;
+    }
+    public Integer getChunkSize() {
+        return this.chunkSize;
+    }
+
     public SubmitIndexAddDocumentsJobShrinkRequest setDocumentIdsShrink(String documentIdsShrink) {
         this.documentIdsShrink = documentIdsShrink;
         return this;
@@ -70,6 +98,22 @@ public class SubmitIndexAddDocumentsJobShrinkRequest extends TeaModel {
     }
     public String getIndexId() {
         return this.indexId;
+    }
+
+    public SubmitIndexAddDocumentsJobShrinkRequest setOverlapSize(Integer overlapSize) {
+        this.overlapSize = overlapSize;
+        return this;
+    }
+    public Integer getOverlapSize() {
+        return this.overlapSize;
+    }
+
+    public SubmitIndexAddDocumentsJobShrinkRequest setSeparator(String separator) {
+        this.separator = separator;
+        return this;
+    }
+    public String getSeparator() {
+        return this.separator;
     }
 
     public SubmitIndexAddDocumentsJobShrinkRequest setSourceType(String sourceType) {
