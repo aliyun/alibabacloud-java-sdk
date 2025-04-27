@@ -98,6 +98,9 @@ public class CreateApprovalProcessRequest extends TeaModel {
         @NameInMap("DomainWhitelistSchemaId")
         public String domainWhitelistSchemaId;
 
+        @NameInMap("EndpointHardeningSchemaId")
+        public String endpointHardeningSchemaId;
+
         /**
          * <strong>example:</strong>
          * <p>approval-schema-090134f1ebff****</p>
@@ -111,6 +114,9 @@ public class CreateApprovalProcessRequest extends TeaModel {
          */
         @NameInMap("SoftwareBlockSchemaId")
         public String softwareBlockSchemaId;
+
+        @NameInMap("SoftwareHardeningSchemaId")
+        public String softwareHardeningSchemaId;
 
         public static CreateApprovalProcessRequestMatchSchemas build(java.util.Map<String, ?> map) throws Exception {
             CreateApprovalProcessRequestMatchSchemas self = new CreateApprovalProcessRequestMatchSchemas();
@@ -157,6 +163,14 @@ public class CreateApprovalProcessRequest extends TeaModel {
             return this.domainWhitelistSchemaId;
         }
 
+        public CreateApprovalProcessRequestMatchSchemas setEndpointHardeningSchemaId(String endpointHardeningSchemaId) {
+            this.endpointHardeningSchemaId = endpointHardeningSchemaId;
+            return this;
+        }
+        public String getEndpointHardeningSchemaId() {
+            return this.endpointHardeningSchemaId;
+        }
+
         public CreateApprovalProcessRequestMatchSchemas setPeripheralBlockSchemaId(String peripheralBlockSchemaId) {
             this.peripheralBlockSchemaId = peripheralBlockSchemaId;
             return this;
@@ -171,6 +185,14 @@ public class CreateApprovalProcessRequest extends TeaModel {
         }
         public String getSoftwareBlockSchemaId() {
             return this.softwareBlockSchemaId;
+        }
+
+        public CreateApprovalProcessRequestMatchSchemas setSoftwareHardeningSchemaId(String softwareHardeningSchemaId) {
+            this.softwareHardeningSchemaId = softwareHardeningSchemaId;
+            return this;
+        }
+        public String getSoftwareHardeningSchemaId() {
+            return this.softwareHardeningSchemaId;
         }
 
     }

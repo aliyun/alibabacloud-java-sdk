@@ -220,6 +220,36 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     }
 
+    public static class ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies extends TeaModel {
+        @NameInMap("PolicyIds")
+        public java.util.List<String> policyIds;
+
+        @NameInMap("SchemaId")
+        public String schemaId;
+
+        public static ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies self = new ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies setPolicyIds(java.util.List<String> policyIds) {
+            this.policyIds = policyIds;
+            return this;
+        }
+        public java.util.List<String> getPolicyIds() {
+            return this.policyIds;
+        }
+
+        public ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies setSchemaId(String schemaId) {
+            this.schemaId = schemaId;
+            return this;
+        }
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+    }
+
     public static class ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies extends TeaModel {
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
@@ -322,6 +352,36 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
     }
 
+    public static class ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies extends TeaModel {
+        @NameInMap("PolicyIds")
+        public java.util.List<String> policyIds;
+
+        @NameInMap("SchemaId")
+        public String schemaId;
+
+        public static ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies self = new ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies setPolicyIds(java.util.List<String> policyIds) {
+            this.policyIds = policyIds;
+            return this;
+        }
+        public java.util.List<String> getPolicyIds() {
+            return this.policyIds;
+        }
+
+        public ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies setSchemaId(String schemaId) {
+            this.schemaId = schemaId;
+            return this;
+        }
+        public String getSchemaId() {
+            return this.schemaId;
+        }
+
+    }
+
     public static class ListApprovalProcessesResponseBodyProcesses extends TeaModel {
         @NameInMap("AppUninstallPolicies")
         public ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies appUninstallPolicies;
@@ -348,6 +408,9 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         @NameInMap("DomainWhitelistPolicies")
         public ListApprovalProcessesResponseBodyProcessesDomainWhitelistPolicies domainWhitelistPolicies;
 
+        @NameInMap("EndpointHardeningPolicies")
+        public ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies endpointHardeningPolicies;
+
         @NameInMap("PeripheralBlockPolicies")
         public ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies peripheralBlockPolicies;
 
@@ -366,6 +429,9 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
 
         @NameInMap("SoftwareBlockPolicies")
         public ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies softwareBlockPolicies;
+
+        @NameInMap("SoftwareHardeningPolicies")
+        public ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies softwareHardeningPolicies;
 
         public static ListApprovalProcessesResponseBodyProcesses build(java.util.Map<String, ?> map) throws Exception {
             ListApprovalProcessesResponseBodyProcesses self = new ListApprovalProcessesResponseBodyProcesses();
@@ -428,6 +494,14 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
             return this.domainWhitelistPolicies;
         }
 
+        public ListApprovalProcessesResponseBodyProcesses setEndpointHardeningPolicies(ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies endpointHardeningPolicies) {
+            this.endpointHardeningPolicies = endpointHardeningPolicies;
+            return this;
+        }
+        public ListApprovalProcessesResponseBodyProcessesEndpointHardeningPolicies getEndpointHardeningPolicies() {
+            return this.endpointHardeningPolicies;
+        }
+
         public ListApprovalProcessesResponseBodyProcesses setPeripheralBlockPolicies(ListApprovalProcessesResponseBodyProcessesPeripheralBlockPolicies peripheralBlockPolicies) {
             this.peripheralBlockPolicies = peripheralBlockPolicies;
             return this;
@@ -466,6 +540,14 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         }
         public ListApprovalProcessesResponseBodyProcessesSoftwareBlockPolicies getSoftwareBlockPolicies() {
             return this.softwareBlockPolicies;
+        }
+
+        public ListApprovalProcessesResponseBodyProcesses setSoftwareHardeningPolicies(ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies softwareHardeningPolicies) {
+            this.softwareHardeningPolicies = softwareHardeningPolicies;
+            return this;
+        }
+        public ListApprovalProcessesResponseBodyProcessesSoftwareHardeningPolicies getSoftwareHardeningPolicies() {
+            return this.softwareHardeningPolicies;
         }
 
     }
