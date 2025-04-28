@@ -26,6 +26,13 @@ public class GetRangeResponseBody extends TeaModel {
     public java.util.List<java.util.List<String>> formulas;
 
     /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
+    @NameInMap("hyperlinks")
+    public java.util.List<java.util.List<GetRangeResponseBodyHyperlinks>> hyperlinks;
+
+    /**
      * <p>requestId</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +75,14 @@ public class GetRangeResponseBody extends TeaModel {
     }
     public java.util.List<java.util.List<String>> getFormulas() {
         return this.formulas;
+    }
+
+    public GetRangeResponseBody setHyperlinks(java.util.List<java.util.List<GetRangeResponseBodyHyperlinks>> hyperlinks) {
+        this.hyperlinks = hyperlinks;
+        return this;
+    }
+    public java.util.List<java.util.List<GetRangeResponseBodyHyperlinks>> getHyperlinks() {
+        return this.hyperlinks;
     }
 
     public GetRangeResponseBody setRequestId(String requestId) {
@@ -158,6 +173,47 @@ public class GetRangeResponseBody extends TeaModel {
         }
         public String getHexString() {
             return this.hexString;
+        }
+
+    }
+
+    public static class GetRangeResponseBodyHyperlinks extends TeaModel {
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("link")
+        public String link;
+
+        @NameInMap("text")
+        public String text;
+
+        public static GetRangeResponseBodyHyperlinks build(java.util.Map<String, ?> map) throws Exception {
+            GetRangeResponseBodyHyperlinks self = new GetRangeResponseBodyHyperlinks();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRangeResponseBodyHyperlinks setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetRangeResponseBodyHyperlinks setLink(String link) {
+            this.link = link;
+            return this;
+        }
+        public String getLink() {
+            return this.link;
+        }
+
+        public GetRangeResponseBodyHyperlinks setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
         }
 
     }

@@ -32,6 +32,9 @@ public class CreateRunResponseBody extends TeaModel {
     @NameInMap("createAt")
     public Long createAt;
 
+    @NameInMap("data")
+    public CreateRunResponseBodyData data;
+
     /**
      * <strong>example:</strong>
      * <p>{}</p>
@@ -144,6 +147,14 @@ public class CreateRunResponseBody extends TeaModel {
     }
     public Long getCreateAt() {
         return this.createAt;
+    }
+
+    public CreateRunResponseBody setData(CreateRunResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateRunResponseBodyData getData() {
+        return this.data;
     }
 
     public CreateRunResponseBody setDelta(CreateRunResponseBodyDelta delta) {
@@ -542,6 +553,359 @@ public class CreateRunResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyDataContentCardCallback extends TeaModel {
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("templateId")
+        public String templateId;
+
+        @NameInMap("userId")
+        public String userId;
+
+        public static CreateRunResponseBodyDataContentCardCallback build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyDataContentCardCallback self = new CreateRunResponseBodyDataContentCardCallback();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyDataContentCardCallback setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateRunResponseBodyDataContentCardCallback setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public CreateRunResponseBodyDataContentCardCallback setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyDataContentDingCard extends TeaModel {
+        @NameInMap("cardDesc")
+        public String cardDesc;
+
+        @NameInMap("content")
+        public String content;
+
+        @NameInMap("contentType")
+        public String contentType;
+
+        @NameInMap("finished")
+        public Boolean finished;
+
+        @NameInMap("templateId")
+        public String templateId;
+
+        public static CreateRunResponseBodyDataContentDingCard build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyDataContentDingCard self = new CreateRunResponseBodyDataContentDingCard();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyDataContentDingCard setCardDesc(String cardDesc) {
+            this.cardDesc = cardDesc;
+            return this;
+        }
+        public String getCardDesc() {
+            return this.cardDesc;
+        }
+
+        public CreateRunResponseBodyDataContentDingCard setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateRunResponseBodyDataContentDingCard setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
+        }
+
+        public CreateRunResponseBodyDataContentDingCard setFinished(Boolean finished) {
+            this.finished = finished;
+            return this;
+        }
+        public Boolean getFinished() {
+            return this.finished;
+        }
+
+        public CreateRunResponseBodyDataContentDingCard setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyDataContentImageUrl extends TeaModel {
+        @NameInMap("detail")
+        public String detail;
+
+        @NameInMap("imageDesc")
+        public String imageDesc;
+
+        @NameInMap("url")
+        public String url;
+
+        public static CreateRunResponseBodyDataContentImageUrl build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyDataContentImageUrl self = new CreateRunResponseBodyDataContentImageUrl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyDataContentImageUrl setDetail(String detail) {
+            this.detail = detail;
+            return this;
+        }
+        public String getDetail() {
+            return this.detail;
+        }
+
+        public CreateRunResponseBodyDataContentImageUrl setImageDesc(String imageDesc) {
+            this.imageDesc = imageDesc;
+            return this;
+        }
+        public String getImageDesc() {
+            return this.imageDesc;
+        }
+
+        public CreateRunResponseBodyDataContentImageUrl setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyDataContentMarkdown extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
+        public static CreateRunResponseBodyDataContentMarkdown build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyDataContentMarkdown self = new CreateRunResponseBodyDataContentMarkdown();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyDataContentMarkdown setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyDataContentText extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
+        public static CreateRunResponseBodyDataContentText build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyDataContentText self = new CreateRunResponseBodyDataContentText();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyDataContentText setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyDataContent extends TeaModel {
+        @NameInMap("cardCallback")
+        public CreateRunResponseBodyDataContentCardCallback cardCallback;
+
+        @NameInMap("dingCard")
+        public CreateRunResponseBodyDataContentDingCard dingCard;
+
+        @NameInMap("imageUrl")
+        public CreateRunResponseBodyDataContentImageUrl imageUrl;
+
+        @NameInMap("markdown")
+        public CreateRunResponseBodyDataContentMarkdown markdown;
+
+        @NameInMap("text")
+        public CreateRunResponseBodyDataContentText text;
+
+        @NameInMap("type")
+        public String type;
+
+        public static CreateRunResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyDataContent self = new CreateRunResponseBodyDataContent();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyDataContent setCardCallback(CreateRunResponseBodyDataContentCardCallback cardCallback) {
+            this.cardCallback = cardCallback;
+            return this;
+        }
+        public CreateRunResponseBodyDataContentCardCallback getCardCallback() {
+            return this.cardCallback;
+        }
+
+        public CreateRunResponseBodyDataContent setDingCard(CreateRunResponseBodyDataContentDingCard dingCard) {
+            this.dingCard = dingCard;
+            return this;
+        }
+        public CreateRunResponseBodyDataContentDingCard getDingCard() {
+            return this.dingCard;
+        }
+
+        public CreateRunResponseBodyDataContent setImageUrl(CreateRunResponseBodyDataContentImageUrl imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public CreateRunResponseBodyDataContentImageUrl getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public CreateRunResponseBodyDataContent setMarkdown(CreateRunResponseBodyDataContentMarkdown markdown) {
+            this.markdown = markdown;
+            return this;
+        }
+        public CreateRunResponseBodyDataContentMarkdown getMarkdown() {
+            return this.markdown;
+        }
+
+        public CreateRunResponseBodyDataContent setText(CreateRunResponseBodyDataContentText text) {
+            this.text = text;
+            return this;
+        }
+        public CreateRunResponseBodyDataContentText getText() {
+            return this.text;
+        }
+
+        public CreateRunResponseBodyDataContent setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyData extends TeaModel {
+        @NameInMap("content")
+        public java.util.List<CreateRunResponseBodyDataContent> content;
+
+        @NameInMap("createAt")
+        public Long createAt;
+
+        @NameInMap("id")
+        public String id;
+
+        @NameInMap("metadata")
+        public java.util.Map<String, ?> metadata;
+
+        @NameInMap("object")
+        public String object;
+
+        @NameInMap("role")
+        public String role;
+
+        @NameInMap("runId")
+        public String runId;
+
+        @NameInMap("threadId")
+        public String threadId;
+
+        public static CreateRunResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyData self = new CreateRunResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyData setContent(java.util.List<CreateRunResponseBodyDataContent> content) {
+            this.content = content;
+            return this;
+        }
+        public java.util.List<CreateRunResponseBodyDataContent> getContent() {
+            return this.content;
+        }
+
+        public CreateRunResponseBodyData setCreateAt(Long createAt) {
+            this.createAt = createAt;
+            return this;
+        }
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        public CreateRunResponseBodyData setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public CreateRunResponseBodyData setMetadata(java.util.Map<String, ?> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+        public java.util.Map<String, ?> getMetadata() {
+            return this.metadata;
+        }
+
+        public CreateRunResponseBodyData setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+        public CreateRunResponseBodyData setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+        public CreateRunResponseBodyData setRunId(String runId) {
+            this.runId = runId;
+            return this;
+        }
+        public String getRunId() {
+            return this.runId;
+        }
+
+        public CreateRunResponseBodyData setThreadId(String threadId) {
+            this.threadId = threadId;
+            return this;
+        }
+        public String getThreadId() {
+            return this.threadId;
         }
 
     }
