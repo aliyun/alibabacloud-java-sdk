@@ -80,6 +80,9 @@ public class RenewDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     public static RenewDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewDesktopGroupRequest self = new RenewDesktopGroupRequest();
         return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class RenewDesktopGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RenewDesktopGroupRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
 }

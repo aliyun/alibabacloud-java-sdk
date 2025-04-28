@@ -95,6 +95,9 @@ public class RenewDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     /**
      * <blockquote>
      * <p> This field is not available for public use.</p>
@@ -165,6 +168,14 @@ public class RenewDesktopsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RenewDesktopsRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public RenewDesktopsRequest setResourceType(String resourceType) {

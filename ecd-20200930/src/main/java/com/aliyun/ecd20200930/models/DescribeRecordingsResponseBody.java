@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeRecordingsResponseBody extends TeaModel {
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nbCQ7ar+fECeh1IuWQXi39R5eoJ68zWp99mTAKRRNRhw==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The screen recording files.</p>
+     */
     @NameInMap("Recordings")
     public java.util.List<DescribeRecordingsResponseBodyRecordings> recordings;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>327CFE78-1C0D-51AC-A9C6-BCEDF0DD44D6</p>
      */
@@ -52,6 +59,8 @@ public class DescribeRecordingsResponseBody extends TeaModel {
 
     public static class DescribeRecordingsResponseBodyRecordings extends TeaModel {
         /**
+         * <p>The cloud computer ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-10v0vuvm616sk****</p>
          */
@@ -59,6 +68,8 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
+         * <p>The cloud computer name.</p>
+         * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
          */
@@ -66,16 +77,23 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
+         * <p>The end time of the recording.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-10T07:26:06Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The end user IDs.</p>
+         */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
+         * <p>The file path.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-4w5nk44zo5yl129dd/1mk78dugw344.mp4</p>
          */
@@ -83,6 +101,8 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         public String filePath;
 
         /**
+         * <p>The policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pg-6dn811rzrwh9ws4z6</p>
          */
@@ -90,6 +110,8 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         public String policyGroupId;
 
         /**
+         * <p>The size of the screen recording file. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1742845</p>
          */
@@ -97,16 +119,32 @@ public class DescribeRecordingsResponseBody extends TeaModel {
         public Integer recordingSize;
 
         /**
+         * <p>The type of event that triggers the recording.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>byaction_cmd_ft: triggered by copy-paste or file transfer events.</li>
+         * <li>period: triggered at scheduled intervals.</li>
+         * <li>session: triggered by session lifecycle monitoring.</li>
+         * <li>byaction_commands: triggered by copy-paste only.</li>
+         * <li>alltime: continuous recording.</li>
+         * <li>byaction_file_transfer: triggered by file transfer only.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>alltime</p>
          */
         @NameInMap("RecordingType")
         public String recordingType;
 
+        /**
+         * <p>The download URL of the screen recording file.</p>
+         */
         @NameInMap("SignedUrl")
         public String signedUrl;
 
         /**
+         * <p>The start time of the recording.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-04-10T07:26:06Z</p>
          */

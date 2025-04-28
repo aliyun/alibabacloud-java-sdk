@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
+    /**
+     * <p>The price details.</p>
+     */
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>72E47B1E-6B11-5A11-A27C-7A80F866****</p>
      */
@@ -37,26 +42,38 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPricePromotions extends TeaModel {
         /**
+         * <p>The description of the promotion rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
 
+        /**
+         * <p>The promotion description.</p>
+         */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>promo_option</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
+        /**
+         * <p>The promotion name.</p>
+         */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether an item is selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -112,6 +129,8 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
+         * <p>The unit of currency (USD).</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -119,26 +138,38 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discounted amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>15.8</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The orders.</p>
+         */
         @NameInMap("OrderLines")
         public java.util.Map<String, String> orderLines;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>79.0</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The promotions.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoPricePromotions> promotions;
 
         /**
+         * <p>The actual price. The actual price is the original price minus the discount.</p>
+         * 
          * <strong>example:</strong>
          * <p>63.2</p>
          */
@@ -201,10 +232,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoRules extends TeaModel {
+        /**
+         * <p>The rule description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>29644</p>
          */
@@ -235,9 +271,15 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
     }
 
     public static class DescribeRenewalPriceResponseBodyPriceInfo extends TeaModel {
+        /**
+         * <p>The price.</p>
+         */
         @NameInMap("Price")
         public DescribeRenewalPriceResponseBodyPriceInfoPrice price;
 
+        /**
+         * <p>The promotion rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<DescribeRenewalPriceResponseBodyPriceInfoRules> rules;
 

@@ -143,6 +143,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     /**
      * <p>The type of the resource.</p>
      * <p>Valid values:</p>
@@ -298,6 +301,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribePriceRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public DescribePriceRequest setResourceType(String resourceType) {

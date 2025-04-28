@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
     /**
+     * <p>The total number of resources.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
     public String count;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
@@ -19,12 +23,17 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>48174475-5EB2-5F99-A9E9-6F892D645****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resources.</p>
+     */
     @NameInMap("ResourceModelList")
     public java.util.List<DescribeResourceByCenterPolicyIdResponseBodyResourceModelList> resourceModelList;
 
@@ -67,6 +76,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
 
     public static class DescribeResourceByCenterPolicyIdResponseBodyResourceModelListAppModelList extends TeaModel {
         /**
+         * <p>The application ID. This parameter is only applicable to cloud applications.</p>
+         * 
          * <strong>example:</strong>
          * <p>18</p>
          */
@@ -74,6 +85,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The application name.</p>
+         * 
          * <strong>example:</strong>
          * <p>alipic-powergem</p>
          */
@@ -104,10 +117,15 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceByCenterPolicyIdResponseBodyResourceModelList extends TeaModel {
+        /**
+         * <p>The cloud applications.</p>
+         */
         @NameInMap("AppModelList")
         public java.util.List<DescribeResourceByCenterPolicyIdResponseBodyResourceModelListAppModelList> appModelList;
 
         /**
+         * <p>The number of vCPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>64</p>
          */
@@ -115,6 +133,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
+         * <p>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of the cloud computer types supported by Alibaba Cloud Workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.8c32g</p>
          */
@@ -122,6 +142,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String desktopType;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.125</p>
          */
@@ -129,6 +151,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public Double gpuCount;
 
         /**
+         * <p>The GPU type.</p>
+         * 
          * <strong>example:</strong>
          * <p>2GiB</p>
          */
@@ -136,6 +160,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
+         * <p>The memory size. Unit: MiB.</p>
+         * 
          * <strong>example:</strong>
          * <p>10240</p>
          */
@@ -143,6 +169,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public Long memory;
 
         /**
+         * <p>The OS type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Linux</p>
          */
@@ -150,6 +178,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String osType;
 
         /**
+         * <p>The billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>postPaid</p>
          */
@@ -157,6 +187,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String payType;
 
         /**
+         * <p>The service type.</p>
+         * 
          * <strong>example:</strong>
          * <p>desktop</p>
          */
@@ -164,6 +196,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The protocol type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ASP</p>
          */
@@ -171,6 +205,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String protocolType;
 
         /**
+         * <p>The resource group ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-d7pasxsd3b9nhq**</p>
          */
@@ -178,6 +214,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The resource group name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -185,6 +223,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String resourceGroupName;
 
         /**
+         * <p>The number of associated resource groups</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -192,16 +232,23 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public Integer resourceGroupRelCount;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-7o96aa08fr****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource name.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -209,6 +256,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>desktop</p>
          */
@@ -216,6 +265,8 @@ public class DescribeResourceByCenterPolicyIdResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The resource status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Stopped</p>
          */

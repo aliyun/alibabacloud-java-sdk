@@ -23,8 +23,8 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The usernames of AD users.\
-     * If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</p>
+     * <p>The usernames of the AD accounts.\
+     * If the only Administrator and Guest users exist in the enterprise AD directory, an empty User array is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListOfficeSiteUsersResponseBodyUsers> users;
@@ -63,7 +63,7 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         public Integer assignedDesktopNumber;
 
         /**
-         * <p>The display name of the user.</p>
+         * <p>The display name of the AD account.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -71,11 +71,14 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        @NameInMap("DisplayNameNew")
+        public String displayNameNew;
+
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The name of the AD user.</p>
+         * <p>The username of the AD account.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -85,6 +88,9 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
 
         @NameInMap("Phone")
         public String phone;
+
+        @NameInMap("UserPrincipalName")
+        public String userPrincipalName;
 
         public static ListOfficeSiteUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListOfficeSiteUsersResponseBodyUsers self = new ListOfficeSiteUsersResponseBodyUsers();
@@ -105,6 +111,14 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public ListOfficeSiteUsersResponseBodyUsers setDisplayNameNew(String displayNameNew) {
+            this.displayNameNew = displayNameNew;
+            return this;
+        }
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
         }
 
         public ListOfficeSiteUsersResponseBodyUsers setEmail(String email) {
@@ -129,6 +143,14 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public ListOfficeSiteUsersResponseBodyUsers setUserPrincipalName(String userPrincipalName) {
+            this.userPrincipalName = userPrincipalName;
+            return this;
+        }
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
         }
 
     }

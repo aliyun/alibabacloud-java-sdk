@@ -1672,6 +1672,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
         @NameInMap("OptCommand")
         public String optCommand;
 
+        @NameInMap("Platforms")
+        public String platforms;
+
         /**
          * <p>The redirection type.</p>
          * <p>Valid values:</p>
@@ -1730,6 +1733,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
         }
         public String getOptCommand() {
             return this.optCommand;
+        }
+
+        public CreatePolicyGroupRequestDeviceRules setPlatforms(String platforms) {
+            this.platforms = platforms;
+            return this;
+        }
+        public String getPlatforms() {
+            return this.platforms;
         }
 
         public CreatePolicyGroupRequestDeviceRules setRedirectType(String redirectType) {

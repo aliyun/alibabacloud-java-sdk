@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class RebuildDesktopsRequest extends TeaModel {
+    @NameInMap("AfterStatus")
+    public String afterStatus;
+
     /**
      * <p>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</p>
      * <p>This parameter is required.</p>
@@ -85,6 +88,14 @@ public class RebuildDesktopsRequest extends TeaModel {
     public static RebuildDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         RebuildDesktopsRequest self = new RebuildDesktopsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RebuildDesktopsRequest setAfterStatus(String afterStatus) {
+        this.afterStatus = afterStatus;
+        return this;
+    }
+    public String getAfterStatus() {
+        return this.afterStatus;
     }
 
     public RebuildDesktopsRequest setDesktopId(java.util.List<String> desktopId) {

@@ -23,7 +23,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the queried snapshots.</p>
+     * <p>The snapshots.</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
@@ -131,6 +131,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
+
+        @NameInMap("DiskStatus")
+        public String diskStatus;
+
+        @NameInMap("OsType")
+        public String osType;
 
         /**
          * <p>The progress of creating the snapshot. Unit: %.</p>
@@ -382,6 +388,22 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
         public String getDesktopStatus() {
             return this.desktopStatus;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setDiskStatus(String diskStatus) {
+            this.diskStatus = diskStatus;
+            return this;
+        }
+        public String getDiskStatus() {
+            return this.diskStatus;
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setOsType(String osType) {
+            this.osType = osType;
+            return this;
+        }
+        public String getOsType() {
+            return this.osType;
         }
 
         public DescribeSnapshotsResponseBodySnapshots setProgress(String progress) {

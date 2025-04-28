@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUsersInGroupResponseBody extends TeaModel {
     /**
-     * <p>The list of authorized users.</p>
+     * <p>The authorized users.</p>
      */
     @NameInMap("EndUsers")
     public java.util.List<DescribeUsersInGroupResponseBodyEndUsers> endUsers;
@@ -340,6 +340,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        @NameInMap("DisplayNameNew")
+        public String displayNameNew;
+
         /**
          * <p>The email address of the authorized user.</p>
          * 
@@ -414,6 +417,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         @NameInMap("UserDesktopId")
         public String userDesktopId;
 
+        @NameInMap("UserPrincipalName")
+        public String userPrincipalName;
+
         /**
          * <p>Details about the seats of users.</p>
          */
@@ -455,6 +461,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsers setDisplayNameNew(String displayNameNew) {
+            this.displayNameNew = displayNameNew;
+            return this;
+        }
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
         }
 
         public DescribeUsersInGroupResponseBodyEndUsers setEndUserEmail(String endUserEmail) {
@@ -519,6 +533,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         }
         public String getUserDesktopId() {
             return this.userDesktopId;
+        }
+
+        public DescribeUsersInGroupResponseBodyEndUsers setUserPrincipalName(String userPrincipalName) {
+            this.userPrincipalName = userPrincipalName;
+            return this;
+        }
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
         }
 
         public DescribeUsersInGroupResponseBodyEndUsers setUserSetPropertiesModels(java.util.List<DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels> userSetPropertiesModels) {

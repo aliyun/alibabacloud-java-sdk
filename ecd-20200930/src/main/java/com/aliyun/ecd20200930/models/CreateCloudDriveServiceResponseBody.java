@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudDriveServiceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the attached cloud disk.</p>
+     * <p>The ID of the enterprise drive.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+cds-7782057786</p>
@@ -23,27 +23,43 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String cdsName;
 
     /**
+     * <p>The ID of the CEN instance.</p>
+     * <blockquote>
+     * <p> To allow end users to connect to cloud computers via virtual private clouds (VPCs), attach your office network to a CEN instance. The CEN instance connects to your on-premises network through VPN Gateway or Express Connect.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cen-638u3wxds9snyc****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The existing enterprise drive or its order that conflicts with the enterprise drive being created.</p>
+     */
     @NameInMap("ConflictCdsAndOrder")
     public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder conflictCdsAndOrder;
 
     /**
+     * <p>The domain name of the enterprise AD office network.</p>
+     * 
      * <strong>example:</strong>
      * <p>test1.local</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ExistConflictCds</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The maximum capacity of each instance in Cloud Drive Service. Unit: GiB</p>
+     * <p>The maximum storage capacity of the enterprise drive. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>213674622976</p>
@@ -52,12 +68,25 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     public String maxSize;
 
     /**
+     * <p>The type of the office network.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>SIMPLE: convenience office network.</li>
+     * <li>AD_CONNECTOR: enterprise AD office network.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AD_CONNECTOR</p>
      */
     @NameInMap("OfficeSiteType")
     public String officeSiteType;
 
+    /**
+     * <p>The ID of the order. You can obtain an order ID on the Orders page in the Expenses and Costs console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>214552063030752</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
@@ -156,9 +185,21 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     }
 
     public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds extends TeaModel {
+        /**
+         * <p>The ID of the enterprise drive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-778205****</p>
+         */
         @NameInMap("CdsId")
         public String cdsId;
 
+        /**
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -186,12 +227,30 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     }
 
     public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder extends TeaModel {
+        /**
+         * <p>The ID of the enterprise drive. The enterprise drive cannot be used if the order is unpaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+cds-778205****</p>
+         */
         @NameInMap("CdsId")
         public String cdsId;
 
+        /**
+         * <p>The ID of the order. You can obtain an order ID on the <strong>Orders</strong> page in the Expenses and Costs console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22442411898****</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -227,9 +286,15 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
     }
 
     public static class CreateCloudDriveServiceResponseBodyConflictCdsAndOrder extends TeaModel {
+        /**
+         * <p>The conflicting enterprise drive.</p>
+         */
         @NameInMap("ConflictCds")
         public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds> conflictCds;
 
+        /**
+         * <p>The subscription orders of the conflicting enterprise drives that are unpaid.</p>
+         */
         @NameInMap("ConflictOrder")
         public java.util.List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder> conflictOrder;
 

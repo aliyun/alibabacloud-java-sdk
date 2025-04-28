@@ -111,6 +111,9 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         @NameInMap("NewImageName")
         public String newImageName;
 
+        @NameInMap("Reason")
+        public String reason;
+
         /**
          * <p>The status of the image modification.</p>
          * <p>Valid values:</p>
@@ -173,6 +176,14 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
         }
         public String getNewImageName() {
             return this.newImageName;
+        }
+
+        public DescribeImageModifiedRecordsResponseBodyImageModifiedRecords setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public DescribeImageModifiedRecordsResponseBodyImageModifiedRecords setStatus(Integer status) {

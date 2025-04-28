@@ -21,6 +21,9 @@ public class DeleteNetworkPackagesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     public static DeleteNetworkPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNetworkPackagesRequest self = new DeleteNetworkPackagesRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DeleteNetworkPackagesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteNetworkPackagesRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
 }

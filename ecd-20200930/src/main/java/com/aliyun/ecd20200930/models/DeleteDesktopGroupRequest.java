@@ -24,6 +24,9 @@ public class DeleteDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     public static DeleteDesktopGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDesktopGroupRequest self = new DeleteDesktopGroupRequest();
         return TeaModel.build(map, self);
@@ -43,6 +46,14 @@ public class DeleteDesktopGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteDesktopGroupRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
 }

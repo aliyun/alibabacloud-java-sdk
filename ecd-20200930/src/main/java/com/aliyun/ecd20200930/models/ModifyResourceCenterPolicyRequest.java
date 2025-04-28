@@ -5,12 +5,21 @@ import com.aliyun.tea.*;
 
 public class ModifyResourceCenterPolicyRequest extends TeaModel {
     /**
+     * <p>The IDs of the cloud computer policies that you want to associate with cloud computers.</p>
+     * <blockquote>
+     * <p> You can specify up to one cloud computer policy that takes effect globally, and up to four cloud computer policies that apply to specific IP addresses. If multiple cloud computer policies are configured for global enforcement, only the earliest-associated policy will take effect</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyGroupIds")
     public java.util.List<String> policyGroupIds;
 
     /**
+     * <p>The policy type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>general: a general policy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +29,14 @@ public class ModifyResourceCenterPolicyRequest extends TeaModel {
     public String policyGroupType;
 
     /**
+     * <p>The service type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>app: cloud applications.</li>
+     * <li>resourceGroup: resource groups.</li>
+     * <li>desktop: cloud computers.</li>
+     * <li>desktopGroup: cloud computer shares.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,12 +46,14 @@ public class ModifyResourceCenterPolicyRequest extends TeaModel {
     public String productType;
 
     /**
+     * <p>The resource IDs. You can specify up to 100 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +63,12 @@ public class ModifyResourceCenterPolicyRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>app: cloud applications.</li>
+     * <li>desktop: cloud computers.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

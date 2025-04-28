@@ -1,3 +1,59 @@
+2025-04-28 Version: 4.6.1
+- Update API CreateCenterPolicy: add request parameters InternetPrinter.
+- Update API CreateCenterPolicy: add request parameters SafeMenu.
+- Update API CreateCenterPolicy: add request parameters DeviceRules.$.Platforms.
+- Update API CreateCloudDriveService: add request parameters ResellerOwnerUid.
+- Update API CreateConfigGroup: add request parameters ConfigTimers.$.NotificationTime.
+- Update API CreateDesktopGroup: add request parameters ResellerOwnerUid.
+- Update API CreateDesktops: add request parameters ResellerOwnerUid.
+- Update API CreateImage: add request parameters DataSnapshotIds.
+- Update API CreateNetworkPackage: add request parameters ResellerOwnerUid.
+- Update API CreatePolicyGroup: add request parameters DeviceRules.$.Platforms.
+- Update API DeleteDesktopGroup: add request parameters ResellerOwnerUid.
+- Update API DeleteDesktops: add request parameters ResellerOwnerUid.
+- Update API DeleteNetworkPackages: add request parameters ResellerOwnerUid.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.InternetPrinter.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.SafeMenu.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.DeviceRules.$.Platforms.
+- Update API DescribeClientEvents: add request parameters FillHardwareInfo.
+- Update API DescribeClientEvents: add request parameters Language.
+- Update API DescribeClientEvents: add response parameters Body.Events.$.TerminalInfo.
+- Update API DescribeDesktopGroups: add response parameters Body.DesktopGroups.$.IsLdap.
+- Update API DescribeDesktops: add response parameters Body.Desktops.$.IsLdap.
+- Update API DescribeImageModifiedRecords: add response parameters Body.ImageModifiedRecords.$.Reason.
+- Update API DescribeModificationPrice: add request parameters ResellerOwnerUid.
+- Update API DescribeOfficeSites: add response parameters Body.OfficeSites.$.IsLdap.
+- Update API DescribeOfficeSites: add response parameters Body.OfficeSites.$.LdapUrl.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.InternetPrinter.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.SafeMenu.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.DeviceRules.$.Platforms.
+- Update API DescribePrice: add request parameters ResellerOwnerUid.
+- Update API DescribeRefundPrice: add request parameters ResellerOwnerUid.
+- Update API DescribeRenewalPrice: add request parameters ResellerOwnerUid.
+- Update API DescribeSnapshots: add request parameters OsType.
+- Update API DescribeSnapshots: add response parameters Body.Snapshots.$.DiskStatus.
+- Update API DescribeSnapshots: add response parameters Body.Snapshots.$.OsType.
+- Update API DescribeTimerGroup: add response parameters Body.Data.ConfigTimers.$.NotificationTime.
+- Update API DescribeUsersInGroup: add response parameters Body.EndUsers.$.DisplayNameNew.
+- Update API DescribeUsersInGroup: add response parameters Body.EndUsers.$.UserPrincipalName.
+- Update API ListDirectoryUsers: add response parameters Body.Users.$.DisplayNameNew.
+- Update API ListDirectoryUsers: add response parameters Body.Users.$.UserPrincipalName.
+- Update API ListOfficeSiteUsers: add response parameters Body.Users.$.DisplayNameNew.
+- Update API ListOfficeSiteUsers: add response parameters Body.Users.$.UserPrincipalName.
+- Update API ModifyCenterPolicy: add request parameters InternetPrinter.
+- Update API ModifyCenterPolicy: add request parameters SafeMenu.
+- Update API ModifyCenterPolicy: add request parameters DeviceRules.$.Platforms.
+- Update API ModifyDesktopChargeType: add request parameters ResellerOwnerUid.
+- Update API ModifyDesktopSpec: add request parameters ResellerOwnerUid.
+- Update API ModifyNetworkPackageBandwidth: add request parameters ResellerOwnerUid.
+- Update API ModifyPolicyGroup: add request parameters DeviceRules.$.Platforms.
+- Update API ModifyTimerGroup: add request parameters ConfigTimers.$.NotificationTime.
+- Update API RebuildDesktops: add request parameters AfterStatus.
+- Update API RenewDesktopGroup: add request parameters ResellerOwnerUid.
+- Update API RenewDesktops: add request parameters ResellerOwnerUid.
+- Update API RenewNetworkPackages: add request parameters ResellerOwnerUid.
+
+
 2025-03-26 Version: 4.6.0
 - Support API CloneCenterPolicy.
 - Support API CreateCenterPolicy.

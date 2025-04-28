@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCenterPolicyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5CED7F18-43B1-5035-BBB6-2538B***</p>
      */

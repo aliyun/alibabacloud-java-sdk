@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTimerGroupRequest extends TeaModel {
     /**
-     * <p>The configuration groups.</p>
+     * <p>The scheduled task groups.</p>
      */
     @NameInMap("ConfigTimers")
     public java.util.List<ModifyTimerGroupRequestConfigTimers> configTimers;
@@ -97,9 +97,9 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public Boolean allowClientSetting;
 
         /**
-         * <p>The CRON expression for the scheduled task.</p>
+         * <p>The cron expression specified in the scheduled task.</p>
          * <blockquote>
-         * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7.</p>
+         * <p> The time must be in UTC. For example, if your local time is 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -126,6 +126,9 @@ public class ModifyTimerGroupRequest extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("NotificationTime")
+        public Integer notificationTime;
+
         /**
          * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
          * <p>Valid values:</p>
@@ -141,13 +144,13 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</p>
+         * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect upon inactivity.</p>
          */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
         /**
-         * <p>The reset operation.</p>
+         * <p>The reset option.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>RESET_TYPE_SYSTEM: resets the system disk.</li>
@@ -162,8 +165,8 @@ public class ModifyTimerGroupRequest extends TeaModel {
         public String resetType;
 
         /**
-         * <p>The type of the scheduled task.</p>
-         * <p>Valid values:</p>
+         * <p>The scheduled task type.</p>
+         * <p>Valid value:</p>
          * <ul>
          * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
          * <li>NoConnect: scheduled disconnection upon specified operation (OperationType).</li>
@@ -231,6 +234,14 @@ public class ModifyTimerGroupRequest extends TeaModel {
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public ModifyTimerGroupRequestConfigTimers setNotificationTime(Integer notificationTime) {
+            this.notificationTime = notificationTime;
+            return this;
+        }
+        public Integer getNotificationTime() {
+            return this.notificationTime;
         }
 
         public ModifyTimerGroupRequestConfigTimers setOperationType(String operationType) {

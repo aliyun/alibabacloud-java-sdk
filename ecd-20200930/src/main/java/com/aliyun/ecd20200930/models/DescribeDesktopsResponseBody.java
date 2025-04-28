@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopsResponseBody extends TeaModel {
     /**
-     * <p>The information about the cloud computers.</p>
+     * <p>The cloud computers.</p>
      */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopsResponseBodyDesktops> desktops;
@@ -1008,6 +1008,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        @NameInMap("IsLdap")
+        public Boolean isLdap;
+
         /**
          * <p>The flag that is used to manage the cloud computer.</p>
          * <p>Valid values:</p>
@@ -1574,6 +1577,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setIsLdap(Boolean isLdap) {
+            this.isLdap = isLdap;
+            return this;
+        }
+        public Boolean getIsLdap() {
+            return this.isLdap;
         }
 
         public DescribeDesktopsResponseBodyDesktops setManagementFlag(String managementFlag) {

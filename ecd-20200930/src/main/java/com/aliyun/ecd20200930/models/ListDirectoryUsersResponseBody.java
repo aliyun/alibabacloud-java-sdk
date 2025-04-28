@@ -23,7 +23,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The names of users corresponding to the AD directory. If the AD directory contains only Administrator and Guest, an empty Users array is returned.</p>
+     * <p>The usernames corresponding to the AD directory. If the AD directory contains only the Administrator and Guest accounts, the Users array will be empty.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListDirectoryUsersResponseBodyUsers> users;
@@ -76,6 +76,9 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        @NameInMap("DisplayNameNew")
+        public String displayNameNew;
+
         /**
          * <p>The email address.</p>
          * 
@@ -103,6 +106,9 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("UserPrincipalName")
+        public String userPrincipalName;
+
         public static ListDirectoryUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             ListDirectoryUsersResponseBodyUsers self = new ListDirectoryUsersResponseBodyUsers();
             return TeaModel.build(map, self);
@@ -122,6 +128,14 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
         public String getDisplayName() {
             return this.displayName;
+        }
+
+        public ListDirectoryUsersResponseBodyUsers setDisplayNameNew(String displayNameNew) {
+            this.displayNameNew = displayNameNew;
+            return this;
+        }
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
         }
 
         public ListDirectoryUsersResponseBodyUsers setEmail(String email) {
@@ -146,6 +160,14 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public ListDirectoryUsersResponseBodyUsers setUserPrincipalName(String userPrincipalName) {
+            this.userPrincipalName = userPrincipalName;
+            return this;
+        }
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
         }
 
     }

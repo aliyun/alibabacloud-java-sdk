@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CloneCenterPolicyRequest extends TeaModel {
     /**
+     * <p>The business type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1: public cloud</li>
+     * <li>8: commercial edition.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,7 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public Integer businessType;
 
     /**
+     * <p>The name of the cloud computer policy that you want to clone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,7 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the cloud computer policy that you want to clone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +40,7 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public String policyGroupId;
 
     /**
+     * <p>The region ID. Set the value to cn-shanghai.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +50,12 @@ public class CloneCenterPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>app: cloud applications.</li>
+     * <li>desktop: cloud computers.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

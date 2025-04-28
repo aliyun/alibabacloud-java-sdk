@@ -41,10 +41,10 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <ul>
-     * <li>Valid values: 1 to 100</li>
-     * <li>Default value: 10</li>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,8 +62,11 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("OsType")
+    public String osType;
+
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -123,25 +126,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotType;
 
     /**
-     * <p>The type of the disk for which the snapshot is created.</p>
+     * <p>The disk for which you want to create a snapshot.</p>
      * <blockquote>
      * <p> The value of this parameter is not case-sensitive.</p>
      * </blockquote>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>Data: data disk</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- -->
-     * </li>
-     * <li><p>System: system disk</p>
-     * <!-- -->
-     * 
-     * <!-- -->
-     * 
-     * <!-- --></li>
+     * <li>Data: the data disk.</li>
+     * <li>System: the system disk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -210,6 +202,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeSnapshotsRequest setOsType(String osType) {
+        this.osType = osType;
+        return this;
+    }
+    public String getOsType() {
+        return this.osType;
     }
 
     public DescribeSnapshotsRequest setRegionId(String regionId) {

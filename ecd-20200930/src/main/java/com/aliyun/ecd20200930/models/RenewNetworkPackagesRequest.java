@@ -88,6 +88,9 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     public static RenewNetworkPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewNetworkPackagesRequest self = new RenewNetworkPackagesRequest();
         return TeaModel.build(map, self);
@@ -147,6 +150,14 @@ public class RenewNetworkPackagesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RenewNetworkPackagesRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
 }

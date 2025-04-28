@@ -35,6 +35,9 @@ public class DescribeRefundPriceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     public static DescribeRefundPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRefundPriceRequest self = new DescribeRefundPriceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeRefundPriceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeRefundPriceRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
 }

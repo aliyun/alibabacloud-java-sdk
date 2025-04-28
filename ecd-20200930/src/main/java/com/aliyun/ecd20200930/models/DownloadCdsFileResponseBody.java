@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DownloadCdsFileResponseBody extends TeaModel {
+    /**
+     * <p>The download URL of the file.</p>
+     */
     @NameInMap("DownloadFileModel")
     public DownloadCdsFileResponseBodyDownloadFileModel downloadFileModel;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,6 +20,8 @@ public class DownloadCdsFileResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E3ED9519-DD73-5C86-9C0A-43C9281C****</p>
      */
@@ -22,6 +29,8 @@ public class DownloadCdsFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -66,20 +75,30 @@ public class DownloadCdsFileResponseBody extends TeaModel {
     }
 
     public static class DownloadCdsFileResponseBodyDownloadFileModel extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("DownloadType")
         public String downloadType;
 
         /**
+         * <p>The download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://pds-XXXX-bj-1693807057.oss-cn-beijing.aliyuncs.com/A0SKfLOp%2F2%2F6662612e0570fb2bdd5549759716d433439f0572%2F6662612ee3804e4901794928b14f9a7477640ee7?di=XXXX&dr=1030&f=667d5a322ebf7409e91c485d808fb3bd8a73efbb&response-content-disposition=attachment%3B%20">https://pds-XXXX-bj-1693807057.oss-cn-beijing.aliyuncs.com/A0SKfLOp%2F2%2F6662612e0570fb2bdd5549759716d433439f0572%2F6662612ee3804e4901794928b14f9a7477640ee7?di=XXXX&amp;dr=1030&amp;f=667d5a322ebf7409e91c485d808fb3bd8a73efbb&amp;response-content-disposition=attachment%3B%20</a></p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("ExpirationSecond")
         public String expirationSecond;
 
         /**
+         * <p>The validity period of the download URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-18T02:55:49.795Z</p>
          */
@@ -87,6 +106,8 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>667d5a322ebf7409e91c485d808fb3bd8a73efbb</p>
          */
@@ -94,12 +115,17 @@ public class DownloadCdsFileResponseBody extends TeaModel {
         public String fileId;
 
         /**
+         * <p>The size of the file. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1594642</p>
          */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 

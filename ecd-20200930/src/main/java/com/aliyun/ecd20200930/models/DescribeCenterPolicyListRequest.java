@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeCenterPolicyListRequest extends TeaModel {
     /**
+     * <p>The business type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1: public cloud.</li>
+     * <li>8: commercial edition.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,9 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer businessType;
 
     /**
+     * <p>The page number.\
+     * Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -21,16 +30,27 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The IDs of the cloud computer policies.</p>
+     */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
 
     /**
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>app: cloud applications.</li>
+     * <li>desktop: cloud computers.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +60,13 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The effective scope of the cloud computer policy.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>IP: The policy applies to specific IP addresses.</li>
+     * <li>GLOBAL: The policy applies globally.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>
      */

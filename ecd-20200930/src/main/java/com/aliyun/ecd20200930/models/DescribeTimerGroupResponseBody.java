@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTimerGroupResponseBody extends TeaModel {
     /**
-     * <p>The information about the configuration group.</p>
+     * <p>The information about the scheduled task group.</p>
      */
     @NameInMap("Data")
     public DescribeTimerGroupResponseBodyData data;
@@ -76,6 +76,9 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
          */
         @NameInMap("Interval")
         public Integer interval;
+
+        @NameInMap("NotificationTime")
+        public Integer notificationTime;
 
         /**
          * <p>The type of the scheduled disconnection task.</p>
@@ -184,6 +187,14 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
             return this.interval;
         }
 
+        public DescribeTimerGroupResponseBodyDataConfigTimers setNotificationTime(Integer notificationTime) {
+            this.notificationTime = notificationTime;
+            return this;
+        }
+        public Integer getNotificationTime() {
+            return this.notificationTime;
+        }
+
         public DescribeTimerGroupResponseBodyDataConfigTimers setOperationType(String operationType) {
             this.operationType = operationType;
             return this;
@@ -243,7 +254,7 @@ public class DescribeTimerGroupResponseBody extends TeaModel {
         public java.util.Map<String, Integer> bindCountMap;
 
         /**
-         * <p>The scheduled task configuration groups.</p>
+         * <p>The scheduled task configurations.</p>
          */
         @NameInMap("ConfigTimers")
         public java.util.List<DescribeTimerGroupResponseBodyDataConfigTimers> configTimers;

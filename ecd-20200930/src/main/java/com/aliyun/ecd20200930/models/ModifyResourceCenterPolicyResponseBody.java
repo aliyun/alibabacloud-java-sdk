@@ -4,10 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyResourceCenterPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The modification results.</p>
+     */
     @NameInMap("ModifyResults")
     public java.util.List<ModifyResourceCenterPolicyResponseBodyModifyResults> modifyResults;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
      */
@@ -37,6 +42,8 @@ public class ModifyResourceCenterPolicyResponseBody extends TeaModel {
 
     public static class ModifyResourceCenterPolicyResponseBodyModifyResults extends TeaModel {
         /**
+         * <p>The verification result.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -44,6 +51,8 @@ public class ModifyResourceCenterPolicyResponseBody extends TeaModel {
         public Boolean checkResult;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-e254cpyt9bb*****</p>
          */

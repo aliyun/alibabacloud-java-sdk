@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientEventsResponseBody extends TeaModel {
     /**
-     * <p>The information about the events of an end user.</p>
+     * <p>The user events.</p>
      */
     @NameInMap("Events")
     public java.util.List<DescribeClientEventsResponseBodyEvents> events;
@@ -55,6 +55,47 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeClientEventsResponseBodyEventsTerminalInfo extends TeaModel {
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("ProductName")
+        public String productName;
+
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
+        public static DescribeClientEventsResponseBodyEventsTerminalInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClientEventsResponseBodyEventsTerminalInfo self = new DescribeClientEventsResponseBodyEventsTerminalInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClientEventsResponseBodyEventsTerminalInfo setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public DescribeClientEventsResponseBodyEventsTerminalInfo setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
+        }
+
+        public DescribeClientEventsResponseBodyEventsTerminalInfo setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
     }
 
     public static class DescribeClientEventsResponseBodyEvents extends TeaModel {
@@ -285,6 +326,9 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("TerminalInfo")
+        public DescribeClientEventsResponseBodyEventsTerminalInfo terminalInfo;
+
         public static DescribeClientEventsResponseBodyEvents build(java.util.Map<String, ?> map) throws Exception {
             DescribeClientEventsResponseBodyEvents self = new DescribeClientEventsResponseBodyEvents();
             return TeaModel.build(map, self);
@@ -472,6 +516,14 @@ public class DescribeClientEventsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeClientEventsResponseBodyEvents setTerminalInfo(DescribeClientEventsResponseBodyEventsTerminalInfo terminalInfo) {
+            this.terminalInfo = terminalInfo;
+            return this;
+        }
+        public DescribeClientEventsResponseBodyEventsTerminalInfo getTerminalInfo() {
+            return this.terminalInfo;
         }
 
     }

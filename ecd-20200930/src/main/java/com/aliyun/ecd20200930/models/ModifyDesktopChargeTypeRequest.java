@@ -90,6 +90,9 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     /**
      * <blockquote>
      * <p> This parameter is in invitational preview and not publicly available.</p>
@@ -160,6 +163,14 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDesktopChargeTypeRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public ModifyDesktopChargeTypeRequest setUseDuration(Integer useDuration) {

@@ -132,6 +132,12 @@ public class DescribeClientEventsRequest extends TeaModel {
     @NameInMap("EventTypes")
     public java.util.List<String> eventTypes;
 
+    @NameInMap("FillHardwareInfo")
+    public Boolean fillHardwareInfo;
+
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <p>The number of entries per page.\
      * Default value: 100.</p>
@@ -256,6 +262,22 @@ public class DescribeClientEventsRequest extends TeaModel {
     }
     public java.util.List<String> getEventTypes() {
         return this.eventTypes;
+    }
+
+    public DescribeClientEventsRequest setFillHardwareInfo(Boolean fillHardwareInfo) {
+        this.fillHardwareInfo = fillHardwareInfo;
+        return this;
+    }
+    public Boolean getFillHardwareInfo() {
+        return this.fillHardwareInfo;
+    }
+
+    public DescribeClientEventsRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribeClientEventsRequest setMaxResults(Integer maxResults) {

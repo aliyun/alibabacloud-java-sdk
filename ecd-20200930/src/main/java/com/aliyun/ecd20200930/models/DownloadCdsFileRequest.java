@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DownloadCdsFileRequest extends TeaModel {
     /**
+     * <p>The enterprise drive ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+cds-643267****</p>
      */
@@ -12,6 +14,8 @@ public class DownloadCdsFileRequest extends TeaModel {
     public String cdsId;
 
     /**
+     * <p>The user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>user****</p>
      */
@@ -19,6 +23,8 @@ public class DownloadCdsFileRequest extends TeaModel {
     public String endUserId;
 
     /**
+     * <p>The file ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>63f3257b68b018170b194d87b875512d108f****</p>
      */
@@ -26,6 +32,8 @@ public class DownloadCdsFileRequest extends TeaModel {
     public String fileId;
 
     /**
+     * <p>The team ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cg-i1ruuudp92qpj****</p>
      */
@@ -33,6 +41,7 @@ public class DownloadCdsFileRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

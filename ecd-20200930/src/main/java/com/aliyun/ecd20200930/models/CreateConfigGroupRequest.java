@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateConfigGroupRequest extends TeaModel {
     /**
-     * <p>The list of configuration groups.</p>
+     * <p>The scheduled task groups.</p>
      */
     @NameInMap("ConfigTimers")
     public java.util.List<CreateConfigGroupRequestConfigTimers> configTimers;
@@ -53,10 +53,10 @@ public class CreateConfigGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the configuration group.</p>
+     * <p>The group type.</p>
      * <p>Valid value:</p>
      * <ul>
-     * <li>Timer: the scheduled task type.</li>
+     * <li>Timer: a scheduled task group.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -121,7 +121,7 @@ public class CreateConfigGroupRequest extends TeaModel {
 
     public static class CreateConfigGroupRequestConfigTimers extends TeaModel {
         /**
-         * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
+         * <p>Specifies whether to allow end users to configure the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -130,7 +130,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public Boolean allowClientSetting;
 
         /**
-         * <p>The CRON expression for the scheduled task.</p>
+         * <p>The cron expression specified in the scheduled task.</p>
          * <blockquote>
          * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</p>
          * </blockquote>
@@ -142,7 +142,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcibly execute the scheduled task.</p>
+         * <p>Specifies whether to forcefully execute the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -159,6 +159,9 @@ public class CreateConfigGroupRequest extends TeaModel {
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("NotificationTime")
+        public Integer notificationTime;
+
         /**
          * <p>The type of the scheduled operation. If you set TimerType to NoConnect, you can specify this parameter.</p>
          * <p>Valid values:</p>
@@ -174,18 +177,18 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The process whitelist. If whitelisted processes are running, the scheduled task upon inactivity does not take effect.</p>
+         * <p>The process whitelist. If whitelisted processes are running, the scheduled task does not take effect.</p>
          */
         @NameInMap("ProcessWhitelist")
         public java.util.List<String> processWhitelist;
 
         /**
-         * <p>The reset operation for cloud computers.</p>
+         * <p>The reset option.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RESET_TYPE_SYSTEM: resets only the system disks of cloud computers.</li>
-         * <li>RESET_TYPE_USER_DISK: resets only the data disks of cloud computers.</li>
-         * <li>RESET_TYPE_BOTH: resets the system disks and data disks of cloud computers.</li>
+         * <li>RESET_TYPE_SYSTEM: resets only the system disk.</li>
+         * <li>RESET_TYPE_USER_DISK: resets only the data disk.</li>
+         * <li>RESET_TYPE_BOTH: resets the system and data disks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -195,7 +198,7 @@ public class CreateConfigGroupRequest extends TeaModel {
         public String resetType;
 
         /**
-         * <p>The type of the scheduled task.</p>
+         * <p>The scheduled task type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>NoOperationDisconnect: scheduled disconnection upon inactivity.</li>
@@ -265,6 +268,14 @@ public class CreateConfigGroupRequest extends TeaModel {
         }
         public Integer getInterval() {
             return this.interval;
+        }
+
+        public CreateConfigGroupRequestConfigTimers setNotificationTime(Integer notificationTime) {
+            this.notificationTime = notificationTime;
+            return this;
+        }
+        public Integer getNotificationTime() {
+            return this.notificationTime;
         }
 
         public CreateConfigGroupRequestConfigTimers setOperationType(String operationType) {

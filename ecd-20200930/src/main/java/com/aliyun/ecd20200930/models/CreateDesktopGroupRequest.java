@@ -523,6 +523,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     /**
      * <p>The reset option of the shared group.</p>
      * <p>Valid values:</p>
@@ -1018,6 +1021,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDesktopGroupRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public CreateDesktopGroupRequest setResetType(Long resetType) {

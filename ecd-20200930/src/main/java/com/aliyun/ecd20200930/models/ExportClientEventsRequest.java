@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportClientEventsRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud desktop.</p>
+     * <p>The cloud computer ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-gx2x1dhsmucyy****</p>
@@ -14,7 +14,7 @@ public class ExportClientEventsRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The name of the cloud desktop.</p>
+     * <p>The cloud computer name.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -42,17 +42,18 @@ public class ExportClientEventsRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The type of event that you want to query. Valid values:</p>
+     * <p>The type of the event that you want to query. If you provide multiple values for EventTypes, the response will include events of all the specified types. If you provide no values for EventTypes and EventType, the response will include all events in the designated region.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>DESKTOP_CONNECT: The desktop session is established.</li>
-     * <li>DESKTOP_DISCONNECT: The desktop session is disconnected.</li>
-     * <li>DESKTOP_REBOOT: The cloud desktop is restarted.</li>
-     * <li>CLIENT_AD_LOGIN: The AD user logs on to the client.</li>
-     * <li>GET_CONNECTION_TICKET: The request to connect to the cloud desktop is sent.</li>
-     * <li>DESKTOP_START: The cloud desktop is started.</li>
-     * <li>DESKTOP_STOP: The cloud desktop is stopped.</li>
+     * <li>DESKTOP_STOP: the shutdown event.</li>
+     * <li>GET_LITE_CONNECTION_TICKET: the event of retrieving the connection ticket.</li>
+     * <li>DESKTOP_DISCONNECT: the session disconnection event.</li>
+     * <li>CLIENT_LOGIN: the user logon event.</li>
+     * <li>GET_CONNECTION_TICKET: the connection credential retrieval event.</li>
+     * <li>DESKTOP_REBOOT: the restart event.</li>
+     * <li>DESKTOP_CONNECT: the session establishment event.</li>
+     * <li>DESKTOP_START: the start event.</li>
      * </ul>
-     * <p>If you do not specify a value for this parameter, events of all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>CLIENT_LOGIN</p>
@@ -61,18 +62,18 @@ public class ExportClientEventsRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The types of event.</p>
+     * <p>The types of the events that you want to query. You can include multiple event types, and the response will return events matching the specified types or all events if none are specified.</p>
      */
     @NameInMap("EventTypes")
     public java.util.List<String> eventTypes;
 
     /**
-     * <p>The language in which the cloud desktop is displayed in the console UI. You can export the list of cloud desktops in the specified language. Valid values:</p>
+     * <p>The language displayed on the frontend page. The backend uses this setting to define the language of exported files.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><code>zh-CN</code>: Simplified Chinese</li>
-     * <li><code>en-GB</code>: English (United Kingdom)</li>
+     * <li>zh-CN: Simplified Chinese.</li>
+     * <li>en-GB: British English.</li>
      * </ul>
-     * <p>Default value: <code>zh-CN</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -94,7 +95,7 @@ public class ExportClientEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The office network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
@@ -103,7 +104,7 @@ public class ExportClientEventsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The office network name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -112,7 +113,7 @@ public class ExportClientEventsRequest extends TeaModel {
     public String officeSiteName;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

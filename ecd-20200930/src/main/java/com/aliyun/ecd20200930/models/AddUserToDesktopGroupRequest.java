@@ -29,7 +29,7 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     public java.util.List<String> desktopGroupIds;
 
     /**
-     * <p>The regular users to whom you want to assign the desktop group.</p>
+     * <p>The IDs of the users to whom you want to grant permissions.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;

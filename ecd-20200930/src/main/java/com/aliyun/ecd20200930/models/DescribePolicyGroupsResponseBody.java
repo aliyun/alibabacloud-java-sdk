@@ -445,6 +445,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("OptCommand")
         public String optCommand;
 
+        @NameInMap("Platforms")
+        public String platforms;
+
         /**
          * <p>The redirection type.</p>
          * <p>Valid values:</p>
@@ -503,6 +506,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getOptCommand() {
             return this.optCommand;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setPlatforms(String platforms) {
+            this.platforms = platforms;
+            return this;
+        }
+        public String getPlatforms() {
+            return this.platforms;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroupsDeviceRules setRedirectType(String redirectType) {
@@ -1120,6 +1131,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("InternetCommunicationProtocol")
         public String internetCommunicationProtocol;
 
+        @NameInMap("InternetPrinter")
+        public String internetPrinter;
+
         /**
          * <p>The permissions on local disk mapping.</p>
          * <p>Valid values:</p>
@@ -1567,6 +1581,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("ResourceRegionId")
         public String resourceRegionId;
+
+        @NameInMap("SafeMenu")
+        public String safeMenu;
 
         /**
          * <p>The effective scope of the policy.</p>
@@ -2181,6 +2198,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.internetCommunicationProtocol;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setInternetPrinter(String internetPrinter) {
+            this.internetPrinter = internetPrinter;
+            return this;
+        }
+        public String getInternetPrinter() {
+            return this.internetPrinter;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setLocalDrive(String localDrive) {
             this.localDrive = localDrive;
             return this;
@@ -2507,6 +2532,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getResourceRegionId() {
             return this.resourceRegionId;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setSafeMenu(String safeMenu) {
+            this.safeMenu = safeMenu;
+            return this;
+        }
+        public String getSafeMenu() {
+            return this.safeMenu;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setScope(String scope) {

@@ -14,7 +14,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information about office networks.</p>
+     * <p>The office networks.</p>
      */
     @NameInMap("OfficeSites")
     public java.util.List<DescribeOfficeSitesResponseBodyOfficeSites> officeSites;
@@ -281,7 +281,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
 
     public static class DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts extends TeaModel {
         /**
-         * <p>The amount of resources.</p>
+         * <p>The number of resources.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,10 +290,11 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Long amount;
 
         /**
-         * <p>The resource type. Valid values:</p>
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>desktop: cloud computers</li>
-         * <li>desktopGroup: shared cloud computers</li>
+         * <li>desktop: the cloud computer.</li>
+         * <li>DesktopGroup: the cloud computer share.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,7 +430,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The custom gateway.</p>
+         * <p>The custom endpoint of the access gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-****.com</p>
@@ -438,7 +439,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String customAccessPoint;
 
         /**
-         * <p>The array of custom DNS addresses.</p>
+         * <p>The custom DNS addresses.</p>
          */
         @NameInMap("CustomDnsAddress")
         public java.util.List<String> customDnsAddress;
@@ -489,7 +490,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String desktopVpcEndpoint;
 
         /**
-         * <p>The array of DNS addresses in the AD domains.</p>
+         * <p>The DNS addresses for the AD domains.</p>
          */
         @NameInMap("DnsAddress")
         public java.util.List<String> dnsAddress;
@@ -577,6 +578,12 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @NameInMap("FileSystemIds")
         public java.util.List<String> fileSystemIds;
 
+        @NameInMap("IsLdap")
+        public Boolean isLdap;
+
+        @NameInMap("LdapUrl")
+        public String ldapUrl;
+
         /**
          * <p>Details about registration logs.</p>
          */
@@ -634,10 +641,11 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String networkPackageId;
 
         /**
-         * <p>The network version. App Streaming is supported by the new version. Valid values:</p>
+         * <p>The network version. The new version supports App Streaming.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>DEFAULT: the legacy version</li>
-         * <li>NM: the new version</li>
+         * <li>DEFAULT: the old version.</li>
+         * <li>NM: the new version.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -720,7 +728,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String rdsLicenseStatus;
 
         /**
-         * <p>The amount of resources.</p>
+         * <p>The number of resources.</p>
          */
         @NameInMap("ResourceAmounts")
         public java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesResourceAmounts> resourceAmounts;
@@ -783,7 +791,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>An array of DNS addresses for AD subdomains.</p>
+         * <p>The DNS addresses for the AD subdomains.</p>
          */
         @NameInMap("SubDnsAddress")
         public java.util.List<String> subDnsAddress;
@@ -821,7 +829,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Long totalEdsCount;
 
         /**
-         * <p>The number of pooled cloud computers in the cloud computer pool.</p>
+         * <p>The number of cloud computers in the cloud computer share.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -830,7 +838,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         public Long totalEdsCountForGroup;
 
         /**
-         * <p>The total number of network cards.</p>
+         * <p>The number of network interface controllers (NICs).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1098,6 +1106,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
         public java.util.List<String> getFileSystemIds() {
             return this.fileSystemIds;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setIsLdap(Boolean isLdap) {
+            this.isLdap = isLdap;
+            return this;
+        }
+        public Boolean getIsLdap() {
+            return this.isLdap;
+        }
+
+        public DescribeOfficeSitesResponseBodyOfficeSites setLdapUrl(String ldapUrl) {
+            this.ldapUrl = ldapUrl;
+            return this;
+        }
+        public String getLdapUrl() {
+            return this.ldapUrl;
         }
 
         public DescribeOfficeSitesResponseBodyOfficeSites setLogs(java.util.List<DescribeOfficeSitesResponseBodyOfficeSitesLogs> logs) {

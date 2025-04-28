@@ -13,6 +13,9 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("AutoCleanUserdata")
     public Boolean autoCleanUserdata;
 
+    @NameInMap("DataSnapshotIds")
+    public java.util.List<String> dataSnapshotIds;
+
     /**
      * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
@@ -99,6 +102,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public Boolean getAutoCleanUserdata() {
         return this.autoCleanUserdata;
+    }
+
+    public CreateImageRequest setDataSnapshotIds(java.util.List<String> dataSnapshotIds) {
+        this.dataSnapshotIds = dataSnapshotIds;
+        return this;
+    }
+    public java.util.List<String> getDataSnapshotIds() {
+        return this.dataSnapshotIds;
     }
 
     public CreateImageRequest setDescription(String description) {

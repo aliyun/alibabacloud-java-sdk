@@ -69,6 +69,9 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
+
     /**
      * <p>The array of resource specification templates.</p>
      */
@@ -191,6 +194,14 @@ public class ModifyDesktopSpecRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDesktopSpecRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public ModifyDesktopSpecRequest setResourceSpecs(java.util.List<ModifyDesktopSpecRequestResourceSpecs> resourceSpecs) {

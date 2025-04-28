@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGuestApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The details of the applications.</p>
+     * <p>The applications.</p>
      */
     @NameInMap("Applications")
     public java.util.List<DescribeGuestApplicationsResponseBodyApplications> applications;
@@ -69,7 +69,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public Double cpuPercent;
 
         /**
-         * <p>The GPU utilization (%).</p>
+         * <p>The GPU usage (%).</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -78,7 +78,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public Double gpuPercent;
 
         /**
-         * <p>The I/O read and write performance.</p>
+         * <p>The I/O read and write performance. Unit: byte/s.</p>
          * 
          * <strong>example:</strong>
          * <p>124906.0</p>
@@ -87,7 +87,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public Double iospeed;
 
         /**
-         * <p>The memory utilization (%).</p>
+         * <p>The memory usage (%).</p>
          * 
          * <strong>example:</strong>
          * <p>34</p>
@@ -231,7 +231,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public String iconUrl;
 
         /**
-         * <p>The I/O read and write performance.</p>
+         * <p>The I/O read and write performance. Unit: byte/s.</p>
          * 
          * <strong>example:</strong>
          * <p>124906.0</p>
@@ -258,7 +258,7 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public Integer pid;
 
         /**
-         * <p>The process information.</p>
+         * <p>The processes.</p>
          */
         @NameInMap("ProcessData")
         public java.util.List<DescribeGuestApplicationsResponseBodyApplicationsProcessData> processData;
@@ -273,7 +273,12 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
         public String processPath;
 
         /**
-         * <p>The application status.</p>
+         * <p>The status of the application.</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>Idle: The application is installed in the cloud computer but is not running.</li>
+         * <li>Running: The application has been installed in the cloud computer and is running.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

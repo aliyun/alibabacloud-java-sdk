@@ -245,7 +245,6 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the policy.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>system-all-enabled-policy</p>
@@ -271,6 +270,9 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResellerOwnerUid")
+    public Long resellerOwnerUid;
 
     /**
      * <p>The ID of the resource group.</p>
@@ -576,6 +578,14 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDesktopsShrinkRequest setResellerOwnerUid(Long resellerOwnerUid) {
+        this.resellerOwnerUid = resellerOwnerUid;
+        return this;
+    }
+    public Long getResellerOwnerUid() {
+        return this.resellerOwnerUid;
     }
 
     public CreateDesktopsShrinkRequest setResourceGroupId(String resourceGroupId) {
