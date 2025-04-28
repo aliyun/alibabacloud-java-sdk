@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyLogHubStatusRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,7 @@ public class ModifyLogHubStatusRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the log shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class ModifyLogHubStatusRequest extends TeaModel {
     public String deliverName;
 
     /**
+     * <p>The name of the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +44,7 @@ public class ModifyLogHubStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +60,13 @@ public class ModifyLogHubStatusRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The status of the log shipping job.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Delete</li>
+     * <li>Pause</li>
+     * <li>Restart</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -30,63 +30,7 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The performance metrics to be queried. Separate multiple values with commas (,). Valid values:</p>
-     * <ul>
-     * <li><p>CPU</p>
-     * <ul>
-     * <li><strong>AnalyticDB_CPU</strong>: the average CPU utilization.</li>
-     * </ul>
-     * </li>
-     * <li><p>Connections</p>
-     * <ul>
-     * <li><strong>AnalyticDB_Connections</strong>: the number of connections of the cluster.</li>
-     * </ul>
-     * </li>
-     * <li><p>Writes</p>
-     * <ul>
-     * <li><strong>AnalyticDB_TPS</strong>: the write transactions per second (TPS).</li>
-     * <li><strong>AnalyticDB_InsertRT</strong>: the write response time.</li>
-     * <li><strong>AnalyticDB_InsertBytes</strong>: the write throughput.</li>
-     * </ul>
-     * </li>
-     * <li><p>Updates</p>
-     * <ul>
-     * <li><strong>AnalyticDB_UpdateRT</strong>: the update response time.</li>
-     * </ul>
-     * </li>
-     * <li><p>Deletes</p>
-     * <ul>
-     * <li><strong>AnalyticDB_DeleteRT</strong>: the delete response time.</li>
-     * </ul>
-     * </li>
-     * <li><p>Queries</p>
-     * <ul>
-     * <li><strong>AnalyticDB_QPS</strong>: the queries per second (QPS).</li>
-     * <li><strong>AnalyticDB_QueryRT</strong>: the query response time.</li>
-     * <li><strong>AnalyticDB_QueryWaitTime</strong>: the query wait time.</li>
-     * </ul>
-     * </li>
-     * <li><p>Disks</p>
-     * <ul>
-     * <li><strong>AnalyticDB_IO</strong>: the disk I/O throughput.</li>
-     * <li><strong>AnalyticDB_IO_UTIL</strong>: the disk I/O usage.</li>
-     * <li><strong>AnalyticDB_IO_WAIT</strong>: the disk I/O wait time.</li>
-     * <li><strong>AnalyticDB_IOPS</strong>: the disk IOPS.</li>
-     * <li><strong>AnalyticDB_DiskUsage</strong>: the disk space that is used.</li>
-     * <li><strong>AnalyticDB_HotDataDiskUsage</strong>: the disk space that is used by hot data.</li>
-     * <li><strong>AnalyticDB_ColdDataDiskUsage</strong>: the disk space that is used by cold data.</li>
-     * </ul>
-     * </li>
-     * <li><p>Other</p>
-     * <ul>
-     * <li><strong>AnalyticDB_BuildTaskCount</strong>: the number of BUILD jobs.</li>
-     * <li><strong>AnalyticDB_ComputeMemoryUsedRatio</strong>: the compute memory usage.</li>
-     * </ul>
-     * </li>
-     * </ul>
-     * <blockquote>
-     * <p> If you leave this parameter empty, the values of all the preceding performance metrics are returned.</p>
-     * </blockquote>
+     * <p>The key of the performance metric that you want to query. Separate multiple keys with commas (,). For more information about the performance metrics, see <a href="https://help.aliyun.com/document_detail/2863211.html">Metric overview</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>AnalyticDB_CPU</p>

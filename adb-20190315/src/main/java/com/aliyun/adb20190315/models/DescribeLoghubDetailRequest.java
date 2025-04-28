@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoghubDetailRequest extends TeaModel {
     /**
+     * <p>The name of the log shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,7 @@ public class DescribeLoghubDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +31,7 @@ public class DescribeLoghubDetailRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +41,8 @@ public class DescribeLoghubDetailRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>am-bp1r053byu48p****</p>

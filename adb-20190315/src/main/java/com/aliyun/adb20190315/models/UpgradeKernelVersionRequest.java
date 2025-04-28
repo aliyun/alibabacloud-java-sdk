@@ -48,7 +48,7 @@ public class UpgradeKernelVersionRequest extends TeaModel {
      * <li><strong>1</strong>: performs the update during the maintenance window.</li>
      * </ul>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612236.html">ModifyDBClusterMaintainTime</a> operation to modify the maintenance window of an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612236.html">ModifyDBClusterMaintainTime</a> operation to modify the maintenance window of an AnalyticDB for MySQL cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

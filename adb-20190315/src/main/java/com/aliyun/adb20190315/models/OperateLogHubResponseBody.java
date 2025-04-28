@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OperateLogHubResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>71B41FF9-1275-5F75-973D-8BC3C60236E6</p>
      */

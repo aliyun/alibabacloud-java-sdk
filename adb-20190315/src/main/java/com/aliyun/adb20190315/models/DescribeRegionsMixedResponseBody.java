@@ -4,10 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsMixedResponseBody extends TeaModel {
+    /**
+     * <p>The queried regions.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsMixedResponseBodyRegions regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2E9450FF-F8AD-54C6-B3C3-009FBD7C0700</p>
      */
@@ -37,6 +42,8 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
 
     public static class DescribeRegionsMixedResponseBodyRegionsRegion extends TeaModel {
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -44,6 +51,13 @@ public class DescribeRegionsMixedResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The version of the cluster.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>2.0</li>
+         * <li>3.0</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3.0</p>
          */

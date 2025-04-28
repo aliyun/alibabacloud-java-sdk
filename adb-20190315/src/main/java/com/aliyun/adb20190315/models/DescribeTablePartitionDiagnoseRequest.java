@@ -62,7 +62,7 @@ public class DescribeTablePartitionDiagnoseRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -71,12 +71,13 @@ public class DescribeTablePartitionDiagnoseRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li>30</li>
      * <li>50</li>
      * <li>100</li>
      * </ul>
+     * <p>Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

@@ -63,6 +63,9 @@ public class DescribeEIURangeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ProductVersion")
+    public String productVersion;
+
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
@@ -181,6 +184,14 @@ public class DescribeEIURangeRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeEIURangeRequest setProductVersion(String productVersion) {
+        this.productVersion = productVersion;
+        return this;
+    }
+    public String getProductVersion() {
+        return this.productVersion;
     }
 
     public DescribeEIURangeRequest setRegionId(String regionId) {

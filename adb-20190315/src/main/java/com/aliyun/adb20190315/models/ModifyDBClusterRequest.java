@@ -92,7 +92,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBNodeStorage;
 
     /**
-     * <p>The enhanced SSD (ESSD) performance level of the cluster. Valid values:</p>
+     * <p>The Enterprise SSD (ESSD) performance level of the cluster. Valid values:</p>
      * <ul>
      * <li>PL0</li>
      * <li>PL1</li>

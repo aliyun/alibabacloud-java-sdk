@@ -11,6 +11,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -27,7 +29,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp13h7uzhulpuxvnp****</p>
@@ -36,6 +38,8 @@ public class DescribeVpcsRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-k</p>
      */

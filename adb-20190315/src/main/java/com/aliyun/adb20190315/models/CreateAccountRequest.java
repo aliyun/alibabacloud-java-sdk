@@ -89,6 +89,9 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateAccountRequestTag> tag;
+
     public static CreateAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountRequest self = new CreateAccountRequest();
         return TeaModel.build(map, self);
@@ -164,6 +167,44 @@ public class CreateAccountRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateAccountRequest setTag(java.util.List<CreateAccountRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateAccountRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateAccountRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAccountRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAccountRequestTag self = new CreateAccountRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAccountRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAccountRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

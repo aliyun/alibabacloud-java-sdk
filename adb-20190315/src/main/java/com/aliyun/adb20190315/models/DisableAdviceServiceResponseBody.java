@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DisableAdviceServiceResponseBody extends TeaModel {
     /**
-     * <p>The message returned for the operation. Valid values:</p>
+     * <p>The returned message. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong> is returned if the operation is successful.</li>
-     * <li>An error message is returned if the operation fails.</li>
+     * <li>If the request was successful, a <strong>success</strong> message is returned.</li>
+     * <li>If the request failed, an error message is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DisableAdviceServiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>57EC6CCA-A582-572C-A33D-F61845CBC03C</p>

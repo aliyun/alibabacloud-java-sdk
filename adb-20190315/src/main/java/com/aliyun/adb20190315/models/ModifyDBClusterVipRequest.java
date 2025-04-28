@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterVipRequest extends TeaModel {
     /**
+     * <p>The internal or public endpoint for which the server certificate needs to be created or updated.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</p>
      */
@@ -12,6 +14,10 @@ public class ModifyDBClusterVipRequest extends TeaModel {
     public String connectionString;
 
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a specific region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +33,8 @@ public class ModifyDBClusterVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -40,6 +48,7 @@ public class ModifyDBClusterVipRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The virtual private cloud (VPC) ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +58,7 @@ public class ModifyDBClusterVipRequest extends TeaModel {
     public String VPCId;
 
     /**
+     * <p>The vSwitch ID of the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

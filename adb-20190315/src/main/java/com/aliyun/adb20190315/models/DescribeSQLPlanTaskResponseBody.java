@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPlanTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -14,7 +14,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of tasks.</p>
+     * <p>The queried task.</p>
      */
     @NameInMap("TaskList")
     public java.util.List<DescribeSQLPlanTaskResponseBodyTaskList> taskList;
@@ -69,7 +69,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         public Long inputSize;
 
         /**
-         * <p>The total amount of time consumed by operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</p>
+         * <p>The total amount of time consumed by all operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -105,7 +105,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         public Long peakMemory;
 
         /**
-         * <p>The time consumed to scan data from a data source in the task. Unit: milliseconds.</p>
+         * <p>The amount of time consumed to scan data from a data source in the task. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -147,7 +147,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>198877623</p>

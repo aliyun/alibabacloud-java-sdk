@@ -92,6 +92,9 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SchemaName")
+    public String schemaName;
+
     public static DescribeTableStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTableStatisticsRequest self = new DescribeTableStatisticsRequest();
         return TeaModel.build(map, self);
@@ -175,6 +178,14 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeTableStatisticsRequest setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    public String getSchemaName() {
+        return this.schemaName;
     }
 
 }

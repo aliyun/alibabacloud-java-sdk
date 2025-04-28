@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterVipResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-****-4A42-BF6D-8A4442913CEF</p>
      */
@@ -12,6 +14,8 @@ public class ModifyDBClusterVipResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1564657730</p>
      */

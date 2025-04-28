@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadRecordsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the detailed information of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,12 +18,12 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The languages available for file titles and some error messages. Default value: zh. Valid values:</p>
+     * <p>The language of file titles and error messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Simplified Chinese</li>
-     * <li><strong>en</strong>: English</li>
-     * <li><strong>ja</strong>: Japanese</li>
-     * <li><strong>zh-tw</strong>: Traditional Chinese</li>
+     * <li><strong>zh</strong> (default): simplified Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeDownloadRecordsRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

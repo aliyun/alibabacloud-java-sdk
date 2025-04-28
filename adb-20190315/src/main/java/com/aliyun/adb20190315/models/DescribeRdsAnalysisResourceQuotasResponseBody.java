@@ -4,28 +4,48 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
+    /**
+     * <p>The editions of the MySQL analytic instances.</p>
+     */
     @NameInMap("DBNodeCategoryList")
     public DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeCategoryList DBNodeCategoryList;
 
+    /**
+     * <p>The instance types of the MySQL analytic instances.</p>
+     */
     @NameInMap("DBNodeClassList")
     public DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeClassList DBNodeClassList;
 
+    /**
+     * <p>The storage sizes of the MySQL analytic instances.</p>
+     */
     @NameInMap("DBNodeStorageList")
     public DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeStorageList DBNodeStorageList;
 
+    /**
+     * <p>The versions of the MySQL analytic instances.</p>
+     */
     @NameInMap("EngineVersionList")
     public DescribeRdsAnalysisResourceQuotasResponseBodyEngineVersionList engineVersionList;
 
+    /**
+     * <p>The modes of the MySQL analytic instances.</p>
+     */
     @NameInMap("ModeList")
     public DescribeRdsAnalysisResourceQuotasResponseBodyModeList modeList;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1A31D7FA-1826-5843-8807-D2F715E70CB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The storage types of the MySQL analytic instances.</p>
+     */
     @NameInMap("StorageTypeList")
     public DescribeRdsAnalysisResourceQuotasResponseBodyStorageTypeList storageTypeList;
 
@@ -92,6 +112,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
 
     public static class DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeCategoryListDBNodeCategory extends TeaModel {
         /**
+         * <p>The display value.</p>
+         * 
          * <strong>example:</strong>
          * <p>mixed_storage</p>
          */
@@ -99,6 +121,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The real value.</p>
+         * 
          * <strong>example:</strong>
          * <p>mixed_storage</p>
          */
@@ -149,6 +173,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
 
     public static class DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeClassListDBNodeClass extends TeaModel {
         /**
+         * <p>The display value.</p>
+         * 
          * <strong>example:</strong>
          * <p>E32</p>
          */
@@ -156,6 +182,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The real value.</p>
+         * 
          * <strong>example:</strong>
          * <p>E32</p>
          */
@@ -206,6 +234,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
 
     public static class DescribeRdsAnalysisResourceQuotasResponseBodyDBNodeStorageListDBNodeStorage extends TeaModel {
         /**
+         * <p>The display value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -213,6 +243,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The real value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -263,6 +295,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
 
     public static class DescribeRdsAnalysisResourceQuotasResponseBodyEngineVersionListEngineVersion extends TeaModel {
         /**
+         * <p>The display value.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.0</p>
          */
@@ -270,6 +304,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The real value.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.0</p>
          */
@@ -320,6 +356,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
 
     public static class DescribeRdsAnalysisResourceQuotasResponseBodyModeListMode extends TeaModel {
         /**
+         * <p>The display value.</p>
+         * 
          * <strong>example:</strong>
          * <p>flexible</p>
          */
@@ -327,6 +365,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The real value.</p>
+         * 
          * <strong>example:</strong>
          * <p>flexible</p>
          */
@@ -377,6 +417,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
 
     public static class DescribeRdsAnalysisResourceQuotasResponseBodyStorageTypeListStorageType extends TeaModel {
         /**
+         * <p>The display value.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
          */
@@ -384,6 +426,8 @@ public class DescribeRdsAnalysisResourceQuotasResponseBody extends TeaModel {
         public String text;
 
         /**
+         * <p>The real value.</p>
+         * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
          */

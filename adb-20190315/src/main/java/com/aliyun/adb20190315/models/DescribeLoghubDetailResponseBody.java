@@ -4,10 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoghubDetailResponseBody extends TeaModel {
+    /**
+     * <p>The queried log collection information.</p>
+     */
     @NameInMap("LoghubInfo")
     public DescribeLoghubDetailResponseBodyLoghubInfo loghubInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -37,6 +42,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
 
     public static class DescribeLoghubDetailResponseBodyLoghubInfoLogHubStoresLogHubStore extends TeaModel {
         /**
+         * <p>The value of the log keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>channel_id</p>
          */
@@ -44,6 +51,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String fieldKey;
 
         /**
+         * <p>The log keyword.</p>
+         * 
          * <strong>example:</strong>
          * <p>put_request</p>
          */
@@ -94,6 +103,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
 
     public static class DescribeLoghubDetailResponseBodyLoghubInfo extends TeaModel {
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>am-8vbs48m7553du1gz2</p>
          */
@@ -101,6 +112,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The database type.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */
@@ -108,6 +121,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String DBType;
 
         /**
+         * <p>The name of the log shipping job.</p>
+         * 
          * <strong>example:</strong>
          * <p>hub-pay-callback-ykt</p>
          */
@@ -115,6 +130,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String deliverName;
 
         /**
+         * <p>The log shipping time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-06\&quot;T\&quot;10:15\&quot;Z\&quot;</p>
          */
@@ -122,6 +139,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String deliverTime;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>aaa</p>
          */
@@ -129,6 +148,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>am-bp1p38m2c26s7hpk690650.ads.aliyuncs.com</p>
          */
@@ -136,16 +157,23 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String domainUrl;
 
         /**
+         * <p>Indicates whether dirty data is filtered.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("FilterDirtyData")
         public Boolean filterDirtyData;
 
+        /**
+         * <p>The log keywords.</p>
+         */
         @NameInMap("LogHubStores")
         public DescribeLoghubDetailResponseBodyLoghubInfoLogHubStores logHubStores;
 
         /**
+         * <p>The name of the Logstore.</p>
+         * 
          * <strong>example:</strong>
          * <p>device_login</p>
          */
@@ -153,6 +181,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>The name of the Simple Log Service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-adb</p>
          */
@@ -160,6 +190,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shenzhen</p>
          */
@@ -167,6 +199,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>cbd_bi</p>
          */
@@ -174,6 +208,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String schemaName;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>test2</p>
          */
@@ -181,6 +217,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The name of the database account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -188,6 +226,8 @@ public class DescribeLoghubDetailResponseBody extends TeaModel {
         public String userName;
 
         /**
+         * <p>The zone ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
          */

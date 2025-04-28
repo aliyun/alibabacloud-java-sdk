@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksResponseBody extends TeaModel {
     /**
+     * <p>The O\&amp;M event IDs that are separated by commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
     public String ids;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8B709A33-5E8D-511F-A225-AFC0B6AAAD76</p>
      */

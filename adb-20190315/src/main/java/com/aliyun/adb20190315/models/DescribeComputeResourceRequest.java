@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComputeResourceRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>am-bp1r053byu48p****</p>
@@ -14,7 +14,7 @@ public class DescribeComputeResourceRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <strong>3</strong>.</p>
+     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to <strong>3.0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -23,10 +23,10 @@ public class DescribeComputeResourceRequest extends TeaModel {
     public String DBClusterVersion;
 
     /**
-     * <p>The available computing resources for migrating AnalyticDB MySQL Data Warehouse Edition to AnalyticDB MySQL Lakehouse Edition. Possible values are:</p>
+     * <p>Specifies whether to query the specifications of the available computing resources that are migrated from AnalyticDB for MySQL Data Warehouse Edition to Data Lakehouse Edition. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
-     * <li><strong>false</strong>(default value)</li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

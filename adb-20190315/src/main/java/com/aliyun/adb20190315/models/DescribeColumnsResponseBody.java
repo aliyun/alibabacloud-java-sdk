@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeColumnsResponseBody extends TeaModel {
     /**
-     * <p>The list of columns.</p>
+     * <p>The queried columns.</p>
      */
     @NameInMap("Items")
     public DescribeColumnsResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -42,7 +42,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
     public static class DescribeColumnsResponseBodyItemsColumn extends TeaModel {
         /**
-         * <p>Indicates whether the columns are auto-incremented.</p>
+         * <p>Indicates whether the column is auto-incremented.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>am-bp1xxxxxxxx47</p>
@@ -69,7 +69,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>Indicates whether the column is a primary key.</p>
+         * <p>Indicates whether the column is a primary key column.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

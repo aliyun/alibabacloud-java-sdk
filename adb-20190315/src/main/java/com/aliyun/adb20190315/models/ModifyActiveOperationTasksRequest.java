@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The ID of the O\&amp;M event.</p>
+     * 
      * <strong>example:</strong>
      * <p>1482487</p>
      */
@@ -12,6 +14,12 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String ids;
 
     /**
+     * <p>Specifies whether to immediately execute the O\&amp;M event. Valid values:</p>
+     * <ul>
+     * <li>1: immediately executes the O\&amp;M event.</li>
+     * <li>0: executes the O\&amp;M event at a specific point in time.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +33,8 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -41,6 +51,8 @@ public class ModifyActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The time from which you want to execute the O\&amp;M event.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-08-15T12:00:00Z</p>
      */

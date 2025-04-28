@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClustersResponseBody extends TeaModel {
     /**
-     * <p>The queried clusters.</p>
+     * <p>The queried cluster information.</p>
      */
     @NameInMap("Items")
     public DescribeDBClustersResponseBodyItems items;
@@ -323,7 +323,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The job steps.</p>
+         * <p>The job step.</p>
          */
         @NameInMap("StepList")
         public DescribeDBClustersResponseBodyItemsDBClusterTaskInfoStepList stepList;

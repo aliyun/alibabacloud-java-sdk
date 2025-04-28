@@ -158,7 +158,7 @@ public class CreateDBClusterRequest extends TeaModel {
     public Boolean diskEncryption;
 
     /**
-     * <p>The number of elastic I/O units (EIUs). For more information, see <a href="https://help.aliyun.com/document_detail/189505.html">Use EIUs to scale up storage resources</a>.</p>
+     * <p>The number of elastic I/O units (EIUs). For more information, see <a href="https://help.aliyun.com/document_detail/189505.html">Elasticity of the storage layer</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -328,8 +328,8 @@ public class CreateDBClusterRequest extends TeaModel {
     /**
      * <p>The subscription period of the subscription cluster.</p>
      * <ul>
-     * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</li>
-     * <li>Valid values when Period is set to Month: 1 to 11 (integer)</li>
+     * <li>Valid values when Period is set to Year: 1, 2, and 3 (integer)</li>
+     * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
      * </ul>
      * <blockquote>
      * <ul>

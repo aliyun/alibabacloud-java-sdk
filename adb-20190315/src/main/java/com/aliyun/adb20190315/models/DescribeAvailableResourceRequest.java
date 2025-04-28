@@ -18,7 +18,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The resources available in the supported modes.</p>
+     * <p>The billing method. Valid values:</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>

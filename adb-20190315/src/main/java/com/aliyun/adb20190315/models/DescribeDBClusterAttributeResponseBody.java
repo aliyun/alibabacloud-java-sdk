@@ -766,6 +766,30 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The ID of the secondary vSwitch.</p>
+         * <blockquote>
+         * <p> You cannot set this parameter to a value that is the same as that of the VSwitchId parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-0jlb72a9dan1ja9cvg9tf</p>
+         */
+        @NameInMap("SecondaryVSwitchId")
+        public String secondaryVSwitchId;
+
+        /**
+         * <p>The ID of the secondary zone.</p>
+         * <blockquote>
+         * <p> You cannot set this parameter to a value that is the same as that of the ZoneId parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-b</p>
+         */
+        @NameInMap("SecondaryZoneId")
+        public String secondaryZoneId;
+
+        /**
          * <p>The specifications of storage resources that are used in the cluster in elastic mode. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.</p>
          * 
          * <strong>example:</strong>
@@ -1158,6 +1182,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setSecondaryVSwitchId(String secondaryVSwitchId) {
+            this.secondaryVSwitchId = secondaryVSwitchId;
+            return this;
+        }
+        public String getSecondaryVSwitchId() {
+            return this.secondaryVSwitchId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setSecondaryZoneId(String secondaryZoneId) {
+            this.secondaryZoneId = secondaryZoneId;
+            return this;
+        }
+        public String getSecondaryZoneId() {
+            return this.secondaryZoneId;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setStorageResource(String storageResource) {

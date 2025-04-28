@@ -11,7 +11,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneList> availableZoneList;
 
     /**
-     * <p>The resources available in the supported editions.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -20,7 +20,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -562,6 +562,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
+         */
+        @NameInMap("ZoneName")
+        public String zoneName;
+
         public static DescribeAvailableResourceResponseBodyAvailableZoneList build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableZoneList self = new DescribeAvailableResourceResponseBodyAvailableZoneList();
             return TeaModel.build(map, self);
@@ -597,6 +606,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableZoneList setZoneName(String zoneName) {
+            this.zoneName = zoneName;
+            return this;
+        }
+        public String getZoneName() {
+            return this.zoneName;
         }
 
     }

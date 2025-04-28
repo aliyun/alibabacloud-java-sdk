@@ -7,7 +7,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
      * <blockquote>
-     * <p> If you leave this parameter empty, the default value 7 is used.</p>
+     * <p> If you do not specify this parameter, the default value 7 is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     /**
      * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
      * <blockquote>
-     * <p> If you leave this parameter empty, the default value 7 is used.</p>
+     * <p> If you do not specify this parameter, the default value 7 is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

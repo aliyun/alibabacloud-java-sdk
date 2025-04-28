@@ -4,6 +4,12 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The free size of backup sets. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FreeBackupSize")
     public Long freeBackupSize;
 
@@ -40,6 +46,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total size of backup sets. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64953700</p>
+     */
     @NameInMap("TotalBackupSize")
     public Long totalBackupSize;
 
@@ -123,6 +135,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <p>The expiration time of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-02T16:00Z</p>
+         */
         @NameInMap("BackupExpiredTime")
         public String backupExpiredTime;
 
@@ -176,7 +194,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupType;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>am-bp18934i73vb5****</p>

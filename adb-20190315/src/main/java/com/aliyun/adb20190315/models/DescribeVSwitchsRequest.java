@@ -11,6 +11,11 @@ public class DescribeVSwitchsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -27,6 +32,11 @@ public class DescribeVSwitchsRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The virtual private cloud (VPC) ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the VPC ID.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>vpc-2ze1lz7nk4pn4zwy1j7pm</p>
      */
@@ -34,6 +44,11 @@ public class DescribeVSwitchsRequest extends TeaModel {
     public String vpcId;
 
     /**
+     * <p>The zone ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeRegions</a> operation to query the most recent zone list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-h</p>
      */

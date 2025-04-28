@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-xxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
     public String ids;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>642F3512-C628-5D0C-8815-F6670CEA00D4</p>
      */

@@ -29,9 +29,9 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>The number of days for which to retain backup files. Valid values: 7 to 730.</p>
+     * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
      * <blockquote>
-     * <p>The default value is 7.</p>
+     * <p> If you do not specify this parameter, the default value 7 is used.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

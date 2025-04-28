@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether an SLR is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     public Boolean hasServiceLinkedRole;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA0F6761-7A8C-59F8-9624-FB56788C0EDF</p>
      */

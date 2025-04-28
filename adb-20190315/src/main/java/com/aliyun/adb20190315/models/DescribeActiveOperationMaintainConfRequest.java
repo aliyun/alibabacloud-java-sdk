@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintainConfRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-xxxxxxxx</p>
      */
@@ -18,6 +20,8 @@ public class DescribeActiveOperationMaintainConfRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -25,6 +29,8 @@ public class DescribeActiveOperationMaintainConfRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmzuemxkbvwqq</p>
      */

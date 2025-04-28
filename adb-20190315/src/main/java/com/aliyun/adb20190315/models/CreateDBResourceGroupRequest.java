@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourceGroupRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <blockquote>
@@ -73,6 +76,14 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     public static CreateDBResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBResourceGroupRequest self = new CreateDBResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBResourceGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateDBResourceGroupRequest setDBClusterId(String DBClusterId) {

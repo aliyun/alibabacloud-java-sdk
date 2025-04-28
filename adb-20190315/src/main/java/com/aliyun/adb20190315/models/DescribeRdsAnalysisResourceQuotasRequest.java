@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     /**
+     * <p>The edition of the MySQL analytic instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>mixed_storage</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     public String clusterCategory;
 
     /**
+     * <p>The mode of the MySQL analytic instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>flexible</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     public String clusterMode;
 
     /**
+     * <p>The instance type of the MySQL analytic instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>E32</p>
      */
@@ -26,6 +32,8 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     public String nodeClass;
 
     /**
+     * <p>The number of nodes in the MySQL analytic instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -39,6 +47,8 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the ApsaraDB RDS instance from which data is synchronized to the MySQL analytic instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>rm-2ze09tofcv39h7165</p>
      */
@@ -46,6 +56,10 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     public String rdsInstanceId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,6 +69,8 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
      */
@@ -68,6 +84,8 @@ public class DescribeRdsAnalysisResourceQuotasRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The storage type of the MySQL analytic instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cloud_essd</p>
      */

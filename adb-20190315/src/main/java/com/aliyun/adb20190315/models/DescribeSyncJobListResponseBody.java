@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSyncJobListResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-j6c22lubl8d9l3989</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
     public Integer DBClusterId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -26,16 +32,23 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>482B8BAE-6EC0-5C0E-B2AF-FD42A3FC5B67</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried synchronization jobs.</p>
+     */
     @NameInMap("SyncJobs")
     public java.util.List<DescribeSyncJobListResponseBodySyncJobs> syncJobs;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -97,6 +110,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
 
     public static class DescribeSyncJobListResponseBodySyncJobs extends TeaModel {
         /**
+         * <p>The ID of the Spark job.</p>
+         * 
          * <strong>example:</strong>
          * <p>dts-xxxxx</p>
          */
@@ -104,6 +119,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         public String jobId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -111,6 +128,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The description of the source instance or cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -118,6 +137,11 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         public String sourceDBClusterDescription;
 
         /**
+         * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query backup set IDs.</p>
+         * <blockquote>
+         * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>pc-t4n766v2llx852n81</p>
          */
@@ -125,6 +149,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         public String sourceDBClusterId;
 
         /**
+         * <p>The database type of the source instance or cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>polardb</p>
          */
@@ -132,6 +158,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         public String sourceDBType;
 
         /**
+         * <p>The storage size of the source instance or cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -139,6 +167,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         public Integer sourceStorageSize;
 
         /**
+         * <p>The number of tables in the source instance or cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -146,6 +176,8 @@ public class DescribeSyncJobListResponseBody extends TeaModel {
         public Integer sourceTableNumber;
 
         /**
+         * <p>The synchronization platform.</p>
+         * 
          * <strong>example:</strong>
          * <p>ADB-CDC</p>
          */

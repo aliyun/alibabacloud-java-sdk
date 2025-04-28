@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSchemasResponseBody extends TeaModel {
     /**
-     * <p>The databases.</p>
+     * <p>The queried databases.</p>
      */
     @NameInMap("Items")
     public DescribeSchemasResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -42,7 +42,7 @@ public class DescribeSchemasResponseBody extends TeaModel {
 
     public static class DescribeSchemasResponseBodyItemsSchema extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>am-bp1xxxxxxxx47</p>

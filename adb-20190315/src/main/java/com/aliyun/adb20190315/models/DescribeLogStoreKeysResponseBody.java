@@ -4,10 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogStoreKeysResponseBody extends TeaModel {
+    /**
+     * <p>The queried log keywords.</p>
+     */
     @NameInMap("LogStoreKeys")
     public DescribeLogStoreKeysResponseBodyLogStoreKeys logStoreKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3BB185E9-BB54-1727-B876-13243E4C0EB5</p>
      */

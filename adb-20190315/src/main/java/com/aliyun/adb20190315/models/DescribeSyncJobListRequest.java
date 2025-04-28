@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSyncJobListRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,8 @@ public class DescribeSyncJobListRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>Specifies whether to obtain details about the source instance or cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -27,6 +33,8 @@ public class DescribeSyncJobListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -34,6 +42,8 @@ public class DescribeSyncJobListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -41,6 +51,10 @@ public class DescribeSyncJobListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +70,8 @@ public class DescribeSyncJobListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The description of the source cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -63,6 +79,11 @@ public class DescribeSyncJobListRequest extends TeaModel {
     public String sourceDBClusterDescription;
 
     /**
+     * <p>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query backup set IDs.</p>
+     * <blockquote>
+     * <p> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>pc-t4n766v2llx852n81</p>
      */
@@ -70,6 +91,8 @@ public class DescribeSyncJobListRequest extends TeaModel {
     public String sourceDBClusterId;
 
     /**
+     * <p>The source database type.</p>
+     * 
      * <strong>example:</strong>
      * <p>sls</p>
      */

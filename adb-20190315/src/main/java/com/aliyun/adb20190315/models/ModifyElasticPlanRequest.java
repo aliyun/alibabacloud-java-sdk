@@ -169,7 +169,7 @@ public class ModifyElasticPlanRequest extends TeaModel {
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/466685.html">DescribeDBResourceGroup</a> operation to query the resource group name.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

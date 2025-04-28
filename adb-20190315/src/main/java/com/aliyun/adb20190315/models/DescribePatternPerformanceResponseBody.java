@@ -4,6 +4,12 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribePatternPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The IP address of the SQL client that submits the SQL pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.14.*</p>
+     */
     @NameInMap("AccessIp")
     public String accessIp;
 
@@ -16,6 +22,12 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The number of failed SQL patterns within the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FailedCount")
     public Long failedCount;
 
@@ -25,6 +37,12 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("Performances")
     public java.util.List<DescribePatternPerformanceResponseBodyPerformances> performances;
 
+    /**
+     * <p>The number of queries executed in association with the SQL pattern within the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35018</p>
+     */
     @NameInMap("QueryCount")
     public Long queryCount;
 
@@ -37,6 +55,12 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The SQL statement that represents the SQL pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT *nFROM HIVE.<code>ADB_EXTERNAL_TPCH_10GB</code>.<code>External_customer</code>nLIMIT ?</p>
+     */
     @NameInMap("SQLPattern")
     public String SQLPattern;
 
@@ -49,9 +73,21 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The tables that are in association with the SQL pattern.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tpch_1g.part;tpch_1g.supplier;tpch_1g.lineitem;tpch_1g.partsupp;tpch_1g.orders;tpch_1g.nation</p>
+     */
     @NameInMap("Tables")
     public String tables;
 
+    /**
+     * <p>The database account that is used to execute the SQL statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("User")
     public String user;
 

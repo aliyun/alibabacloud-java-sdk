@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyLogHubStatusResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AA1F421-395B-5BC4-BDDC-762C508A952B</p>
      */

@@ -40,6 +40,55 @@ public class DescribeAccountsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeAccountsResponseBodyAccountListDBAccountTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAccountsResponseBodyAccountListDBAccountTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountListDBAccountTagsTag self = new DescribeAccountsResponseBodyAccountListDBAccountTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccountTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccountTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeAccountsResponseBodyAccountListDBAccountTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeAccountsResponseBodyAccountListDBAccountTagsTag> tag;
+
+        public static DescribeAccountsResponseBodyAccountListDBAccountTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountsResponseBodyAccountListDBAccountTags self = new DescribeAccountsResponseBodyAccountListDBAccountTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccountTags setTag(java.util.List<DescribeAccountsResponseBodyAccountListDBAccountTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeAccountsResponseBodyAccountListDBAccountTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeAccountsResponseBodyAccountListDBAccount extends TeaModel {
         /**
          * <p>The description of the database account.</p>
@@ -86,6 +135,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
+        @NameInMap("Tags")
+        public DescribeAccountsResponseBodyAccountListDBAccountTags tags;
+
         public static DescribeAccountsResponseBodyAccountListDBAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountListDBAccount self = new DescribeAccountsResponseBodyAccountListDBAccount();
             return TeaModel.build(map, self);
@@ -121,6 +173,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getAccountType() {
             return this.accountType;
+        }
+
+        public DescribeAccountsResponseBodyAccountListDBAccount setTags(DescribeAccountsResponseBodyAccountListDBAccountTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeAccountsResponseBodyAccountListDBAccountTags getTags() {
+            return this.tags;
         }
 
     }

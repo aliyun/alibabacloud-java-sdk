@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class BindDBResourcePoolWithUserRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <blockquote>
@@ -52,6 +55,14 @@ public class BindDBResourcePoolWithUserRequest extends TeaModel {
     public static BindDBResourcePoolWithUserRequest build(java.util.Map<String, ?> map) throws Exception {
         BindDBResourcePoolWithUserRequest self = new BindDBResourcePoolWithUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BindDBResourcePoolWithUserRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public BindDBResourcePoolWithUserRequest setDBClusterId(String DBClusterId) {

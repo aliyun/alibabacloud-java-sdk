@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0A156332-D2AC-5C98-8872-9779EA1CC022</p>
      */

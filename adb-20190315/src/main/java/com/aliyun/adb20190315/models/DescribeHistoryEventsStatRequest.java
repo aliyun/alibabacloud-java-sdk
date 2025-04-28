@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsStatRequest extends TeaModel {
     /**
+     * <p>The status of the event. Valid values:</p>
+     * <ul>
+     * <li>Archived</li>
+     * <li>UnArchived</li>
+     * <li>All</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>All</p>
      */
@@ -12,6 +19,8 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String archiveStatus;
 
     /**
+     * <p>The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, this time is automatically converted to a time that is exactly 30 days earlier than the current time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-01-02T11:31:03Z</p>
      */
@@ -25,6 +34,8 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The product ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>adb</p>
      */
@@ -32,6 +43,8 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String productId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -48,6 +61,8 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2022-03-02T11:31:03Z</p>
      */

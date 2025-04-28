@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateLogHubRequest extends TeaModel {
     /**
+     * <p>Specifies whether to create the log shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class OperateLogHubRequest extends TeaModel {
     public Boolean create;
 
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +28,7 @@ public class OperateLogHubRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the log shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +38,7 @@ public class OperateLogHubRequest extends TeaModel {
     public String deliverName;
 
     /**
+     * <p>The shipping time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +48,7 @@ public class OperateLogHubRequest extends TeaModel {
     public String deliverTime;
 
     /**
+     * <p>The description of the log shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +58,13 @@ public class OperateLogHubRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>Specifies whether to filter dirty data.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -57,12 +72,14 @@ public class OperateLogHubRequest extends TeaModel {
     public Boolean filterDirtyData;
 
     /**
+     * <p>The log keywords.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("LogHubStores")
     public java.util.List<OperateLogHubRequestLogHubStores> logHubStores;
 
     /**
+     * <p>The name of the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,6 +95,7 @@ public class OperateLogHubRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The password of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,6 +105,7 @@ public class OperateLogHubRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,6 +115,8 @@ public class OperateLogHubRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The channel of the log shipping job.</p>
+     * 
      * <strong>example:</strong>
      * <p>SLS</p>
      */
@@ -109,6 +130,7 @@ public class OperateLogHubRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,6 +140,7 @@ public class OperateLogHubRequest extends TeaModel {
     public String schemaName;
 
     /**
+     * <p>The name of the table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -127,6 +150,7 @@ public class OperateLogHubRequest extends TeaModel {
     public String tableName;
 
     /**
+     * <p>The name of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -286,6 +310,7 @@ public class OperateLogHubRequest extends TeaModel {
 
     public static class OperateLogHubRequestLogHubStores extends TeaModel {
         /**
+         * <p>The value of the log keyword.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,6 +320,7 @@ public class OperateLogHubRequest extends TeaModel {
         public String fieldKey;
 
         /**
+         * <p>The log keyword.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

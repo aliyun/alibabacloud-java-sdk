@@ -11,6 +11,12 @@ public class DescribeSyncAvailableDBClusterListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The query type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Target</li>
+     * <li>Source</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +26,7 @@ public class DescribeSyncAvailableDBClusterListRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,6 +36,8 @@ public class DescribeSyncAvailableDBClusterListRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
      */
@@ -41,10 +50,15 @@ public class DescribeSyncAvailableDBClusterListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The source instances or clusters.</p>
+     */
     @NameInMap("SourceDBCluster")
     public java.util.List<DescribeSyncAvailableDBClusterListRequestSourceDBCluster> sourceDBCluster;
 
     /**
+     * <p>The synchronization platform.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADB-CDC</p>
      */
@@ -130,6 +144,8 @@ public class DescribeSyncAvailableDBClusterListRequest extends TeaModel {
 
     public static class DescribeSyncAvailableDBClusterListRequestSourceDBCluster extends TeaModel {
         /**
+         * <p>The ID of the source instance or cluster. Separate multiple IDs with commas (,).</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-bp1l3yh04y7us147n</p>
          */
@@ -137,6 +153,8 @@ public class DescribeSyncAvailableDBClusterListRequest extends TeaModel {
         public String clusterIds;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -144,6 +162,14 @@ public class DescribeSyncAvailableDBClusterListRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The database type of the source instance or cluster.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>rds: ApsaraDB RDS.</li>
+         * <li>sls: Simple Log Service.</li>
+         * <li>polardb: PolarDB.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */

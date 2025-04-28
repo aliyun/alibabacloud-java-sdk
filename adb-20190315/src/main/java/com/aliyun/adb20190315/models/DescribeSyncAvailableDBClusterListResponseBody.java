@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FBD1DD96-AD1D-516C-9D9A-60BA081F66EE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried instances or clusters.</p>
+     */
     @NameInMap("SyncAvailableDBClusters")
     public java.util.List<DescribeSyncAvailableDBClusterListResponseBodySyncAvailableDBClusters> syncAvailableDBClusters;
 
@@ -37,6 +42,8 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
 
     public static class DescribeSyncAvailableDBClusterListResponseBodySyncAvailableDBClusters extends TeaModel {
         /**
+         * <p>The description of the instance or cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>DB1</p>
          */
@@ -44,6 +51,8 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
         public String DBClusterDescription;
 
         /**
+         * <p>The instance or cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-bp1l3yh04y7us147n</p>
          */
@@ -51,6 +60,8 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The database type of the instance or cluster.</p>
+         * 
          * <strong>example:</strong>
          * <p>rds</p>
          */
@@ -58,6 +69,8 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
         public String DBType;
 
         /**
+         * <p>The storage size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -65,6 +78,8 @@ public class DescribeSyncAvailableDBClusterListResponseBody extends TeaModel {
         public Float storageSize;
 
         /**
+         * <p>The number of tables.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

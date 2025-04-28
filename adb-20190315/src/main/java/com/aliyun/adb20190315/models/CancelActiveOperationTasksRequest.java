@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-xxxxxxxx</p>
      */
@@ -18,6 +20,8 @@ public class CancelActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

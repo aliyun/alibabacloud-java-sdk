@@ -92,7 +92,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>am-bp1xxxxxxxx47</p>
@@ -224,7 +224,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     public static class DescribeAllDataSourceResponseBodySchemasSchema extends TeaModel {
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>am-bp1xxxxxxxx47</p>
@@ -285,7 +285,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
 
     public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>am-bp1xxxxxxxx47</p>

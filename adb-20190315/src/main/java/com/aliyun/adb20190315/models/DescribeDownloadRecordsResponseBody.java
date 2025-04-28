@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
     /**
-     * <p>Details about the download tasks.</p>
+     * <p>The queried download tasks.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeDownloadRecordsResponseBodyRecords> records;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>987F51BE-C4CB-332A-B159-63CE87******</p>
@@ -42,7 +42,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
 
     public static class DescribeDownloadRecordsResponseBodyRecords extends TeaModel {
         /**
-         * <p>The ID of the download task.</p>
+         * <p>The download task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69</p>
@@ -51,7 +51,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         public Long downloadId;
 
         /**
-         * <p>The error message returned when the download task has failed.</p>
+         * <p>The error message returned if the download task failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The query result is empty.</p>
@@ -69,11 +69,11 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The status of the download task.</p>
+         * <p>The status of the download task. Valid values:</p>
          * <ul>
-         * <li><strong>running</strong>: The download task is currently in progress.</li>
-         * <li><strong>finished</strong>: The download task is complete.</li>
-         * <li><strong>failed</strong>: The download task has failed.</li>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

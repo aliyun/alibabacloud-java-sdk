@@ -4,10 +4,19 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
+    /**
+     * <p>The queried configuration information.</p>
+     */
     @NameInMap("Config")
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
+     * <p>Indicates whether the O\&amp;M task is configured. Valid values:</p>
+     * <ul>
+     * <li>1: yes.</li>
+     * <li>0: no.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +24,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public Integer hasConfig;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>92B3D2F0-B5E3-5592-9A6F-D0A6C34ACBA9</p>
      */
@@ -52,6 +63,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
+         * <p>The time when the O\&amp;M task was created. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-08T02:23:13Z</p>
          */
@@ -59,6 +72,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The days on which the O\&amp;M task is executed every week.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -66,6 +81,12 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleTime;
 
         /**
+         * <p>The unit of the O\&amp;M task cycle. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Week</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Month</p>
          */
@@ -73,6 +94,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleType;
 
         /**
+         * <p>The end time of the maintenance window.</p>
+         * 
          * <strong>example:</strong>
          * <p>20:00:00Z</p>
          */
@@ -80,6 +103,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
+         * <p>The start time of the maintenance window.</p>
+         * 
          * <strong>example:</strong>
          * <p>18:00:00Z</p>
          */
@@ -87,6 +112,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
+         * <p>The time when the O\&amp;M task was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-12T12:34:40Z</p>
          */
@@ -94,6 +121,12 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>Indicates whether the configuration takes effect. Valid values:</p>
+         * <ul>
+         * <li>1: yes.</li>
+         * <li>2: no.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

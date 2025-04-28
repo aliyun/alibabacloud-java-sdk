@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogHubAttributeRequest extends TeaModel {
     /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The name of the log shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
     public String deliverName;
 
     /**
+     * <p>The name of the Logstore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +41,7 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The name of the Simple Log Service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +51,7 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

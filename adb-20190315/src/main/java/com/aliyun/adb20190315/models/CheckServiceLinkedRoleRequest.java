@@ -11,6 +11,11 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -24,6 +29,8 @@ public class CheckServiceLinkedRoleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The name of the service.</p>
+     * 
      * <strong>example:</strong>
      * <p>ads.aliyuncs.com</p>
      */

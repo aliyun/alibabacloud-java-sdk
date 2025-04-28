@@ -4,10 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeKmsKeysResponseBody extends TeaModel {
+    /**
+     * <p>The queried KMS keys.</p>
+     */
     @NameInMap("KmsKeys")
     public DescribeKmsKeysResponseBodyKmsKeys kmsKeys;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8F91F25F-8BCF-59E3-AF67-3806DB41FD09</p>
      */
@@ -37,6 +42,8 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
 
     public static class DescribeKmsKeysResponseBodyKmsKeysKmsKey extends TeaModel {
         /**
+         * <p>The alias of the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>mykey</p>
          */
@@ -44,6 +51,8 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
         public String keyAlias;
 
         /**
+         * <p>The ID of the key.</p>
+         * 
          * <strong>example:</strong>
          * <p>2e81355b-f8e7-4090-8082-a8f8124a621c</p>
          */

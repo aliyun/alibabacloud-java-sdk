@@ -105,7 +105,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
          * <p>The value of the query property.</p>
          * 
          * <strong>example:</strong>
-         * <p>xian</p>
+         * <p>40</p>
          */
         @NameInMap("Value")
         public String value;
@@ -200,6 +200,15 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        /**
+         * <p>The SQL pattern ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612503.html">DescribePatternPerformance</a> operation to query the performance metrics of an SQL pattern within a time range.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>-5575924945138******</p>
+         */
         @NameInMap("PatternId")
         public String patternId;
 

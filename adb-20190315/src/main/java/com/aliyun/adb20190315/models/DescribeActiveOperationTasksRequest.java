@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTasksRequest extends TeaModel {
     /**
+     * <p>Specifies whether the O\&amp;M task can be canceled. Valid values:</p>
+     * <ul>
+     * <li>\-1: yes for all O\&amp;M tasks.</li>
+     * <li>0: no.</li>
+     * <li>1: yes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -12,6 +19,13 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowCancel;
 
     /**
+     * <p>Specifies whether the execution time of the O\&amp;M task can be changed. Valid values:</p>
+     * <ul>
+     * <li>\-1: yes for all O\&amp;M tasks.</li>
+     * <li>0: no.</li>
+     * <li>1: yes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -19,6 +33,13 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer allowChange;
 
     /**
+     * <p>The trigger level of the O\&amp;M task. Default value: all. Valid values:</p>
+     * <ul>
+     * <li>all: all task levels.</li>
+     * <li>S0: exception fixing.</li>
+     * <li>S1: system O\&amp;M.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */
@@ -26,6 +47,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String changeLevel;
 
     /**
+     * <p>The database type.</p>
+     * 
      * <strong>example:</strong>
      * <p>analyticdb</p>
      */
@@ -33,6 +56,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String dbType;
 
     /**
+     * <p>The name of the cluster.</p>
+     * 
      * <strong>example:</strong>
      * <p>am-2ze307ym37t762hnl</p>
      */
@@ -46,6 +71,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -53,6 +80,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 25.</p>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
@@ -60,6 +89,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The product ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ads</p>
      */
@@ -67,6 +98,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String productId;
 
     /**
+     * <p>The region information.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -74,6 +107,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String region;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-shenzhen</p>
      */
@@ -90,6 +125,13 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>The status of the O\&amp;M task. Valid values:</p>
+     * <ul>
+     * <li>\-1: all statuses.</li>
+     * <li>3: pending.</li>
+     * <li>4: executing.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>-1</p>
      */
@@ -97,6 +139,8 @@ public class DescribeActiveOperationTasksRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The type of the O\&amp;M tasks that you want to query. Set the value to all to query all O\&amp;M tasks configured by the Alibaba Cloud account.</p>
+     * 
      * <strong>example:</strong>
      * <p>all</p>
      */

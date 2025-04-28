@@ -44,6 +44,15 @@ public class ModifyDBClusterPayTypeRequest extends TeaModel {
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -46,6 +46,9 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SchemaNames")
+    public String schemaNames;
+
     /**
      * <p>The total number of entries returned.</p>
      * 
@@ -98,6 +101,14 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeTableStatisticsResponseBody setSchemaNames(String schemaNames) {
+        this.schemaNames = schemaNames;
+        return this;
+    }
+    public String getSchemaNames() {
+        return this.schemaNames;
     }
 
     public DescribeTableStatisticsResponseBody setTotalCount(String totalCount) {

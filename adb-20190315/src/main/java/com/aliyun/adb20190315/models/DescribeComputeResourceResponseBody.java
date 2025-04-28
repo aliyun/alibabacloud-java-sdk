@@ -45,7 +45,7 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
          * <p>The specifications of computing resources displayed in the console.</p>
          * 
          * <strong>example:</strong>
-         * <p>8 Core 32 GB（单机版）</p>
+         * <p>8 Core 32 GB</p>
          */
         @NameInMap("DisplayValue")
         public String displayValue;

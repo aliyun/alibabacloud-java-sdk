@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     /**
+     * <p>The days on which you want to execute O\&amp;M events. Valid values: 1 to 7.</p>
+     * 
      * <strong>example:</strong>
      * <p>1,2,3,4,5,6,7</p>
      */
@@ -12,6 +14,8 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleTime;
 
     /**
+     * <p>The unit of the O\&amp;M cycle. Set the value to Week.</p>
+     * 
      * <strong>example:</strong>
      * <p>Week</p>
      */
@@ -19,6 +23,8 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleType;
 
     /**
+     * <p>The end time of the maintenance window.</p>
+     * 
      * <strong>example:</strong>
      * <p>02:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
+     * <p>The start time of the maintenance window.</p>
+     * 
      * <strong>example:</strong>
      * <p>02:00:00Z</p>
      */
@@ -39,6 +47,8 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -55,6 +65,12 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String securityToken;
 
     /**
+     * <p>Specifies whether to enable O\&amp;M events.</p>
+     * <ul>
+     * <li>1: yes.</li>
+     * <li>0: no.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

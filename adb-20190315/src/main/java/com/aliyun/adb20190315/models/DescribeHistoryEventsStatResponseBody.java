@@ -4,10 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeHistoryEventsStatResponseBody extends TeaModel {
+    /**
+     * <p>The queried events.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryEventsStatResponseBodyItems> items;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA0F6761-7A8C-59F8-9624-FB56788C0EDF</p>
      */
@@ -37,6 +42,14 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
 
     public static class DescribeHistoryEventsStatResponseBodyItems extends TeaModel {
         /**
+         * <p>The system event category. Valid values:</p>
+         * <ul>
+         * <li>Exception</li>
+         * <li>Optimize</li>
+         * <li>Notification</li>
+         * <li>Maintenance</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Exception</p>
          */
@@ -44,6 +57,8 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         public String eventCategory;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

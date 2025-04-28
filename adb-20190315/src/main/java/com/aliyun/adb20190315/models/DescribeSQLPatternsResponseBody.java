@@ -111,7 +111,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double averageExecutionTime;
 
         /**
-         * <p>The number of average operator cost.</p>
+         * <p>The average operation duration.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -138,7 +138,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double averageQueryTime;
 
         /**
-         * <p>The number of average scan cost.</p>
+         * <p>The average scan duration.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -190,7 +190,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long maxExecutionTime;
 
         /**
-         * <p>The number of max operator cost.</p>
+         * <p>The maximum operation duration.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -217,7 +217,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long maxQueryTime;
 
         /**
-         * <p>The number of max scan cost.</p>
+         * <p>The maximum scan duration.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -235,7 +235,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long maxScanSize;
 
         /**
-         * <p>The number of operator cost percentage.</p>
+         * <p>The operation duration percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>75</p>
@@ -244,7 +244,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double operatorCostPercentage;
 
         /**
-         * <p>The number of operator cost sum.</p>
+         * <p>The total operation duration.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -271,7 +271,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public String patternId;
 
         /**
-         * <p>The number of peak memory percentage.</p>
+         * <p>The peak memory percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -280,7 +280,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double peakMemoryPercentage;
 
         /**
-         * <p>The number of peak memory sum.</p>
+         * <p>The total peak memory.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -298,7 +298,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Long queryCount;
 
         /**
-         * <p>The number of query time percentage.</p>
+         * <p>The queue duration of the SQL statement. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -307,7 +307,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double queryTimePercentage;
 
         /**
-         * <p>The number of query time sum.</p>
+         * <p>The total query duration.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -325,7 +325,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public String SQLPattern;
 
         /**
-         * <p>The number of scan cost percentage.</p>
+         * <p>The scan duration percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>75</p>
@@ -334,7 +334,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double scanCostPercentage;
 
         /**
-         * <p>The number of scan cost sum.</p>
+         * <p>The total scan duration.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -343,7 +343,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double scanCostSum;
 
         /**
-         * <p>The number of scan size percentage.</p>
+         * <p>The amount of time consumed to scan data from a data source in the task. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -352,7 +352,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         public Double scanSizePercentage;
 
         /**
-         * <p>The number of scan size sum.</p>
+         * <p>Total total scan size.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

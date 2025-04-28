@@ -53,11 +53,6 @@ public class ModifySQAConfigRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable short query acceleration (SQA).</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>on</li>
-     * <li>off</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

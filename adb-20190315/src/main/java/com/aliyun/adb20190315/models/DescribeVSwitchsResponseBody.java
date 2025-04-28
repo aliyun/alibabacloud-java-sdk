@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1B892DA2-9ABC-5CC0-AD73-405479C3FA53</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried vSwitches.</p>
+     */
     @NameInMap("VSwitches")
     public DescribeVSwitchsResponseBodyVSwitches vSwitches;
 
@@ -37,6 +42,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
 
     public static class DescribeVSwitchsResponseBodyVSwitchesVSwitch extends TeaModel {
         /**
+         * <p>The ID of the Resource Access Management (RAM) user.</p>
+         * 
          * <strong>example:</strong>
          * <p>195813423043****</p>
          */
@@ -44,6 +51,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String aliUid;
 
         /**
+         * <p>The ID of the user channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>26842</p>
          */
@@ -51,6 +60,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String bid;
 
         /**
+         * <p>The IPv4 CIDR block of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
          */
@@ -58,6 +69,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
+         * <p>The time when the vSwitch was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-18T12:43:57Z</p>
          */
@@ -65,6 +78,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The time when the vSwitch was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-22T12:43:57Z</p>
          */
@@ -72,6 +87,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values: <strong>true</strong>: The vSwitch is the default vSwitch. <strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -79,6 +96,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The zone ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-k</p>
          */
@@ -86,6 +105,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String izNo;
 
         /**
+         * <p>The region ID of the vSwitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -93,6 +114,8 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String regionNo;
 
         /**
+         * <p>The state of the vSwitch. Valid values: <strong>Pending</strong>: the vSwitch is being configured. <strong>Available</strong>: the vSwitch is available.</p>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */
@@ -100,12 +123,20 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-25bcdxs7pv1****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VSW-Test-hangzhou-I</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
@@ -205,6 +236,9 @@ public class DescribeVSwitchsResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchsResponseBodyVSwitches extends TeaModel {
+        /**
+         * <p>The queried vSwitch.</p>
+         */
         @NameInMap("VSwitch")
         public java.util.List<DescribeVSwitchsResponseBodyVSwitchesVSwitch> vSwitch;
 
