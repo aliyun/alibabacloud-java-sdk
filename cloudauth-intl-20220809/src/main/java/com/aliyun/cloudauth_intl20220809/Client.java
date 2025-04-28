@@ -563,6 +563,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>全球证件ocr识别接口</p>
+     * 
+     * @param request DocOcrMaxRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DocOcrMaxResponse
+     */
+    public DocOcrMaxResponse docOcrMaxWithOptions(DocOcrMaxRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
+            body.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureBase64)) {
+            body.put("IdOcrPictureBase64", request.idOcrPictureBase64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureUrl)) {
+            body.put("IdOcrPictureUrl", request.idOcrPictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
+            body.put("IdThreshold", request.idThreshold);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            body.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            body.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrModel)) {
+            body.put("OcrModel", request.ocrModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            body.put("SceneCode", request.sceneCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spoof)) {
+            body.put("Spoof", request.spoof);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DocOcrMax"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DocOcrMaxResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>全球证件ocr识别接口</p>
+     * 
+     * @param request DocOcrMaxRequest
+     * @return DocOcrMaxResponse
+     */
+    public DocOcrMaxResponse docOcrMax(DocOcrMaxRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.docOcrMaxWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ekyc纯服务端接口</p>
      * 
      * @param request EkycVerifyRequest
