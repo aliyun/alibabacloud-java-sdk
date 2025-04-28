@@ -2858,6 +2858,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DialogueId", request.dialogueId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             query.put("SessionId", request.sessionId);
         }
@@ -8672,6 +8676,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roundLimit)) {
+            query.put("RoundLimit", request.roundLimit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {

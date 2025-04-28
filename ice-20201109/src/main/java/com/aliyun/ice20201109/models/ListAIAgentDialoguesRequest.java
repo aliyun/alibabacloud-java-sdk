@@ -34,6 +34,9 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RoundLimit")
+    public String roundLimit;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -87,6 +90,14 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAIAgentDialoguesRequest setRoundLimit(String roundLimit) {
+        this.roundLimit = roundLimit;
+        return this;
+    }
+    public String getRoundLimit() {
+        return this.roundLimit;
     }
 
     public ListAIAgentDialoguesRequest setSessionId(String sessionId) {

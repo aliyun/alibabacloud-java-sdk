@@ -13,6 +13,9 @@ public class DeleteAIAgentDialogueRequest extends TeaModel {
     @NameInMap("DialogueId")
     public String dialogueId;
 
+    @NameInMap("NodeId")
+    public String nodeId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class DeleteAIAgentDialogueRequest extends TeaModel {
     }
     public String getDialogueId() {
         return this.dialogueId;
+    }
+
+    public DeleteAIAgentDialogueRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     public DeleteAIAgentDialogueRequest setSessionId(String sessionId) {

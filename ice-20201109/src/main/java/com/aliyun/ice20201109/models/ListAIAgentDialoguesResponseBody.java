@@ -109,6 +109,12 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         @NameInMap("DialogueId")
         public String dialogueId;
 
+        @NameInMap("Extend")
+        public String extend;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
         /**
          * <strong>example:</strong>
          * <p>user</p>
@@ -161,6 +167,22 @@ public class ListAIAgentDialoguesResponseBody extends TeaModel {
         }
         public String getDialogueId() {
             return this.dialogueId;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialogues setExtend(String extend) {
+            this.extend = extend;
+            return this;
+        }
+        public String getExtend() {
+            return this.extend;
+        }
+
+        public ListAIAgentDialoguesResponseBodyDialogues setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public ListAIAgentDialoguesResponseBodyDialogues setProducer(String producer) {
