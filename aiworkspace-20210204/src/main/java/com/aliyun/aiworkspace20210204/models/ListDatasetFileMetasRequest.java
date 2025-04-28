@@ -15,7 +15,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String datasetVersion;
 
     /**
-     * <p>The end time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
+     * <p>The update time range to query. The end time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,17 @@ public class ListDatasetFileMetasRequest extends TeaModel {
 
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-12T14:36:01.000Z</p>
      */
     @NameInMap("EndTagUpdateTime")
     public String endTagUpdateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -68,15 +75,27 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     @Deprecated
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cars/20250221/</p>
+     */
     @NameInMap("QueryFileDir")
     public String queryFileDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>shuima</p>
+     */
     @NameInMap("QueryFileName")
     public String queryFileName;
 
     @NameInMap("QueryFileTypeIncludeAny")
     public java.util.List<String> queryFileTypeIncludeAny;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://test-xxx-oss/car/0001.png</p>
+     */
     @NameInMap("QueryImage")
     public String queryImage;
 
@@ -131,7 +150,7 @@ public class ListDatasetFileMetasRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start time when the file is updated. This parameter is used when you want to query file metadata during a period of time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
+     * <p>The update time range to query. The start time. The time follows the ISO 8601 standard. This parameter is valid only when QueryType is set to TAG.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      * 
      * <strong>example:</strong>
@@ -142,10 +161,17 @@ public class ListDatasetFileMetasRequest extends TeaModel {
 
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-01-12T14:36:01.000Z</p>
      */
     @NameInMap("StartTagUpdateTime")
     public String startTagUpdateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>w_100</p>
+     */
     @NameInMap("ThumbnailMode")
     public String thumbnailMode;
 

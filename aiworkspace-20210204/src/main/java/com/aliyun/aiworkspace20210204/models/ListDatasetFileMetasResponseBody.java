@@ -28,6 +28,10 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     @NameInMap("DatasetVersion")
     public String datasetVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -41,7 +45,7 @@ public class ListDatasetFileMetasResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

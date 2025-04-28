@@ -30,7 +30,7 @@ public class UpdateDatasetFileMetasRequest extends TeaModel {
     public String tagJobId;
 
     /**
-     * <p>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The ID of the workspace to which the dataset belongs. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>796**</p>

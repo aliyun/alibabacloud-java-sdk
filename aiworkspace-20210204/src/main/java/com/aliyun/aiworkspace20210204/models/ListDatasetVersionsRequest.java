@@ -69,17 +69,8 @@ public class ListDatasetVersionsRequest extends TeaModel {
     public String properties;
 
     /**
-     * <p>The field used to sort the results in queries by page. Default value: GmtCreateTime.</p>
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * </ul>
-     * <p>Valid values:</p>
+     * <p>The field used to sort the results in queries by page. Default value: GmtCreateTime.
+     * Valid values:</p>
      * <ul>
      * <li>SourceType</li>
      * <li>DataSourceType</li>
@@ -117,13 +108,6 @@ public class ListDatasetVersionsRequest extends TeaModel {
      * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
      * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
      * <li>USER: a dataset registered by a user.</li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
      * </ul>
      * 
      * <strong>example:</strong>

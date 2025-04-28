@@ -14,11 +14,10 @@ public class ListCodeSourcesRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The order in which the entries are sorted by the specific field on the returned page.</p>
-     * <p>Valid values:</p>
+     * <p>The order in which the entries are sorted by the specific field on the returned page. Valid values:</p>
      * <ul>
-     * <li>asc: ascending order. This is the default value.</li>
-     * <li>desc: descending order.</li>
+     * <li>ASC (default)</li>
+     * <li>DESC</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,10 +47,10 @@ public class ListCodeSourcesRequest extends TeaModel {
     /**
      * <p>The field used for sorting. Valid values:</p>
      * <ul>
-     * <li>GmtModifyTime: the time when the source code is modified.</li>
+     * <li>GmtModifyTime: the time when the code source was modified.</li>
      * <li>DisplayName: the display name.</li>
-     * <li>CodeSourceId: the ID of the code source.</li>
-     * <li>GmtCreateTime: the time when the code source is created. This is the default value.</li>
+     * <li>CodeSourceId: the code source ID.</li>
+     * <li>GmtCreateTime: the time when the code source was created. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

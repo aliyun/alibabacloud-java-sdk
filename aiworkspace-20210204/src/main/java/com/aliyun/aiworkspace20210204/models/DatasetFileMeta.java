@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class DatasetFileMeta extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>image/jpeg</p>
+     */
+    @NameInMap("ContentType")
+    public String contentType;
+
+    /**
+     * <strong>example:</strong>
      * <p>12</p>
      */
     @NameInMap("DataSize")
@@ -35,6 +42,13 @@ public class DatasetFileMeta extends TeaModel {
      */
     @NameInMap("FileName")
     public String fileName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
+    @NameInMap("FileType")
+    public String fileType;
 
     /**
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
@@ -89,6 +103,14 @@ public class DatasetFileMeta extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DatasetFileMeta setContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    public String getContentType() {
+        return this.contentType;
+    }
+
     public DatasetFileMeta setDataSize(Long dataSize) {
         this.dataSize = dataSize;
         return this;
@@ -135,6 +157,14 @@ public class DatasetFileMeta extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
+    }
+
+    public DatasetFileMeta setFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public String getFileType() {
+        return this.fileType;
     }
 
     public DatasetFileMeta setFileUpdateTime(String fileUpdateTime) {

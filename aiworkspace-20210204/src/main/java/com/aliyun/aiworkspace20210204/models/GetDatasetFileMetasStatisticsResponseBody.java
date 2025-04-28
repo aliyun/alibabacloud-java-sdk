@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetDatasetFileMetasStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the returned aggregation list, including the number of each aggregate item. The list is by default sorted in descending order based on the count number.</p>
+     */
     @NameInMap("DatasetFileMetasStats")
     public java.util.List<DatasetFileMetasStat> datasetFileMetasStats;
 
     /**
+     * <p>The returned number. Example: the number of metadata records or the number of user-defined tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>73</p>
      */
@@ -15,6 +20,8 @@ public class GetDatasetFileMetasStatisticsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADF6D849-*****-7E7030F0CE53</p>
      */

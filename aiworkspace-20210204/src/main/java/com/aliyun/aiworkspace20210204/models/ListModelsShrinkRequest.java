@@ -113,6 +113,9 @@ public class ListModelsShrinkRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The tags of the model.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

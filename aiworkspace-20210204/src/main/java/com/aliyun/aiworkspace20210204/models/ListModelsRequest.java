@@ -113,6 +113,9 @@ public class ListModelsRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The tags of the model.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListModelsRequestTag> tag;
 
@@ -260,9 +263,21 @@ public class ListModelsRequest extends TeaModel {
     }
 
     public static class ListModelsRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -3,22 +3,22 @@ package com.aliyun.aiworkspace20210204.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteUserConfigResponseBody extends TeaModel {
+public class DeleteConfigResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>dsjk****dfjksdf</p>
+     * <p>473469C7-AA6F-4DC5-B3DB-A******C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteUserConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteUserConfigResponseBody self = new DeleteUserConfigResponseBody();
+    public static DeleteConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteConfigResponseBody self = new DeleteConfigResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteUserConfigResponseBody setRequestId(String requestId) {
+    public DeleteConfigResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

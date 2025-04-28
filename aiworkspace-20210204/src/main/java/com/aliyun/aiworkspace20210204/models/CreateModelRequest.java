@@ -8,7 +8,7 @@ public class CreateModelRequest extends TeaModel {
      * <p>The visibility of the model in the workspace. Valid values:</p>
      * <ul>
      * <li>PRIVATE (default): Visible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: Visible to all users in the workspace.</li>
+     * <li>PUBLIC: Vvisible to all users in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateModelRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The domain of the model. Describes the domain in which the model is for. Example: nlp (Natural Language Processing), cv (computer vision), and others.</p>
+     * <p>The domain of the model. Describes the domain in which the model is for. Example: nlp (natural language processing), cv (computer vision), and others.</p>
      * 
      * <strong>example:</strong>
      * <p>nlp</p>
@@ -47,13 +47,13 @@ public class CreateModelRequest extends TeaModel {
     public java.util.Map<String, ?> extraInfo;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags. This parameter will be deprecated and replaced by Tag.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
     /**
-     * <p>The model description, which is used to distinguish different models.</p>
+     * <p>The model description, used to distinguish different models.</p>
      */
     @NameInMap("ModelDescription")
     public String modelDescription;
@@ -101,6 +101,9 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<Label> tag;
 
@@ -114,7 +117,7 @@ public class CreateModelRequest extends TeaModel {
     public String task;
 
     /**
-     * <p>The workspace ID. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID. Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>796**</p>

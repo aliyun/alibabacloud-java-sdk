@@ -50,7 +50,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
 
     public static class CreateWorkspaceResourceRequestResourcesLabels extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The label key.</p>
          * 
          * <strong>example:</strong>
          * <p>system.support.eas</p>
@@ -59,7 +59,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The label value.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -132,7 +132,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String envType;
 
         /**
-         * <p>The name of the resource group, which is unique within your Alibaba Cloud account.</p>
+         * <p>The name of the resource group, which is unique within your Alibaba Cloud account. This parameter is required for MaxCompute, Elastic Compute Service (ECS), Lingjun, Alibaba Cloud Container Compute Service (ACS), and Realtime Compute for Apache Flink resources.</p>
          * 
          * <strong>example:</strong>
          * <p>groupName</p>
@@ -154,16 +154,16 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The tags added to the resource.</p>
+         * <p>The labels added to the resource.</p>
          */
         @NameInMap("Labels")
         public java.util.List<CreateWorkspaceResourceRequestResourcesLabels> labels;
 
         /**
-         * <p>The resource name. Format:</p>
+         * <p>The resource name. The name must meet the following requirements:</p>
          * <ul>
          * <li>The name must be 3 to 28 characters in length, and can contain only letters, digits, and underscores (_). The name must start with a letter.</li>
-         * <li>The name is unique in the region.</li>
+         * <li>The name must be unique in the region.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -174,7 +174,7 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>**This field is no longer used and will be removed. Use the ResourceType field instead.</p>
+         * <p>**This parameter is no longer used and will be removed. Use the ResourceType parameter instead.</p>
          * 
          * <strong>example:</strong>
          * <p>MaxCompute</p>
@@ -183,13 +183,13 @@ public class CreateWorkspaceResourceRequest extends TeaModel {
         public String productType;
 
         /**
-         * <p>The list of quotas. Only MaxCompute quotas are available.</p>
+         * <p>The quotas. Only MaxCompute quotas are available.</p>
          */
         @NameInMap("Quotas")
         public java.util.List<CreateWorkspaceResourceRequestResourcesQuotas> quotas;
 
         /**
-         * <p>The resource type. Valid values:</p>
+         * <p>The resource types. Valid values:</p>
          * <ul>
          * <li>MaxCompute</li>
          * <li>ECS</li>
