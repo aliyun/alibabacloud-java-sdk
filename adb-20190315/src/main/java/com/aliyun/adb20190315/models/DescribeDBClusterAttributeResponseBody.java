@@ -725,6 +725,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("ProductForm")
+        public String productForm;
+
         /**
          * <p>The edition of the cluster. Valid values:</p>
          * <ul>
@@ -755,6 +758,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("ReservedNodeCount")
+        public Integer reservedNodeCount;
+
+        @NameInMap("ReservedNodeSize")
+        public String reservedNodeSize;
 
         /**
          * <p>The resource group ID.</p>
@@ -1152,6 +1161,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.port;
         }
 
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setProductForm(String productForm) {
+            this.productForm = productForm;
+            return this;
+        }
+        public String getProductForm() {
+            return this.productForm;
+        }
+
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setProductVersion(String productVersion) {
             this.productVersion = productVersion;
             return this;
@@ -1174,6 +1191,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setReservedNodeCount(Integer reservedNodeCount) {
+            this.reservedNodeCount = reservedNodeCount;
+            return this;
+        }
+        public Integer getReservedNodeCount() {
+            return this.reservedNodeCount;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setReservedNodeSize(String reservedNodeSize) {
+            this.reservedNodeSize = reservedNodeSize;
+            return this;
+        }
+        public String getReservedNodeSize() {
+            return this.reservedNodeSize;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setResourceGroupId(String resourceGroupId) {
