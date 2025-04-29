@@ -16,6 +16,13 @@ public class RunSearchGenerationShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>qwen-max-latest</p>
+     */
+    @NameInMap("ModelId")
+    public String modelId;
+
+    /**
+     * <strong>example:</strong>
      * <p>xxx</p>
      */
     @NameInMap("OriginalSessionId")
@@ -63,6 +70,14 @@ public class RunSearchGenerationShrinkRequest extends TeaModel {
     }
     public String getChatConfigShrink() {
         return this.chatConfigShrink;
+    }
+
+    public RunSearchGenerationShrinkRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
     }
 
     public RunSearchGenerationShrinkRequest setOriginalSessionId(String originalSessionId) {

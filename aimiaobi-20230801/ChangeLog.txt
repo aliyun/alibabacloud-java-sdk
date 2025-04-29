@@ -1,3 +1,13 @@
+2025-04-29 Version: 1.23.0
+- Support API SaveStyleLearningResult.
+- Update API RunSearchGeneration: add request parameters ModelId.
+- Update API RunSearchGeneration: add response parameters Body.Payload.Output.AgentContext.BizContext.ModelId.
+- Update API RunSearchGeneration: add response parameters Body.Payload.Output.AgentContext.BizContext.TokenCalculate.
+- Update API RunSearchGeneration: add response parameters Body.Payload.Output.AgentContext.BizContext.GeneratedContent.ExcerptResult.ReasonTextGenerate.
+- Update API RunSearchGeneration: add response parameters Body.Payload.Output.AgentContext.BizContext.GeneratedContent.TextGenerateResult.ReasonTextGenerate.
+- Update API RunSearchGeneration: add response parameters Body.Payload.Output.AgentContext.BizContext.GeneratedContent.TimelineResult.ReasonTextGenerate.
+
+
 2025-04-17 Version: 1.22.4
 - Update API SubmitEnterpriseVocAnalysisTask: add request parameters ApiKey.
 

@@ -1611,6 +1611,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("GenerateLevel")
         public String generateLevel;
 
+        @NameInMap("ReasonTextGenerate")
+        public String reasonTextGenerate;
+
         @NameInMap("SearchResult")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult> searchResult;
 
@@ -1640,6 +1643,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public String getGenerateLevel() {
             return this.generateLevel;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResult setReasonTextGenerate(String reasonTextGenerate) {
+            this.reasonTextGenerate = reasonTextGenerate;
+            return this;
+        }
+        public String getReasonTextGenerate() {
+            return this.reasonTextGenerate;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResult setSearchResult(java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentExcerptResultSearchResult> searchResult) {
@@ -3213,6 +3224,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("MultimodalSearchResultList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultList> multimodalSearchResultList;
 
+        @NameInMap("ReasonTextGenerate")
+        public String reasonTextGenerate;
+
         @NameInMap("ReferenceList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList> referenceList;
 
@@ -3261,6 +3275,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultMultimodalSearchResultList> getMultimodalSearchResultList() {
             return this.multimodalSearchResultList;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResult setReasonTextGenerate(String reasonTextGenerate) {
+            this.reasonTextGenerate = reasonTextGenerate;
+            return this;
+        }
+        public String getReasonTextGenerate() {
+            return this.reasonTextGenerate;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResult setReferenceList(java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTextGenerateResultReferenceList> referenceList) {
@@ -4413,6 +4435,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("MultimodalSearchResultList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultList> multimodalSearchResultList;
 
+        @NameInMap("ReasonTextGenerate")
+        public String reasonTextGenerate;
+
         @NameInMap("ReferenceList")
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList> referenceList;
 
@@ -4453,6 +4478,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultMultimodalSearchResultList> getMultimodalSearchResultList() {
             return this.multimodalSearchResultList;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResult setReasonTextGenerate(String reasonTextGenerate) {
+            this.reasonTextGenerate = reasonTextGenerate;
+            return this;
+        }
+        public String getReasonTextGenerate() {
+            return this.reasonTextGenerate;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResult setReferenceList(java.util.List<RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContentTimelineResultReferenceList> referenceList) {
@@ -4837,6 +4870,69 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
     }
 
+    public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate extends TeaModel {
+        @NameInMap("FirstTokenTime")
+        public Float firstTokenTime;
+
+        @NameInMap("OutputAvgTime")
+        public Float outputAvgTime;
+
+        @NameInMap("SearchTime")
+        public Float searchTime;
+
+        @NameInMap("Time")
+        public Float time;
+
+        @NameInMap("TotalTokens")
+        public Long totalTokens;
+
+        public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate build(java.util.Map<String, ?> map) throws Exception {
+            RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate();
+            return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate setFirstTokenTime(Float firstTokenTime) {
+            this.firstTokenTime = firstTokenTime;
+            return this;
+        }
+        public Float getFirstTokenTime() {
+            return this.firstTokenTime;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate setOutputAvgTime(Float outputAvgTime) {
+            this.outputAvgTime = outputAvgTime;
+            return this;
+        }
+        public Float getOutputAvgTime() {
+            return this.outputAvgTime;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate setSearchTime(Float searchTime) {
+            this.searchTime = searchTime;
+            return this;
+        }
+        public Float getSearchTime() {
+            return this.searchTime;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate setTime(Float time) {
+            this.time = time;
+            return this;
+        }
+        public Float getTime() {
+            return this.time;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate setTotalTokens(Long totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
+    }
+
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -4847,6 +4943,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
 
         @NameInMap("GeneratedContent")
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent generatedContent;
+
+        @NameInMap("ModelId")
+        public String modelId;
 
         /**
          * <strong>example:</strong>
@@ -4878,6 +4977,9 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         @NameInMap("SupplementEnable")
         public Boolean supplementEnable;
 
+        @NameInMap("TokenCalculate")
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate tokenCalculate;
+
         public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext();
             return TeaModel.build(map, self);
@@ -4897,6 +4999,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextGeneratedContent getGeneratedContent() {
             return this.generatedContent;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext setNextStep(String nextStep) {
@@ -4945,6 +5055,14 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         }
         public Boolean getSupplementEnable() {
             return this.supplementEnable;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext setTokenCalculate(RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate tokenCalculate) {
+            this.tokenCalculate = tokenCalculate;
+            return this;
+        }
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContextTokenCalculate getTokenCalculate() {
+            return this.tokenCalculate;
         }
 
     }

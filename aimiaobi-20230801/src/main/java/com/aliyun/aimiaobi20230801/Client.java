@@ -6211,6 +6211,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ChatConfig", request.chatConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("ModelId", request.modelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.originalSessionId)) {
             body.put("OriginalSessionId", request.originalSessionId);
         }
@@ -7054,6 +7058,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveMaterialDocumentResponse saveMaterialDocument(SaveMaterialDocumentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.saveMaterialDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>保存自定义文体</p>
+     * 
+     * @param tmpReq SaveStyleLearningResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveStyleLearningResultResponse
+     */
+    public SaveStyleLearningResultResponse saveStyleLearningResultWithOptions(SaveStyleLearningResultRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SaveStyleLearningResultShrinkRequest request = new SaveStyleLearningResultShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customTextIdList)) {
+            request.customTextIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customTextIdList, "CustomTextIdList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.materialIdList)) {
+            request.materialIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.materialIdList, "MaterialIdList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            body.put("AgentKey", request.agentKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aigcResult)) {
+            body.put("AigcResult", request.aigcResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customTextIdListShrink)) {
+            body.put("CustomTextIdList", request.customTextIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.materialIdListShrink)) {
+            body.put("MaterialIdList", request.materialIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rewriteResult)) {
+            body.put("RewriteResult", request.rewriteResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.styleName)) {
+            body.put("StyleName", request.styleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveStyleLearningResult"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveStyleLearningResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>保存自定义文体</p>
+     * 
+     * @param request SaveStyleLearningResultRequest
+     * @return SaveStyleLearningResultResponse
+     */
+    public SaveStyleLearningResultResponse saveStyleLearningResult(SaveStyleLearningResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveStyleLearningResultWithOptions(request, runtime);
     }
 
     /**
