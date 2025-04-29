@@ -140,6 +140,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("arr_station")
         public String arrStation;
 
+        @NameInMap("arr_station_location")
+        public String arrStationLocation;
+
+        @NameInMap("arr_station_location_code")
+        public String arrStationLocationCode;
+
         /**
          * <strong>example:</strong>
          * <p>12:30</p>
@@ -237,6 +243,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_city_name")
         public String depCityName;
+
+        @NameInMap("dep_station_location")
+        public String depStationLocation;
+
+        @NameInMap("dep_station_location_code")
+        public String depStationLocationCode;
 
         @NameInMap("department")
         public String department;
@@ -489,6 +501,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
+        @NameInMap("traveler_member_type")
+        public String travelerMemberType;
+
         @NameInMap("traveler_member_type_name")
         public String travelerMemberTypeName;
 
@@ -596,6 +611,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getArrStation() {
             return this.arrStation;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setArrStationLocation(String arrStationLocation) {
+            this.arrStationLocation = arrStationLocation;
+            return this;
+        }
+        public String getArrStationLocation() {
+            return this.arrStationLocation;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setArrStationLocationCode(String arrStationLocationCode) {
+            this.arrStationLocationCode = arrStationLocationCode;
+            return this;
+        }
+        public String getArrStationLocationCode() {
+            return this.arrStationLocationCode;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setArrTime(String arrTime) {
@@ -772,6 +803,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getDepCityName() {
             return this.depCityName;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setDepStationLocation(String depStationLocation) {
+            this.depStationLocation = depStationLocation;
+            return this;
+        }
+        public String getDepStationLocation() {
+            return this.depStationLocation;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setDepStationLocationCode(String depStationLocationCode) {
+            this.depStationLocationCode = depStationLocationCode;
+            return this;
+        }
+        public String getDepStationLocationCode() {
+            return this.depStationLocationCode;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setDepartment(String department) {
@@ -1212,6 +1259,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setTravelerMemberType(String travelerMemberType) {
+            this.travelerMemberType = travelerMemberType;
+            return this;
+        }
+        public String getTravelerMemberType() {
+            return this.travelerMemberType;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setTravelerMemberTypeName(String travelerMemberTypeName) {

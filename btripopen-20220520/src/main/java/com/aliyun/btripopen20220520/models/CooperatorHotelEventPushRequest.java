@@ -5,17 +5,12 @@ import com.aliyun.tea.*;
 
 public class CooperatorHotelEventPushRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
     @NameInMap("change_order_status")
     public Integer changeOrderStatus;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("change_order_status_desc")
     public String changeOrderStatusDesc;
 

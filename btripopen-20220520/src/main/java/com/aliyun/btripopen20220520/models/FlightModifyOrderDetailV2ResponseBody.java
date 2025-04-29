@@ -841,6 +841,9 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         @NameInMap("pid")
         public Long pid;
 
+        @NameInMap("ticket_no_segment_map")
+        public java.util.Map<String, ?> ticketNoSegmentMap;
+
         @NameInMap("ticket_nos")
         public java.util.List<String> ticketNos;
 
@@ -935,6 +938,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
         public Long getPid() {
             return this.pid;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOS setTicketNoSegmentMap(java.util.Map<String, ?> ticketNoSegmentMap) {
+            this.ticketNoSegmentMap = ticketNoSegmentMap;
+            return this;
+        }
+        public java.util.Map<String, ?> getTicketNoSegmentMap() {
+            return this.ticketNoSegmentMap;
         }
 
         public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOS setTicketNos(java.util.List<String> ticketNos) {

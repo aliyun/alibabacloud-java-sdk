@@ -47,6 +47,9 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("phone")
     public String phone;
 
+    @NameInMap("session_parameters")
+    public String sessionParameters;
+
     @NameInMap("sub_corp_id")
     public String subCorpId;
 
@@ -170,6 +173,14 @@ public class AddressGetRequest extends TeaModel {
     }
     public String getPhone() {
         return this.phone;
+    }
+
+    public AddressGetRequest setSessionParameters(String sessionParameters) {
+        this.sessionParameters = sessionParameters;
+        return this;
+    }
+    public String getSessionParameters() {
+        return this.sessionParameters;
     }
 
     public AddressGetRequest setSubCorpId(String subCorpId) {

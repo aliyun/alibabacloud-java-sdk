@@ -408,6 +408,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         @NameInMap("passenger_name")
         public String passengerName;
 
+        @NameInMap("pdf_oss_url")
+        public String pdfOssUrl;
+
         @NameInMap("project")
         public String project;
 
@@ -419,6 +422,9 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
 
         @NameInMap("purchaser_name")
         public String purchaserName;
+
+        @NameInMap("purchaser_tax_no")
+        public String purchaserTaxNo;
 
         @NameInMap("purchaser_type")
         public Integer purchaserType;
@@ -624,6 +630,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
             return this.passengerName;
         }
 
+        public FlightItineraryScanQueryResponseBodyModuleItems setPdfOssUrl(String pdfOssUrl) {
+            this.pdfOssUrl = pdfOssUrl;
+            return this;
+        }
+        public String getPdfOssUrl() {
+            return this.pdfOssUrl;
+        }
+
         public FlightItineraryScanQueryResponseBodyModuleItems setProject(String project) {
             this.project = project;
             return this;
@@ -646,6 +660,14 @@ public class FlightItineraryScanQueryResponseBody extends TeaModel {
         }
         public String getPurchaserName() {
             return this.purchaserName;
+        }
+
+        public FlightItineraryScanQueryResponseBodyModuleItems setPurchaserTaxNo(String purchaserTaxNo) {
+            this.purchaserTaxNo = purchaserTaxNo;
+            return this;
+        }
+        public String getPurchaserTaxNo() {
+            return this.purchaserTaxNo;
         }
 
         public FlightItineraryScanQueryResponseBodyModuleItems setPurchaserType(Integer purchaserType) {

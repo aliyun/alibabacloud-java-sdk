@@ -181,6 +181,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("book_channel")
+        public String bookChannel;
+
         @NameInMap("book_mode")
         public String bookMode;
 
@@ -350,6 +353,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("flight_no")
         public String flightNo;
 
+        @NameInMap("flight_trip_type")
+        public String flightTripType;
+
         /**
          * <strong>example:</strong>
          * <p>4564547</p>
@@ -454,6 +460,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("order_id")
         public String orderId;
+
+        @NameInMap("order_ticket_no")
+        public String orderTicketNo;
 
         /**
          * <strong>example:</strong>
@@ -618,6 +627,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
+
+        @NameInMap("traveler_member_type")
+        public String travelerMemberType;
 
         @NameInMap("traveler_member_type_name")
         public String travelerMemberTypeName;
@@ -792,6 +804,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setBookChannel(String bookChannel) {
+            this.bookChannel = bookChannel;
+            return this;
+        }
+        public String getBookChannel() {
+            return this.bookChannel;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setBookMode(String bookMode) {
@@ -1074,6 +1094,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.flightNo;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setFlightTripType(String flightTripType) {
+            this.flightTripType = flightTripType;
+            return this;
+        }
+        public String getFlightTripType() {
+            return this.flightTripType;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setIndex(String index) {
             this.index = index;
             return this;
@@ -1224,6 +1252,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setOrderTicketNo(String orderTicketNo) {
+            this.orderTicketNo = orderTicketNo;
+            return this;
+        }
+        public String getOrderTicketNo() {
+            return this.orderTicketNo;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setOverApplyId(String overApplyId) {
@@ -1496,6 +1532,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setTravelerMemberType(String travelerMemberType) {
+            this.travelerMemberType = travelerMemberType;
+            return this;
+        }
+        public String getTravelerMemberType() {
+            return this.travelerMemberType;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setTravelerMemberTypeName(String travelerMemberTypeName) {

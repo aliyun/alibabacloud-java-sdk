@@ -17,6 +17,9 @@ public class AddEmployeeShrinkRequest extends TeaModel {
     @NameInMap("base_city_code_list")
     public String baseCityCodeListShrink;
 
+    @NameInMap("base_location_list")
+    public String baseLocationListShrink;
+
     /**
      * <strong>example:</strong>
      * <p>2000-01-02</p>
@@ -155,6 +158,14 @@ public class AddEmployeeShrinkRequest extends TeaModel {
     }
     public String getBaseCityCodeListShrink() {
         return this.baseCityCodeListShrink;
+    }
+
+    public AddEmployeeShrinkRequest setBaseLocationListShrink(String baseLocationListShrink) {
+        this.baseLocationListShrink = baseLocationListShrink;
+        return this;
+    }
+    public String getBaseLocationListShrink() {
+        return this.baseLocationListShrink;
     }
 
     public AddEmployeeShrinkRequest setBirthday(String birthday) {

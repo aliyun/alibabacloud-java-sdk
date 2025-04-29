@@ -481,6 +481,390 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
     }
 
+    public static class FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty extends TeaModel {
+        @NameInMap("adcode")
+        public String adcode;
+
+        @NameInMap("airport_city_code")
+        public String airportCityCode;
+
+        @NameInMap("airport_city_name")
+        public String airportCityName;
+
+        @NameInMap("airport_code")
+        public String airportCode;
+
+        @NameInMap("airport_name")
+        public String airportName;
+
+        @NameInMap("airport_parent_city_name")
+        public String airportParentCityName;
+
+        @NameInMap("county_city_adcode")
+        public String countyCityAdcode;
+
+        @NameInMap("county_city_name")
+        public String countyCityName;
+
+        @NameInMap("prefecture_city_adcode")
+        public String prefectureCityAdcode;
+
+        @NameInMap("prefecture_city_name")
+        public String prefectureCityName;
+
+        public static FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty build(java.util.Map<String, ?> map) throws Exception {
+            FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty self = new FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setAdcode(String adcode) {
+            this.adcode = adcode;
+            return this;
+        }
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setAirportCityCode(String airportCityCode) {
+            this.airportCityCode = airportCityCode;
+            return this;
+        }
+        public String getAirportCityCode() {
+            return this.airportCityCode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setAirportCityName(String airportCityName) {
+            this.airportCityName = airportCityName;
+            return this;
+        }
+        public String getAirportCityName() {
+            return this.airportCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setAirportCode(String airportCode) {
+            this.airportCode = airportCode;
+            return this;
+        }
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setAirportName(String airportName) {
+            this.airportName = airportName;
+            return this;
+        }
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setAirportParentCityName(String airportParentCityName) {
+            this.airportParentCityName = airportParentCityName;
+            return this;
+        }
+        public String getAirportParentCityName() {
+            return this.airportParentCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setCountyCityAdcode(String countyCityAdcode) {
+            this.countyCityAdcode = countyCityAdcode;
+            return this;
+        }
+        public String getCountyCityAdcode() {
+            return this.countyCityAdcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setCountyCityName(String countyCityName) {
+            this.countyCityName = countyCityName;
+            return this;
+        }
+        public String getCountyCityName() {
+            return this.countyCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setPrefectureCityAdcode(String prefectureCityAdcode) {
+            this.prefectureCityAdcode = prefectureCityAdcode;
+            return this;
+        }
+        public String getPrefectureCityAdcode() {
+            return this.prefectureCityAdcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty setPrefectureCityName(String prefectureCityName) {
+            this.prefectureCityName = prefectureCityName;
+            return this;
+        }
+        public String getPrefectureCityName() {
+            return this.prefectureCityName;
+        }
+
+    }
+
+    public static class FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty extends TeaModel {
+        @NameInMap("adcode")
+        public String adcode;
+
+        @NameInMap("airport_city_code")
+        public String airportCityCode;
+
+        @NameInMap("airport_city_name")
+        public String airportCityName;
+
+        @NameInMap("airport_code")
+        public String airportCode;
+
+        @NameInMap("airport_name")
+        public String airportName;
+
+        @NameInMap("airport_parent_city_name")
+        public String airportParentCityName;
+
+        @NameInMap("county_city_adcode")
+        public String countyCityAdcode;
+
+        @NameInMap("county_city_name")
+        public String countyCityName;
+
+        @NameInMap("prefecture_city_adcode")
+        public String prefectureCityAdcode;
+
+        @NameInMap("prefecture_city_name")
+        public String prefectureCityName;
+
+        public static FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty build(java.util.Map<String, ?> map) throws Exception {
+            FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty self = new FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setAdcode(String adcode) {
+            this.adcode = adcode;
+            return this;
+        }
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setAirportCityCode(String airportCityCode) {
+            this.airportCityCode = airportCityCode;
+            return this;
+        }
+        public String getAirportCityCode() {
+            return this.airportCityCode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setAirportCityName(String airportCityName) {
+            this.airportCityName = airportCityName;
+            return this;
+        }
+        public String getAirportCityName() {
+            return this.airportCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setAirportCode(String airportCode) {
+            this.airportCode = airportCode;
+            return this;
+        }
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setAirportName(String airportName) {
+            this.airportName = airportName;
+            return this;
+        }
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setAirportParentCityName(String airportParentCityName) {
+            this.airportParentCityName = airportParentCityName;
+            return this;
+        }
+        public String getAirportParentCityName() {
+            return this.airportParentCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setCountyCityAdcode(String countyCityAdcode) {
+            this.countyCityAdcode = countyCityAdcode;
+            return this;
+        }
+        public String getCountyCityAdcode() {
+            return this.countyCityAdcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setCountyCityName(String countyCityName) {
+            this.countyCityName = countyCityName;
+            return this;
+        }
+        public String getCountyCityName() {
+            return this.countyCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setPrefectureCityAdcode(String prefectureCityAdcode) {
+            this.prefectureCityAdcode = prefectureCityAdcode;
+            return this;
+        }
+        public String getPrefectureCityAdcode() {
+            return this.prefectureCityAdcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty setPrefectureCityName(String prefectureCityName) {
+            this.prefectureCityName = prefectureCityName;
+            return this;
+        }
+        public String getPrefectureCityName() {
+            return this.prefectureCityName;
+        }
+
+    }
+
+    public static class FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty extends TeaModel {
+        @NameInMap("adcode")
+        public String adcode;
+
+        @NameInMap("airport_city_code")
+        public String airportCityCode;
+
+        @NameInMap("airport_city_name")
+        public String airportCityName;
+
+        @NameInMap("airport_code")
+        public String airportCode;
+
+        @NameInMap("airport_name")
+        public String airportName;
+
+        @NameInMap("airport_parent_city_name")
+        public String airportParentCityName;
+
+        @NameInMap("county_city_adcode")
+        public String countyCityAdcode;
+
+        @NameInMap("county_city_name")
+        public String countyCityName;
+
+        @NameInMap("prefecture_city_adcode")
+        public String prefectureCityAdcode;
+
+        @NameInMap("prefecture_city_name")
+        public String prefectureCityName;
+
+        public static FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty build(java.util.Map<String, ?> map) throws Exception {
+            FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty self = new FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setAdcode(String adcode) {
+            this.adcode = adcode;
+            return this;
+        }
+        public String getAdcode() {
+            return this.adcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setAirportCityCode(String airportCityCode) {
+            this.airportCityCode = airportCityCode;
+            return this;
+        }
+        public String getAirportCityCode() {
+            return this.airportCityCode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setAirportCityName(String airportCityName) {
+            this.airportCityName = airportCityName;
+            return this;
+        }
+        public String getAirportCityName() {
+            return this.airportCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setAirportCode(String airportCode) {
+            this.airportCode = airportCode;
+            return this;
+        }
+        public String getAirportCode() {
+            return this.airportCode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setAirportName(String airportName) {
+            this.airportName = airportName;
+            return this;
+        }
+        public String getAirportName() {
+            return this.airportName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setAirportParentCityName(String airportParentCityName) {
+            this.airportParentCityName = airportParentCityName;
+            return this;
+        }
+        public String getAirportParentCityName() {
+            return this.airportParentCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setCountyCityAdcode(String countyCityAdcode) {
+            this.countyCityAdcode = countyCityAdcode;
+            return this;
+        }
+        public String getCountyCityAdcode() {
+            return this.countyCityAdcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setCountyCityName(String countyCityName) {
+            this.countyCityName = countyCityName;
+            return this;
+        }
+        public String getCountyCityName() {
+            return this.countyCityName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setPrefectureCityAdcode(String prefectureCityAdcode) {
+            this.prefectureCityAdcode = prefectureCityAdcode;
+            return this;
+        }
+        public String getPrefectureCityAdcode() {
+            return this.prefectureCityAdcode;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty setPrefectureCityName(String prefectureCityName) {
+            this.prefectureCityName = prefectureCityName;
+            return this;
+        }
+        public String getPrefectureCityName() {
+            return this.prefectureCityName;
+        }
+
+    }
+
+    public static class FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList extends TeaModel {
+        @NameInMap("stop_airport_city_county")
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty stopAirportCityCounty;
+
+        @NameInMap("stop_airport_code")
+        public String stopAirportCode;
+
+        public static FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList build(java.util.Map<String, ?> map) throws Exception {
+            FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList self = new FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList setStopAirportCityCounty(FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty stopAirportCityCounty) {
+            this.stopAirportCityCounty = stopAirportCityCounty;
+            return this;
+        }
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoListStopAirportCityCounty getStopAirportCityCounty() {
+            return this.stopAirportCityCounty;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList setStopAirportCode(String stopAirportCode) {
+            this.stopAirportCode = stopAirportCode;
+            return this;
+        }
+        public String getStopAirportCode() {
+            return this.stopAirportCode;
+        }
+
+    }
+
     public static class FlightOrderQueryResponseBodyModuleFlightInfoList extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -491,6 +875,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("airline_name")
         public String airlineName;
+
+        @NameInMap("arr_airport_city_county")
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty arrAirportCityCounty;
 
         /**
          * <strong>example:</strong>
@@ -538,6 +925,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         @NameInMap("cabin_level")
         public String cabinLevel;
+
+        @NameInMap("dep_airport_city_county")
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty depAirportCityCounty;
 
         /**
          * <strong>example:</strong>
@@ -595,6 +985,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("stop_city")
         public java.util.List<String> stopCity;
 
+        @NameInMap("stop_city_info_list")
+        public java.util.List<FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList> stopCityInfoList;
+
         public static FlightOrderQueryResponseBodyModuleFlightInfoList build(java.util.Map<String, ?> map) throws Exception {
             FlightOrderQueryResponseBodyModuleFlightInfoList self = new FlightOrderQueryResponseBodyModuleFlightInfoList();
             return TeaModel.build(map, self);
@@ -614,6 +1007,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getAirlineName() {
             return this.airlineName;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setArrAirportCityCounty(FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty arrAirportCityCounty) {
+            this.arrAirportCityCounty = arrAirportCityCounty;
+            return this;
+        }
+        public FlightOrderQueryResponseBodyModuleFlightInfoListArrAirportCityCounty getArrAirportCityCounty() {
+            return this.arrAirportCityCounty;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightInfoList setArrAirportCode(String arrAirportCode) {
@@ -686,6 +1087,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getCabinLevel() {
             return this.cabinLevel;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setDepAirportCityCounty(FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty depAirportCityCounty) {
+            this.depAirportCityCounty = depAirportCityCounty;
+            return this;
+        }
+        public FlightOrderQueryResponseBodyModuleFlightInfoListDepAirportCityCounty getDepAirportCityCounty() {
+            return this.depAirportCityCounty;
         }
 
         public FlightOrderQueryResponseBodyModuleFlightInfoList setDepAirportCode(String depAirportCode) {
@@ -782,6 +1191,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public java.util.List<String> getStopCity() {
             return this.stopCity;
+        }
+
+        public FlightOrderQueryResponseBodyModuleFlightInfoList setStopCityInfoList(java.util.List<FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList> stopCityInfoList) {
+            this.stopCityInfoList = stopCityInfoList;
+            return this;
+        }
+        public java.util.List<FlightOrderQueryResponseBodyModuleFlightInfoListStopCityInfoList> getStopCityInfoList() {
+            return this.stopCityInfoList;
         }
 
     }

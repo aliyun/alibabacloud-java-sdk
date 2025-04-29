@@ -17,6 +17,9 @@ public class AddEmployeeRequest extends TeaModel {
     @NameInMap("base_city_code_list")
     public java.util.List<String> baseCityCodeList;
 
+    @NameInMap("base_location_list")
+    public java.util.List<AddEmployeeRequestBaseLocationList> baseLocationList;
+
     /**
      * <strong>example:</strong>
      * <p>2000-01-02</p>
@@ -155,6 +158,14 @@ public class AddEmployeeRequest extends TeaModel {
     }
     public java.util.List<String> getBaseCityCodeList() {
         return this.baseCityCodeList;
+    }
+
+    public AddEmployeeRequest setBaseLocationList(java.util.List<AddEmployeeRequestBaseLocationList> baseLocationList) {
+        this.baseLocationList = baseLocationList;
+        return this;
+    }
+    public java.util.List<AddEmployeeRequestBaseLocationList> getBaseLocationList() {
+        return this.baseLocationList;
     }
 
     public AddEmployeeRequest setBirthday(String birthday) {
@@ -299,6 +310,36 @@ public class AddEmployeeRequest extends TeaModel {
     }
     public String getUserNick() {
         return this.userNick;
+    }
+
+    public static class AddEmployeeRequestBaseLocationList extends TeaModel {
+        @NameInMap("code")
+        public String code;
+
+        @NameInMap("level")
+        public String level;
+
+        public static AddEmployeeRequestBaseLocationList build(java.util.Map<String, ?> map) throws Exception {
+            AddEmployeeRequestBaseLocationList self = new AddEmployeeRequestBaseLocationList();
+            return TeaModel.build(map, self);
+        }
+
+        public AddEmployeeRequestBaseLocationList setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public AddEmployeeRequestBaseLocationList setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
     }
 
     public static class AddEmployeeRequestCertList extends TeaModel {

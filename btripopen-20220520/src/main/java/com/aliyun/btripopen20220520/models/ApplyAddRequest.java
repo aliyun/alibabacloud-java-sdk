@@ -98,6 +98,9 @@ public class ApplyAddRequest extends TeaModel {
     @NameInMap("limit_traveler")
     public Integer limitTraveler;
 
+    @NameInMap("meal_budget")
+    public Long mealBudget;
+
     @NameInMap("payment_department_id")
     public String paymentDepartmentId;
 
@@ -368,6 +371,14 @@ public class ApplyAddRequest extends TeaModel {
     }
     public Integer getLimitTraveler() {
         return this.limitTraveler;
+    }
+
+    public ApplyAddRequest setMealBudget(Long mealBudget) {
+        this.mealBudget = mealBudget;
+        return this;
+    }
+    public Long getMealBudget() {
+        return this.mealBudget;
     }
 
     public ApplyAddRequest setPaymentDepartmentId(String paymentDepartmentId) {

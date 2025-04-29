@@ -196,6 +196,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("book_channel")
+        public String bookChannel;
+
         @NameInMap("book_mode")
         public String bookMode;
 
@@ -388,6 +391,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("flight_no")
         public String flightNo;
 
+        @NameInMap("flight_trip_type")
+        public String flightTripType;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -504,6 +510,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("order_status_desc")
         public String orderStatusDesc;
+
+        @NameInMap("order_ticket_no")
+        public String orderTicketNo;
 
         /**
          * <strong>example:</strong>
@@ -860,6 +869,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.billRecordTime;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setBookChannel(String bookChannel) {
+            this.bookChannel = bookChannel;
+            return this;
+        }
+        public String getBookChannel() {
+            return this.bookChannel;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setBookMode(String bookMode) {
             this.bookMode = bookMode;
             return this;
@@ -1148,6 +1165,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.flightNo;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setFlightTripType(String flightTripType) {
+            this.flightTripType = flightTripType;
+            return this;
+        }
+        public String getFlightTripType() {
+            return this.flightTripType;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setIndex(String index) {
             this.index = index;
             return this;
@@ -1298,6 +1323,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOrderStatusDesc() {
             return this.orderStatusDesc;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setOrderTicketNo(String orderTicketNo) {
+            this.orderTicketNo = orderTicketNo;
+            return this;
+        }
+        public String getOrderTicketNo() {
+            return this.orderTicketNo;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setOverApplyId(String overApplyId) {

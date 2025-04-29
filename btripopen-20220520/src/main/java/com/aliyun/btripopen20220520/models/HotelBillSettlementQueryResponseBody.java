@@ -140,6 +140,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("billing_entity")
         public String billingEntity;
 
+        @NameInMap("book_channel")
+        public String bookChannel;
+
         @NameInMap("book_mode")
         public String bookMode;
 
@@ -516,6 +519,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
+        @NameInMap("traveler_member_type")
+        public String travelerMemberType;
+
         @NameInMap("traveler_member_type_name")
         public String travelerMemberTypeName;
 
@@ -626,6 +632,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBillingEntity() {
             return this.billingEntity;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBookChannel(String bookChannel) {
+            this.bookChannel = bookChannel;
+            return this;
+        }
+        public String getBookChannel() {
+            return this.bookChannel;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setBookMode(String bookMode) {
@@ -1282,6 +1296,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setTravelerMemberType(String travelerMemberType) {
+            this.travelerMemberType = travelerMemberType;
+            return this;
+        }
+        public String getTravelerMemberType() {
+            return this.travelerMemberType;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setTravelerMemberTypeName(String travelerMemberTypeName) {

@@ -462,12 +462,23 @@ public class HotelSearchResponseBody extends TeaModel {
     }
 
     public static class HotelSearchResponseBodyModule extends TeaModel {
+        @NameInMap("count")
+        public Integer count;
+
         @NameInMap("items")
         public java.util.List<HotelSearchResponseBodyModuleItems> items;
 
         public static HotelSearchResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             HotelSearchResponseBodyModule self = new HotelSearchResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public HotelSearchResponseBodyModule setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
         }
 
         public HotelSearchResponseBodyModule setItems(java.util.List<HotelSearchResponseBodyModuleItems> items) {

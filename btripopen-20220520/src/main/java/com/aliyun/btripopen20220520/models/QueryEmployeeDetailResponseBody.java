@@ -113,6 +113,9 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
     }
 
     public static class QueryEmployeeDetailResponseBodyModule extends TeaModel {
+        @NameInMap("email")
+        public String email;
+
         /**
          * <strong>example:</strong>
          * <p>false</p>
@@ -147,6 +150,9 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         @NameInMap("out_employee_id")
         public String outEmployeeId;
 
+        @NameInMap("phone_no")
+        public String phoneNo;
+
         @NameInMap("real_name")
         public String realName;
 
@@ -160,6 +166,14 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         public static QueryEmployeeDetailResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             QueryEmployeeDetailResponseBodyModule self = new QueryEmployeeDetailResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public QueryEmployeeDetailResponseBodyModule setEmail(String email) {
+            this.email = email;
+            return this;
+        }
+        public String getEmail() {
+            return this.email;
         }
 
         public QueryEmployeeDetailResponseBodyModule setIsLeave(Boolean isLeave) {
@@ -208,6 +222,14 @@ public class QueryEmployeeDetailResponseBody extends TeaModel {
         }
         public String getOutEmployeeId() {
             return this.outEmployeeId;
+        }
+
+        public QueryEmployeeDetailResponseBodyModule setPhoneNo(String phoneNo) {
+            this.phoneNo = phoneNo;
+            return this;
+        }
+        public String getPhoneNo() {
+            return this.phoneNo;
         }
 
         public QueryEmployeeDetailResponseBodyModule setRealName(String realName) {

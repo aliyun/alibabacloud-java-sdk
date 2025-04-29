@@ -93,6 +93,25 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class HotelOrderPreValidateResponseBodyModuleItemInvoice extends TeaModel {
+        @NameInMap("support_special")
+        public Boolean supportSpecial;
+
+        public static HotelOrderPreValidateResponseBodyModuleItemInvoice build(java.util.Map<String, ?> map) throws Exception {
+            HotelOrderPreValidateResponseBodyModuleItemInvoice self = new HotelOrderPreValidateResponseBodyModuleItemInvoice();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelOrderPreValidateResponseBodyModuleItemInvoice setSupportSpecial(Boolean supportSpecial) {
+            this.supportSpecial = supportSpecial;
+            return this;
+        }
+        public Boolean getSupportSpecial() {
+            return this.supportSpecial;
+        }
+
+    }
+
     public static class HotelOrderPreValidateResponseBodyModulePromotionInfoPromotionDetailInfoList extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -629,6 +648,9 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         @NameInMap("extend_info")
         public String extendInfo;
 
+        @NameInMap("item_invoice")
+        public HotelOrderPreValidateResponseBodyModuleItemInvoice itemInvoice;
+
         /**
          * <strong>example:</strong>
          * <p>fb5e1abf33924b6c912bd6d80deec0eb-4</p>
@@ -670,6 +692,14 @@ public class HotelOrderPreValidateResponseBody extends TeaModel {
         }
         public String getExtendInfo() {
             return this.extendInfo;
+        }
+
+        public HotelOrderPreValidateResponseBodyModule setItemInvoice(HotelOrderPreValidateResponseBodyModuleItemInvoice itemInvoice) {
+            this.itemInvoice = itemInvoice;
+            return this;
+        }
+        public HotelOrderPreValidateResponseBodyModuleItemInvoice getItemInvoice() {
+            return this.itemInvoice;
         }
 
         public HotelOrderPreValidateResponseBodyModule setItineraryNo(String itineraryNo) {
