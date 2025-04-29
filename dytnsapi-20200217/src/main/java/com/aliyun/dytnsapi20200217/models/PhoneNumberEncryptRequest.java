@@ -43,6 +43,9 @@ public class PhoneNumberEncryptRequest extends TeaModel {
     @NameInMap("Mask")
     public String mask;
 
+    @NameInMap("OutId")
+    public String outId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -79,6 +82,14 @@ public class PhoneNumberEncryptRequest extends TeaModel {
     }
     public String getMask() {
         return this.mask;
+    }
+
+    public PhoneNumberEncryptRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
     }
 
     public PhoneNumberEncryptRequest setOwnerId(Long ownerId) {

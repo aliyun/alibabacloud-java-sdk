@@ -1680,6 +1680,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Mask", request.mask);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -2052,90 +2056,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PhoneNumberStatusForSmsResponse phoneNumberStatusForSms(PhoneNumberStatusForSmsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.phoneNumberStatusForSmsWithOptions(request, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</p>
-     * <ul>
-     * <li>You are charged only if the value of Code is OK and the value of IsPrivacyNumber is true or false.</li>
-     * <li>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</li>
-     * <li>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <strong>Activate Now</strong>, enter the required information, and then submit your application. After your application is approved, you can use the label.</li>
-     * </ul>
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of a virtual phone number. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</p>
-     * 
-     * @param request PhoneNumberStatusForVirtualRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return PhoneNumberStatusForVirtualResponse
-     */
-    public PhoneNumberStatusForVirtualResponse phoneNumberStatusForVirtualWithOptions(PhoneNumberStatusForVirtualRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.authCode)) {
-            query.put("AuthCode", request.authCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.inputNumber)) {
-            query.put("InputNumber", request.inputNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mask)) {
-            query.put("Mask", request.mask);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "PhoneNumberStatusForVirtual"),
-            new TeaPair("version", "2020-02-17"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new PhoneNumberStatusForVirtualResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/154751.html">billing</a> of Cell Phone Number Service.</p>
-     * <ul>
-     * <li>You are charged only if the value of Code is OK and the value of IsPrivacyNumber is true or false.</li>
-     * <li>By default, only Alibaba Cloud accounts can call this operation. RAM users can call this operation only after the RAM users are granted the related permissions. For more information, see <a href="https://help.aliyun.com/document_detail/154006.html">Grant permissions to RAM users</a>.</li>
-     * <li>Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the <a href="https://dytns.console.aliyun.com/analysis/square">Labels</a> page, find the label that you want to use, click <strong>Activate Now</strong>, enter the required information, and then submit your application. After your application is approved, you can use the label.</li>
-     * </ul>
-     * <h3><a href="#qps"></a>QPS limits</h3>
-     * <p>You can call this operation up to 300 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the status of a virtual phone number. You can choose an encryption method for your phone number query, including plaintext, MD5, and SHA256.</p>
-     * 
-     * @param request PhoneNumberStatusForVirtualRequest
-     * @return PhoneNumberStatusForVirtualResponse
-     */
-    public PhoneNumberStatusForVirtualResponse phoneNumberStatusForVirtual(PhoneNumberStatusForVirtualRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.phoneNumberStatusForVirtualWithOptions(request, runtime);
     }
 
     /**

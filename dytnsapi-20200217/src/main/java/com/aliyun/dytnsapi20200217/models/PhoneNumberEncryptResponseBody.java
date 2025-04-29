@@ -106,6 +106,9 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         @NameInMap("OriginalNumber")
         public String originalNumber;
 
+        @NameInMap("OutId")
+        public String outId;
+
         public static PhoneNumberEncryptResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PhoneNumberEncryptResponseBodyData self = new PhoneNumberEncryptResponseBodyData();
             return TeaModel.build(map, self);
@@ -133,6 +136,14 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         }
         public String getOriginalNumber() {
             return this.originalNumber;
+        }
+
+        public PhoneNumberEncryptResponseBodyData setOutId(String outId) {
+            this.outId = outId;
+            return this;
+        }
+        public String getOutId() {
+            return this.outId;
         }
 
     }
