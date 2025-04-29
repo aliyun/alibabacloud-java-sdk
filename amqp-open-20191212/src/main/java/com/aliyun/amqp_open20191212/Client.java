@@ -1293,6 +1293,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.encryptedInstance)) {
             query.put("EncryptedInstance", request.encryptedInstance);
         }
@@ -1323,6 +1327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
             query.put("ModifyType", request.modifyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedCapacity)) {
+            query.put("ProvisionedCapacity", request.provisionedCapacity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueCapacity)) {

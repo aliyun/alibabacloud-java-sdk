@@ -13,6 +13,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Edition")
+    public String edition;
+
     /**
      * <p>实例是否开通数据存储加密功能</p>
      * 
@@ -97,6 +100,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("ModifyType")
     public String modifyType;
 
+    @NameInMap("ProvisionedCapacity")
+    public Integer provisionedCapacity;
+
     /**
      * <p>The maximum number of queues that can be created on the instance.</p>
      * 
@@ -173,6 +179,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public UpdateInstanceRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
+    }
+
     public UpdateInstanceRequest setEncryptedInstance(Boolean encryptedInstance) {
         this.encryptedInstance = encryptedInstance;
         return this;
@@ -235,6 +249,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getModifyType() {
         return this.modifyType;
+    }
+
+    public UpdateInstanceRequest setProvisionedCapacity(Integer provisionedCapacity) {
+        this.provisionedCapacity = provisionedCapacity;
+        return this;
+    }
+    public Integer getProvisionedCapacity() {
+        return this.provisionedCapacity;
     }
 
     public UpdateInstanceRequest setQueueCapacity(Integer queueCapacity) {
