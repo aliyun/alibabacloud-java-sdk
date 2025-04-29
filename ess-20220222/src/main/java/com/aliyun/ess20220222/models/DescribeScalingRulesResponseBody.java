@@ -252,6 +252,9 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("MetricType")
         public String metricType;
 
+        @NameInMap("Period")
+        public Integer period;
+
         /**
          * <p>The statistical method of the event-triggered task that is associated with the scaling rule. Valid values:</p>
          * <ul>
@@ -334,6 +337,14 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         }
         public String getMetricType() {
             return this.metricType;
+        }
+
+        public DescribeScalingRulesResponseBodyScalingRulesAlarms setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
         }
 
         public DescribeScalingRulesResponseBodyScalingRulesAlarms setStatistics(String statistics) {

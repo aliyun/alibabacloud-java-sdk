@@ -38,6 +38,9 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("AlarmDimensions")
     public java.util.List<ModifyScalingRuleRequestAlarmDimensions> alarmDimensions;
 
+    @NameInMap("AlarmOptions")
+    public ModifyScalingRuleRequestAlarmOptions alarmOptions;
+
     /**
      * <p>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.</p>
      * <p>Valid values: 0 to 86400. Unit: seconds.</p>
@@ -284,6 +287,14 @@ public class ModifyScalingRuleRequest extends TeaModel {
         return this.alarmDimensions;
     }
 
+    public ModifyScalingRuleRequest setAlarmOptions(ModifyScalingRuleRequestAlarmOptions alarmOptions) {
+        this.alarmOptions = alarmOptions;
+        return this;
+    }
+    public ModifyScalingRuleRequestAlarmOptions getAlarmOptions() {
+        return this.alarmOptions;
+    }
+
     public ModifyScalingRuleRequest setCooldown(Integer cooldown) {
         this.cooldown = cooldown;
         return this;
@@ -506,6 +517,25 @@ public class ModifyScalingRuleRequest extends TeaModel {
         }
         public String getDimensionValue() {
             return this.dimensionValue;
+        }
+
+    }
+
+    public static class ModifyScalingRuleRequestAlarmOptions extends TeaModel {
+        @NameInMap("Period")
+        public Integer period;
+
+        public static ModifyScalingRuleRequestAlarmOptions build(java.util.Map<String, ?> map) throws Exception {
+            ModifyScalingRuleRequestAlarmOptions self = new ModifyScalingRuleRequestAlarmOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyScalingRuleRequestAlarmOptions setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
         }
 
     }

@@ -2497,6 +2497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AlarmDimensions", request.alarmDimensions);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmOptions)) {
+            query.put("AlarmOptions", request.alarmOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cooldown)) {
             query.put("Cooldown", request.cooldown);
         }
@@ -4548,7 +4552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest diagnosis details for a scaling group. Diagnosis details are only returned in the presence of exceptions.</p>
+     * <p>DescribeScalingGroupDiagnoseDetails</p>
      * 
      * @param request DescribeScalingGroupDiagnoseDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4576,7 +4580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest diagnosis details for a scaling group. Diagnosis details are only returned in the presence of exceptions.</p>
+     * <p>DescribeScalingGroupDiagnoseDetails</p>
      * 
      * @param request DescribeScalingGroupDiagnoseDetailsRequest
      * @return DescribeScalingGroupDiagnoseDetailsResponse
@@ -7487,6 +7491,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.alarmDimensions)) {
             query.put("AlarmDimensions", request.alarmDimensions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmOptions)) {
+            query.put("AlarmOptions", request.alarmOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cooldown)) {

@@ -36,10 +36,10 @@ public class CreateScheduledTaskRequest extends TeaModel {
     public Integer launchExpirationTime;
 
     /**
-     * <p>The point in time at which the scheduled task is triggered. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time must be in UTC. You cannot enter a point in time that is later than 90 days from the point in time at which the scheduled task is created.</p>
+     * <p>The point in time at which the scheduled task is triggered. Specify the time in the ISO 8601 standard. The time must be in UTC. You cannot trigger a scheduled task more than 90 days after its creation.</p>
      * <ul>
-     * <li>If you specify the <code>RecurrenceType</code> parameter, the scheduled task is repeatedly executed at the point in time that is specified by the LaunchTime parameter.</li>
-     * <li>If you do not specify the <code>RecurrenceType</code> parameter, the task is executed only once at the point in time that is specified by the LaunchTime parameter.</li>
+     * <li>If you specify <code>RecurrenceType</code>, the scheduled task is repeatedly triggered at the point in time that is specified by LaunchTime.</li>
+     * <li>If you do not specify <code>RecurrenceType</code>, the scheduled task is triggered only once at the time point that is specified by LaunchTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>

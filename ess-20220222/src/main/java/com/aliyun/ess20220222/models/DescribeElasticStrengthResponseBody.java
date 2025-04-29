@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticStrengthResponseBody extends TeaModel {
     /**
+     * <p>The scaling strength level of the scaling group. Valid values:</p>
+     * <ul>
+     * <li>Strong</li>
+     * <li>Medium</li>
+     * <li>Weak</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Strong</p>
      */
@@ -399,6 +406,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
 
     public static class DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth extends TeaModel {
         /**
+         * <p>The adequacy score.</p>
+         * <p>Valid values: 0 to 3.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -406,6 +416,14 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer adequacyScore;
 
         /**
+         * <p>The inventory health score.</p>
+         * <ul>
+         * <li>A score between 5 and 6 indicates a sufficient inventory.</li>
+         * <li>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</li>
+         * <li>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</li>
+         * </ul>
+         * <p>Calculation formula: <code>HealthScore</code> = <code>AdequacyScore</code> + <code>SupplyScore</code> - <code>HotScore</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -413,6 +431,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer healthScore;
 
         /**
+         * <p>The popularity score.</p>
+         * <p>Valid values: 0 to 3.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -420,6 +441,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public Integer hotScore;
 
         /**
+         * <p>The replenishment capability score.</p>
+         * <p>Valid values: 0 to 3.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -484,6 +508,9 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The inventory health.</p>
+         */
         @NameInMap("InventoryHealth")
         public DescribeElasticStrengthResponseBodyResourcePoolsInventoryHealth inventoryHealth;
 
@@ -497,6 +524,12 @@ public class DescribeElasticStrengthResponseBody extends TeaModel {
         public String msg;
 
         /**
+         * <p>Indicates whether the resource pool is available. Valid values:</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Available</p>
          */

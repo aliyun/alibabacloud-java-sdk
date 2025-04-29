@@ -48,6 +48,9 @@ public class RemoveInstancesShrinkRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The context of the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleHookContext")
     public String lifecycleHookContextShrink;
 

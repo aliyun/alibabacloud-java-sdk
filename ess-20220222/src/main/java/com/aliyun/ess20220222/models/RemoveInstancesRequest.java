@@ -48,6 +48,9 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The context of the lifecycle hook.</p>
+     */
     @NameInMap("LifecycleHookContext")
     public RemoveInstancesRequestLifecycleHookContext lifecycleHookContext;
 
@@ -238,9 +241,22 @@ public class RemoveInstancesRequest extends TeaModel {
     }
 
     public static class RemoveInstancesRequestLifecycleHookContext extends TeaModel {
+        /**
+         * <p>Specifies whether to disable the lifecycle hook. Valid Values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DisableLifecycleHook")
         public Boolean disableLifecycleHook;
 
+        /**
+         * <p>The IDs of the lifecycle hooks that you want to disable.</p>
+         */
         @NameInMap("IgnoredLifecycleHookIds")
         public java.util.List<String> ignoredLifecycleHookIds;
 
