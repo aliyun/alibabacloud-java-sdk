@@ -258,6 +258,9 @@ public class GetClusterResponseBody extends TeaModel {
         @NameInMap("VSwitches")
         public java.util.List<GetClusterResponseBodyDataVSwitches> vSwitches;
 
+        @NameInMap("VersionLifecycle")
+        public String versionLifecycle;
+
         /**
          * <p>VPC ID</p>
          * 
@@ -416,6 +419,14 @@ public class GetClusterResponseBody extends TeaModel {
         }
         public java.util.List<GetClusterResponseBodyDataVSwitches> getVSwitches() {
             return this.vSwitches;
+        }
+
+        public GetClusterResponseBodyData setVersionLifecycle(String versionLifecycle) {
+            this.versionLifecycle = versionLifecycle;
+            return this;
+        }
+        public String getVersionLifecycle() {
+            return this.versionLifecycle;
         }
 
         public GetClusterResponseBodyData setVpcId(String vpcId) {
