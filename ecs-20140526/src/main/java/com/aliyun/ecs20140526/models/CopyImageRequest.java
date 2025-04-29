@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The description of the image copy. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
@@ -30,6 +33,9 @@ public class CopyImageRequest extends TeaModel {
      */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <blockquote>
@@ -120,6 +126,14 @@ public class CopyImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CopyImageRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public CopyImageRequest setDestinationDescription(String destinationDescription) {
         this.destinationDescription = destinationDescription;
         return this;
@@ -142,6 +156,14 @@ public class CopyImageRequest extends TeaModel {
     }
     public String getDestinationRegionId() {
         return this.destinationRegionId;
+    }
+
+    public CopyImageRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CopyImageRequest setEncryptAlgorithm(String encryptAlgorithm) {

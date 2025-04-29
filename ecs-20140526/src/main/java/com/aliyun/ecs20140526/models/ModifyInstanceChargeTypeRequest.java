@@ -7,8 +7,8 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <ul>
-     * <li>true: The payment is automatically completed. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</li>
-     * <li>false: An order is generated but no payment is made.</li>
+     * <li>true: enables automatic payment. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</li>
+     * <li>false: disables automatic payment. An order is generated but no payment is made.</li>
      * </ul>
      * <p>Default value: true.</p>
      * <blockquote>

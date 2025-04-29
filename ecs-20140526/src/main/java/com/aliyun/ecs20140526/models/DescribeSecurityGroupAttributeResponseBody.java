@@ -299,9 +299,21 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <p>The ID of the port list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prl-2ze9743****</p>
+         */
         @NameInMap("PortRangeListId")
         public String portRangeListId;
 
+        /**
+         * <p>The name of the port list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PortRangeListNameSample</p>
+         */
         @NameInMap("PortRangeListName")
         public String portRangeListName;
 

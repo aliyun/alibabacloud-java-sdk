@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If the return value is empty, no more data is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The resources that are associated with the port list.</p>
+     */
     @NameInMap("PortRangeListAssociations")
     public java.util.List<DescribePortRangeListAssociationsResponseBodyPortRangeListAssociations> portRangeListAssociations;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
@@ -52,6 +59,8 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
 
     public static class DescribePortRangeListAssociationsResponseBodyPortRangeListAssociations extends TeaModel {
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-2zefu72****</p>
          */
@@ -59,6 +68,8 @@ public class DescribePortRangeListAssociationsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The type of the resource. Valid value: SecurityGroup.</p>
+         * 
          * <strong>example:</strong>
          * <p>SecurityGroup</p>
          */

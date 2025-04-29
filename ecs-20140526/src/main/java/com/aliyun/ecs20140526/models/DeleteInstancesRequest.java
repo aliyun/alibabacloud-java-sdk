@@ -35,7 +35,7 @@ public class DeleteInstancesRequest extends TeaModel {
      * </ul>
      * <p>Default value: false.</p>
      * <p>**</p>
-     * <p><strong>Warning</strong> When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * <p><strong>Warning</strong> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -44,15 +44,16 @@ public class DeleteInstancesRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>释放<strong>运行中</strong>（<code>Running</code>）的实例时的是否采取强制关机策略。仅当<code>Force=true</code>时生效。取值范围：</p>
+     * <p>Specifies whether to forcefully stop the ECS instance in the <strong>Running</strong> (<code>Running</code>) state before the instance is released. This parameter takes effect only when <code>Force</code> is set to true. Valid values:</p>
      * <ul>
-     * <li>true：强制关机并释放实例。相当于典型的断电操作，实例会直接进入资源释放流程。<blockquote>
-     * <p>Warning: 强制释放相当于断电，实例内存以及存储中的临时数据都会被擦除，无法恢复。</p>
-     * </blockquote>
+     * <li><p>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</p>
+     * <p>**</p>
+     * <p><strong>Warning</strong> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
      * </li>
-     * <li>false：在实例释放前，系统将优先执行标准关机流程，该模式会导致实例释放动作持续几分钟。用户在操作系统关机时，配置一些业务排水动作，从而减少业务系统的噪声。</li>
+     * <li><p>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</p>
+     * </li>
      * </ul>
-     * <p>默认值：true。</p>
+     * <p>Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +94,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to release the expired subscription ECS instance. Valid values:</p>
+     * <p>Specifies whether to release the expired subscription instance.</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>

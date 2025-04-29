@@ -13,6 +13,9 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the shared custom image.</p>
      * <blockquote>
@@ -93,6 +96,14 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     }
     public java.util.List<String> getAddAccount() {
         return this.addAccount;
+    }
+
+    public ModifyImageSharePermissionRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyImageSharePermissionRequest setImageId(String imageId) {

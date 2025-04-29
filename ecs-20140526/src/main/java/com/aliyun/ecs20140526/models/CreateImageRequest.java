@@ -22,15 +22,12 @@ public class CreateImageRequest extends TeaModel {
     /**
      * <p>The boot mode of the image. Valid values:</p>
      * <ul>
-     * <li>BIOS: Basic Input/Output System (BIOS)</li>
-     * <li>UEFI: Unified Extensible Firmware Interface (UEFI)</li>
-     * <li>UEFI-Preferred: BIOS and UEFI</li>
+     * <li>BIOS: BIOS mode</li>
+     * <li>UEFI: Unified Extensible Firmware Interface (UEFI) mode</li>
+     * <li>UEFI-Preferred (default): BIOS mode and UEFI mode</li>
      * </ul>
      * <blockquote>
-     * <p> Before you change the boot mode of an image, we recommend that you get familiar with the boot modes supported by the image to ensure that instances created from the image can start as expected. If you do not know which boot modes are supported by the image, we recommend that you use the image check feature to perform a check. For information about the image check feature, see <a href="https://help.aliyun.com/document_detail/439819.html">Overview of image check</a>.</p>
-     * </blockquote>
-     * <blockquote>
-     * <p> For information about the UEFI-Preferred boot mode, see <a href="https://help.aliyun.com/document_detail/2244655.html">Best practices for ECS instance boot modes</a>.</p>
+     * <p> Before you specify this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,10 +67,13 @@ public class CreateImageRequest extends TeaModel {
     public String detectionStrategy;
 
     /**
-     * <p>The information about the custom image. To create a custom image from multiple snapshots, specify the parameters in this parameter list.</p>
+     * <p>Details of the disks and snapshots from which the custom image is created. If you want to create a custom image based on a system disk snapshot and data disk snapshots, use this parameter to specify the snapshots.</p>
      */
     @NameInMap("DiskDeviceMapping")
     public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     /**
      * <p>The attributes of the custom image.</p>
@@ -195,7 +195,7 @@ public class CreateImageRequest extends TeaModel {
     /**
      * <p>The ID of the snapshot from which to create the custom image.</p>
      * <blockquote>
-     * <p> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <code>DiskDeviceMapping.SnapshotId</code>. To create a custom image from multiple snapshots, you can specify only <code>DiskDeviceMapping.SnapshotId</code>.</p>
+     * <p> To create a custom image from only a system disk snapshot of an ECS instance, you can specify this parameter or <code>DiskDeviceMapping.N.SnapshotId</code> to specify the snapshot ID. If you add data disk snapshots, you can use only <code>DiskDeviceMapping.N.SnapshotId</code> to specify snapshots.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -261,6 +261,14 @@ public class CreateImageRequest extends TeaModel {
     }
     public java.util.List<CreateImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
         return this.diskDeviceMapping;
+    }
+
+    public CreateImageRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateImageRequest setFeatures(CreateImageRequestFeatures features) {
@@ -379,8 +387,8 @@ public class CreateImageRequest extends TeaModel {
         /**
          * <p>The device name of disk N in the custom image. Valid values:</p>
          * <ul>
-         * <li>For disks other than basic disks, such as standard SSDs, ultra disks, and Enterprise SSDs (ESSDs), the valid values range from /dev/vda to /dev/vdz in alphabetical order.</li>
-         * <li>For basic disks, the valid values range from /dev/xvda to /dev/xvdz in alphabetical order.</li>
+         * <li>The device name of the system disk must be /dev/xvda.</li>
+         * <li>The device names of the data disks are unique and range from /dev/xvdb to /dev/xvdz in alphabetical order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,7 +398,7 @@ public class CreateImageRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you leave this parameter empty, the disk type is determined by the corresponding snapshot. Valid values:</p>
+         * <p>The type of disk N in the custom image. You can specify this parameter to create the system disk of the custom image from a data disk snapshot. If you do not specify this parameter, the disk type is determined by the corresponding snapshot. Valid values:</p>
          * <ul>
          * <li>system: system disk. You can specify only one snapshot to use to create the system disk in the custom image.</li>
          * <li>data: data disk. You can specify up to 16 snapshots to use to create data disks in the custom image.</li>
@@ -422,7 +430,7 @@ public class CreateImageRequest extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of snapshot N to use to create the custom image.</p>
+         * <p>The ID of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>s-bp17441ohwkdca0****</p>

@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportImageRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The format in which you want to export the custom image. Valid values:</p>
      * <ul>
@@ -81,6 +84,14 @@ public class ExportImageRequest extends TeaModel {
     public static ExportImageRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportImageRequest self = new ExportImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExportImageRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ExportImageRequest setImageFormat(String imageFormat) {

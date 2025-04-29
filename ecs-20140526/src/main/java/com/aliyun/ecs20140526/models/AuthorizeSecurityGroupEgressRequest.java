@@ -569,6 +569,10 @@ public class AuthorizeSecurityGroupEgressRequest extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>prl-2ze9743****</p>
+         */
         @NameInMap("PortRangeListId")
         public String portRangeListId;
 

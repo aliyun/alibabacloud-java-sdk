@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specifies whether to forcefully delete the custom image. Valid values:</p>
      * <ul>
@@ -53,6 +56,14 @@ public class DeleteImageRequest extends TeaModel {
     public static DeleteImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImageRequest self = new DeleteImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteImageRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteImageRequest setForce(Boolean force) {

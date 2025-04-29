@@ -120,7 +120,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The content of security group rules. You can specify up to 100 security group rules.</p>
+     * <p>The security group rules. You can specify up to 100 security group rules.</p>
      */
     @NameInMap("Permissions")
     public java.util.List<RevokeSecurityGroupEgressRequestPermissions> permissions;
@@ -447,7 +447,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
          * </ul>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects (sources or destinations of traffic).</li>
+         * <li>Advanced security groups do not support security group rules that reference security groups as authorization objects.</li>
          * <li>Each basic security group can contain up to 20 security group rules that reference security groups as authorization objects.</li>
          * </ul>
          * 
@@ -487,7 +487,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
          * <p>The ID of the destination prefix list of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/205046.html">DescribePrefixLists</a> operation to query the IDs of available prefix lists.</p>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+         * <li>If a security group resides in the classic network, you cannot reference prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
          * <li>If you specify <code>DestCidrIp</code>, <code>Ipv6DestCidrIp</code>, or <code>DestGroupId</code>, this parameter is ignored.</li>
          * </ul>
          * 
@@ -498,7 +498,7 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         public String destPrefixListId;
 
         /**
-         * <p>The protocol. The values of this parameter are case-insensitive. Valid values:</p>
+         * <p>The protocol type. The values of this parameter are case-insensitive. Valid values:</p>
          * <ul>
          * <li>TCP.</li>
          * <li>UDP.</li>
@@ -558,8 +558,8 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         /**
          * <p>The action of the security group rule. Valid values:</p>
          * <ul>
-         * <li>accept: allows outbound traffic.</li>
-         * <li>drop: denies outbound traffic and returns no responses. In this case, the request times out or the connection cannot be established.</li>
+         * <li>accept: allows access.</li>
+         * <li>drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.</li>
          * </ul>
          * <p>Default value: accept.</p>
          * 
@@ -584,6 +584,16 @@ public class RevokeSecurityGroupEgressRequest extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
+        /**
+         * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available prefix lists.</p>
+         * <ul>
+         * <li>If you specify <code>Permissions.N.PortRange</code>, this parameter is ignored.</li>
+         * <li>If a security group resides in the classic network, you cannot reference port lists in the rules of the security group. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits and quotas&quot; topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>prl-2ze9743****</p>
+         */
         @NameInMap("PortRangeListId")
         public String portRangeListId;
 

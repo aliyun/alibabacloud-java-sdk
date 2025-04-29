@@ -24,9 +24,8 @@ public class DeleteInstanceRequest extends TeaModel {
      * <li>false: normally releases the ECS instance. This value is valid only if the instance is in the <strong>Stopped</strong> (<code>Stopped</code>) state.</li>
      * </ul>
      * <p>Default value: false.</p>
-     * <blockquote>
-     * <p>Warning: When the Force parameter is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
-     * </blockquote>
+     * <p>**</p>
+     * <p><strong>Warning</strong> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -34,6 +33,21 @@ public class DeleteInstanceRequest extends TeaModel {
     @NameInMap("Force")
     public Boolean force;
 
+    /**
+     * <p>Specifies whether to forcefully stop the ECS instance in the <strong>Running</strong> (<code>Running</code>) state before the instance is released. This parameter takes effect only when <code>Force</code> is set to true. Valid values:</p>
+     * <ul>
+     * <li><p>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</p>
+     * <p>**</p>
+     * <p><strong>Warning</strong> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</p>
+     * </li>
+     * <li><p>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</p>
+     * </li>
+     * </ul>
+     * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 

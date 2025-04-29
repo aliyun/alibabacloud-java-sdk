@@ -4,10 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePortRangeListEntriesResponseBody extends TeaModel {
+    /**
+     * <p>Port list entries.</p>
+     */
     @NameInMap("Entries")
     public java.util.List<DescribePortRangeListEntriesResponseBodyEntries> entries;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>882304EC-5CE2-5860-98ED-3FA1D8D74A0C</p>
      */
@@ -37,6 +42,8 @@ public class DescribePortRangeListEntriesResponseBody extends TeaModel {
 
     public static class DescribePortRangeListEntriesResponseBodyEntries extends TeaModel {
         /**
+         * <p>The description of the port range.</p>
+         * 
          * <strong>example:</strong>
          * <p>Description information of PortRangeList</p>
          */
@@ -44,6 +51,8 @@ public class DescribePortRangeListEntriesResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The port range.</p>
+         * 
          * <strong>example:</strong>
          * <p>80/80</p>
          */

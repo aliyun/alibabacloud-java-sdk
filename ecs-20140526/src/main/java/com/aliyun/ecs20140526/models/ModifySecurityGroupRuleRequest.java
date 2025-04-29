@@ -121,6 +121,16 @@ public class ModifySecurityGroupRuleRequest extends TeaModel {
     @NameInMap("PortRange")
     public String portRange;
 
+    /**
+     * <p>The ID of the port list. You can call the <code>DescribePortRangeLists</code> operation to query the IDs of available port lists.</p>
+     * <ul>
+     * <li>If you specify PortRange, this parameter is ignored.</li>
+     * <li>If a security group is in the classic network, you cannot configure port lists in the rules of the security group. For information about the limits on security groups and port lists, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>prl-2ze9743****</p>
+     */
     @NameInMap("PortRangeListId")
     public String portRangeListId;
 

@@ -31,6 +31,9 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The attributes of the custom image.</p>
      * 
@@ -137,6 +140,14 @@ public class ModifyImageAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyImageAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyImageAttributeRequest setFeatures(ModifyImageAttributeRequestFeatures features) {
