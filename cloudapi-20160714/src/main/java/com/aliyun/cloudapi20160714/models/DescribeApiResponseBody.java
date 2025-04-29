@@ -1724,6 +1724,9 @@ public class DescribeApiResponseBody extends TeaModel {
         @NameInMap("FcType")
         public String fcType;
 
+        @NameInMap("FcVersion")
+        public String fcVersion;
+
         /**
          * <p>The function name defined in Function Compute.</p>
          * 
@@ -1841,6 +1844,14 @@ public class DescribeApiResponseBody extends TeaModel {
         }
         public String getFcType() {
             return this.fcType;
+        }
+
+        public DescribeApiResponseBodyServiceConfigFunctionComputeConfig setFcVersion(String fcVersion) {
+            this.fcVersion = fcVersion;
+            return this;
+        }
+        public String getFcVersion() {
+            return this.fcVersion;
         }
 
         public DescribeApiResponseBodyServiceConfigFunctionComputeConfig setFunctionName(String functionName) {
