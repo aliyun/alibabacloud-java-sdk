@@ -251,6 +251,9 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("SharingEnabled")
+        public String sharingEnabled;
+
         /**
          * <p>The size of the disk. Unit: GiB.</p>
          * 
@@ -374,6 +377,14 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeLensMonitorDisksResponseBodyDiskInfos setSharingEnabled(String sharingEnabled) {
+            this.sharingEnabled = sharingEnabled;
+            return this;
+        }
+        public String getSharingEnabled() {
+            return this.sharingEnabled;
         }
 
         public DescribeLensMonitorDisksResponseBodyDiskInfos setSize(Integer size) {

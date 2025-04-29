@@ -20,6 +20,9 @@ public class DescribeMetricDataRequest extends TeaModel {
     @NameInMap("AggreOps")
     public String aggreOps;
 
+    @NameInMap("AggreOverLineOps")
+    public String aggreOverLineOps;
+
     /**
      * <p>The dimension map in the JSON format. A dimension is a key-value pair. Valid dimension key: diskId.</p>
      * 
@@ -98,6 +101,14 @@ public class DescribeMetricDataRequest extends TeaModel {
     }
     public String getAggreOps() {
         return this.aggreOps;
+    }
+
+    public DescribeMetricDataRequest setAggreOverLineOps(String aggreOverLineOps) {
+        this.aggreOverLineOps = aggreOverLineOps;
+        return this;
+    }
+    public String getAggreOverLineOps() {
+        return this.aggreOverLineOps;
     }
 
     public DescribeMetricDataRequest setDimensions(String dimensions) {

@@ -28,6 +28,9 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    @NameInMap("Warnings")
+    public java.util.List<String> warnings;
+
     public static DescribeMetricDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricDataResponseBody self = new DescribeMetricDataResponseBody();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public DescribeMetricDataResponseBody setWarnings(java.util.List<String> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+    public java.util.List<String> getWarnings() {
+        return this.warnings;
     }
 
     public static class DescribeMetricDataResponseBodyDataList extends TeaModel {
