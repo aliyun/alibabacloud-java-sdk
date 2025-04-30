@@ -17,7 +17,7 @@ public class CreateSessionClusterRequest extends TeaModel {
     public CreateSessionClusterRequestAutoStartConfiguration autoStartConfiguration;
 
     /**
-     * <p>The automatic termination configurations.</p>
+     * <p>The automatic termination configuration.</p>
      */
     @NameInMap("autoStopConfiguration")
     public CreateSessionClusterRequestAutoStopConfiguration autoStopConfiguration;
@@ -63,7 +63,7 @@ public class CreateSessionClusterRequest extends TeaModel {
     public String kind;
 
     /**
-     * <p>The name of the Spark job.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>spark_job_name</p>
@@ -252,7 +252,7 @@ public class CreateSessionClusterRequest extends TeaModel {
 
     public static class CreateSessionClusterRequestAutoStartConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to enable automatic startup is enabled.</p>
+         * <p>Specifies whether to enable automatic startup.</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>

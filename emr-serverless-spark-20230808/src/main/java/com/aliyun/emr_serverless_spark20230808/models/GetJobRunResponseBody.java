@@ -120,11 +120,17 @@ public class GetJobRunResponseBody extends TeaModel {
         public String codeType;
 
         /**
-         * <p>The job configurations of Spark.</p>
+         * <p>The configurations of the Spark jobs.</p>
          */
         @NameInMap("configurationOverrides")
         public GetJobRunResponseBodyJobRunConfigurationOverrides configurationOverrides;
 
+        /**
+         * <p>The version of the Spark engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-4.0.0 (Spark 3.5.2, Scala 2.12)</p>
+         */
         @NameInMap("displayReleaseVersion")
         public String displayReleaseVersion;
 
@@ -137,6 +143,12 @@ public class GetJobRunResponseBody extends TeaModel {
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <p>The environment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env-cpv569tlhtgndjl8****</p>
+         */
         @NameInMap("environmentId")
         public String environmentId;
 
@@ -149,6 +161,12 @@ public class GetJobRunResponseBody extends TeaModel {
         @NameInMap("executionTimeoutSeconds")
         public Integer executionTimeoutSeconds;
 
+        /**
+         * <p>Indicates whether the Fusion engine is used for acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("fusion")
         public Boolean fusion;
 
@@ -234,7 +252,7 @@ public class GetJobRunResponseBody extends TeaModel {
         public Long submitTime;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the job.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;

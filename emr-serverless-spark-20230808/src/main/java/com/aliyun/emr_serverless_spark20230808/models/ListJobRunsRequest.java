@@ -19,6 +19,12 @@ public class ListJobRunsRequest extends TeaModel {
     @NameInMap("endTime")
     public ListJobRunsRequestEndTime endTime;
 
+    /**
+     * <p>The job run ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jd-b6d003f1930f****</p>
+     */
     @NameInMap("jobRunDeploymentId")
     public String jobRunDeploymentId;
 
@@ -40,6 +46,12 @@ public class ListJobRunsRequest extends TeaModel {
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The minimum running duration of the job. Unit: ms.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60000</p>
+     */
     @NameInMap("minDuration")
     public Long minDuration;
 

@@ -314,6 +314,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("draftId")
         public String draftId;
 
+        /**
+         * <p>The additional metadata of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;extraInfoKey&quot;:&quot;extraInfoValue&quot;}</p>
+         */
         @NameInMap("extra")
         public String extra;
 

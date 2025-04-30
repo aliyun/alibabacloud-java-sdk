@@ -191,6 +191,12 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @NameInMap("allowActions")
         public java.util.List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> allowActions;
 
+        /**
+         * <p>The time when the workspace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684115879955</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
@@ -227,6 +233,16 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         @NameInMap("minResource")
         public String minResource;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>PayAsYouGo</li>
+         * <li>Pre</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
+         */
         @NameInMap("paymentType")
         public String paymentType;
 
@@ -267,7 +283,11 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         public String queueStatus;
 
         /**
-         * <p>The queue type.</p>
+         * <p>The type of the queue. Valid values:</p>
+         * <ul>
+         * <li>instance</li>
+         * <li>instanceChildren</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>instance, instanceChildren</p>
