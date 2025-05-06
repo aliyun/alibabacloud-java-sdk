@@ -17,6 +17,9 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DefaultAlgo")
+    public String defaultAlgo;
+
     /**
      * <p>Specifies whether to enable the specified masking rule. Valid values:</p>
      * <ul>
@@ -35,6 +38,9 @@ public class ModifyMaskingRulesRequest extends TeaModel {
 
     @NameInMap("InterfaceVersion")
     public String interfaceVersion;
+
+    @NameInMap("MaskingAlgo")
+    public String maskingAlgo;
 
     /**
      * <p>The parameter that is used to specify the masking rule that you want to modify and the value in the JSON format. All parameter values are of the string type. Example: <code>{&quot;auto&quot;: {&quot;databases&quot;: [&quot;db1&quot;], &quot;tables&quot;: [&quot;tb1&quot;], &quot;columns&quot;: [&quot;c1,c2&quot;] }, &quot;description&quot;: &quot;This rule will be applied to the columns c1 and c2 in table t1&quot;, &quot;enabled&quot;: true, &quot;applies_to&quot;: [&quot;user&quot;]}</code>. Where,</p>
@@ -118,6 +124,14 @@ public class ModifyMaskingRulesRequest extends TeaModel {
         return this.DBClusterId;
     }
 
+    public ModifyMaskingRulesRequest setDefaultAlgo(String defaultAlgo) {
+        this.defaultAlgo = defaultAlgo;
+        return this;
+    }
+    public String getDefaultAlgo() {
+        return this.defaultAlgo;
+    }
+
     public ModifyMaskingRulesRequest setEnable(String enable) {
         this.enable = enable;
         return this;
@@ -132,6 +146,14 @@ public class ModifyMaskingRulesRequest extends TeaModel {
     }
     public String getInterfaceVersion() {
         return this.interfaceVersion;
+    }
+
+    public ModifyMaskingRulesRequest setMaskingAlgo(String maskingAlgo) {
+        this.maskingAlgo = maskingAlgo;
+        return this;
+    }
+    public String getMaskingAlgo() {
+        return this.maskingAlgo;
     }
 
     public ModifyMaskingRulesRequest setRuleConfig(String ruleConfig) {

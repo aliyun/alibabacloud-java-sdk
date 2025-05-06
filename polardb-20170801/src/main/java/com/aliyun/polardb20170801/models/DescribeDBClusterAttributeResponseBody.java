@@ -39,6 +39,16 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("Architecture")
     public String architecture;
 
+    /**
+     * <p>The minor version upgrade method.</p>
+     * <ul>
+     * <li>Auto</li>
+     * <li>Manual</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Manual</p>
+     */
     @NameInMap("AutoUpgradeMinorVersion")
     public String autoUpgradeMinorVersion;
 

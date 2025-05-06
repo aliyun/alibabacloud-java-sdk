@@ -56,7 +56,7 @@ public class ModifyDBClusterRequest extends TeaModel {
      * <ul>
      * <li>0: <code>Crash SQL</code>-based fault injection.</li>
      * </ul>
-     * <p>Valid values:</p>
+     * <p>Enumerated values:</p>
      * <ul>
      * <li>CrashSQLInjection: CrashSQLInjection.</li>
      * </ul>
@@ -80,6 +80,14 @@ public class ModifyDBClusterRequest extends TeaModel {
      * </li>
      * <li><p>In <strong>node-level disaster recovery drill</strong> scenarios, you can specify only one compute node for the disaster recovery drill. You can use the <code>DBNodeCrashList</code> parameter to specify the name of the compute node that you want to use for the drill.</p>
      * </li>
+     * </ul>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>FaultInjectToPrimaryAz</li>
+     * <li>FaultInjectToDbNode</li>
+     * <li>FaultInjection</li>
+     * <li>0</li>
+     * <li>1</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +146,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String standbyHAMode;
 
     /**
-     * <p>Specifies whether to enable automatic storage scaling. This parameter is available only for Standard Edition clusters. Valid values:</p>
+     * <p>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</p>
      * <ul>
      * <li>Enable</li>
      * <li>Disable</li>

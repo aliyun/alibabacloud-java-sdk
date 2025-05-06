@@ -23,6 +23,15 @@ public class DescribeAccountsRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The node type. This parameter is required when you query the PolarDB search node account.</p>
+     * <ul>
+     * <li>Search</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Search</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 

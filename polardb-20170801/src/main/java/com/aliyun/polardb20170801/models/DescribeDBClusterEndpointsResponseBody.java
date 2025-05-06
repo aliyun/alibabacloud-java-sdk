@@ -50,6 +50,16 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>Whether it is the dashboard endpoint of the PolarDB search node.</p>
+         * <ul>
+         * <li>Ture</li>
+         * <li>False</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("DashboardUsed")
         public Boolean dashboardUsed;
 
@@ -296,9 +306,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>The role name of each node in the endpoint. The role name of the primary node is <strong>Writer</strong>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number, such as <strong>Reader1</strong> and <strong>Reader2</strong>.</p>
+         * <p>The role name of each node in the endpoint. The role name of the primary node is <strong>Writer</strong>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number. For example, you can use <strong>Reader1</strong> and <strong>Reader2</strong> as the role names.</p>
          * <blockquote>
-         * <p>This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</p>
+         * <p> This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

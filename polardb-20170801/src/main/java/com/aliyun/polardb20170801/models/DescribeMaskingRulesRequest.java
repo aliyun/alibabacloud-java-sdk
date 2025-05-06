@@ -17,6 +17,13 @@ public class DescribeMaskingRulesRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Queries data masking rules or encryption rules. Valid values:</p>
+     * <p>v1: queries data masking rules. v2: queries data encryption rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("InterfaceVersion")
     public String interfaceVersion;
 

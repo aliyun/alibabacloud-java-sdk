@@ -331,15 +331,15 @@ public class CreateDBClusterRequest extends TeaModel {
     public String GDNId;
 
     /**
-     * <p>Whether to enable the hot standby cluster. Values are as follows:</p>
+     * <p>Specifies whether to enable the hot standby storage cluster feature. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong> (default): Enables the hot standby cluster.</li>
-     * <li><strong>OFF</strong>: Disables the hot standby cluster.</li>
-     * <li><strong>STANDBY</strong>: Enables the hot standby cluster for the standard edition.<blockquote>
-     * <p>The default value for standard edition clusters is <strong>STANDBY</strong>.</p>
-     * </blockquote>
-     * </li>
+     * <li><strong>ON</strong> (default): enables the hot standby storage cluster feature.</li>
+     * <li><strong>OFF</strong>: disables the hot standby storage cluster feature.</li>
+     * <li><strong>STANDBY</strong>: enables the hot standby storage cluster feature for Standard Edition clusters.</li>
      * </ul>
+     * <blockquote>
+     * <p> The default value for Standard Edition clusters is <strong>STANDBY</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ON</p>

@@ -24,18 +24,21 @@ public class CreateDatabaseRequest extends TeaModel {
      * <ul>
      * <li><strong>ReadWrite</strong>: read and write permissions.</li>
      * <li><strong>ReadOnly</strong>: read-only permissions.</li>
-     * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements.</li>
-     * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements.</li>
-     * <li><strong>ReadIndex</strong>: the read-only and index permissions.</li>
+     * <li><strong>DMLOnly</strong>: permissions only to execute DML statements on the database.</li>
+     * <li><strong>DDLOnly</strong>: permissions only to execute DDL statements on the database.</li>
+     * <li><strong>ReadIndex</strong>: read-only and index permissions.</li>
      * </ul>
-     * <p>If you leave this parameter empty, the default value <strong>ReadWrite</strong> is used.</p>
+     * <p>The default value is <strong>ReadWrite</strong>.</p>
      * <blockquote>
-     * <ul>
-     * <li>This parameter is valid only if you specify <strong>AccountName</strong>.</li>
-     * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
-     * <li>This parameter is optional for PolarDB for MySQL clusters.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>This parameter is valid only when the <strong>AccountName</strong> parameter is specified.</p>
+     * </li>
+     * <li><p>For a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster, this parameter is optional. If <strong>AccountName</strong> is specified, it is the account of the database owner.</p>
+     * </li>
+     * <li><p>For a PolarDB for MySQL cluster, this parameter is optional.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ReadWrite</p>
