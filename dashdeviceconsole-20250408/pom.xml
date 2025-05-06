@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dashdeviceconsole20250408</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>dashdeviceconsole20250408</name>
   <description>Alibaba Cloud DashDeviceConsole (20250408) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.7</version>
+      <version>0.3.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
