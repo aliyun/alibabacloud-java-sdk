@@ -223,6 +223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DocumentHandleConfig", request.documentHandleConfigShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.invokeType)) {
+            body.put("InvokeType", request.invokeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.searchDatasetEnable)) {
             body.put("SearchDatasetEnable", request.searchDatasetEnable);
         }

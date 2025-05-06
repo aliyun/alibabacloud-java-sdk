@@ -1,3 +1,7 @@
+2025-05-06 Version: 1.23.1
+- Update API CreateDataset: add request parameters InvokeType.
+
+
 2025-04-29 Version: 1.23.0
 - Support API SaveStyleLearningResult.
 - Update API RunSearchGeneration: add request parameters ModelId.

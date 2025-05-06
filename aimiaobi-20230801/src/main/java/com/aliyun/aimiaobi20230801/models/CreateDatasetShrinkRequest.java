@@ -35,6 +35,13 @@ public class CreateDatasetShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>portal</p>
+     */
+    @NameInMap("InvokeType")
+    public String invokeType;
+
+    /**
+     * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("SearchDatasetEnable")
@@ -92,6 +99,14 @@ public class CreateDatasetShrinkRequest extends TeaModel {
     }
     public String getDocumentHandleConfigShrink() {
         return this.documentHandleConfigShrink;
+    }
+
+    public CreateDatasetShrinkRequest setInvokeType(String invokeType) {
+        this.invokeType = invokeType;
+        return this;
+    }
+    public String getInvokeType() {
+        return this.invokeType;
     }
 
     public CreateDatasetShrinkRequest setSearchDatasetEnable(Integer searchDatasetEnable) {
