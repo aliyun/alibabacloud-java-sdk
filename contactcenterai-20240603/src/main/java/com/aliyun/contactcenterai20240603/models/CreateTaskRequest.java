@@ -556,6 +556,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("level")
         public String level;
 
+        @NameInMap("roleIdentification")
+        public Boolean roleIdentification;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -621,6 +624,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public CreateTaskRequestTranscription setRoleIdentification(Boolean roleIdentification) {
+            this.roleIdentification = roleIdentification;
+            return this;
+        }
+        public Boolean getRoleIdentification() {
+            return this.roleIdentification;
         }
 
         public CreateTaskRequestTranscription setServiceChannel(Integer serviceChannel) {
