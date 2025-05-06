@@ -29,6 +29,9 @@ public class RunSearchCaseFullTextShrinkRequest extends TeaModel {
     @NameInMap("queryKeywords")
     public String queryKeywordsShrink;
 
+    @NameInMap("referLevel")
+    public String referLevel;
+
     @NameInMap("sortKeyAndDirection")
     public String sortKeyAndDirectionShrink;
 
@@ -78,6 +81,14 @@ public class RunSearchCaseFullTextShrinkRequest extends TeaModel {
     }
     public String getQueryKeywordsShrink() {
         return this.queryKeywordsShrink;
+    }
+
+    public RunSearchCaseFullTextShrinkRequest setReferLevel(String referLevel) {
+        this.referLevel = referLevel;
+        return this;
+    }
+    public String getReferLevel() {
+        return this.referLevel;
     }
 
     public RunSearchCaseFullTextShrinkRequest setSortKeyAndDirectionShrink(String sortKeyAndDirectionShrink) {

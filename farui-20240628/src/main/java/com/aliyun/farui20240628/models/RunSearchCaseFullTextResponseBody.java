@@ -200,8 +200,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         @NameInMap("appliedLaws")
         public String appliedLaws;
 
+        @NameInMap("basicCase")
+        public String basicCase;
+
         @NameInMap("caseBasic")
         public String caseBasic;
+
+        @NameInMap("caseCause")
+        public String caseCause;
 
         @NameInMap("caseFeature")
         public String caseFeature;
@@ -245,6 +251,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         @NameInMap("documentType")
         public String documentType;
 
+        @NameInMap("judgReason")
+        public String judgReason;
+
         @NameInMap("keyfacts")
         public String keyfacts;
 
@@ -265,6 +274,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
 
         @NameInMap("referLevel")
         public String referLevel;
+
+        @NameInMap("refereeGist")
+        public String refereeGist;
 
         @NameInMap("sourceContent")
         public String sourceContent;
@@ -312,12 +324,28 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             return this.appliedLaws;
         }
 
+        public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setBasicCase(String basicCase) {
+            this.basicCase = basicCase;
+            return this;
+        }
+        public String getBasicCase() {
+            return this.basicCase;
+        }
+
         public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setCaseBasic(String caseBasic) {
             this.caseBasic = caseBasic;
             return this;
         }
         public String getCaseBasic() {
             return this.caseBasic;
+        }
+
+        public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setCaseCause(String caseCause) {
+            this.caseCause = caseCause;
+            return this;
+        }
+        public String getCaseCause() {
+            return this.caseCause;
         }
 
         public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setCaseFeature(String caseFeature) {
@@ -432,6 +460,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             return this.documentType;
         }
 
+        public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setJudgReason(String judgReason) {
+            this.judgReason = judgReason;
+            return this;
+        }
+        public String getJudgReason() {
+            return this.judgReason;
+        }
+
         public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setKeyfacts(String keyfacts) {
             this.keyfacts = keyfacts;
             return this;
@@ -486,6 +522,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         }
         public String getReferLevel() {
             return this.referLevel;
+        }
+
+        public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setRefereeGist(String refereeGist) {
+            this.refereeGist = refereeGist;
+            return this;
+        }
+        public String getRefereeGist() {
+            return this.refereeGist;
         }
 
         public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain setSourceContent(String sourceContent) {
@@ -550,6 +594,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         @NameInMap("caseDomain")
         public RunSearchCaseFullTextResponseBodyDataCaseResultCaseDomain caseDomain;
 
+        @NameInMap("mode")
+        public String mode;
+
         /**
          * <strong>example:</strong>
          * <p>0.88</p>
@@ -570,6 +617,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
             return this.caseDomain;
         }
 
+        public RunSearchCaseFullTextResponseBodyDataCaseResult setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
         public RunSearchCaseFullTextResponseBodyDataCaseResult setSimilarity(String similarity) {
             this.similarity = similarity;
             return this;
@@ -581,6 +636,9 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
     }
 
     public static class RunSearchCaseFullTextResponseBodyData extends TeaModel {
+        @NameInMap("caseLevel")
+        public String caseLevel;
+
         @NameInMap("caseResult")
         public java.util.List<RunSearchCaseFullTextResponseBodyDataCaseResult> caseResult;
 
@@ -614,6 +672,14 @@ public class RunSearchCaseFullTextResponseBody extends TeaModel {
         public static RunSearchCaseFullTextResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RunSearchCaseFullTextResponseBodyData self = new RunSearchCaseFullTextResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchCaseFullTextResponseBodyData setCaseLevel(String caseLevel) {
+            this.caseLevel = caseLevel;
+            return this;
+        }
+        public String getCaseLevel() {
+            return this.caseLevel;
         }
 
         public RunSearchCaseFullTextResponseBodyData setCaseResult(java.util.List<RunSearchCaseFullTextResponseBodyDataCaseResult> caseResult) {

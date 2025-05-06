@@ -29,6 +29,9 @@ public class RunSearchCaseFullTextRequest extends TeaModel {
     @NameInMap("queryKeywords")
     public java.util.List<String> queryKeywords;
 
+    @NameInMap("referLevel")
+    public String referLevel;
+
     @NameInMap("sortKeyAndDirection")
     public java.util.Map<String, String> sortKeyAndDirection;
 
@@ -78,6 +81,14 @@ public class RunSearchCaseFullTextRequest extends TeaModel {
     }
     public java.util.List<String> getQueryKeywords() {
         return this.queryKeywords;
+    }
+
+    public RunSearchCaseFullTextRequest setReferLevel(String referLevel) {
+        this.referLevel = referLevel;
+        return this;
+    }
+    public String getReferLevel() {
+        return this.referLevel;
     }
 
     public RunSearchCaseFullTextRequest setSortKeyAndDirection(java.util.Map<String, String> sortKeyAndDirection) {

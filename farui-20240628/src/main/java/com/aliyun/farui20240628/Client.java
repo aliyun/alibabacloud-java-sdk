@@ -405,6 +405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("queryKeywords", request.queryKeywordsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.referLevel)) {
+            body.put("referLevel", request.referLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sortKeyAndDirectionShrink)) {
             body.put("sortKeyAndDirection", request.sortKeyAndDirectionShrink);
         }
