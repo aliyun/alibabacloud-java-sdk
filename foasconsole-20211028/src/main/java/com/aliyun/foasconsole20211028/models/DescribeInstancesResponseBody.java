@@ -921,6 +921,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Oss")
         public DescribeInstancesResponseBodyInstancesStorageOss oss;
 
+        @NameInMap("SupportCreateFullyManagedStorage")
+        public Boolean supportCreateFullyManagedStorage;
+
+        @NameInMap("SupportMigrationProgressDetection")
+        public Boolean supportMigrationProgressDetection;
+
         public static DescribeInstancesResponseBodyInstancesStorage build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesStorage self = new DescribeInstancesResponseBodyInstancesStorage();
             return TeaModel.build(map, self);
@@ -948,6 +954,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesStorageOss getOss() {
             return this.oss;
+        }
+
+        public DescribeInstancesResponseBodyInstancesStorage setSupportCreateFullyManagedStorage(Boolean supportCreateFullyManagedStorage) {
+            this.supportCreateFullyManagedStorage = supportCreateFullyManagedStorage;
+            return this;
+        }
+        public Boolean getSupportCreateFullyManagedStorage() {
+            return this.supportCreateFullyManagedStorage;
+        }
+
+        public DescribeInstancesResponseBodyInstancesStorage setSupportMigrationProgressDetection(Boolean supportMigrationProgressDetection) {
+            this.supportMigrationProgressDetection = supportMigrationProgressDetection;
+            return this;
+        }
+        public Boolean getSupportMigrationProgressDetection() {
+            return this.supportMigrationProgressDetection;
         }
 
     }
