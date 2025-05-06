@@ -58,7 +58,7 @@ public class ListAggregateRemediationExecutionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the member account in the account group.</p>
+     * <p>The ID of the member account in the account group. When left unfilled, this rule queries the remediation result for the account that created the rule. If the account is not in the account group, the result will be empty.</p>
      * 
      * <strong>example:</strong>
      * <p>126672004088****</p>

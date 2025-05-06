@@ -2519,6 +2519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CompliancePackId", request.compliancePackId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.multiFiles)) {
+            body.put("MultiFiles", request.multiFiles);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));

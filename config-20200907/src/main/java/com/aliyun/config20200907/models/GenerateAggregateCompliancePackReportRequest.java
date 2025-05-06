@@ -35,6 +35,9 @@ public class GenerateAggregateCompliancePackReportRequest extends TeaModel {
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
+    @NameInMap("MultiFiles")
+    public Boolean multiFiles;
+
     public static GenerateAggregateCompliancePackReportRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateAggregateCompliancePackReportRequest self = new GenerateAggregateCompliancePackReportRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GenerateAggregateCompliancePackReportRequest extends TeaModel {
     }
     public String getCompliancePackId() {
         return this.compliancePackId;
+    }
+
+    public GenerateAggregateCompliancePackReportRequest setMultiFiles(Boolean multiFiles) {
+        this.multiFiles = multiFiles;
+        return this;
+    }
+    public Boolean getMultiFiles() {
+        return this.multiFiles;
     }
 
 }
