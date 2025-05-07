@@ -693,6 +693,9 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeUserResourcesResponseBodyResourcesSessions extends TeaModel {
+        @NameInMap("NickName")
+        public String nickName;
+
         /**
          * <strong>example:</strong>
          * <p>2025-01-22T11:03:36Z</p>
@@ -717,6 +720,14 @@ public class DescribeUserResourcesResponseBody extends TeaModel {
         public static DescribeUserResourcesResponseBodyResourcesSessions build(java.util.Map<String, ?> map) throws Exception {
             DescribeUserResourcesResponseBodyResourcesSessions self = new DescribeUserResourcesResponseBodyResourcesSessions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeUserResourcesResponseBodyResourcesSessions setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
         }
 
         public DescribeUserResourcesResponseBodyResourcesSessions setResourceSessionStartTime(String resourceSessionStartTime) {
