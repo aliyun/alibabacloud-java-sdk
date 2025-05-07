@@ -1,3 +1,7 @@
+2025-05-07 Version: 1.23.3
+- Update API GetDataSourceOrderConfig: add response parameters Body.Data.TotalDocSize.
+
+
 2025-05-07 Version: 1.23.2
 - Update API GetDataSourceOrderConfig: add response parameters Body.Data.UserConfigDataSourceList.$.Enable.
 
