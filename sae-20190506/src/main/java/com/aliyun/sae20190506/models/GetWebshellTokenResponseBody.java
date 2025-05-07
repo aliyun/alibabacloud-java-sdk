@@ -107,6 +107,9 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     }
 
     public static class GetWebshellTokenResponseBodyData extends TeaModel {
+        @NameInMap("HttpUrl")
+        public String httpUrl;
+
         /**
          * <strong>example:</strong>
          * <p>zWWpvRj_5pzof4hfo7-hGynM8oGMmO_7</p>
@@ -114,9 +117,20 @@ public class GetWebshellTokenResponseBody extends TeaModel {
         @NameInMap("Token")
         public String token;
 
+        @NameInMap("WebSocketUrl")
+        public String webSocketUrl;
+
         public static GetWebshellTokenResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetWebshellTokenResponseBodyData self = new GetWebshellTokenResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetWebshellTokenResponseBodyData setHttpUrl(String httpUrl) {
+            this.httpUrl = httpUrl;
+            return this;
+        }
+        public String getHttpUrl() {
+            return this.httpUrl;
         }
 
         public GetWebshellTokenResponseBodyData setToken(String token) {
@@ -125,6 +139,14 @@ public class GetWebshellTokenResponseBody extends TeaModel {
         }
         public String getToken() {
             return this.token;
+        }
+
+        public GetWebshellTokenResponseBodyData setWebSocketUrl(String webSocketUrl) {
+            this.webSocketUrl = webSocketUrl;
+            return this;
+        }
+        public String getWebSocketUrl() {
+            return this.webSocketUrl;
         }
 
     }
