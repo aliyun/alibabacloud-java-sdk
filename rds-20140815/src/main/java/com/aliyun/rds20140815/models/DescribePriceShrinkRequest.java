@@ -71,11 +71,12 @@ public class DescribePriceShrinkRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The storage type of the new instance. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: local SSD</li>
+     * <li><strong>general_essd</strong>: premium Enterprise SSD (ESSD)</li>
+     * <li><strong>local_ssd</strong>: premium local SSD</li>
      * <li><strong>cloud_ssd</strong>: standard SSD</li>
-     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd</strong>: performance level 1 (PL1) ESSD</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
@@ -115,10 +116,10 @@ public class DescribePriceShrinkRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version of the instance. Valid values:</p>
      * <ul>
      * <li>Valid values if you set Engine to <strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
-     * <li>Valid values if you set Engine to <strong>SQLServer</strong>: <strong>08r2_ent_ha</strong> (cloud disks, discontinued), <strong>2008r2</strong>(local disks, discontinued), <strong>2012</strong> (SQL Server EE Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
+     * <li>Valid values if you set Engine to <strong>SQL Server</strong>: <strong>08r2_ent_ha</strong>(cloud disks, discontinued), <strong>2008r2</strong>(high-performance local disks, discontinued), <strong>2012</strong> (SQL Server EE Basic)<strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
      * <li>Valid values if you set Engine to <strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
      * <li>Valid value if you set Engine to <strong>MariaDB</strong>: <strong>10.3</strong></li>
      * </ul>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCDisksRequest extends TeaModel {
     /**
-     * <p>The IDs of cloud disks, local disks, or elastic ephemeral disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The disk ID. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,). Format: <code>[&quot;Disk ID1&quot;,&quot;Disk ID2&quot;]</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;rcd-bp67acfmxazb4p****&quot;, &quot;rcd-bp67acfmxazb4g****&quot;, … &quot;rcd-bp67acfmxazb4d****&quot;]</p>

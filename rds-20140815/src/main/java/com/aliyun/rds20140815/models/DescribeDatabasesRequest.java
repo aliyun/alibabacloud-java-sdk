@@ -54,7 +54,7 @@ public class DescribeDatabasesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries to return per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>

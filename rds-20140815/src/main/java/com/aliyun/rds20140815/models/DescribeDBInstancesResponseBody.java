@@ -159,6 +159,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
+        @NameInMap("BlueGreenDeploymentName")
+        public String blueGreenDeploymentName;
+
+        @NameInMap("BlueInstanceName")
+        public String blueInstanceName;
+
         /**
          * <p>A deprecated parameter.</p>
          * 
@@ -491,6 +497,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("GeneralGroupName")
         public String generalGroupName;
 
+        @NameInMap("GreenInstanceName")
+        public String greenInstanceName;
+
         /**
          * <p>The ID of the disaster recovery instance. This parameter is returned only when the instance is a primary instance and has a disaster recovery instance attached.</p>
          * 
@@ -706,6 +715,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static DescribeDBInstancesResponseBodyItemsDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesResponseBodyItemsDBInstance self = new DescribeDBInstancesResponseBodyItemsDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setBlueGreenDeploymentName(String blueGreenDeploymentName) {
+            this.blueGreenDeploymentName = blueGreenDeploymentName;
+            return this;
+        }
+        public String getBlueGreenDeploymentName() {
+            return this.blueGreenDeploymentName;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setBlueInstanceName(String blueInstanceName) {
+            this.blueInstanceName = blueInstanceName;
+            return this;
+        }
+        public String getBlueInstanceName() {
+            return this.blueInstanceName;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setBpeEnabled(String bpeEnabled) {
@@ -970,6 +995,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getGeneralGroupName() {
             return this.generalGroupName;
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setGreenInstanceName(String greenInstanceName) {
+            this.greenInstanceName = greenInstanceName;
+            return this;
+        }
+        public String getGreenInstanceName() {
+            return this.greenInstanceName;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setGuardDBInstanceId(String guardDBInstanceId) {

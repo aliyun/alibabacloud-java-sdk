@@ -93,20 +93,12 @@ public class DescribeRCDisksResponseBody extends TeaModel {
 
     public static class DescribeRCDisksResponseBodyDisks extends TeaModel {
         /**
-         * <p>The disk category. Valid values:</p>
+         * <p>The category of the disk. Valid values:</p>
          * <ul>
-         * <li>cloud: basic disk</li>
-         * <li>cloud_efficiency: utra disk</li>
-         * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_essd: Enterprise SSD (ESSD)</li>
-         * <li>cloud_auto: ESSD AutoPL disk</li>
-         * <li>local_ssd_pro: I/O-intensive local disk</li>
-         * <li>local_hdd_pro: throughput-intensive local disk</li>
-         * <li>cloud_essd_entry: ESSD Entry disk</li>
-         * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
-         * <li>elastic_ephemeral_disk_premium: premium static ephemeral disk</li>
-         * <li>ephemeral: retired local disk</li>
-         * <li>ephemeral_ssd: retired local SSD</li>
+         * <li><strong>cloud_efficiency</strong>: ultra disk</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD</li>
+         * <li><strong>cloud_essd</strong>: ESSD</li>
+         * <li><strong>cloud_auto</strong>: Premium ESSD</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -53,6 +53,9 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Status")
+    public String status;
+
     @NameInMap("Tag")
     public String tag;
 
@@ -124,6 +127,14 @@ public class DescribeRCInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeRCInstancesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeRCInstancesRequest setTag(String tag) {
