@@ -1,3 +1,6 @@
+2025-05-07 Version: 4.1.2
+- Generated java 2021-10-01 for waf-openapi.
+
 2025-03-27 Version: 4.1.1
 - Update API DescribeDefenseRules: add response parameters Body.Rules.$.ActionExternal.
 - Update API DescribeDefenseRules: add response parameters Body.Rules.$.Description.

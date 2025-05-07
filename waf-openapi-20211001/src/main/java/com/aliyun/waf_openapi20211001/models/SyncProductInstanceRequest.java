@@ -18,10 +18,10 @@ public class SyncProductInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region of the WAF instance. Valid values:</p>
+     * <p>The region ID of the WAF instance. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-     * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,6 +31,8 @@ public class SyncProductInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm4co****f5qa</p>
      */

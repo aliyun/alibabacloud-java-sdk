@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
     /**
-     * <p>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</p>
+     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
@@ -37,7 +37,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
     /**
      * <p>The metric whose top N data entries you want to return. The following metrics are supported:</p>
      * <blockquote>
-     * <p> For more information about attack requests, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p> For more information about attack requests, see the &quot;Operation description&quot; section of this topic.</p>
      * </blockquote>
      * <ul>
      * <li>real_client_ip: The system aggregates the source IP addresses of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>
@@ -141,7 +141,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricRequestFilterConditions extends TeaModel {
         /**
-         * <p>The field name. This operation supports all fields.</p>
+         * <p>The field name. This operation supports all fields. For more information, see the <strong>Supported field names</strong> section below.</p>
          * 
          * <strong>example:</strong>
          * <p>matched_host</p>
@@ -150,7 +150,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter operator.</p>
+         * <p>The operator. For more information, see the <strong>Supported operators</strong> section below.</p>
          * 
          * <strong>example:</strong>
          * <p>eq</p>
@@ -200,7 +200,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricRequestFilterDateRange extends TeaModel {
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +210,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class DescribeSecurityEventTopNMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. Multiple conditions are evaluated by using a logical AND.</p>
+         * <p>The filter conditions. Each object describes a filter condition.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSecurityEventTopNMetricRequestFilterConditions> conditions;

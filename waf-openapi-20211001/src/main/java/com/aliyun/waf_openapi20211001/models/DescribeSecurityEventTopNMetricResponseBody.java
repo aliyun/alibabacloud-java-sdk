@@ -8,7 +8,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>D827FCFE-90A7-4330-9326-D33C8B4C7726</p>
+     * <p>D827FCFE-90A7-4330-9326-*****B4C7726</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,7 +59,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
          * <p>The additional information, such as the protection module for a protection rule whose ID is returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>“”</p>
+         * <p>waf_base</p>
          */
         @NameInMap("Attribute")
         public String attribute;
@@ -68,7 +68,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
          * <p>The field value, which varies based on the metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-8v****a-443-ecs</p>
+         * <p>10000</p>
          */
         @NameInMap("Name")
         public String name;
@@ -115,7 +115,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange extends TeaModel {
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</p>
+         * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888600</p>
@@ -124,7 +124,7 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</p>
+         * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888000</p>
@@ -163,10 +163,10 @@ public class DescribeSecurityEventTopNMetricResponseBody extends TeaModel {
         public DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange dateRange;
 
         /**
-         * <p>The unit of the returned data. Defaults to the value: request.</p>
+         * <p>The unit of the statistics returned. It is fixed as requests.</p>
          * 
          * <strong>example:</strong>
-         * <p>request</p>
+         * <p>requests</p>
          */
         @NameInMap("Units")
         public String units;

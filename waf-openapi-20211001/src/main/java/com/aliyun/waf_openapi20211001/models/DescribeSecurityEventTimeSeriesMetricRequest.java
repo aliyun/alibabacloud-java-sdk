@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
     /**
-     * <p>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</p>
+     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
@@ -109,7 +109,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilterConditions extends TeaModel {
         /**
-         * <p>The field name. This operation supports all fields.</p>
+         * <p>The field name. This operation supports all fields. For details, see the <strong>Supported field names</strong> section below.</p>
          * 
          * <strong>example:</strong>
          * <p>matched_host</p>
@@ -118,7 +118,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The operator.</p>
+         * <p>The operator. For details, see the <strong>Supported operators</strong> section below.</p>
          * 
          * <strong>example:</strong>
          * <p>eq</p>
@@ -168,7 +168,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilterDateRange extends TeaModel {
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class DescribeSecurityEventTimeSeriesMetricRequest extends TeaModel {
 
     public static class DescribeSecurityEventTimeSeriesMetricRequestFilter extends TeaModel {
         /**
-         * <p>The filter conditions. Multiple conditions are evaluated by using a logical AND.</p>
+         * <p>The filter conditions. Each object describes a filter condition.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSecurityEventTimeSeriesMetricRequestFilterConditions> conditions;

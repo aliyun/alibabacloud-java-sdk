@@ -57,7 +57,6 @@ public class ModifyDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>5325</p>

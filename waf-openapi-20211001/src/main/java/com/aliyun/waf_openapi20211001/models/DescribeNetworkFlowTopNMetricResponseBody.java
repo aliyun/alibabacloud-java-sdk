@@ -11,7 +11,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
     public java.util.List<DescribeNetworkFlowTopNMetricResponseBodyNetworkFlowTopNValues> networkFlowTopNValues;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D827FCFE-90A7-4330-9326-D33C8B4C7726</p>
@@ -56,10 +56,10 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeNetworkFlowTopNMetricResponseBodyNetworkFlowTopNValues extends TeaModel {
         /**
-         * <p>Returns additional information, such as the country, province, and city to which an IP address belongs. It\&quot;s currently empty.</p>
+         * <p>Returns additional information, such as the country, province, or city to which an IP address belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>“”</p>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Attribute")
         public String attribute;
@@ -68,7 +68,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
          * <p>The value of this field varies depending on the queried Metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-8v****a-443-ecs (Protected object)</p>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -115,7 +115,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
 
     public static class DescribeNetworkFlowTopNMetricResponseBodyTopNMetaDataDateRange extends TeaModel {
         /**
-         * <p>The end time of the query range (in UNIX timestamp, seconds). Same as the EndDate request parameter.</p>
+         * <p>The end time of the query range (Unix timestamp, seconds). Same as the EndDate request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888600</p>
@@ -124,7 +124,7 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The start time of the query range (in UNIX timestamp, seconds). Same as the StartDate request parameter.</p>
+         * <p>The start time of the query range (Unix timestamp, seconds). Same as the StartDate request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1713888000</p>
@@ -163,10 +163,10 @@ public class DescribeNetworkFlowTopNMetricResponseBody extends TeaModel {
         public DescribeNetworkFlowTopNMetricResponseBodyTopNMetaDataDateRange dateRange;
 
         /**
-         * <p>The unit of the returned data. Defaults to the value: request.</p>
+         * <p>The unit of the returned data. It is fixed as requests.</p>
          * 
          * <strong>example:</strong>
-         * <p>request</p>
+         * <p>requests</p>
          */
         @NameInMap("Units")
         public String units;

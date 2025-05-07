@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTopNMetricShrinkRequest extends TeaModel {
     /**
-     * <p>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</p>
+     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")
@@ -37,7 +37,7 @@ public class DescribeSecurityEventTopNMetricShrinkRequest extends TeaModel {
     /**
      * <p>The metric whose top N data entries you want to return. The following metrics are supported:</p>
      * <blockquote>
-     * <p> For more information about attack requests, see the &quot;Usage notes&quot; section of this topic.</p>
+     * <p> For more information about attack requests, see the &quot;Operation description&quot; section of this topic.</p>
      * </blockquote>
      * <ul>
      * <li>real_client_ip: The system aggregates the source IP addresses of attack requests to collect statistics, sorts the statistical results in descending order, and returns top N data entries.</li>

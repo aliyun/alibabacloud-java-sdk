@@ -69,7 +69,6 @@ public class CreateDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the rule template for which you want to create a protection rule.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1122</p>

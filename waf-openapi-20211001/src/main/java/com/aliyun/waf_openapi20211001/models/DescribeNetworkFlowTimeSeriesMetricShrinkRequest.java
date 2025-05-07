@@ -14,7 +14,7 @@ public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest extends TeaModel {
     /**
      * <p>The Web Application Firewall (WAF) instance ID.</p>
      * <blockquote>
-     * <p> Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to get the WAF instance ID.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to retrieve the WAF instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -25,12 +25,12 @@ public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies the type of data returned by each metric. Valid values:</p>
+     * <p>Specifies the data type to be returned. Valid values:</p>
      * <ul>
-     * <li>qps: Queries per second (QPS) of requests processed by WAF.</li>
-     * <li>total_requests: Total number of requests processed by WAF.</li>
-     * <li>top5_status: The top 5 HTTP status codes returned by WAF, along with their counts.</li>
-     * <li>top 5_upstream_status: The top 5 HTTP status codes returned by the origin server, along with their counts.</li>
+     * <li>qps: Returns the queries per second (QPS) processed by WAF. This value is calculated using a peak detection method: QPS is measured every 10 seconds, and the highest value within the specified time range is returned.</li>
+     * <li>total_requests: Returns the total number of requests processed by WAF.</li>
+     * <li>top5_status: Returns the top 5 HTTP status codes returned by the WAF to clients, along with their corresponding time series statistics.</li>
+     * <li>top 5_upstream_status: Returns the top 5 HTTP status codes returned by the origin server to clients, along with their corresponding time series data.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +41,7 @@ public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest extends TeaModel {
     public String metric;
 
     /**
-     * <p>The region ID of the WAF instance. Valid values:</p>
+     * <p>The region ID of WAF instance. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
      * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>

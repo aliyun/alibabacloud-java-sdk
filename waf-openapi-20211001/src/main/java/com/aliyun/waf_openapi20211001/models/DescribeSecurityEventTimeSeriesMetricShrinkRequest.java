@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityEventTimeSeriesMetricShrinkRequest extends TeaModel {
     /**
-     * <p>The filter parameters for the query. Multiple parameters are evaluated by using a logical AND.</p>
+     * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Filter")

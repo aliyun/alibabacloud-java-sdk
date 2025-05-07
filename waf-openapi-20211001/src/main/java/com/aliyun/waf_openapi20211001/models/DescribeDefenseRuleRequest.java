@@ -51,7 +51,6 @@ public class DescribeDefenseRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the protection rule template to which the protection rule that you want to query belongs.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>10318</p>
