@@ -1,3 +1,7 @@
+2025-05-07 Version: 1.23.2
+- Update API GetDataSourceOrderConfig: add response parameters Body.Data.UserConfigDataSourceList.$.Enable.
+
+
 2025-05-06 Version: 1.23.1
 - Update API CreateDataset: add request parameters InvokeType.
 

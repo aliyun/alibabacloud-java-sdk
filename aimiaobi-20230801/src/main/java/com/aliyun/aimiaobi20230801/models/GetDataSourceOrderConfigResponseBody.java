@@ -103,6 +103,9 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         @NameInMap("Code")
         public String code;
 
+        @NameInMap("Enable")
+        public Boolean enable;
+
         @NameInMap("Name")
         public String name;
 
@@ -131,6 +134,14 @@ public class GetDataSourceOrderConfigResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public GetDataSourceOrderConfigResponseBodyDataUserConfigDataSourceList setName(String name) {
