@@ -378,6 +378,124 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>固话AxB绑定</p>
+     * 
+     * @param tmpReq BindAxbFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindAxbFixedLineResponse
+     */
+    public BindAxbFixedLineResponse bindAxbFixedLineWithOptions(BindAxbFixedLineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BindAxbFixedLineShrinkRequest request = new BindAxbFixedLineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "Extra", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anucode)) {
+            query.put("Anucode", request.anucode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anucodecalled)) {
+            query.put("Anucodecalled", request.anucodecalled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.areacode)) {
+            query.put("Areacode", request.areacode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindType)) {
+            query.put("BindType", request.bindType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            query.put("Extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subts)) {
+            query.put("Subts", request.subts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TAnucodeConnect)) {
+            query.put("TAnucodeConnect", request.TAnucodeConnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telB)) {
+            query.put("TelB", request.telB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAxbFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAxbFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>固话AxB绑定</p>
+     * 
+     * @param request BindAxbFixedLineRequest
+     * @return BindAxbFixedLineResponse
+     */
+    public BindAxbFixedLineResponse bindAxbFixedLine(BindAxbFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindAxbFixedLineWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>An AXG protection solution can be configured to meet the requirements for grading users, limiting the scope of calls, and restricting order snatching. The letter G represents a phone number group to which you can add phone numbers as needed.</p>
      * <h3><a href="#qps"></a>QPS limits</h3>
@@ -753,6 +871,242 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BindAxnExtensionResponse bindAxnExtension(BindAxnExtensionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindAxnExtensionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AXN分机号-号码绑定</p>
+     * 
+     * @param tmpReq BindAxnExtensionFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindAxnExtensionFixedLineResponse
+     */
+    public BindAxnExtensionFixedLineResponse bindAxnExtensionFixedLineWithOptions(BindAxnExtensionFixedLineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BindAxnExtensionFixedLineShrinkRequest request = new BindAxnExtensionFixedLineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extraaxx)) {
+            request.extraaxxShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extraaxx, "Extraaxx", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anucode)) {
+            query.put("Anucode", request.anucode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anucodecalled)) {
+            query.put("Anucodecalled", request.anucodecalled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.areacode)) {
+            query.put("Areacode", request.areacode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindType)) {
+            query.put("BindType", request.bindType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraaxxShrink)) {
+            query.put("Extraaxx", request.extraaxxShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subts)) {
+            query.put("Subts", request.subts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TAnucodeConnect)) {
+            query.put("TAnucodeConnect", request.TAnucodeConnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telXext)) {
+            query.put("TelXext", request.telXext);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAxnExtensionFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAxnExtensionFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AXN分机号-号码绑定</p>
+     * 
+     * @param request BindAxnExtensionFixedLineRequest
+     * @return BindAxnExtensionFixedLineResponse
+     */
+    public BindAxnExtensionFixedLineResponse bindAxnExtensionFixedLine(BindAxnExtensionFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindAxnExtensionFixedLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AXN模式绑定，分配X号码</p>
+     * 
+     * @param tmpReq BindAxnFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindAxnFixedLineResponse
+     */
+    public BindAxnFixedLineResponse bindAxnFixedLineWithOptions(BindAxnFixedLineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BindAxnFixedLineShrinkRequest request = new BindAxnFixedLineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "Extra", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anucode)) {
+            query.put("Anucode", request.anucode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anucodecalled)) {
+            query.put("Anucodecalled", request.anucodecalled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.areacode)) {
+            query.put("Areacode", request.areacode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bindType)) {
+            query.put("BindType", request.bindType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            query.put("Extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subts)) {
+            query.put("Subts", request.subts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TAnucodeConnect)) {
+            query.put("TAnucodeConnect", request.TAnucodeConnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telB)) {
+            query.put("TelB", request.telB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindAxnFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindAxnFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AXN模式绑定，分配X号码</p>
+     * 
+     * @param request BindAxnFixedLineRequest
+     * @return BindAxnFixedLineResponse
+     */
+    public BindAxnFixedLineResponse bindAxnFixedLine(BindAxnFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bindAxnFixedLineWithOptions(request, runtime);
     }
 
     /**
@@ -1694,6 +2048,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>固话AxB解绑</p>
+     * 
+     * @param request DeleteAxbBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAxbBindFixedLineResponse
+     */
+    public DeleteAxbBindFixedLineResponse deleteAxbBindFixedLineWithOptions(DeleteAxbBindFixedLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAxbBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAxbBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>固话AxB解绑</p>
+     * 
+     * @param request DeleteAxbBindFixedLineRequest
+     * @return DeleteAxbBindFixedLineResponse
+     */
+    public DeleteAxbBindFixedLineResponse deleteAxbBindFixedLine(DeleteAxbBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAxbBindFixedLineWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DeleteAxgGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAxgGroupResponse
@@ -1745,6 +2167,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteAxgGroupResponse deleteAxgGroup(DeleteAxgGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAxgGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑已有Axn绑定</p>
+     * 
+     * @param request DeleteAxnBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAxnBindFixedLineResponse
+     */
+    public DeleteAxnBindFixedLineResponse deleteAxnBindFixedLineWithOptions(DeleteAxnBindFixedLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAxnBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAxnBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑已有Axn绑定</p>
+     * 
+     * @param request DeleteAxnBindFixedLineRequest
+     * @return DeleteAxnBindFixedLineResponse
+     */
+    public DeleteAxnBindFixedLineResponse deleteAxnBindFixedLine(DeleteAxnBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAxnBindFixedLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑已有AXN分机号绑定</p>
+     * 
+     * @param request DeleteAxnExtensionBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAxnExtensionBindFixedLineResponse
+     */
+    public DeleteAxnExtensionBindFixedLineResponse deleteAxnExtensionBindFixedLineWithOptions(DeleteAxnExtensionBindFixedLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAxnExtensionBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAxnExtensionBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>解绑已有AXN分机号绑定</p>
+     * 
+     * @param request DeleteAxnExtensionBindFixedLineRequest
+     * @return DeleteAxnExtensionBindFixedLineResponse
+     */
+    public DeleteAxnExtensionBindFixedLineResponse deleteAxnExtensionBindFixedLine(DeleteAxnExtensionBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAxnExtensionBindFixedLineWithOptions(request, runtime);
     }
 
     /**
@@ -2501,6 +3059,242 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OperateBlackNoResponse operateBlackNo(OperateBlackNoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.operateBlackNoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>固话AxB查询</p>
+     * 
+     * @param request QueryAxbBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAxbBindFixedLineResponse
+     */
+    public QueryAxbBindFixedLineResponse queryAxbBindFixedLineWithOptions(QueryAxbBindFixedLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAxbBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAxbBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>固话AxB查询</p>
+     * 
+     * @param request QueryAxbBindFixedLineRequest
+     * @return QueryAxbBindFixedLineResponse
+     */
+    public QueryAxbBindFixedLineResponse queryAxbBindFixedLine(QueryAxbBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAxbBindFixedLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Axn绑定关系</p>
+     * 
+     * @param request QueryAxnBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAxnBindFixedLineResponse
+     */
+    public QueryAxnBindFixedLineResponse queryAxnBindFixedLineWithOptions(QueryAxnBindFixedLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            query.put("Phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telX)) {
+            query.put("TelX", request.telX);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAxnBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAxnBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Axn绑定关系</p>
+     * 
+     * @param request QueryAxnBindFixedLineRequest
+     * @return QueryAxnBindFixedLineResponse
+     */
+    public QueryAxnBindFixedLineResponse queryAxnBindFixedLine(QueryAxnBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAxnBindFixedLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AXN分机号绑定关系</p>
+     * 
+     * @param request QueryAxnExtensionBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAxnExtensionBindFixedLineResponse
+     */
+    public QueryAxnExtensionBindFixedLineResponse queryAxnExtensionBindFixedLineWithOptions(QueryAxnExtensionBindFixedLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryType)) {
+            query.put("QueryType", request.queryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAxnExtensionBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAxnExtensionBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询AXN分机号绑定关系</p>
+     * 
+     * @param request QueryAxnExtensionBindFixedLineRequest
+     * @return QueryAxnExtensionBindFixedLineResponse
+     */
+    public QueryAxnExtensionBindFixedLineResponse queryAxnExtensionBindFixedLine(QueryAxnExtensionBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAxnExtensionBindFixedLineWithOptions(request, runtime);
     }
 
     /**
@@ -3445,6 +4239,332 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnlockSecretNoResponse unlockSecretNo(UnlockSecretNoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unlockSecretNoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>固话AxB绑定更新</p>
+     * 
+     * @param tmpReq UpdateAxbBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAxbBindFixedLineResponse
+     */
+    public UpdateAxbBindFixedLineResponse updateAxbBindFixedLineWithOptions(UpdateAxbBindFixedLineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAxbBindFixedLineShrinkRequest request = new UpdateAxbBindFixedLineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "Extra", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anucode)) {
+            query.put("Anucode", request.anucode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anucodecalled)) {
+            query.put("Anucodecalled", request.anucodecalled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            query.put("Extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subts)) {
+            query.put("Subts", request.subts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TAnucodeConnect)) {
+            query.put("TAnucodeConnect", request.TAnucodeConnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telB)) {
+            query.put("TelB", request.telB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAxbBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAxbBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>固话AxB绑定更新</p>
+     * 
+     * @param request UpdateAxbBindFixedLineRequest
+     * @return UpdateAxbBindFixedLineResponse
+     */
+    public UpdateAxbBindFixedLineResponse updateAxbBindFixedLine(UpdateAxbBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAxbBindFixedLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Axn绑定关系</p>
+     * 
+     * @param tmpReq UpdateAxnBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAxnBindFixedLineResponse
+     */
+    public UpdateAxnBindFixedLineResponse updateAxnBindFixedLineWithOptions(UpdateAxnBindFixedLineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAxnBindFixedLineShrinkRequest request = new UpdateAxnBindFixedLineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extra)) {
+            request.extraShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extra, "Extra", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anucode)) {
+            query.put("Anucode", request.anucode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anucodecalled)) {
+            query.put("Anucodecalled", request.anucodecalled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraShrink)) {
+            query.put("Extra", request.extraShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subts)) {
+            query.put("Subts", request.subts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TAnucodeConnect)) {
+            query.put("TAnucodeConnect", request.TAnucodeConnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telB)) {
+            query.put("TelB", request.telB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAxnBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAxnBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Axn绑定关系</p>
+     * 
+     * @param request UpdateAxnBindFixedLineRequest
+     * @return UpdateAxnBindFixedLineResponse
+     */
+    public UpdateAxnBindFixedLineResponse updateAxnBindFixedLine(UpdateAxnBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAxnBindFixedLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新AXN分机号绑定关系</p>
+     * 
+     * @param tmpReq UpdateAxnExtensionBindFixedLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAxnExtensionBindFixedLineResponse
+     */
+    public UpdateAxnExtensionBindFixedLineResponse updateAxnExtensionBindFixedLineWithOptions(UpdateAxnExtensionBindFixedLineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAxnExtensionBindFixedLineShrinkRequest request = new UpdateAxnExtensionBindFixedLineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.extraaxx)) {
+            request.extraaxxShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.extraaxx, "Extraaxx", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anucode)) {
+            query.put("Anucode", request.anucode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.anucodecalled)) {
+            query.put("Anucodecalled", request.anucodecalled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expiration)) {
+            query.put("Expiration", request.expiration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraaxxShrink)) {
+            query.put("Extraaxx", request.extraaxxShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subId)) {
+            query.put("SubId", request.subId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subts)) {
+            query.put("Subts", request.subts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TAnucodeConnect)) {
+            query.put("TAnucodeConnect", request.TAnucodeConnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.telA)) {
+            query.put("TelA", request.telA);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ts)) {
+            query.put("Ts", request.ts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAxnExtensionBindFixedLine"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAxnExtensionBindFixedLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新AXN分机号绑定关系</p>
+     * 
+     * @param request UpdateAxnExtensionBindFixedLineRequest
+     * @return UpdateAxnExtensionBindFixedLineResponse
+     */
+    public UpdateAxnExtensionBindFixedLineResponse updateAxnExtensionBindFixedLine(UpdateAxnExtensionBindFixedLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAxnExtensionBindFixedLineWithOptions(request, runtime);
     }
 
     /**
