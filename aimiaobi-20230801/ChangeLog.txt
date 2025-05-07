@@ -1,3 +1,16 @@
+2025-05-07 Version: 1.23.4
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.AskUser.
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.AskUserKeywords.
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.CurrentStep.
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.NextStep.
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.SupplementDataType.
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.SupplementEnable.
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.UserBack.
+- Update API RunSearchGeneration: add request parameters AgentContext.BizContext.UserBackKeywords.
+- Update API RunSearchGeneration: add response parameters Body.Payload.Output.AgentContext.BizContext.AskUser.
+- Update API RunSearchGeneration: add response parameters Body.Payload.Output.AgentContext.BizContext.AskUserKeywords.
+
+
 2025-05-07 Version: 1.23.3
 - Update API GetDataSourceOrderConfig: add response parameters Body.Data.TotalDocSize.
 

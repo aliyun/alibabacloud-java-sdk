@@ -425,15 +425,63 @@ public class RunSearchGenerationRequest extends TeaModel {
     }
 
     public static class RunSearchGenerationRequestAgentContextBizContext extends TeaModel {
+        @NameInMap("AskUser")
+        public String askUser;
+
+        @NameInMap("AskUserKeywords")
+        public java.util.List<String> askUserKeywords;
+
+        @NameInMap("CurrentStep")
+        public String currentStep;
+
         @NameInMap("MultimodalMediaSelection")
         public RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelection multimodalMediaSelection;
+
+        @NameInMap("NextStep")
+        public String nextStep;
 
         @NameInMap("SkipCurrentSupplement")
         public Boolean skipCurrentSupplement;
 
+        @NameInMap("SupplementDataType")
+        public String supplementDataType;
+
+        @NameInMap("SupplementEnable")
+        public Boolean supplementEnable;
+
+        @NameInMap("UserBack")
+        public String userBack;
+
+        @NameInMap("UserBackKeywords")
+        public java.util.List<String> userBackKeywords;
+
         public static RunSearchGenerationRequestAgentContextBizContext build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationRequestAgentContextBizContext self = new RunSearchGenerationRequestAgentContextBizContext();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setAskUser(String askUser) {
+            this.askUser = askUser;
+            return this;
+        }
+        public String getAskUser() {
+            return this.askUser;
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setAskUserKeywords(java.util.List<String> askUserKeywords) {
+            this.askUserKeywords = askUserKeywords;
+            return this;
+        }
+        public java.util.List<String> getAskUserKeywords() {
+            return this.askUserKeywords;
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setCurrentStep(String currentStep) {
+            this.currentStep = currentStep;
+            return this;
+        }
+        public String getCurrentStep() {
+            return this.currentStep;
         }
 
         public RunSearchGenerationRequestAgentContextBizContext setMultimodalMediaSelection(RunSearchGenerationRequestAgentContextBizContextMultimodalMediaSelection multimodalMediaSelection) {
@@ -444,12 +492,52 @@ public class RunSearchGenerationRequest extends TeaModel {
             return this.multimodalMediaSelection;
         }
 
+        public RunSearchGenerationRequestAgentContextBizContext setNextStep(String nextStep) {
+            this.nextStep = nextStep;
+            return this;
+        }
+        public String getNextStep() {
+            return this.nextStep;
+        }
+
         public RunSearchGenerationRequestAgentContextBizContext setSkipCurrentSupplement(Boolean skipCurrentSupplement) {
             this.skipCurrentSupplement = skipCurrentSupplement;
             return this;
         }
         public Boolean getSkipCurrentSupplement() {
             return this.skipCurrentSupplement;
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setSupplementDataType(String supplementDataType) {
+            this.supplementDataType = supplementDataType;
+            return this;
+        }
+        public String getSupplementDataType() {
+            return this.supplementDataType;
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setSupplementEnable(Boolean supplementEnable) {
+            this.supplementEnable = supplementEnable;
+            return this;
+        }
+        public Boolean getSupplementEnable() {
+            return this.supplementEnable;
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setUserBack(String userBack) {
+            this.userBack = userBack;
+            return this;
+        }
+        public String getUserBack() {
+            return this.userBack;
+        }
+
+        public RunSearchGenerationRequestAgentContextBizContext setUserBackKeywords(java.util.List<String> userBackKeywords) {
+            this.userBackKeywords = userBackKeywords;
+            return this;
+        }
+        public java.util.List<String> getUserBackKeywords() {
+            return this.userBackKeywords;
         }
 
     }

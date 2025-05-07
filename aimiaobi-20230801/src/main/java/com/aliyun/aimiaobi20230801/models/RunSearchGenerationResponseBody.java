@@ -4936,6 +4936,16 @@ public class RunSearchGenerationResponseBody extends TeaModel {
     public static class RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>您想了解关于xx的哪些信息？</p>
+         */
+        @NameInMap("AskUser")
+        public String askUser;
+
+        @NameInMap("AskUserKeywords")
+        public java.util.List<String> askUserKeywords;
+
+        /**
+         * <strong>example:</strong>
          * <p>start</p>
          */
         @NameInMap("CurrentStep")
@@ -4983,6 +4993,22 @@ public class RunSearchGenerationResponseBody extends TeaModel {
         public static RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext build(java.util.Map<String, ?> map) throws Exception {
             RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext self = new RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext();
             return TeaModel.build(map, self);
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext setAskUser(String askUser) {
+            this.askUser = askUser;
+            return this;
+        }
+        public String getAskUser() {
+            return this.askUser;
+        }
+
+        public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext setAskUserKeywords(java.util.List<String> askUserKeywords) {
+            this.askUserKeywords = askUserKeywords;
+            return this;
+        }
+        public java.util.List<String> getAskUserKeywords() {
+            return this.askUserKeywords;
         }
 
         public RunSearchGenerationResponseBodyPayloadOutputAgentContextBizContext setCurrentStep(String currentStep) {
