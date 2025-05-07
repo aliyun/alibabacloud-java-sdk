@@ -754,8 +754,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取 Ray Dashboard 链接</p>
+     * <p>Obtains a Ray Dashboard URL.</p>
      * 
      * @param request GetRayDashboardRequest
      * @param headers map
@@ -792,8 +795,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/171758.html">pricing</a> of Deep Learning Containers (DLC) of Platform for AI (PAI).</p>
+     * 
      * <b>summary</b> : 
-     * <p>获取 Ray Dashboard 链接</p>
+     * <p>Obtains a Ray Dashboard URL.</p>
      * 
      * @param request GetRayDashboardRequest
      * @return GetRayDashboardResponse
@@ -908,7 +914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a user token.</p>
+     * <p>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</p>
      * 
      * @param request GetTokenRequest
      * @param headers map
@@ -950,7 +956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a user token.</p>
+     * <p>Obtains the sharing token of a DLC job. This token is used to view the information about the shared job.</p>
      * 
      * @param request GetTokenRequest
      * @return GetTokenResponse
@@ -1174,6 +1180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIds)) {
+            query.put("JobIds", request.jobIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {

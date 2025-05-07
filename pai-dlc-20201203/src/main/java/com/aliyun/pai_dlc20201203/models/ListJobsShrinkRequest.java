@@ -71,6 +71,9 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    @NameInMap("JobIds")
+    public String jobIds;
+
     /**
      * <p>The job type. The default value null indicates any type. Valid values:</p>
      * <ul>
@@ -133,6 +136,17 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>PrePaid: Resource quota</li>
+     * <li>Spot: Preemptible resources</li>
+     * <li>PostPaid: Public resources</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
@@ -313,6 +327,14 @@ public class ListJobsShrinkRequest extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public ListJobsShrinkRequest setJobIds(String jobIds) {
+        this.jobIds = jobIds;
+        return this;
+    }
+    public String getJobIds() {
+        return this.jobIds;
     }
 
     public ListJobsShrinkRequest setJobType(String jobType) {
