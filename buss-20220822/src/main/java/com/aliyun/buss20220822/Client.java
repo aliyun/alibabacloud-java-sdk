@@ -200,6 +200,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询安全事件详情</p>
+     * 
+     * @param request GetSecurityEventDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSecurityEventDetailResponse
+     */
+    public GetSecurityEventDetailResponse getSecurityEventDetailWithOptions(GetSecurityEventDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSecurityEventDetail"),
+            new TeaPair("version", "2022-08-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSecurityEventDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询安全事件详情</p>
+     * 
+     * @param request GetSecurityEventDetailRequest
+     * @return GetSecurityEventDetailResponse
+     */
+    public GetSecurityEventDetailResponse getSecurityEventDetail(GetSecurityEventDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSecurityEventDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>处罚资源搜索</p>
      * 
      * @param tmpReq PunishResourceSearchRequest
@@ -254,6 +294,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PunishResourceSearchResponse punishResourceSearch(PunishResourceSearchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.punishResourceSearchWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>记录是否点击链接</p>
+     * 
+     * @param request RecordClickLinkActionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RecordClickLinkActionResponse
+     */
+    public RecordClickLinkActionResponse recordClickLinkActionWithOptions(RecordClickLinkActionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecordClickLinkAction"),
+            new TeaPair("version", "2022-08-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecordClickLinkActionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>记录是否点击链接</p>
+     * 
+     * @param request RecordClickLinkActionRequest
+     * @return RecordClickLinkActionResponse
+     */
+    public RecordClickLinkActionResponse recordClickLinkAction(RecordClickLinkActionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.recordClickLinkActionWithOptions(request, runtime);
     }
 
     /**
@@ -604,5 +688,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchPunishRequestResponse searchPunishRequest(SearchPunishRequestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchPunishRequestWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新安全事件状态</p>
+     * 
+     * @param request UpdateSecurityEventStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSecurityEventStatusResponse
+     */
+    public UpdateSecurityEventStatusResponse updateSecurityEventStatusWithOptions(UpdateSecurityEventStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateSecurityEventStatus"),
+            new TeaPair("version", "2022-08-22"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSecurityEventStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新安全事件状态</p>
+     * 
+     * @param request UpdateSecurityEventStatusRequest
+     * @return UpdateSecurityEventStatusResponse
+     */
+    public UpdateSecurityEventStatusResponse updateSecurityEventStatus(UpdateSecurityEventStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateSecurityEventStatusWithOptions(request, runtime);
     }
 }

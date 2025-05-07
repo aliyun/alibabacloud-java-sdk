@@ -4,6 +4,9 @@ package com.aliyun.buss20220822.models;
 import com.aliyun.tea.*;
 
 public class FindInstanceInfoRequest extends TeaModel {
+    @NameInMap("businessCodes")
+    public String businessCodes;
+
     @NameInMap("bussinessCode")
     public String bussinessCode;
 
@@ -34,6 +37,14 @@ public class FindInstanceInfoRequest extends TeaModel {
     public static FindInstanceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         FindInstanceInfoRequest self = new FindInstanceInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public FindInstanceInfoRequest setBusinessCodes(String businessCodes) {
+        this.businessCodes = businessCodes;
+        return this;
+    }
+    public String getBusinessCodes() {
+        return this.businessCodes;
     }
 
     public FindInstanceInfoRequest setBussinessCode(String bussinessCode) {

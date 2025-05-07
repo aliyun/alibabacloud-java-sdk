@@ -161,11 +161,23 @@ public class SearchPunishRequestResponseBody extends TeaModel {
         @NameInMap("Modifier")
         public String modifier;
 
+        @NameInMap("Operator")
+        public String operator;
+
+        @NameInMap("OperatorNum")
+        public String operatorNum;
+
         @NameInMap("PunishDomain")
         public String punishDomain;
 
         @NameInMap("PunishIp")
         public String punishIp;
+
+        @NameInMap("PunishOfficer")
+        public String punishOfficer;
+
+        @NameInMap("PunishOfficerNum")
+        public String punishOfficerNum;
 
         @NameInMap("PunishRequest")
         public String punishRequest;
@@ -367,6 +379,22 @@ public class SearchPunishRequestResponseBody extends TeaModel {
             return this.modifier;
         }
 
+        public SearchPunishRequestResponseBodyDataList setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public SearchPunishRequestResponseBodyDataList setOperatorNum(String operatorNum) {
+            this.operatorNum = operatorNum;
+            return this;
+        }
+        public String getOperatorNum() {
+            return this.operatorNum;
+        }
+
         public SearchPunishRequestResponseBodyDataList setPunishDomain(String punishDomain) {
             this.punishDomain = punishDomain;
             return this;
@@ -381,6 +409,22 @@ public class SearchPunishRequestResponseBody extends TeaModel {
         }
         public String getPunishIp() {
             return this.punishIp;
+        }
+
+        public SearchPunishRequestResponseBodyDataList setPunishOfficer(String punishOfficer) {
+            this.punishOfficer = punishOfficer;
+            return this;
+        }
+        public String getPunishOfficer() {
+            return this.punishOfficer;
+        }
+
+        public SearchPunishRequestResponseBodyDataList setPunishOfficerNum(String punishOfficerNum) {
+            this.punishOfficerNum = punishOfficerNum;
+            return this;
+        }
+        public String getPunishOfficerNum() {
+            return this.punishOfficerNum;
         }
 
         public SearchPunishRequestResponseBodyDataList setPunishRequest(String punishRequest) {
