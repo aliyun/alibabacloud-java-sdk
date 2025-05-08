@@ -14,6 +14,13 @@ public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <strong>example:</strong>
+     * <p>copilotReference</p>
+     */
+    @NameInMap("GenerateTechnology")
+    public String generateTechnology;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +46,14 @@ public class SaveDataSourceOrderConfigShrinkRequest extends TeaModel {
     }
     public String getAgentKey() {
         return this.agentKey;
+    }
+
+    public SaveDataSourceOrderConfigShrinkRequest setGenerateTechnology(String generateTechnology) {
+        this.generateTechnology = generateTechnology;
+        return this;
+    }
+    public String getGenerateTechnology() {
+        return this.generateTechnology;
     }
 
     public SaveDataSourceOrderConfigShrinkRequest setProductCode(String productCode) {

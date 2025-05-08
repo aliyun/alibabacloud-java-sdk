@@ -1738,6 +1738,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generateTechnology)) {
+            body.put("GenerateTechnology", request.generateTechnology);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
             body.put("ProductCode", request.productCode);
         }
@@ -6922,6 +6926,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generateTechnology)) {
+            body.put("GenerateTechnology", request.generateTechnology);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
             body.put("ProductCode", request.productCode);
         }

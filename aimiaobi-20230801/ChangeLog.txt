@@ -1,3 +1,9 @@
+2025-05-08 Version: 1.23.7
+- Update API GetDataSourceOrderConfig: add request parameters GenerateTechnology.
+- Update API SaveDataSourceOrderConfig: add request parameters GenerateTechnology.
+- Update API SaveDataSourceOrderConfig: add request parameters UserConfigDataSourceList.$.Enable.
+
+
 2025-05-08 Version: 1.23.6
 - Update API GetProperties: add response parameters Body.Data.IntelligentSearchConfig.CopilotPreciseSearchSources.
 

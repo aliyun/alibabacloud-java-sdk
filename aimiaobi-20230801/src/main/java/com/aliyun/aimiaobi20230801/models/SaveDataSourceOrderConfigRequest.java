@@ -14,6 +14,13 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
     public String agentKey;
 
     /**
+     * <strong>example:</strong>
+     * <p>copilotReference</p>
+     */
+    @NameInMap("GenerateTechnology")
+    public String generateTechnology;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +48,14 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
         return this.agentKey;
     }
 
+    public SaveDataSourceOrderConfigRequest setGenerateTechnology(String generateTechnology) {
+        this.generateTechnology = generateTechnology;
+        return this;
+    }
+    public String getGenerateTechnology() {
+        return this.generateTechnology;
+    }
+
     public SaveDataSourceOrderConfigRequest setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -66,6 +81,9 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
          */
         @NameInMap("Code")
         public String code;
+
+        @NameInMap("Enable")
+        public Boolean enable;
 
         @NameInMap("Name")
         public String name;
@@ -99,6 +117,14 @@ public class SaveDataSourceOrderConfigRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public SaveDataSourceOrderConfigRequestUserConfigDataSourceList setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
         }
 
         public SaveDataSourceOrderConfigRequestUserConfigDataSourceList setName(String name) {
