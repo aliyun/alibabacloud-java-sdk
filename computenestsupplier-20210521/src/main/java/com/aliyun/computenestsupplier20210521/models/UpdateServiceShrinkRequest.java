@@ -29,6 +29,9 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     @NameInMap("ApprovalType")
     public String approvalType;
 
+    @NameInMap("BuildParameters")
+    public String buildParameters;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
@@ -290,6 +293,14 @@ public class UpdateServiceShrinkRequest extends TeaModel {
     }
     public String getApprovalType() {
         return this.approvalType;
+    }
+
+    public UpdateServiceShrinkRequest setBuildParameters(String buildParameters) {
+        this.buildParameters = buildParameters;
+        return this;
+    }
+    public String getBuildParameters() {
+        return this.buildParameters;
     }
 
     public UpdateServiceShrinkRequest setClientToken(String clientToken) {

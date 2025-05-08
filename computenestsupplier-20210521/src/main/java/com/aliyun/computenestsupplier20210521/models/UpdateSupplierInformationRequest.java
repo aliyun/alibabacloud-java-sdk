@@ -65,6 +65,9 @@ public class UpdateSupplierInformationRequest extends TeaModel {
     @NameInMap("SupplierUrl")
     public String supplierUrl;
 
+    /**
+     * <p>Contact information of the service provider</p>
+     */
     @NameInMap("SupportContacts")
     public java.util.List<UpdateSupplierInformationRequestSupportContacts> supportContacts;
 
@@ -218,9 +221,21 @@ public class UpdateSupplierInformationRequest extends TeaModel {
     }
 
     public static class UpdateSupplierInformationRequestSupportContacts extends TeaModel {
+        /**
+         * <p>The type of  contact information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Email</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of contact information</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:supplier@example.com">supplier@example.com</a></p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -2322,6 +2322,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>展示服务实例账单</p>
+     * 
+     * @param request ListServiceInstanceBillRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServiceInstanceBillResponse
+     */
+    public ListServiceInstanceBillResponse listServiceInstanceBillWithOptions(ListServiceInstanceBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billingCycle)) {
+            query.put("BillingCycle", request.billingCycle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.billingDate)) {
+            query.put("BillingDate", request.billingDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("Granularity", request.granularity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceVersion)) {
+            query.put("ServiceVersion", request.serviceVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServiceInstanceBill"),
+            new TeaPair("version", "2021-05-21"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServiceInstanceBillResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>展示服务实例账单</p>
+     * 
+     * @param request ListServiceInstanceBillRequest
+     * @return ListServiceInstanceBillResponse
+     */
+    public ListServiceInstanceBillResponse listServiceInstanceBill(ListServiceInstanceBillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listServiceInstanceBillWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询服务实例部署详情</p>
      * 
      * @param request ListServiceInstanceDeployDetailsRequest
@@ -4105,6 +4177,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.approvalType)) {
             query.put("ApprovalType", request.approvalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildParameters)) {
+            query.put("BuildParameters", request.buildParameters);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {

@@ -51,6 +51,12 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("BuildInfo")
     public String buildInfo;
 
+    /**
+     * <p>The parameters for building the service</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</p>
+     */
     @NameInMap("BuildParameters")
     public String buildParameters;
 
@@ -445,6 +451,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("SupplierUrl")
     public String supplierUrl;
 
+    /**
+     * <p>Contact information of the service provider.</p>
+     */
     @NameInMap("SupportContacts")
     public java.util.List<GetServiceResponseBodySupportContacts> supportContacts;
 
@@ -1135,7 +1144,7 @@ public class GetServiceResponseBody extends TeaModel {
          * <p>The package name.</p>
          * 
          * <strong>example:</strong>
-         * <p>按量付费套餐</p>
+         * <p>Pay-as-you-go package</p>
          */
         @NameInMap("SpecificationName")
         public String specificationName;
@@ -2199,9 +2208,21 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodySupportContacts extends TeaModel {
+        /**
+         * <p>The type of Contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Email</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of Contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:supplier@test.com">supplier@test.com</a></p>
+         */
         @NameInMap("Value")
         public String value;
 
