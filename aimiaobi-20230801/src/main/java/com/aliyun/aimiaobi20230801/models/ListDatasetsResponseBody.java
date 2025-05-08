@@ -11,6 +11,9 @@ public class ListDatasetsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CustomSemanticSearchConfig")
+    public ListDatasetsResponseBodyCustomSemanticSearchConfig customSemanticSearchConfig;
+
     @NameInMap("Data")
     public java.util.List<ListDatasetsResponseBodyData> data;
 
@@ -56,6 +59,9 @@ public class ListDatasetsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("ThirdSearchConfig")
+    public ListDatasetsResponseBodyThirdSearchConfig thirdSearchConfig;
+
     /**
      * <strong>example:</strong>
      * <p>100</p>
@@ -74,6 +80,14 @@ public class ListDatasetsResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public ListDatasetsResponseBody setCustomSemanticSearchConfig(ListDatasetsResponseBodyCustomSemanticSearchConfig customSemanticSearchConfig) {
+        this.customSemanticSearchConfig = customSemanticSearchConfig;
+        return this;
+    }
+    public ListDatasetsResponseBodyCustomSemanticSearchConfig getCustomSemanticSearchConfig() {
+        return this.customSemanticSearchConfig;
     }
 
     public ListDatasetsResponseBody setData(java.util.List<ListDatasetsResponseBodyData> data) {
@@ -132,12 +146,88 @@ public class ListDatasetsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public ListDatasetsResponseBody setThirdSearchConfig(ListDatasetsResponseBodyThirdSearchConfig thirdSearchConfig) {
+        this.thirdSearchConfig = thirdSearchConfig;
+        return this;
+    }
+    public ListDatasetsResponseBodyThirdSearchConfig getThirdSearchConfig() {
+        return this.thirdSearchConfig;
+    }
+
     public ListDatasetsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public static class ListDatasetsResponseBodyCustomSemanticSearchConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("DatasetQuota")
+        public Integer datasetQuota;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DatasetUsedQuota")
+        public Integer datasetUsedQuota;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("DocQuota")
+        public Long docQuota;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DocUsedQuota")
+        public Long docUsedQuota;
+
+        public static ListDatasetsResponseBodyCustomSemanticSearchConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListDatasetsResponseBodyCustomSemanticSearchConfig self = new ListDatasetsResponseBodyCustomSemanticSearchConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyCustomSemanticSearchConfig setDatasetQuota(Integer datasetQuota) {
+            this.datasetQuota = datasetQuota;
+            return this;
+        }
+        public Integer getDatasetQuota() {
+            return this.datasetQuota;
+        }
+
+        public ListDatasetsResponseBodyCustomSemanticSearchConfig setDatasetUsedQuota(Integer datasetUsedQuota) {
+            this.datasetUsedQuota = datasetUsedQuota;
+            return this;
+        }
+        public Integer getDatasetUsedQuota() {
+            return this.datasetUsedQuota;
+        }
+
+        public ListDatasetsResponseBodyCustomSemanticSearchConfig setDocQuota(Long docQuota) {
+            this.docQuota = docQuota;
+            return this;
+        }
+        public Long getDocQuota() {
+            return this.docQuota;
+        }
+
+        public ListDatasetsResponseBodyCustomSemanticSearchConfig setDocUsedQuota(Long docUsedQuota) {
+            this.docUsedQuota = docUsedQuota;
+            return this;
+        }
+        public Long getDocUsedQuota() {
+            return this.docUsedQuota;
+        }
+
     }
 
     public static class ListDatasetsResponseBodyData extends TeaModel {
@@ -182,6 +272,13 @@ public class ListDatasetsResponseBody extends TeaModel {
          */
         @NameInMap("DatasetType")
         public String datasetType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DocUsedQuota")
+        public Long docUsedQuota;
 
         /**
          * <strong>example:</strong>
@@ -243,12 +340,58 @@ public class ListDatasetsResponseBody extends TeaModel {
             return this.datasetType;
         }
 
+        public ListDatasetsResponseBodyData setDocUsedQuota(Long docUsedQuota) {
+            this.docUsedQuota = docUsedQuota;
+            return this;
+        }
+        public Long getDocUsedQuota() {
+            return this.docUsedQuota;
+        }
+
         public ListDatasetsResponseBodyData setSearchDatasetEnable(Integer searchDatasetEnable) {
             this.searchDatasetEnable = searchDatasetEnable;
             return this;
         }
         public Integer getSearchDatasetEnable() {
             return this.searchDatasetEnable;
+        }
+
+    }
+
+    public static class ListDatasetsResponseBodyThirdSearchConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("DatasetQuota")
+        public Integer datasetQuota;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("DatasetUsedQuota")
+        public Integer datasetUsedQuota;
+
+        public static ListDatasetsResponseBodyThirdSearchConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListDatasetsResponseBodyThirdSearchConfig self = new ListDatasetsResponseBodyThirdSearchConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDatasetsResponseBodyThirdSearchConfig setDatasetQuota(Integer datasetQuota) {
+            this.datasetQuota = datasetQuota;
+            return this;
+        }
+        public Integer getDatasetQuota() {
+            return this.datasetQuota;
+        }
+
+        public ListDatasetsResponseBodyThirdSearchConfig setDatasetUsedQuota(Integer datasetUsedQuota) {
+            this.datasetUsedQuota = datasetUsedQuota;
+            return this;
+        }
+        public Integer getDatasetUsedQuota() {
+            return this.datasetUsedQuota;
         }
 
     }

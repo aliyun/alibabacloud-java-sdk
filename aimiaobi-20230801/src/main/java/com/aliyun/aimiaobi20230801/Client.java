@@ -3335,6 +3335,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EndTime", request.endTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeConfig)) {
+            body.put("IncludeConfig", request.includeConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             body.put("PageNumber", request.pageNumber);
         }

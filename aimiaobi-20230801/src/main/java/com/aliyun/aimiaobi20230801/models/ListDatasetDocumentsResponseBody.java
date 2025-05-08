@@ -210,6 +210,13 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>2025-04-14 19:59:53</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("DisableHandleMultimodalMedia")
@@ -296,6 +303,13 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         public String title;
 
         /**
+         * <strong>example:</strong>
+         * <p>2025-04-14 19:59:53</p>
+         */
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        /**
          * <p>url</p>
          * 
          * <strong>example:</strong>
@@ -323,6 +337,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public ListDatasetDocumentsResponseBodyData setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListDatasetDocumentsResponseBodyData setDisableHandleMultimodalMedia(Boolean disableHandleMultimodalMedia) {
@@ -427,6 +449,14 @@ public class ListDatasetDocumentsResponseBody extends TeaModel {
         }
         public String getTitle() {
             return this.title;
+        }
+
+        public ListDatasetDocumentsResponseBodyData setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
         }
 
         public ListDatasetDocumentsResponseBodyData setUrl(String url) {

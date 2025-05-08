@@ -32,6 +32,9 @@ public class ListDatasetsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("IncludeConfig")
+    public Boolean includeConfig;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -104,6 +107,14 @@ public class ListDatasetsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public ListDatasetsRequest setIncludeConfig(Boolean includeConfig) {
+        this.includeConfig = includeConfig;
+        return this;
+    }
+    public Boolean getIncludeConfig() {
+        return this.includeConfig;
     }
 
     public ListDatasetsRequest setPageNumber(Integer pageNumber) {
