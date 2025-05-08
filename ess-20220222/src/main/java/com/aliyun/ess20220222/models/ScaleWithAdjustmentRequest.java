@@ -76,6 +76,9 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ParallelTask")
+    public Boolean parallelTask;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -173,6 +176,14 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ScaleWithAdjustmentRequest setParallelTask(Boolean parallelTask) {
+        this.parallelTask = parallelTask;
+        return this;
+    }
+    public Boolean getParallelTask() {
+        return this.parallelTask;
     }
 
     public ScaleWithAdjustmentRequest setResourceOwnerAccount(String resourceOwnerAccount) {
