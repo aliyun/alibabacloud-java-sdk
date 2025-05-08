@@ -76,6 +76,9 @@ public class GetLoginTokenResponseBody extends TeaModel {
     @NameInMap("NextStage")
     public String nextStage;
 
+    @NameInMap("NickName")
+    public String nickName;
+
     /**
      * <blockquote>
      * <p>This is a parameter only for internal use.</p>
@@ -242,6 +245,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
     public String getNextStage() {
         return this.nextStage;
+    }
+
+    public GetLoginTokenResponseBody setNickName(String nickName) {
+        this.nickName = nickName;
+        return this;
+    }
+    public String getNickName() {
+        return this.nickName;
     }
 
     public GetLoginTokenResponseBody setPasswordStrategy(GetLoginTokenResponseBodyPasswordStrategy passwordStrategy) {
