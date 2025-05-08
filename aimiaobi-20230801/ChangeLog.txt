@@ -1,3 +1,7 @@
+2025-05-08 Version: 1.23.6
+- Update API GetProperties: add response parameters Body.Data.IntelligentSearchConfig.CopilotPreciseSearchSources.
+
+
 2025-05-08 Version: 1.23.5
 - Update API ListSearchTaskDialogues: add response parameters Body.Data.$.ChatConfig.
 

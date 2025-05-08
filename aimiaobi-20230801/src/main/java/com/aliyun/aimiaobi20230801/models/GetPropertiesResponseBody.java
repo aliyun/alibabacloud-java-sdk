@@ -129,6 +129,59 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
 
+    public static class GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
+        @NameInMap("Code")
+        public String code;
+
+        /**
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
+        @NameInMap("DatasetName")
+        public String datasetName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources build(java.util.Map<String, ?> map) throws Exception {
+            GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources self = new GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources setDatasetName(String datasetName) {
+            this.datasetName = datasetName;
+            return this;
+        }
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        public GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfigSearchSamplesArticles extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -300,6 +353,9 @@ public class GetPropertiesResponseBody extends TeaModel {
     }
 
     public static class GetPropertiesResponseBodyDataIntelligentSearchConfig extends TeaModel {
+        @NameInMap("CopilotPreciseSearchSources")
+        public java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources> copilotPreciseSearchSources;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -316,6 +372,14 @@ public class GetPropertiesResponseBody extends TeaModel {
         public static GetPropertiesResponseBodyDataIntelligentSearchConfig build(java.util.Map<String, ?> map) throws Exception {
             GetPropertiesResponseBodyDataIntelligentSearchConfig self = new GetPropertiesResponseBodyDataIntelligentSearchConfig();
             return TeaModel.build(map, self);
+        }
+
+        public GetPropertiesResponseBodyDataIntelligentSearchConfig setCopilotPreciseSearchSources(java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources> copilotPreciseSearchSources) {
+            this.copilotPreciseSearchSources = copilotPreciseSearchSources;
+            return this;
+        }
+        public java.util.List<GetPropertiesResponseBodyDataIntelligentSearchConfigCopilotPreciseSearchSources> getCopilotPreciseSearchSources() {
+            return this.copilotPreciseSearchSources;
         }
 
         public GetPropertiesResponseBodyDataIntelligentSearchConfig setProductDescription(String productDescription) {
