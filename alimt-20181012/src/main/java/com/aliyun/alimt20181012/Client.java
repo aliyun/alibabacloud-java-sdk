@@ -545,6 +545,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>语种识别</p>
+     * 
+     * @param request GetDetectLanguageVpcRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDetectLanguageVpcResponse
+     */
+    public GetDetectLanguageVpcResponse getDetectLanguageVpcWithOptions(GetDetectLanguageVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceText)) {
+            body.put("SourceText", request.sourceText);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDetectLanguageVpc"),
+            new TeaPair("version", "2018-10-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDetectLanguageVpcResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>语种识别</p>
+     * 
+     * @param request GetDetectLanguageVpcRequest
+     * @return GetDetectLanguageVpcResponse
+     */
+    public GetDetectLanguageVpcResponse getDetectLanguageVpc(GetDetectLanguageVpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDetectLanguageVpcWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档翻译任务</p>
+     * 
      * @param request GetDocTranslateTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDocTranslateTaskResponse
@@ -570,6 +617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取文档翻译任务</p>
+     * 
      * @param request GetDocTranslateTaskRequest
      * @return GetDocTranslateTaskResponse
      */
@@ -709,6 +759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTitleDiagnose</p>
+     * 
      * @param request GetTitleDiagnoseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTitleDiagnoseResponse
@@ -754,6 +807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTitleDiagnose</p>
+     * 
      * @param request GetTitleDiagnoseRequest
      * @return GetTitleDiagnoseResponse
      */
@@ -763,6 +819,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTitleGenerate</p>
+     * 
      * @param request GetTitleGenerateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTitleGenerateResponse
@@ -816,6 +875,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTitleGenerate</p>
+     * 
      * @param request GetTitleGenerateRequest
      * @return GetTitleGenerateResponse
      */
@@ -825,6 +887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTitleIntelligence</p>
+     * 
      * @param request GetTitleIntelligenceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTitleIntelligenceResponse
@@ -870,6 +935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTitleIntelligence</p>
+     * 
      * @param request GetTitleIntelligenceRequest
      * @return GetTitleIntelligenceResponse
      */
@@ -923,6 +991,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTranslateReport</p>
+     * 
      * @param request GetTranslateReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTranslateReportResponse
@@ -964,6 +1035,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetTranslateReport</p>
+     * 
      * @param request GetTranslateReportRequest
      * @return GetTranslateReportResponse
      */
@@ -1021,6 +1095,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>专业文本翻译</p>
+     * 
      * @param request TranslateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TranslateResponse
@@ -1072,6 +1149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>专业文本翻译</p>
+     * 
      * @param request TranslateRequest
      * @return TranslateResponse
      */
@@ -1081,6 +1161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>TranslateCertificate</p>
+     * 
      * @param request TranslateCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TranslateCertificateResponse
@@ -1126,6 +1209,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>TranslateCertificate</p>
+     * 
      * @param request TranslateCertificateRequest
      * @return TranslateCertificateResponse
      */
@@ -1210,6 +1296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>TranslateECommerce</p>
+     * 
      * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
      * 
      * @param request TranslateECommerceRequest
@@ -1265,6 +1354,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>TranslateECommerce</p>
+     * 
      * @deprecated OpenAPI TranslateECommerce is deprecated, please use alimt::2018-10-12::Translate instead.
      * 
      * @param request TranslateECommerceRequest
@@ -1278,6 +1370,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>文本通用翻译</p>
+     * 
      * @param request TranslateGeneralRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TranslateGeneralResponse
@@ -1329,6 +1424,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>文本通用翻译</p>
+     * 
      * @param request TranslateGeneralRequest
      * @return TranslateGeneralResponse
      */
