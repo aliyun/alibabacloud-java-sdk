@@ -204,6 +204,9 @@ public class RunInstancesShrinkRequest extends TeaModel {
     @NameInMap("IpType")
     public String ipType;
 
+    @NameInMap("Ipv6AddressCount")
+    public Long ipv6AddressCount;
+
     /**
      * <p>The name of the key pair.</p>
      * <blockquote>
@@ -578,6 +581,14 @@ public class RunInstancesShrinkRequest extends TeaModel {
     }
     public String getIpType() {
         return this.ipType;
+    }
+
+    public RunInstancesShrinkRequest setIpv6AddressCount(Long ipv6AddressCount) {
+        this.ipv6AddressCount = ipv6AddressCount;
+        return this;
+    }
+    public Long getIpv6AddressCount() {
+        return this.ipv6AddressCount;
     }
 
     public RunInstancesShrinkRequest setKeyPairName(String keyPairName) {

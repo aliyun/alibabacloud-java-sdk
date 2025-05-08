@@ -221,6 +221,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     @NameInMap("ServerType")
     public String serverType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateARMServerInstancesRequestTag> tag;
+
     public static CreateARMServerInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateARMServerInstancesRequest self = new CreateARMServerInstancesRequest();
         return TeaModel.build(map, self);
@@ -360,6 +363,44 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     }
     public String getServerType() {
         return this.serverType;
+    }
+
+    public CreateARMServerInstancesRequest setTag(java.util.List<CreateARMServerInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateARMServerInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateARMServerInstancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateARMServerInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateARMServerInstancesRequestTag self = new CreateARMServerInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateARMServerInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateARMServerInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

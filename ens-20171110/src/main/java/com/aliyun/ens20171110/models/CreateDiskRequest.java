@@ -50,6 +50,9 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    @NameInMap("InstanceBillingCycle")
+    public String instanceBillingCycle;
+
     /**
      * <p>The billing method of the instance. Set the value to <strong>PostPaid</strong>.</p>
      * <p>This parameter is required.</p>
@@ -136,6 +139,14 @@ public class CreateDiskRequest extends TeaModel {
     }
     public String getEnsRegionId() {
         return this.ensRegionId;
+    }
+
+    public CreateDiskRequest setInstanceBillingCycle(String instanceBillingCycle) {
+        this.instanceBillingCycle = instanceBillingCycle;
+        return this;
+    }
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     public CreateDiskRequest setInstanceChargeType(String instanceChargeType) {

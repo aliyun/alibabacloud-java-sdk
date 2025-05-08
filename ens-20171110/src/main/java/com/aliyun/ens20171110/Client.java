@@ -1061,6 +1061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServerType", request.serverType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1279,6 +1283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceBillingCycle)) {
+            query.put("InstanceBillingCycle", request.instanceBillingCycle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceChargeType)) {
@@ -3259,6 +3267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {
             query.put("EnsRegionId", request.ensRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceBillingCycle)) {
+            query.put("InstanceBillingCycle", request.instanceBillingCycle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotName)) {
@@ -14959,6 +14971,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipType)) {
             query.put("IpType", request.ipType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressCount)) {
+            query.put("Ipv6AddressCount", request.ipv6AddressCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {

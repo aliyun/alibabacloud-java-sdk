@@ -399,6 +399,36 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeARMServerInstancesResponseBodyServersTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeARMServerInstancesResponseBodyServersTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeARMServerInstancesResponseBodyServersTags self = new DescribeARMServerInstancesResponseBodyServersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeARMServerInstancesResponseBodyServersTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeARMServerInstancesResponseBodyServersTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeARMServerInstancesResponseBodyServers extends TeaModel {
         /**
          * <p>The information about the AIC instances.</p>
@@ -519,6 +549,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<DescribeARMServerInstancesResponseBodyServersTags> tags;
+
         public static DescribeARMServerInstancesResponseBodyServers build(java.util.Map<String, ?> map) throws Exception {
             DescribeARMServerInstancesResponseBodyServers self = new DescribeARMServerInstancesResponseBodyServers();
             return TeaModel.build(map, self);
@@ -618,6 +651,14 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeARMServerInstancesResponseBodyServers setTags(java.util.List<DescribeARMServerInstancesResponseBodyServersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeARMServerInstancesResponseBodyServersTags> getTags() {
+            return this.tags;
         }
 
     }

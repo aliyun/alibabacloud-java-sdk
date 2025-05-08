@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     /**
-     * <p>Details about the EIP.</p>
+     * <p>Details of the EIPs.</p>
      */
     @NameInMap("EipAddresses")
     public DescribeEnsEipAddressesResponseBodyEipAddresses eipAddresses;
@@ -93,6 +93,8 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
 
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag extends TeaModel {
         /**
+         * <p>标签键</p>
+         * 
          * <strong>example:</strong>
          * <p>TestKey</p>
          */
@@ -116,6 +118,8 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         public String tagValue;
 
         /**
+         * <p>标签值。</p>
+         * 
          * <strong>example:</strong>
          * <p>TestValue</p>
          */

@@ -63,7 +63,7 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>ENS节点ID数组。数组长度：1~100。</p>
+     * <p>The IDs of edge nodes. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;

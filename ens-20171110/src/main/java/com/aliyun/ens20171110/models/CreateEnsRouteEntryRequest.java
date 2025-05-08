@@ -14,10 +14,10 @@ public class CreateEnsRouteEntryRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination CIDR block of the custom route entry. Make sure that the destination CIDR block meets the following requirements:</p>
+     * <p>The destination CIDR block of the custom route entry. Make sure that the following requirements are met:</p>
      * <ul>
-     * <li>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</li>
-     * <li>The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</li>
+     * <li>The destination CIDR block cannot point or belong to 100.64.0.0/10.</li>
+     * <li>The destination CIDR blocks of the custom route entries in the same route table cannot overlap.</li>
      * <li>0.0.0.0/0 indicates the default CIDR block.</li>
      * </ul>
      * <p>This parameter is required.</p>
