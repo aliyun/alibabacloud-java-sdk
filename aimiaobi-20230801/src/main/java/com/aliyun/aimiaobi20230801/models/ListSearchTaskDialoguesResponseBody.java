@@ -140,7 +140,201 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>x&quot;x</p>
+         */
+        @NameInMap("Code")
+        public String code;
+
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
+        @NameInMap("DatasetName")
+        public String datasetName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>x</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        public static ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources build(java.util.Map<String, ?> map) throws Exception {
+            ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources self = new ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources setDatasetName(String datasetName) {
+            this.datasetName = datasetName;
+            return this;
+        }
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam extends TeaModel {
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("MultimodalSearchTypes")
+        public java.util.List<String> multimodalSearchTypes;
+
+        @NameInMap("SearchSources")
+        public java.util.List<ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources> searchSources;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam build(java.util.Map<String, ?> map) throws Exception {
+            ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam self = new ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam setMultimodalSearchTypes(java.util.List<String> multimodalSearchTypes) {
+            this.multimodalSearchTypes = multimodalSearchTypes;
+            return this;
+        }
+        public java.util.List<String> getMultimodalSearchTypes() {
+            return this.multimodalSearchTypes;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam setSearchSources(java.util.List<ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources> searchSources) {
+            this.searchSources = searchSources;
+            return this;
+        }
+        public java.util.List<ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParamSearchSources> getSearchSources() {
+            return this.searchSources;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
+    public static class ListSearchTaskDialoguesResponseBodyDataChatConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
+        @NameInMap("DialogueType")
+        public Integer dialogueType;
+
+        @NameInMap("EndToEnd")
+        public Boolean endToEnd;
+
+        /**
+         * <strong>example:</strong>
+         * <p>concise</p>
+         */
+        @NameInMap("GenerateLevel")
+        public String generateLevel;
+
+        /**
+         * <strong>example:</strong>
+         * <p>copilotReference</p>
+         */
+        @NameInMap("GenerateTechnology")
+        public String generateTechnology;
+
+        @NameInMap("SearchModels")
+        public java.util.List<String> searchModels;
+
+        @NameInMap("SearchParam")
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam searchParam;
+
+        public static ListSearchTaskDialoguesResponseBodyDataChatConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListSearchTaskDialoguesResponseBodyDataChatConfig self = new ListSearchTaskDialoguesResponseBodyDataChatConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig setDialogueType(Integer dialogueType) {
+            this.dialogueType = dialogueType;
+            return this;
+        }
+        public Integer getDialogueType() {
+            return this.dialogueType;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig setEndToEnd(Boolean endToEnd) {
+            this.endToEnd = endToEnd;
+            return this;
+        }
+        public Boolean getEndToEnd() {
+            return this.endToEnd;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig setGenerateLevel(String generateLevel) {
+            this.generateLevel = generateLevel;
+            return this;
+        }
+        public String getGenerateLevel() {
+            return this.generateLevel;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig setGenerateTechnology(String generateTechnology) {
+            this.generateTechnology = generateTechnology;
+            return this;
+        }
+        public String getGenerateTechnology() {
+            return this.generateTechnology;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig setSearchModels(java.util.List<String> searchModels) {
+            this.searchModels = searchModels;
+            return this;
+        }
+        public java.util.List<String> getSearchModels() {
+            return this.searchModels;
+        }
+
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig setSearchParam(ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam searchParam) {
+            this.searchParam = searchParam;
+            return this;
+        }
+        public ListSearchTaskDialoguesResponseBodyDataChatConfigSearchParam getSearchParam() {
+            return this.searchParam;
+        }
+
+    }
+
     public static class ListSearchTaskDialoguesResponseBodyData extends TeaModel {
+        @NameInMap("ChatConfig")
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig chatConfig;
+
         /**
          * <strong>example:</strong>
          * <p>2024-11-25 13:33:01</p>
@@ -217,6 +411,14 @@ public class ListSearchTaskDialoguesResponseBody extends TeaModel {
         public static ListSearchTaskDialoguesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListSearchTaskDialoguesResponseBodyData self = new ListSearchTaskDialoguesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListSearchTaskDialoguesResponseBodyData setChatConfig(ListSearchTaskDialoguesResponseBodyDataChatConfig chatConfig) {
+            this.chatConfig = chatConfig;
+            return this;
+        }
+        public ListSearchTaskDialoguesResponseBodyDataChatConfig getChatConfig() {
+            return this.chatConfig;
         }
 
         public ListSearchTaskDialoguesResponseBodyData setCreateTime(String createTime) {
