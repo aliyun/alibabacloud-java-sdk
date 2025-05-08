@@ -11858,6 +11858,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询Routine的代码版本列表</p>
+     * 
+     * @param request ListRoutineCodeVersionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRoutineCodeVersionsResponse
+     */
+    public ListRoutineCodeVersionsResponse listRoutineCodeVersionsWithOptions(ListRoutineCodeVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKeyWord)) {
+            body.put("SearchKeyWord", request.searchKeyWord);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRoutineCodeVersions"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRoutineCodeVersionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Routine的代码版本列表</p>
+     * 
+     * @param request ListRoutineCodeVersionsRequest
+     * @return ListRoutineCodeVersionsResponse
+     */
+    public ListRoutineCodeVersionsResponse listRoutineCodeVersions(ListRoutineCodeVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRoutineCodeVersionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询函数关联域名列表</p>
      * 
      * @param request ListRoutineRelatedRecordsRequest
