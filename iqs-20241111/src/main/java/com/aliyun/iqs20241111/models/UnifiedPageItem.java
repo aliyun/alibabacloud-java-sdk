@@ -22,16 +22,16 @@ public class UnifiedPageItem extends TeaModel {
     @NameInMap("markdownText")
     public String markdownText;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2025-04-07T10:15:30.123+08:00</p>
+     */
     @NameInMap("publishedTime")
     public String publishedTime;
 
     @NameInMap("rerankScore")
     public Double rerankScore;
 
-    /**
-     * <strong>example:</strong>
-     * <p>2025-04-07T10:15:30.123+08:00</p>
-     */
     @NameInMap("snippet")
     public String snippet;
 
