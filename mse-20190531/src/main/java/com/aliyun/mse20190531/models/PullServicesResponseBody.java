@@ -140,6 +140,9 @@ public class PullServicesResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("SaeAppId")
+        public String saeAppId;
+
         /**
          * <p>The ID of the service source.</p>
          * 
@@ -188,6 +191,14 @@ public class PullServicesResponseBody extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public PullServicesResponseBodyDataServices setSaeAppId(String saeAppId) {
+            this.saeAppId = saeAppId;
+            return this;
+        }
+        public String getSaeAppId() {
+            return this.saeAppId;
         }
 
         public PullServicesResponseBodyDataServices setSourceId(String sourceId) {

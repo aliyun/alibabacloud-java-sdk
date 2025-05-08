@@ -201,6 +201,9 @@ public class ImportServicesRequest extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("SaeAppId")
+        public String saeAppId;
+
         /**
          * <p>The port of the service.</p>
          * 
@@ -262,6 +265,14 @@ public class ImportServicesRequest extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public ImportServicesRequestServiceList setSaeAppId(String saeAppId) {
+            this.saeAppId = saeAppId;
+            return this;
+        }
+        public String getSaeAppId() {
+            return this.saeAppId;
         }
 
         public ImportServicesRequestServiceList setServicePort(Long servicePort) {

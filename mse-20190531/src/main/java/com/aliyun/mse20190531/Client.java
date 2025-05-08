@@ -3335,6 +3335,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request CreateWebFlowRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWebFlowRuleResponse
+     */
+    public CreateWebFlowRuleResponse createWebFlowRuleWithOptions(CreateWebFlowRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.burst)) {
+            query.put("Burst", request.burst);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.controlBehavior)) {
+            query.put("ControlBehavior", request.controlBehavior);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxQueueingTimeMs)) {
+            query.put("MaxQueueingTimeMs", request.maxQueueingTimeMs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricType)) {
+            query.put("MetricType", request.metricType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramItem)) {
+            query.put("ParamItem", request.paramItem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceMode)) {
+            query.put("ResourceMode", request.resourceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statIntervalMs)) {
+            query.put("StatIntervalMs", request.statIntervalMs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            query.put("Threshold", request.threshold);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWebFlowRule"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWebFlowRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request CreateWebFlowRuleRequest
+     * @return CreateWebFlowRuleResponse
+     */
+    public CreateWebFlowRuleResponse createWebFlowRule(CreateWebFlowRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWebFlowRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a znode.</p>
      * 
      * @param request CreateZnodeRequest
@@ -5001,6 +5105,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSwimmingLaneGroupResponse deleteSwimmingLaneGroup(DeleteSwimmingLaneGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSwimmingLaneGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request DeleteWebFlowRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWebFlowRulesResponse
+     */
+    public DeleteWebFlowRulesResponse deleteWebFlowRulesWithOptions(DeleteWebFlowRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
+            query.put("Ids", request.ids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWebFlowRules"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWebFlowRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request DeleteWebFlowRulesRequest
+     * @return DeleteWebFlowRulesResponse
+     */
+    public DeleteWebFlowRulesResponse deleteWebFlowRules(DeleteWebFlowRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWebFlowRulesWithOptions(request, runtime);
     }
 
     /**
@@ -10579,6 +10739,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request ListWebFlowRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWebFlowRulesResponse
+     */
+    public ListWebFlowRulesResponse listWebFlowRulesWithOptions(ListWebFlowRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
+            query.put("PageIndex", request.pageIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSearchKey)) {
+            query.put("ResourceSearchKey", request.resourceSearchKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWebFlowRules"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWebFlowRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request ListWebFlowRulesRequest
+     * @return ListWebFlowRulesResponse
+     */
+    public ListWebFlowRulesResponse listWebFlowRules(ListWebFlowRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWebFlowRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains the track data of a ZooKeeper instance.</p>
      * 
      * @param request ListZkTrackRequest
@@ -16009,6 +16241,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateServiceSourceResponse updateServiceSource(UpdateServiceSourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateServiceSourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request UpdateWebFlowRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWebFlowRuleResponse
+     */
+    public UpdateWebFlowRuleResponse updateWebFlowRuleWithOptions(UpdateWebFlowRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.burst)) {
+            query.put("Burst", request.burst);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.controlBehavior)) {
+            query.put("ControlBehavior", request.controlBehavior);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("Enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxQueueingTimeMs)) {
+            query.put("MaxQueueingTimeMs", request.maxQueueingTimeMs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricType)) {
+            query.put("MetricType", request.metricType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramItem)) {
+            query.put("ParamItem", request.paramItem);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceMode)) {
+            query.put("ResourceMode", request.resourceMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("RuleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.statIntervalMs)) {
+            query.put("StatIntervalMs", request.statIntervalMs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {
+            query.put("Threshold", request.threshold);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWebFlowRule"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWebFlowRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新热点参数防护规则（HTTP 请求）</p>
+     * 
+     * @param request UpdateWebFlowRuleRequest
+     * @return UpdateWebFlowRuleResponse
+     */
+    public UpdateWebFlowRuleResponse updateWebFlowRule(UpdateWebFlowRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateWebFlowRuleWithOptions(request, runtime);
     }
 
     /**
