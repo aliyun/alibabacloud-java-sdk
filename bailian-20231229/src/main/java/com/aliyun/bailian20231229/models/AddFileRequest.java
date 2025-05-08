@@ -27,6 +27,9 @@ public class AddFileRequest extends TeaModel {
     @NameInMap("LeaseId")
     public String leaseId;
 
+    @NameInMap("OriginalFileUrl")
+    public String originalFileUrl;
+
     /**
      * <p>The parser. Valid value:</p>
      * <ul>
@@ -73,6 +76,14 @@ public class AddFileRequest extends TeaModel {
     }
     public String getLeaseId() {
         return this.leaseId;
+    }
+
+    public AddFileRequest setOriginalFileUrl(String originalFileUrl) {
+        this.originalFileUrl = originalFileUrl;
+        return this;
+    }
+    public String getOriginalFileUrl() {
+        return this.originalFileUrl;
     }
 
     public AddFileRequest setParser(String parser) {

@@ -122,6 +122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LeaseId", request.leaseId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.originalFileUrl)) {
+            body.put("OriginalFileUrl", request.originalFileUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.parser)) {
             body.put("Parser", request.parser);
         }
