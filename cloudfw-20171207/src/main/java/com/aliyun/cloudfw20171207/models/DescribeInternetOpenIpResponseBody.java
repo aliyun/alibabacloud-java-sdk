@@ -120,6 +120,33 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Boolean hasAclRecommend;
 
         /**
+         * <p>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235</p>
+         */
+        @NameInMap("InBytes")
+        public Long inBytes;
+
+        /**
+         * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14151892****7022</p>
+         */
+        @NameInMap("MemberUid")
+        public Long memberUid;
+
+        /**
+         * <p>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1123</p>
+         */
+        @NameInMap("OutBytes")
+        public Long outBytes;
+
+        /**
          * <p>The list of ports.</p>
          */
         @NameInMap("PortList")
@@ -183,6 +210,15 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Long srcIpCnt;
 
         /**
+         * <p>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253023143</p>
+         */
+        @NameInMap("TotalBytes")
+        public Long totalBytes;
+
+        /**
          * <p>Outbound traffic in the last 7 days.</p>
          * 
          * <strong>example:</strong>
@@ -192,31 +228,37 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         public Long totalReplyBytes;
 
         /**
-         * <p>The percentage of traffic of a day. Unit: percent (%).</p>
+         * <p>For detailed traffic information, see the TotalBytes field.</p>
          * 
          * <strong>example:</strong>
-         * <p>11.1</p>
+         * <p>0</p>
          */
         @NameInMap("TrafficPercent1Day")
         public String trafficPercent1Day;
 
         /**
-         * <p>The percentage of traffic of 30 days. Unit: percent (%).</p>
+         * <p>For detailed traffic information, see the TotalBytes field.</p>
          * 
          * <strong>example:</strong>
-         * <p>99.9</p>
+         * <p>0</p>
          */
         @NameInMap("TrafficPercent30Day")
         public String trafficPercent30Day;
 
         /**
-         * <p>The percentage of traffic of seven days. Unit: percent (%).</p>
+         * <p>For detailed traffic information, see the TotalBytes field.</p>
          * 
          * <strong>example:</strong>
-         * <p>77.7</p>
+         * <p>0</p>
          */
         @NameInMap("TrafficPercent7Day")
         public String trafficPercent7Day;
+
+        /**
+         * <p>Reasons for not analyzing the protocol when the protocol is identified as Unknown.</p>
+         */
+        @NameInMap("UnknownReason")
+        public java.util.List<String> unknownReason;
 
         public static DescribeInternetOpenIpResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             DescribeInternetOpenIpResponseBodyDataList self = new DescribeInternetOpenIpResponseBodyDataList();
@@ -269,6 +311,30 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
         public Boolean getHasAclRecommend() {
             return this.hasAclRecommend;
+        }
+
+        public DescribeInternetOpenIpResponseBodyDataList setInBytes(Long inBytes) {
+            this.inBytes = inBytes;
+            return this;
+        }
+        public Long getInBytes() {
+            return this.inBytes;
+        }
+
+        public DescribeInternetOpenIpResponseBodyDataList setMemberUid(Long memberUid) {
+            this.memberUid = memberUid;
+            return this;
+        }
+        public Long getMemberUid() {
+            return this.memberUid;
+        }
+
+        public DescribeInternetOpenIpResponseBodyDataList setOutBytes(Long outBytes) {
+            this.outBytes = outBytes;
+            return this;
+        }
+        public Long getOutBytes() {
+            return this.outBytes;
         }
 
         public DescribeInternetOpenIpResponseBodyDataList setPortList(java.util.List<String> portList) {
@@ -327,6 +393,14 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             return this.srcIpCnt;
         }
 
+        public DescribeInternetOpenIpResponseBodyDataList setTotalBytes(Long totalBytes) {
+            this.totalBytes = totalBytes;
+            return this;
+        }
+        public Long getTotalBytes() {
+            return this.totalBytes;
+        }
+
         public DescribeInternetOpenIpResponseBodyDataList setTotalReplyBytes(Long totalReplyBytes) {
             this.totalReplyBytes = totalReplyBytes;
             return this;
@@ -357,6 +431,14 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
         public String getTrafficPercent7Day() {
             return this.trafficPercent7Day;
+        }
+
+        public DescribeInternetOpenIpResponseBodyDataList setUnknownReason(java.util.List<String> unknownReason) {
+            this.unknownReason = unknownReason;
+            return this;
+        }
+        public java.util.List<String> getUnknownReason() {
+            return this.unknownReason;
         }
 
     }

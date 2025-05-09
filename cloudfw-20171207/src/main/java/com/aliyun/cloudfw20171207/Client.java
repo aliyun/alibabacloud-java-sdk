@@ -3164,6 +3164,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取日志服务信息</p>
+     * 
+     * @param request DescribeLogStoreInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLogStoreInfoResponse
+     */
+    public DescribeLogStoreInfoResponse describeLogStoreInfoWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLogStoreInfo"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLogStoreInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取日志服务信息</p>
+     * @return DescribeLogStoreInfoResponse
+     */
+    public DescribeLogStoreInfoResponse describeLogStoreInfo() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLogStoreInfoWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the pagination status of NAT firewalls.</p>
      * 
      * @param request DescribeNatAclPageStatusRequest
@@ -3448,6 +3482,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeNatFirewallPolicyPriorUsedResponse describeNatFirewallPolicyPriorUsed(DescribeNatFirewallPolicyPriorUsedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNatFirewallPolicyPriorUsedWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>概览页-NAT流量趋势</p>
+     * 
+     * @param request DescribeNatFirewallTrafficTrendRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNatFirewallTrafficTrendResponse
+     */
+    public DescribeNatFirewallTrafficTrendResponse describeNatFirewallTrafficTrendWithOptions(DescribeNatFirewallTrafficTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNatFirewallTrafficTrend"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNatFirewallTrafficTrendResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>概览页-NAT流量趋势</p>
+     * 
+     * @param request DescribeNatFirewallTrafficTrendRequest
+     * @return DescribeNatFirewallTrafficTrendResponse
+     */
+    public DescribeNatFirewallTrafficTrendResponse describeNatFirewallTrafficTrend(DescribeNatFirewallTrafficTrendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNatFirewallTrafficTrendWithOptions(request, runtime);
     }
 
     /**

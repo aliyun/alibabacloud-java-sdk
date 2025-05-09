@@ -138,6 +138,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        @NameInMap("UnknownReason")
+        public java.util.List<String> unknownReason;
+
         public static DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList build(java.util.Map<String, ?> map) throws Exception {
             DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList self = new DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList();
             return TeaModel.build(map, self);
@@ -157,6 +160,14 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public DescribeOutgoingDestinationIPResponseBodyDstIPListApplicationPortList setUnknownReason(java.util.List<String> unknownReason) {
+            this.unknownReason = unknownReason;
+            return this;
+        }
+        public java.util.List<String> getUnknownReason() {
+            return this.unknownReason;
         }
 
     }

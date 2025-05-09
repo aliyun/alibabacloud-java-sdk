@@ -587,6 +587,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
          * <p>WAF Back-to-origin Address</p>
          */
         @NameInMap("SrcIPTag")
+        @Deprecated
         public String srcIPTag;
 
         /**
@@ -773,6 +774,7 @@ public class DescribeRiskEventGroupResponseBody extends TeaModel {
             return this.srcIP;
         }
 
+        @Deprecated
         public DescribeRiskEventGroupResponseBodyDataList setSrcIPTag(String srcIPTag) {
             this.srcIPTag = srcIPTag;
             return this;
