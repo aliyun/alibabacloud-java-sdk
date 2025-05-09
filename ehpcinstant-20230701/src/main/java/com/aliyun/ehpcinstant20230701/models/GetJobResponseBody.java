@@ -608,6 +608,9 @@ public class GetJobResponseBody extends TeaModel {
     }
 
     public static class GetJobResponseBodyJobInfo extends TeaModel {
+        @NameInMap("AppExtraInfo")
+        public String appExtraInfo;
+
         /**
          * <strong>example:</strong>
          * <p>2024-03-05 20:00:46</p>
@@ -669,6 +672,14 @@ public class GetJobResponseBody extends TeaModel {
         public static GetJobResponseBodyJobInfo build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfo self = new GetJobResponseBodyJobInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfo setAppExtraInfo(String appExtraInfo) {
+            this.appExtraInfo = appExtraInfo;
+            return this;
+        }
+        public String getAppExtraInfo() {
+            return this.appExtraInfo;
         }
 
         public GetJobResponseBodyJobInfo setCreateTime(String createTime) {

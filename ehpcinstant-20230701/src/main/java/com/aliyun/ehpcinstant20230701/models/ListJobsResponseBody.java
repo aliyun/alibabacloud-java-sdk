@@ -111,6 +111,9 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobList extends TeaModel {
+        @NameInMap("AppExtraInfo")
+        public String appExtraInfo;
+
         @NameInMap("AppName")
         public String appName;
 
@@ -197,6 +200,14 @@ public class ListJobsResponseBody extends TeaModel {
         public static ListJobsResponseBodyJobList build(java.util.Map<String, ?> map) throws Exception {
             ListJobsResponseBodyJobList self = new ListJobsResponseBodyJobList();
             return TeaModel.build(map, self);
+        }
+
+        public ListJobsResponseBodyJobList setAppExtraInfo(String appExtraInfo) {
+            this.appExtraInfo = appExtraInfo;
+            return this;
+        }
+        public String getAppExtraInfo() {
+            return this.appExtraInfo;
         }
 
         public ListJobsResponseBodyJobList setAppName(String appName) {
