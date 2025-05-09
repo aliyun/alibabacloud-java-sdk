@@ -15449,6 +15449,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加实例</p>
+     * 
+     * @param request SimplyAddInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SimplyAddInstanceResponse
+     */
+    public SimplyAddInstanceResponse simplyAddInstanceWithOptions(SimplyAddInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.databasePassword)) {
+            query.put("DatabasePassword", request.databasePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseUser)) {
+            query.put("DatabaseUser", request.databaseUser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            query.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceRegion)) {
+            query.put("InstanceRegion", request.instanceRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SimplyAddInstance"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SimplyAddInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加实例</p>
+     * 
+     * @param request SimplyAddInstanceRequest
+     * @return SimplyAddInstanceResponse
+     */
+    public SimplyAddInstanceResponse simplyAddInstance(SimplyAddInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.simplyAddInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Skips the verification on the number of rows in the precheck for data change.</p>
      * 
      * @param request SkipDataCorrectRowCheckRequest
