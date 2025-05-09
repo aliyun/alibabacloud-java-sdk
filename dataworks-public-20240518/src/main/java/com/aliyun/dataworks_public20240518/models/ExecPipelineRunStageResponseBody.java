@@ -3,12 +3,12 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class AbolishDeploymentResponseBody extends TeaModel {
+public class ExecPipelineRunStageResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>55D786C9-DD57-524D-884C-C5239278XXXX</p>
+     * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -16,8 +16,12 @@ public class AbolishDeploymentResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true</p>
+     * </li>
+     * <li><p>false</p>
+     * <p>**</p>
+     * <p><strong>Note:</strong> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,12 +30,12 @@ public class AbolishDeploymentResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static AbolishDeploymentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        AbolishDeploymentResponseBody self = new AbolishDeploymentResponseBody();
+    public static ExecPipelineRunStageResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ExecPipelineRunStageResponseBody self = new ExecPipelineRunStageResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AbolishDeploymentResponseBody setRequestId(String requestId) {
+    public ExecPipelineRunStageResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -39,7 +43,7 @@ public class AbolishDeploymentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AbolishDeploymentResponseBody setSuccess(Boolean success) {
+    public ExecPipelineRunStageResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

@@ -3,12 +3,12 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class ListDeploymentsResponseBody extends TeaModel {
+public class ListPipelineRunsResponseBody extends TeaModel {
     /**
      * <p>The pagination information.</p>
      */
     @NameInMap("PagingInfo")
-    public ListDeploymentsResponseBodyPagingInfo pagingInfo;
+    public ListPipelineRunsResponseBodyPagingInfo pagingInfo;
 
     /**
      * <p>The request ID.</p>
@@ -19,20 +19,20 @@ public class ListDeploymentsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ListDeploymentsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListDeploymentsResponseBody self = new ListDeploymentsResponseBody();
+    public static ListPipelineRunsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListPipelineRunsResponseBody self = new ListPipelineRunsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListDeploymentsResponseBody setPagingInfo(ListDeploymentsResponseBodyPagingInfo pagingInfo) {
+    public ListPipelineRunsResponseBody setPagingInfo(ListPipelineRunsResponseBodyPagingInfo pagingInfo) {
         this.pagingInfo = pagingInfo;
         return this;
     }
-    public ListDeploymentsResponseBodyPagingInfo getPagingInfo() {
+    public ListPipelineRunsResponseBodyPagingInfo getPagingInfo() {
         return this.pagingInfo;
     }
 
-    public ListDeploymentsResponseBody setRequestId(String requestId) {
+    public ListPipelineRunsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -40,7 +40,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListDeploymentsResponseBodyPagingInfoDeploymentsStages extends TeaModel {
+    public static class ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages extends TeaModel {
         /**
          * <p>The code of the stage.</p>
          * 
@@ -96,7 +96,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>RUNNING</p>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -122,17 +122,17 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>CHECK</p>
+         * <p>Check</p>
          */
         @NameInMap("Type")
         public String type;
 
-        public static ListDeploymentsResponseBodyPagingInfoDeploymentsStages build(java.util.Map<String, ?> map) throws Exception {
-            ListDeploymentsResponseBodyPagingInfoDeploymentsStages self = new ListDeploymentsResponseBodyPagingInfoDeploymentsStages();
+        public static ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages self = new ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages();
             return TeaModel.build(map, self);
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setCode(String code) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setCode(String code) {
             this.code = code;
             return this;
         }
@@ -140,7 +140,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.code;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setDescription(String description) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -148,7 +148,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setDetail(java.util.Map<String, ?> detail) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setDetail(java.util.Map<String, ?> detail) {
             this.detail = detail;
             return this;
         }
@@ -156,7 +156,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.detail;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setMessage(String message) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -164,7 +164,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setName(String name) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setName(String name) {
             this.name = name;
             return this;
         }
@@ -172,7 +172,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setStatus(String status) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -180,7 +180,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setStep(Integer step) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setStep(Integer step) {
             this.step = step;
             return this;
         }
@@ -188,7 +188,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.step;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeploymentsStages setType(String type) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages setType(String type) {
             this.type = type;
             return this;
         }
@@ -198,7 +198,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     }
 
-    public static class ListDeploymentsResponseBodyPagingInfoDeployments extends TeaModel {
+    public static class ListPipelineRunsResponseBodyPagingInfoPipelineRuns extends TeaModel {
         /**
          * <p>The time when the process was created. This value is a UNIX timestamp.</p>
          * 
@@ -209,7 +209,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The ID of the user who creates the process.</p>
+         * <p>The creator of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>110755000425XXXX</p>
@@ -221,13 +221,13 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * <p>The process ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ddf354a5-03df-48fc-94c1-cc973f79XXXX</p>
+         * <p>097c73fe-ed6e-4fb1-b109-a5d59e46cd58</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The error message returned if the process fails.</p>
+         * <p>The error message returned during the stage.</p>
          * 
          * <strong>example:</strong>
          * <p>Error message</p>
@@ -236,7 +236,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The time when the process was last modified. This value is a UNIX timestamp.</p>
+         * <p>The time when the process was modified. This value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1702736654000</p>
@@ -248,7 +248,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * <p>The DataWorks workspace ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>44683</p>
+         * <p>70199</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
@@ -257,7 +257,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * <p>The stages of the process.</p>
          */
         @NameInMap("Stages")
-        public java.util.List<ListDeploymentsResponseBodyPagingInfoDeploymentsStages> stages;
+        public java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages> stages;
 
         /**
          * <p>The status of the process.</p>
@@ -272,17 +272,17 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>RUNNING</p>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
-        public static ListDeploymentsResponseBodyPagingInfoDeployments build(java.util.Map<String, ?> map) throws Exception {
-            ListDeploymentsResponseBodyPagingInfoDeployments self = new ListDeploymentsResponseBodyPagingInfoDeployments();
+        public static ListPipelineRunsResponseBodyPagingInfoPipelineRuns build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelineRunsResponseBodyPagingInfoPipelineRuns self = new ListPipelineRunsResponseBodyPagingInfoPipelineRuns();
             return TeaModel.build(map, self);
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setCreateTime(Long createTime) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -290,7 +290,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setCreator(String creator) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setCreator(String creator) {
             this.creator = creator;
             return this;
         }
@@ -298,7 +298,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.creator;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setId(String id) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setId(String id) {
             this.id = id;
             return this;
         }
@@ -306,7 +306,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setMessage(String message) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -314,7 +314,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setModifyTime(Long modifyTime) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setModifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
@@ -322,7 +322,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setProjectId(Long projectId) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
@@ -330,15 +330,15 @@ public class ListDeploymentsResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setStages(java.util.List<ListDeploymentsResponseBodyPagingInfoDeploymentsStages> stages) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setStages(java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages> stages) {
             this.stages = stages;
             return this;
         }
-        public java.util.List<ListDeploymentsResponseBodyPagingInfoDeploymentsStages> getStages() {
+        public java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRunsStages> getStages() {
             return this.stages;
         }
 
-        public ListDeploymentsResponseBodyPagingInfoDeployments setStatus(String status) {
+        public ListPipelineRunsResponseBodyPagingInfoPipelineRuns setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -348,13 +348,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
 
     }
 
-    public static class ListDeploymentsResponseBodyPagingInfo extends TeaModel {
-        /**
-         * <p>The processes.</p>
-         */
-        @NameInMap("Deployments")
-        public java.util.List<ListDeploymentsResponseBodyPagingInfoDeployments> deployments;
-
+    public static class ListPipelineRunsResponseBodyPagingInfo extends TeaModel {
         /**
          * <p>The page number.</p>
          * 
@@ -362,7 +356,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * <p>1</p>
          */
         @NameInMap("PageNumber")
-        public String pageNumber;
+        public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
@@ -371,7 +365,13 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * <p>10</p>
          */
         @NameInMap("PageSize")
-        public String pageSize;
+        public Integer pageSize;
+
+        /**
+         * <p>The processes.</p>
+         */
+        @NameInMap("PipelineRuns")
+        public java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRuns> pipelineRuns;
 
         /**
          * <p>The total number of entries returned.</p>
@@ -380,42 +380,42 @@ public class ListDeploymentsResponseBody extends TeaModel {
          * <p>2524</p>
          */
         @NameInMap("TotalCount")
-        public String totalCount;
+        public Integer totalCount;
 
-        public static ListDeploymentsResponseBodyPagingInfo build(java.util.Map<String, ?> map) throws Exception {
-            ListDeploymentsResponseBodyPagingInfo self = new ListDeploymentsResponseBodyPagingInfo();
+        public static ListPipelineRunsResponseBodyPagingInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListPipelineRunsResponseBodyPagingInfo self = new ListPipelineRunsResponseBodyPagingInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListDeploymentsResponseBodyPagingInfo setDeployments(java.util.List<ListDeploymentsResponseBodyPagingInfoDeployments> deployments) {
-            this.deployments = deployments;
-            return this;
-        }
-        public java.util.List<ListDeploymentsResponseBodyPagingInfoDeployments> getDeployments() {
-            return this.deployments;
-        }
-
-        public ListDeploymentsResponseBodyPagingInfo setPageNumber(String pageNumber) {
+        public ListPipelineRunsResponseBodyPagingInfo setPageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
-        public String getPageNumber() {
+        public Integer getPageNumber() {
             return this.pageNumber;
         }
 
-        public ListDeploymentsResponseBodyPagingInfo setPageSize(String pageSize) {
+        public ListPipelineRunsResponseBodyPagingInfo setPageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
         }
-        public String getPageSize() {
+        public Integer getPageSize() {
             return this.pageSize;
         }
 
-        public ListDeploymentsResponseBodyPagingInfo setTotalCount(String totalCount) {
+        public ListPipelineRunsResponseBodyPagingInfo setPipelineRuns(java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRuns> pipelineRuns) {
+            this.pipelineRuns = pipelineRuns;
+            return this;
+        }
+        public java.util.List<ListPipelineRunsResponseBodyPagingInfoPipelineRuns> getPipelineRuns() {
+            return this.pipelineRuns;
+        }
+
+        public ListPipelineRunsResponseBodyPagingInfo setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
-        public String getTotalCount() {
+        public Integer getTotalCount() {
             return this.totalCount;
         }
 

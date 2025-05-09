@@ -3,12 +3,12 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class GetDeploymentResponseBody extends TeaModel {
+public class GetPipelineRunResponseBody extends TeaModel {
     /**
      * <p>The information about the process.</p>
      */
     @NameInMap("Pipeline")
-    public GetDeploymentResponseBodyPipeline pipeline;
+    public GetPipelineRunResponseBodyPipeline pipeline;
 
     /**
      * <p>The request ID.</p>
@@ -19,20 +19,20 @@ public class GetDeploymentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static GetDeploymentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetDeploymentResponseBody self = new GetDeploymentResponseBody();
+    public static GetPipelineRunResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetPipelineRunResponseBody self = new GetPipelineRunResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetDeploymentResponseBody setPipeline(GetDeploymentResponseBodyPipeline pipeline) {
+    public GetPipelineRunResponseBody setPipeline(GetPipelineRunResponseBodyPipeline pipeline) {
         this.pipeline = pipeline;
         return this;
     }
-    public GetDeploymentResponseBodyPipeline getPipeline() {
+    public GetPipelineRunResponseBodyPipeline getPipeline() {
         return this.pipeline;
     }
 
-    public GetDeploymentResponseBody setRequestId(String requestId) {
+    public GetPipelineRunResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -40,7 +40,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class GetDeploymentResponseBodyPipelineStages extends TeaModel {
+    public static class GetPipelineRunResponseBodyPipelineStages extends TeaModel {
         /**
          * <p>The code of the stage.</p>
          * 
@@ -96,7 +96,7 @@ public class GetDeploymentResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>INIT</p>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -122,17 +122,17 @@ public class GetDeploymentResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>BUILD</p>
+         * <p>Check</p>
          */
         @NameInMap("Type")
         public String type;
 
-        public static GetDeploymentResponseBodyPipelineStages build(java.util.Map<String, ?> map) throws Exception {
-            GetDeploymentResponseBodyPipelineStages self = new GetDeploymentResponseBodyPipelineStages();
+        public static GetPipelineRunResponseBodyPipelineStages build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineRunResponseBodyPipelineStages self = new GetPipelineRunResponseBodyPipelineStages();
             return TeaModel.build(map, self);
         }
 
-        public GetDeploymentResponseBodyPipelineStages setCode(String code) {
+        public GetPipelineRunResponseBodyPipelineStages setCode(String code) {
             this.code = code;
             return this;
         }
@@ -140,7 +140,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.code;
         }
 
-        public GetDeploymentResponseBodyPipelineStages setDescription(String description) {
+        public GetPipelineRunResponseBodyPipelineStages setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -148,7 +148,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetDeploymentResponseBodyPipelineStages setDetail(java.util.Map<String, ?> detail) {
+        public GetPipelineRunResponseBodyPipelineStages setDetail(java.util.Map<String, ?> detail) {
             this.detail = detail;
             return this;
         }
@@ -156,7 +156,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.detail;
         }
 
-        public GetDeploymentResponseBodyPipelineStages setMessage(String message) {
+        public GetPipelineRunResponseBodyPipelineStages setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -164,7 +164,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.message;
         }
 
-        public GetDeploymentResponseBodyPipelineStages setName(String name) {
+        public GetPipelineRunResponseBodyPipelineStages setName(String name) {
             this.name = name;
             return this;
         }
@@ -172,7 +172,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetDeploymentResponseBodyPipelineStages setStatus(String status) {
+        public GetPipelineRunResponseBodyPipelineStages setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -180,7 +180,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetDeploymentResponseBodyPipelineStages setStep(Integer step) {
+        public GetPipelineRunResponseBodyPipelineStages setStep(Integer step) {
             this.step = step;
             return this;
         }
@@ -188,7 +188,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.step;
         }
 
-        public GetDeploymentResponseBodyPipelineStages setType(String type) {
+        public GetPipelineRunResponseBodyPipelineStages setType(String type) {
             this.type = type;
             return this;
         }
@@ -198,7 +198,7 @@ public class GetDeploymentResponseBody extends TeaModel {
 
     }
 
-    public static class GetDeploymentResponseBodyPipeline extends TeaModel {
+    public static class GetPipelineRunResponseBodyPipeline extends TeaModel {
         /**
          * <p>The time when the process was created. This value is a UNIX timestamp.</p>
          * 
@@ -218,7 +218,7 @@ public class GetDeploymentResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The ID of the process.</p>
+         * <p>The process ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
@@ -257,7 +257,7 @@ public class GetDeploymentResponseBody extends TeaModel {
          * <p>The information about stages in the process.</p>
          */
         @NameInMap("Stages")
-        public java.util.List<GetDeploymentResponseBodyPipelineStages> stages;
+        public java.util.List<GetPipelineRunResponseBodyPipelineStages> stages;
 
         /**
          * <p>The status of the process.</p>
@@ -272,17 +272,17 @@ public class GetDeploymentResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>RUNNING</p>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
-        public static GetDeploymentResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
-            GetDeploymentResponseBodyPipeline self = new GetDeploymentResponseBodyPipeline();
+        public static GetPipelineRunResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
+            GetPipelineRunResponseBodyPipeline self = new GetPipelineRunResponseBodyPipeline();
             return TeaModel.build(map, self);
         }
 
-        public GetDeploymentResponseBodyPipeline setCreateTime(Long createTime) {
+        public GetPipelineRunResponseBodyPipeline setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -290,7 +290,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetDeploymentResponseBodyPipeline setCreator(String creator) {
+        public GetPipelineRunResponseBodyPipeline setCreator(String creator) {
             this.creator = creator;
             return this;
         }
@@ -298,7 +298,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.creator;
         }
 
-        public GetDeploymentResponseBodyPipeline setId(String id) {
+        public GetPipelineRunResponseBodyPipeline setId(String id) {
             this.id = id;
             return this;
         }
@@ -306,7 +306,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.id;
         }
 
-        public GetDeploymentResponseBodyPipeline setMessage(String message) {
+        public GetPipelineRunResponseBodyPipeline setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -314,7 +314,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.message;
         }
 
-        public GetDeploymentResponseBodyPipeline setModifyTime(Long modifyTime) {
+        public GetPipelineRunResponseBodyPipeline setModifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
             return this;
         }
@@ -322,7 +322,7 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
-        public GetDeploymentResponseBodyPipeline setProjectId(Long projectId) {
+        public GetPipelineRunResponseBodyPipeline setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
@@ -330,15 +330,15 @@ public class GetDeploymentResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public GetDeploymentResponseBodyPipeline setStages(java.util.List<GetDeploymentResponseBodyPipelineStages> stages) {
+        public GetPipelineRunResponseBodyPipeline setStages(java.util.List<GetPipelineRunResponseBodyPipelineStages> stages) {
             this.stages = stages;
             return this;
         }
-        public java.util.List<GetDeploymentResponseBodyPipelineStages> getStages() {
+        public java.util.List<GetPipelineRunResponseBodyPipelineStages> getStages() {
             return this.stages;
         }
 
-        public GetDeploymentResponseBodyPipeline setStatus(String status) {
+        public GetPipelineRunResponseBodyPipeline setStatus(String status) {
             this.status = status;
             return this;
         }

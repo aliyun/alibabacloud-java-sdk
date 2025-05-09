@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class CreateResourceRequest extends TeaModel {
+public class CreateResourceAdvanceRequest extends TeaModel {
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
@@ -15,7 +15,7 @@ public class CreateResourceRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("ResourceFile")
-    public String resourceFile;
+    public java.io.InputStream resourceFileObject;
 
     /**
      * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
@@ -52,12 +52,12 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("Spec")
     public String spec;
 
-    public static CreateResourceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateResourceRequest self = new CreateResourceRequest();
+    public static CreateResourceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateResourceAdvanceRequest self = new CreateResourceAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateResourceRequest setProjectId(Long projectId) {
+    public CreateResourceAdvanceRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
@@ -65,15 +65,15 @@ public class CreateResourceRequest extends TeaModel {
         return this.projectId;
     }
 
-    public CreateResourceRequest setResourceFile(String resourceFile) {
-        this.resourceFile = resourceFile;
+    public CreateResourceAdvanceRequest setResourceFileObject(java.io.InputStream resourceFileObject) {
+        this.resourceFileObject = resourceFileObject;
         return this;
     }
-    public String getResourceFile() {
-        return this.resourceFile;
+    public java.io.InputStream getResourceFileObject() {
+        return this.resourceFileObject;
     }
 
-    public CreateResourceRequest setSpec(String spec) {
+    public CreateResourceAdvanceRequest setSpec(String spec) {
         this.spec = spec;
         return this;
     }

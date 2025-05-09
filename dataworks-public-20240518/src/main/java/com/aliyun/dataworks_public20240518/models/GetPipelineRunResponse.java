@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class ListDeploymentsResponse extends TeaModel {
+public class GetPipelineRunResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListDeploymentsResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListDeploymentsResponseBody body;
+    public GetPipelineRunResponseBody body;
 
-    public static ListDeploymentsResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListDeploymentsResponse self = new ListDeploymentsResponse();
+    public static GetPipelineRunResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetPipelineRunResponse self = new GetPipelineRunResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListDeploymentsResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetPipelineRunResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListDeploymentsResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListDeploymentsResponse setStatusCode(Integer statusCode) {
+    public GetPipelineRunResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListDeploymentsResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListDeploymentsResponse setBody(ListDeploymentsResponseBody body) {
+    public GetPipelineRunResponse setBody(GetPipelineRunResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListDeploymentsResponseBody getBody() {
+    public GetPipelineRunResponseBody getBody() {
         return this.body;
     }
 

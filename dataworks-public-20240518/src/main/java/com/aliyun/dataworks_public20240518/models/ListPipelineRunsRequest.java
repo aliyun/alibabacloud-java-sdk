@@ -3,12 +3,12 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class ListDeploymentsRequest extends TeaModel {
+public class ListPipelineRunsRequest extends TeaModel {
     /**
      * <p>The ID of the user who creates the processes. This parameter specifies a filter condition.</p>
      * 
      * <strong>example:</strong>
-     * <p>110755000425XXXX</p>
+     * <p>110755000425****</p>
      */
     @NameInMap("Creator")
     public String creator;
@@ -55,17 +55,17 @@ public class ListDeploymentsRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>RUNNING</p>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
-    public static ListDeploymentsRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListDeploymentsRequest self = new ListDeploymentsRequest();
+    public static ListPipelineRunsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListPipelineRunsRequest self = new ListPipelineRunsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListDeploymentsRequest setCreator(String creator) {
+    public ListPipelineRunsRequest setCreator(String creator) {
         this.creator = creator;
         return this;
     }
@@ -73,7 +73,7 @@ public class ListDeploymentsRequest extends TeaModel {
         return this.creator;
     }
 
-    public ListDeploymentsRequest setPageNumber(Integer pageNumber) {
+    public ListPipelineRunsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListDeploymentsRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListDeploymentsRequest setPageSize(Integer pageSize) {
+    public ListPipelineRunsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListDeploymentsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListDeploymentsRequest setProjectId(Long projectId) {
+    public ListPipelineRunsRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
@@ -97,7 +97,7 @@ public class ListDeploymentsRequest extends TeaModel {
         return this.projectId;
     }
 
-    public ListDeploymentsRequest setStatus(String status) {
+    public ListPipelineRunsRequest setStatus(String status) {
         this.status = status;
         return this;
     }

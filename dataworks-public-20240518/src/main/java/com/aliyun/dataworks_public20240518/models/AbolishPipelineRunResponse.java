@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class AbolishDeploymentResponse extends TeaModel {
+public class AbolishPipelineRunResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class AbolishDeploymentResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public AbolishDeploymentResponseBody body;
+    public AbolishPipelineRunResponseBody body;
 
-    public static AbolishDeploymentResponse build(java.util.Map<String, ?> map) throws Exception {
-        AbolishDeploymentResponse self = new AbolishDeploymentResponse();
+    public static AbolishPipelineRunResponse build(java.util.Map<String, ?> map) throws Exception {
+        AbolishPipelineRunResponse self = new AbolishPipelineRunResponse();
         return TeaModel.build(map, self);
     }
 
-    public AbolishDeploymentResponse setHeaders(java.util.Map<String, String> headers) {
+    public AbolishPipelineRunResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class AbolishDeploymentResponse extends TeaModel {
         return this.headers;
     }
 
-    public AbolishDeploymentResponse setStatusCode(Integer statusCode) {
+    public AbolishPipelineRunResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class AbolishDeploymentResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AbolishDeploymentResponse setBody(AbolishDeploymentResponseBody body) {
+    public AbolishPipelineRunResponse setBody(AbolishPipelineRunResponseBody body) {
         this.body = body;
         return this;
     }
-    public AbolishDeploymentResponseBody getBody() {
+    public AbolishPipelineRunResponseBody getBody() {
         return this.body;
     }
 

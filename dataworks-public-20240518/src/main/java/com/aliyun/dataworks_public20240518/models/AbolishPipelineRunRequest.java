@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class AbolishDeploymentRequest extends TeaModel {
+public class AbolishPipelineRunRequest extends TeaModel {
     /**
      * <p>The ID of the process.</p>
      * <p>This parameter is required.</p>
@@ -16,7 +16,7 @@ public class AbolishDeploymentRequest extends TeaModel {
 
     /**
      * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,12 @@ public class AbolishDeploymentRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    public static AbolishDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
-        AbolishDeploymentRequest self = new AbolishDeploymentRequest();
+    public static AbolishPipelineRunRequest build(java.util.Map<String, ?> map) throws Exception {
+        AbolishPipelineRunRequest self = new AbolishPipelineRunRequest();
         return TeaModel.build(map, self);
     }
 
-    public AbolishDeploymentRequest setId(String id) {
+    public AbolishPipelineRunRequest setId(String id) {
         this.id = id;
         return this;
     }
@@ -38,7 +38,7 @@ public class AbolishDeploymentRequest extends TeaModel {
         return this.id;
     }
 
-    public AbolishDeploymentRequest setProjectId(Long projectId) {
+    public AbolishPipelineRunRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }

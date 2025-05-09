@@ -24,6 +24,9 @@ public class UpdateResourceRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("ResourceFile")
+    public String resourceFile;
+
     /**
      * <p>The FlowSpec field information about the file resource. For more information, see <a href="https://github.com/aliyun/dataworks-spec/blob/master/README_zh_CN.md">FlowSpec</a>.</p>
      * <p>This parameter is required.</p>
@@ -78,6 +81,14 @@ public class UpdateResourceRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public UpdateResourceRequest setResourceFile(String resourceFile) {
+        this.resourceFile = resourceFile;
+        return this;
+    }
+    public String getResourceFile() {
+        return this.resourceFile;
     }
 
     public UpdateResourceRequest setSpec(String spec) {

@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDeploymentShrinkRequest extends TeaModel {
+public class CreatePipelineRunRequest extends TeaModel {
     /**
      * <p>The description of the process.</p>
      * 
@@ -21,11 +21,10 @@ public class CreateDeploymentShrinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectIds")
-    public String objectIdsShrink;
+    public java.util.List<String> objectIds;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,12 +47,12 @@ public class CreateDeploymentShrinkRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    public static CreateDeploymentShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDeploymentShrinkRequest self = new CreateDeploymentShrinkRequest();
+    public static CreatePipelineRunRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreatePipelineRunRequest self = new CreatePipelineRunRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeploymentShrinkRequest setDescription(String description) {
+    public CreatePipelineRunRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -61,15 +60,15 @@ public class CreateDeploymentShrinkRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateDeploymentShrinkRequest setObjectIdsShrink(String objectIdsShrink) {
-        this.objectIdsShrink = objectIdsShrink;
+    public CreatePipelineRunRequest setObjectIds(java.util.List<String> objectIds) {
+        this.objectIds = objectIds;
         return this;
     }
-    public String getObjectIdsShrink() {
-        return this.objectIdsShrink;
+    public java.util.List<String> getObjectIds() {
+        return this.objectIds;
     }
 
-    public CreateDeploymentShrinkRequest setProjectId(Long projectId) {
+    public CreatePipelineRunRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
@@ -77,7 +76,7 @@ public class CreateDeploymentShrinkRequest extends TeaModel {
         return this.projectId;
     }
 
-    public CreateDeploymentShrinkRequest setType(String type) {
+    public CreatePipelineRunRequest setType(String type) {
         this.type = type;
         return this;
     }

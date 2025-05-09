@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDeploymentResponseBody extends TeaModel {
+public class CreatePipelineRunResponseBody extends TeaModel {
     /**
      * <p>The ID of the process.</p>
      * 
@@ -22,12 +22,12 @@ public class CreateDeploymentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateDeploymentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateDeploymentResponseBody self = new CreateDeploymentResponseBody();
+    public static CreatePipelineRunResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreatePipelineRunResponseBody self = new CreatePipelineRunResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeploymentResponseBody setId(String id) {
+    public CreatePipelineRunResponseBody setId(String id) {
         this.id = id;
         return this;
     }
@@ -35,7 +35,7 @@ public class CreateDeploymentResponseBody extends TeaModel {
         return this.id;
     }
 
-    public CreateDeploymentResponseBody setRequestId(String requestId) {
+    public CreatePipelineRunResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

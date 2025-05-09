@@ -3,13 +3,13 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class GetDeploymentRequest extends TeaModel {
+public class GetPipelineRunRequest extends TeaModel {
     /**
      * <p>The ID of the process.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>a7ef0634-20ec-4a7c-a214-54020f91XXXX</p>
+     * <p>a7ef0634-20ec-4a7c-a214-54020f****</p>
      */
     @NameInMap("Id")
     public String id;
@@ -25,12 +25,12 @@ public class GetDeploymentRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    public static GetDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetDeploymentRequest self = new GetDeploymentRequest();
+    public static GetPipelineRunRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetPipelineRunRequest self = new GetPipelineRunRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetDeploymentRequest setId(String id) {
+    public GetPipelineRunRequest setId(String id) {
         this.id = id;
         return this;
     }
@@ -38,7 +38,7 @@ public class GetDeploymentRequest extends TeaModel {
         return this.id;
     }
 
-    public GetDeploymentRequest setProjectId(Long projectId) {
+    public GetPipelineRunRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }

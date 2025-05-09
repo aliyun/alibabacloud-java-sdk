@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20240518.models;
 
 import com.aliyun.tea.*;
 
-public class ExecDeploymentStageRequest extends TeaModel {
+public class ExecPipelineRunStageRequest extends TeaModel {
     /**
      * <p>The code of the stage in the process. You can call the GetDeployment operation to query the code.</p>
      * <p>This parameter is required.</p>
@@ -25,8 +25,7 @@ public class ExecDeploymentStageRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
-     * <p>You can use this parameter to specify the DataWorks workspace on which you want to perform the API operation.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,12 +34,12 @@ public class ExecDeploymentStageRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
-    public static ExecDeploymentStageRequest build(java.util.Map<String, ?> map) throws Exception {
-        ExecDeploymentStageRequest self = new ExecDeploymentStageRequest();
+    public static ExecPipelineRunStageRequest build(java.util.Map<String, ?> map) throws Exception {
+        ExecPipelineRunStageRequest self = new ExecPipelineRunStageRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExecDeploymentStageRequest setCode(String code) {
+    public ExecPipelineRunStageRequest setCode(String code) {
         this.code = code;
         return this;
     }
@@ -48,7 +47,7 @@ public class ExecDeploymentStageRequest extends TeaModel {
         return this.code;
     }
 
-    public ExecDeploymentStageRequest setId(String id) {
+    public ExecPipelineRunStageRequest setId(String id) {
         this.id = id;
         return this;
     }
@@ -56,7 +55,7 @@ public class ExecDeploymentStageRequest extends TeaModel {
         return this.id;
     }
 
-    public ExecDeploymentStageRequest setProjectId(Long projectId) {
+    public ExecPipelineRunStageRequest setProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
