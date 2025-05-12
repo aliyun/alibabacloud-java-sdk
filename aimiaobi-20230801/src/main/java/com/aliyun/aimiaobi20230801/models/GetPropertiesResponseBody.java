@@ -408,6 +408,47 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
 
+    public static class GetPropertiesResponseBodyDataSearchSourceList extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("DatasetName")
+        public String datasetName;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static GetPropertiesResponseBodyDataSearchSourceList build(java.util.Map<String, ?> map) throws Exception {
+            GetPropertiesResponseBodyDataSearchSourceList self = new GetPropertiesResponseBodyDataSearchSourceList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPropertiesResponseBodyDataSearchSourceList setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public GetPropertiesResponseBodyDataSearchSourceList setDatasetName(String datasetName) {
+            this.datasetName = datasetName;
+            return this;
+        }
+        public String getDatasetName() {
+            return this.datasetName;
+        }
+
+        public GetPropertiesResponseBodyDataSearchSourceList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class GetPropertiesResponseBodyDataSearchSources extends TeaModel {
         @NameInMap("Label")
         public String label;
@@ -610,6 +651,9 @@ public class GetPropertiesResponseBody extends TeaModel {
         @NameInMap("IntelligentSearchConfig")
         public GetPropertiesResponseBodyDataIntelligentSearchConfig intelligentSearchConfig;
 
+        @NameInMap("SearchSourceList")
+        public java.util.List<GetPropertiesResponseBodyDataSearchSourceList> searchSourceList;
+
         @NameInMap("SearchSources")
         public java.util.List<GetPropertiesResponseBodyDataSearchSources> searchSources;
 
@@ -664,6 +708,14 @@ public class GetPropertiesResponseBody extends TeaModel {
         }
         public GetPropertiesResponseBodyDataIntelligentSearchConfig getIntelligentSearchConfig() {
             return this.intelligentSearchConfig;
+        }
+
+        public GetPropertiesResponseBodyData setSearchSourceList(java.util.List<GetPropertiesResponseBodyDataSearchSourceList> searchSourceList) {
+            this.searchSourceList = searchSourceList;
+            return this;
+        }
+        public java.util.List<GetPropertiesResponseBodyDataSearchSourceList> getSearchSourceList() {
+            return this.searchSourceList;
         }
 
         public GetPropertiesResponseBodyData setSearchSources(java.util.List<GetPropertiesResponseBodyDataSearchSources> searchSources) {
