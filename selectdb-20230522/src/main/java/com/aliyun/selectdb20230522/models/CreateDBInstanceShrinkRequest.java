@@ -4,6 +4,9 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceShrinkRequest extends TeaModel {
+    @NameInMap("AddVPCIPs")
+    public String addVPCIPs;
+
     /**
      * <p>The reserved cache size.</p>
      * <p>This parameter is required.</p>
@@ -47,12 +50,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The specifications of the instance. Valid values:</p>
-     * <ul>
-     * <li><strong>selectdb.xlarge</strong>: 4 CPU cores and 32 GB of memory</li>
-     * <li><strong>selectdb.2xlarge</strong>: 8 CPU cores and 64 GB of memory</li>
-     * <li><strong>selectdb.4xlarge</strong>: 16 CPU cores and 128 GB of memory</li>
-     * </ul>
+     * <p>The instance type. You can call the <a href="https://help.aliyun.com/document_detail/2853363.html">DescribeAllDBInstanceClass</a> operation to query instance types.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,6 +68,17 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
+    /**
+     * <p>The deployment method of the instance.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>multi_az</li>
+     * <li>single_az</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>single_az</p>
+     */
     @NameInMap("DeployScheme")
     public String deployScheme;
 
@@ -83,7 +92,7 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance. Default value: <strong>2.4</strong>.</p>
+     * <p>The database engine version of the instance. Default value: <strong>3.0</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -93,6 +102,13 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String engineVersion;
 
     /**
+     * <p>The configurations of multi-zone deployment.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter takes effect and is required only when DeployScheme is set to multi_az.</li>
+     * </ul>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
@@ -153,10 +169,10 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String tagShrink;
 
     /**
-     * <p>The subscription duration of the instance.</p>
+     * <p>The subscription duration of the instance. Valid values:</p>
      * <ul>
-     * <li>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</li>
-     * <li>Valid values when Period is set to Month: 1 to 9 (integer)</li>
+     * <li>If Period is set to Year, valid values of UsedTime are 1, 2, 3, 4, and 5.</li>
+     * <li>If Period is set to Month, valid values of UsedTime are 1 to 12.</li>
      * </ul>
      * <blockquote>
      * <p> This parameter takes effect and is required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
@@ -201,6 +217,14 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public static CreateDBInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceShrinkRequest self = new CreateDBInstanceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBInstanceShrinkRequest setAddVPCIPs(String addVPCIPs) {
+        this.addVPCIPs = addVPCIPs;
+        return this;
+    }
+    public String getAddVPCIPs() {
+        return this.addVPCIPs;
     }
 
     public CreateDBInstanceShrinkRequest setCacheSize(Integer cacheSize) {

@@ -44,7 +44,7 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
      * <li>selectdb_pre_public_intl: subscription commodity on the international site (alibabacloud.com)</li>
      * <li>selectdb_go_public_cn: pay-as-you-go commodity on the China site (aliyun.com)</li>
      * <li>selectdb_go_public_intl: pay-as-you-go commodity on the international site (alibabacloud.com)</li>
-     * <li>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com).</li>
+     * <li>selectdb_pre_public_cn: subscription commodity on the China site (aliyun.com)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -72,6 +72,9 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
      */
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
+
+    @NameInMap("ModifyClusterChargeType")
+    public Boolean modifyClusterChargeType;
 
     /**
      * <p>The size of the reserved cache.</p>
@@ -183,6 +186,14 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     }
     public String getDbInstanceId() {
         return this.dbInstanceId;
+    }
+
+    public GetModifyBEClusterInquiryRequest setModifyClusterChargeType(Boolean modifyClusterChargeType) {
+        this.modifyClusterChargeType = modifyClusterChargeType;
+        return this;
+    }
+    public Boolean getModifyClusterChargeType() {
+        return this.modifyClusterChargeType;
     }
 
     public GetModifyBEClusterInquiryRequest setPreCacheSize(Long preCacheSize) {

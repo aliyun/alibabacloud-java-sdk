@@ -24,6 +24,11 @@ public class ModifyBEClusterAttributeRequest extends TeaModel {
 
     /**
      * <p>The attribute type of the instance. Set this parameter to DBInstanceDescription.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>MaintainTime</li>
+     * <li>DBInstanceDescription</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -50,6 +50,9 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("RefundAmount")
+        public String refundAmount;
+
         /**
          * <p>The amount of money.</p>
          * 
@@ -70,6 +73,14 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public GetModifyBEClusterInquiryResponseBodyData setRefundAmount(String refundAmount) {
+            this.refundAmount = refundAmount;
+            return this;
+        }
+        public String getRefundAmount() {
+            return this.refundAmount;
         }
 
         public GetModifyBEClusterInquiryResponseBodyData setTradeAmount(String tradeAmount) {
