@@ -140,6 +140,80 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class ListMaterialDocumentsResponseBodyDataFileAttr extends TeaModel {
+        @NameInMap("Duration")
+        public Double duration;
+
+        @NameInMap("FileLength")
+        public Long fileLength;
+
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("MimeType")
+        public String mimeType;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        public static ListMaterialDocumentsResponseBodyDataFileAttr build(java.util.Map<String, ?> map) throws Exception {
+            ListMaterialDocumentsResponseBodyDataFileAttr self = new ListMaterialDocumentsResponseBodyDataFileAttr();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMaterialDocumentsResponseBodyDataFileAttr setDuration(Double duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        public ListMaterialDocumentsResponseBodyDataFileAttr setFileLength(Long fileLength) {
+            this.fileLength = fileLength;
+            return this;
+        }
+        public Long getFileLength() {
+            return this.fileLength;
+        }
+
+        public ListMaterialDocumentsResponseBodyDataFileAttr setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public ListMaterialDocumentsResponseBodyDataFileAttr setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public ListMaterialDocumentsResponseBodyDataFileAttr setMimeType(String mimeType) {
+            this.mimeType = mimeType;
+            return this;
+        }
+        public String getMimeType() {
+            return this.mimeType;
+        }
+
+        public ListMaterialDocumentsResponseBodyDataFileAttr setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+    }
+
     public static class ListMaterialDocumentsResponseBodyData extends TeaModel {
         @NameInMap("Author")
         public String author;
@@ -177,6 +251,12 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
          */
         @NameInMap("ExternalUrl")
         public String externalUrl;
+
+        @NameInMap("FileAttr")
+        public ListMaterialDocumentsResponseBodyDataFileAttr fileAttr;
+
+        @NameInMap("FileKey")
+        public String fileKey;
 
         @NameInMap("HtmlContent")
         public String htmlContent;
@@ -311,6 +391,22 @@ public class ListMaterialDocumentsResponseBody extends TeaModel {
         }
         public String getExternalUrl() {
             return this.externalUrl;
+        }
+
+        public ListMaterialDocumentsResponseBodyData setFileAttr(ListMaterialDocumentsResponseBodyDataFileAttr fileAttr) {
+            this.fileAttr = fileAttr;
+            return this;
+        }
+        public ListMaterialDocumentsResponseBodyDataFileAttr getFileAttr() {
+            return this.fileAttr;
+        }
+
+        public ListMaterialDocumentsResponseBodyData setFileKey(String fileKey) {
+            this.fileKey = fileKey;
+            return this;
+        }
+        public String getFileKey() {
+            return this.fileKey;
         }
 
         public ListMaterialDocumentsResponseBodyData setHtmlContent(String htmlContent) {

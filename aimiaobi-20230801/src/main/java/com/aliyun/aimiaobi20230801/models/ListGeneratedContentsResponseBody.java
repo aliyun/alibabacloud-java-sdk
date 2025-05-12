@@ -140,6 +140,58 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
         return this.total;
     }
 
+    public static class ListGeneratedContentsResponseBodyDataFileAttr extends TeaModel {
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("TmpUrl")
+        public String tmpUrl;
+
+        @NameInMap("Width")
+        public Integer width;
+
+        public static ListGeneratedContentsResponseBodyDataFileAttr build(java.util.Map<String, ?> map) throws Exception {
+            ListGeneratedContentsResponseBodyDataFileAttr self = new ListGeneratedContentsResponseBodyDataFileAttr();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGeneratedContentsResponseBodyDataFileAttr setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public ListGeneratedContentsResponseBodyDataFileAttr setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public ListGeneratedContentsResponseBodyDataFileAttr setTmpUrl(String tmpUrl) {
+            this.tmpUrl = tmpUrl;
+            return this;
+        }
+        public String getTmpUrl() {
+            return this.tmpUrl;
+        }
+
+        public ListGeneratedContentsResponseBodyDataFileAttr setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+    }
+
     public static class ListGeneratedContentsResponseBodyData extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -174,6 +226,12 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
          */
         @NameInMap("DeviceId")
         public String deviceId;
+
+        @NameInMap("FileAttr")
+        public ListGeneratedContentsResponseBodyDataFileAttr fileAttr;
+
+        @NameInMap("FileKey")
+        public String fileKey;
 
         /**
          * <strong>example:</strong>
@@ -273,6 +331,22 @@ public class ListGeneratedContentsResponseBody extends TeaModel {
         }
         public String getDeviceId() {
             return this.deviceId;
+        }
+
+        public ListGeneratedContentsResponseBodyData setFileAttr(ListGeneratedContentsResponseBodyDataFileAttr fileAttr) {
+            this.fileAttr = fileAttr;
+            return this;
+        }
+        public ListGeneratedContentsResponseBodyDataFileAttr getFileAttr() {
+            return this.fileAttr;
+        }
+
+        public ListGeneratedContentsResponseBodyData setFileKey(String fileKey) {
+            this.fileKey = fileKey;
+            return this;
+        }
+        public String getFileKey() {
+            return this.fileKey;
         }
 
         public ListGeneratedContentsResponseBodyData setId(Long id) {

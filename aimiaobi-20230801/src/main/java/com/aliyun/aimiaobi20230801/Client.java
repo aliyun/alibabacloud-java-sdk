@@ -3622,6 +3622,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Current", request.current);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dataType)) {
+            body.put("DataType", request.dataType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             body.put("EndTime", request.endTime);
         }

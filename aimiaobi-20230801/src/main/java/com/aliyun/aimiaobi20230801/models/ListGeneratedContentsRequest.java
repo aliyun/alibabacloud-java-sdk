@@ -27,6 +27,9 @@ public class ListGeneratedContentsRequest extends TeaModel {
     @NameInMap("Current")
     public Integer current;
 
+    @NameInMap("DataType")
+    public String dataType;
+
     /**
      * <strong>example:</strong>
      * <p>2024-01-04 11:46:07</p>
@@ -84,6 +87,14 @@ public class ListGeneratedContentsRequest extends TeaModel {
     }
     public Integer getCurrent() {
         return this.current;
+    }
+
+    public ListGeneratedContentsRequest setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public String getDataType() {
+        return this.dataType;
     }
 
     public ListGeneratedContentsRequest setEndTime(String endTime) {
