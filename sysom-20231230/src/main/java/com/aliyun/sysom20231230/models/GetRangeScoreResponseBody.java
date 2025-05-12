@@ -88,7 +88,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
          * <p>1725797727754</p>
          */
         @NameInMap("time")
-        public Float time;
+        public Long time;
 
         /**
          * <strong>example:</strong>
@@ -102,18 +102,18 @@ public class GetRangeScoreResponseBody extends TeaModel {
          * <p>100</p>
          */
         @NameInMap("value")
-        public Float value;
+        public Long value;
 
         public static GetRangeScoreResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRangeScoreResponseBodyData self = new GetRangeScoreResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetRangeScoreResponseBodyData setTime(Float time) {
+        public GetRangeScoreResponseBodyData setTime(Long time) {
             this.time = time;
             return this;
         }
-        public Float getTime() {
+        public Long getTime() {
             return this.time;
         }
 
@@ -125,11 +125,11 @@ public class GetRangeScoreResponseBody extends TeaModel {
             return this.type;
         }
 
-        public GetRangeScoreResponseBodyData setValue(Float value) {
+        public GetRangeScoreResponseBodyData setValue(Long value) {
             this.value = value;
             return this;
         }
-        public Float getValue() {
+        public Long getValue() {
             return this.value;
         }
 

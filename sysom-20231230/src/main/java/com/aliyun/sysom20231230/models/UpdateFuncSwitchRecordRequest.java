@@ -72,6 +72,9 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         @NameInMap("cpu")
         public String cpu;
 
+        @NameInMap("duration")
+        public Integer duration;
+
         /**
          * <strong>example:</strong>
          * <p>/tmp/sysom/java-profiler</p>
@@ -100,6 +103,9 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         @NameInMap("mem")
         public String mem;
 
+        @NameInMap("pid")
+        public Integer pid;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -126,6 +132,14 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         }
         public String getCpu() {
             return this.cpu;
+        }
+
+        public UpdateFuncSwitchRecordRequestParamsArgs setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
         }
 
         public UpdateFuncSwitchRecordRequestParamsArgs setJavaStorePath(String javaStorePath) {
@@ -158,6 +172,14 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         }
         public String getMem() {
             return this.mem;
+        }
+
+        public UpdateFuncSwitchRecordRequestParamsArgs setPid(Integer pid) {
+            this.pid = pid;
+            return this;
+        }
+        public Integer getPid() {
+            return this.pid;
         }
 
         public UpdateFuncSwitchRecordRequestParamsArgs setSystemProfiling(String systemProfiling) {
@@ -196,6 +218,9 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
          */
         @NameInMap("op")
         public String op;
+
+        @NameInMap("region")
+        public String region;
 
         /**
          * <strong>example:</strong>
@@ -239,6 +264,14 @@ public class UpdateFuncSwitchRecordRequest extends TeaModel {
         }
         public String getOp() {
             return this.op;
+        }
+
+        public UpdateFuncSwitchRecordRequestParams setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public UpdateFuncSwitchRecordRequestParams setUid(String uid) {

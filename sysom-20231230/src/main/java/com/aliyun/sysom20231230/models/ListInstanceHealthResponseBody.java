@@ -12,7 +12,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("data")
-    public ListInstanceHealthResponseBodyData data;
+    public java.util.List<ListInstanceHealthResponseBodyData> data;
 
     /**
      * <strong>example:</strong>
@@ -48,11 +48,11 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListInstanceHealthResponseBody setData(ListInstanceHealthResponseBodyData data) {
+    public ListInstanceHealthResponseBody setData(java.util.List<ListInstanceHealthResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public ListInstanceHealthResponseBodyData getData() {
+    public java.util.List<ListInstanceHealthResponseBodyData> getData() {
         return this.data;
     }
 
@@ -84,45 +84,21 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         @NameInMap("images")
         public java.util.List<String> images;
 
-        /**
-         * <strong>example:</strong>
-         * <p>i-wz9d00ut2ska3mlyhn6j</p>
-         */
         @NameInMap("instance")
         public String instance;
 
-        /**
-         * <strong>example:</strong>
-         * <p>default</p>
-         */
         @NameInMap("namespace")
         public String namespace;
 
-        /**
-         * <strong>example:</strong>
-         * <p>test-pod</p>
-         */
         @NameInMap("pod")
         public String pod;
 
-        /**
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
-         */
         @NameInMap("region_id")
         public String regionId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
         @NameInMap("score")
         public Float score;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Running</p>
-         */
         @NameInMap("status")
         public String status;
 

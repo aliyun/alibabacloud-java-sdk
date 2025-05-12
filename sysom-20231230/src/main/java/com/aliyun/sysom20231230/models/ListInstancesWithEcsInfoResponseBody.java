@@ -143,6 +143,9 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         @NameInMap("instance_tag")
         public java.util.List<ListInstancesWithEcsInfoResponseBodyDataInstanceTag> instanceTag;
 
+        @NameInMap("kernel_version")
+        public String kernelVersion;
+
         /**
          * <strong>example:</strong>
          * <p>x86</p>
@@ -234,6 +237,14 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         }
         public java.util.List<ListInstancesWithEcsInfoResponseBodyDataInstanceTag> getInstanceTag() {
             return this.instanceTag;
+        }
+
+        public ListInstancesWithEcsInfoResponseBodyData setKernelVersion(String kernelVersion) {
+            this.kernelVersion = kernelVersion;
+            return this;
+        }
+        public String getKernelVersion() {
+            return this.kernelVersion;
         }
 
         public ListInstancesWithEcsInfoResponseBodyData setOsArch(String osArch) {

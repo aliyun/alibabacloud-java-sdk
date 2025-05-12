@@ -17,6 +17,9 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
+    @NameInMap("total")
+    public Integer total;
+
     public static ListAbnormalyEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAbnormalyEventsResponseBody self = new ListAbnormalyEventsResponseBody();
         return TeaModel.build(map, self);
@@ -46,25 +49,51 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         return this.message;
     }
 
+    public ListAbnormalyEventsResponseBody setTotal(Integer total) {
+        this.total = total;
+        return this;
+    }
+    public Integer getTotal() {
+        return this.total;
+    }
+
+    public static class ListAbnormalyEventsResponseBodyDataOptsResult extends TeaModel {
+        @NameInMap("status")
+        public String status;
+
+        @NameInMap("url")
+        public String url;
+
+        public static ListAbnormalyEventsResponseBodyDataOptsResult build(java.util.Map<String, ?> map) throws Exception {
+            ListAbnormalyEventsResponseBodyDataOptsResult self = new ListAbnormalyEventsResponseBodyDataOptsResult();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAbnormalyEventsResponseBodyDataOptsResult setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListAbnormalyEventsResponseBodyDataOptsResult setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class ListAbnormalyEventsResponseBodyDataOpts extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>diagnose</p>
-         */
         @NameInMap("label")
         public String label;
 
-        /**
-         * <strong>example:</strong>
-         * <p>&quot;{\&quot;service_name\&quot;: \&quot;oomcheck\&quot;, \&quot;params\&quot;: {\&quot;auto_initial\&quot;: true, \&quot;instance\&quot;: \&quot;i-wz9d00ut2ska3mlyhn6i\&quot;, \&quot;region\&quot;: \&quot;cn-shenzhen\&quot;, \&quot;uuid\&quot;: \&quot;24576d0c-a19d-49dd-8a64-3867440fd7a6\&quot;, \&quot;is_history\&quot;: 1}}&quot;</p>
-         */
-        @NameInMap("params")
-        public String params;
+        @NameInMap("result")
+        public ListAbnormalyEventsResponseBodyDataOptsResult result;
 
-        /**
-         * <strong>example:</strong>
-         * <p>realtime</p>
-         */
         @NameInMap("type")
         public String type;
 
@@ -81,12 +110,12 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             return this.label;
         }
 
-        public ListAbnormalyEventsResponseBodyDataOpts setParams(String params) {
-            this.params = params;
+        public ListAbnormalyEventsResponseBodyDataOpts setResult(ListAbnormalyEventsResponseBodyDataOptsResult result) {
+            this.result = result;
             return this;
         }
-        public String getParams() {
-            return this.params;
+        public ListAbnormalyEventsResponseBodyDataOptsResult getResult() {
+            return this.result;
         }
 
         public ListAbnormalyEventsResponseBodyDataOpts setType(String type) {
@@ -105,17 +134,16 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
          * <p>1725801090000</p>
          */
         @NameInMap("created_at")
-        public Float createdAt;
+        public Long createdAt;
 
         @NameInMap("description")
         public String description;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("id")
-        public String id;
+        @NameInMap("diag_status")
+        public Integer diagStatus;
+
+        @NameInMap("end_at")
+        public Long endAt;
 
         /**
          * <strong>example:</strong>
@@ -127,8 +155,17 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         @NameInMap("item")
         public String item;
 
+        @NameInMap("level")
+        public String level;
+
+        @NameInMap("namespace")
+        public String namespace;
+
         @NameInMap("opts")
-        public ListAbnormalyEventsResponseBodyDataOpts opts;
+        public java.util.List<ListAbnormalyEventsResponseBodyDataOpts> opts;
+
+        @NameInMap("pod")
+        public String pod;
 
         /**
          * <strong>example:</strong>
@@ -144,16 +181,19 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
+        @NameInMap("uuid")
+        public String uuid;
+
         public static ListAbnormalyEventsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAbnormalyEventsResponseBodyData self = new ListAbnormalyEventsResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListAbnormalyEventsResponseBodyData setCreatedAt(Float createdAt) {
+        public ListAbnormalyEventsResponseBodyData setCreatedAt(Long createdAt) {
             this.createdAt = createdAt;
             return this;
         }
-        public Float getCreatedAt() {
+        public Long getCreatedAt() {
             return this.createdAt;
         }
 
@@ -165,12 +205,20 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListAbnormalyEventsResponseBodyData setId(String id) {
-            this.id = id;
+        public ListAbnormalyEventsResponseBodyData setDiagStatus(Integer diagStatus) {
+            this.diagStatus = diagStatus;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public Integer getDiagStatus() {
+            return this.diagStatus;
+        }
+
+        public ListAbnormalyEventsResponseBodyData setEndAt(Long endAt) {
+            this.endAt = endAt;
+            return this;
+        }
+        public Long getEndAt() {
+            return this.endAt;
         }
 
         public ListAbnormalyEventsResponseBodyData setInstance(String instance) {
@@ -189,12 +237,36 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             return this.item;
         }
 
-        public ListAbnormalyEventsResponseBodyData setOpts(ListAbnormalyEventsResponseBodyDataOpts opts) {
+        public ListAbnormalyEventsResponseBodyData setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public ListAbnormalyEventsResponseBodyData setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public ListAbnormalyEventsResponseBodyData setOpts(java.util.List<ListAbnormalyEventsResponseBodyDataOpts> opts) {
             this.opts = opts;
             return this;
         }
-        public ListAbnormalyEventsResponseBodyDataOpts getOpts() {
+        public java.util.List<ListAbnormalyEventsResponseBodyDataOpts> getOpts() {
             return this.opts;
+        }
+
+        public ListAbnormalyEventsResponseBodyData setPod(String pod) {
+            this.pod = pod;
+            return this;
+        }
+        public String getPod() {
+            return this.pod;
         }
 
         public ListAbnormalyEventsResponseBodyData setRegionId(String regionId) {
@@ -211,6 +283,14 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListAbnormalyEventsResponseBodyData setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }
