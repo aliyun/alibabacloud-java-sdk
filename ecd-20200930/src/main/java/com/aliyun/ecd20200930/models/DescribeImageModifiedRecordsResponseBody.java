@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     /**
-     * <p>Details about the image modification record.</p>
+     * <p>The image change records.</p>
      */
     @NameInMap("ImageModifiedRecords")
     public java.util.List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> imageModifiedRecords;

@@ -14,7 +14,7 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     public String adHostname;
 
     /**
-     * <p>The hostname of the backup domain controller.</p>
+     * <p>The hostname of the secondary domain controller.</p>
      * 
      * <strong>example:</strong>
      * <p>dc002</p>
@@ -23,7 +23,7 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     public String backupDCHostname;
 
     /**
-     * <p>The DNS address of the backup domain controller.</p>
+     * <p>The IP address of the DNS server corresponding to the secondary domain controller.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.2.100</p>
@@ -32,7 +32,7 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     public String backupDns;
 
     /**
-     * <p>Details of the IP addresses of the Domain Name System (DNS) servers that correspond to the enterprise AD system. You can specify only one IP address.</p>
+     * <p>The IP addresses of the DNS servers corresponding to the enterprise ADs. You can specify only one DNS IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.<em>.</em></p>
@@ -124,7 +124,7 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     public String officeSiteName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ModifyADConnectorOfficeSiteRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The DNS address of the subdomain in the enterprise AD domain. You can specify only one DNS address. If you configure <code>SubDomainName</code> and leave this parameter empty, the value is the same as that of the enterprise AD domain.</p>
+     * <p>The IP addresses of the DNS servers corresponding to the enterprise AD subdomains. You can specify only one DNS IP address. If you specify <code>SubDomainName</code> and leave this parameter empty, the value is the same as that of the enterprise AD domain.</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.<em>.</em></p>

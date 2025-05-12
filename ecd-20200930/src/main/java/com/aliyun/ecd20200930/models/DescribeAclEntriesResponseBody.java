@@ -73,7 +73,7 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
         public String policy;
 
         /**
-         * <p>The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.</p>
+         * <p>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-fsafeweh***</p>

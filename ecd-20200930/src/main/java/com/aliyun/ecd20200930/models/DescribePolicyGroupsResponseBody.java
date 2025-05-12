@@ -8,7 +8,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The details of the cloud computer policies.</p>
+     * <p>The cloud computer policies.</p>
      */
     @NameInMap("DescribePolicyGroups")
     public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroups> describePolicyGroups;

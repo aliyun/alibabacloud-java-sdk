@@ -1624,7 +1624,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String deviceName;
 
         /**
-         * <p>The product ID.</p>
+         * <p>The product ID (PID).</p>
          * 
          * <strong>example:</strong>
          * <p>0x55b1</p>
@@ -1636,16 +1636,16 @@ public class CreatePolicyGroupRequest extends TeaModel {
          * <p>The peripheral type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>usbKey</li>
-         * <li>other</li>
-         * <li>graphicsTablet</li>
-         * <li>printer</li>
-         * <li>cardReader</li>
-         * <li>scanner</li>
-         * <li>storage</li>
-         * <li>camera</li>
-         * <li>adb</li>
-         * <li>networkInterfaceCard: the NIC device.</li>
+         * <li>usbKey: UKeys.</li>
+         * <li>other: other peripheral devices.</li>
+         * <li>graphicsTablet: graphics tablets.</li>
+         * <li>printer: printers.</li>
+         * <li>cardReader: card readers.</li>
+         * <li>scanner: scanners.</li>
+         * <li>storage: storage devices.</li>
+         * <li>camera: web cameras.</li>
+         * <li>adb: Android Debug Bridge (ADB) devices.</li>
+         * <li>networkInterfaceCard: NIC devices.</li>
          * </ul>
          * 
          * <strong>example:</strong>

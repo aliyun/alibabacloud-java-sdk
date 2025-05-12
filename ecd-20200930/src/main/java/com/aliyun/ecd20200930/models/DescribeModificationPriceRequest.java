@@ -73,6 +73,9 @@ public class DescribeModificationPriceRequest extends TeaModel {
     @NameInMap("ResellerOwnerUid")
     public Long resellerOwnerUid;
 
+    @NameInMap("ResourceSpecs")
+    public java.util.List<DescribeModificationPriceRequestResourceSpecs> resourceSpecs;
+
     /**
      * <p>The resource type. The required parameters depend on the resource type.</p>
      * <ul>
@@ -154,6 +157,14 @@ public class DescribeModificationPriceRequest extends TeaModel {
         return this.resellerOwnerUid;
     }
 
+    public DescribeModificationPriceRequest setResourceSpecs(java.util.List<DescribeModificationPriceRequestResourceSpecs> resourceSpecs) {
+        this.resourceSpecs = resourceSpecs;
+        return this;
+    }
+    public java.util.List<DescribeModificationPriceRequestResourceSpecs> getResourceSpecs() {
+        return this.resourceSpecs;
+    }
+
     public DescribeModificationPriceRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -176,6 +187,47 @@ public class DescribeModificationPriceRequest extends TeaModel {
     }
     public Integer getUserDiskSizeGib() {
         return this.userDiskSizeGib;
+    }
+
+    public static class DescribeModificationPriceRequestResourceSpecs extends TeaModel {
+        @NameInMap("DesktopId")
+        public String desktopId;
+
+        @NameInMap("RootDiskSizeGib")
+        public Integer rootDiskSizeGib;
+
+        @NameInMap("UserDiskSizeGib")
+        public Integer userDiskSizeGib;
+
+        public static DescribeModificationPriceRequestResourceSpecs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeModificationPriceRequestResourceSpecs self = new DescribeModificationPriceRequestResourceSpecs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeModificationPriceRequestResourceSpecs setDesktopId(String desktopId) {
+            this.desktopId = desktopId;
+            return this;
+        }
+        public String getDesktopId() {
+            return this.desktopId;
+        }
+
+        public DescribeModificationPriceRequestResourceSpecs setRootDiskSizeGib(Integer rootDiskSizeGib) {
+            this.rootDiskSizeGib = rootDiskSizeGib;
+            return this;
+        }
+        public Integer getRootDiskSizeGib() {
+            return this.rootDiskSizeGib;
+        }
+
+        public DescribeModificationPriceRequestResourceSpecs setUserDiskSizeGib(Integer userDiskSizeGib) {
+            this.userDiskSizeGib = userDiskSizeGib;
+            return this;
+        }
+        public Integer getUserDiskSizeGib() {
+            return this.userDiskSizeGib;
+        }
+
     }
 
 }

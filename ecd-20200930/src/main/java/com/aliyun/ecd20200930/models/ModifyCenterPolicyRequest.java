@@ -2358,7 +2358,7 @@ public class ModifyCenterPolicyRequest extends TeaModel {
          * <p>The peripheral type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>usbKey: UKeys</li>
+         * <li>usbKey: UKeys.</li>
          * <li>other: other peripheral devices.</li>
          * <li>graphicsTablet: graphics tablets.</li>
          * <li>cardReader: card readers.</li>
@@ -2400,9 +2400,9 @@ public class ModifyCenterPolicyRequest extends TeaModel {
          * <p>The redirection type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>deviceRedirect: device redirection</li>
+         * <li>deviceRedirect: device redirection.</li>
          * <li>usbRedirect: USB redirection.</li>
-         * <li>off: any type of redirection.</li>
+         * <li>off: redirection disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

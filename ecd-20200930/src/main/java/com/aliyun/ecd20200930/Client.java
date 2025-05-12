@@ -2243,7 +2243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建无地域策略</p>
+     * <p>Creates a center policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2675,7 +2675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建无地域策略</p>
+     * <p>Creates a center policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @return CreateCenterPolicyResponse
@@ -7986,6 +7986,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResellerOwnerUid", request.resellerOwnerUid);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSpecs)) {
+            query.put("ResourceSpecs", request.resourceSpecs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
             query.put("ResourceType", request.resourceType);
         }
@@ -10263,7 +10267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer must be in the Running state.</p>
+     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</p>
      * 
      * <b>summary</b> : 
      * <p>Obtains the credential that is used to connect to a cloud desktop.</p>
@@ -10334,7 +10338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer must be in the Running state.</p>
+     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation will expire in 10 minutes.</p>
      * 
      * <b>summary</b> : 
      * <p>Obtains the credential that is used to connect to a cloud desktop.</p>

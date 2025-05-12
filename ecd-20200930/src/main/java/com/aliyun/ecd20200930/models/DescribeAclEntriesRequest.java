@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAclEntriesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Maximum value: 1600.</p>
-     * <p>Default value: 1600.</p>
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Maximum value: 1600.</li>
+     * <li>Default value: 1600.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -33,7 +36,7 @@ public class DescribeAclEntriesRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

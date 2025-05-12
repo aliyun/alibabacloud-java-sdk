@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBundlesResponseBody extends TeaModel {
     /**
-     * <p>The details of the cloud computer templates.</p>
+     * <p>The cloud computer templates.</p>
      */
     @NameInMap("Bundles")
     public java.util.List<DescribeBundlesResponseBodyBundles> bundles;
@@ -292,11 +292,12 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The category of the data disk. Valid values:</p>
+         * <p>The category of the data disk.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_auto: SSD</li>
-         * <li>cloud_essd: ESSD (supported by specific specifications)</li>
+         * <li>cloud_efficiency: the ultra disk</li>
+         * <li>cloud_auto: the standard SSD.</li>
+         * <li>cloud_essd: the ESSD. Take note that only specific cloud computer types support ESSDs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -509,11 +510,12 @@ public class DescribeBundlesResponseBody extends TeaModel {
         public String stockState;
 
         /**
-         * <p>The category of the system disk. Valid values:</p>
+         * <p>The category of the system disk.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>cloud_efficiency: ultra disk</li>
-         * <li>cloud_auto: SSD</li>
-         * <li>cloud_essd: ESSD (supported by specific specifications)</li>
+         * <li>cloud_efficiency: the ultra disk</li>
+         * <li>cloud_auto: the standard SSD.</li>
+         * <li>cloud_essd: the Enterprise SSD (ESSD). Take note that only specific cloud computer types support ESSDs.</li>
          * </ul>
          * 
          * <strong>example:</strong>

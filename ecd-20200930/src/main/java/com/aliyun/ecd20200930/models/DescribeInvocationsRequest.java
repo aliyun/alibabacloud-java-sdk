@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
     /**
-     * <p>The type of the command. Valid values:</p>
+     * <p>The command type.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>RunBatScript</li>
-     * <li>RunPowerShellScript</li>
+     * <li>RunPowerShellScript: the PowerShell command.</li>
+     * <li>RunBatScript: the Bat command.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +19,12 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String commandType;
 
     /**
-     * <p>The encoding method of the command content and output. Valid values:</p>
+     * <p>The encoding method of the command content and outputs.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>PlainText</li>
-     * <li>Base64</li>
+     * <li>Base64 (default): returns the Base64-encoded command content and command outputs.</li>
+     * <li>PlainText: returns the original command content and outputs in plain text.</li>
      * </ul>
-     * <p>Default value: Base64.</p>
      * 
      * <strong>example:</strong>
      * <p>PlainText</p>
@@ -32,7 +33,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>The ID of the cloud desktop. If you specify a cloud desktop, all the execution records of Cloud Assistant commands on the cloud desktop are queried.</p>
+     * <p>The cloud computer ID. If you specify a cloud computer, all command execution records of the cloud computer are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-7w78ozhjcwa3u****</p>
@@ -41,13 +42,16 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The IDs of the cloud desktops.</p>
+     * <p>The cloud computer IDs.</p>
+     * <blockquote>
+     * <p> The <code>DesktopId</code> parameter will be deprecated. We recommend using the DesktopIds parameter to specify cloud computer IDs instead.</p>
+     * </blockquote>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
     /**
-     * <p>The ID of the end user.</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>
@@ -56,11 +60,11 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>Specifies whether to return the execution results of all cloud computers if the command is executed on multiple cloud computers.</p>
+     * <p>Specifies whether to return the execution results of the remote command on all cloud computers when executed across multiple cloud computers.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: returned.</li>
-     * <li>false: not returned.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,12 +74,12 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Boolean includeInvokeDesktops;
 
     /**
-     * <p>Specifies whether to return command outputs in the response. Valid values:</p>
+     * <p>Specifies whether to return command outputs in the response.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>true: returns command outputs.</li>
-     * <li>false: does not return command outputs.</li>
+     * <li>true</li>
+     * <li>false (default)</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -84,7 +88,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Boolean includeOutput;
 
     /**
-     * <p>The ID of the execution.</p>
+     * <p>The execution ID of the command. You can obtain the value by calling the <a href="~~RunCommand~~">RunCommand</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>t-hz0jdfwd9f****</p>
@@ -93,15 +97,15 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The overall execution status of a command. The overall execution status is determined by the execution status of the command on one or more cloud desktops. Valid values:</p>
+     * <p>The execution status of the command. The value of this parameter is determined by the execution states of the command on all participating cloud computers.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Running: The execution is in progress on one or more cloud desktops.</li>
-     * <li>Finished: The execution is finished on all cloud desktops, or the execution is manually stopped on some cloud desktops and the execution is finished on others.</li>
-     * <li>Failed: The execution failed on all cloud desktops.</li>
-     * <li>PartialFailed: The execution failed on some cloud desktops.</li>
-     * <li>Stopped: The execution is stopped.</li>
+     * <li>Finished: The command execution completes on all cloud computers. Alternatively, the command execution is manually stopped on some cloud computers while it completes on the others.</li>
+     * <li>Stopped: The command execution stops.</li>
+     * <li>Failed: The command execution failed on all cloud computers.</li>
+     * <li>Running: Once there is a command execution in progress, the execution status defaults to Running.</li>
+     * <li>PartialFailed: If the command execution failed on part of the cloud computers, the execution status is considered partially failed.</li>
      * </ul>
-     * <p>Default value: Running.</p>
      * 
      * <strong>example:</strong>
      * <p>Finished</p>
@@ -132,7 +136,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

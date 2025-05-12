@@ -851,7 +851,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String endUserApplyAdminCoordinate;
 
         /**
-         * <p>Indicates whether end users in the same workspace can share cloud computers.</p>
+         * <p>Indicates whether end users in the same office network can share cloud computers.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -878,7 +878,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String html5Access;
 
         /**
-         * <p>The file transfer policy of the HTML5 client.</p>
+         * <p>The file transfer feature on the web client.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -968,7 +968,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public Integer memorySingleRateLimit;
 
         /**
-         * <p>Indicates whether the Restart button is displayed in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</p>
+         * <p>Indicates whether the Restart button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
          * <blockquote>
          * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
          * </blockquote>
@@ -980,7 +980,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String mobileRestart;
 
         /**
-         * <p>Indicates whether the Stop button is displayed in the DesktopAssistant menu when end users connect to cloud computers from mobile clients (Android clients and iOS clients).</p>
+         * <p>Indicates whether the Stop button is displayed in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
          * <blockquote>
          * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
          * </blockquote>
@@ -1334,7 +1334,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public java.util.List<DescribeCenterPolicyListResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule> usbSupplyRedirectRule;
 
         /**
-         * <p>The average bitrate for video encoding. Valid values: 1000 to 50000.</p>
+         * <p>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1361,7 +1361,7 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public Integer videoEncMinQP;
 
         /**
-         * <p>The peak bitrate for video encoding. Valid values: 1000 to 50000.</p>
+         * <p>The peak bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
