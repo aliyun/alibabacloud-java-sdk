@@ -93,6 +93,9 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<ListElasticNetworkInterfacesRequestTag> tag;
+
     /**
      * <p>The type of the variable.</p>
      * <p>Valid value:</p>
@@ -211,6 +214,14 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
         return this.status;
     }
 
+    public ListElasticNetworkInterfacesRequest setTag(java.util.List<ListElasticNetworkInterfacesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListElasticNetworkInterfacesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListElasticNetworkInterfacesRequest setType(String type) {
         this.type = type;
         return this;
@@ -241,6 +252,36 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class ListElasticNetworkInterfacesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListElasticNetworkInterfacesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListElasticNetworkInterfacesRequestTag self = new ListElasticNetworkInterfacesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListElasticNetworkInterfacesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListElasticNetworkInterfacesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

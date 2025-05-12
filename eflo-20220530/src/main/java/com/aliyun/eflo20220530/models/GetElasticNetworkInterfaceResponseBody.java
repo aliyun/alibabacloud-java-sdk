@@ -413,6 +413,36 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
 
     }
 
+    public static class GetElasticNetworkInterfaceResponseBodyContentTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetElasticNetworkInterfaceResponseBodyContentTags build(java.util.Map<String, ?> map) throws Exception {
+            GetElasticNetworkInterfaceResponseBodyContentTags self = new GetElasticNetworkInterfaceResponseBodyContentTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetElasticNetworkInterfaceResponseBodyContentTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetElasticNetworkInterfaceResponseBodyContentTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetElasticNetworkInterfaceResponseBodyContent extends TeaModel {
         /**
          * <p>The time when the data address was created.</p>
@@ -562,6 +592,9 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<GetElasticNetworkInterfaceResponseBodyContentTags> tags;
 
         /**
          * <p>NIC Type</p>
@@ -743,6 +776,14 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetElasticNetworkInterfaceResponseBodyContent setTags(java.util.List<GetElasticNetworkInterfaceResponseBodyContentTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetElasticNetworkInterfaceResponseBodyContentTags> getTags() {
+            return this.tags;
         }
 
         public GetElasticNetworkInterfaceResponseBodyContent setType(String type) {

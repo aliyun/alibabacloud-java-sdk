@@ -277,6 +277,36 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
 
     }
 
+    public static class GetNetworkInterfaceResponseBodyContentTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetNetworkInterfaceResponseBodyContentTags build(java.util.Map<String, ?> map) throws Exception {
+            GetNetworkInterfaceResponseBodyContentTags self = new GetNetworkInterfaceResponseBodyContentTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetNetworkInterfaceResponseBodyContentTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetNetworkInterfaceResponseBodyContentTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetNetworkInterfaceResponseBodyContentVpdBaseInfo extends TeaModel {
         /**
          * <p>The network segment of the Lingjun subnet.</p>
@@ -489,6 +519,9 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
         @NameInMap("SubnetBaseInfo")
         public GetNetworkInterfaceResponseBodyContentSubnetBaseInfo subnetBaseInfo;
 
+        @NameInMap("Tags")
+        public java.util.List<GetNetworkInterfaceResponseBodyContentTags> tags;
+
         /**
          * <p>The ID of the tenant.</p>
          * 
@@ -636,6 +669,14 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
         }
         public GetNetworkInterfaceResponseBodyContentSubnetBaseInfo getSubnetBaseInfo() {
             return this.subnetBaseInfo;
+        }
+
+        public GetNetworkInterfaceResponseBodyContent setTags(java.util.List<GetNetworkInterfaceResponseBodyContentTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetNetworkInterfaceResponseBodyContentTags> getTags() {
+            return this.tags;
         }
 
         public GetNetworkInterfaceResponseBodyContent setTenantId(String tenantId) {

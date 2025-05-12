@@ -62,6 +62,9 @@ public class CreateElasticNetworkInterfaceRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateElasticNetworkInterfaceRequestTag> tag;
+
     /**
      * <p>The ID of the vSwitch.</p>
      * 
@@ -154,6 +157,14 @@ public class CreateElasticNetworkInterfaceRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public CreateElasticNetworkInterfaceRequest setTag(java.util.List<CreateElasticNetworkInterfaceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateElasticNetworkInterfaceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateElasticNetworkInterfaceRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -176,6 +187,36 @@ public class CreateElasticNetworkInterfaceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateElasticNetworkInterfaceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateElasticNetworkInterfaceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateElasticNetworkInterfaceRequestTag self = new CreateElasticNetworkInterfaceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateElasticNetworkInterfaceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateElasticNetworkInterfaceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

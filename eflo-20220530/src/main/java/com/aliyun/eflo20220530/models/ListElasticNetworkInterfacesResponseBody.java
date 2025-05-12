@@ -91,6 +91,36 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListElasticNetworkInterfacesResponseBodyContentDataTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListElasticNetworkInterfacesResponseBodyContentDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListElasticNetworkInterfacesResponseBodyContentDataTags self = new ListElasticNetworkInterfacesResponseBodyContentDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListElasticNetworkInterfacesResponseBodyContentDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListElasticNetworkInterfacesResponseBodyContentDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListElasticNetworkInterfacesResponseBodyContentData extends TeaModel {
         /**
          * <p>The time when the data address was created.</p>
@@ -211,6 +241,9 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListElasticNetworkInterfacesResponseBodyContentDataTags> tags;
 
         /**
          * <p>network interface controller type, the default type DEFAULT cannot be manually released</p>
@@ -368,6 +401,14 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListElasticNetworkInterfacesResponseBodyContentData setTags(java.util.List<ListElasticNetworkInterfacesResponseBodyContentDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListElasticNetworkInterfacesResponseBodyContentDataTags> getTags() {
+            return this.tags;
         }
 
         public ListElasticNetworkInterfacesResponseBodyContentData setType(String type) {

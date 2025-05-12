@@ -26,7 +26,6 @@ public class GetNetworkInterfaceRequest extends TeaModel {
 
     /**
      * <p>Subnet of Lingjun</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>subnet-f3zfzmnc</p>

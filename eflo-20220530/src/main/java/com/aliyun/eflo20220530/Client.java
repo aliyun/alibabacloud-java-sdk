@@ -361,6 +361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SecurityGroupId", request.securityGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             body.put("VSwitchId", request.vSwitchId);
         }
@@ -2999,6 +3003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Status", request.status);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("Type", request.type);
         }
@@ -3661,6 +3669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.subnetId)) {
             body.put("SubnetId", request.subnetId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            body.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpdId)) {

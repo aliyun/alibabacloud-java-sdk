@@ -283,6 +283,36 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
+    public static class ListNetworkInterfacesResponseBodyContentDataTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListNetworkInterfacesResponseBodyContentDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListNetworkInterfacesResponseBodyContentDataTags self = new ListNetworkInterfacesResponseBodyContentDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNetworkInterfacesResponseBodyContentDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListNetworkInterfacesResponseBodyContentDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListNetworkInterfacesResponseBodyContentDataVpdBaseInfo extends TeaModel {
         /**
          * <p>The network segment of Lingjun network segment (VPD).</p>
@@ -493,6 +523,9 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("SubnetBaseInfo")
         public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo subnetBaseInfo;
 
+        @NameInMap("Tags")
+        public java.util.List<ListNetworkInterfacesResponseBodyContentDataTags> tags;
+
         /**
          * <p>The tenant ID.</p>
          * 
@@ -640,6 +673,14 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         }
         public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo getSubnetBaseInfo() {
             return this.subnetBaseInfo;
+        }
+
+        public ListNetworkInterfacesResponseBodyContentData setTags(java.util.List<ListNetworkInterfacesResponseBodyContentDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListNetworkInterfacesResponseBodyContentDataTags> getTags() {
+            return this.tags;
         }
 
         public ListNetworkInterfacesResponseBodyContentData setTenantId(String tenantId) {

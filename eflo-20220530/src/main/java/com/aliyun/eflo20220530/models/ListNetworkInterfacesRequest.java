@@ -80,6 +80,9 @@ public class ListNetworkInterfacesRequest extends TeaModel {
     @NameInMap("SubnetId")
     public String subnetId;
 
+    @NameInMap("Tag")
+    public java.util.List<ListNetworkInterfacesRequestTag> tag;
+
     /**
      * <p>The ID of the VPD.</p>
      * 
@@ -166,12 +169,50 @@ public class ListNetworkInterfacesRequest extends TeaModel {
         return this.subnetId;
     }
 
+    public ListNetworkInterfacesRequest setTag(java.util.List<ListNetworkInterfacesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListNetworkInterfacesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public ListNetworkInterfacesRequest setVpdId(String vpdId) {
         this.vpdId = vpdId;
         return this;
     }
     public String getVpdId() {
         return this.vpdId;
+    }
+
+    public static class ListNetworkInterfacesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListNetworkInterfacesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListNetworkInterfacesRequestTag self = new ListNetworkInterfacesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListNetworkInterfacesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListNetworkInterfacesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
