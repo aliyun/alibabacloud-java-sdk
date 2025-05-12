@@ -112,6 +112,9 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     @NameInMap("Scene")
     public String scene;
 
+    @NameInMap("TemplateConfig")
+    public String templateConfig;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -268,6 +271,14 @@ public class AddSmarttagTemplateRequest extends TeaModel {
     }
     public String getScene() {
         return this.scene;
+    }
+
+    public AddSmarttagTemplateRequest setTemplateConfig(String templateConfig) {
+        this.templateConfig = templateConfig;
+        return this;
+    }
+    public String getTemplateConfig() {
+        return this.templateConfig;
     }
 
     public AddSmarttagTemplateRequest setTemplateName(String templateName) {
