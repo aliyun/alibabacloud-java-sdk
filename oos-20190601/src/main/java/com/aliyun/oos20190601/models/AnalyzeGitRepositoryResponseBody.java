@@ -79,6 +79,9 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         @NameInMap("BuildType")
         public String buildType;
 
+        @NameInMap("RuntimeType")
+        public String runtimeType;
+
         public static AnalyzeGitRepositoryResponseBodyAnalysisResults build(java.util.Map<String, ?> map) throws Exception {
             AnalyzeGitRepositoryResponseBodyAnalysisResults self = new AnalyzeGitRepositoryResponseBodyAnalysisResults();
             return TeaModel.build(map, self);
@@ -98,6 +101,14 @@ public class AnalyzeGitRepositoryResponseBody extends TeaModel {
         }
         public String getBuildType() {
             return this.buildType;
+        }
+
+        public AnalyzeGitRepositoryResponseBodyAnalysisResults setRuntimeType(String runtimeType) {
+            this.runtimeType = runtimeType;
+            return this;
+        }
+        public String getRuntimeType() {
+            return this.runtimeType;
         }
 
     }

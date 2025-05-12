@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTemplateParameterConstraintsRequest extends TeaModel {
     /**
+     * <p>The information about the parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;endDate\&quot;: \&quot;2022-04-13T03:31:20Z\&quot;, \&quot;Status\&quot;: \&quot;Stopped\&quot;}</p>
      */
@@ -12,6 +14,8 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     public String parameters;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The content of the template in the JSON or YAML format. This parameter is the same as the Content parameter that you can specify when you call the CreateTemplate operation. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;Description&quot;: &quot;Example template, describe instances in some status&quot;,
@@ -42,6 +48,8 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     public String templateContent;
 
     /**
+     * <p>The name of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>MyTemplate</p>
      */
@@ -49,6 +57,8 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     public String templateName;
 
     /**
+     * <p>The URL that is used to store the content of the Operation Orchestration Service (OOS) template in the Alibaba Cloud Object Storage Service (OSS). Only the public-read URL is supported. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://oos-template.cn-hangzhou.oss.aliyun-inc.com/oos-test-template.json">http://oos-template.cn-hangzhou.oss.aliyun-inc.com/oos-test-template.json</a></p>
      */
@@ -56,6 +66,8 @@ public class GetTemplateParameterConstraintsRequest extends TeaModel {
     public String templateURL;
 
     /**
+     * <p>The version of the template. The default value is the latest version of the template.</p>
+     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */

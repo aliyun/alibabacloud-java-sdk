@@ -50,6 +50,12 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The source of application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Platform&quot;:&quot;github&quot;,&quot;RepoName&quot;:&quot;wenle/springboot-ecs-sourcecode-demo&quot;,&quot;Owner&quot;:&quot;wenle&quot;,&quot;Branch&quot;:&quot;main&quot;,&quot;CommitHash&quot;:&quot;8559ff3ac7568fc7951ff63f841883ee3f06c6fe&quot;,&quot;CommitMessage&quot;:&quot;Init computenest project&quot;}</p>
+         */
         @NameInMap("ApplicationSource")
         public String applicationSource;
 
@@ -135,10 +141,10 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The operation metadata.</p>
+         * <p>The hosted O\&amp;M configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;PrometheusConfigMap\&quot;:{\&quot;模板1\&quot;:{\&quot;EnablePrometheus\&quot;:false}}}</p>
+         * <p>{\\&quot;PrometheusConfigMap\\&quot;:{\\&quot;Template 1\\&quot;:{\\&quot;EnablePrometheus\\&quot;:false}}}</p>
          */
         @NameInMap("OperationMetadata")
         public String operationMetadata;

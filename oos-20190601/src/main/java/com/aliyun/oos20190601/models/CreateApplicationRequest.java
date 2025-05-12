@@ -10,6 +10,12 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("AlarmConfig")
     public CreateApplicationRequestAlarmConfig alarmConfig;
 
+    /**
+     * <p>The source of application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Platform&quot;:&quot;github&quot;,&quot;Owner&quot;:&quot;githubUser&quot;,&quot;RepoName&quot;:&quot;githubUser/repoName&quot;}</p>
+     */
     @NameInMap("ApplicationSource")
     public String applicationSource;
 
@@ -60,7 +66,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the service.</p>
+     * <p>The ID of the Compute Nest service that corresponds to the application template.</p>
      * 
      * <strong>example:</strong>
      * <p>service-79538e30e44541b699d8</p>

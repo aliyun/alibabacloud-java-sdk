@@ -37,6 +37,15 @@ public class ListExecutionsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of the executions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     public static ListExecutionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListExecutionsResponseBody self = new ListExecutionsResponseBody();
         return TeaModel.build(map, self);
@@ -72,6 +81,14 @@ public class ListExecutionsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListExecutionsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListExecutionsResponseBodyExecutionsCurrentTasks extends TeaModel {

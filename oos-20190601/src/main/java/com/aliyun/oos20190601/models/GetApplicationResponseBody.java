@@ -101,6 +101,15 @@ public class GetApplicationResponseBody extends TeaModel {
         public GetApplicationResponseBodyApplicationAlarmConfig alarmConfig;
 
         /**
+         * <p>The source of application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Platform&quot;:&quot;gitee&quot;,&quot;Owner&quot;:&quot;aliyun-computenest&quot;,&quot;RepoName&quot;:&quot;aliyun-computenest/java-springboot-demo&quot;,&quot;Name&quot;:&quot;java-springboot-demo&quot;}</p>
+         */
+        @NameInMap("ApplicationSource")
+        public String applicationSource;
+
+        /**
          * <p>The type of the application.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -169,7 +178,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the service.</p>
+         * <p>The ID of the Compute Nest service that corresponds to the application template.</p>
          * 
          * <strong>example:</strong>
          * <p>service-79538e30e44541b699d8</p>
@@ -206,6 +215,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public GetApplicationResponseBodyApplicationAlarmConfig getAlarmConfig() {
             return this.alarmConfig;
+        }
+
+        public GetApplicationResponseBodyApplication setApplicationSource(String applicationSource) {
+            this.applicationSource = applicationSource;
+            return this;
+        }
+        public String getApplicationSource() {
+            return this.applicationSource;
         }
 
         public GetApplicationResponseBodyApplication setApplicationType(String applicationType) {

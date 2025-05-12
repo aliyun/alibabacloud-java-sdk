@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     /**
+     * <p>The constraints of the parameters.</p>
+     * 
      * <strong>example:</strong>
      * <p>[
      *     {
@@ -42,6 +44,8 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     public java.util.Map<String, ?> parameterConstraints;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CBEC8072-BEC2-478E-8EAE-E723BA79CF19</p>
      */

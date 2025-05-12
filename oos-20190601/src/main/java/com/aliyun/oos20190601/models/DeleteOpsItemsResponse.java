@@ -3,7 +3,7 @@ package com.aliyun.oos20190601.models;
 
 import com.aliyun.tea.*;
 
-public class ListGitRepositoriesResponse extends TeaModel {
+public class DeleteOpsItemsResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ListGitRepositoriesResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ListGitRepositoriesResponseBody body;
+    public DeleteOpsItemsResponseBody body;
 
-    public static ListGitRepositoriesResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListGitRepositoriesResponse self = new ListGitRepositoriesResponse();
+    public static DeleteOpsItemsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteOpsItemsResponse self = new DeleteOpsItemsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListGitRepositoriesResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteOpsItemsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ListGitRepositoriesResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListGitRepositoriesResponse setStatusCode(Integer statusCode) {
+    public DeleteOpsItemsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ListGitRepositoriesResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListGitRepositoriesResponse setBody(ListGitRepositoriesResponseBody body) {
+    public DeleteOpsItemsResponse setBody(DeleteOpsItemsResponseBody body) {
         this.body = body;
         return this;
     }
-    public ListGitRepositoriesResponseBody getBody() {
+    public DeleteOpsItemsResponseBody getBody() {
         return this.body;
     }
 
