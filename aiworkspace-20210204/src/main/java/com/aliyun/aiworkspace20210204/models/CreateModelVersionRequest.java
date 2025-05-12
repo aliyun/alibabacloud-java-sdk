@@ -72,7 +72,8 @@ public class CreateModelVersionRequest extends TeaModel {
     /**
      * <p>The framework of the model. Valid values:</p>
      * <ul>
-     * <li>Pytorch -XGBoost</li>
+     * <li>Pytorch </li>
+     * <li>XGBoost</li>
      * <li>Keras</li>
      * <li>Caffe</li>
      * <li>Alink</li>

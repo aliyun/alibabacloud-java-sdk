@@ -28,6 +28,9 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     @NameInMap("FileCreateTime")
     public String fileCreateTime;
 
+    @NameInMap("FileFingerPrint")
+    public String fileFingerPrint;
+
     @NameInMap("FileName")
     public String fileName;
 
@@ -108,6 +111,14 @@ public class DatasetFileMetaConentUpdate extends TeaModel {
     }
     public String getFileCreateTime() {
         return this.fileCreateTime;
+    }
+
+    public DatasetFileMetaConentUpdate setFileFingerPrint(String fileFingerPrint) {
+        this.fileFingerPrint = fileFingerPrint;
+        return this;
+    }
+    public String getFileFingerPrint() {
+        return this.fileFingerPrint;
     }
 
     public DatasetFileMetaConentUpdate setFileName(String fileName) {

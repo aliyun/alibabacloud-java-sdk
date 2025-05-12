@@ -4,10 +4,15 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The configuration items.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<ListConfigsResponseBodyConfigs> configs;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A******C83E</p>
      */
@@ -15,6 +20,8 @@ public class ListConfigsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of items returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -52,6 +59,8 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigsLabels extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -59,6 +68,8 @@ public class ListConfigsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -90,6 +101,14 @@ public class ListConfigsResponseBody extends TeaModel {
 
     public static class ListConfigsResponseBodyConfigs extends TeaModel {
         /**
+         * <p>The key of the configuration item. Supported keys:</p>
+         * <ul>
+         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tempTableLifecycle</p>
          */
@@ -97,12 +116,17 @@ public class ListConfigsResponseBody extends TeaModel {
         public String configKey;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://***</p>
          */
         @NameInMap("ConfigValue")
         public String configValue;
 
+        /**
+         * <p>The tags of the configuration item.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<ListConfigsResponseBodyConfigsLabels> labels;
 

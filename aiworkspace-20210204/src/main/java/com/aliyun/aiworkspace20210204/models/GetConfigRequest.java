@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetConfigRequest extends TeaModel {
     /**
+     * <p>The category of the configuration item. Supported categories:</p>
+     * <ul>
+     * <li>CommonResourceConfig</li>
+     * <li>DLCAutoRecycle</li>
+     * <li>DLCPriorityConfig</li>
+     * <li>DSWPriorityConfig</li>
+     * <li>QuotaMaximumDuration</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>CommonResourceConfig</p>
      */
@@ -12,6 +21,14 @@ public class GetConfigRequest extends TeaModel {
     public String categoryName;
 
     /**
+     * <p>The key of the configuration item. Supported keys:</p>
+     * <ul>
+     * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+     * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
+     * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+     * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>tempStoragePath</p>
      */
@@ -19,6 +36,8 @@ public class GetConfigRequest extends TeaModel {
     public String configKey;
 
     /**
+     * <p>The value of the configuration item.</p>
+     * 
      * <strong>example:</strong>
      * <p>oss://***</p>
      */

@@ -2481,7 +2481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取配置</p>
+     * <p>Obtains a workspace configuration item.</p>
      * 
      * @param request GetConfigRequest
      * @param headers map
@@ -2523,7 +2523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取配置</p>
+     * <p>Obtains a workspace configuration item.</p>
      * 
      * @param request GetConfigRequest
      * @return GetConfigResponse
@@ -3314,7 +3314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取配置</p>
+     * <p>Obtains a list of workspace configurations.</p>
      * 
      * @param request ListConfigsRequest
      * @param headers map
@@ -3360,7 +3360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取配置</p>
+     * <p>Obtains a list of workspace configurations.</p>
      * 
      * @param request ListConfigsRequest
      * @return ListConfigsResponse
@@ -5400,7 +5400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新配置</p>
+     * <p>Updates or adds a workspace configuration item.</p>
      * 
      * @param request UpdateConfigRequest
      * @param headers map
@@ -5446,7 +5446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新配置</p>
+     * <p>Updates or adds a workspace configuration item.</p>
      * 
      * @param request UpdateConfigRequest
      * @return UpdateConfigResponse
@@ -5459,7 +5459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新配置</p>
+     * <p>Updates or adds workspace configurations in batches.</p>
      * 
      * @param request UpdateConfigsRequest
      * @param headers map
@@ -5493,7 +5493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新配置</p>
+     * <p>Updates or adds workspace configurations in batches.</p>
      * 
      * @param request UpdateConfigsRequest
      * @return UpdateConfigsResponse

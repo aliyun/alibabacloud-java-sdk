@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigsRequest extends TeaModel {
+    /**
+     * <p>The list of workspace configurations to update or add.</p>
+     */
     @NameInMap("Configs")
     public java.util.List<UpdateConfigsRequestConfigs> configs;
 
@@ -22,6 +25,8 @@ public class UpdateConfigsRequest extends TeaModel {
 
     public static class UpdateConfigsRequestConfigsLabels extends TeaModel {
         /**
+         * <p>The key of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>key1</p>
          */
@@ -29,6 +34,8 @@ public class UpdateConfigsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>value1</p>
          */
@@ -60,6 +67,15 @@ public class UpdateConfigsRequest extends TeaModel {
 
     public static class UpdateConfigsRequestConfigs extends TeaModel {
         /**
+         * <p>The category of the configuration item. Supported categories:</p>
+         * <ul>
+         * <li>CommonResourceConfig</li>
+         * <li>DLCAutoRecycle</li>
+         * <li>DLCPriorityConfig</li>
+         * <li>DSWPriorityConfig</li>
+         * <li>QuotaMaximumDuration</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CommonResourceConfig</p>
          */
@@ -67,6 +83,14 @@ public class UpdateConfigsRequest extends TeaModel {
         public String categoryName;
 
         /**
+         * <p>The key of the configuration item. Supported keys:</p>
+         * <ul>
+         * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
+         * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
+         * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
+         * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>tempStoragePath</p>
          */
@@ -74,12 +98,17 @@ public class UpdateConfigsRequest extends TeaModel {
         public String configKey;
 
         /**
+         * <p>The value of the configuration item.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss://test/s/</p>
          */
         @NameInMap("ConfigValue")
         public String configValue;
 
+        /**
+         * <p>The tags of the configuration item.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<UpdateConfigsRequestConfigsLabels> labels;
 
