@@ -246,7 +246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application service.</p>
+     * <p>Creates an application service to obtain the inference capabilities of large models.</p>
      * 
      * @param request CreateAppServiceRequest
      * @param headers map
@@ -310,7 +310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an application service.</p>
+     * <p>Creates an application service to obtain the inference capabilities of large models.</p>
      * 
      * @param request CreateAppServiceRequest
      * @return CreateAppServiceResponse
@@ -4395,6 +4395,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateGatewayWithOptions(GatewayId, ClusterId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the specific fields of a service group.</p>
+     * 
+     * @param request UpdateGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGroupResponse
+     */
+    public UpdateGroupResponse updateGroupWithOptions(String ClusterId, String GroupName, UpdateGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficMode)) {
+            body.put("TrafficMode", request.trafficMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGroup"),
+            new TeaPair("version", "2021-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/groups/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/" + com.aliyun.openapiutil.Client.getEncodeParam(GroupName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the specific fields of a service group.</p>
+     * 
+     * @param request UpdateGroupRequest
+     * @return UpdateGroupResponse
+     */
+    public UpdateGroupResponse updateGroup(String ClusterId, String GroupName, UpdateGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateGroupWithOptions(ClusterId, GroupName, request, headers, runtime);
     }
 
     /**

@@ -58,11 +58,15 @@ public class CreateResourceRequest extends TeaModel {
     public String ecsInstanceType;
 
     /**
-     * <p>The custom tag.</p>
+     * <p>The labels.</p>
      */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MyResource</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
@@ -193,7 +197,7 @@ public class CreateResourceRequest extends TeaModel {
 
     public static class CreateResourceRequestSelfManagedResourceOptionsNodeTolerations extends TeaModel {
         /**
-         * <p>The result.</p>
+         * <p>The effect.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>PreferNoSchedule</li>
