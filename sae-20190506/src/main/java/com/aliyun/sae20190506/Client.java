@@ -5280,6 +5280,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取应用列表，供全链路灰度拉取应用列表</p>
+     * 
+     * @param request ListApplicationsForSwimmingLaneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListApplicationsForSwimmingLaneResponse
+     */
+    public ListApplicationsForSwimmingLaneResponse listApplicationsForSwimmingLaneWithOptions(ListApplicationsForSwimmingLaneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApplicationsForSwimmingLane"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/cas/gray/listApplicationsForSwimmingLane"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApplicationsForSwimmingLaneResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取应用列表，供全链路灰度拉取应用列表</p>
+     * 
+     * @param request ListApplicationsForSwimmingLaneRequest
+     * @return ListApplicationsForSwimmingLaneResponse
+     */
+    public ListApplicationsForSwimmingLaneResponse listApplicationsForSwimmingLane(ListApplicationsForSwimmingLaneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listApplicationsForSwimmingLaneWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query a list of change orders.</p>
      * 
      * @param request ListChangeOrdersRequest
