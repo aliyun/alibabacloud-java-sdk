@@ -7,6 +7,9 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     @NameInMap("dim")
     public String dim;
 
+    @NameInMap("dimDisabled")
+    public Boolean dimDisabled;
+
     @NameInMap("displayNameCn")
     public String displayNameCn;
 
@@ -15,6 +18,9 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
 
     @NameInMap("hidden")
     public Boolean hidden;
+
+    @NameInMap("labelDisabled")
+    public Boolean labelDisabled;
 
     @NameInMap("opt")
     public String opt;
@@ -33,6 +39,14 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     }
     public String getDim() {
         return this.dim;
+    }
+
+    public AlertRuleAlertMetricFilterDef setDimDisabled(Boolean dimDisabled) {
+        this.dimDisabled = dimDisabled;
+        return this;
+    }
+    public Boolean getDimDisabled() {
+        return this.dimDisabled;
     }
 
     public AlertRuleAlertMetricFilterDef setDisplayNameCn(String displayNameCn) {
@@ -57,6 +71,14 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
     }
     public Boolean getHidden() {
         return this.hidden;
+    }
+
+    public AlertRuleAlertMetricFilterDef setLabelDisabled(Boolean labelDisabled) {
+        this.labelDisabled = labelDisabled;
+        return this;
+    }
+    public Boolean getLabelDisabled() {
+        return this.labelDisabled;
     }
 
     public AlertRuleAlertMetricFilterDef setOpt(String opt) {

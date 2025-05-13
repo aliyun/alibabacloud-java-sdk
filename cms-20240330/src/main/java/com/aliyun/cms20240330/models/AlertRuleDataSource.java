@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleDataSource extends TeaModel {
+    @NameInMap("appType")
+    public String appType;
+
     @NameInMap("dsList")
     public java.util.List<AlertRuleDataSourceDsList> dsList;
 
@@ -16,6 +19,9 @@ public class AlertRuleDataSource extends TeaModel {
     @NameInMap("namespace")
     public String namespace;
 
+    @NameInMap("regionId")
+    public String regionId;
+
     /**
      * <p>数据源类型</p>
      * <p>This parameter is required.</p>
@@ -26,6 +32,14 @@ public class AlertRuleDataSource extends TeaModel {
     public static AlertRuleDataSource build(java.util.Map<String, ?> map) throws Exception {
         AlertRuleDataSource self = new AlertRuleDataSource();
         return TeaModel.build(map, self);
+    }
+
+    public AlertRuleDataSource setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
     }
 
     public AlertRuleDataSource setDsList(java.util.List<AlertRuleDataSourceDsList> dsList) {
@@ -50,6 +64,14 @@ public class AlertRuleDataSource extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public AlertRuleDataSource setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public AlertRuleDataSource setType(String type) {

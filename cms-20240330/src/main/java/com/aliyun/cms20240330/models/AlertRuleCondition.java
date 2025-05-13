@@ -28,6 +28,9 @@ public class AlertRuleCondition extends TeaModel {
     @NameInMap("nodataAlertLevel")
     public String nodataAlertLevel;
 
+    @NameInMap("relation")
+    public String relation;
+
     /**
      * <p>规则条件类型，可选值：SLS_CONDITION</p>
      * <p>This parameter is required.</p>
@@ -78,6 +81,14 @@ public class AlertRuleCondition extends TeaModel {
     }
     public String getNodataAlertLevel() {
         return this.nodataAlertLevel;
+    }
+
+    public AlertRuleCondition setRelation(String relation) {
+        this.relation = relation;
+        return this;
+    }
+    public String getRelation() {
+        return this.relation;
     }
 
     public AlertRuleCondition setType(String type) {

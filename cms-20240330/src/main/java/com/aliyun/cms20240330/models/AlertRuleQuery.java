@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class AlertRuleQuery extends TeaModel {
+    @NameInMap("checkAfterDataComplete")
+    public Boolean checkAfterDataComplete;
+
     @NameInMap("duration")
     public Long duration;
 
@@ -35,6 +38,14 @@ public class AlertRuleQuery extends TeaModel {
     public static AlertRuleQuery build(java.util.Map<String, ?> map) throws Exception {
         AlertRuleQuery self = new AlertRuleQuery();
         return TeaModel.build(map, self);
+    }
+
+    public AlertRuleQuery setCheckAfterDataComplete(Boolean checkAfterDataComplete) {
+        this.checkAfterDataComplete = checkAfterDataComplete;
+        return this;
+    }
+    public Boolean getCheckAfterDataComplete() {
+        return this.checkAfterDataComplete;
     }
 
     public AlertRuleQuery setDuration(Long duration) {
@@ -101,7 +112,57 @@ public class AlertRuleQuery extends TeaModel {
         return this.type;
     }
 
+    public static class AlertRuleQueryQueriesApmFilters extends TeaModel {
+        @NameInMap("dim")
+        public String dim;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("value")
+        public String value;
+
+        public static AlertRuleQueryQueriesApmFilters build(java.util.Map<String, ?> map) throws Exception {
+            AlertRuleQueryQueriesApmFilters self = new AlertRuleQueryQueriesApmFilters();
+            return TeaModel.build(map, self);
+        }
+
+        public AlertRuleQueryQueriesApmFilters setDim(String dim) {
+            this.dim = dim;
+            return this;
+        }
+        public String getDim() {
+            return this.dim;
+        }
+
+        public AlertRuleQueryQueriesApmFilters setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public AlertRuleQueryQueriesApmFilters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class AlertRuleQueryQueries extends TeaModel {
+        @NameInMap("apmAlertMetricId")
+        public String apmAlertMetricId;
+
+        @NameInMap("apmFilters")
+        public java.util.List<AlertRuleQueryQueriesApmFilters> apmFilters;
+
+        @NameInMap("apmGroupBy")
+        public java.util.List<String> apmGroupBy;
+
         @NameInMap("duration")
         public Long duration;
 
@@ -113,7 +174,6 @@ public class AlertRuleQuery extends TeaModel {
 
         /**
          * <p>查询表达式</p>
-         * <p>This parameter is required.</p>
          */
         @NameInMap("expr")
         public String expr;
@@ -134,11 +194,35 @@ public class AlertRuleQuery extends TeaModel {
          * <p>整点时间查询区间。  如果指定了window则不指定start、end</p>
          */
         @NameInMap("window")
-        public String window;
+        public Long window;
 
         public static AlertRuleQueryQueries build(java.util.Map<String, ?> map) throws Exception {
             AlertRuleQueryQueries self = new AlertRuleQueryQueries();
             return TeaModel.build(map, self);
+        }
+
+        public AlertRuleQueryQueries setApmAlertMetricId(String apmAlertMetricId) {
+            this.apmAlertMetricId = apmAlertMetricId;
+            return this;
+        }
+        public String getApmAlertMetricId() {
+            return this.apmAlertMetricId;
+        }
+
+        public AlertRuleQueryQueries setApmFilters(java.util.List<AlertRuleQueryQueriesApmFilters> apmFilters) {
+            this.apmFilters = apmFilters;
+            return this;
+        }
+        public java.util.List<AlertRuleQueryQueriesApmFilters> getApmFilters() {
+            return this.apmFilters;
+        }
+
+        public AlertRuleQueryQueries setApmGroupBy(java.util.List<String> apmGroupBy) {
+            this.apmGroupBy = apmGroupBy;
+            return this;
+        }
+        public java.util.List<String> getApmGroupBy() {
+            return this.apmGroupBy;
         }
 
         public AlertRuleQueryQueries setDuration(Long duration) {
@@ -181,11 +265,11 @@ public class AlertRuleQuery extends TeaModel {
             return this.timeUnit;
         }
 
-        public AlertRuleQueryQueries setWindow(String window) {
+        public AlertRuleQueryQueries setWindow(Long window) {
             this.window = window;
             return this;
         }
-        public String getWindow() {
+        public Long getWindow() {
             return this.window;
         }
 

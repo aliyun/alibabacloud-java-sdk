@@ -28,6 +28,9 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     @NameInMap("integrationSetting")
     public String integrationSetting;
 
+    @NameInMap("token")
+    public String token;
+
     @NameInMap("transformerSetting")
     public java.util.List<TransformAction> transformerSetting;
 
@@ -102,6 +105,14 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     }
     public String getIntegrationSetting() {
         return this.integrationSetting;
+    }
+
+    public AlertEventIntegrationPolicyForView setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
     public AlertEventIntegrationPolicyForView setTransformerSetting(java.util.List<TransformAction> transformerSetting) {
