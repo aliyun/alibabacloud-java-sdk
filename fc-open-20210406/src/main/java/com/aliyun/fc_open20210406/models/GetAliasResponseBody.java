@@ -6,42 +6,59 @@ import com.aliyun.tea.*;
 public class GetAliasResponseBody extends TeaModel {
     /**
      * <p>The additional version to which the alias points and the weight of the additional version.</p>
-     * <br>
-     * <p>*   The additional version takes effect only when the function is invoked.</p>
-     * <p>*   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</p>
+     * <ul>
+     * <li>The additional version takes effect only when the function is invoked.</li>
+     * <li>The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</li>
+     * </ul>
      */
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
     /**
      * <p>The name of the alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alias_test</p>
      */
     @NameInMap("aliasName")
     public String aliasName;
 
     /**
      * <p>The time when the alias was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-27T06:37:29Z</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
     /**
      * <p>The description of the alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The time when the alias was last modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-27T06:37:29Z</p>
      */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
     /**
      * <p>The canary release mode. Valid values:</p>
-     * <br>
-     * <p>*   **Random**: random canary release. This is the default value.</p>
-     * <p>*   **Content**: rule-based canary release.</p>
+     * <ul>
+     * <li><strong>Random</strong>: random canary release. This is the default value.</li>
+     * <li><strong>Content</strong>: rule-based canary release.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Random</p>
      */
     @NameInMap("resolvePolicy")
     public String resolvePolicy;
@@ -54,6 +71,9 @@ public class GetAliasResponseBody extends TeaModel {
 
     /**
      * <p>The version to which the alias points.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("versionId")
     public String versionId;

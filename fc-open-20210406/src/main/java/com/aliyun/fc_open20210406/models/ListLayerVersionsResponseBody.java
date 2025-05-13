@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListLayerVersionsResponseBody extends TeaModel {
     /**
-     * <p>The information about layer versions.</p>
+     * <p>The list of layer versions.</p>
      */
     @NameInMap("layers")
     public java.util.List<Layer> layers;
 
     /**
      * <p>The initial version of the layer for the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21</p>
      */
     @NameInMap("nextVersion")
     public Integer nextVersion;

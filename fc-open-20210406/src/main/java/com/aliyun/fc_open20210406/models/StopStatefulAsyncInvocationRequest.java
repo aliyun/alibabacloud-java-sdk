@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StopStatefulAsyncInvocationRequest extends TeaModel {
     /**
      * <p>The version or alias of the service to which the asynchronous task belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

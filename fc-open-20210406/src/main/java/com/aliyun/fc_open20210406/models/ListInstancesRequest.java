@@ -5,21 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The IDs of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The maximum number of resources to return. Valid values: \[0,1000].</p>
-     * <br>
+     * <p>The maximum number of resources to return. Valid values: [0,1000].</p>
      * <p>The number of returned resources is less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The version or alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

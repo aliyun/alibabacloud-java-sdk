@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class CreateAliasRequest extends TeaModel {
     /**
      * <p>The canary release version to which the alias points and the weight of the canary release version.</p>
-     * <br>
-     * <p>*   The canary release version takes effect only when the function is invoked.</p>
-     * <p>*   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</p>
+     * <ul>
+     * <li>The canary release version takes effect only when the function is invoked.</li>
+     * <li>The value consists of a version number and the corresponding weight. For example, 2:0.05 indicates that Version 2 is the canary release version and 5% of traffic is directed to the canary release version when the function is invoked. 95% of traffic is directed to the main version.</li>
+     * </ul>
      */
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
     /**
-     * <p>The name of the alias. The name can contain letters, digits, underscores (\_), and hyphens (-) only. The name cannot start with a digit or a hyphen (-). The name must be 1 to 128 characters in length. The name cannot be set to **LATEST**</p>
+     * <p>The name of the alias. The value can contain only letters, digits, underscores (_) and hyphens (-). It cannot start with a digit or hyphen (-). It must be 1 to 128 characters in length and cannot be <strong>LATEST</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alias_test</p>
      */
     @NameInMap("aliasName")
     public String aliasName;
 
     /**
      * <p>The description of the alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The canary release mode. Default values: off. Valid values:</p>
-     * <br>
-     * <p>*   **Random**: random canary release.</p>
-     * <p>*   **Content**: rule-based canary release. By default, this parameter is empty.</p>
+     * <p>The canary release mode. Valid values:</p>
+     * <ul>
+     * <li><strong>Random</strong>: random canary release.</li>
+     * <li><strong>Content</strong>: rule-based canary release. Default value: null.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Random</p>
      */
     @NameInMap("resolvePolicy")
     public String resolvePolicy;
@@ -42,6 +54,10 @@ public class CreateAliasRequest extends TeaModel {
 
     /**
      * <p>The ID of the version to which the alias points.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("versionId")
     public String versionId;

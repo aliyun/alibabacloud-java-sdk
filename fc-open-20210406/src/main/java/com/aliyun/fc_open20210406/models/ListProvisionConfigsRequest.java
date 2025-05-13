@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListProvisionConfigsRequest extends TeaModel {
     /**
-     * <p>The maximum number of resources to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.</p>
+     * <p>The maximum number of results to return. Default value: 20. Maximum value: 100. The number of returned resources is less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public Long limit;
 
     /**
-     * <p>The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.</p>
+     * <p>The token required to obtain more results. You do not need to specify this parameter in the first call. If a NextToken value is returned by a previous call, more results are available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demoNextToken</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>The qualifier of the service to which resources belong. The qualifier must be aliasName and used together with the serviceName parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
 
     /**
      * <p>The name of the service to which resources belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>serviceName</p>
      */
     @NameInMap("serviceName")
     public String serviceName;

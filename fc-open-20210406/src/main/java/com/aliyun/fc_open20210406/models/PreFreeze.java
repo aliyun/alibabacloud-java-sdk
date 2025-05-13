@@ -4,9 +4,17 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PreFreeze extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>index.preFreeze</p>
+     */
     @NameInMap("handler")
     public String handler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 

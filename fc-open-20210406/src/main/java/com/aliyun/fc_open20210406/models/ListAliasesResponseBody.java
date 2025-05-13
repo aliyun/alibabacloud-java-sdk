@@ -12,6 +12,9 @@ public class ListAliasesResponseBody extends TeaModel {
 
     /**
      * <p>The token used to obtain more results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8bj81uI8n****</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -40,54 +43,74 @@ public class ListAliasesResponseBody extends TeaModel {
     public static class ListAliasesResponseBodyAliases extends TeaModel {
         /**
          * <p>The additional version to which the alias points and the weight of the additional version.</p>
-         * <br>
-         * <p>*   The additional version takes effect only when the function is invoked.</p>
-         * <p>*   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</p>
+         * <ul>
+         * <li>The additional version takes effect only when the function is invoked.</li>
+         * <li>The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</li>
+         * </ul>
          */
         @NameInMap("additionalVersionWeight")
         public java.util.Map<String, Float> additionalVersionWeight;
 
         /**
          * <p>The name of the alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("aliasName")
         public String aliasName;
 
         /**
          * <p>The time when the ConfigMaps were created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-08-15T16:06:05.000+0000</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
          * <p>The description of the alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample alias.</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The time at which the system parameter was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-08-15T16:06:05.000+0000</p>
          */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
         /**
-         * <p>The canary release mode. Valid values:</p>
-         * <br>
-         * <p>*   **Random**: random canary release. This is the default value.</p>
-         * <p>*   **Content**: rule-based canary release.</p>
+         * <p>The canary release mode. Default value: Random. Valid values:</p>
+         * <ul>
+         * <li><strong>Random</strong>: random canary release.</li>
+         * <li><strong>Content</strong>: rule-based canary release.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Random</p>
          */
         @NameInMap("resolvePolicy")
         public String resolvePolicy;
 
         /**
-         * <p>The canary release rule. Traffic that meets the canary release rule is routed to the canary release instance.</p>
+         * <p>The canary release rule. Traffic that meets the canary release rule is routed to the canary release instances.</p>
          */
         @NameInMap("routePolicy")
         public RoutePolicy routePolicy;
 
         /**
          * <p>The ID of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("versionId")
         public String versionId;

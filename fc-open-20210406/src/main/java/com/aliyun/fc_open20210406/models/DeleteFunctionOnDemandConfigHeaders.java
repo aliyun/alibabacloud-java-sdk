@@ -8,25 +8,37 @@ public class DeleteFunctionOnDemandConfigHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>If the ETag specified in the request matches the ETag value of the OndemandConfig, FC returns 200 OK. If the ETag specified in the request does not match the ETag value of the object, FC returns 412 Precondition Failed.</p>
+     * <p>If the ETag specified in a request matches the ETag value of the object, OSS transmits the object and returns 200 OK. If the ETag specified in a request does not match the ETag value of the object, OSS returns 412 Precondition Failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e19d5cd5af0378da05f63f891c7467af</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The start time when the function is invoked. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>The time when the function is invoked. The value is in the <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The trace ID of the request for Function Compute API, which is also the unique ID of the request.</p>
+     * <p>The trace ID, which is the unique identifier of a trace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r9s89isisi****</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

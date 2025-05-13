@@ -4,12 +4,22 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class SourceMQTTParameters extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

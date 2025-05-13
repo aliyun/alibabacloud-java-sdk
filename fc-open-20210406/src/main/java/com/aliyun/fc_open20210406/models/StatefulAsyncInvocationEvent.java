@@ -4,15 +4,31 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class StatefulAsyncInvocationEvent extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Error&quot;:&quot;UnhandledInvocationError&quot;}</p>
+     */
     @NameInMap("eventDetail")
     public String eventDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("eventId")
     public Long eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enqueued</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1647420449721</p>
+     */
     @NameInMap("timestamp")
     public Long timestamp;
 

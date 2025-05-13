@@ -34,6 +34,10 @@ public class Trigger extends TeaModel {
     @NameInMap("triggerId")
     public String triggerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("triggerName")
     public String triggerName;
 

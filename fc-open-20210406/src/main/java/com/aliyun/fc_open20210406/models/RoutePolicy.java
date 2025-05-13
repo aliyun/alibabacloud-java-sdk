@@ -4,9 +4,18 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class RoutePolicy extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AND</p>
+     */
     @NameInMap("condition")
     public String condition;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("policyItems")
     public java.util.List<PolicyItem> policyItems;
 

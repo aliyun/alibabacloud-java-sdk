@@ -4,6 +4,10 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class AccelerationInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Preparing</p>
+     */
     @NameInMap("status")
     public String status;
 

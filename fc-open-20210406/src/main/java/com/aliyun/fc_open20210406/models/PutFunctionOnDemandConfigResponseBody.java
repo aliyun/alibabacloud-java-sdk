@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class PutFunctionOnDemandConfigResponseBody extends TeaModel {
     /**
      * <p>The maximum number of instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maximumInstanceCount")
     public Long maximumInstanceCount;
 
     /**
      * <p>The description of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345#servierName#qualifier#functionName</p>
      */
     @NameInMap("resource")
     public String resource;

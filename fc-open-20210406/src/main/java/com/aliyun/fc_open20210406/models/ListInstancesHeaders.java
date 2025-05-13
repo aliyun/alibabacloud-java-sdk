@@ -9,9 +9,18 @@ public class ListInstancesHeaders extends TeaModel {
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
+
+    @NameInMap("X-Fc-Date")
+    public String xFcDate;
+
+    @NameInMap("X-Fc-Trace-Id")
+    public String xFcTraceId;
 
     public static ListInstancesHeaders build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesHeaders self = new ListInstancesHeaders();
@@ -32,6 +41,22 @@ public class ListInstancesHeaders extends TeaModel {
     }
     public String getXFcAccountId() {
         return this.xFcAccountId;
+    }
+
+    public ListInstancesHeaders setXFcDate(String xFcDate) {
+        this.xFcDate = xFcDate;
+        return this;
+    }
+    public String getXFcDate() {
+        return this.xFcDate;
+    }
+
+    public ListInstancesHeaders setXFcTraceId(String xFcTraceId) {
+        this.xFcTraceId = xFcTraceId;
+        return this;
+    }
+    public String getXFcTraceId() {
+        return this.xFcTraceId;
     }
 
 }

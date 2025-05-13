@@ -9,59 +9,82 @@ public class InvokeFunctionHeaders extends TeaModel {
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when the function is invoked. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The time when the function is invoked. The format is <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>The invocation method. Valid values:</p>
-     * <br>
-     * <p>*   **Sync**: synchronous invocations</p>
-     * <p>*   **Async**: asynchronous invocations</p>
-     * <br>
+     * <ul>
+     * <li><strong>Sync</strong>: synchronous invocations</li>
+     * <li><strong>Async</strong>: asynchronous invocations</li>
+     * </ul>
      * <p>Default value: Sync</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sync</p>
      */
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
     /**
      * <p>The method used to return logs. Valid values:</p>
-     * <br>
-     * <p>*   **Tail**: returns the last 4 KB of logs that are generated for the current request.</p>
-     * <p>*   **None**: No logs are returned for the current request. Default value: None.</p>
+     * <ul>
+     * <li><strong>Tail</strong>: returns the last 4 KB of logs that are generated for the current request.</li>
+     * <li><strong>None</strong>: No logs are returned for the current request. Default value: None.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
     /**
      * <p>Specifies whether to enable the asynchronous task mode for requests. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter takes effect only for asynchronous invocations. It does not take effect for synchronous invocations.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only for asynchronous invocations. It does not take effect for synchronous invocations.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("X-Fc-Stateful-Async-Invocation-Enable")
     public String xFcStatefulAsyncInvocationEnable;
 
     /**
      * <p>The ID of the asynchronous task. You must enable the asynchronous task feature in advance.</p>
-     * <br>
-     * <p>> When you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, you can use the video name as the invocation ID for a video-processing function. This way, you can use the ID to check whether the video is processed or terminate the processing of the video. The ID must start with a letter or an underscore (\_) and can contain letters, digits, underscores (\_), and hyphens (-). The ID can be up to 128 characters in length. If you do not specify the ID of the asynchronous invocation, Function Compute automatically generates an ID.</p>
+     * <blockquote>
+     * <p>When you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, you can use the video name as the invocation ID for a video-processing function. This way, you can use the ID to check whether the video is processed or terminate the processing of the video. The ID must start with a letter or an underscore (<em>) and can contain letters, digits, underscores (</em>), and hyphens (-). The ID can be up to 128 characters in length. If you do not specify the ID of the asynchronous invocation, Function Compute automatically generates an ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test-invoke-id</p>
      */
     @NameInMap("X-Fc-Stateful-Async-Invocation-Id")
     public String xFcStatefulAsyncInvocationId;
 
     /**
-     * <p>The trace ID of the request for Function Compute API. The value is the same as that of the **requestId** parameter in the response.</p>
+     * <p>The trace ID of the request for Function Compute API. The value is the same as that of the <strong>requestId</strong> parameter in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-trace-id</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

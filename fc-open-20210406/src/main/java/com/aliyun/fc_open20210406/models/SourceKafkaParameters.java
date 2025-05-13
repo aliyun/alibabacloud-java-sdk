@@ -4,9 +4,15 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class SourceKafkaParameters extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ConsumerGroup")
     public String consumerGroup;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,12 +22,19 @@ public class SourceKafkaParameters extends TeaModel {
     @NameInMap("OffsetReset")
     public String offsetReset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

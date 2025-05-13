@@ -4,9 +4,19 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class DNSOption extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ndots</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("value")
     public String value;
 

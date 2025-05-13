@@ -7,18 +7,38 @@ public class UpdateFunctionHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e19d5cd5af0378da05f63f891c7467af</p>
+     */
     @NameInMap("If-Match")
     public String ifMatch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
+     */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1506052139770049xxxx</p>
+     */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
+     */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-trace-id</p>
+     */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;
 

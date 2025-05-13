@@ -9,18 +9,27 @@ public class GetAccountSettingsHeaders extends TeaModel {
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>The time when the Function Compute API was called. The value is in the <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The custom request ID.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rid281s******</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

@@ -8,25 +8,37 @@ public class DeleteFunctionHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ETag value of the resource. This value is used to ensure that the modified resource is consistent with the resource to be modified. The ETag value is returned in the responses of the CREATE, GET, and UPDATE operations.</p>
+     * <p>The header that is used to ensure that the changed resources are consistent with resources to be changed. The value comes from the response of the Create, Get, and Update API operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e19d5cd5af0378da05f63f891c7467af</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when Function Compute API is called. Specify the time in the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>The time when the function is invoked. The value is in the <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>The trace ID of the request for Function Compute API. The value is the same as that of the requestId parameter in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-trace-id</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

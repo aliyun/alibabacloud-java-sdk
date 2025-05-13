@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationFunctionsResponseBody extends TeaModel {
     /**
-     * <p>The trace ID of the request for Function Compute API.</p>
+     * <p>The details of returned data.</p>
      */
     @NameInMap("data")
     public java.util.List<AsyncConfigMeta> data;
 
     /**
-     * <p>2022-01-28 18:04:38</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

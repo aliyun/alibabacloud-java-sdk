@@ -5,25 +5,33 @@ import com.aliyun.tea.*;
 
 public class UpdateAliasRequest extends TeaModel {
     /**
-     * <p>The additional version to which the alias points and the weight of the additional version.</p>
-     * <br>
-     * <p>*   The additional version takes effect only when the function is invoked.</p>
-     * <p>*   The value consists of a version number and a specific weight. For example, 2:0.05 indicates that when a function is invoked, Version 2 is the canary release version, 5% of the traffic is distributed to the canary release version, and 95% of the traffic is distributed to the major version.</p>
+     * <p>The canary release version to which the alias points and the weight of the canary release version.</p>
+     * <ul>
+     * <li>The canary release version takes effect only when the function is invoked.</li>
+     * <li>The value consists of a version number and the corresponding weight. For example, 2:0.05 indicates that Version 2 is the canary release version and 5% of the traffic is routed to the canary release version when the function is invoked. The remaining 95% traffic is routed to the main version.</li>
+     * </ul>
      */
     @NameInMap("additionalVersionWeight")
     public java.util.Map<String, Float> additionalVersionWeight;
 
     /**
      * <p>The description of the alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The canary release mode. Valid values:</p>
-     * <br>
-     * <p>*   **Random**: random canary release. This is the default value.</p>
-     * <p>*   **Content**: rule-based canary release.</p>
+     * <p>The canary release mode. Default values: off. Valid values:</p>
+     * <ul>
+     * <li><strong>Random</strong>: random canary release.</li>
+     * <li><strong>Content</strong>: rule-based canary release.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Random</p>
      */
     @NameInMap("resolvePolicy")
     public String resolvePolicy;
@@ -36,6 +44,9 @@ public class UpdateAliasRequest extends TeaModel {
 
     /**
      * <p>The ID of the version to which the alias points.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("versionId")
     public String versionId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PublishServiceVersionRequest extends TeaModel {
     /**
      * <p>The description of the service version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_description</p>
      */
     @NameInMap("description")
     public String description;

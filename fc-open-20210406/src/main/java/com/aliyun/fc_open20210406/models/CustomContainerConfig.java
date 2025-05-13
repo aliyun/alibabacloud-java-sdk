@@ -4,21 +4,45 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class CustomContainerConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("accelerationType")
     public String accelerationType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;-arg1&quot;, &quot;value1&quot;]</p>
+     */
     @NameInMap("args")
     public String args;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;/code/myserver&quot;]</p>
+     */
     @NameInMap("command")
     public String command;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry-vpc.cn-hangzhou.aliyuncs.com/fc-demo/helloworld:v1beta1</p>
+     */
     @NameInMap("image")
     public String image;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cri-xxxxxxxxxx</p>
+     */
     @NameInMap("instanceID")
     public String instanceID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("webServerMode")
     public Boolean webServerMode;
 

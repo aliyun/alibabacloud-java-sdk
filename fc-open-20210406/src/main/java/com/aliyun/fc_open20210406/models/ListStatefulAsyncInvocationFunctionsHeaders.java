@@ -8,19 +8,28 @@ public class ListStatefulAsyncInvocationFunctionsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12348*****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The token used to obtain more results. If this parameter is left empty, all the results are returned.</p>
+     * <p>The time when the function is invoked. The value is in the <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The details of returned data.</p>
+     * <p>The trace ID of the request for Function Compute API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>duytnd-Xsdfasfd***</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

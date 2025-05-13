@@ -6,60 +6,75 @@ import com.aliyun.tea.*;
 public class CreateServiceRequest extends TeaModel {
     /**
      * <p>The description of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service_description</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>Specifies whether to allow functions to access the Internet. Valid values:</p>
-     * <br>
-     * <p>*   **true**: allows functions to access the Internet. This is the default value.</p>
-     * <p>*   **false**: does not allow functions to access the Internet.</p>
+     * <p>Specifies whether to allow functions to access the Internet. Default value: true. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("internetAccess")
     public Boolean internetAccess;
 
     /**
-     * <p>The log configuration. Function Compute writes function execution logs to the specified Logstore.</p>
+     * <p>The log configurations. Function Compute writes function execution logs to the specified Logstore.</p>
      */
     @NameInMap("logConfig")
     public LogConfig logConfig;
 
     /**
-     * <p>The configuration of the Apsara File Storage NAS (NAS) file system. The configurations allow functions in the specified service to access the NAS file system.</p>
+     * <p>The File Storage NAS (NAS) configurations. The configurations allow functions to access the specified NAS file system.</p>
      */
     @NameInMap("nasConfig")
     public NASConfig nasConfig;
 
     /**
-     * <p>The OSS mount configurations.</p>
+     * <p>The Object Storage Service (OSS) mounting configurations.</p>
      */
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
     /**
-     * <p>The RAM role that is used to grant required permissions to Function Compute. The RAM role is used in the following scenarios:</p>
-     * <br>
-     * <p>*   Sends function execution logs to your Logstore.</p>
-     * <p>*   Generates a token for a function to access other cloud resources during function execution.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used to grant required permissions to Function Compute. The RAM role is used in the following scenarios:</p>
+     * <ul>
+     * <li>Send function execution logs to your Logstore.</li>
+     * <li>Generate a token for a function to access other cloud resources during function executions.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::188077086902****:role/fc-test</p>
      */
     @NameInMap("role")
     public String role;
 
     /**
-     * <p>The name of the service. The name can contain only letters, digits, hyphens (-), and underscores (\_). It cannot start with a digit or hyphen (-). It must be 1 to 128 characters in length.</p>
+     * <p>The name of the service. The name can contain only letters, digits, hyphens (-), and underscores (_). It cannot start with a digit or hyphen (-). The name must be 1 to 128 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service_Name</p>
      */
     @NameInMap("serviceName")
     public String serviceName;
 
     /**
-     * <p>The configuration of Tracing Analysis. After Function Compute is integrated with Tracing Analysis, you can record the duration of a request in Function Compute, view the cold start time of a function, and record the execution duration of a function. For more information, see [Tracing Analysis](~~189804~~).</p>
+     * <p>The configuration of Managed Service for OpenTelemetry. After Function Compute is integrated with Managed Service for OpenTelemetry, you can record the duration of a request in Function Compute, view the cold start duration of a function, and record the execution duration of a function. For more information, see <a href="https://help.aliyun.com/document_detail/189804.html">Tracing analysis</a>.</p>
      */
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
 
     /**
-     * <p>The VPC configurations. The configurations allow functions in the specified service to access the specified VPC.</p>
+     * <p>The Virtual Private Cloud (VPC) configurations. The configurations allow the function to access the specified VPCs.</p>
      */
     @NameInMap("vpcConfig")
     public VPCConfig vpcConfig;

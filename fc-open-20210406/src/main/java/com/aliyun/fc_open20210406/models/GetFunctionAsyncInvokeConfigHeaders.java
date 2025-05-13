@@ -9,18 +9,27 @@ public class GetFunctionAsyncInvokeConfigHeaders extends TeaModel {
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when the Function Compute is called. The format is **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The time when the Function Compute is called. The format is <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sat, 14 Jul 2017 07:02:38 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>The trace ID of the invocation request of Function Compute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asdf****</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

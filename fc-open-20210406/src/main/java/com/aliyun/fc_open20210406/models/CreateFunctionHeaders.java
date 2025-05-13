@@ -9,24 +9,36 @@ public class CreateFunctionHeaders extends TeaModel {
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
      * <p>The CRC-64 value of the function code package.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1506052139770049xxxx</p>
      */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
     /**
-     * <p>The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The time on which the function is invoked. The format of the value is: <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>The trace ID of the request. The value is the same as that of the requestId parameter in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-trace-id</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

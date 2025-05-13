@@ -13,15 +13,25 @@ public class SourceRocketMQParameters extends TeaModel {
     @NameInMap("FilterType")
     public String filterType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("GroupID")
     public String groupID;
 
     @NameInMap("InstanceEndpoint")
     public String instanceEndpoint;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PrivateNetwork</p>
+     */
     @NameInMap("InstanceNetwork")
     public String instanceNetwork;
 
@@ -31,6 +41,10 @@ public class SourceRocketMQParameters extends TeaModel {
     @NameInMap("InstanceSecurityGroupId")
     public String instanceSecurityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cloud_5</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
@@ -43,6 +57,10 @@ public class SourceRocketMQParameters extends TeaModel {
     @NameInMap("InstanceVpcId")
     public String instanceVpcId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CONSUME_FROM_LAST_OFFSET</p>
+     */
     @NameInMap("Offset")
     public String offset;
 
@@ -55,6 +73,9 @@ public class SourceRocketMQParameters extends TeaModel {
     @NameInMap("Timestamp")
     public Long timestamp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Topic")
     public String topic;
 

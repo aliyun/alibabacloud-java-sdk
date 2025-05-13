@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetServiceRequest extends TeaModel {
     /**
      * <p>The version or alias of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

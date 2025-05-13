@@ -4,12 +4,24 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class AsyncConfigMeta extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>functionName</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LATEST</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>serviceName</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 

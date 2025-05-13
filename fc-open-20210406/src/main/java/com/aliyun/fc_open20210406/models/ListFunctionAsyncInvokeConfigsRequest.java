@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListFunctionAsyncInvokeConfigsRequest extends TeaModel {
     /**
      * <p>The maximum number of resources to return. Default value: 20. The value cannot exceed 100. The number of returned configurations is less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The token required to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8bj81uI8n****</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

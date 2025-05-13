@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventSourcesResponseBody extends TeaModel {
     /**
-     * <p>The information about event sources.</p>
+     * <p>The event sources.</p>
      */
     @NameInMap("eventSources")
     public java.util.List<ListEventSourcesResponseBodyEventSources> eventSources;
@@ -26,12 +26,18 @@ public class ListEventSourcesResponseBody extends TeaModel {
     public static class ListEventSourcesResponseBodyEventSources extends TeaModel {
         /**
          * <p>The time when the event source was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-08-15T16:06:05.000+0000</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
-         * <p>The ARN of the event source.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-shanghai:123456:eventbus/mns-test/rule/fc-test1/target/abc</p>
          */
         @NameInMap("sourceArn")
         public String sourceArn;

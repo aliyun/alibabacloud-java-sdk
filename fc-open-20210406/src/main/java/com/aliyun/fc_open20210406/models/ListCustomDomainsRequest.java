@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListCustomDomainsRequest extends TeaModel {
     /**
-     * <p>The maximum number of resources to return. Valid values: \[0,100]. Default value: 20. The number of returned results is less than or equal to the specified number.</p>
+     * <p>The maximum number of resources to return. Valid values: [0,100]. Default value: 20. The number of returned results is less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The pagination token to use to request the next page of results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fc-thinkphp-demo.functioncompute.com</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>The prefix that the returned domain names must contain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prefix_text</p>
      */
     @NameInMap("prefix")
     public String prefix;
 
     /**
      * <p>The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>next_service</p>
      */
     @NameInMap("startKey")
     public String startKey;

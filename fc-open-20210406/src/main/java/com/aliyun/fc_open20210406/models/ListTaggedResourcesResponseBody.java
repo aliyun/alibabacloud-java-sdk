@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTaggedResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token used to obtain more results. You do not need to provide this parameter in the first call. The tokens for subsequent queries are obtained from the returned results.</p>
+     * <p>The token required to obtain more results. If the number of layers exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a-service</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

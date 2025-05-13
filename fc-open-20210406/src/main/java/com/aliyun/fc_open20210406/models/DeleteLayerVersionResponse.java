@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteLayerVersionResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     public static DeleteLayerVersionResponse build(java.util.Map<String, ?> map) throws Exception {

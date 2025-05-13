@@ -4,6 +4,10 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class LayerCode extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>仅在查询具体层版本时返回</p>
+     */
     @NameInMap("location")
     public String location;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListReservedCapacitiesResponseBody extends TeaModel {
     /**
      * <p>The token used to obtain more results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8bj81uI8n****</p>
      */
     @NameInMap("nextToken")
     public String nextToken;

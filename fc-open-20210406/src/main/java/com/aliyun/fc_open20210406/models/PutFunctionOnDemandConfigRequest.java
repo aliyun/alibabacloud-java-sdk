@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class PutFunctionOnDemandConfigRequest extends TeaModel {
     /**
-     * <p>The maximum number of on-demand instances. For more information, see [Configure provisioned instances and auto scaling rules](~~185038~~).</p>
+     * <p>The maximum number of on-demand instances. For more information, see <a href="https://help.aliyun.com/document_detail/185038.html">Configure provisioned instances and auto scaling rules</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("maximumInstanceCount")
     public Long maximumInstanceCount;
 
     /**
      * <p>The service alias or latest version. Other versions are not supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

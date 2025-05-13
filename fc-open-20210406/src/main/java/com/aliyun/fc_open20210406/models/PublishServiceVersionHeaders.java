@@ -8,25 +8,37 @@ public class PublishServiceVersionHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The ETag value of the service. This value is used to ensure that the modified service is consistent with the service to be modified. The ETag value is returned in the responses of the [CreateService](~~175256~~), [UpdateService](~~188167~~), and [GetService](~~189225~~) operations.</p>
+     * <p>The ETag value of the service. This value is used to ensure that the modified service is consistent with the service to be modified. The ETag value is returned in the responses of the <a href="https://help.aliyun.com/document_detail/175256.html">CreateService</a>, <a href="https://help.aliyun.com/document_detail/188167.html">UpdateService</a>, and <a href="https://help.aliyun.com/document_detail/189225.html">GetService</a> operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e19d5cd5af0378da05f63f891c7467af</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
      * <p>The start time when the function is invoked. Specify the time in the yyyy-mm-ddhh:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>2020-12-1210:00:00</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rid281s******</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

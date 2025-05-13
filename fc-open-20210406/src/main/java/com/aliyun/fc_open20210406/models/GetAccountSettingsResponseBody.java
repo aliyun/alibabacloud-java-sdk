@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetAccountSettingsResponseBody extends TeaModel {
     /**
-     * <p>The list of zones.</p>
+     * <p>The zone IDs.</p>
      */
     @NameInMap("availableAZs")
     public java.util.List<String> availableAZs;
 
     /**
-     * <p>The default RAM role.</p>
+     * <p>The default service role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1234:role/aliyunfcdefaultrole</p>
      */
     @NameInMap("defaultRole")
     public String defaultRole;

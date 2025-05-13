@@ -9,26 +9,37 @@ public class UpdateAliasHeaders extends TeaModel {
 
     /**
      * <p>If the ETag specified in the request matches the ETag value of the object, the object and 200 OK are returned. Otherwise, 412 Precondition Failed is returned.</p>
-     * <br>
      * <p>The ETag value of an object is used to check data integrity of the object. This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e19d5cd5af0378da05f63f891c7467af</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time on which the function is invoked. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The time on which the function is invoked. The format of the value is: <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>The trace ID of the invocation request of Function Compute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rid281s******</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

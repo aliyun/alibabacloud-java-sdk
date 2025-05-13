@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListLayerVersionsRequest extends TeaModel {
     /**
      * <p>The maximum number of resources to return. Default value: 20. The value cannot exceed 100. The number of returned configurations is less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The initial version of the layer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("startVersion")
     public Integer startVersion;

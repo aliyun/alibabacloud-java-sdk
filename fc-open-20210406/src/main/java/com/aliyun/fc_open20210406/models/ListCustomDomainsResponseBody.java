@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListCustomDomainsResponseBody extends TeaModel {
     /**
-     * <p>The information about custom domain names.</p>
+     * <p>The list of domain names.</p>
      */
     @NameInMap("customDomains")
     public java.util.List<ListCustomDomainsResponseBodyCustomDomains> customDomains;
 
     /**
      * <p>The pagination token to use to request the next page of results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -40,64 +43,83 @@ public class ListCustomDomainsResponseBody extends TeaModel {
     public static class ListCustomDomainsResponseBodyCustomDomains extends TeaModel {
         /**
          * <p>The ID of your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1986114****4305</p>
          */
         @NameInMap("accountId")
         public String accountId;
 
         /**
          * <p>The version of the API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-08-15</p>
          */
         @NameInMap("apiVersion")
         public String apiVersion;
 
         /**
-         * <p>The configurations of the HTTPS certificate.</p>
+         * <p>The HTTPS certificate configurations.</p>
          */
         @NameInMap("certConfig")
         public CertConfig certConfig;
 
         /**
          * <p>The time when the custom domain name was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-27T08:02:19Z</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("domainName")
         public String domainName;
 
         /**
-         * <p>The time when the domain name was last modified.</p>
+         * <p>The last time when the domain name was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-27T08:02:19Z</p>
          */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
         /**
-         * <p>The protocol type that is supported by the custom domain name.</p>
-         * <br>
-         * <p>*   **HTTP**: Only HTTP is supported.</p>
-         * <p>*   **HTTPS**: Only HTTPS is supported.</p>
-         * <p>*   **HTTP,HTTPS**: HTTP and HTTPS are supported.</p>
+         * <p>The protocol type that is supported by the custom domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>HTTP</strong>: Only HTTP is supported.</li>
+         * <li><strong>HTTPS</strong>: Only HTTPS is supported.</li>
+         * <li><strong>HTTP,HTTPS</strong>: Both HTTP and HTTPS are supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("protocol")
         public String protocol;
 
         /**
-         * <p>The route table that maps the paths to functions when the functions are invoked by using the custom domain name.</p>
+         * <p>The route table configurations. The route table maps paths to functions when the functions are invoked by using custom domain names.</p>
          */
         @NameInMap("routeConfig")
         public RouteConfig routeConfig;
 
         /**
-         * <p>The Transport Layer Security (TLS) configuration.</p>
+         * <p>The Transport Layer Security (TLS) configurations.</p>
          */
         @NameInMap("tlsConfig")
         public TLSConfig tlsConfig;
 
         /**
-         * <p>The Web Application Firewall (WAF) configuration.</p>
+         * <p>The Web Application Firewall (WAF) configurations.</p>
          */
         @NameInMap("wafConfig")
         public WAFConfig wafConfig;

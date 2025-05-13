@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListServicesRequest extends TeaModel {
     /**
      * <p>The maximum number of resources to return. Default value: 20. The value cannot exceed 100. The number of returned configurations is less than or equal to the specified number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
      * <p>The starting position of the query. If this parameter is left empty, the query starts from the beginning. You do not need to specify this parameter in the first query. If the number of asynchronous tasks exceeds the limit, the nextToken parameter is returned, the value of which can be used in subsequent calls to obtain more results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0****be03f84eb48b699f0a4883</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
      * <p>The prefix that the names of returned resources must contain. If the name prefix is a, the names of returned resources must start with a.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prefix_text</p>
      */
     @NameInMap("prefix")
     public String prefix;
 
     /**
      * <p>The returned resources are sorted in alphabetical order, and the resources that include and follow the resource specified by the startKey parameter are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nextService</p>
      */
     @NameInMap("startKey")
     public String startKey;

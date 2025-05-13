@@ -4,98 +4,193 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class UpdateFunctionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9000</p>
+     */
     @NameInMap("caPort")
     public Integer caPort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5434025278388143772</p>
+     */
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("codeSize")
     public Long codeSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.5</p>
+     */
     @NameInMap("cpu")
     public Float cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2016-08-15T15:00:00.000+0000</p>
+     */
     @NameInMap("createdTime")
     public String createdTime;
 
+    /**
+     * <p>The configurations of the Custom Container runtime. After you configure the Custom Container runtime, you can use a custom container image to execute functions.</p>
+     */
     @NameInMap("customContainerConfig")
     public CustomContainerConfig customContainerConfig;
 
+    /**
+     * <p>The custom DNS settings of the function.</p>
+     */
     @NameInMap("customDNS")
     public CustomDNS customDNS;
 
+    /**
+     * <p>The custom health check configurations of the function. This parameter is applicable only to custom runtimes and Custom Container runtimes.</p>
+     */
     @NameInMap("customHealthCheckConfig")
     public CustomHealthCheckConfig customHealthCheckConfig;
 
+    /**
+     * <p>The configurations of the custom runtime function.</p>
+     */
     @NameInMap("customRuntimeConfig")
     public CustomRuntimeConfig customRuntimeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>This is a demo hello world function</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("diskSize")
     public Integer diskSize;
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2d28e0e9-9ba5-4eed-8b1a-d3d9cd24****</p>
+     */
     @NameInMap("functionId")
     public String functionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo-function</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2048</p>
+     */
     @NameInMap("gpuMemorySize")
     public Integer gpuMemorySize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>index.handler</p>
+     */
     @NameInMap("handler")
     public String handler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("initializationTimeout")
     public Integer initializationTimeout;
 
+    /**
+     * <strong>example:</strong>
+     * <p>index.handler</p>
+     */
     @NameInMap("initializer")
     public String initializer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("instanceConcurrency")
     public Integer instanceConcurrency;
 
+    /**
+     * <p>The lifecycle configurations of the instance.</p>
+     */
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("instanceSoftConcurrency")
     public Integer instanceSoftConcurrency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>e1</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2016-08-15T17:00:00.000+0000</p>
+     */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
     /**
-     * <p>An array that consists of the information of layers.</p>
-     * <br>
-     * <p>> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name as a layer with a larger subscript.</p>
+     * <p>The layers.</p>
+     * <blockquote>
+     * <p> Multiple layers are merged based on the order of array subscripts. The content of a layer with a smaller subscript overwrites the file that has the same name of a layer with a larger subscript.</p>
+     * </blockquote>
      */
     @NameInMap("layers")
     public java.util.List<String> layers;
 
     /**
-     * <p>ARN list of layers</p>
+     * <p>A list of layer ARNs.</p>
      */
     @NameInMap("layersArnV2")
     public java.util.List<String> layersArnV2;
 
+    /**
+     * <strong>example:</strong>
+     * <p>512</p>
+     */
     @NameInMap("memorySize")
     public Integer memorySize;
 
     /**
-     * <p>The runtime environment of the function. Valid values: **nodejs16**, **nodejs14**, **nodejs12**, **nodejs10**, **nodejs8**, **nodejs6**, **nodejs4.4**, **python3.10**, **python3.9**, **python3**, **python2.7**, **java11**, **java8**, **go1**, **php7.2**, **dotnetcore3.1**, **dotnetcore2.1**, **custom.debian10**, **custom**, and **custom-container**. For more information, see [Supported function runtime environments](~~73338~~).</p>
+     * <p>The runtime of the function. Valid values: <strong>nodejs20</strong>, <strong>nodejs18</strong>, <strong>nodejs16</strong>, <strong>nodejs14</strong>, <strong>nodejs12</strong>, <strong>nodejs10</strong>, <strong>nodejs8</strong>, <strong>nodejs6</strong>, <strong>nodejs4.4</strong>, <strong>python3.10</strong>, <strong>python3.9</strong>, <strong>python3</strong>, <strong>python2.7</strong>, <strong>java11</strong>, <strong>java8</strong>, <strong>go1</strong>, <strong>php7.2</strong>, <strong>dotnetcore3.1</strong>, <strong>dotnetcore2.1</strong>, <strong>custom.debian10</strong>, <strong>custom</strong>, and <strong>custom-container</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/73338.html">Runtimes that are supported by Function Compute</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python3.9</p>
      */
     @NameInMap("runtime")
     public String runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("timeout")
     public Integer timeout;
 

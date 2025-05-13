@@ -7,6 +7,9 @@ public class CustomHealthCheckConfig extends TeaModel {
     @NameInMap("failureThreshold")
     public Integer failureThreshold;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("httpGetUrl")
     public String httpGetUrl;
 

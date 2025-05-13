@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class PutProvisionConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to always allocate CPU resources. Default value: true.</p>
+     * <p>Specify whether to always allocate CPUs. Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
@@ -17,7 +20,11 @@ public class PutProvisionConfigRequest extends TeaModel {
     public java.util.List<ScheduledActions> scheduledActions;
 
     /**
-     * <p>The number of target provisioned instances. Valid values: \[0,10000].</p>
+     * <p>The number of provisioned instances. Valid values: [0,10000].</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("target")
     public Long target;
@@ -30,6 +37,10 @@ public class PutProvisionConfigRequest extends TeaModel {
 
     /**
      * <p>The service alias or latest version. Other versions are not supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>prod</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

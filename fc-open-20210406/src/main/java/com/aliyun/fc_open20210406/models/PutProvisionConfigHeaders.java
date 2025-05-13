@@ -9,18 +9,27 @@ public class PutProvisionConfigHeaders extends TeaModel {
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when the function is invoked. The value follows the **EEE,d MMM yyyy HH:mm:ss GMT** format.</p>
+     * <p>The time when the function is invoked. The value follows the <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>The trace ID of the invocation request of Function Compute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rid281s******</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

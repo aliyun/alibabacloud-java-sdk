@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CreateVpcBindingRequest extends TeaModel {
     /**
      * <p>The ID of the VPC to be bound.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v-xxxx</p>
      */
     @NameInMap("vpcId")
     public String vpcId;

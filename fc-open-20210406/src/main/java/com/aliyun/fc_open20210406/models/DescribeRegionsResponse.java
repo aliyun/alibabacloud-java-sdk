@@ -3,25 +3,22 @@ package com.aliyun.fc_open20210406.models;
 
 import com.aliyun.tea.*;
 
-public class ClaimGPUInstanceResponse extends TeaModel {
+public class DescribeRegionsResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public ClaimGPUInstanceResponseBody body;
+    public DescribeRegionsResponseBody body;
 
-    public static ClaimGPUInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        ClaimGPUInstanceResponse self = new ClaimGPUInstanceResponse();
+    public static DescribeRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeRegionsResponse self = new DescribeRegionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ClaimGPUInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeRegionsResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class ClaimGPUInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public ClaimGPUInstanceResponse setStatusCode(Integer statusCode) {
+    public DescribeRegionsResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class ClaimGPUInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ClaimGPUInstanceResponse setBody(ClaimGPUInstanceResponseBody body) {
+    public DescribeRegionsResponse setBody(DescribeRegionsResponseBody body) {
         this.body = body;
         return this;
     }
-    public ClaimGPUInstanceResponseBody getBody() {
+    public DescribeRegionsResponseBody getBody() {
         return this.body;
     }
 

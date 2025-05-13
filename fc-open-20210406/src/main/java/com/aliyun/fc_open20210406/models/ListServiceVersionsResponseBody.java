@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ListServiceVersionsResponseBody extends TeaModel {
     /**
      * <p>The order in which the returned versions are sorted. Valid values:</p>
-     * <p>  - **FORWARD**: in ascending order. </p>
-     * <p>  - **BACKWARD**: in descending order. This is the default value.</p>
+     * <ul>
+     * <li><strong>FORWARD</strong>: The results are sorted in ascending order.</li>
+     * <li><strong>BACKWARD</strong>: The results are sorted in descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BACKWARD</p>
      */
     @NameInMap("direction")
     public String direction;
 
     /**
-     * <p>The token used to obtain more results. If the number of resources exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * <p>The token required to obtain more results. If the number of layers exceeds the limit, the nextToken parameter is returned. You can include the parameter in subsequent calls to obtain more results. You do not need to provide this parameter in the first call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eJhojW7N****</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The list of versions.</p>
+     * <p>The versions.</p>
      */
     @NameInMap("versions")
     public java.util.List<ListServiceVersionsResponseBodyVersions> versions;
@@ -56,24 +64,36 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     public static class ListServiceVersionsResponseBodyVersions extends TeaModel {
         /**
          * <p>The time when the service version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-16T06:23:50Z</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
          * <p>The description of the service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_description</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The time when the service version was last modified.</p>
+         * <p>The last time when the service version was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-15T06:12:31Z</p>
          */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
         /**
          * <p>The version of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("versionId")
         public String versionId;

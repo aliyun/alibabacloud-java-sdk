@@ -4,9 +4,17 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class JWTAuthConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>/userInfo/*</p>
+     */
     @NameInMap("blackList")
     public String blackList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>header:userID:userIDToFunction</p>
+     */
     @NameInMap("claimPassBy")
     public java.util.List<String> claimPassBy;
 

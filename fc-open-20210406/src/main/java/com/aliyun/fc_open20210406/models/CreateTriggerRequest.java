@@ -6,60 +6,86 @@ import com.aliyun.tea.*;
 public class CreateTriggerRequest extends TeaModel {
     /**
      * <p>The description of the trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trigger for test</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The role that is used by the event source such as Object Storage Service (OSS) to invoke the function. For more information, see [Overview](~~53102~~).</p>
+     * <p>The RAM role that is used by the event source such as Object Storage Service (OSS) to invoke the function. For more information, see <a href="https://help.aliyun.com/document_detail/53102.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890:role/fc-test</p>
      */
     @NameInMap("invocationRole")
     public String invocationRole;
 
     /**
      * <p>The version or alias of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the event source for the trigger.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the trigger event source. This parameter is optional for time triggers, HTTP triggers, and EventBridge-based triggers. This parameter is required for other types of triggers. For an EventBridge-based trigger, if you specify this parameter, the existing resources on the EventBridge side are associated with the trigger. <strong>Do not specify the same sourceArn value for two different EventBridge triggers</strong>. Otherwise, the update and delete operations of one trigger affect another.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:oss:cn-shanghai:12345:mybucket</p>
      */
     @NameInMap("sourceArn")
     public String sourceArn;
 
     /**
-     * <p>The configurations of the trigger. The configurations vary based on the trigger type. For more information about the format, see the following topics:</p>
-     * <br>
-     * <p>*   Object Storage Service (OSS) trigger: [OSSTriggerConfig](~~415697~~).</p>
-     * <p>*   Simple Log Service trigger: [LogTriggerConfig](~~415694~~).</p>
-     * <p>*   Time trigger: [TimeTriggerConfig](~~415712~~).</p>
-     * <p>*   HTTP trigger: [HTTPTriggerConfig](~~415685~~).</p>
-     * <p>*   Tablestore trigger: Specify the **SourceArn** parameter and leave this parameter empty.</p>
-     * <p>*   Alibaba Cloud CDN event trigger: [CDNEventsTriggerConfig](~~415674~~).</p>
-     * <p>*   Message Service (MNS) topic trigger: [MnsTopicTriggerConfig](~~415695~~).</p>
-     * <p>*   EventBridge triggers: [EventBridgeTriggerConfig](~~2508622~~).</p>
+     * <p>The trigger configurations. The configurations vary based on the trigger type. The following items list the configuration format for different triggers:</p>
+     * <ul>
+     * <li>OSS triggers: <a href="https://help.aliyun.com/document_detail/415697.html">OSSTriggerConfig</a>.</li>
+     * <li>Simple Log Service triggers: <a href="https://help.aliyun.com/document_detail/415694.html">LogTriggerConfig</a>.</li>
+     * <li>Time triggers: <a href="https://help.aliyun.com/document_detail/415712.html">TimeTriggerConfig</a>.</li>
+     * <li>HTTP triggers: <a href="https://help.aliyun.com/document_detail/415685.html">HTTPTriggerConfig</a></li>
+     * <li>Tablestore triggers: Specify the <strong>SourceArnm</strong> parameter and leave this parameter empty.</li>
+     * <li>Alibaba Cloud CDN event triggers: <a href="https://help.aliyun.com/document_detail/415674.html">CDNEventsTriggerConfig</a>.</li>
+     * <li>Simple Message Queue (formerly MNS) (SMQ) topic triggers: <a href="https://help.aliyun.com/document_detail/415695.html">MnsTopicTriggerConfig</a>.</li>
+     * <li>EventBridge-based triggers: <a href="https://help.aliyun.com/document_detail/2508622.html">EventBridgeTriggerConfig</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;events&quot;: [&quot;oss:ObjectCreated:*&quot;], &quot;filter&quot;: {&quot;key&quot;: {&quot;prefix&quot;: &quot;/prefix&quot;, &quot;suffix&quot;: &quot;.zip&quot;}}}</p>
      */
     @NameInMap("triggerConfig")
     public String triggerConfig;
 
     /**
-     * <p>The name of the trigger. The name contains only letters, digits, hyphens (-), and underscores (\_). The name must be 1 to 128 characters in length and cannot start with a digit or hyphen (-).</p>
+     * <p>The name of the trigger. The name can contain only letters, digits, hyphens (-), and underscores (_). The name must be 1 to 128 characters in length and cannot start with a digit or a hyphen (-).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss_create_object_demo</p>
      */
     @NameInMap("triggerName")
     public String triggerName;
 
     /**
      * <p>The type of the trigger. Valid values:</p>
-     * <br>
-     * <p>*   **oss**: OSS event trigger. For more information, see [Overview](~~62922~~).</p>
-     * <p>*   **log**: Simple Log Service trigger. For more information, see [Overview](~~84386~~).</p>
-     * <p>*   **timer**: time trigger. For more information, see [Overview](~~68172~~).</p>
-     * <p>*   **http**: HTTP trigger. For more information, see [Overview](~~71229~~).</p>
-     * <p>*   **tablestore**: Tablestore trigger. For more information, see [Overview](~~100092~~).</p>
-     * <p>*   **cdn_events**: CDN event trigger. For more information, see [Overview](~~73333~~).</p>
-     * <p>*   **mns_topic**: MNS topic trigger. For more information, see [Overview](~~97032~~).</p>
-     * <p>*   **eventbridge**: EventBridge triggers.</p>
+     * <ul>
+     * <li><strong>oss</strong>: OSS event trigger. For more information, see <a href="https://help.aliyun.com/document_detail/62922.html">Overview of OSS event triggers</a>.</li>
+     * <li><strong>log</strong>: Simple Log Service trigger. For more information, see <a href="https://help.aliyun.com/document_detail/84386.html">Simple Log Service triggers</a>.</li>
+     * <li><strong>timer</strong>: time trigger. For more information, see <a href="https://help.aliyun.com/document_detail/68172.html">Configure a time trigger</a>.</li>
+     * <li><strong>http</strong>: HTTP trigger. For more information, see <a href="https://help.aliyun.com/document_detail/71229.html">Overview</a>.</li>
+     * <li><strong>tablestore</strong>: Tablestore trigger. For more information, see <a href="https://help.aliyun.com/document_detail/100092.html">Tablestore triggers</a>.</li>
+     * <li><strong>cdn_events</strong>: Alibaba Cloud CDN event triggers. For more information, see <a href="https://help.aliyun.com/document_detail/73333.html">Overview</a>.</li>
+     * <li><strong>mns_topic</strong>: SMQ topic triggers. For more information, see <a href="https://help.aliyun.com/document_detail/97032.html">Simple Message Queue (formerly MNS) topic triggers</a>.</li>
+     * <li><strong>eventbridge</strong>: EventBridge-based triggers.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
      */
     @NameInMap("triggerType")
     public String triggerType;

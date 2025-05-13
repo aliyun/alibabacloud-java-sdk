@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RegisterEventSourceResponseBody extends TeaModel {
     /**
      * <p>The time when the event source was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-08-15T16:06:05.000+0000</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
     /**
-     * <p>The ARN of the event source.</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:eventbridge:cn-shanghai:123456:eventbus/mns-test/rule/fc-test1/target/abc</p>
      */
     @NameInMap("sourceArn")
     public String sourceArn;

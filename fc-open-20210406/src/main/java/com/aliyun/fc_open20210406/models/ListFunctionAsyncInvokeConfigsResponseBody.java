@@ -12,6 +12,9 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The token used to obtain more results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0be03****f84eb48b699f0a4883</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -39,60 +42,87 @@ public class ListFunctionAsyncInvokeConfigsResponseBody extends TeaModel {
 
     public static class ListFunctionAsyncInvokeConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The time when the application was created.</p>
+         * <p>The time when the asynchronous invocation configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-10T02:45:02Z</p>
          */
         @NameInMap("createdTime")
         public String createdTime;
 
         /**
-         * <p>The configuration structure of the destination for the asynchronous invocation. If you have not configured this parameter, this parameter is null.</p>
+         * <p>The configuration struct of the destination for asynchronous invocations. If you did not configure this parameter, this parameter is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;onSuccess&quot;: null,&quot;onFailure&quot;: {&quot;destination&quot;: &quot;acs:mns:cn-shanghai:123:/queues/xxx/messages&quot;}}</p>
          */
         @NameInMap("destinationConfig")
         public DestinationConfig destinationConfig;
 
         /**
          * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>helloworld</p>
          */
         @NameInMap("function")
         public String function;
 
         /**
          * <p>The time when the configuration was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-10T02:45:02Z</p>
          */
         @NameInMap("lastModifiedTime")
         public String lastModifiedTime;
 
         /**
-         * <p>The maximum validity period of messages. If you have not configured this parameter, this parameter is null.</p>
+         * <p>The maximum validity period of a message. If you have not configured this parameter, this parameter is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("maxAsyncEventAgeInSeconds")
         public Long maxAsyncEventAgeInSeconds;
 
         /**
          * <p>The maximum number of retries allowed after an asynchronous invocation fails. If you have not configured this parameter, this parameter is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("maxAsyncRetryAttempts")
         public Long maxAsyncRetryAttempts;
 
         /**
          * <p>The version or alias of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("qualifier")
         public String qualifier;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-service</p>
          */
         @NameInMap("service")
         public String service;
 
         /**
-         * <p>Specifies whether to enable the asynchronous task feature.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
+         * <p>Specifies whether to enable the asynchronous task feature. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
          * <p>If you have not configured this parameter, this parameter is null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("statefulInvocation")
         public Boolean statefulInvocation;

@@ -4,15 +4,39 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PolicyItem extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>x-test-uid</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>=</p>
+     */
     @NameInMap("operator")
     public String operator;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Header</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111</p>
+     */
     @NameInMap("value")
     public String value;
 

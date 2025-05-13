@@ -8,40 +8,63 @@ public class ListStatefulAsyncInvocationsHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>It is a tool used to manage and configure Alibaba Cloud resources. After simple installation and configuration, you can use Alibaba Cloud CLI to manage multiple Alibaba Cloud services and migrate your data and business to the cloud with ease.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>Alibaba Cloud CLI</p>
+     * <p>The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1506052139770049xxxx</p>
      */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
     /**
-     * <p>- **true**: returns the invocationPayload parameter in the response. </p>
-     * <p>- **false**: does not return the invocationPayload parameter in the response. </p>
-     * <br>
-     * <p>> The `invocationPayload` parameter indicates the input parameters of an asynchronous task.</p>
+     * <p>The time when the function is invoked. The value is in the <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sat, 14 Jul 2017 07:02:38 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>The token used to obtain more results. If this parameter is left empty, all the results are returned.</p>
+     * <p>The method used to invoke the function.</p>
+     * <ul>
+     * <li><strong>Sync</strong>: synchronous invocations</li>
+     * <li><strong>Async</strong>: asynchronous invocations</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Async</p>
      */
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
     /**
-     * <p>The time when Function Compute API is called.</p>
+     * <p>The method used to return logs.</p>
+     * <ul>
+     * <li><strong>Tail</strong>: returns the last 4 KB of logs that are generated for the current request.</li>
+     * <li><strong>None</strong>: does not return logs for the current request. Default value: None.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Tail</p>
      */
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
     /**
-     * <p>The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by the tool.</p>
+     * <p>The trace ID of the request for Function Compute API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcxxx</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

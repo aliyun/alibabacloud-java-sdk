@@ -8,25 +8,37 @@ public class DeleteTriggerHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>This parameter is used to ensure that the modified resource is consistent with the resource to be modified. You can obtain the parameter value from the responses of [CreateTrigger](~~415729~~), [GetTrigger](~~415732~~), and [UpdateTrigger](~~415731~~) operations.</p>
+     * <p>This parameter is used to ensure that the modified resource is consistent with the resource to be modified. You can obtain the parameter value from the responses of <a href="https://help.aliyun.com/document_detail/415729.html">CreateTrigger</a>, <a href="https://help.aliyun.com/document_detail/415732.html">GetTrigger</a>, and <a href="https://help.aliyun.com/document_detail/415731.html">UpdateTrigger</a> operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e19d5cd5af0378da05f63f891c74****</p>
      */
     @NameInMap("If-Match")
     public String ifMatch;
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The time when the request is initiated on the client. The format of the value is: **EEE,d MMM yyyy HH:mm:ss GMT**.</p>
+     * <p>The time when the request is initiated on the client. The format of the value is: <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wed, 11 May 2022 09:00:00 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
      * <p>The custom request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-test-trace-id</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

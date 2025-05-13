@@ -4,21 +4,37 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class PathConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>f1</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
     @NameInMap("methods")
     public java.util.List<String> methods;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/login</p>
+     */
     @NameInMap("path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>prod</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
     @NameInMap("rewriteConfig")
     public RewriteConfig rewriteConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>s1</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 

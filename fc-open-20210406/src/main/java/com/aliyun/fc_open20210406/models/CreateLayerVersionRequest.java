@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class CreateLayerVersionRequest extends TeaModel {
     /**
      * <p>The layer code.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Code")
     public Code code;
@@ -17,7 +18,10 @@ public class CreateLayerVersionRequest extends TeaModel {
     public java.util.List<String> compatibleRuntime;
 
     /**
-     * <p>The layer description. The description can be up to 256 characters in length.</p>
+     * <p>The layer description. The description can be up to 256 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("description")
     public String description;

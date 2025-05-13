@@ -4,9 +4,18 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class TracingConfig extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("params")
     public java.util.Map<String, String> params;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Jaeger</p>
+     */
     @NameInMap("type")
     public String type;
 

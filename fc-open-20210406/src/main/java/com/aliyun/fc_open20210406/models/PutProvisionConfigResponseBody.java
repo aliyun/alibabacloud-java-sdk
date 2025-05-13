@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class PutProvisionConfigResponseBody extends TeaModel {
     /**
      * <p>Specifies whether to always allocate CPU to a function instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
 
     /**
      * <p>The actual number of provisioned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("current")
     public Long current;
 
     /**
      * <p>The description of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;12345#servierName#qualifier#functionName&quot;</p>
      */
     @NameInMap("resource")
     public String resource;
 
     /**
-     * <p>The configurations of scheduled auto scaling.</p>
+     * <p>The configuration of scheduled auto scaling.</p>
      */
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledActions> scheduledActions;
 
     /**
      * <p>The number of target provisioned instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("target")
     public Long target;

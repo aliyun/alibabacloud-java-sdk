@@ -43,9 +43,17 @@ public class RewriteConfig extends TeaModel {
     }
 
     public static class RewriteConfigEqualRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/old</p>
+         */
         @NameInMap("match")
         public String match;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/new</p>
+         */
         @NameInMap("replacement")
         public String replacement;
 
@@ -73,9 +81,17 @@ public class RewriteConfig extends TeaModel {
     }
 
     public static class RewriteConfigRegexRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>^/js/(.*?)$</p>
+         */
         @NameInMap("match")
         public String match;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/public/javascripts/$1</p>
+         */
         @NameInMap("replacement")
         public String replacement;
 
@@ -103,9 +119,17 @@ public class RewriteConfig extends TeaModel {
     }
 
     public static class RewriteConfigWildcardRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/api/*</p>
+         */
         @NameInMap("match")
         public String match;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/$1</p>
+         */
         @NameInMap("replacement")
         public String replacement;
 

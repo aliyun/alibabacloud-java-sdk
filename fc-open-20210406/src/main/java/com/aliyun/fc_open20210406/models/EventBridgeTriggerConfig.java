@@ -7,12 +7,18 @@ public class EventBridgeTriggerConfig extends TeaModel {
     @NameInMap("asyncInvocationType")
     public Boolean asyncInvocationType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("eventRuleFilterPattern")
     public String eventRuleFilterPattern;
 
     @NameInMap("eventSinkConfig")
     public EventSinkConfig eventSinkConfig;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("eventSourceConfig")
     public EventSourceConfig eventSourceConfig;
 

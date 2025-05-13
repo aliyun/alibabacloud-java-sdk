@@ -5,55 +5,103 @@ import com.aliyun.tea.*;
 
 public class ListStatefulAsyncInvocationsRequest extends TeaModel {
     /**
-     * <p>You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * <ul>
+     * <li>Specifies whether to return the invocationPayload parameter in the response. <strong>true</strong>: returns the <code>invocationPayload</code> parameter in the response.``</li>
+     * <li><strong>false</strong>: does not return the <code>invocationPayload</code> parameter in the response.``</li>
+     * </ul>
+     * <blockquote>
+     * <p> The <code>invocationPayload</code> parameter indicates the input parameters of an asynchronous task.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("includePayload")
     public Boolean includePayload;
 
     /**
-     * <p>Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.</p>
+     * <p>The name prefix of the asynchronous tasks. This parameter is used to limit the names of the returned asynchronous tasks. For example, if you set the <code>invocationidPrefix</code> parameter to <code>job</code>, the names of the returned invocations must start with <code>job</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcxxx</p>
      */
     @NameInMap("invocationIdPrefix")
     public String invocationIdPrefix;
 
     /**
-     * <p>The list of events that trigger the asynchronous task.</p>
+     * <p>The maximum number of asynchronous tasks to be returned. The default value is 20. Valid values: [1,100].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public Integer limit;
 
     /**
-     * <p>The ID of the instance that is used to run the asynchronous task.</p>
+     * <p>The token required to obtain more results. You do not need to specify this parameter in the first call. If a NextToken value is returned by a previous call, more results are available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0****be03f84eb48b699f0a4883</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The number of retries after the asynchronous task fails.</p>
+     * <p>The version or alias of the service to which the asynchronous task belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;
 
     /**
-     * <p>StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.</p>
+     * <p>The method that you want to use to sort the returned asynchronous tasks.</p>
+     * <ul>
+     * <li><strong>asc</strong>: the ascending order</li>
+     * <li><strong>desc</strong>: the descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("sortOrderByTime")
     public String sortOrderByTime;
 
     /**
-     * <p>The structure of the asynchronous task.</p>
+     * <p>The start time of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640966400000</p>
      */
     @NameInMap("startedTimeBegin")
     public Long startedTimeBegin;
 
     /**
-     * <p>The latest version of Function Compute API.</p>
+     * <p>The end time of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640966400000</p>
      */
     @NameInMap("startedTimeEnd")
     public Long startedTimeEnd;
 
     /**
-     * <p>The request ID of the asynchronous task.</p>
+     * <p>The state of the asynchronous task.</p>
+     * <ul>
+     * <li><strong>Enqueued</strong>: The asynchronous task is enqueued and is waiting to be executed.</li>
+     * <li><strong>Succeeded</strong>: The invocation succeeded.</li>
+     * <li><strong>Failed</strong>: The invocation failed.</li>
+     * <li><strong>Running</strong>: The invocation is being executed.</li>
+     * <li><strong>Stopped</strong>: The invocation was terminated.</li>
+     * <li><strong>Stopping</strong>: The invocation is being terminated.</li>
+     * <li><strong>Invalid</strong>: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</li>
+     * <li><strong>Expired</strong>: The maximum validity period of messages is specified for the asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages elapsed.</li>
+     * <li><strong>Retrying</strong>: The asynchronous task is being retried due to an execution error.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("status")
     public String status;

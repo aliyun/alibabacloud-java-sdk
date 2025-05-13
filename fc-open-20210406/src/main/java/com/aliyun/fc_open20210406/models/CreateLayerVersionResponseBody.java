@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateLayerVersionResponseBody extends TeaModel {
     /**
      * <p>The access mode of the layer. Digit 0 specifies that the layer is private and digit 1 specifies that the layer is public. By default, public layers are public. Custom layers can be set to private or public.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("acl")
     public Integer acl;
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the layer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxxxx#Layer-name#1</p>
      */
     @NameInMap("arn")
     public String arn;
@@ -24,12 +30,18 @@ public class CreateLayerVersionResponseBody extends TeaModel {
 
     /**
      * <p>The CRC-64 value of the layer code package. The value is calculated based on the **ECMA-182 **standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2825179536350****</p>
      */
     @NameInMap("codeChecksum")
     public String codeChecksum;
 
     /**
      * <p>The size of the layer code package. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>421</p>
      */
     @NameInMap("codesize")
     public Long codesize;
@@ -42,24 +54,36 @@ public class CreateLayerVersionResponseBody extends TeaModel {
 
     /**
      * <p>The time when the layer version was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-01T11:08:00Z</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
     /**
      * <p>The description of the layer version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>the first layer</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The layer name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyLayer</p>
      */
     @NameInMap("layerName")
     public String layerName;
 
     /**
      * <p>The layer version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("version")
     public Integer version;

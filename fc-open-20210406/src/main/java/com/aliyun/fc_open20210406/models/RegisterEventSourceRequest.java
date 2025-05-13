@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class RegisterEventSourceRequest extends TeaModel {
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:eventbridge:cn-shanghai:123456:eventbus/mns-test/rule/fc-test1/target/abc</p>
      */
     @NameInMap("sourceArn")
     public String sourceArn;
 
     /**
      * <p>The version or alias of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

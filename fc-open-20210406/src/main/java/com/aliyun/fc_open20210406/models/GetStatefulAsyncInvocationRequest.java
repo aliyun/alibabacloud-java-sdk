@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetStatefulAsyncInvocationRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that is used to run the asynchronous task.</p>
+     * <p>The version or alias of the service to which the asynchronous task belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST</p>
      */
     @NameInMap("qualifier")
     public String qualifier;

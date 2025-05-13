@@ -4,12 +4,20 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class NASConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("groupId")
     public Integer groupId;
 
     @NameInMap("mountPoints")
     public java.util.List<NASConfigMountPoints> mountPoints;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("userId")
     public Integer userId;
 
@@ -43,12 +51,24 @@ public class NASConfig extends TeaModel {
     }
 
     public static class NASConfigMountPoints extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enableTLS")
         public Boolean enableTLS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/home/test</p>
+         */
         @NameInMap("mountDir")
         public String mountDir;
 
+        /**
+         * <strong>example:</strong>
+         * <p>***-uni85.cn-hangzhou.nas.aliyuncs.com:/</p>
+         */
         @NameInMap("serverAddr")
         public String serverAddr;
 

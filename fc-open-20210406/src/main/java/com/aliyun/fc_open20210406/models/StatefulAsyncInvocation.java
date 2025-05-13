@@ -4,51 +4,111 @@ package com.aliyun.fc_open20210406.models;
 import com.aliyun.tea.*;
 
 public class StatefulAsyncInvocation extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("alreadyRetriedTimes")
     public Long alreadyRetriedTimes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("destinationStatus")
     public String destinationStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("durationMs")
     public Long durationMs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1633449599</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
     @NameInMap("events")
     public java.util.List<StatefulAsyncInvocationEvent> events;
 
+    /**
+     * <strong>example:</strong>
+     * <p>functionName</p>
+     */
     @NameInMap("functionName")
     public String functionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D4-4BA6-5293-9FD1-882707E</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UnhandledInvocationError</p>
+     */
     @NameInMap("invocationErrorMessage")
     public String invocationErrorMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cxxdfd</p>
+     */
     @NameInMap("invocationId")
     public String invocationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}</p>
+     */
     @NameInMap("invocationPayload")
     public String invocationPayload;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LATEST</p>
+     */
     @NameInMap("qualifier")
     public String qualifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ABA740D4-4BA6-5293-9FD1-882707EADC37</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my-result</p>
+     */
     @NameInMap("returnPayload")
     public String returnPayload;
 
+    /**
+     * <strong>example:</strong>
+     * <p>serviceName</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1633449590</p>
+     */
     @NameInMap("startedTime")
     public Long startedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("status")
     public String status;
 

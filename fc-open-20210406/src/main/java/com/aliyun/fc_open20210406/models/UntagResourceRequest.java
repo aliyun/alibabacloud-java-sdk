@@ -6,17 +6,26 @@ import com.aliyun.tea.*;
 public class UntagResourceRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags. This parameter takes effect only when no tag key is specified. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("all")
     public Boolean all;
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
-     * <br>
-     * <p>> You can use the value of this parameter to query the information about the resource, such as the account, service, and region information of the resource. You can manage tags only for services for top level resources.</p>
+     * <blockquote>
+     * <p> You can use the value of this parameter to query information about the resource, such as the account, service, and region of the resource. You can manage tags only for services for top level resources.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-shanghai:188077086902****:services/demo</p>
      */
     @NameInMap("resourceArn")
     public String resourceArn;

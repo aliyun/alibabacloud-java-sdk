@@ -7,6 +7,10 @@ public class HTTPTriggerConfig extends TeaModel {
     @NameInMap("authConfig")
     public String authConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>anonymous, function, jwt</p>
+     */
     @NameInMap("authType")
     public String authType;
 

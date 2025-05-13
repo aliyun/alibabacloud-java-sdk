@@ -7,6 +7,9 @@ public class SourceMNSParameters extends TeaModel {
     @NameInMap("IsBase64Decode")
     public Boolean isBase64Decode;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 

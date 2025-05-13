@@ -7,9 +7,17 @@ public class CertConfig extends TeaModel {
     @NameInMap("certName")
     public String certName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE----- xxxxx -----END CERTIFICATE-----</p>
+     */
     @NameInMap("certificate")
     public String certificate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-----BEGIN RSA PRIVATE KEY----- xxxxx -----END RSA PRIVATE KEY-----</p>
+     */
     @NameInMap("privateKey")
     public String privateKey;
 

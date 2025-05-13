@@ -25,13 +25,19 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1ef6b6ff-7f7b-485e-ab49-501ac681****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The version of the service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.</p>
+         * <p>The version of service to which the instance belongs. If the instance belongs to the LATEST alias, 0 is returned as the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("versionId")
         public String versionId;

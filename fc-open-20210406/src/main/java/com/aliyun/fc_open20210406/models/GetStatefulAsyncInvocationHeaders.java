@@ -8,37 +8,63 @@ public class GetStatefulAsyncInvocationHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
-     * <p>The list of events that trigger the asynchronous task.</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188077086902****</p>
      */
     @NameInMap("X-Fc-Account-Id")
     public String xFcAccountId;
 
     /**
-     * <p>The structure of the asynchronous task.</p>
+     * <p>The CRC-64 value of the function code package. This value is used to check data integrity. The value is automatically calculated by a tool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1506052139770049xxxx</p>
      */
     @NameInMap("X-Fc-Code-Checksum")
     public String xFcCodeChecksum;
 
     /**
-     * <p>Alibaba Cloud provides SDKs for multiple programming languages to help you integrate Alibaba Cloud services by using APIs. We recommend that you use an SDK to call API operations. This frees you from manual signature verification.</p>
+     * <p>The time when the function is invoked. The value is in the <strong>EEE,d MMM yyyy HH:mm:ss GMT</strong> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Sat, 14 Jul 2017 07:02:38 GMT</p>
      */
     @NameInMap("X-Fc-Date")
     public String xFcDate;
 
     /**
-     * <p>StatefulAsyncInvocation: asynchronous task. Asynchronous tasks allow you to manage the states on the basis of common asynchronous invocations, which is more suitable for task scenarios.</p>
+     * <p>The method used to invoke the function. Valid values:</p>
+     * <ul>
+     * <li><strong>Sync</strong>: synchronous invocation mode</li>
+     * <li><strong>Async</strong>: asynchronous invocation mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Async</p>
      */
     @NameInMap("X-Fc-Invocation-Type")
     public String xFcInvocationType;
 
     /**
-     * <p>The latest version of Function Compute API.</p>
+     * <p>The method used to return logs. Default value: None. Valid values:</p>
+     * <ul>
+     * <li><strong>Tail</strong>: returns the last 4 KB of logs that are generated for the current request.</li>
+     * <li><strong>None</strong>: does not return logs for the request.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Tail</p>
      */
     @NameInMap("X-Fc-Log-Type")
     public String xFcLogType;
 
     /**
-     * <p>You can search for API operations, call and debug API operations online, and dynamically generate executable sample code for SDKs.</p>
+     * <p>The trace ID of the request for Function Compute API.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asdf****</p>
      */
     @NameInMap("X-Fc-Trace-Id")
     public String xFcTraceId;

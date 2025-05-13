@@ -5,43 +5,58 @@ import com.aliyun.tea.*;
 
 public class GetProvisionConfigResponseBody extends TeaModel {
     /**
-     * <p>Specifies whether to always allocate CPU to a function instance.</p>
+     * <p>Specifies whether to always allocate CPU resources to function instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("alwaysAllocateCPU")
     public Boolean alwaysAllocateCPU;
 
     /**
-     * <p>The actual number of provisioned instances.</p>
+     * <p>The number of current resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("current")
     public Long current;
 
     /**
      * <p>The error message returned if a provisioned instance fails to be created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image not found</p>
      */
     @NameInMap("currentError")
     public String currentError;
 
     /**
-     * <p>The description of the resource.</p>
+     * <p>The resource description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345#servierName#qualifier#functionName</p>
      */
     @NameInMap("resource")
     public String resource;
 
     /**
-     * <p>The configurations of scheduled auto scaling.</p>
+     * <p>The scheduled auto scaling policy.</p>
      */
     @NameInMap("scheduledActions")
     public java.util.List<ScheduledActions> scheduledActions;
 
     /**
-     * <p>The expected number of provisioned instances.</p>
+     * <p>The expected number of resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("target")
     public Long target;
 
     /**
-     * <p>The configurations of metric-based auto scaling.</p>
+     * <p>The configurations of the metric-based scaling policy.</p>
      */
     @NameInMap("targetTrackingPolicies")
     public java.util.List<TargetTrackingPolicies> targetTrackingPolicies;

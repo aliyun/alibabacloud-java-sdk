@@ -1,3 +1,9 @@
+2025-05-13 Version: 2.1.0
+- Support API DescribeRegions.
+- Update API ListInstances: add request parameters X-Fc-Date.
+- Update API ListInstances: add request parameters X-Fc-Trace-Id.
+
+
 2023-12-29 Version: 2.0.12
 - Generated java 2021-04-06 for FC-Open.
 

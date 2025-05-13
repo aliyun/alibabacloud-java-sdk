@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListReservedCapacitiesRequest extends TeaModel {
     /**
      * <p>The maximum number of resources to return. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("limit")
     public String limit;
 
     /**
      * <p>The token that determines the start point of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8bj81uI8n****</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
