@@ -76,6 +76,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Connects Elasticsearch clusters.</p>
+     * 
      * @param request AddConnectableClusterRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -108,6 +111,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Connects Elasticsearch clusters.</p>
+     * 
      * @param request AddConnectableClusterRequest
      * @return AddConnectableClusterResponse
      */

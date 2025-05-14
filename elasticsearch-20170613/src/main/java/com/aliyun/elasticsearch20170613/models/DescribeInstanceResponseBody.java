@@ -1113,8 +1113,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("enablePublic")
         public Boolean enablePublic;
 
-        @NameInMap("endtime")
-        public Long endtime;
+        @NameInMap("endTime")
+        public Long endTime;
 
         /**
          * <strong>example:</strong>
@@ -1448,12 +1448,12 @@ public class DescribeInstanceResponseBody extends TeaModel {
             return this.enablePublic;
         }
 
-        public DescribeInstanceResponseBodyResult setEndtime(Long endtime) {
-            this.endtime = endtime;
+        public DescribeInstanceResponseBodyResult setEndTime(Long endTime) {
+            this.endTime = endTime;
             return this;
         }
-        public Long getEndtime() {
-            return this.endtime;
+        public Long getEndTime() {
+            return this.endTime;
         }
 
         public DescribeInstanceResponseBodyResult setEsConfig(java.util.Map<String, ?> esConfig) {

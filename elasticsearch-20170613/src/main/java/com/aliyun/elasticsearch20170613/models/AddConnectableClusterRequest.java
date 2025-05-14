@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddConnectableClusterRequest extends TeaModel {
     /**
+     * <p>请求体。</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;instanceId&quot;:&quot;es-cn-09k1rgid9000g****&quot; }</p>
      */
@@ -12,6 +14,8 @@ public class AddConnectableClusterRequest extends TeaModel {
     public String body;
 
     /**
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></p>
+     * 
      * <strong>example:</strong>
      * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
      */
