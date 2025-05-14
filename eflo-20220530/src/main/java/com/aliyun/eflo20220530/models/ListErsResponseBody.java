@@ -91,6 +91,36 @@ public class ListErsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ListErsResponseBodyContentDataTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListErsResponseBodyContentDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListErsResponseBodyContentDataTags self = new ListErsResponseBodyContentDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListErsResponseBodyContentDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListErsResponseBodyContentDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListErsResponseBodyContentData extends TeaModel {
         /**
          * <p>The number of connections to the Lingjun HUB network instance.</p>
@@ -200,6 +230,9 @@ public class ListErsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<ListErsResponseBodyContentDataTags> tags;
+
         /**
          * <p>The tenant ID.</p>
          * 
@@ -308,6 +341,14 @@ public class ListErsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListErsResponseBodyContentData setTags(java.util.List<ListErsResponseBodyContentDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListErsResponseBodyContentDataTags> getTags() {
+            return this.tags;
         }
 
         public ListErsResponseBodyContentData setTenantId(String tenantId) {

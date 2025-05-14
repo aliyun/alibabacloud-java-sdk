@@ -975,6 +975,36 @@ public class GetErResponseBody extends TeaModel {
 
     }
 
+    public static class GetErResponseBodyContentTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetErResponseBodyContentTags build(java.util.Map<String, ?> map) throws Exception {
+            GetErResponseBodyContentTags self = new GetErResponseBodyContentTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetErResponseBodyContentTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetErResponseBodyContentTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetErResponseBodyContent extends TeaModel {
         /**
          * <p>The time when the data address was created.</p>
@@ -1083,6 +1113,9 @@ public class GetErResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<GetErResponseBodyContentTags> tags;
 
         /**
          * <p>The ID of the tenant.</p>
@@ -1200,6 +1233,14 @@ public class GetErResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetErResponseBodyContent setTags(java.util.List<GetErResponseBodyContentTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetErResponseBodyContentTags> getTags() {
+            return this.tags;
         }
 
         public GetErResponseBodyContent setTenantId(String tenantId) {

@@ -52,6 +52,9 @@ public class CreateErRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateErRequestTag> tag;
+
     public static CreateErRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateErRequest self = new CreateErRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,44 @@ public class CreateErRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateErRequest setTag(java.util.List<CreateErRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateErRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateErRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateErRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateErRequestTag self = new CreateErRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateErRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateErRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

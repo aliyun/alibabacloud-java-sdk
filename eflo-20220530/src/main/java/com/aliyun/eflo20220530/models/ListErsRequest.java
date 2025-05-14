@@ -103,6 +103,9 @@ public class ListErsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<ListErsRequestTag> tag;
+
     public static ListErsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListErsRequest self = new ListErsRequest();
         return TeaModel.build(map, self);
@@ -186,6 +189,44 @@ public class ListErsRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListErsRequest setTag(java.util.List<ListErsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListErsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class ListErsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListErsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListErsRequestTag self = new ListErsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListErsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListErsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
