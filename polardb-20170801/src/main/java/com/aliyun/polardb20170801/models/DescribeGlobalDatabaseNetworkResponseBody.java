@@ -101,6 +101,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @NameInMap("GlobalDomainName")
     public String globalDomainName;
 
+    @NameInMap("Labels")
+    public DescribeGlobalDatabaseNetworkResponseBodyLabels labels;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -202,6 +205,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     }
     public String getGlobalDomainName() {
         return this.globalDomainName;
+    }
+
+    public DescribeGlobalDatabaseNetworkResponseBody setLabels(DescribeGlobalDatabaseNetworkResponseBodyLabels labels) {
+        this.labels = labels;
+        return this;
+    }
+    public DescribeGlobalDatabaseNetworkResponseBodyLabels getLabels() {
+        return this.labels;
     }
 
     public DescribeGlobalDatabaseNetworkResponseBody setRequestId(String requestId) {
@@ -765,6 +776,25 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
         public String getStorageUsed() {
             return this.storageUsed;
+        }
+
+    }
+
+    public static class DescribeGlobalDatabaseNetworkResponseBodyLabels extends TeaModel {
+        @NameInMap("GDNVersion")
+        public String GDNVersion;
+
+        public static DescribeGlobalDatabaseNetworkResponseBodyLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalDatabaseNetworkResponseBodyLabels self = new DescribeGlobalDatabaseNetworkResponseBodyLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDatabaseNetworkResponseBodyLabels setGDNVersion(String GDNVersion) {
+            this.GDNVersion = GDNVersion;
+            return this;
+        }
+        public String getGDNVersion() {
+            return this.GDNVersion;
         }
 
     }

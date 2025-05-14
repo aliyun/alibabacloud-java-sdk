@@ -1721,6 +1721,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建全球数据网络</p>
+     * 
+     * @param request CreateGlobalDataNetworkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGlobalDataNetworkResponse
+     */
+    public CreateGlobalDataNetworkResponse createGlobalDataNetworkWithOptions(CreateGlobalDataNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationFileSystemPath)) {
+            query.put("DestinationFileSystemPath", request.destinationFileSystemPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationId)) {
+            query.put("DestinationId", request.destinationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationRegion)) {
+            query.put("DestinationRegion", request.destinationRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
+            query.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.freezeSourceDuringSync)) {
+            query.put("FreezeSourceDuringSync", request.freezeSourceDuringSync);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceFileSystemPath)) {
+            query.put("SourceFileSystemPath", request.sourceFileSystemPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceId)) {
+            query.put("SourceId", request.sourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceRegion)) {
+            query.put("SourceRegion", request.sourceRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGlobalDataNetwork"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGlobalDataNetworkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建全球数据网络</p>
+     * 
+     * @param request CreateGlobalDataNetworkRequest
+     * @return CreateGlobalDataNetworkResponse
+     */
+    public CreateGlobalDataNetworkResponse createGlobalDataNetwork(CreateGlobalDataNetworkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGlobalDataNetworkWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p> A cluster belongs to only one GDN.</p>
@@ -1746,6 +1826,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.GDNDescription)) {
             query.put("GDNDescription", request.GDNDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.GDNVersion)) {
+            query.put("GDNVersion", request.GDNVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -2760,6 +2844,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDatabaseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteGlobalDataNetwork</p>
+     * 
+     * @param request DeleteGlobalDataNetworkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteGlobalDataNetworkResponse
+     */
+    public DeleteGlobalDataNetworkResponse deleteGlobalDataNetworkWithOptions(DeleteGlobalDataNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkId)) {
+            query.put("NetworkId", request.networkId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGlobalDataNetwork"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGlobalDataNetworkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteGlobalDataNetwork</p>
+     * 
+     * @param request DeleteGlobalDataNetworkRequest
+     * @return DeleteGlobalDataNetworkResponse
+     */
+    public DeleteGlobalDataNetworkResponse deleteGlobalDataNetwork(DeleteGlobalDataNetworkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteGlobalDataNetworkWithOptions(request, runtime);
     }
 
     /**
@@ -5700,6 +5828,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDetachedBackupsResponse describeDetachedBackups(DescribeDetachedBackupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDetachedBackupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeGlobalDataNetworkList</p>
+     * 
+     * @param request DescribeGlobalDataNetworkListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeGlobalDataNetworkListResponse
+     */
+    public DescribeGlobalDataNetworkListResponse describeGlobalDataNetworkListWithOptions(DescribeGlobalDataNetworkListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeGlobalDataNetworkList"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeGlobalDataNetworkListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DescribeGlobalDataNetworkList</p>
+     * 
+     * @param request DescribeGlobalDataNetworkListRequest
+     * @return DescribeGlobalDataNetworkListResponse
+     */
+    public DescribeGlobalDataNetworkListResponse describeGlobalDataNetworkList(DescribeGlobalDataNetworkListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeGlobalDataNetworkListWithOptions(request, runtime);
     }
 
     /**
@@ -11282,6 +11458,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.GDNId)) {

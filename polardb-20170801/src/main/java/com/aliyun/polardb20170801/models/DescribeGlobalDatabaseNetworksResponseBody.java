@@ -157,6 +157,25 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeGlobalDatabaseNetworksResponseBodyItemsLabels extends TeaModel {
+        @NameInMap("GDNVersion")
+        public String GDNVersion;
+
+        public static DescribeGlobalDatabaseNetworksResponseBodyItemsLabels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGlobalDatabaseNetworksResponseBodyItemsLabels self = new DescribeGlobalDatabaseNetworksResponseBodyItemsLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDatabaseNetworksResponseBodyItemsLabels setGDNVersion(String GDNVersion) {
+            this.GDNVersion = GDNVersion;
+            return this;
+        }
+        public String getGDNVersion() {
+            return this.GDNVersion;
+        }
+
+    }
+
     public static class DescribeGlobalDatabaseNetworksResponseBodyItems extends TeaModel {
         /**
          * <p>The time when the GDN was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
@@ -231,6 +250,9 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         @NameInMap("GDNStatus")
         public String GDNStatus;
 
+        @NameInMap("Labels")
+        public DescribeGlobalDatabaseNetworksResponseBodyItemsLabels labels;
+
         public static DescribeGlobalDatabaseNetworksResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDatabaseNetworksResponseBodyItems self = new DescribeGlobalDatabaseNetworksResponseBodyItems();
             return TeaModel.build(map, self);
@@ -290,6 +312,14 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         }
         public String getGDNStatus() {
             return this.GDNStatus;
+        }
+
+        public DescribeGlobalDatabaseNetworksResponseBodyItems setLabels(DescribeGlobalDatabaseNetworksResponseBodyItemsLabels labels) {
+            this.labels = labels;
+            return this;
+        }
+        public DescribeGlobalDatabaseNetworksResponseBodyItemsLabels getLabels() {
+            return this.labels;
         }
 
     }

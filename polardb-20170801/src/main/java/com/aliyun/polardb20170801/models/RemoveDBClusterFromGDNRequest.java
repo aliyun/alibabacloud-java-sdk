@@ -17,6 +17,9 @@ public class RemoveDBClusterFromGDNRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     /**
      * <p>The ID of the GDN.</p>
      * <p>This parameter is required.</p>
@@ -53,6 +56,14 @@ public class RemoveDBClusterFromGDNRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public RemoveDBClusterFromGDNRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public RemoveDBClusterFromGDNRequest setGDNId(String GDNId) {

@@ -38,6 +38,9 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("GDNDescription")
     public String GDNDescription;
 
+    @NameInMap("GDNVersion")
+    public String GDNVersion;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -89,6 +92,14 @@ public class CreateGlobalDatabaseNetworkRequest extends TeaModel {
     }
     public String getGDNDescription() {
         return this.GDNDescription;
+    }
+
+    public CreateGlobalDatabaseNetworkRequest setGDNVersion(String GDNVersion) {
+        this.GDNVersion = GDNVersion;
+        return this;
+    }
+    public String getGDNVersion() {
+        return this.GDNVersion;
     }
 
     public CreateGlobalDatabaseNetworkRequest setOwnerAccount(String ownerAccount) {
