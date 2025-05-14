@@ -1,3 +1,6 @@
+2025-05-14 Version: 1.5.11
+- Generated java 2022-01-01 for pai-dsw.
+
 2025-04-22 Version: 1.5.10
 - Update API ListEcsSpecs: add response parameters Body.EcsSpecs.$.GPUMemorySize.
 - Update API ListEcsSpecs: add response parameters Body.EcsSpecs.$.SpotStockStatus.

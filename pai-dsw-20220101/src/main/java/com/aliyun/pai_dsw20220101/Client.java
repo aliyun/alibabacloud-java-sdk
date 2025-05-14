@@ -1092,7 +1092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ECS规格列表</p>
+     * <p>Queries a list of specifications of ECS instances.</p>
      * 
      * @param request ListEcsSpecsRequest
      * @param headers map
@@ -1142,7 +1142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取ECS规格列表</p>
+     * <p>Queries a list of specifications of ECS instances.</p>
      * 
      * @param request ListEcsSpecsRequest
      * @return ListEcsSpecsResponse

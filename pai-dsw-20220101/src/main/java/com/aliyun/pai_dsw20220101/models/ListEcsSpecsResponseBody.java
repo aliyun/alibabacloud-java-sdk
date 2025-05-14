@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListEcsSpecsResponseBody extends TeaModel {
     /**
+     * <p>The status code. Valid values:</p>
+     * <ul>
+     * <li>InternalError: an internal error. All errors, except for parameter validation errors, are classified as internal errors.</li>
+     * <li>ValidationError: a parameter validation error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The specifications of the ECS instances returned on this page.</p>
+     */
     @NameInMap("EcsSpecs")
     public java.util.List<ListEcsSpecsResponseBodyEcsSpecs> ecsSpecs;
 
     /**
+     * <p>The HTTP status code. Valid values:</p>
+     * <ul>
+     * <li>400</li>
+     * <li>404</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>null</p>
      */
@@ -22,6 +37,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;XXX&quot;</p>
      */
@@ -29,6 +46,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
      */
@@ -36,6 +55,12 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +68,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of ECS instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>35</p>
      */
@@ -112,12 +139,20 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
     public static class ListEcsSpecsResponseBodyEcsSpecsLabels extends TeaModel {
         /**
+         * <p>The label key added to the ECS specification.</p>
+         * 
          * <strong>example:</strong>
-         * <p>stsTokenOwner</p>
+         * <p>SupportResourcePackDeduction</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The label value added to the ECS specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -146,6 +181,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
     public static class ListEcsSpecsResponseBodyEcsSpecs extends TeaModel {
         /**
+         * <p>The accelerator type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CPU</p>
          */
@@ -153,6 +190,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public String acceleratorType;
 
         /**
+         * <p>The number of vCPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -160,6 +199,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public Long CPU;
 
         /**
+         * <p>The currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -167,6 +208,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The number of GPUs.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -177,6 +220,15 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public Float GPUMemorySize;
 
         /**
+         * <p>The GPU type. Valid values:</p>
+         * <ul>
+         * <li>V100</li>
+         * <li>A100</li>
+         * <li>A10</li>
+         * <li>T4</li>
+         * <li>P100</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>v100</p>
          */
@@ -184,6 +236,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public String GPUType;
 
         /**
+         * <p>The inbound bandwidth of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>5120000</p>
          */
@@ -191,6 +245,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public Long instanceBandwidthRx;
 
         /**
+         * <p>The instance type.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.gn5-c28g1.7xlarge</p>
          */
@@ -198,6 +254,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>Indicates whether the resource was available.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -205,6 +263,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public Boolean isAvailable;
 
         /**
+         * <p>The labels of the ECS specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
          */
@@ -212,6 +272,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public java.util.List<ListEcsSpecsResponseBodyEcsSpecsLabels> labels;
 
         /**
+         * <p>The memory size. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>32</p>
          */
@@ -219,6 +281,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public Float memory;
 
         /**
+         * <p>The price.</p>
+         * 
          * <strong>example:</strong>
          * <p>22.8</p>
          */
@@ -229,6 +293,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         public String spotStockStatus;
 
         /**
+         * <p>The size of the system disk. Unit: GB.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */

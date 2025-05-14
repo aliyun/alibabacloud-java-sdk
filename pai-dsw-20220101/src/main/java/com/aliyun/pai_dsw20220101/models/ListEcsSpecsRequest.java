@@ -5,15 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListEcsSpecsRequest extends TeaModel {
     /**
+     * <p>The accelerator type.</p>
+     * <ul>
+     * <li>CPU: Only CPU computing is used.</li>
+     * <li>GPU: GPUs are used to accelerate computing.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>PRIVATE</p>
+     * <p>CPU</p>
      */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
     /**
+     * <p>The sorting order. Valid values:</p>
+     * <ul>
+     * <li>ASC</li>
+     * <li>DESC</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DESC</p>
      */
@@ -21,6 +32,8 @@ public class ListEcsSpecsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +41,8 @@ public class ListEcsSpecsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +50,8 @@ public class ListEcsSpecsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The field by which the query results are sorted. Set the value to gmtCreate.</p>
+     * 
      * <strong>example:</strong>
      * <p>gmtCreate</p>
      */

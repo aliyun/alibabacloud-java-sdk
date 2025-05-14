@@ -669,7 +669,7 @@ public class CreateInstanceRequest extends TeaModel {
         public String optionType;
 
         /**
-         * <p>The custom dataset mount options. Only OSS is supported. You cannot specify OptionType at the same time. For more information, see <a href="https://help.aliyun.com/zh/pai/user-guide/read-and-write-dataset-data">DSW mount configurations</a>.</p>
+         * <p>The custom dataset mount options. Only OSS is supported. You cannot specify OptionType at the same time. For more information, see <a href="https://www.alibabacloud.com/help/en/pai/user-guide/read-and-write-dataset-data">DSW mount configurations</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
