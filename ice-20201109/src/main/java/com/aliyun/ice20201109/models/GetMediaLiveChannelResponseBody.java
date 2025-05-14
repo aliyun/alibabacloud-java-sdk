@@ -1019,6 +1019,12 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
         public GetMediaLiveChannelResponseBodyChannelVideoSettingsVideoCodecSetting videoCodecSetting;
 
         /**
+         * <p>视频转码方式（普通转码、窄带高清转码等）</p>
+         */
+        @NameInMap("VideoCodecType")
+        public String videoCodecType;
+
+        /**
          * <p>The width of the video in pixels.</p>
          * 
          * <strong>example:</strong>
@@ -1062,6 +1068,14 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
         }
         public GetMediaLiveChannelResponseBodyChannelVideoSettingsVideoCodecSetting getVideoCodecSetting() {
             return this.videoCodecSetting;
+        }
+
+        public GetMediaLiveChannelResponseBodyChannelVideoSettings setVideoCodecType(String videoCodecType) {
+            this.videoCodecType = videoCodecType;
+            return this;
+        }
+        public String getVideoCodecType() {
+            return this.videoCodecType;
         }
 
         public GetMediaLiveChannelResponseBodyChannelVideoSettings setWidth(Integer width) {

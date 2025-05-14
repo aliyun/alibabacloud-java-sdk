@@ -1074,6 +1074,9 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         @NameInMap("VideoCodecSetting")
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSetting videoCodecSetting;
 
+        @NameInMap("VideoCodecType")
+        public String videoCodecType;
+
         /**
          * <p>The width of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</p>
          * 
@@ -1118,6 +1121,14 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         }
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSetting getVideoCodecSetting() {
             return this.videoCodecSetting;
+        }
+
+        public UpdateMediaLiveChannelRequestVideoSettings setVideoCodecType(String videoCodecType) {
+            this.videoCodecType = videoCodecType;
+            return this;
+        }
+        public String getVideoCodecType() {
+            return this.videoCodecType;
         }
 
         public UpdateMediaLiveChannelRequestVideoSettings setWidth(Integer width) {
