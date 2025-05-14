@@ -6057,6 +6057,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallerNumber", request.callerNumber);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extension)) {
+            query.put("Extension", request.extension);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
             query.put("OutId", request.outId);
         }

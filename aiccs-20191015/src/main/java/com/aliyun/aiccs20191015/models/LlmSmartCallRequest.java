@@ -32,6 +32,9 @@ public class LlmSmartCallRequest extends TeaModel {
     @NameInMap("CallerNumber")
     public String callerNumber;
 
+    @NameInMap("Extension")
+    public String extension;
+
     /**
      * <strong>example:</strong>
      * <p>222356****</p>
@@ -80,6 +83,14 @@ public class LlmSmartCallRequest extends TeaModel {
     }
     public String getCallerNumber() {
         return this.callerNumber;
+    }
+
+    public LlmSmartCallRequest setExtension(String extension) {
+        this.extension = extension;
+        return this;
+    }
+    public String getExtension() {
+        return this.extension;
     }
 
     public LlmSmartCallRequest setOutId(String outId) {

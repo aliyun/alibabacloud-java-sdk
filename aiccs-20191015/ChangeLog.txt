@@ -1,3 +1,7 @@
+2025-05-14 Version: 2.2.3
+- Update API LlmSmartCall: add request parameters Extension.
+
+
 2025-04-18 Version: 2.2.2
 - Update API LlmSmartCall: add request parameters BizParam.
 
