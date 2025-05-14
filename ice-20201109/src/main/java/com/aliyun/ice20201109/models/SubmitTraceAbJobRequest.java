@@ -35,14 +35,14 @@ public class SubmitTraceAbJobRequest extends TeaModel {
      * <p>0</p>
      */
     @NameInMap("StartTime")
-    public String startTime;
+    public Long startTime;
 
     /**
      * <strong>example:</strong>
      * <p>360</p>
      */
     @NameInMap("TotalTime")
-    public String totalTime;
+    public Long totalTime;
 
     /**
      * <strong>example:</strong>
@@ -88,19 +88,19 @@ public class SubmitTraceAbJobRequest extends TeaModel {
         return this.output;
     }
 
-    public SubmitTraceAbJobRequest setStartTime(String startTime) {
+    public SubmitTraceAbJobRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
-    public SubmitTraceAbJobRequest setTotalTime(String totalTime) {
+    public SubmitTraceAbJobRequest setTotalTime(Long totalTime) {
         this.totalTime = totalTime;
         return this;
     }
-    public String getTotalTime() {
+    public Long getTotalTime() {
         return this.totalTime;
     }
 
