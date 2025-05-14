@@ -140,6 +140,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>取消审核任务</p>
+     * 
+     * @param request CancelAuditTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelAuditTaskResponse
+     */
+    public CancelAuditTaskResponse cancelAuditTaskWithOptions(CancelAuditTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.articleId)) {
+            body.put("ArticleId", request.articleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentAuditTaskId)) {
+            body.put("ContentAuditTaskId", request.contentAuditTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelAuditTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelAuditTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消审核任务</p>
+     * 
+     * @param request CancelAuditTaskRequest
+     * @return CancelAuditTaskResponse
+     */
+    public CancelAuditTaskResponse cancelAuditTask(CancelAuditTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelAuditTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>清除所有干预内容</p>
      * 
      * @param request ClearIntervenesRequest
@@ -5084,6 +5136,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询审核结果</p>
+     * 
+     * @param request QueryAuditTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAuditTaskResponse
+     */
+    public QueryAuditTaskResponse queryAuditTaskWithOptions(QueryAuditTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.articleId)) {
+            body.put("ArticleId", request.articleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentAuditTaskId)) {
+            body.put("ContentAuditTaskId", request.contentAuditTaskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryAuditTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAuditTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询审核结果</p>
+     * 
+     * @param request QueryAuditTaskRequest
+     * @return QueryAuditTaskResponse
+     */
+    public QueryAuditTaskResponse queryAuditTask(QueryAuditTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAuditTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>内容缩写</p>
      * 
      * @param request RunAbbreviationContentRequest
@@ -7620,6 +7724,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitAsyncTaskResponse submitAsyncTask(SubmitAsyncTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitAsyncTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交审核任务</p>
+     * 
+     * @param request SubmitAuditTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitAuditTaskResponse
+     */
+    public SubmitAuditTaskResponse submitAuditTaskWithOptions(SubmitAuditTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.articleId)) {
+            body.put("ArticleId", request.articleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.htmlContent)) {
+            body.put("HtmlContent", request.htmlContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitAuditTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitAuditTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交审核任务</p>
+     * 
+     * @param request SubmitAuditTaskRequest
+     * @return SubmitAuditTaskResponse
+     */
+    public SubmitAuditTaskResponse submitAuditTask(SubmitAuditTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitAuditTaskWithOptions(request, runtime);
     }
 
     /**
