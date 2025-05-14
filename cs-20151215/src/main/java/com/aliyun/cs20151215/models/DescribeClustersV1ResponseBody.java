@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1ResponseBody extends TeaModel {
     /**
-     * <p>The queried cluster(s) details.</p>
+     * <p>The queried cluster details.</p>
      */
     @NameInMap("clusters")
     public java.util.List<DescribeClustersV1ResponseBodyClusters> clusters;
@@ -426,7 +426,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String subnetCidr;
 
         /**
-         * <p>The resource labels of the cluster.</p>
+         * <p>The resource tags of the cluster.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;

@@ -8,7 +8,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
      * <p>The CPU architecture of the node. Valid values: <code>amd64</code>, <code>arm</code>, and <code>arm64</code>.</p>
      * <p>Default value: <code>amd64</code>.</p>
      * <blockquote>
-     * <p> This parameter is required if you want to add the existing node to a Container Service for Kubernetes (ACK) Edge cluster.</p>
+     * <p> This parameter is required if you want to add a node to an ACK Edge cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String arch;
 
     /**
-     * <p>Describes the expiration time of the generated token, formatted as a Unix timestamp. For example, 1739980800 represents 2025-02-20 00:00:00.</p>
+     * <p>The expiration time of the token that is generated. The value is a UNIX timestamp. For example, a value of 1739980800 indicates 00:00:00 (UTC+8) on February 20, 2025.</p>
      * 
      * <strong>example:</strong>
      * <p>1740037333</p>
@@ -27,16 +27,16 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Long expired;
 
     /**
-     * <p>Specifies whether to mount data disks to an existing instance when you manually add this instance to the cluster. You can add data disks to store container data and images. Valid values:</p>
+     * <p>Specifies whether to mount data disks to an existing instance when you manually add this instance to the cluster. You can use data disks to store container data and images. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: mounts data disks to the existing instance. Back up the data first to prevent losses.</li>
-     * <li><code>false</code>: does not mount data disks to the existing instance.</li>
+     * <li><code>true</code>: mounts data disks to the instance that you want to add. After a data disk is mounted, the original data on the disk is erased. Back up data before you mount a data disk.</li>
+     * <li><code>false</code>: does not mount data disks to the instance.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
-     * <p>Mounting rules:</p>
+     * <p>How a data disk is mounted:</p>
      * <ul>
-     * <li>If the Elastic Compute Service (ECS) instances are already mounted with data disks and the file system of the last data disk is uninitialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.</li>
-     * <li>If no data disk is mounted to the ECS instance, no new disk will be mounted.</li>
+     * <li>If the Elastic Compute Service (ECS) instances are already mounted with data disks and the file system of the last data disk is uninitialized, the system automatically formats this data disk to ext4 and uses the disk to store the data in the /var/lib/docker and /var/lib/kubelet directories.</li>
+     * <li>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,10 +46,10 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public Boolean formatDisk;
 
     /**
-     * <p>Specifies whether to retain the name of the existing instance when it is added to the cluster. ``Valid values:</p>
+     * <p>Specifies whether to retain the name of an existing instance when it is added to the cluster. If you do not retain the instance name, the instance is renamed in the <code>worker-k8s-for-cs-&lt;clusterid&gt;</code> format. Valid values:</p>
      * <ul>
      * <li><code>true</code>: retains the instance name.</li>
-     * <li><code>false</code>: renames the instance to worker-k8s-for-cs-\<clusterid>.</li>
+     * <li><code>false</code>: does not retain the instance name.</li>
      * </ul>
      * <p>Default value: <code>true</code>.</p>
      * 
@@ -62,7 +62,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     /**
      * <p>The ID of the node pool to which you want to add an existing node.</p>
      * <blockquote>
-     * <p> If not specified, the node is added to the default node pool.</p>
+     * <p> If you do not specify a node pool ID, the node is added to the default node pool.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,9 +72,9 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>The node configurations for the existing instance that you want to add as a node.</p>
+     * <p>The node configurations for the node that you want to add.</p>
      * <blockquote>
-     * <p> This parameter is required if you want to add the existing node to an ACK Edge cluster.</p>
+     * <p> This parameter is required if you want to add a node to an ACK Edge cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String options;
 
     /**
-     * <p>If you specify a list of ApsaraDB RDS instances, ECS instances in the cluster will be automatically added to the whitelist of the ApsaraDB RDS instances.</p>
+     * <p>A list of ApsaraDB RDS instances. ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
      */
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;

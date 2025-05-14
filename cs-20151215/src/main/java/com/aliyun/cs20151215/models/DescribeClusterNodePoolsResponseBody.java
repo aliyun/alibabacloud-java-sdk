@@ -23,6 +23,25 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         return this.nodepools;
     }
 
+    public static class DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode extends TeaModel {
+        @NameInMap("enable")
+        public Boolean enable;
+
+        public static DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode self = new DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling extends TeaModel {
         /**
          * <p>The maximum bandwidth of the elastic IP address (EIP).</p>
@@ -2082,6 +2101,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolsResponseBodyNodepools extends TeaModel {
+        @NameInMap("auto_mode")
+        public DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode autoMode;
+
         /**
          * <p>The configurations of auto scaling.</p>
          */
@@ -2158,6 +2180,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public static DescribeClusterNodePoolsResponseBodyNodepools build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolsResponseBodyNodepools self = new DescribeClusterNodePoolsResponseBodyNodepools();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepools setAutoMode(DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode autoMode) {
+            this.autoMode = autoMode;
+            return this;
+        }
+        public DescribeClusterNodePoolsResponseBodyNodepoolsAutoMode getAutoMode() {
+            return this.autoMode;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepools setAutoScaling(DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling autoScaling) {

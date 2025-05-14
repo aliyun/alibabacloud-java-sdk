@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
+    @NameInMap("auto_mode")
+    public DescribeClusterNodePoolDetailResponseBodyAutoMode autoMode;
+
     /**
      * <p>The auto scaling configuration of the node pool.</p>
      */
@@ -104,6 +107,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public static DescribeClusterNodePoolDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterNodePoolDetailResponseBody self = new DescribeClusterNodePoolDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeClusterNodePoolDetailResponseBody setAutoMode(DescribeClusterNodePoolDetailResponseBodyAutoMode autoMode) {
+        this.autoMode = autoMode;
+        return this;
+    }
+    public DescribeClusterNodePoolDetailResponseBodyAutoMode getAutoMode() {
+        return this.autoMode;
     }
 
     public DescribeClusterNodePoolDetailResponseBody setAutoScaling(DescribeClusterNodePoolDetailResponseBodyAutoScaling autoScaling) {
@@ -208,6 +219,25 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
     public DescribeClusterNodePoolDetailResponseBodyTeeConfig getTeeConfig() {
         return this.teeConfig;
+    }
+
+    public static class DescribeClusterNodePoolDetailResponseBodyAutoMode extends TeaModel {
+        @NameInMap("enable")
+        public Boolean enable;
+
+        public static DescribeClusterNodePoolDetailResponseBodyAutoMode build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyAutoMode self = new DescribeClusterNodePoolDetailResponseBodyAutoMode();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyAutoMode setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
     }
 
     public static class DescribeClusterNodePoolDetailResponseBodyAutoScaling extends TeaModel {
@@ -1232,7 +1262,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public Long autoRenewPeriod;
 
         /**
-         * <p>【The field is deprecated】Please use the parameter security_hardening_os instead.</p>
+         * <p>[<strong>Deprecated</strong>] Please use the parameter security_hardening_os instead.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

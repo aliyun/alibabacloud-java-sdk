@@ -13,9 +13,9 @@ public class UpdateUserPermissionsRequest extends TeaModel {
     /**
      * <p>The authorization method. Valid values:</p>
      * <ul>
-     * <li><code>apply</code>: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</li>
-     * <li><code>delete</code>: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, while other permissions of the RAM user or RAM role on the cluster are not affected.</li>
-     * <li><code>patch</code>: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, while other permissions of the RAM user or RAM role on the cluster are not affected.</li>
+     * <li><code>apply</code>: The global update mode. Overwrites all existing permissions of the RAM user or RAM role on the cluster. You must specify all the permissions you want to grant to the RAM user or RAM role in the request parameters when you call this operation.</li>
+     * <li><code>delete</code>: The deletion mode. Revokes only the cluster permissions specified in the request, preserving other existing permissions of the RAM user or RAM role.</li>
+     * <li><code>patch</code>: The incremental mode. Adds only the cluster permissions specified in the request, preserving other existing permissions of the RAM user or RAM role.</li>
      * </ul>
      * <p>Default value: <code>apply</code>.</p>
      * 

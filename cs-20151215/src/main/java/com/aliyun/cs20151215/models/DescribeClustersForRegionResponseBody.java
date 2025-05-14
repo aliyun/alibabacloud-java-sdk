@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersForRegionResponseBody extends TeaModel {
     /**
-     * <p>The information about the clusters returned.</p>
+     * <p>The information about the queried clusters.</p>
      */
     @NameInMap("clusters")
     public java.util.List<DescribeClustersForRegionResponseBodyClusters> clusters;

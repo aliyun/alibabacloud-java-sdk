@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
     /**
-     * <p>The kubeconfig file of the cluster. For more information about the content of the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</p>
+     * <p>The content of the kubeconfig file. For more information about how to view the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>apiVersion: v1****</p>
